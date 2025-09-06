@@ -5,6 +5,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
@@ -20,6 +21,7 @@ export default async function handler(
   const month =
 
     (req && req.query.month as string) || new Date().toISOString().slice(0, 7);
+
 
 
     return;
@@ -58,6 +60,8 @@ export default async function handler(
 
 
 
+
+
 }
     res.status (405).json ({ error: "Method not allowed" });
     return;
@@ -92,6 +96,7 @@ export default async function handler(
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -99,5 +104,6 @@ export default async function handler(
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

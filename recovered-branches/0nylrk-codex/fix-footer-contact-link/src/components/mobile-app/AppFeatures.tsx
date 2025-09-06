@@ -6,6 +6,7 @@
 
 
 
+
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -36,6 +37,7 @@ const features = [
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
 
   }
+
   },
 
   {
@@ -86,8 +88,12 @@ export const AppFeatures: React.FC = () => {
               </CardContent>
             </Card>
 
-
-
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
 
 
 import React from "react",;

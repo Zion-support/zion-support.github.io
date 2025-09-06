@@ -1,13 +1,19 @@
 
 
-
-
-
-
-
-
-
-
+import { useState  } from 'react';
+import { Button } from '@/components/ui/button';
+import { DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger;
+  DropdownMenuSeparator;
+  DropdownMenuLabel;
+  DropdownMenuRadioGroup;
+  DropdownMenuRadioItem;
+  DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
 
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
@@ -19,7 +25,10 @@ interface PdfExportButtonProps {
   resume: Resume
 }
 
-
+export function PdfExportButton({ resume }: PdfExportButtonProps) {
+  const [isExporting, setIsExporting] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const [includePortfolio, setIncludePortfolio] = useState(true);
 
 
 
@@ -28,6 +37,8 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
+
+
 
 
 
@@ -56,12 +67,13 @@ interface PdfExportButtonProps {;
 }
 
 export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const [includePortfolio, setIncludePortfolio] = useState(true);
 
   const [includePortfolio, setIncludePortfolio] = useState(true),
   const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
+
 
 
 
@@ -78,6 +90,7 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
@@ -240,6 +253,8 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
   )
 
 
+
+
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false),;
@@ -339,6 +354,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -349,9 +365,8 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components / ui / dropdown - menu';

@@ -3,6 +3,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -22,6 +23,7 @@ export default async function handler(
   if (!code) return res.status($1).json({ $2 });
 
   const usingPlaceholder =
+
 
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
@@ -62,7 +64,34 @@ if ( {) {
 
     }
 
-
+    const supabase = getServerSupabase();
+    const events = ["visitsignupprofile_completedjob_createdhire"] as const;
+    const counts: Record<string, number> = {}
+    for (const ev of events) {
+      const { count, error } = await supabase
+        .from("referral_events")
+        .select("*", { count: "exact", head: true })
+        .eq("partner_code", code)
+        .eq("event", ev);
+      if (error) return res.status($1).json({ $2 });
+      counts[ev] = count |0;
+    }
+    const total_signups = counts["signup"] |0;
+    const total_visits = counts["visit"] |0;
+    const total_profile_completions = counts["profile_completed"] |0;
+    const total_job_creations = counts["job_created"] |0;
+    const payout_amount =
+      total_profile_completions * 30 + total_job_creations * 50;
+    return res.status(200).json({
+      total_signups
+      total_visits
+      total_profile_completions
+      total_job_creations
+      conversion_rate: total_signups
+        ? total_profile_completions / total_signups
+        : 0
+      payout_amount: total_profile_completions * 50
+      currency: "USD"
 
         : 0,
       payout_amount: total_profile_completions * 50,
@@ -128,18 +157,24 @@ export default async function handler(req, res) {
 
 
 
+
+
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
-
+    }
+    const supabase = getServerSupabase();
+    const events = ["visitsignupprofile_completedjob_createdhire"] as const;
+    const counts: Record<string, number> = {}
     for (const ev of events) {
       const { count, error } = await supabase
-        .from('referral_events')
-        .select('*', { count: 'exact', head: true })
-        .eq('partner_code', code)
-        .eq('event', ev);
-      if (error) return res.status(500).json({ error: error.message });
-      counts[ev] = count || 0
+        .from("referral_events")
+        .select("*", { count: "exact", head: true })
+        .eq("partner_code", code)
+        .eq("event", ev);
+      if (error) return res && res.status($1).json({ $2 });
+      counts[ev] = count || 0;
     }
+
 
     const total_signups = counts['signup'] || 0;
     const total_visits = counts['visit'] || 0;
@@ -150,19 +185,46 @@ export default async function handler(req, res) {
     const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
     return res.status(200).json({
       total_signups
       total_visits
       total_profile_completions
       total_job_creations
 
+    return res && res.status(200).json({
+    const total_signups = counts["signup"] || 0;
+    const total_visits = counts["visit"] || 0;
+    const total_profile_completions = counts["profile_completed"] || 0;
+    const total_job_creations = counts["job_created"] || 0;
+    const payout_amount =
+      total_profile_completions * 30 + total_job_creations * 50;
+    return res && res.status(200).json({
+      total_signups,
+      total_visits,
+      total_profile_completions,
+    total_job_creations,
+      conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
+      payout_amount,
+      currency: 'USD'
+    });
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+    return res.status(500).json({ error: e?.message })
+  }
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return res.status (500).json ({ error: e?.message });
 
   }
 }
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -171,4 +233,5 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

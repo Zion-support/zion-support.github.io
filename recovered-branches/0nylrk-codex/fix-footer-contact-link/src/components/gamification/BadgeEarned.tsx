@@ -1,7 +1,7 @@
 
 
-
-
+import React from "react";
+import { getBadgeMeta, BadgeKey } from "./badgeConfig";
 
 interface BadgeEarnedProps {
 
@@ -14,6 +14,7 @@ interface BadgeEarnedProps {
 
 
   size?: number;
+
 
 
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
@@ -37,6 +38,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
@@ -45,6 +47,7 @@ interface BadgeEarnedProps {
 
   earnedDate?: string
 }
+
 
 
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
@@ -151,6 +154,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

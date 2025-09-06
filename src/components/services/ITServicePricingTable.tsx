@@ -28,6 +28,8 @@ export function ITServicePricingTable() {;
 
 
 
+
+
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     
@@ -101,6 +103,8 @@ export function ITServicePricingTable() {;
 
 
 
+
+
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
@@ -124,6 +128,15 @@ export function ITServicePricingTable() {;
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
 
-
-
+                  className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
+              <TableHead className="text-zion-cyan font-medium">
+                <Button 
+                  variant="ghost" 
+                  onClick={() => handleSort("country")}
+                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
+                >
+                  <span>Country</span>
+                  <ArrowUpDown className="h-4 w-4" />
+                </Button>
+              </TableHead>
 

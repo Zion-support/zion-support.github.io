@@ -4,6 +4,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { OpenAI } from "openai";
 export default async function handler(
@@ -17,6 +18,7 @@ export default async function handler(
 
 
   if (req.method !== "POST") return res.status($1).json({ $2 });
+
   try {
     const { markdown, targetLanguage = "en" } = req.body |{}
     if (!markdown) return res.status($1).json({ $2 });
@@ -44,6 +46,14 @@ export default async function handler(
   } catch (error: any) {
     return res
       .status(500)
+
+      .json({ error: error?.message |"Translation failed" });
+      .json({ error: error?.message || "Translation failed" });
+  }
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
@@ -107,4 +117,24 @@ function handler() {
 
   }
 
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

@@ -1,5 +1,5 @@
 import { useResume } from '@/hooks/useResume';
-interface ResumeVersionSelectorProps {
+interface ResumeVersionSelectorProps {;
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 
@@ -24,6 +24,8 @@ export function ResumeVersionSelector(): any ({;
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
 
+        setNewResumeTitle('');
+      setIsLoading(false);
 
 import { useState } from 'react';
 import {import { useState } from 'react';
@@ -76,12 +78,49 @@ if ( {) {
   }
 
 
+  return (
 
+        setNewResumeTitle('')
+import { useState } from 'react',;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuSeparator,;
+  DropdownMenuTrigger;
+} from '@/components/ui/dropdown-menu',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
+import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
+import { Resume } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+interface ResumeVersionSelectorProps {;
+  currentResume: Resume,;
+  onResumeChange: (resumeId: string) => void;
+}
+;
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+  const { createResume, fetchResume } = useResume(),;
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false),;
+  const [newResumeTitle, setNewResumeTitle] = useState(''),;
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const handleCreateNewVersion = async () => {;
+    if (newResumeTitle.trim()) {;
+      setIsLoading(true),;
+      const resumeId = await createResume({ title: newResumeTitle.trim() }),;
+      if (resumeId) {;
+        await fetchResume(resumeId),;
+        onResumeChange(resumeId),;
+        setSaveDialogOpen(false);
+        setNewResumeTitle('');
 
       }
       setIsLoading(false)
     }
   },
+
 
 
 
@@ -94,20 +133,35 @@ if ( {) {
 
 
 
+
   return (
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
 
+          <Button variant='outline' size='sm' className='gap-2'>
+            {currentResume?.basic_info?.title |'My Resume'}
+            <ChevronDown className='h-4 w-4' />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align='end'>
+          {existingResumes.map(resume => (
+            <DropdownMenuItem
+              key={resume.id}
+              onClick={() => onResumeChange(resume.id!)}
+              className='cursor-pointer'            >              className="cursor-pointer"
+        <DropdownMenuContent align="end">
+          {existingResumes.map((resume) => (
+            <DropdownMenuItem
+              key={resume.id}
+              onClick={() => onResumeChange(resume.id!)}
 
           <Button variant="outline" size="sm" className="gap-2">
             {currentResume?.basic_info?.title || 'My Resume'}
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-
-
 
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
@@ -137,6 +191,35 @@ if ( {) {
 
 
 
+        <DropdownMenuContent align="end">
+          {existingResumes.map((resume) => (
+            <DropdownMenuItem
+    <div className='flex items - center gap - 2'>;
+      <span className='text - sm text - muted - foreground'>Resume:</span>;
+      <DropdownMenu>;
+        <DropdownMenuTrigger as_child>;
+          <Button variant='outline' size='sm' className='gap - 2'>;
+            {current_resume?.basic_info?.title || 'My Resume'}
+            <ChevronDown className='h - 4 w - 4' />;
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align='end'>;
+          {existing_resumes.map (resume => (
+            <DropdownMenuItem;
+              key={resume.id}
+
+              on_click={() => onResumeChange (resume.id!)}
+              className='cursor - pointer'            >              className="cursor - pointer";
+        <DropdownMenuContent align="end">;
+          {existing_resumes.map ((resume) => (
+            <DropdownMenuItem;
+              key={resume.id}
+              on_click={() => onResumeChange (resume.id!)}
+              className="cursor - pointer";
+            >;
+
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -147,6 +230,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -186,6 +270,7 @@ if ( {) {
 
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
+
 
 
 
@@ -252,6 +337,7 @@ if ( {) {
 
             <Button 
               variant="outline" 
+
 
 
               <Save className="h-4 w-4" />
@@ -330,6 +416,7 @@ if ( {) {
       </Dialog>;
 
 
+
 }
 
 }
@@ -347,3 +434,4 @@ if ( {) {
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h - 4 w - 4 mr - 2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle > Save as new resume version</DialogTitle> </DialogHeader> <div className="py - 4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>);
 }";
 }
+

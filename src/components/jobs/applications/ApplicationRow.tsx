@@ -6,6 +6,8 @@ interface ApplicationRowProps {
 
 
 
+
+
 export function ApplicationRow({
 
   application
@@ -15,6 +17,7 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
+
 
 
 
@@ -70,6 +73,7 @@ export function ApplicationRow(): any ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
+
   return (
     <TableRow key={application.id}>
       <TableCell>
@@ -88,10 +92,12 @@ export function ApplicationRow(): any ({;
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
                 height={36} // Corresponds to h-9 w-9
-                className="rounded-full object-cover" // Ensure rounded and object-cover
+                className='rounded-full object-cover' // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
                 priority={false}
               />
+
+
 
 
 
@@ -138,6 +144,8 @@ export function ApplicationRow(): any ({;
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
+
+
 
 
 
@@ -369,5 +377,7 @@ export function ApplicationRow({;
     </TableRow>);
 }
 ;
+
+
 
 

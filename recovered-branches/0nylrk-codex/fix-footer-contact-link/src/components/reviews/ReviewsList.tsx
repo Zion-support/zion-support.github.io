@@ -1,11 +1,17 @@
 
 
+import { Review } from "@/types/reviews";
+import { ReviewCard } from "./ReviewCard";
+import { Review } from "@/types/reviews",
+import { ReviewCard } from "./ReviewCard",
 
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
 
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
+
+
 
 
 interface ReviewsListProps {
@@ -19,6 +25,22 @@ export function ReviewsList({
   onReportReview
 }: ReviewsListProps) {
   if (isLoading) {
+
+import { Review  } from '@/types / reviews';
+import { ReviewCard  } from './ReviewCard';
+interface ReviewsListProps {
+  reviews: Review[];
+  is_loading: boolean;
+  onReportReview: (review_id: string, reason: string) => Promise < boolean>;
+}
+export /**
+ * ReviewsList - Function description
+ */
+function ReviewsList() {
+  // Check condition
+if ( {) {
+  $2
+}
 
     return (
       <div className="space - y-4">;
@@ -43,6 +65,17 @@ export function ReviewsList({
                 <div className="h-6 w-16 bg-muted rounded"></div>
               </div>
             </div>
+
+          ))}
+      </div>
+    );
+  }
+            <div className="h-20 bg-muted rounded mb-3"></div>
+            <div className="flex gap-2">
+              <div className="h-6 w-16 bg-muted rounded"></div>
+              <div className="h-6 w-16 bg-muted rounded"></div>
+            </div>
+          </div>
 
 import { Review } from "@/types/reviews",;
 import { ReviewCard } from "./ReviewCard",;
@@ -75,7 +108,9 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -121,6 +156,9 @@ if ( {) {
 }
 
 
+    <div className="space-y-4">
+      {reviews.map((review) => (
+        <ReviewCard key={review.id} review={review} onReport={onReportReview} />
 
         <ReviewCard 
           key={review.id} 
@@ -133,6 +171,7 @@ if ( {) {
     </div>
 
 
+
   )
 }
 ;
@@ -140,5 +179,6 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -57,12 +57,14 @@ export function ListingCard(): any ({;
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>;
           {title}
 
+
         </h3>;
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>;
 
         {tags && tags.length > 0 && (;
           <div className='flex flex-wrap gap-2 mb-4'>;
             {tags && tags.map((tag, i) => (;
+
 
               <Badge
                 key={i}
@@ -87,6 +89,8 @@ export function ListingCard(): any ({;
 
 
 
+
+
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
@@ -101,6 +105,7 @@ export function ListingCard(): any ({;
 
 
 
+
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
@@ -109,6 +114,7 @@ export function ListingCard(): any ({;
             {category}
           </Badge>
         </div>
+
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
           {title}
         </h3>
@@ -125,6 +131,7 @@ export function ListingCard(): any ({;
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
         
         {tags && tags.length > 0 && (
+
 
 
 
@@ -177,6 +184,7 @@ export function ListingCard(): any ({;
 
 
 
+
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -184,6 +192,7 @@ export function ListingCard(): any ({;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+
 
 
             <span className="text-sm text-zion-slate-light">{author.name}</span>
@@ -292,5 +301,6 @@ function ListingCard() {
     </Link>);
 }"}) })";
 ;
+
 
 

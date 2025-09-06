@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -36,6 +40,10 @@ type Props = {
 type Props = {
   questions: Question[]
   onComplete: (score: number) => void
+
+export default function Quiz({ questions, onComplete }: Props) {
+
+export default function Quiz({ questions, onComplete }: Props) {;
 
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -61,6 +69,13 @@ type Props = {
                 <input
 
 
+};
+                  type='radio'                  name={q.id}
+  function submit() {
+    setSubmitted(true);
+    onComplete(score)
+  }
+
 
 
 
@@ -70,7 +85,9 @@ export default function Quiz({ questions, onComplete }: Props) {
   const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   function submit() {
 
 
@@ -136,10 +153,14 @@ export default function Quiz({ questions, onComplete }: Props) {
 
 
 
+
+
               </label>
             ))}
           </div>
           {submitted && (
+
+
 
 
 
@@ -154,11 +175,14 @@ export default function Quiz({ questions, onComplete }: Props) {
 
 
 
+
+
               )}
             </div>
           )}
         </div>
       ))}
+
 
 
       <button onClick={submit} className=&quot;px-4 py-2 bg-blue-600 text-white rounded&quot;>Submit Quiz</button>
@@ -171,5 +195,6 @@ export default function Quiz({ questions, onComplete }: Props) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

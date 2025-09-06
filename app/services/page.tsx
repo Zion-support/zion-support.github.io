@@ -6,13 +6,16 @@ import Link from 'next/link';
 
 export const metadata = {
 
+
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description:
+
 
 };
 
 export default function ServicesOverviewPage() {
   return (
+
 
     <div className="animate-fade-in">;
       {" "}
@@ -22,22 +25,22 @@ export default function ServicesOverviewPage() {
           Our Services;
         </h1>{" "}
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+
           {" "}
           Product engineering and AI-first consulting to deliver measurable;
           outcomes for your business.{" "}
         </p>{" "}
       </div>{" "}
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">;
         {" "}
+
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS"
           description="End-to-end product development with billing,auth,and analytics"
           bullets={[
-            "Foundational architecture"
-            "Billing + subscriptions"
-            "Growth analytics"
-=======
+
 import Link from './next / link';
 export const metadata = {
   title: "Services | Zion Tech Group",
@@ -76,12 +79,19 @@ function ServicesOverviewPage() {
             "Market validation"
 
 
+=======
+            "AI-powered tools",
+            "Billing & subscriptions", 
+            "Growth analytics",
+            "Market validation"
+
           ]}
 
           icon="🚀"
         />
         <ServiceCard
           href="/services/ai-services"
+
 
           title="AI Services"
 
@@ -93,10 +103,12 @@ function ServicesOverviewPage() {
           ]}
 
 
+
           icon="🤖"
         />
         <ServiceCard
           href="/services/it-services"
+
 
           title="IT Services"
 
@@ -109,11 +121,13 @@ function ServicesOverviewPage() {
           ]}
 
 
+
           icon="⚙️"
         />
         <ServiceCard
 
           href="/services/blockchain"
+
 
           title="Blockchain Services"
           description="Smart contracts, DeFi protocols, and Web3 solutions"
@@ -143,6 +157,7 @@ function ServicesOverviewPage() {
 
           description="Advanced analytics and BI solutions that transform data into insights"
           bullets={["Real-time dashboards", "Predictive analytics", "AI-powered insights"]}
+
           icon="📊"
         />
         <ServiceCard
@@ -290,37 +305,78 @@ function ServicesOverviewPage() {
           icon="💰"
         />
         <ServiceCard
-          href="/services/ai-hr-management"
-          title="AI HR Management"
-          description="Intelligent human resources with AI recruitment and employee analytics"
-          bullets={["AI recruitment", "Employee analytics", "Performance tracking", "Retention analysis"]}
-          icon="👥"
 
+          href="/services/healthtech"
+          title="HealthTech Solutions"
+          description="Telemedicine, EHR systems, medical AI, and healthcare analytics"
+          bullets={["Telemedicine", "EHR systems", "Medical AI", "Healthcare analytics"]}
+          icon="🏥"
+        />
+        <ServiceCard
+          href="/services/edtech"
+          title="EdTech Solutions"
+          description="Learning management systems, virtual classrooms, and educational AI"
+          bullets={["LMS platforms", "Virtual classrooms", "Educational AI", "Student analytics"]}
+          icon="🎓"
+        />
+        <ServiceCard
+          href="/contact"
+          title="Custom Solutions"
+          description="Tailored technology solutions for unique business challenges"
+          bullets={["Custom development", "System integration", "Digital transformation", "Consulting"]}
+          icon="💡"
         />
       </div>
-      <CTA />
-
-
-    </div>
+      
+      {/* Statistics Section */}
+      <section className="py-16 bg-gray-50 rounded-xl mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Proven track record of delivering exceptional results for businesses across industries.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <StatCard
+              number="500+"
+              label="Successful Projects"
+              description="Delivered across 15+ industries"
+            />
+            <StatCard
+              number="$2B+"
+              label="Combined Market Value"
+              description="Generated for our clients"
+            />
+            <StatCard
+              number="99.9%"
+              label="Uptime Guarantee"
+              description="With 24/7 monitoring & support"
+            />
+            <StatCard
+              number="300%"
+              label="Average ROI"
+              description="For our technology solutions"
+            />
+          </div>
+        </div>
+      </section>
+      
+      <CTA />{" "}
+    </div>;
   );
 }
-
-
-
-function ServiceCard({ 
-  href, 
-  title, 
-  description, 
-  bullets, 
-  icon 
-}: { 
-  href: string; 
-  title: string; 
-  description: string; 
-  bullets: string[]; 
-
-
-
+function ServiceCard({
+  href,
+  title,
+  description,
+  bullets,
+  icon
+}: {
+  href: string;
+  title: string;
+  description: string;
+  bullets: string[];
 
   icon: string;
 }) {
@@ -401,6 +457,8 @@ function CTA() {
       </div>
     </div>
   );
+
+
 
 
 

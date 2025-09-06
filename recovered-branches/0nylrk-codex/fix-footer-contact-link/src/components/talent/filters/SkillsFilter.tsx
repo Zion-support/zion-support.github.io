@@ -1,3 +1,5 @@
+import React from 'react';
+
 
 
 
@@ -16,6 +18,7 @@ import {SkillsFilterProps} from "@/types/filters";
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
+
   "Machine Learning",
   "Deep Learning",
   "Python",
@@ -67,10 +70,15 @@ import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Common skills in AI and tech;
 const POPULAR_SKILLS = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+import { ChevronDown, ChevronUp } from './lucide-react';
+import { Button } from '@/components / ui / button';
+import { Checkbox } from '@/components / ui / checkbox';
+import { SkillsFilterProps } from '@/types / filters';
+// Common skills in AI and tech;
+const POPULAR_SKILLS = [;
 
   "Machine Learning";
   "Deep Learning";
@@ -113,6 +121,7 @@ const POPULAR_SKILLS = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -120,12 +129,14 @@ const POPULAR_SKILLS = [;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                 {skill}
               </label>;
             </div>;
           ))}
         </div>;
       )}
+
 
 
 
@@ -139,5 +150,6 @@ const POPULAR_SKILLS = [;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -22,11 +22,17 @@ interface ProfileBadgeProps {;
 }'"  )
 }
 
+import React from "react",
+import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
+import { cn } from "@/lib/utils",
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
 
 
 interface ProfileBadgeProps {
   type: BadgeType,
+
+
 
 
 
@@ -40,7 +46,15 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     verified: {
       icon: BadgeCheck,
 
-
+      text: "Verified",
+      colors: "bg-blue-500/20 text-blue-400"},
+    featured: {
+      text: 'Verified',
+      colors: 'bg-blue-500/20 text-blue-400',
+    },
+      text: "Verified",
+      colors: "bg-blue-500/20 text-blue-400"},
+    featured: {
 
       icon: Star,
       text: "Featured",
@@ -53,7 +67,9 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       icon: Award,
 
 
+
       <span>{text}</span>;
+
     </div>);
   type, class_name;
 }: ProfileBadgeProps) {
@@ -66,4 +82,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   text;
 }</span>;
 }'"  );
+
 }
+

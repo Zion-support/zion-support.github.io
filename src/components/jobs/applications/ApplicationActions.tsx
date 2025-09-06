@@ -21,27 +21,29 @@ return (
           <Button
             variant='outline'
             size='sm'
-            disabled={processingId === application.id}          >
-            {processingId === application.id ? (
-              <Loader2 className='h-4 w-4 animate-spin' />
-            ) : (
-              <>
-                Status <ChevronDown className='h-4 w-4 ml-1' />
-              </>
+            disabled={processingId === application && application.id}>;
+            {processingId === application && application.id ? (;
+              <Loader2 className='h-4 w-4 animate-spin' />;
+            ) : (;
+              <>;
+                Status <ChevronDown className='h-4 w-4 ml-1' />;
+              </>;
             )}
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align='end'>
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align='end'>;
           <DropdownMenuItem
-            onClick={() => onStatusChange(application.id, 'shortlisted')}
-          >
-            Shortlist
-          </DropdownMenuItem>
+            onClick={() => onStatusChange(application && application.id, 'shortlisted')}
+          >;
+            Shortlist;
+          </DropdownMenuItem>;
           <DropdownMenuItem
+
             onClick={() => onStatusChange(application.id, 'interview')}
           >
             Schedule Interview
           </DropdownMenuItem>
+
           <DropdownMenuItem
 
             onClick={() => onStatusChange(application.id, 'rejected')}
@@ -64,6 +66,7 @@ interface ApplicationActionsProps {
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
+
 
 
 
@@ -177,6 +180,7 @@ import { Button } from '@/components / ui / button';
 
 
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
+
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;
   application: JobApplication,;
@@ -260,4 +264,6 @@ export function ApplicationActions({;
         </Link>;
       </Button>;
     </div>);
+
 }
+

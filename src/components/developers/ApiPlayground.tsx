@@ -13,6 +13,8 @@ const options: RequestInit = {
       // Add timeout to prevent hanging
 
 
+
+
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
@@ -83,6 +85,7 @@ export function ApiPlayground(): any ({;
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+
         options.body = body
 
 ;
@@ -92,6 +95,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   const [body, setBody] = useState("{}"),;
   const [response, setResponse] = useState<string | null>(null),;
   const [loading, setLoading] = useState(false),;
+
   const handleParamChange = (name: string, value: string) => {;
     setParamValues(prev => ({ ...prev, [name]: value }));
   };
@@ -174,14 +178,17 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
 
 
+
   return (
     <div className='space-y-4'>;
       <Input
         value={apiKey}
+
         onChange={e => setApiKey(e.target.value)}
         placeholder='API Key'
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
+
 
 
 
@@ -190,6 +197,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         <Input
 
           value={paramValues[p.name] || ''}
+
 
 
           onChange={e => handleParamChange(p.name, e.target.value)}        />
@@ -271,6 +279,10 @@ if () {) {
   /> {
   params.map ( (p) => (<Input key= {
 
+  p.name
+}</div>)
+}export default ApiPlayground
+'"
 
 
 
@@ -317,6 +329,7 @@ if (contentType?.includes ('application/json') ) {;
 
 
 
+
 <<<<<<< HEAD
 
 
@@ -342,3 +355,4 @@ if (contentType?.includes ('application/json') ) {;
 }
 ;
 export default ApiPlayground;
+

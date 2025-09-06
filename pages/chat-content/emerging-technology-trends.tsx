@@ -2,7 +2,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -16,9 +18,11 @@
 
 
 
+
 };
 
 export default EmergingTechnologyTrends;
+
 
 
   )
@@ -29,6 +33,7 @@ export default EmergingTechnologyTrends;
 
 },
 export default EmergingTechnologyTrends,
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -45,5 +50,6 @@ export default EmergingTechnologyTrends;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

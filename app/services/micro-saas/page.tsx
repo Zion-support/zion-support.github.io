@@ -3,10 +3,12 @@
 
 
 
+
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
   keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
+
 
 
 };
@@ -14,6 +16,7 @@ export const metadata = {
 
 export default function MicroSaasPage() {
   return (
+
 
 
     <div className="animate-fade-in">
@@ -296,9 +299,11 @@ export default function MicroSaasPage() {
             price="$1,499/month"
             icon="🎧"
 
+
           />
         </div>
       </section>
+
 
 
       <section className="mb-16">
@@ -342,9 +347,11 @@ export default function MicroSaasPage() {
             title="AI/ML"
             technologies={["OpenAI GPT-4", "Hugging Face", "LangChain", "Vector DBs", "MLflow"]}
 
+
           />
         </div>
       </section>
+
 
 
       <Pricing />
@@ -387,24 +394,35 @@ export default function MicroSaasPage() {
 
       <CTASection />
 
+
     </div>
   );
 }
 
 
-function ServiceCard({ title, description, features, price, icon }: { 
+function MicroSaaSCard({ 
+  title, 
+  description, 
+  features, 
+  pricing, 
+  marketSize, 
+  icon 
+}: { 
   title: string; 
   description: string; 
   features: string[]; 
-  price: string; 
+  pricing: string; 
+  marketSize: string; 
   icon: string; 
 }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200">
+
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
       <div className="mb-4">
+
         <div className="text-2xl font-bold text-blue-600 mb-2">{price}</div>
         <div className="text-sm text-gray-500">Starting price</div>
       </div>
@@ -506,3 +524,4 @@ function Pricing() {
 
 
 >>>>>>> origin/final-merged-improvements
+

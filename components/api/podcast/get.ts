@@ -11,20 +11,17 @@ function ensureStorage() {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
-
-
-
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  ensureStorage()
+  const { id } = req.query as { id?: string }
+  ensureStorage(),;
+  const { id } = req.query as { id?: string };
 
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const episode = episodes.find(e => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
+
 
 
   return res.status(200).json({ episode })
@@ -76,6 +73,7 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 
 

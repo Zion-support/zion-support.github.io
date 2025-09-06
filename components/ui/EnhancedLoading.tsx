@@ -22,10 +22,13 @@ class ErrorBoundary extends React.Component {
 
 
 
+
+
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
 }
+
 export default function EnhancedLoading(): any ({ lines = 3 }: EnhancedLoadingProps) {;
   return (
     <div className="space-y-2">;

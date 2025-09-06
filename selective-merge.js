@@ -29,15 +29,15 @@ const mainSourceDirs = [;
     // First, let's see what files are in the clean-merge-services-improvements branch
     console && console.log('📋 Checking files in clean-merge-services-improvements branch...');
     const files = execSync('git ls-tree -r --name-only origin/clean-merge-services-improvements', { encoding: 'utf8' });
-    const fileList = files && files.trim().split('\n');
+    const fileList = files.trim().split('\n');
     // Filter for main source files
-    const mainFiles = fileList && fileList.filter(file => {
-      return mainSourceDirs && mainSourceDirs.some(dir => file && file.startsWith(dir)) || 
-             mainSourceDirs && mainSourceDirs.includes(file);
+    const mainFiles = fileList.filter(file => {
+      return mainSourceDirs.some(dir => file.startsWith(dir)) |;
+             mainSourceDirs.includes(file);
     });
-    console && console.log(`Found ${mainFiles && mainFiles.length} main source files to potentially merge`);
+    console.log(`Found ${mainFiles.length} main source files to potentially merge`);
     // Try to cherry-pick specific commits or files
-    console && console.log('🍒 Attempting to cherry-pick specific changes...');
+    console.log(' Attempting to cherry-pick specific changes...');
     // Get the latest commit from the clean-merge-services-improvements branch
     const latestCommit = execSync('git rev-parse origin/clean-merge-services-improvements', { encoding: 'utf8' }).trim();
     console && console.log(`Latest commit: ${latestCommit}`);
@@ -64,7 +64,7 @@ const mainSourceDirs = [;
 const mergeSpecificFiles = () =>: any {
   try {
     // First, let's see what files are in the clean - merge - services - improvements branch;
-    console.log ('📋 Checking files in clean - merge - services - improvements branch...');
+    console.log (' Checking files in clean - merge - services - improvements branch...');
 ;
     const files = exec_sync ('git ls - tree -r --name - only origin / clean - merge - services - improvements', { encoding: 'utf8' });
     const file_list = files.trim ().split ('\n');
@@ -78,7 +78,7 @@ const mergeSpecificFiles = () =>: any {
     console.log (`Found ${main_files.length} main source files to potentially merge`);
 ;
     // Try to cherry - pick specific commits or files;
-    console.log ('🍒 Attempting to cherry - pick specific changes...');
+    console.log (' Attempting to cherry - pick specific changes...');
 ;
     // Get the latest commit from the clean - merge - services - improvements branch;
     const latest_commit = exec_sync ('git rev - parse origin / clean - merge - services - improvements', { encoding: 'utf8' }).trim ();
@@ -101,7 +101,7 @@ const mergeSpecificFiles = () =>: any {
     // Add the merged files
     try {
       execSync('git add .', { stdio: 'inherit' });
-      console && console.log('📝 Files added to staging area');
+      console.log(' Files added to staging area');
       // Commit the changes
       execSync('git commit -m "Selective merge of main source files from clean-merge-services-improvements"', { stdio: 'inherit' });
       console && console.log('✅ Changes committed');
@@ -111,7 +111,7 @@ const mergeSpecificFiles = () =>: any {
       console && console.error('Error committing changes:', error && error.message);
     }
   } else {
-    console && console.log('❌ Selective merge failed');
+    console && console.log(' Selective merge failed');
   }
 }
 main();
@@ -125,22 +125,22 @@ const main = () =>: any {
   if () {) {
   $2
 }
-    console.log ('✅ Selective merge completed');
+    console.log (' Selective merge completed');
 ;
     // Add the merged files;
     try {
       exec_sync ('git add .', { stdio: 'inherit' });
-      console.log ('📝 Files added to staging area');
+      console.log (' Files added to staging area');
 ;
       // Commit the changes;
       exec_sync ('git commit -m "Selective merge of main source files from clean - merge - services - improvements"', { stdio: 'inherit' });
-      console.log ('✅ Changes committed');
+      console.log (' Changes committed');
 ;
     } catch (error) {
       console.error ('Error committing changes:', error.message);
     }
   } else {
-    console.log ('❌ Selective merge failed');
+    console.log (' Selective merge failed');
   }
 }
 ;

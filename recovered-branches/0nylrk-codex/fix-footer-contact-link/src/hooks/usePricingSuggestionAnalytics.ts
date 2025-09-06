@@ -1,8 +1,10 @@
 
 
 
+
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';
+
 
 interface PricingSuggestionAnalytics {
   total_suggestions: number;
@@ -27,9 +29,10 @@ interface PricingSuggestionAnalytics {
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+import {useState, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",
 
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
@@ -169,14 +172,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
   }, [days]);
 
 
-
-
-
-
+  return analytics
 };
-
-
-
 
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
@@ -285,10 +282,12 @@ if (throw error) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

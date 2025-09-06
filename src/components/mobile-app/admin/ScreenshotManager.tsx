@@ -20,4 +20,11 @@ return (
               : "border-zion-purple/30"
           }`}
 
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >
+          <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
+          <p className="text-sm mb-2">Drag & drop screenshots here</p>
+          <input
 

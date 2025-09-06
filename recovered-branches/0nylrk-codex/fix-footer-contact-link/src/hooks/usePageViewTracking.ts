@@ -4,12 +4,14 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 /**
@@ -23,12 +25,14 @@ export function usePageViewTracking() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -50,7 +54,6 @@ export function usePageViewTracking() {
     // Listen for route changes
     window && window.addEventListener('popstate', handleRouteChange);
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Initial page load
 
     handleRouteChange(),
@@ -66,6 +69,8 @@ export function usePageViewTracking() {
 
     // // // console.log('Page view:', location.pathname)
   }, [location.pathname])
+
+
 
 import { useEffect } from 'react',;
 import { useLocation } from 'react-router-dom',;
@@ -107,12 +112,13 @@ function usePageViewTracking() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 
 

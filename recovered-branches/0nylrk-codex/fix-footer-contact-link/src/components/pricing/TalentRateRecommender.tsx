@@ -1,7 +1,12 @@
 
 
-
-
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
+import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -33,6 +38,21 @@ interface TalentRateRecommenderProps {;
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion } from '@/services / pricingSuggestionService';
+import { PricingSuggestionBox } from './PricingSuggestionBox';
+import { use_auth } from '@/hooks / use_auth';
+import { Sparkles } from './lucide-react';
+interface TalentRateRecommenderProps {
+  skills: string[],
+  years_experience: number,
+  location?: string;
+  onSuggestionApplied: (value: number) => void,
+  rate_type: "hourly" | "fixed";
+}
+export const TalentRateRecommender: React.FC < TalentRateRecommenderProps> = ({
+
 
   skills;
   years_experience;
@@ -54,6 +74,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
       const result = await getTalentRateSuggestion(params);
 
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
 
 interface TalentRateRecommenderProps {
   skills: string[],
@@ -61,6 +83,8 @@ interface TalentRateRecommenderProps {
   location?: string,
   onSuggestionApplied: (value: number) => void,
   rateType: "hourly" | "fixed"
+
+
 
 
 import React, { useState } from "react",;
@@ -112,7 +136,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -134,12 +160,27 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     } finally {
       setIsLoading(false)
 
-
-
-
-
-
-
+    }
+  }
+  const handleApplySuggestion = () => {
+    if (suggestion) {
+      // We'll use the middle of the range as the suggested rate
+      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2);
+      onSuggestionApplied(suggestedRate);
+      // Track this suggestion application
+      if (user) {
+        trackPricingSuggestion({
+          userId: user.id
+          suggestionType: 'talent'
+          suggestedMin: suggestion.minRate
+          suggestedMax: suggestion.maxRate
+          actualValue: suggestedRate
+          accepted: true
+        })
+      }
+    }
+  }
+  };
 
 ;
     setIsLoading(true),;
@@ -156,7 +197,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       setIsLoading(false);
     }
   },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       // We'll use the middle of the range as the suggested rate;
@@ -173,9 +213,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           actualValue: suggestedRate,;
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
+
 
 
   },
@@ -225,6 +265,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

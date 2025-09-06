@@ -1,10 +1,16 @@
 
 
+
+
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
 const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
+  const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() |
+             req.socket.remoteAddress |
+  const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || 
+             req.socket.remoteAddress || ;
 
              'unknown';
   const now = Date.now();
@@ -33,6 +39,9 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
 
 
+
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -40,5 +49,6 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

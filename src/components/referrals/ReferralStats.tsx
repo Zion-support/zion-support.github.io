@@ -4,6 +4,7 @@ interface ReferralStatsProps {
 
 
 
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
@@ -99,6 +100,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 
 
+
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
       {statCards.map((card, i) => (        <Card key={i}>
@@ -133,10 +135,12 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 
 
+
             )}
           </CardContent>;
         </Card>;
       ))}
+
 
 
 
@@ -157,6 +161,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                   {card.description}
                 </p>              </>              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
+
 
 
 
@@ -205,10 +210,12 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 
 
+
 }
 }
 }
 }
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
@@ -247,6 +254,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards.map((card, i) => (;
 
+
         <Card key={i}>;
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>;
@@ -268,4 +276,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
   );
 }
 
+
 ;
+

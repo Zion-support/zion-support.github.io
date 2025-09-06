@@ -1,14 +1,15 @@
 
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Download, FileText, Mail, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
 
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Download, FileText, Mail, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Download, FileText, Mail, BarChart3 } from "lucide-react",
+import { Link } from "react-router-dom",
 
 export function BillingHeader() {
   return (
@@ -36,6 +37,13 @@ export function BillingHeader() {
         Manage your subscription, view invoice history, and update payment methods.
       </p>
 
+    </div>
+  );
+}
+    </div>;
+  );
+}
+    </div>
 
   )
 import React from "react",;
@@ -71,5 +79,7 @@ export function BillingHeader() {;
   );
 }
 ;
+
+
 
 

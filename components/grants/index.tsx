@@ -24,7 +24,6 @@ const statuses: GrantStatus[] = [;
   'Under Review',;
   'Approved',;
   'Rejected',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
 export default function GrantsPage() {;
@@ -36,25 +35,54 @@ export default function GrantsPage() {;
     program?: string;
   }>({});
 
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
+export default function GrantsPage() {
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
+export default function GrantsPage() {;
 
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
   useEffect(() => {
 
+  useEffect(() => {
 
 
+    const params = new URLSearchParams();
+    if (filters.sector) params.set('sector', filters.sector);
+    if (filters.status) params.set('status', filters.status);
+    if (filters.region) params.set('region', filters.region);
+    if (filters.program) params.set('program', filters.program);
+    fetch(`/api/grants?${params.toString()}`)
+      .then(r => r.json())
+      .then(d => setItems(d.items |[]))
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
+export default function GrantsPage() {;
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
+  useEffect(() => {;
+    const params = new URLSearchParams();
+    if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
+    if (filters && filters.status) params && params.set('status', filters && filters.status);
+    if (filters && filters.region) params && params.set('region', filters && filters.region);
+    if (filters && filters.program) params && params.set('program', filters && filters.program);
+    fetch(`/api/grants?${params && params.toString()}`);
+      .then(r => r && r.json());
+      .then(d => setItems(d && d.items || []));
 
       .catch(() => setItems([]));  }, [filters]);
   return (
-
-      .then((r) => r.json())
-      .then((d) => setItems(d.items || []))
-
+    <EnhancedLayout>      .then((r) => r.json())
+      .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
   }, [filters]);
 
   return (
+
+
 
 
 
@@ -66,6 +94,25 @@ export default function GrantsPage() {;
 
   return (
 
+    <EnhancedLayout>
+      <div className='flex items-center justify-between mb-6'>
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
+        <div className='flex gap-2'>
+          <Link href='/grants/apply'>
+            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>
+          </Link>
+          <Link href='/incubator'>
+            <a className='px-3 py-2 bg-purple-600 text-white rounded'>
+              Incubator
+            </a>
+          </Link>
+      </div>
+      <div className='grid md:grid-cols-4 gap-4 mb-6'>
+        <select
+          className='border rounded p-2'
+          value={filters.sector |''}
+          onChange={e =>
+            setFilters(f => ({ ...f, sector: e.target.value |undefined }))
 
           }
         >
@@ -170,6 +217,7 @@ export default function GrantsPage() {;
       </div>;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -203,6 +251,7 @@ export default function GrantsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

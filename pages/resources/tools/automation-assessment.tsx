@@ -4,6 +4,8 @@
 
 
 
+
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -11,6 +13,7 @@ export default function ToolPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
+
 
 
 
@@ -22,6 +25,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function ToolPage() {
+
 
 
   const questions = [
@@ -48,6 +52,23 @@ export default function ToolPage() {
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
 
+  }
+  const calculateScore = () => {
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0)
+    const maxScore = questions.length * 5
+    const percentage = (totalScore / maxScore) * 100
+    if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' }
+    if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' }
+    if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' }
+    return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.' }
+  }
+  const nextQuestion = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1)
+    } else {
+      setShowResults(true)
+    }
+  }
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -132,6 +153,7 @@ export default function ToolPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -139,6 +161,7 @@ export default function ToolPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   },
 
@@ -163,7 +186,7 @@ export default function ToolPage(req, res) {
             <div className="max-w-4xl mx-auto">
               <nav className="mb-8">
                 <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  ← Back to Resources
+                   Back to Resources
                 </Link>
               </nav>
 
@@ -188,33 +211,25 @@ export default function ToolPage(req, res) {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
+                  <button 
 
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
-
+                    onClick={resetAssessment}
+                  <button
+                    onClick={resetAssessment}
+                    onClick={resetAssessment  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
                   </button>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                  <Link
+                  <Link 
+                  <Link
 
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
@@ -248,7 +263,7 @@ export default function ToolPage(req, res) {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Resources
+                 Back to Resources
               </Link>
             </nav>
 
@@ -269,12 +284,14 @@ export default function ToolPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               </div>
             </div>
@@ -421,12 +438,14 @@ export default function ToolPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
@@ -438,29 +457,48 @@ export default function ToolPage(req, res) {
 
               <div className="flex justify-between">
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                <button 
+                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
+                  disabled={currentQuestion === 0}
+                <button
+                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
+                  disabled={currentQuestion === 0}
+                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  disabled={currentQuestion === 0  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
 
-
-
+                <button
+                  onClick={nextQuestion}
+                  disabled={!answers[currentQ.id]}
+                <button 
+                  onClick={nextQuestion}
+                  disabled={!answers[currentQ.id]}
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
+  );
+};
+                <button
+                  onClick={nextQuestion  } catch (error) {
 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -468,6 +506,22 @@ export default function ToolPage(req, res) {
 
 }
 
+
+  },
+  const reset_assessment = () =>: any {
+    setCurrentQuestion (0),
+    set_answers ({}),
+    setShowResults (false);
+  },
+  // Check condition
+if ( {) {
+  $2
+}
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
   }
 
@@ -483,7 +537,7 @@ export default function ToolPage(req, res) {
           <div className="max - w-4xl mx - auto">;
             <nav className="mb - 8">;
               <Link href="/resources" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-                ← Back to Resources;
+                 Back to Resources;
               </Link>;
             </nav>;
             <div className="text - center mb - 12">;
@@ -542,9 +596,12 @@ export default function ToolPage(req, res) {
   }
 
 
+
+
 }
 
 }
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -552,5 +609,6 @@ export default function ToolPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

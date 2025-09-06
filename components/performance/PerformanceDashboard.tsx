@@ -18,39 +18,39 @@ interface PerformanceMetrics {
 const PerformanceDashboard: React.FC = () => {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {;
-    if (typeof window !== "undefined" && "performance" in window) {;
-      const observer = new PerformanceObserver((list) => {;
-        const entries = list && list.getEntries();
-        const newMetrics: Partial<PerformanceMetrics> = {};
-        entries && entries.forEach((entry) => {;
-          if (entry && entry.entryType === "paint") {;
-            if (entry && entry.name === "first-contentful-paint") {;
-              newMetrics && newMetrics.firstContentfulPaint = entry && entry.startTime;
+  useEffect(() => {
+    if (typeof window !== "undefined" && "performance" in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const newMetrics: Partial<PerformanceMetrics> = {}
+        entries.forEach((entry) => {
+          if (entry.entryType === "paint") {
+            if (entry.name === "first-contentful-paint") {
+              newMetrics.firstContentfulPaint = entry.startTime;
             }
-          } else if (entry && entry.entryType === "largest-contentful-paint") {;
-            newMetrics && newMetrics.largestContentfulPaint = entry && entry.startTime;
-          } else if (entry && entry.entryType === "layout-shift") {;
-            newMetrics && newMetrics.cumulativeLayoutShift =;
-              (newMetrics && newMetrics.cumulativeLayoutShift || 0) + (entry as any).value;
+          } else if (entry.entryType === "largest-contentful-paint") {
+            newMetrics.largestContentfulPaint = entry.startTime;
+          } else if (entry.entryType === "layout-shift") {
+            newMetrics.cumulativeLayoutShift =
+              (newMetrics.cumulativeLayoutShift |0) + (entry as any).value;
           }
         });
-        if (Object && Object.keys(newMetrics).length > 0) {;
-          setMetrics(;
-            (prev) => ({ ...prev, ...newMetrics }) as PerformanceMetrics,;
+        if (Object.keys(newMetrics).length > 0) {
+          setMetrics(
+            (prev) => ({ ...prev, ...newMetrics }) as PerformanceMetrics
           );
         }
       });
-      observer && observer.observe({;
-        entryTypes: ["paint", "largest-contentful-paint", "layout-shift"],;
+      observer.observe({
+        entryTypes: ["paint", "largest-contentful-paint", "layout-shift"]
       });
-      // Get load time;
-      window && window.addEventListener("load", () => {;
-        const loadTime =;
-          performance && performance.timing.loadEventEnd - performance && performance.timing.navigationStart;
+      // Get load time
+      window.addEventListener("load", () => {
+        const loadTime =
+          performance.timing.loadEventEnd - performance.timing.navigationStart;
         setMetrics((prev) => ({ ...prev, loadTime }) as PerformanceMetrics);
       });
-      return () => observer && observer.disconnect();
+      return () => observer.disconnect();
     }
   }, []);
   const getScoreColor = (;
@@ -224,7 +224,7 @@ if (return null) {
         on_click={() => setIsVisible (!is_visible)}
         className="bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue - 700 transition - colors";
       >;
-        📊 Performance;
+         Performance;
       </button>;
       {is_visible && (
         <div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p - 6 w - 80 border">;

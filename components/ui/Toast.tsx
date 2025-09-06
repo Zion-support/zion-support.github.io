@@ -6,11 +6,13 @@ export type ToastType = 'success' | 'error' | 'info' | 'warning';
 interface ToastProps {
   toast: Toast;
 
+
   onRemove: (id: string) => void;
 
   id: string,
   type: ToastType,
   title: string,;
+
 
   message?: string;
   duration?: number
@@ -21,7 +23,9 @@ interface ToastProps {
 }
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 import React from 'react';
@@ -62,8 +66,17 @@ interface ToastProps {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+import React from 'react';
+ export type ToastType = 'success' | 'error' | 'info' | 'warning';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
+
+}, [toast && toast.id, toast && toast.duration, onRemove]);
+const getIcon = () => {;
+  switch (toast && toast.type) {;
+  case 'success': ;
 
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
@@ -72,6 +85,9 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     const timer = setTimeout(() => {
       setIsVisible(false);
 
+
+      setTimeout(() => onRemove(toast.id), 300)
+    }, toast.duration || 5000);
 
 
     return () => clearTimeout(timer)
@@ -107,6 +123,20 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return <Info className='w-5 h-5 text-blue-400' />;
       default:
 
+        return <Info className='w-5 h-5 text-blue-400' />;    }      case 'error':
+        return <AlertCircle className="w-5 h-5 text-red-400" />;
+      case 'warning':
+        return <AlertCircle className="w-5 h-5 text-yellow-400" />;
+      case 'info':
+        return <Info className="w-5 h-5 text-blue-400" />;
+      default: return <Info className="w-5 h-5 text-blue-400" />
+    }
+  }
+        return <Info className='w-5 h-5 text-blue-400' />;    }
+
+
+
+
 
 
 
@@ -128,6 +158,25 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return 'border-yellow-500/20';
       case 'info':
         return 'border-blue-500/20';
+
+
+  };
+  const getBackgroundColor = () => {;
+    switch (toast && toast.type) {;
+      case 'success':;
+
+        return 'bg-green-500/10';
+      case 'error':;
+        return 'bg-red-500/10';
+      case 'warning':;
+        return 'bg-yellow-500/10';
+      case 'info':;
+        return 'bg-blue-500/10';
+      default:;
+        return 'bg-blue-500/10';
+    }
+
+
       default:
         return 'border-blue-500/20';    }      default: return 'border-blue-500/20'
     }
@@ -142,6 +191,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return 'bg-yellow-500/10';
       case 'info':
         return 'bg-blue-500/10';
+
       default:
         return 'bg-blue-500/10';
     }
@@ -152,6 +202,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         <div className='flex-1 min-w-0'>
           <h4 className='text-sm font-semibold text-white'>{toast.title}</h4>
           {toast.message && (
+
 
         </div>
         <button
@@ -198,12 +249,25 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
         ))}
       </AnimatePresence>
 
+    </div>
+    </div>;
+
   );};          }}
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >
           <X className="w-4 h-4 text-white/60 hover:text-white" />
         </button>
       </div>
+
+          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200";
+        >;
+          <X className="w-4 h-4 text-white/60 hover:text-white" />;
+        </button>;
+      </div>;
+
+
+
+
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">
         <motion.div
@@ -221,6 +285,12 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
     </motion.div>
   )
 
+}
+};
+    </div>
+  );};
+
+
 
 interface ToastContainerProps {
   toasts: Toast[]
@@ -231,6 +301,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
     <div className="fixed top-4 right-4 z-50 space-y-3">
       <AnimatePresence>
         {toasts.map((toast) => (
+
 
 
 
@@ -258,8 +329,30 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
         ))}
 
 
+
 };    toasts;
 
+
+    const newToast = { ...toast, id };
+    setToasts(prev => [...prev, newToast])
+  };
+  const removeToast = (id: string) => {
+    setToasts(prev => prev.filter(toast => toast.id !== id))
+  };
+  const showSuccess = (title: string, message?: string) => {
+    addToast({ type: 'success', title, message })
+  };
+  const showError = (title: string, message?: string) => {
+    addToast({ type: 'error', title, message })
+  };
+  const showInfo = (title: string, message?: string) => {
+    addToast({ type: 'info', title, message })
+  };
+  const showWarning = (title: string, message?: string) => {
+    addToast({ type: 'warning', title, message })
+  };
+  return {
+    toasts;
 
 
     showSuccess;
@@ -270,7 +363,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
 
 };
 
-=======
     <div className='fixed top - 4 right - 4 z - 50 space - y-3'>;
       <AnimatePresence>;
         {toasts.map (toast => (          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
@@ -297,6 +389,8 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
       </div>;
     </motion.div>);
 }
+
+
 
 
 

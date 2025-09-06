@@ -1,6 +1,9 @@
 
 #!/usr/bin/env node
 
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
 
 #!/usr / bin / env node;
 import fs from './fs';
@@ -23,19 +26,7 @@ files.for_each ((file) => {
     content = content.replace (
       /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
       (match) => {
-        modified = true;
-        return match.replace (",", ";");
-      },
-    );
-;
-    // Fix import statements missing semicolons;
-    content = content.replace (
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
-      (match) => {
-        // Check condition
-if (.ends_with (") {
-  $2
-}")) {
+        if (!match ;")) {
           modified = true;
           return match.trim () + ";";
 
@@ -93,10 +84,14 @@ if ( {) {
 
 
 
+
+
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
+
+
 
 
 
@@ -132,10 +127,12 @@ fixCareers(),;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -1,14 +1,13 @@
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/security/osv-report.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/security/osv-report.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/security/osv-report.json',
 
 export default function OsvWatchPage() {
 
@@ -32,15 +31,12 @@ export default function OsvWatchPage() {
           <ul className="mt-6 space-y-4">
             {results.map((r, idx) => (
               <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-                <div className="font-medium">{r.name} — {r.versionRange}</div>
+                <div className="font-medium">{r.name}  {r.versionRange}</div>
                 <ul className="list-disc ml-5 mt-2">
                   {r.vulns.slice(0, 5).map((v, i) => (
 
-
-
+                    <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary |''}</li>
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary || ''}</li>
-
-
 
                   ))}
                 </ul>
@@ -50,6 +46,7 @@ export default function OsvWatchPage() {
         )}
       </div>
     </EnhancedLayout>
+
 
 
 
@@ -91,6 +88,7 @@ export default function OsvWatchPage() {
 
 
 
+
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -119,11 +117,13 @@ export default function OsvWatchPage() {
   }
 
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

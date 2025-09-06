@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -73,6 +74,7 @@ import {
   Atom, Rocket, Target, Microscope, DollarSign, Phone
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
 } from 'lucide-react'
+
 import {;
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain,;
   Atom, Rocket, Target, Microscope, DollarSign, Phone,;
@@ -193,7 +195,9 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -217,7 +221,9 @@ export default function ComprehensivePricing2029(req, res) {
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -243,7 +249,10 @@ export default function ComprehensivePricing2029(req, res) {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
 
-
+              Transparent pricing for our revolutionary 2029 services. Choose the perfect plan 
+              for your business transformation journey.
+            </p>
+            {/* Billing Toggle */}
 
               Transparent pricing for our revolutionary 2029 services. Choose the perfect plan
               for your business transformation journey.
@@ -254,6 +263,7 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
 
@@ -276,6 +286,7 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className="text-gray-400">Monthly</span>
               <button
@@ -287,6 +298,8 @@ export default function ComprehensivePricing2029(req, res) {
                 <div
                   className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
                     billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
+
+
 
             {/* Billing Toggle */}
             <div className="flex items - center justify - center gap - 4 mb - 12">;
@@ -324,12 +337,14 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <section className="py-12 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
@@ -424,6 +439,7 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -431,18 +447,16 @@ export default function ComprehensivePricing2029(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Service Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+              {filteredServices.length} cutting-edge services available to transform your business.
+              {filteredServices.length} cutting-edge services available to transform your business. 
+              {filteredServices.length} cutting-edge services available to transform your business.
 
               Each service includes comprehensive features, support, and implementation.
             </p>
@@ -492,12 +506,14 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
@@ -528,12 +544,14 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     </div>
                     <div className="text-sm text-gray-400">
@@ -561,12 +579,14 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
@@ -600,12 +620,14 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
@@ -637,12 +659,14 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
@@ -674,12 +698,14 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <div className="grid grid-cols-2 gap-4 mb-6 text-center">
                     <div>
@@ -703,12 +729,14 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <div className="flex gap-3">
                     <Link
@@ -743,7 +771,9 @@ export default function ComprehensivePricing2029(req, res) {
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -773,6 +803,8 @@ export default function ComprehensivePricing2029(req, res) {
               Enterprise Solutions
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+
+
 
 
 
@@ -867,7 +899,9 @@ export default function ComprehensivePricing2029(req, res) {
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -897,6 +931,8 @@ export default function ComprehensivePricing2029(req, res) {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+
+
 
 
 
@@ -974,8 +1010,9 @@ export default function ComprehensivePricing2029(req, res) {
       <UltraFuturisticFooter2029 />
     </div>
 
-
-
+  );
+};
+  )
 
           >;
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
@@ -1030,6 +1067,7 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1041,5 +1079,6 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

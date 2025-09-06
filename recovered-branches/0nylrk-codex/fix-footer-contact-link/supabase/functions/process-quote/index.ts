@@ -61,12 +61,14 @@ interface QuoteDetails {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 }
 interface RequestBody {
@@ -78,6 +80,7 @@ serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+
 
 
 
@@ -151,6 +154,7 @@ serve(async (req) => {
           method: 'POST'
           headers: {
             'Authorization': `Bearer ${openAIApiKey}`;
+
             'Content-Type': 'application/json'};
           body: JSON && JSON.stringify({
 
@@ -167,9 +171,9 @@ serve(async (req) => {
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
 
-
-
-
+                Service: ${service?.title |'Custom Service'}
+                Category: ${service?.category |'N/A'}
+                
 
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
@@ -204,7 +208,9 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 Service: ${service?.title || 'Custom Service'}
@@ -235,12 +241,14 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         }
       }
@@ -332,6 +340,7 @@ if ( {) {
 
 
 
+
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
@@ -378,4 +387,5 @@ if ( {) {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 });
+
 

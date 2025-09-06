@@ -1,14 +1,19 @@
 import { useState, useEffect } from 'react';
 
 
+import { useState, useEffect } from 'react'
+import { WifiOff, Wifi } from 'lucide-react'
+import { useState, useEffect } from 'react',
+import { WifiOff, Wifi } from 'lucide-react'
+import { Alert, AlertDescription } from '@/components/ui/alert',
 
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
+import { Alert, AlertDescription } from '@/components/ui/alert'
+export const OfflineIndicator = () => {
+import { useState, useEffect } from 'react',
 
 import { WifiOff, Wifi } from 'lucide-react'
+
+
 
 
 
@@ -25,6 +30,8 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine,
       setIsOnline(online),
       
+
+
 
 
 
@@ -80,6 +87,78 @@ export const OfflineIndicator = () => {;
 
 
 
+    }
+    // Set initial status
+    updateOnlineStatus()
+    // Listen for online/offline events
+    window.addEventListener('online', updateOnlineStatus)
+    window.addEventListener('offline', updateOnlineStatus);
+    return () => {;
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
+    } }, [showOfflineAlert]);      window.removeEventListener('offline', updateOnlineStatus)
+    }
+    // Set initial status;
+    updateOnlineStatus ();
+    // Listen for online / offline events;
+    window.addEventListener ('online', updateOnlineStatus);
+    window.addEventListener ('offline', updateOnlineStatus);
+    return () => {
+      window.removeEventListener ('online', updateOnlineStatus);
+      window.removeEventListener ('offline', updateOnlineStatus);
+    } }, [showOfflineAlert]);      window.removeEventListener ('offline', updateOnlineStatus);
+    }
+  }, [showOfflineAlert]);
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>
+      <Alert variant={isOnline ? 'default' : 'destructive'}>
+        <div className='flex items-center gap-2'>
+            <Wifi className='h-4 w-4' />
+          ) : (
+            <WifiOff className='h-4 w-4' />
+          )}
+          <AlertDescription>
+            {isOnline
+              ? 'Connection restored'
+              : 'You are offline. Some features may not work.'}          </AlertDescription>            {isOnline ? (
+              'Connection restored'
+            ) : (
+              'You are offline. Some features may not work.'
+            )}
+        </div>
+      </Alert>
+    </div>
+  )
+} }
+
+  }, [showOfflineAlert]),
+
+    <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>
+      <Alert variant={isOnline ? 'default' : 'destructive'}>
+        <div className='flex items-center gap-2'>
+            <Wifi className='h-4 w-4' />
+          ) : (
+            <WifiOff className='h-4 w-4' />
+          )}
+          <AlertDescription>
+            {isOnline
+              ? 'Connection restored'
+              : 'You are offline. Some features may not work.'}          </AlertDescription>            {isOnline ? (
+              'Connection restored'
+            ) : (
+              'You are offline. Some features may not work.'
+            )}
+        </div>
+      </Alert>
+    </div>
+  )
+} }
+  }, [showOfflineAlert]),
+
 
   if (!showOfflineAlert) return null;
 
@@ -116,6 +195,7 @@ export const OfflineIndicator = () => {;
 
 
 };
+
     <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
       <Alert variant={is_online ? 'default' : 'destructive'}>;
         <div className='flex items - center gap - 2'>;
@@ -132,5 +212,6 @@ export const OfflineIndicator = () => {;
     </div>);
 } }
 };
+
 
 

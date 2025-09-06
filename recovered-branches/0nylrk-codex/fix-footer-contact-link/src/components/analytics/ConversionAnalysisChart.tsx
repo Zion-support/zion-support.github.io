@@ -8,12 +8,14 @@
 
 
 
+
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {;
   data: Array<Record<string, any>>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
 }
+
 
 
 export function ConversionAnalysisChart({
@@ -29,6 +31,8 @@ export function ConversionAnalysisChart({
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+
+
 
 
 interface ConversionAnalysisProps {
@@ -55,6 +59,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -64,6 +69,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -119,6 +125,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -129,5 +136,6 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 
 
   );
+
 
 }

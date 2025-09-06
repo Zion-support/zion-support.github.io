@@ -7,6 +7,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -14,6 +15,7 @@ import {LanguageThemeSelector} from "../components/onboarding/LanguageThemeSelec
 import {RolePicker} from "../components/onboarding/RolePicker";
 import {SignUpForm} from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
+
 
 
 
@@ -190,6 +192,7 @@ type OnboardingStep = "language" | "role" | "signup";
 ;
 
 
+
 export /**
  * MobileOnboarding - Function description
  */
@@ -257,6 +260,7 @@ if ( {) {
       </div>;
     </div>);
 }
+
 
 
 

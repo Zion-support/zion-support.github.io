@@ -1,4 +1,6 @@
 
+export interface InnovativeAIAutomationService {
+export interface InnovativeAIAutomationService {;
 
   id: string;
   name: string;
@@ -30,6 +32,7 @@
     mobile: string;
     email: string;
     address: string;
+
 
     website: string;
   }
@@ -425,6 +428,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     email: string,;
     address: string,;
     website: string;
+
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -655,7 +659,9 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,;
     reviews: 28;
 
+
   }
 ];
+
 
 

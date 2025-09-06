@@ -3,10 +3,10 @@
 import React from "react";
 
 
-
-
-
-
+import { QuoteStatusBadge } from "./QuoteStatusBadge";
+import type { QuoteRequest } from "@/types/quotes";
+import { format } from "date-fns";
+import {format} from "date-fns";
 
 import React from "react",
 import { 
@@ -29,6 +29,7 @@ import { format } from "date-fns",
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -38,6 +39,7 @@ import { format } from "date-fns",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
@@ -45,10 +47,17 @@ interface QuoteDetailsProps {
 
 }
 
-
-
-
-
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null;
+  const formatDate = (dateString?: string) => {
+    if (!dateString) return "Not specified";
+    try {
+      return format(new Date(dateString), "PPP");
+    } catch (e) {
+      return dateString;
+    }
+  }
+  };
 
 import React from "react",;
 import {;
@@ -70,7 +79,6 @@ interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
   onClose: () => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
@@ -123,6 +131,7 @@ if (return "Not specified") {
 
 
   },
+
 
 
 
@@ -206,6 +215,7 @@ if (return "Not specified") {
             </div>
           </CardContent>
         </Card>
+
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
@@ -213,6 +223,7 @@ if (return "Not specified") {
     </Dialog>
 
   );
+
 
 }
 
@@ -225,5 +236,6 @@ if (return "Not specified") {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -3,6 +3,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import {
 
+  appendLog
+  evaluateReflexes
+  readState
+  writeState;
+  appendLog,
+  evaluateReflexes,
+  readState,;
+  writeState,;
+
 } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] |req.query.token;
@@ -15,9 +24,14 @@ function isAuthorized(req: NextApiRequest): boolean {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
 
+    return res.status(200).json({ metrics: state.metrics |{} });  }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    return res.status(200).json({ metrics: state.metrics || {} });  }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
   if (req.method === 'GET') {
@@ -68,6 +82,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
+
   return res && res.status(405).json({ error: 'Method not allowed' });
 
 }
@@ -78,7 +93,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 }
+
 
 
 
@@ -89,4 +106,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

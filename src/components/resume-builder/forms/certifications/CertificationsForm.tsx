@@ -23,6 +23,8 @@ return (
 
 
 
+
+
       )}
 
 
@@ -37,6 +39,8 @@ return (
 
 
 
+
+
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
@@ -46,6 +50,7 @@ return (
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
+
 
 
 
@@ -65,12 +70,14 @@ return (
                     setEditingId(null),
 
 
+
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
+
 
 
 
@@ -117,6 +124,7 @@ return (
               >
                 {editingId ? 'Cancel' : 'Back'}
 
+
               </Button>
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
@@ -134,6 +142,7 @@ return (
                 </Button>
 
                 <Button type="button" onClick={onComplete}>
+
 
 
                   Next
@@ -171,6 +180,7 @@ return (
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
 }'"}
+
 
       // Check condition
 if ( {) {
@@ -284,4 +294,6 @@ if ( {) {
 }'"}
 
 }
+
 ;
+

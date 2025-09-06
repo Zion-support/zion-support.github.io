@@ -68,6 +68,8 @@ const EnhancedLoading: React.FC<{;
 
 
 
+
+
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
@@ -75,10 +77,12 @@ const EnhancedLoading: React.FC<{;
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 
 
+
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+
             />
           )}
         </div>
@@ -94,6 +98,7 @@ const EnhancedLoading: React.FC<{;
     </CardContent>
   </Card>
 )
+
 
 
 
@@ -185,6 +190,7 @@ const EnhancedError: React.FC<{;
 
 
 
+
             Try Again
           </Button>
         )}
@@ -207,12 +213,42 @@ const useNetworkStatus = () => {
   return is_online;
 }
 
-
-
-
+// Advanced Dynamic Component Loader
+export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
+  importFn
+  fallback
+  errorFallback
+  loadingComponent
+  enableRetry = true
+  maxRetries = 3
+  prefetch = false
+  className
+  children
+  ...props
+},) => {
+  const [loadingState, setLoadingState] = useState<LoadingState>({
+    isLoading: true
+    error: null
+    retryCount: 0
+    isOnline: true
+  })
+  const [progress, setProgress] = useState(0)
+  const [DynamicComponent, setDynamicComponent] =
+    useState<ComponentType<any> | null>(null)
+  const isOnline = useNetworkStatus()
+  // Simulate loading progress for better UX
+  useEffect((,) => {
+    if (loadingState.isLoading && !loadingState.error) {
+      const interval = setInterval((,) => {
+        setProgress(prev => {
+          if (prev >= 90) return prev
+          return prev + Math.random() * 10
+        })
+      }, 100)
+      return () => clearInterval(interval)
+    }
     };
 ;
-
 
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
@@ -444,16 +480,19 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
     );
 
 
+
   }
   // Success state
   if (DynamicComponent) {
+
     return (
-      <Suspense fallback={fallback |<EnhancedLoading />}>
-        <AnimatePresence>
-          <motion.div
+      <Suspense fallback={fallback || <EnhancedLoading />}>;
+        <AnimatePresence>;
+          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+
             transition={{ duration: 0.3 }}
             className = {className,}
           >
@@ -473,6 +512,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+
             transition={{ duration: 0 && 0.3 }}
             className = {className,}>;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
@@ -512,6 +552,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 
 
 
+
+
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
@@ -528,6 +570,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //   }
 // )
 // export const DynamicThreeComponent = createDynamicComponent(
+
+
 
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
@@ -716,8 +760,10 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //     )
 //   }
 
+
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
+
 
 // );
 // export const DynamicThreeComponent = createDynamicComponent (
@@ -729,6 +775,10 @@ export default DynamicComponentLoader; export default DynamicComponentLoader
 //       </div>;
 //     );
 //   }
+
+// )
+export default DynamicComponentLoader; export default DynamicComponentLoader
+
 
     />;
   );
@@ -762,10 +812,22 @@ export default DynamicComponentLoader; export default DynamicComponentLoader
 
 export default DynamicComponentLoader;export default DynamicComponentLoader ;
 
+
+//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
+//   {
+//     loadingComponent: () => (
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       </div>
+//     )
+//   }
+
 // );
 export default DynamicComponentLoader; export default DynamicComponentLoader;
 
 
 // );
 
+
 export default DynamicComponentLoader;
+

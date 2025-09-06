@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -21,17 +22,19 @@ export type BudgetType = "fixed" | "hourly" | "range";
 
 
 
+
 export interface ListingItem {;
 
   id: string;
   title: string;
   category: string,
   image?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
 export interface ContactInfo {;
+
+
 
 
 
@@ -41,6 +44,7 @@ export interface ContactInfo {;
   phone: string,
   company: string;
 }
+
 export interface Budget {
   amount: number;
   max_amount?: number,
@@ -70,6 +74,7 @@ export interface QuoteFormData {
 
 
 
+
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
@@ -77,13 +82,13 @@ export interface QuoteFormData {
   projectDescription: string;
   startDate?: Date;
   endDate?: Date;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   timeline: TimelineType;
 
   budget: Budget,
   contact_info: ContactInfo;
 }
 export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
+
 
 
 
@@ -96,6 +101,7 @@ export interface QuoteRequest {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -134,8 +140,10 @@ export type BudgetType = "fixed" | "hourly" | "range",
   updated_at: string;
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

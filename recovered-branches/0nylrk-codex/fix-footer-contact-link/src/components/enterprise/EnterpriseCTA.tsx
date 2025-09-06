@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -84,6 +85,7 @@ export function EnterpriseCTA() {;
 
 
 
+
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="gap-2">
@@ -130,6 +132,13 @@ export function EnterpriseCTA() {;
         </div>
       </div>
 
+    </section>
+  );
+}
+    </section>;
+  );
+}
+    </section>
 
   )
 import React from "react",;
@@ -197,5 +206,7 @@ export function EnterpriseCTA() {;
   );
 }
 ;
+
+
 
 

@@ -3,25 +3,36 @@ export default function ForumPostPage() {
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
 
+  const router = useRouter()
+  const postId = router.query.postId as string
+  const { user } = useAuth()
+  const { toast } = useToast()
+  const [post, setPost] = useState(mockPost)
+  const [replies, setReplies] = useState(mockReplies)
+  // Check if this is the user's own post
+  const isAuthor = user?.id === post?.authorId
+  // Check if user is admin/mod
+  const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin'
+      return
+    }
+  const handlePinPost = () => {
+    if (!isAdminOrMod) return
+    setPost({ ...post, isPinned: !post.isPinned })
+  const handleLockPost = () => {
+    if (!isAdminOrMod) return
+    setPost({ ...post, isLocked: !post.isLocked })
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
+}
 
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
+  )
+}
 
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
       return;
-
-
-
-
+    if (!isAdminOrMod) return;
+    if (!isAdminOrMod) return,
+    
 
     setPost({ ...post, isPinned: !post.isPinned }),
     
@@ -32,8 +43,11 @@ class ErrorBoundary extends React.Component {
 
   const handleLockPost = () => {
 
-
-
+    if (!isAdminOrMod) return,
+    
+    if (!isAdminOrMod) return;
+    if (!isAdminOrMod) return,
+    
 
     setPost({ ...post, isLocked: !post.isLocked }),
     
@@ -510,4 +524,6 @@ if (return) {
   );
 }
 
+
 ;
+

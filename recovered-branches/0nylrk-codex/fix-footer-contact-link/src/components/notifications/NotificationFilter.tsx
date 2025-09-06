@@ -1,7 +1,10 @@
 
 
-
-
+export type FilterType =
+  | "all"
+  | "unread"
+  | "onboarding"
+  | "messages"
 
   | "system";
 ;
@@ -12,6 +15,8 @@ interface NotificationFilterProps {
 }
 
 
+
+
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
@@ -20,6 +25,8 @@ export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system'
 interface NotificationFilterProps {
   filter: FilterType,
   onFilterChange: (filter: FilterType) => void
+
+
 
 
 
@@ -36,7 +43,9 @@ interface NotificationFilterProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -75,6 +84,7 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
 
 
 
+
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
@@ -85,10 +95,12 @@ interface NotificationFilterProps {;
   onFilterChange: (filter: FilterType) => void;
 
 
+
 }
 
   )
 },
+
 
 
 
@@ -100,5 +112,6 @@ interface NotificationFilterProps {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

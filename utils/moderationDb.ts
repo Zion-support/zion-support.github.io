@@ -1,6 +1,6 @@
 
-
-
+export interface ModerationFlag {
+export interface ModerationFlag {;
 
   id: string;
   contentId: string;
@@ -35,6 +35,8 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
   return flag;
 
 }
+
+
 
 
 

@@ -143,7 +143,7 @@ async function sendCriticalErrorAlert("errorReport": ErrorRepor t) {
         "headers": {
           'Content-Type': 'application/json'},
         "body": JSO N.stringify({
-          text: "🚨 Critical Error Alert",
+          text: " Critical Error Alert",
           "attachments": [{
               color: 'danger',
               "fields": [

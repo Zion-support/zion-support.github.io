@@ -135,16 +135,25 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset',
   full_width?: boolean,
 
+
+  ),;
+  if (href) {;
+    return (;
+
       <Link href={href} className={classes}>;
         {content}
       </Link>);
   }
 
-  return (
-=======
 ;
 =======
 
+
+=======
+;
+  return (;
+  return (
+;
 
   return (;
     <button;
@@ -159,34 +168,20 @@ interface ButtonProps {
       {content}
 
 
+
+
 }),;
 Button.displayName = 'Button',;
 export default Button,;
 
 // Specialized button variants;
-export /**
- * PrimaryButton - Function description
- */
-function PrimaryButton() {
-  return <Button {...props} variant="primary" />;
+export function PrimaryButton(props: Omit<ButtonProps 'variant'>) {return <Button {...props} variant="primary" />;
 }
-export /**
- * SecondaryButton - Function description
- */
-function SecondaryButton() {
-  return <Button {...props} variant="secondary" />;
+export function SecondaryButton(props: Omit<ButtonProps 'variant'>) {return <Button {...props} variant="secondary" />;
 }
-export /**
- * OutlineButton - Function description
- */
-function OutlineButton() {
-  return <Button {...props} variant="outline" />;
+export function OutlineButton(props: Omit<ButtonProps 'variant'>) {return <Button {...props} variant="outline" />;
 }
-export /**
- * GhostButton - Function description
- */
-function GhostButton() {
-  return <Button {...props} variant="ghost" />;
+export function GhostButton(props: Omit<ButtonProps 'variant'>) {return <Button {...props} variant="ghost" />;
 }
 // Icon button variant;
 

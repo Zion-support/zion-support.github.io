@@ -3,6 +3,7 @@
 
 
 
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -68,12 +69,50 @@ export default function ProjectPage() {
         const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers })
         const json = await res.json()
         if (!json.ok) throw new Error(json.error |"Failed to load project")
+
         setLoading(true),
         const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
         const json = await res.json(),
         if (!json.ok) throw new Error(json.error || "Failed to load project"),
 
         setProject(json.project)
+
+import { useEffect, useState  } from './react';,
+import { use_router  } from './next / router';,
+import FeedbackModal from "../../components / ui / FeedbackModal",
+export default /**
+ * ProjectPage - Function description
+ */
+function ProjectPage() {
+  const router = use_router (),
+  const { project_id } = router.query as { project_id?: string },
+  const [project, set_project] = useState < any | null>(null),
+  const [loading, set_loading] = useState (true),
+  const [error, set_error] = useState < string | null>(null),
+  const [note, set_note] = useState (""),
+  const headers = {
+    "x - demo - user - role": "client",
+    "x - demo - user - id": "client - 1",
+    // For talent view demo, swap role and provide slug;
+    // "x - demo - user - role": "talent",
+    // "x - demo - talent - slug": "ava - chen"} as Record < string, string>,
+  useEffect (() => {
+    async /**
+ * load - Function description
+ */
+function load() {
+      // Check condition
+if (return, ) {
+  $2
+}
+      try {
+        set_loading (true),
+        const res = await fetch (`/api / marketplace / projects?id=${project_id}`, { headers }),
+        const json = await res.json (),
+        if (throw new Error (json.error || "Failed to load project"), ) {
+  $2
+}
+        set_project (json.project);
 
       } catch (e: any) {
         set_error (e.message);
@@ -114,11 +153,17 @@ export default function ProjectPage() {
       setNote("")
       setShowFeedback(true)
 
-
+    }
+  }
+  async function markCompleted() {
+    const res = await fetch(`/api/marketplace/projects`, {
+      method: "PATCH"
+      headers: { "Content-Type": "application/json", ...headers }
+      body: JSON.stringify({ id: projectId, action: "mark_completed" })})
+    const json = await res.json()
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
 
   }
 }
@@ -159,10 +204,18 @@ export default function ProjectPage() {
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+      {loading && <div>Loading…</div>}
+      {error && <div className="text-red-600">{error}</div>}
+      {loading && <div>Loading…</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      {error && <div className="text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
       {project && (
         <div className="space-y-6">
@@ -181,12 +234,14 @@ export default function ProjectPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             </span>
           </div>
@@ -202,6 +257,21 @@ export default function ProjectPage() {
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
+
+            </span>;
+          </div>;
+          <section className="rounded border p - 4">;
+            <h2 className="font - medium mb - 2">Project Summary</h2>;
+            <div className="text - sm">;
+              <div><b > Client</b>: {project.client_id}</div>;
+              <div><b > Talent</b>: {project.talent_slug}</div>;
+              <div><b > Start</b>: {new Date (project.startDateIso).toLocaleDateString ()}</div>;
+              <div className="mt - 2">{project.summary}</div>;
+            </div>;
+          </section>;
+          <section className="rounded border p - 4">;
+            <h2 className="font - medium mb - 2">Timeline</h2>;
+            <ul className="list - disc pl - 6 space - y-1 text - sm">;
 
               {project.timeline?.length ? (
 
@@ -370,6 +440,7 @@ export default function ProjectPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -377,14 +448,15 @@ export default function ProjectPage(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             </ul>
           </section>
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
               {project.documents?.length ? (
-                project.documents.map((d: any) => (
-                  <li key={d.id}>
+                project.documents.map ((d: any) => (
+                  <li key={d.id}>;
                     {d.url ? (
 
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</a>
@@ -404,12 +476,14 @@ export default function ProjectPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
@@ -437,12 +511,14 @@ export default function ProjectPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
@@ -461,12 +537,14 @@ export default function ProjectPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             </div>
             <div className="flex gap-2">
@@ -478,17 +556,20 @@ export default function ProjectPage(req, res) {
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-
-
-
-
+            )}
+          </div>
+        </div>
+      )}
+      <FeedbackModal
+        isOpen={showFeedback}
+        onClose={() => setShowFeedback(false)}
+        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
+        userHeaders={headers}
+      />
+    </div>
+  )
+  );
+};
 
             )  } catch (error) {
     console.error("Error:", error);
@@ -532,11 +613,13 @@ export default function ProjectPage(req, res) {
   }
 
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

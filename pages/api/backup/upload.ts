@@ -1,7 +1,11 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { Web3Storage, File } from 'web3.storage',;
+;
+const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
 
-
-
+export const config = { api: { bodyParser: { sizeLimit: '2mb' } } },
 
 
 import { Web3Storage, File } from 'web3.storage';
@@ -18,6 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ cid })
   } catch (e: any) {
+
 
 
 
@@ -57,5 +62,6 @@ export default async function handler(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

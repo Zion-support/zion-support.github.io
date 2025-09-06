@@ -6,8 +6,9 @@ export type AdminActionType =
   | 'flag_content'
   | 'remove_content'
   | 'investigate'
-  | 'dismiss';
+  | 'dismiss'
   | 'escalate';
+
 
 
 
@@ -28,12 +29,14 @@ export interface AdminAction {
   type: AdminActionType;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   admin_id: string;
   reason: string,
   details: Record < string, any>;
   created_at: string;
   executed_at?: string;
   status: 'pending' | 'executed' | 'failed',
+
 
 
 }
@@ -64,6 +67,7 @@ export interface FraudDetectionConfig {
     suspiciousActivity: {
       enabled: boolean;
 
+
       threshold: number,
     }
     fake_profile: {
@@ -85,6 +89,7 @@ export interface FraudDetectionConfig {
 
 
 
+
   }
 
 
@@ -101,4 +106,5 @@ export interface FraudDetectionConfig {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

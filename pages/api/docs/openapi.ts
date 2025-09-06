@@ -1,4 +1,10 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+import { EndpointSpec } from '[^']*';
+import type { NextApiRequest, NextApiResponse } from "next";
+import v1 from "../../../data/api-docs/v1";
+import { EndpointSpec } from "../../../data/api-docs/types";
 
 function toOpenApi() {
   const paths: Record<string, any> = {}
@@ -18,6 +24,9 @@ function toOpenApi() {
 
                   schema: ep && ep.responseBodySchema || { type: "object" },
 
+                "application / json": {
+                  schema: ep.responseBodySchema || { type: "object" },
+
 
                 },
               },
@@ -31,6 +40,7 @@ function toOpenApi() {
 
         }));
     });
+
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -154,5 +164,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 

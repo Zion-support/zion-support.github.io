@@ -1,5 +1,23 @@
 
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
+  Wifi, Building, Cpu as CpuIcon
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 
 
 
@@ -28,8 +46,19 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
-
-
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
+  Wifi, Building, Cpu as CpuIcon
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -86,10 +115,13 @@ const serviceCategories = [
     icon: Network,
     color: 'from-purple-500 to-pink-600',
 
+    features: [
+      'Quantum Encryption',
+      'Network Optimization',
+      'Security Monitoring',
+    ],
+  },];
 
-    features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
-  }
-];
 
 const heroFeatures = [
   {
@@ -107,6 +139,157 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
+
+];
+
+const testimonials = [
+import Head from 'next / head';
+import Link from 'next / link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, } from 'lucide-react';
+import Layout from '../components / layout / Layout';
+const contact_info = {
+
+
+const contactInfo = {
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+}
+;
+const hero_stats = [;
+  {
+    label: 'Infrastructure Projects',
+    value: '150+',
+    icon: <Server className='w - 5 h - 5' />,
+  },
+  {
+    label: 'Enterprise Clients',
+    value: '300+',
+    icon: <Building className='w - 5 h - 5' />,
+  },
+  {
+    label: 'Uptime Guarantee',
+    value: '99.99%',
+    icon: <Award className='w - 5 h - 5' />,
+  },
+  {
+    label: 'Cost Reduction',
+    value: '60%',
+    icon: <TrendingUp className='w - 5 h - 5' />,
+  }, ];
+;
+const service_categories = [;
+  {
+    title: 'Quantum Cloud Computing',
+    description:;
+      'Next - generation cloud infrastructure with quantum processing capabilities',
+    services: advancedITInfrastructureServices2025.filter (
+      string => s.category === 'Quantum Cloud Computing'),
+    icon: Cloud,
+    color: 'from - indigo - 500 to - purple - 600',
+    features: ['Quantum Processing', 'Hybrid Computing', 'AI Acceleration'],
+  },
+  {
+    title: 'Edge Computing & IoT',
+    description: 'Autonomous edge infrastructure with intelligent optimization',
+    services: advancedITInfrastructureServices2025.filter (
+      string => s.category === 'Edge Computing & IoT'),
+    icon: Wifi,
+    color: 'from - green - 500 to - emerald - 600',
+    features: ['Edge Processing', 'IoT Orchestration', '5G Optimization'],
+  },
+  {
+    title: 'Cybersecurity',
+    description:;
+      'Comprehensive security framework with continuous verification',
+    services: advancedITInfrastructureServices2025.filter (
+      string => s.category === 'Cybersecurity'),
+    icon: SecurityIcon,
+    color: 'from - red - 500 to - orange - 600',
+    features: ['Zero Trust', 'Threat Detection', 'Compliance Automation'],
+  },
+  {
+    title: 'Data Center Infrastructure',
+    description:;
+      'Self - managing data center infrastructure with AI optimization',
+    services: advancedITInfrastructureServices2025.filter (
+      string => s.category === 'Data Center Infrastructure'),
+    icon: Building,
+    color: 'from - blue - 500 to - cyan - 600',
+    features: ['AI Management', 'Predictive Maintenance', 'Cost Optimization'],
+  },
+  {
+    title: 'Quantum Networking',
+    description:;
+      'Next - generation networking with quantum encryption and optimization',
+    services: advancedITInfrastructureServices2025.filter (
+      string => s.category === 'Quantum Networking'),
+    icon: Network,
+
+    content:;
+      "Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible.",
+
+    rating: 5,
+    avatar: '👩‍🔬'
+  };
+  {
+    name: 'Robert Thompson',
+    role: 'Infrastructure Director, EdgeNet Solutions',
+    company: 'EdgeNet Solutions',
+
+    content:;
+      'The autonomous edge computing network has transformed our IoT operations. We now have real - time processing with 90% lower latency and 70% cost reduction.',
+
+    rating: 5,
+    avatar: '👨‍💼'
+  };
+  {
+    name: 'Lisa Chang',
+    role: 'Security CISO, SecureCorp International',
+    company: 'SecureCorp International',
+
+    color: 'from-purple-500 to-pink-600',
+
+
+export default function AdvancedITInfrastructureServices() {
+
+  return (
+
+          href='https://ziontechgroup && ziontechgroup.com/advanced-it-infrastructure-services'
+        />;
+      </Head>;
+
+      {/* Hero Section */}
+
+    features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,;
+  Wifi, Building, Cpu as CpuIcon;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const heroStats = [;
+  { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },;
+  { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },;
+  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },;
 
   { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
     console.error("Error:", error);
@@ -221,6 +404,8 @@ const testimonials = [;
   }
 }
 ],
+
+
 
 
 export default function AdvancedITInfrastructureServices() {
@@ -361,12 +546,14 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           >
 
@@ -383,8 +570,8 @@ export default function AdvancedITInfrastructureServices() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
+
 
 
 
@@ -411,6 +598,7 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 >
                   {stat.icon}
                   <span className="text-blue-400 font-semibold">{stat.value}</span>
@@ -426,7 +614,6 @@ export default function AdvancedITInfrastructureServices() {
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </motion.div>
@@ -441,27 +628,43 @@ export default function AdvancedITInfrastructureServices() {
             viewport={{ once: true }}
             className='text-center mb-16'
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
 
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               Why Choose Our IT Infrastructure Services?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Our infrastructure services combine cutting-edge technology with
+              intelligent automation to deliver unprecedented performance and
+              reliability
             </p>
           </motion.div>
 
@@ -473,11 +676,36 @@ export default function AdvancedITInfrastructureServices() {
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                className='relative group'
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {heroFeatures.map((feature, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="relative group"
 
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
@@ -496,6 +724,7 @@ export default function AdvancedITInfrastructureServices() {
             ))}
           </div>
         </div>
+
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -514,7 +743,8 @@ export default function AdvancedITInfrastructureServices() {
         </div>;
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
       {/* Services Section */}
 
       <section id="services" className="py-20 bg-black">
@@ -537,7 +767,9 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -570,6 +802,7 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               IT Infrastructure Service Categories;
@@ -592,11 +825,13 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
+
 
 
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -661,6 +896,7 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -713,12 +949,14 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -775,12 +1013,14 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                           </div>
                           <div className="flex items-center justify-between">
@@ -803,8 +1043,8 @@ export default function AdvancedITInfrastructureServices() {
                     </motion.div>
 
                   ))}
-                </div>
-              </motion.div>
+                </div>;
+              </motion && motion.div>;
             ))}
           </div>
         </div>
@@ -834,10 +1074,11 @@ export default function AdvancedITInfrastructureServices() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+
 
 
 
@@ -846,20 +1087,35 @@ export default function AdvancedITInfrastructureServices() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
-
-
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real feedback from organizations that have transformed their infrastructure with our advanced services
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Real feedback from organizations that have transformed their
+              infrastructure with our advanced services
             </p>
           </motion.div>
 
@@ -904,8 +1160,10 @@ export default function AdvancedITInfrastructureServices() {
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20"
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -986,8 +1244,10 @@ export default function AdvancedITInfrastructureServices() {
 }
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           >
@@ -1027,12 +1287,14 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               >
                 <Mail className="mr-2 w-5 h-5" />
@@ -1043,10 +1305,10 @@ export default function AdvancedITInfrastructureServices() {
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </div>
       </section>
+
 
 
 
@@ -1080,4 +1342,5 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

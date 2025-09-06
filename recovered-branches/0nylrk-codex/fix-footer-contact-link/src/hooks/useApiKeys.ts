@@ -7,6 +7,7 @@
 
 
 
+
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -34,6 +35,7 @@ export interface ApiKey {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   id: string;
   name: string;
   key_prefix: string;
@@ -41,18 +43,19 @@ export interface ApiKey {
   created_at: string;
   last_used_at: string | null;
 
-
-
-
-
+  expires_at: string | null
+  is_active: boolean
+}
+export interface ApiLog {
 
   expires_at: string | null,
   is_active: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
 export interface ApiLog {;
+
+
 
 
 
@@ -66,15 +69,18 @@ export interface ApiLog {;
   status_code: number;
   created_at: string;
 
-
-
-
+  ip_address?: string
+  response_time_ms?: number
+}
+export function useApiKeys() {
 
   ip_address?: string,
   response_time_ms?: number
 }
 
 export function useApiKeys() {;
+
+
 
 
 
@@ -172,13 +178,24 @@ export function useApiKeys() {
 
 
     try {
-      const { data: { session } } = await supabase.auth.getSession(),
+      const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required"),
+        setError("Authentication required");
         return
 
-
-
+      }
+      const response = await fetch(`${getApiUrl()}/keys`, {
+        method: 'GET'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch API keys')
+      }
+      setKeys(result.keys |[])
 
 
 ;
@@ -233,7 +250,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       setKeys(result.keys || [])
 
       setKeys(result.keys || [])
@@ -251,7 +270,6 @@ if ( {) {
         title: "Error fetching API keys",
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } finally {
       set_loading (false);
     }
@@ -284,7 +302,7 @@ if ( {) {
       const response = await fetch(`${getApiUrl()}/create`, {
         method: 'POST'
         headers: {
-          'Authorization': `Bearer ${session.access_token}`;
+          'Authorization': `Bearer ${session && session.access_token}`;
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({
@@ -293,6 +311,7 @@ if ( {) {
           expiresAt: expiresAt ? expiresAt && expiresAt.toISOString() : null
         })
       });
+
 
 
 
@@ -382,6 +401,7 @@ if ( {) {
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
 
+
         variant: "destructive";
         title: "Error creating API key"
         variant: "destructive",
@@ -389,7 +409,7 @@ if ( {) {
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false)
+      set_loading (false);
     }
 
   }
@@ -415,7 +435,7 @@ if ( {) {
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required");
+        setError("Authentication required"),
         return
 
 
@@ -428,6 +448,8 @@ if ( {) {
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({ keyId })
+
+
 
 
 
@@ -486,12 +508,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       // Update the key in the list
       setKeys(prev => prev.map(key =>
         key.id === keyId ? { ...result, key: undefined } : key
@@ -527,7 +551,7 @@ if ( {) {
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false)
+      set_loading (false);
     }
 
   }
@@ -551,7 +575,7 @@ if ( {) {
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required");
+        setError("Authentication required"),
         return
 
 
@@ -564,6 +588,8 @@ if ( {) {
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({ keyId })
+
+
 
 
 
@@ -623,12 +649,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       // Update the key's active status in the list
       setKeys(prev => prev.map(key =>
         key.id === keyId ? { ...key, is_active: false } : key
@@ -656,7 +684,7 @@ if ( {) {
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false)
+      set_loading (false);
     }
 
   }
@@ -688,6 +716,7 @@ if ( {) {
         {
           method: 'GET'
           headers: {
+
 
 
 
@@ -774,6 +803,7 @@ if ( {) {
 
 
 
+
     }
   }
 
@@ -794,6 +824,14 @@ if ( {) {
 
 
     clearNewApiKey: () => setNewApiKey(null)
+
+  }
+}
+        variant: "destructive",
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
 
 ;
       setLogs(result.logs || []),;
@@ -823,6 +861,8 @@ if ( {) {
     revokeApiKey;
     fetchApiLogs;
     clearNewApiKey: () => setNewApiKey(null);
+
+
 
 
   }

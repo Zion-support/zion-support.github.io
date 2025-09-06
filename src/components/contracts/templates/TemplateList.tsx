@@ -9,7 +9,9 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 
 
+
 import { useAuth } from "@/hooks/useAuth",
+
 
 
 // useRouter replaces the old useLocation hook from react-router
@@ -22,6 +24,8 @@ import { useAuth } from "@/hooks/useAuth",
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle} from "@/components/ui/alert-dialog"
+
+
 
 
 
@@ -43,6 +47,10 @@ import { useAuth } from "@/hooks/useAuth"
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
+
+
+
+
 
 
 
@@ -71,6 +79,8 @@ import { use_auth  } from '@/hooks / use_auth';
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+
+
 
 
 interface TemplateListProps {
@@ -188,6 +198,7 @@ export function TemplateList(): any ({;
 
 
 
+
               <div className="flex items-center gap-2">
                 </div>;
                 <p className="text-xs text-muted-foreground">;
@@ -288,6 +299,7 @@ return;
 }await setDefaultTemplate.mutateAsync (templateId) 
 
 
+
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
@@ -307,6 +319,7 @@ return;
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
+
 
 
 
@@ -335,5 +348,6 @@ return;
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"};
+
 
 

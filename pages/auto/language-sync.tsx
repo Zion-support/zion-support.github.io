@@ -20,9 +20,13 @@ const LanguageSync: NextPage = () => {
     </div>
   )
 
+}
+export default LanguageSync;
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+},
+export default LanguageSync,
+},
+},
+export default LanguageSync,
+},
 

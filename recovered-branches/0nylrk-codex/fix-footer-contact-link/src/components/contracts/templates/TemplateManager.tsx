@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -21,6 +22,7 @@ interface TemplateManagerProps {
 }: TemplateManagerProps) {
   const [mode, setMode] = useState<"list" | "save">("list"),
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
+
 
 
 
@@ -50,9 +52,13 @@ interface TemplateManagerProps {
 
 
 
+
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 }
+
+
 
 
 
@@ -64,6 +70,8 @@ export function TemplateManager({;
   isOpen;
   onClose;
   onSelectTemplate;
+
+
 
 
 
@@ -122,17 +130,21 @@ export function TemplateManager({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                 disabled={!currentValues}
               >
                 Save Current as Template
               </Button>
             </div>
+
+
 
 
 
@@ -148,9 +160,10 @@ export function TemplateManager({;
           </div>;
         ) : (;
           <TemplateSaveForm
-            onCancel={() => {;
+            onCancel={() => {
               setMode("list");
               setSelectedTemplate(null);
+
 
 
 
@@ -162,6 +175,7 @@ export function TemplateManager({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             }}
@@ -202,5 +216,7 @@ export function TemplateManager({;
       </DialogContent>;
     </Dialog>);
 }
+
+
 
 

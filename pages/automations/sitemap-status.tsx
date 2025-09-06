@@ -21,12 +21,14 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <div className="enhanced-card">
         <div className="text-lg">Indexed URLs: {urlCount}</div>
@@ -42,23 +44,32 @@ export const getServerSideProps: GetServerSideProps = async () => {
   let urlCount = 0
   try {
 
-
-
+    const raw = fs.readFileSync(p, 'utf8')
+    urlCount = (raw.match(/<url>/g) |[]).length
+  } catch {}
+  return { props: { urlCount } }
+}
+export default SitemapStatus;
 
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
-
-
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+  } catch {}
+  return { props: { urlCount } }
+},
+;
+export default SitemapStatus,;
+  } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: { urlCount }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+export default SitemapStatus;
 

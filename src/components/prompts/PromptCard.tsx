@@ -2,7 +2,9 @@ import { useState } from 'react';
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -32,13 +34,14 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
 
 
   return (
-    <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
-      <p className='mb-4 text-sm'>{prompt.text}</p>
-      <div className='flex gap-2 mt-auto'>
+    <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>;
+      <p className='mb-4 text-sm'>{prompt && prompt.text}</p>;
+      <div className='flex gap-2 mt-auto'>;
         <Button
           variant='outline'
           size='sm'
           onClick={handleCopy}
+
 
 
 
@@ -116,3 +119,4 @@ function PromptCard() {
 
 
 ;
+

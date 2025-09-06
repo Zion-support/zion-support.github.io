@@ -2,6 +2,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,6 +35,7 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -60,12 +62,13 @@ import { DownloadSection } from "@/components/mobile-app/DownloadSection",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 const MobileAppPage: React.FC = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <AppLayout>;
@@ -114,12 +117,14 @@ const MobileAppPage: React.FC = () => {;
 
 
 
+
     </AppLayout>);
 }
 ;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default MobileAppPage;
 

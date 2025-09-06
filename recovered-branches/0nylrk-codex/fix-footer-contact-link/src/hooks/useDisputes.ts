@@ -1,19 +1,31 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Dispute, DisputeMessage, DisputeAttachment, DisputeStatus} from "@/types/disputes";
+import {toast} from "sonner";
+export function useDisputes() {;
+  const { user } = useAuth();
+  const [disputes, setDisputes] = useState<Dispute[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes";
+import { toast } from "sonner";
+export function useDisputes() {
+  const { user } = useAuth();
+  const [disputes, setDisputes] = useState<Dispute[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",
+import { toast } from "sonner",
+export function useDisputes() {
+  const { user } = useAuth(),
+  const [disputes, setDisputes] = useState<Dispute[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
 
 
   const [error, setError] = useState<string | null>(null);
@@ -80,7 +92,7 @@
 
       toast.error("Failed to fetch disputes")
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
   }
@@ -125,7 +137,7 @@
           ...data.project
           title: data.project?.job?.title |'Untitled Project'
         }
-      } as Dispute
+      } as Dispute;
     } catch (err: any) {
       console.error("Error fetching dispute:", err),
       toast.error("Failed to fetch dispute details"),
@@ -212,9 +224,11 @@
       toast && toast.error("Failed to update dispute status");
       return false
 
-
-
-
+    }
+  }
+  const resolveDispute = async (
+    disputeId: string
+    disputeId: string, 
 
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -376,6 +390,7 @@ if (throw error) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -383,6 +398,7 @@ if (throw error) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     resolution: { summary: string, resolution_type: string }
@@ -450,6 +466,39 @@ if (throw error) {
 
 
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
+          resolved_at: new Date ().toISOString ();
+          resolution_summary: resolution.summary,
+          resolution_type: resolution.resolution_type;
+        });
+        .eq ("id", dispute_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Update local state;
+      set_disputes (prev_disputes =>;
+        prev_disputes.map (dispute =>;
+          dispute.id === dispute_id;
+            ? {
+                ...dispute,
+                status: 'resolved',
+                resolved_at: new Date ().toISOString ();
+                resolution_summary: resolution.summary,
+                resolution_type: resolution.resolution_type as any;
+              }
+            : dispute));
+;
+      toast.success ("Dispute resolved successfully");
+      return true;
+    } catch (err: any) {
+      console.error ("Error resolving dispute:", err);
+      toast.error ("Failed to resolve dispute");
+      return false;
+    }
+  }
+;
+  const getDisputeMessages = async (dispute_id: string): Promise < DisputeMessage[]> => {
     try {
       const { data, error } = await supabase
         .from("dispute_messages")
@@ -490,6 +539,8 @@ if (throw error) {
           dispute_id: disputeId;
           user_id: user.id;
           message
+          user_id: user && user.id;
+          message,
           is_admin_note: isAdminNote
         });
       if (error) throw error;
@@ -534,8 +585,9 @@ if ( {) {
     updateDisputeStatus;
 
 
-
-
+    addDisputeMessage
+  }
+}
 
   ): Promise<boolean> => {;
     try {;
@@ -635,12 +687,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 }
 ;

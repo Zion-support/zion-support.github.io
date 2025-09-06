@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState, useRef } from 'react';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
@@ -166,6 +167,7 @@ export function FooterNewsletter(): React.ReactElement {;
         style={{ display: 'none' }}
 
 
+
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
@@ -176,6 +178,8 @@ export function FooterNewsletter(): React.ReactElement {;
         type="submit"
         aria-label="Subscribe to newsletter"
         disabled={isSubmitting}
+
+
 
 
 
@@ -218,6 +222,7 @@ export function FooterNewsletter(): React.ReactElement {;
 
 
 } ;
+
 } ;
 
 import React, { useState, useRef } from 'react';
@@ -346,4 +351,5 @@ if ( {) {
 
 
 }
+
 

@@ -6,6 +6,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -15,6 +16,7 @@ import {Clock, Map, DollarSign} from "lucide-react";
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export function PageHero() {
@@ -63,7 +65,10 @@ export function PageHero() {
       </div>
     </div>
 
-
+  );
+}
+  )
+  )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Clock, Map, DollarSign } from "lucide-react";
 
@@ -103,6 +108,7 @@ export function PageHero() {;
     </div>;
   );
 
+
 }
 ;
 
@@ -115,4 +121,5 @@ export function PageHero() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

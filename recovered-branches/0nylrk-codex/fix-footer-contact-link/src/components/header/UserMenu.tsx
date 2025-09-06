@@ -81,7 +81,9 @@ export function UserMenu() {
   },
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
   if (!user) {;
     return (
@@ -229,7 +231,6 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 
       toast ({
@@ -302,6 +303,6 @@ if ( {) {
 
 }
 
-
-
+}
+;
 

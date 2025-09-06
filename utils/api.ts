@@ -4,6 +4,7 @@
 
 
 
+
 interface Blob {
   size: number;
   type: string;
@@ -330,6 +331,7 @@ export type { ApiResponse, RequestOptions };
 
 
 
+
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
@@ -341,6 +343,8 @@ interface RequestOptions extends RequestInit {
 
 
 // Add global type definitions for Node && Node.js environment
+
+
 
 
 declare global {
@@ -404,7 +408,10 @@ if ( {) {
 
 
 
+
+
 export type { ApiResponse, RequestOptions };
+
 
 export type { ApiResponse, RequestOptions };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -432,5 +439,6 @@ export type { ApiResponse, RequestOptions }
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

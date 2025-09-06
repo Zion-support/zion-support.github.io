@@ -5,8 +5,26 @@ import {
   Bug,
   Send,
 
-
-
+  Clipboard,
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import * as Sentry from '@sentry/nextjs'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ErrorBoundaryState {
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string | null
+  retryCount: number
+  userFeedback: string
+  showDetails: boolean
+interface ErrorBoundaryProps {
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  enableRetry?: boolean
 
   Clipboard,;
 
@@ -38,6 +56,7 @@ interface ErrorBoundaryProps {
   showReportButton?: boolean;
   context?: string;
 }
+
 
 
 
@@ -118,6 +137,7 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
 
 
 
+
     }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -131,6 +151,8 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
     Sentry.withScope(scope => {
       scope.setTag(
 
+
+
         'errorBoundary',
         this.props.context || 'GlobalErrorBoundary';
       );
@@ -143,6 +165,7 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
     // Custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
+
 
     }
   }
@@ -190,10 +213,13 @@ if ( {) {
     // Clear any pending retry timeouts
 
     this.retryTimeouts.forEach(timeout => clearTimeout(timeout))
+
   }
-  private generateErrorId(): string {
-    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}` }    this.retryTimeouts.forEach(timeout => clearTimeout(timeout))
+
+  private generateErrorId(): string {;
+    return `err_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;  }    this && this.retryTimeouts.forEach(timeout => clearTimeout(timeout));
   }
+
   private generateErrorId(): string {
     return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 
@@ -493,6 +519,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         return null;
       }
     }
+
     return null;
   }
 
@@ -741,6 +768,82 @@ if (return) {
   $2
 }
 
+;
+interface ErrorBoundaryProps {;
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableRetry?: boolean;
+  maxRetries?: number;
+  showReportButton?: boolean;
+  context?: string;
+}
+;
+export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {;
+  private retryTimeouts: NodeJS.Timeout[] = [];
+  constructor(props: ErrorBoundaryProps) {;
+    super(props);
+    this.state = {;
+      hasError: false,;
+      error: null,;
+      errorInfo: null,;
+      errorId: null,;
+      retryCount: 0,;
+      userFeedback: '',;
+      showDetails: false;
+    }
+  }
+;
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {;
+    return {;
+      hasError: true,;
+      error;
+    }
+  }
+;
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+    const errorId = this.generateErrorId();
+    // Enhanced error logging;
+    const enhancedError = {;
+      ...error,;
+      componentStack: errorInfo.componentStack,;
+      errorBoundary: this.props.context || 'GlobalErrorBoundary',;
+      timestamp: new Date().toISOString(),;
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',;
+      url: typeof window !== 'undefined' ? window.location.href : 'SSR',;
+      userId: this.getUserId(),;
+      buildInfo: this.getBuildInfo();
+    }
+;
+    // Log to console in development;
+    if (process.env.NODE_ENV === 'development') {;
+      console.group('🚨 Error Boundary Caught Error');
+      logErrorToProduction('Error:', { data: error });
+      logErrorToProduction('Error Info:', { data: errorInfo });
+      logErrorToProduction('Enhanced Error:', { data: enhancedError });
+      console.groupEnd();
+    }
+;
+    // Report to Sentry;
+    Sentry.withScope((scope) => {;
+      scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary');
+      scope.setLevel('error');
+      scope.setContext('errorInfo', {;
+        componentStack: errorInfo.componentStack,;
+        retryCount: this.state.retryCount;
+      });
+      Sentry.captureException(error);
+    });
+    // Custom error handler;
+    if (this.props.onError) {;
+      this.props.onError(error, errorInfo);
+    }
+
+    this.setState({
+      errorInfo,
+      errorId,
+    }) }
+
 
     try {
       // Report to your error reporting service;
@@ -762,6 +865,16 @@ if (return) {
         }),
 
 
+      if (response.ok) {
+        // Show success message
+      }
+    } catch (err) {
+      logErrorToProduction('Failed to report error:', { data: err })
+    }    }
+  }
+    });  }
+
+
         });
       });
       // Check condition
@@ -781,9 +894,11 @@ if ( {) {
 
 
 
+
     this.setState({
       errorInfo,
       errorId,
+
 
 
 
@@ -807,6 +922,7 @@ if ( {) {
 
 
 
+
   private getBuildInfo() {;
     return {;
       version: process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',;
@@ -825,13 +941,20 @@ if ( {) {
 
 
 
+
       }
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
 
+      const canRetry = null;
+        this.props.enableRetry !== false &&
+        this.state.retryCount < (this.props.maxRetries || 3)
+      return (
+        <div className='min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20'>          <motion.div      }
 
-
+      const severity = this.getErrorSeverity(this.state.error)
+      const suggestion = this.getErrorSuggestion(this.state.error)
 
       const canRetry = this.props.enableRetry !== false && 
                        this.state.retryCount < (this.props.maxRetries || 3)
@@ -856,10 +979,12 @@ if ( {) {
 
 
 
+
                 </div>
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
                 </CardTitle>
+
                 <div className='flex items-center justify-center gap-2 mt-2'>
                   <Badge
                     variant={
@@ -892,6 +1017,7 @@ if ( {) {
               </CardHeader>
 
 
+
                       {this.props.maxRetries || 3}                    </p>                    {suggestion}
                   </p>
                   {this.state.retryCount > 0 && (
@@ -914,6 +1040,7 @@ if ( {) {
                     </Badge>;
                   )}
                 </div>
+
               </CardHeader>
 
 
@@ -962,6 +1089,7 @@ if ( {) {
                   {this && this.state.retryCount > 0 && (;
                     <p className="text-sm text-orange-600 dark:text-orange-400">;
                       Retry attempt: {this && this.state.retryCount}/{this && this.props.maxRetries || 3}
+
                     </p>;
                   )}
                 </div>;
@@ -1024,19 +1152,84 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   )}
                 </div>
+
                 {/* Action Buttons */}
+
                 <div className='flex flex-col sm:flex-row gap-3 justify-center'>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
+
 
                   {canRetry && (
                     <Button onClick={this.retry} className="flex items-center gap-2">
                       <RefreshCw className="h-4 w-4" />
                       Try Again
                     </Button>
+
                   )}
 
+                      Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
+                    </p>;
+                  )}
+                </div>
+                {/* Action Buttons */}
+                <div className='flex flex-col sm:flex-row gap-3 justify-center'>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  )}
+
+                  <Button
+                    onClick={this.goHome}
+                    variant='outline'
+                    className='flex items-center gap-2'
+                  >
+                    <Home className='h-4 w-4' />
+                    Go Home
+                  </Button>
+                  <Button
+                    onClick={() =>
+                      this.setState({ showDetails: !this.state.showDetails })
+                    }
+                    variant='ghost'
+                    size='sm'
+                    className='flex items-center gap-2'
+                  >
+                    <Bug className='h-4 w-4' />                    {this.state.showDetails ? 'Hide' : 'Show'} Details                  {canRetry && (
+                    <Button onClick={this.retry} className="flex items-center gap-2">
+                      <RefreshCw className="h-4 w-4" />
+                      Try Again
+                    </Button>
+                  )}
+                  <Button onClick={this.goHome} variant="outline" className="flex items-center gap-2">
+                    <Home className="h-4 w-4" />
+                    Go Home
+                  </Button>
+                  <Button
+                    onClick={() => this.setState({ showDetails: !this.state.showDetails })}
+                    variant="ghost"
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
+                  
+                  <Button onClick={this.goHome} variant="outline" className="flex items-center gap-2">
+                    <Home className="h-4 w-4" />
+                    Go Home
+                  </Button>
+                  <Button 
+                    onClick={() => this.setState({ showDetails: !this.state.showDetails })}
+                    variant="ghost" 
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
+
+
+                  <Button 
+                    onClick={() => this.setState({ showDetails: !this.state.showDetails })}
+                    variant="ghost" 
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
 
                     <Bug className="h-4 w-4" />
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
@@ -1064,6 +1257,7 @@ if ( {) {
 
 
 
+
                 {/* Error Details */}
                 <AnimatePresence>;
                   {this && this.state.showDetails && (;
@@ -1082,6 +1276,7 @@ if ( {) {
                         <div>
 
 
+
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
                           <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
                             {this.state.error.message}
@@ -1092,7 +1287,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                         {process.env.NODE_ENV === 'development' &&
   private go_home = () => {
@@ -1304,10 +1501,13 @@ if ( {) {
                           )}
 
 
+
+
                         <div className='flex gap-2'>;
                           <Button
                             onClick={this && this.copyErrorDetails}
                             variant='outline'
+
 
                             size='sm'>;
                             <Clipboard className='h-4 w-4 mr-2' />;
@@ -1329,6 +1529,7 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
+
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
@@ -1342,14 +1543,17 @@ if ( {) {
 
 
 
+
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
+
 
 
                             <Button
@@ -1396,13 +1600,37 @@ if ( {) {
                             </Button>;
 
 
+
                           )}
                         </div>;
                       </div>;
                     </motion && motion.div>;
                   )}
 
+                </AnimatePresence>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      )
+    return this.props.children
+      );
 
+
+    return this.props.children;
+  }
+// Hook for programmatic error boundary
+export const useErrorBoundary = () => {
+  const [error, setError] = React.useState<Error | null>(null)
+  React.useEffect((,) => {
+    if (error) {
+      throw error
+    }
+  }, [error])
+  const captureError = React.useCallback((error: Error) => {
+    setError(error)
+  }, [])
+  return { captureError }
 
 }
 
@@ -1435,4 +1663,6 @@ export default GlobalErrorBoundary;
   }
 
 // Hook for programmatic error boundary
+
 export const useErrorBoundary = () => {
+

@@ -5,16 +5,44 @@ import React from 'react';
 import Head from 'next/head';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
 
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Crown,
+  Award,
+  Target,
+  Users,
+  Clock,;
+  Globe2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
 
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
@@ -101,6 +129,8 @@ const pricingTiers = [
     period: '/month'
     description: 'Perfect for small businesses and startups'
     features: [
+
+
 
 
 
@@ -227,21 +257,115 @@ const pricing_tiers = [;
     cta: 'Contact Sales'
     href: '/contact'
 
-  },];      'Custom AI developmentDedicated support teamWhite-label solutions24/7 phone supportCustom analyticsFull API accessCustom integrationsDedicated account manager';
-      'SLA guaranteesOn-premise deployment'
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',  website: 'https://ziontechgroup && ziontechgroup.com';
+};
+      'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
+
     ];
     popular: false
     color: 'from-indigo-600 to-purple-600'
     cta: 'Contact Sales'
     href: '/contact'
   }
-const servicePricing = [
+
+
+    name: 'Professional',
+    price: '$999',
+    period: '/month',
+    description: 'Ideal for growing businesses and enterprises',
+
+    features: [;
+      'Advanced AI capabilities',
+      'Priority support',
+      'Full feature access',
+      'Phone & email support',
+      'Advanced analytics',
+      'API access',
+      'Custom integrations',
+      'Training & onboarding',
+    ],
+    popular: true,
+    color: 'from - purple - 600 to - pink - 600',
+    cta: 'Start Free Trial',
+    href: '/contact',
+  },  {      'Advanced AI capabilities_priority support_full feature access_phone & email support_advanced analyticsAPI access_custom integrations_training & onboarding';
+
+    ];
+    popular: true,
+    color: 'from - purple - 600 to - pink - 600',
+    cta: 'Start Free Trial',
+
+    href: '/contact';
+  }
+
+    name: 'Enterprise',
+    price: 'Custom',
+    period: '',
+    description: 'Tailored solutions for large organizations',
+
+    features: [;
+      'Custom AI development',
+      'Dedicated support team',
+      'White - label solutions',
+      '24 / 7 phone support',
+      'Custom analytics',
+      'Full API access',
+      'Custom integrations',
+      'Dedicated account manager',
+      'SLA guarantees',
+      'On - premise deployment',
+    ],
+    popular: false,
+    color: 'from - indigo - 600 to - purple - 600',
+    cta: 'Contact Sales',
+    href: '/contact',
+  }, ];      'Custom AI development_dedicated support team_white - label solutions24 / 7 phone support_custom analytics_full API access_custom integrations_dedicated account manager';
+      'SLA guarantees_on - premise deployment';
+
+    ];
+    popular: false,
+    color: 'from - indigo - 600 to - purple - 600',
+    cta: 'Contact Sales',
+    href: '/contact';
+  }
+
+const pricingTiers = [;
+  {;
+    name: 'Starter',;
+    price: '$299',;
+    period: '/month',;
+    description: 'Perfect for small businesses and startups',;
+    features: [;
+      'Basic AI integration',;
+      'Standard support',;
+      'Core features access',;
+      'Email support',;
+      'Basic analytics',;
+      'Mobile app access',;
+    ],;
+    popular: false,;
+    color: 'from-blue-600 to-cyan-600',;
+    cta: 'Get Started',;
+    href: '/contact',;
+  },  {      'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access';
+    ];
+    popular: false,;
+    color: 'from-blue-600 to-cyan-600',;
+    cta: 'Get Started',;
+    href: '/contact';
+  };
+
+
   {
-    category: '🚀 2028 Futuristic Innovations'
+    category: ' 2028 Futuristic Innovations'
     services: futuristic2028Services.slice(0, 6)
   }
   {
-    category: '🏙️ Smart City & Infrastructure'
+    category: ' Smart City & Infrastructure'
     services: emergingTech2028Services
       .filter(
         s =>
@@ -251,27 +375,109 @@ const servicePricing = [
       .slice(0, 4)
   }
   {
-    category: '⚛️ Quantum & Advanced Tech'
+    category: ' Quantum & Advanced Tech'
     services: futuristic2028Services
       .filter(s => s.category.includes('Quantum'))
       .slice(0, 4)
   }
   {
-    category: '🤖 AI & Machine Learning'
+    category: ' AI & Machine Learning'
     services: emergingTech2028Services
       .filter(s => s.category.includes('AI'))
       .slice(0, 4)
   },];  {
-    category: '🏙️ Smart City & Infrastructure'
+    category: ' Smart City & Infrastructure'
     services: emergingTech2028Services.filter(s => s.category.includes('Smart City') |s.category.includes('Infrastructure')).slice(0, 4)
   }
   {
-    category: '⚛️ Quantum & Advanced Tech'
+    category: ' Quantum & Advanced Tech'
     services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
   }
   {
-    category: '🤖 AI & Machine Learning'
+    category: ' AI & Machine Learning'
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
+
+const service_pricing = [;
+  {
+    category: ' 2028 Futuristic Innovations',
+    services: futuristic2028Services.slice (0, 6),
+  },
+  {
+    category: ' Smart City & Infrastructure',
+    services: emergingTech2028Services;
+      .filter (
+        string =>;
+          s.category.includes ('Smart City') ||;
+          s.category.includes ('Infrastructure'));
+      .slice (0, 4),
+  },
+  {
+    category: ' Quantum & Advanced Tech',
+    services: futuristic2028Services;
+      .filter (string => s.category.includes ('Quantum'));
+      .slice (0, 4),
+  },
+  {
+    category: ' AI & Machine Learning',
+    services: emergingTech2028Services;
+      .filter (string => s.category.includes ('AI'));
+      .slice (0, 4),
+  }, ];  {
+    category: ' Smart City & Infrastructure',
+    services: emergingTech2028Services.filter (string => s.category.includes ('Smart City') || s.category.includes ('Infrastructure')).slice (0, 4);
+  }
+  {
+    category: ' Quantum & Advanced Tech',
+    services: futuristic2028Services.filter (string => s.category.includes ('Quantum')).slice (0, 4);
+  }
+  {
+    category: ' AI & Machine Learning',
+    services: emergingTech2028Services.filter (string => s.category.includes ('AI')).slice (0, 4);
+  }
+
+    popular: false,;
+    color: 'from-indigo-600 to-purple-600',;
+    cta: 'Contact Sales',;
+    href: '/contact';
+  }
+const servicePricing = [;
+  {;
+    category: '🚀 2028 Futuristic Innovations',;
+    services: futuristic2028Services && futuristic2028Services.slice(0, 6),;
+  },;
+  {;
+    category: '🏙️ Smart City & Infrastructure',;
+    services: emergingTech2028Services;
+      .filter(;
+        s =>;
+          s && s.category.includes('Smart City') ||;
+          s && s.category.includes('Infrastructure');
+      );
+      .slice(0, 4),;
+  },;
+  {;
+    category: '⚛️ Quantum & Advanced Tech',;
+    services: futuristic2028Services;
+      .filter(s => s && s.category.includes('Quantum'));
+      .slice(0, 4),;
+  },;
+  {;
+    category: '🤖 AI & Machine Learning',;
+    services: emergingTech2028Services;
+      .filter(s => s && s.category.includes('AI'));
+      .slice(0, 4),;
+  },];  {;
+    category: '🏙️ Smart City & Infrastructure',;
+    services: emergingTech2028Services && emergingTech2028Services.filter(s => s && s.category.includes('Smart City') || s && s.category.includes('Infrastructure')).slice(0, 4);
+  };
+  {;
+    category: '⚛️ Quantum & Advanced Tech',;
+    services: futuristic2028Services && futuristic2028Services.filter(s => s && s.category.includes('Quantum')).slice(0, 4);
+  };
+  {;
+    category: '🤖 AI & Machine Learning',;
+    services: emergingTech2028Services && emergingTech2028Services.filter(s => s && s.category.includes('AI')).slice(0, 4);
+
   }
 ];
 
@@ -312,6 +518,7 @@ export default function Revolutionary2028Pricing() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2028-pricing" />
       <UltraFuturisticNavigation2028 />
+
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden'>
         {/* Animated Background */}
@@ -385,6 +592,7 @@ export default function Revolutionary2028Pricing() {
               ensures you get maximum value for your investment in the future.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+
               <Link
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
@@ -394,12 +602,14 @@ export default function Revolutionary2028Pricing() {
               </Link>
               <Link
                 href="/2028-services-showcase"
+
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
               >
                 <span>View Services</span>
                 <Rocket className="w-5 h-5" />
               </Link>
             </div>
+
             {/* Pricing Stats */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
               <div className='text-center'>
@@ -457,6 +667,30 @@ export default function Revolutionary2028Pricing() {
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
+
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
+                Plan;
+              </span>;
+            </h2>;
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>;
+              Flexible pricing plans designed to scale with your business. Start;
+              small and grow with us.;
+            </p>;
+          </div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingTiers && pricingTiers.map((tier, index) => (            </h2>;
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
+              Flexible pricing plans designed to scale with your business. Start small and grow with us.;
+            </p>;
+          </div>;
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+            {pricingTiers && pricingTiers.map((tier, index) => (;
+              <motion&& motion.div
+                key={tier && tier.name}
+
+
+
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -486,9 +720,9 @@ export default function Revolutionary2028Pricing() {
                       <div className='flex items-baseline space-x-2'>
                         <span className='text-4xl font-bold text-white'>
                           {tier.price}
-                        </span>
-                        <span className='text-purple-300'>{tier.period}</span>
-                      </div>
+                        </span>;
+                        <span className='text - purple - 300'>{tier.period}</span>;
+                      </div>;
                       {tier.name === 'Enterprise' && (
                         <p className='text-sm text-purple-300 mt-2'>
                           Contact us for custom pricing
@@ -504,19 +738,27 @@ export default function Revolutionary2028Pricing() {
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
                           <span className='text-purple-200'>{feature}</span>                        </li>
 
+                    <div className="mb-8">
+                      <div className="flex items-baseline space-x-2">
+                        <span className="text-4xl font-bold text-white">{tier.price}</span>
+                        <span className="text-purple-300">{tier.period}</span>
+                      </div>
+                      {tier.name === 'Enterprise' && (
+                        <p className="text-sm text-purple-300 mt-2">Contact us for custom pricing</p>
+                      )}
+                    </div>
+                    <ul className="space-y-3 mb-8">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center space-x-3">
+                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                          <span className="text-purple-200">{feature}</span>
+                        </li>
+                      ))}
 
-                    <Link
-                      href={tier && tier.href}
-                      className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
-                      {tier && tier.cta}
-                    </Link>;
-                  </div>;
-                </div>;
-              </motion && motion.div>;
-            ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -537,6 +779,7 @@ export default function Revolutionary2028Pricing() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       {/* Service Pricing */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
@@ -594,9 +837,11 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -607,9 +852,11 @@ export default function Revolutionary2028Pricing() {
                       </div>
                     </div>
                   </motion.div>
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 ))}
-</div>;
+              </div>;
             </div>;
           ))}
         </div>
@@ -621,8 +868,10 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       {/* Value Proposition */}
       <section className='py-20 bg-black/50'>
@@ -639,6 +888,7 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
@@ -648,6 +898,7 @@ export default function Revolutionary2028Pricing() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Value Proposition */}
+
 
 
 
@@ -772,6 +1023,7 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
@@ -789,9 +1041,10 @@ export default function Revolutionary2028Pricing() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 
@@ -803,7 +1056,9 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -833,6 +1088,8 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
+
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -853,6 +1110,7 @@ export default function Revolutionary2028Pricing() {
               <div className="text-3xl font-bold text-green-400">30%</div>;
               <div className="text-purple-300">Lower than Market</div>;
             </motion && motion.div>;
+
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -868,7 +1126,9 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -889,12 +1149,15 @@ export default function Revolutionary2028Pricing() {
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
                 Transparent pricing with no surprise fees. What you see is what you pay
+
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
               <div className="text-blue-300">Transparent Pricing</div>
             </motion.div>
             <motion.div
+
+
 
 
 
@@ -918,6 +1181,7 @@ export default function Revolutionary2028Pricing() {
               <div className="text-3xl font-bold text-blue-400">100%</div>;
               <div className="text-blue-300">Transparent Pricing</div>;
             </motion && motion.div>;
+
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -933,7 +1197,9 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -987,11 +1253,14 @@ export default function Revolutionary2028Pricing() {
           </div>;
         </div>;
       </section>;
+
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
+
+
 
 
 
@@ -1005,12 +1274,14 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1026,7 +1297,9 @@ export default function Revolutionary2028Pricing() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1034,8 +1307,9 @@ export default function Revolutionary2028Pricing() {
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to{' '}
+
+
 
 
 
@@ -1083,16 +1357,52 @@ export default function Revolutionary2028Pricing() {
       </section>
       <UltraFuturisticFooter2028 />
 
-
   );
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+    </>;
+);
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+            <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
+              Join hundreds of companies already leveraging our futuristic;
+              services to gain competitive advantages and drive innovation.;
+            </p>;
+            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
+              <Link;
+                href='/contact';
+                className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - xl hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl hover:shadow - purple - 500 / 25 flex items - center space - x-2';
+              >;
+                <span > Start Free Trial</span>;
+                <ArrowRight className='w - 5 h - 5' />;
+              </Link>;
+              <Link;
+                href='/contact';
+                className='px - 8 py - 4 border border - purple - 500 / 30 text - purple - 300 rounded - xl hover:bg - purple - 900 / 30 transition - all duration - 300 flex items - center space - x-2';
+              >;
+                <span > Schedule Demo</span>;
+                <Clock className='w - 5 h - 5' />;
+              </Link>;
+            </div>;
+            <div className='flex items - center justify - center space - x-8 text - purple - 300'>;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > 30 - Day Free Trial</span>;
+              </div>;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />;
+                <span > No Credit Card Required</span>;
+              </div>;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > Cancel Anytime</span>              <div className="flex items - center space - x-2">;
+                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+                <span > Cancel Anytime</span>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <UltraFuturisticFooter2028 />;
+    </>);
+      <UltraFuturisticFooter2028 />
+  );
 

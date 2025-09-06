@@ -5,13 +5,37 @@
 
 
 
+
+
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 
+import React from "react",
+import { CheckCircle, Circle, ArrowRight } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+export interface OnboardingStep {
 
+
+
+
+
+  steps: OnboardingStep[]
+
+  title?: string;
+  className?: string
+}
+export function OnboardingTracker({
+  steps;
+
+  title = "Complete Your Profile"
+  className
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
 
 export interface OnboardingStep {
   id: string,
@@ -22,6 +46,10 @@ export interface OnboardingStep {
 
 
 
+
+
+export function OnboardingTracker({ ;
+  steps;
 
 import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
@@ -38,9 +66,9 @@ export interface OnboardingStep {;
   link: string,;
   action?: string;
 }
+interface OnboardingTrackerProps {
 
-interface OnboardingTrackerProps {;
-  steps: OnboardingStep[],;
+  steps: OnboardingStep[]
 
   title?: string;
   className?: string;
@@ -65,6 +93,10 @@ export function OnboardingTracker({
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
 
+        <div
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+        <div 
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 
 ;
 export function OnboardingTracker({;
@@ -88,6 +120,7 @@ export function OnboardingTracker({;
 
 
 
+
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
           style={{ width: `${progress}%` }}></div>;
@@ -102,10 +135,10 @@ export function OnboardingTracker({;
 
 
 
+
           style={{ width: `${progress}%` }}
         ></div>
       </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step) => (;
@@ -135,6 +168,15 @@ export function OnboardingTracker({;
             )}
           </div>;
         ))}
+
+      </div>
+    </div>
+  )
+}
+      </div>;
+    </div>;
+  );
+}
 
 import React from './react';
 import { CheckCircle, Circle, ArrowRight } from './lucide-react';

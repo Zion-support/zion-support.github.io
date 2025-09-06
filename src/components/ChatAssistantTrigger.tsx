@@ -5,8 +5,13 @@
         method: "POST"
         headers: {
 
-
-
+          "Content-Type": "application/json"}
+        body: JSON.stringify({
+          messages: [{ role: "user", content: message }]
+        })})
+            avatarUrl: 'https://placehold.co/64x64?text=AI'
+            role: 'Virtual Assistant';      if (!response.ok) {
+        throw new Error("Failed to get response from AI assistant")
 
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
@@ -15,6 +20,7 @@
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
+
 
 
 
@@ -92,6 +98,7 @@
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
 
+
             role: 'Virtual Assistant'
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
@@ -101,6 +108,7 @@
             name: 'AI Assistant',;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';
+
 
 
           }}
@@ -174,10 +182,13 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     </>;
   );
 }
 ;
 
 
+
 ;
+

@@ -1,7 +1,11 @@
 
 
-
-
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Resume, ResumeBasicInfo  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useResumeActions() {
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -9,6 +13,8 @@ import {Resume, ResumeBasicInfo} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
+
+
 
 
 
@@ -25,11 +31,9 @@ export function useResumeActions() {;
       setError('You must be logged in to create a resume')
       return null
 
-
-
-
-
-
+    }
+    setIsLoading(true);
+    setError(null);
 
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -50,7 +54,9 @@ export function useResumeActions() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -90,12 +96,19 @@ export function useResumeActions() {;
 
       return data.id
     } catch (e: any) {
-      return handleResumeError(e, 'Could not create resume') ? null : null
+      return handleResumeError (e, 'Could not create resume') ? null : null;
     } finally {
       setIsLoading(false)
 
-
-
+    }
+  }
+  const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update a resume')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -130,7 +143,9 @@ export function useResumeActions() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -166,8 +181,19 @@ export function useResumeActions() {;
       
       return showSuccessToast("Resume updated", "Your resume information has been updated")
 
-
-
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update resume')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  const setActiveResume = async (resumeId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to set active resume')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -200,7 +226,9 @@ export function useResumeActions() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -283,7 +311,6 @@ if (throw error) {
   $2
 }
       return showSuccessToast ("Active resume set", "Your selected resume is now marked as active");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e: any) {
       return handleResumeError (e, 'Could not set active resume');
     } finally {
@@ -301,7 +328,10 @@ if (throw error) {
     setActiveResume}
 }
 
-
+  },;
+  return {;
+    isLoading,;
+    error,;
 
     createResume;
     updateBasicInfo;

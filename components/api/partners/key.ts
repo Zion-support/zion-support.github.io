@@ -3,6 +3,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
 
+  authenticateRequest
+  listApiKeys
+  saveApiKeys;
+  authenticateRequest,
+  listApiKeys,;
+  saveApiKeys,;
+
 } from '../../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -59,6 +66,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
+
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });
@@ -68,6 +77,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 if ( {) {
   $2
 }
+
 
 
 
@@ -152,6 +162,7 @@ if (existing.active = false) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 
 

@@ -30,12 +30,22 @@ import React from 'react'
 import Link from 'next/link'
 import {
 
+  AlertTriangle
+  ExternalLink
+  RefreshCw
+  Settings
+  CheckCircle
+import React from 'react'
+import Link from 'next/link'
+import {
 
   AlertTriangle,
   ExternalLink,
   RefreshCw,
   Settings,;
   CheckCircle;
+
+
 
 
 
@@ -50,6 +60,8 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {;
   onRetry?: () => void;
 
+
+
   showSetupButton?: boolean
 
 export function AuthConfigurationError({
@@ -62,17 +74,9 @@ export function AuthConfigurationError({
     } else {
       window.location.reload() }
   }
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
-      <div className='max-w-2xl w-full'>
-export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {
-  const handleRefresh = () => {
-    if (onRetry) {
-      onRetry()
-    } else {
-      window.location.reload()
     }
-  }
+  };
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
       <div className='max-w-2xl w-full'>
@@ -113,6 +117,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
     if (onRetry) {;
       onRetry();
     } else {;
+
 
 
 
@@ -189,10 +194,13 @@ if ( {) {
 
 
 
+
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
+
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. 
+
               New users cannot sign up until this is resolved.
             </AlertDescription>
           </Alert>
@@ -208,6 +216,7 @@ if ( {) {
 
 
 
+
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• AUTH0_SECRET</li>
@@ -217,6 +226,7 @@ if ( {) {
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
           </div>
+
 
         <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
           <div className='text-center mb-6'>;
@@ -257,7 +267,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
@@ -301,7 +313,9 @@ if ( {) {
             <h3 className='font-semibold text-gray-900 mb-2'>;
               Missing Configuration:;
             </h3>;
+
             <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">;
+
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>;
             <ul className="text-sm text-gray-700 space-y-1">;
     <div className='min - h-screen bg - gradient - to - br from - red - 50 via - orange - 50 to - yellow - 50 flex items - center justify - center p - 4'>;
@@ -352,6 +366,7 @@ if ( {) {
             <h3 className='font - semibold text - gray - 900 mb - 2'>;
               Missing Configuration:;
             </h3>;
+
             <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
             <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
             <ul className="text - sm text - gray - 700 space - y-1">;
@@ -360,6 +375,7 @@ if ( {) {
               <li>• AUTH0_ISSUER_BASE_URL</li>;
               <li>• AUTH0_CLIENT_ID</li>;
               <li>• AUTH0_CLIENT_SECRET</li>;
+
             </ul>;
           </div>;
 
@@ -393,6 +409,7 @@ if ( {) {
             >
               <RefreshCw className="w-4 h-4 mr-2" />
 
+
               Check Again
             </Button>
           </div>
@@ -420,6 +437,7 @@ if ( {) {
                 <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />
+
                   <a 
                     href="https://manage.auth0.com/" 
                     target="_blank" 
@@ -450,6 +468,7 @@ if ( {) {
               
 
 
+
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
                 <div>
@@ -478,6 +497,7 @@ if ( {) {
 
               <li className='flex items-start gap-3'>;
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>;
+
                   2;
                 </span>                <div>                <div>;
                   <strong>Create Auth0 Account:</strong>;
@@ -593,6 +613,7 @@ if ( {) {
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
+
               
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
@@ -605,12 +626,23 @@ if ( {) {
               </li>
               <li className="flex items-start gap-3">
 
+
               
+              <li className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
+                <div>
+
+                  <strong>Configure Environment:</strong>
+                  <br />
+                  Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
+                </div>
+              </li>
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
+
 
 
 
@@ -676,6 +708,7 @@ if ( {) {
           </div>;
         </div>;
 
+
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
           <h3 className="font-semibold text-blue-900 mb-3">Alternative Actions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -683,16 +716,23 @@ if ( {) {
               href="/marketplace" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
+              <span>Browse Marketplace</span>            >
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
 
+            <Link
+              href="/talent"
+            
+            <Link 
+              href="/talent" 
 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>View Talent Pool</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+
 
 
 
@@ -730,6 +770,7 @@ if ( {) {
 
         {/* Setup Script Info */}
         {showSetupButton && (
+
           <div className='mt-6 text-center'>
             <div className='bg-green-50 rounded-lg border border-green-200 p-4'>
               <div className='flex items-center justify-center gap-2 text-green-700 mb-2'>
@@ -740,6 +781,7 @@ if ( {) {
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Automated Setup Available</span>
+
 
 
 
@@ -827,6 +869,7 @@ if ( {) {
 
 
 
+
         <div className="mt-6 text-center text-sm text-gray-500">
           <p>
             For detailed instructions, see{' '}
@@ -837,6 +880,7 @@ if ( {) {
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
               className="text-blue-600 hover: underline"
             >
+
 
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
@@ -853,11 +897,13 @@ if ( {) {
 
 
 
+
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;
 }
 }
+
 
 
 
@@ -994,3 +1040,4 @@ export default AuthConfigurationError,
 }
 ;
 export default AuthConfigurationError;
+

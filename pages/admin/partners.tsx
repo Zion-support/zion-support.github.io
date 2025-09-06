@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import React, { useState, useEffect } from 'react';
@@ -9,6 +10,7 @@ import Head from 'next / head';
 ;
 
 interface Partner {
+
 
 
 
@@ -34,6 +36,11 @@ interface Partner {
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
 
+    const json = await res.json();
+    setFlags(json.flags |[]);
+
+  }
+
 import { useEffect, useState } from 'react';
 export default function AdminPartners(req, res) {
   try {
@@ -45,15 +52,46 @@ export default function AdminPartners(req, res) {
       try {
         const res = await fetch('/api/admin/partners/list');
         const json = await res.json();
-        setPartners(json.partners || []);
-      } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+        setPartners(json.partners || [])
+      } catch {}
+    })()
+  }, []);
+
+  async function updatePartner(code: string, updates: any) {
+    await fetch('/api/admin/partners/update', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ code, ...updates })
+    });
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
+    setPartners(json.partners || [])
+
   }
 }
     })();
   }, []),;
   async function updatePartner(code: string, updates: any) {;
+
+
+  async function viewFlags(code: string) {
+    setSelected(code)
+    const res = await fetch(
+      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
+    );
+    const json = await res && res.json();
+    setFlags(json && json.flags || []);
+  }
+
+  useEffect(() => {;
+    // Simulate loading partners;
+    setTimeout(() => {;
+      setPartners(mockPartners);
+      setLoading(false);
+    }, 1000);  }, []);
+
+  async function updatePartner(): any (code: string, updates: any) {;
 
     await fetch('/api/admin/partners/update', {;
       method: 'POST',;
@@ -79,7 +117,9 @@ export default function AdminPartners(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -90,8 +130,9 @@ export default function AdminPartners(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
 
-
+}
 
   return (
     <div className="space-y-6">
@@ -156,6 +197,7 @@ export default function AdminPartners(req, res) {
 
 
 
+
   return (
 
 
@@ -195,6 +237,7 @@ export default function AdminPartners(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -548,9 +591,13 @@ export default function AdminPartners(req, res) {
 
 
 
+
+
 }
 }
 }
+
+
 
 
 
@@ -572,10 +619,12 @@ export default function AdminPartners(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

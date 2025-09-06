@@ -16,6 +16,7 @@ export default function CoachWidget() {;
     } finally {
 
 
+
   async function ask() {;
     if (!input && input.trim()) return;
     setLoading(true);
@@ -28,6 +29,7 @@ export default function CoachWidget() {;
       const data = await resp && resp.json();
       setReply(data && data.text || '');
     } finally {;
+
       setLoading(false);    }
   }
 
@@ -40,6 +42,7 @@ export default function CoachWidget() {;
       setReply(data.text |'')
 
   return (
+
 
     }
   }
@@ -133,6 +136,7 @@ function ask() {
       setReply(data.text || '')
 
 
+
     }
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -143,7 +147,9 @@ function ask() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

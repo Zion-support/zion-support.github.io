@@ -6,6 +6,7 @@
 
 
 
+
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 
@@ -34,6 +35,7 @@ export type BadgeKey =
   | "top_contributor"
   | "profile_complete"
   | "featured_creator"
+
 
 
   color: string,
@@ -91,6 +93,10 @@ export const badgeList: BadgeMeta[] = [
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key),
+
+;
+;
+
 
 import { LucideIcon } from "lucide-react",;
 import {;
@@ -182,8 +188,10 @@ export const badge_list: BadgeMeta[] = [;
 
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+    icon: BadgeDollarSign,
+    color: "#22C55E", // Soft Green;
+    bg: "#F2FCE2",    // Soft Green;
+  }];
+export const getBadgeMeta = (key: BadgeKey) =>;
+  badgeList.find((b) => b.key === key);
 

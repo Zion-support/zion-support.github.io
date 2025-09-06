@@ -3,16 +3,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -29,6 +33,7 @@ export type ProposalType =;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -39,12 +44,18 @@ export type ProposalType =;
 export type ProposalForm = {
   target_institution: string;
   type: ProposalType;
+
   regionalScope: string;
   budgetOrGoals: string;
   supportingMultiverses: string;
   language?: string;
   customPrompt?: string;};export type ProposalForm = {
 
+  targetInstitution: string
+  type: ProposalType
+  regionalScope: string
+  budgetOrGoals: string
+  supportingMultiverses: string
 
   targetInstitution: string,
   type: ProposalType,
@@ -52,21 +63,43 @@ export type ProposalForm = {
   budgetOrGoals: string,
   supportingMultiverses: string,;
 
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
   language?: string;
   customPrompt?: string
 }
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  language?: string;
+  customPrompt?: string
+}
+export default function ProposalGenerator() {
+  const [form, setForm] = useState<ProposalForm>({
+    targetInstitution: 'UNDP'
+    type: 'Workforce Dev'
+    regionalScope: 'Global'
+    budgetOrGoals: ''
+    supportingMultiverses: ''
+    language: 'English'
+    customPrompt:
+export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
+export type ProposalForm = {
+  targetInstitution: string,
+  custom_prompt?: string;}export type ProposalForm = {
+  target_institution: string,
+  type: ProposalType,
+  regional_scope: string,
+  budgetOrGoals: string,
+  supporting_multiverses: string,
+  language?: string;
+  customPrompt?: string
+};
+export default function ProposalGenerator() {;
+  const [form, setForm] = useState<ProposalForm>({;
+    targetInstitution: 'UNDP',;
+    type: 'Workforce Dev',;
+    regionalScope: 'Global',;
+    budgetOrGoals: '',;
+    supportingMultiverses: '',;
+    language: 'English',;
+    customPrompt:;
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
   });
   const [isGenerating, setIsGenerating] = useState(false);
@@ -74,7 +107,9 @@ export type ProposalForm = {
   const [draftJson, setDraftJson] = useState<any>(null);
 
 
+
   const [exportLinks, setExportLinks] = useState<{;
+
 
 
     pdfUrl?: string;
@@ -90,6 +125,10 @@ export type ProposalForm = {
   ) {;
 
     setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
+
+
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
+  const [isGenerating, setIsGenerating] = useState(false);
 
 
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -117,9 +156,11 @@ export type ProposalForm = {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   }
+
 
 
 
@@ -148,6 +189,7 @@ export type ProposalForm = {
 
 
 
+
       setStatusMessage('Export failed');    }
 
     }
@@ -169,6 +211,7 @@ export type ProposalForm = {
     try {
       const res = await fetch('/api/proposals/submit', {
 
+
     } finally {;
       setIsGenerating(false);    }      const data = await res && res.json();
       setDraftMarkdown(data && data.markdown || '');
@@ -182,6 +225,7 @@ export type ProposalForm = {
 
     }
   }
+
   async function handleExport() {;
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {;
@@ -211,6 +255,7 @@ export type ProposalForm = {
       setStatusMessage('Export failed');
     }
   }
+
   async function handleSubmitBridge() {;
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {;
@@ -233,6 +278,15 @@ export type ProposalForm = {
   }
   return (
 
+    <div className='space-y-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <div className='space-y-4'>      const data = await res.json();
+      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
+    } catch (e) {
+      console.error(e);
+
+
+
 
 
 
@@ -244,6 +298,7 @@ export type ProposalForm = {
     } catch (e) {;
       console && console.error(e);
       setStatusMessage('Submission failed');
+
 
 
 
@@ -354,6 +409,25 @@ export type ProposalForm = {
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
 
 
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
+            <input
+              className="w-full border rounded px-3 py-2"
+              value={form.targetInstitution}
+              onChange={(e) => handleChange('targetInstitution', e.target.value)}
+              placeholder="UNDP / World Bank / ILO"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
+            <select
+              className="w-full border rounded px-3 py-2"
+              value={form.type}
+              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
+
 
 
     }
@@ -442,6 +516,8 @@ export type ProposalForm = {
 
 
 
+
+
               onClick={handleGenerate}
               disabled={isGenerating}
             >
@@ -516,6 +592,7 @@ export type ProposalForm = {
 
 
 
+
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
@@ -540,9 +617,11 @@ export type ProposalForm = {
 
 
 
+
               )}
             </div>;
           )}
+
 
 
 
@@ -557,9 +636,11 @@ export type ProposalForm = {
       </div>;
     </div>;
 
+
   );
 
 }
+
   );
 }
 
@@ -567,6 +648,7 @@ export type ProposalForm = {
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
   custom_prompt?: string;
 }
@@ -930,8 +1012,10 @@ function handleSubmitBridge() {
       </div>;
     </div>);
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

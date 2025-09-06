@@ -6,10 +6,12 @@
 
 
 
+
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+
 
 
 type TalentItem = {;
@@ -19,14 +21,13 @@ type TalentItem = {;
   averageRating: number;
   totalReviews: number;
 
-
-
-
-
+}
+type Props = { items: TalentItem[] }
 
 };
 
 type Props = { items: TalentItem[] };
+
 
 
 
@@ -47,6 +48,7 @@ type Props = { items: TalentItem[] },
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
@@ -83,11 +85,19 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const raw = fs && fs.readFileSync(p, "utf8");
     const data = JSON && JSON.parse(raw);
     items = data && data.items || [];
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
   } catch {}
   return { props: { items } }
 }
+  return { props: { items }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
 export default TopTalentsPage;
 
   )
@@ -102,8 +112,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
   let items: TalentItem[] = [];
   try {
 
+
     const raw = fs.readFileSync (p, "utf8");
     const data = JSON.parse (raw);
+
 
 
     items = data.items || [];
@@ -113,15 +125,23 @@ export const getServerSideProps: GetServerSideProps = async () => {
 ;
 
 
-
-
-  )
-},
-export const getServerSideProps: GetServerSideProps = async () => {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  const p = path.join(process.cwd(), 'publicautomationstop-talents.json'),
+  let items: TalentItem[] = [],
+  try {
+    const raw = fs.readFileSync(p, 'utf8'),
+    const data = JSON.parse(raw),
+    items = data.items || []
+  } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: { items }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
 
 export default TopTalentsPage;
 

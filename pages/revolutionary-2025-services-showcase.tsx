@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -136,6 +137,7 @@ import {
 // Import the new revolutionary services
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
+
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices]
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -376,41 +378,23 @@ const serviceCategories = [;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
   }
 }
-],;
-export default function Revolutionary2025ServicesShowcase(req, res) {
-  try {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [viewMode, setViewMode] = useState('grid');
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' ||;
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-    return matchesSearch && matchesCategory;
-  });
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price-low':;
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),;
-      case 'price-high':;
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),;
-      case 'rating':;
-        return b.rating - a.rating,;
-      case 'customers':;
-        return b.customers - a.customers,;
-      default: return b.popular ? 1 : -1;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+const serviceCategories = [
+  {
+    id: 'ai-consciousness'
+    title: ' AI Consciousness & Emotional Intelligence'
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms'
+    icon: Brain
+    color: 'from-violet-500 to-purple-500'
+    services: allServices.filter(s => s.category.includes('AI Consciousness') |s.category.includes('Healthcare AI'))
+    gradient: 'from-violet-500/20 to-indigo-500/20'
   }
 }
   }),
@@ -437,12 +421,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
@@ -473,12 +459,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center max-w-4xl mx-auto"
             >
@@ -529,12 +517,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -595,12 +585,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
@@ -641,12 +633,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
@@ -670,12 +664,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
                   <button
@@ -721,12 +717,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <div className="mb-8">
               <p className="text-gray-400">
@@ -755,7 +753,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             <AnimatePresence mode="wait">
@@ -792,7 +792,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
@@ -840,12 +842,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         {service.popular && (
                           <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
@@ -895,20 +899,15 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 }
 
                         </h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Tagline */}
                         <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
                           {service.tagline}
-
-                        </p>;
-
+                        </p>
                         {/* Price */}
                         <div className="text - 3xl font - bold text - white mb - 4">;
                           {service.price}
-
-                          <span className="text - lg text - gray - 400 font - normal">{service.period}</span>;
-                        </div>;
-
+                          <span className="text-lg text-gray-400 font-normal">{service.period}</span>
+                        </div>
                         {/* Features */}
                         <div className="space - y-2 mb - 6">;
                           <h4 className="text - sm font - semibold text - purple - 400">Key Features</h4>;
@@ -927,7 +926,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -966,12 +967,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         <div className="grid grid-cols-2 gap-3 mb-6">
                           <div className="bg-gray-800/50 rounded-lg p-3">
@@ -995,12 +998,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         <div className="flex space-x-3 mb-4">
                           <Link href={service.link} target="_blank" rel="noopener noreferrer">
@@ -1027,7 +1032,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                         <div className="grid grid-cols-1 gap-2 text-xs">
@@ -1048,7 +1055,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                           </div>
@@ -1069,7 +1078,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                           </div>
@@ -1115,7 +1126,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   className="space-y-6"
@@ -1164,7 +1177,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                         <div className="flex-1">
@@ -1173,16 +1188,11 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                             <div className="flex-1">
                               <div className="flex items-center gap-3 mb-2">
                                 <h3 className="text-xl font-bold text-white">{service.name}</h3>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                 {service.popular && (
                                   <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                                     POPULAR
                                   </span>
-                                )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                                )}
                               </div>
                               <p className="text-gray-300 text-sm">{service.tagline}</p>
                             </div>
@@ -1214,7 +1224,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -1271,7 +1283,6 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               </div>;
                             </div>;
                           </div>;
@@ -1300,13 +1311,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                             </div>
                             <div className="text-sm text-gray-400">30-day free trial</div>
                           </div>
-
-                          {/* Market Data */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
+                          {/* Market Data */}
                           <div className="grid grid-cols-2 gap-3">
                             <div className="bg-gray-800/50 rounded-lg p-3 text-center">
                               <div className="text-xs text-gray-400 mb-1">Market Size</div>
@@ -1317,13 +1322,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                               <div className="text-sm text-gray-200">{service.growthRate}</div>
                             </div>
                           </div>
-
-                          {/* ROI */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
+                          {/* ROI */}
                           <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-3">
                             <div className="text-xs text-green-400 mb-1">Expected ROI</div>
                             <div className="text-sm text-green-300">{service.roi}</div>
@@ -1339,12 +1338,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                           <div className="space-y-3">
                             <Link href={service.link} target="_blank" rel="noopener noreferrer">
@@ -1371,12 +1372,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
@@ -1396,12 +1399,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             </div>
                             <div className="flex items-center gap-2 text-blue-400">
@@ -1421,12 +1426,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             </div>
                           </div>
@@ -1461,6 +1468,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1468,9 +1476,10 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
+                <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>
                 <button
@@ -1490,12 +1499,14 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
@@ -1523,7 +1534,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -1550,7 +1563,6 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -1564,7 +1576,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                   <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                   <p className="text-gray-300 mb-3">{contactInfo.mobile}</p>
                   <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="text-purple-400 hover:text-purple-300">
-                    Call Now →
+                    Call Now 
                   </a>
                 </div>
                 <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">
@@ -1572,7 +1584,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                   <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                   <p className="text-gray-300 mb-3">{contactInfo.email}</p>
                   <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">
-                    Send Email →
+                    Send Email 
                   </a>
                 </div>
                 <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">
@@ -1580,7 +1592,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                   <p className="text-gray-300 mb-3 text-sm">{contactInfo.address}</p>
                   <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
-                    Get Directions →
+                    Get Directions 
                   </a>
                 </div>
               </div>
@@ -1602,9 +1614,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
       </div>
     </>
 
-
-
-
+  );
+};
+  )
 
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -1619,7 +1631,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                   <h3 className="text - lg font - semibold text - white mb - 2">Call Us</h3>;
                   <p className="text - gray - 300 mb - 3">{contact_info.mobile}</p>;
                   <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`} className="text - purple - 400 hover:text - purple - 300">;
-                    Call Now →;
+                    Call Now ;
                   </a>;
                 </div>;
                 <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
@@ -1627,7 +1639,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                   <h3 className="text - lg font - semibold text - white mb - 2">Email Us</h3>;
                   <p className="text - gray - 300 mb - 3">{contact_info.email}</p>;
                   <a href={`mailto:${contact_info.email}`} className="text - blue - 400 hover:text - blue - 300">;
-                    Send Email →;
+                    Send Email ;
                   </a>;
                 </div>;
                 <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
@@ -1666,6 +1678,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1676,5 +1689,6 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

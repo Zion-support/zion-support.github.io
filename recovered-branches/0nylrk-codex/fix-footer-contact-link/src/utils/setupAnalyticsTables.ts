@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,6 +12,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 export async function ensureAnalyticsTablesExist() {
   try {
@@ -30,9 +32,12 @@ export async function ensureAnalyticsTablesExist() {
       console && console.log('Creating analytics tables...');
       await createAnalyticsTables()
 
-
-
-
+    }
+  } catch (error) {
+    console.warn('Error checking if analytics tables exist:', error);
+    // No need to create tables here, as this could be a connection error
+  }
+}
 
 import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {;
@@ -55,7 +60,9 @@ export async function ensureAnalyticsTablesExist() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -156,6 +163,29 @@ async function createAnalyticsTables() {
       `
 
 
+    // Tables creation failed, but we can still continue
+          ROUND ((c.conversion_count::numeric / NULLIF (p.view_count, 0)) * 100, 2) AS conversion_rate;
+        FROM conversions c;
+        LEFT JOIN page_views p ON c.date = p.date;
+        ORDER BY c.date DESC;
+      `;
+    });
+;
+    console.log ('Analytics tables created successfully');
+  } catch (error) {
+    console.error ('Error creating analytics tables:', error);
+    // Tables creation failed, but we can still continue;
+  }
+}
+    }),
+    
+    // // // console.log('Analytics tables created successfully')
+  } catch (error) {
+    console.error('Error creating analytics tables:', error),
+    // Tables creation failed, but we can still continue
+  }
+}
+
 ;
 async function createAnalyticsTables() {;
   try {;
@@ -223,5 +253,7 @@ async function createAnalyticsTables() {;
   }
 }
 ;
+
+
 
 

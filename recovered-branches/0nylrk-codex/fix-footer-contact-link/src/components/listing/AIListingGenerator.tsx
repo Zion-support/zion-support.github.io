@@ -1,5 +1,13 @@
 
 
+import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Sparkles} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
+import {AIListingForm} from "./AIListingForm";
+import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
+import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -8,6 +16,68 @@ import { Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
 
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
+interface GeneratedContent {
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
+
+interface GeneratedContent {
+  description: string,
+  tags: string[],
+  suggestedPrice: {
+    min: number,
+    max: number
+  },
+  keyPoints: string[]
+
+}
+
+  description: string
+  tags: string[]
+  suggestedPrice: {
+    min: number
+
+    max: number
+  }
+  keyPoints: string[]
+}
+interface AIListingGeneratorProps {
+
+  onApplyGenerated?: (content: GeneratedContent) => void
+
+  initialValues?: {
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
+    targetAudience?: string
+  }
+}
+
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+  const handleGenerate = async ({
+    title;
+    category;
+    keyFeatures;
+    targetAudience
+  }: {
+    title: string
+    category: string
+    keyFeatures: string
+    targetAudience: string
+  }) => {
+    setIsLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
+        body: { title, category, keyFeatures, targetAudience }
+      });
+      if (error) {
+        throw new Error(error.message)
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -35,10 +105,9 @@ interface GeneratedContent {;
   };
   keyPoints: string[];
 }
+interface AIListingGeneratorProps {
 
-interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent) => void,;
-  initialValues?: {;
+  onApplyGenerated?: (content: GeneratedContent) => void
 
     title?: string;
     category?: string;
@@ -89,6 +158,7 @@ function AIListingGenerator() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   const handle_generate = async ({
@@ -115,6 +185,7 @@ function AIListingGenerator() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       }
@@ -162,6 +233,12 @@ function AIListingGenerator() {
         </CardHeader>
         <CardContent>
 
+          <AIListingForm
+            onSubmit={handleGenerate}
+            isLoading={isLoading}
+          <AIListingForm 
+            onSubmit={handleGenerate} 
+            isLoading={isLoading} 
 
 ;
       // Check condition
@@ -188,7 +265,6 @@ if ( {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -249,6 +325,10 @@ if ( {) {
     }
   }
 
+    }
+
+  },
+
 
   return (
 
@@ -267,6 +347,7 @@ if ( {) {
 
 
 
+
           <AIListingForm
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
@@ -275,6 +356,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -295,5 +377,7 @@ if ( {) {
     </div>;
   );
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 

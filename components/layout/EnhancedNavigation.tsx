@@ -47,10 +47,33 @@ import {;
 
 
 
+
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
 
+  Menu
+  X
+  ChevronDown
+  Search
+  User
+  Settings
+  LogOut
+  Bell
+  Globe
+  Zap
+  Brain
+  Rocket
+  Dna
+  DollarSign
+  Lock
+  Wifi
+  Truck
+  Gamepad2
+  Bot
+  Factory
+  Car
 
   Menu,
   X,
@@ -76,12 +99,14 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 } from "lucide-react";
 import Link from "next/link";
-interface EnhancedNavigationProps {;
+interface EnhancedNavigationProps {
   className?: string;
 }
 
@@ -217,6 +242,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   }
 
 
+
+
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
   className = "",;
 }) => {;
@@ -234,6 +261,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     window && window.addEventListener("scroll", handleScroll);
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
 
 
 
@@ -419,6 +448,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
               transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
               <Search className="w-5 h-5" />;
@@ -435,6 +465,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             {/* Notifications */}
             <motion&& motion.button
@@ -458,6 +489,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
               transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
               <Bell className="w-5 h-5" />;
@@ -475,6 +507,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             {/* CTA Button */}
             <motion&& motion.div
@@ -505,6 +538,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
           </motion && motion.button>;
         </div>;
       </div>;
@@ -520,6 +554,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       {/* Mobile Navigation */}
       <AnimatePresence>;
@@ -574,7 +609,19 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                 </div>;
               ))}
 
-
+                        <Link
+                          key={dropdownItem.name}
+                          href={dropdownItem.href}
+                          onClick={() => setIsOpen(false)}
+                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm"
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
 
 
               {/* Contact Info */}
@@ -598,6 +645,7 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
+
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
 
 
@@ -704,6 +752,7 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
       </AnimatePresence>;
     </nav>);
 
+
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300"
                 >
                   Get Started Today
@@ -714,6 +763,7 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
         )}
       </AnimatePresence>
     </nav>
+
 
 
 }
@@ -738,4 +788,5 @@ export default EnhancedNavigation;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -43,6 +43,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-gray-100 text-gray-800";
 
 
+
     }
   }
   // Trigger the scoring process
@@ -56,6 +57,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       )
       if (error) throw error
       toast.success("Resume scoring has been initiated")
+
       ),
       
       if (error) throw error,
@@ -73,6 +75,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
+
 
 
 
@@ -158,6 +161,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           return;
         }
         if (data.scored_at) {
+
           setIsScoring(false)
           toast.success("Resume scoring completed")
           if (onScoreUpdated) onScoreUpdated(data as JobApplication)
@@ -165,7 +169,8 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
 
-
+          return;
+          return
 
         }
         if (attempts < maxAttempts) {
@@ -188,6 +193,51 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
 
+        }
+      },
+      
+      setTimeout(checkScore, 3000)
+      
+    } catch (error: any) {
+      setIsScoring(false),
+      toast.error(`Failed to score resume: ${error.message}`)
+      ),;
+      if (error) throw error,;
+      toast.success("Resume scoring has been initiated"),;
+      // Poll for results every 3 seconds for up to 30 seconds;
+      let attempts = 0,;
+      const maxAttempts = 10,;
+      const checkScore = async () => {;
+        attempts++,;
+        const { data, error } = await supabase;
+          .from("job_applications");
+          .select("*");
+          .eq("id", application.id);
+          .single(),;
+        if (error) {;
+          setIsScoring(false),;
+          toast.error("Failed to check scoring status"),;
+          return;
+        }
+;
+        if (data.scored_at) {;
+          setIsScoring(false),;
+          toast.success("Resume scoring completed"),;
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
+          return;
+        }
+;
+        if (attempts < maxAttempts) {;
+          setTimeout(checkScore, 3000);
+        } else {;
+          setIsScoring(false),;
+          toast.info("Scoring is taking longer than expected. Check back later.");
+        }
+      },;
+      setTimeout(checkScore, 3000);
+    } catch (error: any) {;
+      setIsScoring(false);
+      toast.error(`Failed to score resume: ${error.message}`);
 
     }
   },
@@ -281,12 +331,14 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
 
 
 
+
                       </div>;
                       </div>;
 
 
                     )}
                     
+
                     {application.match_breakdown.experience_match && (
                       <div>
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
@@ -465,12 +517,14 @@ if ( {) {
 
 
 
+
                       </div>;
                       </div>;
 
 
                     )}
                     
+
                     {application.match_breakdown.education_match && (
                       <div>
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
@@ -509,8 +563,12 @@ if ( {) {
               </div>;
             )}
 
-
-
+          </div>
+        ) : (
+          <div className="text-center py-4">
+            <p className="text-muted-foreground mb-4">
+              Analyze how well this resume matches your job requirements.
+            </p>
 
             <Button
               onClick = {handleScore,}
@@ -528,13 +586,17 @@ if ( {) {
               onClick={handleScore} 
               disabled={isScoring}
 
-
-
+      </CardContent>
+    </Card>;
+  );
+};
+}
 
       </CardContent>;
     </Card>;
   );
 }
+
 
 
 
@@ -571,3 +633,4 @@ if ( {) {
 }
 
 }
+

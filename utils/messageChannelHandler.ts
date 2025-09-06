@@ -1,9 +1,12 @@
 
-
-
-
-
-
+};
+};
+};
+};
+;
+,;
+,
+ursor/integrate-build-improve-and-re-verify-8f7d
 
 }}}};
 ;
@@ -57,19 +60,59 @@ ursor/add-new-services-and-deploy-updates-0462
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
-
-
-
+// Message channel handler for real-time communication
+export class MessageChannelHandler {;
+  private channels: Map<string, MessageChannel> = new Map();
+  createChannel(id: string): MessageChannel {
+    const channel = new MessageChannel();
+    this.channels.set(id, channel);
+    return channel;
+  }
+  getChannel(id: string): MessageChannel | undefined {
+    return this.channels.get(id);
+  }
+  removeChannel(id: string): boolean {
+    return this.channels.delete(id);
+  }
+  broadcast(message: any, excludeChannel?: string): void {
+    this.channels.forEach((channel, id) => {
+      if (id !== excludeChannel) {
+        channel.port1.postMessage(message);
+// Message channel handler for real - time communication;
+export class MessageChannelHandler {
+  private channels: Map < string, MessageChannel> = new Map ();
+;
+  create_channel (id: string): MessageChannel {
+    const channel = new MessageChannel ();
+    this.channels.set (id, channel);
+    return channel;
+  }
+  get_channel (id: string): MessageChannel | undefined {
+    return this.channels.get (id);
+  }
+  remove_channel (id: string): boolean {
+    return this.channels.delete (id);
+  }
+  broadcast (message: any, exclude_channel?: string): void {
+    this.channels.for_each ((channel, id) => {
+      // Check condition
+if ( {) {
+  $2
+}
+        channel.port1.post_message (message);
+      }
+    });
+  }
+}
+export default MessageChannelHandler;
+}}}};
 
 ;
 
 },;
 ,;
+
 
 
 
@@ -83,5 +126,6 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -69,7 +69,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 AI monitoring'
     ],
     "popular": true,
-    "icon": '☁️🔧',
+    "icon": '',
     "color": 'from-blue-600 to-cyan-700',
     "textColor": 'text-blue-400',
     "link": 'https://ziontechgroup.com/hybrid-cloud-orchestration',
@@ -118,7 +118,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       'Global edge network'
     ],
     "popular": true,
-    "icon": '🌐⚡',
+    "icon": '',
     "color": 'from-green-600 to-emerald-700',
     "textColor": 'text-green-400',
     "link": 'https://ziontechgroup.com/edge-computing-infrastructure',
@@ -167,7 +167,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       'Future-proof security'
     ],
     "popular": true,
-    "icon": '🔐⚛️',
+    "icon": '',
     "color": 'from-purple-600 to-violet-700',
     "textColor": 'text-purple-400',
     "link": 'https://ziontechgroup.com/quantum-safe-cybersecurity',
@@ -216,7 +216,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 AI management'
     ],
     "popular": true,
-    "icon": '🏢🤖',
+    "icon": '',
     "color": 'from-slate-600 to-gray-700',
     "textColor": 'text-slate-400',
     "link": 'https://ziontechgroup.com/autonomous-data-center',
@@ -265,7 +265,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       'Future-ready infrastructure'
     ],
     "popular": true,
-    "icon": '📡🚀',
+    "icon": '',
     "color": 'from-indigo-600 to-blue-700',
     "textColor": 'text-indigo-400',
     "link": 'https://ziontechgroup.com/6g-network-infrastructure',
@@ -314,7 +314,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       'Future-ready infrastructure'
     ],
     "popular": true,
-    "icon": '🌐⚛️',
+    "icon": '',
     "color": 'from-violet-600 to-purple-700',
     "textColor": 'text-violet-400',
     "link": 'https://ziontechgroup.com/quantum-internet',
@@ -363,7 +363,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 development'
     ],
     "popular": true,
-    "icon": '💻🤖',
+    "icon": '',
     "color": 'from-cyan-600 to-blue-700',
     "textColor": 'text-cyan-400',
     "link": 'https://ziontechgroup.com/autonomous-software-development',
@@ -412,7 +412,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 AI assistance'
     ],
     "popular": true,
-    "icon": '🛠️🤖',
+    "icon": '',
     "color": 'from-orange-600 to-red-700',
     "textColor": 'text-orange-400',
     "link": 'https://ziontechgroup.com/intelligent-service-desk',
@@ -461,7 +461,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 AI management'
     ],
     "popular": true,
-    "icon": '🌐🤖',
+    "icon": '',
     "color": 'from-teal-600 to-green-700',
     "textColor": 'text-teal-400',
     "link": 'https://ziontechgroup.com/autonomous-network-management',
@@ -569,7 +569,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 AI monitoring'
     ],
     "popular": true,
-    "icon": '☁️🔧',
+    "icon": '',
     "color": 'from-blue-600 to-cyan-700',
     "textColor": 'text-blue-400',
     "link": 'https://ziontechgroup.com/hybrid-cloud-orchestration',
@@ -618,7 +618,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       'Global edge network'
     ],
     "popular": true,
-    "icon": '🌐⚡',
+    "icon": '',
     "color": 'from-green-600 to-emerald-700',
     "textColor": 'text-green-400',
     "link": 'https://ziontechgroup.com/edge-computing-infrastructure',
@@ -667,7 +667,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       'Future-proof security'
     ],
     "popular": true,
-    "icon": '🔐⚛️',
+    "icon": '',
     "color": 'from-purple-600 to-violet-700',
     "textColor": 'text-purple-400',
     "link": 'https://ziontechgroup.com/quantum-safe-cybersecurity',
@@ -716,7 +716,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 AI management'
     ],
     "popular": true,
-    "icon": '🏢🤖',
+    "icon": '',
     "color": 'from-slate-600 to-gray-700',
     "textColor": 'text-slate-400',
     "link": 'https://ziontechgroup.com/autonomous-data-center',
@@ -765,7 +765,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       'Future-ready infrastructure'
     ],
     "popular": true,
-    "icon": '📡🚀',
+    "icon": '',
     "color": 'from-indigo-600 to-blue-700',
     "textColor": 'text-indigo-400',
     "link": 'https://ziontechgroup.com/6g-network-infrastructure',
@@ -814,7 +814,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       'Future-ready infrastructure'
     ],
     "popular": true,
-    "icon": '🌐⚛️',
+    "icon": '',
     "color": 'from-violet-600 to-purple-700',
     "textColor": 'text-violet-400',
     "link": 'https://ziontechgroup.com/quantum-internet',
@@ -863,7 +863,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 development'
     ],
     "popular": true,
-    "icon": '💻🤖',
+    "icon": '',
     "color": 'from-cyan-600 to-blue-700',
     "textColor": 'text-cyan-400',
     "link": 'https://ziontechgroup.com/autonomous-software-development',
@@ -912,7 +912,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 AI assistance'
     ],
     "popular": true,
-    "icon": '🛠️🤖',
+    "icon": '',
     "color": 'from-orange-600 to-red-700',
     "textColor": 'text-orange-400',
     "link": 'https://ziontechgroup.com/intelligent-service-desk',
@@ -961,7 +961,7 @@ export const "enterpriseITInfrastructureServices2025": EnterpriseITInfrastructur
       '24/7 AI management'
     ],
     "popular": true,
-    "icon": '🌐🤖',
+    "icon": '',
     "color": 'from-teal-600 to-green-700',
     "textColor": 'text-teal-400',
     "link": 'https://ziontechgroup.com/autonomous-network-management',

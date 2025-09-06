@@ -7,6 +7,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -25,10 +26,13 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
 
 
 
+
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams() as { profileId?: string };
+
+
 
 
 
@@ -74,6 +78,29 @@ export default function ProfilePage() {
 
 
 
+      setIsLoading(true),
+      setIsError(false),
+      try {
+        const { data, error } = await supabase
+          .from("talent_profiles")
+          .select("*")
+          .eq("id", profileId)
+          .single();
+          .single(),
+
+
+
+
+export default function ProfilePage() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { profileId } = useParams() as { profileId?: string };
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {;
+    const fetchProfile = async () => {;
 
       setIsLoading(true);
       setIsError(false);
@@ -83,81 +110,20 @@ export default function ProfilePage() {
           .select("*");
           .eq("id", profileId);
           .single();
-
-import { useState, useEffect } from './react';
-import { use_params } from './react-router-dom';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/components / ui / use - toast';
-import { SEO } from '@/components / SEO';
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { HireNowCTA } from '@/components / profile / HireNowCTA';
-import { Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from './lucide-react';
-;
-export default /**
- * ProfilePage - Function description
- */
-function ProfilePage() {
-  // use_params may be untyped in this environment, so avoid passing a;
-  // type argument and cast the result instead to prevent TS2347 errors.;
-  const { profile_id } = use_params () as { profile_id?: string }
-  const [profile_data, setProfileData] = useState < any>(null);
-  const [is_loading, setIsLoading] = useState (true);
-  const [is_error, setIsError] = useState (false);
-;
-  useEffect (() => {
-    const fetch_profile = async () => {
-      setIsLoading (true);
-      setIsError (false);
-      try {
-        const { data, error } = await supabase;
-          .from ("talent_profiles");
-          .select ("*");
-          .eq ("id", profile_id);
-          .single ();
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          throw error;
+        if (error) {
+          throw error
         }
-        setProfileData (data);
+        setProfileData(data)
       } catch (error) {
-        console.error ("Error fetching profile:", error);
-        setIsError (true);
-        toast ({
-          title: "Error",
-          description: "Failed to load profile. Please try again later.",
-          variant: "destructive"});
-
+        console.error("Error fetching profile:", error);
+        setIsError(true);
+        toast({
+          title: "Error"
+          description: "Failed to load profile. Please try again later."
+          variant: "destructive"})
       } finally {
         setIsLoading (false);
       }
-
-
-        if (error) {;
-          throw error;
-        }
-
-        setProfileData(data);
-      } catch (error) {;
-        console && console.error("Error fetching profile:", error);
-        setIsError(true);
-        toast({;
-          title: "Error",;
-          description: "Failed to load profile. Please try again later.",;
-          variant: "destructive"});
-      } finally {;
-        setIsLoading(false);
-      }
-    };
-
-    if (profileId) {;
-      fetchProfile();
     }
 
 
@@ -166,8 +132,10 @@ if ( {) {
   }, [profileId]),
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -190,10 +158,12 @@ if ( {) {
     );
   }
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-500">Failed to load profile.</p>
+      </div>
+    )
+  }
 
 
   return (
@@ -269,9 +239,11 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               {/* Skills */}
@@ -294,6 +266,15 @@ if ( {) {
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
 
             </div>
+
+            </div>;
+
+            {/* Bio Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
+              <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
+            </div>;
+
 
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
@@ -325,6 +306,16 @@ if ( {) {
 
             </div>
 
+              </div>;
+            </div>;
+
+            {/* Experience Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>;
+              <p className="text-zion-slate-light">{profileData && profileData.experience || "No experience provided."}</p>;
+            </div>;
+
+
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
@@ -346,12 +337,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 )}
                 {profileData && profileData.twitter_link && (;
@@ -371,12 +364,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 )}
                 {profileData && profileData.linkedin_link && (;
@@ -396,12 +391,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 )}
 
@@ -421,7 +418,24 @@ if ( {) {
                 hourly_rate: profileData?.hourly_rate |0
 
 
+              }}
+            />
+            {/* Placeholder for other sidebar elements */}
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+                hourly_rate: profileData?.hourly_rate || 0
 
+              }}
+            />;
+            {/* Placeholder for other sidebar elements */}
 
           </div>;
         </div>;
@@ -440,8 +454,10 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -34,6 +34,7 @@ export default async function handler(
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
 
+
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
 
@@ -55,18 +56,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
   const { episodeId } = req && req.body || {};
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  const idx = episodes && episodes.findIndex((e) => e && e.id === episodeId);
   if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
+
   const episode = episodes[idx];
   const text = episode && episode.transcript as string;
+
   const elevenKey = process && process.env.ELEVENLABS_API_KEY;
   const playhtKey = process && process.env.PLAYHT_API_KEY;
+
   const baseFilename = `${episode && episode.id}-${Date && Date.now()}`;
   const mp3Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
   const wavPath = path && path.join(PUBLIC_DIR, `${baseFilename}.wav`);
   const mp4Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
+
   let mp3Created = false;
   try {
     if (elevenKey) {
@@ -117,6 +123,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     episodes[idx] = episode;
 
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+      mp3Url: publicBase + '.mp3';
+      wavUrl: publicBase + '.wav'
+      mp4Url: publicBase + '.mp4'}
+    episodes[idx] = episode;
 
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
     return res.status(200).json({ episode });
@@ -130,6 +141,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error: any) {
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
+
+
 
 
       .json({ error: error?.message || 'Synthesis failed' });
@@ -217,6 +230,7 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
@@ -230,5 +244,6 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

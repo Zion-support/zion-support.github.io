@@ -23,24 +23,21 @@ class ErrorBoundary extends React.Component {
 }
 import React from "react";
 import Head from "next/head";
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Shield,;
-  Star,;
-
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Shield
+  Star
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-
-export default function QuantumInternetSecurityPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
-    s && s.link.endsWith("/quantum-internet-security-platform"),;
-
+export default function QuantumInternetSecurityPage() {
+  const service = enhancedRealMicroSaasServices.find((s) =>
+    s.link.endsWith("/quantum-internet-security-platform")
   );
   if (!service) return null;
 
@@ -92,7 +89,7 @@ export default function QuantumInternetSecurityPage() {;
                     </span>;
                   </div>;
                   <div className="text-slate-400">;
-                    {service && service.trialDays}-day free trial • Setup:{" "}
+                    {service && service.trialDays}-day free trial  Setup:{" "}
                     {service && service.setupTime}
                   </div>;
                 </div>;
@@ -203,7 +200,7 @@ if (return null) {
                     </span>;
                   </div>;
                   <div className="text - slate - 400">;
-                    {service.trial_days}-day free trial • Setup:{" "}
+                    {service.trial_days}-day free trial  Setup:{" "}
                     {service.setup_time}
                   </div>;
                 </div>;

@@ -5,6 +5,38 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     resolver: zodResolver(profileSchema)
     defaultValues: {
 
+      displayName: ""
+      bio: ""
+      headline: ""}})
+  const getTypeLabel = () => {
+    switch (userType) {
+      case "serviceProvider": return "Service Provider"
+      case "talent":
+        return "Talent",
+      case "client":
+        return "Client",
+      default:
+        return "User"
+    }
+  }
+      displayName: "",
+      bio: "",
+      headline: ""}}),
+
+  const getTypeLabel = () => {
+    switch (userType) {
+      case "serviceProvider": return "Service Provider",
+      case "talent":
+        return "Talent",
+      case "client":
+        return "Client",
+      default:
+        return "User"
+    }
+  },
+
+
+
 
 
 
@@ -23,6 +55,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </p>
       </div>
       
+
 
 
 
@@ -112,6 +145,7 @@ function ProfileSetup() {
         return "User";
 
 
+
     }
   }
 
@@ -164,6 +198,7 @@ function ProfileSetup() {
             name="headline"
             render={({ field }: { field: any }) => (
 
+
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
@@ -212,12 +247,15 @@ function ProfileSetup() {
                   <div className="relative">;
                     <Input;
                       placeholder={`e.g., ${
+
                         user_type === "service_provider" ? "Professional Videographer with 5+ years experience" :;
                         user_type === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
                         "Creative Director at XYZ Studios";
 
                       }`}
+
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+
                       {...field}
                     />;
 
@@ -225,7 +263,9 @@ function ProfileSetup() {
 
 
           <FormField
+
             control = {form.control,}
+
             name="bio"
             render={({ field }: { field: any },) => (;
               <FormItem>;
@@ -247,11 +287,13 @@ function ProfileSetup() {
                 <FormControl>;
                   <Textarea;
                     placeholder={`Tell us about your ${
+
                       userType === "serviceProvider" ? "services and expertise" :
                       userType === "talent" ? "skills and experience" :
                       "business and needs"
                     }`}
                     className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
+
                     {...field}
                   />;
                 </FormControl>;
@@ -279,7 +321,9 @@ function ProfileSetup() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
@@ -311,6 +355,11 @@ function ProfileSetup() {
     </div>
   )
 
+                  />;
+                </FormControl>;
+                <FormMessage className="text-red-400" />;
+              </FormItem>;
+            )}
 
           />;
           <Button;
@@ -324,7 +373,12 @@ function ProfileSetup() {
     </div>;
   );
 
-
+case "talent": return "Talent";"
+case "client": return "Client"
+default:
+}
+getTypeLabel () "
+}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
 
   ...field "
 }/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
@@ -339,6 +393,7 @@ function ProfileSetup() {
 
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
+
 
 
 
@@ -371,3 +426,4 @@ getTypeLabel () ";
 }/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
 }/> <Button > Complete Profile </Button> </form> </Form> </div>);
 }"}
+

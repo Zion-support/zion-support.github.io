@@ -3,6 +3,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
 
+  authenticateRequest
+  calculateUsageSummary;
+  authenticateRequest,;
+  calculateUsageSummary,;
+
 } from '../../../utils/api/partnerAuth';
 
 export default async function handler(
@@ -19,6 +24,8 @@ export default async function handler(
   }
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
+
+
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -46,11 +53,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

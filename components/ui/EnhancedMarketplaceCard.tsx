@@ -44,6 +44,7 @@ interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
+
 interface EnhancedMarketplaceCardProps {;
   title: string, description: string,;
   price?: string;
@@ -68,6 +69,7 @@ const EnhancedMarketplaceCard: React.FC < EnhancedMarketplaceCardProps> = ({
   class_name = '';
 
 }) => {
+
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   title,;
   description,;
@@ -211,7 +213,7 @@ interface MarketplaceCardProps {
 }
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           <div className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors">;
-            Learn more →;
+            Learn more ;
           </div>;
         </div>;
       </div>;
@@ -226,6 +228,7 @@ interface MarketplaceCardProps {;
   on_favorite?: () => void;
 }
 
+const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({;
 const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
 
   title;
@@ -262,7 +265,6 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
   );
 }
 export default EnhancedMarketplaceCard;
-=======
   on_favorite;
 }) => {
   return (
@@ -299,4 +301,3 @@ export default EnhancedMarketplaceCard;
 ;
 export default EnhancedMarketplaceCard;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

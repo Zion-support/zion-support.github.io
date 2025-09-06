@@ -36,6 +36,8 @@ import { useCurrency } from '@/hooks/useCurrency';
 
 
 
+
+
 import React, { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
 import { use_router } from 'next / router';
@@ -67,6 +69,8 @@ import { DollarSign } from 'lucide-react'
 
 
 
+
+
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -89,9 +93,11 @@ interface ProductListingCardProps {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -104,7 +110,67 @@ const ProductListingCardComponent = ({
   view = 'grid',
   onRequestQuote,
 
+  detailBasePath = '/marketplace/listing'
+}: ProductListingCardProps) => {
+  const isGrid = view === 'grid',
+  const router = useRouter(),
+  const [loading, setLoading] = useState(false),
+  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
+    ? listing.images[0] 
+    : '/placeholder.svg'
+  ),
+  const [imageError, setImageError] = useState(false),
 
+  const stockStatus =
+    listing.stock === undefined
+      ? 'In stock'
+      : listing.stock <= 0
+  detailBasePath = '/marketplace/listing',
+}: ProductListingCardProps) => {
+  const isGrid = view === 'grid'
+  const router = useRouter()
+  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
+      ? listing.images[0]
+      : '/placeholder.svg'
+  )
+  const [imageError, setImageError] = useState(false)
+  const stockStatus = null;
+    listing.stock === undefined
+      ? 'In stock'
+      : listing.stock <= 0
+        ? 'Out of stock'
+        : listing.stock <= 5
+          ? 'Low stock'
+          : 'In stock'
+      ? 'Out of stock'
+      : listing.stock <= 5
+      ? 'Low stock'
+      : 'In stock',
+
+  const stockVariant =
+    listing.stock === undefined
+      ? 'success'
+      : listing.stock <= 0
+  const stockVariant = null;
+    listing.stock === undefined
+      ? 'success'
+      : listing.stock <= 0
+        ? 'destructive'
+        : listing.stock <= 5
+          ? 'warning'
+          : 'success'
+  const { formatPrice } = useCurrency()
+  const getPrice = () => {
+    if (listing.price === null) return 'Custom pricing'
+    return formatPrice(listing.price)
+  }
+  const handleImageError = () => {
+    if (!imageError) {
+      // Prevent infinite loops if placeholder also fails
+      setImageSrc('/placeholder.svg')
+      setImageError(true)
 
     }
     // Validate listing ID exists before navigation;
@@ -159,6 +225,68 @@ if ( {) {
   const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
       onKeyDown={e => {
 
+        if (e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault()
+          handleViewListing()
+        }      }}
+    >
+      {/* Image */}
+      <div
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+  detailBasePath = '/marketplace/listing'
+}: ProductListingCardProps) => {
+  const isGrid = view === 'grid',
+  const router = useRouter(),
+  const [loading, setLoading] = useState(false),
+  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
+    ? listing.images[0] 
+    : '/placeholder.svg'
+  ),
+  const [imageError, setImageError] = useState(false),
+
+
+
+
+  const stockVariant =
+    listing.stock === undefined
+      ? 'success'
+      : listing.stock <= 0
+      ? 'destructive'
+      : listing.stock <= 5
+      ? 'warning'
+      : 'success',
+    
+  const { formatPrice } = useCurrency(),
+
+  const getPrice = () => {
+    if (listing.price === null) return "Custom pricing",
+    return formatPrice(listing.price)
+  },
+
+  const handleImageError = () => {
+    if (!imageError) { // Prevent infinite loops if placeholder also fails
+      setImageSrc('/placeholder.svg'),
+      setImageError(true)
+import React, { useState } from 'react',;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import { useRouter } from 'next/router',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { ProductListing } from "@/types/listings",;
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from "@/components/RatingStars",;
+import { FavoriteButton } from "@/components/FavoriteButton",;
+import { useDispatch } from 'react-redux',;
+import type { AppDispatch } from '@/store',;
+import { addItem } from '@/store/cartSlice',;
+import { toast } from '@/hooks/use-toast',;
+import { useCurrency } from '@/hooks/useCurrency',;
+import Image from 'next/image', // Import next/image;
+interface ProductListingCardProps {;
+  listing: ProductListing,;
+  view?: 'grid' | 'list',;
+  onRequestQuote?: (id: string) => void,;
 
   detailBasePath?: string;
 const ProductListingCardComponent = ({;
@@ -281,6 +409,7 @@ const ProductListingCardComponent = ({;
       {/* Image */}
 
 
+
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
 
@@ -353,6 +482,7 @@ if ( {) {
         on_click={handleViewListing} // Keep existing on_click for navigation;";
         tab_index={-1} // Remove from tab order as parent is focusable;
         onKeyDown={(e) => {
+
           // Check condition
 if ( {) {
   $2
@@ -372,6 +502,16 @@ if ( {) {
             e.preventDefault()
             handleViewListing()
 
+          }
+        }}
+      >;
+        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+          <Image;
+            src={imageSrc}
+            alt={listing.title}
+            fill={true}
+            style={{ objectFit: 'cover' }}
+            onError={handleImageError}
 
             priority={false} // Assuming these are not LCP images
             sizes={
@@ -390,10 +530,11 @@ if ( {) {
               variant={stockVariant as any}
               className='absolute top-2 left-2'            >
           {stockStatus && (;
-            <Badge;
+            <Badge
               variant={stockVariant as any}
               className="absolute top-2 left-2"
             >
+
 
 
               {stockStatus}
@@ -429,6 +570,7 @@ if ( {) {
           </div>;
 
           {/* Title & Description */}
+
           <div onClick={handleViewListing} className='block'>
             {listing.uspHeadline && (
               <p className='text-primary font-semibold text-sm mb-1'>
@@ -467,6 +609,7 @@ if ( {) {
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
 
+
                 {listing.uspHeadline}
               </p>
             )}
@@ -483,6 +626,7 @@ if ( {) {
               {listing.tags.map((tag, idx) => (
                 <span
                   key={idx}
+
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
@@ -500,11 +644,13 @@ if ( {) {
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
 
+
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
+
 
 
 
@@ -549,7 +695,9 @@ if ( {) {
                 'Add to Cart';
               )}
 
+
             </Button>;
+
 
 
             <Button
@@ -562,7 +710,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
@@ -597,6 +747,7 @@ if ( {) {
               }}
               disabled={loading}
 
+
             >
               {loading ? (
                 <>
@@ -610,6 +761,7 @@ if ( {) {
                 "Add to Cart"
               )}
             </Button>
+
             <Button
               size='sm'
               variant='default'
@@ -634,6 +786,7 @@ if ( {) {
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
+
 
                 router.push('/checkout')
               }}
@@ -727,6 +880,7 @@ if ( {) {
               Buy Now;
             </Button>;
             {onRequestQuote && (
+
               <Button;
                 size='sm';
                 variant='outline';
@@ -810,6 +964,7 @@ export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
                 Request Quote;
               </Button>) }
+
 
 
 
@@ -906,5 +1061,6 @@ ProductListingCard.display_name = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+
 
 

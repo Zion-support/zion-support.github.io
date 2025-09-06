@@ -7,6 +7,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -15,6 +16,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Label} from "@/components/ui/label";
 import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
+
 
 
 
@@ -37,7 +39,9 @@ import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 
 
+
 type ResumeStep = "basics" | "experience" | "education" | "skills",
+
 
   const renderStepContent = () => {
     switch (currentStep) {
@@ -121,6 +125,13 @@ function BasicsStep() {
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
 
+          <Textarea
+            id="summary"
+            placeholder="Write a brief summary about yourself"
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+
             rows={4}
           />
         </div>
@@ -128,6 +139,10 @@ function BasicsStep() {
     </Card>
   )
 }
+
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -149,7 +164,26 @@ export function MobileResumeBuilder() {;
 
   const renderStepContent = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { Label } from '@/components / ui / label';
+import { ChevronRight, Plus, Zap, Trash2 } from './lucide-react';
+;
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+;
+export /**
+ * MobileResumeBuilder - Function description
+ */
+function MobileResumeBuilder() {
+  const [current_step, setCurrentStep] = useState < ResumeStep>("basics");
+;
+  const renderStepContent = () =>: any {
+    switch (current_step) {
 
       case "basics": return <BasicsStep />;
       case "experience":;
@@ -163,6 +197,8 @@ export function MobileResumeBuilder() {;
     }
 
   };
+
+
 
 
 
@@ -254,6 +290,7 @@ function BasicsStep() {;
 
 
 
+
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
@@ -262,6 +299,7 @@ function BasicsStep() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -378,7 +416,6 @@ function ExperienceStep() {
     set_experiences (experiences.filter (exp => exp.id !== id));
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="space - y-4">;
       {experiences.map ((exp, index) => (
@@ -487,20 +524,20 @@ function EducationStep() {
   
 
   return (
-    <div className="space-y-4">
-      {educations.map((edu, index) => (
-        <Card key={edu.id}>
-          <CardContent className="p-4 space-y-4">
-            <div className="flex justify-between items-center">
-              <h3 className="font-medium">Education {index + 1}</h3>
+    <div className="space - y-4">;
+      {educations.map ((edu, index) => (
+        <Card key={edu.id}>;
+          <CardContent className="p - 4 space - y-4">;
+            <div className="flex justify - between items - center">;
+              <h3 className="font - medium">Education {index + 1}</h3>;
               {educations.length > 1 && (
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => removeEducation(edu.id)}
-                >
-                  <Trash2 className="h-5 w-5 text-destructive" />
-                </Button>
+                  onClick={() => removeEducation(edu && edu.id)}
+                >;
+                  <Trash2 className="h-5 w-5 text-destructive" />;
+                </Button>;
               )}
             </div>
             <div className="space-y-2">
@@ -539,14 +576,14 @@ function EducationStep() {
   )
 }
 function SkillsStep() {
-  const [skills, setSkills] = useState([
+  const [skills, set_skills] = useState ([;
     { id: '1', name: "", proficiency: "beginner" }
 
   ]);
   ]),
   
   const addSkill = () => {
-    const newId = (skills.length + 1).toString(),
+    const newId = (skills.length + 1).toString();
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
   }
   const removeSkill = (id: string) => {
@@ -695,7 +732,6 @@ function SkillsStep() {;
       skill && skill.id === id ? { ...skill, [field]: value } : skill;
     ));
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="space-y-4">;
@@ -714,10 +750,56 @@ function SkillsStep() {;
                   value={skill && skill.proficiency}
                   onValueChange={(value) => updateSkill(skill && skill.id, "proficiency", value)}
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+;
+  const add_skill = () =>: any {
+    const new_id = (skills.length + 1).to_string ();
+    set_skills ([...skills, { id: new_id, name: "", proficiency: "beginner" }]);
+  }
+;
+  const remove_skill = (id: string) =>: any {
+    set_skills (skills.filter (skill => skill.id !== id));
+  }
+;
+  const update_skill = (id: string, field: string, value: string) =>: any {
+    set_skills (skills.map (skill =>;
+      skill.id === id ? { ...skill, [field]: value } : skill));
+  }
+;
+  return (
+    <div className="space - y-4">;
+      <Card>;
+        <CardContent className="p - 4">;
+          <div className="space - y-4">;
+            {skills.map ((skill) => (
+              <div key={skill.id} className="flex items - center gap - 2">;
+                <Input;
+                  placeholder="Skill (e.g. JavaScript, Figma)";
+                  value={skill.name}
+                  on_change={(e) => update_skill (skill.id, "name", e.target.value)}
+                  className="flex - 1";
+                />;
+                <Select;
+                  value={skill.proficiency}
+                  onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
+                >
+                  <SelectTrigger className="w-[130px]">
+                    <SelectValue placeholder="Level" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="beginner">Beginner</SelectItem>
+                    <SelectItem value="intermediate">Intermediate</SelectItem>
+                    <SelectItem value="advanced">Advanced</SelectItem>
+                    <SelectItem value="expert">Expert</SelectItem>
+                  </SelectContent>
+                </Select>
+                {skills.length > 1 && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => removeSkill(skill.id)}
+                  >;
+                    <Trash2 className="h-4 w-4 text-destructive" />;
+                  </Button>;
 
                 )}
               </div>;
@@ -763,10 +845,12 @@ function SkillsStep() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

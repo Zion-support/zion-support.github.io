@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {JobApplication} from "@/types/jobs";
@@ -33,6 +34,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
 
 
+
 interface ApplicationCardProps {
   application: JobApplication
 }
@@ -49,7 +51,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
   const [expanded, setExpanded] = useState(false);
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -66,7 +70,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
   const renderActionButtons = () => {
     switch (application.status) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       case "shortlisted": return (
           <Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
@@ -302,9 +305,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
+
 
 
 
@@ -317,6 +320,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         )}
@@ -344,6 +348,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
           </div>
         </div>
 
+        <Button
+          variant="secondary"
+        <Button 
+          variant="secondary" 
 
           size="sm"
           className="w-full"

@@ -15,6 +15,17 @@ const RadioGroup = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
 
+import * as React from &quot;react & quot;
+import * as RadioGroupPrimitive from &quot;@radix - ui / react - radio - group & quot;
+import { Circle } from &quot;lucide-react & quot;
+;
+import { cn } from &quot;@/lib / utils & quot;
+;
+const RadioGroup = React.forward_ref<;
+  React.ElementRef < typeof RadioGroupPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof RadioGroupPrimitive.Root>;
+>(({ class_name, ...props }, ref) => {
+
   return (
     <RadioGroupPrimitive.Root;
       className={cn (&quot;grid gap - 2&quot;, class_name)}
@@ -39,11 +50,12 @@ className={cn(
     <RadioGroupPrimitive.Item;
       ref={ref}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+      className={cn(
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+className={cn(
+        &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;,
+      className={cn(
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
 
         className
       )}
@@ -56,6 +68,7 @@ className={cn(
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
+
 
 
 
@@ -82,11 +95,13 @@ RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
 
 
 
+
 export { RadioGroup, RadioGroupItem }
 
 
 export { RadioGroup, RadioGroupItem }
 ;
+
 
 
 
@@ -97,4 +112,5 @@ export { RadioGroup, RadioGroupItem }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

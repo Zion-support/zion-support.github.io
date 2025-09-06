@@ -6,6 +6,8 @@ status;
 
 
 
+
+
   status: "incomplete" | "current" | "complete"
   label: string
   description?: string
@@ -22,7 +24,15 @@ interface StepProps {
 }
 export function Step({
 
-
+  status,
+  label,
+  description,
+  status
+  label
+  description
+  status,
+  label,
+  description,
 
   className}: StepProps) {
   return (
@@ -35,6 +45,7 @@ export function Step({
         "relative flex items-center",
         {
           "opacity-60": status === "incomplete"},
+
 
 
 
@@ -140,6 +151,7 @@ export function Step({;
       <div className="ml-4 min-w-0">;
         <h3
           className={cn("text-sm font-medium", {
+
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
           {label}
@@ -154,6 +166,8 @@ export function Step({;
     </li>
   )
 }
+
+
 
 
 
@@ -178,10 +192,12 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   
 
 
+
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
+
 
 
 
@@ -193,6 +209,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+
 
 
 
@@ -236,6 +253,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
 
     <div className={cn("w-full", className)}>;
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
+
         {React.Children.map(childrenArray, (child, index) => {;
           if (!React.isValidElement(child)) return null,;
           let status: "incomplete" | "current" | "complete" = "incomplete",;
@@ -359,5 +377,7 @@ if (status = "current") {
 }"}
 }
 ;
+
+
 
 

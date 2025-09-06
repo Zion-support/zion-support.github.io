@@ -2,9 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const { OpenAI } = require('openai');
-const DATA_DIR = path.join(process.cwd(), 'data');
-const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json');
-const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback');
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+const FEEDBACK_FILE = path && path.join(DATA_DIR, 'feedback_logs && feedback_logs.json');
+const REPORT_DIR = path && path.join(DATA_DIR, 'reportsfeedback');
 function readAll() {
   try {
 
@@ -29,12 +29,14 @@ function readAll() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   }
 }
@@ -104,10 +106,19 @@ async function main() {
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
 
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
   console.log('Analysis written to', summaryPath)
 }
 main().catch((e) => { console.error(e), process.exit(1) });
+
+
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+main().catch((e) => { console.error(e), process.exit(1) }),;
 
   // // // console.log('Analysis written to', summaryPath)
   const all = readAll(),;
@@ -143,6 +154,7 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -151,5 +163,6 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

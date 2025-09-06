@@ -1,11 +1,23 @@
 
 
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
 
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",
+
+
+
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useIsMobile } from "@/hooks/use-mobile",
 
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
@@ -40,9 +52,16 @@ function ApplicationStatusTrackerContent() {
     </>
   )
 
-
-
-
+}
+export default function ApplicationStatusTracker() {
+  return (
+    <ProtectedRoute>
+      <AppLayout>
+        <ApplicationStatusTrackerContent />
+      </AppLayout>
+    </ProtectedRoute>
+  )
+}
 
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -89,6 +108,7 @@ function ApplicationStatusTrackerContent() {;
 
 
 
+
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
 import { ApplicationsTracker } from '@/components / jobs / applications';
@@ -101,6 +121,7 @@ import { useIsMobile } from '@/hooks / use - mobile';
  */
 function ApplicationStatusTrackerContent() {
   const is_mobile = useIsMobile ();
+
 
 
 
@@ -141,6 +162,7 @@ function ApplicationStatusTracker() {
 
 
 
+
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
@@ -164,5 +186,6 @@ function ApplicationStatusTracker() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

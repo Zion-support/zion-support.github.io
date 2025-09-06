@@ -7,6 +7,8 @@ project_name: string, goals: string,
 
 
 
+
 export interface ProjectBrief {
 
 }
+

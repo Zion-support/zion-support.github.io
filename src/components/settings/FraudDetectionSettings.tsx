@@ -249,4 +249,6 @@ export function FraudDetectionSettings() {;
     </Card>;
   );
 }
+
 ;
+

@@ -109,8 +109,78 @@ export default function VerifyPage() {
       setRequiredDocs(data && data.requiredDocuments);
       setOptionalDocs(data && data.optionalDocuments);
 
+  async function upload(kind: KycDocumentMeta['kind']) {;
+    const filename = prompt(`Enter filename for ${kind}`) || '';
+    if (!filename) return;
+    setBusy(true);
+    const res = await fetch('/api/kyc/upload', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify({ userId, kind, filename })}),;
+    const data = await res.json();
+    if (data.ok) {;
+      setProfile(data.profile);
+    } else {
+      setMessage(data.error |'Upload failed');
+    }
+    setBusy(false);  }
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, kind, filename })});
+    const data = await res.json();
+    if (data.ok) {
+      setProfile(data.profile)
+    } else {
+      setMessage(data.error || 'Upload failed')
+    }
+    setBusy(false)
+  }
 
 
+
+
+
+
+
+  async function upload(): any (kind: KycDocumentMeta['kind']) {;
+    const filename = prompt(`Enter filename for ${kind}`) || '';
+    if (!filename) return;
+    setBusy(true);
+    const res = await fetch('/api/kyc/upload', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify({ userId })}),;
+    const data = await res.json();
+    if (data.ok) {;
+      setProfile(data.profile);
+      setMessage('Submitted. AML check performed.');
+    } else {
+      setMessage(data.error |'Submit failed');
+    }
+    setBusy(false);  }
+  const labels = getBadgeLabels(profile |undefined);
+    } else {;
+      setMessage(data.error || 'Submit failed');
+    } else {;
+      setMessage(data.error || 'Submit failed');
+    }
+    setBusy(false);  }
+
+  const labels = getBadgeLabels(profile || undefined);
+
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    setBusy(false);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const labels = getBadgeLabels(profile || undefined),
 
   return (
     <>
@@ -128,6 +198,7 @@ export default function VerifyPage() {
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
         <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
+
 
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
@@ -205,6 +276,7 @@ export default function VerifyPage() {
           )}
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         {labels.length > 0 && (
           <div className="mb-4">
@@ -289,10 +361,11 @@ export default function VerifyPage() {
             <div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-gray-600">Progress</span>
-                <span className="text-sm font-medium">{progress}% {profile.status === 'submitted' && '→ Pending ID'} {profile.status === 'approved' && '→ Approved'}</span>
+                <span className="text-sm font-medium">{progress}% {profile.status === 'submitted' && ' Pending ID'} {profile.status === 'approved' && ' Approved'}</span>
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
+
 
 
 
@@ -307,8 +380,8 @@ export default function VerifyPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
             <section>
 
@@ -334,7 +407,6 @@ export default function VerifyPage() {
                     </div>
                   )
                 })}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </section>
             {optionalDocs.length > 0 && (
@@ -346,12 +418,11 @@ export default function VerifyPage() {
                     const hasIt = (profile.documents |[]).some(
                       d => d.kind === k
                     );
+                      >
 
-                      >;
-                        <div>;
-                          <div className='text-sm font-medium'>{k}</div>;
-                          <div className='text-xs text-gray-500'>;
-
+                        <div>
+                          <div className='text-sm font-medium'>{k}</div>
+                          <div className='text-xs text-gray-500'>
                             {hasIt ? 'Uploaded' : 'Optional'}
                           </div>;
                         </div>;
@@ -383,8 +454,28 @@ export default function VerifyPage() {
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
 
-
-
+                    );                  })}
+                </div>
+              </section>
+            )}
+            <div>
+              <button
+                disabled={
+                  busy |
+                  profile.status === 'submitted' |
+                  profile.status === 'approved'
+                }
+                onClick={submit}
+                className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
+              >
+                Submit for review
+              </button>
+            </div>
+            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
+        )}
+      </main>
+    </>
+);
 
 
                     )
@@ -453,15 +544,119 @@ export default function VerifyPage() {
             <div>;
               <button
                 disabled={
-                  busy ||
-                  profile && profile.status === 'submitted' ||
-                  profile && profile.status === 'approved'
+                  busy |
+                  profile.status === 'submitted' |
+                  profile.status === 'approved'
                 }
                 onClick={submit}
-                className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'>;
+
+                className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
+              >
+                Submit for review
+              </button>
+            </div>
+            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
+        )}
+      </main>
+    </>
+);
+                <h2 className="font-semibold mb-2">Optional documents</h2>
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
+                  {optionalDocs.map((k) => {
+                    const hasIt = (profile.documents || []).some((d) => d.kind === k);
+                    return (
+                      <div key={k} className="flex items-center justify-between border rounded p-3">
+                        <div>
+                          <div className="text-sm font-medium">{k}</div>
+                          <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
+                        </div>
+                        <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+                      </div>
+                    )
+                  })}
+                </div>
+              </section>
+            )}
+
+            <div>
+              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
+            </div>
+
+            {message && <div className="text-sm text-blue-700">{message}</div>}
+          </div>
+        )}
+      </main>
+    </>
+  )
+}
+                />              </div>;
+            </div>;
+            <section>;
+              <h2 className='font - semibold mb - 2'>Required documents</h2>;
+              <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 2'>;
+                {required_docs.map (key => {
+                  const has_it = (profile.documents || []).some (
+                    d => d.kind === k);
+;
+                    >;
+                      <div>;
+                        <div className='text - sm font - medium'>{k}</div>;
+                        <div className='text - xs text - gray - 500'>;
+                          {has_it ? 'Uploaded' : 'Missing'}
+                        </div>;
+                      </div>;
+                      <button;
+                        disabled={busy}
+                        on_click={() => upload (k)}
+                        className='text - sm px - 3 py - 1 rounded bg - gray - 900 text - white disabled:opacity - 50';
+                      >;
+                        {has_it ? 'Replace' : 'Upload'}
+                      </button>;
+                    </div>);                })}
+              </div>;
+            </section>;
+            {optional_docs.length > 0 && (
+              <section>;
+                <h2 className='font - semibold mb - 2'>Optional documents</h2>;
+                <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 2'>;
+                  {optional_docs.map (key => {
+                    const has_it = (profile.documents || []).some (
+                      d => d.kind === k);
+;
+                      >;
+                        <div>;
+                          <div className='text - sm font - medium'>{k}</div>;
+                          <div className='text - xs text - gray - 500'>;
+                            {has_it ? 'Uploaded' : 'Optional'}
+                          </div>;
+                        </div>;
+                        <button;
+                          disabled={busy}
+                          on_click={() => upload (k)}
+                          className='text - sm px - 3 py - 1 rounded bg - gray - 900 text - white disabled:opacity - 50';
+                        >;
+                          {has_it ? 'Replace' : 'Upload'}
+                        </button>;
+                      </div>);                  })}
+                </div>;
+              </section>)}
+            <div>;
+              <button;
+                disabled={
+                  busy ||;
+                  profile.status === 'submitted' ||;
+                  profile.status === 'approved';
+                }
+                on_click={submit}
+                className='rounded bg - green - 600 text - white px - 4 py - 2 disabled:opacity - 50';
+              >;
                 Submit for review;
               </button>;
             </div>;
+            {message && <div className='text - sm text - blue - 700'>{message}</div>}          </div>)}
+      </main>;
+    </>);
+;
 
             <section>;
               <h2 className="font-semibold mb-2">Required documents</h2>;
@@ -515,7 +710,14 @@ export default function VerifyPage() {
             <div>
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
-
+            <div>
+              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
+            </div>
+            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
+        )}
+      </main>
+    </>
+);
 
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
@@ -541,10 +743,12 @@ export default function VerifyPage() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -29,17 +29,30 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-
-
-
-
-
-
+import {
+  Star
+  ExternalLink
+  ArrowRight
+  TrendingUp
+  Users
+  Clock
+  Shield
+  Zap;
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,;
+  Zap,;
 
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
   service: {
+
+
 
 
 
@@ -55,7 +68,6 @@ import {;
 } from 'lucide-react';
 interface EnhancedServiceCardProps {;
   service: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     id: string;
     name: string;
     tagline: string;
@@ -189,6 +201,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         duration: 0.6,
 
 
+
         ease: 'back_out' as const,
       },
     },    hover: {        ease: "ease_out" as const;
@@ -199,6 +212,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 ;
   const icon_variants = {
     hidden: { rotate: -180, scale: 0 },
+
 
     visible: {    visible: {
 
@@ -224,7 +238,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Background Glow */}
       <div
         className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -238,8 +251,23 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             .join(', ')})`,;
 
 
+  return (
+    <motion.div
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover"
+      viewport={{ once: true }}
+        ease: 'easeInOut' as const,
+      },
+    },
+
+
+
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
     >
       {/* Background Glow */}
@@ -254,6 +282,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       {service.popular && (
         <div className="absolute top-4 right-4 z-10">
           <motion.div
+
 
 
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"
@@ -290,6 +319,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <motion.div
             className={`text-4xl ${service.textColor}`}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
             variants={iconVariants}
             initial='hidden'
             animate='visible'
@@ -307,9 +337,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             {service.icon}
           </motion.div>
 
+
           <div className='text-right'>
             <div className='text-2xl font-bold text-white'>{service.price}</div>
             <div className='text-sm text-gray-400'>{service.period}</div>          </div>
+
         </div>
         {/* Title & Tagline */}
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
@@ -320,6 +352,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
         </p>
+
 
 
           <div className="text-right">
@@ -336,6 +369,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
@@ -383,12 +417,14 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
@@ -415,24 +451,29 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             whileHover='hover'>;
             {service && service.icon}
           </motion && motion.div>;
+
           <div className='text-right'>;
             <div className='text-2xl font-bold text-white'>{service && service.price}</div>;
             <div className='text-sm text-gray-400'>{service && service.period}</div>          </div>;
         </div>;
+
         {/* Title & Tagline */}
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
           {service && service.name}
         </h3>;
         <p className='text-gray-300 text-sm mb-4 leading-relaxed'>          {service && service.tagline}
         </p>;
+
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service && service.description}
         </p>;
+
         {/* Key Metrics */}          ;
           <div className="text-right">;
             <div className="text-2xl font-bold text-white">{service && service.price}</div>;
             <div className="text-sm text-gray-400">{service && service.period}</div>;
         </div>;
+
         {/* Title & Tagline */}
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
           {service && service.name}
@@ -442,10 +483,12 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         </h3>;
         <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
         </p>;
+
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>        <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3">;
           {service && service.description}
         </p>;
+
         {/* Key Metrics */}
         <div className='grid grid-cols-2 gap-4 mb-6'>;
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>;
@@ -460,7 +503,18 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             </div>;
             <div className='text-xs text-gray-400'>Rating</div>          </div>;
         </div>;
+
         {/* Features Preview */}
+
+
+        <div className="mb-6">
+          <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+            <Zap className="w-4 h-4 text-yellow-400" />
+            Key Features
+          </h4>
+          <div className="space-y-2">
+            {service.features.slice(0, 3).map((feature, index) => (
+              <motion.div
 
 
                 key={index}
@@ -475,6 +529,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -485,14 +540,22 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                 {feature}
               </motion && motion.div>;
             ))}
 
 
+            {service.features.length > 3 && (
+              <div className="text-xs text-gray-500 mt-2">
+                +{service.features.length - 3} more features
+              </div>
+
+
             )}
           </div>
         </div>
+
 
 
 
@@ -511,6 +574,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         {/* Market Info */}
@@ -525,6 +589,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -538,6 +603,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           </div>
@@ -578,6 +644,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             <Shield className="w-4 h-4" />
 
             {service.setupTime}
+
 
 
 
@@ -638,12 +705,15 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
             {service.setupTime}
 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -660,13 +730,14 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           <motion.a
             href={service.link}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
 
             whileHover={{ scale: 1 && 1.05 }}
@@ -706,6 +777,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -737,10 +809,13 @@ whileHover={{ scale: 1 && 1.05 }}
       </div>;
       {/* Hover Effect Border */}
 
+
 };
 export default EnhancedServiceCard;    </motion && motion.div>;
   );
 
+}
+};
 
 
 export default EnhancedServiceCard;    </motion.div>
@@ -753,6 +828,7 @@ export default EnhancedServiceCard;
 
 };
 export default EnhancedServiceCard;
+
 
 export default EnhancedServiceCard;
 
@@ -769,5 +845,6 @@ export default EnhancedServiceCard;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -58,43 +58,81 @@ export default function ZionHireAI() {;
       <Header />;
       <main className='flex-1'>;
 
-                  background_image: `linear - gradient (to bottom right, ${primary_color}, rgba (25, 33, 52, 1))`,
+import React from 'react';
+import { Header } from '@/components / Header';
+import { SEO } from '@/components / SEO';
+import { use_whitelabel } from '@/context / WhitelabelContext';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+  ArrowRight,
+  Briefcase,
+  PenTool,
+  BarChart3,
+  Users,
+  Shield,
+  Globe,
+} from 'lucide-react';
+import { use_auth } from '@/hooks / use_auth';
+import Link from 'next / link';
+export default /**
+ * ZionHireAI - Function description
+ */
+function ZionHireAI() {
+  const { is_whitelabel, brand_name, primary_color } = use_whitelabel ();
+  const { is_authenticated } = use_auth ();
+  return (
+    <>;
+      <SEO;
+        title='Zion Hire AI - White - labeled AI Recruiting Assistant';
+        description='Empower your company with AI - powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.';
+      />;
+      <Header />;
+      <main className='flex - 1'>;
+        {/* Hero Section */}
+        <section;
+          className='relative bg - gradient - to - br from - zion - blue to - zion - blue - dark py - 16 md:py - 24';
+          style={
+            primary_color;
+              ? {
+                  backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`
                 }
               : {}
-          }
-        >;
-          <div className='container mx - auto px - 4 md:px - 6'>;
-            <div className='grid gap - 6 md:grid - cols - 2 items - center'>;
-              <div className='space - y-4'>;
-                <h1 className='text - 3xl md:text - 5xl font - bold tracking - tighter text - white'>;
-                  {is_whitelabel;
-                    ? `${brand_name} Recruiting Assistant`;
+          }>;
+          <div className='container mx-auto px-4 md:px-6'>;
+            <div className='grid gap-6 md:grid-cols-2 items-center'>;
+              <div className='space-y-4'>;
+                <h1 className='text-3xl md:text-5xl font-bold tracking-tighter text-white'>;
+                  {isWhitelabel;
+                    ? `${brandName} Recruiting Assistant`;
                     : 'Zion Hire AI'}
                 </h1>;
-                <p className='text - lg text - zion - slate - light max - w-[600px]'>;
-                  Empower your team with AI - driven talent acquisition.;
+                <p className='text-lg text-zion-slate-light max-w-[600px]'>;
+                  Empower your team with AI-driven talent acquisition.;
                   Streamline your hiring process, improve candidate matches, and;
                   enhance the applicant experience.;
                 </p>;
-                <div className='flex flex - col sm:flex - row gap - 3 pt - 4'>;
-                  <Button;
-                    size='lg';
-                    className='bg - zion - purple hover:bg - zion - purple - light text - white';
-                    as_child;
-                  >;
-                    <Link;
-                      href={is_authenticated ? '/enterprise / admin' : '/login'}
-                    >;
-                      Get Started <ArrowRight className='ml - 2 h - 4 w - 4' />;
+                <div className='flex flex-col sm:flex-row gap-3 pt-4'>;
+                  <Button
+                    size='lg'
+                    className='bg-zion-purple hover:bg-zion-purple-light text-white'
+                    asChild>;
+                    <Link
+                      href={isAuthenticated ? '/enterprise/admin' : '/login'}>;
+                      Get Started <ArrowRight className='ml-2 h-4 w-4' />;
                     </Link>;
                   </Button>;
-                  <Button;
-                    variant='outline';
-                    size='lg';
-                    className='bg - transparent border - white text - white hover:bg - white / 10';
-                    as_child;
-                  >;
-                    <Link href='/enterprise / demo'>Request Demo</Link>;
+                  <Button
+                    variant='outline'
+                    size='lg'
+                    className='bg-transparent border-white text-white hover:bg-white/10'
+                    asChild>;
+                    <Link href='/enterprise/demo'>Request Demo</Link>;
 
                   </Button>;
                 </div>;
@@ -132,6 +170,7 @@ export default function ZionHireAI() {
 
 
 
+
   return (
     <>
       <SEO 
@@ -141,6 +180,7 @@ export default function ZionHireAI() {
       <Header />
       <main className='flex-1'>
         {/* Hero Section */}
+
         <section
           className='relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24'
           style={
@@ -192,7 +232,9 @@ export default function ZionHireAI() {
               <div className='relative hidden md:block'>
                 <div className='absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl'></div>
                 <img
+
                   src='https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI'
+
                   alt='Zion Hire AI Dashboard'
                   className='relative z-10 rounded-lg shadow-xl'
                   loading='lazy'                />                  src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
@@ -202,12 +244,14 @@ export default function ZionHireAI() {
                 />
 
 
+
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
+
 
 
 
@@ -223,6 +267,7 @@ export default function ZionHireAI() {
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
+
 
 
 
@@ -248,11 +293,13 @@ export default function ZionHireAI() {
                       </span>
                       <span>Optimized for inclusivity</span>
                     </li>
+
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Template
                       </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">
                     <li className="flex items-center">
+
 
 
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
@@ -319,6 +366,7 @@ export default function ZionHireAI() {
                 </CardContent>
               </Card>
 
+
               <Card className='bg-card border border-border'>                <CardHeader>
               
               <Card className="bg-card border border-border">
@@ -326,9 +374,11 @@ export default function ZionHireAI() {
 
 
 
+
               
               <Card className="bg-card border border-border">
                 <CardHeader>
+
 
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
@@ -347,9 +397,11 @@ export default function ZionHireAI() {
                       <span>Culture fit prediction</span>
                     </li>
 
-
+                    <li className='flex items-center'>
+                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
+                        Data
+                      </span>                    <li className="flex items-center">
                     <li className="flex items-center">
-
 
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Performance tracking</span>
@@ -358,9 +410,12 @@ export default function ZionHireAI() {
                 </CardContent>
               </Card>
 
+
+
               
               <Card className="bg-card border border-border">
                 <CardHeader>
+
 
 
               
@@ -402,6 +457,7 @@ export default function ZionHireAI() {
 
 
                 <CardHeader>
+
                   <BarChart3 className='h-10 w-10 text-zion-purple mb-2' />
                   <CardTitle>Advanced Analytics</CardTitle>
                   <CardDescription>
@@ -429,6 +485,7 @@ export default function ZionHireAI() {
                     <li className="flex items-center">
 
 
+
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Cost per hire analysis</span>
                     </li>
@@ -442,6 +499,7 @@ export default function ZionHireAI() {
 
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
+
                   <CardTitle>White-Labeled Platform</CardTitle>
                   <CardDescription>
                     Customize the platform with your company's branding and
@@ -458,6 +516,7 @@ export default function ZionHireAI() {
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Co-branded or white-labeled</span>
                     </li>
+
                     <li className='flex items-center'>
                       <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Custom
@@ -493,6 +552,7 @@ export default function ZionHireAI() {
                     </li>
 
 
+
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
                       <span>Team roles & permissions</span>
@@ -506,7 +566,14 @@ export default function ZionHireAI() {
 
         {/* CTA Section */}
 
-
+        <section className='bg-zion-blue-dark py-16'>
+          <div className='container mx-auto px-4 md:px-6 text-center'>
+            <h2 className='text-3xl font-bold text-white mb-4'>
+              Ready to transform your hiring process?
+            </h2>
+            <p className='text-zion-slate-light max-w-2xl mx-auto mb-8'>
+              Join leading companies using Zion Hire AI to find better talent
+              faster, reduce time-to-hire, and improve candidate experience.
 
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
@@ -516,8 +583,10 @@ export default function ZionHireAI() {
               reduce time-to-hire, and improve candidate experience.
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -535,6 +604,8 @@ export default function ZionHireAI() {
             >
 
 
+
+
               <Link href="/enterprise/demo">
                 Schedule a Demo
               </Link>
@@ -548,6 +619,69 @@ export default function ZionHireAI() {
       </main>
     </>
 
+  )
+}
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { SEO } from "@/components/SEO",;
+import { useWhitelabel } from "@/context/WhitelabelContext",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react';
+import { useAuth } from "@/hooks/useAuth",;
+import Link from "next/link",;
+export default function ZionHireAI() {;
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),;
+  const { isAuthenticated } = useAuth(),;
+  return (;
+    <>;
+      <SEO;
+        title="Zion Hire AI - White-labeled AI Recruiting Assistant";
+        description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.";
+      />;
+      <Header />;
+      <main className="flex-1">;
+        {/* Hero Section */}
+        <section;
+          className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24";
+          style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
+        >;
+          <div className="container mx-auto px-4 md:px-6">;
+            <div className="grid gap-6 md:grid-cols-2 items-center">;
+              <div className="space-y-4">;
+                <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">;
+                  {isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
+                </h1>;
+                <p className="text-lg text-zion-slate-light max-w-[600px]">;
+                  Empower your team with AI-driven talent acquisition. Streamline your hiring process,;
+                  improve candidate matches, and enhance the applicant experience.;
+                </p>;
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">;
+                  <Button;
+                    size="lg";
+                    className="bg-zion-purple hover:bg-zion-purple-light text-white";
+                    asChild;
+                  >;
+                    <Link href={isAuthenticated ? "/enterprise/admin" : "/login"}>;
+                      Get Started <ArrowRight className="ml-2 h-4 w-4" />;
+                    </Link>;
+                  </Button>;
+                  <Button;
+                    variant="outline";
+                    size="lg";
+                    className="bg-transparent border-white text-white hover:bg-white/10";
+                    asChild;
+                  >;
+                    <Link href="/enterprise/demo">;
+                      Request Demo;
+                    </Link>;
+                  </Button>;
+                </div>;
+              </div>;
+              <div className="relative hidden md:block">;
+                <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>;
+                <img;
+                  src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI";
 
                   alt="Zion Hire AI Dashboard";
                   className="relative z-10 rounded-lg shadow-xl";
@@ -1084,5 +1218,7 @@ export default function ZionHireAI() {
 
 
 
+
     </>);
 }
+

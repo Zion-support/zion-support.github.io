@@ -32,6 +32,8 @@ type Message = {
 }
 
 
+
+
       id: `bot-escalation-${Date.now()}`,
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
@@ -385,4 +387,6 @@ type Message = {
   const suggestEscalation = () => {
     const escalationMessage: Message = {
 
+
     handleSendMessage(text)
+

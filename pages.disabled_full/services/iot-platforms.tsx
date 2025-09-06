@@ -9,6 +9,7 @@ interface IotplatformsProps {
   // Add props here as needed
 
 }
+export default function Iotplatforms({ }: IotplatformsProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

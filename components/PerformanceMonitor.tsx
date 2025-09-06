@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -42,43 +46,43 @@ interface PerformanceMonitorProps {
 // Extend the Window interface to include performance;
 declare global {
   interface Window {
-    performance: Performance,
+    performance: Performance
   }
   interface Performance {
-    getEntriesByType (type: string): PerformanceEntry[],
+    getEntriesByType(type: string): PerformanceEntry[]
     memory?: {
-      usedJSHeapSize: number, totalJSHeapSize: number,
-      jsHeapSizeLimit: number,
+      usedJSHeapSize: number, totalJSHeapSize: number
+      jsHeapSizeLimit: number
     }
   }
   interface PerformanceEntry {
-    name: string, start_time: number,
-    duration: number,
+    name: string, startTime: number
+    duration: number
   }
   interface PerformanceNavigationTiming extends PerformanceEntry {
-    domContentLoadedEventStart: number, domContentLoadedEventEnd: number,
-    loadEventStart: number, loadEventEnd: number,
-    fetch_start: number,
+    domContentLoadedEventStart: number, domContentLoadedEventEnd: number
+    loadEventStart: number, loadEventEnd: number
+    fetchStart: number
   }
-// Define Performance types if not available;
+// Define Performance types if not available
 interface PerformanceEntry {
-  name: string,
-  entry_type: string,
-  start_time: number,
-  duration: number,
+  name: string
+  entryType: string
+  startTime: number
+  duration: number
 }
 interface Performance {
-  getEntriesByType (type: string): PerformanceEntry[],
+  getEntriesByType(type: string): PerformanceEntry[]
 }
 interface PerformanceNavigationTiming extends PerformanceEntry {
-  loadEventEnd: number,
-  loadEventStart: number,
-  domContentLoadedEventEnd: number,
-  domContentLoadedEventStart: number,
-  response_end: number,
-  response_start: number,
-  request_start: number,
-  navigation_start: number,
+  loadEventEnd: number
+  loadEventStart: number
+  domContentLoadedEventEnd: number
+  domContentLoadedEventStart: number
+  responseEnd: number
+  responseStart: number
+  requestStart: number
+  navigationStart: number
 }
 // Define Performance types if not available;
 
@@ -87,6 +91,7 @@ interface Performance {
   now (): number;
 }
 interface PerformanceEntry {
+
 interface PerformanceData {;
   domContentLoaded: number,;
   loadComplete: number,;
@@ -100,14 +105,18 @@ interface PerformanceData {;
     limit: number,;
   } | null;
 }
+
 interface PerformanceMonitorProps {;
   onPerformanceData?: (data: PerformanceData) => void,;
 }
+
 // Extend the Window interface to include performance;
 declare global {;
   interface Window {;
+
     performance: Performance,;
   }
+
   interface Performance {;
     getEntriesByType(type: string): PerformanceEntry[],;
     memory?: {;
@@ -115,15 +124,18 @@ declare global {;
       jsHeapSizeLimit: number,;
     };
   }
+
   interface PerformanceEntry {;
     name: string, startTime: number,;
     duration: number,;
   }
+
   interface PerformanceNavigationTiming extends PerformanceEntry {;
     domContentLoadedEventStart: number, domContentLoadedEventEnd: number,;
     loadEventStart: number, loadEventEnd: number,;
     fetchStart: number,;
   }
+
 // Define Performance types if not available;
 interface PerformanceEntry {;
   name: string,;
@@ -131,9 +143,11 @@ interface PerformanceEntry {;
   startTime: number,;
   duration: number,;
 }
+
 interface Performance {;
   getEntriesByType(type: string): PerformanceEntry[],;
 }
+
 interface PerformanceNavigationTiming extends PerformanceEntry {;
   loadEventEnd: number,;
   loadEventStart: number,;
@@ -144,11 +158,13 @@ interface PerformanceNavigationTiming extends PerformanceEntry {;
   requestStart: number,;
   navigationStart: number,;
 }
+
 // Define Performance types if not available;
 interface Performance {;
   getEntriesByType(type: string): PerformanceEntry[];
   now(): number;
 }
+
 interface PerformanceEntry {;
   name: string;
   entry_type: string;
@@ -197,30 +213,31 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     const measurePerformance = () => {;
       const navigationEntries = window && window.performance.getEntriesByType('navigation');
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
-      const paintEntries = window && window.performance.getEntriesByType('paint');
-      const performanceData = {;
-        // Navigation timing;
-        domContentLoaded: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.domContentLoadedEventStart,;
-        loadComplete: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,;
-        totalLoadTime: navigation && navigation.loadEventEnd - navigation && navigation.fetchStart,;
-        // Paint timing;
-        firstPaint: paintEntries && paintEntries.find(entry => entry && entry.name === 'first-paint')?.startTime || 0,;
-        firstContentfulPaint: paintEntries && paintEntries.find(entry => entry && entry.name === 'first-contentful-paint')?.startTime || 0,;
-        // Resource timing;
-        resourceCount: window && window.performance.getEntriesByType('resource').length,;
-        // Memory usage (if available);
-        memory: (window && window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {;
-          used: (window && window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory && memory.usedJSHeapSize,;
-          total: (window && window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory && memory.totalJSHeapSize,;
-          limit: (window && window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory && memory.jsHeapSizeLimit;
-      },;
-      if (onPerformanceData) {;
+      const paintEntries = window.performance.getEntriesByType('paint');
+      const performanceData = {
+        // Navigation timing
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
+        // Paint timing
+        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime |0
+        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime |0
+        // Resource timing
+        resourceCount: window.performance.getEntriesByType('resource').length
+// Memory usage (if available)
+
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+      }
+      if (onPerformanceData) {
         onPerformanceData(performanceData);
       }
-      // Log performance data in development;
-      if (process && process.env.NODE_ENV === 'development') {;
-        // eslint-disable-next-line no-console;
-        console && console.log('Performance Metrics:', performanceData);
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance Metrics:', performanceData);
       }
     };
     // Measure performance after page load;
@@ -361,12 +378,12 @@ if (value <= thresholds && thresholds.good) return 'text-green-600;
 <div className="flex justify-between>            <span className="text-gray-600">LCP: </span>"            <span className={getScoreColor(metrics && metrics.lcp, { good: 2500, poor: 4000 })}>"              {Math && Math.round(metrics && metrics.lcp)}ms ({getScoreText(metrics && metrics.lcp, { good: 2500, poor: 4000 })})</span>;
           </div>;
         )}
-        {metrics && metrics.fid && (;
-<div className="flex justify-between>            <span className="text-gray-600">FID: </span>"            <span className={getScoreColor(metrics && metrics.fid, { good: 100, poor: 300 })}>"              {Math && Math.round(metrics && metrics.fid)}ms ({getScoreText(metrics && metrics.fid, { good: 100, poor: 300 })})</span>;
+        {metrics.fid && (;
+<div className="flex justify-between>            <span className="text-gray-600">FID: </span>"            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>"              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})</span>;
           </div>;
         )}
-        {metrics && metrics.cls && (;
-<div className="flex justify-between>            <span className="text-gray-600">CLS: </span>"            <span className={getScoreColor(metrics && metrics.cls, { good: 0 && 0.1, poor: 0 && 0.25 })}>"              {metrics && metrics.cls.toFixed(3)} ({getScoreText(metrics && metrics.cls, { good: 0 && 0.1, poor: 0 && 0.25 })})</span>;
+        {metrics.cls && (;
+<div className="flex justify-between>            <span className="text-gray-600">CLS: </span>"            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>"              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})</span>;
           </div>;
         )}
         {metrics && metrics.ttfb && (;
@@ -476,10 +493,12 @@ export default PerformanceMonitor;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -1,10 +1,13 @@
 
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../utils/sync/storage";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
-
-
-
-
+  return res.status(200).json({ paused: state.config.paused })
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, writeState } from "../../../utils/sync/storage",;
+;
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -18,7 +21,9 @@ import { readState, writeState } from "../../../utils/sync/storage",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -28,6 +33,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   state.config.paused = Boolean(paused),
   writeState(state),
 
+  return res.status(200).json({ paused: state.config.paused });
+};
 
   return res.status(200).json({ paused: state.config.paused })
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -48,4 +55,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 

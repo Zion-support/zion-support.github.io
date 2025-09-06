@@ -3,8 +3,10 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 import fs from 'fs';
 import path from 'path';
@@ -22,7 +24,9 @@ import {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 } from 'lucide-react';
 
 
@@ -46,6 +50,7 @@ import {
 
 
 
+
 import fs from 'fs';
 import path from 'path';
 
@@ -55,6 +60,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 import {
+
 
   stack?: string;
   url?: string;
@@ -70,10 +76,13 @@ import {
 
 
 
+
+
     name: string;
     message: string;
     stack?: string;
 
+  }
 
 
 
@@ -85,6 +94,8 @@ import {
     memory?: number;
 
   }
+
+
 
 
 
@@ -128,12 +139,14 @@ interface LogsPageProps {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   logs: LogEntry[];
   errorCount: number;
@@ -151,7 +164,9 @@ interface LogsPageProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -170,11 +185,15 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
 
 
 
+
+
   logs: initialLogs,
   errorCount,
   warningCount,
   totalCount,
   lastUpdated,;
+
+
 
 
 
@@ -201,7 +220,6 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
   }
 }
 },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
   const colors = {;
 
@@ -221,8 +239,9 @@ export default function LogsPage(): any ({;
   warningCount,;
   totalCount,;
   lastUpdated,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
+
+
 
 
 
@@ -231,6 +250,8 @@ export default function LogsPage(): any ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
@@ -247,8 +268,10 @@ export default function LogsPage(): any ({;
 
 
 
+
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
+
 
   );
   const sources = Array && Array.from(new Set(logs && logs.map(log => log && log.source))).filter(;
@@ -305,7 +328,9 @@ export default function LogsPage(): any ({;
 
 
 
+
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+
 
 
 
@@ -384,8 +409,10 @@ export default function LogsPage(): any ({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
@@ -394,6 +421,8 @@ export default function LogsPage(): any ({;
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
+
+
 
 
 
@@ -444,7 +473,9 @@ export default function LogsPage(): any ({;
             <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
@@ -553,9 +584,11 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   return (
@@ -567,8 +600,8 @@ const formatTimestamp = (timestamp: string) => {
             <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
             Refresh
           </Button>
-          <Button onClick={exportLogs} variant="outline">
-            <Download className="h-4 w-4 mr-2" />
+          <Button onClick={exportLogs} variant='outline'>
+            <Download className='h-4 w-4 mr-2' />
             Export
           </Button>
         </div>
@@ -584,6 +617,7 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -591,6 +625,7 @@ const formatTimestamp = (timestamp: string) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         <Card>
@@ -602,7 +637,6 @@ const formatTimestamp = (timestamp: string) => {
             <div className="text-2xl font-bold">{totalCount}</div>
             <p className="text-xs text-muted-foreground">All log entries</p>
           </CardContent>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </Card>
         <Card>
 
@@ -653,12 +687,14 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <Card>
         <CardHeader>
@@ -678,7 +714,7 @@ const formatTimestamp = (timestamp: string) => {
             
             <Select value={levelFilter} onValueChange={setLevelFilter}>
               <SelectTrigger>
-                <SelectValue placeholder="All levels" />
+                <SelectValue placeholder='All levels' />
               </SelectTrigger>
               <SelectContent>
 
@@ -712,13 +748,14 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
               <SelectTrigger>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
               <SelectContent>
@@ -726,7 +763,6 @@ const formatTimestamp = (timestamp: string) => {
                 {categories.map(category => (
                   <SelectItem key={category} value={category}>{category}</SelectItem>
                 ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </SelectContent>
             </Select>
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
@@ -739,11 +775,13 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       <Card>
@@ -777,6 +815,7 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -784,11 +823,14 @@ const formatTimestamp = (timestamp: string) => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context
                       </summary>
+
+
 
 
 
@@ -813,6 +855,7 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -820,6 +863,7 @@ const formatTimestamp = (timestamp: string) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   {log.error && (
@@ -839,7 +883,9 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -861,6 +907,8 @@ const formatTimestamp = (timestamp: string) => {
             }
           }
         } catch (fileError) {;
+
+
 
           // Skip problematic files;
         }
@@ -908,6 +956,7 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
         logs: []
         errorCount: 0
         warningCount: 0
@@ -915,6 +964,7 @@ const formatTimestamp = (timestamp: string) => {
         lastUpdated: new Date().toISOString()
       }
     }
+
 
 
 
@@ -987,7 +1037,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 }
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Sort logs by timestamp (newest first);
     logs && logs.sort(;
       (a, b) =>;
@@ -1019,10 +1068,11 @@ export const getServerSideProps: GetServerSideProps = async () => {;
         lastUpdated: new Date().toISOString(),;
       },;
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
 }
+
+
 
 
 

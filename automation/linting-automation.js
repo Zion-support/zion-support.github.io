@@ -253,6 +253,129 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
       const fixOutput = execSync('npm run "lint": fix', { 
 
+
+
+      const fixOutput = execSync('npm run "lint": fix', { 
+      const fixOutput = execSync('npm run "lint": fix', { 
+      const fixOutput = execSync('npm run lint:fix', { 
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 120000
+      ;};);
+      const fixOutput = execSync('npm run "lint": fix', { 
+        "cwd": this.projectRoot;
+        encoding: 'utf8'
+        timeout: 120000;
+      };);
+      const fixOutput = execSync('npm run "lint": fix', { 
+      const fixOutput = execSync('npm run "lint": fix', { 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+      const fixOutput = execSync('npm run "lint": fix', { 
+ursor/fix-syntax-push-and-merge-to-main-40de
+      const fixOutput = execSync('npm run lint:fix', { 
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 120000
+      ;};);
+      const fixOutput = execSync('npm run "lint": fix', { 
+        "cwd": this.projectRoot;
+        encoding: 'utf8'
+        timeout: 120000;
+      };);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+"cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 120000
+      });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+      this.log('Auto-fix applied');
+      // Run linting again to check if issues were resolved;
+      const recheckOutput = execSync('npm run lint', { 
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 60000
+      ;};);
+        "cwd": this.projectRoot;
+        encoding: 'utf8'
+        timeout: 60000;
+      };);
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+"cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000
+      });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+      this.log('Linting issues resolved');
+    } catch (fixError) {
+      this.log(`Failed to fix linting "issues": ${fixError.message}`);
+      await this.reportLintingFailure(fixError);
+    }
+  }
+  async saveLintReport() {
+    const report = {
+      "lastLint": this.lastLint;
+      projectRoot: this.projectRoot;
+      eslintConfig: this.getEslintConfig()
+ursor/integrate-build-improve-and-re-verify-8f7d
+   ; ;};
+   };
+   ; ;};
+   };
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+   ; ;};
+   };
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+};ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+    fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));
+  }
+  getEslintConfig() {
+    try {
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      const configPath = path.join(this.projectRoot, 'eslint.config.js';);
+      if () {
+        return {) {
+    ) {
+        return {;
+  }
+          exists: true,
+          path: configPath,
+          size: fs.statSync(configPath).size
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        return {}
+          "exists": true;
+          path: configPath;
+          size: fs.statSync(configPath).size;
+        }}
+    } catch (error) {
+      // Ignore errors;
+    }
+
+
+
+
+    
+
     return { exists: false ;}}
   async reportLintingFailure(error) {
     const failureReport = {
@@ -373,6 +496,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     const recentFiles = [];
 
 
+
+
     const recentFiles = [];
 
     const recentFiles = [;];
@@ -426,6 +551,80 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
 
 
     return recentFiles}
+
+
+
+    return recentFiles}
+    return recentFiles}
+    return recentFiles;}
+    return recentFiles}
+  getFilesInDirectory(dir, fileList = []) {}
+    try {}
+      const files = fs.readdirSync(dir);,
+      for (const file of, files) {}
+        const filePath = path.join(dir, file);,
+        const stat = fs.statSync(filePath);,
+    return recentFiles}
+    return recentFiles}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+    return recentFiles}
+ursor/fix-syntax-push-and-merge-to-main-40de
+    return recentFiles;}
+    return recentFiles}
+  getFilesInDirectory(dir, fileList = []) {}
+    try {}
+      const files = fs.readdirSync(dir);,
+      for (const file of, files) {}
+        const filePath = path.join(dir, file);,
+        const stat = fs.statSync(filePath);,
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+return recentFiles;
+  }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+  getFilesInDirectory(dir, fileList = []) {
+    try {
+      const files = fs.readdirSync(dir);
+ursor/integrate-build-improve-and-re-verify-8f7d
+      for (const file of files) {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+        if () {
+          this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          fileList.push(filePath)}
+        if () {
+          this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          fileList.push(filePath)}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+       else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          fileList.push(filePath)}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+if (stat.isDirectory()) {
+          this.getFilesInDirectory(filePath, fileList);
+        } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          fileList.push(filePath);
+        }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+      }
+    } catch (error) {
+      // Ignore errors;
+    }
+    return fileList) {
+    ) {
+          this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          fileList.push(filePath)}
+      }
+    } catch (error) {
+      // Ignore errors;
+    }
+    return fileList;
+  }}
+  async start() {
+    this.isRunning = true;
+    this.log('Linting Automation started');
+    return fileList}}
+    
 
     return fileList) {
     ) {

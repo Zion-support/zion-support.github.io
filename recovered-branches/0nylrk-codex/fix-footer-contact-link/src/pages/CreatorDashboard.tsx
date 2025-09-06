@@ -2,6 +2,7 @@
 
 
 
+
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
@@ -57,13 +58,12 @@ export default function CreatorDashboard() {
 
 
 
+
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CreatorDashboard() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <SidebarProvider>;
       <div className="min-h-screen flex w-full bg-zion-blue">;
@@ -79,6 +79,7 @@ export default function CreatorDashboard() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -87,5 +88,6 @@ export default function CreatorDashboard() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

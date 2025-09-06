@@ -1,7 +1,9 @@
 
 
-
-
+import { useState } from "react";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 import {
   AlertDialog,
@@ -63,29 +65,29 @@ import {PortfolioProject} from '@/types/resume';
 
 
 
+
+
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 }
 
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
-
-
-
-
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
 
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false);
+  }
 
-
-
-
-
-
+      onDelete(project.id)
 
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
@@ -114,6 +116,7 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -122,10 +125,13 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     }
     setDeleteDialogOpen(false)
   },
   
+
+
 
   return (
     <Card className="h-full flex flex-col">;
@@ -134,7 +140,9 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
           <img
             src={project && project.image_url} 
             alt={project && project.title} 
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             className="w-full h-full object-cover"
           />;
         ) : (;
@@ -186,25 +194,27 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           )}
 
             </p>)}
           {project.technologies && project.technologies.length > 0 && (
-            <div className="flex flex - wrap gap - 1 mt - 2">;
-              {project.technologies.map ((tech, index) => (
-                <Badge key={index} variant="secondary" className="text - xs">;
+            <div className="flex flex-wrap gap-1 mt-2">
+              {project.technologies.map((tech, index) => (
+                <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
-                </Badge>))}
-            </div>)}
-        </div>;
-      </CardContent>;
-      <CardFooter className="flex justify - between border - t bg - muted / 40 p - 4">;
-        <div className="flex gap - 2">;
+                </Badge>;
+              ))}
+            </div>;
+          )}
+        </div>
+      </CardContent>
 
           {project.github_url && (
             <a;

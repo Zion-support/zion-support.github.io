@@ -2,6 +2,7 @@
 
 
 
+
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
@@ -15,14 +16,14 @@ import {toast} from "@/components/ui/use-toast";
 
 
 
+
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
 
-
-
-
+import { Star, AlertTriangle } from "lucide-react",
+import { toast } from "@/components/ui/use-toast",
 
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
@@ -32,15 +33,15 @@ function ReviewsModerationContent() {
   
 
   const fetchReviews = async () => {
-    setIsLoading(true),
-    try {
-      // In a real application, you would fetch reviews from an API
-      // For now, let's simulate a delay and return empty data
-      await new Promise(resolve => setTimeout(resolve, 1000)),
-      setReviews([]),
+    setIsLoading(true);
+    try {;
+      // In a real application, you would fetch reviews from an API;
+      // For now, let's simulate a delay and return empty data;
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setReviews([]);
       setIsLoading(false)
     } catch (error) {
-      console.error("Error fetching reviews:", error),
+      console.error("Error fetching reviews:", error);
       toast({
         title: "Error"
         description: "Failed to load reviews. Please try again later."
@@ -66,7 +67,6 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {;
     fetchReviews();
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
   const handleRefresh = () => {
@@ -133,6 +133,14 @@ function ReviewsModerationContent() {
     </>
   )
 
+}
+export default function ReviewsModeration() {
+  return (
+    <ProtectedRoute>
+      <ReviewsModerationContent />
+    </ProtectedRoute>
+  )
+}
 
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -227,6 +235,20 @@ function ReviewsModerationContent() {;
     </>;
   );
 
+}
+;
+export default function ReviewsModeration() {;
+  return (;
+    <ProtectedRoute>;
+      <ReviewsModerationContent />;
+    </ProtectedRoute>;
+  );
+}
+;
+}
+
+
+
 
 
 import { AppHeader } from '@/layout / AppHeader';
@@ -251,4 +273,5 @@ function ReviewsModerationContent() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

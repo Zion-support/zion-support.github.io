@@ -28,12 +28,14 @@ interface Activity {
 
 
 
+
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const [isLoading, setIsLoading] = useState(true);
@@ -55,7 +57,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         setActivities(data |[])
 
       } catch (err) {
-        console.error('Error fetching milestone activities:', err)
+        console.error ('Error fetching milestone activities:', err);
       } finally {
         setIsLoading(false)
 
@@ -118,7 +120,9 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -138,6 +142,16 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         return 'created a new milestone'
 
 
+      case 'status_changed':
+        return `changed status from ${activity.previous_status |'none'} to ${activity.new_status}`;
+      case 'updated':
+        return 'updated milestone details';
+      case 'deliverable_added':
+        return 'added a deliverable';
+      default:
+        return activity.action.replace(/_/g, ' ')
+    }
+  }
 
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
@@ -148,11 +162,11 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       case 'status_changed':;
         return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
       case 'updated':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return 'updated milestone details';
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
+
 
 
 
@@ -163,31 +177,31 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
 
+
     }
   }
 
   if (isLoading) {
     return (
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <div className="flex items-center space-x-4">
-                <Skeleton className="h-10 w-10 rounded-full" />
-                <div className="space-y-2">
-                  <Skeleton className="h-4 w-40" />
-                  <Skeleton className="h-4 w-60" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+      <div className="space-y-4">;
+        {[1, 2, 3].map((i) => (;
+          <Card key={i}>;
+            <CardContent className="p-6">;
+              <div className="flex items-center space-x-4">;
+                <Skeleton className="h-10 w-10 rounded-full" />;
+                <div className="space-y-2">;
+                  <Skeleton className="h-4 w-40" />;
+                  <Skeleton className="h-4 w-60" />;
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>;
         ))}
-      </div>
-    )
+      </div>;
+    );
   }
 
   if (activities.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -268,5 +282,13 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_activities ();
+    }
+  }, [project_id]);
+;
 

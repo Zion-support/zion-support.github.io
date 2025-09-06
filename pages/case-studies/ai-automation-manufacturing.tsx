@@ -10,6 +10,10 @@ export default function CaseStudyPage() {
     industry: 'Manufacturing'
     challenge: 'Inefficient production processes, high downtime, and quality control issues'
     solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization'
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    challenge: 'Inefficient production processes, high downtime, and quality control issues',
+    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
     results: [
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
     ]
@@ -44,6 +48,7 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -51,9 +56,10 @@ export default function CaseStudyPage() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Case Studies
+                 Back to Case Studies
               </Link>
             </nav>
 
@@ -80,12 +86,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 </span>
               </div>
@@ -108,12 +116,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
@@ -133,12 +143,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
@@ -158,12 +170,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
@@ -194,12 +208,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
@@ -208,7 +224,7 @@ export default function CaseStudyPage() {
                   <div key={index} className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                        <span className="text-yellow-900 font-bold text-sm">✓</span>
+                        <span className="text-yellow-900 font-bold text-sm"></span>
                       </div>
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
@@ -235,6 +251,7 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -242,11 +259,17 @@ export default function CaseStudyPage() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
 
+                  This case study demonstrates the real impact of AI automation in manufacturing. 
+                  Let's discuss how we can help you achieve similar results.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Link 
 
                   This case study demonstrates the real impact of AI automation in manufacturing.
                   Let's discuss how we can help you achieve similar results.
@@ -255,18 +278,17 @@ export default function CaseStudyPage() {
                   <Link
 
 
+
+
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                  <Link
+                  <Link 
+                  <Link
 
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
@@ -281,6 +303,8 @@ export default function CaseStudyPage() {
       </div>
     </>
 
+  );
+};
 
   )
             <section className="text-center">;
@@ -316,6 +340,7 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -327,5 +352,6 @@ export default function CaseStudyPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

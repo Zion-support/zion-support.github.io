@@ -70,7 +70,6 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
         <main className="min-h-screen">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {children}
         </main>;
         <Footer />;

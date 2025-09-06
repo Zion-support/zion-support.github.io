@@ -2,8 +2,10 @@
 
 
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
@@ -18,6 +20,10 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
@@ -46,6 +52,70 @@ serve(async (req) => {
   const redirectUrl = url && url.searchParams.get("redirect");
 
 
+
+  const url = new URL(req.url),
+  const type = url.searchParams.get("type"), // "open" or "click"
+  const campaignId = url.searchParams.get("cid");
+  const userId = url.searchParams.get("uid");
+  const redirectUrl = url.searchParams.get("redirect");
+  const campaignId = url.searchParams.get("cid"),
+  const userId = url.searchParams.get("uid"),
+  const redirectUrl = url.searchParams.get("redirect"),
+
+  // Validate required parameters
+  if (!type |!campaignId |!userId) {
+    return new Response("Missing required parameters", { status: 400 })
+  }
+  try {
+    // Update the email campaign record based on event type
+    if (type === "open") {
+      await supabase
+        .from("email_campaigns")
+        .update({ opened_at: new Date().toISOString() })
+        .eq("id", campaignId)
+        .eq("user_id", userId);
+        .eq("user_id", userId),
+
+      // Return a 1x1 transparent GIF
+      return new Response(
+        new Uint8Array([
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
+// Initialize Supabase client;
+const supabase_url = Deno.env.get ("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabase = create_client (supabase_url, supabaseServiceKey);
+;
+serve (async (req) => {
+  // Parse the URL to get the tracking parameters;
+  const url = new URL (req.url);
+  const type = url.search_params.get ("type"), // "open" or "click";
+  const campaign_id = url.search_params.get ("cid");
+  const user_id = url.search_params.get ("uid");
+  const redirect_url = url.search_params.get ("redirect");
+;
+  // Validate required parameters;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response ("Missing required parameters", { status: 400 });
+  }
+  try {
+    // Update the email campaign record based on event type;
+    // Check condition
+if ( {) {
+  $2
+}
+      await supabase;
+        .from ("email_campaigns");
+        .update ({ opened_at: new Date ().toISOString () });
+        .eq ("id", campaign_id);
+        .eq ("user_id", user_id);
+;
+      // Return a 1x1 transparent GIF;
+      return new Response (
+        new Uint8Array ([;
 
           0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00;
           0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00;
@@ -79,7 +149,7 @@ serve(async (req) => {
       return new Response(null, {
         status: 302
         headers: {
-          Location: destination}})
+          Location: destination}});
     }
     return new Response("Invalid event type", { status: 400 })
   } catch (error) {
@@ -97,6 +167,9 @@ serve(async (req) => {
           Location: redirectUrl}})
     }
     return new Response("Error processing event", { status: 500 })
+
+  }
+});
 
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -171,6 +244,7 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -178,6 +252,7 @@ serve(async (req) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

@@ -1,7 +1,11 @@
 
 
-
-
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { WorkExperience  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useWorkExperience() {
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -9,6 +13,8 @@ import {WorkExperience} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useWorkExperience() {;
+
+
 
 
 
@@ -25,11 +31,9 @@ export function useWorkExperience() {;
       setError('You must be logged in to update work experience')
       return false
 
-
-
-
-
-
+    }
+    setIsLoading(true);
+    setError(null);
 
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -50,7 +54,9 @@ export function useWorkExperience() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -106,8 +112,15 @@ export function useWorkExperience() {;
     } finally {
       setIsLoading(false)
 
-
-
+    }
+  }
+  const updateWorkExperience = async (workId: string, work: WorkExperience): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update work experience')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -144,7 +157,9 @@ export function useWorkExperience() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -200,8 +215,15 @@ export function useWorkExperience() {;
     } finally {
       setIsLoading(false)
 
-
-
+    }
+  }
+  const deleteWorkExperience = async (workId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete work experience')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -238,7 +260,9 @@ export function useWorkExperience() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -263,7 +287,7 @@ export function useWorkExperience() {;
 
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
     } catch (e: any) {
-      return handleResumeError(e, 'Could not delete work experience')
+      return handleResumeError (e, 'Could not delete work experience');
     } finally {
       setIsLoading(false)
 
@@ -282,7 +306,6 @@ if (throw error) {
   $2
 }
       return showSuccessToast ("Work experience deleted", "Your work experience has been removed from your resume");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e: any) {
       return handleResumeError (e, 'Could not delete work experience');
     } finally {
@@ -296,18 +319,32 @@ if (throw error) {
     updateWorkExperience;
 
 
+    deleteWorkExperience
+  }
+}
+;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      const { error } = await supabase;
+        .from('work_history');
+        .delete();
+        .eq('id', workId),;
+      if (error) throw error,;
+      return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume");
+    } catch (e: any) {;
+      return handleResumeError(e, 'Could not delete work experience');
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  return {;
+    isLoading,;
+    error,;
+    addWorkExperience;
+    updateWorkExperience;
+    deleteWorkExperience;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 }
 ;

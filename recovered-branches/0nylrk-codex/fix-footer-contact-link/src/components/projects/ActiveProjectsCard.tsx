@@ -2,6 +2,7 @@
 
 
 
+
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {BriefcaseIcon, Clock} from "lucide-react";
@@ -11,6 +12,7 @@ import {Badge} from "@/components/ui/badge";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
+
 
 
 
@@ -74,7 +76,6 @@ export function ActiveProjectsCard() {;
   }, [projects, isLoading]);
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card>;
         <CardHeader>;
@@ -93,6 +94,7 @@ export function ActiveProjectsCard() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -100,6 +102,7 @@ export function ActiveProjectsCard() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             ))}
@@ -160,14 +163,21 @@ export function ActiveProjectsCard() {;
             </Button>
           </div>
         ))}
-      </CardContent>
-      {activeProjects.length > 2 && (
-        <CardFooter>
-          <Button variant="ghost" className="w-full" asChild>
-            <Link to="/projects">View All Projects</Link>
-          </Button>
-        </CardFooter>
+      </CardContent>;
+      {activeProjects && activeProjects.length > 2 && (;
+        <CardFooter>;
+          <Button variant="ghost" className="w-full" asChild>;
+            <Link to="/projects">View All Projects</Link>;
+          </Button>;
+        </CardFooter>;
       )}
+
+    </Card>
+  )
+}
+    </Card>;
+  );
+}
 
 import { useEffect, useState } from './react';
 import { Link } from './react-router-dom';

@@ -1,10 +1,12 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface SeverityDisplayProps {
   severity: string
 }
+
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
   severity
 }) => {
@@ -12,10 +14,14 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
 
 
 
+
+
     <SeverityIndicator
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
       showText={true}
+
+
 
 
 
@@ -27,7 +33,8 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
   return (
 
-
+    />;
+);
 
     <SeverityIndicator 
       severity={severity as "safe" | "suspicious" | "dangerous"} 
@@ -45,6 +52,7 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
       showText={true}
     />;
   );
+
 
 
 
@@ -90,6 +98,7 @@ export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
 interface SeverityDisplayProps {
   severity: string
 }
+
 
 
 

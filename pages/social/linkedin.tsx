@@ -28,8 +28,9 @@ import Head from 'next/head';
 export default function LinkedInRedirect() {
 
 
+import Head from 'next/head';
 
-
+export default function LinkedInRedirect() {
 
 
 export default function LinkedInRedirect() {;
@@ -37,7 +38,6 @@ export default function LinkedInRedirect() {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace(;
         'https://www && www.linkedin.com/company/zion-tech-group';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     }
   }, []);
@@ -64,6 +64,8 @@ export default function LinkedInRedirect() {;
       </div>;
     </>;
   );
+
+
 
 
 export default function LinkedInRedirect(req, res) {
@@ -94,6 +96,7 @@ export default function LinkedInRedirect(req, res) {
 		</>
 	)
 }
+
 
 
 
@@ -148,5 +151,6 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

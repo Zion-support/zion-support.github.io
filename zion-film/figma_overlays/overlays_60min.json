@@ -62,32 +62,32 @@
     {
       "tc": "00:00:04",
       "type": "actCard",
-      "text": "Act 1 — Genesis"
+      "text": "Act 1  Genesis"
     },
     {
       "tc": "00:01:05",
       "type": "lowerThird",
-      "text": "Founder — Zion OS"
+      "text": "Founder  Zion OS"
     },
     {
       "tc": "00:07:12",
       "type": "quoteCard",
-      "text": "Sovereignty scales with software. — Zion Book"
+      "text": "Sovereignty scales with software.  Zion Book"
     },
     {
       "tc": "00:20:02",
       "type": "actCard",
-      "text": "Act 2 — The Rise"
+      "text": "Act 2  The Rise"
     },
     {
       "tc": "00:23:10",
       "type": "dataTicker",
-      "text": "Nations online: Aurora · Forge · Haven"
+      "text": "Nations online: Aurora  Forge  Haven"
     },
     {
       "tc": "00:29:10",
       "type": "lowerThird",
-      "text": "Alumni — Aurora Academy"
+      "text": "Alumni  Aurora Academy"
     },
     {
       "tc": "00:40:08",
@@ -97,17 +97,17 @@
     {
       "tc": "00:45:02",
       "type": "actCard",
-      "text": "Act 3 — The Future"
+      "text": "Act 3  The Future"
     },
     {
       "tc": "00:46:08",
       "type": "dataTicker",
-      "text": "ZionGPT online — Policy Sim | Risk Guardrails | Deliberation Aids"
+      "text": "ZionGPT online  Policy Sim | Risk Guardrails | Deliberation Aids"
     },
     {
       "tc": "00:58:06",
       "type": "quoteCard",
-      "text": "This isn’t a platform. It’s a world."
+      "text": "This isnt a platform. Its a world."
     }
   ]
 }

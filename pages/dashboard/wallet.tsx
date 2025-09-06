@@ -10,6 +10,7 @@
 
 
 
+
 import React from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 import dynamic from "next/dynamic",;
@@ -44,6 +45,7 @@ export default function WalletPage() {
     </EnhancedLayout>
 
 
+
   )
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
@@ -61,6 +63,7 @@ export default function WalletPage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -72,5 +75,6 @@ export default function WalletPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

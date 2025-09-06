@@ -92,19 +92,19 @@ const ${componentName} = () => {
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
                 <ul className="text-gray-600 space-y-2">;
-                  <li>• Advanced AI Solutions</li>;
-                  <li>• Custom Implementation</li>;
-                  <li>• 24/7 Support</li>;
-                  <li>• Expert Consultation</li>;
+                  <li> Advanced AI Solutions</li>;
+                  <li> Custom Implementation</li>;
+                  <li> 24/7 Support</li>;
+                  <li> Expert Consultation</li>;
                 </ul>;
               </div>;
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
                 <ul className="text-gray-600 space-y-2">;
-                  <li>• Industry Expertise</li>;
-                  <li>• Proven Results</li>;
-                  <li>• Scalable Solutions</li>;
-                  <li>• Competitive Pricing</li>;
+                  <li> Industry Expertise</li>;
+                  <li> Proven Results</li>;
+                  <li> Scalable Solutions</li>;
+                  <li> Competitive Pricing</li>;
                 </ul>;
               </div>;
             </div>;
@@ -135,6 +135,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     if (content.includes("href="/") && !content.includes("import Link")) {;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
 
 ;
 // "Note": previously broken fixer removed to avoid syntax errors.

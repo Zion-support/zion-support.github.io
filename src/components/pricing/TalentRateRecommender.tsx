@@ -1,12 +1,18 @@
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
 
+  skills: string[]
+  yearsExperience: number
+  location?: string
+  onSuggestionApplied: (value: number,) => void
 
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
+
+
 
 
       // Track this suggestion application
@@ -118,6 +124,7 @@ if ( {) {
 
 
 
+
   return (
     <div className="space-y-4">
       <div>
@@ -127,6 +134,7 @@ if ( {) {
             variant="outline"
             onClick = {generateSuggestion,}
             disabled = {skills.length === 0 |yearsExperience <= 0,}
+
             onClick={generateSuggestion}
             disabled={skills.length === 0 || yearsExperience <= 0}
             className="w-full"
@@ -148,6 +156,7 @@ if ( {) {
 };
 '"};
 };
+
 
 
 
@@ -192,3 +201,4 @@ return (<div className="space - y-4" > <div> {";
 }
 '"},
 }
+

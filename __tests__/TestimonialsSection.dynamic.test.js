@@ -34,7 +34,6 @@ describe('TestimonialsSection', () => {
   });
 });
 
-=======
       screen.getByTestId('testimonialssection.dynamic'
   test('displays correct content'
   test('handles user interactions'

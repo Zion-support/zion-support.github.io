@@ -1,5 +1,10 @@
 
 
+export interface Wallet {
+export interface Wallet {;
+  user_id: string;
+
+
 
 
 
@@ -9,11 +14,13 @@
 }
 export type TransactionType = 'earn' | 'burn';
 
+
 ;
 
 export interface TokenTransaction {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -24,6 +31,8 @@ export interface TokenTransaction {
 
   created_at: string
 }
+
+
 
 
   user_id: string,;
@@ -41,5 +50,7 @@ export interface TokenTransaction {;
   created_at: string;
 }
 ;
+
+
 
 

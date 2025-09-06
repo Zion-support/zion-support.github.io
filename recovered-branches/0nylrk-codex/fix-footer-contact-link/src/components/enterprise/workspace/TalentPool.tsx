@@ -6,6 +6,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export function TalentPool() {
@@ -75,9 +77,9 @@ export function TalentPool() {
 
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case "available": return <Badge className="bg-green-500">Available</Badge>,
-      case "interviewing":
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>,
+      case "available": return <Badge className="bg-green-500">Available</Badge>;
+      case "interviewing":;
+        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
       case "hired":
         return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>
       default:
@@ -155,7 +157,6 @@ export function TalentPool() {;
 
   const getStatusBadge = (status: string) => {;
     switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "available": return <Badge className="bg-green-500">Available</Badge>;
       case "interviewing":;
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
@@ -176,6 +177,62 @@ export function TalentPool() {;
             <CardTitle>Dedicated Talent Pool</CardTitle>;
             <CardDescription>Candidates matched to your company</CardDescription>;
 
+import React from './react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+export /**
+ * TalentPool - Function description
+ */
+function TalentPool() {
+  // Mock talent data;
+  const talents = [;
+    {
+      id: "talent - 1",
+      name: "Jessica Lee",
+      role: "UI / UX Designer",
+      skills: ["Figma", "Sketch", "User Testing"];
+      status: "available",
+      match: 95;
+    }
+    {
+      id: "talent - 2",
+      name: "Marcus Wright",
+      role: "Full Stack Developer",
+      skills: ["React", "Node.js", "MongoDB"];
+      status: "interviewing",
+      match: 92;
+    }
+    {
+      id: "talent - 3",
+      name: "Aisha Patel",
+      role: "Product Manager",
+      skills: ["Agile", "Roadmapping", "User Research"];
+      status: "available",
+      match: 88;
+    }
+  ];
+;
+  const getStatusBadge = (status: string) =>: any {
+    switch (status) {
+      case "available": return <Badge className="bg - green - 500">Available</Badge>;
+      case "interviewing":;
+        return <Badge variant="outline" className="bg - amber - 100 text - amber - 800 border - amber - 200">Interviewing</Badge>;
+      case "hired":;
+        return <Badge variant="outline" className="bg - blue - 100 text - blue - 800 border - blue - 200">Hired</Badge>,
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  }
+;
+  return (
+    <Card>;
+      <CardHeader>;
+        <div className="flex items - center justify - between">;
+          <div>;
+            <CardTitle > Dedicated Talent Pool</CardTitle>;
+            <CardDescription > Candidates matched to your company</CardDescription>;
+
           </div>;
           <Button size="sm">View All</Button>;
         </div>;
@@ -193,12 +250,13 @@ export function TalentPool() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
                   <Badge key={index} variant="secondary" className="text-xs">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {skill}
                   </Badge>;
                 ))}
@@ -252,5 +310,7 @@ export function TalentPool() {;
       </CardContent>;
     </Card>);
 }
+
+
 
 

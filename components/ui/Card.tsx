@@ -9,10 +9,17 @@ const CardContent = React && React.forwardRef<;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
 
+const CardContent = React.forwardRef<
+  HTMLDivElement
+
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
 CardContent && CardContent.displayName = "CardContent";
 
+const CardFooter = React.forwardRef<
+  HTMLDivElement
 
 const CardFooter = React && React.forwardRef<;
   HTMLDivElement,;
@@ -38,6 +45,7 @@ const CardFooter = React.forward_ref<;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
+
 
 
 
@@ -84,6 +92,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 
 
+
 interface CardProps {
   children: React.ReactNode,
   class_name?: string,
@@ -91,6 +100,7 @@ interface CardProps {
   on_click?: () => void,
   hover?: boolean;
 }
+
 const Card: React.FC<CardProps> = ({
 
   children
@@ -104,6 +114,7 @@ const Card: React.FC<CardProps> = ({
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
   return (
     <div
+
       className={classes}
       style={style}
       on_click={on_click}
@@ -118,15 +129,18 @@ const Card: React.FC<CardProps> = ({
 
 
 
+      </div>;
+      {/* Hover glow effect */}
+      {hover && (
 
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      )}
+    </div>
+  )
+}
+export default Card;
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 },
 export default Card,
 ;
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 

@@ -1,6 +1,7 @@
 
 
 
+
 interface Contract {
 
   id: string;
@@ -27,6 +28,7 @@ export function RecentContractsTable({
   contracts
   onViewContract
 }: RecentContractsTableProps) {
+
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
 
@@ -98,19 +100,17 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                     variant="ghost"
                     size="sm"
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                  >;
-                    View;
-                  </Button>;
-                </td>;
-
-
-
-
-
-
+                    onClick={() => onViewContract(contract.id)}
+                  >
+                    View
+                  </Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
 
           </tbody>;
         </table>;
@@ -118,13 +118,11 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
 
     </>;
 
-
-
-
-
-
-
-
   );
+              </tr>))}
+          </tbody>;
+        </table>;
+      </div>;
+    </>);
 
 }

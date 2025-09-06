@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -22,12 +23,14 @@ import {useIsMobile} from "@/hooks/use-mobile";
 
 
 
+
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
+
 
 
 
@@ -46,6 +49,7 @@ import {useIsMobile} from "@/hooks/use-mobile";
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 function ClientDashboardContent() {
@@ -238,6 +242,7 @@ function ClientDashboardContent() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -245,6 +250,7 @@ function ClientDashboardContent() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               {/* Active Projects Card */}
@@ -268,10 +274,24 @@ function ClientDashboardContent() {;
                       Select a job to see AI-matched talent suggestions;
                     </p>;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
 
-
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+}
+export default function ClientDashboard() {
+  return (
+    <ProtectedRoute>
+      <ClientDashboardContent />
+    </ProtectedRoute>
+  )
+}
 
 ;
   // Set the first job as selected when jobs are loaded (if any);
@@ -367,7 +387,6 @@ if ( {) {
                       Select a job to see AI - matched talent suggestions;
                     </p>;
                   </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
@@ -379,4 +398,7 @@ if ( {) {
 
 
 
+
+;
+;
 

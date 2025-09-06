@@ -4,6 +4,7 @@
 
 
 
+
 import {;
   Card,;
   CardHeader,;
@@ -78,21 +79,19 @@ export function JobMatches({ jobId }: JobMatchesProps) {
 
 
 
+
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
 import { Skeleton } from "@/components/ui/skeleton",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface JobMatchesProps {;
   jobId: string;
 }
+export function JobMatches({ jobId }: JobMatchesProps) {
 
-
-export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
-  const { matches, isLoading, isProcessing, triggerAIMatching } =;
-
+  const { matches, isLoading, isProcessing, triggerAIMatching } =
     useJobMatches(jobId);
 
   if (isLoading) {;
@@ -120,10 +119,7 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
       </Card>;
     );
   }
-
-
-  if (matches && matches.length === 0) {;
-
+  if (matches.length === 0) {
     return (
       <EmptyMatchesCard
         onRefresh={triggerAIMatching}
@@ -139,9 +135,11 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   return (
@@ -164,7 +162,6 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
       ))}
     </div>
           talentId={match.talent_profile?.id || ""}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name={match.talent_profile?.full_name || ""}
           title={match.talent_profile?.professional_title || ""}
           company={match.talent_profile?.company_name || ""}
@@ -177,11 +174,9 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
         />
       ))}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+    </div>;
+    </div>
+    </div>;
 
   );
 

@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -23,9 +27,14 @@ import { motion } from 'framer-motion';
 
 
 
+
+
 } from 'lucide-react';
+
 interface QuantumHolographicCardProps {
   service: {
+
+
 
 
 
@@ -46,7 +55,9 @@ interface QuantumHolographicCardProps {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 } from 'lucide-react';
@@ -65,6 +76,7 @@ interface QuantumHolographicCardProps {
     color: string;
 
 
+
     text_color: string;
     link: string;
     market_position: string;
@@ -81,6 +93,7 @@ interface QuantumHolographicCardProps {
     market_size: string;
     growth_rate: string;
     variant: string;
+
 
     contact_info: {
 
@@ -135,16 +148,19 @@ interface QuantumHolographicCardProps {
 
 
 
+
+
+
+
     reviews: number;
   }
-  class_name?: string;
-;
-const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
-  service,
-  class_name = '',
+  className?: string;
+const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
+  service
+  className = ''
 }) => {
-  const card_variants = {
-    hidden: { opacity: 0, coordinate_y: 50, scale: 0.9 },
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 }
     visible: {      opacity: 1,    visible: {
 
       opacity: 1,
@@ -191,7 +207,9 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
         duration: 0.5
         ease: 'easeOut' as const
       }
-
+    })
+  }
+    >
     };
     hover: {;
       y: -10,;
@@ -223,6 +241,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
         ease: "easeInOut" as const;
       }
     }
+
   const featureVariants = {;
     hidden: { opacity: 0, x: -20 },;
     visible: (i: number) => ({;
@@ -235,8 +254,14 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       },;
     }),;
   };
+
+
     >;
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+
 
 
       {/* Holographic glow effect */}
@@ -307,6 +332,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
               <div>;
                 <h3 className='text - xl font - bold text - white mb - 1'>;
                   {service.name}
+
 
 
 
@@ -410,11 +436,13 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
 
+
                 <span>Popular</span>
 
               </motion.div>
             )}
           </div>
+
 
 
 
@@ -426,9 +454,9 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
 
 
+
           {/* Price and trial */}
           <div className="flex items-center justify-between mb-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
               <span className="text-gray-400">{service.period}</span>
@@ -439,8 +467,15 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
               <span>{service.trialDays} days free</span>
 
             </div>
+            <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>
+              <div className='flex items-center space-x-2 text-sm text-gray-400 mb-1'>
+                <Star className='w-4 h-4 fill-yellow-400 text-yellow-400' />
+                <span>Rating</span>
+              </div>
+              <div className='text-xl font-bold text-white'>
+                {service.rating}/5.0
+              </div>            </div>
           </div>
-          {/* Description */}
 
           </div>;
           {/* Price and trial */}
@@ -479,6 +514,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
                 {service && service.customers.toLocaleString()}+;
               </div>;
             </div>;
+
             <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
               <div className='flex items-center space-x-2 text-sm text-gray-400 mb-1'>;
                 <Star className='w-4 h-4 fill-yellow-400 text-yellow-400' />;
@@ -488,6 +524,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
                 {service && service.rating}/5 && 5.0;
               </div>            </div>;
           </div>;
+
           {/* Features */}
           <div className='mb-6'>;
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
@@ -638,6 +675,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
 
 
+
           <div className='mb - 6'>;
             <h4 className='text - white font - semibold mb - 3 flex items - center space - x-2'>;
               <Zap className='w - 4 h - 4 text - yellow - 400' />;
@@ -666,9 +704,11 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
                 </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
               ))}
             </div>
           </div>
+
 
 
 
@@ -687,6 +727,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           {/* Market data */}
@@ -729,16 +770,17 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
             </h4>
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
-                <span className="text-blue-400">📱</span>
+                <span className="text-blue-400"></span>
                 <span>{service.contactInfo.mobile}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-green-400">✉️</span>
+                <span className="text-green-400"></span>
                 <span>{service.contactInfo.email}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-purple-400">📍</span>
+                <span className="text-purple-400"></span>
                 <span className="text-xs">{service.contactInfo.address}</span>
+
 
 
 
@@ -836,11 +878,13 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
 
 
+
           {/* ROI and competitors */}
 
               </div>
             </div>
           </div>
+
 
 
 
@@ -853,10 +897,12 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {/* CTA Button */}
           <motion.a
             href={service.link}
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+
 
 
 
@@ -877,6 +923,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -887,8 +934,10 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
           </motion.a>
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
           {/* CTA Button */}
             whileHover={{ scale: 1 && 1.02 }}
@@ -906,11 +955,13 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
             href={service.link}
 
 
+
             className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
             whileHover={{ scale: 1.02 }}
 
@@ -940,6 +991,8 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
             <a
 
 
+
+
               href={service && service.link}
               className="inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300">;
               <span>Learn more about {service && service.name}</span>;
@@ -955,11 +1008,13 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

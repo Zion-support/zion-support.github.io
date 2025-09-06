@@ -386,6 +386,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />
       </Head>
 
+    <div className="min-h-screen bg-gray-50">;
+      <Head>;
+        <title>Join Our Team - Zion Tech Group</title>;
+        <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />;
+      </Head>;
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -469,6 +475,30 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
             <motion.div,
 
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center max-w-4xl mx-auto">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Join Our Team;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">;
+                Be part of a team that's shaping the future of technology and helping businesses transform digitally;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="#openings" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
+                  View Open Positions;
+                </Link>;
+                <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
+                  Get In Touch;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        {/* Benefits Section */}
+        <section className="py-20 bg-white">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div,
+
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -508,6 +538,37 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                       {benefit.description}
                     </p>
                   </motion.div>
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Why Work With Us?;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                We're building a culture of innovation, collaboration, and growth where talented individuals can thrive;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {benefits && benefits.map((benefit, index) => {;
+                const IconComponent = benefit && benefit.icon;
+                return (
+                  <motion&& motion.div,
+    key={index}
+                    className="text-center p-6"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>;
+                    <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">;
+                      <IconComponent className="w-8 h-8" />;
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">;
+                      {benefit && benefit.title}
+                    </h3>;
+                    <p className="text-gray-600">;
+                      {benefit && benefit.description}
+                    </p>;
+                  </motion && motion.div>;
 
                 );
               })}
@@ -550,6 +611,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               {values.map((value, index) => (
                 <motion.div,
 
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Our Values;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                The principles that guide our work and shape our company culture;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+              {values && values.map((value, index) => (;
+                <motion&& motion.div,
+
     key={index}
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -561,7 +635,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     {job && job.title}
                   </h3>;
                   <p className="text-gray-600 mb-4">;
-                    {job && job.department} • {job && job.location} • {job && job.type}
+                    {job && job.department}  {job && job.location}  {job && job.type}
                   </p>;
                   <p className="text-gray-700 mb-4">;
                     {job && job.description}
@@ -643,6 +717,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               {jobOpenings.map((job, index) => (
                 <motion.div,
     key={job.id}
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Open Positions;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                Explore current job openings and find the perfect role for your skills and career goals;
+              </p>;
+            </motion && motion.div>;
+            <div className="space-y-8">;
+              {jobOpenings && jobOpenings.map((job, index) => (;
+                <motion&& motion.div,
+    key={job && job.id}
 
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -777,4 +865,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </div>
     </MainLayout>
   );
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">;
+                Don't See the Right Role?;
+              </h2>;
+              <p className="text-xl mb-8 max-w-2xl mx-auto">;
+                We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.;
+              </p>;
+              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                Send Your Resume;
+              </Link>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>;
+  ),;
+}
 

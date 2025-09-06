@@ -1,4 +1,9 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { Interface } from 'ethers';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { Interface } from 'ethers',;
 
 // Simple ABI for demonstration (release/refund)
 const abi = [
@@ -14,12 +19,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
   }
   try {
-    const iface = new Interface(abi)
-    const data = iface.encodeDeploy(constructorArgs)
+    const iface = new Interface(abi),
+    const data = iface.encodeDeploy(constructorArgs),
     const tx = {
-      data: bytecode + data.slice(2)
+      data: bytecode + data.slice(2),
       // gas and value are intentionally left for client to estimate via MetaMask
 
+
+    return res.status(200).json({ abi, tx })
+  } catch (e: any) {
+    return res.status(400).json({ error: e?.message |'Failed to prepare deployment tx' })
+  try {
+    const iface = new Interface(abi),
+    const data = iface.encodeDeploy(constructorArgs),
+    const tx = {
+      data: bytecode + data.slice(2),
+      // gas and value are intentionally left for client to estimate via MetaMask
+    },
+    return res.status(200).json({ abi, tx })
+  } catch (e: any) {
+    return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { Interface } from 'ethers';
 // Simple ABI for demonstration (release/refund);
@@ -35,6 +57,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
   }
+
 
 }
 
@@ -59,4 +82,5 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

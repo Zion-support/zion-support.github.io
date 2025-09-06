@@ -6,6 +6,7 @@
 
 
 
+
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -53,6 +54,7 @@ function parseMarkdown(filePath: string): BlogPost | null {
   }
 
 
+
 interface BlogPostPageProps {
   /**;
   * Preloaded blog post for static generation. Can be null if not found.;
@@ -62,7 +64,6 @@ interface BlogPostPageProps {
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter()
   const { slug } = router.query
@@ -101,7 +102,9 @@ function parseMarkdown(filePath: string): BlogPost | null {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -163,7 +166,6 @@ if ( {) {
   $2
 }
     return <div>{error}</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
   const articleLd = {
@@ -264,12 +266,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             className="w-10 h-10 rounded-full"
             onError={(e) => {
@@ -305,12 +309,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           </div>
         </div>
@@ -335,12 +341,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="object-cover w-full h-full"
               onError={(e) => {
@@ -393,10 +401,12 @@ export const getStaticProps: GetStaticProps < BlogPostPageProps> = async ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

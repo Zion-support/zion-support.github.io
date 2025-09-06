@@ -20,14 +20,14 @@ class ComprehensiveSourceFixer {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async fixAllSourceFiles() {
-    this.log('🔧 Starting comprehensive source file fixing...');
+    this.log(' Starting comprehensive source file fixing...');
     // Fix src directory
     await this.fixDirectory(path.join(__dirname, 'src'));
     // Fix pages directory
     await this.fixDirectory(path.join(__dirname, 'pages'));
-    this.log(`✅ Fixed ${this.fixes.length} files`);
+    this.log(` Fixed ${this.fixes.length} files`);
     if (this.errors.length > 0) {
-      this.log(`❌ ${this.errors.length} errors encountered`)}
+      this.log(` ${this.errors.length} errors encountered`)}
     await this.generateReport()}
   async fixDirectory(dir) {
     if (!fs.existsSync(dir)) return;
@@ -64,10 +64,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           "fixes": this.getAppliedFixes(content, fixedContent),
           "timestamp": new Date().toISOString()
         });
-        this.log(`✅ "Fixed": ${path.basename(filePath)}`)}
+        this.log(` "Fixed": ${path.basename(filePath)}`)}
     } catch (error) {
       this.errors.push({ "file": filePath, "error": error.message });
-      this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`, 'ERROR')}
+      this.log(` Error fixing ${path.basename(filePath)}: ${error.message}`, 'ERROR')}
   }
   fixSourceContent(content, filePath) {
     let fixed = content;

@@ -9,6 +9,7 @@ interface DataanalyticsProps {
   // Add props here as needed
 
 }
+export default function Dataanalytics({ }: DataanalyticsProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

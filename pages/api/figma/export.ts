@@ -1,14 +1,22 @@
 
-
-
-
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import JSZip from "jszip";
+import {
+  getZionDesignMap
+  buildTokenSet
+  buildUIKit
+  UIKitKind
+  getZionDesignMap,
+  buildTokenSet,
+  buildUIKit,
+  UIKitKind,;
 
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
 
 
 
@@ -29,14 +37,15 @@ function handler() {
 
 
 
+
   try {
 
     const kit = (req && req.query.kit as string) || "tailwind";
 
     const kind = (
 
-
-
+      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
+    ) as UIKitKind;
 
   try {;
     const kit = (req.query.kit as string) || "tailwind";
@@ -44,27 +53,22 @@ function handler() {
       ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
     ) as UIKitKind;
     const zip = new JSZip();
-
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
-
     // Core files
     zip.file("map.json", JSON.stringify(map, null, 2));
     zip.file("tokens.json", JSON.stringify(tokens, null, 2));
-
     // UIKit folder
     const uikit = buildUIKit(kind);
     const uiFolder = zip.folder("uikit")!;
     Object.entries(uikit).forEach(([path, content]) =>
-      uiFolder.file(path, content),
+      uiFolder.file(path, content)
     );
-
     // README
     zip.file(
-      "README.md",
-      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
+      "README.md"
+      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`
     );
-
     const buffer = await zip.generateAsync({ type: "nodebuffer" });
     res.setHeader("Content-Type", "application/zip");
     res.setHeader(
@@ -76,6 +80,8 @@ function handler() {
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
+
+
 
 
 
@@ -180,10 +186,13 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 
+
+
   }
 }
   }
 }
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -192,4 +201,5 @@ export default async function handler(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

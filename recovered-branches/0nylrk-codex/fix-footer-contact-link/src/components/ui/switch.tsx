@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -18,6 +19,7 @@ const Switch = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
 ></typeof>(({ className, ...props }, ref) => (
   <SwitchPrimitives.Root
+
 
 
 const Switch = React && React.forwardRef<;
@@ -42,15 +44,18 @@ const Switch = React && React.forwardRef<;
         "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       )}
     />;
   </SwitchPrimitives && SwitchPrimitives.Root>;
 ));
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -61,5 +66,6 @@ Switch && Switch.displayName = SwitchPrimitives && SwitchPrimitives.Root.display
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

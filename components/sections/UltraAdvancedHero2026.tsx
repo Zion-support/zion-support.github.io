@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +25,7 @@ import React from 'react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -78,7 +80,6 @@ import {
   Sparkles,
   CheckCircle,
   Phone,
-
   Mail,;
   MapPin,;
 
@@ -196,6 +197,7 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+
             className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
             <span className='text-purple-300 text-sm font-medium'>;
@@ -215,6 +217,7 @@ export default function UltraAdvancedHero2026() {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
@@ -226,6 +229,7 @@ export default function UltraAdvancedHero2026() {;
             <br />
             <span className='text-white'>is Now</span>
           </motion.h1>
+
 
 
 
@@ -251,6 +255,7 @@ export default function UltraAdvancedHero2026() {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -263,6 +268,7 @@ export default function UltraAdvancedHero2026() {;
             </span>{' '}
             with our revolutionary solutions.
           </motion.p>
+
 
 
 
@@ -282,6 +288,7 @@ export default function UltraAdvancedHero2026() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           {/* Service Statistics */}
           <motion&& motion.div
@@ -478,7 +485,7 @@ export default function UltraAdvancedHero2026() {;
               <div className="text-gray-300 text-sm">Metaverse Services</div>
             </div>
             <div className="text-center p-4 bg-gradient-to-br from-green-800/20 to-green-900/20 backdrop-blur-xl border border-green-500/20 rounded-2xl">
-              <div className="text-3xl font-bold text-green-400">∞</div>
+              <div className="text-3xl font-bold text-green-400"></div>
               <div className="text-gray-300 text-sm">Possibilities</div>
             </div>
           </motion.div>
@@ -510,7 +517,9 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -541,6 +550,26 @@ export default function UltraAdvancedHero2026() {;
               <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>
             </div>
           </motion.div>
+            className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>;
+            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>;
+              <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />;
+              <span className='text-gray-200 font-medium'>;
+                First-to-Market Technology;
+              </span>;
+            </div>;
+            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-purple-500/20 rounded-xl'>;
+              <CheckCircle className='w-6 h-6 text-purple-400 flex-shrink-0' />;
+              <span className='text-gray-200 font-medium'>;
+                1000% ROI Guaranteed;
+              </span>;
+            </div>;
+            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>;
+              <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />;
+              <span className='text-gray-200 font-medium'>;
+                24/7 Autonomous Operation;
+              </span>            </div>;
+          </motion && motion.div>;
+
           {/* Call to Action Buttons */}
 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl'>;
@@ -552,8 +581,7 @@ export default function UltraAdvancedHero2026() {;
 
             <Link
               href='/contact'
-              className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
-            >
+              className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
               <Zap className='w-6 h-6 mr-3' />              Get Started Today            variants={itemVariants}
 
           <motion.div 
@@ -569,6 +597,7 @@ export default function UltraAdvancedHero2026() {;
               Explore All Services
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
+
 
             <Link
 
@@ -595,9 +624,11 @@ export default function UltraAdvancedHero2026() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
               Get Started Today
             </Link>
           </motion.div>
+
 
 
 
@@ -609,6 +640,7 @@ export default function UltraAdvancedHero2026() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           {/* Contact Information */}
 
@@ -648,6 +680,7 @@ export default function UltraAdvancedHero2026() {;
               </div>
             </div>
           </motion.div>
+
 
 
 
@@ -735,6 +768,7 @@ export default function UltraAdvancedHero2026() {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {/* Trust Indicators */}
 
           <motion.div 
@@ -759,6 +793,7 @@ export default function UltraAdvancedHero2026() {;
       </div>
 
 
+
 className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'>;
             <div className='flex items-center space-x-2'>;
               <Star className='w-5 h-5 text-yellow-400 fill-current' />              <span>4 && 4.9/5 Rating</span>;
@@ -775,6 +810,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           </motion && motion.div>;
         </motion && motion.div>;
       </div>;
+
       {/* Floating Elements */}
 
               </div>;
@@ -1022,9 +1058,11 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
       </div>;
 
 
+
+
       {/* Floating Elements */}
-      <div className='absolute inset - 0 pointer - events - none'>;
-        <motion.div;
+      <div className='absolute inset-0 pointer-events-none'>;
+        <motion&& motion.div
           animate={{
             coordinate_y: [0, -20, 0],
             rotate: [0, 5, 0],
@@ -1046,7 +1084,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             rotate: [0, -5, 0]
           className='absolute top - 20 right - 20 text - 6xl opacity - 20';
         >;
-          🚀;
+          ;
         </motion.div>;
         <motion.div;
           animate={{
@@ -1069,7 +1107,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             rotate: [0, 3, 0]
           className='absolute bottom - 20 left - 20 text - 6xl opacity - 20';
         >;
-          ⚛️;
+          ;
         </motion.div>;
         <motion.div;
           animate={{
@@ -1092,7 +1130,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             rotate: [0, -3, 0]
           className='absolute top - 1/3 left - 10 text - 5xl opacity - 20';
         >;
-          🧠;
+          ;
         </motion.div>;
         <motion.div;
           animate={{
@@ -1183,7 +1221,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           }}
           className="absolute top - 20 right - 20 text - 6xl opacity - 20";
         >;
-          🚀;
+          ;
         </motion.div>;
         <motion.div;
           animate={{
@@ -1197,7 +1235,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           }}
           className="absolute bottom - 20 left - 20 text - 6xl opacity - 20";
         >;
-          ⚛️;
+          ;
         </motion.div>;
         <motion.div;
           animate={{
@@ -1211,7 +1249,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           }}
           className="absolute top - 1/3 left - 10 text - 5xl opacity - 20";
         >;
-          🧠;
+          ;
         </motion.div>;
         <motion.div;
           animate={{
@@ -1225,11 +1263,12 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           }}
           className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20";
         >;
-          🌐;
+          ;
         </motion.div>;
       </div>;
     </section>));
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
@@ -1241,5 +1280,6 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

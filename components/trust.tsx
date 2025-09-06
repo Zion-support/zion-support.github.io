@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -27,6 +31,8 @@ import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
 
 
+
+
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [data, setData] = useState<any>(null),
@@ -37,14 +43,18 @@ export default function TrustPage() {;
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
 
-
-
-
-
-
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import TrustBadge from '../components/ui/TrustBadge';
+import TrustRadar from '../components/ui/TrustRadar';
+import RiskIndicator from '../components/ui/RiskIndicator';
+export default function TrustPage() {;
+  const [userId, setUserId] = useState<string>('demo-user');
+  const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
+
 
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
@@ -52,6 +62,8 @@ export default function TrustPage() {;
   }, []);
   useEffect(() => {
     async function load() {
+
+
 
 
 
@@ -64,6 +76,7 @@ export default function TrustPage() {;
 
 
   }, []);
+
   useEffect(() => {;
     async function load() {;
       setLoading(true);
@@ -74,6 +87,35 @@ export default function TrustPage() {;
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
       setData(json);
 
+      setLoading(true);
+      const res = await fetch(
+        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
+      );
+      const json = await res && res.json();
+      setData(json);
+      setLoading(false);
+    }
+    load();
+  }, [userId]);
+
+
+  }
+  async function submitAppeal(): any (e: React && React.FormEvent) {;
+    e && e.preventDefault();
+    const form = e && e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const message = formData && formData.get('message');
+    const contactEmail = formData && formData.get('email');
+    await fetch('/api/trust/appeal', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON && JSON.stringify({ userId, message, contactEmail }),;
+    });
+    alert('Appeal submitted');
+    form && form.reset();  }
+  return (
+    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
+    alert('Appeal submitted');
 
 
 
@@ -167,7 +209,9 @@ export default function TrustPage() {;
                       </li>;
 
 
-
+                        <span>{c.key}</span>
+                        <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
+                      </li>
 
 
 
@@ -187,6 +231,7 @@ export default function TrustPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                     ))}
@@ -263,6 +308,8 @@ export default function TrustPage() {;
                 </div>
               )}
             </div>
+
+
 
 
 
@@ -478,7 +525,9 @@ function submit_appeal() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

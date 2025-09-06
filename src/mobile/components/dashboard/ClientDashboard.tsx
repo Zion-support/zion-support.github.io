@@ -9,7 +9,9 @@ export function ClientDashboard() {
 
 
 
+
       
+
 
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -21,7 +23,9 @@ export function ClientDashboard() {
           </Link>
         </div>
 
+
         
+
 
         <Card>
           <CardContent className="p-4">
@@ -34,9 +38,11 @@ export function ClientDashboard() {
                 <Badge>3 Milestones</Badge>
               </div>
 
+
               
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
+
 
                   <span>Progress</span>
                   <span className="font-medium">60%</span>
@@ -45,6 +51,8 @@ export function ClientDashboard() {
                   <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
                 </div>
               </div>
+
+
 
               
               <div className="flex justify-between items-center">
@@ -67,29 +75,32 @@ export function ClientDashboard() {
 
 
 
+
                 <Button size="sm" variant="outline">View Details</Button>
               </div>
             </div>
           </CardContent>
         </Card>
       </section>
+
       
 
       
 
 
       <section>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-medium">Suggested Talents</h2>
-          <Link href="/mobile/marketplace">
-            <Button variant="ghost" size="sm" className="h-8 gap-1">
-              View all <ChevronRight className="h-4 w-4" />
+        <div className='flex items-center justify-between mb-4'>
+          <h2 className='text-lg font-medium'>Suggested Talents</h2>
+          <Link href='/mobile/marketplace'>
+            <Button variant='ghost' size='sm' className='h-8 gap-1'>
+              View all <ChevronRight className='h-4 w-4' />
             </Button>
           </Link>
         </div>
         <div className='space-y-3'>
         
         <div className="space-y-3">
+
 
 
           <Card>
@@ -138,6 +149,7 @@ export function ClientDashboard() {
                   89% match
                 </div>
               </div>
+
               <div className='mt-3 flex gap-1 flex-wrap'>
                 <Badge variant='outline' className='text-xs'>
                   React
@@ -149,6 +161,7 @@ export function ClientDashboard() {
                   AWS
                 </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
               <div className="mt-3 flex gap-1 flex-wrap">
+
 
 
                 <Badge variant="outline" className="text-xs">React</Badge>
@@ -235,6 +248,7 @@ export function ClientDashboard() {
             </div>
 
             
+
 
 
 
@@ -510,6 +524,8 @@ function ClientDashboard() {
   );
 }
 
+
+
       <section>;
         <div className='flex items - center justify - between mb - 4'>;
           <h2 className='text - lg font - medium'>Recent Updates</h2>;
@@ -575,4 +591,6 @@ function ClientDashboard() {
         </Card>;
       </section>;
     </div>);
+
 }
+

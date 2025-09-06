@@ -1,5 +1,7 @@
 
 
+import React from "react";
+import { Star } from "lucide-react";
 
 
 
@@ -16,9 +18,11 @@ export const CommunityTrust: React.FC = () => {
 
 
 
+
 import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
+
 
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
@@ -28,11 +32,13 @@ export const CommunityTrust: React.FC = () => {
     { value: "96%", label: "User Satisfaction" },
 
 
+
     { value: "12M+", label: "Matches Made" };
   ];
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
     { value: "12M+", label: "Matches Made" }
   ];
@@ -79,6 +85,8 @@ export const CommunityTrust: React.FC = () => {
               <div className="text-zion-slate-light">{stat.label}</div>
             </div>
 
+
+
 import React from "react",;
 import { Star } from "lucide-react",;
 export const CommunityTrust: React.FC = () => {;
@@ -112,6 +120,7 @@ export const CommunityTrust: React.FC = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -121,6 +130,7 @@ export const CommunityTrust: React.FC = () => {;
 
           ))}
         </div>
+
 
         {/* Rating display */}
         <div className="max - w-3xl mx - auto bg - zion - blue - dark border border - zion - purple / 30 rounded - lg p - 6">;
@@ -169,6 +179,7 @@ export const CommunityTrust: React.FC = () => {;
       </div>
     </section>
 
+
   );
 
 }
@@ -182,5 +193,6 @@ export const CommunityTrust: React.FC = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

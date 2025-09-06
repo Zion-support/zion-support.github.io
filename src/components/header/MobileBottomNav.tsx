@@ -62,6 +62,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 
 
+
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
   const navItems = [
@@ -122,23 +123,46 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       icon: Home,
 
 
+
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
 
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
+    },
+      matches: (path: string) =>
+        path.startsWith('/talent') ||
+        path.startsWith('/categories') ||
+        path.startsWith('/marketplace'),    },
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
+    },
 
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
 
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
+    },
+      matches: (path: string) =>
+        path.startsWith('/community') || path.startsWith('/forum'),    },
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
+    },
 
     {
       name: "Wishlist",
       href: "/wishlist",
       icon: Heart,
 
+      matches: (path: string) => path.startsWith("/wishlist"),
+      badge: favoritesCount,
+      authRequired: true
+      matches: (path: string) => path.startsWith('/wishlist'),      badge: favoritesCount,
+      authRequired: true,
+      matches: (path: string) => path.startsWith("/wishlist"),
+      badge: favoritesCount,
+      authRequired: true
 
     },
     {
@@ -146,6 +170,15 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       href: "/messages",
       icon: MessageSquare,
 
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
+      badge: unreadCount,
+      authRequired: true
+      matches: (path: string) =>
+        path.startsWith('/messages') || path.startsWith('/inbox'),      badge: unreadCount,
+      authRequired: true,
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
+      badge: unreadCount,
+      authRequired: true
 
     },
     {
@@ -153,18 +186,32 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       href: "/cart",
       icon: ShoppingCart,
 
+      matches: (path: string) => path.startsWith("/cart"),
+      badge: cartCount
+    },
+      matches: (path: string) => path.startsWith('/cart'),
+      badge: cartCount,    },
+      matches: (path: string) => path.startsWith("/cart"),
+      badge: cartCount
+    },
 
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+      matches: (path: string) => path.startsWith('/dashboard'),
+      authRequired: true,
+    },
+  ]
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(
+    item => !item.authRequired || (item.authRequired && isAuthenticated)
+  )
+      matches: (path: string) => path.startsWith("/dashboard"),
+      authRequired: true
+    }
+  ],
 
 
 
@@ -281,8 +328,19 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     item => !item && item.authRequired || (item && item.authRequired && isAuthenticated);
   );
 
-              'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-              item && item.matches(router && router.pathname)
+
+  return (
+    <nav className='md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20'>;
+      <div className='flex justify-around items-center h-16'>;
+        {visibleItems && visibleItems.map(item => (;
+          <Link
+            key={item && item.name}
+            href={item && item.href}
+            aria-label={item && item.name}
+            className={cn(
+              'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+
+              item.matches(router.pathname)
 
                 ? 'text-primary'
                 : 'text-foreground/70 hover:text-foreground'
@@ -313,10 +371,10 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
 
-
-
-
-
+      </div>
+    </nav>
+  )
+}
 
 ;
 }
@@ -403,5 +461,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     </nav>);
 }
 ;
+
+
 
 

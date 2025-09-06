@@ -28,25 +28,37 @@ interface ActiveFiltersProps {
 
 
 
-
+  selectedSkills
+  toggleSkill
+  selectedAvailability
+  toggleAvailability
+  selectedRegions
+  toggleRegion
+  priceRange
+  setPriceRange
+  experienceRange
+  setExperienceRange
+  clearFilters
+}: ActiveFiltersProps) {
+  // Check if any filters are active
+  const hasActiveFilters =
+    selectedSkills.length > 0 |
+    selectedAvailability.length > 0 |
+    selectedRegions.length > 0 |
+    experienceRange[0] !== 0 |
+    experienceRange[1] !== 15 |
+    priceRange[0] !== 50 |
+    priceRange[1] !== 200
+  if (!hasActiveFilters) return null
 
 
   const hasActiveFilters = null;
     selectedSkills.length > 0 ||
     selectedAvailability.length > 0 ||
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
 
 
     priceRange[1] !== 200,
@@ -61,9 +73,8 @@ interface ActiveFiltersProps {
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
   return (
-    <div className="mb-6 flex flex-wrap gap-2 items-center">
-      <span className="text-zion-slate-light text-sm">Active filters:</span>
-      
+    <div className='mb-6 flex flex-wrap gap-2 items-center'>
+      <span className='text-zion-slate-light text-sm'>Active filters:</span>
       {selectedSkills.map(skill => (
         <ClickableBadge 
           key={skill}
@@ -164,20 +175,37 @@ export function ActiveFilters({;
       
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
 
+        <ClickableBadge
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => setPriceRange([50, 200])}        >
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => setPriceRange([50, 200])}
+        >
 
           ${priceRange[0]}-${priceRange[1]}/hr
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
 
+      {(experienceRange[0] !== 0 |experienceRange[1] !== 15) && (
       
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
-
+        <ClickableBadge
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => setExperienceRange([0, 15])}        >
+      
+      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => setExperienceRange([0, 15])}
+        >
 
           {experienceRange[0]}-{experienceRange[1]} years
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+
           <X className="h-3 w-3" />
 
 
@@ -280,6 +308,7 @@ export function ActiveFilters({;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -424,5 +453,7 @@ if (return null) {
     </div>);
 }
 ;
+
+
 
 

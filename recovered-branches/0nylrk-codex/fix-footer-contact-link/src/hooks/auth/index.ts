@@ -4,16 +4,19 @@ export * from './use_logout';
 ;
 
 
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null;
+};
 
-
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+export * from './useEmailAuth';
+export * from './useProfileManagement';
+export * from './useSocialAuth';
+export * from './useLogout';
+export * from './useEmailAuth',;
+export * from './useProfileManagement',;
+export * from './useSocialAuth',;
 
 export * from './useLogout';
 

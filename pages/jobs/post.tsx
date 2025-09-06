@@ -2,6 +2,7 @@
 
 
 
+
             <input
               value={title}
               onChange={e => setTitle(e && e.target.value)}
@@ -83,6 +84,7 @@ export default PostJob;
 
 
 
+
 const PostJob: NextPage = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -103,7 +105,9 @@ const PostJob: NextPage = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -136,7 +140,9 @@ const PostJob: NextPage = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -156,6 +162,13 @@ const PostJob: NextPage = () => {
               </div>
               <div>
 
+                <div className='text-sm opacity-70'>Description</div>
+                <p className='whitespace-pre-wrap'>
+                  {description |'No description provided.'}
+                </p>
+              </div>
+            </div>
+          ) : (
 
             <p className='text-sm opacity-80'>
               Click Preview to see how your job will appear to talent.
@@ -166,6 +179,13 @@ const PostJob: NextPage = () => {
   );
 }
 export default PostJob;
+
+
+                <div className="text-sm opacity-70">Description</div>
+                <p className="whitespace-pre-wrap">{description || 'No description provided.'}</p>
+              </div>
+            </div>
+          ) : (
 
             <p className="text-sm opacity-80">Click Preview to see how your job will appear to talent.</p>
           )  } catch (error) {
@@ -178,6 +198,8 @@ export default PostJob;
     </div>;
   );
 },;
+
+
 
 export default PostJob;
 

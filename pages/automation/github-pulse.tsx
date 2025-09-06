@@ -1,14 +1,13 @@
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/github-pulse.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/github-pulse.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/github-pulse.json',
 
 export default function GithubPulsePage() {
 
@@ -48,6 +47,7 @@ function Metric({ label, value }: { label: string, value: any }) {
 
 
 
+
 export default function GithubPulsePage() {
 
   const repo = data?.repo |{}
@@ -81,6 +81,7 @@ function Metric({ label, value }: { label: string, value: any }) {
 
 
 
+
   )
   } catch (error) {
     console.error("Error:", error);
@@ -88,9 +89,12 @@ function Metric({ label, value }: { label: string, value: any }) {
   }
 
 
+
+
 }
 
 }
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -101,5 +105,6 @@ function Metric({ label, value }: { label: string, value: any }) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

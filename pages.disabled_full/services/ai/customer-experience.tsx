@@ -9,6 +9,7 @@ interface CustomerexperienceProps {
   // Add props here as needed
 
 }
+export default function Customerexperience({ }: CustomerexperienceProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

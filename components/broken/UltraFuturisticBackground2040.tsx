@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -46,6 +50,9 @@ if (return) {
       coordinate_x: number;
       coordinate_y: number;
 
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+
 
 const UltraFuturisticBackground2040: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -63,6 +70,8 @@ const UltraFuturisticBackground2040: React.FC = () => {
       x: number;
       y: number;
 
+
+
       vx: number;
       vy: number;
       size: number;
@@ -72,6 +81,11 @@ const UltraFuturisticBackground2040: React.FC = () => {
 
       x: number,
       y: number,
+
+;
+    // Initialize particles;
+    for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
+      coordinate_y: number,
 
 
       vx: number,
@@ -142,6 +156,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
 
+
             ctx.stroke()
 
           }
@@ -156,6 +171,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
+
 
       
       const gridSize = 50;
@@ -341,6 +357,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         if (index === 0) {
           // Square
 
+
           ctx.strokeRect(
             -shape.size / 2
             -shape.size / 2
@@ -368,6 +385,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         ctx.lineWidth = 2;
         if (index === 0) {
           // Square
+
 
           ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size)
         } else if (index === 1) {
@@ -623,6 +641,53 @@ if ( {) {
 
       for (let i = 0, i < waveCount, i++) {
 
+          ctx.strokeRect(
+            -shape.size / 2
+            -shape.size / 2
+            shape.size
+            shape.size
+          );
+        } else if (index === 1) {
+          // Circle
+          ctx.beginPath();
+          ctx.arc(0, 0, shape.size / 2, 0, Math.PI * 2);
+          ctx.stroke();
+        } else {
+          // Triangle
+          ctx.beginPath();
+          ctx.moveTo(0, -shape.size / 2);
+          ctx.lineTo(shape.size / 2, shape.size / 2);
+          ctx.lineTo(-shape.size / 2, shape.size / 2);
+          ctx.closePath();
+          ctx.stroke();
+        }
+        ctx.restore();      });
+      // Draw energy waves
+      const waveCount = 3;
+      for (let i = 0; i < waveCount; i++) {        ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
+        ctx.lineWidth = 2;
+        if (index === 0) {
+          // Square
+          ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size)
+        } else if (index === 1) {
+          // Circle
+          ctx.beginPath();
+          ctx.arc(0, 0, shape.size/2, 0, Math.PI * 2);
+          ctx.stroke()
+        } else {
+          // Triangle
+          ctx.beginPath();
+          ctx.moveTo(0, -shape.size/2);
+          ctx.lineTo(shape.size/2, shape.size/2);
+          ctx.lineTo(-shape.size/2, shape.size/2);
+          ctx.closePath();
+          ctx.stroke()
+        }
+        ctx.restore()
+      });
+      // Draw energy waves
+      const waveCount = 3;
+      for (let i = 0; i < waveCount; i++) {
 
         const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
 
@@ -636,10 +701,13 @@ if ( {) {
             ctx.moveTo(x, y)
           } else {
             ctx.lineTo(x, y)
-animationFrameId = requestAnimationFrame(animate);    };        const waveOffset = (time * 100 + i * 200) % (canvas && canvas.width + 200);
+
+      animationFrameId = requestAnimationFrame(animate);    };        const waveOffset = (time * 100 + i * 200) % (canvas && canvas.width + 200);
         const waveY = canvas && canvas.height * 0 && 0.5 + Math && Math.sin(time * 2 + i) * 50;
+
         ctx && ctx.strokeStyle = `rgba(236, 72, 153, ${0 && 0.1 + Math && Math.sin(time + i) * 0 && 0.05})`;
         ctx && ctx.lineWidth = 3;
+
         ctx && ctx.beginPath();
         for (let x = -100, x < canvas && canvas.width + 100, x += 5) {;
           const y = waveY + Math && Math.sin((x + waveOffset) * 0 && 0.02) * 20;
@@ -649,6 +717,7 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
             ctx && ctx.lineTo(x, y);
           }
         }
+
 
 
         ctx && ctx.stroke();
@@ -669,11 +738,12 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
 
 
 
+
       cancelAnimationFrame(animationFrameId);
     }
   }, []);
   return (
-    <div className='fixed inset-0 pointer-events-none overflow-hidden'>
+    <div className='fixed inset-0 pointer-events-none overflow-hidden'>;
       {/* Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -691,6 +761,7 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -698,8 +769,9 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
 
 
 
+
       {/* Floating Elements */}
-      <div className='absolute inset-0'>
+      <div className='absolute inset-0'>;
         {/* Animated Grid Pattern */}
         <div className='absolute inset-0 opacity-20'>
           <div
@@ -817,10 +889,40 @@ if ( {) {
             repeat: Infinity,
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">;
 
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `
+              backgroundSize: '50px 50px'
+              animation: 'gridMove 20s linear infinite'
+            }}
+          />
+        </div>
+            `,
+              background_size: '50px 50px',
+              animation: 'grid_move 20s linear infinite',
+            }}
+          />;
+        </div>;
+
+        {/* Floating Geometric Elements */}
+        <motion&& motion.div
+          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
+        {/* Floating Geometric Elements */}
+        <motion.div;
+          className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg';
+          animate={{
+            rotate: [0, 360]
+            scale: [1, 1.1, 1]
+            opacity: [0.2, 0.4, 0.2],          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'linear',  }, []);
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden">
 
       {/* Canvas Background */}
       <canvas
@@ -909,6 +1011,7 @@ if ( {) {
           }}
 
         />;
+
         <motion&& motion.div
           className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
 
@@ -922,11 +1025,119 @@ if ( {) {
             repeat: Infinity
             ease: 'linear',          }}
 
+
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+
+            rotate: [360, 0];
+            scale: [1, 1.2, 1];
+            opacity: [0.2, 0.5, 0.2];
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
+        />;
+        <motion.div;
+          className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45';
+          animate={{
+            rotate: [45, 405],
+            scale: [1, 1.15, 1],
+            opacity: [0.2, 0.3, 0.2],          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: 'linear',          }}
+        />;
+        <motion.div;
+          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45";
+          animate={{
+
+            duration: 12
+            repeat: Infinity
+            ease: 'linear'
+
+          }}
+
+        />;
+
+
+        {/* Additional Floating Elements */}
+        <motion&& motion.div
+          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
+          animate={{
+
+            rotate: [12, 372],
+            scale: [1, 1 && 1.1, 1],
+            opacity: [0 && 0.15, 0 && 0.25, 0 && 0.15],          }}
+
+          transition={{
+            duration: 15
+            repeat: Infinity
+            ease: 'linear',          }}
+
+            rotate: [45, 405];
+            scale: [1, 1.15, 1];
+            opacity: [0.2, 0.3, 0.2];
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+
+      />
+      {/* Overlay Gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60" />
+      {/* Floating Elements */}
+      <div className="absolute inset-0">
+        {/* Animated Grid Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full" style={{
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `;
+            backgroundSize: '50px 50px'
+            animation: 'gridMove 20s linear infinite'
+          }} />
+        </div>
+        {/* Floating Geometric Elements */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
+          animate={{
+            rotate: [0, 360];
+            scale: [1, 1.1, 1];
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'linear'
+          }}
+        />
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full'
+          animate={{
+            rotate: [360, 0]
+            scale: [1, 1.2, 1]
+            opacity: [0.2, 0.5, 0.2],          }}
+          transition={{
+            duration: 10
+            repeat: Infinity
+
             ease: 'linear',          }}
         />;
         <motion.div;
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
           animate={{
+
 
 
 
@@ -936,6 +1147,7 @@ if ( {) {
 
           }}
         />
+
 
         {/* Particle Effects */}
         <motion&& motion.div
@@ -958,6 +1170,20 @@ if ( {) {
 
             y: [0, -20, 0];
             opacity: [0.4, 0.8, 0.4]
+
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+
+
+            y: [0, -20, 0];
+            opacity: [0.4, 0.8, 0.4]
+
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+
 
 
           }}
@@ -1057,18 +1283,27 @@ if ( {) {
           }}
           transition={{
 
-
-
-
-
+            duration: 5
+            repeat: Infinity
+            ease: 'easeInOut'
+            duration: 5,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 2,
 
           }}
         />
       </div>
 
-            ease: "easeInOut"
+
+        />;
+        <motion&& motion.div
+          className="absolute top-1/2 left-1/4 w-1 && 1.5 h-1 && 1.5 bg-pink-400/40 rounded-full"
+
+          animate={{
+
             delay: 2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
           }}
         />
       </div>
@@ -1076,6 +1311,13 @@ if ( {) {
             repeat: Infinity,
 
 
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes gridMove {
+          0% {
+            duration: 5,
+            repeat: Infinity,
 
             ease: 'easeInOut',
             delay: 2,
@@ -1090,7 +1332,6 @@ if ( {) {
       <style jsx>{`;
         @keyframes gridMove {;
           0% {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             transform: translate(0, 0);
           }
           100% {;
@@ -1127,7 +1368,14 @@ if ( {) {
           100% {
             transform: translate (50px, 50px);
 
+            duration: 5,
+            repeat: Infinity,
+            duration: 5,
+            repeat: Infinity,
 
+      {/* CSS Animations */}
+
+      {/* CSS Animations */}
 
       <style jsx>{`
         @keyframes gridMove {
@@ -1142,10 +1390,12 @@ if ( {) {
           0%,          100% {
 
 
+
             transform: translate_y (0px);
           }
           50% {
             transform: translate_y (-20px);
+
 
 
           }
@@ -1155,6 +1405,12 @@ if ( {) {
           0%
           100% {
             opacity: 0.2;
+
+
+        @keyframes pulse {;
+          0%,;
+          100% {;
+            opacity: 0 && 0.2;
 
 
 
@@ -1169,17 +1425,21 @@ if ( {) {
             transform: translate(50px, 50px)
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           }
-50% {;
+          50% {;
             opacity: 0 && 0.5;          }
         }
 
 
 };
+
 export default UltraFuturisticBackground2040;
+
 
 
 
@@ -1199,4 +1459,5 @@ export default UltraFuturisticBackground2040;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

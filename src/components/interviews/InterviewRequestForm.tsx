@@ -162,6 +162,8 @@ interface InterviewRequestFormProps {
 
 
 
+
+
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
@@ -172,10 +174,25 @@ const formSchema = z.object({
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
 
+  title: z.string().min(3, 'Please provide a brief title for the interview.'),
+  notes: z.string().optional(),
+})
+export function InterviewRequestForm({
+  talent,
+  onClose,
+  userDetails,
+}: InterviewRequestFormProps) {
+  const { requestInterview } = useInterviews()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  title: z.string().min(3, "Please provide a brief title for the interview."),
+  notes: z.string().optional()}),
+
+
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+
 
 
 
@@ -191,6 +208,7 @@ const formSchema = z.object({
         description: 'Please log in to schedule an interview'
         variant: 'destructive'
       })
+
       return;
     }
     setIsSubmitting(true)
@@ -200,6 +218,8 @@ const formSchema = z.object({
       const scheduledDate = new Date(dateTimeString)
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration)
+
+
 
       duration: "30",
       platform: "zoom",
@@ -226,10 +246,12 @@ const formSchema = z.object({
       const durationMinutes = parseInt(values.duration),
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -241,13 +263,43 @@ const formSchema = z.object({
         notes: values.notes,
         meeting_platform: values.platform as any,
 
+        meeting_link: values.meetingLink,
+        interview_type: 'video',
+        title: values.title,
+      })
+      toast({
+        title: 'Interview requested',
+        description: `Your interview request with ${talent.full_name} has been sent.`,
+      })
+      onClose()
+    } catch (error) {
+      logErrorToProduction('Failed to schedule interview:', { data: error })
+      toast({
+        title: 'Failed to schedule interview',
+        description:
+          'An error occurred while scheduling the interview. Please try again.',
+        variant: 'destructive',
+      })
+        interview_type: "video",
+        title: values.title
+      }),
 
-
+      toast({
+        title: "Interview requested",
+        description: `Your interview request with ${talent.full_name} has been sent.`}),
+      onClose()
+    } catch (error) {
+      logErrorToProduction('Failed to schedule interview:', { data: error }),
+      toast({
+        title: "Failed to schedule interview",
+        description: "An error occurred while scheduling the interview. Please try again.",
+        variant: "destructive"})
 
     } finally {
       setIsSubmitting (false);
     }
   }
+
 
 
 
@@ -422,6 +474,7 @@ export function InterviewRequestForm(): any ({;
 
 
 
+
               alt={talent.full_name}
               className='h-full w-full object-cover'
               loading='lazy'            />
@@ -430,6 +483,7 @@ export function InterviewRequestForm(): any ({;
               className="h-full w-full object-cover"
               loading="lazy"
             />
+
 
 
           </div>
@@ -447,6 +501,7 @@ export function InterviewRequestForm(): any ({;
             <h3 className='text-lg font-medium text-white'>;
               {talent && talent.full_name}
             </h3>;
+
             <p className='text-sm text-zion-slate-light'>;
               {talent && talent.professional_title}
             </p>;
@@ -469,6 +524,7 @@ export function InterviewRequestForm(): any ({;
           name="title"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
             <FormItem>
+
 
 
               <FormLabel>Interview Title</FormLabel>
@@ -508,6 +564,7 @@ export function InterviewRequestForm(): any ({;
                       <Button
 
 
+
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal",
@@ -516,10 +573,12 @@ export function InterviewRequestForm(): any ({;
                       >
 
 
+
                         {field.value ? (
                           format(field.value, 'PPP')
                         ) : (
                           <span>Pick a date</span>
+
               field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'date'>;
             }) => (;
               <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>;
@@ -558,11 +617,13 @@ export function InterviewRequestForm(): any ({;
                       className="p-3 pointer-events-auto"
 
 
+
                     />
                   </PopoverContent>
                 </Popover>
                 <FormMessage />
               </FormItem>
+
 
                       selected={field && field.value}
                       onSelect={field && field.onChange}
@@ -780,6 +841,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
+
+
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -797,6 +860,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
@@ -804,6 +868,26 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
 
+
+          <FormField
+            control={form.control}
+            name='duration'
+            render={({
+
+              field
+            }: {
+              field: ControllerRenderProps<
+                z.infer<typeof formSchema>
+                'duration'
+              >
+            }) => (              <FormItem>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="duration"
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
+              <FormItem>
           <FormField
             control={form.control}
             name='duration'
@@ -811,7 +895,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               field,
             }: {
               field: ControllerRenderProps<
-                z.infer<typeof formSchema>,
+                z.infer<typeof formSchema>
+
                 'duration'
               >
             }) => (              <FormItem>
@@ -882,6 +967,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>
 
 
+
                 <FormLabel>Platform</FormLabel>
                 z && z.infer<typeof formSchema>,;
                 'platform';
@@ -916,6 +1002,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
+
 
           />;
         </div>;
@@ -972,6 +1059,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
+
+
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
                   <Input
@@ -982,13 +1071,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />
               </FormItem>
             )}
-          />
+          />;
         )}
+
 
 
         <FormField
           control={form && form.control}
           name='notes'
+
               </FormItem>)}
           />)}
         <FormField;
@@ -1023,11 +1114,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
+
+
                   {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
           )}
         />
         <div className='flex justify-end gap-4 pt-4'>
@@ -1046,13 +1139,22 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     </Form>
   )
 
-
-
+}setIsSubmitting (true)
+}catch (error) {
+  logErrorToProduction ('Failed to schedule interview:', {
+  data: error
+})
+toast ({
+}finally {
+  setIsSubmitting (false)
+}"
 
 toast ({;
 }finally {;
   setIsSubmitting (false) ;
 }";
+
+
 
 
 
@@ -1155,4 +1257,6 @@ toast ({
 }/> </Button> </div> </form> </Form>);
 }'"}
 }
+
 ;
+

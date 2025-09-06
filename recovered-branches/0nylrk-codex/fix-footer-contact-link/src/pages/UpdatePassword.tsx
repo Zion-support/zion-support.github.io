@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useNavigate, useLocation} from "react-router-dom";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -50,6 +51,7 @@ export default function UpdatePassword() {;
 
 
 
+
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -57,7 +59,7 @@ const updatePasswordSchema = z
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
-      .max(64, "Password must be less than 64 characters"),
+      .max(64, "Password must be less than 64 characters");
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
 
@@ -110,7 +112,7 @@ export default function UpdatePassword() {
     if (token) {
       setAccessToken(token)
     } else {
-      setError("No access token found. Please request a new password reset link.")
+      set_error ("No access token found. Please request a new password reset link.");
     }
     // Clean up auth state to prevent issues
     cleanupAuthState()
@@ -223,6 +225,13 @@ export default function UpdatePassword() {
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
 
+                  <Button
+                    className="mt-3 text-xs"
+                    variant="outline"
+                  <Button 
+                    className="mt-3 text-xs"
+                    variant="outline"
+
 import { useState, useEffect } from "react",;
 import { useNavigate, useLocation } from "react-router-dom",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -334,6 +343,8 @@ export default function UpdatePassword() {;
   }
 
 
+
+
   return (
 
     <>;
@@ -358,6 +369,8 @@ export default function UpdatePassword() {;
                   <Button;
                     className="mt-3 text-xs";
                     variant="outline";
+
+
 
 
                     onClick={() => navigate('/forgot-password')}
@@ -404,6 +417,24 @@ export default function UpdatePassword() {;
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 
+
+              {success ? (;
+                <div className="text-center py-8">;
+                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
+                    <LockKeyhole className="h-6 w-6 text-zion-purple" />;
+                  </div>;
+                  <h3 className="text-lg font-medium text-white">Password updated</h3>;
+                  <p className="mt-2 text-sm text-zion-slate-light">;
+                    Your password has been successfully updated.;
+                  </p>;
+                  <p className="mt-2 text-sm text-zion-slate-light">;
+                    Redirecting you to login...;
+                  </p>;
+                </div>;
+              ) : (;
+                <Form {...form}>;
+                  <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+
                     <FormField
                       control={form && form.control}
                       name="password"
@@ -414,7 +445,7 @@ export default function UpdatePassword() {;
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              placeholder="••••••••"
+                              placeholder=""
                               disabled={isLoading}
                               {...field}
                             />;
@@ -437,7 +468,7 @@ export default function UpdatePassword() {;
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              placeholder="••••••••"
+                              placeholder=""
                               disabled={isLoading}
                               {...field}
                             />
@@ -485,6 +516,8 @@ export default function UpdatePassword() {;
       <Footer />
     </>
   )
+
+
 
                       name="confirmPassword";
 
@@ -537,6 +570,18 @@ export default function UpdatePassword() {;
               <div className="max-w-md text-center">;
                 <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
                 <p className="text-lg text-white/80">;
+
+                </Form>)}
+            </div>;
+          </div>;
+        </div>;
+        <div className="hidden lg: block relative w - 0 flex - 1">;
+          <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - tr from - zion - blue - dark via - zion - purple to - zion - cyan opacity - 80">;
+            <div className="flex flex - col justify - center items - center h - full px - 8">;
+              <div className="max - w-md text - center">;
+                <h3 className="text - 3xl font - bold text - white mb - 4">Password Recovery</h3>;
+                <p className="text - lg text - white / 80">;
+
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -547,6 +592,8 @@ export default function UpdatePassword() {;
       <Footer />;
     </>;
   );
+
+
 
 }
 ;

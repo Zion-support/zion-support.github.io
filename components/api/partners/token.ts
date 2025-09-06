@@ -20,6 +20,7 @@ export default async function handler(
     {
 
 
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "POST") {
@@ -118,15 +119,18 @@ if ( {) {
 
 
 
+
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

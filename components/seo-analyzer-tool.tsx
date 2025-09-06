@@ -30,6 +30,9 @@ import {
   Smartphone,;
   Zap,;
 
+} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
+export default function SEOAnalyzerToolPage() {;
+} from 'lucide-react';
 
 
 export default function SEOAnalyzerToolPage() {
@@ -91,7 +94,7 @@ export default function SEOAnalyzerToolPage() {
       factors: [
         'Page load speedMobile responsivenessXML sitemapRobots.txt configurationSSL certificateCore Web Vitals'
       ];
-      icon: '⚙️'
+      icon: ''
       color: 'text-blue-400'
     }
     {
@@ -99,7 +102,7 @@ export default function SEOAnalyzerToolPage() {
       factors: [
         'Keyword densityContent relevanceReadability scoresContent freshnessMultimedia optimizationSchema markup'
       ]
-      icon: '📊'
+      icon: ''
       color: 'text-purple-400'
     }
     {
@@ -108,7 +111,7 @@ export default function SEOAnalyzerToolPage() {
         'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
 
       ]
-      icon: '📍'
+      icon: ''
       color: 'text-orange-400'
     }
     {
@@ -296,7 +299,6 @@ export default function SEOAnalyzerToolPage() {
       ];
       popular: false;
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       name: 'Professional',
       price: '$89',
       period: '/month',
@@ -335,8 +337,19 @@ export default function SEOAnalyzerToolPage() {
       ],
       popular: false,
 
-
-
+    {
+      category: 'Technical SEO'
+      factors: [
+        'Page load speed'
+        'Mobile responsiveness'
+        'XML sitemap'
+        'Robots.txt configuration'
+        'SSL certificate'
+        'Core Web Vitals'
+      ]
+      icon: ''
+      color: 'text-blue-400'
+    }
 
     {
       category: 'Content SEO'
@@ -348,7 +361,7 @@ export default function SEOAnalyzerToolPage() {
         'Multimedia optimization'
         'Schema markup'
       ]
-      icon: '📊'
+      icon: ''
       color: 'text-purple-400'
     }
     {
@@ -361,7 +374,7 @@ export default function SEOAnalyzerToolPage() {
         'Location-based content'
         'Local link building'
       ]
-      icon: '📍'
+      icon: ''
       color: 'text-orange-400'
     },  ];      color: 'text-orange-400'
     }
@@ -420,7 +433,6 @@ export default function SEOAnalyzerToolPage() {
       ]
       popular: false
     },  ];
-;
   const handleAnalyzeSEO = async () => {
     if () return) {
   $2
@@ -429,8 +441,65 @@ export default function SEOAnalyzerToolPage() {
       ];
       popular: false;
     }
+  ];
 
+  const pricing = [;
+    {;
+      name: 'Starter',;
+      price: '$39',;
+      period: '/month',;
+      description: 'Perfect for small businesses and bloggers',;
+      features: [;
+        '10 website analyses/month',;
+        'Basic SEO metrics',;
+        'Keyword research (100 keywords)',;
+        'On-page SEO analysis',;
+        'Email support',;
+        'Basic reporting',;
+      ],;
+      popular: false,;
+    },    {        '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting';
+      ];
+      popular: false;
+    };
+      name: 'Professional',;
+      price: '$89',;
+      period: '/month',;
+      description: 'Ideal for growing businesses and agencies',;
+      features: [;
+        '50 website analyses/month',;
+        'Advanced SEO metrics',;
+        'Keyword research (500 keywords)',;
+        'Competitive analysis',;
+        'Priority support',;
+        'Advanced reporting',;
+        'API access',;
+        'Team collaboration',;
+      ],;
+      popular: true,;
+    },    {        '50 website analyses/monthAdvanced SEO metricsKeyword research (500 keywords)Competitive analysisPriority supportAdvanced reportingAPI accessTeam collaboration';
+      ];
+      popular: true;
+    };
+      name: 'Enterprise',;
+      price: '$249',;
+      period: '/month',;
+      description: 'For large organizations and SEO agencies',;
+      features: [;
+        'Unlimited analyses',;
+        'Enterprise SEO metrics',;
+        'Unlimited keyword research',;
+        'Advanced competitive analysis',;
+        '24/7 dedicated support',;
+        'Custom reporting',;
+        'White-label options',;
+        'Custom integrations',;
+      ],;
+      popular: false,;
+    },  ];
 
+  const handleAnalyzeSEO = async () => {;
+    if (!url && url.trim()) return;        'Unlimited analysesEnterprise SEO metricsUnlimited keyword researchAdvanced competitive analysis24/7 dedicated supportCustom reportingWhite-label optionsCustom integrations';
       ];
       popular: false;
     }
@@ -506,8 +575,11 @@ export default function SEOAnalyzerToolPage() {
 
 
 
+
+
   const handleAnalyzeSEO = async () => {;
     if (!url && url.trim()) return;
+
     setIsAnalyzing(true);
     // Simulate SEO analysis;
     setTimeout(() => {;
@@ -556,6 +628,19 @@ export default function SEOAnalyzerToolPage() {
         ],;
       });
       setIsAnalyzing(false);
+
+
+      setIsAnalyzing(false);
+    }, 4000);
+  };
+
+  };
+
+      setIsAnalyzing(false);
+
+    }, 4000);  };
+
+  };
 
 
   return (
@@ -637,6 +722,8 @@ export default function SEOAnalyzerToolPage() {
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
 
 
+
+
   return (
 
       setIsAnalyzing (false);
@@ -663,8 +750,16 @@ export default function SEOAnalyzerToolPage() {
         </title>;
 
         />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
+        <meta
+          property='og:title'
+          content='SEO Analyzer Tool - Zion Tech Group'
+        />;
+        <meta
+          property='og:description'
+          content='Professional SEO analysis tool with comprehensive insights and optimization recommendations.'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+      </Head>
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]' />;
@@ -723,11 +818,13 @@ export default function SEOAnalyzerToolPage() {
                 ) : (;
                   <>;
                     <Search className='w-5 h-5 mr-2' />                    Analyze SEO      </Head>;
+
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0 && 0.06),transparent_50%)]" />;
         <div className="absolute inset-0 bg-grid opacity-10" />;
+
         <div className="relative z-10 container-cursor text-center">;
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">;
             <Search className="w-4 h-4 mr-2" />;
@@ -739,6 +836,7 @@ export default function SEOAnalyzerToolPage() {
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">;
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.;
           </p>;
+
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">;
             <div className="flex flex-col sm:flex-row gap-4">;
@@ -776,6 +874,8 @@ export default function SEOAnalyzerToolPage() {
 
 
 
+
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               href="#pricing"
@@ -792,6 +892,8 @@ href="/contact"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
             >
+
+
 
 
               Schedule Demo
@@ -905,10 +1007,72 @@ href="/contact"
         </div>;
       </section>;
 
+              Schedule Demo
+            </Button>
+          </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className='section - padding bg - gradient - cursor - accent'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+              Powerful SEO Features;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 
+              Our SEO analyzer provides comprehensive insights and tools to help;
+              you dominate search rankings.;
+            </p>;
+          </div>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+      <section className="section-padding bg-gradient-cursor-accent">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Powerful SEO Features
 
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
+                    />;
+                  </div>;
+                  <div className='flex-1'>;
+                    <h3 className='text-2xl font-bold mb-4 text-white'>;
+                      {feature && feature.title}
+                    </h3>;
+                    <p className='text-gray-400 leading-relaxed'>                      {feature && feature.description}              Powerful SEO Features;
+            </h2>;
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+              Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.;
+            </p>;
+          </div>;
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+            {features && features.map((feature, index) => (;
+              <Card
+                key={index}
+                className="card-hover group border-gradient-green"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="relative">
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {feature.icon}
+                    </div>
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
 
 
 
@@ -916,7 +1080,9 @@ href="/contact"
                   </div>
                 </div>
               </Card>
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
             ))}
           </div>
         </div>
@@ -954,9 +1120,50 @@ href="/contact"
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
 
+          </div>;
+        </div>;
+      </section>;
+      {/* SEO Factors Section */}
+      <section className='section-padding bg-gradient-cursor'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+              Comprehensive SEO Analysis;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                    </p>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* SEO Factors Section */}
+      <section className='section - padding bg - gradient - cursor'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+              Comprehensive SEO Analysis;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              We analyze every aspect of your website's SEO to provide;
+              actionable insights and recommendations.;
+            </p>;
+          </div>;
+
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
                     </p>
@@ -971,7 +1178,9 @@ href="/contact"
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
@@ -982,11 +1191,13 @@ href="/contact"
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               Comprehensive SEO Analysis
 
@@ -1004,6 +1215,7 @@ href="/contact"
               We analyze every aspect of your website's SEO to provide actionable insights and recommendations.;
             </p>;
           </div>;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {seoFactors && seoFactors.map((category, index) => (;
               <Card
@@ -1104,10 +1316,10 @@ href="/contact"
         </div>;
       </section>;
 
+          </div>
+        </div>
+      </section>
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* Demo Analysis Results */}
       {analysis_results && (
@@ -1143,6 +1355,7 @@ href="/contact"
                   Good SEO foundation with room for improvement;
                 </p>;
               </Card>;
+
               {/* Detailed Scores */}
               <Card className='border-gradient-green'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
@@ -1177,6 +1390,7 @@ href="/contact"
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.;
               </p>;
             </div>;
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
 
 
@@ -1240,6 +1454,7 @@ href="/contact"
                       )}
 
 
+
               {/* Issues */}
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>
@@ -1254,14 +1469,17 @@ href="/contact"
                       ) : (
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
                       )}
+
                       <div>
                         <span className='text-gray-300'>{issue.message}</span>
                         <div className='text-xs text-gray-500 mt-1'>
                           Priority: {issue.priority}
 
 
+
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                   ))}
                 </div>
               </Card>
@@ -1301,11 +1519,11 @@ href="/contact"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
                       <span className="text-gray-300">{rec}</span>;
 
+                  ))}
+                </div>
+              </Card>
+            </div>
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             {/* Recommendations and Keywords */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -1363,6 +1581,8 @@ href="/contact"
 
 
 
+
+
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
                 <div className="space-y-4">
@@ -1383,6 +1603,7 @@ href="/contact"
 
 
 
+
                         </span>
                       </div>
                     </div>
@@ -1392,6 +1613,7 @@ href="/contact"
 
 
 <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
+
               {/* Overall Score */}
               <Card className='border - gradient - green text - center'>;
                 <h3 className='text - 2xl font - bold mb - 6 text - white'>;
@@ -1601,7 +1823,9 @@ href="/contact"
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1622,6 +1846,8 @@ href="/contact"
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
+
+
 
 
 
@@ -1648,23 +1874,24 @@ href="/contact"
 
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            {pricing.map ((plan, index) => (              Simple Pricing;
             </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
               Choose the SEO analysis plan that best fits your business needs and goals.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            {pricing.map ((plan, index) => (
-              <Card;
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+            {pricing && pricing.map((plan, index) => (;
+              <Card
                 key={index}
-                className={`card - hover border - gradient - green ${plan.popular ? 'ring - 2 ring - green - 500 scale - 105' : ''}`}
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                {plan.popular && (
-                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
-                    <span className='bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 4 py - 2 rounded - full text - sm font - medium'>                      Most Popular;
+                className={`card-hover border-gradient-green ${plan && plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
+                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                {plan && plan.popular && (;
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
+                    <span className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular;
                     </span>;
-                  </div>)}                  <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
-                    <span className="bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 4 py - 2 rounded - full text - sm font - medium">;
+                  </div>;
+                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">;
                       Most Popular;
                     </span>;
                   </div>)}
@@ -1679,6 +1906,8 @@ href="/contact"
 
 
 
+
+
                 className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1687,6 +1916,7 @@ href="/contact"
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <span className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular
                     </span>
+                    <span className='text-gray-400'>{plan.period}</span>
                   </div>
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 
@@ -1695,6 +1925,7 @@ href="/contact"
                     </span>
                   </div>
                 )}
+
 
 
 
@@ -1727,6 +1958,7 @@ href="/contact"
                   href='/contact'
                   size='lg'
 
+
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
@@ -1737,12 +1969,14 @@ href="/contact"
             ))}
 
 
+
           </div>;
         </div>;
       </section>;
 
 
       {/* CTA Section */}
+
 
 
 
@@ -1765,8 +1999,10 @@ href="/contact"
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           </h2>
@@ -1775,7 +2011,6 @@ href="/contact"
             search rankings and drive more organic traffic.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               size='lg'
@@ -1787,6 +2022,7 @@ href="/contact"
               href='/contact'
               variant='outline'
               size='lg'
+
 
 
 
@@ -1808,5 +2044,6 @@ href="/contact"
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

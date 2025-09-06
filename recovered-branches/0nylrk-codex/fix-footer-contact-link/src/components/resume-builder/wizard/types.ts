@@ -5,6 +5,7 @@
 
 
 
+
 export interface StepProps {
   id: string;
   label: string
@@ -47,6 +48,7 @@ export interface ResumeProgressProps {
   progress: number
 }
 
+
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void,
@@ -55,6 +57,8 @@ import { Resume } from "@/types/resume",
 export interface StepProps {
   id: string,
   label: string
+
+
 
 
 
@@ -75,7 +79,15 @@ export interface NavigationButtonsProps {;
   nextLabel?: string,;
   isLoading?: boolean;
 
-
+}
+export interface ResumeProgressProps {
+  resume: Resume | null;
+  progress: number
+}
+export interface CreateResumeFormProps {
+  onCreateResume: (title: string) => Promise<void>;
+  onCancel: () => void;
+  isLoading: boolean
 
 }
 ;
@@ -89,11 +101,14 @@ export interface ResumeProgressProps {;
 
 
 
+
+
 ;
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean;
+
 
 
 
@@ -115,5 +130,6 @@ export interface EmptyResumeProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

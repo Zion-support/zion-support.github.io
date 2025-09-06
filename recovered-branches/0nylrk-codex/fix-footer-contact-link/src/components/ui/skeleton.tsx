@@ -16,11 +16,10 @@ function Skeleton({
 
 }
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+export { Skeleton }
+;
+export { Skeleton };
+export { Skeleton }
+;
+;
 

@@ -64,6 +64,7 @@ const NewProposal: NextPage = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -71,15 +72,20 @@ const NewProposal: NextPage = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         />
       </div>
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
   )
 
+}
+export default NewProposal;
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+},
+export default NewProposal,
+},
+},
+export default NewProposal,
+},
 

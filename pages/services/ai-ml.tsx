@@ -1,12 +1,22 @@
 
-
-
-
+import React from 'react',
+import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-
-
+  Brain
+  Cpu
+  Database
+  Zap
+  Shield
+  Rocket
+  ArrowRight
+  CheckCircle
+  Star
+  Users
+  Clock
+  TrendingUp;
 
 } from 'lucide-react';
 
@@ -84,8 +94,10 @@ function AIMLServicesPage() {
 
 
 
+
 export default function AIMLServicesPage() {
   const services = [
+
 
   Brain,
   Cpu,
@@ -101,14 +113,20 @@ export default function AIMLServicesPage() {
   Clock,
   TrendingUp,
 } from 'lucide-react';
-import EnhancedNavigation from '../../components / EnhancedNavigation';
-import EnhancedFooter from '../../components / EnhancedFooter';
-export default /**
- * AIMLServicesPage - Function description
- */
-function AIMLServicesPage() {
-  const services = [;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import {
+  Brain, Cpu, Database, Zap, Shield, Rocket,
+  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
+export default function AIMLServicesPage() {
+  const services = [
 
     {
       title: "Custom AI Solutions",
@@ -175,11 +193,11 @@ function AIMLServicesPage() {
         <meta
           name='description'
           content='Cutting-edge AI and machine learning solutions from Zion Tech Group. Custom AI applications, automation, and intelligent systems that drive business growth.'
-        />
+        />;
         <meta
           property='og:title'
           content='AI & Machine Learning Services - Zion Tech Group'
-        />
+        />;
         <meta
           property='og:description'
           content='Cutting-edge AI and machine learning solutions that drive business growth and innovation.'
@@ -192,11 +210,38 @@ function AIMLServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+            transition={{ duration: 0.8 }}
+            className='mb-8'
+        <meta name="description" content="Cutting-edge AI and machine learning solutions from Zion Tech Group. Custom AI applications, automation, and intelligent systems that drive business growth." />
+        <meta property="og:title" content="AI & Machine Learning Services - Zion Tech Group" />
+        <meta property="og:description" content="Cutting-edge AI and machine learning solutions that drive business growth and innovation." />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-ml" />
+      </Head>
+      <EnhancedNavigation />
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="relative pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-8"
 
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-6">
@@ -222,12 +267,14 @@ function AIMLServicesPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Get AI Consultation
@@ -235,6 +282,8 @@ function AIMLServicesPage() {
           </motion.div>
         </div>
       </section>
+
+
 
 
 
@@ -255,13 +304,57 @@ function AIMLServicesPage() {
             className='mb-12'>;
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
 
+    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
+      <Head>;
+        <title > AI & Machine Learning Services - Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Cutting - edge AI and machine learning solutions from Zion Tech Group. Custom AI applications, automation, and intelligent systems that drive business growth.';
+        />;
+        <meta;
+          property='og:title';
+          content='AI & Machine Learning Services - Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Cutting - edge AI and machine learning solutions that drive business growth and innovation.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / services / ai - ml' />      </Head>;
+      <EnhancedNavigation />;
+      {/* Hero Section */}
+      <section className='relative pt - 32 pb - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb - 8';
+          >;
+            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - purple - 400 bg - clip - text text - transparent mb - 6'>;
+              AI & Machine Learning;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed'>;
+              Revolutionary AI solutions that adapt, learn, and evolve with your;
+              business            </p>;
+          </motion.div>;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb - 12';
+          >;
+            <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
+
               From custom neural networks to intelligent automation systems, we;
               deliver AI solutions that provide measurable business outcomes and;
               competitive advantages.;
             </p>;
 
 
-
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              From custom neural networks to intelligent automation systems, we deliver AI solutions 
+              that provide measurable business outcomes and competitive advantages.
 
             </p>
           </motion.div>
@@ -281,27 +374,56 @@ function AIMLServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              From custom neural networks to intelligent automation systems, we deliver AI solutions
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-              that provide measurable business outcomes and competitive advantages.
-            </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
-              Get AI Consultation
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+            className="mb-12";
+          >;
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">;
+              From custom neural networks to intelligent automation systems, we deliver AI solutions;
+              that provide measurable business outcomes and competitive advantages.;
+            </p>;
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">;
+              Get AI Consultation;
+              <ArrowRight className="w-5 h-5" />;
+            </button>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Stats Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-16 px-6">;
+        <div className="max-w-7xl mx-auto">;
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
+            {stats.map((stat, index) => (;
+              <motion.div;
+                key={stat.label  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="text-center"
 
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -327,7 +449,9 @@ function AIMLServicesPage() {
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
             ))}
 
           </div>;
@@ -341,23 +465,42 @@ function AIMLServicesPage() {
 
 
 
+
+
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
-
-
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Our AI Services</h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed to transform your business operations and drive innovation
+            <h2 className='text-4xl font-bold text-white mb-6'>
+              Our AI Services
+            </h2>
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>
+              Comprehensive AI solutions designed to transform your business
+              operations and drive innovation
             </p>
           </motion.div>
 
@@ -371,14 +514,34 @@ function AIMLServicesPage() {
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                key={service.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
 
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -423,10 +586,12 @@ function AIMLServicesPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 </ul>
                 <div className="flex items-center justify-between">
@@ -465,14 +630,32 @@ function AIMLServicesPage() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
           >
 
@@ -489,13 +672,12 @@ function AIMLServicesPage() {
 
 
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Schedule Consultation
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
                 View Case Studies
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </button>
             </div>
           </motion.div>
@@ -504,8 +686,39 @@ function AIMLServicesPage() {
       <EnhancedFooter />
     </div>
 
+)
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) )
+),
 
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Ready to Transform Your Business with AI?;
+            </h2>;
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+              Let's discuss how our AI solutions can drive innovation,;
+              efficiency, and growth for your organization.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
+                Schedule Consultation;
+              </button>;
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                View Case Studies;
+              </button>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+      <EnhancedFooter />;
+    </div>;
+  ),;
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
+}</div> </div> </section> <motion&& motion.div initial= {
+
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -519,7 +732,49 @@ function AIMLServicesPage() {
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization. </p> Schedule Consultation </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
+
+}
+}
+}
   )
+}
+            <button className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
+              Get AI Consultation;
+              <ArrowRight className='w - 5 h - 5' />            </button>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Stats Section */}
+      <section className='py - 16 px - 6'>;
+        <div className='max - w-7xl mx - auto'>;
+          <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'>            {stats.map ((stat, index) => (
+              <motion.div;
+                key={stat.label}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text - center';
+              >;
+                <div className='w - 16 h - 16 bg - gradient - to - br from - purple - 500 / 20 to - pink - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
+                  <stat.icon className='w - 8 h - 8 text - purple - 400' />;
+                </div>;
+                <div className='text - 3xl font - bold text - white mb - 2'>;
+                  {stat.number}
+                </div>;
+                <div className='text - white / 70'>{stat.label}</div>              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Services Grid */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text - center mb - 16';
+
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business with AI?;
@@ -546,5 +801,7 @@ function AIMLServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

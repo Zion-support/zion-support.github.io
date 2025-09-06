@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     "[NFT Claim] address:"
     address
     "signature:"
-    signature.slice(0, 18) + "…"
+    signature.slice(0, 18) + ""
   );
   return res.status(200).json({ ok: true });
   const { address, signature } = req.body |{}
@@ -39,12 +39,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!address || !signature)
     return res && res.status(400).json({ error: "Missing address or signature" });
   // In production: verify signature, mint or issue POAP
-  console && console.log(
-    "[NFT Claim] address:",
-    address,
-    "signature:",
-    signature && signature.slice(0, 18) + "…",
+  console.log(
+    "[NFT Claim] address:"
+    address
+    "signature:"
+    signature.slice(0, 18) + ""
   );
+
+  return res.status(200).json({ ok: true });
+}
+
+
+
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 export default async /**
@@ -65,7 +71,7 @@ function handler() {
     "[NFT Claim] address:",
     address,
     "signature:",
-    signature.slice (0, 18) + "…",
+    signature.slice (0, 18) + "",
   );
   return res.status (200).json ({ ok: true });
   const { address, signature } = req.body || {}
@@ -78,11 +84,12 @@ function handler() {
     "[NFT Claim] address:",
     address,
     "signature:",
-    signature.slice (0, 18) + "…",
+    signature.slice (0, 18) + "",
   );
   return res.status (200).json ({ ok: true });
-
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 

@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -18,6 +19,7 @@ import {useUpdateMilestone} from './useUpdateMilestone';
 import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
 import {MilestoneStatus} from './types';
+
 
 export const use_milestones = (project_id?: string) =>: any {
   const { milestones, activities, is_loading, error, refetch } = useLoadMilestones (project_id);
@@ -52,6 +54,9 @@ if (return null, ) {
     deleteMilestone;
     uploadDeliverable: handleUploadDeliverable
     refetch
+
+  }
+}
 
 
 import { useState } from 'react',;
@@ -92,6 +97,7 @@ export const useMilestones = (projectId?: string) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -99,6 +105,7 @@ export const useMilestones = (projectId?: string) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 };

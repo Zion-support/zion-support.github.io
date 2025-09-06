@@ -1,5 +1,7 @@
 
 
+export interface FilterSidebarProps {
+export interface FilterSidebarProps {;
 
   searchTerm: string;
   setSearchTerm: (term: string) => void;
@@ -30,6 +32,7 @@
   clear_filters: () => void,
   isMobileFilterOpen?: boolean;
 }
+
 
 
 
@@ -110,6 +113,7 @@ export interface PriceFilterProps extends FilterComponentProps {
 }
 export interface SearchFilterProps {
 
+
   search_term: string,
   setSearchTerm: (term: string) => void;
 }
@@ -121,12 +125,15 @@ export interface SortFilterProps {
 }
 
 
+
+
 ;
 export interface SortFilterProps {;
   sortOption: string;
   setSortOption: (option: string) => void;
 }
 ;
+
 
 
 
@@ -137,5 +144,6 @@ export interface SortFilterProps {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

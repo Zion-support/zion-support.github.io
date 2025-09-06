@@ -5,7 +5,9 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export default function Placeholder() {
@@ -29,7 +31,6 @@ export default function Placeholder() {
     </main>
 
   );export default function Placeholder() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <main className='min-h-screen p-8'>;
       <Head>;
@@ -66,6 +67,7 @@ export default function Placeholder() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -73,4 +75,5 @@ export default function Placeholder() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

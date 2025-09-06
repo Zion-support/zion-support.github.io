@@ -1,10 +1,16 @@
 
 
+import React from "react";
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
 
 import {cn} from "@/lib/utils";
 
 import React from "react",
 import { cn } from "@/lib/utils",
+
+
 
 
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -43,6 +49,10 @@ export function SidebarSection(): any ({ className, title, children, ...props }:
       {title && (;
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;
 
+  return (
+    <div className={cn("py-2", className)} {...props}>
+      {title && (
+        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -60,7 +70,9 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           {title}
@@ -74,10 +86,6 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
   )
 }
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+;
+;
 

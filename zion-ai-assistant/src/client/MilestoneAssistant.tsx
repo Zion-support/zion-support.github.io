@@ -173,6 +173,10 @@ function accept() {
 
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
 
+              <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
+                <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
+                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
+
                   AI Suggested;
                 </span>;
               </div>;

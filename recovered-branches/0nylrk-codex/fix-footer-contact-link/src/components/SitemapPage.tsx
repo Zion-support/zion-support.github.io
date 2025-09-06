@@ -1,19 +1,20 @@
 
 
+import React from "react";
+import { completeSitemap, dynamicPaths } from "@/config/sitemap";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
+import { SEO } from "./SEO";
+import { AppLayout } from "@/layout/AppLayout";
 
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 import React from 'react';
 import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import {Link} from 'react-router-dom';
 import {ChevronRight} from 'lucide-react';
 import {SEO} from './SEO';
 import {AppLayout} from '@/layout/AppLayout';
+
+
 
 
 
@@ -31,11 +32,12 @@ import { AppLayout } from '@/layout/AppLayout',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 export const SitemapPage: React.FC = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>;
 
@@ -124,25 +126,17 @@ export const SitemapPage: React.FC = () => {
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
 
-                    </Link>;
-                  </li>))}
-            </ul>;
-          </div>;
-          {/* Shared Routes */}
+          {/* Admin Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">;
-              Authenticated User Pages;
+              Admin Pages;
             </h2>;
             <p className="text - sm text - zion - slate mb - 4">;
-              Requires any account type;
+              Requires admin account;
             </p>;
             <ul className="space - y-2">;
               {complete_sitemap;
-                .filter (
-                  (route) =>;
-                    route.required_auth &&;
-                    (!route.required_roles || route.required_roles.length === 0),
-                );
+                .filter ((route) => route.required_roles?.includes ("admin"));
                 .map ((route) => (
                   <li key={route.path}>;
                     <Link;
@@ -313,8 +307,14 @@ export const SitemapPage: React.FC = () => {
                 </li>;
               ))}
 
+            </ul>
+          </div>
+        </div>
+      </div>
+    </AppLayout>
+  );
+}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             </ul>;
           </div>;
@@ -322,6 +322,8 @@ export const SitemapPage: React.FC = () => {
       </div>;
     </AppLayout>;
 
+
   );
 };
+
 

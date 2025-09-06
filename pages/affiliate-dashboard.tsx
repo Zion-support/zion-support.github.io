@@ -1,6 +1,8 @@
 
-
-
+import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react',;
+;
+function getRefCode(): string {
 
 
 
@@ -25,6 +27,7 @@
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
+
 
 
 
@@ -109,6 +112,7 @@ export default function AffiliateDashboard(req, res) {
     )
   }
 
+
 }
 
   return (
@@ -150,12 +154,14 @@ export default function AffiliateDashboard(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       </div>
     </div>
@@ -168,6 +174,8 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
 
+  );
+};
 
   )
 ;
@@ -184,6 +192,8 @@ function Stat({ label, value }: { label: string, value: number | string }) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 ;
   return (;
     <div className="space-y-6">;
@@ -213,6 +223,7 @@ function Stat({ label, value }: { label: string, value: number | string }) {
     </div>);
 }
 
+
 /**
  * Stat - Function description
  */
@@ -230,5 +241,6 @@ function Stat() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

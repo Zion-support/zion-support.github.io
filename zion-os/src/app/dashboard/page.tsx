@@ -31,6 +31,50 @@ export default function DashboardPage() {;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
 
+"use client",
+import { use_auth  } from '@/contexts / AuthContext';,
+import { use_router  } from './next / navigation';,
+import { useEffect  } from './react';,
+import Link from './next / link';,
+export default /**
+ * DashboardPage - Function description
+ */
+function DashboardPage() {
+  const { user, is_authenticated, is_loading } = use_auth (),
+  const router = use_router ();
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      router.push ("/auth / signin");
+    }
+  }, [is_authenticated, is_loading, router]);
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="min - h-screen flex items - center justify - center">;
+        <div className="text - center">;
+          <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - blue - 500 mx - auto mb - 4"></div>;
+          <p className="text - zinc - 400">Loading...</p>;
+"use client",;
+import { useAuth } from "@/contexts/AuthContext",;
+import { useRouter } from "next/navigation",;
+import { useEffect } from "react",;
+import Link from "next/link",;
+export default function DashboardPage() {;
+  const { user, isAuthenticated, isLoading } = useAuth(),;
+  const router = useRouter();
+  useEffect(() => {;
+    if (!isLoading && !isAuthenticated) {;
+      router.push("/auth/signin");
+    }
+  }, [isAuthenticated, isLoading, router]);
+  if (isLoading) {;
+    return (;
+
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
@@ -70,7 +114,7 @@ export default function DashboardPage() {;
         >;
           <div className="text - center space - y-3">;
             <div className="w - 16 h - 16 bg - blue - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;
-              <span className="text - 3xl">🚀</span>;
+              <span className="text - 3xl"></span>;
             </div>;
             <h3 className="font - semibold text - white text - lg">Launch New Instance</h3>;
             <p className="text - zinc - 400 text - sm">;
@@ -84,7 +128,7 @@ export default function DashboardPage() {;
         >;
           <div className="text - center space - y-3">;
             <div className="w - 16 h - 16 bg - purple - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;
-              <span className="text - 3xl">⚙️</span>;
+              <span className="text - 3xl"></span>;
             </div>;
             <h3 className="font - semibold text - white text - lg">Manage Instances</h3>;
             <p className="text - zinc - 400 text - sm">;
@@ -98,7 +142,7 @@ export default function DashboardPage() {;
         >;
           <div className="text - center space - y-3">;
             <div className="w - 16 h - 16 bg - green - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;
-              <span className="text - 3xl">📚</span>;
+              <span className="text - 3xl"></span>;
             </div>;
             <h3 className="font - semibold text - white text - lg">Documentation</h3>;
             <p className="text - zinc - 400 text - sm">;

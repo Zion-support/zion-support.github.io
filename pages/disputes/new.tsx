@@ -1,13 +1,8 @@
 
-
-
-
-
+import { useRouter  } from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react',
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-
-
-
 import {useCurrentUser} from '../../utils/auth';
 
 
@@ -22,8 +17,16 @@ const REASONS = [;
 ] as const;
 type ReasonType = (typeof REASONS)[number];
 
-
-
+export default function NewDisputePage() {
+  const router = useRouter();
+  const {
+    projectId: qProjectId
+    entityType
+    entityId
+    talentId
+    clientId
+  } = router.query as Record<string, string>;  const user = useCurrentUser();
+  const [projectId, setProjectId] = useState(qProjectId |'');
 
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -47,6 +50,8 @@ export default function NewDisputePage() {;
 
 
 
+
+
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -59,6 +64,10 @@ export default function NewDisputePage(req, res) {
 
 
   const router = useRouter();
+
+
+  const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
+  const user = useCurrentUser();
 
 
 
@@ -131,6 +140,11 @@ export default function NewDisputePage(req, res) {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
 
+        body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })}),;
+      if (!res.ok) throw new Error('Failed to create');
+      const { dispute } = await res.json();
+
+
 
         body: JSON && JSON.stringify({;
           projectId,;
@@ -147,6 +161,40 @@ export default function NewDisputePage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+      if (files.length > 0) {;
+        const filePayload = await Promise.all(;
+          files.map(async (f) => ({;
+            fileName: f.name;
+            mimeType: f.type;
+            base64: await toBase64(f)}));
+        );
+        await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {;
+          method: 'POST',;
+          headers: { 'Content-Type': 'application/json' },;
+          body: JSON.stringify({ files: filePayload })});
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
+    } catch (error) {
+      alert(e.message || 'Error');
+    } finally {;
+      setSubmitting(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   return (
     <EnhancedLayout>
@@ -268,8 +316,10 @@ function toBase64(file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
     const reader = new FileReader();
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
@@ -277,14 +327,15 @@ function toBase64(file: File): Promise<string> {;
   });
 
 
-
-
+}
+}
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
 
@@ -297,4 +348,5 @@ function toBase64(file: File): Promise<string> {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

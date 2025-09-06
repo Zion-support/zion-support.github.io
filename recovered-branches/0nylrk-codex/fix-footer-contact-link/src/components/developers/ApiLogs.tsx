@@ -6,9 +6,25 @@ import {List, RefreshCw} from "lucide-react";
 import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
 
 
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Badge} from "@/components/ui/badge";
 
 
 
+
+  const handleRefresh = () => {
+    fetchApiLogs(pageSize, currentPage * pageSize)
+  }
+  // Helper to format the timestamp
+  const formatTimestamp = (timestamp: string) => {
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
+  }
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
 
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -29,12 +45,11 @@ export function ApiLogs() {
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
-  }, [pageSize, currentPage]),
-  
+  }, [pageSize, currentPage]);
+
   const handleRefresh = () => {
     fetchApiLogs(pageSize, currentPage * pageSize)
-  },
-  
+  }
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
@@ -143,7 +158,6 @@ export function ApiLogs() {;
         <div className="flex justify-between items-center mb-6">;
           <div className="flex items-center space-x-2">;
             <span className="text-sm text-zinc-400">Show</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Select
               value={pageSize && pageSize.toString()}
               onValueChange={(value) => {;
@@ -155,12 +169,14 @@ export function ApiLogs() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               }}
             >
@@ -226,6 +242,73 @@ export function ApiLogs() {;
                             ? "border-green-500 text-green-400"
                             : log.method === 'POST'
 
+                setCurrentPage(0), // Reset to first page when changing page size;
+              }}
+            >;
+              <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">;
+                <SelectValue placeholder="25" />;
+              </SelectTrigger>;
+              <SelectContent className="bg-zinc-900 border-zinc-800">;
+                <SelectItem value="10">10</SelectItem>;
+                <SelectItem value="25">25</SelectItem>;
+                <SelectItem value="50">50</SelectItem>;
+                <SelectItem value="100">100</SelectItem>;
+              </SelectContent>;
+            </Select>;
+            <span className="text-sm text-zinc-400">per page</span>;
+          </div>;
+
+          <Button variant="outline" size="sm" onClick={handleRefresh}>;
+            <RefreshCw size={14} className="mr-1" /> Refresh;
+          </Button>;
+        </div>;
+
+        <div className="overflow-x-auto">;
+          <table className="w-full border-collapse">;
+            <thead>;
+              <tr className="border-b border-zinc-800">;
+                <th className="px-4 py-2 text-left font-medium text-zinc-300">Timestamp</th>;
+                <th className="px-4 py-2 text-left font-medium text-zinc-300">Method</th>;
+                <th className="px-4 py-2 text-left font-medium text-zinc-300">Endpoint</th>;
+                <th className="px-4 py-2 text-left font-medium text-zinc-300">Status</th>;
+                <th className="px-4 py-2 text-left font-medium text-zinc-300">Response Time</th>;
+                <th className="px-4 py-2 text-left font-medium text-zinc-300">IP Address</th>;
+              </tr>;
+            </thead>;
+            <tbody>;
+              {loading ? (;
+                <tr>;
+                  <td colSpan={6} className="text-center py-12">;
+                    <div className="flex flex-col items-center">;
+                      <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-zion-cyan mb-4"></div>;
+                      <span className="text-zinc-500">Loading logs...</span>;
+                    </div>;
+                  </td>;
+                </tr>;
+              ) : logs && logs.length === 0 ? (;
+                <tr>;
+                  <td colSpan={6} className="text-center py-12">;
+                    <div className="flex flex-col items-center">;
+                      <List className="opacity-30 mb-3" size={24} />;
+                      <span className="text-zinc-500">No API logs found.</span>;
+                      <span className="text-sm text-zinc-600 mt-1">;
+                        Logs will appear here when you make API requests.;
+                      </span>;
+                    </div>;
+                  </td>;
+                </tr>;
+              ) : (;
+                logs && logs.map((log) => (;
+                  <tr key={log && log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">;
+                    <td className="px-4 py-3 text-sm">{formatTimestamp(log && log.created_at)}</td>;
+                    <td className="px-4 py-3">;
+                      <Badge
+                        variant="outline"
+                        className={
+                          log && log.method === 'GET' 
+                            ? "border-green-500 text-green-400" 
+                            : log && log.method === 'POST' 
+
                             ? "border-blue-500 text-blue-400"
                             : log && log.method === 'PUT'
                             ? "border-yellow-500 text-yellow-400"
@@ -288,5 +371,10 @@ export function ApiLogs() {;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+import { useState, useEffect } from './react';
+import { format } from './date - fns';
+import { List, RefreshCw } from './lucide-react';
+import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
+;
 

@@ -24,6 +24,7 @@ const getDefaultCategories = (t: any) => [
 
 
 
+
   {
     id: "talents"
     name: t('categories.talents')
@@ -45,6 +46,7 @@ const getDefaultCategories = (t: any) => [
     iconName: "Lightbulb"
     link: "/innovation"
     color: "from-emerald-500 to-green-600"}]
+
     id: "innovation",
     name: t('categories.innovation'),
     description: t('categories.innovation_desc'),
@@ -200,6 +202,7 @@ export function CategoriesSection({
   
 
 
+
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -211,6 +214,7 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
+
 
 
 
@@ -229,7 +233,10 @@ export function CategoriesSection({
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
 
-
+          </p>
+        </div>
+      </section>
+    )
 
   }
 };
@@ -238,6 +245,7 @@ const getSpecialServices = (t: any,) => [;
   {;
     title: t('categories && categories.it_onsite_services'),;
     link: "/it-onsite-services";
+
 
 
   }
@@ -303,6 +311,7 @@ export function CategoriesSection(): any ({;
 
 
 
+
   }
 
   return (
@@ -324,11 +333,12 @@ export function CategoriesSection(): any ({;
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-
-
+          {displayCategories.map((category) => (
+          {displayCategories.map((category,) => (
+          {displayCategories.map((category) => (
             <Link
-              key={category.id}
-              href={category.link || '#'}
+              key = {category.id,}
+              href = {category.link |'#',}
 
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
@@ -347,6 +357,7 @@ export function CategoriesSection(): any ({;
         </div>;
 
 
+
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
@@ -355,6 +366,7 @@ export function CategoriesSection(): any ({;
               <Link
                 key = {service.title,}
                 href = {service.link,}
+
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
@@ -368,27 +380,45 @@ export function CategoriesSection(): any ({;
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
-              </Link>;
-            ))}
+              </Link>            ))}
           </div>
         </div>
         
 
-
-        <div className="mt-12 flex justify-center">
-          <Link
-            href="/categories/all"
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
-          >
-            {t('home.view_all_categories')}
-
-
-
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+  switch (iconName) {
+}
+const getSpecialServices = (t: any) => [ {
+  title: t ('categories.it onsite services')
+link: "/it-onsite-services"
+}]
+interface CategoriesSectionProps {
+  showTitle?: boolean
+className?: string
+style?: React.CSSProperties
+categories?: CategoryType[], //Accept categories as a prop
+}export function CategoriesSection ({
+  showTitle = true
+className
+style
+categories: fetchedCategories, //Rename prop for clarity
+}: CategoriesSectionProps) {
+  const {
+  t
+}= useTranslation ()
+const defaultCategories = getDefaultCategories (t)
+//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
 
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
+
+
 
 
 
@@ -490,6 +520,7 @@ function CategoriesSection() {
   // Check condition
 if ( {) {
   $2
+
 }
     return (
       <section className={cn ("py - 20 bg - zion - blue text - center", class_name)} style={style}>;
@@ -607,3 +638,4 @@ if ( {) {
 }'"}
 }
 ;
+

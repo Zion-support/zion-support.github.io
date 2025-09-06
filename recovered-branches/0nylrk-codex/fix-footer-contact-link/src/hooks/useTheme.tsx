@@ -7,12 +7,14 @@ import React from 'react',
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 // This is a simplified version of the theme hook for offline development
 
@@ -39,11 +41,13 @@ export const use_theme = () =>: any {
   }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 
 };

@@ -6,6 +6,7 @@ import { Loader2 } from 'lucide-react'
 
 
 
+
   const [newResumeTitle, setNewResumeTitle] = useState('')
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;
@@ -49,6 +50,7 @@ export const CreateResumeForm = ({
 
 
 
+
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
@@ -67,6 +69,7 @@ export const CreateResumeForm = ({
           </div>;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
@@ -74,6 +77,7 @@ export const CreateResumeForm = ({
 
 
           <Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel;
+
 
   const handleSubmit = async () => {;
     if (!newResumeTitle && newResumeTitle.trim()) return;
@@ -90,11 +94,21 @@ export const CreateResumeForm = ({
           <div className="flex gap-2 max-w-md mx-auto">;
             <input
               type="text"
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')"
+
+              placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
               value={newResumeTitle}
-
-
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+            />;
+            <Button;
+              onClick={handleSubmit}
+              disabled={!newResumeTitle.trim() || isLoading}
+            >
+              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              Create
+            </Button>
+          </div>
+          
 
           <Button
             variant="ghost"
@@ -102,6 +116,7 @@ export const CreateResumeForm = ({
             className="mt-4"
           >
             Cancel
+
 
 
 
@@ -129,12 +144,14 @@ export const CreateResumeForm = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
+
 '"},;
 
 
 
   );
 };
+
 
 
 
@@ -226,3 +243,4 @@ w - full max - w-2xl mx - auto"> <CardContent className=" py - 8"> <div classNam
 '"},
   );
 }
+

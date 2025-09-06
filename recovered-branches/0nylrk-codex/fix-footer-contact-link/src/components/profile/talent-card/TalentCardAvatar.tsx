@@ -1,8 +1,10 @@
 
 
-
+import React from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+
 
 interface TalentCardAvatarProps {;
 
@@ -16,10 +18,18 @@ interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 }
 
   const getInitials = (name: string) => {
     return name
+
+      .split(" ")
+      .map((part) => part[0])
+      .join("")
+      .toUpperCase();
+  }
+
 
 
   return (
@@ -30,6 +40,12 @@ interface TalentCardAvatarProps {
       />
       <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
 
+        {getInitials(fullName)}
+      </AvatarFallback>
+    </Avatar>
+  )
+}
+
 import React from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 interface TalentCardAvatarProps {;
@@ -38,6 +54,8 @@ interface TalentCardAvatarProps {;
 }
 ;
 export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarProps) {;
+
+
 
   // Get initials for avatar fallback;
   const getInitials = (name: string) => {;
@@ -60,6 +78,7 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
     </Avatar>;
 
   );
+
 
 
 }
@@ -87,4 +106,5 @@ function TalentCardAvatar() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

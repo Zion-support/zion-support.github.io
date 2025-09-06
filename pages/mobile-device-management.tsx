@@ -1,6 +1,7 @@
 
 
 
+
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
@@ -9,11 +10,11 @@ import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
 
 export default function MDMPage() {
   const features = [
+
     'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const pricing = [
-    { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
-    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' };
+    { tier: 'SMB (up to 100 devices)', range: '$300$1,000/month', note: 'Based on device count and features' },
+    { tier: 'Mid-market (1001,000 devices)', range: '$1,000$7,000/month', note: 'Advanced policies, integrations, support' };
     { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }];
 
   const references = [
@@ -48,12 +49,14 @@ export default function MDMPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             </div>
           </header>
@@ -102,12 +105,14 @@ export default function MDMPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             </div>
           </section>
@@ -127,11 +132,13 @@ export default function MDMPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

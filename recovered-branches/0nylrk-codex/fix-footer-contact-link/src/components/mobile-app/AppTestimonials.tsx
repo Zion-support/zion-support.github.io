@@ -6,6 +6,7 @@
 
 
 
+
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
@@ -45,6 +46,7 @@ const testimonials = [
     rating: 5
     avatar: "/placeholder.svg"
   }
+
   },
   {
     name: "Sarah Williams",
@@ -86,6 +88,8 @@ export const AppTestimonials: React.FC = () => {
 
 
 
+
+
                     <Star
                       key={i}
 
@@ -107,6 +111,14 @@ export const AppTestimonials: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>
+
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 
 import React from "react",;
 import { Star } from "lucide-react",;
@@ -149,8 +161,10 @@ export const AppTestimonials: React.FC = () => {;
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">;
               <CardContent className="pt-6">;
                 <div className="flex mb-4">;
+
                   {Array.from({ length: 5 }).map((_, i) => (;
                     <Star;
+
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
 
@@ -172,6 +186,11 @@ export const AppTestimonials: React.FC = () => {;
               </CardFooter>;
             </Card>;
           ))}
+        </div>
+      </div>
+    </section>
+  )
+}
 
         </div>;
       </div>;

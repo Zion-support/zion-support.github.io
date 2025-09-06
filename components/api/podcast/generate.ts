@@ -20,10 +20,12 @@ function writeEpisodes(episodes: any[]) {
 
 
 
+
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const id = uuidv4();
@@ -124,11 +126,51 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     return res.status(500).json({ error: error?.message |'Unknown error' })
 
 
+
 }
     const episode = {
 
 
+
     writeEpisodes(episodes);
+
+    return res && res.status(200).json({ episode });
+  } catch (error: any) {
+    console && console.error(error);
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
+  }    episodes && episodes.unshift(episode);
+    }
+
+    const episodes = readEpisodes();
+    const episode = {
+      id,
+      createdAt: new Date().toISOString(),
+      persona,
+      invitee,
+      topic,
+      title: generated && generated.title,
+      questions: generated && generated.questions || [],
+      timeMarkers: generated && generated.timeMarkers || {
+        intro: '00:00',
+        segments: [],
+        closing: '14:30',
+      },
+      transcript: generated && generated.transcript,
+      youtubeDescription: generated && generated.youtubeDescription || '',
+      spotifyDescription: generated && generated.spotifyDescription || '',
+      bestQuote: generated && generated.bestQuote || '',
+      audio: {},
+    };
+    episodes && episodes.unshift(episode);
+    writeEpisodes(episodes);
+
+    return res && res.status(200).json({ episode });
+  } catch (error: any) {
+    console && console.error(error);
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
+  }    episodes && episodes.unshift(episode);
+    writeEpisodes(episodes);
+
     return res && res.status(200).json({ episode })
   } catch (error: any) {
     console && console.error(error);
@@ -137,6 +179,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 }
 }
     const episode = {
+
 
 
 
@@ -153,4 +196,5 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

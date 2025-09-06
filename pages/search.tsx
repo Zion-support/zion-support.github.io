@@ -1,12 +1,6 @@
 
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+import React, { useState, useEffect } from 'react',
+origin/automation-improvements-final
 
 import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react',
@@ -19,8 +13,24 @@ import Layout from './components/Layout';
 
 import {
 
-
-
+  Search
+  Filter
+  ArrowRight
+  Clock
+  Star
+  FileText
+  Code
+  Database
+  Cloud
+  Shield
+  Brain
+  Users
+  Settings
+  Globe
+  CheckCircle
+  X
+  ChevronDown
+  ChevronUp
 
   Search,
   Filter,
@@ -40,6 +50,8 @@ import {
   X,
   ChevronDown,
   ChevronUp;
+
+
 
 
 
@@ -129,24 +141,56 @@ const filters = [
   { name: 'Popular', count: 2 }
 ];
 
-
-
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
 export default function SearchPage() {
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+  ExternalLink,
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Target,
+  Star,
+  Sparkles,
+  Zap,
+  Users,
+  Award,
+  Clock,
+  CheckCircle,
+  Globe,
+  Code,
+  Server,
+  TrendingUp,
+  BarChart3,
+  Cloud,
+  Network,
+  Lightbulb,
+  Flame,
+  Zap as ZapIcon,
+  X,
+  Sliders,
+  SortAsc,
+  SortDesc,;
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+origin/main
+export default function SearchPage() {
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+export default function SearchPage() {;
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -163,6 +207,8 @@ export default function SearchPage() {
 
     return matchesQuery && matchesCategory && matchesFilter;
   });
+
+
 
 
 import React, { useState, useEffect } from 'react';
@@ -494,12 +540,16 @@ export default function SearchPage(req, res) {
   },
 
 
+
+
   return (
     <Layout>
       <Head>
         <title>Search - Zion Tech Group</title>
         <meta name="description" content="Search our website for information, guides, services, and more." />
       </Head>
+
+
 
 
 
@@ -544,16 +594,57 @@ export default function SearchPage(req, res) {
 
               {/* Search Bar */}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-              <div className="max-w-2xl mx-auto">;
-                <div className="relative">;
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-
-
-
+              <div className="max-w-2xl mx-auto">
+      <SmartHeader />
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              Search Our Services
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+              Find the perfect AI and technology solutions for your business needs.
+              Search across our comprehensive service catalog with advanced filtering options.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Search Interface */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="px-6 pb-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
+              <div className="flex-1 max-w-2xl">
 
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -563,13 +654,26 @@ export default function SearchPage(req, res) {
                     placeholder="Search for services, guides, articles..."
                     value={searchQuery}
 
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
+            </motion.div>
+          </div>
+        </section>
 
         {/* Filters Section */}
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex flex-wrap gap-4">
+
+
 
 
 
@@ -591,12 +695,15 @@ export default function SearchPage(req, res) {
 
 
 
+
+
                 <button
                   onClick={() => setShowFilters(!showFilters)}
                   className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
 
-
+                  <Filter className="w-4 h-4 mr-2" />
+                  Filters
 
                   <Grid className="w-5 h-5" />
                 </button>
@@ -637,22 +744,65 @@ export default function SearchPage(req, res) {
                   <Sliders className="w-4 h-4" />
                   Filters
 
+                  {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
+                </button>
+                {categories.map((category) => (
+                  <button
+                    key={category.name}
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`px-4 py-2 rounded-lg transition-colors ${
+                      selectedCategory === category.name
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
 
-
+                  >
+                    {term}
+                  </button>
+                ))}
+              </div>
 
 
               <div className="text-sm text-gray-600">
                 {filteredResults.length} results found
               </div>
             </div>
+
             {showFilters && (
               <motion.div
+
+                </button>;
+
+                {categories && categories.map((category) => (;
+                  <button
+                    key={category && category.name}
+                    onClick={() => setSelectedCategory(category && category.name)}
+                    className={`px-4 py-2 rounded-lg transition-colors ${;
+                      selectedCategory === category && category.name;
+                        ? 'bg-blue-600 text-white';
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
+                    }`}
+                  >;
+                    {category && category.name} ({category && category.count});
+                  </button>;
+                ))}
+              </div>;
+
+              <div className="text-sm text-gray-600">;
+                {filteredResults && filteredResults.length} results found;
+              </div>;
+            </div>;
+
+            {showFilters && (;
+              <motion&& motion.div
 
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
 
                 transition={{ duration: 0.3 }}
+
+
 
 
 
@@ -730,14 +880,15 @@ export default function SearchPage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <button
                       key={filter && filter.name}
                       onClick={() => setSelectedFilter(filter && filter.name)}
@@ -747,8 +898,11 @@ export default function SearchPage(req, res) {
                           : 'bg-white text-gray-700 hover:bg-gray-100';
                       }`}
 
-
-
+                    >
+                      {filter.name} ({filter.count})
+                    </button>
+                  ))}
+                </div>
 
                   ))}                </div>
 ursor/fix-lint-push-and-merge-to-main-ae4e
@@ -763,6 +917,17 @@ origin/automation-improvements-final
           </div>
         </section>
 
+                    >;
+                      {filter && filter.name} ({filter && filter.count});
+                    </button>;
+                  ))}
+                </div>;
+              </motion && motion.div>;
+            )}
+          </div>;
+        </section>;
+
+
         {/* Search Results */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -776,6 +941,8 @@ origin/automation-improvements-final
                     animate={{ opacity: 1, y: 0 }}
 
                     transition={{ duration: 0.5, delay: index * 0.1 }}
+
+
 
 
 
@@ -1035,11 +1202,13 @@ origin/automation-improvements-final
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   >
                     <div className="flex items-start justify-between">
@@ -1050,6 +1219,8 @@ origin/automation-improvements-final
                           <span className="mx-2 text-gray-300">•</span>
                           <span className="text-sm text-gray-500">{result.type}</span>
                         </div>
+
+
 
 
                         <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -1486,7 +1657,8 @@ origin/automation-improvements-final
 }  )
 }
 
-
+  )
+)
 
                         <div className="flex flex-col items-end gap-2">
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -1537,7 +1709,9 @@ origin/automation-improvements-final
                         </a>
                       </div>
 
+
 >>>>>>> origin/automation-improvements-final
+
 
 
 
@@ -1553,6 +1727,8 @@ origin/automation-improvements-final
 
             ) : (
               <motion.div
+
+
 
 
 
@@ -1610,6 +1786,8 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
@@ -1737,12 +1915,14 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 
+
   )
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 }
   )
 }

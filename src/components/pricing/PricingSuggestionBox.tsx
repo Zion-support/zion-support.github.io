@@ -53,12 +53,14 @@ interface PricingSuggestionBoxProps {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
@@ -84,6 +86,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
 
 
+
     return (
       <Card className="border border-dashed border-muted">
         <CardContent className="flex items-center justify-center p-6">
@@ -104,6 +107,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     return null
   }
   const confidenceColor = {
+
 
 
     )
@@ -156,10 +160,12 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 
 
 
+
       <CardContent className="p-5 space-y-4">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">AI Suggested Price</h4>
           <Badge variant="outline" className={confidenceColor}>
+
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   suggestion,;
@@ -239,6 +245,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </div>
 
 
+
+
         <div className="bg-muted/50 rounded-md p-3 text-center">
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
@@ -246,8 +254,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 
 
 
+
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
+
 
 
 
@@ -276,6 +286,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
                 </Button>
 
         <div className="flex items-center justify-between">
+
 
 
               </TooltipTrigger>
@@ -453,3 +464,4 @@ if ( {) {
 }
 "  );
 }
+

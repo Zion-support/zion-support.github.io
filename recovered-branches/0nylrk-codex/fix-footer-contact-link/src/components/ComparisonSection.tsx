@@ -21,14 +21,16 @@ export function ComparisonSection() {
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
+
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,;
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
 } from "./ui/table";
+
 
 
 
@@ -40,6 +42,7 @@ import {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -114,12 +117,14 @@ import {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
@@ -128,6 +133,9 @@ import {
         </div>
       </div>
 
+    </section>
+  );
+}
 
   )
 import { GradientHeading } from "./GradientHeading",;
@@ -221,6 +229,26 @@ export function ComparisonSection() {;
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
               <p className="text-white">;
                 <span className="font-bold">Total Annual Savings: </span>;
+
+                <span className="text-green-400 font-bold text-xl">;
+                  Up to 65%;
+                </span>;
+                <span className="block text-sm text-zion-slate-light mt-1">;
+                    </TableCell>;
+                  </TableRow>))}
+              </TableBody>;
+            </Table>;
+          </div>;
+          <div className="mt - 8 flex justify - between items - center bg - zion - blue p - 6 rounded - lg border border - zion - purple / 20">;
+            <div className="flex items - start">;
+              <CheckCircle2 className="mr - 2 h - 6 w - 6 text - green - 400 flex - shrink - 0 mt - 1" />;
+              <p className="text - white">;
+                <span className="font - bold">Total Annual Savings: </span>;
+                <span className="text - green - 400 font - bold text - xl">;
+                  Up to 65%;
+                </span>;
+                <span className="block text - sm text - zion - slate - light mt - 1">;
+
 
                 <span className="text-green-400 font-bold text-xl">Up to 65%</span>;
                 <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>;

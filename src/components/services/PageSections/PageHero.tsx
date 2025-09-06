@@ -16,6 +16,7 @@ export function PageHero() {
             <Map className="h-8 w-8 text-zion-cyan" />
 
 
+
           </div>
           <h3 className="text-xl font-bold text-white mb-2">Global Coverage</h3>
           <p className="text-zion-slate-light">IT onsite services available in over 190 countries and territories worldwide</p>
@@ -138,6 +139,7 @@ export function PageHero() {;
 };
     </div>
   )
+
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
@@ -261,4 +263,6 @@ function PageHero() {
         </div>;
       </div>;
     </div>);
+
 }
+

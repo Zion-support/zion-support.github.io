@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -21,11 +25,66 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 
+import {
+  Star
+  CheckCircle
+  ArrowRight
+  TrendingUp
+  Users
+  Award
+  Clock
+  Zap
+  Shield
+  Brain
+  Atom
+  Rocket
+  ShoppingCart
+  Cpu
+  Globe
+  Lock
+  Video
+  Palette
+  BarChart
+  UserCheck
+  FileText
+  Heart
+  Eye
+  Search
+  Phone;
+} from 'lucide-react';
+import { realMarketServices } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
+  Star, CheckCircle, ArrowRight, TrendingUp, Users
 
-
-
-
-
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Rocket,
+  ShoppingCart,
+  Cpu,
+  Globe,
+  Lock,
+  Video,
+  Palette,
+  BarChart,
+  UserCheck,
+  FileText,
+  Heart,
+  Eye,
+  Search,;
+  Phone,;
+} from 'lucide-react';
+import { realMarketServices } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
+  Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
 
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
@@ -33,6 +92,7 @@ import { motion } from 'framer-motion';
  } from 'lucide-react';
 import { realMarketServices  } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
+
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -57,7 +117,7 @@ visible: {
 const serviceCategories = [
   {
     id: 'ai-services'
-    title: '🧠 Revolutionary AI Services'
+    title: ' Revolutionary AI Services'
     description: 'Next-generation AI consciousness and creativity'
     icon: Brain
     color: 'from-violet-500 to-purple-500'
@@ -67,7 +127,7 @@ const serviceCategories = [
   }
   {
     id: 'quantum-tech'
-    title: '⚛️ Quantum & Emerging Tech'
+    title: ' Quantum & Emerging Tech'
     description: 'Quantum computing and beyond'
     icon: Atom
     color: 'from-indigo-500 to-blue-500'
@@ -80,7 +140,7 @@ const serviceCategories = [
   }
   {
     id: 'enterprise-it'
-    title: '🏙️ Enterprise IT Solutions'
+    title: ' Enterprise IT Solutions'
     description: 'Autonomous operations and zero-trust security'
     icon: Cpu
     color: 'from-blue-500 to-cyan-500'
@@ -96,7 +156,7 @@ const serviceCategories = [
   }
   {
     id: 'business-automation'
-    title: '🛒 Business Automation'
+    title: ' Business Automation'
     description: 'Streamline business operations'
     icon: ShoppingCart
     color: 'from-teal-500 to-emerald-500'
@@ -112,7 +172,7 @@ const serviceCategories = [
   }
   {
     id: 'robotics-automation'
-    title: '🤖 Robotics & Automation'
+    title: ' Robotics & Automation'
     description: 'Intelligent automation solutions'
     icon: Rocket
     color: 'from-green-500 to-yellow-500'
@@ -125,7 +185,7 @@ const serviceCategories = [
   }
   {
     id: 'research-development'
-    title: '🔬 Research & Development'
+    title: ' Research & Development'
     description: 'Breakthrough technologies and innovations'
     icon: Globe
     color: 'from-orange-500 to-red-500'
@@ -137,6 +197,8 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
+
+
 
 
 
@@ -241,12 +303,12 @@ visible: {
 }initial= {  {}
 ;
 const service_categories = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'ai - services',
-    title: '🧠 Revolutionary AI Services',
+    title: ' Revolutionary AI Services',
     description: 'Next - generation AI consciousness and creativity',
     icon: Brain,
+
 
 
 
@@ -279,6 +341,7 @@ const service_categories = [;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -326,9 +389,11 @@ const service_categories = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
@@ -340,6 +405,28 @@ const service_categories = [;
             designed to transform your business and propel you into the future.
           </p>
 
+        stagger_children: 0.1,
+      },
+    },  }
+;
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1;
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+
+  };
+
+
+
+
+      <div className='absolute inset-0 overflow-hidden'>
+        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
+        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
+      </div>
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+        {/* Header */}
 
 
   return (
@@ -352,6 +439,7 @@ const service_categories = [;
       </div>;
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         {/* Header */}
+
 
 
         <motion.div;
@@ -372,6 +460,7 @@ const service_categories = [;
 
 
 
+
   };
 
   const itemVariants = {
@@ -381,10 +470,12 @@ const service_categories = [;
 
 
 
+
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
           className='text-center mb-16'
 
@@ -392,7 +483,9 @@ const service_categories = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
         >
@@ -437,6 +530,7 @@ const service_categories = [;
             computing, and emerging technology solutions. Each service is;
             designed to transform your business and propel you into the future.;
           </p>;
+
           {/* Stats */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>;
             {[;
@@ -455,6 +549,7 @@ const service_categories = [;
             Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. ;
             Each service is designed to transform your business and propel you into the future.;
           </p>;
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">;
             {[;
@@ -468,6 +563,10 @@ const service_categories = [;
               },
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
+
+
+
+
 
 
 
@@ -505,6 +604,7 @@ const service_categories = [;
 
 
               </motion.div>
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
 
@@ -525,6 +625,7 @@ const service_categories = [;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         {/* Search and Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -541,7 +642,9 @@ const service_categories = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -549,9 +652,8 @@ const service_categories = [;
 
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Search */}
-            <div className='relative flex-1 max-w-md'>
+            <div className='relative flex-1 max-w-md'>;
               <input
                 type='text'
                 placeholder='Search services...'
@@ -582,12 +684,14 @@ const service_categories = [;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             {/* Category Filter */}
             <select
@@ -598,6 +702,7 @@ const service_categories = [;
             </select>
           </div>
         </motion.div>
+
 
 
 
@@ -618,6 +723,7 @@ const service_categories = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         {/* Service Categories */}
         <motion&& motion.div
@@ -641,7 +747,9 @@ const service_categories = [;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
         {/* Services Grid */}
         <motion&& motion.div
@@ -669,6 +777,7 @@ const service_categories = [;
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
 
 
+
           </div>;
         </motion && motion.div>;
 
@@ -686,14 +795,16 @@ const service_categories = [;
 
 
 
+
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
 
-                  Popular
+
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 </div>
               )}
 
@@ -793,69 +904,86 @@ const service_categories = [;
                     ? 'border - cyan - 500 bg - cyan - 500 / 10';
                     : 'border - white / 20 bg - white / 5 hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 5';
                 }`}
-                on_click={() =>;
-                  setSelectedCategory (
-                    category.id === selected_category ? 'all' : category.id);
+                onClick={() =>;
+                  setSelectedCategory(;
+                    category && category.id === selectedCategory ? 'all' : category && category.id;
+                  );
                 }
               >;
-                <div className='flex items - center space - x-3 mb - 4'>;
-                  <div;
-                    className={`w - 12 h - 12 rounded - lg bg - gradient - to - r ${category.color} flex items - center justify - center`}
-                  >;
-                    <category.icon className='w - 6 h - 6 text - white' />;
+                <div className='flex items-center space-x-3 mb-4'>;
+                  <div
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
+                    <category && category.icon className='w-6 h-6 text-white' />;
                   </div>;
                   <div>;
-                    <h3 className='text - lg font - semibold text - white'>;
-                      {category.title}
+                    <h3 className='text-lg font-semibold text-white'>;
+                      {category && category.title}
                     </h3>;
-                    <p className='text - sm text - gray - 400'>;
-                      {category.description}
+                    <p className='text-sm text-gray-400'>;
+                      {category && category.description}
                     </p>;
                   </div>;
                 </div>;
-                <div className='text - sm text - gray - 300'>                  {category.services.length} services available                    : 'border - white / 20 bg - white / 5 hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 5';
+                <div className='text-sm text-gray-300'>                  {category && category.services.length} services available                    : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5';
                 }`}
-                on_click={() => setSelectedCategory (category.id === selected_category ? 'all' : category.id)}
+                onClick={() => setSelectedCategory(category && category.id === selectedCategory ? 'all' : category && category.id)}
               >;
-                <div className="flex items - center space - x-3 mb - 4">;
-                  <div className={`w - 12 h - 12 rounded - lg bg - gradient - to - r ${category.color} flex items - center justify - center`}>;
-                    <category.icon className="w - 6 h - 6 text - white" />;
+                <div className="flex items-center space-x-3 mb-4">;
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
+                    <category && category.icon className="w-6 h-6 text-white" />;
                   </div>;
                   <div>;
-                    <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
-                    <p className="text - sm text - gray - 400">{category.description}</p>;
+                    <h3 className="text-lg font-semibold text-white">{category && category.title}</h3>;
+                    <p className="text-sm text-gray-400">{category && category.description}</p>;
                   </div>;
                 </div>;
-                <div className="text - sm text - gray - 300">;
-                  {category.services.length} services available;
+                <div className="text-sm text-gray-300">;
+                  {category && category.services.length} services available;
                 </div>;
-              </motion.div>))}
-          </div>;
-        </motion.div>;
+              </motion && motion.div>;
+            ))}
+          </div>
+        </motion.div>
         {/* Services Grid */}
-        <motion.div;
-          variants={container_variants}
-          initial='hidden';
-          whileInView='visible';
+        <motion&& motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
           viewport={{ once: true }}
-          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'        >          initial="hidden";
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";
           whileInView="visible";
           viewport={{ once: true }}
-          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
-          {filtered_services.map ((service, index) => (
-            <motion.div;
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+          {filteredServices && filteredServices.map((service, index) => (;
+            <motion&& motion.div
+              key={service && service.id}
+              variants={itemVariants}
+              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105'>;
+              {/* Popular Badge */}
+              {service && service.popular && (;
+                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105";
+            >;
+              {/* Popular Badge */}
+              {service && service.popular && (;
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">;
+                </div>;
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {filteredServices.map((service, index) => (
+            <motion.div
               key={service.id}
-              variants={item_variants}
-              className='group relative p - 6 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 5 transition - all duration - 300 hover:scale - 105';
-            >;
+              variants={itemVariants}
+              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
+            >
               {/* Popular Badge */}
               {service.popular && (
-                <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 3 py - 1 rounded - full font - semibold'>                  Popular              className="group relative p - 6 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 5 transition - all duration - 300 hover:scale - 105";
-            >;
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 3 py - 1 rounded - full font - semibold">;
-                </div>)}
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                  Popular
+                </div>
+              )}
               {/* Service Icon */}
               <div className='flex items - center justify - between mb - 4'>;
                 <div;
@@ -922,12 +1050,14 @@ const service_categories = [;
                   </div>;
                   <div className='text-sm text-gray-400'>{service && service.period}</div>                </div>;
               </div>;
+
               {/* Service Info */}
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
                 {service && service.name}
               </h3>;
               <p className='text-gray-300 mb-4 leading-relaxed'>                {service && service.description}
               </p>;
+
               {/* Features */}              <div className="flex items-center justify-between mb-4">;
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service && service.color} flex items-center justify-center text-2xl`}>;
                   {service && service.icon}
@@ -936,6 +1066,7 @@ const service_categories = [;
                   <div className="text-2xl font-bold text-white">{service && service.price}</div>;
                   <div className="text-sm text-gray-400">{service && service.period}</div>;
               </div>;
+
               {/* Service Info */}
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
                 {service && service.name}
@@ -950,8 +1081,10 @@ const service_categories = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                   </div>
                 ))}
@@ -977,12 +1110,14 @@ const service_categories = [;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
@@ -996,6 +1131,8 @@ const service_categories = [;
 
                     <span>{feature}</span>
 
+
+
                   </div>
                 ))}
                 {service.features.length > 3 && (
@@ -1003,8 +1140,8 @@ const service_categories = [;
                 {service.features.slice(0, 3).map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                    <span>{feature}</span>
                   </div>
+
 
 
                 ))}
@@ -1021,6 +1158,7 @@ const service_categories = [;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
               {/* Service Meta */}
@@ -1065,6 +1203,7 @@ const service_categories = [;
               </div>
 
               </div>;
+
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;
                 <div className='flex items-center space-x-2 text-gray-400'>;
@@ -1094,6 +1233,7 @@ const service_categories = [;
                   <span>{service && service.growthRate}</span>;
                 </div>;
               </div>;
+
               {/* Market Position */}
               <div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10'>;
                 <div className='text-xs text-gray-400 mb-1'>;
@@ -1105,6 +1245,7 @@ const service_categories = [;
                   {service && service.marketPosition}
                 </div>;
               </div>;
+
               {/* ROI */}
               <div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'>;
                 <div className='text-xs text-green-400 mb-1 font-semibold'>;
@@ -1138,7 +1279,9 @@ const service_categories = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 <a
 
@@ -1175,6 +1318,7 @@ const service_categories = [;
 
 
 
+
               {/* Trial Info */}
               <div className='mt-4 text-center'>;
                 <div className='text-sm text-gray-400'>;
@@ -1203,6 +1347,7 @@ const service_categories = [;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1219,7 +1364,9 @@ const service_categories = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1236,13 +1383,11 @@ const service_categories = [;
               of business automation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg'
-              >
-                Start Your Free Trial
-              </a>
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg'>;
+                Start Your Free Trial;
+              </a>;
               <a
                 href='/pricing-2034'
 
@@ -1283,13 +1428,22 @@ const service_categories = [;
                              <a
                  href="/pricing-2034"
 
+                 className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg"
+               >
+                 View Pricing
+               </a>
+            </div>
+            <div className="mt-6 text-sm text-gray-400">
+              <Phone className="w-4 h-4 inline mr-2" />
+              Need help? Call us at {contactInfo.mobile}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
 
-
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 }
   );
 }
@@ -1470,10 +1624,12 @@ const service_categories = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

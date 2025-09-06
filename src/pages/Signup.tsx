@@ -18,12 +18,12 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
 
-
-
+  )
+})
+export default function Signup() {
   ),
 });
 export default function Signup() {;
-
 
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
@@ -85,21 +85,26 @@ function Signup() {
   const isPartnerSignup = router.query.type === 'partner';
   const signup_source = (router.query.source as string) || 'direct';
   const performHealthCheck = async () => {
-    setHealthCheckLoading(true)
-    setHealthCheckError(null)
+    setHealthCheckLoading (true);
+    setHealthCheckError (null);
     try {
-      const res = await axios.get('/api/auth/health')
-      setAuthServiceAvailable(res.status === 200)
-      if (res.status !== 200) {
-        setHealthCheckError('Authentication service is experiencing issues')
+      const res = await axios.get ('/api / auth / health');
+      setAuthServiceAvailable (res.status === 200);
+      // Check condition
+if ( {) {
+  $2
+}
+        setHealthCheckError ('Authentication service is experiencing issues');
       }
     } catch (err: any) {
 
-
-
-
+      logErrorToProduction('Auth service health check failed', { data: err })
+      setAuthServiceAvailable(false)
+      // Set a more specific error message based on the error type
+      if (
+        err.code === 'NETWORK_ERROR' |
+        err.message?.includes('Network Error')
       if (true) {}
-
 
       ) {
         setHealthCheckError('Network connection issues detected')
@@ -123,10 +128,10 @@ if ( {) {
         setHealthCheckError (
           'Authentication service is temporarily unavailable');
       } else {
-        setHealthCheckError('Unable to verify authentication service status')
+        setHealthCheckError ('Unable to verify authentication service status');
       }
     } finally {
-      setHealthCheckLoading(false)
+      setHealthCheckLoading (false);
     }
   }
 
@@ -235,13 +240,16 @@ if ( {) {
                 method: err.config.method
               }
 
-
-
-
+            : 'No config'
+        })
+        const status = err.response?.status
+        // Try both 'error' and 'message' fields for compatibility
+        const errorMsg =
+          err.response?.data?.error |
+          err.response?.data?.message |
         const errorMsg = null;
           err.response?.data?.error ||
           err.response?.data?.message ||
-
 
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
@@ -295,7 +303,7 @@ if ( {) {
 }
             set_errors ({ password: error_msg });
           } else {
-            setErrors({ confirm: errorMsg })
+            set_errors ({ confirm: error_msg });
           }
 
           toast ({
@@ -316,8 +324,8 @@ if ( {) {
 
         }
       } finally {
-        logInfo('Form submission completed, setting loading to false')
-        setLoading(false)
+        log_info ('Form submission completed, setting loading to false');
+        set_loading (false);
       }
 
     },
@@ -558,6 +566,8 @@ export default function Signup() {;
 
 
 
+  // Show loading state only during initial health check
+  if (healthCheckLoading) {
 
     return (
       <AuthLayout>;
@@ -585,6 +595,15 @@ export default function Signup() {;
             </div>;
           )}
 
+          <form onSubmit={handleFormSubmit} className='space-y-4' noValidate>;
+            {/* Show Health Check Warning */}
+            {healthCheckError && (;
+              <Alert
+                variant='destructive'
+                className='border-yellow-500 bg-yellow-50 text-yellow-900'>;
+                <AlertCircle className='h-4 w-4' />;
+                <AlertDescription className='flex items-center justify-between'>;
+
       <AuthLayout>;
         <div className='flex min - h-screen items - center justify - center p - 4'>;
           <div className='text - center space - y-4'>;
@@ -608,6 +627,8 @@ export default function Signup() {;
           )}
 
 
+
+
               <Button
                 type="button"
                 variant="ghost"
@@ -629,6 +650,7 @@ export default function Signup() {;
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
+
 
 
 
@@ -680,6 +702,7 @@ request: err && err.request ? 'Request made but no response': 'No request';
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
 }</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
 
+
               </div>)}
           </form>;
           {!emailVerificationRequired && (
@@ -711,6 +734,7 @@ request: err.request ? 'Request made but no response': 'No request';
 if ( {) {
   $2
 
+
 }
   return (<AuthLayout> <div className="flex min - h-screen items - center justify - center p - 4" > <div className="text - center space - y-4" > <div className="animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto" ></div> <p className="text - muted - foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>);
 }> {';
@@ -741,6 +765,7 @@ if ( {) {
 }</div> </div> </AuthLayout>);
 }'";
 }
+
 import { useState  } from './react';
 import { Link, Navigate, use_navigate  } from './react-router-dom';
 import { use_form, type UseFormReturn  } from './react - hook - form';
@@ -757,8 +782,55 @@ import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
 
-
-
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage,
+} from "@/components/ui/form"
+// Form validation schema
+const signupSchema = z
+  .object({
+    displayName: z.string().min(2, "Name must be at least 2 characters")
+    email: z.string().email("Please enter a valid email")
+    password: z.string()
+      .min(8, "Password must be at least 8 characters")
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+      .regex(/[0-9]/, "Password must contain at least one number")
+    confirmPassword: z.string()
+    termsAccepted: z.boolean().refine(val => val === true, {
+      message: "You must accept the terms and conditions",
+}),
+})
+  .refine(data => data.password === data.confirmPassword, {
+    message: "Passwords do not match"
+    path: ["confirmPassword"],
+})
+type SignupFormValues = z.infer<typeof signupSchema>
+export default function Signup() {
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth()
+  const navigate = useNavigate()
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  // Track confirm password locally to prevent it from clearing on blur
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState("")
+  const passwordValue = form.watch("password")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  // Initialize react-hook-form
+  const form = useForm({
+    resolver: zodResolver(signupSchema)
+    defaultValues: {
+      displayName: "
+      email: "
+      password: "
+      confirmPassword: "
+      termsAccepted: false,
+}
+}) as UseFormReturn<SignupFormValues>
+  // Form submission handler
+  const onSubmit = async (data: SignupFormValues) => {
 
       displayName: ",
       email: ",
@@ -769,6 +841,8 @@ import {
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
+
+
 
 
 
@@ -802,6 +876,7 @@ import {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
+
 
 
 
@@ -917,6 +992,7 @@ if ( {) {
           toast.error (session_error.message || "Failed to set session. Please try logging in.");
           return;
 }
+
         // The onAuthStateChange listener in AuthProvider should now handle
         // updating user state and navigating if necessary for other cases.
         // For direct signup with session, we can navigate.
@@ -936,6 +1012,9 @@ if ( {) {
   $2
 }
 
+      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
+      if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
+
         try {
           await mailchimp_service.add_subscriber ({
             email: data.email,
@@ -944,18 +1023,18 @@ if ( {) {
           await mailchimp_service.sendWelcomeEmail (data.email, 'NEW10');
 
 } catch (err) {
-          console.error('Mailchimp subscription failed', err)
-          // Non-critical error, don't block user flow
+          console.error ('Mailchimp subscription failed', err);
+          // Non - critical error, don't block user flow;
 }
       }
-      // Toast and navigation are handled above if session is present
-      // If emailVerificationRequired, no toast/navigation here, message is shown
+      // Toast and navigation are handled above if session is present;
+      // If emailVerificationRequired, no toast / navigation here, message is shown;
 } catch (err: any) {
-      const message = err.message ?? "Registration failed"
-      form.setError("root", { message })
-      toast.error(message)
+      const message = err.message ?? "Registration failed";
+      form.set_error ("root", { message });
+      toast.error (message);
 } finally {
-      setIsSubmitting(false) }
+      setIsSubmitting (false) }
   }
 
 }</div> <div className="flex items-center space-x-2" > <input) 
@@ -1111,9 +1190,10 @@ if ( {) {
       form.set_focus (first_error);
 }
   }
-  // Redirect if user is already logged in and has completed profile
-  if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />
+  // Redirect if user is already logged in and has completed profile;
+  // Check condition
+if ( {) {
+  $2
 }
 
 
@@ -1146,15 +1226,23 @@ const Signup = () => {;
                   <li>• Custom Development</li>;
                 </ul>;
               </div>;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
-                <ul className="text-gray-600 space-y-2">;
-    return <Navigate to="/" />;
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+                View Pricing;
+              </Link>;
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
+                Contact Us;
+              </Link>;
+            </div>;
+    </>  );
+
 }
 
 
 }};
 };
+
 
 
         </div>;
@@ -1163,5 +1251,6 @@ const Signup = () => {;
   );
 }
 ;
+
 
 

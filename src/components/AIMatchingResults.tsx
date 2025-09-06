@@ -15,6 +15,7 @@ interface AIMatchingResultsProps {
 
 
 
+
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -385,6 +386,7 @@ if ( {) {
 
 
 
+
                                   </div>
                                 </div>
                               )}
@@ -457,6 +459,7 @@ if ( {) {
                     </div>;
 
 
+
             )}
           </TabsContent>;
         ))}
@@ -487,3 +490,4 @@ if ( {) {
       </Tabs>;
     </div>);
 }
+

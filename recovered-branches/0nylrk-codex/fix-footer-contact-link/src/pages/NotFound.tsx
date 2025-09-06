@@ -3,6 +3,7 @@
 
 
 
+
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 const NotFound = () => {
@@ -25,6 +26,7 @@ const NotFound = () => {
     )
 
   }, [location.pathname]);
+
   }, [location.pathname]),
 
 
@@ -46,9 +48,11 @@ export default NotFound;
 },
 
 
-
-
-
+export default NotFound,
+import { useLocation } from "react-router-dom",;
+import { useEffect } from "react",;
+const NotFound = () => {;
+  const location = useLocation(),;
 
   useEffect(() => {;
     console && console.error(;
@@ -71,6 +75,7 @@ export default NotFound;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -79,6 +84,7 @@ export default NotFound;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default NotFound;
 

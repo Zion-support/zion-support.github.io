@@ -2,6 +2,8 @@
 
 
 
+
+
 type Props = {
   message: string;
   onJoin?: () => void;
@@ -23,8 +25,10 @@ export default function InviteBanner({
         >          Join Meetingtype Props = {
 
 
+
   message: string
   message: string,;
+
 
 
 
@@ -38,6 +42,7 @@ export default function InviteBanner({
   onJoin?: () => void;
   canJoin?: boolean;
 };
+
 export default function InviteBanner(): any ({ message, onJoin, canJoin = true }: Props) {;
   return (
     <div className="w-full bg-gray-900 text-white p-3 rounded border border-gray-700 flex items-center justify-between">
@@ -61,10 +66,12 @@ export default function InviteBanner(): any ({ message, onJoin, canJoin = true }
 }
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

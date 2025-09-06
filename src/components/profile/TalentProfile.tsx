@@ -67,12 +67,14 @@ export function TalentProfile(): any ({;
     })) || [];
 
   return (
+
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
       <ProfileHero
         name={profile.full_name}
         title={profile.professional_title}
         avatarUrl={profile.profile_picture_url}
+
         profileType='talent'
 
         rating={profile && profile.average_rating}
@@ -329,10 +331,14 @@ export function TalentProfile({
 
 
 
+
+
   profile,
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
+
+
 
 
 
@@ -468,6 +474,8 @@ export function TalentProfile({;
 
 
 
+
+
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
@@ -535,6 +543,47 @@ export function TalentProfile({;
             />;
           </div>;
 
+                <div className='flex flex-wrap gap-4 justify-center'>
+                  <Button
+                    size='lg'
+                    className='bg-zion-purple text-white hover:bg-zion-purple-dark'
+                    onClick={onRequestHire}                  >
+                    <Handshake className='mr-2 h-5 w-5' />
+                    Hire Now
+                  </Button>
+                  {onMessageTalent && (
+                    <Button
+                      size='lg'
+                      variant='outline'
+                      className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+                      onClick={onMessageTalent}                    >
+                      <MessageSquare className='mr-2 h-5 w-5' />
+                
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+                    onClick={onRequestHire}
+                  >
+                    <Handshake className="mr-2 h-5 w-5" />
+                    Hire Now
+                  </Button>
+                  
+                  {onMessageTalent && (
+                    <Button 
+                      size="lg" 
+                      variant="outline"
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                      onClick={onMessageTalent}
+                    >
+                      <MessageSquare className="mr-2 h-5 w-5" />
 
 
+
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+;
 

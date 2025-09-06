@@ -1,5 +1,14 @@
 
 
+// Content monitoring functionality
+import { FraudFlag, FraudSeverity  } from '@/types/fraud';
+import { analyzeContent  } from './analyzeContent';
+import { flagContent } from './flagContent';
+/**
+ * Create a monitoring system helper to easily monitor any content
+ */
+
+
 
 
 
@@ -9,7 +18,9 @@ export const monitorContent = async (;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   userId: string;
@@ -32,6 +43,8 @@ export const monitorContent = async (;
 
     )) {
       severity = 'dangerous'
+
+
 
 
 
@@ -69,7 +82,9 @@ export const monitorContent = async (;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
@@ -95,6 +110,10 @@ export const monitorContent = async (;
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
 
+    }
+  }
+}
+
 
 ;
     await flagContent(;
@@ -112,6 +131,8 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {;
       // // // console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here;
+
+
 
 
     }

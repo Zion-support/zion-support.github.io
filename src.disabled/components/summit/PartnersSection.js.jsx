@@ -1,12 +1,8 @@
 
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+:src.disabled/components/summit/PartnersSection.js.jsx
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+:temp_exclude/src.disabled/components/summit/PartnersSection.js.jsx
 
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"

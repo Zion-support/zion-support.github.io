@@ -16,6 +16,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import OptimizedImagedynamic from '../components/OptimizedImage.dynamic';
+
 describe('OptimizedImagedynamic', () => {
   test('renders without crashing', () => {
     render(<OptimizedImagedynamic />);
@@ -38,9 +39,15 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
     // Test content display
+  });
+  
   test('handles user interactions', () => {
+    render(<OptimizedImagedynamic />);
     // Test user interactions
+  });
+  
   test('applies correct styling', () => {
+    render(<OptimizedImagedynamic />);
     // Test styling
   });
 });

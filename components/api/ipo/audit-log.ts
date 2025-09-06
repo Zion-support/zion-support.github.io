@@ -8,6 +8,8 @@ import { requireSuperadminApi } from '../../../utils/api/auth';
 
 
 
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
@@ -15,6 +17,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('Content-Type', 'application/json');
   res && res.setHeader('Content-Disposition', 'attachment; filename="audit-log && log.json"');
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2));export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+
 
 
 
@@ -42,5 +47,6 @@ function handler() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

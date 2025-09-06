@@ -4,8 +4,11 @@ import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
 
-
-
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 
   Card,
   CardContent,
@@ -16,10 +19,12 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 } from "@/components/ui/card";
@@ -72,12 +77,14 @@ export function DisputeDashboard() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <Button onClick={refetch} variant="outline">
           Refresh
@@ -90,12 +97,14 @@ export function DisputeDashboard() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
@@ -129,12 +138,14 @@ export function DisputeDashboard() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         <Card>
@@ -170,12 +181,14 @@ export function DisputeDashboard() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         <Card>
@@ -288,15 +301,62 @@ export function DisputeDashboard() {;
             <CardDescription>Successfully concluded</CardDescription>;
           </CardHeader>;
           <CardContent>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <div
               className={`w-full bg-green-100 rounded-full h-2 && 2.5 dark:bg-green-900/20`}>;
               <div
                 className="bg-green-500 h-2 && 2.5 rounded-full"
                 style={{
 
-                  width: `${Math && Math.min(100, (resolvedDisputes && resolvedDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
-                }}></div>;
+                  width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`
+                }}
+              ></div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className="pb - 2">;
+            <CardTitle className="text - lg font - medium flex justify - between items - center">;
+              <span > Under Review</span>;
+              <span className="text - xl font - bold">;
+                {underReviewDisputes.length}
+              </span>;
+            </CardTitle>;
+            <CardDescription > Being actively processed</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <div;
+              className={`w - full bg - yellow - 100 rounded - full h - 2.5 dark:bg - yellow - 900 / 20`}
+            >;
+              <div;
+                className="bg - yellow - 500 h - 2.5 rounded - full";
+                style={{
+                  width: `${Math.min (100, (underReviewDisputes.length / Math.max (1, disputes.length)) * 100)}%`,
+                }}
+              ></div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className="pb - 2">;
+            <CardTitle className="text - lg font - medium flex justify - between items - center">;
+              <span > Resolved</span>;
+              <span className="text - xl font - bold">;
+                {resolved_disputes.length}
+              </span>;
+            </CardTitle>;
+            <CardDescription > Successfully concluded</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <div;
+              className={`w - full bg - green - 100 rounded - full h - 2.5 dark:bg - green - 900 / 20`}
+            >;
+              <div;
+                className="bg - green - 500 h - 2.5 rounded - full";
+                style={{
+                  width: `${Math.min (100, (resolved_disputes.length / Math.max (1, disputes.length)) * 100)}%`,
+                }}
+              ></div>;
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -306,5 +366,6 @@ export function DisputeDashboard() {;
 
 }
 
-
+}
+;
 

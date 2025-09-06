@@ -13,12 +13,8 @@ import {
   FormLabel,
   FormControl,
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  FormDescription,
+  FormDescription,;
 
 } from "@/components/ui/form";
 
@@ -29,14 +25,11 @@ interface AdditionalClausesFieldsProps {;
 }
 
 
-
-
-
-
-
-
-
-
+export function AdditionalClausesFields({
+  form
+}: AdditionalClausesFieldsProps) {
+  return (
+    <FormField
 
 
 
@@ -73,10 +66,12 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       control={form.control}
       name="additionalClauses"
@@ -100,6 +95,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                     <Checkbox
 
                       checked={field.value?.includes("nda")}
+
 
 
 
@@ -138,12 +134,15 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
+
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
+
+
 
 
 
@@ -160,12 +159,14 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             );
                       }}
@@ -191,20 +192,26 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
 
-
-
-
+                      checked={field.value?.includes("ip")}
+                      onCheckedChange={(checked) => {
+                        const currentValues = field.value |[];
+                        return checked
+                          ? field.onChange([...currentValues, "ip"])
+                          : field.onChange(
+                              currentValues.filter((value) => value !== "ip")
+                              currentValues.filter((value) => value !== "ip"),
 
                       checked={field.value?.includes('ip')}
 
@@ -232,9 +239,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             );
                       }}
@@ -260,11 +269,12 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
@@ -275,8 +285,15 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                       checked={field.value?.includes("termination")}
                       onCheckedChange={(checked) => {
 
-
-
+                        const currentValues = field.value |[];
+                        return checked
+                          ? field.onChange([...currentValues, "termination"])
+                          : field.onChange(
+                              currentValues.filter(
+                                (value) => value !== "termination"
+                              )
+                                (value) => value !== "termination",
+                              ),
 
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
@@ -290,12 +307,14 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             );
                       }}
@@ -320,13 +339,15 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
+
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+
 
 
 
@@ -346,6 +367,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -358,12 +380,14 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             );
                       }}
@@ -391,6 +415,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -400,5 +425,6 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
+
 
 }

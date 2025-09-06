@@ -1,4 +1,21 @@
 
+import React from 'react',
+import Head from 'next/head';
+import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import ServiceAds from '../components/sections/ServiceAds';
+export default function ApiMockContractTestingPage() {
+import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import ServiceAds from '../components/sections/ServiceAds';
+export default function ApiMockContractTestingPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };
+
+
 
 
 
@@ -13,6 +30,23 @@
         'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
       price: 'Starting at $69/month'
       features: [
+
+        'OpenAPI/GraphQL import and live mock server'
+        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
+        'Dynamic data generators and scenario templates'
+        'Snapshot diffs and changelog with approvals'
+      ]
+      link: 'https://ziontechgroup.com/api-mock-contract-testing'
+      contactInfo
+    }
+        'OpenAPI/GraphQL import and live mock server',
+        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)',
+        'Dynamic data generators and scenario templates',
+        'Snapshot diffs and changelog with approvals',
+      ],
+      link: 'https://ziontechgroup.com/api-mock-contract-testing',
+      contactInfo,;
+    },;
 
   ];
   const tiers = [
@@ -31,6 +65,10 @@
       price: 'Custom'
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
     },  ];
+
+
+import React from 'react';
+import Head from 'next/head';
 
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -68,6 +106,8 @@ export default function ApiMockContractTestingPage(req, res) {
   }
 }
   ],
+
+
 
 
   return (
@@ -166,6 +206,7 @@ export default function ApiMockContractTestingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -173,12 +214,13 @@ export default function ApiMockContractTestingPage(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
       </div>
     </Layout>
+
 
 
 
@@ -210,11 +252,13 @@ export default function ApiMockContractTestingPage(req, res) {
 
 
 
+
   )
 }
 
     </Layout>);
 ;
+
 
 
 
@@ -225,5 +269,6 @@ export default function ApiMockContractTestingPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

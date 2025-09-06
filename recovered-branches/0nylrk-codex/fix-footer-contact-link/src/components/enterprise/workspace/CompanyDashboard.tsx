@@ -1,4 +1,22 @@
 
+import React from "react";
+import { WorkspaceHeader } from "./WorkspaceHeader";
+import { SharedInbox } from "./SharedInbox";
+import { TeamStats } from "./TeamStats";
+import { QuickActions } from "./QuickActions";
+import { RecentActivity } from "./RecentActivity";
+import { TalentPool } from "./TalentPool";
+export interface Company {;
+  id: string;
+  name: string;
+  logoUrl?: string;
+  theme?: {
+    primaryColor: string;
+    backgroundColor: string;
+    textColor: string;
+  };
+  plan: string;
+  teamSize: number;
 
 
 import React from "react",
@@ -7,6 +25,10 @@ import { SharedInbox } from "./SharedInbox",
 import { TeamStats } from "./TeamStats",
 import { QuickActions } from "./QuickActions",
 
+import { RecentActivity } from "./RecentActivity";
+import { TalentPool } from "./TalentPool";
+import { RecentActivity } from "./RecentActivity",
+import { TalentPool } from "./TalentPool",
 
 export interface Company {
   id: string,
@@ -14,13 +36,19 @@ export interface Company {
   logoUrl?: string,
   theme?: {
 
+    primaryColor: string;
+    backgroundColor: string;
 
 
-
-
-
-
-
+  plan: string;
+  teamSize: number;
+  teamLimit: number;
+  billingCycle: string;
+  workspaceUrl: string
+}
+interface CompanyDashboardProps {
+  company: Company;
+}
 
     primaryColor: string,
     backgroundColor: string,
@@ -39,12 +67,13 @@ import { QuickActions } from "./QuickActions",;
 import { RecentActivity } from "./RecentActivity",;
 import { TalentPool } from "./TalentPool",;
 export interface Company {;
-  id: string,;
-  name: string,;
-  logoUrl?: string,;
+  id: string;
+  name: string;
+  logoUrl?: string;
   theme?: {;
-    primaryColor: string,;
-    backgroundColor: string,;
+    primaryColor: string;
+    backgroundColor: string;
+
     textColor: string;
   },;
   plan: string,;
@@ -55,20 +84,23 @@ export interface Company {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
   teamLimit: number;
   billingCycle: string;
-  workspaceUrl: string;
+  workspaceUrl: string
 }
 
+;
+interface CompanyDashboardProps {;
 
-
-
-
-
+interface CompanyDashboardProps {
+;
+interface CompanyDashboardProps {;
 
   company: Company;
 }
@@ -84,12 +116,14 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
@@ -104,6 +138,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -111,12 +146,16 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         <div className="space-y-6">
           <TeamStats />
           <SharedInbox />
         </div>
       </div>
 
+    </div>
+  );
+}
 
   )
 ;
@@ -128,6 +167,42 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {;
 
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">;
         <div className="lg:col-span-2 space-y-6">;
+
+import React from './react';
+import { WorkspaceHeader  } from './WorkspaceHeader';
+import { SharedInbox  } from './SharedInbox';
+import { TeamStats  } from './TeamStats';
+import { QuickActions  } from './QuickActions';
+import { RecentActivity  } from './RecentActivity';
+import { TalentPool  } from './TalentPool';
+export interface Company {
+  id: string;
+  name: string;
+  logo_url?: string;
+  theme?: {
+    primary_color: string;
+    background_color: string;
+    text_color: string;
+  }
+  plan: string;
+  team_size: number;
+  team_limit: number;
+  billing_cycle: string;
+  workspace_url: string;
+}
+interface CompanyDashboardProps {
+  company: Company;
+}
+export /**
+ * CompanyDashboard - Function description
+ */
+function CompanyDashboard() {
+  return (
+    <div className="container mx - auto max - w-7xl py - 8 px - 4 md:px - 6">;
+      <WorkspaceHeader company={company} />;
+      <div className="mt - 8 grid grid - cols - 1 lg: grid - cols - 3 gap - 6">;
+        <div className="lg:col - span - 2 space - y-6">;
+
 
           <QuickActions />;
           <RecentActivity />;

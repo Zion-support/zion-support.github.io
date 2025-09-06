@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -21,10 +25,19 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-
-
-
-
+import {
+  ArrowRight
+  Brain
+  Zap
+  Shield
+  Rocket
+  Sparkles
+  Star
+  TrendingUp
+  Globe
+  Cpu
+  Lock
+  Cloud;
 
   ArrowRight,
   Brain,
@@ -38,6 +51,7 @@ import { motion } from 'framer-motion';
   Cpu,
 
 
+
   Lock,
   Cloud,
 } from 'lucide-react';
@@ -46,6 +60,7 @@ import Link from 'next / link';
 const Enhanced2026ServicesShowcase = () =>: any {
   const featured_services = [;
     {
+
       id: 'ai - business - intelligence - elite - 2026',
       name: 'AI Business Intelligence Elite 2026',
       description:;
@@ -110,28 +125,26 @@ const Enhanced2026ServicesShowcase = () =>: any {
       ],
     },
     {
-      id: 'neuromorphic - computing - platform - 2026',
-      name: 'Neuromorphic Computing Platform 2026',    {
-      id: 'neuromorphic - computing - platform - 2026',
+      id: 'neuromorphic-computing-platform-2026',
       name: 'Neuromorphic Computing Platform 2026',
-      description: 'Brain - inspired computing for next - generation AI with ultra - low power consumption and cognitive capabilities.',
-      price: '$1, 499';
-      period: '/month',
+      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
+      price: '$1,499',
+    period: '/month',
       icon: Cpu,
       color: 'from - green - 500 to - emerald - 500',
       category: 'Emerging Tech',
-      features: ['Brain - like ProcessingLow PowerReal - time LearningCognitive Computing'];
+      features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']
     }
     {
-      id: 'dna - computing - platform - 2026',
-      name: 'DNA Computing Platform 2026',
-      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
-      price: '$2, 999';
-      period: '/month',
-      icon: Globe,
-      color: 'from - indigo - 500 to - purple - 500',
-      category: 'Emerging Tech',
-      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready'];
+      id: 'dna-computing-platform-2026'
+      name: 'DNA Computing Platform 2026'
+      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.'
+      price: '$2,999';
+      period: '/month'
+      icon: Globe
+      color: 'from-indigo-500 to-purple-500'
+      category: 'Emerging Tech'
+      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']
     }
     {
       id: 'space - debris - tracking - system',
@@ -156,22 +169,22 @@ const Enhanced2026ServicesShowcase = () =>: any {
       ],
     },
     {
-      id: 'dna - computing - platform - 2026',
-      name: 'DNA Computing Platform 2026',
-      description:;
-        'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
-      price: '$2, 999',
-      period: '/month',
-      icon: Globe,
-      color: 'from - indigo - 500 to - purple - 500',
-      category: 'Emerging Tech',
-      features: [;
-        'Molecular Processing',
-        'Exponential Speed',
-        'Complex Algorithms',
-        'Research Ready',
-      ],
-    },
+      id: 'dna-computing-platform-2026'
+      name: 'DNA Computing Platform 2026'
+      description:
+        'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.'
+      price: '$2,999'
+      period: '/month'
+      icon: Globe
+      color: 'from-indigo-500 to-purple-500'
+      category: 'Emerging Tech'
+      features: [
+        'Molecular Processing'
+        'Exponential Speed'
+        'Complex Algorithms'
+        'Research Ready'
+      ]
+    }
     {
       id: 'space - debris - tracking - system',
       name: 'Space Debris Tracking System 2026',
@@ -199,9 +212,8 @@ import {;
   Lock,;
   Cloud,;
 
-
-
-
+  Lock,;
+  Cloud,;
 
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
@@ -338,6 +350,7 @@ const Enhanced2026ServicesShowcase = () => {;
       ],;
     },;
   ];
+
   const categories = [;
     {;
       name: 'AI Services',;
@@ -368,6 +381,8 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
+
+
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Background Effects */}
@@ -388,6 +403,8 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
+
+
         {/* Section Header */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -404,7 +421,9 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -420,6 +439,9 @@ const Enhanced2026ServicesShowcase = () => {;
             Experience the future with our cutting-edge AI, quantum, and
             emerging technology services designed to transform your business          </p>        >
 
+          className="text-center mb-16"
+        >
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               2026 Revolutionary Services
@@ -429,6 +451,8 @@ const Enhanced2026ServicesShowcase = () => {;
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
           </p>
         </motion.div>
+
+
 
 
         {/* Category Overview */}
@@ -448,7 +472,9 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -519,6 +545,7 @@ const Enhanced2026ServicesShowcase = () => {;
           viewport={{ once: true }}
 
 
+
           className='text - center mb - 16';
         >;
           <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -567,6 +594,7 @@ const Enhanced2026ServicesShowcase = () => {;
 
             >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
               <div
 
                 className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
@@ -586,6 +614,24 @@ const Enhanced2026ServicesShowcase = () => {;
             </motion && motion.div>;
 
 
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="group text-center"
+            >
+              <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
+                <category.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
+              <p className="text-2xl font-bold text-cyan-400">{category.count}</p>
+            </motion.div>
+          ))}
+
+        </motion && motion.div>;
+
+
+        {/* Featured Services Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+
+
 
 
         {/* Featured Services Grid */}
@@ -603,7 +649,7 @@ const Enhanced2026ServicesShowcase = () => {;
               key={service.id}
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+              transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               viewport={{ once: true }}
 
               whileHover={{ scale: 1.02, y: -5 }}
@@ -615,18 +661,18 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
             >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div
-                className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}
-              ></div>
-              <div className='relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300'>
+                className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>;
+              <div className='relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300'>;
                 {/* Service Header */}
-                <div className='flex items-center space-x-3 mb-4'>
+                <div className='flex items-center space-x-3 mb-4'>;
                   <div
 
               whileHover={{ scale: 1.02, y: -5 }}
@@ -659,9 +705,11 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     </h3>;
                     <p className='text-gray-400 text-sm'>{service && service.category}</p>                  </div>;
                 </div>;
+
                 {/* Description */}
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                  {service && service.description}
                 </p>;
+
                 {/* Features */}            >;
               <div className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>;
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">;
@@ -675,12 +723,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     <p className="text-gray-400 text-sm">{service && service.category}</p>;
                   </div>;
                 </div>;
+
                 {/* Description */}
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
                   {service && service.description}
                 </p>;
                 {/* Features */}
 
+
+                <div className="mb-4">
+                  <ul className="space-y-1">
+                    {service.features.slice(0, 2).map((feature, i) => (
+                      <li key={i} className="flex items-center text-gray-400 text-xs">
+                        <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
 
 
 
@@ -695,16 +750,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                       </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                     ))}
 
 
                   </ul>
                 </div>
+
 
 
 
@@ -730,6 +788,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
+
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -738,7 +797,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                       {service.period}
                     </span>
                   </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
 
                 <div className="flex items-center justify-between">
@@ -758,6 +816,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             </motion.div>
           ))}
         </div>
+
 
 
 
@@ -792,6 +851,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -808,7 +868,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -829,18 +891,18 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 transition={{ duration: 0.2 }}
               >
                 <Link
-                  href="/services"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200"
-                >
-                  <Rocket className="w-5 h-5 mr-2" />
-                  View All Services
-                </Link>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2, delay: 0.1 }}
-              >
+                  href='/services'
+                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200'>;
+                  <Rocket className='w-5 h-5 mr-2' />                  View All Services                  href="/services";
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200";
+                >;
+                  <Rocket className="w-5 h-5 mr-2" />;
+                </Link>;
+              </motion && motion.div>;
+              <motion&& motion.div
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}
+                transition={{ duration: 0 && 0.2, delay: 0 && 0.1 }}>;
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500/10 transition-all duration-200"
@@ -856,15 +918,16 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
     </section>
   );
 
+}
+};
 
+export default Enhanced2026ServicesShowcase;  )
+}
+export default Enhanced2026ServicesShowcase;
 
+export default Enhanced2026ServicesShowcase;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+}
+}
+export default Enhanced2026ServicesShowcase;
 

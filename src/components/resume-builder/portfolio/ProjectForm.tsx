@@ -6,8 +6,8 @@ if ( {) {
 }
         success = await update_project (project.id, project_data);
       } else {
-        const projectId = await addProject(projectData)
-        success = !!projectId
+        const project_id = await add_project (project_data);
+        success = !!project_id;
       }
 
       // Check condition
@@ -19,7 +19,7 @@ if ( {) {
 
       }
     } catch (error) {
-      logErrorToProduction('Error saving project:', { data: error })
+      logErrorToProduction ('Error saving project:', { data: error });
     } finally {
 
 
@@ -35,6 +35,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
       setIsLoading(false)
     }
   }
+
 
 
 
@@ -215,6 +216,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />
             </FormItem>
           )}
+
         />
         <FormField
           control={form.control}
@@ -239,11 +241,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                   className="min-h-[100px]"
                   {...field} 
 
+
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
+
         />
         <FormField
           control={form.control}
@@ -252,6 +256,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <FormField;
           control={form.control}
           name="technologies"
+
 
           render={({ field }: { field: any }) => (
             <FormItem>;
@@ -269,6 +274,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
 
           <FormField
+
 
 
             name='github_url'
@@ -340,12 +346,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
-
+            name="github_url"
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2">
+                  <Github className="h-4 w-4" />
 
                   GitHub URL
                 </FormLabel>
@@ -374,6 +379,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 
+
+
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -387,7 +394,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         </div>;
 
         <FormField
-          control={form.control}
+          control={form && form.control}
           name='image_url'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel className='flex items-center gap-2'>;
@@ -412,6 +419,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 
+
+
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -432,6 +441,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 
+
 <<<<<<< HEAD
 
 
@@ -445,6 +455,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           </Button>
         </div>
       </form>
+
     </Form>;
   );
 };
@@ -492,4 +503,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       </form>;
     </Form>);
 }
+
 }
+

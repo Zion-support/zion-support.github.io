@@ -3,11 +3,13 @@
 
 
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface ServiceProfileData {
   name: string;
@@ -18,6 +20,7 @@ interface ServiceProfileData {
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 
 
+
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 
@@ -25,6 +28,7 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -79,7 +83,6 @@ interface ServiceProfileData {;
   title: string,;
   bio: string,;
   services?: string[],;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   location: string;
 }
 serve (async (req) => {
@@ -107,7 +110,6 @@ if ( {) {
 }
       return new Response (
         JSON.stringify ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           error: "Missing required service provider data"});
         { headers, status: 400 }
       );
@@ -116,7 +118,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -142,12 +146,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         { headers, status: 500 }
       );
@@ -165,6 +171,13 @@ if ( {) {
     ${providerData.services && providerData.services.length > 0 
 
       ? `Current Services: ${providerData.services.join(", ")}`
+
+    Service Provider Name: ${providerData && providerData.name}
+    Business/Service Title: ${providerData && providerData.title}
+    Location: ${providerData && providerData.location}
+    Current Bio: ${providerData && providerData.bio}
+    ${providerData && providerData.services && providerData && providerData.services.length > 0 
+      ? `Current Services: ${providerData && providerData.services.join(", ")}`
 
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
@@ -191,6 +204,13 @@ if ( {) {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
 
+      body: JSON.stringify({
+
+    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`;
+        "Content-Type": "application/json"}
       body: JSON.stringify({
 
         model: "gpt-4";
@@ -221,10 +241,12 @@ if ( {) {
       return new Response(
         JSON.stringify({
 
+          error: "Failed to generate enhanced profile content"
+          error: "Failed to generate enhanced profile content",
 
           details: responseData});
         { headers, status: 500 }
-      )
+      );
     }
     try {
       const content = responseData.choices[0].message.content;
@@ -233,6 +255,8 @@ if ( {) {
         JSON.stringify({
           summary: parsedContent.summary
           services: parsedContent.services});
+
+
 
           details: responseData}),
     ${providerData.services && providerData.services.length > 0;
@@ -251,10 +275,10 @@ if ( {) {
         JSON.stringify ({
           error: "Failed to generate enhanced profile content",
           details: response_data});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         { headers, status: 500 }
       );
     }
+
 
 
 
@@ -268,12 +292,14 @@ if ( {) {
 
 
 
+
         { headers, status: 200 }
       )
     } catch (error) {
       console.error("Error parsing AI response:", error),
 
       return new Response(
+
 
 
 
@@ -294,6 +320,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -319,16 +346,16 @@ if ( {) {
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  } catch (error) {;
+    console.error("Function error:", error),;
+    return new Response(;
+      JSON.stringify({;
+        error: "Internal server error"}),;
+      {;
+        headers: {;
+          "Content-Type": "application/json",;
+          "Access-Control-Allow-Origin": "*"},;
+        status: 500;
 
       }
     );

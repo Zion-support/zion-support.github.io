@@ -1,12 +1,14 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 import { ProviderConnection, SyncLogEntry } from "./types";
@@ -25,6 +27,13 @@ export const crm = {
 
   async syncContact(
 
+    connection: ProviderConnection
+    contact: Record<string, any>
+  ) {
+    connection: ProviderConnection,
+    contact: Record<string, any>,
+  ) {;
+
     return mockProviderCall(connection, "sync_contact", { contact });
 
   }
@@ -34,10 +43,16 @@ export const crm = {
 // ATS actions
 export const ats = {
 
-
-
-
-
+  async updateStatus(
+    connection: ProviderConnection
+    status: Record<string, any>
+  ) {
+    connection: ProviderConnection,
+    status: Record<string, any>,
+  ) {;
+    return mockProviderCall(connection, "update_status", { status });
+  }
+}
 
 
   async createCandidate(
@@ -51,10 +66,12 @@ export const ats = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

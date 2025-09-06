@@ -8,6 +8,7 @@ interface TimelineStepProps {
 
 
 
+
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 
@@ -26,6 +27,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                 I have specific start and end dates
               </p>
             </div>
+
             <div
 
               onClick={() => updateFormData({ timeline: "fixed" })}
@@ -39,6 +41,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
 
 
+
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   Start Date
@@ -46,6 +49,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
+
 
             >;
               <h4 className='font-medium text-white'>Flexible Timeline</h4>;
@@ -114,6 +118,8 @@ function TimelineStep() {
 
 
 
+
+
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -131,6 +137,7 @@ function TimelineStep() {
                       onSelect={(date) => updateFormData({ startDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
+
 
 
 
@@ -184,6 +191,7 @@ function TimelineStep() {
                 </Popover>;
               </div>;
 
+
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
                         !formData.endDate && "text-zion-slate-light"
 
@@ -197,12 +205,41 @@ function TimelineStep() {
                     align='start'>;
                     <Calendar
 
+                      mode='single'
+                      selected={formData.startDate}
+                      onSelect={date => updateFormData({ startDate: date })}                      initialFocus
+                      className='p-3 pointer-events-auto'
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+              <div>
+                <Label className='block mb-2 text-zion-slate-light'>
+                  End Date
+                </Label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant='outline'
+                      className={cn(
+                        'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark'
+                        !formData.endDate && 'text-zion-slate-light'
+                      )}                    >
+                      <CalendarIcon className='mr-2 h-4 w-4' />
+                      {formData.endDate ? (
+                        format(formData.endDate, 'PPP')
+                      ) : (
+                        <span>Pick a date</span>
+
+
                       initialFocus;
                       className='p-3 pointer-events-auto';
                       disabled={date =>;
                         date < (formData && formData.startDate || new Date());
 
                       mode="single"
+
+
 
 
 
@@ -312,4 +349,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
       </div>;
     </div>);
 }
+
 ;
+

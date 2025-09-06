@@ -1,8 +1,24 @@
 
 
-
-
-
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { MessagingContextType  } from '@/types/messaging';
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
+// Default context used when React type definitions are missing
+const defaultContext: MessagingContextType = {
+  messages: [],
+  conversations: [],
+  unreadCount: 0,
+  activeConversation: null,
+  activeMessages: [],
+  isLoading: false,
+  sendMessage: async () => {},
+  createConversation: async () => {},
+  markAsRead: async () => {},
+  setActiveConversation: () => {},
+  fetchConversations: async () => {},
+  loadMessages: async () => {}
+};
 
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -23,6 +39,7 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
+
 
 
 
@@ -57,6 +74,7 @@ const MessagingContext = createContext(
   defaultContext as MessagingContextType
 
 );
+
 ),
 
 // Hook for using the messaging context
@@ -68,10 +86,10 @@ export function useMessaging(): MessagingContextType {
 
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider')
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return context;
 }
+
 
 
 
@@ -133,6 +151,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 
   const {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     messages;
     active_messages;
     setActiveMessages;
@@ -150,6 +169,11 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 
   return (
     <MessagingContext.Provider value={contextValue}>
+
+      {children}
+    </MessagingContext.Provider>
+  )
+}
 
 ;
 // Provider component;
@@ -197,6 +221,40 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
   const contextValue: MessagingContextType = {;
 
 
+    fetch_conversations;
+    load_messages;
+  } = useMessagingOperations (user);
+;
+  // Setup real - time subscription;
+  useMessagingRealtime (user, active_conversation, setActiveMessages, fetch_conversations);
+;
+  // Calculate unread count from conversations;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      const count = conversations.reduce ((acc, conversation) => acc + conversation.unread_count, 0);
+      setUnreadCount (count);
+    }
+  }, [conversations, setUnreadCount]);
+;
+  // Fetch conversations when user changes;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_conversations ();
+    } else {
+      set_conversations ([]);
+      setUnreadCount (0);
+    }
+  }, [user, fetch_conversations, set_conversations, setUnreadCount]);
+;
+  // Create context value with all the methods and states;
+  const context_value: MessagingContextType = {
+
     messages;
     active_messages;
     conversations;
@@ -215,17 +273,16 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
       {children}
-
-    </MessagingContext && MessagingContext.Provider>;
-  );
+    </MessagingContext.Provider>
+  )
 }
-
-=======
     fetch_conversations,
     load_messages;
   }

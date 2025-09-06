@@ -9,41 +9,63 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+  Star
+  TrendingUp
+  Users
+  Award
+  Clock
+  Heart
+  Brain
+  Atom
+  Shield
+  Rocket
+  Zap
+  Globe
+  CheckCircle
+  ArrowRight
+  Search
+  Filter
+  ChevronDown
+  ChevronUp
+  Eye
+  Play
+  Sparkles
+  Target
+  Microscope
+  Lock
+  Cloud
+  BarChart3
+  Settings
+  Cpu
+  Database
+  Network
+  Server
+  ShieldCheck
+  GlobeIcon
+  StarIcon
+  TrendingUpIcon
+  UsersIcon
+  CheckCircleIcon
+  ArrowRightIcon
+  CpuIcon
+  DollarSign
+  Phone
+  Mail
+  MapPin
+  Dna
+  Target as TargetIcon
+  Shield as ShieldIcon
+  BookOpen
+  Sparkles as SparklesIcon
+  Zap as ZapIcon
+  Brain as BrainIcon
+  Play as PlayIcon;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
+  Star, TrendingUp, Users, Award, Clock, Heart
+  Brain, Atom, Shield, Rocket, Zap, Globe
 
-
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   Star,
   TrendingUp,
@@ -97,6 +119,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
   Brain as BrainIcon,
   Play as PlayIcon,
 } from 'lucide-react';
@@ -120,6 +143,7 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   CpuIcon, DollarSign, Phone, Mail, MapPin;
   Dna, Target as TargetIcon, Shield as ShieldIcon;
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
+
 
   Brain as BrainIcon, Play as PlayIcon;
 } from 'lucide-react';
@@ -173,6 +197,9 @@ const stats = [
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
 
+export default function UltimateFuturisticServicesShowcase2025() {
+
+export default function UltimateFuturisticServicesShowcase2025() {;
 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -181,6 +208,7 @@ const stats = [
 
 
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
+
 
 
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -233,6 +261,7 @@ const stats = [
   });
 
 
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -255,6 +284,19 @@ const stats = [
         duration: 0.5
       }
     },  };        duration: 0.5
+        return b.rating - a.rating;
+      case 'customers':;
+        return b.customers - a.customers;
+      default: return b.popular ? 1 : -1
+    }
+  });
+;
+  const container_variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
       }
     }
   }
@@ -268,7 +310,6 @@ const stats = [
   return (
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <Layout>;
       <Head>;
         <title>;
@@ -287,6 +328,38 @@ const stats = [
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
       </Head>
+
+          href='https://ziontechgroup && ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
+        />;
+      </Head>;
+
+      {/* Hero Section */}
+      <section className='relative py-20 lg:py-32 overflow-hidden'>;
+        <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div        <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>;
+        <meta name="description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology." />;
+        <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />;
+        <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />;
+        <meta property="og:description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations." />;
+        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />;
+        <meta property="og:type" content="website" />;
+        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />;
+      </Head>;
+
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Ultimate Futuristic
+
+              </span>
+              <br />
 
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
                 Services 2025
@@ -377,7 +450,6 @@ const stats = [
             </p>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -395,6 +467,23 @@ const stats = [
                     <div className="text-2xl font-bold text-white">{stat && stat.number}</div>;
                     <div className="text-sm text-gray-300">{stat && stat.label}</div>;
                 </motion && motion.div>;
+
+
+            <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {stats.map ((stat, index) => (                Ultimate Futuristic;
+              </span>;
+              <br />;
+              <span className="bg - gradient - to - r from - blue - 400 via - indigo - 400 to - violet - 400 bg - clip - text text - transparent">;
+                Services 2025;
+              </span>;
+            </h1>;
+            <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
+              Experience the future of technology with our revolutionary services that combine AI consciousness,
+              quantum computing, space technology, and breakthrough innovations to transform your business.;
+            </p>;
+            <div className="flex flex - wrap justify - center gap - 4 mb - 12">;
+              {stats.map ((stat, index) => (
+                <motion.div;
+
 
 
 
@@ -419,10 +508,12 @@ const stats = [
 
 
 
+
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+
 
 
 
@@ -438,9 +529,10 @@ const stats = [
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             {/* Search */}
-            <div className='relative flex-1 max-w-md'>
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+            <div className='relative flex-1 max-w-md'>;
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
               <input
                 type='text'
                 placeholder='Search futuristic services...'
@@ -498,12 +590,14 @@ const stats = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     {category.title} ({category.count})
                   </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 ))}
               </select>
 
@@ -537,6 +631,8 @@ const stats = [
               </select>
 
 
+
+
               {/* Sort Options */}
               <select
                 value={sortBy}
@@ -550,7 +646,9 @@ const stats = [
                 <option value='customers'>Most Customers</option>;
               </select>;
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
               {/* Sort Options */}
               <select
@@ -561,7 +659,9 @@ const stats = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
               >
@@ -593,6 +693,7 @@ const stats = [
                 <option value="rating">Highest Rated</option>;
                 <option value="customers">Most Customers</option>;
               </select>;
+
               {/* View Mode Toggle */}
               <div className="flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1">
                 <button
@@ -628,9 +729,11 @@ const stats = [
         </div>
       </section>
       {/* Services Grid */}
-      <section className='py-16'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <motion.div
+
+      {/* Services Grid */}
+      <section className='py-16'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <motion&& motion.div
             variants={containerVariants}
             initial='hidden'
             animate='visible'
@@ -651,6 +754,7 @@ const stats = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -659,10 +763,10 @@ const stats = [
 
 
 
+
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variants={itemVariants}
                 className={`group relative ${
 
@@ -670,8 +774,12 @@ const stats = [
 
 
 
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
             {sortedServices.map((service, index) => (
               <motion.div
@@ -728,8 +836,10 @@ const stats = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -740,23 +850,36 @@ const stats = [
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
 
+                  <div className='absolute top - 4 right - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - semibold px - 3 py - 1 rounded - full'>                    Popular                  <div className="absolute top - 4 right - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - semibold px - 3 py - 1 rounded - full">;
+                    Popular;
+                  </div>)}
+                {/* Service Header */}
+                <div;
+                  className={`${view_mode === 'list' ? 'flex items - start space - x-6' : 'text - center'}`}
+                >;
+                  <div;
+                    className={`${view_mode === 'list' ? 'flex - shrink - 0' : 'mx - auto mb - 4'}`}
+                  >;
+                    <div;
+                      className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} flex items - center justify - center text - 3xl`}
+                    >;
+                      {service.icon}
+                    </div>;
+                  </div>;
+                  <div className={`${view_mode === 'list' ? 'flex - 1' : ''}`}>;
+                    <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors'>;
+
                       {service.name}
                     </h3>;
                     <p className='text - gray - 300 text - sm mb - 3'>;
                       {service.tagline}
-
-                    </p>;
-
+                    </p>
                     {/* Price */}
                     <div className='flex items - center justify - center space - x-2 mb - 4'>;
                       <span className='text - 3xl font - bold text - white'>;
                         {service.price}
-
-                <div className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}>
-                  <div className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}>
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}>
-                      {service.icon}
-
+                      </span>
+                      <span className='text-gray-400'>{service.period}</span>                    </div>                      {service.icon}
                     </div>
                   </div>
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
@@ -772,49 +895,9 @@ const stats = [
                   </div>
                 </div>
                 {/* Description */}
-
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} flex items-center justify-center text-3xl`}>;
-                      {service && service.icon}
-                    </div>;
-                  </div>;
-
-                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>;
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>;
-                      {service && service.name}
-                    </h3>;
-                    <p className='text-gray-300 text-sm mb-3'>;
-                      {service && service.tagline}
-                    </p>;
-
-                    {/* Price */}
-                    <div className='flex items-center justify-center space-x-2 mb-4'>;
-                      <span className='text-3xl font-bold text-white'>;
-                        {service && service.price}
-                      </span>;
-                      <span className='text-gray-400'>{service && service.period}</span>                    </div>                      {service && service.icon}
-                    </div>;
-                  </div>;
-
-                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>;
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">;
-                      {service && service.name}
-                    </h3>;
-                    <p className="text-gray-300 text-sm mb-3">{service && service.tagline}</p>;
-
-                    {/* Price */}
-                    <div className="flex items-center justify-center space-x-2 mb-4">;
-                      <span className="text-3xl font-bold text-white">{service && service.price}</span>;
-                      <span className="text-gray-400">{service && service.period}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-
-                {/* Description */}
-                <p className='text-gray-300 mb-6 leading-relaxed'>;
-                  {service && service.description}
-                </p>;
-
-
+                <p className='text-gray-300 mb-6 leading-relaxed'>
+                  {service.description}
+                </p>
                 {/* Features */}
                 <div className='mb-6'>;
                   <h4 className='text-white font-semibold mb-3 flex items-center'>;
@@ -831,8 +914,29 @@ const stats = [
                     ))}
 
 
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      </span>;
+                      <span className='text - gray - 400'>{service.period}</span>                    </div>                      {service.icon}
+                    </div>;
+                  </div>;
+                  <div className={`${view_mode === 'list' ? 'flex - 1' : ''}`}>;
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
+                  <div className='absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full'>                    Popular                  <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    Popular
+                  </div>
+                )}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {/* Service Header */}
+                <div
+                  className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}
+                >
+                  <div
+                    className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}
+                  >
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}
+                    >
+
 
                       {service.icon}
                     </div>
@@ -854,9 +958,9 @@ const stats = [
                   {service.description}
                 </p>;
                 {/* Features */}
-                <div className='mb - 6'>;
-                  <h4 className='text - white font - semibold mb - 3 flex items - center'>;
-                    <Sparkles className='w - 4 h - 4 mr - 2 text - purple - 400' />;
+                <div className="mb-6">;
+                  <h4 className="text-white font-semibold mb-3 flex items-center">;
+                    <Sparkles className="w-4 h-4 mr-2 text-purple-400" />;
                     Key Features;
                   </h4>;
                   <div className='grid grid - cols - 1 gap - 2'>;
@@ -880,6 +984,7 @@ const stats = [
                     {service.features.slice (0, 4).map ((feature, idx) => (
                       <div key={idx} className="flex items - center text - sm text - gray - 300">;
                         <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
+
 
 
                         {feature}
@@ -910,6 +1015,7 @@ const stats = [
                   </div>
                 </div>
 
+
                         {feature}
                       </div>
                     ))}
@@ -925,11 +1031,13 @@ const stats = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 {/* Service Details */}
                 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
@@ -938,6 +1046,7 @@ const stats = [
                     <span className='text-white font-medium'>
                       {service.setupTime}
                     </span>
+
 
 
 
@@ -956,6 +1065,7 @@ const stats = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   </div>
@@ -1084,6 +1194,7 @@ const stats = [
                       <span className="font-semibold text-white">Market Size: </span> {service && service.marketSize}
                   </div>;
                 </div>;
+
                 {/* Action Buttons */}
 
                     href={service && service.link}
@@ -1151,11 +1262,13 @@ const stats = [
                 {/* Contact Info */}
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       </a>
                     </div>
@@ -1164,6 +1277,7 @@ const stats = [
               </motion.div>
             ))}
           </motion.div>
+
 
 
 
@@ -1188,6 +1302,7 @@ const stats = [
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           {/* No Results */}
 
           {sortedServices.length === 0 && (
@@ -1196,18 +1311,27 @@ const stats = [
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
               <button
-                onClick={() => {
+
+                onClick={() => {;
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                }}
+                className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300'              >              <button
+                onClick={() => {;
 
                   setSearchTerm('');
 
-                  setSelectedCategory('all');
-
+                  setSelectedCategory('all')
                 }}
-
-
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300";
+              >;
+                Clear Filters;
+              </button>;
+            </div>;
           )}
         </div>
       </section>
+
 
 
 
@@ -1228,11 +1352,13 @@ const stats = [
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
+
 
 
 
@@ -1248,6 +1374,7 @@ const stats = [
 
 
 
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1255,13 +1382,14 @@ const stats = [
           >
             <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">
               Ready to Experience the Future?
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with our revolutionary futuristic services.
               Get in touch with our experts to discuss your specific needs and implementation strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+
 
 
 
@@ -1277,13 +1405,25 @@ const stats = [
               <Link
                 href="/contact"
 
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Our Experts
+              </Link>
+              <Link
+                href='/pricing'
+                className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'                href="/pricing"
+                className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
 
-
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 }
   );
 }
@@ -1494,10 +1634,12 @@ const stats = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

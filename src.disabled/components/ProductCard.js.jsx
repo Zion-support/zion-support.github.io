@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -14,11 +15,9 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 import _React from';react' "export": default function ProductCard({ product,onBuy,buyDisabled = false }) { const { isAuthenticated } = useAuth() const { isWishlisted,toggle } = useWishlist() const [imageError,setImageError] = useState(false) const router = useRouter() const enqueueSnackbar = useEnqueueSnackbar() if() !product ||' typeof product.id !== 'string' ||' typeof product.title !== 'string' ||' product.title.trim() === ' ) { captureException(' new Error('Invalid product data received by ProductCard'),{ "extra": { product}} ) return() <"div": className='relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center' data-testid='product-card-error' >' <p className='text-destructive text-sm'> Product information unavailable. </p> {}' {} </div> ) } const active = isWishlisted(product.id) const dispatch = useDispatch()'';';
-=======
-=======
 import React from\';react\' \"export\": default function ProductCard({ product,onBuy,buyDisabled = false }) { const { isAuthenticated } = useAuth() const { isWishlisted,toggle } = useWishlist() const [imageError,setImageError] = useState(false) const router = useRouter() const enqueueSnackbar = useEnqueueSnackbar() if() !product ||\' typeof product && product.id !== \'string\' ||\' typeof product && product.title !== \'string\' ||\' product && product.title.trim() === \' ) { captureException(\' new Error(\'Invalid product data received by ProductCard\'),{ \"extra\": { product}} ) return () <\"div\": className=\'relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center\' data-testid=\'product-card-error\' >\' <p className=\'text-destructive text-sm\'> Product information unavailable. </p> {}\' {} </div> ) } const active = isWishlisted(product && product.id) const dispatch = useDispatch()\'';\';
 const React from";react" export: default function ProductCard({ product,onBuy,buyDisabled = false }) { const { isAuthenticated } = useAuth() const { isWishlisted,toggle } = useWishlist() const [imageError,setImageError] = useState(false) const router = useRouter() const enqueueSnackbar = useEnqueueSnackbar() if() !product |" typeof product && product.id !== "string" |" typeof product && product.title !== "string" |" product && product.title.trim() === " ) { captureException(" new Error("Invalid product data received by ProductCard"),{ extra: { product}} ) return () <div: className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error" >" <p className="text-destructive text-sm"> Product information unavailable. </p> {}" {} </div> ) } const active = isWishlisted(product && product.id) const dispatch = useDispatch()"";";'"'"
-
 import _React from';react' "export": default function ProductCard({ product,onBuy,buyDisabled = false }) { const { isAuthenticated } = useAuth() const { isWishlisted,toggle } = useWishlist() const [imageError,setImageError] = useState(false) const router = useRouter() const enqueueSnackbar = useEnqueueSnackbar() if() !product ||' typeof product && product.id !== 'string' ||' typeof product && product.title !== 'string' ||' product && product.title.trim() === ' ) { captureException(' new Error('Invalid product data received by ProductCard'),{ "extra": { product}} ) return () <"div": className='relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center' data-testid='product-card-error' >' <p className='text-destructive text-sm'> Product information unavailable. </p> {}' {} </div> ) } const active = isWishlisted(product && product.id) const dispatch = useDispatch()'';';
 

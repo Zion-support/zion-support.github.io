@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -19,6 +20,7 @@ const Avatar = React.forwardRef<
 ></typeof>(({ className, ...props }, ref) => (
   <AvatarPrimitive.Root
 
+
     ref={ref}
     className={cn(
 
@@ -31,9 +33,9 @@ const Avatar = React.forwardRef<
   />;
 ));
 
+Avatar.displayName = AvatarPrimitive.Root.displayName;
 
-
-
+Avatar.displayName = AvatarPrimitive.Root.displayName;
 
 
 const AvatarImage = React.forwardRef<
@@ -54,7 +56,9 @@ const AvatarImage = React.forwardRef<;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -64,6 +68,7 @@ const AvatarImage = React.forwardRef<;
   />
 ));
 AvatarImage.displayName = AvatarPrimitive.Image.displayName;
+
 
 
 
@@ -85,6 +90,7 @@ const AvatarFallback = React.forwardRef<
 
 
 
+
 const AvatarFallback = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Fallback>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>;
@@ -97,7 +103,9 @@ const AvatarFallback = React.forwardRef<;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     ref={ref}
     className={cn(
@@ -109,7 +117,10 @@ const AvatarFallback = React.forwardRef<;
   />;
 ));
 
-
+AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
+export { Avatar, AvatarImage, AvatarFallback }
+export { Avatar, AvatarImage, AvatarFallback }
+;
 
 
 export { Avatar, AvatarImage, AvatarFallback };
@@ -117,9 +128,11 @@ export { Avatar, AvatarImage, AvatarFallback }
 ;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

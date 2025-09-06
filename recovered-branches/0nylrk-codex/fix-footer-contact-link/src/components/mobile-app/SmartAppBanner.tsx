@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState, useEffect } from "react";
 import {X, ArrowRight} from "lucide-react";
 import {Link} from "react-router-dom";
@@ -29,6 +30,7 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string;
   delay?: number, // Delay in milliseconds before showing the banner;
 }
+
 
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
@@ -129,6 +131,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
@@ -139,6 +142,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
+
 
 
 
@@ -230,6 +234,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 
 
 
+
 export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({
   app_name = "Zion Marketplace";
   appIconSrc;
@@ -309,5 +314,6 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

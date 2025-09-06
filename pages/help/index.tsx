@@ -2,11 +2,18 @@
 
 import Link from 'next/link';
 
+import { readJson  } from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
+export async function getStaticProps() {
 
+
+import {readJson} from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
 
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return { props: { articles } };
+
 
 
 
@@ -26,6 +33,7 @@ export async function getStaticProps() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <div className="space-y-8">
@@ -51,10 +59,10 @@ export async function getStaticProps() {;
       ))}
     </div>
 
+);
 
-
-
-
+}
+}
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -80,10 +88,12 @@ export async function getStaticProps() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

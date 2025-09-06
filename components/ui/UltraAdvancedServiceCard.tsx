@@ -4,28 +4,42 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-
-
-
-
-
-
+import {
+  ArrowRight,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Clock,
+  Check,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,;
+  Globe,;} from 'lucide-react';
 
 
 import {
@@ -44,6 +58,7 @@ import {
   DollarSign
   Lock
   Globe;} from 'lucide-react';
+
 
 
 import {
@@ -70,6 +85,7 @@ interface UltraAdvancedServiceCardProps {
 
 
 
+
 import {;
   ArrowRight,;
   ExternalLink,;
@@ -86,11 +102,13 @@ import {;
   DollarSign,;
   Lock,;
   Globe,;} from 'lucide-react';
+
 interface UltraAdvancedServiceCardProps {;
   service: {import { ;
   ArrowRight, ExternalLink, Star, TrendingUp, ;
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe;
+
 interface UltraAdvancedServiceCardProps {;
   service: {;
     id: string;
@@ -103,6 +121,7 @@ interface UltraAdvancedServiceCardProps {;
     popular: boolean;
     icon: string;
     color: string;
+
 
 
     text_color: string;
@@ -122,6 +141,7 @@ interface UltraAdvancedServiceCardProps {;
     growth_rate: string;
     variant: string;
 
+
     contact_info: {
 
       mobile: string;
@@ -140,21 +160,23 @@ interface UltraAdvancedServiceCardProps {;
     rating: number;
 
 
-    reviews: number;
-  };
-
-
 
     reviews: number;
   };
 
 
 
+    reviews: number;
+  };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
 
 
   service: {
+      
     id: string,
     name: string,
     tagline: string,
@@ -197,12 +219,16 @@ interface UltraAdvancedServiceCardProps {;
 
 
 
+
+
     reviews: number
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+
+
 
 
 
@@ -247,6 +273,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     if (category.includes('Security') |category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
     if (category.includes('Internet') |category.includes('Network')) return <Globe className="w-4 h-4" />
     return <Zap className="w-4 h-4" />
+
 
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({;
   service,;
@@ -376,33 +403,64 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
+
         style={{
           background: `linear-gradient(135deg, ${service.color})`;
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
       />
       {/* Main Card */}
 
-
-
-
-      <div 
-
+    hidden: { opacity: 0, height: 0 },
 
       <div 
 
 
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    },
+  };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+        onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+    >
+      {/* Glow Effect */}
+      <div  return (
+    <motion.div
+      className="relative group"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover="hover"
+      onHoverEnd={() => setIsHovered(false)}
+    >
+      {/* Glow Effect */}
+      <div
+        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
+          isHovered ? 'opacity-100' : 'opacity-50'
+        }`}
+        style={{
+          background: `linear-gradient(135deg, ${service.color})`
+          transform: isHovered ? 'scale(1.05)' : 'scale(1)'
+        }}
+      />
+      {/* Main Card */}
+      <div        className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
+          isHovered ? 'shadow-2xl' : 'shadow-lg'
+        }`}
+      >
+        <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
+          isHovered ? 'opacity-100' : 'opacity-50';
+        }`}
+        style={{
+          background: `linear-gradient(135deg, ${service.color})`;
+          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
+      />
+      {/* Main Card */}
+      <div
+    hidden: { opacity: 0, height: 0 },
 
       <div 
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
@@ -442,6 +500,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             </div>
             {service.popular && (
               <motion.div
+
 
 
 
@@ -503,6 +562,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
+
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -548,12 +608,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             </div>
           </div>
@@ -596,19 +658,77 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
           </div>
 
+          </div>;
+          {/* Tagline */}
+          <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service && service.tagline}
+          </p>;
+          {/* Price */}          <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
+            {service && service.tagline}
+          </p>;
+          {/* Price */}
+          <div className='flex items-center justify-between mb-4'>;
+            <div className='flex items-baseline space-x-1'>;
+              <span className='text-2xl font-bold text-white'>;
+                {service && service.price}
+              </span>;
+              <span className='text-gray-400'>{service && service.period}</span>;
+            <div className='flex items-center space-x-2'>;
+              <div className='flex items-center space-x-1'>;
+                <Star className='w-4 h-4 text-yellow-400 fill-current' />;
+                <span className='text-white text-sm'>{service && service.rating}</span>;
+              </div>;
+              <span className='text-gray-400 text-sm'>({service && service.reviews})</span>            </div>;
+          </div>;
+          {/* Quick Stats */}              <span className="text-gray-400 text-sm">({service && service.reviews})</span>;
+            </div>;
+          </div>;
+          {/* Quick Stats */}
+          <div className='grid grid-cols-2 gap-3 mb-4'>;
+            <div className='flex items-center space-x-2 text-sm'>;
+              <Users className='w-4 h-4 text-blue-400' />;
+              <span className='text-gray-300'>;
+                {service && service.customers.toLocaleString()}+ users;
+              </span>;
+            </div>;
+            <div className='flex items-center space-x-2 text-sm'>;
+              <Clock className='w-4 h-4 text-green-400' />;
+              <span className='text-gray-300'>;
+                {service && service.trialDays} day trial;
+              </span>            </div>;
+          </div>;
+          {/* Market Data */}          <div className="grid grid-cols-2 gap-3 mb-4">;
+            <div className="flex items-center space-x-2 text-sm">;
+              <Users className="w-4 h-4 text-blue-400" />;
+              <span className="text-gray-300">{service && service.customers.toLocaleString()}+ users</span>;
+            </div>;
+            <div className="flex items-center space-x-2 text-sm">;
+              <Clock className="w-4 h-4 text-green-400" />;
+              <span className="text-gray-300">{service && service.trialDays} day trial</span>;
+          </div>;
+          {/* Market Data */}
+          <div className='bg-gray-800/50 rounded-lg p-3 mb-4'>;
+            <div className='flex items-center justify-between text-sm'>;
+              <span className='text-gray-400'>Market Size:</span>;
+              <span className='text-green-400 font-semibold'>;
+                {service && service.marketSize}
+              </span>;
+            </div>;
+            <div className='flex items-center justify-between text-sm mt-1'>;
+              <span className='text-gray-400'>Growth Rate:</span>;
+              <span className='text-blue-400 font-semibold'>;
+                {service && service.growthRate}
+              </span>            </div>          <div className="bg-gray-800/50 rounded-lg p-3 mb-4">;
+            <div className="flex items-center justify-between text-sm">;
+              <span className="text-gray-400">Market Size:</span>;
+              <span className="text-green-400 font-semibold">{service && service.marketSize}</span>;
+            </div>;
+            <div className="flex items-center justify-between text-sm mt-1">;
+              <span className="text-gray-400">Growth Rate:</span>;
+              <span className="text-blue-400 font-semibold">{service && service.growthRate}</span>;
+          </div>;
 
+          </div>
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -625,6 +745,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
                   </p>
                 </div>
+
 
 
 
@@ -670,10 +791,12 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                 {/* ROI */}
                 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
                   <p className='text-gray-300 text-sm'>{service.roi}</p>
+
 
 
 
@@ -692,6 +815,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 </div>
@@ -777,18 +901,27 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+                {/* Contact Info */}
+                <div className="bg-gray-800/50 rounded-lg p-3">
+                  <h4 className="text-white font-semibold mb-2">Contact Information</h4>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-400">Mobile:</span>
+                      <span className="text-white">{service.contactInfo.mobile}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-400">Email:</span>
+                      <span className="text-white">{service.contactInfo.email}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-400">Address:</span>
+                      <span className="text-white text-xs">{service.contactInfo.address}</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
 
           {/* Action Buttons */}
@@ -969,6 +1102,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
             <motion.button
 
+              whileHover={{ scale: 1 && 1.02 }}
+              whileTap={{ scale: 0 && 0.98 }}
+              onClick={() => window && window.open(service && service.link, '_blank')}
+            >;
+              <span>Learn More</span>;
+              <ExternalLink className='w-4 h-4' />;
+            </motion && motion.button>;
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -980,7 +1122,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               }`}
@@ -994,6 +1138,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
+
             </motion && motion.button>;
           </div>;
 
@@ -1001,8 +1146,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
           {/* Expand/Collapse Indicator */}
-          <motion.div
+          <motion&& motion.div
             className='flex justify-center mt-4'
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
@@ -1013,7 +1159,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     </motion.div>
   );
 
-
+}
+};
 
 
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
@@ -1042,6 +1189,7 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1056,5 +1204,6 @@ export default UltraAdvancedServiceCard;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

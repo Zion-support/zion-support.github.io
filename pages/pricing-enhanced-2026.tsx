@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -147,6 +148,7 @@ export default function PricingEnhanced2026Page() {
       color: 'from-green-500 to-emerald-600'
     }
   ]
+
 export default function PricingEnhanced2026Page(req, res) {
   try {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
@@ -234,7 +236,9 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   ],
@@ -321,7 +325,7 @@ export default function PricingEnhanced2026Page(req, res) {
       description: 'ArrowRight-generation network security with continuous verification'
       features: ['Continuous verificationMicro-segmentationReal-time threat detection']
       link: 'https://ziontechgroup.com/services/zero-trust-network-architecture-2026'
-      icon: '🛡️'
+      icon: ''
       color: 'from-red-500 to-pink-600'
     }
     {
@@ -330,7 +334,7 @@ export default function PricingEnhanced2026Page(req, res) {
       description: 'AI-powered medical diagnostics with 95% accuracy rate'
       features: ['Medical image analysisDiagnosis predictionTreatment recommendations']
       link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics'
-      icon: '🏥'
+      icon: ''
       color: 'from-blue-500 to-cyan-600'
     }
     {
@@ -339,7 +343,7 @@ export default function PricingEnhanced2026Page(req, res) {
       description: 'Unbreakable quantum encryption for the future internet'
       features: ['Quantum key distributionPost-quantum cryptographyReal-time threat detection']
       link: 'https://ziontechgroup.com/services/quantum-internet-security-platform'
-      icon: '🔐'
+      icon: ''
       color: 'from-blue-500 to-cyan-600'
     }
   ]
@@ -420,12 +424,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
@@ -434,6 +440,7 @@ export default function PricingEnhanced2026Page(req, res) {
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
 
           {/* Twitter */}
+
 
 
           <meta name="twitter:card" content="summary_large_image" />;
@@ -452,6 +459,7 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -493,12 +501,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             className="max-w-7xl mx-auto text-center"
           >
@@ -510,7 +520,9 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
 
@@ -527,13 +539,15 @@ export default function PricingEnhanced2026Page(req, res) {
             </p>;
             {/* Billing Cycle Toggle */}
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
+              Achieve remarkable ROI with transparent, competitive pricing.
+            </p>
+            {/* Billing Cycle Toggle */}
+            {/* Billing Cycle Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
@@ -551,6 +565,7 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
             {/* Contact Information */  } catch (error) {
 
     console.error("Error:", error);
@@ -565,6 +580,7 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
               >;
                 <span;
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${;
@@ -581,6 +597,12 @@ export default function PricingEnhanced2026Page(req, res) {
               </span>
             </div>
 
+            {/* Contact Information */}
+            {/* Contact Information */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
@@ -613,12 +635,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
@@ -653,10 +677,12 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="relative"
                 >
@@ -687,6 +713,7 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="relative"
                 >
@@ -696,6 +723,7 @@ export default function PricingEnhanced2026Page(req, res) {
                     className={`h - full ${tier.popular ? 'ring - 2 ring - cyan - 500 ring - opacity - 50' : ''}`}
                   >;
                     {tier.popular && (
+
 
 
 
@@ -711,12 +739,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
@@ -743,12 +773,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       </div>
                       <ul className="text-left space-y-3 mb-8">
@@ -843,12 +875,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-12"
             >
@@ -907,6 +941,20 @@ export default function PricingEnhanced2026Page(req, res) {
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 
+                            {service}
+                          </li>
+                        ))}
+                            {service  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </li>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                       </ul>
 
@@ -927,12 +975,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       >
                         View Services
@@ -995,12 +1045,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-12"
             >
@@ -1057,6 +1109,20 @@ export default function PricingEnhanced2026Page(req, res) {
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 
+                            {feature}
+                          </li>
+                        ))}
+                            {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </li>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                       </ul>
 
@@ -1078,12 +1144,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         >
                           Learn More
@@ -1163,12 +1231,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
@@ -1194,12 +1264,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -1220,12 +1292,14 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -1246,11 +1320,13 @@ export default function PricingEnhanced2026Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

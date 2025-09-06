@@ -6,6 +6,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 interface OnboardingStatus {
@@ -27,6 +29,8 @@ interface OnboardingStatus {
   responseReceived: boolean
 }
 
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
 
 export function useOnboardingStatus() {
   const { user } = useAuth(),
@@ -110,12 +114,14 @@ export function useOnboardingStatus() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         }
         if (data) {
@@ -128,6 +134,20 @@ export function useOnboardingStatus() {;
             inviteSent: data.talent_invited |false
             responseReceived: data.quote_received |false
           })
+
+import {useState, useEffect} from "react";
+import {useAuth} from "./useAuth";
+import {supabase} from "@/integrations/supabase/client";
+interface OnboardingStatus {;
+  profileCompleted: boolean,;
+  skillsAdded: boolean,;
+  availabilitySet: boolean,;
+  matchReceived: boolean,;
+  jobPosted: boolean,;
+  inviteSent: boolean,;
+  responseReceived: boolean;
+}
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -151,5 +171,48 @@ export function useOnboardingStatus() {;
         }
 
 
+      } catch (err) {
+        console.error("Error in onboarding status hook:", err)
+      }
+    }
+    fetchOnboardingStatus()
+  }, [user]);
 
+
+
+
+
+    fetchOnboardingStatus();
+  }, [user]);
+
+  return status;
+}
+
+import { useState, useEffect } from './react';
+import { use_auth } from './use_auth';
+import { supabase } from '@/integrations / supabase / client';
+interface OnboardingStatus {
+  profile_completed: boolean,
+  skills_added: boolean,
+  availability_set: boolean,
+  match_received: boolean,
+  job_posted: boolean,
+  invite_sent: boolean,
+  response_received: boolean;
+}
+export /**
+ * useOnboardingStatus - Function description
+ */
+function useOnboardingStatus() {
+  const { user } = use_auth ();
+  const [status, set_status] = useState < OnboardingStatus>({
+    profile_completed: false,
+    skills_added: false,
+    availability_set: false,
+    match_received: false,
+    job_posted: false,
+    invite_sent: false,
+    response_received: false;
+  });
+;
 

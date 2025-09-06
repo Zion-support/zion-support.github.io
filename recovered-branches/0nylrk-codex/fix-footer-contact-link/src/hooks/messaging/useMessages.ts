@@ -1,12 +1,16 @@
 
 
-
-
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Message, Conversation  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';
 
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+
+
 
 
 
@@ -21,6 +25,18 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook to handle message operations
  */
 export function useMessages(
+
+import {UserProfile, UserDetails} from '@/types / auth';
+import {supabase} from '@/integrations / supabase / client';
+import {Message, Conversation} from '@/types / messaging';
+import {toast} from '@/hooks / use - toast';
+// Allow either UserProfile or UserDetails;
+type UserWithProfile = UserProfile | UserDetails | null;
+;
+/**;
+* Hook to handle message operations;
+*/;
+export function use_messages (
 
   user: UserWithProfile;
   active_conversation: Conversation | null;
@@ -38,6 +54,43 @@ export function useMessages(
       }
     } catch (error) {
       console && console.error('Error fetching messages:', error)
+
+  fetch_conversations: () => Promise < void>) {
+  /**;
+  * Fetch messages for a conversation;
+  */;
+  const load_messages = async (conversation_id: string) => {
+    // Check condition
+if (return) {
+  $2
+}
+    setIsLoading (true),
+    try {
+      const { data, error } = await supabase;
+        .from ('messages');
+        .select ('*');
+        .eq ('conversation_id', conversation_id);
+        .order ('created_at', { ascending: true });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Use updater function for setActiveMessages;
+      setActiveMessages (() => data as Message[]);
+;
+      // Mark messages as read;
+      const unread_messages = data.filter (
+        msg => !msg.read && msg.recipient_id === user.id);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        await markAsRead (conversation_id);
+      }
+    } catch (error) {
+      console.error ('Error fetching messages:', error);
 
     } finally {
       setIsLoading (false);
@@ -97,7 +150,9 @@ export function useMessages(;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -111,6 +166,7 @@ export function useMessages(;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -120,6 +176,7 @@ export function useMessages(;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   /**
@@ -154,11 +211,8 @@ export function useMessages(;
         setActiveMessages(prev => [...prev, data as Message])
       }
 
-
-
-
-
-
+      // Update conversations list
+      await fetchConversations();
 
   },;
   /**;
@@ -196,7 +250,9 @@ export function useMessages(;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
       
@@ -210,6 +266,10 @@ export function useMessages(;
       console && console.error('Error sending message:', error);
       toast({
 
+        title: "Failed to send message";
+        description: "Please try again later"
+        variant: "destructive"
+      })
 
     }
   }
@@ -268,10 +328,10 @@ export function useMessages(;
 
     markAsRead
 
-
-
-
-
+        title: "Failed to send message",
+        description: "Please try again later",
+        variant: "destructive"
+      })
 
 ;
   /**;
@@ -378,6 +438,8 @@ if ( {) {
     markAsRead;
 
 
+
+
   }
 ;
   /**;
@@ -433,5 +495,4 @@ if (throw error) {
     send_message;
     markAsRead;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

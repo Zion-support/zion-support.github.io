@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -15,6 +16,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -23,6 +25,19 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
+
+import { Config } from './tailwindcss';
+import { font_family } from './tailwindcss / default_theme';
+import plugin from './tailwindcss / plugin';
+import animate_plugin from './tailwindcss - animate';
+const config: Config = {
+  dark_mode: ["class"],
+  content: [;
+    "./pages/**/*.{ts, tsx}";
+    "./components/**/*.{ts, tsx}";
+    "./app/**/*.{ts, tsx}";
+    "./src/**/*.{ts, tsx}"];
+  safelist: ['border - border'];
 
   theme: {
     container: {
@@ -159,6 +174,12 @@ const config: Config = {
         '.rtl': {
 
 
+
+          textAlign: 'left'}},
+      addUtilities(newUtilities)
+    })]},
+
+
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -251,6 +272,8 @@ const config: Config = {;
           textAlign: 'left'}},;
       addUtilities(newUtilities);
     })]},;
+
+
 
 export default config;
 

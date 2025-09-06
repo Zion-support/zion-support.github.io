@@ -49,10 +49,10 @@ const sheetVariants = cva(
   {
     variants: {
       side: {
-        top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
+        top: &quot;inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top&quot;
         bottom:
-          "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
-        left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
+          &quot;inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom&quot;
+        left: &quot;inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm&quot;
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
 
@@ -69,6 +69,54 @@ const SheetContent = React.forwardRef<
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
+
+import * as SheetPrimitive from &quot;@radix - ui / react - dialog & quot;
+import { cva, type VariantProps } from &quot;class - variance - authority & quot;
+import { X } from &quot;lucide-react & quot;
+import * as React from &quot;react & quot;
+;
+import { cn } from &quot;@/lib / utils & quot;
+;
+const Sheet = SheetPrimitive.Root;
+const SheetTrigger = SheetPrimitive.Trigger;
+const SheetClose = SheetPrimitive.Close;
+const SheetPortal = SheetPrimitive.Portal;
+const SheetOverlay = React.forward_ref<;
+  React.ElementRef < typeof SheetPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Overlay>;
+>(({ class_name, ...props }, ref) => (
+  <SheetPrimitive.Overlay;
+    className={cn (
+      &quot;fixed inset - 0 z - 50 bg - black / 80  data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0&quot;,
+      class_name)}
+    {...props}
+    ref={ref}
+  />));
+SheetOverlay.display_name = SheetPrimitive.Overlay.display_name;
+const sheet_variants = cva (
+  &quot;fixed z - 50 gap - 4 bg - background p - 6 shadow - lg transition ease - in - out data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:duration - 300 data-[state = open]:duration - 500 & quot;,
+  {
+    variants: {
+      side: {
+        top: &quot;inset - x-0 top - 0 border - b data-[state = closed]:slide - out - to - top data-[state = open]:slide - in - from - top & quot;,
+        bottom:;
+          &quot;inset - x-0 bottom - 0 border - t data-[state = closed]:slide - out - to - bottom data-[state = open]:slide - in - from - bottom & quot;,
+        left: &quot;inset - y-0 left - 0 h - full w - 3/4 border - r data-[state = closed]:slide - out - to - left data-[state = open]:slide - in - from - left sm:max - w-sm & quot;,
+        right:;
+          &quot;inset - y-0 right - 0 h - full w - 3/4  border - l data-[state = closed]:slide - out - to - right data-[state = open]:slide - in - from - right sm:max - w-sm & quot;}},
+    default_variants: {
+      side: &quot;right & quot;}}
+);
+interface SheetContentProps;
+  extends React.ComponentPropsWithoutRef < typeof SheetPrimitive.Content>,
+  VariantProps < typeof sheet_variants> { }
+const SheetContent = React.forward_ref<;
+  React.ElementRef < typeof SheetPrimitive.Content>,
+  SheetContentProps;
+>(({ side = &quot;right & quot;, class_name, children, ...props }, ref) => (
+  <SheetPortal>;
+    <SheetOverlay />;
+    <SheetPrimitive.Content;
 
       ref={ref}
       className={cn (sheet_variants ({ side }), class_name)}
@@ -87,12 +135,14 @@ const SheetContent = React.forwardRef<
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
@@ -145,7 +195,7 @@ const SheetTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
     ref={ref}
-    className={cn("text-lg font-semibold text-foreground", className)}
+    className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
     {...props}
   />;
 ));
@@ -157,6 +207,13 @@ const SheetDescription = React.forwardRef<;
 
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
+
+  />));
+SheetTitle.display_name = SheetPrimitive.Title.display_name;
+const SheetDescription = React.forward_ref<;
+  React.ElementRef < typeof SheetPrimitive.Description>,
+  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Description>;
+>(({ class_name, ...props }, ref) => (
 
   <SheetPrimitive.Description;
     ref={ref}
@@ -172,7 +229,6 @@ export {Sheet, SheetClose;
 export {;
 
   Sheet, SheetClose;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
 
 }

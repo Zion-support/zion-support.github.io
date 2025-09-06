@@ -1,5 +1,9 @@
 
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdminFromApi } from '../../../../utils/auth';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   const { allowed } = await ensureAdminFromApi(req)
@@ -29,6 +33,7 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
+
 
 
     .replace(/'/g, '&#039,')
@@ -82,5 +87,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

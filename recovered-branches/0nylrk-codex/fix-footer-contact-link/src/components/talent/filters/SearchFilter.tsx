@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -33,6 +34,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
       </div>
     </div>
 
+
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from "lucide-react",;
 import { SearchFilterProps } from "@/types/filters";
@@ -47,11 +49,14 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
 
+
+
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
         />;
       </div>;
     </div>;
   );
+
 
 
 
@@ -65,4 +70,5 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

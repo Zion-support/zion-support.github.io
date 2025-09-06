@@ -1,14 +1,9 @@
 
 
-
-
-
-
-
-
-
-
-
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
 
 interface EducationListProps {
   educationEntries: Education[];
@@ -28,6 +23,7 @@ interface EducationListProps {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -37,6 +33,7 @@ interface EducationListProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 }
 export function EducationList({
   educationEntries
@@ -44,6 +41,17 @@ export function EducationList({
   onDelete
 }: EducationListProps) {
   if (!educationEntries |educationEntries.length === 0) {
+
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+interface EducationListProps {;
+  educationEntries: Education[],;
+  onEdit: (education: Education) => void,;
+  onDelete: (id: string) => void;
+}
+
+export function EducationList(): any ({ educationEntries, onEdit, onDelete }: EducationListProps) {;
+  if (!educationEntries || educationEntries && educationEntries.length === 0) {;
 
     return null;
   }
@@ -68,9 +76,7 @@ export function EducationList({
   );
 }
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  )
+}
+;
 

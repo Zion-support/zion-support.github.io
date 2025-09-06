@@ -6,12 +6,14 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listProposals } from "../../../utils/data/proposals";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
 
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
@@ -29,11 +31,11 @@ export default async function handler(
     return res
       .status(500)
 
-
-
-
-
-
+      .json({ error: error?.message |"Failed to list proposals" });
+      .json({ error: error?.message || "Failed to list proposals" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
@@ -43,6 +45,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ proposals })
   } catch (error: any) {
     res.status(500).json({ error: error?.message || 'Failed to list proposals' });
+
 
   }
 
@@ -66,6 +69,7 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+
   }
 }
 
@@ -86,9 +90,11 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

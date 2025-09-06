@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -13,6 +14,7 @@ const DATA_DIR = path.join(process.cwd(), "data", "kyc");
 const FILE = path.join(DATA_DIR, "profiles.json");
 function load(): Record<string, KycProfile> {
   try {
+
     const raw = fs.readFileSync(FILE, "utf8");
     return JSON.parse(raw);
   } catch {
@@ -20,7 +22,7 @@ function load(): Record<string, KycProfile> {
   }
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET");
+  if (req.method !== "GET")
     return res.status(405).json({ error: "Method not allowed" });
   const { userId } = req.query as { userId?: string }
   if (!userId) return res.status(400).json({ error: "Missing userId" });
@@ -96,6 +98,7 @@ function load(): Record<string, KycProfile> {
 ;
 export default function handler(req, res) {
   try {
+
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     ok: true,;
     profile;
@@ -112,7 +115,13 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
 
+
+
+  });
+
+}
 

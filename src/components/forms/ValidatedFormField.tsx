@@ -14,6 +14,11 @@ import {;
   SelectItem,;
   SelectTrigger,;
 
+  SelectValue;
+} from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
+import { cn } from '@/lib/utils'
+
+
 
 
 import { Button } from '@/components/ui/button';
@@ -24,8 +29,19 @@ interface ValidationRule {;
   maxLength?: number;
   pattern?: RegExp;
 
-
-
+  custom?: (value: any) => string | null
+interface ValidatedFormFieldProps {
+  name: string;
+  label: string;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
+  placeholder?: string;
+  description?: string;
+  validation?: ValidationRule;
+  options?: { value: string, label: string }[],
+  form: any, // React Hook Form control
+  className?: string;
+  disabled?: boolean;
+  showValidIcon?: boolean;
 
   name: string
   label: string
@@ -47,6 +63,8 @@ interface ValidationRule {;
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
+
+
 
 
 
@@ -199,6 +217,7 @@ if ( {) {
       return validation.custom(value)
     }
 
+
     // Check condition
 if ( {) {
   $2
@@ -236,6 +255,7 @@ if (return null) {
 }
     switch (validation_state) {
       case 'validating':;
+
 
 
 
@@ -390,6 +410,7 @@ export function ValidatedFormField(): any ({;
   },
 
 
+
     switch (type) {
       case 'textarea':
         return (
@@ -414,6 +435,7 @@ export function ValidatedFormField(): any ({;
           </div>;
         );
 
+
         ),
 
 
@@ -432,6 +454,8 @@ export function ValidatedFormField(): any ({;
 
 
 
+
+
                     {option.label}
                   </SelectItem>
                 ))}
@@ -443,6 +467,7 @@ export function ValidatedFormField(): any ({;
           </div>
         )
         ),
+
 
 
 
@@ -506,6 +531,7 @@ export function ValidatedFormField(): any ({;
                 size='sm'
                 className='h-7 w-7 p-0'
                 onClick={() => setShowPassword(!showPassword)}
+
                 aria-label={showPassword ? 'Hide password' : 'Show password'}              >
                 type="button"
                 variant="ghost"
@@ -514,6 +540,14 @@ export function ValidatedFormField(): any ({;
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
+
+              </Button>
+            </div>
+          </div>
+        )
+        ),
+
+
 
 
 
@@ -573,10 +607,13 @@ export function ValidatedFormField(): any ({;
 
 
 
+
                   {fieldError.message}
                 </FormMessage>
               )}
               {description && !fieldError && (
+
+
 
                 <p className='text-sm text-muted-foreground'>{description}</p>
                 <p className="text-sm text-muted-foreground">{description}</p>
@@ -636,6 +673,8 @@ export const commonValidations = {
 
 
 
+
+
   }},
     };
   }};
@@ -688,4 +727,6 @@ export const commonValidations = {;
 
   }},
     }
+
   }};
+

@@ -1,12 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
-
-
-
-
-
+import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
+import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
@@ -24,6 +19,8 @@ import fs from 'fs';
 import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
+
+
 
 
 function load(): Record<string, KycProfile> {
@@ -61,6 +58,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     userId?: string;
+
+  } = req.body as {
+    user_id?: string;
 
     role?: KycRole;
     fullLegalName?: string;
@@ -186,7 +186,6 @@ export default function handler(req, res) {
     createdAt: now,;
     lastUpdatedAt: now,;
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
@@ -196,12 +195,16 @@ export default function handler(req, res) {
   save(db);
 
   res.status(200).json({
-    ok: true, profile,
-    requiredDocuments: getRequiredDocuments(role),
-    optionalDocuments: getOptionalDocuments(role)})
-}
 
+    ok: true
+    profile
+    requiredDocuments: getRequiredDocuments(role)
+optionalDocuments: getOptionalDocuments(role)
+  });
+
+}
   }
+
 
 
 
@@ -211,5 +214,6 @@ export default function handler(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

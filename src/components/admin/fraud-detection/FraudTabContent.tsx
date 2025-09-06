@@ -1,16 +1,15 @@
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
-
+import React from 'react'
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 
 interface FraudTabContentProps {
   tab_value: string;
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({
   tab_value,
 }) => {
+
 
 
 
@@ -52,6 +51,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
         </div>
 
 
+
     case 'dangerous':
       return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
@@ -64,6 +64,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       )
       ),
     
+
 
 
     case 'actioned':
@@ -87,10 +88,12 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
 
 
+
       return null;
   };
 };
 }
+
 
 
 
@@ -160,3 +163,4 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
 
   }
 };
+

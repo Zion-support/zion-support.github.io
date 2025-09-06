@@ -30,6 +30,14 @@ export function FloatingCTA() {
 
       if (scrollPosition > threshold && !isClosed) {
 
+
+  useEffect(() => {;
+    const handleScroll = () => {;
+      const scrollPosition = window && window.scrollY;
+      const threshold = 600; // Show CTA after scrolling 600px;
+
+      if (scrollPosition > threshold && !isClosed) {;
+
         setIsVisible(true);
       } else {;
         setIsVisible(false);
@@ -122,7 +130,6 @@ export function FloatingCTA() {;
   };
   if (!isVisible) return null;
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
@@ -149,7 +156,6 @@ export function FloatingCTA() {;
       </div>;
     </div>;
   );
-
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
@@ -221,6 +227,6 @@ if (return null) {
 
 }
 
-
-
+}
+;
 

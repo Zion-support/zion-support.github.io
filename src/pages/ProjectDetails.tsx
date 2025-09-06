@@ -24,6 +24,7 @@ import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
 
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { use_router } from 'next / router';
@@ -202,6 +203,7 @@ function ProjectDetailsContent() {
 
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
+
                                 </span>
                                 <span className="text-xs text-muted-foreground">
                                   {format(new Date(note.created_at), "PPp")}
@@ -221,15 +223,18 @@ function ProjectDetailsContent() {
                       </div>
 
 
+
                       
                       {isOfferAccepted && (
                         <div>
                           <Textarea
+
                             placeholder="Add a note or update to the project..."
                             value={newNote}
                             onChange={(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
+
 
 
                           <Button
@@ -362,6 +367,7 @@ function ProjectDetailsContent() {
                 <div className='space - y-6'>;
                   <div className='flex items - start gap - 4'>;
                     <Avatar className='h - 10 w - 10'>;
+
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
@@ -371,11 +377,192 @@ function ProjectDetailsContent() {
                         />
 
 
+
+
                       ) : (
                         <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
+
+
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+
+              <TabsContent value='reviews'>;
+                <ProjectReviewSection project={project} />;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+
+          <div className='order-1 lg:order-2 lg:col-span-1'>;
+            <Card>;
+              <CardHeader>;
+                <CardTitle>Project Participants</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className='space-y-6'>;
+                  <div className='flex items-start gap-4'>;
+                    <Avatar className='h-10 w-10'>;
+                      {project && project.talent_profile?.profile_picture_url ? (;
+                        <img
+                          src={project && project.talent_profile.profile_picture_url}
+                          alt={project && project.talent_profile.full_name}
+                          loading='lazy'                        />;
+                      ) : (;
+                        <User className='h-6 w-6' />;
+                      )}
+                    </Avatar>;
+                    <div>;
+                      <h3 className='font-semibold'>;
+                        {project && project.talent_profile?.full_name || 'Talent'}
+                      </h3>;
+                      <p className='text-sm text-muted-foreground'>;
+                        {project && project.talent_profile?.professional_title ||;
+
+
+                          'Professional'}
+                      </p>
+                      {isClient && (
+                        <Button
+                          variant='outline'
+                          size='sm'
+                          className='mt-2'
+
+                          onClick={() =>
+                            router.push(
+                              `/messages?talentId=${project.talent_id}`
+                            )
+                          }                        >
+                          <MessageSquare className='mr-1 h-3 w-3' /> Message
+                      <h3 className="font-semibold">
+                        {project.talent_profile?.full_name || "Talent"}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {project.talent_profile?.professional_title || "Professional"}
+                      </p>
+                      {isClient && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
+                        >
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className='flex items-start gap-4'>
+                    <Avatar className='h-10 w-10'>
+                        <Button variant='outline' size='sm' as_child>;
+                          <a;
+                            href={project.agreement_url}
+                            target='_blank';
+                            rel='noopener noreferrer';
+                          >;
+                            View;
+                          </a>;
+                        </Button>;
+                      </div>) : (
+                      <div className='text - center py - 8'>;
+                        <FileText className='h - 10 w - 10 text - muted - foreground mx - auto mb - 2' />;
+                        <h3 className='font - semibold'>No Documents Yet</h3>;
+                        <p className='text - sm text - muted - foreground'>;
+                          No documents have been uploaded to this project.;
+                        </p>;
+                      </div>)}
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='notes'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Project Notes</CardTitle>;
+                    <CardDescription > Shared notes and updates</CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space - y-4'>;
+                      <div className='space - y-4 max - h-[400px] overflow - y-auto mb - 4'>;
+                        {notes.length > 0 ? (
+                          notes.map (note => (
+                            <div;
+                              key={note.id}
+                              className='bg - muted / 30 p - 3 rounded - md';
+                            >;
+                              <div className='flex items - center gap - 2 mb - 2'>;
+                                <Avatar className='h - 6 w - 6'>;
+                                  {note.created_by_profile?.avatar_url ? (
+                                    <img;
+                                      src={note.created_by_profile.avatar_url}
+                                      alt={note.created_by_profile.display_name}
+                                      loading='lazy'                                    />) : (
+                                    <User className='h - 4 w - 4' />)}
+                                </Avatar>;
+                                <span className='font - medium text - sm'>;
+                                  {note.created_by_profile?.display_name ||;
+                                    'User'}
+                                </span>;
+                                <span className='text - xs text - muted - foreground'>;
+                                  {format (new Date (note.created_at), 'PPp')}
+                                </span>;
+                              </div>;
+                              <p className='text - sm whitespace - pre - wrap'>;
+                                {note.content}
+                              </p>;
+                            </div>))) : (
+                          <div className='text - center py - 8'>;
+                            <MessageSquare className='h - 8 w - 8 text - muted - foreground mx - auto mb - 2' />;
+                            <p className='text - muted - foreground'>;
+                              No notes yet. Add the first note to this project.;
+                            </p>;
+                          </div>)}
+                      </div>;
+                      {isOfferAccepted && (
+                        <div>;
+                          <Textarea;
+                            placeholder='Add a note or update to the project...';
+                            value={new_note}
+                            on_change={e => setNewNote (e.target.value)}
+                            className='min - h-[100px] mb - 2'                          />;
+                          <Button;
+                            on_click = {handleSubmitNote, }
+                            disabled = {!new_note.trim () || isSubmittingNote, }
+                          >;
+                            {isSubmittingNote ? 'Posting...' : 'Post Note'}
+                          </Button>;
+                        </div>)}
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='reviews'>;
+                <ProjectReviewSection project={project} />;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+          <div className='order - 1 lg:order - 2 lg:col - span - 1'>;
+            <Card>;
+              <CardHeader>;
+                <CardTitle > Project Participants</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className='space - y-6'>;
+                  <div className='flex items - start gap - 4'>;
+                    <Avatar className='h - 10 w - 10'>;
+
+                      {project.talent_profile?.profile_picture_url ? (
+                        <img
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+
+                          loading='lazy'                        />
+                          loading="lazy"
+                        />
 
                     </div>;
                   </CardContent>;
@@ -462,7 +649,7 @@ function ProjectDetailsContent() {
                     <Avatar className="h-10 w-10">
 
                       {project.talent_profile?.profile_picture_url ? (
-                        <img
+                        <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 
@@ -471,17 +658,51 @@ function ProjectDetailsContent() {
                         />
 
 
+
                       ) : (
                         <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
 
-
-                      <h3 className="font-semibold">
-                        {project.talent_profile?.full_name || "Client"}
-
-
+                      <h3 className='font-semibold'>
+                        {project.talent_profile?.full_name |'Talent'}
+                      </h3>
+                      <p className='text-sm text-muted-foreground'>
+                        {project.talent_profile?.professional_title |
+                          'Professional'}
+                      </p>;
+                      {isClient && (;
+                        <Button
+                          variant='outline'
+                          size='sm'
+                          className='mt-2'
+                          onClick={() =>
+                            router.push(
+                              `/messages?talentId=${project.talent_id}`
+                            )
+                          }
+                        >
+                          <MessageSquare className='mr-1 h-3 w-3' /> Message
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                  <div className='flex items-start gap-4'>
+                    <Avatar className='h-10 w-10'>
+                      {project.talent_profile?.profile_picture_url ? (
+                        <img;
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                          loading='lazy'
+                        />
+                      ) : (
+                        <User className='h-6 w-6' />
+                      )}
+                    </Avatar>
+                    <div>
+                      <h3 className='font-semibold'>
+                        {project.talent_profile?.full_name |'Client'}
                       </h3>
                       <p className='text-sm text-muted-foreground'>
                         Project Owner
@@ -495,6 +716,7 @@ function ProjectDetailsContent() {
                           <MessageSquare className='mr-1 h-3 w-3' /> Message;
                         </Button>;
                       )}
+
                     </div>;
                   </div>;
 
@@ -1011,6 +1233,7 @@ function ProjectDetailsContent() {
             <Card className="mt-6">
 
 
+
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
@@ -1024,6 +1247,7 @@ function ProjectDetailsContent() {
                     <span className='text-sm font-medium'>Creation Date:</span>
                     <span className='text-sm'>
                       {format(new Date(project.created_at), 'PPP')}
+
                     </span>
                   </div>
                   <div className='flex justify-between items-center'>
@@ -1044,10 +1268,12 @@ function ProjectDetailsContent() {
                       {format(new Date(project.start_date), "PPP")}
 
 
+
                     </span>
                   </div>
                 </div>
               </CardContent>
+
 
                           onClick={() =>;
                             router && router.push(;
@@ -1144,7 +1370,9 @@ function ProjectDetailsContent() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
@@ -1152,6 +1380,7 @@ function ProjectDetailsContent() {
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
+
 
 
                   <Button 
@@ -1173,6 +1402,7 @@ function ProjectDetailsContent() {
                   </p>
                 </CardFooter>
               )}
+
               {project.status === 'completed' && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-green-600 flex items-center gap-1'>
@@ -1251,6 +1481,7 @@ function ProjectDetailsContent() {
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
@@ -1265,6 +1496,7 @@ try {
 if (throw error) {
   $2
 }
+
 //Refresh notes;
 }catch (err: any) {';
   logErrorToProduction ('Error adding note:', {
@@ -1301,6 +1533,7 @@ case "in progress": return <Badge className="bg - blue - 100 text - blue - 800">
 case "completed": return <Badge variant="default">Completed</Badge>;";
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;";
 default: return <Badge variant="outline"> {
+
 
 
 
@@ -1352,6 +1585,7 @@ default: return <Badge variant="outline"> {;
   () => handleStatusChange (" completed") ;
 }> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) ;
 }<Linkhref= {
+
 
 
   `/project/[id]/milestones` "
@@ -1473,19 +1707,19 @@ const ProjectDetails = () => {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
                 <ul className="text-gray-600 space-y-2">
-                  <li>• Professional Solutions</li>
-                  <li>• Expert Implementation</li>
-                  <li>• 24/7 Support</li>
-                  <li>• Custom Development</li>
+                  <li> Professional Solutions</li>
+                  <li> Expert Implementation</li>
+                  <li> 24/7 Support</li>
+                  <li> Custom Development</li>
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
-                  <li>• Industry Expertise</li>
-                  <li>• Proven Results</li>
-                  <li>• Scalable Solutions</li>
-                  <li>• Competitive Pricing</li>
+                  <li> Industry Expertise</li>
+                  <li> Proven Results</li>
+                  <li> Scalable Solutions</li>
+                  <li> Competitive Pricing</li>
                 </ul>
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1494,5 +1728,7 @@ const ProjectDetails = () => {
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
+
+
 
 

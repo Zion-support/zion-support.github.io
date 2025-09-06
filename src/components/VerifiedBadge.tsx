@@ -91,6 +91,7 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
 
 
 
+
   return (
 
 
@@ -101,6 +102,7 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         <TooltipContent>
           <p>{label}</p>
         </TooltipContent>
+
       </Tooltip>;
     </TooltipProvider>;
   );
@@ -139,6 +141,7 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
         </TooltipContent>;
       </Tooltip>;
 
+
   );
 }
 
@@ -146,3 +149,4 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
 
     </TooltipProvider>);
 }
+

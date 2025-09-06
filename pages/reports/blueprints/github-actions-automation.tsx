@@ -3,6 +3,7 @@ import React from 'react';
 
 
 
+
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -15,6 +16,7 @@ import Link from 'next / link';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 const GitHubActionsAutomationBlueprint: React.FC = () => {
   const automation_workflows = [;
     {
@@ -24,7 +26,14 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       status: 'active'
       frequency: 'on-push'
       health: 'excellent'
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  const automationFeatures = [
+
     {
       name: 'Continuous Deployment'
       description: 'Automated deployment to staging and production'
@@ -126,7 +135,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       status: 'active',
       frequency: 'hourly',
 
-
+      health: 'excellent'
+    }
+  ];
 
 
       } catch (error) {
@@ -141,7 +152,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   const automationFeatures = [
@@ -177,12 +190,18 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
       status: 'implemented'
 
+    }
+  ];
+
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ];
+
+
 
 
   const performanceMetrics = [
@@ -192,6 +211,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     { metric: 'Deployment Frequency', value: '12 / day', target: '5 / day', status: 'exceeded' },
     { metric: 'Lead Time', value: '1.2 hours', target: '4 hours', status: 'exceeded' },
     { metric: 'MTTR', value: '15 min', target: '30 min', status: 'exceeded' },
+
+    { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded' }
+  ];
 
 
     { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded'   } catch (error) {
@@ -203,6 +225,8 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   ];
 
 
+
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -211,9 +235,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       case 'excellent': return 'text-green-400';
       default: return 'text-gray-400';
 
-
-
-
+    }
+  }
+  };
 
 
       } catch (error) {
@@ -222,6 +246,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
   }
 }
   };
+
 
 
 
@@ -237,6 +262,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
   const getFrequencyColor = (frequency: string) => {
 
+
     switch (frequency) {
 
       case 'on-push': return 'bg-blue-500/20 text-blue-400';
@@ -246,9 +272,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       case 'hourly': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-gray-500/20 text-gray-400';
 
-
-
-
+    }
+  }
+  };
 
 
       } catch (error) {
@@ -263,6 +289,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -270,6 +297,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   return (
@@ -292,6 +320,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -299,9 +328,10 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            ← Back to Blueprints
+             Back to Blueprints
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
             GitHub Actions Automation
@@ -322,12 +352,14 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -362,7 +394,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -386,7 +420,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   </span>
@@ -405,12 +441,14 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   </span>
                   <span className="text-xs text-green-400">● {workflow.health}</span>
@@ -437,7 +475,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -460,12 +500,14 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   </span>
                 </div>
@@ -493,7 +535,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -541,12 +585,14 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 </tbody>
               </table>
@@ -565,6 +611,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -572,24 +619,21 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Pipeline</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-6xl font-bold text-green-400 mb-4">⚡</div>
+              <div className="text-6xl font-bold text-green-400 mb-4"></div>
               <h3 className="text-xl font-semibold mb-2 text-white">Intelligent Automation</h3>
               <p className="text-gray-300 mb-6">
 
-
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                Our GitHub Actions automation system provides intelligent CI/CD pipelines with
+                self-healing capabilities, automated testing, and seamless deployments that
+                Our GitHub Actions automation system provides intelligent CI/CD pipelines with 
+                self-healing capabilities, automated testing, and seamless deployments that 
+                Our GitHub Actions automation system provides intelligent CI/CD pipelines with
+                self-healing capabilities, automated testing, and seamless deployments that
 
                 ensure code quality and rapid delivery.
               </p>
@@ -630,6 +674,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -637,37 +682,38 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-green-400">CI/CD Tools</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• GitHub Actions for workflow automation</li>
-                <li>• Docker for containerization</li>
-                <li>• Kubernetes for orchestration</li>
-                <li>• Helm for package management</li>
-                <li>• ArgoCD for GitOps deployment</li>
-                <li>• Tekton for cloud-native CI/CD</li>
+                <li> GitHub Actions for workflow automation</li>
+                <li> Docker for containerization</li>
+                <li> Kubernetes for orchestration</li>
+                <li> Helm for package management</li>
+                <li> ArgoCD for GitOps deployment</li>
+                <li> Tekton for cloud-native CI/CD</li>
               </ul>
             </div>
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-green-400">Testing & Quality</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• Jest for unit testing</li>
-                <li>• Playwright for E2E testing</li>
-                <li>• SonarQube for code quality</li>
-                <li>• Lighthouse for performance</li>
-                <li>• OWASP ZAP for security</li>
-                <li>• Snyk for dependency scanning</li>
+                <li> Jest for unit testing</li>
+                <li> Playwright for E2E testing</li>
+                <li> SonarQube for code quality</li>
+                <li> Lighthouse for performance</li>
+                <li> OWASP ZAP for security</li>
+                <li> Snyk for dependency scanning</li>
               </ul>
             </div>
           </div>
         </div>
 
-
-
-
+        {/* Navigation */}
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link 
 
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
@@ -681,6 +727,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -688,18 +735,16 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
             All Blueprints
           </Link>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+          <Link
+          <Link 
+          <Link
 
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
@@ -707,12 +752,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             Comprehensive Redundancy
           </Link>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+          <Link
+          <Link 
+          <Link
 
             href="/reports/blueprints/ultimate-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
@@ -727,6 +769,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 }
 
 
+
 ;
 
 
@@ -735,6 +778,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export default GitHubActionsAutomationBlueprint;

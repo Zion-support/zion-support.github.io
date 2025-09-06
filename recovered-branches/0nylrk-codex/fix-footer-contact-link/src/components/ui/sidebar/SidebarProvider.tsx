@@ -7,12 +7,14 @@ import React, { createContext, useContext, useState } from "react",
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 interface SidebarContextType {
   is_open: boolean;
@@ -37,9 +39,10 @@ interface SidebarProviderProps {
   default_open?: boolean;
 }
 
-
-
-
+export function SidebarProvider({
+  children
+  defaultOpen = true
+}: SidebarProviderProps) {
 
 
 
@@ -47,6 +50,8 @@ export function SidebarProvider({
   children, 
   defaultOpen = true 
 }: SidebarProviderProps) {;
+
+
 
 
 
@@ -61,10 +66,10 @@ export function SidebarProvider({
   return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
 
-
-
-
-
+      <div
+        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
+      >
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 
 import React, { createContext, useContext, useState } from "react",;
 
@@ -92,7 +97,6 @@ export function SidebarProvider(): any ({ ;
   children, ;
   defaultOpen = true ;
 }: SidebarProviderProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
@@ -101,6 +105,7 @@ export function SidebarProvider(): any ({ ;
   return (;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
+
 
 
 
@@ -116,6 +121,7 @@ export function SidebarProvider(): any ({ ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         {children}
       </div>
     </SidebarContext.Provider>
@@ -123,6 +129,7 @@ export function SidebarProvider(): any ({ ;
 
 }
 }
+
 
   const toggle = () =>: any setIsOpen (!is_open);
   const open = () =>: any setIsOpen (true);
@@ -148,4 +155,5 @@ export function SidebarProvider(): any ({ ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

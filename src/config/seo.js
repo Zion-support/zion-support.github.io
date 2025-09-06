@@ -1,4 +1,4 @@
-// SEO Meta Tags Configuration
+// SEO Meta Tags Configuration;
 export const defaultSEO = {
 
     type: 'website',
@@ -54,6 +54,8 @@ export const defaultSEO = {
 
 
 
+
 export default defaultSEO;
 ;
 }
+

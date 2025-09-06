@@ -17,12 +17,10 @@ export const InstallPrompt: React.FC = () => {
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
 
-
-
-
+    if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
+      return
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
-
 
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
@@ -337,4 +335,6 @@ export default InstallPrompt,
 ;
 
     </>
+
   )
+

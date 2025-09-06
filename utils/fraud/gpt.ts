@@ -3,10 +3,10 @@ import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
   source: MonitoredSource
-): Promise<GptClassification> {;
-  const apiKey = process.env.OPENAI_API_KEY;
+): Promise<GptClassification> {
+  const apiKey = process && process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    const lower = text.toLowerCase();
+    const lower = text && text.toLowerCase();
     const looksDanger =
       /(cashapp|paypal\.me|venmo\.com|wa\.me|t\.me|whatsapp|telegram|western union|gift card|crypto only|outside payment)/.test(
         lower
@@ -34,6 +34,8 @@ export async function classifyWithGPT(
     response_format: { type: 'json_object' as const }
   });
   const content = completion.choices[0]?.message?.content ?? '{}';
+
+  const content = completion && completion.choices[0]?.message?.content ?? '{}';
   try {
 
     const parsed = JSON.parse (content);
@@ -62,11 +64,15 @@ if ( {) {
 
 
 
+
+
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
     }
   }export interface GptResult {
+
+
 
 
 
@@ -81,7 +87,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   label: string;
@@ -124,7 +132,10 @@ if ( {) {
 
 
 
+
+
 }
+
 
 
 
@@ -137,5 +148,6 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -2,6 +2,7 @@
 
 
 
+
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'));
   if (!service) return null;
 
@@ -52,6 +53,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 export default function AISEOOptimizationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
+
   if (!service) return null,
 
   return (
@@ -94,6 +96,7 @@ export default function AISEOOptimizationPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -101,13 +104,14 @@ export default function AISEOOptimizationPage() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup: {service.setupTime}</div>
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
@@ -119,12 +123,14 @@ export default function AISEOOptimizationPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-emerald-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
@@ -137,6 +143,8 @@ export default function AISEOOptimizationPage() {
       </div>
     </Layout>
 
+  );
+};
 
   )
   } catch (error) {
@@ -152,4 +160,6 @@ export default function AISEOOptimizationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 

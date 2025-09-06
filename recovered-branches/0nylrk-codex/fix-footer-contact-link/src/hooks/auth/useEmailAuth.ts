@@ -1,19 +1,19 @@
 
 
+import {useState} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+import {cleanupAuthState} from "@/utils/authUtils";
+import { useState } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
 
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {cleanupAuthState} from "@/utils/authUtils";
+import { toast } from "@/hooks/use-toast",
+import type { UserProfile } from "@/types/auth",
+import { cleanupAuthState } from "@/utils/authUtils",
 
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
@@ -32,6 +32,30 @@ export const useEmailAuth = (
         password});
       if (error) {
         toast({
+
+import { useState } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import type { UserProfile } from "@/types / auth";
+import { cleanupAuthState } from '@/utils / auth_utils';
+export const useEmailAuth = (
+  set_user: (user: UserProfile | null) =>: any void,
+  setIsLoading: (loading: boolean) => void) => {
+  const login = async ({ email, password }: { email: string, password: string }) => {
+    try {
+      setIsLoading (true);
+      // Clean up any stale auth state before login;
+      cleanupAuthState ();
+;
+      const { data, error } = await supabase.auth.signInWithPassword ({
+        email;
+        password});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
 
           title: "Login failed";
 
@@ -52,12 +76,14 @@ export const useEmailAuth = (
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         return { error }
       }
@@ -105,7 +131,7 @@ export const useEmailAuth = (
         email,
         password,
         options: {
-          // Only store a simple display name in the profile data
+          // Only store a simple display name in the profile data;
           data: {
             display_name: userData?.displayName ?? userData?.name ?? ""
 
@@ -121,11 +147,21 @@ export const useEmailAuth = (
           title: "Signup failed",
           description: error.message,
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+          variant: "destructive"}),
+        return { error }
+      }
+;
+      toast({;
+        title: "Signup successful",;
+        description: "Check your email for verification instructions."}),;
+      return { data }
+    } catch (error: any) {;
+      console.error("Signup error:", error),;
+      toast({;
+        title: "Signup failed",;
+        description: error.message || "An unexpected error occurred",;
+        variant: "destructive"}),;
+      return { error }
 
           variant: "destructive"});
         return { error };
@@ -153,11 +189,9 @@ export const useEmailAuth = (
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+      return { error };
+      return { error }
+      return { error };
 
     } finally {
       setIsLoading(false)
@@ -181,11 +215,21 @@ export const useEmailAuth = (
           title: "Password reset failed",
           description: error.message,
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+          variant: "destructive"}),
+        return { error }
+      }
+;
+      toast({;
+        title: "Password reset email sent",;
+        description: "Check your email for password reset instructions."}),;
+      return {}
+    } catch (error: any) {;
+      console.error("Password reset error:", error),;
+      toast({;
+        title: "Password reset failed",;
+        description: error.message || "An unexpected error occurred",;
+        variant: "destructive"}),;
+      return { error }
 
           variant: "destructive"});
         return { error };
@@ -219,11 +263,9 @@ export const useEmailAuth = (
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+      return { error };
+      return { error }
+      return { error };
 
     } finally {
       setIsLoading(false)
@@ -236,6 +278,8 @@ export const useEmailAuth = (
 
 
 
+
   return { login, signup, resetPassword }
 };
+
 

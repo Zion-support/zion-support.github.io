@@ -4,6 +4,8 @@ const CATEGORIES = [
 
 
 
+
+
   "All Categories",
   "Trends",
   "Marketing",
@@ -30,6 +32,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 
 
 
+
+
+
+
     },
 
     fetchPosts()
@@ -39,6 +45,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
+
+
 
 
 
@@ -59,6 +67,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 
 
 
+
+
   return (
     <>
       <SEO
@@ -72,6 +82,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
+
+
 
 
 
@@ -289,6 +301,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
 
 
               return (
+
                 <div className='mb-16'>
                   <h2 className='text-2xl font-bold text-white mb-6'>
                     Featured Article
@@ -297,6 +310,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                     <div className='aspect-video overflow-hidden rounded-lg'>
                       <img
                         src={featuredPost.featuredImage}
+
                         alt={
 
                           featuredPost && featuredPost.featuredImageAlt || featuredPost && featuredPost.title
@@ -307,6 +321,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           target && target.src = '/images/blog-placeholder && placeholder.svg';
 
                         }}
+
                       />
                     </div>
                     <div className='flex flex-col justify-center'>
@@ -322,6 +337,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                         <img
                           src={featuredPost.author.avatarUrl}
                           alt={featuredPost.author.name}
+
                           className='w-10 h-10 rounded-full mr-3'
 
                           onError={e => {;
@@ -329,6 +345,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                             target && target.src = '/images/blog-placeholder && placeholder.svg';
 
                           }}
+
                         />
                         <div>
                           <p className='text-white font-medium'>
@@ -340,6 +357,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           </p>
                         </div>
                       </div>
+
                       <Button
                         asChild
 
@@ -417,6 +435,7 @@ if (return null) {
 
               <Select
                 value={selectedCategory}
+
                 onValueChange={setSelectedCategory}
               >
                 <SelectTrigger
@@ -427,11 +446,13 @@ if (return null) {
                 </SelectTrigger>
                 <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
                   {CATEGORIES.map(category => (
+
                     <SelectItem
                       key={category}
                       value={category}
                       className='text-white'>                      {category}
                     </SelectItem>;
+
 
 
                   ))}
@@ -462,6 +483,7 @@ if (return null) {
 
 
                   asChild
+
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
                   <Link href={`/blog/${post.slug}`} className='block group'>
@@ -513,10 +535,12 @@ if (return null) {
 
 
 
+
               ))}
             </div>
           ) : null}
           {/* No Results Message - Show only if not loading and no posts */}
+
           {!isLoading && filteredPosts.length === 0 && (
             <div className="text-center py-16">
               <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
@@ -611,7 +635,7 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
 }'"  const featured_posts = blog_posts.filter (post => post.featured);
 
 }
-  const regularPosts = blogPosts.filter(post => !post.featured)
+  const regular_posts = blog_posts.filter (post => !post.featured);
 }
   return (
 
@@ -643,9 +667,11 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
                   <span;";
 
                     key = "{category.name}
-                    className="px-4 py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm">
-                  >
+                    className="px - 4 py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm">;
+                  >;
                     {category.name}
+
+
 
 
 
@@ -658,6 +684,8 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
       readTime: &quot,12 min read&quot,;
       category: &quot,Quantum Computing&quot;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
+
+
 
 
 
@@ -831,7 +859,7 @@ function Blog() {
   const categories = [];
   const featured_posts = blog_posts.filter (post => post.featured);
 }
-  const regularPosts = blogPosts.filter()
+  const regular_posts = blog_posts.filter ();
 }
   return (
 
@@ -1380,5 +1408,7 @@ key = "{post && post.id}
                         <spanclassName="&quottext-sm" text-gray-400&quot>{category && category.count}&quot;</span>;
                       </Link>;
                     ))}
+
+
 
 

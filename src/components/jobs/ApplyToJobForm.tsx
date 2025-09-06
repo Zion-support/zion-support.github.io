@@ -14,6 +14,7 @@ import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 
 
+
 interface ApplyToJobFormProps {
 
   job: Job
@@ -53,6 +54,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
 
 
+
     setIsSubmitting(true)
     setError(null)
     try {
@@ -60,8 +62,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         job.id
         coverLetter
 
-
-
+        selectedResumeId |undefined
+        resumeFile |undefined
+        selectedResumeId || undefined
+        resumeFile || undefined
 
       )
       if (success) {
@@ -104,6 +108,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       
       if (success) {
         toast.success("Your application has been submitted!"),
+
 
 
         if (onSuccess) {
@@ -179,6 +184,7 @@ if ( {) {
         }
       }
     } catch (err: any) {
+
       set_error (err.message || "Failed to submit application"),
       toast.error ("Failed to submit application");
     } finally {
@@ -186,11 +192,13 @@ if ( {) {
     }
 
 
+
   },
   
 
   },
   
+
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -203,12 +211,14 @@ if ( {) {
       
 
 
+
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
+
       
       <div className="space-y-4">
         <div>
@@ -315,6 +325,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
         
 
 
+
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -323,6 +334,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
               <span>Loading your resumes...</span>
             </div>
           ) : resumes && resumes.length > 0 ? (
+
 
             <Select
               value={selectedResumeId}
@@ -498,36 +510,52 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                     );
 
 
-
-
-      <div className="flex justify-end gap-2">
-            onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
-          />;
         </div>;
-      </div>;
 
-      <div className="flex justify-end gap-2">;
-        <Button
-          type="button"
-          variant="outline"
+        <div>;
+          <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>;
 
-          onClick={() => {;
-            if (onSuccess) onSuccess();
-
-
-          disabled={isSubmitting}
-          onClick={() => {;
-            if (onSuccess) onSuccess();
-
-
-
-
-
-
+          <input
+            id="cvUpload"
+            type="file"
+            accept=".pdf"
+            className="mt-1"
+            onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
+          />
+        </div>
+      </div>
+            onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
+          />
+        </div>
+      </div>
+        </Button>
+      </div>
+    </form>
+  )
+}setError (null)
+if (success) {
+  if (onSuccess) {
+}finally {
+  setIsSubmitting (false)
+}
+handleSubmit
+}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
+  error
+}</AlertDescription> </Alert>) "
+}<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
+  selectedResumeId
+}onValueChange= {
+  setSelectedResumeId "
+}> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>)
+}return null
+})
+}</SelectContent> </Select> > Create Resume </Button> </div>) "
+}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
+}</Button> </div> </form>)
+}"}
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"};
-
 
         </Button>;
       </div>;
@@ -540,6 +568,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                   // Check condition
 if ( {) {
   $2
+
 }
                     return (
                       <SelectItem key={resume.id} value={resume.id}>;
@@ -628,3 +657,4 @@ handle_submit;
 }"}
 }
 ;
+

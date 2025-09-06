@@ -8,11 +8,13 @@ type Props = {;
 
 
 };
+
 function matchesRegion(): any (profile: TalentProfile, region?: string) {;
   if (!region) return true;
 
 
   );
+
   if (items && items.length === 0) {;
     return (
       <div className="text-sm text-gray-400">;
@@ -50,12 +52,13 @@ function matchesRegion(): any (profile: TalentProfile, region?: string) {;
             ))}
           </div>;
           <div className="mt-3 text-sm">;
-            ${p && p.hourlyRateUsd}/hr • {p && p.availability}
+            ${p && p.hourlyRateUsd}/hr  {p && p.availability}
           </div>;
         </div>;
 
 
-=======
+
+
   const r = region.toLowerCase();
   return profile.location.toLowerCase().includes(r)
 }
@@ -69,6 +72,8 @@ export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
     [region, service]
+
+
 
   );
 
@@ -98,6 +103,8 @@ export default function TalentGrid({ region, service }: Props) {
         </div>
 
 
+
+
       ))}
     </div>;
   );
@@ -106,7 +113,6 @@ export default function TalentGrid({ region, service }: Props) {
 
 }
 
-=======
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
@@ -196,10 +202,11 @@ if ( {) {
               </span>))}
           </div>;
           <div className="mt - 3 text - sm">;
-            ${p.hourlyRateUsd}/hr • {p.availability}
+            ${p.hourlyRateUsd}/hr  {p.availability}
           </div>;
         </div>))}
     </div>);
+
   }
 
   return (
@@ -263,6 +270,7 @@ export default function TalentGrid(_{_region, _service}: Props) {_const _items =
     </div>
 
   )
+
 
 }
 

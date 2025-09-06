@@ -1,13 +1,20 @@
 
-
-
-
-
+import { GetStaticPaths, GetStaticProps  } from 'next';
+import { useState  } from 'react';
+import { readJson  } from '../../utils/fsDb';
+import {GetStaticPaths, GetStaticProps} from 'next';
+import {useState} from 'react';
+import {readJson} from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
 
 
 
 
 import type { HelpArticle } from '../../utils/support';
+
+import {read_json} from '../../utils / fs_db';
+import type { HelpArticle } from '../../utils / support';
+;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = read_json < HelpArticle[]>('help / articles.json', []);
@@ -17,10 +24,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
 
-
-
-
-
+    paths: articles.map(a => ({ params: { slug: a.slug } }))
+    fallback: false
+  }
+}
+export const getStaticProps: GetStaticProps = async ctx => {
 
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
@@ -28,12 +36,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { props: { article } }
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
+
 
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
+
 
 
 
@@ -53,7 +62,9 @@ export const getStaticProps: GetStaticProps = async ctx => {;
 
 
 
+
             className='enhanced-button enhanced-button-secondary';
+
     paths: articles.map (array => ({ params: { slug: a.slug } })),
     fallback: false,
   }
@@ -112,6 +123,12 @@ function vote() {
 
 
 
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ articleId: article.id, helpful })});
+    setVoted(helpful)
+  }
+export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
 
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
@@ -121,10 +138,9 @@ function vote() {
       body: JSON.stringify({ articleId: article.id, helpful })
     });
 
+    setVoted(helpful);
 
-
-
-
+  }
 
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
@@ -162,7 +178,9 @@ export default function HelpArticlePage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
     setVoted(helpful);
@@ -170,6 +188,7 @@ export default function HelpArticlePage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 
 }
@@ -209,6 +228,7 @@ export default function HelpArticlePage(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -229,11 +249,13 @@ export default function HelpArticlePage(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

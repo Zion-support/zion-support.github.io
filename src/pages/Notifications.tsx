@@ -39,6 +39,8 @@ import { toast } from '@/hooks/use-toast';
 
 
 
+
+
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -46,8 +48,9 @@ interface Notification {
   message: string;
   timestamp: Date;
   read: boolean;
-  actionUrl?: string;
+  action_url?: string;
 }
+
 
 
 
@@ -168,3 +171,4 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
   }
 }
 ;
+

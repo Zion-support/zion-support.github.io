@@ -241,9 +241,11 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
 
       for (const file of, files) {}
         const checksum = this.calculateFileChecksum(file);,
@@ -478,6 +480,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         "issuesFound": issues.length,",
         "issues": issues";,
       };,
+
+
 
 
 
@@ -762,12 +766,16 @@ module.exports = FileIntegrityMonitor;
 ursor/add-new-services-and-deploy-updates-0462
 
 
+
+
 module.exports = FileIntegrityMonitor;
 ;
 ;
 ;
 
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 
 
 
@@ -777,7 +785,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 const crypto = require('crypto');
-console.log('🔒 File Integrity Monitor Starting...\n');
+console.log(' File Integrity Monitor Starting...\n');
 class FileIntegrityMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -942,6 +950,8 @@ class FileIntegrityMonitor {
       'Updating file checksums...');
     try {
       issues.push({
+
+
 
 
       issues.push({

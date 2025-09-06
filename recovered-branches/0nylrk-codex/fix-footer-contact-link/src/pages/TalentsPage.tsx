@@ -1,4 +1,11 @@
 
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+// Sample talent listings
+const TALENT_LISTINGS: ProductListing[] = [
+  {
+
+
 
 
 
@@ -8,7 +15,10 @@
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 
-
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
 
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
@@ -170,8 +180,33 @@ const TALENT_FILTERS = [
   { label: 'Consulting', value: 'consulting' }]
 
 
+    author: {
+
+
+
 export default function TalentsPage() {
   return (
+    <DynamicListingPage
+      title="AI & Tech Talent"
+      description="Connect with highly skilled professionals in AI, software development, data science, and more."
+      categorySlug="talents"
+      listings={TALENT_LISTINGS}
+      categoryFilters={TALENT_FILTERS}
+      initialPrice={{ min: 100, max: 200 }}
+    />
+  )
+}
+    <DynamicListingPage 
+      title="AI & Tech Talent"
+      description="Connect with highly skilled professionals in AI, software development, data science, and more."
+      categorySlug="talents"
+      listings={TALENT_LISTINGS}
+      categoryFilters={TALENT_FILTERS}
+      initialPrice={{ min: 100, max: 200 }}
+    />
+  )
+};
+;
 
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
@@ -298,5 +333,7 @@ export default function TalentsPage() {;
   );
 }
 ;
+
+
 
 

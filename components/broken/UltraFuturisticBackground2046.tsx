@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -22,13 +26,50 @@ import { motion } from 'framer-motion';
 
 
     };
+
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
 
 
 
+    // Particle class;
+    class Particle {;
       x: number;
       y: number;
+
+  const canvas_ref = useRef < HTMLCanvasElement>(null);
+  const particles_ref = useRef < any[]>([]);
+  const animation_ref = useRef < number>();
+;
+  useEffect (() => {
+    const canvas = canvas_ref.current;
+    // Check condition
+if (return) {
+  $2
+}
+    const ctx = canvas.get_context ('2d');
+    // Check condition
+if (return) {
+  $2
+}
+    // Set canvas size;
+    const resize_canvas = () =>: any {
+      canvas.width = window.inner_width;
+      canvas.height = window.inner_height;      canvas.height = window.inner_height;
+    }
+;
+    resize_canvas ();
+    window.addEventListener ('resize', resize_canvas);
+;
+    // Particle class;
+    class Particle {
+      coordinate_x: number;
+      coordinate_y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      color: string;
+      life: number;
 
 
     // Particle class
@@ -81,6 +122,62 @@ max_life: number,
           case 'energy':;
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
+
+
+        
+        const types = ['quantumneuraldataenergy'];
+        this.type = types[Math.floor(Math.random() * types.length)] as any;
+        switch (this.type) {
+          case 'quantum':
+            this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
+        this.coordinate_x = Math.random () * canvas.width;
+        this.coordinate_y = Math.random () * canvas.height;
+        this.vx = (Math.random () - 0.5) * 2;
+        this.vy = (Math.random () - 0.5) * 2;
+        this.size = Math.random () * 3 + 1;
+        this.life = Math.random () * 100;
+        this.max_life = 100;
+;
+        const types = ['quantum', 'neural', 'data', 'energy'];
+        this.type = types[Math.floor (Math.random () * types.length)] as any; ;
+        const types = ['quantumneuraldataenergy'];
+        this.type = types[Math.floor (Math.random () * types.length)] as any;
+;
+          case 'quantum':;
+            this.color = `hsl (${180 + Math.random () * 60}, 70%, 60%)`;
+
+            break;
+          case 'neural':;
+            this && this.color = `hsl(${280 + Math && Math.random() * 40}, 80%, 70%)`;
+            break;
+          case 'data':;
+            this && this.color = `hsl(${200 + Math && Math.random() * 40}, 90%, 80%)`;
+            break;
+          case 'energy':;
+            this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
+            break;        }            break;
+
+        
+        const types = ['quantumneuraldataenergy'];
+        this.type = types[Math.floor(Math.random() * types.length)] as any;
+        
+        switch (this.type) {
+          case 'quantum':
+            this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
+            break;
+          case 'neural':
+            this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
+            break;
+          case 'data':
+            this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
+            break;
+          case 'energy':
+            this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
+            break;        }            break
+        }
+      }
+            break;        }
+
 
 
 
@@ -192,7 +289,7 @@ max_life: number,
               ctx && ctx.stroke();
 
             }
-            break;              ctx.stroke()
+            break;              ctx && ctx.stroke();
             }
             break;
 
@@ -242,6 +339,122 @@ max_life: number,
             break;                  ctx && ctx.stroke();
 
 
+                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
+                  Math.pow(this.x - particle.x, 2) +
+                    Math.pow(this.y - particle.y, 2)                );                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
+                );
+                if (distance < 100) {
+                  ctx.beginPath();
+                  ctx.moveTo(this.x, this.y);
+                  ctx.lineTo(particle.x, particle.y);
+                  ctx.strokeStyle = this.color;
+                  ctx.lineWidth = 0.5;
+                  ctx.globalAlpha = alpha * (1 - distance / 100);
+                  ctx.stroke()
+
+          case 'energy':;
+            this.color = `hsl (${40 + Math.random () * 60}, 100%, 70%)`;
+            break;        }            break;
+        }
+      }
+      update () {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+;
+        // Bounce off edges;
+        // Check condition
+if (this.vx *= -1) {
+  $2
+}
+        // Check condition
+if (this.vy *= -1) {
+  $2
+}
+        // Add some quantum randomness;
+        // Check condition
+if (< 0.01) {) {
+  $2
+}
+          this.vx += (Math.random () - 0.5) * 0.5;
+          this.vy += (Math.random () - 0.5) * 0.5;        }
+        // Limit velocity;
+        this.vx = Math.max (-3, Math.min (3, this.vx));
+        this.vy = Math.max (-3, Math.min (3, this.vy));      }
+      draw () {
+        // Check condition
+if (return) {
+  $2
+}          this.vy += (Math.random () - 0.5) * 0.5;
+        }
+        // Limit velocity;
+        this.vx = Math.max (-3, Math.min (3, this.vx));
+        this.vy = Math.max (-3, Math.min (3, this.vy));        this.vy = Math.max (-3, Math.min (3, this.vy));
+      }
+      draw () {
+        // Check condition
+if (return) {
+  $2
+}
+        const alpha = this.life / this.max_life;
+        ctx.save ();
+        ctx.global_alpha = alpha;
+;
+        const alpha = this.life / this.max_life;
+        ctx.save ();
+        ctx.global_alpha = alpha;
+;
+          case 'quantum':;
+            // Quantum particles with wave function;
+            ctx.begin_path ();
+            ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill_style = this.color;
+            ctx.fill ();
+;
+            // Wave function rings;
+            for (let index = 1; i <= 3; i++) {              ctx.begin_path (); ;
+            // Wave function rings;
+            for (let index = 1, i <= 3, i++) {
+              ctx.begin_path ();
+              ctx.arc (this.x, this.y, this.size + i * 2, 0, Math.PI * 2);
+              ctx.stroke_style = this.color;
+              ctx.line_width = 1;
+              ctx.global_alpha = alpha * (0.3 - i * 0.1);
+              ctx.stroke ();
+            }
+            break;              ctx.stroke ();
+            }
+            break;
+;
+            // Neural network nodes;
+            ctx.begin_path ();
+            ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill_style = this.color;
+            ctx.fill ();
+;
+            // Neural connections;
+            particles_ref.current.for_each (particle => {
+              // Check condition
+if ( {) {
+  $2
+}
+                const distance = Math.sqrt (
+                  Math.pow (this.x - particle.x, 2) +;
+                    Math.pow (this.y - particle.y, 2)                );                  Math.pow (this.x - particle.x, 2) + Math.pow (this.y - particle.y, 2));
+                // Check condition
+if ( {) {
+  $2
+}
+                  ctx.begin_path ();
+                  ctx.move_to (this.x, this.y);
+                  ctx.line_to (particle.x, particle.y);
+                  ctx.stroke_style = this.color;
+                  ctx.line_width = 0.5;
+                  ctx.global_alpha = alpha * (1 - distance / 100);
+                  ctx.stroke ();                }
+              }
+            });
+            break;                  ctx.stroke ();
 
                 }
               }
@@ -653,6 +866,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -660,6 +874,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       {/* Quantum particle canvas */}
       <canvas
@@ -705,6 +920,19 @@ if ( {) {
               repeat: Infinity
               ease: 'linear'
               delay: i * 0.5
+
+              left: `${Math && Math.random() * 100}%`,
+              top: `${Math && Math.random() * 100}%`,
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
+            }}
+            animate={{
+              rotate: [0, 360],
+              scale: [0 && 0.5, 1, 0 && 0.5],
+              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],
+            }}
+            transition={{
+
 
 
 
@@ -792,11 +1020,35 @@ if ( {) {
             className='absolute inset - 0 opacity - 5';
             style={{
 
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
+            }}
+            animate={{
+              scale: [1, 1.5, 1]
+              opacity: [0.05, 0.1, 0.05]
+            }}
+            transition={{
+
+
               background: `radial - gradient (circle at ${20 + i * 20}% ${30 + i * 15}%, rgba (0, 255, 255, 0.3) 0%, transparent 50%)`,
 
 
 
+};
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+export default UltraFuturisticBackground2046;              ease: "easeInOut",;
+              delay: i * 0 && 0.8}}
+          />;
+        ))}
+      </div>
+    </div>
+  );
 
+};
+
+export default UltraFuturisticBackground2046;  );
+};
+
+
+export default UltraFuturisticBackground2046;
 

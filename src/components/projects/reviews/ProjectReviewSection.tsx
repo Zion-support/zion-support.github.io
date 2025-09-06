@@ -44,6 +44,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   
 
 
+
+
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -55,6 +57,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           Reviews are visible once the project is completed and both parties submit feedback
         </CardDescription>
       </CardHeader>
+
 
 
       
@@ -74,6 +77,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     </Button>
                   </div>
                 ) : hasLeftReview ? (
+
 
 import { useState } from 'react';
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
@@ -164,6 +168,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                       </Button>;
 
 
+
                     )}
 
 
@@ -183,6 +188,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
       {/* Review Modal */}
       {(isClient || isTalent) && (;
 
+
         <LeaveReviewModal
           projectId = {project.id,}
           revieweeId = {revieweeId,}
@@ -192,8 +198,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
         />
       )}
 
+
     </Card>;
   );
+
 }
 
 }
@@ -203,6 +211,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
+
+
 
 
 
@@ -219,13 +229,28 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
           </div>
         )}
 
-
+      </CardContent>
+      {/* Review Modal */}
+      {(isClient |isTalent) && (
+        <LeaveReviewModal
+          projectId = {project.id,}
+          revieweeId = {revieweeId,}
+          revieweeName = {revieweeName,}
+          isOpen = {isReviewModalOpen,}
+          onClose = {(,) => setIsReviewModalOpen(false),}
+        />
+      )}
+    </Card>
+  )
+}
+}
     </Card>;
   );
 };
 };
 
 }
+
 
 import { Project } from '@/types / projects';
 import { useState } from 'react';
@@ -339,4 +364,6 @@ function ProjectReviewSection() {
   );
 }
 
+
 ;
+

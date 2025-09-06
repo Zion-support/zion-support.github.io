@@ -1,4 +1,13 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method === "GET") {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { store } from "../../../utils/data/enterpriseStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {;
 
     const companies = store.listCompanies();
     return res.status(200).json(companies);
@@ -17,6 +26,9 @@
   }
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
+
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ companies: [] });
@@ -89,4 +101,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 

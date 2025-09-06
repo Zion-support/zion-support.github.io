@@ -34,7 +34,6 @@ describe('SecurityHeaders', () => {
   });
 });
 
-=======
     expect(screen.getByTestId('securityheaders.dynamic'
   test('displays correct content'
   test('handles user interactions'

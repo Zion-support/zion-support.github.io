@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
+
 
 
 import { NotificationItem } from './NotificationItem';
@@ -10,6 +12,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 
 
 import { Bell } from 'lucide-react';
+
 
 
 
@@ -55,6 +58,7 @@ interface NotificationListProps {;
 }
 
 
+
 export const NotificationList: React.FC<NotificationListProps> = ({;
   loading;
   error;
@@ -70,6 +74,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
         <div className="p-8 text-center text-amber-500">;
           <p>{error}</p>;
           <Button
+
+
 
             variant="outline"
             size="sm"
@@ -98,6 +104,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
       ) : (
         notifications.map((notification) => (
           <NotificationItem
+
 
 
     </ScrollArea>;
@@ -152,4 +159,5 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   error,
   notifications,
   onMarkAsRead,
+
 

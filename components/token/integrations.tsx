@@ -22,20 +22,27 @@ class ErrorBoundary extends React.Component {
 }
 import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
+
 import { useWallet } from '../../hooks/useWallet';
 
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {
+  fetchDepinActivities
+  calculateRewards
+  DepinReward;
+  fetchDepinActivities,
+  calculateRewards,;
+  DepinReward,;
+} from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+const ClientOnlyBridge = dynamic(
+  () => import('../../components/ui/BridgeForm')
+  { ssr: false }
+);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false })
+export default function TokenIntegrationsPage() {
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+export default function TokenIntegrationsPage() {;
 
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
@@ -50,6 +57,10 @@ import { useWallet } from '../../hooks/useWallet';
 
       await connect();
       return;    }      return;
+
+
+      await connect();
+      return
 
 
     }
@@ -69,6 +80,8 @@ import { useWallet } from '../../hooks/useWallet';
       body: JSON && JSON.stringify({ region, stakeUsd: stake }),;
 
     });
+
+
 
 
 
@@ -120,6 +133,7 @@ import { useWallet } from '../../hooks/useWallet';
 
 
 
+
     setSuggestion(data)
         </div>;
         {rewards && (;
@@ -161,6 +175,7 @@ import { useWallet } from '../../hooks/useWallet';
                 <span>{r && r.network} — {r && r.reason}</span>;
                 <span className="font-medium">+{r && r.points} ZION$</span>;
               </div>;
+
 
             ))}
           </div>;
@@ -230,6 +245,8 @@ import { useWallet } from '../../hooks/useWallet';
 
 
 
+
+
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>
         {rewards && (
@@ -240,11 +257,13 @@ import { useWallet } from '../../hooks/useWallet';
                 <span className="font-medium">+{r.points} ZION$</span>
               </div>
 
+
               </div>
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -334,10 +353,10 @@ import { useWallet } from '../../hooks/useWallet';
         </ul>;
       </section>;
     </div>;
-
   );
 }
       </section>
+
       <section className="space-y-2 text-xs text-gray-500">
         <div>Security</div>
         <ul className="list-disc ml-5 space-y-1">
@@ -351,6 +370,7 @@ import { useWallet } from '../../hooks/useWallet';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -359,5 +379,6 @@ import { useWallet } from '../../hooks/useWallet';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

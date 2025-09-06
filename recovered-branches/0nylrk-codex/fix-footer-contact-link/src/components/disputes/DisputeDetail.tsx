@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDisputes} from "@/hooks/useDisputes";
@@ -25,6 +26,7 @@ export function DisputeDetail() {;
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+
 
 
 
@@ -127,12 +129,20 @@ export function DisputeDetail() {
       } finally {
         setIsLoading(false)
 
-
-
-
-
-
-
+      }
+    }
+    loadDisputeData()
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
+  const handleStatusChange = async (status: DisputeStatus) => {
+    if (!disputeId) return
+    const success = await updateDisputeStatus(disputeId, status);
+    if (success && dispute) {
+      setDispute({ ...dispute, status })
+    }
+  }
+  const handleResolveDispute = async () => {
+    if (!disputeId) return;
+  };
 
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
@@ -206,6 +216,7 @@ export function DisputeDetail() {;
 
 
 
+
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     
@@ -216,6 +227,7 @@ export function DisputeDetail() {;
     }
 
     const success = await resolveDispute(disputeId, resolution);
+
     
     const success = await resolveDispute(disputeId, resolution),
 
@@ -253,8 +265,16 @@ export function DisputeDetail() {;
     } finally {
       setIsSending(false)
 
-
-
+    }
+  }
+  if (isLoading) {
+    return (
+      <div className="p-8 text-center">
+        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
+        <p>Loading dispute details...</p>
+      </div>
+    )
+  }
 
   },;
 
@@ -281,7 +301,6 @@ export function DisputeDetail() {;
   const handleSendMessage = async () => {;
     if (!disputeId || !message && message.trim()) return;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsSending(true);
     try {;
       const success = await addDisputeMessage(disputeId, message, isAdmin);
@@ -296,17 +315,15 @@ export function DisputeDetail() {;
     } finally {;
       setIsSending(false);
     }
-
-  };
-
-  if (isLoading) {;
-
+  }
+  if (isLoading) {
     return (
       <div className="p-8 text-center">;
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>;
         <p>Loading dispute details...</p>;
       </div>;
     );
+
 
 
 
@@ -321,6 +338,7 @@ export function DisputeDetail() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }
@@ -357,7 +375,6 @@ export function DisputeDetail() {;
 ;
 
   if (!dispute) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="p-8 text-center">;
         <p>Dispute not found</p>;
@@ -372,9 +389,172 @@ export function DisputeDetail() {;
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
       case "open": return "default";
-      case "under_review": return "secondary",;
-      case "resolved": return "outline", // Changed from "success" to "outline";
 
+      case "under_review": return "secondary"
+      case "resolved": return "outline", // Changed from "success" to "outline"
+import React, { useState, useEffect } from './react';
+import { use_params, use_navigate } from './react-router-dom';
+import { use_disputes } from '@/hooks / use_disputes';
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from '@/types / disputes';
+import { Button } from '@/components / ui / button';
+import { Textarea } from '@/components / ui / textarea';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Separator } from '@/components / ui / separator';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { format, formatDistanceToNow } from './date - fns';
+import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from './lucide-react';
+import { use_auth } from '@/hooks / use_auth';
+import { toast } from './sonner';
+export /**
+ * DisputeDetail - Function description
+ */
+function DisputeDetail() {
+  // use_params may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { dispute_id } = use_params () as { dispute_id?: string }
+  const navigate = use_navigate ();
+  const { user } = use_auth ();
+  const { getDisputeById, updateDisputeStatus, resolve_dispute, getDisputeMessages, addDisputeMessage } = use_disputes ();
+;
+  const [dispute, set_dispute] = useState < any>(null);
+  const [messages, set_messages] = useState < DisputeMessage[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [message, set_message] = useState ("");
+  const [is_sending, setIsSending] = useState (false);
+  const [resolution, set_resolution] = useState ({
+    summary: "",
+    resolution_type: "compromise"}),
+  const [active_tab, setActiveTab] = useState ("overview");
+;
+  // Check if user is admin (placeholder - implement proper admin check);
+  const is_admin = user?.user_type === "admin";
+;
+  useEffect (() => {
+    // Check condition
+if (return) {
+  $2
+}
+    const loadDisputeData = async () => {
+      setIsLoading (true);
+      try {
+        const dispute_data = await getDisputeById (dispute_id);
+        // Check condition
+if ( {) {
+  $2
+}
+          toast.error ("Dispute not found");
+          navigate ("/dashboard / disputes");
+          return;
+        }
+        set_dispute (dispute_data);
+;
+        const messages_data = await getDisputeMessages (dispute_id);
+        set_messages (messages_data);
+      } catch (error) {
+        console.error ("Error loading dispute data:", error);
+        toast.error ("Failed to load dispute");
+      } finally {
+        setIsLoading (false);
+      }
+    }
+;
+    loadDisputeData ();
+  }, [dispute_id, navigate, getDisputeById, getDisputeMessages]);
+;
+  const handleStatusChange = async (status: DisputeStatus) => {
+    // Check condition
+if (return, ) {
+  $2
+}
+    const success = await updateDisputeStatus (dispute_id, status);
+    // Check condition
+if ( {) {
+  $2
+}
+      set_dispute ({ ...dispute, status });
+    }
+  }
+;
+  const handleResolveDispute = async () => {
+    // Check condition
+if (return) {
+  $2
+}
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("Please provide a resolution summary");
+      return;
+    }
+    const success = await resolve_dispute (dispute_id, resolution);
+    // Check condition
+if ( {) {
+  $2
+}
+      set_dispute ({
+        ...dispute,
+        status: "resolved",
+        resolution_summary: resolution.summary,
+        resolution_type: resolution.resolution_type,
+        resolved_at: new Date ().toISOString ();
+      });
+    }
+  }
+;
+  const handleSendMessage = async () => {
+    if () return) {
+  $2
+}
+    setIsSending (true);
+    try {
+      const success = await addDisputeMessage (dispute_id, message, is_admin);
+      // Check condition
+if ( {) {
+  $2
+}
+        // Refresh messages;
+        const updated_messages = await getDisputeMessages (dispute_id);
+        set_messages (updated_messages);
+        set_message ("");
+      }
+    } catch (error) {
+      console.error ("Error sending message:", error);
+    } finally {
+      setIsSending (false);
+    }
+  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="p - 8 text - center">;
+        <div className="w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded - full"></div>;
+        <p > Loading dispute details...</p>;
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="p - 8 text - center">;
+        <p > Dispute not found</p>;
+        <Button on_click={() => navigate ("/dashboard / disputes")} className="mt - 4">;
+          Back to Disputes;
+        </Button>;
+      </div>);
+  }
+  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
+    switch (status) {
+      case "open": return "default";
+      case "under_review": return "secondary",
+      case "resolved": return "outline", // Changed from './success'; to "outline";
 
       case "closed": return "outline";
       default: return "default";
@@ -393,12 +573,14 @@ export function DisputeDetail() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               {dispute.status.replace('_ ')}
             </Badge>
@@ -419,10 +601,10 @@ export function DisputeDetail() {;
         </div>
       </div>
       {dispute.status === "resolved" && dispute.resolution_summary && (
-        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
-          <Check className="h-4 w-4" />
-          <AlertTitle>This dispute has been resolved</AlertTitle>
-          <AlertDescription>
+        <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
+          <Check className="h - 4 w - 4" />;
+          <AlertTitle > This dispute has been resolved</AlertTitle>;
+          <AlertDescription>;
             {dispute.resolution_summary}
           </AlertDescription>
         </Alert>
@@ -478,6 +660,55 @@ export function DisputeDetail() {;
                           <span>Under review</span>
                         </li>
                       )}
+
+          </AlertDescription>;
+        </Alert>)}
+      <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
+        <div className="lg:col - span - 2">;
+          <Tabs value={active_tab} onValueChange={setActiveTab}>;
+            <TabsList className="mb - 6">;
+              <TabsTrigger value="overview">Overview</TabsTrigger>;
+              <TabsTrigger value="messages">Messages</TabsTrigger>;
+              <TabsTrigger value="attachments">Attachments</TabsTrigger>;
+              {is_admin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
+            </TabsList>;
+            <TabsContent value="overview" className="space - y-6">;
+              <Card>;
+                <CardHeader>;
+                  <CardTitle > Dispute Details</CardTitle>;
+                  <CardDescription > Information about this dispute case</CardDescription>;
+                </CardHeader>;
+                <CardContent className="space - y-4">;
+                  <div>;
+                    <h3 className="font - medium">Reason</h3>;
+                    <p>{disputeReasonLabels[dispute.reason_code as any] || dispute.reason_code}</p>;
+                  </div>;
+                  <div>;
+                    <h3 className="font - medium">Description</h3>;
+                    <p className="whitespace - pre - wrap">{dispute.description}</p>;
+                  </div>;
+                  <div>;
+                    <h3 className="font - medium">Project</h3>;
+                    <p>{dispute.project?.title || "Unknown Project"}</p>;
+                    <p className="text - sm text - muted - foreground">{dispute.project?.scope_summary}</p>;
+                  </div>;
+                  {dispute.milestone_id && (
+                    <div>;
+                      <h3 className="font - medium">Related Milestone</h3>;
+                      <p className="text - sm">Milestone ID: {dispute.milestone_id}</p>;
+                    </div>)}
+                  <div>;
+                    <h3 className="font - medium">Timeline</h3>;
+                    <ul className="space - y-2 mt - 2">;
+                      <li className="flex gap - 2 items - center">;
+                        <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">1</Badge>;
+                        <span > Created on {format (new Date (dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+                      </li>;
+                      {dispute.status !== "open" && (
+                        <li className="flex gap - 2 items - center">;
+                          <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">2</Badge>;
+                          <span > Under review</span>;
+                        </li>)}
 
                       {dispute.resolved_at && (
                         <li className="flex gap - 2 items - center">;
@@ -649,6 +880,27 @@ export function DisputeDetail() {;
                         .filter (msg => !msg.is_admin_note);
                         .map ((msg) => {
                           const isCurrentUser = user?.id === msg.user_id;
+
+            </TabsContent>;
+
+            <TabsContent value="messages" className="space-y-6">;
+              <Card>;
+                <CardHeader>;
+                  <CardTitle>Messages</CardTitle>;
+                  <CardDescription>Communication regarding this dispute</CardDescription>;
+                </CardHeader>;
+                <CardContent>;
+                  <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">;
+                    {messages && messages.length === 0 ? (;
+                      <div className="text-center py-12">;
+                        <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />;
+                        <p className="text-muted-foreground">No messages yet</p>;
+                      </div>;
+                    ) : (;
+                      messages;
+                        .filter(msg => !msg && msg.is_admin_note);
+                        .map((msg) => {;
+                          const isCurrentUser = user?.id === msg && msg.user_id;
 
                           return (
 
@@ -879,11 +1131,13 @@ export function DisputeDetail() {;
 
 
 
+
                     />;
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
                         {isSending ? "Sending..." : "Send Message"}
                       </Button>;
+
                     </div>;
                   </div>;
                 </CardFooter>;
@@ -999,19 +1253,21 @@ export function DisputeDetail() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                             }
                           }}
-                        >
-                          Add Admin Note
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
+                        >;
+                          Add Admin Note;
+                        </Button>;
+                      </div>;
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
             )}
           </Tabs>
         </div>

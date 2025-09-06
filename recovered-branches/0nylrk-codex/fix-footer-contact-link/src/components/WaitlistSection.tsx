@@ -1,3 +1,5 @@
+import React from 'react';
+
 
 
 
@@ -17,6 +19,7 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
 
 
 
@@ -159,6 +162,12 @@ if ( {) {
   };
 
 
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+
 
 
 
@@ -233,16 +242,17 @@ if ( {) {
               <Label
                 htmlFor="terms"
 
-
-
+                className="text-sm text-zion-slate font-normal"
+              >
+                I agree to receive updates about Zion and understand I can unsubscribe anytime.
+              </Label>
+            </div>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
             <Button 
               type="submit" 
               disabled={isSubmitting} 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
@@ -253,6 +263,8 @@ if ( {) {
       </div>
     </section>
   )
+
+
 
 
 import { useState } from "react",;
@@ -347,7 +359,6 @@ export function WaitlistSection() {;
               className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
             >;
               {is_submitting ? "Processing..." : "Complete Registration"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </form>;
         </div>;
@@ -360,9 +371,11 @@ export function WaitlistSection() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 ;

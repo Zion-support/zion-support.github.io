@@ -1,7 +1,11 @@
 
-
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
@@ -15,6 +19,10 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
+
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -34,7 +42,6 @@ export default function handler(req, res) {
     })),
     const top = entries.sort ((array: any, boolean: any) => b.points - a.points).slice (0, 20),
     res.status (200).json ({ leaderboard: top });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e: any) {
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
@@ -48,6 +55,7 @@ export default function handler(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -58,4 +66,5 @@ export default function handler(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -6,6 +6,8 @@
 
 
 
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -21,7 +23,9 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const BusinessIntelligenceChat: NextPage = () => {
@@ -29,19 +33,22 @@ const BusinessIntelligenceChat: NextPage = () => {
     <div>
       <Head>
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
+        <meta
+          name="description"
+          content="BusinessIntelligenceChat blog post"
+        />{" "}
+      </Head>
+      <main>
+        <h1>BusinessIntelligenceChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
+  );
+}
+export default BusinessIntelligenceChat;
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
 

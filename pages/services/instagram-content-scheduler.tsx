@@ -16,9 +16,13 @@ const InstagramContentScheduler: NextPage = () => {
     </div>
   )
 
+}
+export default InstagramContentScheduler;
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+},
+export default InstagramContentScheduler,
+},
+},
+export default InstagramContentScheduler,
+},
 

@@ -6,13 +6,17 @@
               !isPast(parseISO(interview.scheduled_date))
           )
 
-
-
+          .sort(
+            (a, b) =>
+              parseISO(a.scheduled_date).getTime() -
+              parseISO(b.scheduled_date).getTime()          )
 
           .sort(;
             (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
               parseISO(b.scheduled_date).getTime()          );
+
+
 
 
 
@@ -45,6 +49,8 @@
 
 
 
+
+
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -64,6 +70,7 @@
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
+
 
 
 
@@ -133,6 +140,7 @@ export function UpcomingInterviewsCard() {;
 
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
+
           .filter(;
             interview =>;
               interview && interview.status === 'confirmed' &&;
@@ -185,6 +193,7 @@ if ( {) {
     );
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
@@ -194,6 +203,7 @@ if ( {) {
 
 
   }
+
 
   if (upcomingInterviews.length === 0) {
     return (
@@ -248,6 +258,26 @@ if ( {) {
   }
   return (
 
+    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+      <CardHeader>
+        <CardTitle className="text-lg flex items-center">
+          <Video className="h-5 w-5 mr-2 text-zion-purple" />
+          Upcoming Interviews
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {upcomingInterviews.map(interview => {
+            const interviewDate = parseISO(interview.scheduled_date)
+            const formattedDate = format(interviewDate, 'EEE, MMM d')
+            const formattedTime = format(interviewDate, 'h:mm a')
+            // Determine if interview is happening soon (within 30 minutes)            const now = new Date()
+            const isStartingSoon = null;
+              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
+              interviewDate.getTime() > now.getTime()
+
+
+
 
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
@@ -264,26 +294,53 @@ if ( {) {
 
 
 
+
+
             return (
-              <div key={interview.id} className="flex items-center gap-3">
-                <Avatar className="h-10 w-10 bg-zion-purple/10">
-                  {interview.client_avatar || interview.talent_avatar ? (
+              <div key={interview.id} className='flex items-center gap-3'>
+                <Avatar className='h-10 w-10 bg-zion-purple/10'>
+                  {interview.client_avatar |interview.talent_avatar ? (
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
 
-
-
+                      loading="lazy"
+                    />
+                  ) : (
+                      loading='lazy'                    />
+                  ) : (
+                    <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
+                      {(
+                        interview.client_name ||
+                        interview.talent_name ||
+                        'U'
+                      ).charAt(0)}
+                    </div>
+            return (<div key={interview.id} className="flex items-center gap-3">
+                <Avatar className="h-10 w-10 bg-zion-purple/10">
+                  {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
+                  {/* For now, conditional rendering based on available image */}
+                  {interview.client_avatar || interview.talent_avatar ? (
+                    <img 
+                      src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined
+                      alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string
+                    />
+                  ) : (
+                      loading="lazy"
+                    />
+                  ) : (
 
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
-                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                      {(interview.client_name |interview.talent_name |"U").charAt(0)}
                     </div>
                   )}
                 </Avatar>
+
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <p className="font-medium line-clamp-1">
                       {interview.title || "Interview"}
+
                     </p>
                     {isStartingSoon && (
                       <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
@@ -379,11 +436,13 @@ if ( {) {
             </Link>
 
 
+
           </Button>
         </div>
       </CardContent>
     </Card>
   )
+
                   </div>;
                 </div>;
               </div>;
@@ -409,6 +468,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
+
 }
     return (
       <Card className='bg - zion - blue - dark / 40 border - zion - blue - light'>;
@@ -505,8 +565,11 @@ if ( {) {
 
 
 
+
     </Card>);
 }
 }
 
+
 ;
+

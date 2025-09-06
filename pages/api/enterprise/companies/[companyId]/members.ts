@@ -1,15 +1,28 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '[^']*';
+import type { EnterpriseRole } from '../../../../../utils/types/enterprise';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { store } from "../../../../../utils/data/enterpriseStore";
+import type { EnterpriseRole } from "../../../../../utils/types/enterprise";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { companyId } = req.query;
 
+  if (!companyId |typeof companyId !== "string") {
+    return res.status(400).json({ error: "companyId required" });
+  }
+  const company = store.getCompanyById(companyId);
+  if (!company) return res.status(404).json({ error: "Company not found" });
+  if (req.method === "GET") {
+    return res.status(200).json(company.members);
+  }
+  if (req.method === "POST") {
+    const { name, email, role } = req.body |{}
+    if (!name |!email)
+      return res.status(400).json({ error: "name and email required" });
+    const r: EnterpriseRole = role |"viewer";
 
-  // Check condition
-if ( {) {
-  $2
-}
-    const { name, email, role } = req.body || {}
-    if (
-      return res.status (400).json ({ error: "name and email required" })) {
-  $2
-}
     const r: EnterpriseRole = role || "viewer";
     const member = store.add_member (company_id, name, email, r);
     return res.status (201).json (member);
@@ -18,10 +31,26 @@ if ( {) {
 if ( {) {
   $2
 }
-    const { member_id, role } = req.body || {}
-    if (
-      return res.status (400).json ({ error: "member_id and role required" })) {
-  $2
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ members: [] });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '../../../../../utils/data/enterpriseStore';
+import type { EnterpriseRole } from '../../../../../utils/types/enterprise';
+export default function handler(req, res) {
+  try {
+  const { companyId } = req.query;
+  if (!companyId || typeof companyId !== 'string') {;
+    return res.status(400).json({ error: 'companyId required' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
     const ok = store.updateMemberRole (company_id, member_id, role);
     return res;
@@ -136,6 +165,7 @@ if ( {) {
   }
 
 
+
 }
 }
 
@@ -146,4 +176,5 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

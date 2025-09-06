@@ -3,6 +3,17 @@
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true)
 
+      institution: '',
+      degree: '',
+      field_of_study: '',
+      start_date: format(new Date(), 'yyyy-MM-dd'),
+      is_current: false,
+      description: '',
+      location: '',
+    },;
+  });
+  const handleSubmit = async (data: EducationFormValues) => {;
+    setIsLoading(true);
 
     setError(null);    try {
       await onSubmit(data)
@@ -69,6 +80,7 @@ function EducationFormFields() {
       setIsLoading (false);
     }
   }
+
 
 
 
@@ -148,10 +160,11 @@ function EducationFormFields() {
             )}
 
           />;
+
         </div>;
 
         <FormField
-          control={form.control}
+          control={form && form.control}
           name='field_of_study'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Field of Study</FormLabel>;
@@ -167,6 +180,8 @@ function EducationFormFields() {
           name="field_of_study"
           render={({ field }: { field: any }) => (
             <FormItem>
+
+
 
 
 
@@ -188,13 +203,15 @@ function EducationFormFields() {
 
             control={form.control}
 
-
-
+            name="start_date"
+            name='start_date'
+            name="start_date"
 
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
+
 
 
 
@@ -218,11 +235,19 @@ function EducationFormFields() {
             )}
           />
 
+
           <div className='space-y-4'>;
             <FormField
 
               control={form.control}
 
+              name='is_current'
+              render={({ field }: { field: any }) => (
+                <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
+              name="is_current"
+              render={({ field }: { field: any }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
+                  <FormControl>
 
                     <Checkbox
                       checked={field.value}
@@ -246,6 +271,7 @@ function EducationFormFields() {
                 name="end_date"
 
 
+
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
@@ -256,12 +282,14 @@ function EducationFormFields() {
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
+
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''} 
                       />
                     </FormControl>
+
 
 
                     <FormMessage />
@@ -279,11 +307,12 @@ function EducationFormFields() {
 
 
 
+
           </div>;
         </div>;
 
         <FormField
-          control={form.control}
+          control={form && form.control}
           name='location'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
@@ -337,12 +366,13 @@ function EducationFormFields() {
         />;
 
 
+
         <FormField
           control={form.control}
           name='description'
-          render={({ field }: { field: any }) => (            <FormItem>
-              <FormLabel>Description (Optional)</FormLabel>
-              <FormControl>
+          render={({ field }: { field: any }) => (            <FormItem>;
+              <FormLabel>Description (Optional)</FormLabel>;
+              <FormControl>;
                 <Textarea
                   placeholder='Notable achievements, courses, activities...'
                   className='min-h-[100px]'
@@ -360,11 +390,55 @@ function EducationFormFields() {
           name="location"
           render={({ field }: { field: any }) => (
             <FormItem>
+        />
+
+        <FormField
+          control={form.control}
+          name='description'
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel>Description (Optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder='Notable achievements, courses, activities...'
+                  className='min-h-[100px]'
+
+            </FormItem>)}
+
+        />;
+        <FormField;
+          control={form.control}
+          name='description';
+          render={({ field }: { field: any }) => (            <FormItem>;
+              <FormLabel > Description (Optional)</FormLabel>;
+              <FormControl>;
+                <Textarea;
+                  placeholder='Notable achievements, courses, activities...';
+                  className='min - h-[100px]';
+          name="location"
+          render={({ field }: { field: any }) => (
+            <FormItem>
+
+              <FormLabel>Description (Optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Notable achievements, courses, activities..."
+                  className="min-h-[100px]"
+        {error && (
+          <Alert variant='destructive'>
+            <AlertDescription>{error}</AlertDescription>
+          </Alert>
+        )}
+        <div className='flex justify-between pt-2'>
+          <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
+          </Button>
+          <Button type='submit' disabled={isLoading}>
+            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
 
-
-
-
+          <Button type="submit" disabled={isLoading}>
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
@@ -390,6 +464,8 @@ function EducationFormFields() {
         </div>;
       </form>;
     </Form>);
+
 }
 
 }
+

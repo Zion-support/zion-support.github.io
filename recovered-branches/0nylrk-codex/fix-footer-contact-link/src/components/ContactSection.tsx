@@ -2,6 +2,7 @@
 
 
 
+
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Button  } from '@/components / ui / button';
 import { Mail  } from './lucide-react';
@@ -49,6 +50,7 @@ function ContactSection() {
 
 
 
+
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -84,7 +86,6 @@ export function ContactSection() {
                     <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
                       Name
                     </label>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <input
                       type="text"
                       id="name"
@@ -165,21 +166,18 @@ export function ContactSection() {
                   />;
                 </div>;
                 <div>;
-                  <label;
-                    html_for="message";
-                    className="block text - sm font - medium text - zion - slate - light mb - 1";
-                  >;
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Message;
                   </label>;
-                  <textarea;
-                    id="message";
+                  <textarea
+                    id="message"
                     rows={4}
-                    className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus: border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
-                  ></textarea>;
+                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus: border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"></textarea>;
                 </div>;
                 <div>;
-                  <Button className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
-
+                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
                     Send Message;
                   </Button>;
                 </div>;
@@ -212,6 +210,9 @@ export function ContactSection() {
         </div>
       </div>
 
+    </section>
+  );
+}
 
   )
 import { GradientHeading } from "@/components/GradientHeading",;

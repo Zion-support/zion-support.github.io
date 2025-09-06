@@ -1,5 +1,12 @@
 
 
+import React from "react";
+import {cn} from "@/lib/utils";
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+import React from "react",
+import { cn } from "@/lib/utils";
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+interface SeverityIndicatorProps {
 
 
 interface SeverityIndicatorProps {;
@@ -24,7 +31,9 @@ import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -62,6 +71,20 @@ export function SeverityIndicator(): any ({ ;
   size = "md";
   className ;
 
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
+          "text-destructive"
+        )} />,
+      case 'suspicious':
+        return <AlertTriangle className={cn(
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
+          "text-amber-500"
+        )} />;
+      default: return <CheckCircle className={cn(
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
+          "text-green-500"
+        )} />
+    }
+  }
 
         )} />,
       default:
@@ -80,6 +103,8 @@ export function SeverityIndicator(): any ({ ;
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+
+
 
 
 import React from "react",;
@@ -103,10 +128,12 @@ export function SeverityIndicator({;
   const getSeverityIcon = () => {;
     switch (severity) {;
       case 'dangerous':;
+
         return <AlertCircle className={cn(;
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",;
           "text-destructive";
         )} />,;
+
 
       case 'suspicious':;
         return <AlertTriangleclassName={cn(
@@ -133,13 +160,13 @@ export function SeverityIndicator({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { cn } from '@/lib / utils';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';

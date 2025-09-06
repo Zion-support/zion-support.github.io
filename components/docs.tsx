@@ -5,6 +5,10 @@ import Button from '../components/ui/Button';
 
 
 export default function DocsPage() {
+export default function DocsPage() {
+  const contact = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
 
 export default function DocsPage() {
   const contact = {
@@ -19,6 +23,7 @@ export default function DocsPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -27,6 +32,7 @@ export default function DocsPage() {
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
         { name: 'Contact Sales', href: '/contact' }]
     };
+
 
 
 
@@ -114,8 +120,10 @@ export default function DocsPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
   });
+
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
+
 
 
 
@@ -222,6 +230,7 @@ export default function DocsPage() {;
 
 
 
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
 
@@ -243,7 +252,6 @@ export default function DocsPage() {;
     });  };      day: 'numeric';
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
   return (
@@ -275,8 +283,8 @@ export default function DocsPage() {;
                     <li key={l && l.name}>;
                       <a
                         href={l.href}
-                        className='text-cyan-400 hover:underline'
-                      >
+                        className='text - cyan - 400 hover:underline';
+                      >;
                         {l.name}
 
                       </a>                    </li>      </Head>
@@ -303,12 +311,14 @@ export default function DocsPage() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   ))}
                 </ul>;
@@ -386,12 +396,12 @@ export default function DocsPage() {;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
-
   );
 }
               ))}
             </ul>
           </Card>
+
           <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">Need help?</h2>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -414,6 +424,7 @@ export default function DocsPage() {;
 
 
 
+
               ))}
             </ul>
           </Card>
@@ -428,4 +439,5 @@ export default function DocsPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

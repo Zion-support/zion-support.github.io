@@ -6,23 +6,78 @@ import Link from 'next/link';
 
 import {
 
-
+  Brain
+  Mail
+  Phone
+  MapPin
+  Globe
+  Github
+  Linkedin
+  Twitter;
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
+  Linkedin,;
+  Twitter,;
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
-const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear()
-  const footerSections = [
-    {
-      title: 'Services'
-      links: [
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' }
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' }
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' }
-        { name: 'Space Technology', href: '/space-technology' }
-        {
-          name: 'View All Services'
-          href: '/comprehensive-2025-services-showcase'
-        }
-      ]
+import React from 'react';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import {;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+  Twitter,;
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+
+const EnhancedFooter: React.FC = () => {;
+  const currentYear = new Date().getFullYear(),;
+
+  const footerSections = [;
+    {;
+      title: 'Services',;
+      links: [;
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },;
+        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },;
+        { name: 'Edge Computing', href: '/edge-computing-orchestration' },;
+        { name: 'Space Technology', href: '/space-technology' },;
+        {;
+          name: 'View All Services',;
+          href: '/comprehensive-2025-services-showcase',;
+        },;
+      ],;
+
     },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
       ]
     }
@@ -55,12 +110,24 @@ const EnhancedFooter: React.FC = () => {
   ];
   const socialLinks = [
 
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+
     {
       name: 'LinkedIn'
       href: 'https://linkedin.com/company/ziontechgroup'
       icon: Linkedin
     }
     {
+
+      name: 'Twitter'
+      href: 'https://twitter.com/ziontechgroup'
+      icon: Twitter
+    }
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
 
 
   return (
@@ -117,7 +184,9 @@ const EnhancedFooter: React.FC = () => {
             </div>
           </div>
           {/* Footer Sections */}
+
           {footerSections.map(section => (
+
             <div key={section.title}>
               <h3 className='text-white font-semibold mb-4'>{section.title}</h3>
               <ul className='space-y-2'>
@@ -131,10 +200,20 @@ const EnhancedFooter: React.FC = () => {
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
-                      href={link.href}
-                      className="text-white/70 hover: text-white transition-colors duration-200"
-                    >
-                      {link.name}
+
+import Link from 'next / link';
+import {
+import React from 'react';
+import Link from 'next/link';
+
+import {
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
+
                     </Link>
                   </li>
                 ))}
@@ -142,6 +221,8 @@ const EnhancedFooter: React.FC = () => {
             </div>
           ))}
         </div>
+
+
 
 
         {/* Bottom Section */}
@@ -195,7 +276,9 @@ const EnhancedFooter: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -207,6 +290,7 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
+
 
 
 
@@ -263,6 +347,7 @@ const EnhancedFooter: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 export default EnhancedFooter;
 import React from './react';
   FileText,
@@ -314,6 +399,138 @@ function EnhancedFooter() {
     <footer className="bg-gray-900 text-white">";
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">,;
+
+
+  const footer_links = {}, ";
+      { name: "IT Services", href: "/services / it - services" }, ";
+      { name: "Micro SaaS", href: "/services / micro - saas" }, ";
+      { name: "Web Development", href: "/services / web - development" }, ";
+      { name: "Cloud Services", href: "/services / cloud - services" }, ";
+      { name: "AI Development", href: "/services / ai - development" }],
+    solutions: [",
+      { name: "AI Content Creation", href: "/solutions / ai - content - creation" }, ";
+      { name: "Customer Support", href: "/solutions / customer - support" }, ";
+      { name: "Email Automation", href: "/solutions / email - automation" }, ";
+      { name: "Event Management", href: "/solutions / event - management" }, ";
+      { name: "Project Management", href: "/solutions / project - management" }, ";
+      { name: "Workflow Automation", href: "/solutions / workflow - automation" }],
+    company: [",
+      { name: "About Us", href: "/about" }, ";
+      { name: "Careers", href: "/careers" }, ";
+      { name: "Partners", href: "/partners" }, ";
+      { name: "Contact", href: "/contact" }, ";
+      { name: "Blog", href: "/blog" }],
+    resources: [",
+      { name: "Help Center", href: "/help" }, ";
+      { name: "Pricing Guide", href: "/pricing - guide" }, ";
+      { name: "Search", href: "/search" }, ";
+      { name: "Sitemap", href: "/sitemap" }],
+    legal: [",
+      { name: "Privacy Policy", href: "/privacy" }, ";
+      { name: "Terms of Service", href: "/terms" }, ";
+      { name: "Cookie Policy", href: "/cookies" }]}
+  const social_links = [];
+;
+  return (
+    <footer className="bg - gray - 900 text - white">";
+      <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">";
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 6 gap - 8">,
+          {/* comment */}";
+          <div className="lg: col - span - 2">";
+            <div className="flex items - center space - x-2 mb - 4">";
+              <div className="w - 10 h - 10 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">";
+                <span className="text - white font - bold text - lg">Z</span>;
+              </div>;
+              <div>";
+
+                  Technology Solutions,;
+                </div>;
+            </div>";
+            <p className="text-gray-400 mb-6 max-w-md">,;
+              Leading technology solutions provider specializing in AI,;
+              cybersecurity, cloud infrastructure, and digital transformation,;
+services. We help businesses innovate, scale, and succeed in the,;
+
+digital age.;
+            </p>";
+            <div className="space-y-3">";
+              <div className="flex items-center space-x-3 text-gray-400">";
+                <Phone className="w-4 h-4"  />";
+                <ahref="tel: +13024640950
+                  className="hover:text-white transition-colors">;
+
+                  +1 (302) 464-0950,;
+
+                </a>;
+              </div>";
+              <div className="flex items-center space-x-3 text-gray-400">";
+                <Mail className="w-4 h-4"  />";
+                <ahref="mailto: kleber@ziontechgroup && ziontechgroup.com
+                  className="hover:text-white transition-colors">;
+
+                  kleber@ziontechgroup && ziontechgroup.com,;
+                </a>;
+              </div>";
+              <div className="flex items-center space-x-3 text-gray-400">";
+                <MapPin className="w-4 h-4"  />,;
+
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>;
+              </div>;
+          {/* comment */}
+          <div>";
+            <h3 className="text-lg font-semibold mb-4 flex items-center">";
+              <Globe className="w-5 h-5 mr-2 text-blue-400"  />;
+
+                <span className="text - xl font - bold">Zion Tech Group</span>";
+                <div className="text - xs text - gray - 400">;
+                  Technology Solutions,
+                </div>;
+            </div>";
+            <p className="text - gray - 400 mb - 6 max - w-md">,
+              Leading technology solutions provider specializing in AI,
+              cybersecurity, cloud infrastructure, and digital transformation,
+services. We help businesses innovate, scale, and succeed in the,
+digital age.;
+            </p>";
+            <div className="space - y-3">";
+              <div className="flex items - center space - x-3 text - gray - 400">";
+                <Phone className="w - 4 h - 4"  />";
+                <a href="tel: +13024640950;
+                  className="hover:text - white transition - colors">;
+                  +1 (302) 464 - 0950,
+                </a>;
+              </div>";
+              <div className="flex items - center space - x-3 text - gray - 400">";
+                <Mail className="w - 4 h - 4"  />";
+                <a href="mailto: kleber@ziontechgroup.com;
+                  className="hover:text - white transition - colors">;
+                  kleber@ziontechgroup.com,
+                </a>;
+              </div>";
+              <div className="flex items - center space - x-3 text - gray - 400">";
+                <MapPin className="w - 4 h - 4"  />,
+                <span > 364 E Main St STE 1008, Middletown DE 19709</span>;
+              </div>;
+          {/* comment */}
+          <div>";
+            <h3 className="text - lg font - semibold mb - 4 flex items - center">";
+              <Globe className="w - 5 h - 5 mr - 2 text - blue - 400"  />;
+              Services,
+
+            </h3>";
+            <ul className="space - y-2">;
+              {footer_links.services.map (link => (";
+                <li key="{link.name}">";
+                  <Link href="{link.href}
+
+              Services,;
+            </h3>";
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.services.map(link => (";
+                <li key="{link && link.name}">";
+                  <Link href="{link && link.href}
+                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
+                    {link && link.name}
 
 
 
@@ -439,7 +656,41 @@ company updates.;
               <buttontype="submit
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
 
-                Subscribe
+
+                Subscribe,;
+
+                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    {link.name}
+                  </Link>;
+                </li>))}
+            </ul>";
+            <h4 className="text - md font - semibold mb - 3 text - gray - 300">Legal</h4>";
+            <ul className="space - y-2">;
+              {footer_links.legal.map (link => (";
+                <li key="{link.name}">";
+                  <Link href="{link.href}
+                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    {link.name}
+                  </Link>;
+                </li>))}
+            </ul>;
+          </div>;
+        {/* comment */}";
+        <div className="border - t border - gray - 800 mt - 12 pt - 8">";
+          <div className="max - w-2xl mx - auto text - center mb - 8">";
+            <h3 className="text - xl font - semibold mb - 2">Stay Updated</h3>";
+            <p className="text - gray - 400 mb - 4">;
+              Subscribe to our newsletter for the latest technology insights and,
+company updates.;
+            </p>";
+            <form className="flex flex - col sm: flex - row gap - 3 max - w-md mx - auto">";
+              <input type="email;
+                placeholder="Enter your email;
+                className="flex - 1 px - 4 py - 2 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent"  />";
+              <button type="submit;
+                className="bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - semibold hover:bg - blue - 700 transition - colors">;
+                Subscribe,
+
               </button>;
             </form>;
           </div>;
@@ -472,5 +723,7 @@ company updates.;
   )}"'
 
 export default EnhancedFooter;
+
+
 
 

@@ -1,21 +1,14 @@
 
 
-
-
-
-
-
-
-
-import {useState} from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Loader2} from "lucide-react";
-import {CreateResumeFormProps} from "./types";
-
-
-
-
+export const CreateResumeForm = ({
+  onCreateResume;
+  onCancel;
+  isLoading
+}: CreateResumeFormProps) => {
+  const [newResumeTitle, setNewResumeTitle] = useState('');
+export const CreateResumeForm = ({ ;
+  onCreateResume;
+  onCancel;
 
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -53,6 +46,19 @@ export const CreateResumeForm = ({ ;
   onCancel;
   isLoading ;
 
+            <input
+              type="text"
+              placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+import { useState } from "react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { CreateResumeFormProps } from "./types",;
+export const CreateResumeForm = ({;
+  onCreateResume,;
+  onCancel,;
+  isLoading;
 
 
 }: CreateResumeFormProps) => {;
@@ -80,7 +86,9 @@ export const CreateResumeForm = ({ ;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               value={newResumeTitle}
@@ -112,6 +120,7 @@ export const CreateResumeForm = ({ ;
 
 
 
+
               onChange={(e) => setNewResumeTitle(e && e.target.value)}
             />;
             <Button
@@ -126,6 +135,7 @@ export const CreateResumeForm = ({ ;
             variant="ghost"
             onClick={onCancel}
             className="mt-4">;
+
 
 
 

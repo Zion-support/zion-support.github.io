@@ -11,6 +11,10 @@
 
 
 
+
+
+
+
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -41,6 +45,7 @@ interface GeneratedContentDisplayProps {;
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -48,6 +53,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -75,17 +81,20 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         <div>
 
 
+
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
+
               </Badge>
             ))}
           </div>
         </div>
               </Badge>;
             ))}
+
 
         
 
@@ -94,6 +103,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </div>
 
         
+
         <div>
 
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
@@ -246,6 +256,7 @@ function GeneratedContentDisplay() {
 }
 
 
+
         <Button;
           on_click={on_apply}
           className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
@@ -263,5 +274,6 @@ function GeneratedContentDisplay() {
 }
 
 ;
+
 
 

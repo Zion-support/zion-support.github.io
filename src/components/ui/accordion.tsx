@@ -10,11 +10,13 @@ const Accordion = AccordionPrimitive.Root
 
 
 
+
 const AccordionItem = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Item>
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
+
 import * as React from 'react';
 import {ElementRef, ComponentPropsWithoutRef} from 'react';
 import * as AccordionPrimitive from '@radix - ui / react - accordion';
@@ -31,6 +33,7 @@ const AccordionItem = React.forward_ref<;
     {...props}
 
 
+
 AccordionItem.displayName = "AccordionItem"
 
 AccordionItem.displayName = "AccordionItem"
@@ -40,6 +43,7 @@ AccordionItem.displayName = "AccordionItem"
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const AccordionTrigger = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
@@ -48,6 +52,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
+
 
 
 import React from 'react';
@@ -99,6 +104,8 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 
 
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -107,6 +114,7 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
   />));
@@ -136,6 +144,7 @@ const AccordionContent = React.forward_ref<;
     ref={ref}
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
+
 
 
 
@@ -172,3 +181,4 @@ AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 
 ;
+

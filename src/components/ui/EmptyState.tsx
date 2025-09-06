@@ -11,6 +11,31 @@ interface EmptyStateProps {
   showRetry?: boolean;
 
 
+export function EmptyState({
+  text = 'No items available'
+  description
+  onRetry
+export function EmptyState({
+  text = "No items available"
+  description
+  onRetry
+  showRetry = false
+
+import { Package, RefreshCw } from 'lucide-react';
+import { Button } from './button',;
+interface EmptyStateProps {;
+  text?: string,;
+  description?: string,;
+  onRetry?: () => void,;
+  showRetry?: boolean,;
+  icon?: React.ReactNode;
+}
+
+export function EmptyState({ 
+  text = "No items available",
+  description,
+  onRetry,
+  showRetry = false,
 
   icon
 }: EmptyStateProps) {
@@ -39,7 +64,9 @@ function EmptyState() {
       </div>;
       <h3 className="text - xl font - semibold text - white mb - 2">;
         {text}
+
       </h3>
+
       {description && (
 
 
@@ -48,10 +75,12 @@ function EmptyState() {
 export function EmptyState(): any ({;
   text = 'No items available',;
 
+
         <p className="text-gray-400 mb-6 max-w-md">
 ;
 export function EmptyState({;
   text = "No items available",;
+
   description,;
   onRetry;
   showRetry = false;
@@ -92,6 +121,7 @@ export function EmptyState({;
           <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">;
           {description}
         </p>;
+
 
       )}
       {showRetry && onRetry && (;
@@ -147,3 +177,4 @@ export function EmptyState({;
         </Button>)}
     </div>);
 }
+

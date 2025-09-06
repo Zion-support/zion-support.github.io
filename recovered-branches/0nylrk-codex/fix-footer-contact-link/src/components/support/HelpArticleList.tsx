@@ -1,15 +1,35 @@
 
 
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
 
+
+export function HelpArticleList({
+  categoryId
+  onArticleSelect
+  searchQuery
+}: HelpArticleListProps) {
+  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
+  if (!category) {
+    return <div>Category not found</div>;
+  }
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
-
 
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
+
 
 
 import React from "react",;
@@ -29,6 +49,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   }
 
 
+
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
@@ -40,6 +61,8 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
     : category.articles;
     : category.articles,
   
+
+
 
   return (
     <div>
@@ -58,24 +81,24 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
         <div className="space-y-4">
           {filteredArticles.map((article) => (
             <Card
-              key={article.id}
+              key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-              onClick={() => onArticleSelect(article.id)}
-            >
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg">{article.title}</CardTitle>
-                <CardDescription className="text-zion-slate-light text-sm">
-                  Last updated: {formatDate(article.lastUpdated)}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-zion-slate-light truncate">
-                  {article.content.substring(0, 120)}...
-                </p>
-              </CardContent>
-            </Card>
+              onClick={() => onArticleSelect(article && article.id)}
+            >;
+              <CardHeader className="pb-2">;
+                <CardTitle className="text-lg">{article && article.title}</CardTitle>;
+                <CardDescription className="text-zion-slate-light text-sm">;
+                  Last updated: {formatDate(article && article.lastUpdated)}
+                </CardDescription>;
+              </CardHeader>;
+              <CardContent>;
+                <p className="text-sm text-zion-slate-light truncate">;
+                  {article && article.content.substring(0, 120)}...;
+                </p>;
+              </CardContent>;
+            </Card>;
           ))}
-        </div>
+        </div>;
       )}
     </div>
   );
@@ -86,6 +109,7 @@ function formatDate(date: string): string {
     year: "numeric"
     month: "long"
     day: "numeric"
+
 
 
 
@@ -127,6 +151,7 @@ export /**
  */
 function HelpArticleList() {
   const category = HELP_CATEGORIES.find ((cat) => cat.id === category_id);
+
 
 
 ;
@@ -192,6 +217,7 @@ function format_date (date: string): string {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -199,5 +225,6 @@ function format_date (date: string): string {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

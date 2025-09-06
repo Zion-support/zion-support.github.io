@@ -88,6 +88,7 @@ import Head from 'next/head';
 
     });
     setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
+
   return (
 
     <div className='min-h-screen p-8 space-y-8'>;
@@ -269,9 +270,18 @@ function broadcast() {
       </section>;
 
 
+
+
     setStatus('Broadcasting manifesto...');
 
 
 
+    const res = await fetch('/api/offworld/ipfs?action=broadcast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: 'We build beyond platforms.' }) }),
+    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
+  }
+      <section className='space-y-2'>;
+        <h2 className='font-semibold'>Broadcast Manifesto</h2>;
+        <button
+          className='px-3 py-2 bg-indigo-600 text-white rounded'
 
 

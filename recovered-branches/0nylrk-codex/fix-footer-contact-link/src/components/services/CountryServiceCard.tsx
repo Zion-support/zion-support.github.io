@@ -1,19 +1,17 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Globe, Server, Clock, MapPin, Check} from "lucide-react";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
+import { CountryPricing } from "@/data/onsiteServicePricing",
 
 interface CountryServiceCardProps {
 
@@ -27,19 +25,33 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
 
   const getRegionEmoji = (countryName: string): string => {
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+    const emojiMap: Record<string, string> = {
+    const emojiMap: Record<string, string> = {;
 
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
       "Australia": "🇦🇺";
 
+      "Germany": "🇩🇪"
+      "France": "🇫🇷";
+      "Japan": "🇯🇵";
+      "China": "🇨🇳";
+      "Brazil": "🇧🇷";
+      "India": "🇮🇳";
+      "Russia": "🇷🇺";
+      "Singapore": "🇸🇬";
+      "South Korea": "🇰🇷";
+      "South Africa": "🇿🇦";
+      // Default if no flag is found
+      "default": "🌐"
+    }
+    return emojiMap[countryName] |emojiMap["default"]
+  }
+  // Get response time estimate based on country
+  const getResponseTime = (countryName: string): string => {
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
 
     const emojiMap: Record<string string> = {
       "United States": "🇺🇸",
@@ -58,12 +70,10 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       "South Korea": "🇰🇷",
       "South Africa": "🇿🇦",
       // Default if no flag is found
-      "default": "🌐"
-    },
-    
-    return emojiMap[countryName] || emojiMap["default"]
-  },
-  
+      "default": ""
+    }
+    return emojiMap[countryName] |emojiMap["default"]
+  }
   // Get response time estimate based on country
   const getResponseTime = (countryName: string): string => {
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
@@ -122,6 +132,10 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
           onClick={() => onSelect(country)}
           className={`w-full ${
 
+            isPopular
+              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
+
           }`}
         >
           Select Service
@@ -129,6 +143,11 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       </CardFooter>
     </Card>
   )
+
+}
+            isPopular 
+              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" 
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -182,6 +201,13 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple";
         : "bg-zion-blue-dark border-zion-blue-light";
 
+
+  return (
+    <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
+      isPopular 
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
+        : "bg-zion-blue-dark border-zion-blue-light"
+
     }`}>;
       <CardHeader className="pb-2">;
         <div className="flex items-center justify-between">;
@@ -216,6 +242,21 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
           <div className="flex items-start">;
             <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>First hour included</span>;
+
+      // Default if no flag is found;
+      "default": "🌐";
+    }
+;
+    return emoji_map[country_name] || emoji_map["default"];
+  }
+;
+  // Get response time estimate based on country;
+  const getResponseTime = (country_name: string): string => {
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
+;
+    if () {) {
+  $2
 
 }
 ;
@@ -275,9 +316,8 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
         </Button>;
       </CardFooter>;
 
-
-
-
+    </Card>;
+  );
 
 }
 

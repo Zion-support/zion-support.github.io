@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -21,9 +25,24 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-
-
-
+import {
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Brain
+  Database
+  Cloud
+  Lock
+  Rocket
+  Users
+  DollarSign
+  Target
+  Award
+  Phone;
 
   CheckCircle,
   ArrowRight,
@@ -46,6 +65,7 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -53,6 +73,7 @@ import { motion } from 'framer-motion';
 
 
 } from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
+
 
 
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
@@ -120,6 +141,54 @@ const ComprehensiveServicesShowcase2025 = () => {
       gradient: 'from-amber-600 via-yellow-600 to-orange-600'
       description: 'Advanced learning and educational technology'
     },  ];      description: 'Advanced learning and educational technology'
+    {
+      title: 'AI & Automation Services',
+      icon: Brain,
+      services: advancedAIAutomation2025,
+      gradient: 'from-purple-600 via-pink-600 to-blue-600',
+      description: 'Cutting-edge AI solutions that transform business operations'
+    };
+    {
+      title: 'Cybersecurity & Security',
+      icon: Shield,
+      services: advancedCybersecurity2025,
+      gradient: 'from-red-600 via-orange-600 to-yellow-600',
+      description: 'Advanced security solutions for the digital age'
+    };
+    {
+      title: 'Blockchain & Web3',
+      icon: Globe,
+      services: blockchainWeb32025,
+      gradient: 'from-green-600 via-teal-600 to-cyan-600',
+      description: 'Next-generation blockchain and decentralized solutions'
+    };
+    {
+      title: 'IoT & Edge Computing',
+      icon: Cloud,
+      services: iotEdgeComputing2025,
+      gradient: 'from-blue-600 via-indigo-600 to-purple-600',
+      description: 'Smart connected solutions for the Internet of Things'
+    };
+    {
+      title: 'Healthcare & Biotechnology',
+      icon: Target,
+      services: healthcareBiotech2025,
+      gradient: 'from-pink-600 via-rose-600 to-red-600',
+      description: 'Innovative healthcare and biotech solutions'
+    };
+    {
+      title: 'Fintech & Financial',
+      icon: DollarSign,
+      services: fintechFinancial2025,
+      gradient: 'from-emerald-600 via-green-600 to-teal-600',
+      description: 'Revolutionary financial technology solutions'
+    };
+    {
+      title: 'Education & E - Learning',
+      icon: Award,
+      services: educationElearning2025,
+      gradient: 'from-amber-600 via-yellow-600 to-orange-600',
+      description: 'Advanced learning and educational technology'
     }
   ];
   const containerVariants = {
@@ -168,6 +237,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       {/* Animated Background Elements */}
 
 
+
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>
@@ -209,12 +279,13 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
+
 
 
 
@@ -230,6 +301,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
         >
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
             Revolutionary 2025 Services
@@ -239,6 +311,10 @@ const ComprehensiveServicesShowcase2025 = () => {
             services, IT solutions, and AI innovations designed to transform
             your business and drive success in the digital age.          </p>        >
 
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
             Revolutionary 2025 Services
           </h2>
@@ -246,6 +322,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.
           </p>
         </motion.div>
+
+
 
 
         {/* Service Categories */}
@@ -397,6 +475,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -415,6 +494,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
@@ -462,7 +542,9 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   >
@@ -492,12 +574,25 @@ const ComprehensiveServicesShowcase2025 = () => {
                       </p>
                     </div>
 
+                    <div className="mb-4">;
+                      <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">;
+                        {service && service.name}
+                      </h4>;
+                      <p className="text-gray-400 text-sm leading-relaxed">;
+                        {service && service.description}
+                      </p>;
+                    </div>;
+
                     {/* Features */}
+
+                      <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}
+
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
                       </p>
@@ -533,6 +628,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -541,6 +637,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     {/* Pricing */}
 
@@ -575,8 +672,9 @@ const ComprehensiveServicesShowcase2025 = () => {
                         </div>
                       </div>
                     </div>
-</ul>;
+                      </ul>;
                     </div>;
+
                     {/* Pricing */}
                     <div className='mb-4'>;
                       <div className='flex items-center justify-between'>;
@@ -598,6 +696,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                       <div className="text-xs text-gray-500 mt-1">;
                       </div>;
                     </div>;
+
                     {/* ROI */}
                     <div className='mb-4'>;
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>;
@@ -619,6 +718,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                         </div>;
                       </div>;
                     </div>;
+
                     {/* Use Cases */}
 
                             </span>;
@@ -664,13 +764,16 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                       </a>
                     </div>
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </motion.div>
+
 
 
 
@@ -685,11 +788,13 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                 ))}
               </div>
             </motion.div>
           ))}
         </motion.div>
+
 
 
 
@@ -709,6 +814,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -724,7 +830,9 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -740,7 +848,6 @@ const ComprehensiveServicesShowcase2025 = () => {
               solutions to drive innovation, efficiency, and growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='https://ziontechgroup && ziontechgroup.com/contact'
                 className='inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
@@ -762,6 +869,19 @@ const ComprehensiveServicesShowcase2025 = () => {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">;
 
 
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="text-center mt-20"
+        >
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses already leveraging our cutting-edge solutions to drive innovation, efficiency, and growth.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+
+
               <a
                 href="https://ziontechgroup && ziontechgroup.com/contact"
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30">;
@@ -771,36 +891,220 @@ const ComprehensiveServicesShowcase2025 = () => {
               <a
                 href="tel:+13024640950"
 
-                className="inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600"
-              >
-                Call +1 302 464 0950
-                <Phone className="w-5 h-5 ml-2" />
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-
 
 
 };
+
+export default ComprehensiveServicesShowcase2025;  );
+}
+export default ComprehensiveServicesShowcase2025;  )
+}
+};
+
 export default ComprehensiveServicesShowcase2025;  );
 };
 
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 export default ComprehensiveServicesShowcase2025;
 
 
-
-
+                      </p>;
+                    </div>;
+                    {/* Features */}
+                    <div className='mb - 4'>;
+                      <h5 className='text - sm font - medium text - purple - 300 mb - 2'>;
+                        Key Features:;
+                      </h5>;
+                      <ul className='space - y-1'>;
+                        {service.features;
+                          ?.slice (0, 3);
+                          .map ((feature, feature_index) => (
+                            <li;
+                              key={feature_index}
+                              className='flex items - center text - xs text - gray - 400';
+                            >;
+                              <CheckCircle className='w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0' />;
+                              {feature}
+                            </li>))}
+                        {service.features && service.features.length > 3 && (
+                          <li className='text - xs text - gray - 500 italic'>                            +{service.features.length - 3} more features                    <div className="mb - 4">;
+                      <h5 className="text - sm font - medium text - purple - 300 mb - 2">Key Features:</h5>;
+                      <ul className="space - y-1">;
+                        {service.features?.slice (0, 3).map ((feature, feature_index) => (
+                          <li key={feature_index} className="flex items - center text - xs text - gray - 400">;
+                            <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
+                            {feature}
+                          </li>))}
+                        {service.features && service.features.length > 3 && (
+                          <li className="text - xs text - gray - 500 italic">;
+                          </li>)}
+                      </ul>;
+                    </div>;
+                    {/* Pricing */}
+                    <div className='mb - 4'>;
+                      <div className='flex items - center justify - between'>;
+                        <span className='text - sm text - gray - 400'>;
+                          Starting from:;
+                        </span>;
+                        <span className='text - lg font - bold text - green - 400'>;
+                          {service.price}
+                          {service.period}
+                        </span>;
+                      </div>;
+                      <div className='text - xs text - gray - 500 mt - 1'>                        Market position: {service.market_position}                    <div className="mb - 4">;
+                      <div className="flex items - center justify - between">;
+                        <span className="text - sm text - gray - 400">Starting from:</span>;
+                        <span className="text - lg font - bold text - green - 400">;
+                          {service.price}{service.period}
+                        </span>;
+                      </div>;
+                      <div className="text - xs text - gray - 500 mt - 1">;
+                      </div>;
+                    </div>;
+                    {/* ROI */}
+                    <div className='mb - 4'>;
+                      <h5 className='text - sm font - medium text - purple - 300 mb - 2'>;
+                        ROI & Benefits:;
+                      </h5>;
+                      <div className='text - xs text - gray - 400'>;
+                        <div className='flex items - center mb - 1'>;
+                          <TrendingUp className='w - 3 h - 3 text - blue - 400 mr - 2 flex - shrink - 0' />;
+                          {service.roi}
+                        </div>;
+                        <div className='text - xs text - gray - 500'>                          Setup time: {service.setup_time}                    <div className="mb - 4">;
+                      <h5 className="text - sm font - medium text - purple - 300 mb - 2">ROI & Benefits:</h5>;
+                      <div className="text - xs text - gray - 400">;
+                        <div className="flex items - center mb - 1">;
+                          <TrendingUp className="w - 3 h - 3 text - blue - 400 mr - 2 flex - shrink - 0" />;
+                          {service.roi}
+                        </div>;
+                        <div className="text - xs text - gray - 500">;
+                        </div>;
+                      </div>;
+                    </div>;
+                    {/* Use Cases */}
+                    <div className='mb - 4'>;
+                      <h5 className='text - sm font - medium text - purple - 300 mb - 2'>;
+                        Perfect for:;
+                      </h5>;
+                      <div className='flex flex - wrap gap - 1'>;
+                        {service.use_cases;
+                          ?.slice (0, 3);
+                          .map ((use_case, useCaseIndex) => (
+                            <span;
+                              key={useCaseIndex}
+                              className='px - 2 py - 1 bg - slate - 700 / 50 text - xs text - gray - 300 rounded - full';
+                            >;
+                              {use_case}
+                            </span>))}                      </div>;
+                    </div>;
+                    {/* CTA Button */}
+                    <div className='mt - 6'>                    <div className="mb - 4">;
+                      <h5 className="text - sm font - medium text - purple - 300 mb - 2">Perfect for:</h5>;
+                      <div className="flex flex - wrap gap - 1">;
+                        {service.use_cases?.slice (0, 3).map ((use_case, useCaseIndex) => (
+                          <span;
+                            key={useCaseIndex}
+                            className="px - 2 py - 1 bg - slate - 700 / 50 text - xs text - gray - 300 rounded - full";
+                          >;
+                            {use_case}
+                          </span>))}
+                    </div>;
+                    {/* CTA Button */}
+                    <div className='mt - 6'>;
+                      <a;
+                        href={service.link}
+                        className='inline - flex items - center justify - center w - full px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white text - sm font - medium rounded - lg hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
+                      >;
+                        Learn More;
+                        <ArrowRight className='w - 4 h - 4 ml - 2' />                      </a>;
+                    </div>;
+                    {/* Hover Effect Overlay */}
+                    <div className='absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - pink - 600 / 10 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none' />                  </motion.div>                      <a;
+                        href={service.link}
+                        className="inline - flex items - center justify - center w - full px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white text - sm font - medium rounded - lg hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+                      >;
+                        Learn More;
+                        <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                      </a>;
+                    </div>;
+                    {/* Hover Effect Overlay */}
+                    <div className='absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - pink - 600 / 10 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none' />                    <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - pink - 600 / 10 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />;
+                  </motion.div>))}
+              </div>;
+            </motion.div>))}
+        </motion.div>;
+        {/* Call to Action */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 30 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className='text - center mt - 20';
+        >;
+          <div className='bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - xl rounded - 3xl p - 8 border border - purple - 500 / 30'>;
+            <h3 className='text - 3xl font - bold text - white mb - 4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
+              Join thousands of businesses already leveraging our cutting - edge;
+              solutions to drive innovation, efficiency, and growth.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <a;
+                href='https://ziontechgroup.com / contact';
+                className='inline - flex items - center justify - center px - 8 py - 3 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
+              >;
+                Get Started Today;
+                <Rocket className='w - 5 h - 5 ml - 2' />;
+              </a>;
+              <a;
+                href='tel:+13024640950';
+                className='inline - flex items - center justify - center px - 8 py - 3 bg - slate - 700 / 50 text - white font - semibold rounded - xl hover:bg - slate - 600 / 50 transition - all duration - 200 border border - slate - 600';
+              >;
+                Call +1 302 464 0950;
+                <Phone className='w - 5 h - 5 ml - 2' />              </a>        >;
+          <div className="bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - xl rounded - 3xl p - 8 border border - purple - 500 / 30">;
+            <h3 className="text - 3xl font - bold text - white mb - 4">;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
+              Join thousands of businesses already leveraging our cutting - edge solutions to drive innovation, efficiency, and growth.;
+            </p>;
+            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+              <a;
+                href="https://ziontechgroup.com / contact";
+                className="inline - flex items - center justify - center px - 8 py - 3 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+              >;
+                Get Started Today;
+                <Rocket className="w - 5 h - 5 ml - 2" />;
+              </a>;
+              <a;
+                href="tel:+13024640950";
+                className="inline - flex items - center justify - center px - 8 py - 3 bg - slate - 700 / 50 text - white font - semibold rounded - xl hover:bg - slate - 600 / 50 transition - all duration - 200 border border - slate - 600";
+              >;
+                Call +1 302 464 0950;
+                <Phone className="w - 5 h - 5 ml - 2" />;
+              </a>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>);
+}
+;
+export default ComprehensiveServicesShowcase2025);
+}
+;
+export default ComprehensiveServicesShowcase2025;
+;
+  );
+}
+};
 
 
 export default ComprehensiveServicesShowcase2025;  )
 }
 export default ComprehensiveServicesShowcase2025;
+
 
 
 
@@ -811,4 +1115,5 @@ export default ComprehensiveServicesShowcase2025;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

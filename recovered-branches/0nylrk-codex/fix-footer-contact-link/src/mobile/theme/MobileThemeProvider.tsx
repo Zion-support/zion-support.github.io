@@ -4,12 +4,24 @@
   children: React.ReactNode
 }
 
+
+
 export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 
   const { theme } = useTheme();
   return (
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
 
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
+interface MobileThemeProviderProps {
+  children: React.ReactNode
+}
+
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
+  const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
 
 import React from "react",
 import { useTheme } from "@/hooks/useTheme",
@@ -18,6 +30,8 @@ interface MobileThemeProviderProps {
 import React from "react",;
 import { useTheme } from "@/hooks/useTheme",;
 interface MobileThemeProviderProps {;
+
+
 
   children: React.ReactNode;
 }
@@ -32,6 +46,7 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 
   return (;
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+
 
 
 
@@ -50,10 +65,23 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       {children}
 
     </div>;
   );
 }
 
+
+export /**
+ * MobileThemeProvider - Function description
+ */
+function MobileThemeProvider() {
+  const { theme } = use_theme ();
+
+  return (
+    <div className={`mobile - app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+      {children}
+    </div>);
+}
 

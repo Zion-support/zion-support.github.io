@@ -33,18 +33,18 @@ class SafeAutomationRunner {
     console.log(logMessage);
     const logFile = path.join(this.logDir, 'safe-automation.log';);
     fs.appendFileSync(logFile, logMessage + '\n')}
-  async runCommand() { this.log("🔧 ${description }");
+  async runCommand() { this.log(" ${description }");
     try {
       const result = execSync(command, { 
         "encoding": 'utf8', 
         "stdio": 'pip;e;';
-        timeout: timeout })this.log("✅ ${description} completed successfully");
+        timeout: timeout })this.log(" ${description} completed successfully");
       this.results.completed.push(description);
-      return { "success": true output: result }} catch(error) { this.log("❌ ${description } "failed": ${error.message}", 'ERROR');
+      return { "success": true output: result }} catch(error) { this.log(" ${description } "failed": ${error.message}", 'ERROR');
       this.results.failed.push({ description, "error": error.message });
       return { "success": false error: error.message }}
   }
-  async runAutomationScripts() { this.log('🚀 Starting Safe Automation Runner');
+  async runAutomationScripts() { this.log(' Starting Safe Automation Runner');
     // Basic health checks;
     await this.runCommand('npm --version', 'Check npm version', 10000);
     await this.runCommand('node --version', 'Check node version', 10000);

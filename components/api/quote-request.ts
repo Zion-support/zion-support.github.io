@@ -17,6 +17,15 @@ const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createClient } from '@supabase/supabase-js';
+import OpenAI from 'openai';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+
+
+
 const openaiApiKey = process.env.OPENAI_API_KEY;
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -55,7 +64,7 @@ export default async function handler(
           model: "gpt-4 && 4.1-mini",
           input: prompt,
         });
-        aiSummary = text && text.split("\n")[0] || text;
+        aiSummary = text.split("\n")[0] |text;
         const tagsLine = (
           text && text.split("\n").find((l) => l && l.toLowerCase().includes("tags")) || ""
 
@@ -69,6 +78,7 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
+
 
 
 
@@ -196,6 +206,7 @@ if (throw error) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

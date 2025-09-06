@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
+
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
@@ -30,6 +31,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
+
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -37,9 +39,11 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 
 
 
+
+
 export default function BlogPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+
 
     <UltraFuturisticBackground intensity="high" variant="quantum">;
       <SEO title="Blog | Zion Tech Group" description="Insights and updates on AI, cloud, and automation." canonical="https://ziontechgroup && ziontechgroup.com/blog/" />;
@@ -49,17 +53,20 @@ export default function BlogPage() {
       </div>;
 
   return (
+
     <UltraFuturisticBackground intensity='high' variant='quantum'>
       <SEO
         title='Blog | Zion Tech Group'
         description='Insights and updates on AI, cloud, and automation.'
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
@@ -70,6 +77,7 @@ export default function BlogPage() {
       </div>
     </UltraFuturisticBackground>;
   );
+
 
 
 }
@@ -84,5 +92,6 @@ export default function BlogPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

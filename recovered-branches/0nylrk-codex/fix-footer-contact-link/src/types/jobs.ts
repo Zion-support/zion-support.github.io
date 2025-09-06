@@ -2,6 +2,8 @@
 
 
 
+
+
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -16,8 +18,12 @@ export type JobCategory =;
 export interface JobBudget {
 
 
+
+
+
 }
 export interface Job {
+
 
 
   min: number;
@@ -25,13 +31,9 @@ export interface Job {
   currency: string
 }
 
+export interface Job {
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+export interface Job {;
 
   id: string;
   client_id: string;
@@ -42,6 +44,7 @@ export interface Job {
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+
 
 
 
@@ -62,6 +65,7 @@ export interface JobFormData {;
   description: string;
   category: JobCategory;
   skills: string;
+
 
   budget_min: number;
   budget_max: number,
@@ -98,11 +102,9 @@ export interface JobMatch {
   }
 }
 
+export interface ResumeAttachment {
 
-
-
-
-
+export interface ResumeAttachment {;
 
   id: string;
   title: string;
@@ -118,6 +120,7 @@ export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' |
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 ;
@@ -126,6 +129,7 @@ export interface JobApplication {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -158,13 +162,8 @@ export interface JobApplication {
       score: number;
 
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
+  notes?: string,  // New field for client notes
+}
 
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
@@ -276,12 +275,12 @@ export interface JobApplication {;
       missing: string[];
     }
     experience_match?: {
-      score: number,
-      analysis: string;
+      score: number
+      analysis: string
     }
     education_match?: {
-      score: number,
-      analysis: string;
+      score: number
+      analysis: string
     }
   }
   match_suggestion?: string;
@@ -293,7 +292,9 @@ export interface JobApplication {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }

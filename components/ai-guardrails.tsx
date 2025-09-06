@@ -6,8 +6,14 @@ import Head from 'next/head';
 
 import {
 
-
-
+  Check
+  Shield
+  ShieldAlert
+  Lock
+  Phone
+  Mail
+  MapPin
+  ExternalLink;
 
   Check,
   Shield,
@@ -21,9 +27,13 @@ import {
 
 
 
+
+
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+
+
 
 
 export default function AIGuardrailsPage() {
@@ -33,6 +43,8 @@ export default function AIGuardrailsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
+
+
 
 
 export default function AIGuardrailsPage() {
@@ -48,10 +60,12 @@ export default function AIGuardrailsPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const features = [
@@ -62,10 +76,35 @@ export default function AIGuardrailsPage() {
     'Human handoff flows and escalation policies'
     'Audit logs, alerting and exportable evidence'
 
-}
+import {;
+  Check,;
+  Shield,;
+  ShieldAlert,;
+  Lock,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  ExternalLink,;
+} from 'lucide-react';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 
 
+export default function AIGuardrailsPage() {;
+  const contactInfo = {;
+    mobile: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup && ziontechgroup.com',;
+  };
 
+  const features = [;
+    'Prompt/output policy engine with allow/deny lists',;
+    'Jailbreak and prompt injection detection',;
+    'PII/PHI detection and redaction',;
+    'Toxicity, bias and safety classifiers',;
+    'Human handoff flows and escalation policies',;
+    'Audit logs, alerting and exportable evidence',;
   ];
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -74,6 +113,7 @@ export default function AIGuardrailsPage() {
         <meta
           name='description'
           content='Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.'
+
 
         />
         <link rel='canonical' href='https://ziontechgroup.com/ai-guardrails' />
@@ -98,6 +138,7 @@ export default function AIGuardrailsPage() {
                 <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                   {features.map(f => (
                     <li
+
                       key={f}
                       className='flex items-start gap-2 text-gray-200'
                     >
@@ -205,6 +246,9 @@ export default function AIGuardrailsPage() {
 				</div>
 			</section>
 		</UltraAdvancedFuturisticBackground>
+
+);
+	);
 
 }
 

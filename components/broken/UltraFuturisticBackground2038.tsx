@@ -1,7 +1,30 @@
 
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
 
+interface UltraFuturisticBackground2038Props {
+  intensity?: 'low' | 'medium' | 'high';
+  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness';
+  children?: React.ReactNode
 }
 import React, { useEffect, useRef } from 'react';
 
@@ -20,6 +43,8 @@ import { motion } from 'framer-motion';
 
 
 
+
+
   children?: React && React.ReactNode;
 export default function UltraFuturisticBackground2038(): any ({;
   intensity = 'medium',;
@@ -28,10 +53,14 @@ export default function UltraFuturisticBackground2038(): any ({;
 
 
 
-
-
+  intensity = 'medium',
+  theme = 'consciousness',
+  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
   intensity = 'medium';
   theme = 'consciousness';
+
+  children
+}: UltraFuturisticBackground2038Props) {
 
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -124,9 +153,476 @@ if ( {) {
 
     window && window.addEventListener('resize', resizeCanvas);
 
+            primary: ['#ff0080#00ffff#ffff00#ff00ff#8000ff#00ff80'],
+            secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
+            accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
+          };
+        case 'neon':
+          return {
+            primary: ['#ff0080#00ffff#ffff00#ff00ff#8000ff#00ff80'],
+            secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
+            accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
+          };
+        case 'holographic':
+          return {
+            primary: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
+            secondary: ['#54a0ff#5f27cd#ff9ff3#54a0ff#5f27cd#ff6b6b'],
+            accent: ['#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3#54a0ff'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
+          };
+        case 'cyberpunk':
+          return {
+            primary: ['#ff0055#00ffff#ffff00#ff00ff#8000ff#00ff80'],
+            secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
+            accent: ['#ffff40#ff40ff#ff6b6b#4ecdc4#45b7d1#96ceb4'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
+          };
+        case 'space':
+          return {
+            primary: ['#1e3a8a#7c3aed#059669#dc2626#ea580c#0891b2'],
+            secondary: ['#8b5cf6#ec4899#f59e0b#10b981#06b6d4#a855f7'],
+            accent: ['#f97316#ef4444#84cc16#06b6d4#a855f7#f97316'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
+          };
+        default: // quantum
+          return {
+            primary: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'],
+            primary: [;
+              '#ff0080',
+              '#00ffff',
+              '#ffff00',
+              '#ff00ff',
+              '#8000ff',
+              '#00ff80',
+            ],
+            secondary: [;
+              '#ff8000',
+              '#0080ff',
+              '#ff4080',
+              '#40ffff',
+              '#ffff40',
+              '#ff40ff',
+            ],
+            accent: [;
+              '#ff6b6b',
+              '#4ecdc4',
+              '#45b7d1',
+              '#96ceb4',
+              '#feca57',
+              '#ff9ff3',
+            ],
+            quantum: [;
+              '#8b5cf6',
+              '#06b6d4',
+              '#ec4899',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+            ],
+        case 'neon':;
+          return {
+            primary: [;
+              '#ff0080',
+              '#00ffff',
+              '#ffff00',
+              '#ff00ff',
+              '#8000ff',
+              '#00ff80',
+            ],
+            secondary: [;
+              '#ff8000',
+              '#0080ff',
+              '#ff4080',
+              '#40ffff',
+              '#ffff40',
+              '#ff40ff',
+            ],
+            accent: [;
+              '#ff6b6b',
+              '#4ecdc4',
+              '#45b7d1',
+              '#96ceb4',
+              '#feca57',
+              '#ff9ff3',
+            ],
+            quantum: [;
+              '#8b5cf6',
+              '#06b6d4',
+              '#ec4899',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+            ],
+          }
+        case 'holographic':;
+          return {
+            primary: [;
+              '#ff6b6b',
+              '#4ecdc4',
+              '#45b7d1',
+              '#96ceb4',
+              '#feca57',
+              '#ff9ff3',
+            ],
+            secondary: [;
+              '#54a0ff',
+              '#5f27cd',
+              '#ff9ff3',
+              '#54a0ff',
+              '#5f27cd',
+              '#ff6b6b',
+            ],
+            accent: [;
+              '#4ecdc4',
+              '#45b7d1',
+              '#96ceb4',
+              '#feca57',
+              '#ff9ff3',
+              '#54a0ff',
+            ],
+            quantum: [;
+              '#8b5cf6',
+              '#06b6d4',
+              '#ec4899',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+            ],
+          }
+        case 'cyberpunk':;
+          return {
+            primary: [;
+              '#ff0055',
+              '#00ffff',
+              '#ffff00',
+              '#ff00ff',
+              '#8000ff',
+              '#00ff80',
+            ],
+            secondary: [;
+              '#ff8000',
+              '#0080ff',
+              '#ff4080',
+              '#40ffff',
+              '#ffff40',
+              '#ff40ff',
+            ],
+            accent: [;
+              '#ffff40',
+              '#ff40ff',
+              '#ff6b6b',
+              '#4ecdc4',
+              '#45b7d1',
+              '#96ceb4',
+            ],
+            quantum: [;
+              '#8b5cf6',
+              '#06b6d4',
+              '#ec4899',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+            ],
+          }
+        case 'space':;
+          return {
+            primary: [;
+              '#1e3a8a',
+              '#7c3aed',
+              '#059669',
+              '#dc2626',
+              '#ea580c',
+              '#0891b2',
+            ],
+            secondary: [;
+              '#8b5cf6',
+              '#ec4899',
+              '#f59e0b',
+              '#10b981',
+              '#06b6d4',
+              '#a855f7',
+            ],
+            accent: [;
+              '#f97316',
+              '#ef4444',
+              '#84cc16',
+              '#06b6d4',
+              '#a855f7',
+              '#f97316',
+            ],
+            quantum: [;
+              '#8b5cf6',
+              '#06b6d4',
+              '#ec4899',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+            ],
+          }
+        default: // quantum;
+          return {
+            primary: [;
+              '#8b5cf6',
+              '#06b6d4',
+              '#ec4899',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+            ],
+            secondary: [;
+              '#f59e0b',
+              '#ef4444',
+              '#8b5cf6',
+              '#06b6d4',
+              '#ec4899',
+              '#10b981',
+            ],
+            accent: [;
+              '#ec4899',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+              '#8b5cf6',
+              '#06b6d4',
+            ],
+            quantum: [;
+              '#8b5cf6',
+              '#06b6d4',
+              '#ec4899',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+            ],
+          }      }            primary: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'],
+
+            secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4#ec4899#10b981'],
+            accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'];
           }
 
-    }
+    resizeCanvas();
+    window && window.addEventListener('resize', resizeCanvas);
+
+    // Enhanced theme-based color schemes for 2038;
+    const getThemeColors = () => {;
+      switch (theme) {;
+        case 'consciousness':;
+          return {;
+            primary: [;
+              '#ff0080',;
+              '#00ffff',;
+              '#ffff00',;
+              '#ff00ff',;
+              '#8000ff',;
+              '#00ff80',;
+            ],;
+            secondary: [;
+              '#ff8000',;
+              '#0080ff',;
+              '#ff4080',;
+              '#40ffff',;
+              '#ffff40',;
+              '#ff40ff',;
+            ],;
+            accent: [;
+              '#ff6b6b',;
+              '#4ecdc4',;
+              '#45b7d1',;
+              '#96ceb4',;
+              '#feca57',;
+              '#ff9ff3',;
+            ],;
+            quantum: [;
+              '#8b5cf6',;
+              '#06b6d4',;
+              '#ec4899',;
+              '#10b981',;
+              '#f59e0b',;
+              '#ef4444',;
+            ],;
+        case 'neon':;
+          return {;
+            primary: [;
+              '#ff0080',;
+              '#00ffff',;
+              '#ffff00',;
+              '#ff00ff',;
+              '#8000ff',;
+              '#00ff80',;
+            ],;
+            secondary: [;
+              '#ff8000',;
+              '#0080ff',;
+              '#ff4080',;
+              '#40ffff',;
+              '#ffff40',;
+              '#ff40ff',;
+            ],;
+            accent: [;
+              '#ff6b6b',;
+              '#4ecdc4',;
+              '#45b7d1',;
+              '#96ceb4',;
+              '#feca57',;
+              '#ff9ff3',;
+            ],;
+            quantum: [;
+              '#8b5cf6',;
+              '#06b6d4',;
+              '#ec4899',;
+              '#10b981',;
+              '#f59e0b',;
+              '#ef4444',;
+            ],;
+          };
+        case 'holographic':;
+          return {;
+            primary: [;
+              '#ff6b6b',;
+              '#4ecdc4',;
+              '#45b7d1',;
+              '#96ceb4',;
+              '#feca57',;
+              '#ff9ff3',;
+            ],;
+            secondary: [;
+              '#54a0ff',;
+              '#5f27cd',;
+              '#ff9ff3',;
+              '#54a0ff',;
+              '#5f27cd',;
+              '#ff6b6b',;
+            ],;
+            accent: [;
+              '#4ecdc4',;
+              '#45b7d1',;
+              '#96ceb4',;
+              '#feca57',;
+              '#ff9ff3',;
+              '#54a0ff',;
+            ],;
+            quantum: [;
+              '#8b5cf6',;
+              '#06b6d4',;
+              '#ec4899',;
+              '#10b981',;
+              '#f59e0b',;
+              '#ef4444',;
+            ],;
+          };
+        case 'cyberpunk':;
+          return {;
+            primary: [;
+              '#ff0055',;
+              '#00ffff',;
+              '#ffff00',;
+              '#ff00ff',;
+              '#8000ff',;
+              '#00ff80',;
+            ],;
+            secondary: [;
+              '#ff8000',;
+              '#0080ff',;
+              '#ff4080',;
+              '#40ffff',;
+              '#ffff40',;
+              '#ff40ff',;
+            ],;
+            accent: [;
+              '#ffff40',;
+              '#ff40ff',;
+              '#ff6b6b',;
+              '#4ecdc4',;
+              '#45b7d1',;
+              '#96ceb4',;
+            ],;
+            quantum: [;
+              '#8b5cf6',;
+              '#06b6d4',;
+              '#ec4899',;
+              '#10b981',;
+              '#f59e0b',;
+              '#ef4444',;
+            ],;
+          };
+        case 'space':;
+          return {;
+            primary: [;
+              '#1e3a8a',;
+              '#7c3aed',;
+              '#059669',;
+              '#dc2626',;
+              '#ea580c',;
+              '#0891b2',;
+            ],;
+            secondary: [;
+              '#8b5cf6',;
+              '#ec4899',;
+              '#f59e0b',;
+              '#10b981',;
+              '#06b6d4',;
+              '#a855f7',;
+            ],;
+            accent: [;
+              '#f97316',;
+              '#ef4444',;
+              '#84cc16',;
+              '#06b6d4',;
+              '#a855f7',;
+              '#f97316',;
+            ],;
+            quantum: [;
+              '#8b5cf6',;
+              '#06b6d4',;
+              '#ec4899',;
+              '#10b981',;
+              '#f59e0b',;
+              '#ef4444',;
+            ],;
+          };
+        default: // quantum;
+          return {;
+            primary: [;
+              '#8b5cf6',;
+              '#06b6d4',;
+              '#ec4899',;
+              '#10b981',;
+              '#f59e0b',;
+              '#ef4444',;
+            ],;
+            secondary: [;
+              '#f59e0b',;
+              '#ef4444',;
+              '#8b5cf6',;
+              '#06b6d4',;
+              '#ec4899',;
+              '#10b981',;
+            ],;
+            accent: [;
+              '#ec4899',;
+              '#10b981',;
+              '#f59e0b',;
+              '#ef4444',;
+              '#8b5cf6',;
+              '#06b6d4',;
+            ],;
+            quantum: [;
+              '#8b5cf6',;
+              '#06b6d4',;
+              '#ec4899',;
+              '#10b981',;
+              '#f59e0b',;
+              '#ef4444',;
+            ],;
+          };      }            primary: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'],;
+            secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4#ec4899#10b981'],;
+            accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4'],;
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'];
+
+          }
+    };
 
     const colors = getThemeColors();
 
@@ -136,11 +632,23 @@ if ( {) {
 
       x: number;
       y: number;
+
+    }
+;
+    const colors = getThemeColors ();
+;
+    // Enhanced particle system with consciousness and quantum effects;
+    let particles: Array<{
+      coordinate_x: number;
+      coordinate_y: number;
+
       vx: number;
       vy: number;
       size: number;
       opacity: number;
       color: string;
+
+
 
 
       type:;
@@ -160,6 +668,8 @@ if ( {) {
       rotation_speed: number;
 
 
+
+
       phase: number;
       amplitude: number;
       frequency: number;
@@ -168,6 +678,9 @@ if ( {) {
 
       x: number,
       y: number,
+
+      quantum_state: number;    }> = [];      coordinate_x: number,
+      coordinate_y: number,
 
 
       vx: number,
@@ -332,6 +845,95 @@ if ( {) {
               ctx && ctx.fillRect(x, y, 20, 20);
 
 
+      quantum_state: number;
+    // Initialize particles with enhanced consciousness and quantum effects;
+    const init_particles = () =>: any {
+      particles = [];
+      const particle_count = Math.floor (50 * intensity_multiplier);
+;
+      for (let index = 0; i < particle_count; i++) {
+        const type =;
+          Math.random () > 0.7;
+            ? 'consciousness';
+            : Math.random () > 0.5;
+              ? 'quantum - field';
+              : Math.random () > 0.3;
+                ? 'hologram';
+                : 'particle'; ;
+      for (let index = 0, i < particle_count, i++) {
+        const type = Math.random () > 0.7 ? 'consciousness' :;
+                    Math.random () > 0.5 ? 'quantum - field' :;
+                    Math.random () > 0.3 ? 'hologram' : 'particle';
+;
+          coordinate_x: Math.random () * canvas.width,
+          coordinate_y: Math.random () * canvas.height,
+          vx: (Math.random () - 0.5) * 2 * intensity_multiplier,
+          vy: (Math.random () - 0.5) * 2 * intensity_multiplier,
+          size: Math.random () * 4 + 1,
+          opacity: Math.random () * 0.8 + 0.2,
+          color:;
+            colors.primary[Math.floor (Math.random () * colors.primary.length)],
+          type,          life: Math.random () * 100,          color: colors.primary[Math.floor (Math.random () * colors.primary.length)],
+          type;
+          life: Math.random () * 100,
+          max_life: 100,
+          rotation: Math.random () * Math.PI * 2,
+          rotation_speed: (Math.random () - 0.5) * 0.1,
+          phase: Math.random () * Math.PI * 2,
+          amplitude: Math.random () * 20 + 10,
+          frequency: Math.random () * 0.02 + 0.01,
+          entanglement: [Math.random (), Math.random ()],
+          consciousness: Math.random (),
+          quantum_state: Math.random (),
+        });      }          entanglement: [Math.random (), Math.random ()];
+          consciousness: Math.random (),
+          quantum_state: Math.random ();
+        });
+    }
+;
+    // Enhanced animation loop with consciousness and quantum effects;
+    const animate = () =>: any {
+      // Check condition
+if (return) {
+  $2
+}
+      ctx.clear_rect (0, 0, canvas.width, canvas.height);
+;
+      // Create quantum field effects;
+      // Check condition
+if ( {) {
+  $2
+}
+        const time = Date.now () * 0.001;
+        for (let coordinate_x = 0; x < canvas.width; x += 20) {
+          for (let coordinate_y = 0; y < canvas.height; y += 20) {
+            const noise =;
+              Math.sin (x * 0.01 + time) * Math.cos (y * 0.01 + time) * 0.5;
+            const alpha = (noise + 0.5) * 0.1;
+            // Check condition
+if ( {) {
+  $2
+}
+              ctx.fill_style = `rgba (139, 92, 246, ${alpha})`;
+              ctx.fill_rect (x, y, 20, 20);            }      // Create quantum field effects;
+      // Check condition
+if ( {) {
+  $2
+}
+        const time = Date.now () * 0.001;
+        for (let coordinate_x = 0, x < canvas.width, x += 20) {
+          for (let coordinate_y = 0, y < canvas.height, y += 20) {
+            const noise = Math.sin (x * 0.01 + time) * Math.cos (y * 0.01 + time) * 0.5;
+            const alpha = (noise + 0.5) * 0.1;
+            // Check condition
+if ( {) {
+  $2
+}
+              ctx.fill_style = `rgba (139, 92, 246, ${alpha})`;
+              ctx.fill_rect (x, y, 20, 20);
+
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -339,6 +941,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             }
@@ -349,6 +952,10 @@ if ( {) {
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update particle properties
+
+      // Update and draw particles;
+      particles.for_each ((particle, index) => {
+        // Update particle properties;
 
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -402,9 +1009,12 @@ if ( {) {
               }
             }
           })
-        }
-// Consciousness wave effects
+        // Consciousness wave effects
         if (particle.type === 'consciousness') {
+          const waveX =
+            particle.x + Math.sin(particle.phase) * particle.amplitude;
+          const waveY =
+            particle.y + Math.cos(particle.phase) * particle.amplitude;
           const waveX = particle.x + Math.sin(particle.phase) * particle.amplitude;
           const waveY = particle.y + Math.cos(particle.phase) * particle.amplitude;
           
@@ -419,7 +1029,8 @@ if ( {) {
         }
         // Holographic effects
         if (particle.type === 'hologram') {
-          const hologramSize = particle.size * (1 + Math.sin(particle.phase) * 0.3);
+          const hologramSize =
+            particle.size * (1 + Math.sin(particle.phase) * 0.3);
           ctx.strokeStyle = `rgba(78, 205, 196, ${particle.opacity})`;
 
           ctx.lineWidth = 1;
@@ -479,34 +1090,22 @@ if ( {) {
             hologramSize, ;
             hologramSize;
           );
-        }
-        // Quantum field effects;
-        if (particle && particle.type === 'quantum-field') {;
-          const fieldSize = particle && particle.size * 3;
-          const gradient = ctx && ctx.createRadialGradient(;
-            particle && particle.x,;
-            particle && particle.y,;
-            0,;
-            particle && particle.x,;
-            particle && particle.y,;
-            fieldSize;
+          gradient.addColorStop(
+            0
+            `rgba(139, 92, 246, ${particle.opacity * 0.8})`
           );
-          gradient && gradient.addColorStop(;
-            0,;
-            `rgba(139, 92, 246, ${particle && particle.opacity * 0 && 0.8})`;
-          );
-          gradient && gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
-          ctx && ctx.fillStyle = gradient;
-          ctx && ctx.fillRect(;
-            particle && particle.x - fieldSize / 2,;
-            particle && particle.y - fieldSize / 2,;
-            fieldSize,;
-            fieldSize;
+          gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
+          ctx.fillStyle = gradient;
+          ctx.fillRect(
+            particle.x - fieldSize / 2
+            particle.y - fieldSize / 2
+            fieldSize
+            fieldSize
           );        }
-        // Standard particle rendering;
-        if (particle && particle.type === 'particle') {;
-          ctx && ctx.fillStyle = `${particle && particle.color}${Math && Math.floor(particle && particle.opacity * 255);
-            .toString(16);
+        // Standard particle rendering
+        if (particle.type === 'particle') {
+          ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255)
+            .toString(16)
             .padStart(2, '0')}`;          );
           gradient && gradient.addColorStop(0, `rgba(139, 92, 246, ${particle && particle.opacity * 0 && 0.8})`);
           gradient && gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
@@ -549,7 +1148,24 @@ if ( {) {
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
           ctx.beginPath();
 
+          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
 
+        // Boundary wrapping with quantum tunneling effect
+        if (
+          particle.x < 0 |
+          particle.x > canvas.width |
+          particle.y < 0 |
+          particle.y > canvas.height
+        ) {
+          if (Math.random() > 0.8) {
+            // Quantum tunneling
+            particle.x = Math.random() * canvas.width;
+            particle.y = Math.random() * canvas.height;
+          } else {
+            particle.x = (particle.x + canvas.width) % canvas.width;
+            particle.y = (particle.y + canvas.height) % canvas.height;          }          ctx.beginPath();
 
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill()
@@ -716,6 +1332,7 @@ if (> 0.8) {) {
           } else {
 
 
+
             particle.coordinate_x = (particle.x + canvas.width) % canvas.width;
             particle.coordinate_y = (particle.y + canvas.height) % canvas.height;          }          ctx.begin_path ();
           ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -738,6 +1355,7 @@ if (> 0.8) { // Quantum tunneling) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -806,9 +1424,11 @@ if (> 0.8) { // Quantum tunneling) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
+
 
 
 
@@ -888,6 +1508,8 @@ if ( {) {
 
 
 
+
+
   return (
     <div ref={container_ref} className='fixed inset - 0 pointer - events - none'>;
       <canvas;
@@ -915,9 +1537,8 @@ if ( {) {
                 className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';
                 style={{
 
-
-
-
+                  left: `${(i * 5) % 100}%`
+                  left: `${(i * 5) % 100}%`,
 
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                 animate={{
@@ -928,12 +1549,18 @@ if ( {) {
                   repeat: Infinity
                   ease: "easeInOut"
 
+                  left: `${(i * 5) % 100}%`,
+                  top: `${(i * 3) % 100}%`,
+
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -948,7 +1575,78 @@ if ( {) {
                   duration: 3 + i * 0.2
                   repeat: Infinity
 
+                  duration: 3 + i * 0 && 0.2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                  top: `${(i * 3) % 100}%`,
 
+                }}
+                animate={{
+                  height: [32, 64, 32],
+                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],
+                }}
+                transition={{
+                  duration: 3 + i * 0 && 0.2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',                }}
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas)
+    }
+  }, [intensity, theme]);
+  return (
+    <div ref={containerRef} className="fixed inset-0 pointer-events-none">
+      <canvas
+        ref={canvasRef}
+        className="w-full h-full"
+        style={{
+          background: theme === 'consciousness' ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
+                   theme === 'quantum' ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
+                   theme === 'holographic' ? 'radial-gradient(ellipse at center, rgba(78, 205, 196, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
+'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)';
+        }}
+      />
+      {/* Additional visual effects */}
+      <div className="absolute inset-0">
+        {/* Quantum field lines */}
+        {theme === 'consciousness' && (
+          <div className="absolute inset-0">
+            {[...Array(20)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20"
+                style={{
+                  left: `${(i * 5) % 100}%`,
+                  top: `${(i * 3) % 100}%`}}
+                animate={{
+                  height: [32, 64, 32];
+                  opacity: [0.2, 0.6, 0.2]}}
+                transition={{
+                  duration: 3 + i * 0.2,
+                  repeat: Infinity,
+                  ease: "easeInOut";
+                }}
+
+            ))}
+          </div>
+        )}
+
+        {/* Holographic grid */}
+        {theme === 'holographic' && (
+          <div className='absolute inset - 0'>;
+            {[...Array (15)].map ((_, i) => (
+              <motion.div;
+                key={i}
+                className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
+                style={{
+
+        {theme === 'holographic' && (
+          <div className="absolute inset-0">
+            {[...Array(15)].map((_, i) => (
+              <motion.div
+
+                  top: `${(i * 7) % 100}%`,            {[...Array (15)].map ((_, i) => (
+              <motion.div;
 
                 key={i}
                 className='absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
@@ -972,12 +1670,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 }}
                 animate={{
@@ -987,10 +1687,14 @@ if ( {) {
                   duration: 4 + i * 0.3
                   repeat: Infinity
 
+                  duration: 4 + i * 0 && 0.3,
+                  repeat: Infinity,
+                  ease: "easeInOut";
+                  duration: 4 + i * 0.3
+                  repeat: Infinity
+                  ease: "easeInOut"
+                  top: `${(i * 7) % 100}%`,
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
                 }}
                 animate={{
@@ -1010,10 +1714,10 @@ if ( {) {
           <div className='absolute inset - 0'>;
             {[...Array (8)].map ((_, i) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={i}
                 className='absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full';
                 style={{
+
 
 
 
@@ -1029,6 +1733,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                 key={i}
                 className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
                 style={{
@@ -1038,6 +1743,7 @@ if ( {) {
                   scale: [1, 1 && 1.5, 1]
                   opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
                 transition={{
+
 
 
 
@@ -1054,6 +1760,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -1063,8 +1770,12 @@ if ( {) {
                   duration: 6 + i * 0.5
                   repeat: Infinity
 
+                  left: `${(i * 12) % 100}%`,
+                  duration: 6 + i * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                  top: `${(i * 8) % 100}%`,
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
                 }}
                 animate={{
@@ -1108,15 +1819,15 @@ if ( {) {
 }// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2;
 particle && particle.y - hologramSize / 2;
 hologramSize;
-hologramSize) ;
-}// Quantum field effects ctx && ctx.fillStyle = gradient;
-ctx && ctx.fillRect (particle && particle.x - fieldSize / 2;
-particle && particle.y - fieldSize / 2;
+hologramSize)
+}// Quantum field effects ctx.fillStyle = gradient;
+ctx.fillRect (particle.x - fieldSize / 2;
+particle.y - fieldSize / 2;
 fieldSize;
-fieldSize) ;
-}// Standard particle rendering ;
-}// Boundary wrapping with quantum tunneling effect if (particle && particle.x < 0 || particle && particle.x > canvas && canvas.width || requestAnimationFrame (animate) ;
-};
+fieldSize)
+}// Standard particle rendering
+}// Boundary wrapping with quantum tunneling effect if (particle.x < 0 |particle.x > canvas.width |requestAnimationFrame (animate)
+}
 initParticles ();
 animate ();
 
@@ -1135,10 +1846,12 @@ animate ();
           </div>)}
       </div>;
 
+              />
+            ))}
+          </div>
+        )}
+      </div>
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {children}
     </div>);
@@ -1174,6 +1887,7 @@ init_particles ();
 animate ();
 
 
+
 />) );
 }</div>);
 }/>) );
@@ -1185,6 +1899,7 @@ animate ();
   children
 }</div>)   )
 }
+
 />) ) 
 }</div>) 
 }/>) ) 
@@ -1195,10 +1910,12 @@ animate ();
   children 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

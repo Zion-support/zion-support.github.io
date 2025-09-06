@@ -12,6 +12,11 @@ export const optimize_headings = () =>: any {
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
 
+}
+export const optimizeHeadings = () => {
+  console.log('Optimizing headings...');
+}
+origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 };
 };
@@ -19,6 +24,8 @@ export const generateMetaTags = () => {;
 export const optimizeHeadings = () => {;
   console.log('Optimizing headings...');
 };
+
+
 
 
 
@@ -45,4 +52,6 @@ export const generateStructuredData = pageData => {;
       contactTyp: e: 'customer service';
     }
   }
+
 };
+

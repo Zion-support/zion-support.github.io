@@ -1,7 +1,9 @@
 
-
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
@@ -34,8 +36,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(500).json({ error: 'Translation failed' })
 
-
-
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ translation: 'Translated content' });
@@ -58,14 +61,25 @@ export default async function handler(req, res) {
   }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-  }
 }
 
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+import type { NextApiRequest, NextApiResponse } from 'next',
+import OpenAI from 'openai',
+const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const { text, targets } = req.body as { text: string, targets: string[] },
+  // Check condition
+if (|| targets.length === 0) {) {
+  $2
+}
+    return res.status (400).json ({ error: 'Invalid input' });
+
   }
 }
 ;
@@ -130,4 +144,8 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+  }
+}
+  }
+}
 

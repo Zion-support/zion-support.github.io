@@ -81,13 +81,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
         issues.push('Invalid return statement syntax');
       }
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
         issues.push('Merge conflict markers found');
       }
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 
 
@@ -101,6 +102,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 
 
@@ -120,6 +123,24 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+      // Check for React usage without import
+      if (content.includes('React.') && !content.includes('import React')) {;
+        issues.push('React used without import');
+      }
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+      return issues;
+    } catch (error) {
+      return [`File read error: ${error.message}`];
+    }
+  }
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
   async quickTypeCheck(filePath) {
     if (!filePath.endsWith('.ts') && !filePath.endsWith('.tsx')) {
       return [];
@@ -128,6 +149,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 
 
@@ -149,6 +172,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
+
   async autoFixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
@@ -157,6 +182,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 
 

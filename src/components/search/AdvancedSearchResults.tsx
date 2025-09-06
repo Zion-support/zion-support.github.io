@@ -62,8 +62,10 @@ import { use_router } from 'next / router';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -218,6 +220,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
 
 
 
+
             {part}
           </mark>
         ) : (
@@ -255,6 +258,7 @@ const SearchResultCard: React.FC<{;
     if (result && result.url) {;
       router && router.push(result && result.url);
     }
+
   };
 
   const cardClass =;
@@ -264,19 +268,21 @@ const SearchResultCard: React.FC<{;
 
 
   return (
-    <div onClick={handleClick} className={cardClass}>
-      {result.image && (
-        <div className={viewMode === 'grid' ? 'mb-3' : 'flex-shrink-0'}>
+    <div onClick={handleClick} className={cardClass}>;
+      {result && result.image && (;
+        <div className={viewMode === 'grid' ? 'mb-3' : 'flex-shrink-0'}>;
           <img
-            src={result.image}
-            alt={result.title}
+            src={result && result.image}
+            alt={result && result.title}
             className={
               viewMode === 'grid'
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
 
+
             }          />;
         </div>;
+
 
 
       )}
@@ -316,7 +322,9 @@ const SearchResultCard: React.FC<{;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         </div>
       )}
@@ -368,6 +376,7 @@ const SearchResultCard: React.FC<{;
               {result && result.type}
             </Badge>;
           </div>;
+
           {result && result.price && (;
             <div className='text-right'>;
               <span className='font-bold text-primary'>;
@@ -376,6 +385,7 @@ const SearchResultCard: React.FC<{;
               </span>;
               {result && result.type === 'talent' && (;
                 <span className='text-sm text-muted-foreground'>/hr</span>;
+
 
               )}
             </div>;
@@ -421,6 +431,7 @@ const SearchResultCard: React.FC<{;
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />;
 
+
         </div>;
         <p className='text - muted - foreground mb - 3 line - clamp - 2'>;
           <HighlightText text={result.description} search_term={search_term} />;
@@ -434,31 +445,12 @@ const SearchResultCard: React.FC<{;
 
                 {result.category}
 
+
         </div>;
-      )}
-;
-      <div className="flex-1">;
-        <div className="flex items-start justify-between mb-2">;
-          <div>;
-            <h3 className="font-semibold text-lg mb-1">;
-              <HighlightText text={result.title} searchTerm={searchTerm} />;
-            </h3>;
-            <Badge variant="secondary" className="text-xs">;
-              {result.type}
-            </Badge>;
-          </div>;
-          {result.price && (;
-            <div className="text-right">;
-              <span className="font-bold text-primary">;
-                {result.currency === 'USD' ? '$' : ''}{result.price}
-              </span>;
-              {result.type === 'talent' && <span className="text-sm text-muted-foreground">/hr</span>}
-            </div>;
-          )}
-        </div>;
-        <p className="text-muted-foreground mb-3 line-clamp-2">;
-          <HighlightText text={result.description} searchTerm={searchTerm} />;
+        <p className='text - muted - foreground mb - 3 line - clamp - 2'>;
+          <HighlightText text={result.description} search_term={search_term} />;
         </p>;
+
 
         <div className='flex items-center justify-between'>;
           <div className='flex gap-2 flex-wrap'>;
@@ -487,6 +479,7 @@ const SearchResultCard: React.FC<{;
 // Filter Sidebar Component;
 const FilterSidebar: React.FC<{
 
+
   filters: SearchFilters;
   onFiltersChange: (filters: SearchFilters) => void;
   available_categories: string[];
@@ -513,7 +506,9 @@ const FilterSidebar: React.FC<{
 
           {result && result.rating && (;
             <div className='flex items-center gap-1'>;
+
               <span className='text-yellow-500'>★</span>;
+
               <span className='text-sm'>{result && result.rating.toFixed(1)}</span>;
             </div>;
           )}
@@ -529,6 +524,7 @@ const FilterSidebar: React.FC<{
           </div>
           
 
+
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
@@ -540,6 +536,7 @@ const FilterSidebar: React.FC<{
       </div>;
     </div>;
   );
+
 },;
 // Filter Sidebar Component;
 const FilterSidebar: React.FC<{;
@@ -573,6 +570,7 @@ const FilterSidebar: React.FC<{;
 
 
 
+
   return (
 
                 id={option.id}
@@ -593,6 +591,7 @@ const FilterSidebar: React.FC<{;
               </label>
             </div>
           ))}
+
         </div>
       </div>
       <Separator />
@@ -646,7 +645,9 @@ const FilterSidebar: React.FC<{;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           </SelectTrigger>
           <SelectContent>
@@ -654,7 +655,7 @@ const FilterSidebar: React.FC<{;
             {availableCategories.map(category => (
               <SelectItem key={category} value={category}>
                 {category}
-              </SelectItem>
+              </SelectItem>;
             ))}
 
           </SelectContent>;
@@ -693,6 +694,7 @@ const FilterSidebar: React.FC<{;
           <div className="flex justify-between text-sm text-muted-foreground">
 
 
+
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
           </div>
@@ -706,12 +708,14 @@ const FilterSidebar: React.FC<{;
           onValueChange={value =>;
             onFiltersChange({ ...filters, minRating: parseFloat(value) });
           }
+
         >          <SelectTrigger>
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
         <Select value={filters.minRating.toString()} onValueChange={(value) => 
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
+
 
 
             <SelectValue />
@@ -731,6 +735,7 @@ const FilterSidebar: React.FC<{;
 }
 // No Results Component;
 const NoResultsState: React.FC<{
+
   searchTerm: string
   onNewSearch: (term: string) => void
 }> = ({ searchTerm, onNewSearch }) => {  const suggestions = [
@@ -759,6 +764,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 
 
 
+
   return (
     <div className="text-center py-12">
       <div className="mb-6">
@@ -768,6 +774,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
         </p>
       </div>
+
 
         >          <SelectTrigger>;
 
@@ -846,6 +853,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
               >;
+
 
 
                 {suggestion}
@@ -1077,6 +1085,7 @@ if ( {) {
     (filters.minRating > 0 ? 1 : 0)
           </div>;
         </div>;
+
         <div className="text-sm text-muted-foreground">;
           <p>Tips for better results: </p>;
           <ul className="mt-2 space-y-1">;
@@ -1219,6 +1228,7 @@ export const AdvancedSearchResults: React.FC = () => {;
 
 
 
+
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
@@ -1238,6 +1248,7 @@ export const AdvancedSearchResults: React.FC = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -1254,7 +1265,7 @@ export const AdvancedSearchResults: React.FC = () => {;
             <div className='flex items-center gap-2'>
               {/* Sort Options */}
               <Select
-                value={filters.sort}
+                value={filters && filters.sort}
                 onValueChange={value => setFilters({ ...filters, sort: value })}
               >
                 <SelectTrigger className='w-40'>                  <SelectValue />
@@ -1268,6 +1279,7 @@ export const AdvancedSearchResults: React.FC = () => {;
                   <SelectValue />
 
 
+
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="relevance">Relevance</SelectItem>
@@ -1276,6 +1288,7 @@ export const AdvancedSearchResults: React.FC = () => {;
                   <SelectItem value="rating">Highest Rated</SelectItem>
                 </SelectContent>
               </Select>
+
               >;
                 <SelectTrigger className='w-40'>                  <SelectValue />;
   // Active filters count;
@@ -1344,6 +1357,7 @@ export const AdvancedSearchResults: React.FC = () => {;
                   <List className="h-4 w-4" />
 
 
+
                 </Button>
               </div>
                   onClick={() => setViewMode('list')}                >;
@@ -1383,6 +1397,7 @@ export const AdvancedSearchResults: React.FC = () => {;
                   <SheetHeader>;
                     <SheetTitle > Search Filters</SheetTitle>;
                   </SheetHeader>;
+
                   <div className='mt - 6'>;
                     <FilterSidebar;
                       filters = {filters, }
@@ -1423,6 +1438,7 @@ export const AdvancedSearchResults: React.FC = () => {;
           </div>;
 
 
+
         )}
 
       </div>;
@@ -1459,6 +1475,7 @@ export const AdvancedSearchResults: React.FC = () => {;
                 availableCategories = {availableCategories,}
 
 
+
                     variant="ghost"
                     size="sm"
                     onClick={() => setFilters({
@@ -1486,11 +1503,13 @@ export const AdvancedSearchResults: React.FC = () => {;
           {/* Main Content */}
 
 
+
                 </div>;
 
 
                 {/* Load More Button */}
                 {hasMore && (
+
 
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
@@ -1535,13 +1554,21 @@ export const AdvancedSearchResults: React.FC = () => {;
                       viewMode={viewMode}
                     />;
 
-
-
-
+    </div>
+  )
+}
+export default AdvancedSearchResults
+  suggestion
+}</Button>) )
+}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>)
+}
+//Main Search Results Page Component setTotalCount (data.totalCount)
+setCurrentPage (data.page)
+setHasMore (data.hasMore)
+//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
 setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
-
 
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
@@ -1594,16 +1621,19 @@ setHasMore (data.hasMore);
 export default AdvancedSearchResults
 '"
 
-
+export default AdvancedSearchResults
+export default AdvancedSearchResults
 
 export default AdvancedSearchResults, ;
 export default AdvancedSearchResults;
+
 
 
     </div>;
   );
 };
 export default AdvancedSearchResults;
+
 
 
 
@@ -1747,3 +1777,4 @@ export default AdvancedSearchResults;
 '";
 export default AdvancedSearchResults,
 export default AdvancedSearchResults,
+

@@ -4,11 +4,18 @@ export * from './resume / useResumeBasic';
 ;
 
 
+// UseResume utility
+export const UseResume = () => {
+  // Implementation here
+  return null;
+};
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+// This file re-exports all resume hooks to maintain backward compatibility
+export * from './resume';
+export * from './resume/useResumeBasic';
+// This file re-exports all resume hooks to maintain backward compatibility;
+export * from './resume',;
+// This file re-exports all resume hooks to maintain backward compatibility;
+export * from './resume',;
 export * from './resume/useResumeBasic';
 

@@ -8,6 +8,7 @@ export interface CountryPricing {
 
 
 
+
   pricePerIncident: number;
 }
 
@@ -490,4 +491,5 @@ export const onsiteServicePricing: CountryPricing[] = [;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

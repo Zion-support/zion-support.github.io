@@ -15,10 +15,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+export interface EmptyMatchesCardProps {;
+  onRefresh: () => void;
+  isProcessing: boolean;
 
 
 import { Card } from "@/components/ui/card",
@@ -62,8 +61,11 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             Find AI Matches
           </>
 
-
-
+        )}
+      </Button>
+    </Card>
+  );
+}
 
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -75,7 +77,6 @@ export interface EmptyMatchesCardProps {;
 ;
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {;
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
@@ -101,7 +102,6 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 
     </Card>;
   );
-
 import { Card  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Sparkles, RefreshCcw  } from './lucide-react';
@@ -142,6 +142,8 @@ function EmptyMatchesCard() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

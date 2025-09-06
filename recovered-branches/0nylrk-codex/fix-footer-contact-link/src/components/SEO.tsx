@@ -2,6 +2,8 @@
 
 
 
+
+
 interface SEOProps {
 
   title: string
@@ -14,6 +16,7 @@ interface SEOProps {
 import { Helmet } from "react-helmet-async",
 
 
+
 import {Helmet} from "react-helmet-async";
 import { Helmet } from "react-helmet-async",
 
@@ -21,6 +24,7 @@ import { Helmet } from "react-helmet-async",
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -37,6 +41,7 @@ interface SEOProps {
 
 
 
+
   // Default to the Google Drive image URL
 
   ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
@@ -45,6 +50,7 @@ interface SEOProps {
   noindex}: SEOProps) {
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+
 
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
   ogUrl,
@@ -103,6 +109,8 @@ function SEO() {
   )
 
 
+
+
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
@@ -159,6 +167,7 @@ export function SEO({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -167,6 +176,7 @@ export function SEO({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 ;

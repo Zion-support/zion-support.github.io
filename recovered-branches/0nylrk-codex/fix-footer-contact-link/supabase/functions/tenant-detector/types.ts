@@ -1,5 +1,7 @@
 
 
+export interface TenantInfo {
+export interface TenantInfo {;
 
   id: string;
   brand_name: string;
@@ -18,6 +20,15 @@
   }
   is_active: boolean
 
+}
+export interface TenantResponse {
+
+  tenant: TenantInfo | null
+
+  error?: string
+}
+export interface TenantInfo {;
+
   id: string,;
   brand_name: string,;
   subdomain: string,;
@@ -32,6 +43,7 @@
     cta: string;
   }
   is_active: boolean;
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -61,5 +73,6 @@ export interface TenantResponse {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -6,7 +6,9 @@ import type { UserProfile } from "@/types/auth",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -14,7 +16,6 @@ import type { UserProfile } from "@/types/auth",
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
 // in this file.
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export interface SupabaseUser {
 
   id: string,
@@ -96,9 +97,9 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     avatar_url: profile.avatar_url || undefined;
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility;
     role: profile.user_type // Map user_type to role for backward compatibility;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
+
 
 
 
@@ -111,4 +112,5 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

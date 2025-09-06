@@ -1,4 +1,10 @@
 
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import Button from '../../components/ui/Button',
+import Card from '../../components/ui/Card';
+
 
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
@@ -22,10 +28,11 @@ import React from 'react';
     return null;
   }
 
+export async function getStaticPaths() {
 
+export async function getStaticPaths() {;
 
-
-
+export async function getStaticPaths() {;
 
   const services = getAllServices();
   const slugs = new Set<string>();
@@ -38,6 +45,7 @@ import React from 'react';
 
 
 
+
   return {;
     paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),;
     fallback: false,;
@@ -45,6 +53,7 @@ import React from 'react';
 export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const services = getAllServices();
@@ -293,6 +302,7 @@ function ServiceDetailPage() {
 
 
 
+
                     className='text-xs hover:underline'>;
                     {contactInfo && contactInfo.address}
                 </span>;
@@ -359,6 +369,7 @@ function ServiceDetailPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
@@ -489,7 +500,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
-							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'}</div>
+							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days  Setup: {service.setupTime || 'Fast'}</div>
 							<div className="mt-6 flex gap-3">
 								<Button href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Button>
 								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
@@ -513,6 +524,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -525,5 +537,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

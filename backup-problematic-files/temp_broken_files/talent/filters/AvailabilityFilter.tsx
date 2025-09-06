@@ -46,14 +46,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
     </div>;
   ),;}
  ];
-<<<<<<< HEAD
-:temp_broken_files/talent/filters/AvailabilityFilter.tsx
-
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   toggleSection ;
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
 }</button> {;
@@ -61,15 +55,5 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/Availab
   option.label ;
 }</label> </div>) ) ;
 }</div>) ;
-<<<<<<< HEAD
-:temp_broken_files/talent/filters/AvailabilityFilter.tsx
-}</div>) ;"}"
-}</div>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
-=======
 
-}</div>) ;
-}"
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

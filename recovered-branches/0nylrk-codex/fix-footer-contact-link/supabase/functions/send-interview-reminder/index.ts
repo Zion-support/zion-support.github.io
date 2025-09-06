@@ -1,18 +1,24 @@
 
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
-import {Resend} from "npm: resend@2 ;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {Resend} from "npm: resend@2.0.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+import { Resend } from "npm: resend@2.0.0",
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") |"";
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {Resend} from "npm: resend@2.0.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+import { Resend } from "npm: resend@2.0.0",
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -93,7 +99,6 @@ serve(async (req) => {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           try {
             await resend.emails.send ({
               from: "Zion Marketplace <onboarding@resend.dev>";
@@ -122,6 +127,8 @@ if ( {) {
             
 
             results.push(`Reminder sent to client: ${clientEmail}`)
+
+
 
           } catch (emailError) {
             console && console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
@@ -163,6 +170,8 @@ if ( {) {
 
 
 
+
+
           }
         }
         // Mark the interview as reminder sent
@@ -171,6 +180,16 @@ if ( {) {
           .update({ reminder_sent: new Date().toISOString() })
 
           .eq('id', interview.id)
+
+      }
+    }
+    return new Response(JSON.stringify({ success: true, results }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
+              `}),
+            
+            results.push(`Reminder sent to talent: ${talentEmail}`)
+          } catch (emailError) {
+            console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
@@ -263,6 +282,8 @@ serve(async (req) => {;
           .eq('id', interview.id);
 
 
+
+
       }
     }
     
@@ -283,13 +304,15 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+;
+    return new Response(JSON.stringify({ success: true, results }), {;
+      headers: { ...corsHeaders, "Content-Type": "application/json" },;
+      status: 200});
+  } catch (error) {;
+    console.error("Error in send-interview-reminder function:", error),;
+    return new Response(JSON.stringify({ error: error.message }), {;
+      headers: { ...corsHeaders, "Content-Type": "application/json" },;
+      status: 500});
 
   }
 });

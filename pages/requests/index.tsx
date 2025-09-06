@@ -1,6 +1,7 @@
 
-
-
+import EmptyState from '../../components/ui/EmptyState'
+export default function RequestsPage() {
+  return (
 
 
 
@@ -10,8 +11,10 @@ export default function RequestsPage() {
       <h2 className=&quot;text-xl font-semibold mb-2&quot;>Requests</h2>
       <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; ctaLabel=&quot;Submit a quote&quot; ctaHref=&quot;/dashboard&quot; />
 
-
-
+export default function RequestsPage() {_return (
+    <div>
+      <h2 className="text-xl font-semibold mb-2">Requests</h2>
+      <EmptyState title="Nothing here yet..." message="Submit a quote or respond to invitations to see them here." ctaLabel="Submit a quote" ctaHref="/dashboard" />
 
     </div>
   )  } catch (error) {
@@ -19,4 +22,3 @@ export default function RequestsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

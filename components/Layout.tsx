@@ -1,5 +1,7 @@
 
 
+
+
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
@@ -105,9 +107,11 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
 
+
         {noIndex && <meta name="robots" content="noindex,nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={ogTitle |title} />
+
         <meta
           property="og:description"
           content={ogDescription |description}
@@ -134,11 +138,23 @@ const Layout: React.FC < LayoutProps> = ({
       <Footer />
     </div>
 
+import React, { ReactNode } from "react";
 
+interface LayoutProps {
+  children: ReactNode,
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
 }
 export default Layout;
-
 
 import React, { ReactNode } from "react";
 interface LayoutProps {
@@ -181,13 +197,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
   );
 };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
 
 

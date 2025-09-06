@@ -1,19 +1,29 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import React, { useState, useRef, useEffect } from "react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {ScrollArea} from "@/components/ui/scroll-area";
+import {Separator} from "@/components/ui/separator";
+import {toast} from "@/components/ui/use-toast";
+import {cn} from "@/lib/utils";
+import {ChatMessage} from "./ChatMessage";
+import {QuickReplyButton} from "./QuickReplyButton";
+import {Send, Loader2} from "lucide-react";
+import {useTheme} from "@/hooks/useTheme";
+import React, { useState, useRef, useEffect } from "react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { ScrollArea } from "@/components/ui/scroll-area",
+import { Separator } from "@/components/ui/separator",
+import { toast } from "@/components/ui/use-toast",
+import { cn } from "@/lib/utils",
+import { ChatMessage } from "./ChatMessage",
+import { QuickReplyButton } from "./QuickReplyButton",
+import { Send, Loader2 } from "lucide-react";
+import { useTheme } from "@/hooks/useTheme";
+import { Send, Loader2 } from "lucide-react",
+import { useTheme } from "@/hooks/useTheme",
 
 // Define suggested quick replies
 
@@ -72,11 +82,10 @@ export function ChatBotPanel() {
 
     }
   }, [messages]);
-
-  // Focus input when component mounts;
-  useEffect(() => {;
-    if (inputRef && inputRef.current) {;
-      inputRef && inputRef.current.focus();
+  // Focus input when component mounts
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus()
     }
   }, []);
 import React, { useState, useRef, useEffect } from "react",;
@@ -130,6 +139,7 @@ export function ChatBotPanel() {;
 
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -137,6 +147,7 @@ export function ChatBotPanel() {;
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
     const userMessage: Message = {
+
       id: `user-${Date.now()}`
       content: text
       sender: "user"
@@ -188,22 +199,37 @@ export function ChatBotPanel() {;
         if (failedAttempts >= 2) {
           suggestEscalation()
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  }, []),;
+  const handleSendMessage = async (text: string = inputValue) => {;
+    if (!text.trim()) return,;
+    const userMessage: Message = {;
+      id: `user-${Date.now()}`,;
+      content: text,;
+      sender: "user",;
+      timestamp: new Date()},;
+    setMessages((prev) => [...prev, userMessage]),;
+    setInputValue(""),;
+    setIsLoading(true),;
+    try {;
+      // Call the OpenAI-powered support function;
+      const response = await sendToAIAssistant(text),;
+      const botMessage: Message = {;
+        id: `bot-${Date.now()}`,;
+        content: response.message || "Sorry, I couldn't process your request. Please try again.",;
+        sender: "bot",;
+        timestamp: new Date()},;
+      setMessages((prev) => [...prev, botMessage]),;
+      // Check if the request was successful;
+      if (!response.success) {;
+        setFailedAttempts((prev) => prev + 1),;
+        // After 3 failed attempts, suggest escalation;
+        if (failedAttempts >= 2) {;
+          suggestEscalation();
 
         }
       } else {
         // Reset failed attempts if successful;
         setFailedAttempts (0);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
 
     } catch (error) {
@@ -224,6 +250,15 @@ export function ChatBotPanel() {;
       if (failedAttempts >= 2) {;
         suggestEscalation();
 
+    } catch (error) {
+      console.error("Error in AI chat:", error),
+      toast({
+        variant: "destructive"
+        title: "Communication Error"
+        description: "We're having trouble connecting to our support service."})
+      setFailedAttempts((prev) => prev + 1);
+      if (failedAttempts >= 2) {
+        suggestEscalation()
 
         variant: "destructive",
         title: "Communication Error",
@@ -233,14 +268,21 @@ export function ChatBotPanel() {;
       if (failedAttempts >= 2) {
         suggestEscalation()
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+    } catch (error) {;
+      console.error("Error in AI chat:", error),;
+      toast({;
+        variant: "destructive",;
+        title: "Communication Error",;
+        description: "We're having trouble connecting to our support service."}),;
+      setFailedAttempts((prev) => prev + 1),;
+      if (failedAttempts >= 2) {;
+        suggestEscalation();
 
       }
     } finally {;
       setIsLoading(false);
     }
+
 
 
 
@@ -261,6 +303,7 @@ export function ChatBotPanel() {;
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
         })});
+
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
@@ -273,6 +316,8 @@ export function ChatBotPanel() {;
           message: "I'm having trouble connecting to my knowledge base right now."
         }
       }
+
+
 
 
 
@@ -318,6 +363,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -326,6 +372,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       }
@@ -340,6 +387,7 @@ if ( {) {
       return {
         success: false
         message: "I'm experiencing technical difficulties. Please try again later."
+
 
       };
     }
@@ -358,6 +406,7 @@ if ( {) {
     
     // Log this interaction for the support team
     logSupportEscalation()
+
   },
 
   const logSupportEscalation = async () => {
@@ -444,9 +493,9 @@ if ( {) {
     ]);
       },
       {
-        id: `bot-${Date.now()}`,
-        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
-        sender: "bot",
+        id: `bot-${Date.now()}`
+        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
+        sender: "bot"
         timestamp: new Date()
       }
     ]),
@@ -568,7 +617,6 @@ if ( {) {
     ]);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="flex flex-col h-full">;
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
@@ -580,7 +628,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -608,13 +658,13 @@ if ( {) {
           <div className="flex flex-wrap gap-2">
             {QUICK_REPLIES.map((reply) => (
               <QuickReplyButton
-                key={reply.id}
-                text={reply.text}
-                onClick={() => handleQuickReply(reply.text)}
-              />
+                key={reply && reply.id}
+                text={reply && reply.text}
+                onClick={() => handleQuickReply(reply && reply.text)}
+              />;
             ))}
-          </div>
-        </div>
+          </div>;
+        </div>;
       )}
 
       
@@ -632,6 +682,20 @@ if ( {) {
             >
               Chat with Live Agent
             </Button>
+
+
+      {failedAttempts >= 3 && (;
+        <div className="px-4 py-3 border-t border-zion-purple/10">;
+          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>;
+            Need more help?;
+          </p>;
+          <div className="flex gap-2">;
+            <Button
+              onClick={handleEscalateToLiveAgent}
+              size="sm"
+              className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+              Chat with Live Agent;
+            </Button>;
 
             <Button
               onClick={handleEmailSupport}
@@ -688,9 +752,9 @@ if ( {) {
     </div>
   )
 
-
-;
 =======
+}
+
 ;
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
@@ -751,6 +815,8 @@ if ( {) {
       </div>;
     </div>;
   );
+
+
 
 }
 ;

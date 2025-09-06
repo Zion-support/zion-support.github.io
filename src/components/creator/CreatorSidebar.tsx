@@ -41,6 +41,7 @@ export function AppSidebar() {
 
 
 
+
 import {;
   Bell,;
   FileText,;
@@ -141,6 +142,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
 }
   );
 }
+
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -218,4 +220,6 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
+
 }
+

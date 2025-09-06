@@ -127,9 +127,10 @@ if ( {) {
     }
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+
+
 
 

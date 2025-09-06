@@ -8,6 +8,7 @@ export interface Achievement {
 
 
 
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
 export interface Achievement {
@@ -81,6 +82,7 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
 
 
 
+
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
@@ -134,5 +136,7 @@ function AchievementBadges() {
     </Card>);
 }
 ;
+
+
 
 

@@ -13,6 +13,8 @@ const completion = await client.chat.completions.create ({
 
 
 
+
+
   role: 'system', content: system
 }
 export type AnalyzeResponse = {
@@ -25,6 +27,8 @@ export type AnalyzeRequestBody = {
 }
 export type AnalyzeResponse = {
   analysis: string
+
+
 
 
 
@@ -49,10 +53,12 @@ export type AnalyzeResponse = {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export default async function handler(
@@ -63,14 +69,17 @@ export default async function handler(
 
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }
+
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody;
   if (!operatorPrompt || typeof operatorPrompt !== 'string') {
     return res && res.status(400).json({ error: 'operatorPrompt is required' });  }    return res && res.status(405).json({ error: 'Method not allowed' })
   }
+
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody;
   if (!operatorPrompt || typeof operatorPrompt !== 'string') {
     return res && res.status(400).json({ error: 'operatorPrompt is required' });    return res && res.status(400).json({ error: 'operatorPrompt is required' })
   }
+
   const apiKey = process && process.env.OPENAI_API_KEY;
   if (!apiKey) {
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
@@ -85,6 +94,10 @@ export default async function handler(
 
     ]      .filter(Boolean)      `Operator Prompt: ${operatorPrompt}`;
       context ? `Context: ${JSON && JSON.stringify(context)}` : undefined]
+
+
+      `Operator Prompt: ${operatorPrompt}`;
+      context ? `Context: ${JSON.stringify(context)}` : undefined]
 
 
       .filter(Boolean)
@@ -111,7 +124,20 @@ export default async function handler(
     return res.status(500).json({ error: 'Failed to generate analysis' });
 
   }
+    const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.';
+        { role: 'system', content: system };
+        { role: 'user', content: user }];
+      temperature: 0.3,
+      max_tokens: 300});
+    const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
 
+    return res.status(200).json({ analysis })
+  } catch (error: any) {
+    console.error('Analyze API error', error?.message |error);
+    return res.status(500).json({ error: 'Failed to generate analysis' })
+    console && console.error('Analyze API error', error?.message || error);
+    return res && res.status(500).json({ error: 'Failed to generate analysis' });
+  }
 
     const analysis = completion && completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
     return res && res.status(200).json({ analysis })
@@ -123,13 +149,22 @@ export default async function handler(
 }
 
 
-
-}
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
   }
 
-
+;
+    const analysis =;
+      completion.choices?.[0]?.message?.content?.trim () ||;
+      'No analysis generated.';
+    return res.status (200).json ({ analysis });
+  } catch (error: any) {
+    console.error ('Analyze API error', error?.message || error);
+    return res.status (500).json ({ error: 'Failed to generate analysis' });
+  }
+    const analysis = completion.choices?.[0]?.message?.content?.trim () || 'No analysis generated.';
+    return res.status (200).json ({ analysis });
+  } catch (error: any) {
+    console.error ('Analyze API error', error?.message || error);
+    return res.status (500).json ({ error: 'Failed to generate analysis' });
 
 }
 
@@ -146,7 +181,6 @@ export default async function handler(
 
 }
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  }
+  }
 

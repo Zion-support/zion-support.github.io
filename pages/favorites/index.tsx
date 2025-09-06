@@ -17,17 +17,30 @@ export default function FavoritesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div>
+      <h2 className=&quot;text-xl font-semibold mb-4&quot;>Favorites</h2>
+      <ul className=&quot;list-disc pl-6&quot;>
+        {favorites.map(f => <li key={f}>{f}</li>)}
+      </ul>;
+    </div>;
+  );
 }
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  return (
+    <div>
+      <h2 className="text-xl font-semibold mb-4">Favorites</h2>
+      <ul className="list-disc pl-6">
+        {favorites.map(f => <li key={f}>{f}</li>)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </ul>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

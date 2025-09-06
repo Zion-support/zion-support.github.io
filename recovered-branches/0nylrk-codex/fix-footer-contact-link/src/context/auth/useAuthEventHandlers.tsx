@@ -1,19 +1,17 @@
+import React from 'react';
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {toast} from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+import {checkNewRegistration} from "@/utils/authUtils";
+import {useNavigate} from 'react-router-dom';
+import { toast } from "@/hooks/use-toast",
+import type { UserProfile } from "@/types/auth";
+import { checkNewRegistration } from "@/utils/authUtils";
+import { useNavigate } from 'react-router-dom';
+import type { UserProfile } from "@/types/auth",
+import { checkNewRegistration } from "@/utils/authUtils",
+import { useNavigate } from 'react-router-dom',
 
 /**
  * Custom hook for auth event handling
@@ -67,7 +65,13 @@ export function useAuthEventHandlers(
 
 
 
-
+  return {
+    handleSignedIn,
+    handleSignedOut
+import { toast } from "@/hooks/use-toast",;
+import type { UserProfile } from "@/types/auth",;
+import { checkNewRegistration } from "@/utils/authUtils",;
+import { useNavigate } from 'react-router-dom',;
 
 /**;
  * Custom hook for auth event handling;
@@ -117,7 +121,9 @@ export function useAuthEventHandlers(): any (;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }

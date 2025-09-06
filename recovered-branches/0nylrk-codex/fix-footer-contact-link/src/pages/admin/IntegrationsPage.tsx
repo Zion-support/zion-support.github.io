@@ -3,6 +3,8 @@
 
 
 
+
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -10,18 +12,16 @@ import {IntegrationsHub} from "@/components/integrations/IntegrationsHub";
 import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
 
 export default function IntegrationsPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <ProtectedRoute adminOnly={true}>;
       <SEO
@@ -36,6 +36,8 @@ export default function IntegrationsPage() {
       <Footer />
     </ProtectedRoute>
   )
+
+
 
 
 import React, { useState } from "react",;
@@ -63,6 +65,7 @@ export default function IntegrationsPage() {;
 
 
 
+
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -85,6 +88,7 @@ function IntegrationsPage() {
       </main>;
       <Footer />;
     </ProtectedRoute>);
+
 
 
 

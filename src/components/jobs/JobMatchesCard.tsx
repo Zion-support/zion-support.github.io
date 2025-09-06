@@ -21,6 +21,7 @@ interface JobMatchCardProps {;
 
 
 
+
 export function JobMatchesCard(): any ({;
   match,;
   onApply,;
@@ -46,11 +47,13 @@ export function JobMatchesCard(): any ({;
 
 
 
+
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
   
+
 
 
   return (
@@ -77,6 +80,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
           {job.description}
         </p>
+
         {match.matched_skills?.length > 0 && (
           <div className='mb-3'>
             <p className='text-xs text-muted-foreground mb-1'>
@@ -127,6 +131,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                 </span>;
               )}
 
+
             </CardDescription>;
           </div>;
           <Badge variant='outline' className='flex items-center'>;
@@ -147,6 +152,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <div className='flex flex-wrap gap-1'>;
               {match && match.matched_skills.slice(0, 5).map((skill, i) => (;
 
+
                 <Badge key={i} variant='secondary' className='text-xs'>                  {skill}
                 </Badge>;
               ))}
@@ -157,12 +163,15 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
 
 
+
+
                   +{match.matched_skills.length - 5}
                 </Badge>
               )}
             </div>;
           </div>;
         )}
+
 
 
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
@@ -188,6 +197,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         {match.status === 'applied' |showApplied ? (
           <div className='w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md'>
             <CheckCircle className='h-4 w-4 mr-2' />
+
       <CardFooter className="p-4 pt-0">
         {match.status === 'applied' || showApplied ? (
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
@@ -224,10 +234,13 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
 
 
+
+
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
+
 
 
 
@@ -355,3 +368,4 @@ if (return null) {
     </Card>);
 }
 ;
+

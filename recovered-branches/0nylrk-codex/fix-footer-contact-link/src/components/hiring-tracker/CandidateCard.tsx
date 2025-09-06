@@ -1,7 +1,14 @@
 
-
-
-
+import { useState } from "react";
+import { Draggable } from "react-beautiful-dnd";
+import { formatDistanceToNow } from "date-fns";
+import { Link } from "react-router-dom";
+import { JobApplication } from "@/types/jobs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
 
 
 import { useState } from "react",
@@ -46,12 +53,11 @@ import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 
-
-
-interface CandidateCardProps {;
-
-
-
+interface CandidateCardProps {
+  application: JobApplication;
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { 
 
   MessageSquare,
   User,
@@ -70,20 +76,22 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 
-
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { toast } from "@/hooks/use-toast",
+import { HireConfirmationModal } from "./HireConfirmationModal",
 
 interface CandidateCardProps {
   application: JobApplication,
   index: number
 }
+
+
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -213,7 +221,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
     toast({;
       title: "Hiring process initiated",;
       description: "Offer has been sent to the talent.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
   }
 
@@ -228,7 +235,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -258,13 +267,12 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                       <img
                         src={application && application.talent_profile.profile_picture_url}
                         alt={
-
-                          application && application.talent_profile.full_name || "Candidate"
-
+                          application.talent_profile.full_name |"Candidate"
                         }
                       />;
                     ) : (;
                       <User className="h-4 w-4" />;
+
 
 
 
@@ -277,6 +285,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                     )}
@@ -299,12 +308,14 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 <DropdownMenu>
@@ -340,11 +351,31 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                       </DropdownMenuItem>;
                     )}
 
-
-
-
-
-
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+              {/* Application Info */}
+              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">
+                <div className="flex items-center">
+                  <Calendar className="h-3 w-3 mr-1" />
+                  {formatDistanceToNow(new Date(application.created_at), {
+                    addSuffix: true
+                  })}
+                </div>
+                {isStalled && (
+                  <div className="flex items-center text-amber-500">
+                    <AlertTriangle className="h-3 w-3 mr-1" />
+                    Stalled
+                  </div>
+                )}
+              </div>
+              {/* Match Score */}
+              {application.match_score !== null &&
+                application.match_score !== undefined && (
+                  <div className="mb-2">
+                    <ScoreBadge application={application} />
+                  </div>
+                )}
 
 
                   </DropdownMenuContent>;
@@ -352,23 +383,29 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
               </div>;
 
               {/* Application Info */}
-              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
-                <div className="flex items-center">;
-                  <Calendar className="h-3 w-3 mr-1" />;
-                  {formatDistanceToNow(new Date(application && application.created_at), {;
-                    addSuffix: true,;
+              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">
+                <div className="flex items-center">
+                  <Calendar className="h-3 w-3 mr-1" />
+                  {formatDistanceToNow(new Date(application.created_at), {
+                    addSuffix: true
                   })}
-                </div>;
-
-                {isStalled && (;
-                  <div className="flex items-center text-amber-500">;
-                    <AlertTriangle className="h-3 w-3 mr-1" />;
-                    Stalled;
+                </div>
+                {isStalled && (
+                  <div className="flex items-center text-amber-500">
+                    <AlertTriangle className="h-3 w-3 mr-1" />
+                    Stalled
+                  </div>
+                )}
+              </div>
+              {/* Match Score */}
+              {application && application.match_score !== null &&;
+                application && application.match_score !== undefined && (;
+                  <div className="mb-2">;
+                    <ScoreBadge application={application} />;
                   </div>;
                 )}
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Match Score */}
 
               {application.match_score !== null && application.match_score !== undefined && (;
@@ -383,6 +420,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -390,6 +428,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               {/* Notes Section */}
               {showNotes && (;
@@ -407,6 +446,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </div>;
                 </div>;
               )}
+
 
 
 
@@ -446,6 +486,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </Link>
                 </Button>
 
+
                 <Button variant="outline" size="sm" className="flex-1" asChild>
                 
                 <Button 
@@ -460,6 +501,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
+
                   {application.resume?.file_url ? (
 
 
@@ -468,6 +510,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {application.resume?.file_url ? (
+
 
                     <a
                       href={application && application.resume.file_url}
@@ -493,12 +536,14 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="flex-1"
                   onClick={() => setShowHireModal(true)}
@@ -512,6 +557,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
       </Draggable>
       </Draggable>;
+
 
 
 
@@ -690,6 +736,7 @@ function CandidateCard() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         is_open={showHireModal}
@@ -707,6 +754,7 @@ function CandidateCard() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -716,5 +764,6 @@ function CandidateCard() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
+
 
 }

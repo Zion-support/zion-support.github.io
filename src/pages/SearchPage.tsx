@@ -30,6 +30,7 @@ import { generateSearchSuggestions } from "@/data/marketplaceData";
 
 
 
+
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -75,6 +76,7 @@ import { Loader2 } from 'lucide-react'
 
 
 
+
 import { Loader2 } from 'lucide-react'
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
@@ -113,6 +115,8 @@ interface SearchResult {
 function highlight(text: string, term: string) {
 
 
+
+
   },;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -126,10 +130,12 @@ function highlight(text: string, term: string) {
 
 
 
+
+
   return (
-    <div key={pageKey}>
-      <main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
+    <div key={pageKey}>;
+      <main className="container mx-auto px-4 py-8">;
+        <form onSubmit={handleSubmit} className="mb-6">;
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -147,6 +153,7 @@ function highlight(text: string, term: string) {
             searchSuggestions={suggestions}
 
 
+
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
@@ -154,6 +161,7 @@ function highlight(text: string, term: string) {
           <div className="flex justify-center py-8">
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
           </div>
+
             onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion && suggestion.text.trim();
               setQuery(searchTerm);              router && router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
@@ -168,21 +176,21 @@ function highlight(text: string, term: string) {
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
           </div>;
         )}
-        {!loading && marketplaceResults.length === 0 && blogResults.length > 0 && (
-          <div>
-            <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>
-            <div className="space-y-4">
-              {blogResults.map(r => (
-                <div key={`blog-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
-                  <h3 className="text-lg font-bold text-white">{highlight(r.title, query)}</h3>
-                  <p className="text-zion-slate-light">{highlight(r.description, query)}</p>
-                </div>
+        {!loading && marketplaceResults && marketplaceResults.length === 0 && blogResults && blogResults.length > 0 && (;
+          <div>;
+            <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>;
+            <div className="space-y-4">;
+              {blogResults && blogResults.map(r => (;
+                <div key={`blog-${r && r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                  <h3 className="text-lg font-bold text-white">{highlight(r && r.title, query)}</h3>;
+                  <p className="text-zion-slate-light">{highlight(r && r.description, query)}</p>;
+                </div>;
               ))}
-            </div>
-          </div>
+            </div>;
+          </div>;
         )}
-        {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
-          <p className="text-zion-slate-light">No results found for "{query}".</p>
+        {!loading && marketplaceResults && marketplaceResults.length === 0 && blogResults && blogResults.length === 0 && query && (;
+          <p className="text-zion-slate-light">No results found for "{query}".</p>;
         )}
 
         {!loading && marketplaceResults && marketplaceResults.length > 0 && (;
@@ -211,16 +219,15 @@ function highlight(text: string, term: string) {
                 .map((r) => (
 
                   <div
-                    key={`${r.type}-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
+                    key={`${r && r.type}-${r && r.id}`}
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                    <h3 className="text-lg font-bold text-white">;
+                      {highlight(r && r.title, query)}
+                    </h3>;
+                    <p className="text-zion-slate-light">;
+                      {highlight(r && r.description, query)}
+                    </p>;
+                  </div>;
                 ))}
             </TabsContent>
             <TabsContent value="talent" className="space-y-4">
@@ -228,16 +235,15 @@ function highlight(text: string, term: string) {
                 .filter((r) => r.type === "talent")
                 .map((r) => (
                   <div
-                    key={`talent-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
+                    key={`talent-${r && r.id}`}
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                    <h3 className="text-lg font-bold text-white">;
+                      {highlight(r && r.title, query)}
+                    </h3>;
+                    <p className="text-zion-slate-light">;
+                      {highlight(r && r.description, query)}
+                    </p>;
+                  </div>;
                 ))}
             </TabsContent>
             <TabsContent value="docs" className="space-y-4">
@@ -245,16 +251,15 @@ function highlight(text: string, term: string) {
                 .filter((r) => r.type === "doc")
                 .map((r) => (
                   <div
-                    key={`doc-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
+                    key={`doc-${r && r.id}`}
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                    <h3 className="text-lg font-bold text-white">;
+                      {highlight(r && r.title, query)}
+                    </h3>;
+                    <p className="text-zion-slate-light">;
+                      {highlight(r && r.description, query)}
+                    </p>;
+                  </div>;
                 ))}
             </TabsContent>
             <TabsContent value="blog" className="space-y-4">
@@ -262,26 +267,35 @@ function highlight(text: string, term: string) {
                 .filter((r) => r.type === "blog")
                 .map((r) => (
                   <div
-                    key={`blog-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
+                    key={`blog-${r && r.id}`}
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                    <h3 className="text-lg font-bold text-white">;
+                      {highlight(r && r.title, query)}
+                    </h3>;
+                    <p className="text-zion-slate-light">;
+                      {highlight(r && r.description, query)}
+                    </p>;
+                  </div>;
                 ))}
-            </TabsContent>
-          </Tabs>
+            </TabsContent>;
+          </Tabs>;
         )}
 
-
-
-
+      </main>
+    </div>
+  )
+  setQuery (urlQuery)
+}, [router.isReady, router.query.q]), //Fixed dependency array //Fetch results when query changes useEffect ( () => {
+  if (!router.isReady) return;
+if (query.trim () ) {
+  fetchResults (query.trim () )
+}else {
+  setResults ([])
+}, [router.isReady, query]), //Fixed dependency array const fetchResults = async (term: string) => {
+  if (!term.trim () ) {
+  setResults ([])
+return
 return;
-
 
 }setLoading (true)
 try {
@@ -451,8 +465,8 @@ set_results ([]);
   set_loading (false);
 
 }
-const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault ()
+const handle_submit = (e: React.FormEvent) =>: any {
+  e.prevent_default ();
 router.push (`/search?q=$ {
 
   encodeURIComponent (query.trim () );
@@ -484,45 +498,77 @@ router.push (`/search?q=$ {
 }'"  );
 
               {/* Sort Options */}
-              <div  className="mb-6">
-                <label className="block text-sm font - medium text-gray - 700 mb-2">Sort By</label>
-                <select
-                  value={sortBy}
-                  onChange={ (e) => setSortBy(e.target.value as any) }
-                  className="w-full px-3 py-2 border border-gray - 300 rounded-lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500">
-                  <option value="relevance">Relevance</option>
-                  <option value="date">Date</option>
-                  <option value="popularity">Popularity</option>
-                </select>
-              </div>
+              <div  className="mb - 6">;
+                <label className="block text - sm font - medium text - gray - 700 mb - 2">Sort By</label>;
+                <select;
+                  value={sort_by}
+                  on_change={ (e) => setSortBy (e.target.value as any) }
+                  className="w - full px - 3 py - 2 border border - gray - 300 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - blue -500">;
+                  <option value="relevance">Relevance</option>;
+                  <option value="date">Date</option>;
+                  <option value="popularity">Popularity</option>;
+                </select>;
+              </div>;
               {/* Filter Options */}
-              <div  className="space - y-3">
-                {filterOptions.map(filter => (<button     key={filter.id}
-                    onClick={ () => toggleFilter(filter.id) }
-                    className={`w-full flex items - center justify - between p - 3 rounded-lg transition - colors ${selectedFilters.has(filter.id) ? 'bg-blue - 50 border border-blue - 200'
-                        : 'hover:bg-gray - 50'
+              <div  className="space - y - 3">;
+                {filter_options.map (filter => (<button     key={filter.id}
+                    on_click={ () => toggle_filter (filter.id) }
+                    className={`w - full flex items - center justify - between p - 3 rounded - lg transition - colors ${selected_filters.has (filter.id) ? 'bg - blue - 50 border border - blue - 200';
+                        : 'hover:bg - gray - 50';
 }`}
-                  >
-                    <div  className="flex items - center space - x-3">
-                      <filter.icon className="h-5 w-5 text-gray -600" />
-                      <span className="text-sm font - medium text-gray -700">{filter.name}</span>
-                    </div>
-                    <span className="text-sm text-gray -500">{filter.count}</span>
+                  >;
+                    <div  className="flex items - center space - x - 3">;
+                      <filter.icon className="h - 5 w - 5 text - gray -600" />;
+                      <span className="text - sm font - medium text - gray -700">{filter.name}</span>;
+                    </div>;
+                    <span className="text - sm text - gray -500">{filter.count}</span>;
                   </button>) ) }
-              </div>
-            </div>
-          </div>
-        </motion.div>
+              </div>;
+            </div>;
+          </div>;
+        </motion.div>;
         {/* Search Results */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="max - w-6xl mx -auto">
+          className="max - w - 6xl mx -auto">;
           {/* Results Count */}
 
-
-
+          <div  className="mb-6">
+            <p className="text-slate -300">
+              {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  )
+}
 
 ;
 
@@ -567,6 +613,8 @@ router.push (`/search?q=$ {
               </Link>;
             </div>;
     </>);
+
 }
 }
 ;
+

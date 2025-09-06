@@ -6,10 +6,12 @@ const handleEnhance = async () => {
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
 
+
   import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 
       }),
+
       return
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -75,6 +77,8 @@ if ( {) {
   }
 
 
+
+
   import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
@@ -124,6 +128,8 @@ export function AIEnhancementButton(): any ({;
       setShowActions(true);
     }
 
+
+
   },
   
   const handleAccept = () => {
@@ -135,10 +141,22 @@ export function AIEnhancementButton(): any ({;
 
 
 
+
+
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
+
+  }
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  }
+  const handleCancel = () => {
+    setShowActions(false)
+    setGeneratedContent(null)
+  }
+
 
 
   },
@@ -153,11 +171,39 @@ export function AIEnhancementButton(): any ({;
   },
   
 
+  return (
+    <Button
+      type="button"
+      variant = {variant,}
+      size = {size,}
+      className={`gap-1 ${className}`}
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
+  
+  return (
+    <Button
+      type="button"
+  },;
+  const handleAccept = () => {;
+    if (generatedContent) {;
+      onEnhanced(generatedContent),;
+      setShowActions(false),;
+      setGeneratedContent(null),;
+      toast({;
+        title: "Content applied",;
+        description: "AI-enhanced content has been applied."});
+    }
+  },;
+  const handleRegenerate = async () => {;
+    await handleEnhance();
+  },;
+  const handleCancel = () => {;
+    setShowActions(false);
+    setGeneratedContent(null);
+  };
+  if (showActions) {;
+    return (;
 
-
-
-  if (showActions) {
-    return (
       <div className="flex gap-2 items-center">;
         <Button
           type="button"
@@ -268,6 +314,7 @@ if ( {) {
   return (
     <Button;
       type="button";
+
       variant = {variant, }
       size = {size, }
       className={`gap - 1 ${class_name}`}
@@ -297,10 +344,13 @@ if ( {) {
 
 
 
+
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
       ) : (
         <Sparkles className="h-4 w-4" />
       )}
+
       <span className="text-xs">{buttonText}</span>
+

@@ -9,9 +9,40 @@ import { NotificationContextType } from './types';
 // `createContext` call returns `{}` instead of the expected shape.
 
 
+const defaultContext: NotificationContextType = {
+  notifications: []
+  filteredNotifications: []
+  unreadCount: 0
+  loading: false
+  filter: 'all'
+  markAsRead: async () => {}
+  markAllAsRead: async () => {}
+  dismissNotification: async () => {}
+  setFilter: () => {}
+  fetchNotifications: async () => {}}
+// Cast the default context value to avoid issues when React types are missing.
+const NotificationContext = createContext(
+  defaultContext as NotificationContextType
+);
+export const useNotifications = (): NotificationContextType => {
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')
+  }
+  return context
+}
+export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+  const { user } = useAuth();
+  const notificationOps = useNotificationOperations(user?.id);
+  // Load notifications when user changes
+  useEffect(() => {
+    notificationOps.fetchNotifications();
 
 
-
+export const useNotifications = (): NotificationContextType => {;
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')
 
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -38,9 +69,7 @@ const defaultContext: NotificationContextType = {;
 const NotificationContext = createContext(;
   defaultContext as NotificationContextType;
 );
-
-export const useNotifications = (): NotificationContextType => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export const useNotifications = (): NotificationContextType => {
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
@@ -50,7 +79,9 @@ export const useNotifications = (): NotificationContextType => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -66,7 +97,6 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   const { user } = useAuth(),
   const notificationOps = useNotificationOperations(user?.id),
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Load notifications when user changes
   useEffect(() => {
     notificationOps.fetchNotifications(),
@@ -91,7 +121,22 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             console.log('Notification change received:', payload);
             notificationOps.fetchNotifications()
 
+          }
+        )
+        .subscribe();
+      return () => {
+        supabase.removeChannel(channel)
+      }
+    }
+  }, [user]);
+  return (
+    <NotificationContext.Provider value={notificationOps}>
+      {children}
+    </NotificationContext.Provider>
+  )
+}
 
+};
 
   return context;
 };
@@ -118,7 +163,6 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
           (payload) => {;
             console && console.log('Notification change received:', payload);
             notificationOps && notificationOps.fetchNotifications();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
         );
         .subscribe();
@@ -211,6 +255,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -218,5 +263,6 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

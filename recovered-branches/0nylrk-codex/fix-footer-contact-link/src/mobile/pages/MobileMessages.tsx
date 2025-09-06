@@ -1,19 +1,17 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import React, { useState } from "react";
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {MobileConversationList} from "../components/messaging/MobileConversationList";
+import {MobileChatView} from "../components/messaging/MobileChatView";
+import React, { useState } from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { MobileConversationList } from "../components/messaging/MobileConversationList";
+import { MobileChatView } from "../components/messaging/MobileChatView";
+import { MobileConversationList } from "../components/messaging/MobileConversationList",
+import { MobileChatView } from "../components/messaging/MobileChatView",
 
 // Mock data for demonstration
 
@@ -72,8 +70,31 @@ const mockMessages: Message[] = [
     status: "read"}
   {
 
-
+    id: "4"
+    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
+    timestamp: "10:40 AM"
+    isMe: true
+    status: "read"}
+    id: "4",
+    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
+    timestamp: "10:40 AM",
+    isMe: true,
+    status: "read"},
   {
+    id: "5"
+    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?"
+    timestamp: "10:45 AM"
+    isMe: false
+    status: "read"}]
+    id: "5",
+    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?",
+    timestamp: "10:45 AM",
+    isMe: false,
+    status: "read"}],
+
+export function MobileMessages() {;
+  const [activeConversation, setActiveConversation] = useState<string | null>(null);
+  const [messages, setMessages] = useState<Message[]>(mockMessages);
 
 export function MobileMessages() {
 
@@ -102,6 +123,12 @@ export function MobileMessages() {
       {activeConversation ? (
         <MobileChatView
           contact={{
+
+
+            status: "Online"
+            id: currentContact?.id || "",
+            name: currentContact?.name || "",
+            status: "Online"
 
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -208,6 +235,7 @@ export function MobileMessages() {;
       {activeConversation ? (;
 
 
+
         <MobileChatView
           contact={{
             id: currentContact?.id |""
@@ -218,6 +246,7 @@ export function MobileMessages() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           }}
@@ -241,4 +270,20 @@ export function MobileMessages() {;
   );
 }
 
+
+        />) : (
+        <>;
+          <MobileHeader;
+            title="Messages";
+          />;
+          <main className="flex - 1 overflow - y-auto">;
+            <MobileConversationList;
+              conversations={mock_conversations}
+              onSelectConversation={handleSelectConversation}
+            />;
+          </main>;
+          <BottomNavigation />;
+        </>)}
+    </div>);
+}
 

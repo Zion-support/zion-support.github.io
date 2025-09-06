@@ -23,12 +23,16 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 
 
+
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>
-          <p className="text-muted-foreground mt-1">
+          <h1 className='text-3xl font-bold tracking-tight'>
+            Enterprise Admin Dashboard
+          </h1>
+          <p className='text-muted-foreground mt-1'>
             Manage your company's account, team members, and subscription
           </p>
 
@@ -39,6 +43,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
             <Settings className="h-4 w-4" />
             Settings
           </Button>
+
 
 
 
@@ -152,6 +157,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 
 
+
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
@@ -161,6 +167,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
         <Button>Customize Workspace</Button>
       </div>
     </div>
+
 
 
 
@@ -270,6 +277,7 @@ function AdminHeader() {
           </div>;
         </div>;
       </div>;
+
       <div className='bg - muted / 50 rounded - lg p - 4 flex items - center justify - between'>;
         <div className='flex items - center gap - 4'>;
           <div className='h - 12 w - 12 rounded - lg bg - card flex items - center justify - center'>;
@@ -289,7 +297,9 @@ function AdminHeader() {
         </div>;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Team Members</div>;
+
           <div className="text - xl font - medium">{company?.team_size || "Loading..."} / {company?.team_limit || "∞"}</div>;
+
         </div>;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Billing Cycle</div>;
@@ -318,5 +328,7 @@ function AdminHeader() {
     </div>);
 }
 ;
+
+
 
 

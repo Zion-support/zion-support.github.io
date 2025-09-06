@@ -30,7 +30,9 @@ export const useSearchParams = () => [new URLSearchParams(), () => {}] as any;ex
 };
 
   useSearchParams};
+
 ;
+
 
 
 import React from 'react';
@@ -40,6 +42,7 @@ export const Route = ({ element }: { element: any }) =>: any element;
 export const Link = (props: any) =>: any {
   return React.create_element ('a', props);
 }
+
 
 export const NavLink = Link;
 export const Navigate = ({ to }: { to: string }) =>: any null;
@@ -77,5 +80,6 @@ export const useSearchParams = () =>: any [new URLSearchParams (), () => {}] as 
   use_location;
   use_params;
   useSearchParams}
+
 
 

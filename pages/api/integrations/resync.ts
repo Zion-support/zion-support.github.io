@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -10,6 +11,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
 
   try {
   if (req && req.method !== "POST")
@@ -24,6 +26,7 @@ export default async function handler(
   if (!conn) return res && res.status(404).json({ error: "Connection not found" });
   const now = Date && Date.now();
   writeState((s) => {
+
 
     s.logs.push({
       id: `${now}-${providerId}-resync`
@@ -55,11 +58,17 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 
     });
 
 }
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 
 
   }
@@ -73,7 +82,9 @@ export default async function handler(req, res) {
     const target = s.connections.find(c => c.providerId === providerId);
     if (target) target.lastSyncAt = now
   });
+
   res.status(200).json({ ok: true })
+
 }
 
     const target = s.connections.find ((c) => c.provider_id === provider_id);
@@ -81,6 +92,7 @@ export default async function handler(req, res) {
 if (target.lastSyncAt = now) {
   $2
 }
+
 
 
 
@@ -96,4 +108,5 @@ if (target.lastSyncAt = now) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

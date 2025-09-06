@@ -1,4 +1,8 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -29,6 +33,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Coach error' })
+
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -63,8 +71,18 @@ if ( {) {
 }
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+;
+    // Fallback without API key;
+    return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' });
+  } catch (error) {
+    return res.status(500).json({ error: e?.message ?? 'Coach error' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
   }
 }
@@ -86,4 +104,8 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+  }
+}
+  }
+}
 

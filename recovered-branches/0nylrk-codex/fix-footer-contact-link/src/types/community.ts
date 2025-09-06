@@ -1,7 +1,8 @@
 
 
 
-
+export type ForumCategory =
+export type ForumCategory = 
 
   | 'getting-hired'
   | 'project-help'
@@ -9,6 +10,23 @@
   | 'feedback'
   | 'announcements';
 
+export type ForumCategory =;
+  | 'getting - hired';
+  | 'project - help';
+  | 'ai - tools';
+  | 'feedback';
+  | 'announcements';
+export interface ForumCategoryInfo {
+
+
+
+
+  admin_only: boolean,
+  icon: string;
+
+}
+
+export interface ForumCategoryInfo {;
 
   id: ForumCategory;
   name: string;
@@ -16,6 +34,7 @@
   adminOnly: boolean
   icon: string
 }
+
 
 
   id: string;
@@ -75,9 +94,11 @@ export interface Badge {;
   name: string;
   description: string;
 
+
   icon: string,
   color: string;
 }
+
 
 
 export interface UserBadge {
@@ -92,12 +113,14 @@ export interface CommunityUser {
 
 
 
+
   id: string;
   name: string;
   description: string;
   icon: string
   color: string
 }
+
 
 
 
@@ -122,6 +145,7 @@ export interface UserBadge {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -215,5 +239,7 @@ export interface CommunityUser {;
   isModerator: boolean;
 }
 ;
+
+
 
 

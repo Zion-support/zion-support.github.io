@@ -12,6 +12,7 @@ interface SeverityIndicatorProps {
   size?: "sm" | "md" | "lg",
 
 
+
   className?: string
 }
 
@@ -56,6 +57,7 @@ export function SeverityIndicator ({
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
@@ -101,6 +103,7 @@ export function SeverityIndicator({;
 
     </div>;
   );
+
 }
 
     <div className={cn ("flex items - center gap - 1", class_name)}>;
@@ -112,3 +115,4 @@ export function SeverityIndicator({;
 
 }
 ;
+

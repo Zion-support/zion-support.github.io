@@ -4,6 +4,7 @@ const getBenefits = (t: any) => [
 
 
 
+
   {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
@@ -30,6 +31,7 @@ const getBenefits = (t: any) => [
     description: t('benefits.cost_reduction_desc')
     icon: <TrendingDown className='w-8 h-8' />
   }
+
 ]
 export function BenefitsSection({ className, style }: BenefitsSectionProps) {
   const { t } = useTranslation()
@@ -37,6 +39,7 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
     >
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
+
 
     title: t('benefits.ai_matchmaking'),
     description: t('benefits.ai_matchmaking_desc'),
@@ -54,17 +57,15 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
     description: t('benefits.cost_reduction_desc'),
 
 
+
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
           </p>
         </div>
 
-
-
-
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
-
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
@@ -140,6 +141,9 @@ export function BenefitsSection(): any ({ className, style }: BenefitsSectionPro
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits && benefits.map((benefit, index) => (        ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
 
+          {benefits && benefits.map((benefit, index) => (;
+            <FeatureCard
+
 import { GradientHeading } from './GradientHeading';
 import { FeatureCard } from './FeatureCard';
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
@@ -191,6 +195,7 @@ function BenefitsSection() {
 
           {benefits.map((benefit, index) => (;
             <FeatureCard;
+
 
 
               key={index}
@@ -272,3 +277,4 @@ function Page() {
       "Transparent cost structure" ];
 }
 ;
+

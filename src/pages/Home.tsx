@@ -1,6 +1,7 @@
 
 
 
+
 import React, { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -9,7 +10,9 @@ import { usePerformance } from '../hooks/usePerformance';
 const Home: React.FC = () => {
   usePerformance();
 
+
   return (
+
     <>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
@@ -271,9 +274,12 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
       </motion.div>
+
       </div>
     </>
   );
+
+
 
 
 

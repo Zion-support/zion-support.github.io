@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
@@ -80,6 +81,7 @@ interface ActiveFiltersProps {
     priceRange[0] !== 50 |
     priceRange[1] !== 200;
   if (!hasActiveFilters) return null;
+
   const hasActiveFilters = 
     selectedSkills.length > 0 || 
     selectedAvailability.length > 0 || 
@@ -98,22 +100,35 @@ interface ActiveFiltersProps {
       {selectedSkills.map(skill => (
 
 
+
+
         <ClickableBadge
           key={skill}
 
 
+  clearFilters;
+}: ActiveFiltersProps) {;
+  // Check if any filters are active;
+  const hasActiveFilters = ;
+    selectedSkills && selectedSkills.length > 0 || ;
+    selectedAvailability && selectedAvailability.length > 0 || ;
+    selectedRegions && selectedRegions.length > 0 ||;
+    experienceRange[0] !== 0 ||;
+    experienceRange[1] !== 15 ||;
+    priceRange[0] !== 50 ||;
+    priceRange[1] !== 200;
+
+  if (!hasActiveFilters) return null;
+
+  return (
+    <div className="mb-6 flex flex-wrap gap-2 items-center">;
+      <span className="text-zion-slate-light text-sm">Active filters:</span>;
+
+      {selectedSkills && selectedSkills.map(skill => (;
+        <ClickableBadge
+          key={skill}
+
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
           onClick={() => toggleSkill(skill)}
         >;
@@ -188,6 +203,8 @@ interface ActiveFiltersProps {
   )
 
 
+
+
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -228,6 +245,7 @@ interface ActiveFiltersProps {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -238,9 +256,8 @@ interface ActiveFiltersProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';

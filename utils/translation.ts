@@ -1,5 +1,6 @@
 
 
+
 import i18n from './i18n',
 export type TranslationMap = Record < string string | undefined>,
 export function getWithFallback (map: TranslationMap, preferred: string): string | undefined {
@@ -11,6 +12,7 @@ export async function translateTextViaAI(text: string, targets: string[]): Promi
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
   const res = await fetch('/api/translate', {;
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' },;
@@ -18,10 +20,14 @@ export async function translateTextViaAI(text: string, targets: string[]): Promi
   if (!res.ok) throw new Error('Translation API failed');
   return res.json();
 
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 
 
 }
@@ -38,6 +44,7 @@ export function getWithFallback(map: TranslationMap, preferred: string): string 
 }
 ;
 export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {;
+
 
 
 import i18n from './i18n',
@@ -66,6 +73,7 @@ export function getSelectedLanguage (): string {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
   const res = await fetch('/api/translate', {;
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' },;
@@ -73,16 +81,16 @@ export function getSelectedLanguage (): string {
   if (!res.ok) throw new Error('Translation API failed');
   return res.json();
 
-
-
-
-
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
 ;
 export function getSelectedLanguage(): string {;
   return i18n.resolvedLanguage || i18n.language || 'en';
+
 
 
 
@@ -96,4 +104,5 @@ export function getSelectedLanguage(): string {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -25,17 +26,16 @@
   report_count: number;
   reviewer_profile?: {
 
+
     display_name: string,
     avatar_url?: string;
 
   }
 }
 
+export interface ReviewReport {
 
-
-
-
-
+export interface ReviewReport {;
 
   id: string;
   review_id: string;
@@ -81,5 +81,7 @@ export interface ReviewReport {;
   resolved_at?: string;
 }
 ;
+
+
 
 

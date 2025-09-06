@@ -8,6 +8,19 @@ interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
 
+const getSteps = (t: any,) => [
+
+import React from 'react',
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { useTranslation } from "react-i18next",
+interface HowItWorksSectionProps {
+  className?: string,
+  style?: React.CSSProperties
+}
+
+const getSteps = (t: any) => [
 
   {
     title: t('how_it_works.post')
@@ -227,6 +240,7 @@ const getSteps = (t: any) => [
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
+
 
 
 
@@ -526,12 +540,23 @@ function HowItWorksSection() {
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
                   {index % 2 === 0 ? (
+
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
                   ) : null}
                 </div>;
+
+
+                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
+                  <step && step.icon className="w-6 h-6 text-zion-cyan" />;
+                </div>;
+
+                <div className="md:w-1/2 md:px-12 text-center md:text-left">;
+                  {index % 2 !== 0 ? (;
+                    <div>;
+
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
@@ -551,6 +576,7 @@ function HowItWorksSection() {
 });
 
 export default Component;
+
 
 }
 
@@ -585,5 +611,6 @@ export default Component;
 }
 }
 ;
+
 
 

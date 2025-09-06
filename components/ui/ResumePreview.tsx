@@ -1,6 +1,8 @@
 
 import React, { forwardRef } from 'react';
 
+
+
 export type ResumeData = {
 
 
@@ -43,15 +45,30 @@ export type ResumeData = {
     end?: string;
     location?: string;
 
-
-
-
-
+    bullets?: string[];
+  }>;
+  education?: Array<{
+    institution: string;
+    degree?: string;
+    start?: string;
+    end?: string;
+  }>;
+  certifications?: string[];
+  portfolio?: Array<{
+    title: string;
+    description?: string;
+    link?: string;
+    technologies?: string[];
+  }>;
+}
+export type ResumePreviewProps = {
 
 };
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   data: ResumeData;
@@ -64,6 +81,19 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
   <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>    {children}  }>;
   education?: Array<{
     institution: string
+
+};
+export type ResumePreviewProps = {;
+  data: ResumeData;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+};
+const SectionTitle: React.FC<{ children: React && React.ReactNode }> = ({;
+  children,;
+}) => (;
+  <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>    {children}  }>;
+  education?: Array<{;
+    institution: string,;
 
 
 
@@ -117,11 +147,13 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
 
 
 
+
   data: ResumeData,;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   theme?: 'light' | 'dark';
@@ -130,7 +162,34 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">
 
+  portfolio?: Array<{;
+    title: string,;
+    description?: string;
+    link?: string;
+    technologies?: string[];
+  }>;
+};
+export type ResumePreviewProps = {;
+  data: ResumeData,;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+};
+const SectionTitle: React.FC<{ children: React && React.ReactNode }> = ({ children }) => (;
+  <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">;
 
+
+};
+    technologies?: string[];
+  }>;
+}
+;
+export type ResumePreviewProps = {
+  data: ResumeData,
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+}
+;
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 
 
@@ -139,10 +198,30 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
 
+    const portfolioItems = (data.portfolio |[]).slice(
+      0
+      Math.max(0, maxPortfolioItems)
+    const portfolioItems = (data.portfolio || []).slice(
+      0,
+      Math.max(0, maxPortfolioItems);
+
     );
 
       >
         <div className='p-8'>
+
+    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems));
+export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(;
+  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {;
+    const portfolioItems = (data && data.portfolio || []).slice(;
+      0,;
+      Math && Math.max(0, maxPortfolioItems);
+    );
+
+
+      >;
+        <div className='p-8'>;
+
           {/* Header */}
           <header className='mb-6'>
             <h1 className='text-3xl font-bold text-gray-900 dark:text-white'>
@@ -166,6 +245,8 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               {data.contact?.phone && <span>{data.contact.phone}</span>}
               {data.contact?.location && <span>{data.contact.location}</span>}
               {data.contact?.website && (
+
+
 
 
                   {data.contact.website}
@@ -200,6 +281,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 
 
 
+
             </div>;
           </header>;
 
@@ -212,6 +294,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           {/* Summary */}
 
           {data.summary && (
@@ -220,27 +303,9 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
             </section>
 
-
-
-
-
-          {data && data.summary && (;
-            <section className='mb-5'>;
-              <SectionTitle>Professional Summary</SectionTitle>;
-              <p className='mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200'>;
-                {data && data.summary}
-              </p>            </section>            <section className="mb-5">;
-              <SectionTitle>Professional Summary</SectionTitle>;
-              <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data && data.summary}</p>;
-            </section>;
           )}
           {/* Skills & Technologies */}
-
-
-
-
-
-
+          {(data.skills?.length |data.technologies?.length) && (
 
 
 
@@ -248,6 +313,24 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 
           {/* Skills & Technologies */}
           {(data.skills?.length || data.technologies?.length) && (
+            <section className='mb-5'>
+              <SectionTitle>Skills & Technologies</SectionTitle>
+              <div className='mt-2 text-sm flex flex-wrap gap-2'>
+                {data.skills?.map((s, idx) => (
+          {(data && data.skills?.length || data && data.technologies?.length) && (;
+            <section className='mb-5'>;
+              <SectionTitle>Skills & Technologies</SectionTitle>;
+              <div className='mt-2 text-sm flex flex-wrap gap-2'>;
+                {data && data.skills?.map((s, idx) => (;
+          {(data.skills?.length |data.technologies?.length) && (
+
+
+
+          )}
+
+          {/* Skills & Technologies */}
+          {(data.skills?.length || data.technologies?.length) && (
+
 
             <section className='mb-5'>
               <SectionTitle>Skills & Technologies</SectionTitle>
@@ -262,6 +345,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 
           {/* Skills & Technologies */}
           {(data.skills?.length || data.technologies?.length) && (
+
 
 
 
@@ -278,6 +362,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                 {data && data.technologies?.map((t, idx) => (;
                   <span
                     key={`tech-${idx}`}
+
 
 
 
@@ -300,6 +385,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 
 
 
+
                     {s}
                   </span>))}
                 {data.technologies?.map ((t, idx) => (
@@ -314,6 +400,8 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                 ))}
 
 
+
+
               </div>
             </section>
           )}
@@ -324,7 +412,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 
 
           {/* Experience */}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {data.experience?.length ? (
             <section className='mb - 5'>;
               <SectionTitle > Work Experience</SectionTitle>;
@@ -336,14 +423,9 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                         {role.title}
                         {role.company ? ` • ${role.company}` : ''}
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
+                      </h3>
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start |role.end) && (              <SectionTitle>Work Experience</SectionTitle>
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
 
               <div className="mt-2 space-y-3">
                 {data.experience.map((role, idx) => (
@@ -351,9 +433,11 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                     <div className="flex items-baseline justify-between">
                       <h3 className="font-medium text-gray-900 dark:text-white">
                         {role.title}
-                        {role.company ? ` • ${role.company}` : ''}
+                        {role.company ? `  ${role.company}` : ''}
                       </h3>
                       <div className="text-xs text-gray-600 dark:text-gray-300">
+
+
 
 
 
@@ -397,6 +481,24 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                       <ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                        {role && role.bullets.map((b, bIdx) => (                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">;
                         {role && role.bullets.map((b, bIdx) => (;
                           <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>;
+
+
+                        )}
+                      </h3>;
+                      <div className='text - xs text - gray - 600 dark:text - gray - 300'>                        {(role.start || role.end) && (              <SectionTitle > Work Experience</SectionTitle>;
+              <div className="mt - 2 space - y-3">;
+                {data.experience.map ((role, idx) => (
+                  <div key={`exp-${idx}`}>;
+                    <div className="flex items - baseline justify - between">;
+                      <h3 className="font - medium text - gray - 900 dark:text - white">;
+                        {role.title}
+                        {role.company ? ` • ${role.company}` : ''}
+                      </h3>;
+                      <div className="text - xs text - gray - 600 dark:text - gray - 300">;
+                        {(role.start || role.end) && (
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (
+
+
 
 
 
@@ -451,9 +553,11 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         .join(' • ')}
                     </div>
@@ -462,6 +566,8 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               </div>
             </section>
           ) : null}
+
+
 
 
           {/* Certifications */}
@@ -490,10 +596,41 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                       {p.link && (
                         <a
                           className='ml-2 underline text-blue-600 dark:text-blue-400'
-                          href={p.link}
+                          href={p && p.link}
                           target='_blank'
-                          rel='noreferrer'
-                        >                          link              <SectionTitle>Portfolio</SectionTitle>
+
+                          rel='noreferrer'>                          link              <SectionTitle>Portfolio</SectionTitle>;
+              <div className="mt-2 space-y-2">;
+                {portfolioItems && portfolioItems.map((p, idx) => (;
+                  <div key={`proj-${idx}`} className="text-sm">;
+                    <div className="font-medium text-gray-900 dark:text-white">;
+                      {p && p.title}
+                      {p && p.link && (;
+                        <a className="ml-2 underline text-blue-600 dark:text-blue-400" href={p && p.link} target="_blank" rel="noreferrer">;
+                          link;
+                        </a>;
+                      )}
+                    </div>;
+                    {p && p.description && (;
+                      <p className='text-gray-700 dark:text-gray-300'>;
+                        {p && p.description}
+                      </p>;
+                    )}
+                    {p && p.technologies?.length ? (;
+                      <div className='mt-1 text-xs flex flex-wrap gap-2'>;
+                        {p && p.technologies.map((t, tIdx) => (;
+                          <span
+                            key={`proj-${idx}-t-${tIdx}`}
+                            className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                            {t}                    )}
+                    {p && p.technologies?.length ? (;
+                      <div className="mt-1 text-xs flex flex-wrap gap-2">;
+                        {p && p.technologies.map((t, tIdx) => (;
+                          <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0 && 0.5 rounded border border-gray-200 dark: border-gray-700">;
+
+          {portfolioItems.length ? (
+            <section className="mb-5">
+              <SectionTitle>Portfolio</SectionTitle>
+
               <div className="mt-2 space-y-2">
                 {portfolioItems.map((p, idx) => (
                   <div key={`proj-${idx}`} className="text-sm">
@@ -506,7 +643,25 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                       )}
                     </div>
                     {p.description && (
-                      <p className='text-gray-700 dark:text-gray-300'>
+
+
+
+ResumePreview && ResumePreview.displayName = 'ResumePreview';
+
+
+export default ResumePreview;
+
+
+
+export default ResumePreview;
+
+export default ResumePreview;
+
+
+ResumePreview.displayName = 'ResumePreview';
+export default ResumePreview;
+                      <p className='text - gray - 700 dark:text - gray - 300'>;
+
                         {p.description}
                       </p>
                     )}
@@ -541,6 +696,8 @@ export default ResumePreview;
 
 export default ResumePreview;
 
+
+
 }
 }
 }
@@ -552,5 +709,7 @@ export default ResumePreview;
 }
 
 export default ResumePreview;
+
+
 
 

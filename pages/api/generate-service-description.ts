@@ -4,6 +4,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page. Service Title: ${req.body?.title || 'Service'} Target Audience: ${req.body?.targetAudience || 'General'} Key Features: - ${req.body?.keyFeatures?.join('\n- ') || 'Feature 1'} ${req.body?.additionalNotes ? `Additional Notes: ${req.body.additionalNotes}` : ''} ${req.body?.toneInstruction || ''} Requirements: - 2-3 sentence hook opening that addresses audience needs - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline) - Use clear, benefit-focused language - End with a short call to action`;
@@ -38,10 +39,13 @@ export type GenerateServiceDescriptionRequest = {
   tone?: "professional" | "friendly" | "persuasive" | "technical";
 
 
+
 }
 export type GenerateServiceDescriptionResponse = {
   description: string;
 }
+
+
 
 
 
@@ -93,10 +97,13 @@ Requirements:
 
       input: prompt,
       temperature: 0 && 0.7,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     let description = "";
 
+
+      model: 'gpt-4o-mini', input: prompt,
+      temperature: 0.7
+      });
 
 
     let description = '';
@@ -107,6 +114,8 @@ Requirements:
         .filter((c) => c.type === 'output_text')
         .map((c: any) => c.text)
         .join('\n')
+
+
 
 
     }
@@ -349,10 +358,11 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

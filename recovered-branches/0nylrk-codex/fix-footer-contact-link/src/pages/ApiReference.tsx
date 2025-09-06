@@ -1,7 +1,19 @@
 
 
-
-
+import React, { useState } from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+export function ApiReference() {;
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+import React, { useState } from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+export function ApiReference() {
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+import { CodeBlock } from "@/components/developers/CodeBlock",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 
 export function ApiReference() {
@@ -86,19 +98,48 @@ export function ApiReference() {;
 
       "id": "job-123";
 
+import React, { useState } from './react';
+import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
+import { CodeBlock } from '@/components / developers / CodeBlock';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+export /**
+ * ApiReference - Function description
+ */
+function ApiReference() {
+  const [active_endpoint, setActiveEndpoint] = useState ("get - jobs");
+;
+  // Sample endpoint data;
+  const endpoints = [;
+    {
+      id: "get - jobs",
+      method: "GET",
+      path: "/api / jobs",
+      description: "Retrieve a list of job postings with optional filtering",
+      parameters: [;
+        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" }
+        { name: "category", type: "string", description: "Filter by job category" },
+        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
+      responses: {
+        "200": {
+          description: "A list of jobs",
+          example: `{
+  "jobs": [;
+    {
+      "id": "job - 123";
+
       "title": "Senior React Developer";
       "description": "We're looking for an experienced React developer...";
       "category": "development";
       "budget": {;
         "min": 5000;
-
-        "max": 10000,
-        "currency": "USD";
+        "max": 10000
+        "currency": "USD"
       }
       "status": "open";
-      "created_at": "2023 - 05 - 10T15:30:00Z";
+      "created_at": "2023-05-10T15:30:00Z"
     }
-    // More jobs...;
+    // More jobs...
   ];
   "count": 42;
   "limit": 20;
@@ -178,7 +219,7 @@ export function ApiReference() {;
   "retry_after": 60
 }`
         }
-      },
+      }
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
@@ -215,6 +256,23 @@ export function ApiReference() {;
   "category": "design",
   "budget": {
 
+    "min": 3000;
+    "max": 5000
+    "currency": "USD"
+  },
+  "status": "open",
+  "created_at": "2023-05-15T10:12:00Z"
+}`
+        }
+    "min": 3000,
+    "max": 5000,
+    "currency": "USD"
+  },
+  "status": "open",
+  "created_at": "2023-05-15T10:12:00Z"
+}`
+        },
+
         "400": {
           description: "Bad request"
           example: `{
@@ -223,10 +281,18 @@ export function ApiReference() {;
   "details": [
     {
 
+      "field": "title"
+      "error": "Title is required"
+
     }
   ]
 }`
         }
+
+      }
+      "field": "title",
+      "error": "Title is required"
+      };
 
 import React, { useState } from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
@@ -311,14 +377,15 @@ export function ApiReference() {;
 
   "id": "job-456";
 
+
+
   "title": "UX Designer";
   "description": "Looking for a UX designer with 3+ years experience...";
   "category": "design";
   "budget": {;
     "min": 3000;
-
-    "max": 5000,
-    "currency": "USD";
+    "max": 5000
+    "currency": "USD"
   }
   "status": "open";
   "created_at": "2023 - 05 - 15T10:12:00Z";
@@ -351,10 +418,14 @@ export function ApiReference() {;
       "error": "Title is required";
 
 
+      "field": "title",
+      "error": "Title is required";
+
     }
   ];
 }`;
         }
+
 
 
 
@@ -385,10 +456,17 @@ export function ApiReference() {;
 
 
 
+
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
+
+      }
+      request_example: `curl -X POST \\;
+  https://api.zionai.com / v1 / api / jobs \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content - Type: application / json" \\;
 
   -d '{
 
@@ -398,7 +476,6 @@ export function ApiReference() {;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content-Type: application/json" \\;
   -d '{;
-
     "title": "UX Designer";
     "description": "Looking for a UX designer with 3+ years experience...";
     "category": "design";
@@ -654,12 +731,16 @@ export function ApiReference() {;
 
 
                             'bg-red-950 text-red-500'
-                          }`}>
+                          }`}>;
                             {status}
 
                           </span>
                           <span className="text-white">{response.description}</span>
                         </div>
+
+                        <CodeBlock
+                          code={response.example}
+                        
 
                         <CodeBlock 
                           code={response.example} 
@@ -678,6 +759,88 @@ export function ApiReference() {;
                       <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;
                       <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;
 
+            <div>;
+              <div className="flex items - center mb - 6">;
+                <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
+                  activeEndpointData.method === "GET" ? "bg - green - 950 text - green - 500" :;
+                  activeEndpointData.method === "POST" ? "bg - blue - 950 text - blue - 500" :;
+                  "bg - yellow - 950 text - yellow - 500";
+                }`}>;
+                  {activeEndpointData.method}
+                </span>;
+                <span className="font - mono text - lg text - white">{activeEndpointData.path}</span>;
+              </div>;
+              <p className="text - zinc - 400 mb - 8">{activeEndpointData.description}</p>;
+              <Tabs default_value="docs">;
+                <TabsList className="mb - 6">;
+                  <TabsTrigger value="docs">Documentation</TabsTrigger>;
+                  <TabsTrigger value="try">Try It</TabsTrigger>;
+                </TabsList>;
+                <TabsContent value="docs">;
+                  {/* Request section */}
+                  <div className="mb - 8">;
+                    <h3 className="text - xl font - semibold text - white mb - 4">Request</h3>;
+                    {activeEndpointData.parameters && activeEndpointData.parameters.length > 0 && (
+                      <>;
+                        <h4 className="text - lg font - medium text - white mb - 3">Parameters</h4>;
+                        <div className="overflow - x-auto mb - 6">;
+                          <table className="w - full border - collapse">;
+                            <thead>;
+                              <tr className="border - b border - zinc - 800">;
+                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Name</th>;
+                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Type</th>;
+                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Required</th>;
+                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Description</th>;
+                              </tr>;
+                            </thead>;
+                            <tbody>;
+                              {activeEndpointData.parameters.map ((param, index) => (
+                                <tr key={param.name} className={index < activeEndpointData.parameters.length - 1 ? "border - b border - zinc - 800" : ""}>;
+                                  <td className="py - 2 px - 4 text - white font - mono">{param.name}</td>;
+                                  <td className="py - 2 px - 4 text - blue - 400 font - mono">{param.type}</td>;
+                                  <td className="py - 2 px - 4 text - zinc - 300">{param.required ? "Yes" : "No"}</td>;
+                                  <td className="py - 2 px - 4 text - zinc - 300">{param.description}</td>;
+                                </tr>))}
+                            </tbody>;
+                          </table>;
+                        </div>;
+                      </>)}
+                    <h4 className="text - lg font - medium text - white mb - 3">Example Request</h4>;
+                    <CodeBlock;
+                      code={activeEndpointData.request_example}
+                      language="bash";
+                      showLineNumbers={true}
+                    />;
+                  </div>;
+                  {/* Response section */}
+                  <div>;
+                    <h3 className="text - xl font - semibold text - white mb - 4">Responses</h3>;
+                    {Object.entries (activeEndpointData.responses).map (([status, response]) => (
+                      <div key={status} className="mb - 6">;
+                        <div className="flex items - center mb - 3">;
+                          <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
+                            status.starts_with ('2') ? 'bg - green - 950 text - green - 500' :;
+                            status === '401' || status === '403' ? 'bg - orange - 950 text - orange - 500' :;
+                            'bg - red - 950 text - red - 500';
+                          }`}>;
+                            {status}
+                          </span>;
+                          <span className="text - white">{response.description}</span>;
+                        </div>;
+                        <CodeBlock;
+                          code={response.example}
+                          language="json";
+                          showLineNumbers={true}
+                        />;
+                      </div>))}
+                  </div>;
+                </TabsContent>;
+                <TabsContent value="try">;
+                  <div className="p - 8 border border - zinc - 800 rounded - lg flex items - center justify - center">;
+                    <div className="text - center">;
+                      <p className="text - zinc - 400 mb - 3">Interactive API tester coming soon</p>;
+                      <p className="text - zinc - 600 text - sm">Try the Postman collection in the meantime</p>;
+
                     </div>;
                   </div>;
                 </TabsContent>;
@@ -686,18 +849,24 @@ export function ApiReference() {;
 
 
 
+=======
+;
+
+
 export default ApiReference;
 
 
-=======
             </div>) : (
             <div className="p - 8 border border - zinc - 800 rounded - lg text - center">;
               <p className="text - zinc - 400">Select an endpoint from the list to view details</p>;
             </div>)}
         </div>;
       </div>;
-    </ApiDocsLayout>);
+    </ApiDocsLayout>;
+  );
 }
+
+
 
 export default ApiReference;
 

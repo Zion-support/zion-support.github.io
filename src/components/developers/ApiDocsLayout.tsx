@@ -54,9 +54,11 @@ import {
 
 
 
+
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
+
 
 
 
@@ -70,6 +72,7 @@ interface ApiDocsLayoutProps {
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
+
 
 
 
@@ -92,6 +95,7 @@ interface ApiDocsLayoutProps {
     if (path) {
       router.push(path),
       setSearchValue("")
+
 import { SearchSuggestion } from "@/types/search",;
 import React, { useState } from "react",;
 import Link from 'next/link',;
@@ -141,19 +145,19 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
       router.push(path),;
       setSearchValue("");
     }
-  },;
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    const path = getDocsSearchPath(searchValue),;
-    if (path) {;
-      router.push(path),;
-      setSearchValue("");
+  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const path = getDocsSearchPath(searchValue);    if (path) {
+      router.push(path)
+      setSearchValue("")
     }
-  },;
-  return (;
+  }
+  return (
     <div className="flex min-h-screen bg-zinc-950">;
      {/* Sidebar */}
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
+
 
 
       <Link href="/developers/docs" className="flex items-center mb-8">
@@ -165,6 +169,7 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
       <div className="mb-6">
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
+
      <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
       <Link href="/developers/docs" className="flex items-center mb-8">;
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">;
@@ -185,6 +190,7 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          onChange={setSearchValue}
          onSelectSuggestion={handleSelectSuggestion}
          searchSuggestions={docsSearchSuggestions}
+
 
 
          placeholder="Search documentation"
@@ -365,5 +371,6 @@ if ( {) {
 }
 ;
 export default ApiDocsLayout;
+
 
 

@@ -1,7 +1,19 @@
 
 
-
-
+import {useAuthStatus} from "./talent/useAuthStatus";
+import {useTalentData} from "./talent/useTalentData";
+import {useFilterTalents} from "./talent/useFilterTalents";
+import {useUIState} from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { ;
+    isAuthenticated;
+import { useAuthStatus } from "./talent/useAuthStatus",
+import { useTalentData } from "./talent/useTalentData",
+import { useFilterTalents } from "./talent/useFilterTalents";
+import { useUIState } from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
 
   const {
     is_authenticated;
@@ -141,6 +153,8 @@ export function useTalentDirectory() {
     toggleSection;
     handleToggleSave
 
+  }
+}
 
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
@@ -227,9 +241,10 @@ export function useTalentDirectory() {;
     handleToggleSave;
 
 
+
+
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 
 

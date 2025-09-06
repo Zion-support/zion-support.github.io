@@ -3,7 +3,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 import Link from 'next/link';
@@ -13,6 +15,8 @@ import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
+
+
 
 
 
@@ -35,6 +39,8 @@ import {;
 
 
 
+
+
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
@@ -45,8 +51,10 @@ import {
 
 
 
+
 } from '@/components/ui/card';
 const LoginPage = () => {;
+
 
 
   Card
@@ -54,6 +62,8 @@ const LoginPage = () => {;
   CardDescription
   CardHeader
   CardTitle;
+
+
 
   Card,
   CardContent,
@@ -63,7 +73,9 @@ const LoginPage = () => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 } from '@/components/ui/card';
 const LoginPage = () => {
@@ -77,6 +89,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -84,6 +97,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const router = useRouter();
@@ -116,7 +130,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
       if (mounted) {
         logWarn('LoginPage: Session check timeout after 5 seconds');
         setSessionCheckTimedOut(true);
-        setIsCheckingSession(false); // Allow form to render if timeout
+        setIsCheckingSession(false); // Allow form to render if timeout;
         setSessionChecked(true); // Mark check as complete even on timeout      }
     }, 5000);
     const checkSessionAndListen = async () => {
@@ -375,6 +389,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
           setSessionChecked(true);
 
 
+
+
           );        }
       }
 
@@ -451,6 +467,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
+
+
+
       });
 
       if (response && response.ok) {;
@@ -474,6 +494,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
+
+
 
 
 
@@ -575,7 +597,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
   },
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault(),
@@ -657,19 +681,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
+
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
                   displayMessage = 'Network error. Please check your internet connection and try again.'
               } else if (signInError.message.toLowerCase().includes('user disabled')) {
                   displayMessage = 'Your account has been disabled. Please contact support.'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
 
   // Auto-redirect to verification status page for unverified users after showing message;
   useEffect(() => {;
     if (isEmailUnverified && verificationEmailSent && email) {;
       const timer = setTimeout(() => {;
+
+
 
 
 
@@ -690,6 +717,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -698,6 +726,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
@@ -709,7 +738,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
   // 1. Primary Loading State: During initial session check;
   if (isCheckingSession) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     logInfo('LoginPage: Rendering "Checking authentication..."');
     return (
 
@@ -750,6 +778,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
+
   // This is a safeguard against the component's content persisting on other auth routes.;
 
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
@@ -765,7 +795,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   return (
     <>
@@ -779,6 +811,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader>
+
 
 
   return (
@@ -801,6 +834,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -892,6 +926,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
+
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -920,6 +956,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -927,6 +964,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 </Link>
@@ -941,10 +979,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
+
   )
 },
 export default LoginPage,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 />;
               </div>;
 
@@ -968,6 +1007,7 @@ export default LoginPage,
                   className='text-blue-600 hover:underline'>                  Sign up;
 
 
+
                 </Link>;
               </p>;
             </div>;
@@ -989,4 +1029,5 @@ export default LoginPage,
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

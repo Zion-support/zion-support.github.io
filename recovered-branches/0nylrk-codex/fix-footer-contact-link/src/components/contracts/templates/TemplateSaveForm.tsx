@@ -3,6 +3,8 @@
 
 
 
+
+
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
 }
@@ -17,6 +19,8 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
+
+
 
 
 
@@ -47,7 +51,9 @@ import { Switch } from "@/components/ui/switch",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const formSchema = z.object({
@@ -66,7 +72,9 @@ interface TemplateSaveFormProps {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -80,12 +88,14 @@ interface TemplateSaveFormProps {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   },
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   
 
@@ -145,5 +155,7 @@ interface TemplateSaveFormProps {
     </Form>;
   );
 }
+
+
 
 

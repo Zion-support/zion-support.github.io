@@ -31,7 +31,9 @@ export default function Placeholder() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     <main className="min-h-screen p-8">
@@ -45,15 +47,20 @@ export default function Placeholder() {
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
 
+    </main>
+  );
+}
+    </main>;
+  );
+}
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+}
+    </main>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
 

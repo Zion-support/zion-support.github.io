@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
@@ -23,6 +24,7 @@ import {
 
 
 
+
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string
@@ -30,6 +32,8 @@ async function submitByEmail(
   text: string
   attachments: any[] = []
 ) {
+
+
 
 
 
@@ -49,11 +53,13 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
@@ -62,10 +68,14 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 
 
 
+
+
   const from = process.env.EMAIL_FROM |user;
   if (!host |!user |!pass) throw new Error("Email not configured");
   const from = process.env.EMAIL_FROM || user;
   if (!host || !user || !pass) throw new Error("Email not configured");
+
+
 
 
   const transporter = nodemailer.createTransport({
@@ -76,21 +86,35 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
   });
 
 
+
+
   if (!host || !user || !pass) throw new Error('Email not configured');
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
 
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
@@ -127,6 +151,8 @@ export default async function handler(
 
 
 
+
+
       .json({ error: error?.message |"Submission failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
@@ -149,13 +175,19 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
     port,
     secure: port === 465,
     auth: { user, pass },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
 
     const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
 
 
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status($1).json({$2});
+      .json({ error: error?.message || "Submission failed" });
+;
+export default async function handler(req, res) {
 
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
@@ -189,6 +221,8 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 
       .json({ error: error?.message |"Submission failed" });
 
+  }
+}
 
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
@@ -202,6 +236,7 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
     return res.status(500).json({ error: error?.message || 'Submission failed' })
 
   }
+
 
 }
     const updated = updateProposalMeta (id, (m) => ({
@@ -261,4 +296,5 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -1,8 +1,13 @@
 
 
-
-
-
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
+import {Eye, ChevronDown, Loader2} from "lucide-react";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
 
 import { useState } from "react",
 import { Link } from "react-router-dom",
@@ -25,12 +30,14 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 interface ApplicationActionsProps {
 
@@ -40,6 +47,7 @@ interface ApplicationActionsProps {
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
+
 
 
 
@@ -57,17 +65,19 @@ interface ApplicationActionsProps {;
 export function ApplicationActions(): any ({;
 
 
+
 export function ApplicationActions({;
   application;
   processingId;
   onViewApplication;
 
-
-
+export function ApplicationActions({
+  application,
+  processingId,
+  onViewApplication,
 
   onStatusChange
 }: ApplicationActionsProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="flex items-center justify-end gap-2">;
@@ -120,6 +130,10 @@ export function ApplicationActions({;
         </DropdownMenuContent>
       </DropdownMenu>
 
+      <Button
+        variant="default"
+      <Button 
+        variant="default" 
 
         size="sm"
         asChild
@@ -195,7 +209,6 @@ function ApplicationActions() {
           <DropdownMenuItem;
             on_click={() => onStatusChange (application.id, "rejected")}
             className="text - red - 600";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             Reject;
           </DropdownMenuItem>;
@@ -215,6 +228,7 @@ function ApplicationActions() {
 }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -222,4 +236,5 @@ function ApplicationActions() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -62,7 +62,6 @@ import enTranslation from './locales/en/translation.json',;
 import esTranslation from './locales/es/translation.json',;
 import ptTranslation from './locales/pt/translation.json',;
 import arTranslation from './locales/ar/translation.json',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Initialize i18next;
 i18n;
   .use (LanguageDetector) // Detect user language;
@@ -111,7 +110,9 @@ i18n.on ('language_changed', (lng) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default i18n;

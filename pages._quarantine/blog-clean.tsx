@@ -1,18 +1,23 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -186,7 +191,7 @@ const "Blog": NextPage = () => {;
                   <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">;
                     <Calendar className="h-4 w-4"  />;
                     <span>{post && post.date}</span>;
-                    <span>•</span>;
+                    <span></span>;
                     <Clock className="h-4 w-4"  />;
                     <span>{post && post.readTime}</span>;
                   </div>;
@@ -258,7 +263,7 @@ const "Blog": NextPage = () => {;
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold leading-6 text-white hover: tex t-blue-300 transition-colors">;
-              Visit our website <span aria-hidden="true">→</span>;
+              Visit our website <span aria-hidden="true"></span>;
             </Link>;
           </div>;
         </div>;

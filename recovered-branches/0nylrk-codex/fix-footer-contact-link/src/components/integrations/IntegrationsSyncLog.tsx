@@ -1,19 +1,30 @@
 
 
-
-
-
+import React from "react";
+import { Card } from "@/components/ui/card";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
+import {Card} from "@/components/ui/card";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
 
 import React from "react",
 import { Card } from "@/components/ui/card",
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+
 
 
 
@@ -27,6 +38,7 @@ import { Badge } from "@/components/ui/badge",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 // Sample data for integration sync logs
@@ -133,10 +145,13 @@ export function IntegrationsSyncLog() {
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
 
-
-
-
-
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </Card>
+  )
+}
 
 import React from "react",;
 import { Card } from "@/components/ui/card",;
@@ -196,7 +211,6 @@ const syncLogs = [;
 export function IntegrationsSyncLog() {;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "success": return <Badge className="bg-green-500">Success</Badge>;
       case "error":;
         return <Badge variant="destructive">Error</Badge>;
@@ -239,6 +253,7 @@ export function IntegrationsSyncLog() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -247,6 +262,7 @@ export function IntegrationsSyncLog() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             ))}
@@ -258,7 +274,6 @@ export function IntegrationsSyncLog() {;
   );
 }
 
-=======
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';

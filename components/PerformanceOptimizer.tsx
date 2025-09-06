@@ -4,23 +4,30 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useEffect, useState, useCallback } from 'react';
+
 import { motion } from 'framer-motion';
 
+
 import {
+
 
   Zap,
   Clock,
@@ -31,11 +38,14 @@ import {
   Database,;
   Network,;
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 
+
 } from 'lucide-react';
+
 interface PerformanceMetrics {;
   loadTime: number;
 
@@ -48,6 +58,8 @@ interface PerformanceMetrics {;
 
   Database,;
   Network,;
+
+
 
 
 
@@ -65,8 +77,6 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 
   timeToInteractive: number;
-;
-
 }, []);
 
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
@@ -78,6 +88,7 @@ interface PerformanceMetrics {
   largestContentfulPaint: number
   cumulativeLayoutShift: number
   firstInputDelay: number
+
   timeToInteractive: number
 //Add responsive sizes if not present // Check condition
 if ( {) {
@@ -93,7 +104,7 @@ interface PerformanceMetrics {
   largestContentfulPaint: number,
   cumulativeLayoutShift: number,
   firstInputDelay: number,
-timeToInteractive: number;
+  timeToInteractive: number;
 }
 interface PerformanceOptimizerProps {
   class_name?: string;
@@ -263,7 +274,8 @@ if ( {) {
   // Optimize fonts;
   const optimizeFonts = useCallback(async () => {;
     setIsOptimizing(true);
-    setOptimizationStatus('Optimizing fonts...');
+    setOptimizationStatus('Optimizing images...');
+
     try {;
       // Add font-display: swap to improve font loading;
       const style = document && document.createElement('style'),;
@@ -285,6 +297,9 @@ if ( {) {
           font-family: 'Orbitron';
           font-display: swap;
 
+
+          font-family: 'Inter',
+          font-display: swap
 
 
         }
@@ -335,9 +350,11 @@ if ( {) {
         }
       `;
       document && document.head.appendChild(style);
+
       setOptimizationStatus('Font optimization complete');
 
 
+      // Simulate optimization delay;
       await new Promise(resolve => setTimeout(resolve, 800));
     } catch (error) {;
       setOptimizationStatus('Font optimization failed');
@@ -351,6 +368,332 @@ if ( {) {
     } finally {;
       setIsOptimizing(false);
 
+
+      
+      // Simulate optimization delay
+      await new Promise(resolve => setTimeout(resolve, 800))
+      document.head.append_child (style);
+;
+      setOptimizationStatus ('Font optimization complete');
+;
+      // Simulate optimization delay;
+      await new Promise (resolve => set_timeout (resolve, 800));
+    } catch (error) {
+      setOptimizationStatus ('Font optimization failed');
+      console.error ('Font optimization error:', error);
+    } finally {
+      setIsOptimizing (false);    }      // Simulate optimization delay;
+      await new Promise (resolve => set_timeout (resolve, 800));
+
+    } catch (error) {
+      setOptimizationStatus ('Font optimization failed');
+      console.error ('Font optimization error:', error);
+    } finally {
+
+
+  // Optimize CSS and JavaScript;
+  const optimizeCode = useCallback(async () => {;
+    setIsOptimizing(true);
+    setOptimizationStatus('Optimizing code...');
+    try {
+      // Add resource hints for critical resources
+      const preloadLinks = [
+        {
+          rel: 'preload'
+          href: '/fonts/inter-var.woff2'
+          as: 'font'
+          type: 'font/woff2'
+          crossorigin: 'anonymous'
+        }
+        {
+          rel: 'preload'
+          href: '/fonts/jetbrains-mono-var.woff2'
+          as: 'font'
+          type: 'font/woff2'
+          crossorigin: 'anonymous'
+        },      ];        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+        { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+
+      ];
+      preloadLinks.forEach(linkAttrs => {
+      ];
+
+      preloadLinks && preloadLinks.forEach(linkAttrs => {;
+      setIsOptimizing (false);
+    }
+  }, []);
+;
+  // Optimize CSS and JavaScript;
+  const optimize_code = useCallback (async () => {
+    setIsOptimizing (true);
+    setOptimizationStatus ('Optimizing code...');
+;
+    try {
+      // Add resource hints for critical resources;
+      const preload_links = [;
+        {
+          rel: 'preload',
+          href: '/fonts / inter - var.woff2',
+          as: 'font',
+          type: 'font / woff2',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel: 'preload',
+          href: '/fonts / jetbrains - mono - var.woff2',
+          as: 'font',
+          type: 'font / woff2',
+          crossorigin: 'anonymous',
+        },      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }
+      ];
+;
+      preload_links.for_each (link_attrs => {
+import React, { useEffect } from 'react;
+import Head from 'next / head;
+interface PerformanceOptimizerProps {preload_images?: string[];
+  preload_fonts?: string[];
+  criticalCSS?: string;
+}
+
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
+preloadImages = [], preloadFonts = [;
+    'https: //fonts && fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap;
+  ], criticalCSS'}) => {;
+  useEffect(() => {;
+
+    // Performance monitoring;
+    if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
+        for (const entry of list && list.getEntries()) {;
+if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);
+'          }'          if (entry && entry.entryType === 'first-input') {'            console && console.log('FID: ', entry && entry.processingStart - entry && entry.startTime);'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && console.log('CLS: ', (entry as any).value);'            }'          }}
+      });
+
+      try {;
+        observer && observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+'      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
+        console && console.log('Performance monitoring not fully supported');
+'      }';
+      // Resource hints for better performance;
+
+const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
+preload_images = [], preload_fonts = [;
+    'https: //fonts.googleapis.com / css2?family = Inter:wght@300;400;500;600;700;800;900 & display = swap;
+  ], criticalCSS'}) => {
+  useEffect (() => {
+    // Performance monitoring;
+    if ( {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver ((list) => {) {
+  $2
+}
+        for (const entry of list.get_entries ()) {
+if ( {'            console.log ('LCP: ', entry.start_time)) {
+  $2
+}
+'          }'          if ( {'            console.log ('FID: ', entry.processing_start - entry.start_time)) {
+  $2
+}'          }'          if ( {'            if (!(entry as any).hadRecentInput) {'              console.log ('CLS: ', (entry as any).value)) {
+  $2
+}'            }'          }}
+      });
+      try {
+        observer.observe ({ entry_types: ['largest - contentful - paint', 'first - input', 'layout - shift'] });
+'      } catch (e) {'        // Fallback for browsers that don & apos;t support all entry types;
+        console.log ('Performance monitoring not fully supported');
+'      }';
+      // Resource hints for better performance;
+      const addResourceHint = (href: string, as: string, type?: string) =>: any {
+        const link = document.create_element ('link');
+        Object.entries (link_attrs).for_each (([key, value]) => {
+          // Check condition
+if ( {) {
+  $2
+}
+            link.set_attribute (key, value as string);
+
+          } else {
+      const addResourceHint = (href: string, as: string, type?: string) => {;
+        const link = document && document.createElement('link');
+        Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
+          if (key === 'crossorigin') {;
+            link && link.setAttribute(key, value as string);
+          } else {;
+            (link as any)[key] = value;
+          }
+        });
+
+
+      await new Promise(resolve => setTimeout(resolve, 1200));
+    } catch (error) {;
+      setOptimizationStatus('Code optimization failed');
+
+      console.error('Code optimization error:', error)
+    } finally {
+      setIsOptimizing(false)
+
+    }
+  }, []);
+
+
+  // Run all optimizations;
+  const runAllOptimizations = useCallback(async () => {;
+    setIsOptimizing(true);
+    setOptimizationStatus('Starting comprehensive optimization...');
+    try {;
+
+      await optimizeImages();
+      await optimizeFonts();
+      await optimizeCode();
+
+
+      setOptimizationStatus('Optimization failed');
+
+      console.error('Optimization error:', error)
+    } finally {
+      setIsOptimizing(false)
+
+    }
+  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
+
+
+  // Initialize performance monitoring;
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      // Measure initial performance;
+      window && window.addEventListener('load', measurePerformance);
+      // Monitor for performance issues;
+      const observer = new PerformanceObserver(list => {;
+        for (const entry of list && list.getEntries()) {;
+          if (entry && entry.entryType === 'largest-contentful-paint') {;
+            const lcp = entry && entry.startTime;
+            if (lcp > 2500) {;
+              // LCP should be under 2 && 2.5s;
+              console && console.warn('LCP is too slow:', lcp);            }
+
+          }
+        }
+      });      // Monitor for performance issues;
+      const observer = new PerformanceObserver((list) => {;
+        for (const entry of list && list.getEntries()) {;
+          if (entry && entry.entryType === 'largest-contentful-paint') {;
+            const lcp = entry && entry.startTime;
+            if (lcp > 2500) { // LCP should be under 2 && 2.5s;
+              console && console.warn('LCP is too slow:', lcp);
+
+      
+      // Monitor for performance issues
+  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
+  // Initialize performance monitoring
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Measure initial performance
+      window.addEventListener('load', measurePerformance);
+      // Monitor for performance issues
+      const observer = new PerformanceObserver(list => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            const lcp = entry.startTime;
+            if (lcp > 2500) {
+              // LCP should be under 2.5s
+              console.warn('LCP is too slow:', lcp);            }
+          }
+        }
+      });      // Monitor for performance issues
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            const lcp = entry.startTime;
+            if (lcp > 2500) { // LCP should be under 2.5s
+              console.warn('LCP is too slow:', lcp)
+
+        document.head.append_child (link);
+      });
+;
+      setOptimizationStatus ('Code optimization complete');
+;
+      // Simulate optimization delay;
+      await new Promise (resolve => set_timeout (resolve, 1200));
+    } catch (error) {
+      setOptimizationStatus ('Code optimization failed');
+      console.error ('Code optimization error:', error);
+    } finally {
+      setIsOptimizing (false);    }      setIsOptimizing (false);
+    }
+  }, []);
+;
+  // Run all optimizations;
+  const runAllOptimizations = useCallback (async () => {
+    setIsOptimizing (true);
+    setOptimizationStatus ('Starting comprehensive optimization...');
+;
+    try {
+      await optimize_images ();
+      await optimize_fonts ();
+      await optimize_code ();
+;
+      setOptimizationStatus ('All optimizations complete!');
+;
+      // Re - measure performance after optimization;
+      set_timeout (() => {
+        measure_performance ();
+      }, 500);
+    } catch (error) {
+      setOptimizationStatus ('Optimization failed');
+      console.error ('Optimization error:', error);
+    } finally {
+      setIsOptimizing (false);    }      setOptimizationStatus ('All optimizations complete!');
+;
+      // Re - measure performance after optimization;
+      set_timeout (() => {
+        measure_performance ();
+      }, 500);
+    } catch (error) {
+      setOptimizationStatus ('Optimization failed');
+      console.error ('Optimization error:', error);
+    } finally {
+      setIsOptimizing (false);
+    }
+  }, [optimize_images, optimize_fonts, optimize_code, measure_performance]);
+;
+  // Initialize performance monitoring;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      // Measure initial performance;
+      window.addEventListener ('load', measure_performance);
+;
+      // Monitor for performance issues;
+      const observer = new PerformanceObserver (list => {
+        for (const entry of list.get_entries ()) {
+          // Check condition
+if ( {) {
+  $2
+}
+            const lcp = entry.start_time;
+            // Check condition
+if ( {) {
+  $2
+}
+              // LCP should be under 2.5s;
+              console.warn ('LCP is too slow:', lcp);            }
+          }
+        }
+      });      // Monitor for performance issues;
+      const observer = new PerformanceObserver ((list) => {
+        for (const entry of list.get_entries ()) {
+          // Check condition
+if ( {) {
+  $2
+}
+            const lcp = entry.start_time;
+            // Check condition
+if ( { // LCP should be under 2.5s) {
+  $2
+}
+              console.warn ('LCP is too slow:', lcp);
 
             }
           }
@@ -382,6 +725,7 @@ if ( {) {
 
 
       observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
       return () => {;
         window && window.removeEventListener('load', measurePerformance);
         observer && observer.disconnect();
@@ -392,20 +736,104 @@ if ( {) {
         observer && observer.disconnect();
       }
   }, [measurePerformance]);
+
   const getPerformanceScore = (): number => {;
     let score = 100;
+
     if (metrics && metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics && metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics && metrics.loadTime > 3000) score -= 15;
     if (metrics && metrics.timeToInteractive > 3500) score -= 20;
+
     return Math && Math.max(0, score);  };    ;
     return Math && Math.max(0, score);
 
 
+
+
   };
+
   const getPerformanceGrade = (score: number): string => {;
 
+    return Math.max(0, score);  }
+    return Math.max(0, score)
+  }
+  const getPerformanceGrade = (score: number): string => {
+    if (score >= 90) return 'A';
+    if (score >= 80) return 'B';
+    if (score >= 70) return 'C';
+    if (score >= 60) return 'D';
 
+
+  };
+
+  const performanceScore = getPerformanceScore();
+  const performanceGrade = getPerformanceGrade(performanceScore);
+
+
+    >;
+      <div className='flex items-center justify-between mb-6'>;
+        <h3 className='text-xl font-bold text-white flex items-center gap-2'>;
+          <Gauge className='w-5 h-5 text-cyan-400' />          Performance Optimizer;
+        </h3>;
+        <button
+          onClick={() => setShowMetrics(!showMetrics)}
+          className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'        >  return (
+    <div className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 ${className}`}>;
+      <div className="flex items-center justify-between mb-6">;
+        <h3 className="text-xl font-bold text-white flex items-center gap-2">;
+          <Gauge className="w-5 h-5 text-cyan-400" />;
+        </h3>;
+        <button
+          onClick={() => setShowMetrics(!showMetrics)}
+
+  return (
+    <div className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 ${className}`}>
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-xl font-bold text-white flex items-center gap-2">
+          <Gauge className="w-5 h-5 text-cyan-400" />
+        </h3>
+        <button
+          onClick={() => setShowMetrics(!showMetrics)}
+          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+
+        >
+          {showMetrics ? 'Hide' : 'Show'} Metrics
+        </button>
+      </div>
+      {/* Performance Score */}
+
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-white/70">Performance Score</span>
+          <span className="text-2xl font-bold text-cyan-400">{performanceGrade}</span>
+        </div>
+        <div className='w-full bg-white/10 rounded-full h-3'>
+          <motion.div
+            className='h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full'
+            initial={{ width: 0 }}
+            animate={{ width: `${performanceScore}%` }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+          />
+        </div>
+        <div className='text-right mt-1'>
+          <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>        </div>
+        <div className="w-full bg-white/10 rounded-full h-3">
+          <motion.div
+
+            className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${performanceScore}%` }}
+            transition={{ duration: 1, ease: "easeOut" }}
+
+
+          />
+        </div>
+        <div className="text-right mt-1">
+          <span className="text-sm text-white/60">{performanceScore}/100</span>
+        </div>
+      </div>
+          <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>
 
 
         </div>
@@ -414,7 +842,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       {/* Metrics Display */}
@@ -429,7 +859,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -537,7 +969,20 @@ if ( {) {
       <div className='space-y-3'>        <button      <div className="space-y-3">;
 
 
+          </div>
+        </motion.div>
+      )}
+      {/* Optimization Controls */}
+      <div className='space-y-3'>        <button      <div className="space-y-3">
+        <button
 
+
+      {/* Optimization Controls */}
+      <div className='space-y-3'>        <button      <div className="space-y-3">
+        <button
+      <div className='space-y-3'>        <button
+
+        <button
 
 
           onClick={runAllOptimizations}
@@ -567,14 +1012,14 @@ if ( {) {
         <h4 className='text-sm font-semibold text-white/80 mb-3'>;
           Performance Tips;
         </h4>;
-        <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">;
+        <ul className='text-xs text-white/60 space-y-1'>          <li> Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">;
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>;
         <ul className="text-xs text-white/60 space-y-1">;
-          <li>• Use WebP images for better compression</li>;
-          <li>• Implement lazy loading for images</li>;
-          <li>• Minimize CSS and JavaScript bundles</li>;
-          <li>• Use CDN for static assets</li>;
-          <li>• Enable gzip compression</li>;
+          <li> Use WebP images for better compression</li>;
+          <li> Implement lazy loading for images</li>;
+          <li> Minimize CSS and JavaScript bundles</li>;
+          <li> Use CDN for static assets</li>;
+          <li> Enable gzip compression</li>;
         </ul>;
       </div>;
     </div>;
@@ -624,16 +1069,18 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
   );
 
 };
-  );
+
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
+
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
@@ -641,8 +1088,12 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 
 
+
+
         )}
       </div>
+
+
 
 
 
@@ -664,12 +1115,14 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
@@ -867,18 +1320,19 @@ if (return 'D') {
         <h4 className='text - sm font - semibold text - white / 80 mb - 3'>;
           Performance Tips;
         </h4>;
-        <ul className='text - xs text - white / 60 space - y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border - t border - white / 10">;
+        <ul className='text - xs text - white / 60 space - y-1'>          <li> Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border - t border - white / 10">;
         <h4 className="text - sm font - semibold text - white / 80 mb - 3">Performance Tips</h4>;
         <ul className="text - xs text - white / 60 space - y-1">;
-          <li>• Use WebP images for better compression</li>;
-          <li>• Implement lazy loading for images</li>;
-          <li>• Minimize CSS and JavaScript bundles</li>;
-          <li>• Use CDN for static assets</li>;
-          <li>• Enable gzip compression</li>;
+          <li> Use WebP images for better compression</li>;
+          <li> Implement lazy loading for images</li>;
+          <li> Minimize CSS and JavaScript bundles</li>;
+          <li> Use CDN for static assets</li>;
+          <li> Enable gzip compression</li>;
         </ul>;
       </div>;
     </div>);
 }export default PerformanceOptimizer;}
+
 
 
 
@@ -1029,5 +1483,6 @@ export default PerformanceOptimizer;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

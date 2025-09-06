@@ -1,8 +1,15 @@
 
+import {Route, Routes} from "react-router-dom";
+import MobileAppPage from "../pages/MobileAppPage";
+import MobileLaunchPage from "../pages/MobileLaunchPage";
+import OpenAppRedirect from "../pages/OpenAppRedirect";
 
 import { Route, Routes } from "react-router-dom",
 import MobileAppPage from "../pages/MobileAppPage",
 
+
+import MobileLaunchPage from "../pages/MobileLaunchPage",
+import OpenAppRedirect from "../pages/OpenAppRedirect",
 
 const MobileAppRoutes = () => {
   return (
@@ -23,6 +30,8 @@ export default MobileAppRoutes;
 
 
 
+
+
 export default MobileAppRoutes,
 import { Route, Routes } from "react-router-dom",;
 import MobileAppPage from "../pages/MobileAppPage",;
@@ -39,7 +48,6 @@ const MobileAppRoutes = () => {
 
 
 const MobileAppRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Mobile App Routes */}
@@ -53,6 +61,7 @@ const MobileAppRoutes = () => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -61,6 +70,7 @@ const MobileAppRoutes = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default MobileAppRoutes;
 

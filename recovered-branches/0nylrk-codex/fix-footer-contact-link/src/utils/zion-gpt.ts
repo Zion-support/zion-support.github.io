@@ -4,12 +4,15 @@
 // This file handles interaction with the fine-tuned ZionGPT model
 
 
-
+import {supabase} from '@/integrations/supabase/client';
+export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
+export type ZionGPTUsage = {
 
 
 
 
 export type ZionGPTUsage = {;
+
 
 
 
@@ -20,10 +23,12 @@ export type ZionGPTUsage = {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   modelId: string;
   tokensUsed: number;
   cost: number
   timestamp: Date
+
 
 
 
@@ -34,6 +39,7 @@ export interface ModelConfig {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -177,6 +183,7 @@ export async function logModelUsage(;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -184,6 +191,7 @@ export async function logModelUsage(;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }
@@ -195,14 +203,16 @@ function calculateCost(modelId: string, tokens: number): number {
   return tokens * ratePerToken
 }
 
-
-
-
+// Function to call ZionGPT models through Supabase Edge Function
+export async function callZionGPT({
+  prompt
 
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
   prompt, ;
+
+
 
 
 
@@ -384,6 +394,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -392,6 +403,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }

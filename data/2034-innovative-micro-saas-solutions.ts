@@ -1,5 +1,6 @@
 
 
+
   id: string;
   name: string;
   description: string;
@@ -63,6 +64,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     link: 'https://ziontechgroup.com/services/local-seo-reviews-booster'
     realService: true
   }
+
   {
     id: 'smart-invoice-reconciliation'
     name: 'Smart Invoice Reconciliation'
@@ -86,8 +88,33 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     name: 'Candidate Screening Copilot'
     description:
 
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
+    category: 'Human Resources'
+    pricing: { starter: '$69/mo' }
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync']
+    integrations: ['Greenhouse', 'Lever']
+    useCases: ['Faster hiring', 'Bias reduction']
+    link: 'https://ziontechgroup.com/services/candidate-screening-copilot'
+    realService: true
+  }
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+    id: 'candidate - screening - copilot',
+    name: 'Candidate Screening Copilot',
+    description:;
+      'Summarize resumes, score against job descriptions, and auto - generate interview question sets.',
 
+    category: 'Human Resources',
+    pricing: { starter: '$69/mo' },
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
+    integrations: ['Greenhouse', 'Lever'],
+    useCases: ['Faster hiring', 'Bias reduction'],
+    link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
+    realService: true,
+  },;
 ];	id: string;
+
+	id: string, name: string,
+	description: string, tagline?: string,
 
 
 	category:
@@ -170,6 +197,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true
 
 
+
+
 	id: string,;
 	name: string,;
 	description: string,;
@@ -245,7 +274,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
 		realService: true;
 
+
 	}
 ];
+
 
 

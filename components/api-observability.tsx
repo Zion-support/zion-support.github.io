@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -10,6 +11,7 @@
 }- Zion Tech Group</title>) ) 
 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
+
 
 
 
@@ -21,14 +23,13 @@ import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 
+export default function ApiObservabilityPage() {
 
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+export default function ApiObservabilityPage() {;
+  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/api-observability'));
 
   if (!service) return null;
+
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -57,7 +58,7 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
               <div className="flex items-end justify-between mb-3">;
                 <div>;
                   <div className="text-3xl font-bold text-white">{service && service.price}<span className="text-slate-400 text-base">{service && service.period}</span></div>;
-                  <div className="text-slate-400">{service && service.trialDays}-day free trial • Setup: {service && service.setupTime}</div>;
+                  <div className="text-slate-400">{service && service.trialDays}-day free trial  Setup: {service && service.setupTime}</div>;
                 </div>;
               </div>;
               <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
@@ -108,7 +109,7 @@ if (return null) {
               <div className="flex items - end justify - between mb - 3">;
                 <div>;
                   <div className="text - 3xl font - bold text - white">{service.price}<span className="text - slate - 400 text - base">{service.period}</span></div>;
-                  <div className="text - slate - 400">{service.trial_days}-day free trial • Setup: {service.setup_time}</div>;
+                  <div className="text - slate - 400">{service.trial_days}-day free trial  Setup: {service.setup_time}</div>;
                 </div>;
               </div>;
               <Link href="/contact" variant="quantum" size="lg" className="w - full">Start Trial < ArrowRight className="w - 5 h - 5 ml - 2" /></Button>;
@@ -129,6 +130,8 @@ if (return null) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

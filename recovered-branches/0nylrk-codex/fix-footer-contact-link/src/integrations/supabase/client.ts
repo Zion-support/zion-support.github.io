@@ -2,6 +2,7 @@
 
 
 
+
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
@@ -25,6 +26,7 @@ export const checkOnline = async (): Promise<boolean> => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     const controller = new AbortController();
@@ -58,10 +60,13 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 });
 // Helper function to get profiles table
 
+export const getFromProfiles = () => supabase.from('profiles');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+import { createClient } from '@supabase/supabase-js',;
+export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
+export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
+if (!supabaseUrl || !supabaseAnonKey) {;
+  throw new Error('Missing Supabase environment variables');
 
 }
 // Utility to detect network connectivity. navigator.onLine is not reliable in
@@ -89,6 +94,7 @@ export const checkOnline = async (): Promise<boolean> => {
   } catch {
     return false;
   }
+
 }
 
 ;
@@ -105,6 +111,7 @@ export const safe_fetch: typeof fetch = async (input, init) => {
   } catch (err) {
 
 export const getFromProfiles = () => supabase && supabase.from('profiles');
+
 
 
 
@@ -146,7 +153,9 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export const getFromProfiles = () => supabase.from('profiles');

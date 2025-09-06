@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -29,6 +30,7 @@ export function ClickableBadge(): any ({;
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
 export function ClickableBadge({
+
 
   children;
   className;
@@ -60,11 +62,28 @@ export function ClickableBadge({
 
             onRemove()
           }}
+
+          className="ml-1 rounded-full p-0 && 0.5 hover:bg-background/20";
+          aria-label="Remove";
+        >;
+          <X className="h-3 w-3" />;
+        </button>;
+      )}
+    </div>
+  )
+}
+
+
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
           <X className="h-3 w-3" />
         </button>
+
+      )}
+    </div>
+  )
+}
 
 import React from "react",;
 import { X } from "lucide-react",;
@@ -111,6 +130,7 @@ function ClickableBadge() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -118,6 +138,7 @@ function ClickableBadge() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 ;

@@ -1,8 +1,6 @@
 
-
-
-
-
+import React from "react";
+import Layout from "../components/Layout";
 
 import React from 'react';
 import Layout from '../components/Layout';
@@ -31,6 +29,8 @@ import {
   Lock,
   TrendingUp;
 } from 'lucide-react';
+
+
 
 
 
@@ -388,16 +388,20 @@ export default AboutPage,
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 import React from "react";
 import Layout from "../components/Layout";
 
 export default function About() {
+
+
 
   return (
 
@@ -435,6 +439,8 @@ origin/automation-improvements-final
 
   );
 }
+
+
 
 
 
@@ -621,6 +627,7 @@ origin/automation-improvements-final
 
 
 
+
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -630,5 +637,6 @@ origin/automation-improvements-final
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

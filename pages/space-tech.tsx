@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import React from "react";
@@ -13,6 +14,7 @@ return (
       <meta
         name="description"
         content="Space mission control, satellite operations, and secure communications consulting."
+
 
       />;
       <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/space-tech" />;
@@ -65,6 +67,8 @@ return (
             className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
             <Globe2 className="w-4 h-4" />{" "}
 
+
+
             <span>Explore detailed Space Technology offerings</span>
           </a>
         </section>
@@ -73,12 +77,15 @@ return (
   </Layout>
 );
 
+
+
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Satellite, CheckCircle, Globe2 } from 'lucide-react',
 export default function SpaceTechPage() {
   const features = [
+
     'Mission control dashboards and telemetry pipelinesSatellite operations playbooks and anomaly responseGround station integrations and data delivery SLAsSecure communications and zero-trust segmentation'],
   return (_<Layout>
       <Head>
@@ -211,10 +218,30 @@ export default function SpaceTechPage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+            </div>;
+          </section>;
+          <section className="text-center">;
+            <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
+              <Globe2 className="w-4 h-4" />;
+              <span>Explore detailed Space Technology offerings</span>;
+            </a>;
+          </section>;
+        </div>;
+      </div>;
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

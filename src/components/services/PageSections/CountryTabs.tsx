@@ -29,6 +29,7 @@ export function CountryTabs(): any ({;
 
 
 
+
 export function CountryTabs({
   popularCountries,
   filteredCountries,
@@ -37,11 +38,27 @@ export function CountryTabs({
   searchQuery,
 
 
+
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
+
+  setSearchQuery,
+}: CountryTabsProps) {
+  const [currentPage, setCurrentPage] = useState(1)
+  const countriesPerPage = 50
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [searchQuery])
+  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
+  popularCountries,
+  filteredCountries,
+  handleCountrySelect,
+  onQuote,
+  searchQuery,
+
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
@@ -49,7 +66,9 @@ export function CountryTabs({
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -57,16 +76,28 @@ export function CountryTabs({
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
 
+  popularCountries
+  filteredCountries
+  handleCountrySelect
+  onQuote
+  searchQuery
+  setSearchQuery
+}: CountryTabsProps) {
+  const [currentPage, setCurrentPage] = useState(1)
+  const countriesPerPage = 50
   useEffect(() => {
     setCurrentPage(1)
+
   }, [searchQuery]),
 
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
+
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
   )
   ),
+
 
 
 
@@ -88,6 +119,7 @@ export function CountryTabs({
                 isPopular = {true,}
               />
             ))}
+
 
         </div>;
       </TabsContent>;
@@ -171,6 +203,7 @@ export function CountryTabs({
             ))}
         </div>
       </TabsContent>
+
 
       <TabsContent value="all" className="mt-0">
         <div className="mb-6 max-w-md mx-auto">
@@ -355,20 +388,41 @@ function CountryTabs() {
 
 
 
+
                     }}
                   />;
                 </PaginationItem>;
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(;
-                  (page) => (;
+                {Array.from ({ length: total_pages }, (_, i) => i + 1).map (
+                  page => (
                     <PaginationItem key={page}>;
                       <PaginationButton;
                         page={page}
-                        isActive={page === currentPage}
 
-
-
-
-                )}
+                        is_active={page === current_page}
+                        on_click={e => {
+                          e.prevent_default ();
+                          setCurrentPage (page) }}
+                      />;
+                    </PaginationItem>))}
                 <PaginationItem>;
                   <PaginationNext;
-                    href={`?page=${currentPage + 1}`}
+                    href={`?page=${current_page + 1}`}
+                    on_click={e => {
+                      e.prevent_default ();
+                      setCurrentPage (Math.min (total_pages, current_page + 1)) }}
+                  />;
+                </PaginationItem>;
+              </PaginationContent>;
+            </Pagination>;
+          </div>)}
+      </TabsContent>;
+    </Tabs>));
+}
+  );
+}
+
+
+                    onClick={(e) => {;
+                      e.preventDefault(),;
+                      setCurrentPage(Math.max(1, currentPage - 1));
+

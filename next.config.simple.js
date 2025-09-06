@@ -41,6 +41,7 @@ const nextConfig = {
 
   // Trailing slash
   trailingSlash: false,
+
   // Base path
   basePath: '',
   // Asset prefix
@@ -54,6 +55,7 @@ const nextConfig = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 

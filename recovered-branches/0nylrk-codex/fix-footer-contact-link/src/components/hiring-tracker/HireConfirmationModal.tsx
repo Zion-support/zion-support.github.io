@@ -1,8 +1,11 @@
 
 
-
-
-
+import React, { useState } from 'react';
+import {
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogHeader;
 
 import React, { useState } from 'react',
 import {
@@ -32,6 +35,9 @@ export interface HireConfirmationModalProps {
   onConfirm: () => void
 
 
+  isSubmitting?: boolean
+}
+export function HireConfirmationModal({
 
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -48,15 +54,18 @@ export interface HireConfirmationModalProps {;
   onClose: () => void,;
   candidateData?: TalentProfile;
   application?: JobApplication;
-  onConfirm: () => void,;
-  isSubmitting?: boolean;
+  onConfirm: () => void
+
+  isSubmitting?: boolean
 }
 
 
 export function HireConfirmationModal({ ;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   isOpen;
 
@@ -67,7 +76,6 @@ export function HireConfirmationModal({ ;
   isOpen;
   onClose, ;
   candidateData, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   application;
   onConfirm;
   isSubmitting = false;
@@ -88,6 +96,20 @@ export function HireConfirmationModal({ ;
         variant: 'destructive'})
       return
 
+import React, { useState } from 'react',
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
 
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
@@ -151,6 +173,7 @@ export function HireConfirmationModal({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -158,6 +181,7 @@ export function HireConfirmationModal({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     }
@@ -191,6 +215,7 @@ export function HireConfirmationModal({;
         variant: 'destructive'}),;
       return;
     }
+
 
     if (!user) {;
       toast({;
@@ -287,6 +312,7 @@ if ( {) {
           {
 
 
+
     // Create a new project;
     try {;
       const { data: projectData, error: projectError } = await supabase;
@@ -352,6 +378,69 @@ if ( {) {
 
             setIsLoading(false);
 
+            client_id: user.id,
+            talent_id: talent_data.user_id,
+            job_id: application?.job_id || null,
+            title: project_name,
+            description: project_description,
+            status: 'active',
+            payment_terms: 'hourly'}]);
+        .select ();
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: 'Error creating project',
+          description: project_error.message,
+          variant: 'destructive'}),
+        setIsLoading (false);
+        return;
+      }
+      // Create a new hiring record;
+      const { error: hiring_error } = await supabase;
+        .from ('hiring_records');
+        .insert ([;
+          {
+            client_id: user.id,
+            talent_id: talent_data.user_id,
+            project_id: project_data.id,
+            hire_date: new Date ().toISOString (),
+            status: 'active'}]),
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: 'Error creating hiring record',
+          description: hiring_error.message,
+          variant: 'destructive'}),
+        setIsLoading (false);
+        return;
+      }
+      // Update the availability status;
+      // Check condition
+if ( {) {
+  $2
+}
+        try {
+          const { error: availability_error } = await supabase;
+            .from ('talent_profiles');
+            .update ({ availability_type: 'unavailable' });
+            .eq ('id', talent_data.id);
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            toast ({
+              title: 'Error updating availability',
+              description: availability_error.message,
+              variant: 'destructive'}),
+            setIsLoading (false);
+
             return;
           }
 
@@ -382,8 +471,8 @@ if ( {) {
       setIsLoading(false)
     }
 
-
-
+  }
+  };
 
 ;
     setIsLoading(true),;
@@ -461,19 +550,19 @@ if ( {) {
         title: 'Candidate hired successfully',;
         description: `${talentData && talentData.full_name} has been hired for the project.`}),;
       onConfirm();
-      onClose();
-    } catch (error) {;
-      console && console.error('Error hiring candidate:', error);
-      toast({;
-        title: 'Error hiring candidate',;
-        description: 'Failed to hire candidate. Please try again.',;
-        variant: 'destructive'});
-    } finally {;
-      setIsLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      onClose()
+    } catch (error) {
+      console.error('Error hiring candidate:', error);
+      toast({
+        title: 'Error hiring candidate'
+        description: 'Failed to hire candidate. Please try again.'
+        variant: 'destructive'})
+    } finally {
+      setIsLoading(false)
     }
 
   },
+
 
 
 
@@ -550,6 +639,7 @@ if ( {) {
   )
 
 }
+
 }
 ;
 

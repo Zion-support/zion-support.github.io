@@ -14,7 +14,6 @@ global.window.scrollTo = vi.fn(), // vi should be globally available;
 afterEach(() => {cleanup();
   vi.restoreAllMocks(), // Changed from jest to vi;
 });
-=======
 import '@testing - library / jest - dom',
 import { cleanup } from '@testing - library / react',
 import { vi, after_each } from 'vitest',
@@ -31,7 +30,6 @@ after_each (() => {
   cleanup (),
   vi.restoreAllMocks (), // Changed from jest to vi;
 }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 // -----------------------------------------------------------------------------;
 // Jest - compatibility shim ------------------------------------------------------;
 // -----------------------------------------------------------------------------;
@@ -42,11 +40,7 @@ after_each (() => {
 // deliberately attaching to global for test environment setup;
 
 
->>>>>>> origin/automation-improvements-final
-=======
   SnapshotSerializer: () => {}}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 // eslint - disable - next - line @typescript - eslint / no - explicit - any;
 (global_this as any).jest = {
   // Core mocking utilities;
@@ -65,4 +59,3 @@ after_each (() => {
   // Snapshot placeholder (no - op) – Vitest has its own snapshot system.;
   // We expose it so imports compile even if we don't use it.;
   SnapshotSerializer: () => {}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

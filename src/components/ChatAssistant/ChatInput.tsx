@@ -91,6 +91,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
     // Focus input when component mounts;
     inputRef && inputRef.current?.focus();
 
+
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
 import { Send } from 'lucide-react'
@@ -117,10 +118,12 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       onSend(message);
 
 
+
     }
 
 
       }
+
     }
   };
 
@@ -160,6 +163,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
 
 
+
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -180,6 +184,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         onChange={(e) => setMessage(e.target.value)}
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -187,6 +192,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -211,6 +217,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
         disabled={!message.trim() || disabled}
 
+
       >
         <Send className="h-5 w-5" />
 
@@ -225,12 +232,24 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
         disabled={!message.trim() || disabled}
 
+
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
   )
 }
+
+        disabled={!message.trim() |disabled}
+        disabled={!message.trim() || disabled}
+
+      >
+        <Send className="h-5 w-5" />
+      </Button>
+    </form>
+  )
+}
+
 
 
       <Button;
@@ -246,4 +265,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         <Send className="h - 5 w - 5" />;
       </Button>;
     </form>);
+
 }
+

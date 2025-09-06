@@ -1,5 +1,7 @@
 
 
+export interface TalentProfile {
+export interface TalentProfile {;
 
   id: string;
   user_id: string;
@@ -20,11 +22,11 @@
   key_projects?: {
 
 
-
-
-    description: string
-  }[]
+export interface TalentProfile {;
 }
+export interface TalentProfileFilters {
+
+export interface TalentProfileFilters {;
 
   search?: string;
   skills?: string[],
@@ -33,6 +35,10 @@
   priceRange?: [number, number],
   experienceRange?: [number, number]
 }
+
+export interface HireRequest {
+
+export interface HireRequest {;
 
   id: string;
   clientId: string;
@@ -55,6 +61,9 @@
   status: 'pending' | 'accepted' | 'rejected' | 'completed'
 
   createdAt: string
+
+}
+export interface TalentProfile {;
 
   id: string,;
   user_id: string,;
@@ -101,6 +110,7 @@ export interface HireRequest {
 
 
 
+
   }
   timeline: {
     start_date: string;
@@ -115,6 +125,7 @@ export interface HireRequest {
 
 
 export interface TalentProfile {;
+
 
 
 }

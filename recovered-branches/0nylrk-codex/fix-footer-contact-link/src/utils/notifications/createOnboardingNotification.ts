@@ -4,12 +4,14 @@
 
 
 
+
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 /**
@@ -30,6 +32,27 @@ export async function createOnboardingNotification({
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
+
+import {create_notification} from './create_notification';
+import {OnboardingNotificationParams} from './types';
+/**;
+* Creates an onboarding notification for a user;
+*/;
+export async /**
+ * createOnboardingNotification - Function description
+ */
+function createOnboardingNotification() {
+  let title = '';
+  let message = '';
+  let action_url = '';
+  let action_text = '';
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    switch (missing_milestone) {
+      case 'profile_completed':;
 
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
@@ -88,6 +111,8 @@ export async function createOnboardingNotification({
 
     actionText
   })
+
+
 
 
 import { createNotification } from './createNotification',;
@@ -164,7 +189,9 @@ export async function createOnboardingNotification({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 ;

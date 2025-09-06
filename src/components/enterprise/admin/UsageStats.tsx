@@ -7,6 +7,7 @@ return (
 
 
 
+
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -176,6 +177,7 @@ return (
       </div>
 
 
+
 import {;
   Card,;
   CardContent,;
@@ -209,7 +211,9 @@ export function UsageStats() {;
         </p>;
       </div>;
 
+
       <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;
+
         <Card>;
           <CardHeader>;
             <CardTitle > Job Postings</CardTitle>;
@@ -229,7 +233,9 @@ export function UsageStats() {;
                 <Badge variant='outline'>25 / 50</Badge>;
               </div>;
 
+
               <Progress value={50} className='h - 2' />;
+
             </div>;
             <div className='grid gap - 4'>;
               <div className='grid grid - cols - 3 items - center gap - 4'>;
@@ -269,7 +275,9 @@ export function UsageStats() {;
                 <Badge variant='outline'>178 / 500</Badge>;
               </div>;
 
+
               <Progress value={35.6} className='h - 2' />;
+
             </div>;
             <div className='grid gap - 4'>;
               <div className='grid grid - cols - 3 items - center gap - 4'>;
@@ -305,7 +313,9 @@ export function UsageStats() {;
                 <div className='text - sm font - medium'>AI matching credits</div>;
                 <Badge variant='outline'>435 / 1000</Badge>;
               </div>;
+
               <Progress value={43.5} className='h - 2' />;
+
             </div>;
             <div className='grid gap - 4'>;
               <div className='grid grid - cols - 3 items - center gap - 4'>;
@@ -392,6 +402,7 @@ export function UsageStats() {;
 
 
 
+
         <Button > Contact Us</Button>;
       </div>;
     </div>);
@@ -399,5 +410,6 @@ export function UsageStats() {;
 
     </div>
   )
+
 
 

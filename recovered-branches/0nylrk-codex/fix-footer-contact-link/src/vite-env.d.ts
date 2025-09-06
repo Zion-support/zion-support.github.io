@@ -34,41 +34,28 @@ interface ImportMetaEnv {;
   readonly VITE_APP_TITLE: string,;
   // add more env variables as needed;
 }
-;
-interface ImportMeta {;
-  readonly env: ImportMetaEnv;
+interface ImportMeta {readonly env: ImportMetaEnv;
 }
-;
 // Global type declarations;
-declare namespace React {;
-  type ReactNode = React.ReactNode,;
-  type FC<P = {}> = React.FC<P>,;
-  type FormEvent<T = Element> = React.FormEvent<T>,;
-  type KeyboardEvent<T = Element> = React.KeyboardEvent<T>,;
+declare namespace React {type ReactNode = React.ReactNode;
+  type FC<P = {}> = React.FC<P>;
+  type FormEvent<T = Element> = React.FormEvent<T>;
+  type KeyboardEvent<T = Element> = React.KeyboardEvent<T>;
   type ChangeEvent<T = Element> = React.ChangeEvent<T>;
 }
-;
 // Type declarations for modules used in Vite configuration;
-declare module 'vitest/config' {;
-  export { defineConfig } from 'vite';
+declare module 'vitest/config' {export { defineConfig } from 'vite';
 }
-;
-declare module '@vitejs/plugin-react-swc' {;
-  import { Plugin } from 'vite',;
+declare module '@vitejs/plugin-react-swc' {import { Plugin } from 'vite';
   export default function reactSWC(): Plugin;
 }
-;
-declare module 'path' {;
-  export function resolve(...paths: string[]): string,;
-  export function join(...paths: string[]): string,;
+declare module 'path' {export function resolve(...paths: string[]): string;
+  export function join(...paths: string[]): string;
   export function dirname(path: string): string;
 }
-;
-declare module 'lovable-tagger' {;
-  import { Plugin } from 'vite',;
+declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
-;
 // Add Node.js globals;
 declare let __dirname: string,;
 declare let process: {;
@@ -82,9 +69,11 @@ declare let process: {;
 // Badge component type fixes
 declare module '@/components/ui/badge' {
 
-
-
-
+  export interface BadgeProps {
+  }
+  export interface BadgeProps {};
+;
+  export const Badge: React.FC<BadgeProps>;
 
 }
 interface ImportMeta {
@@ -115,6 +104,8 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
     serverUrl?: string;
     onDisconnect?: () => void;
     className?: string;
+
+
 
     className?: string,
     variant?: "default" | "secondary" | "destructive" | "outline",
@@ -169,6 +160,7 @@ declare module '@/components / ChatAssistant / ChatMessage' {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   }
@@ -186,6 +178,7 @@ declare module '@/components / ChatAssistant / ChatMessage' {
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
+
 
 
 // ProductListingCard type fixes;
@@ -215,7 +208,9 @@ declare module '@livekit / components - react' {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 declare module '@livekit/components-styles' {;

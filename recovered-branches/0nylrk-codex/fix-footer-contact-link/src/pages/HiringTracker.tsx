@@ -29,6 +29,7 @@ function HiringTrackerContent() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (
@@ -37,6 +38,7 @@ function HiringTrackerContent() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -94,6 +96,20 @@ function HiringTrackerContent() {;
     </>;
   );
 
+}
+;
+export default function HiringTracker() {;
+  return (;
+    <ProtectedRoute>;
+      <HiringTrackerContent />;
+    </ProtectedRoute>;
+  );
+}
+;
+}
+
+
+
 
 
 import { useState } from './react';
@@ -117,4 +133,5 @@ function HiringTrackerContent() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

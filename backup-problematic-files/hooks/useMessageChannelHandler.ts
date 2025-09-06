@@ -1,19 +1,9 @@
 
 import { useEffect, useCallback } from 'react';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-// Define MessageEvent type if not available
 
-=======
-import { useEffect, useCallback  } from './react';
-;
-// Define MessageEvent if not available;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface Event {
   type: string;
   target: EventTarget | null;
@@ -55,13 +45,12 @@ function useMessageChannelHandler() {
   const handle_message = useCallback (
     (event: MessageEvent < unknown>) => {
 
-<<<<<<< HEAD
+
   onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       try {
         // Check condition
 if ( {) {
@@ -76,38 +65,16 @@ if ( {) {
 }
           on_error (error as Error);
         }
-<<<<<<< HEAD
-  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
-    try {
-      if (onMessage) {
-        onMessage(event && event.data);
-=======
-
-=======
 
 
-  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
-    try {
-      if (onMessage) {
-        onMessage(event && event.data);
-=======
-=======
-  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
-    try {
-      if (onMessage) {;
-        onMessage(event.data);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useMessageChannelHandler.ts
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       }
     } catch (error) {
       if (onError) {
         onError(error as Error);
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     }
     [onMessage, onError]
@@ -120,51 +87,11 @@ if ( {) {
     };
 
   }, [handleMessage]);
-<<<<<<< HEAD
-}
-}
-ursor/integrate-build-improve-and-re-verify-8f7d
-import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
-import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
-ursor/add-new-services-and-deploy-updates-0462
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
-origin/main
-origin/automation-improvements-final
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-}
-=======
-
-}
-
-
-
-}
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-      }
-    },
-    [on_message, on_error],
-  );
-;
-  useEffect (() => {
-    window.addEventListener ("message", handle_message);
-    return () => {
-      window.removeEventListener ("message", handle_message);
-    }
-  }, [handle_message]);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

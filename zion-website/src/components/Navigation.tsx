@@ -17,6 +17,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 
+
 'use client';
 import { useState } from 'react';
 import { Dialog } from '@headlessui / react';
@@ -124,6 +125,7 @@ function Navigation() {
     </header>);
 
 
+
               Zion Tech Group
             </div>
           </Link>
@@ -206,4 +208,6 @@ function Navigation() {
       </Dialog>
     </header>
   )
+
 }
+

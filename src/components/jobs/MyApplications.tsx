@@ -38,6 +38,8 @@ import {ApplicationStatus} from "@/types/jobs";
 
 
 
+
+
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -70,7 +72,9 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus,) => {;
     switch (status) {;
       case "new": return <Badge variant="secondary">New</Badge>;
+
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
+
       default:;
         return <Badge variant="outline">{status}</Badge>;
     }
@@ -122,8 +126,8 @@ export function MyApplications() {;
                 {application.job?.title || "Unknown Job"}
               </CardTitle>;
               {getStatusBadge(application.status)}
-            </div>;
-            <p className="text-sm text-muted-foreground">;
+            </div>
+            <p className="text-sm text-muted-foreground">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </p>;
           </CardHeader>;
@@ -131,6 +135,8 @@ export function MyApplications() {;
             <div className="space-y-3">;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
+
+
 
 
 
@@ -144,9 +150,11 @@ export function MyApplications() {;
                   size="sm"
               
               <div className="flex justify-between items-center">
+
                 <Button 
                   variant="outline" 
                   size="sm" 
+
 
                   className="text-xs"
                   asChild
@@ -155,6 +163,7 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+
 
 
 
@@ -185,6 +194,7 @@ export function MyApplications() {;
               <div className="flex justify-between items-center">;
 
 
+
                 <Button
                   variant="outline" 
                   size="sm" 
@@ -194,6 +204,7 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job;
                   </Link>;
                 </Button>;
+
 
 
 
@@ -215,6 +226,7 @@ export function MyApplications() {;
 
 
 
+
                 <Button 
 
                   variant="default" 
@@ -231,6 +243,8 @@ export function MyApplications() {;
         </Card>;
       ))}
 
+    </div>
+  )
 
 }
 
@@ -314,14 +328,17 @@ if ( {) {
               </div>;
             </div>;
           </CardContent>;
+
         </Card>))}
     </div>);
 }
+
 
     </div>;
   );
 }
 ;
+
 
 
 
@@ -335,3 +352,4 @@ if ( {) {
 };
 }
 ;
+

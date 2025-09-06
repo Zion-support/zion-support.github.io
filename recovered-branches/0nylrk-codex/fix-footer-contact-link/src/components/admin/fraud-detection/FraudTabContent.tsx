@@ -1,6 +1,8 @@
 
 
-
+import React from "react";
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
@@ -61,11 +63,8 @@ import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
     default:
       return null
 
-
-
-
-
-
+  }
+}
 
 
 import React from "react",;
@@ -116,6 +115,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -124,6 +124,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 };

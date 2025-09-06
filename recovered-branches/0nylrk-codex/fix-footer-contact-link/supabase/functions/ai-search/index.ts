@@ -3,9 +3,13 @@
 
 
 
+
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+
 
 
 
@@ -17,8 +21,10 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 const corsHeaders = {
@@ -34,9 +40,9 @@ serve(async (req) => {
     if (!query) {
       return new Response(
 
+        JSON.stringify({ error: "Query is required" });
+        JSON.stringify({ error: "Query is required" }),
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
@@ -62,13 +68,10 @@ serve(async (req) => {
     let filters;
 
         JSON.stringify({ error: "Query is required" }),
-
-
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     const completion = await openai && openai.chat.completions && completions.create({
       model: "gpt-4o-mini",
@@ -87,9 +90,17 @@ serve(async (req) => {
     }
     return new Response(
 
-
-
-
+      JSON.stringify({ filters });
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
+  } catch (error) {
+    console.error("ai-search error", error);
+    return new Response(
+      JSON.stringify({ error: error.message });
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
+  }
+});
 
 
       JSON.stringify({ filters }),
@@ -151,6 +162,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -159,6 +171,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

@@ -1,5 +1,6 @@
 
 
+
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
@@ -30,6 +31,7 @@ export default function ApiDocsPage() {
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <div>
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
@@ -44,12 +46,14 @@ export default function ApiDocsPage() {
         {activeEndpoint ? (
 
 
+
         {_activeEndpoint ? (
 
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
@@ -85,6 +89,8 @@ function ChangelogWidget() {
         {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
       </div>
 
+
+
 :components/docs/ApiDocsPage.tsx
       <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />
     </div>
@@ -94,13 +100,17 @@ function ChangelogWidget() {
   )}
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 
+
+
   );
 };
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}
 
+
 :backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

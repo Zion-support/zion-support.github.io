@@ -7,6 +7,8 @@ import { useAuth } from "@/context/auth/AuthProvider",
 
 
 
+
+
 import {
   Form,
   FormControl,
@@ -24,8 +26,10 @@ import {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -75,6 +79,7 @@ export function LoginForm() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -83,6 +88,7 @@ export function LoginForm() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -132,11 +138,13 @@ export function LoginForm() {
 
 
 
+
               <FormControl>
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
+
                 <Checkbox
 
                   checked={field.value}
@@ -146,6 +154,8 @@ export function LoginForm() {
                   className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
                   aria-label="Remember me"
                 />
+
+
 
 
 
@@ -161,6 +171,8 @@ export function LoginForm() {
           <div className='text-sm'>;
             {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
             {/* If "Remember me" was previously here, it's moved. */}
+
+
 
             field: ControllerRenderProps < LoginFormValues, 'remember_me'>;
           }) => (
@@ -189,6 +201,8 @@ export function LoginForm() {
               href='/forgot - password';
               className='font - medium text - zion - cyan hover:text - zion - cyan - light';
             >;
+
+
 
               Forgot password?;
             </Link>;
@@ -325,6 +339,8 @@ export function LoginForm() {
 
 
 
+
+
             Check status
           </Button>
         </div>
@@ -340,7 +356,9 @@ export function LoginForm() {
 
 
 
+
 return;
+
 
 
 }setIsResending (true);'
@@ -375,7 +393,9 @@ if (!email) {'
 
 
 
+
 return;
+
 
 
 }router.push (`/verify-status?email=$ {
@@ -450,6 +470,7 @@ return;
 });
 }finally {
   setIsSubmitting (false);
+
 }
 const handleResendEmail = async () => {';
   const email = form.get_values ('email');
@@ -518,3 +539,4 @@ return;
 }'"}
 }
 ;
+

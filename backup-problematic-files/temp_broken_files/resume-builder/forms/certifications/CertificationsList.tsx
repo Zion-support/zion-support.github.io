@@ -31,7 +31,7 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
                     ? cert.issue_date ;
                     :format(cert.issue_date, 'MMM yyyy')) :'N/A'}
                   {cert.expiration_date && (;
-                    <> · Expires:{typeof cert.expiration_date === 'string' ;
+                    <>  Expires:{typeof cert.expiration_date === 'string' ;
                       ? cert.expiration_date ;
                       :format(cert.expiration_date, 'MMM yyyy')}
                     </>;
@@ -75,20 +75,10 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
   ),;}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' ;
 }{;
-  cert.expiration date && (<> · Expires: {';
+  cert.expiration date && (<>  Expires: {';
   typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy') ;
 }</>) ;
 }</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div> <a href= {;"  cert.credential url ";"}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) ;
 }</CardContent> </Card>) ) ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/certifications/CertificationsList.tsx
-}</div>) ;"}'"
-}</div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/certifications/CertificationsList.tsx
-=======
 
-}</div>) ;
-}'"
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

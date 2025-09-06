@@ -10,24 +10,36 @@ import { cn } from "@/lib/utils",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
 
+
+    { id: "service", label: "Service" }
+    { id: "details", label: "Details" }
+    { id: "timeline", label: "Timeline" }
+    { id: "budget", label: "Budget" }
+    { id: "service", label: "Service" },
+    { id: "details", label: "Details" },
+    { id: "timeline", label: "Timeline" },
+    { id: "budget", label: "Budget" },
+    { id: "summary", label: "Summary" };
+  ];
+
     { id: "summary", label: "Summary" }
 
 
-
-
-
+    { id: "summary", label: "Summary" }
+  ],
 
 
   return (
@@ -67,6 +79,19 @@ export function StepProgress({ currentStep }: StepProgressProps) {
               <span
                 className={cn(
 
+
+                  "text-zion-slate-light"
+                )}
+              >
+                {step.label}
+              </span>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
 
                   "text-xs mt-2 font-medium",
                   status === "complete" ? "text-zion-cyan" : 
@@ -121,6 +146,12 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
 
 
+
+                  "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
+                  status === "complete" ? "bg-zion-purple text-white" : 
+                  status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
+
+
                   "bg-zion-blue-light text-zion-slate-light"
                 )}>;
                 {status === "complete" ? (;
@@ -133,6 +164,13 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
               <span
                 className={cn(
                   "text-xs mt-2 font-medium"
+
+
+
+                  "text-xs mt-2 font-medium",
+
+                  status === "complete" ? "text-zion-cyan" : 
+                  status === "current" ? "text-white" : 
 
                   "text-zion-slate-light"
                 )}>;
@@ -149,13 +187,13 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from '@/components / icons';
 import { cn } from '@/lib / utils';

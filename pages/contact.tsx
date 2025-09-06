@@ -3,6 +3,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,6 +35,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import React from "react";
 import Layout from "../components/Layout";
 import React from 'react';
@@ -43,10 +45,9 @@ import Layout from '../components/Layout';
 origin/automation-improvements-final
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+import Head from 'next/head';
+import { useState } from 'react';
+import { ContactInfo } from '../types';
 
 export default function Contact() {
   const [formData, setFormData] = useState({

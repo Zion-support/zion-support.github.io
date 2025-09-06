@@ -3,24 +3,14 @@ interface LazyComponentProps {component: () => Promise<{ default: React.Componen
   fallback?: React.ReactNode;
   [key: string]: any;
 }
-<<<<<<< HEAD
-:components/LazyComponent.tsx
-const LazyComponent: React.FC<LazyComponentProps> = ({component;
-  fallback = <div>Loading...</div>;
-=======
-<<<<<<< HEAD:components/LazyComponent.tsx
-<<<<<<< HEAD
-const LazyComponent: React.FC<LazyComponentProps> = ({component;
-  fallback = <div>Loading...</div>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 ;
 const LazyComponent: React.FC<LazyComponentProps> = ({;
   component,;
   fallback = <div>Loading...</div>,;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   ...props;
 }) => {const LazyLoadedComponent = lazy(component);
   return (;
@@ -30,7 +20,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({;
   );
 }
 export default LazyComponent;
-=======
 
 ;
 const LazyComponent: React.FC<LazyComponentProps> = ({;
@@ -62,11 +51,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 },
 
 export default LazyComponent,
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
-:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

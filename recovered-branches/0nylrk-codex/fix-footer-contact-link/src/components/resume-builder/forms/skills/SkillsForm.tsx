@@ -1,13 +1,16 @@
 
 
+import { useState  } from 'react';
+import { Skill  } from '@/types/resume';
+import { Button  } from '@/components/ui/button';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { useResume  } from '@/hooks/useResume';
+import { SkillsFormProps  } from './types';
+import { SkillsList  } from './SkillsList';
+import { AddSkillForm  } from './AddSkillForm';
+import { BulkAddSkills } from './BulkAddSkills';
+export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
 
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 import {useState} from 'react';
 import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
@@ -19,6 +22,8 @@ import {AddSkillForm} from './AddSkillForm';
 import {BulkAddSkills} from './BulkAddSkills';
 
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
+
+
 
 
 
@@ -63,7 +68,9 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       }
       return success
@@ -71,6 +78,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       setError(err.message |'An error occurred')
       return false
     }
+
 
 
   }
@@ -91,6 +99,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -119,14 +128,15 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
         setLocalSkills(localSkills && localSkills.filter(skill => skill && skill.id !== id));
       }
     }
+  },
   };
 
   const refreshSkills = async () => {;
     try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
+
 
 
 
@@ -143,12 +153,14 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       }
 
     } catch (err: any) {;
       setError(err && err.message || 'Failed to refresh skills');
 
     }
+
 
 
   },
@@ -169,6 +181,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
   return (
@@ -204,6 +217,9 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       </div>
     </div>
   )
+
+}
+}
 
 export /**
  * SkillsForm - Function description

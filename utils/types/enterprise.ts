@@ -88,9 +88,16 @@ export interface InvoiceRecord {;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
 
-
-
-
+}
+export interface CompanyRecord {id: string;
+  name: string;
+  slug: string, // e.g. acme;
+  logoUrl?: string;
+  brandColor?: string;
+  plan: CompanyPlan;
+  members: CompanyMember[];
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
 
   } catch (error) {
     console.error("Error:", error);
@@ -152,10 +159,12 @@ export interface CompanyRecord {
 
 
 
+
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -5,6 +5,8 @@ import path from 'path';
 
 
 
+
+
   content: string | null,
   generated_at: string | null;
 }
@@ -14,6 +16,8 @@ export default /**
  */
 function ChangelogPage() {
   return (
+
+
 
 
 
@@ -39,6 +43,8 @@ function ChangelogPage() {
 
 
 
+
+
           No changelog generated yet.
 
         </div>
@@ -47,7 +53,9 @@ function ChangelogPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
     </main>
 
 
@@ -58,6 +66,7 @@ function ChangelogPage() {
 
 
   } catch {
+
 
 
 
@@ -99,6 +108,7 @@ function ChangelogPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

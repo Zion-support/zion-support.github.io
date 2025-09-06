@@ -4,6 +4,7 @@
 
 
 
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -28,8 +29,8 @@ export default async function handler(
 
 
 
+
   const { id } = req.query;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (typeof id !== "string")
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
@@ -53,6 +54,8 @@ export default async function handler(
 
     ((dispute.status = status |"Resolved")
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
+
+
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -99,6 +102,7 @@ export default async function handler(req, res) {
 ;
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
+
 
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
 
@@ -148,6 +152,7 @@ export default async function handler(req, res) {
     }
     const dispute = await getDisputeById (id);
     if (return res.status ($1).json ({ $2 })) {
+
   $2
 }
     const { resolution_summary, status } = req.body || {}
@@ -156,6 +161,7 @@ export default async function handler(req, res) {
     if () {) {
   $2
 }
+
       return res.status (400).json ({ error: "Invalid status" });
     }
     ((dispute.status = status || "Resolved"),
@@ -173,5 +179,6 @@ export default async function handler(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -7,6 +7,8 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 
 
 
+
+
       title: 'Processing your request',
       description:
         "You'll be redirected to our secure payment portal momentarily."
@@ -86,4 +88,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
     </div>
   )
 }
+
 ;
+

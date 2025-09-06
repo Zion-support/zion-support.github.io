@@ -19,6 +19,20 @@ export default function AwsCostAnomalyMonitorPage() {
             {[ 'Anomaly detection & budgetsSlack triage workflowsService/tag breakdownsMonthly savings report' ].map((f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-cyan-500/30 text-slate-200">{f}</div>
 
+            ))}
+          </div>
+          <div className="flex gap-3">
+            <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Start from $199/mo</a>
+            <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</a>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+          <div className="flex gap-3">
+            <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Start from $199/mo</Link>
+            <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
 
           </div>
         </div>
@@ -54,11 +68,20 @@ export default function AwsCostAnomalyMonitorPage(req, res) {
 }
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+          </div>;
+          <div className="flex gap-3">;
+            <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Start from $199/mo</a>;
+            <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</a>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+;
 

@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useEffect, useState } from 'react',;
 import type { NextPage, GetServerSideProps } from 'next',;
 import ReviewSummary from '../../components/reviews/ReviewSummary',;
@@ -42,6 +43,7 @@ import type { PublicReview, ReviewsSummary } from '../../types/reviews';
 
 
 
+
 const ClientPage: NextPage<Props> = ({ clientId }) => {
   const [summary, setSummary] = useState<ReviewsSummary | null>(null)
   const [reviews, setReviews] = useState<PublicReview[]>([])
@@ -66,8 +68,9 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {;
     return res.status(500).json({ error: "Internal server error" });
 
 
+
+
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
   }, [client_id]),
   async /**
@@ -76,16 +79,49 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {;
 function handle_report() {
     await fetch ('/api / reviews / report', {
       method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ review_id: id, reason: 'Inappropriate content' })});
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   }
 }
   return (
 
 
 
+      <section className="grid gap - 4">;
+        {reviews.map ((r) => (<ReviewCard key={r.id} review={r} on_report={handle_report} />))}
+        {!reviews.length && (<div className="enhanced - card">No public reviews yet.</div>)}
+      </section>;
+    </main>);
+},
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { slug } = ctx.query as { slug: string },
+  return { props: { clientId: slug } }
+};
+
+
+
+
+    <main className="max-w-4xl mx-auto p-6 space-y-6">
+      <header className="enhanced-card">
+        <h1 className="text-3xl font-bold">Client: {clientId}</h1>
+      </header>
+      {summary && <ReviewSummary summary={summary} />}
+      <section className="grid gap-4">
+        {reviews.map((r) => (<ReviewCard key={r.id} review={r} onReport={handleReport} />))}
+        {!reviews.length && (<div className="enhanced-card">No public reviews yet.</div>)}
+      </section>
+    </main>
+  )
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { slug } = ctx.query as { slug: string }
+  return { props: { clientId: slug } }
+}
+export default ClientPage;
 
 
       {summary && <ReviewSummary summary={summary} />  } catch (error) {
@@ -109,7 +145,9 @@ function handle_report() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -120,9 +158,11 @@ function handle_report() {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },
 
-
-
-
+  return { props: { clientId: slug } }
+},
+;
+export default ClientPage,;
+  return { props: { clientId: slug }   } catch (error) {
 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -131,6 +171,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 };
 export default ClientPage;
+
 
 
 
@@ -152,4 +193,5 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -1,5 +1,6 @@
 
-
+import React from 'react',
+import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
@@ -11,6 +12,7 @@ export default function ApiPerformanceTestingPage() {
     'CI checks and PR annotations'
     'Synthetic traffic for staging'
   ];
+
   return (
     <div className='relative isolate'>
       <section className='px-6 lg:px-10 py-16 lg:py-24'>
@@ -96,6 +98,7 @@ export default function ApiPerformanceTestingPage() {
               </div>
             </div>
             <p className='mt-4 text-sm text-gray-400'>
+
               Market references:{' '}
               <a
                 className='underline hover:text-cyan-300'
@@ -146,6 +149,9 @@ export default function ApiPerformanceTestingPage() {
     </div>
   );
 
+
+}
+import React from 'react',
 
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
@@ -279,6 +285,7 @@ export default function ApiPerformanceTestingPage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -288,5 +295,6 @@ export default function ApiPerformanceTestingPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

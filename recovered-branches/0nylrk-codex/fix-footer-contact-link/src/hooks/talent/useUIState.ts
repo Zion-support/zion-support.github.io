@@ -4,6 +4,7 @@
 
 
 
+
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
@@ -13,10 +14,22 @@ export function useUIState() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
   const [expandedSections, setExpandedSections] = useState({
+
+import {useState} from 'react';
+import {TalentProfile} from '@/types / talent';
+export /**
+ * useUIState - Function description
+ */
+function useUIState() {
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState (false);
+  const [isHireModalOpen, setIsHireModalOpen] = useState (false);
+  const [selected_talent, setSelectedTalent] = useState < TalentProfile | null>(null);
+  const [expanded_sections, setExpandedSections] = useState ({
 
     skills: true;
     availability: true;
@@ -89,6 +102,7 @@ export function useUIState() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -100,6 +114,7 @@ export function useUIState() {;
 
     expandedSections;
     toggleSection;
+
 
 
     closeMobileFilter}

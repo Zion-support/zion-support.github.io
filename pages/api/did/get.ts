@@ -1,8 +1,21 @@
 
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ |{}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { address } = req.query as { address?: string }
+  if (!address) return res.status(400).json({ error: 'Missing address' })
+  const data = store[String(address).toLowerCase()] |null
+
+  return res.status(200).json({ data })
+  const { address } = req.query as { address?: string },
+  if (!address) return res.status(400).json({ error: 'Missing address' }),
+  const data = store[String(address).toLowerCase()] || null,
+  return res.status(200).json({ data });
+};
 
 const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
 export default function handler(req: any, res: any) {
@@ -29,6 +42,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -40,5 +54,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

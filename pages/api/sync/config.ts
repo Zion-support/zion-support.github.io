@@ -1,7 +1,7 @@
 
-
-
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../utils/sync/storage";
+import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
@@ -11,7 +11,9 @@ import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -25,8 +27,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
 
 
+
     return res.status(200).json({ config: state.config })
   }
+
 
 
 
@@ -58,7 +62,6 @@ import { readState, writeState } from "../../../utils/sync/storage",
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
@@ -69,6 +72,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
   if (req.method === "POST") {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
@@ -178,5 +182,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

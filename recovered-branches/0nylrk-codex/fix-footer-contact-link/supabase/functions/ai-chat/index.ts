@@ -1,6 +1,11 @@
 
 
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 
@@ -26,6 +31,7 @@ interface Message {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -33,10 +39,18 @@ interface Message {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
 }
 interface RequestBody {
-  messages: Message[]
+  messages: Message[];
 }
+
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
+
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -72,6 +86,11 @@ serve(async (req) => {
     if (data.error) {
       throw new Error(data.error.message)
 
+    }
+    const assistantMessage = data.choices[0].message.content;
+    // Log this interaction for analytics (in a real implementation)
+    // This would track common questions, successful interactions, etc.
+    console.log('AI chat interaction logged');
 
 ;
   try {;
@@ -102,14 +121,14 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
     }
-
-    const assistantMessage = data.choices[0].message.content,
-
+    const assistantMessage = data.choices[0].message.content;
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
     // // // console.log('AI chat interaction logged'),
@@ -120,6 +139,8 @@ serve(async (req) => {
     console.error('Error in ai-chat function:', error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500
+
+
 
 
 
@@ -148,6 +169,7 @@ serve(async (req) => {
 
     return new Response(JSON && JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+
   } catch (error) {
     console && console.error('Error in ai-chat function:', error);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
@@ -162,6 +184,7 @@ if ( {) {
   $2
 }
     return new Response (null, { headers: cors_headers });
+
   }
   try {
     const { messages } = await req.json () as RequestBody;
@@ -215,6 +238,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -222,6 +246,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

@@ -1,6 +1,8 @@
 
 
 
+
+
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Future of Work and Automation</h1>;
@@ -20,7 +22,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default function FutureOfWorkAndAutomationPage() {
@@ -49,10 +53,12 @@ export default function FutureOfWorkAndAutomationPage() {
 }
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

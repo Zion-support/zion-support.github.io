@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -85,6 +86,7 @@ export default function Comprehensive2025ServicesShowcase() {
 
 
 
+
     visible: {
       opacity: 1
       y: 0
@@ -93,6 +95,8 @@ export default function Comprehensive2025ServicesShowcase() {
         stagger_children: 0.1;
       }
     }
+
+
 
 
 
@@ -196,7 +200,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -204,13 +210,13 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
-        <title>Comprehensive 2025 Innovative Services Showcase — Zion Tech Group</title>
+        <title>Comprehensive 2025 Innovative Services Showcase  Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transform your business with Zion Tech Group." />
-        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase — Zion Tech Group" />
+        <meta property="og:title" content="Comprehensive 2025 Innovative Services Showcase  Zion Tech Group" />
         <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase — Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase  Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
 
       {/* Hero Section */}
@@ -223,7 +229,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -245,12 +253,12 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Innovative Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
+
 
 
 
@@ -264,6 +272,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
@@ -305,12 +314,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -395,7 +406,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -415,7 +428,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
   }
 }
                 >
-                  <Grid className="w-5 h-5" />
+                  {category.name} ({category.count})
                 </button>
                 <button
                   onClick={() => setViewMode('list')  } catch (error) {
@@ -430,7 +443,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -454,12 +466,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
               >
@@ -547,12 +561,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 {service.popular && (
                   <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold rounded-full">
@@ -576,7 +592,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -587,7 +605,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -606,12 +623,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
@@ -645,7 +664,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 <div className="mb-6">
@@ -661,7 +682,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {service.features.length > 3 && (
                       <div className="text-cyan-400 text-sm font-medium">
                         +{service.features.length - 3} more features
@@ -688,12 +708,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div>
@@ -717,6 +739,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -724,8 +747,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                 <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
-                  <div className="text-cyan-400 font-semibold mb-2">🚀 Expected ROI:</div>
+                  <div className="text-cyan-400 font-semibold mb-2"> Expected ROI:</div>
                   <p className="text-white/80 text-sm">{service.roi}</p>
                   <div className="mt-2 text-white/60 text-sm">
                     Setup Time: {service.setupTime} | Trial: {service.trialDays} days
@@ -753,12 +777,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -774,12 +800,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <button className="px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white transition-all duration-300 hover:bg-white/5">
                     Contact Sales
@@ -797,12 +825,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">
                   <div className="text-white/60 text-sm mb-2">Ready to get started?</div>
@@ -812,7 +842,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                       📞 {service.contactInfo.mobile}
                     </a>
                     <a href={`mailto:${service.contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">
-                      ✉️ {service.contactInfo.email}
+                       {service.contactInfo.email}
                     </a>
                   </div>
                 </div>
@@ -852,6 +882,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -859,9 +890,10 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="text-6xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-white/70 mb-6">Try adjusting your search terms or filters</p>
               <button
@@ -881,12 +913,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
@@ -914,7 +948,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -941,19 +977,15 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+              Our team of experts is ready to help you implement these cutting-edge solutions
+              Our team of experts is ready to help you implement these cutting-edge solutions 
+              Our team of experts is ready to help you implement these cutting-edge solutions
 
               and drive innovation in your organization.
             </p>
@@ -972,12 +1004,14 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <a
                 href="tel:+13024640950"
@@ -992,9 +1026,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
       <EnhancedFooter />
     </div>
 
-
-
-
+  );
+};
+  )
 
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
@@ -1034,6 +1068,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1044,5 +1079,6 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

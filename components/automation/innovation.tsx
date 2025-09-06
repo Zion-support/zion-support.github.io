@@ -2,6 +2,7 @@
 
 
 
+
 };
 </header> {;
   items && items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) ;
@@ -56,6 +57,7 @@ export default function InnovationDigest(): any ({ items }: Props) {;
 
 
 
+
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -79,6 +81,14 @@ export default function InnovationDigest({ items }: Props) {
         ))}
       </ul>
 
+    </div>
+    </div>;
+);
+}
+  );
+}
+
+
 
 }
 </header> {
@@ -93,7 +103,7 @@ function InnovationDigest() {
     <div className="space - y-6">;
       <header className="space - y-2">;
         <h1 className="text - 3xl font - bold">Innovation Digest</h1>;
-        <p className="text - gray - 600 dark:text - gray - 300">Latest AI research and tools—auto - curated.</p>;
+        <p className="text - gray - 600 dark:text - gray - 300">Latest AI research and toolsauto - curated.</p>;
       </header>;
       {items.length === 0 && (
         <div className="text - gray - 600 dark:text - gray - 400">No entries yet. The automation will populate this feed shortly.</div>)}
@@ -131,7 +141,7 @@ export default function InnovationDigest({ items }: Props) {
             </div>
             <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;mt-1 block font-medium text-blue-600 dark:text-cyan-400&quot;>{it.title}</a>
             {it.summary && <p className=&quot;mt-2 text-sm text-gray-600 dark:text-gray-300&quot;>{it.summary}</p>}
-=======
+
 
 
 
@@ -142,4 +152,6 @@ export default function InnovationDigest({ items }: Props) {
   );
 }
 
+
+=======
 

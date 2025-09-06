@@ -3,8 +3,12 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
 
-
-
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
 
   Card,
   CardContent,
@@ -16,10 +20,12 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 } from "@/components/ui/card";
@@ -36,11 +42,18 @@ export function IntegrationsHub() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { IntegrationCards } from "./IntegrationCards",
+import { ZapierIntegration } from "./ZapierIntegration",
+import { Badge } from "@/components/ui/badge",
+import { WebhookManager } from "./WebhookManager",
+import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
+export function IntegrationsHub() {
+  const [activeTab, setActiveTab] = useState("marketplace"),
+  
 
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
@@ -54,12 +67,14 @@ export function IntegrationsHub() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
@@ -97,12 +112,14 @@ export function IntegrationsHub() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
@@ -149,12 +166,14 @@ export function IntegrationsHub() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
@@ -169,12 +188,14 @@ export function IntegrationsHub() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
@@ -194,12 +215,14 @@ export function IntegrationsHub() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           <TabsContent value="webhooks" className="m-0">
             <Card>
@@ -221,12 +244,14 @@ export function IntegrationsHub() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <Card className="mt-6">
               <CardHeader>
@@ -245,9 +270,8 @@ export function IntegrationsHub() {;
       </Tabs>
     </div>
 
-
-
-
+  );
+}
 
   )
 import React, { useState } from "react",;
@@ -285,22 +309,64 @@ export function IntegrationsHub() {;
               <CardTitle className="text-lg">Status</CardTitle>;
               <Badge variant="outline" className="bg-green-100 text-green-800">;
 
+import React, { useState } from './react';
+import { Button  } from '@/components / ui / button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+import { IntegrationCards  } from './IntegrationCards';
+import { ZapierIntegration  } from './ZapierIntegration';
+import { Badge  } from '@/components / ui / badge';
+import { WebhookManager  } from './WebhookManager';
+import { IntegrationsSyncLog  } from './IntegrationsSyncLog';
+export /**
+ * IntegrationsHub - Function description
+ */
+function IntegrationsHub() {
+  const [active_tab, setActiveTab] = useState ("marketplace");
+;
+  return (
+    <div className="space - y-6">;
+      <div className="flex justify - between items - center">;
+        <div>;
+          <h1 className="text - 3xl font - bold">Integrations Hub</h1>;
+          <p className="text - muted - foreground mt - 1">;
+            Connect your platform with the tools and services you use every day;
+          </p>;
+        </div>;
+        <div className="flex gap - 2">;
+          <Button variant="outline">View Documentation</Button>;
+          <Button > Connect New Integration</Button>;
+        </div>;
+      </div>;
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
+        <Card>;
+          <CardHeader className="pb - 2">;
+            <div className="flex justify - between items - center">;
+              <CardTitle className="text - lg">Status</CardTitle>;
+              <Badge variant="outline" className="bg - green - 100 text - green - 800">;
+
                 Healthy;
               </Badge>;
             </div>;
           </CardHeader>;
           <CardContent>;
-
-            <div className="space - y-2">;
-              <div className="flex justify - between text - sm">;
-                <span className="text - muted - foreground">;
+            <div className="space-y-2">;
+              <div className="flex justify-between text-sm">;
+                <span className="text-muted-foreground">;
                   Connected Services;
                 </span>;
-                <span className="font - medium">7 / 12</span>;
+                <span className="font-medium">7 / 12</span>;
               </div>;
-              <div className="flex justify - between text - sm">;
-                <span className="text - muted - foreground">Last Sync</span>;
-                <span className="font - medium">2 mins ago</span>;
+              <div className="flex justify-between text-sm">;
+                <span className="text-muted-foreground">Last Sync</span>;
+                <span className="font-medium">2 mins ago</span>;
               </div>;
               <div className="flex justify - between text - sm">;
                 <span className="text - muted - foreground">Pending Webhooks</span>;
@@ -409,6 +475,7 @@ export function IntegrationsHub() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -416,6 +483,7 @@ export function IntegrationsHub() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   );
 }

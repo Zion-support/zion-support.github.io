@@ -21,7 +21,7 @@ const { execSync, spawn } = require(
 const cron = require(
   'node-cron')';
 // // // // // // // // console.log(
-  '🔍 "Code": Quality Monitor Starting...\n')';
+  ' "Code": Quality Monitor Starting...\n')';
 class: CodeQualityMonitor {
   constructor() {
     // // // // // // // // console.log(logEntry.trim());

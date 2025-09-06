@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 
 import { 
   Home, 
@@ -123,6 +125,8 @@ const sitemapData = [;
 
 
 
+
+
 export default function SitemapPage() {
   return (
     <>
@@ -131,6 +135,17 @@ export default function SitemapPage() {
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
       </Head>
       <div className="min-h-screen bg-gray-50">
+
+
+export default function SitemapPage() {;
+  return (
+    <>;
+      <Head>;
+        <title>Sitemap - Zion Tech Group</title>;
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />;
+      </Head>;
+
+      <div className="min-h-screen bg-gray-50">;
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
@@ -185,10 +200,80 @@ export default function SitemapPage() {
                 </motion && motion.div>;
               ))}
 
+
+;
+export default /**
+ * SitemapPage - Function description
+ */
+function SitemapPage() {
+  return (
+    <>;
+      <Head>;
+        <title > Sitemap - Zion Tech Group</title>;
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />;
+      </Head>;
+      <div className="min - h-screen bg - gray - 50">;
+        {/* Hero Section */}
+        <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
+          <div className="max - w-7xl mx - auto px - 4">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text - center";
+            >;
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+                Site <span className="text - yellow - 400">Map</span>;
+              </h1>;
+              <p className="text - xl mb - 8 max - w-3xl mx - auto">;
+                Navigate through all our pages, services, and resources;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Sitemap Content */}
+        <section className="py - 16">;
+          <div className="max - w-7xl mx - auto px - 4">;
+            <div className="grid gap - 8 md:grid - cols - 2 lg:grid - cols - 3">;
+              {sitemap_data.map ((section, section_index) => (
+                <motion.div;
+                  key={section.category}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: section_index * 0.1 }}
+                  className="bg - white rounded - lg shadow - lg p - 6";
+                >;
+                  <h3 className="text - xl font - bold mb - 4 text - gray - 800">;
+                    {section.category}
+                  </h3>;
+                  <div className="space - y-3">;
+                    {section.pages.map ((page, page_index) => (
+                      <Link;
+                        key={page.name}
+                        href={page.url}
+                        className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 50 transition - colors group";
+                      >;
+                        <page.icon className="w - 5 h - 5 text - blue - 600 group - hover:text - blue - 700" />;
+                        <div>;
+                          <div className="font - medium text - gray - 800 group - hover:text - blue - 600">;
+                            {page.name}
+                          </div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+
             </div>
           </div>
         </section>
       </div>
+
+    </>
+  );
+origin/automation-improvements-final
 
 }
 
@@ -205,6 +290,8 @@ import {
   ChevronRight
   Globe
   Building;
+
+
 
     </>;
   );
@@ -238,17 +325,16 @@ export default function SitemapPage() {
   Building,;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 } from 'lucide-react';
-import SmartHeader from '../components / SmartHeader';
-import SmartFooter from '../components / SmartFooter';
-export default /**
- * SitemapPage - Function description
- */
-function SitemapPage() {
-  const main_pages = [;
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function SitemapPage() {
+  const mainPages = [
     {
       href: '/',
       label: '🏠 Home',
@@ -258,22 +344,25 @@ function SitemapPage() {
 
     {
       href: '/about'
-      label: '👥 About Us'
+      label: ' About Us'
       description: 'Company story, mission, values, and team information'
     }
     {
       href: '/services'
-      label: '🚀 Services'
+      label: ' Services'
       description: 'Complete catalog of AI and technology services'
     }
     {
       href: '/explore'
-      label: '🔍 Explore'
+      label: ' Explore'
       description: 'Browse services by category and technology area'
     }
     {
 
-
+      href: '/contact'
+      label: '📧 Contact'
+      description: 'Get in touch and start your project'
+    }
 
       href: '/contact',
       label: '📧 Contact',
@@ -286,125 +375,126 @@ function SitemapPage() {
 
 
 
+
+
   ];
 
 ;
   const service_categories = [;
     {
-      href: '/category / ai',
-      label: '🧠 AI & Machine Learning',
-      description: 'Artificial intelligence and machine learning solutions',
-    },
+      href: '/category/ai'
+      label: ' AI & Machine Learning'
+      description: 'Artificial intelligence and machine learning solutions'
+    }
     {
-      href: '/category / quantum',
-      label: '⚛️ Quantum Computing',
-      description: 'Quantum computing and quantum AI applications',
-    },
+      href: '/category/quantum'
+      label: ' Quantum Computing'
+      description: 'Quantum computing and quantum AI applications'
+    }
     {
-      href: '/category / cybersecurity',
-      label: '🛡️ Cybersecurity',
-      description: 'Quantum - resistant security and threat detection',
-    },
+      href: '/category/cybersecurity'
+      label: ' Cybersecurity'
+      description: 'Quantum-resistant security and threat detection'
+    }
     {
-      href: '/category / cloud',
-      label: '☁️ Cloud & DevOps',
-      description: 'Cloud infrastructure and DevOps automation',
-    },
+      href: '/category/cloud'
+      label: ' Cloud & DevOps'
+      description: 'Cloud infrastructure and DevOps automation'
+    }
     {
-      href: '/category / edge',
-      label: '🌐 Edge Computing',
-      description: 'Edge computing orchestration and IoT management',
-    },
+      href: '/category/edge'
+      label: ' Edge Computing'
+      description: 'Edge computing orchestration and IoT management'
+    }
     {
-      href: '/category / space',
-      label: '🚀 Space Technology',
-      description: 'Space exploration and resource optimization',
-    },
+      href: '/category/space'
+      label: ' Space Technology'
+      description: 'Space exploration and resource optimization'
+    }
     {
-      href: '/category / biotech',
-      label: '🧬 Biotechnology',
-      description: 'Neural interfaces and biomedical innovations',
-    },
+      href: '/category/biotech'
+      label: ' Biotechnology'
+      description: 'Neural interfaces and biomedical innovations'
+    }
     {
-      href: '/category / blockchain',
-      label: '⛓️ Blockchain',
-      description: 'AI - powered blockchain governance and DeFi',
-    },
+      href: '/category/blockchain'
+      label: ' Blockchain'
+      description: 'AI-powered blockchain governance and DeFi'
+    }
     {
-      href: '/category / automation',
-      label: '⚡ Automation',
-      description: 'Business process automation and AI agents',
-    },
+      href: '/category/automation'
+      label: ' Automation'
+      description: 'Business process automation and AI agents'
+    }
     {
-      href: '/category / fintech',
-      label: '💰 Financial Technology',
-      description: 'Quantum financial trading and AI analytics',
-    },
+      href: '/category/fintech'
+      label: ' Financial Technology'
+      description: 'Quantum financial trading and AI analytics'
+    }
   ];
-;
-  const featured_services = [;
+  const featuredServices = [
     {
-      href: '/ai - business - intelligence',
-      label: 'AI Business Intelligence',
-      category: 'AI & ML',
-    },
+      href: '/ai-business-intelligence'
+      label: 'AI Business Intelligence'
+      category: 'AI & ML'
+    }
     {
-      href: '/quantum - cybersecurity',
-      label: 'Quantum Cybersecurity',
-      category: 'Cybersecurity',
-    },
+      href: '/quantum-cybersecurity'
+      label: 'Quantum Cybersecurity'
+      category: 'Cybersecurity'
+    }
     {
-      href: '/edge - computing - orchestration',
-      label: 'Edge Computing Orchestration',
-      category: 'Edge Computing',
-    },
+      href: '/edge-computing-orchestration'
+      label: 'Edge Computing Orchestration'
+      category: 'Edge Computing'
+    }
     {
-      href: '/space - technology',
-      label: 'Space Technology Innovation',
-      category: 'Space Technology',
-    },
+      href: '/space-technology'
+      label: 'Space Technology Innovation'
+      category: 'Space Technology'
+    }
     {
-      href: '/neural - interface',
-      label: 'Neural Interface Development',
-      category: 'Biotechnology',
-    },
+      href: '/neural-interface'
+      label: 'Neural Interface Development'
+      category: 'Biotechnology'
+    }
     {
-      href: '/autonomous - devops',
-      label: 'Autonomous DevOps',
-      category: 'Cloud & DevOps',
-    },
+      href: '/autonomous-devops'
+      label: 'Autonomous DevOps'
+      category: 'Cloud & DevOps'
+    }
     {
-      href: '/ai - customer - experience',
-      label: 'AI Customer Experience',
-      category: 'AI & ML',
-    },
+      href: '/ai-customer-experience'
+      label: 'AI Customer Experience'
+      category: 'AI & ML'
+    }
     {
-      href: '/quantum - neural - networks',
-      label: 'Quantum Neural Networks',
-      category: 'Quantum Computing',
-    },
+      href: '/quantum-neural-networks'
+      label: 'Quantum Neural Networks'
+      category: 'Quantum Computing'
+    }
   ];
 ;
   const resources = [;
 
     {
       href: '/reports'
-      label: '📊 Reports'
+      label: ' Reports'
       description: 'Latest technology reports and insights'
     }
     {
       href: '/newsroom'
-      label: '📰 Newsroom'
+      label: ' Newsroom'
       description: 'Company updates and industry news'
     }
     {
       href: '/automation'
-      label: '⚡ Automations'
+      label: ' Automations'
       description: 'Automation tools and solutions'
     }
     {
       href: '/search'
-      label: '🔎 Search'
+      label: ' Search'
       description: 'Search across all services and content'
     }
   ];
@@ -443,6 +533,8 @@ function SitemapPage() {
       action: 'https://maps.google.com/?q=Middletown,DE'
     }
   ];
+
+
 
 
 
@@ -636,10 +728,18 @@ export default function SitemapPage() {;
       description: 'Real-time system status and uptime',;
     },  ];
 
+    { href: '/', label: '🏠 Home', description: 'Main landing page with company overview and featured services' },
+    { href: '/about', label: '👥 About Us', description: 'Company story, mission, values, and team information' };
+    { href: '/services', label: '🚀 Services', description: 'Complete catalog of AI and technology services' },
+    { href: '/explore', label: '🔍 Explore', description: 'Browse services by category and technology area' },
+    { href: '/contact', label: '📧 Contact', description: 'Get in touch and start your project' }
+  ];
+
 
 
   const contactInfo = [;
     { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },;
+
 
     {;
       type: 'Email',;
@@ -673,10 +773,13 @@ export default function SitemapPage() {;
 
 
 
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
         <title>Sitemap | Zion Tech Group</title>
+
+
 
 
         <meta
@@ -690,6 +793,48 @@ export default function SitemapPage() {;
         />
         <link rel='canonical' href='https://ziontechgroup.com/sitemap' />      </Head>
 
+      <SmartHeader />
+      {/* Hero Section */}
+      <section className='pt-32 pb-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+      <SmartHeader />
+      {/* Hero Section */}
+      <section className='pt-32 pb-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
+        <meta property="og:title" content="Sitemap | Zion Tech Group" />
+        <meta property="og:description" content="Complete website sitemap and navigation guide." />
+        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
+      </Head>
+
+      <SmartHeader />
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
           >
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Site Map
@@ -700,11 +845,55 @@ export default function SitemapPage() {;
               Tech Group.
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
+            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+              Site Map
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
+              Navigate our comprehensive website and discover all the AI-powered
+              technology solutions, resources, and information available at Zion
+              Tech Group.
+
+  ];
 
 
+
+
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
+      <Head>
+        <title>Sitemap | Zion Tech Group</title>
+
+
+
+          >
+            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+              Site Map
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
+              Navigate our comprehensive website and discover all the AI-powered
+              technology solutions, resources, and information available at Zion
+              Tech Group.
+
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
               Site Map;
@@ -735,6 +924,8 @@ export default function SitemapPage() {;
         </div>
       </section>
 
+
+
       {/* Main Pages */}
       <section id='main-pages' className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -744,8 +935,36 @@ export default function SitemapPage() {;
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
-
-
+            className='mb-16'
+      {/* Main Pages */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section id="main-pages" className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-16"
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
@@ -756,6 +975,8 @@ export default function SitemapPage() {;
               and services
             </p>
           </motion.div>
+
+
 
 
 
@@ -791,8 +1012,36 @@ export default function SitemapPage() {;
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-
-
+                className='group'
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mainPages.map((page, index) => (
+              <motion.div
+                key={page.href  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="group"
 
               >
                 <Link
@@ -813,6 +1062,8 @@ export default function SitemapPage() {;
 
 
 
+
+
             ))}
           </div>
         </div>
@@ -821,7 +1072,9 @@ export default function SitemapPage() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       {/* Service Categories */}
 
@@ -833,30 +1086,43 @@ export default function SitemapPage() {;
             viewport={{ once: true }}
             className='mb-16'
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
-
-
-      {/* Service Categories */}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Service Categories */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6 }}
-            viewport={{ once: true }}
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-16"
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
@@ -869,6 +1135,8 @@ export default function SitemapPage() {;
           </motion.div>
 
 
+
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.href}
@@ -877,6 +1145,37 @@ export default function SitemapPage() {;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategories.map((category, index) => (
+
+              <motion.div
+                key={category.href  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="group"
 
               >
                 <Link
@@ -894,10 +1193,14 @@ export default function SitemapPage() {;
                   </p>                </Link>
               </motion.div>
 
+
+
             ))}
           </div>
         </div>
       </section>
+
+
 
 
       {/* Featured Services */}
@@ -908,6 +1211,7 @@ export default function SitemapPage() {;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+
 
 
 
@@ -940,6 +1244,7 @@ export default function SitemapPage() {;
 
 
 
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
@@ -947,6 +1252,8 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions
             </p>
           </motion.div>
+
+
 
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
@@ -957,6 +1264,37 @@ export default function SitemapPage() {;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredServices.map((service, index) => (
+
+              <motion.div
+                key={service.href  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="group"
 
               >
                 <Link
@@ -972,10 +1310,14 @@ export default function SitemapPage() {;
                   <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
               </motion.div>
 
+
+
             ))}
           </div>
         </div>
       </section>
+
+
 
 
       {/* Resources & Tools */}
@@ -986,6 +1328,7 @@ export default function SitemapPage() {;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+
 
 
 
@@ -1018,6 +1361,7 @@ export default function SitemapPage() {;
 
 
 
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
@@ -1025,6 +1369,8 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
+
+
 
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
@@ -1035,6 +1381,37 @@ export default function SitemapPage() {;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {resources.map((resource, index) => (
+
+              <motion.div
+                key={resource.href  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="group"
 
               >
                 <Link
@@ -1052,10 +1429,14 @@ export default function SitemapPage() {;
                   </p>                </Link>
               </motion.div>
 
+
+
             ))}
           </div>
         </div>
       </section>
+
+
 
 
       {/* External Resources */}
@@ -1066,6 +1447,7 @@ export default function SitemapPage() {;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+
 
 
 
@@ -1098,6 +1480,7 @@ export default function SitemapPage() {;
 
 
 
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
@@ -1105,6 +1488,8 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
+
+
 
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
@@ -1115,6 +1500,37 @@ export default function SitemapPage() {;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {externalLinks.map((link, index) => (
+
+              <motion.div
+                key={link.href  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="group"
 
               >
                 <a
@@ -1134,10 +1550,14 @@ export default function SitemapPage() {;
                   </p>                </a>
               </motion.div>
 
+
+
             ))}
           </div>
         </div>
       </section>
+
+
 
 
       {/* Contact Information */}
@@ -1148,6 +1568,7 @@ export default function SitemapPage() {;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+
 
 
 
@@ -1180,6 +1601,7 @@ export default function SitemapPage() {;
 
 
 
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information
@@ -1189,6 +1611,7 @@ export default function SitemapPage() {;
               project
             </p>
           </motion.div>
+
 
 
 
@@ -1220,12 +1643,43 @@ export default function SitemapPage() {;
 
 
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
                 className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {contactInfo.map((contact, index) => (
+
+              <motion.div
+                key={contact.type  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
 
               >
                 <h3 className='text-lg font-bold text-white mb-3'>
@@ -1243,7 +1697,16 @@ export default function SitemapPage() {;
                       : ''
                   }
 
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'                >
+
+                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
+              >
+                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
+                <a
+                  href={contact.action}
+                  target={contact.action.startsWith('http') ? '_blank' : '_self'}
+                  rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                >
                   {contact.value}
                 </a>
               </motion.div>
@@ -1261,6 +1724,8 @@ export default function SitemapPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+
+
 
 
 
@@ -1304,7 +1769,9 @@ export default function SitemapPage() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           >
@@ -1315,7 +1782,6 @@ export default function SitemapPage() {;
               Use our search functionality or contact us directly for assistance
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href='/search'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -1336,6 +1802,9 @@ export default function SitemapPage() {;
       <SmartFooter />
     </div>
 
+  ),
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
   );
 
   )
@@ -1354,6 +1823,15 @@ export default function SitemapPage() {;
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > External Resources </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources and tools hosted on external platforms </p> </motion.div> </h3> <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Contact Information </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Get in touch with us for consultations, support, or to start your project </p> </motion.div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
+
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
+                Contact Support;
+                <Mail className='w-5 h-5 ml-2' />              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
 
       <SmartFooter />;
     </div>;
@@ -1375,6 +1853,9 @@ export default function SitemapPage() {;
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Contact Information </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Get in touch with us for consultations, support, or to start your project </p> </motion && motion.div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
 
+}whileInView= {
+  {
+  opacity: 1, y: 0 
 
   {
   opacity: 0, y: 30
@@ -1389,7 +1870,9 @@ export default function SitemapPage() {;
 }viewport= {
   {
 
-
+  once: true
+}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
+  )
 
   )
 
@@ -1716,8 +2199,10 @@ export default function SitemapPage() {;
   }
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 }
 }
 

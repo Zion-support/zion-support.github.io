@@ -14,14 +14,11 @@ interface MilestoneCreatorProps {
   projectType?: string;
 }
 
+export function MilestoneCreator({
 
 
 
-export function MilestoneCreator(): any ({;
-
-
-
-
+export function MilestoneCreator({;
 
   onSubmit;
   isSubmitting;
@@ -34,10 +31,8 @@ export function MilestoneCreator(): any ({;
 }: MilestoneCreatorProps) {
   return (
 
-
-
-
-
+    <AddMilestoneForm
+    <AddMilestoneForm 
 
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
@@ -68,6 +63,7 @@ export function MilestoneCreator({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -75,6 +71,7 @@ export function MilestoneCreator({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       onSubmit={onSubmit}
@@ -89,4 +86,28 @@ export function MilestoneCreator({;
   );
 }
 
+
+  on_submit: (data: any) => Promise < void>,
+  is_submitting: boolean,
+  on_cancel: () => void,
+  project_scope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string | null;
+  project_type?: string;
+}
+export /**
+ * MilestoneCreator - Function description
+ */
+function MilestoneCreator() {
+  return (
+    <AddMilestoneForm;
+      on_submit={on_submit}
+      is_submitting={is_submitting}
+      on_cancel={on_cancel}
+      project_scope={project_scope}
+      projectStartDate={projectStartDate}
+      projectEndDate={projectEndDate}
+      project_type={project_type}
+    />);
+}
 

@@ -21,6 +21,7 @@ import {;
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     loadTenants();
   }, []);
@@ -32,6 +33,7 @@ export function TenantsList() {
         .from("whitelabel_tenants")
         .select("*")
         .order("created_at", { ascending: false });
+
       if (error) throw error;
       setTenants(data as WhitelabelTenant[]);
     } catch (error: any) {
@@ -108,14 +110,17 @@ import {
   TableHead,
   TableHeader,
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+  TableRow,;
+  TableRow,
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+DropdownMenuTrigger,;
+  DropdownMenuTrigger,
 
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
@@ -139,6 +144,7 @@ import { format } from "date-fns";
 export function TenantsList() {;
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {;
 
@@ -168,6 +174,7 @@ export function TenantsList() {;
     }
 
   };
+
 
 
 
@@ -264,6 +271,8 @@ import { format } from "date-fns";
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
+
 
 
 
@@ -376,11 +385,11 @@ export function TenantsList() {;
         variant: "destructive",;
         title: "Failed to verify DNS",;
         description: error && error.message,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
 
   },
+
 
 
 
@@ -755,11 +764,62 @@ if (throw error) {
                   </TableRow>)))}
             </TableBody>;
           </Table>;
+
         </div>)}
     </div>);
 
 }
 
+                    </TableCell>
+                    <TableCell>
+                      <Badge variant={tenant.is_active ? "default" : "destructive"}>
+                        {tenant.is_active ? "Active" : "Inactive"}
+                      </Badge>
+                    </TableCell>
+                    <TableCell>{format(new Date(tenant.created_at), 'MMM d, yyyy')}</TableCell>
+                    <TableCell className="text-right">
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <Button variant="ghost" size="sm">
+                            <MoreHorizontal className="h-4 w-4" />
+                            <span className="sr-only">Actions</span>
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end">
+                          <DropdownMenuItem>
+                            <Edit className="mr-2 h-4 w-4" />
+                            Edit Tenant
+                          </DropdownMenuItem>
+                          <DropdownMenuItem>
+                            <Users className="mr-2 h-4 w-4" />
+                            Manage Admins
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => toggleTenantStatus(tenant)}>
+                            {tenant.is_active ? (
+                              <>
+                                <PowerOff className="mr-2 h-4 w-4" />
+                                Disable Tenant
+                              </>
+                            ) : (
+                              <>
+                                <Power className="mr-2 h-4 w-4" />
+                                Enable Tenant
+                              </>
+                            )}
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </TableCell>
+                  </TableRow>
+                ))
+              )}
+            </TableBody>
+          </Table>
+        </div>
+      )}
+    </div>
+  );
+}
 
     </div>;
   );
@@ -768,6 +828,8 @@ if (throw error) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

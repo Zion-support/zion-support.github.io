@@ -1,8 +1,10 @@
 
 import React from 'react',
 import Head from 'next/head',
+import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings,} from 'lucide-react';
 import { Zap, Brain, Code, Shield, Users, TrendingUp;
   CheckCircle, ArrowRight, Star, Clock, Target;
   Cpu, Rocket, Globe, BarChart3, Settings
@@ -64,6 +66,50 @@ const serviceHighlights = [
 
 const benefits = [
 
+  {
+    title: '80% Reduction in Manual Work'
+    description: 'Automate repetitive tasks and focus on high-value activities'
+    icon: Zap
+    color: 'text-emerald-400'
+  }
+  {
+    title: '300% ROI Improvement'
+    description:
+      'Significant returns through increased efficiency and productivity'
+    icon: TrendingUp
+    color: 'text-blue-400'
+  },  {
+    title: '24/7 Operation'
+    description: 'Round-the-clock automation without human intervention'
+    icon: Clock
+    color: 'text-purple-400'
+  },  {
+    title: 'Real-time Insights'
+    description: 'Instant analytics and decision-making support'
+    icon: BarChart3
+    color: 'text-pink-400'
+  },];
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings, } from 'lucide-react';
+import Layout from '../components / layout / Layout';
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+const service_highlights = [;
+  {
+    title: 'AI Code Generation',
+    description:;
+      'Generate production - ready code across multiple languages with AI intelligence',
+    icon: Code,
+    color: 'from - emerald - 500 to - teal - 600',
+    features: [;
+      'Multi - language support',
 
       'Security scanning',
       'Performance optimization',
@@ -139,6 +185,16 @@ const benefits = [;
     icon: Zap,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
+
+import { motion } from 'framer-motion';
+import {;
+  Zap, Brain, Code, Shield, Users, TrendingUp,;
+  CheckCircle, ArrowRight, Star, Clock, Target,;
+  Cpu, Rocket, Globe, BarChart3, Settings;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
@@ -245,6 +301,8 @@ const benefits = [;
 ],
 
 
+
+
 export default function AIAutomationServices() {
 
     color: 'text-pink-400',;
@@ -263,7 +321,7 @@ export default function AIAutomationServices() {;
         <meta
           name='description'
           content='Transform your business with our advanced AI automation services. From code generation to DevOps automation, customer support to marketing - automate everything with AI intelligence.'
-        />
+        />;
         <meta
           name='keywords'
           content='AI automation, code generation, DevOps automation, customer support AI, marketing automation, sales intelligence, Zion Tech Group'
@@ -393,6 +451,7 @@ export default function AIAutomationServices() {;
             className="max-w-4xl mx-auto"
 
 
+
           >
             <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8'>
               <Zap className='w-5 h-5 text-emerald-400' />
@@ -434,6 +493,7 @@ export default function AIAutomationServices() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
               <Zap className="w-5 h-5 text-emerald-400" />
@@ -448,12 +508,14 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 AI Automation
@@ -469,6 +531,8 @@ export default function AIAutomationServices() {;
               automation. From code generation to customer support, automate
               everything with intelligent AI that learns and adapts to your
               needs.
+
+
 
 
             </p>
@@ -493,6 +557,7 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -501,6 +566,7 @@ export default function AIAutomationServices() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   <span>Explore Services</span>
@@ -517,6 +583,7 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -524,14 +591,15 @@ export default function AIAutomationServices() {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </motion.div>
         </div>
+
 
 
 
@@ -582,6 +650,7 @@ export default function AIAutomationServices() {;
 
 
 
+
         </div>
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
           <div className="w-6 h-6 bg-teal-400 rounded-full"></div>
@@ -589,7 +658,6 @@ export default function AIAutomationServices() {;
         <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </section>
 
       {/* Service Highlights */}
@@ -612,27 +680,35 @@ export default function AIAutomationServices() {;
         <div className="container mx-auto px-4">
           <motion.div
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               AI Automation <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI automation solutions that transform every aspect of your business operations
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Comprehensive AI automation solutions that transform every aspect
+              of your business operations
             </p>
           </motion.div>
 
@@ -646,14 +722,34 @@ export default function AIAutomationServices() {;
                 className='futuristic-card p-6 group hover:scale-105 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceHighlights.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                key={service.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
 
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -676,6 +772,7 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -683,6 +780,7 @@ export default function AIAutomationServices() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   {service.features.map((feature, featureIndex) => (
@@ -722,18 +820,35 @@ export default function AIAutomationServices() {;
         <div className="container mx-auto px-4">
           <motion.div
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span> Portfolio
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive range of AI automation services designed for modern enterprises
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Discover our comprehensive range of AI automation services
+              designed for modern enterprises
             </p>
           </motion.div>
 
@@ -747,14 +862,34 @@ export default function AIAutomationServices() {;
                 className='animated-border'
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {advancedAIAutomationServices2025.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="animated-border"
 
               >
                 <div className="h-full">
@@ -784,7 +919,7 @@ export default function AIAutomationServices() {;
                   <div className='flex items-center justify-between mb-4'>
                     <div className='text-2xl font-bold text-emerald-400'>
                       {service.price}
-                      <span className='text-gray-400 text-lg'>
+                      <span className='text - gray - 400 text - lg'>;
                         {service.period}
                       </span>
                     </div>
@@ -792,8 +927,8 @@ export default function AIAutomationServices() {;
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`w-4 h-4 ${i < service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`}
-                        />
+                          className={`w-4 h-4 ${i < service && service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`}
+                        />;
                       ))}
                       <span className='text-gray-400 text-sm ml-2'>
                         ({service.reviews})
@@ -873,7 +1008,9 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -891,12 +1028,14 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     </Link>
                   </div>
@@ -925,10 +1064,11 @@ export default function AIAutomationServices() {;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
+
+
 
 
 
@@ -937,20 +1077,35 @@ export default function AIAutomationServices() {;
         <div className="container mx-auto px-4">
           <motion.div
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
-
-
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your business with intelligent automation that delivers measurable results
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Transform your business with intelligent automation that delivers
+              measurable results
             </p>
           </motion.div>
 
@@ -964,14 +1119,34 @@ export default function AIAutomationServices() {;
                 className='text-center group'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                key={benefit.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="text-center group"
 
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -980,8 +1155,8 @@ export default function AIAutomationServices() {;
 
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
-                </h3>
-                <p className='text-gray-300 leading-relaxed'>
+                </h3>;
+                <p className='text - gray - 300 leading - relaxed'>;
                   {benefit.description}
                 </p>              </motion.div>
             ))}
@@ -1009,10 +1184,22 @@ export default function AIAutomationServices() {;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>;
         <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
+
+
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
 
 
                   <span>Start Your Automation Journey</span>
@@ -1025,7 +1212,9 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1050,7 +1239,9 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1070,11 +1261,13 @@ export default function AIAutomationServices() {;
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   <span>View All Services</span>
@@ -1090,6 +1283,7 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1097,24 +1291,35 @@ export default function AIAutomationServices() {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
               <div>
-                <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>
-                <div className="text-gray-300">AI Monitoring</div>
+                <div className='text-3xl font-bold text-emerald-400 mb-2'>
+                  24/7
+                </div>
+                <div className='text-gray-300'>AI Monitoring</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime Guarantee</div>
+                <div className='text-3xl font-bold text-emerald-400 mb-2'>
+                  99.9%
+                </div>
+                <div className='text-gray-300'>Uptime Guarantee</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>
                 <div className="text-gray-300">Average ROI</div>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           </motion.div>
         </div>
       </section>
 
+    </Layout>
+);
+    </Layout>;
+);
+
+}
+    </Layout>
 
   )
             className="max-w-4xl mx-auto";
@@ -1122,15 +1327,51 @@ export default function AIAutomationServices() {;
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?;
             </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Join thousands of companies already transforming their operations with AI automation.;
-              Get started today and see the difference intelligent automation can make.;
+
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+                </p>              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py - 20 bg - gradient - to - r from - emerald - 900 / 20 via - teal - 900 / 20 to - cyan - 900 / 20'>;
+        <div className='container mx - auto px - 4 text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='max - w-4xl mx - auto';
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+              Ready to{' '}
+              <span className='bg - gradient - to - r from - emerald - 400 to - teal - 400 bg - clip - text text - transparent'>;
+                Automate;
+              </span>{' '}
+              Your Business?;
+            </h2>;
+            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
+
+              Join thousands of companies already transforming their operations;
+              with AI automation. Get started today and see the difference;
+              intelligent automation can make.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
-              <Link href="/contact" className="group">;
-                <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">;
+
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
+              <Link href='/contact' className='group'>;
+                <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>;
                   <span>Start Your Automation Journey</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
+                </button>;
+              </Link>;
+
+  )
+}
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+              <Link href='/contact' className='group'>;
+                <button className='bg - gradient - to - r from - emerald - 500 to - teal - 600 hover:from - emerald - 600 hover:to - teal - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
+                  <span > Start Your Automation Journey</span>;
+                  <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
+
                 </button>;
               </Link>;
               <Link href="/comprehensive-services-showcase-2025" className="group">;
@@ -1164,5 +1405,7 @@ export default function AIAutomationServices() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

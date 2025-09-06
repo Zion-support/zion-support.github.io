@@ -7,7 +7,27 @@ import { motion } from 'framer-motion';
 
 import {
 
-
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Star
+  Shield
+  Brain
+  DollarSign
+  Dna
+  Rocket
+  Users
+  Award
+  Zap
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
 
   Phone,
   Mail,
@@ -30,6 +50,8 @@ import {
   Youtube,;
   Github,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
+
+
 
 
 
@@ -112,6 +134,135 @@ const contactInfo = {
 {
   /* Background Effects */
 }<div className="absolute inset-0 overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+
+
+  {
+    title: 'AI & Automation'
+    services: [
+      {
+        name: 'AI Autonomous Business Processor'
+        href: '/ai-autonomous-business-processor'
+      }
+      {
+        name: 'AI Predictive Enterprise Analytics'
+        href: '/ai-predictive-enterprise-analytics'
+      }
+      {
+        name: 'AI Autonomous Customer Success'
+        href: '/ai-autonomous-customer-success'
+      }
+      {
+        name: 'AI Autonomous Marketing Orchestrator'
+        href: '/ai-autonomous-marketing-orchestrator'
+      }
+      {
+        name: 'AI Autonomous Sales Intelligence'
+        href: '/ai-autonomous-sales-intelligence'
+      }
+    ]
+  }
+  {
+    title: 'Cybersecurity & Quantum'
+    services: [
+      {
+        name: 'Quantum Encryption Platform'
+        href: '/quantum-encryption-platform'
+      }
+      {
+        name: 'AI Autonomous Threat Hunter'
+        href: '/ai-autonomous-threat-hunter'
+      }
+      {
+        name: 'Quantum Zero Trust Security'
+        href: '/quantum-zero-trust-security'
+      }
+      {
+        name: 'AI Autonomous Vulnerability Scanner'
+        href: '/ai-autonomous-vulnerability-scanner'
+      }
+      {
+        name: 'Quantum Secure Communication'
+        href: '/quantum-secure-communication'
+      }
+    ]
+  }
+  {
+    title: 'Fintech & Blockchain'
+    services: [
+      {
+        name: 'Quantum Financial Trading Platform'
+        href: '/quantum-financial-trading-platform'
+      }
+      {
+        name: 'AI Autonomous Wealth Management'
+        href: '/ai-autonomous-wealth-management'
+      }
+      {
+        name: 'Quantum Blockchain Finance'
+        href: '/quantum-blockchain-finance'
+      }
+      {
+        name: 'AI Autonomous Insurance Platform'
+        href: '/ai-autonomous-insurance-platform'
+      }
+      {
+        name: 'Quantum Payment Processing'
+        href: '/quantum-payment-processing'
+      }
+    ]
+  }
+  {
+    title: 'Healthcare & Biotech'
+    services: [
+      {
+        name: 'AI Autonomous Medical Diagnostics'
+        href: '/ai-autonomous-medical-diagnostics'
+      }
+      {
+        name: 'Quantum Drug Discovery Platform'
+        href: '/quantum-drug-discovery-platform'
+      }
+      {
+        name: 'AI Autonomous Patient Care'
+        href: '/ai-autonomous-patient-care'
+      }
+      { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
+      {
+
+        name: 'AI Autonomous Clinical Trials',
+        href: '/ai-autonomous-clinical-trials',
+      },
+    ],
+  },]}
+
+
 
 const serviceCategories = [
   {
@@ -401,44 +552,6 @@ const service_categories = [;
 const companyLinks = [
 ;
 const company_links = [;
-
-const _serviceCategories = [
-  {_title: 'AI & Automation', _services: [
-      { name: 'AI Autonomous Business Processor', _href: '/ai-autonomous-business-processor'},
-      {_name: 'AI Predictive Enterprise Analytics', _href: '/ai-predictive-enterprise-analytics'},
-      {_name: 'AI Autonomous Customer Success', _href: '/ai-autonomous-customer-success'},
-      {_name: 'AI Autonomous Marketing Orchestrator', _href: '/ai-autonomous-marketing-orchestrator'},
-      {_name: 'AI Autonomous Sales Intelligence', _href: '/ai-autonomous-sales-intelligence'}
-    ]
-  },
-  {_title: 'Cybersecurity & Quantum', _services: [
-      { name: 'Quantum Encryption Platform', _href: '/quantum-encryption-platform'},
-      {_name: 'AI Autonomous Threat Hunter', _href: '/ai-autonomous-threat-hunter'},
-      {_name: 'Quantum Zero Trust Security', _href: '/quantum-zero-trust-security'},
-      {_name: 'AI Autonomous Vulnerability Scanner', _href: '/ai-autonomous-vulnerability-scanner'},
-      {_name: 'Quantum Secure Communication', _href: '/quantum-secure-communication'}
-    ]
-  },
-  {_title: 'Fintech & Blockchain', _services: [
-      { name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform'},
-      {_name: 'AI Autonomous Wealth Management', _href: '/ai-autonomous-wealth-management'},
-      {_name: 'Quantum Blockchain Finance', _href: '/quantum-blockchain-finance'},
-      {_name: 'AI Autonomous Insurance Platform', _href: '/ai-autonomous-insurance-platform'},
-      {_name: 'Quantum Payment Processing', _href: '/quantum-payment-processing'}
-    ]
-  },
-  {_title: 'Healthcare & Biotech', _services: [
-      { name: 'AI Autonomous Medical Diagnostics', _href: '/ai-autonomous-medical-diagnostics'},
-      {_name: 'Quantum Drug Discovery Platform', _href: '/quantum-drug-discovery-platform'},
-      {_name: 'AI Autonomous Patient Care', _href: '/ai-autonomous-patient-care'},
-      {_name: 'Quantum Genomic Analysis', _href: '/quantum-genomic-analysis'},
-      {_name: 'AI Autonomous Clinical Trials', _href: '/ai-autonomous-clinical-trials'}
-    ]
-  }
-],
-
-const companyLinks = [
-
   { name: 'About Us', href: '/about' },
   { name: 'Leadership Team', href: '/leadership' },
   { name: 'Careers', href: '/careers' },
@@ -466,7 +579,50 @@ const resource_links = [;
 
 const socialLinks = [
 
+  { name: 'Developer Resources', href: '/developer - resources' }, ];  { name: 'Developer Resources', href: '/developer - resources' }
+];
+;
+const social_links = [;
+  { name: 'Facebook', href: '#', icon: Facebook },
+  { name: 'Twitter', href: '#', icon: Twitter },
+  { name: 'LinkedIn', href: '#', icon: Linkedin },
+  { name: 'Instagram', href: '#', icon: Instagram },
+  { name: 'YouTube', href: '#', icon: Youtube },
 
+
+
+
+
+
+export default function UltraFuturisticFooter2026() {;
+
+  return (
+    <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>;
+      {/* Background Effects */}
+
+      <div className='absolute inset-0 overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0 && 0.05),transparent_50%)]'></div>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.05),transparent_50%)]'></div>;
+      </div>;
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
+
+        {/* Main Footer Content */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12'>;
+          {/* Company Info */}
+
+
+          <div className='lg:col-span-2'>            <motion && motion.div      {/* Background Effects */}
+      <div className="absolute inset-0 overflow-hidden">;
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0 && 0.05),transparent_50%)]"></div>;
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.05),transparent_50%)]"></div>;
+      </div>;
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">;
+          {/* Company Info */}
+
+          <div className="lg:col-span-2">
 
 export default function UltraFuturisticFooter2026() {
   return (
@@ -522,7 +678,20 @@ export default function UltraFuturisticFooter2026() {
                 solutions. Transforming businesses with cutting-edge technology.
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+              transition={{ duration: 0.6 }}
+            >
+              <div className='flex items-center mb-6'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>
+                  <Zap className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+                  Zion Tech Group
+                </h3>
+              </div>
+              <p className='text-gray-300 mb-6 leading-relaxed'>
+                Leading provider of revolutionary AI automation, quantum
+                cybersecurity, fintech blockchain, and healthcare biotech
+                solutions. Transforming businesses with cutting-edge technology.
 
               </p>
               {/* Contact Info */}
@@ -555,6 +724,7 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </p>
               {/* Contact Info */}
@@ -565,6 +735,7 @@ export default function UltraFuturisticFooter2026() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -612,7 +783,6 @@ export default function UltraFuturisticFooter2026() {
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Additional Links */}
 
 
@@ -622,12 +792,15 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 
@@ -654,7 +827,11 @@ export default function UltraFuturisticFooter2026() {
             </ul>;
           </motion && motion.div>;
 
-
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
 
 
           {/* Resources */}
@@ -685,7 +862,11 @@ export default function UltraFuturisticFooter2026() {
             </ul>;
           </motion && motion.div>;
 
-
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
 
 
           {/* Social Media */}
@@ -727,6 +908,7 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -734,10 +916,12 @@ export default function UltraFuturisticFooter2026() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
               ))}
             </div>
           </motion.div>
         </div>
+
 
 
 
@@ -759,6 +943,7 @@ export default function UltraFuturisticFooter2026() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         {/* Newsletter Signup */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -771,7 +956,9 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
         >
           <div className='text-center'>
@@ -835,6 +1022,7 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
                 Subscribe;
               </button>;
             </div>;
@@ -849,10 +1037,12 @@ export default function UltraFuturisticFooter2026() {
         {/* Bottom Bar */}
         <motion&& motion.div
 
+
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className='border-t border-gray-800 pt-8'
+
 
 
 
@@ -862,10 +1052,13 @@ export default function UltraFuturisticFooter2026() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
               © 2026 Zion Tech Group. All rights reserved.
+
+
 
 
 
@@ -875,10 +1068,20 @@ export default function UltraFuturisticFooter2026() {
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>;
               © 2026 Zion Tech Group. All rights reserved. |;
 
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </motion.div>
 
 
         {/* Bottom Bar */}
-        <motion.div
+        <motion&& motion.div
+        </motion.div>;
+        {/* Bottom Bar */}
+        <motion.div;
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -888,7 +1091,9 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
         >
@@ -910,7 +1115,7 @@ export default function UltraFuturisticFooter2026() {
 
           <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2026 Zion Tech Group. All rights reserved.
+               2026 Zion Tech Group. All rights reserved.
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">
                 Privacy Policy
               </Link>
@@ -932,6 +1137,7 @@ export default function UltraFuturisticFooter2026() {
           </div>
         </motion.div>
       </div>
+
 
 
 
@@ -971,6 +1177,7 @@ export default function UltraFuturisticFooter2026() {
           </div>;
         </motion && motion.div>;
       </div>;
+
 
 
 
@@ -1034,6 +1241,7 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -1041,5 +1249,6 @@ export default function UltraFuturisticFooter2026() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

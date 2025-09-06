@@ -1,15 +1,24 @@
 
+export default function AboutPage() {return (;
+export default function AboutPage() {;
+  return (;
+    <div className="min-h-screen bg-white">;
+
 export default /**
  * AboutPage - Function description
  */
 function AboutPage() {
   return (
     <div className="min - h-screen bg - white">;
-=======
+
 export default function AboutPage() {;
   return (;
 =======
 
+
+=======
+export default function AboutPage() {;
+  return (;
 
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}

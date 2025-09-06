@@ -1,7 +1,12 @@
 
-
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
@@ -25,6 +30,10 @@ res.setHeader('AllowPOST')
     return res.status(200).json({ ok: true, user })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
+
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -100,6 +109,18 @@ export default function handler(req, res) {
 
     return res.status(200).json({ ok: true, user })
 
+import type { NextApiRequest, NextApiResponse } from 'next',
+import fs from 'fs',
+import path from 'path',
+const users_path = path.join (process.cwd (), 'datalearnusers.json'),
+const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
+/**
+ * read_json - Function description
+ */
+function read_json() {
+  return JSON.parse (fs.readFileSync (p, 'utf - 8'));
+}
+
 
 /**
  * write_json - Function description
@@ -161,10 +182,12 @@ if (user.boostInSearch = enable_boost, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
   }
+
 
 

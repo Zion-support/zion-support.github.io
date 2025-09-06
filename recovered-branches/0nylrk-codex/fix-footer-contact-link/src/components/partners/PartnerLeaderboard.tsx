@@ -1,7 +1,13 @@
 
 
-
-
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Crown, Medal, Trophy} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge";
+import { Crown, Medal, Trophy } from "lucide-react";
 
 interface LeaderboardEntry {
 
@@ -17,7 +23,9 @@ import { Crown, Medal, Trophy } from "lucide-react",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -48,6 +56,7 @@ export function PartnerLeaderboard() {
 
 
 
+
       referrals: 178,
       earnings: 4500,
 
@@ -62,6 +71,7 @@ export function PartnerLeaderboard() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
     {
 
@@ -105,8 +115,18 @@ export function PartnerLeaderboard() {
     }
     {
 
+      id: "5"
+      rank: 5
+      name: "Deep Learning Daily"
+      avatar: ""
+      referrals: 87
+      earnings: 2175
 
 
+      badges: ["newcomer"]
+    }
+  ];
+  // Function to render rank badge
 
 
 
@@ -129,6 +149,16 @@ export function PartnerLeaderboard() {
                   className={`flex items-center justify-between p-3 rounded-md ${
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
+
+    },
+    {
+      id: "5",
+      rank: 5,
+      name: "Deep Learning Daily",
+      avatar: "",
+      referrals: 87,
+      earnings: 2175,
+      badges: ["newcomer"]
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -194,6 +224,7 @@ export function PartnerLeaderboard() {;
       badges: ["newcomer"];
     }
   ];
+  // Function to render rank badge
 
   // Function to render rank badge;
   const renderRankBadge = (rank: number) => {;
@@ -290,6 +321,7 @@ function PartnerLeaderboard() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           <div className="space - y-4">;
@@ -298,6 +330,7 @@ function PartnerLeaderboard() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   }`}
@@ -388,11 +421,24 @@ function PartnerLeaderboard() {
                         </Badge>;
                       )}
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                      )}
+                      {entry.badges.includes("trending") && (
+                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
+                          Trending
+                        </Badge>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
+                <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
+                <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>
+                <p className="text-xs text-zion-slate-light">
+                  Start referring to earn your spot on the leaderboard
+                </p>
+              </div>
 
                     </div>;
                   </div>;
@@ -409,9 +455,11 @@ function PartnerLeaderboard() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             )}

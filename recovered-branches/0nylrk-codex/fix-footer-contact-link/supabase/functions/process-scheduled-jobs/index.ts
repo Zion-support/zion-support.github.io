@@ -3,10 +3,12 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+
 
 
 
@@ -16,6 +18,9 @@ const corsHeaders = {
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -40,10 +45,10 @@ serve(async (req) => {
     if (fetchError) throw fetchError;
     for (const job of jobs |[]) {
       // Process job based on type
-      switch (job.job_type) {
+      switch (job && job.job_type) {
         case 'onboarding_reminder':
           // Process onboarding reminder
-          if (job.payload && job.payload.user_id && job.payload.missing_milestone) {
+          if (job && job.payload && job && job.payload.user_id && job && job.payload.missing_milestone) {
             await processOnboardingReminder(
               supabaseAdmin;
               job.payload.user_id;
@@ -123,7 +128,6 @@ if ( {) {
               job.payload.user_id;
               job.payload.missing_milestone;
               job.payload.role);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           break;
         case 'email_reminder':;
@@ -155,6 +159,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -162,6 +167,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       }
@@ -172,7 +178,7 @@ if ( {) {
           status: 'completed'
           completed_at: new Date().toISOString()
         })
-        .eq('id', job.id)
+        .eq('id', job && job.id)
     }
 
     return new Response(JSON.stringify({ processed: jobs?.length |0 }), {
@@ -200,6 +206,30 @@ if ( {) {
 
 async function processOnboardingReminder(supabase, userId, milestone, role) {
 
+      // Update job status;
+      await supabase_admin;
+        .from ('scheduled_jobs');
+        .update ({
+          status: 'completed',
+          completed_at: new Date ().toISOString ();
+        });
+        .eq ('id', job.id);
+    }
+    return new Response (JSON.stringify ({ processed: jobs?.length || 0 }), {
+      headers: { ...cors_headers, "Content - Type": "application / json" }
+      status: 200});
+  } catch (error) {
+    return new Response (JSON.stringify ({ error: error.message }), {
+      headers: { ...cors_headers, "Content - Type": "application / json" }
+      status: 500});
+  }
+});
+;
+async /**
+ * processOnboardingReminder - Function description
+ */
+function processOnboardingReminder() {
+
   try {
 
     // Create notification for user
@@ -215,7 +245,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     const message = milestoneMessages[milestone] |"Continue your onboarding process";
     const title = `Action needed: ${message}`;
     // Insert notification
-    await supabase.from('notifications').insert({
+    await supabase && supabase.from('notifications').insert({
       user_id: userId;
       title;
       message;
@@ -258,12 +288,20 @@ async function processResumeScoring(supabase, applicationId) {
         method: "POST";
         headers: {
 
+          "Content-Type": "application/json"
+          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
 
         body: JSON.stringify({ applicationId })}
     );
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`)
+
+    }
+    console.log(`Successfully scored application ${applicationId}`);
+          "Content-Type": "application/json",
 
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
 ;
@@ -319,6 +357,8 @@ async function processResumeScoring(supabase, applicationId) {;
     if (!response.ok) {;
       const errorData = await response.json(),;
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
+
+
 
     }
 
@@ -384,6 +424,27 @@ async function processContentGeneration(supabase, contentType) {
         headers: {
 
 
+
+    if (!response && response.ok) {
+      const errorData = await response && response.json();
+      throw new Error(`Content generation failed: ${JSON && JSON.stringify(errorData)}`)
+    }
+    const contentData = await response.json();
+    console.log(`Successfully generated ${contentType} content`);
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
+        body: JSON.stringify({ 
+          contentType,
+          autoPublish: contentType === 'blog' ? true : false,
+          includeImage: contentType === 'blog' ? true : false
+        })}
+    );
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
+    }
+
 ;
     // // // console.log(`Successfully scored application ${applicationId}`),;
     // Notify the client that their application has been scored;
@@ -437,8 +498,10 @@ async function processContentGeneration(supabase, contentType) {;
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
 
+
     const contentData = await response.json(),
     // // // console.log(`Successfully generated ${contentType} content`),
+
 
 
     // If it's a newsletter, send a test email to the admin
@@ -469,6 +532,14 @@ async function processContentGeneration(supabase, contentType) {;
               body: contentData.body;
               testMode: true
 
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
+            body: JSON && JSON.stringify({
+              subject: contentData && contentData.subject;
+              previewText: contentData && contentData.previewText;
+              body: contentData && contentData.body;
+              testMode: true,
+
               testEmail: adminEmail
             })}
         );
@@ -476,6 +547,14 @@ async function processContentGeneration(supabase, contentType) {;
         await supabase && supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
 
+
+          read: false
+        })
+          title: "Newsletter Draft Ready",
+          message: "AI-generated newsletter draft has been sent to your email for review.",
+          type: "system",
+          read: false
+        })
 
 ;
     const contentData = await response.json(),;
@@ -516,6 +595,8 @@ async function processContentGeneration(supabase, contentType) {;
         });
 
 
+
+
       }
     }
     return contentData
@@ -529,7 +610,6 @@ async function processContentGeneration(supabase, contentType) {;
   } catch (error) {
     console.error ("Error processing resume scoring:", error);
   }
-=======
     console.error(`Error processing ${contentType} generation:`, error)
   }
 

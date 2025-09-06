@@ -1,6 +1,7 @@
 
 
-
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
@@ -14,6 +15,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -21,6 +23,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const corsHeaders = {
@@ -176,8 +179,10 @@ if ( {) {
 
       });
 
-
-
+      JSON.stringify({ 
+        completion,
+        tokensUsed: data.usage?.total_tokens || 0
+      }),
 
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
@@ -197,9 +202,8 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 
-
-    console.error ("Error in zion - gpt function:", error);
-
+  }
+});
 
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -235,6 +239,7 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -242,6 +247,7 @@ serve(async (req) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

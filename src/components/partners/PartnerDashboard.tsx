@@ -22,8 +22,10 @@ import {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -39,6 +41,8 @@ import { Star } from 'lucide-react';
 
 
 
+
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
@@ -46,9 +50,11 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -60,6 +66,14 @@ export function PartnerDashboard() {
     completedReferrals: 34,
     conversionRate: 18.5,
 
+    totalRevenue: 850.0,
+    pendingRevenue: 200.0,
+
+
+    totalRevenue: 850.00,
+    pendingRevenue: 200.00
+  },
+  
 
   return (
     <div className="space-y-6">
@@ -75,6 +89,8 @@ export function PartnerDashboard() {
     conversionRate: 18.5,
     totalRevenue: 850.00,
     pendingRevenue: 200.00
+
+
 
 
 
@@ -114,6 +130,7 @@ export function PartnerDashboard() {
 
 
 
+
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 
             <p className="text-xs text-zion-slate-light">
@@ -143,6 +160,7 @@ export function PartnerDashboard() {
 
         
 
+
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
         
         <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -154,6 +172,7 @@ export function PartnerDashboard() {
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
               ${stats.pendingRevenue} pending payout
+
 
 
             </p>
@@ -177,6 +196,7 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
+
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader>
@@ -195,6 +215,8 @@ export function PartnerDashboard() {
           <Button variant="outline" size="sm">View All</Button>
 
 
+
+
         </CardHeader>
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
@@ -202,9 +224,11 @@ export function PartnerDashboard() {
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
               Start sharing your referral links to earn rewards
+
             </p>
           </div>
         </CardContent>
+
       </Card>
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
@@ -233,5 +257,6 @@ export function PartnerDashboard() {
 
             </p>
           </div>
+
 
 

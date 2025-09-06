@@ -36,6 +36,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
 
 
+
                   }`}
                 />
               ))}
@@ -51,6 +52,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
         </div>
       </div>
       {ratingDistribution && (
+
 
 
             <div key={rating} className="flex items-center gap-2">
@@ -128,6 +130,7 @@ if (return 0) {
           {[5, 4, 3, 2, 1].map((rating) => (
 
 
+
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -180,5 +183,6 @@ if (return 0) {
   );
 }
 ;
+
 
 

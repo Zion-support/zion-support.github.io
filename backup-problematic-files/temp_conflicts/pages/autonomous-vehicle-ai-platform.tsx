@@ -1,4 +1,5 @@
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,12 +33,6 @@ import {;
   Car,;
   Star,;
 
-=======
-
-
-import React from "react";
-import Head from "next/head";
-import {
 
   Phone,
   Mail,
@@ -47,21 +42,21 @@ import {
   Car,
   Star,;
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 
+
 export default function AutonomousVehicleAIPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
     s && s.link.endsWith("/autonomous-vehicle-ai-platform"),;
 
-=======
 
-    s.link.endsWith("/autonomous-vehicle-ai-platform"),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
   if (!service) return null;
 
@@ -103,6 +98,7 @@ export default function AutonomousVehicleAIPage() {;
                 ))}
 
 
+
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-orange-500/30 p-6 h-fit">
@@ -125,10 +121,13 @@ export default function AutonomousVehicleAIPage() {;
                 </div>
               </div>
 
+
               <Button
                 href="/contact"
                 variant="quantum"
                 size="lg"
+
+
 
 import React from './react';
 import Head from './next / head';
@@ -154,7 +153,8 @@ function AutonomousVehicleAIPage() {
   // Check condition
 if (return null) {
   $2
-=======
+
+
                 className="w-full"
               >
                 Schedule a Pilot
@@ -182,7 +182,9 @@ if (return null) {
   );
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 }
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -232,7 +234,9 @@ if (return null) {
                     </span>;
                   </div>;
                   <div className="text - slate - 400">;
+
                     {service.trial_days}-day free trial • Setup:{" "}
+
                     {service.setup_time}
                   </div>;
                 </div>;
@@ -269,5 +273,7 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

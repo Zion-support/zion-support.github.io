@@ -15,13 +15,53 @@ import { supabase } from '@/integrations/supabase/client';
 // Form schema
 
 
-
+const formSchema = z.object({
+  brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' })
+  subdomain: z.string()
+    .min(3, { message: 'Subdomain must be at least 3 characters' })
+    .max(20, { message: 'Subdomain must be at most 20 characters' })
+    .regex(/^[a-z0-9-]+$/, { message: 'Subdomain can only contain lowercase letters, numbers, and hyphens' });
+  custom_domain: z.string().optional()
+  primary_color: z.string().regex(/^#([0-9A-F]{6})$/i, { message: 'Must be a valid hex color' })
+  theme_preset: z.enum(['lightdarkneoncorporatestartup'])
+  headline: z.string().min(5, { message: 'Headline must be at least 5 characters' })
+  subtitle: z.string().min(5, { message: 'Subtitle must be at least 5 characters' })
+  cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })})
+type FormValues = z.infer<typeof formSchema>;
+export function WhitelabelRequestForm() {
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+      brand_name: ''
+      subdomain: ''
+      custom_domain: ''
+      primary_color: '#9b87f5'
+      theme_preset: 'light'
+      headline: 'AI Marketplace'
+      subtitle: 'Find the best AI talent'
+      cta: 'Get Started'}})
+  const onSubmit = async (values: FormValues) => {
+    try {
+      // Prepare the data
+      const tenantData = {
+        brand_name: values.brand_name
+        subdomain: values.subdomain
+        custom_domain: values.custom_domain |null
+        primary_color: values.primary_color
+        theme_preset: values.theme_preset
+        landing_page_copy: {
+          headline: values.headline
+          subtitle: values.subtitle
+          cta: values.cta}
+      }
 
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta};
       };
       
+
+
 
 
 
@@ -47,9 +87,9 @@ import { supabase } from '@/integrations/supabase/client';
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
 
-
-
-
+    }
+  }
+  };
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -128,10 +168,10 @@ export function WhitelabelRequestForm() {;
         variant: 'destructive',;
         title: 'Error creating tenant',;
         description: error && error.message || 'Something went wrong'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
+
 
 
 
@@ -219,6 +259,7 @@ export function WhitelabelRequestForm() {;
                 control={form.control}
                 name="theme_preset"
                 render={({ field }) => (
+
                   <FormItem>
                     <FormLabel>Theme Preset</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -242,8 +283,18 @@ export function WhitelabelRequestForm() {;
               <div className="border rounded-md p-4 space-y-4">
                 <h3 className="text-sm font-medium">Landing Page Copy</h3>
                 <FormField
-                  control={form.control}
+                  control={form && form.control}
                   name="headline"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Headline</FormLabel>;
+                  </FormItem>)}
+              />;
+              <div className="border rounded - md p - 4 space - y-4">;
+                <h3 className="text - sm font - medium">Landing Page Copy</h3>;
+                <FormField;
+                  control={form.control}
+                  name="headline";
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Headline</FormLabel>
@@ -268,8 +319,16 @@ export function WhitelabelRequestForm() {;
                   )}
                 />
                 <FormField
-                  control={form.control}
+                  control={form && form.control}
                   name="cta"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>CTA Button Text</FormLabel>;
+                    </FormItem>)}
+                />;
+                <FormField;
+                  control={form.control}
+                  name="cta";
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>CTA Button Text</FormLabel>

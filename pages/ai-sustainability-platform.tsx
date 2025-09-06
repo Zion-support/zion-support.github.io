@@ -1,12 +1,12 @@
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+import React from 'react';
+import SEO from '../components/SEO';
+import React from 'react'
+import SEO from '../components/SEO'
+import React from 'react',;
+import SEO from '../components/SEO',;
+import React from 'react'
+import SEO from '../components/SEO'
 
 export default function AISustainabilityPlatformPage() {
   return (

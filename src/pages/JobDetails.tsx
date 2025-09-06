@@ -7,6 +7,8 @@ Calendar,
 
 
 
+
+
   Briefcase;
 import {;
   Calendar,;
@@ -57,6 +59,7 @@ interface Job {
   skills?: string[];
   created_at: string;
   category: string;
+
 
 
 
@@ -140,6 +143,7 @@ export default function JobDetails() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
   return (
     <>
       <SEO 
@@ -147,6 +151,7 @@ export default function JobDetails() {
         description={job.description.substring(0, 160)}
       />
       <Header />
+
 
 
                   </div>
@@ -169,6 +174,7 @@ export default function JobDetails() {
                     Apply Now;
                   </Button>;
                 )}
+
 
 
 
@@ -207,6 +213,7 @@ export default function JobDetails() {
                     Apply Now;
                   </Button>;
                 )}
+
                 
 
 
@@ -224,6 +231,7 @@ export default function JobDetails() {
                     </p>;
                   </div>;
                 )}
+
   const { user, is_authenticated } = use_auth ();
   // navigate is now router;
   const { is_whitelabel, brand_name } = use_whitelabel ();
@@ -389,14 +397,18 @@ if ( {) {
         </div>;
       </main>;
 
-
-      {/* Job application modal */}
-      {job && (
-        <ApplyToJobModal
-          job={{
-
-
-
+            id: job.id
+            title: job.title
+            description: job.description
+            company_name: job.company_name ?? 'Company'
+            budget: formatBudget(job.budget)
+            client_id: job.client_id
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
+            client_id: job.client_id,
 
           }}
 
@@ -487,4 +499,6 @@ const isOwnJob = user?.id === job.client id;
             title: job.title,
             description: job.description,
             company_name: job.company_name ?? "Company",
+
             budget: formatBudget(job.budget),
+

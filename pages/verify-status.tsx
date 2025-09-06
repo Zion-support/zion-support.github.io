@@ -6,11 +6,13 @@
 
 
 
+
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+
 
 
 
@@ -22,23 +24,43 @@ export default function VerifyStatus() {
   const router = useRouter()
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
 
-  const { email: emailParam } = router.query,
-
+  const { email: emailParam } = router.query
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [error, setError] = useState('')
+  const [isResending, setIsResending] = useState(false)
+  const [isCheckingStatus, setIsCheckingStatus] = useState(false)
+  const [lastSentTime, setLastSentTime] = useState<Date | null>(null)
+  const [countdown, setCountdown] = useState(0)
+  useEffect(() => {
+    if (typeof emailParam === 'string') {
+      setEmail(emailParam)
+    }
+  }, [emailParam])
+  // Countdown timer for resend button
+  useEffect(() => {
+    let interval: NodeJS.Timeout
+    let interval: NodeJS.Timeout,
+    if (countdown > 0) {
+      interval = setInterval(() => {
+        setCountdown(prev => prev - 1)
+      }, 1000)
     }
     return () => clearInterval(interval)
-  }, [countdown]),
+  }, [countdown])
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address')
+  }, [countdown]);
 
   const handleResendEmail = async () => {
     if (!email) {
-      setError('Please enter your email address'),
+      setError('Please enter your email address');
       return
     }
-
-    setIsResending(true),
-    setError(''),
-    setMessage(''),
-
-
+    setIsResending(true)
+    setError('')
+    setMessage('')
 
     try {
       const response = await fetch('/api/resend-verification-email', {
@@ -131,6 +153,7 @@ if ( {) {
       } else {
         set_error (data.message || 'Failed to resend verification email');
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { useState, useEffect } from 'react';
@@ -152,13 +175,12 @@ export default function VerifyStatus() {
 
   const { email: emailParam } = router.query,
 
+
       }
     } catch (err) {
       set_error ('Network error. Please try again.');
     } finally {
-
-      setIsResending (false);
-
+      setIsResending(false)
     }
 
 
@@ -256,7 +278,9 @@ export default function VerifyStatus(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -368,12 +392,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -396,12 +422,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
@@ -447,12 +475,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -479,13 +509,14 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               placeholder="Enter your email address"
               className="w-full"
             />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {email && (
               <p className="text-xs text-gray-500">
                 We'll check the verification status for this email address
@@ -509,12 +540,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           {email && (
 
@@ -538,8 +571,10 @@ if ( {) {
           <div className="space-y-3">
             {/* Check Status Button */}
 
-
-
+            <Button
+              onClick={handleCheckStatus}
+              disabled={!email |isCheckingStatus}
+              disabled={!email || isCheckingStatus}
 
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
@@ -586,12 +621,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="w-full"
               variant="outline"
@@ -607,9 +644,13 @@ if ( {) {
                   Check Verification Status
                 </>
 
-
-
-
+              )}
+            </Button>
+            {/* Resend Email Button */}
+            <Button
+              onClick={handleResendEmail}
+              disabled={!email |isResending |countdown > 0}
+              disabled={!email || isResending || countdown > 0}
 
               )  } catch (error) {
     console.error("Error:", error);
@@ -638,12 +679,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="w-full"
               variant="secondary"
@@ -682,6 +725,7 @@ if ( {) {
   }
 }
             <Button;
+
 
 
               on_click={handleCheckStatus}
@@ -738,6 +782,7 @@ if ( {) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
               className="w-full"
             >
               Try Login
@@ -755,12 +800,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
@@ -779,12 +826,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               variant="ghost"
               size="sm"
@@ -816,12 +865,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               variant="ghost"
               className="w-full text-sm"
@@ -841,12 +892,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               variant="ghost"
               className="w-full text-sm"
@@ -867,6 +920,7 @@ if ( {) {
 
 
 
+
 };
 
 
@@ -875,4 +929,5 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

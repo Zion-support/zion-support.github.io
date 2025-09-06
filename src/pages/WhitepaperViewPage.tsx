@@ -77,7 +77,9 @@ if (.whitepaper_data) {) {
         set_error (e.message || 'An unexpected error occurred.');
 
       } finally {
+
         setLoading(false)
+
       }
 
 
@@ -167,6 +169,7 @@ const WhitepaperViewPage: React.FC = () => {;
         setLoading(false),;
         return;
 
+
       }
       setLoading(true),;
       setError(null),;
@@ -181,6 +184,7 @@ const WhitepaperViewPage: React.FC = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
       }
       setLoading(true)
       setError(null)
@@ -199,6 +203,8 @@ const WhitepaperViewPage: React.FC = () => {;
       } finally {
         setLoading(false)
       }
+
+
 
     }
     },
@@ -268,6 +274,7 @@ export default WhitepaperViewPage;
 },
 ;
 
+
       }
       setLoading(true),;
       setError(null),;
@@ -277,13 +284,15 @@ export default WhitepaperViewPage;
 
 
 
+
     },;
     fetchWhitepaper();
   }, [id]),;
+
   if (loading) {;
     return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>;
   }
-;
+
   if (error) {;
     return (
       <div className="flex flex-col justify-center items-center h-screen text-red-600">;
@@ -335,7 +344,7 @@ export default WhitepaperViewPage;
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back;
                  </Link>;
             </Button>;
-            {!sharedData.is_public && isAdmin && (;
+            {!sharedData && sharedData.is_public && isAdmin && (;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;
                     Private (Admin View);
                 </span>;
@@ -351,6 +360,7 @@ export default WhitepaperViewPage;
     </div>;
   );
 },;
+
 
 
 
@@ -430,3 +440,4 @@ export default WhitepaperViewPage,
 
         setError("No whitepaper ID provided."),
         setLoading(false),
+

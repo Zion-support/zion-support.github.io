@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -25,6 +29,7 @@ interface SearchResult {
   url: string, type: 'service' | 'page' | 'category'
 }
 const SearchBar: React.FC = () => {
+
 interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
@@ -41,11 +46,11 @@ const SearchBar: React.FC = () => {
   // Mock search data - in a real app, this would come from an API;
   const search_data: SearchResult[] = [;
     {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro - saas',
-      type: 'category',
-    },
+      title: 'Micro SaaS Products'
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more'
+      url: '/micro-saas'
+      type: 'category'
+    }
     {
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
@@ -141,6 +146,7 @@ const SearchBar: React.FC = () => {
     setIsLoading(false);
 
   }
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
@@ -200,6 +206,7 @@ const SearchBar: React.FC = () => {
           </div>
         )}
       </div>
+
       {/* Search Results Dropdown */}
       {isOpen && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">

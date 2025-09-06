@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import { Card  } from '@/components / ui / card';
@@ -12,6 +13,7 @@ import { HELP_CATEGORIES  } from './help - content';
 interface HelpArticleViewProps {
   article_id: string;
 }
+
 
 
 
@@ -40,6 +42,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
       break
 
 
+
+
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
@@ -53,17 +57,28 @@ interface HelpArticleViewProps {;
 }
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-
   const [feedbackGiven, setFeedbackGiven] = useState<
     "helpful" | "not-helpful" | null
   >(null);
 
   // Find the article in all categories
-  let article = null;
+  let article,
   for (const category of HELP_CATEGORIES) {
 
     const found = category.articles.find((a) => a.id === articleId);
     if (found) {
+
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {ThumbsUp, ThumbsDown} from "lucide-react";
+import {toast} from "@/components/ui/use-toast";
+import {HELP_CATEGORIES} from "./help-content";
+interface HelpArticleViewProps {;
+  articleId: string;
+}
+
+
 
 
       article = found;
@@ -82,6 +97,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     }
@@ -114,6 +130,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   },
   
 
+
+
   return (
     <div>
       <Card className="p-6">
@@ -121,6 +139,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         <div className="flex items-center text-sm text-zion-slate-light mb-6">
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
+
+
         <div className="prose dark:prose-invert max-w-none mb-8">
           {article.content.split("\n").map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
@@ -135,10 +155,50 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
               <Button
                 variant="outline"
                 size="sm"
+
+  // Check condition
+if ( {) {
+  $2
+}
+    return <div > Article not found</div>;
+  }
+  const handle_feedback = (type: "helpful" | "not - helpful") =>: any {
+    (setFeedbackGiven (type),
+      // In a real implementation, this would send feedback to the server;
+      toast ({
+        title: "Thank you for your feedback!",
+        description:;
+          type === "helpful";
+            ? "We're glad this article was helpful.";
+            : "We'll work on improving this article.",
+      }));
+  }
+;
+  return (
+    <div>;
+      <Card className="p - 6">;
+        <h2 className="text - 2xl font - bold mb - 4">{article.title}</h2>;
+        <div className="flex items - center text - sm text - zion - slate - light mb - 6">;
+          <span > Last updated: {format_date (article.last_updated)}</span>;
+        </div>;
+        <div className="prose dark:prose - invert max - w-none mb - 8">;
+          {article.content.split ("\n").map ((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>))}
+        </div>;
+        <div className="border - t border - gray - 200 dark:border - gray - 700 pt - 6 mt - 6">;
+          <div className="flex flex - col sm:flex - row items - center justify - between">;
+            <div className="text - sm text - zion - slate - light mb - 4 sm:mb - 0">;
+              Was this article helpful?;
+            </div>;
+            <div className="flex items - center space - x-3">;
+              <Button;
+                variant="outline";
+                size="sm";
                 className={
-                  feedbackGiven === "helpful"
-                    ? "bg-green-100 dark:bg-green-900/30"
-                    : ""
+                  feedback_given === "helpful";
+                    ? "bg - green - 100 dark:bg - green - 900 / 30";
+                    : "";
+
                 }
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
@@ -176,6 +236,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
               </Button>
             </div>
 
+
+
 ;
   const handleFeedback = (type: "helpful" | "not-helpful") => {;
     setFeedbackGiven(type),;
@@ -211,13 +273,17 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
               >;
-                <ThumbsUp className="h-4 w-4 mr-2" />;
+                <ThumbsUp className="h - 4 w - 4 mr - 2" />;
                 Yes;
               </Button>;
               <Button;
                 variant="outline";
                 size="sm";
-                className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
+                className={
+                  feedback_given === "not - helpful";
+                    ? "bg - red - 100 dark:bg - red - 900 / 30";
+                    : "";
+                }
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
 
@@ -240,10 +306,12 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
 
 
+
           )}
         </div>
       </Card>
     </div>
+
   );
 }
 
@@ -273,14 +341,19 @@ function formatDate(date: string): string {
     month: "long"
     day: "numeric"
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+  });
+}
 
   })
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  })
+}
+;
+function formatDate(date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric";
+    month: "long";
+    day: "numeric";
+  });
+}
+;
 

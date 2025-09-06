@@ -1,5 +1,7 @@
 
 
+
+
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
@@ -17,6 +19,7 @@ export function UploadSection(): any ({;
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
+
 
 
 import React from 'react';
@@ -44,6 +47,7 @@ function UploadSection() {
         <Button variant='outline' className='relative'>;
           Browse Files;
 
+
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
@@ -70,6 +74,7 @@ function UploadSection() {
             </span>          </div>      {customFile && (
       
       {customFile && (
+
 
 export function UploadSection({
   customFile,
@@ -138,9 +143,12 @@ export function UploadSection({
         </Button>
       )}
     </div>
+
   );
 
 
 };
 }
+
+
 

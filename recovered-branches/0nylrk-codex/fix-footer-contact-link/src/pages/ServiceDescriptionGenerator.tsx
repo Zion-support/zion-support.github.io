@@ -3,6 +3,8 @@
 
 
 
+
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -13,7 +15,17 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceDescriptionGenerator() {;
 
-
+  const { isAuthenticated, isLoading } = useAuth();
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+export default function ServiceDescriptionGenerator() {
 
   const { isAuthenticated, isLoading } = useAuth();
 
@@ -65,6 +77,8 @@ export default function ServiceDescriptionGenerator() {
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
 
+              <GeneratedDescriptionDisplay
+              <GeneratedDescriptionDisplay 
 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -121,7 +135,9 @@ export default function ServiceDescriptionGenerator() {;
 
 
 
+
               <GeneratedDescriptionDisplay
+
 
 
 
@@ -130,7 +146,6 @@ export default function ServiceDescriptionGenerator() {;
               />;
             )}
 
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -196,7 +211,9 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
-
+    </div>;
+  );
+}
     </div>);
 }
 

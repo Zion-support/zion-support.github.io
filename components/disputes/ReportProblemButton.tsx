@@ -1,14 +1,18 @@
 
 import Link from "next/link";
 
-
-
-
+export default function ReportProblemButton({
+  projectId
+  entityType
+  entityId
+}: {
 
   projectId,
   entityType,
   entityId,
 }: {;
+
+
 
 
 
@@ -48,9 +52,12 @@ export default function ReportProblemButton(): any ({;
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
         {" "}
 
-        Report a Problem
-      </a>
-    </Link>
+        Report a Problem;
+      </a>;
+    </Link>;
+  );
+}
+
 
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
@@ -71,6 +78,11 @@ export default function ReportProblemButton(): any ({;
   );
 }
 
+import Link from 'next/link';
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+  const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
+  });
+
 
 
 
@@ -80,6 +92,7 @@ export default function ReportProblemButton(): any ({;
         Report a Problem
       </a>
     </Link>
+
 
 import Link from './next / link';
 ;
@@ -91,6 +104,7 @@ function ReportProblemButton() {
     project_id,
     ...(entity_type ? { entity_type } : {}),
     ...(entity_id ? { entity_id } : {}),
+
   });
   return (
     <Link href={`/disputes / new?${query.to_string ()}`}>;
@@ -114,6 +128,8 @@ function ReportProblemButton() {
       <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm"></a>;
     </Link>);
 }
+
+
 
 
 

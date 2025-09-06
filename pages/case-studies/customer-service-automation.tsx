@@ -15,16 +15,22 @@ export default function CaseStudyPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <main className="container mx-auto px-6 py-12">
 
+          {/* Breadcrumb */}
+          {/* Breadcrumb */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
             </Link>
-            <span className="text-white/60 mx-2">→</span>
+            <span className="text-white/60 mx-2"></span>
             <Link href="/case-studies" className="text-white/60 hover:text-white transition-colors">
               Case Studies
             </Link>
-            <span className="text-white/60 mx-2">→</span>
+            <span className="text-white/60 mx-2"></span>
             <span className="text-white">Intelligent Customer Service Automation</span>
           </nav>
 
@@ -39,12 +45,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           <header className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30 mb-6">
@@ -77,6 +85,7 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -84,11 +93,13 @@ export default function CaseStudyPage() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Financial Services Provider</h3>
                 <p className="text-white/90 text-lg mb-4">
+
 
 
 
@@ -102,6 +113,7 @@ export default function CaseStudyPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   investment, and insurance products. The company faced challenges with high customer service costs and long response times.
@@ -134,12 +146,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
@@ -177,6 +191,7 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -184,16 +199,15 @@ export default function CaseStudyPage() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">AI-Powered Customer Service Platform</h3>
                 <p className="text-white/90 text-lg mb-6">
 
-
-
-
-
+                  We implemented a comprehensive customer service automation platform that combines 
+                  We implemented a comprehensive customer service automation platform that combines
 
                   intelligent chatbots, automated ticket routing, and sentiment analysis for optimal customer experience.
                 </p>
@@ -202,10 +216,8 @@ export default function CaseStudyPage() {
                     <h4 className="text-xl font-semibold text-green-400 mb-3">Intelligent Chatbots</h4>
                     <p className="text-white/80">
 
-
-
-
-
+                      AI-powered chatbots handle 70% of customer inquiries automatically with 
+                      AI-powered chatbots handle 70% of customer inquiries automatically with
 
                       natural language understanding and context awareness.
                     </p>
@@ -240,12 +252,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       to human agents when needed.
                     </p>
@@ -265,12 +279,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
@@ -333,12 +349,14 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
@@ -594,12 +612,14 @@ export default function CaseStudyPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
@@ -648,6 +668,7 @@ export default function CaseStudyPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -655,11 +676,17 @@ export default function CaseStudyPage(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             <section className="text-center">
               <div className="bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl p-8 border border-green-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Customer Service?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
 
+                  This case study demonstrates the real impact of customer service automation. 
+                  Let&apos,s discuss how we can help you achieve similar results.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Link 
 
                   This case study demonstrates the real impact of customer service automation.
 
@@ -668,18 +695,17 @@ export default function CaseStudyPage(req, res) {
                   <Link
 
 
+
+
                     href="/contact"
                     className="bg-gradient-to-r from-green-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-500 hover:to-cyan-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                  <Link
+                  <Link 
+                  <Link
 
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-green-400/50 transition-all duration-300"
@@ -705,7 +731,6 @@ export default function CaseStudyPage(req, res) {
                     <div>;
                       <h4 className="text-lg font-semibold text-white">System Design & Planning (Month 1)</h4>;
                       <p className="text-white/70">Customer service workflow analysis and system architecture design</p>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>;
                   </div>;
                   <div>;

@@ -1,5 +1,7 @@
+
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
+
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { cn } from &quot;@/lib/utils&quot;
 import { Button } from &quot;@/components/ui/button&quot;
@@ -26,6 +28,8 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+
+
 
 
 
@@ -83,8 +87,10 @@ function useCarousel(): CarouselContextProps {;
 
 
 
+
   }
 ;
+
   return context as CarouselContextProps;
 }
 const Carousel = React.forwardRef<
@@ -93,6 +99,7 @@ const Carousel = React.forwardRef<
 >(
   (
     {
+
 
 
       orientation = "horizontal",
@@ -109,6 +116,7 @@ const Carousel = React.forwardRef<
       {
         ...(opts |{})
         axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot;}
+
         ...(opts || {}),
         axis: orientation === "horizontal" ? "x" : "y"},
       plugins
@@ -137,6 +145,7 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
+
 
 
 
@@ -174,6 +183,7 @@ on_select (api);
 
     }, [api, on_select]);
 
+
     return (
       <CarouselContext.Provider;
         value={{
@@ -199,14 +209,15 @@ on_select (api);
           ref={ref}
           onKeyDownCapture={handleKeyDown}
 
-
-
+className={cn(&quot;relative&quot;, className)}
+className={cn(&quot;relative&quot; className)}
 
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
+
 
 
           {...props}
@@ -216,6 +227,7 @@ on_select (api);
       </CarouselContext.Provider>;
     );
   }
+
 
 )
 Carousel.displayName = &quot;Carousel&quot;
@@ -249,6 +261,7 @@ const CarouselContent = React.forward_ref<;
             : "-mt-4 flex-col snap-y snap-mandatory",
 
 
+
           className
         )}
         {...props}
@@ -257,6 +270,7 @@ const CarouselContent = React.forward_ref<;
   )
 })
 CarouselContent.displayName = &quot;CarouselContent&quot;
+
 CarouselContent.displayName = "CarouselContent"
 
 const CarouselItem = React.forwardRef<
@@ -282,7 +296,7 @@ const CarouselItem = React.forward_ref<;
 >(({ class_name, ...props }, ref) => {
   const { orientation } = use_carousel ();
   return (
-    <div
+    <div;
       ref={ref}
 
       role="group"
@@ -294,6 +308,7 @@ const CarouselItem = React.forward_ref<;
         orientation === "horizontal" ? "pl-4" : "pt-4",
 
 
+
         className
       )}
       {...props}
@@ -301,6 +316,7 @@ const CarouselItem = React.forward_ref<;
   )
 })
 CarouselItem.displayName = &quot;CarouselItem&quot;
+
 CarouselItem.displayName = "CarouselItem"
 
 const CarouselPrevious = React.forwardRef<
@@ -326,7 +342,7 @@ const CarouselPrevious = React.forward_ref<;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_prev, canScrollPrev } = use_carousel ();
   return (
-    <Button
+    <Button;
       ref={ref}
       variant={variant}
       size={size}
@@ -340,6 +356,7 @@ const CarouselPrevious = React.forward_ref<;
         orientation === "horizontal"
           ? "left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2"
           : "top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90",
+
 
 
         className
@@ -372,6 +389,7 @@ CarouselPrevious.displayName = "CarouselPrevious"
 const CarouselNext = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<typeof Button>
+
 >(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
 
@@ -389,7 +407,7 @@ const CarouselNext = React.forward_ref<;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_next, canScrollNext } = use_carousel ();
   return (
-    <Button
+    <Button;
       ref={ref}
       variant={variant}
       size={size}
@@ -403,6 +421,7 @@ const CarouselNext = React.forward_ref<;
         orientation === "horizontal"
           ? "right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2"
           : "bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+
 
 
         className
@@ -437,6 +456,7 @@ CarouselNext.display_name = &quot;CarouselNext & quot;
     </Button>
   )
 })
+
 CarouselNext.displayName = "CarouselNext"
 
 export {
@@ -448,4 +468,6 @@ export {
   CarouselNext};
   CarouselPrevious,
   CarouselNext}
+
 ;
+

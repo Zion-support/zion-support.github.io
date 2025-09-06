@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -14,6 +15,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {toast} from "sonner";
 export function WebhookManager() {;
   const { ;
+
     webhooks;
 
 
@@ -168,6 +170,12 @@ export function WebhookManager() {
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
 
+              <Input
+                id="webhook-url"
+                placeholder="https://example.com/webhook"
+              <Input 
+                id="webhook-url" 
+                placeholder="https://example.com/webhook"
 
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -277,6 +285,8 @@ export function WebhookManager() {;
                 placeholder="https://example.com/webhook";
 
 
+
+
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
@@ -293,20 +303,20 @@ export function WebhookManager() {;
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
               ))}
-            </div>
-            <div className="flex space-x-2">
+            </div>;
+            <div className="flex space-x-2">;
               <Select
-                value={newWebhook.selectedEvent}
+                value={newWebhook && newWebhook.selectedEvent}
                 onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
-              >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select event" />
-                </SelectTrigger>
-                <SelectContent>
-                  {eventOptions.map(option => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label}
-                    </SelectItem>
+              >;
+                <SelectTrigger className="w-full">;
+                  <SelectValue placeholder="Select event" />;
+                </SelectTrigger>;
+                <SelectContent>;
+                  {eventOptions && eventOptions.map(option => (;
+                    <SelectItem key={option && option.value} value={option && option.value}>;
+                      {option && option.label}
+                    </SelectItem>;
                   ))}
                 </SelectContent>
               </Select>
@@ -341,20 +351,17 @@ export function WebhookManager() {;
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
         {loading ? (
-          <p>Loading webhooks...</p>
-        ) : error ? (
-          <p className="text-red-500">{error}</p>
-        ) : webhooks.length === 0 ? (
-          <p>No webhooks configured yet. Create your first webhook above.</p>
-        ) : (
-          <div className="space-y-4">
-            {webhooks.map(webhook => (
-              <Card key={webhook.id}>
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-lg">{webhook.name}</CardTitle>
-                      <CardDescription className="truncate max-w-md">
+          <p > Loading webhooks...</p>) : error ? (
+          <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
+          <p > No webhooks configured yet. Create your first webhook above.</p>) : (
+          <div className="space - y-4">;
+            {webhooks.map (webhook => (
+              <Card key={webhook.id}>;
+                <CardHeader className="pb - 2">;
+                  <div className="flex justify - between items - start">;
+                    <div>;
+                      <CardTitle className="text - lg">{webhook.name}</CardTitle>;
+                      <CardDescription className="truncate max - w-md">;
                         {webhook.url}
                       </CardDescription>
                     </div>
@@ -398,10 +405,10 @@ export function WebhookManager() {;
                       {webhook.last_triggered_at
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
                         : 'Never triggered'}
-                    </div>
-                  </div>
-                </CardContent>
-                <CardFooter className="flex justify-between pt-2">
+                    </div>;
+                  </div>;
+                </CardContent>;
+                <CardFooter className="flex justify-between pt-2">;
                   <Button
                     variant="outline"
                     size="sm"
@@ -464,11 +471,61 @@ export function WebhookManager() {;
   )
 }
 
+
+        {testResult && (;
+          <Card className="mt-4 border-blue-200">;
+            <CardHeader>;
+              <CardTitle className="text-lg">Webhook Test Result</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space-y-2">;
+                <div className="flex justify-between">;
+                  <span className="font-medium">Status:</span>;
+                  <span className={testResult && testResult.status >= 200 && testResult && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>;
+                    {testResult && testResult.status} {testResult && testResult.statusText}
+                  </span>;
+                </div>;
+                <div>;
+                  <span className="font-medium">Response:</span>;
+                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
+                    {testResult && testResult.responseBody || '<empty>'}
+                      {webhook.event_types.map (event => (
+                        <SelectItem key={event} value={event}>;
+                          Test {event_options.find (e => e.value === event)?.label || event}
+                        </SelectItem>))}
+                    </SelectContent>;
+                  </Select>;
+                </CardFooter>;
+              </Card>))}
+          </div>)}
+        {test_result && (
+          <Card className="mt - 4 border - blue - 200">;
+            <CardHeader>;
+              <CardTitle className="text - lg">Webhook Test Result</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space - y-2">;
+                <div className="flex justify - between">;
+                  <span className="font - medium">Status:</span>;
+                  <span className={test_result.status >= 200 && test_result.status < 300 ? 'text - green - 600' : 'text - red - 600'}>;
+                    {test_result.status} {test_result.status_text}
+                  </span>;
+                </div>;
+                <div>;
+                  <span className="font - medium">Response:</span>;
+                  <pre className="mt - 1 p - 2 bg - gray - 100 rounded text - sm overflow - x-auto">;
+                    {test_result.response_body || '<empty>'}
+
                   </pre>;
                 </div>;
               </div>;
             </CardContent>;
-
+          </Card>;
+        )}
+      </div>;
+    </div>;
+  );
+}
           </Card>)}
       </div>;
     </div>);

@@ -3,6 +3,7 @@
 
 
 
+
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -57,10 +58,12 @@ import {
 
 
 
+
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
+
 
 
 
@@ -72,6 +75,7 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 const Solutions: NextPage = () => {
   const industry_solutions = [;
@@ -263,16 +267,18 @@ const Solutions: NextPage = () => {
       popular: false,
       icon: <BookOpenCheck className="w-8 h-8" />
 
-
-
-
-
+    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   ],
   const solutionCapabilities = [
     {
-      title: 'Industry Expertise',
-      description: 'Deep domain knowledge across sectors',
+      title: 'Industry Expertise'
+      description: 'Deep domain knowledge across sectors'
       icon: <Briefcase className="w-6 h-6" />
     },
     {
@@ -296,9 +302,31 @@ const Solutions: NextPage = () => {
       icon: <Shield className="w-6 h-6" />
     },
     {
-      title: 'Analytics & Insights',
-      description: 'Data-driven decision making',
+      title: 'Custom Development'
+      description: 'Tailored solutions for unique needs'
+      icon: <Code className="w-6 h-6" />
+    }
+    {
+      title: 'Integration Services'
+      description: 'Seamless system integration'
+      icon: <Network className="w-6 h-6" />
+    }
+    {
+      title: 'AI & Automation'
+      description: 'Intelligent automation solutions'
+      icon: <Brain className="w-6 h-6" />
+    }
+    {
+      title: 'Cloud & Security'
+      description: 'Secure cloud infrastructure'
+      icon: <Shield className="w-6 h-6" />
+    }
+    {
+      title: 'Analytics & Insights'
+      description: 'Data-driven decision making'
       icon: <BarChart3 className="w-6 h-6" />
+
+
 
 
       } catch (error) {
@@ -308,6 +336,8 @@ const Solutions: NextPage = () => {
 }
 
 
+
+
   ],
   const caseStudies = [
     {
@@ -315,10 +345,10 @@ const Solutions: NextPage = () => {
       industry: "Healthcare",
       description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
       results: [
-        "30% reduction in administrative overhead",
-        "Improved patient satisfaction scores",
+        "30% reduction in administrative overhead"
+        "Improved patient satisfaction scores"
         "Enhanced data security and compliance"
-      ],
+      ]
       technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
     },
     {
@@ -337,11 +367,24 @@ const Solutions: NextPage = () => {
       industry: "Manufacturing",
       description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
       results: [
-        "25% reduction in unplanned downtime",
-        "15% improvement in production efficiency",
+        "45% increase in conversion rates"
+        "60% improvement in page load times"
+        "Enhanced mobile user experience"
+      ]
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
+    }
+    {
+      title: "Manufacturing IoT Integration"
+      industry: "Manufacturing"
+      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency."
+      results: [
+        "25% reduction in unplanned downtime"
+        "15% improvement in production efficiency"
         "Predictive maintenance cost savings"
-      ],
+      ]
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+
+
 
 
       } catch (error) {
@@ -349,6 +392,8 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
   ],
 
@@ -371,7 +416,9 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -393,7 +440,6 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
                 Industry Solutions
@@ -403,7 +449,18 @@ const Solutions: NextPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-
+                <a
+                  href="/contact"
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                </a>
+                <a 
+                  href="/contact" 
+                <a
+                  href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
@@ -420,11 +477,13 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -476,12 +535,14 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -530,7 +591,9 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -549,12 +612,14 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
@@ -615,12 +680,14 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -683,7 +750,6 @@ const Solutions: NextPage = () => {
 }
 
                 >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {solution.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -711,7 +777,9 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -730,12 +798,14 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
@@ -745,9 +815,12 @@ const Solutions: NextPage = () => {
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
 
-
-
-
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <a 
+                    href="/contact" 
 
                         {feature  } catch (error) {
     console.error("Error:", error);
@@ -770,12 +843,14 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
@@ -819,7 +894,9 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -846,7 +923,6 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                 Ready for Industry Transformation?
@@ -856,7 +932,18 @@ const Solutions: NextPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-
+                <a
+                  href="/contact"
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Transformation
+                </a>
+                <a 
+                  href="/contact" 
+                <a
+                  href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Transformation
@@ -873,11 +960,13 @@ const Solutions: NextPage = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -895,6 +984,11 @@ const Solutions: NextPage = () => {
 export default Solutions;
 
 
+},
+
+export default Solutions,;
+;
+export default Solutions,
 
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
@@ -926,6 +1020,7 @@ export default Solutions;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -937,5 +1032,6 @@ export default Solutions,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -34,7 +34,6 @@ describe('SecurityDashboard', () => {
   });
 });
 
-=======
     expect(screen.getByTestId('securitydashboard.dynamic'
   test('displays correct content'
   test('handles user interactions'

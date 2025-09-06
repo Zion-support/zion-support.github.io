@@ -24,22 +24,42 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState } from 'react';
 
+import { useRouter  } from 'next/router';
+import Head from 'next/head',
+import MilestoneForm from '../../../components/monetization/MilestoneForm',
+import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
-
-
+import { Milestone } from '../../../utils/types/milestones';
+import {
+  createMilestone
+  fetchMilestones
+  updateMilestoneStatus;
+import {
+  createMilestone,
+  fetchMilestones,;
+  updateMilestoneStatus,;
 
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
+
   if (typeof window === 'undefined') return 'client';
-  const url = new URL(window.location.href);
-  const r = url.searchParams.get('role');
-  if (r === 'talent' |r === 'admin') return r;
+
+  const url = new URL(window && window.location.href);
+  const r = url && url.searchParams.get('role');
+  if (r === 'talent' || r === 'admin') return r;
+
   return 'client';
 export default function ProjectMilestonesPage() {;
   const router = useRouter();
-  const { 'project-id': projectId } = router.query as any;
-  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
-    getRoleFromEnvOrQuery()
+
+  const { 'project-id': projectId } = router && router.query as any;
+
+  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>;
+    getRoleFromEnvOrQuery();
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -61,6 +81,12 @@ export default function ProjectMilestonesPage() {;
   }, [role]);
   useEffect(() => {
     if (!projectId) return;
+
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+import { Milestone } from '../../../utils/types/milestones';
 
 import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
@@ -98,6 +124,7 @@ export default function ProjectMilestonesPage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -111,6 +138,7 @@ import { Milestone } from '../../../utils/types/milestones';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     let cancelled = false;
@@ -131,17 +159,90 @@ import { Milestone } from '../../../utils/types/milestones';
 
         if (!cancelled) setLoading(false);
 
+import {use_router} from 'next / router';
+import Head from 'next / head';
+import MilestoneForm from '../../../components / monetization / MilestoneForm';
+import MilestoneCard from '../../../components / monetization / MilestoneCard';
+import { Milestone } from '../../../utils / types / milestones';
+import {
+  create_milestone,
+  fetch_milestones,
+  updateMilestoneStatus,
+} from '../../../utils / api / milestones - client';
+function getRoleFromEnvOrQuery (): 'client' | 'talent' | 'admin' {
+  // Check condition
+if (return 'client') {
+  $2
+}
+  const url = new URL (window.location.href);
+  const r = url.search_params.get ('role');
+  // Check condition
+if (return r) {
+  $2
+}
+  return 'client';
+export default /**
+ * ProjectMilestonesPage - Function description
+ */
+function ProjectMilestonesPage() {
+  const router = use_router ();
+  const { 'project - id': project_id } = router.query as any;
+;
+  const [role, set_role] = useState<'client' | 'talent' | 'admin'>(() =>;
+    getRoleFromEnvOrQuery ());  const [milestones, set_milestones] = useState < Milestone[]>([]);
+  const [loading, set_loading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  useEffect (() => {
+    set_role (getRoleFromEnvOrQuery ());  }, []);
+;
+  // Demo cookie - based auth to hit API successfully;
+  useEffect (() => {
+    // Check condition
+if (return) {
+  $2
+}
+    try {
+      const user_id =;
+        role === 'talent';
+          ? 'talent - 1';
+          : role === 'client';
+            ? 'client - 1';
+            : 'client - 1';
+      document.cookie = `x - user - id=${user_id} path=/`;
+      document.cookie = `x - user - role=${role} path=/`;    } catch {}
+  }, [role]);
+;
+  useEffect (() => {
+    // Check condition
+if (return) {
+  $2
+}
+    let cancelled = false;
+    (async () => {
+      set_loading (true);
+      set_error (null);
+      try {
+        const data = await fetch_milestones (project_id as string);
+        if (set_milestones (data.milestones || [])) {
+  $2
+}
+      } catch (e: any) {
+        if (set_error (e?.message || 'Failed to load milestones')) {
+  $2
+}
+      } finally {
+        if (set_loading (false)) {
+  $2
+}
+
       }
     })();
     return () => {;
       cancelled = true;
 
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+    }
+    };
 
   }, [projectId]);
 
@@ -156,12 +257,8 @@ import { Milestone } from '../../../utils/types/milestones';
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
 
-
-
-
-  }, [projectId]);
-
-
+    setMilestones(prev => [res.milestone, ...prev]);  }
+    setMilestones(prev => [res.milestone, ...prev]);  };
 
 
       } catch (error) {
@@ -181,6 +278,7 @@ import { Milestone } from '../../../utils/types/milestones';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -189,6 +287,7 @@ import { Milestone } from '../../../utils/types/milestones';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
@@ -242,6 +341,7 @@ import { Milestone } from '../../../utils/types/milestones';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -249,6 +349,7 @@ import { Milestone } from '../../../utils/types/milestones';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         </div>
@@ -259,9 +360,12 @@ import { Milestone } from '../../../utils/types/milestones';
               <h2 className="text-lg font-semibold">Add Milestone</h2>
               <span className="text-xs text-gray-500">Role: {role}</span>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <MilestoneForm onSubmit={handleCreate} />
           </div>
+
+        )}
+        {loading && <div>Loading milestones...</div>}
+        {error && <div className='text-red-600'>{error}</div>}
 
 
         )  } catch (error) {
@@ -281,6 +385,29 @@ import { Milestone } from '../../../utils/types/milestones';
   }
 }
 
+
+
+;
+  const handle_create = async (payload: {
+    title: string;
+    description?: string;
+    due_date: string;
+    amount_usd: number;
+  }) => {
+    // Check condition
+if (return) {
+  $2
+}
+    const res = await create_milestone (project_id as string, payload);
+    set_milestones (prev => [res.milestone, ...prev]);  }
+;
+  const handle_action = async (
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid',
+    milestone_id: string) => {
+    // Check condition
+if (return, ) {
+  $2
+}
 
         {!loading && !error && (
           <div className="space-y-4">
@@ -306,6 +433,9 @@ import { Milestone } from '../../../utils/types/milestones';
     </div>
 );
 
+
+}
+}
 
               <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
             )  } catch (error) {
@@ -335,8 +465,13 @@ import { Milestone } from '../../../utils/types/milestones';
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+          </div>)}
+        <div className='mt - 12 text - xs text - gray - 500'>;
+          Integration hooks ready: on Approved &rarr; trigger payout intent; on;
+          Paid &rarr; capture via Stripe / PayPal / Escrow.;
+        </div>;
+      </div>;
 
 
     </div>;
@@ -352,6 +487,8 @@ import { Milestone } from '../../../utils/types/milestones';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

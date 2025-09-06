@@ -2,6 +2,7 @@
 
 
 
+
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -44,6 +45,7 @@ export async function getServerSideProps() {
 
 
 }</div> </div>) import fs from 'fs';
+
 import path from 'path';
 export type Trend = {;
   id: string,;
@@ -54,9 +56,21 @@ export type Trend = {;
   tags: string[];
 };
 
-
-
-
+export async function getServerSideProps() {;
+ </div> </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string
+  date: string
+  title: string
+  highlights: string[]
+  summary: string
+  tags: string[]
+}
+export async function getServerSideProps() {
+</div> </div>) ) 
+ </div> </div>) ) 
 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -72,18 +86,23 @@ export type Trend = {
 export async function getServerSideProps() {;
 
 
+
+
   const file = path.join(process.cwd(), 'dataai-trends.json');
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
     items = JSON.parse(raw)
 
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
 
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
+
 
 
 
@@ -113,6 +132,7 @@ export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
 
 
 
+
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
     <div className="space-y-6">
@@ -135,6 +155,14 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
+
+    </div>
+    </div>;
+);
+}
+  );
+}
+
 
 
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
@@ -165,7 +193,8 @@ function AiTrendsPage() {
           </div>))}
       </div>;
     </div>);
-=======
+
+
 
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
@@ -186,18 +215,19 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
             <div className="flex flex-wrap gap-2 pt-1">
               {t.tags.map(tag => (<span key={tag} className="text-xs px-2 py-0.5 rounded bg-gray-100">{tag}</span>))}
 
+
+
             </div>
           </div>
         ))}
       </div>
 
-
-
-=======
 );
 }
 
   );
 }
 
+
+=======
 

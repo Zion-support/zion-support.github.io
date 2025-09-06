@@ -75,9 +75,11 @@ interface OnboardingWizardProps {;
 
 
 
+
 export function OnboardingWizard(): any ({;
   type,;
   onComplete,;
+
 
 
 
@@ -96,8 +98,10 @@ export function OnboardingWizard(): any ({;
 
 
 
+
   const router = useRouter(); // Changed from useNavigate to useRouter
   const { user } = useAuth()
+
 
 
 
@@ -109,9 +113,8 @@ export function OnboardingWizard(): any ({;
 
 
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
+  const router = useRouter(); // Changed from useNavigate to useRouter
+  const { user } = useAuth()
 
 
 import { useState, useEffect } from 'react',;
@@ -148,6 +151,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
 
 
+
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -167,6 +171,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "View Matches",
         url: "/talent"
+
       },
       skipText: "Skip for now"
     },
@@ -176,69 +181,157 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
       action: {
 
+        text: 'Browse Talent',
+        url: '/talent',
+      },
+    },
+  ]
+        text: "Browse Talent",
+        url: "/talent"
+      }
+    }
+  ],
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
+        text: "Browse Talent",
+        url: "/talent"
+      }
+    }
+  ],
 
   const talentSteps: WizardStep[] = [
     {
-      title: "Complete your profile",
-      description: "Add your skills, experience, and preferences",
-      icon: <FileText className="h-6 w-6 text-zion-purple" />,
+      title: 'Complete your profile'
+      description: 'Add your skills, experience, and preferences'
+      icon: <FileText className='h-6 w-6 text-zion-purple' />
       action: {
-        text: "Edit Profile",
-        url: "/profile"
-      },
+        text: 'Edit Profile'
+        url: '/profile'
+      }
       skipText: "I'll do this later"
-    },
+    }
     {
-      title: "Define skills & availability",
-      description: "Let clients know when you're available and what you can do",
-      icon: <Calendar className="h-6 w-6 text-zion-cyan" />,
+      title: 'Define skills & availability'
+      description: "Let clients know when you're available and what you can do"
+      icon: <Calendar className='h-6 w-6 text-zion-cyan' />
       action: {
-        text: "Set Availability",
-        url: "/profile?tab=skills"
-      },
-      skipText: "Skip for now"
-    },
+        text: 'Set Availability'
+        url: '/profile?tab=skills'
+      }
+      skipText: 'Skip for now'
+    }
     {
-      title: "Preview your profile",
-      description: "See how clients will view your profile",
-      icon: <Eye className="h-6 w-6 text-zion-purple" />,
+      title: 'Preview your profile'
+      description: 'See how clients will view your profile'
+      icon: <Eye className='h-6 w-6 text-zion-purple' />
       action: {
-        text: "Preview Profile",
+        text: 'Preview Profile'
         url: `/talent/${user?.id}`
-      },
-      skipText: "Skip for now"
-    },
+      }
+      skipText: 'Skip for now'
+    }
     {
-      title: "Enable AI matchmaking",
-      description: "Let our AI find the perfect opportunities for you",
-      icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
+      title: 'Enable AI matchmaking'
+      description: 'Let our AI find the perfect opportunities for you'
+      icon: <Rocket className='h-6 w-6 text-zion-cyan' />
       action: {
-
-
-
+        text: 'Enable Matchmaking',
+        url: '/talent-dashboard',
+      },
+    },
+  ]
+  const steps = type === 'client' ? clientSteps : talentSteps
+  // Navigate to the specified URL
+  const handleAction = () => {
+    const currentStepData = steps[currentStep]
+    if (!currentStepData) return;
+    if (currentStep < steps.length - 1) {
+      router.push(currentStepData.action.url); // Changed to router.push
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      router.push(currentStepData.action.url); // Changed to router.push
+      onComplete()
+    }
+  }
+  // Skip the current step
+  const handleSkip = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      onSkip()
+    }
+  }
+    >
+        text: "Enable Matchmaking",
+        url: "/talent-dashboard"
+      }
+    }
+  ],;
+  const steps = type === 'client' ? clientSteps : talentSteps,;
+  // Navigate to the specified URL;
+  const handleAction = () => {;
+    const currentStepData = steps[currentStep],;
+    if (!currentStepData) return,;
+    if (currentStep < steps.length - 1) {;
+      router.push(currentStepData.action.url), // Changed to router.push;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      router.push(currentStepData.action.url), // Changed to router.push;
+      onComplete();
+    }
+  },;
+  // Skip the current step;
+  const handleSkip = () => {;
+    if (currentStep < steps.length - 1) {;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      onSkip();
+    }
+  },
+  
+  return (
+    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
 
       <CardHeader>
-        <CardTitle className="text-center text-white">
-          {type === 'client' ? 
-            "Ready to find top IT talent?" : 
-            "Let's build your professional profile"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex items-center mb-6">
+        <CardTitle className='text-center text-white'>
+          {type === 'client'
+            ? 'Ready to find top IT talent?'
+            : "Let's build your professional profile"}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='flex items-center mb-6'>;
           {/* Step dots */}
           <div className='flex items-center justify-center flex-1'>
           <div className="flex items-center justify-center flex-1">
 
+                )}              />
+            ))}
+          </div>
+        </div>
+        <div className='flex flex-col items-center text-center p-4'>
+          <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>
+                  "h-2 w-2 rounded-full mx-1",
+                  index === currentStep
+                    ? "bg-zion-purple scale-125"
+                    : index < currentStep
+                    ? "bg-zion-cyan"
+                    : "bg-zion-blue-light"
+                )}
+              />;
+            ))}
+          </div>
+        </div>
 
-
-
-
+        <div className="flex flex-col items-center text-center p-4">
+          <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
+      </CardFooter>
+    </Card>
+  )
+}
 
 ;
 }
@@ -420,5 +513,7 @@ if ( {) {
     </Card>);
 }
 ;
+
+
 
 

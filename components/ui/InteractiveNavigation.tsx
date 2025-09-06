@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 
 
 
+
 ;
 
 
@@ -30,6 +31,7 @@ interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
+
 
             </Link>;
             {/* Submenu */}
@@ -62,15 +64,17 @@ interface NavigationItem {;
     </nav>;
   );
 
-
-
-
+}
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 
 };
 
 export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
+
 
 
 
@@ -91,6 +95,7 @@ const InteractiveNavigation: React.FC: = () => {";
 
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+
 
 
 
@@ -173,6 +178,7 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text - gray - 600 hover:text - gray - 900: transition - colors">About</Link>", ";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 
+
 export default Component}
 
 
@@ -181,6 +187,8 @@ export default Component}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

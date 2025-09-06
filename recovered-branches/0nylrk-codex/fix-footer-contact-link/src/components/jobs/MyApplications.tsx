@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -18,6 +19,7 @@ export function MyApplications() {;
 
 
 
+
 import { Link } from "react-router-dom",
 import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {
@@ -25,7 +27,6 @@ export function MyApplications() {
   
 
   const getStatusBadge = (status: ApplicationStatus) => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>,
       case "viewed":
@@ -97,6 +98,9 @@ export function MyApplications() {
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 
+                  {application.cover_letter}
+                </p>
+              )}
 
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -167,8 +171,8 @@ export function MyApplications() {;
                 {application.job?.title || "Unknown Job"}
               </CardTitle>
               {getStatusBadge(application.status)}
-            </div>;
-            <p className="text-sm text-muted-foreground">;
+            </div>
+            <p className="text-sm text-muted-foreground">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </p>;
           </CardHeader>;
@@ -182,7 +186,9 @@ export function MyApplications() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   {application.cover_letter}
@@ -201,6 +207,7 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+
 
 
 
@@ -247,6 +254,7 @@ export function MyApplications() {;
 
 
 
+
                   size="sm"
                   className="text-xs"
                   asChild>;
@@ -259,6 +267,13 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
+
+    </div>
+  )
+}
+    </div>;
+  );
+}
 
         return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
       case "interview":;

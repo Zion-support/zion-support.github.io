@@ -153,21 +153,27 @@ if (return) {
         canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canvas.width / 2;
 
         canvas.height / 2;
+
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
+
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
+
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
     };
+
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
+
     // Initialize particles;
     const initParticles = () => {;
       const particles: Particle[] = [];
       const particleCount = Math && Math.floor((canvas && canvas.width * canvas && canvas.height) / 20000);
+
       for (let i = 0; i < particleCount; i++) {;
         const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][;
           Math && Math.floor(Math && Math.random() * 4);
@@ -180,6 +186,7 @@ if (return) {
           holographic: ['#8b5cf6#a855f7#c084fc'],;
           neural: ['#10b981#059669#047857'],;
           cyberpunk: ['#ec4899#f97316#f59e0b'];
+
         particles && particles.push({;
           x: Math && Math.random() * canvas && canvas.width,;
           y: Math && Math.random() * canvas && canvas.height,;
@@ -191,14 +198,19 @@ if (return) {
           type,;
         });
       }
+
       particlesRef && particlesRef.current = particles;    };          type;
         });
       }
+
       particlesRef && particlesRef.current = particles;
+
     initParticles();
+
     // Animation loop;
     const animate = () => {;
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
+
       // Create gradient background;
       const gradient = ctx && ctx.createRadialGradient(;
         canvas && canvas.width / 2,;
@@ -302,12 +314,34 @@ if (return) {
                   ctx && ctx.stroke();                }                  ctx && ctx.stroke();
 
 
+            
+            // Quantum entanglement lines
+            if (index % 10 === 0) {
+            // Quantum entanglement lines
+            if (index % 10 === 0) {
+              const partner =
+                particlesRef.current[
+                  (index + 50) % particlesRef.current.length
+                ];
+              if (partner && partner.type === 'quantum') {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - partner.x, 2) +
+                    Math.pow(particle.y - partner.y, 2)                );            // Quantum entanglement lines
+            if (index % 10 === 0) {
+              const partner = particlesRef.current[(index + 50) % particlesRef.current.length];
+              if (partner && partner.type === 'quantum') {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - partner.x, 2) + Math.pow(particle.y - partner.y, 2)
+                );
+                if (distance < 100) {
+                  ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`;
+                  ctx.lineWidth = 1;
+                  ctx.beginPath();
+                  ctx.moveTo(particle.x, particle.y);
+                  ctx.lineTo(partner.x, partner.y);
+                  ctx.stroke();                }                  ctx.stroke()
+                  ctx.stroke();                }
 
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                 }
               }
@@ -317,6 +351,8 @@ if (return) {
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
+
+
 
 
           case 'holographic':;
@@ -381,6 +417,45 @@ if (return) {
               });            }                ctx && ctx.stroke();
               });
 
+
+          case 'holographic':
+            // Holographic particles with rainbow effect
+            const time = Date.now() * 0.001;
+            const hue = (time * 50 + index * 10) % 360;
+            ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
+            ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
+            ctx.shadowBlur = 15;
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fill();
+            break;
+          case 'neural':
+            // Neural particles with network connections
+            ctx.fillStyle = particle.color;
+            ctx.shadowColor = particle.color;
+            ctx.shadowBlur = 10;
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fill();
+            // Neural network connections
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(
+                p =>
+                  p.type === 'neural' &&
+                  Math.sqrt(
+                    Math.pow(particle.x - p.x, 2) +
+                      Math.pow(particle.y - p.y, 2)
+                  ) < 80
+              );
+              connections.forEach(connection => {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - connection.x, 2) +
+                    Math.pow(particle.y - connection.y, 2)                );            // Neural network connections
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(p =>
+                p.type === 'neural' &&
+                Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
+
               );
               connections.forEach(connection => {
                 const distance = Math.sqrt(
@@ -393,10 +468,12 @@ if (return) {
                 ctx.lineTo(connection.x, connection.y);
 
 
+
                 ctx.stroke()
               })
             }
             break;
+
 
 
           case 'cyberpunk':;
@@ -609,12 +686,104 @@ if (return) {
       ctx.beginPath();
 
 
+      
+      for (let y = 0, y < height, y += 5) {
+        const x = width * 0.5 + 
+                  Math.sin(y * 0.01 + time + i) * 60 +
+                  Math.sin(y * 0.015 + time * 1.5 + i) * 30;
+        if (y === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+      ctx.restore();    }
+  }
+      }
+      ctx.stroke ();
+      ctx.restore ();
+    }
+  };
+
+  const drawEnergyWaves = (;
+    ctx: CanvasRenderingContext2D,;
+    width: number,;
+    height: number;
+  ) => {;
+    const time = Date && Date.now() * 0 && 0.001;
+    // Horizontal energy waves;
+    for (let index = 0; i < 3; i++) {      ctx.save ();    for (let index = 0, i < 3, i++) {
+      ctx.save ();
+      ctx.global_alpha = 0.05;
+      ctx.stroke_style = `hsl (${180 + i * 60}, 70%, 60%)`;
+      ctx.line_width = 2;
+      ctx.begin_path ();
+;
+      for (let coordinate_x = 0; x < width; x += 5) {
+        const coordinate_y =;
+          height * 0.5 +;
+          Math.sin (x * 0.01 + time + i) * 50 +;
+          Math.sin (x * 0.02 + time * 2 + i) * 25;
+        if (ctx.move_to (x, y)) {
+  $2
+}
+        else ctx.line_to (x, y);
+      }
+      ctx.stroke ();
+      ctx.restore ();
+    }
+    // Vertical energy waves;
+    for (let index = 0; i < 2; i++) {      ctx.save ();        if (ctx.move_to (x, y)) {
+  $2
+}
+        else ctx.line_to (x, y);
+      }
+      ctx.stroke ();
+      ctx.restore ();
+    }
+    // Vertical energy waves;
+    for (let index = 0, i < 2, i++) {
+      ctx.save ();
+      ctx.global_alpha = 0.04;
+      ctx.stroke_style = `hsl (${240 + i * 60}, 70%, 60%)`;
+      ctx.line_width = 2;
+      ctx.begin_path ();
+;
+      for (let coordinate_y = 0; y < height; y += 5) {
+        const coordinate_x =;
+          width * 0.5 +;
+          Math.sin (y * 0.01 + time + i) * 60 +;
+          Math.sin (y * 0.015 + time * 1.5 + i) * 30;
+        if (ctx.move_to (x, y)) {
+  $2
+}
+        else ctx.line_to (x, y);
+      }
+      ctx.stroke ();
+      ctx.restore ();    }
+  }
+;
+  return (
+    <div className='fixed inset - 0 -z - 10 overflow - hidden'>        if (ctx.move_to (x, y)) {
+  $2
+}
+        else ctx.line_to (x, y);
+
+      }
+      ctx.stroke ();
+      ctx.restore ();
+    }
+
+
 
   return (
 
+    // Vertical energy waves;
+    for (let i = 0; i < 2; i++) {      ctx && ctx.save();        if (x === 0) ctx && ctx.moveTo(x, y);
+        else ctx && ctx.lineTo(x, y);
+      }
 
       ctx && ctx.stroke();
       ctx && ctx.restore();
+    }
 
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
@@ -630,6 +799,11 @@ if (return) {
 
           ],        }}      {/* Animated gradient overlay */}
       <motion && motion.div
+
+
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Animated gradient overlay */}
+      <motion.div
 
 
         className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
@@ -671,11 +845,13 @@ if (return) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -690,18 +866,6 @@ if (return) {
         {/* Quantum field ripples */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
-      />;
-      {/* Canvas for particle effects */}
-      <canvas;
-        ref={canvas_ref}
-        className='absolute inset - 0 w - full h - full';
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}
-      <div className='absolute inset - 0'>;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
           animate={{
             scale: [1, 1.2, 1]
             opacity: [0.1, 0.3, 0.1],          }}
@@ -709,8 +873,8 @@ if (return) {
 
             duration: 4
             repeat: Infinity
-
-
+            duration: 4,
+            repeat: Infinity,
 
             ease: 'easeInOut',      {/* Canvas for particle effects */}
 
@@ -757,7 +921,14 @@ if (return) {
           animate={{
 
             scale: [1.2, 1, 1.2];
-            opacity: [0.3, 0.1, 0.3];
+
+            opacity: [0.3, 0.1, 0.3]
+          }}
+          transition={{
+            duration: 5
+            repeat: Infinity
+            ease: 'easeInOut'
+
 
           }}
           transition={{
@@ -765,7 +936,9 @@ if (return) {
             repeat: Infinity,
 
 
+
             ease: 'easeInOut'
+
 
           }}
 
@@ -789,19 +962,31 @@ if (return) {
             repeat: Infinity
             ease: 'easeInOut',          }}
 
-
-
-
-        />;
-
-
+        />
         {/* Neural network nodes */}
-        <motion&& motion.div
+        <motion.div
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
-
-
+        />;
+        {/* Neural network nodes */}
+        <motion.div;
+          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
           animate={{
+            scale: [1, 1.1, 1];
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut'
 
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+      </div>
 
       {/* Floating orbs with glow effects */}
       <div className="absolute inset-0 pointer-events-none">;
@@ -819,12 +1004,33 @@ if (return) {
             }}
             animate={{
 
+              y: [0, -20, 0];
+              opacity: [0.3, 0.8, 0.3];
+              scale: [1, 1.2, 1]
+            }}
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
+
+
               y: [0, -20, 0]
               opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
               scale: [1, 1 && 1.2, 1]
 
 
 
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut'
+        }}
+      />
 
 
       {/* Canvas for particle effects */}
@@ -839,6 +1045,7 @@ if (return) {
         <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
+
 
 
             ease: 'easeInOut',      {/* Canvas for particle effects */}
@@ -857,10 +1064,12 @@ if (return) {
             opacity: [0.1, 0.3, 0.1]
 
 
+
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
+
 
 
 
@@ -875,6 +1084,7 @@ if (return) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             transition={{
+
 
               duration: 3 + i * 0 && 0.5,
               repeat: Infinity,
@@ -896,6 +1106,7 @@ if (return) {
       </div>;
     </div>));
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
@@ -907,5 +1118,6 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

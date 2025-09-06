@@ -1,5 +1,25 @@
 
 
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import Marketplace from "@/pages/Marketplace";
+import Categories from "@/pages/Categories";
+import CategoryDetail from "@/pages/CategoryDetail";
+import Featured from "@/pages/Featured";
+import ListingDetail from "@/pages/ListingDetail";
+import EquipmentPage from "@/pages/EquipmentPage";
+import EquipmentDetail from "@/pages/EquipmentDetail";
+import PostJob from "@/pages/PostJob";
+import JobDetails from "@/pages/JobDetails";
+import PublishProduct from "@/pages/PublishProduct";
+import ServicesPage from "@/pages/ServicesPage";
+import RequestQuote from "@/pages/RequestQuote";
+import AIMatcher from "@/pages/AIMatcher";
+import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator";
+import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage";
+import SearchPage from "@/pages/SearchPage";
+import ProjectRoom from "@/pages/ProjectRoom";
+import VideoCall from "@/pages/VideoCall";
 
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -21,9 +41,36 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
 import SearchPage from "@/pages/SearchPage",
 
 
+import ProjectRoom from "@/pages/ProjectRoom",
+import VideoCall from "@/pages/VideoCall",
+
 const MarketplaceRoutes = () => {
+},
+
+export default MarketplaceRoutes,
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import Marketplace from "@/pages/Marketplace",;
+import Categories from "@/pages/Categories",;
+import CategoryDetail from "@/pages/CategoryDetail",;
+import Featured from "@/pages/Featured",;
+import ListingDetail from "@/pages/ListingDetail",;
+import EquipmentPage from "@/pages/EquipmentPage",;
+import EquipmentDetail from "@/pages/EquipmentDetail",;
+import PostJob from "@/pages/PostJob",;
+import JobDetails from "@/pages/JobDetails",;
+import PublishProduct from "@/pages/PublishProduct",;
+import ServicesPage from "@/pages/ServicesPage",;
+import RequestQuote from "@/pages/RequestQuote",;
+import AIMatcher from "@/pages/AIMatcher",;
+import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",;
+import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
+import SearchPage from "@/pages/SearchPage",;
+import ProjectRoom from "@/pages/ProjectRoom",;
+import VideoCall from "@/pages/VideoCall",;
+const MarketplaceRoutes = () => {;
   return (
-    <Routes>
+    <Routes>;
       {/* Marketplace Routes */}
       <Route path="/marketplace" element={<Marketplace />} />
       <Route path="/categories" element={<Categories />} />
@@ -92,6 +139,8 @@ export default MarketplaceRoutes;
 
 
 
+
+
 export default MarketplaceRoutes,
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -123,7 +172,6 @@ const MarketplaceRoutes = () => {
 
 
 const MarketplaceRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Marketplace Routes */}
@@ -199,6 +247,7 @@ const MarketplaceRoutes = () => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -207,6 +256,7 @@ const MarketplaceRoutes = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default MarketplaceRoutes;
 

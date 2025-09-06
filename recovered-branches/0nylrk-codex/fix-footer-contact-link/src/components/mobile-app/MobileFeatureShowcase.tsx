@@ -1,27 +1,25 @@
 
 
+import React from "react";
+import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
+import React from "react",
+import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
 
-
-
-import React from './react';
-import { CheckCircle, Smartphone, Users, Star, Mail } from './lucide-react';
+import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
 
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [;
     {
 
-
-
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
-
-
-
+      icon: <Users className="h-8 w-8 text-zion-cyan" />
+      title: "Hire from Anywhere"
 
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
+
 
 
 
@@ -40,6 +38,7 @@ export const MobileFeatureShowcase: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
@@ -124,6 +123,13 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
 
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
@@ -190,6 +196,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -198,6 +205,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

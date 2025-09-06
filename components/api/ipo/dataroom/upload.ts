@@ -24,7 +24,6 @@ import path from 'path';
     res && res.status(200).json({ ok: true })
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   })
 
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
@@ -69,8 +68,9 @@ function handler() {
   });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) });
     res.status (200).json ({ ok: true });
   });
-
 }
+
+
 
 
 

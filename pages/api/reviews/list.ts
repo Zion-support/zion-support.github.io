@@ -1,5 +1,17 @@
 
 
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readReviews, readProjects } from "../../../utils/dataStore";
+import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
+import { TALENT_PROFILES } from "../../../data/talent";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "GET") {
+    return res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { readReviews, readProjects } from '../../../utils/dataStore';
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
 import { TALENT_PROFILES } from '../../../data/talent';
@@ -8,6 +20,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
+
+  }
+  try {
+  try {;
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+
+    const { targetType, targetId } = req.query as {
+      targetType?: string;
+      targetId?: string;
 
     }
 
@@ -28,6 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
 
@@ -35,6 +57,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
 
     const filtered = all.filter((r) => {
+
 
       if (r.removed |!r.approved) return false;
       const matchesTarget =
@@ -70,6 +93,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
         if (r && r.anonymous) authorName = "Anonymous";
 
+
+;
+    // Map to public reviews (mask anonymous author);
+    const public_reviews: PublicReview[] = filtered;
+      .sort (
+        (a, b) =>;
+          new Date (b.created_at).get_time () - new Date (a.created_at).get_time (),
+      );
+      .map ((r) => {
+        let author_name = r.from_id;
+        // Check condition
+if ( {) {
+  $2
+}
+          const t = TALENT_PROFILES.find ((tp) => tp.slug === r.from_id);
+          author_name = t ? t.name : r.from_id;
+        }
+        // Check condition
+if (author_name = "Anonymous") {
+  $2
+}
 
 
         return {
@@ -113,7 +157,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ).length;
 ;
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     const summary: ReviewsSummary = {
       average_rating,
       total_reviews,
@@ -121,10 +167,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      most_recent: public_reviews.slice (0, 5),
+    }
+;
+    return res.status (200).json ({ summary, reviews: public_reviews });
+
   } catch (error: any) {
 
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
+
+
 
 
 
@@ -270,8 +322,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 
+
   }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

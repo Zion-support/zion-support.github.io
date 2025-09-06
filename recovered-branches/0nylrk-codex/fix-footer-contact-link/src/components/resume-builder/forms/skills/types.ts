@@ -3,6 +3,7 @@
 
 
 
+
 import { Skill  } from '@/types / resume';
 
 export interface SkillsFormProps {
@@ -14,10 +15,12 @@ export interface SkillsFormProps {
   skills: Skill[];
 
 
+
   on_complete: () => void;
   on_back: () => void;
 
 }
+
 
 
 
@@ -54,6 +57,7 @@ export interface AddSkillFormProps {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string
@@ -88,6 +92,7 @@ export interface AddSkillFormProps {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -97,12 +102,14 @@ export interface AddSkillFormProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 }
 export interface BulkAddSkillsProps {
   resumeId: string;
 
   onSuccess: () => Promise<void>;
 }
+
 
 
 
@@ -128,5 +135,6 @@ export interface BulkAddSkillsProps {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -1,7 +1,13 @@
 
 
 
+export type ReferralStatus = 'pending' | 'completed' | 'expired';
+;
 
+  created_at: string,
+  updated_at: string;
+
+}
 
   id: string;
   user_id: string;
@@ -9,6 +15,7 @@
   created_at: string
   updated_at: string
 }
+
 
 
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
@@ -69,6 +76,7 @@ export interface ReferralStats {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   totalReferrals: number;
   pendingReferrals: number;
   completedReferrals: number
@@ -126,6 +134,7 @@ export interface ReferralStats {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -133,5 +142,6 @@ export interface ReferralStats {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

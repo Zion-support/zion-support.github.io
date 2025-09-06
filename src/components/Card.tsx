@@ -7,8 +7,10 @@ interface CardProps {
 
   className?: string;
 
+
   children?: React.ReactNode;
 }
+
 
 
 const Card: React.FC<CardProps> = ({
@@ -27,9 +29,11 @@ const Card: React.FC<CardProps> = ({
   
   return (
 
+
     <div className={classes}>
       {title && <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>}
       {description && <p className="text-gray-300 mb-4">{description}</p>}
+
 
       {children}
     </div>

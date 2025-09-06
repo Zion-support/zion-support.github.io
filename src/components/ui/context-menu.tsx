@@ -1,5 +1,7 @@
+
 import * as React from "react"
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
+
 import { Check, ChevronRight, Circle } from 'lucide-react'
 import { cn } from &quot;@/lib/utils&quot;
 
@@ -31,7 +33,7 @@ const ContextMenuSubTrigger = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubTrigger> & {
     inset?: boolean;
   }
->(({ className, inset, children, ...props }, ref) => (;
+>(({ class_name, inset, children, ...props }, ref) => (
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
 className={cn(
@@ -40,6 +42,7 @@ className={cn(
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
+
 
 
       className
@@ -244,6 +247,7 @@ className={cn (
     </span>
     {children}
 
+
   </ContextMenuPrimitive.RadioItem>));
 ContextMenuRadioItem.display_name = ContextMenuPrimitive.RadioItem.display_name;
 const ContextMenuLabel = React.forward_ref<;
@@ -255,7 +259,7 @@ const ContextMenuLabel = React.forward_ref<;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
     inset?: boolean;
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Label;
     ref={ref}
 className={cn(
@@ -264,6 +268,7 @@ className={cn(
     className={cn(
       "px-2 py-1.5 text-sm font-semibold text-foreground",
       inset && "pl-8",
+
 
 
       className
@@ -327,6 +332,7 @@ const ContextMenuShortcut = ({
   );
 }
 
+
 ContextMenuShortcut.display_name = &quot;ContextMenuShortcut & quot;
 ;
 
@@ -346,4 +352,6 @@ export {
   ContextMenuGroup,
   ContextMenuPortal,
   ContextMenuSub,
+
   ContextMenuSubContent,
+

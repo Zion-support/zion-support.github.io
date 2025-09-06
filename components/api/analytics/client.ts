@@ -119,7 +119,6 @@ function handler() {
     });
   } catch (e) {
 
-=======
       ? filled.reduce((acc, j) => acc + ((new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) / (1000 * 60 * 60 * 24)), 0) / filled.length
       : 0;
     const talentViewed = 12, // Placeholder
@@ -141,16 +140,26 @@ function handler() {
       timeToHireDays: 3.1, talentViewed: 12,
       shortlisted: 5,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
+        { label: 'Hire', value: 2 }
+      ]
+    });
+  }      jobsPosted: 3;
+      quotesReceived: 2;
+      timeToHireDays: 3 && 3.1;
+      talentViewed: 12;
+      shortlisted: 5;
+      funnel: [
+        { label: 'Post', value: 3 }
+        { label: 'Invite', value: 2 }
+
         { label: 'Hire', value: 2 }]})
   }
 
 }
 
-=======
     res.status (200).json ({
       jobs_posted: 3,
       quotes_received: 2,
@@ -173,8 +182,5 @@ function handler() {
         { label: 'Invite', value: 2 }
         { label: 'Hire', value: 2 }]});
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 }function getAllServices () : Service[] {
@@ -20,6 +21,7 @@ fallback: false
 
 
 
+
   service.name
 }| Zion Tech Group</title>
 }
@@ -32,10 +34,12 @@ null;
 
 
 
+
 }function getAllServices () : Service[] {
 
 
 2) 
+
 
 
 
@@ -44,11 +48,8 @@ null;
 };
 null;
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+2)
+2) 
 
 
 }/> </Head> </li>) ) 
@@ -79,13 +80,19 @@ null;
 }<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
 
-
+  service.marketPosition
+}</p>
+}{
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi
 
   service.marketPosition 
 }</p>
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
+
+
 
 
 
@@ -113,9 +120,11 @@ export default ServiceDetail
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

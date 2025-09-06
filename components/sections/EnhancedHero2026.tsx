@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -21,13 +25,16 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-
-
-
-} from 'lucide-react';
-
-interface EnhancedHero2026Props {;
-  contactInfo: {;
+import {
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Brain
+  Rocket
+  CheckCircle;
 
   ArrowRight,
   Star,
@@ -56,7 +63,8 @@ interface EnhancedHero2026Props {
   };
   serviceStats: {;
 
-
+  Rocket,;
+  CheckCircle,;
 
 } from 'lucide-react';
 
@@ -107,6 +115,8 @@ interface EnhancedHero2026Props {
     hidden: { scale: 0.8, opacity: 0 },
 
 
+
+
     revolutionaryServices: number;
   }
 export default function EnhancedHero2026({
@@ -119,13 +129,17 @@ export default function EnhancedHero2026({
       opacity: 1
       transition: {
 
+
         staggerChildren: 0.2,
       },;
+
 
     },  };        staggerChildren: 0.2
       }
     }
   }
+
+
 
         staggerChildren: 0.2,
       },
@@ -135,6 +149,8 @@ export default function EnhancedHero2026({
 
   const itemVariants = {
     hidden: { y: 30, opacity: 0 }
+
+
 
 
     visible: {
@@ -172,6 +188,7 @@ export default function EnhancedHero2026(): any ({;
       }
     }
   };
+
   const statsVariants = {;
     hidden: { scale: 0 && 0.8, opacity: 0 },;
     visible: {;
@@ -183,6 +200,7 @@ export default function EnhancedHero2026(): any ({;
       },;
     },;
   };
+
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Elements */}
@@ -227,6 +245,7 @@ export default function EnhancedHero2026(): any ({;
               opacity: [0.3, 0.8, 0.3]
               scale: [1, 1.5, 1],            }}
             transition={{
+
 
 
 
@@ -284,18 +303,33 @@ export default function EnhancedHero2026(): any ({;
 
 
 
+
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math.random() * 2,            }}  };
 
 
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.4),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.4),transparent_50%)]" />
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {Array.from({ length: 20 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`}}
+            animate={{
+              y: [0, -30, 0];
+              opacity: [0.3, 0.8, 0.3];
+              scale: [1, 1.5, 1]
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
             }}
             transition={{
               duration: 3 + Math.random() * 2
@@ -308,13 +342,17 @@ export default function EnhancedHero2026(): any ({;
               repeat: Infinity,
 
 
-
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
 
 
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
+
 
 
 
@@ -340,6 +378,7 @@ export default function EnhancedHero2026(): any ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -555,7 +594,9 @@ export default function EnhancedHero2026(): any ({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -568,7 +609,9 @@ export default function EnhancedHero2026(): any ({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
           {/* Enhanced CTA Section */}
@@ -588,6 +631,8 @@ export default function EnhancedHero2026(): any ({;
               </Button>
 
 
+
+
               <Button
                 href="/contact"
 
@@ -599,6 +644,7 @@ export default function EnhancedHero2026(): any ({;
                 href="/contact" 
 
 
+
               <Button 
                 href="/contact" 
 
@@ -608,6 +654,7 @@ export default function EnhancedHero2026(): any ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -659,13 +706,19 @@ export default function EnhancedHero2026(): any ({;
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>99.9% Uptime Guarantee</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-green-400' />
+                <span>99.9% Uptime Guarantee</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span>24/7 Expert Support</span>              <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
 
                 <span>24/7 Expert Support</span>
               </div>
             </div>
           </motion.div>
+
 
 
 
@@ -715,6 +768,7 @@ export default function EnhancedHero2026(): any ({;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {/* Contact Information */}
 
           <motion.div 
@@ -749,14 +803,119 @@ export default function EnhancedHero2026(): any ({;
 }
 
 
-
-
-
+  )
+}
+          <motion.div variants={item_variants} className='space - y-6'>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+              <Button;
+                href='/services';
+                variant='primary';
+                size='xl';
+                className='text - xl px - 12 py - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 600 hover:to - purple - 700 shadow - 2xl hover:shadow - purple - 500 / 30 border - 0 group';
+              >              >;
+                <span className="flex items - center">;
+                  <Rocket className="mr - 3 w - 7 h - 7 group - hover:rotate - 12 transition - transform" />;
+                  Explore All Services;
+                </span>;
+                <ArrowRight className="ml - 3 w - 6 h - 6 group - hover:translate - x-1 transition - transform" />;
+              </Button>;
+              <Button;
+                href="/contact";
+                variant="secondary";
+                size="xl";
+                className="text - xl px - 12 py - 6 bg - gradient - to - r from - slate - 800 to - slate - 700 hover:from - slate - 700 hover:to - slate - 600 border - slate - 600 hover:border - slate - 500 shadow - 2xl";
+              >;
+                <span className='flex items - center'>;
+                  <Rocket className='mr - 3 w - 7 h - 7 group - hover:rotate - 12 transition - transform' />;
+                  Explore All Services;
+                </span>;
+                <ArrowRight className='ml - 3 w - 6 h - 6 group - hover:translate - x-1 transition - transform' />;
+              </Button>;
+              <Button;
+                href='/contact';
+                variant='secondary';
+                size='xl';
+                className='text - xl px - 12 py - 6 bg - gradient - to - r from - slate - 800 to - slate - 700 hover:from - slate - 700 hover:to - slate - 600 border - slate - 600 hover:border - slate - 500 shadow - 2xl';
+              >;
+                <span className='flex items - center'>;
+                  <Shield className='mr - 3 w - 7 h - 7' />                  Get Expert Consultation                <span className="flex items - center">;
+                  <Shield className="mr - 3 w - 7 h - 7" />;
+                  Get Expert Consultation;
+                </span>;
+              </Button>;
+            </div>;
+            {/* Trust Indicators */}
+            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-8 text - sm text - gray - 400'>;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />;
+                <span > 5000+ Happy Customers</span>;
+              </div>                <span > 5000+ Happy Customers</span>;
+              </div>;
+              <div className="flex items - center space - x-2">;
+                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+                <span > 99.9% Uptime Guarantee</span>;
+              </div>;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />;
+                <span > 99.9% Uptime Guarantee</span>;
+              </div>;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > 24 / 7 Expert Support</span>              <div className="flex items - center space - x-2">;
+                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+                <span > 24 / 7 Expert Support</span>;
+              </div>;
+            </div>;
+          </motion.div>;
+          {/* Contact Information */}
+          <motion.div;
+            variants={item_variants}
+            className='bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 6 max - w-2xl mx - auto';
+          >;
+            <div className='text - center mb - 4'>;
+              <h3 className='text - lg font - semibold text - white mb - 2'>;
+                Ready to Get Started?;
+              </h3>;
+              <p className='text - gray - 300 text - sm'>;
+                Contact our team of experts today;
+              </p>;
+            </div>;
+            <div className='grid grid - cols - 1 sm:grid - cols - 3 gap - 4 text - sm'>;
+              <div className='text - center'>;
+                <div className='text - cyan - 400 font - medium'>Phone</div>;
+                <div className='text - white'>{contact_info.mobile}</div>;
+              </div>;
+              <div className='text - center'>;
+                <div className='text - cyan - 400 font - medium'>Email</div>;
+                <div className='text - white'>{contact_info.email}</div>;
+              </div>;
+              <div className='text - center'>;
+                <div className='text - cyan - 400 font - medium'>Website</div>;
+                <div className='text - white'>{contact_info.website}</div>              </div>            variants={item_variants}
+            className="bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 6 max - w-2xl mx - auto";
+          >;
+            <div className="text - center mb - 4">;
+              <h3 className="text - lg font - semibold text - white mb - 2">Ready to Get Started?</h3>;
+              <p className="text - gray - 300 text - sm">Contact our team of experts today</p>;
+            </div>;
+            <div className="grid grid - cols - 1 sm:grid - cols - 3 gap - 4 text - sm">;
+              <div className="text - center">;
+                <div className="text - cyan - 400 font - medium">Phone</div>;
+                <div className="text - white">{contact_info.mobile}</div>;
+              </div>;
+              <div className="text - center">;
+                <div className="text - cyan - 400 font - medium">Email</div>;
+                <div className="text - white">{contact_info.email}</div>;
+              </div>;
+              <div className="text - center">;
+                <div className="text - cyan - 400 font - medium">Website</div>;
+                <div className="text - white">{contact_info.website}</div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </motion.div>;
+      </div>;
+    </section>));
+}
 
   );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 

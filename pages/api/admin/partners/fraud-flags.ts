@@ -1,6 +1,9 @@
 
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../../utils/supabase/server';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getServerSupabase } from '../../../../utils/supabase/server',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
@@ -18,13 +21,12 @@
       if (count > 30 && ip !== 'unknown') {
 
 
-
-
-
-
-
-
-
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+    return res.status(500).json({ error: e?.message })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
@@ -52,10 +54,12 @@
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

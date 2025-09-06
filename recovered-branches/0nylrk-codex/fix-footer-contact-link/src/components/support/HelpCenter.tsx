@@ -1,4 +1,18 @@
 
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HelpCategoryList } from "./HelpCategoryList";
+import { HelpArticleList } from "./HelpArticleList";
+import { HelpArticleView } from "./HelpArticleView";
+import { HELP_CATEGORIES } from "./help-content";
+import { AppLayout } from "@/layout/AppLayout";
+import { Search } from "lucide-react";
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
 
 
@@ -15,6 +29,7 @@ import {HELP_CATEGORIES} from "./help-content";
 import {AppLayout} from "@/layout/AppLayout";
 import {Search} from "lucide-react";
 export default function HelpCenter() {;
+
 
 
 
@@ -40,6 +55,7 @@ export default function HelpCenter() {;
   },
 
   
+
 
   return (
     <AppLayout>
@@ -70,6 +86,10 @@ export default function HelpCenter() {;
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
 
+                <HelpCategoryList
+                  categories={HELP_CATEGORIES}
+                <HelpCategoryList 
+                  categories={HELP_CATEGORIES} 
 
 import React, { useState } from "react",;
 import { Input } from "@/components/ui/input",;
@@ -85,6 +105,8 @@ export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
+
+
 
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
@@ -135,6 +157,7 @@ export default function HelpCenter() {;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
 
+
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
 
@@ -159,6 +182,7 @@ export default function HelpCenter() {;
 
               
 
+
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -166,11 +190,13 @@ export default function HelpCenter() {;
                     onClick={handleBackToCategories}
                     className="mb-4"
                   >
-                    ← All Categories
+                     All Categories
                   </Button>
+
 
                   <HelpArticleList
                   <HelpArticleList 
+
 
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
@@ -180,9 +206,11 @@ export default function HelpCenter() {;
               )}
 
               
-
               {selectedArticle && (
                 <>
+
+              {selectedArticle && (;
+                <>;
 
                   <Button
                     variant="ghost"
@@ -199,11 +227,13 @@ export default function HelpCenter() {;
 
 
 
+
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 <div className="space-y-6">
@@ -340,9 +370,11 @@ export default function HelpCenter() {;
 
 
 
+
   );
 }
   )
+
 
 
 ;
@@ -350,6 +382,7 @@ export default function HelpCenter() {;
                 <>;
                   <Button;
                     variant="ghost";
+
 
 
 
@@ -389,4 +422,5 @@ export default function HelpCenter() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

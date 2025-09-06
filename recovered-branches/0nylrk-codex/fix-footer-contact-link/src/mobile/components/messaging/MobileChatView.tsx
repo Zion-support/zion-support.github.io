@@ -5,6 +5,8 @@
 
 
 
+
+
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -14,11 +16,14 @@ import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 interface Message {
   id: string,
@@ -33,7 +38,12 @@ interface MobileChatViewProps {
     name: string
     avatar?: string;
 
-
+    status?: string
+  }
+  messages: Message[]
+  onBack: () => void
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
 
 interface Message {
   id: string,
@@ -47,6 +57,26 @@ interface Message {
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
 
+}
+
+
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState("");
+  const navigate = useNavigate();
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage);
+      setNewMessage("")
+    }
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(),
+      handleSend()
+    }
+  };
 
 import React, { useState } from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
@@ -127,7 +157,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   
@@ -221,6 +253,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <p>{message.content}</p>
               <div className={cn(
 
+
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+                "text-xs mt-1 flex justify-end",
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
 
   },;
   const startVideoCall = () => {;
@@ -385,6 +423,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
               <p>{message && message.content}</p>;
@@ -401,12 +440,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 
 
+
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>;
             </div>;

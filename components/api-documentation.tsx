@@ -11,6 +11,7 @@ import {
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -64,6 +65,7 @@ export default function APIDocumentation() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   Code,
   Database,
   Shield,
@@ -95,6 +97,17 @@ import {
   Code, Database, Shield, Zap, Globe, Cpu, 
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
 
+  Lock,;
+  Brain,;
+} from 'lucide-react';
+export default function APIDocumentation() {
+	return (
+  Lock,;
+  Brain,;
+} from 'lucide-react';
+
+export default function APIDocumentation() {
+	return (
 
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>

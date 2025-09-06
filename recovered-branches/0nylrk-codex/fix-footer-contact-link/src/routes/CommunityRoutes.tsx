@@ -1,4 +1,13 @@
 
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "../components/ProtectedRoute";
+import CommunityPage from "../pages/CommunityPage";
+import ForumCategoryPage from "../pages/ForumCategoryPage";
+import ForumPostPage from "../pages/ForumPostPage";
+import CreatePostPage from "../pages/CreatePostPage";
+import EditPostPage from "../pages/EditPostPage";
+import CommunityProfilePage from "../pages/CommunityProfilePage";
 
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
@@ -8,6 +17,9 @@ import ForumCategoryPage from "../pages/ForumCategoryPage",
 import ForumPostPage from "../pages/ForumPostPage",
 import CreatePostPage from "../pages/CreatePostPage",
 
+
+import EditPostPage from "../pages/EditPostPage",
+import CommunityProfilePage from "../pages/CommunityProfilePage",
 
 const CommunityRoutes = () => {
   return (
@@ -45,7 +57,12 @@ const CommunityRoutes = () => {
             <EditPostPage />
           </ProtectedRoute>
 
-
+        }
+      />
+    </Routes>
+  )
+}
+export default CommunityRoutes;
 
 
 import { Fragment } from "react",;
@@ -68,7 +85,25 @@ const CommunityRoutes = () => {;
       <Route path="/community/post/:postId" element={<ForumPostPage />} />;
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+import { Fragment } from './react';
+import { Route, Routes } from './react-router-dom';
+import { ProtectedRoute } from '../components / ProtectedRoute';
+import CommunityPage from "../pages / CommunityPage";
+import ForumCategoryPage from "../pages / ForumCategoryPage";
+import ForumPostPage from "../pages / ForumPostPage";
+import CreatePostPage from "../pages / CreatePostPage";
+import EditPostPage from "../pages / EditPostPage";
+import CommunityProfilePage from "../pages / CommunityProfilePage";
+const CommunityRoutes = () =>: any {
+  return (
+    <Routes>;
+      {/* Public routes */}
+      <Route path="/community" element={<CommunityPage />} />;
+      <Route path="/forum" element={<CommunityPage />} />;
+      <Route path="/community / category/:category_id" element={<ForumCategoryPage />} />;
+      <Route path="/community / post/:post_id" element={<ForumPostPage />} />;
+      <Route path="/community / profile/:user_id" element={<CommunityProfilePage />} />;
 
       {/* Protected routes */}
       <Route;
@@ -96,7 +131,9 @@ const CommunityRoutes = () => {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -5,6 +5,8 @@
 
 
 
+
+
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -15,13 +17,19 @@ import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, A
 import {useState} from "react";
 
 
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
+
+
 
 
 
@@ -48,7 +56,9 @@ export function TemplateList({;
   };
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 import { ContractTemplate } from "@/types/contracts",;
 import { Button } from "@/components/ui/button",;
@@ -80,19 +90,18 @@ export function TemplateList(): any ({;
   templates;
   isLoading;
   onSelect;
-  onEdit;
-}: TemplateListProps) {;
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
+  onEdit
+}: TemplateListProps) {
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
 
-  const handleDeleteClick = (templateId: string) => {;
-    setTemplateToDelete(templateId);
-  };
-
-  const handleDeleteConfirm = async () => {;
-    if (templateToDelete) {;
-      await deleteTemplate && deleteTemplate.mutateAsync(templateToDelete);
-      setTemplateToDelete(null);
+  const handleDeleteClick = (templateId: string) => {
+    setTemplateToDelete(templateId)
+  }
+  const handleDeleteConfirm = async () => {
+    if (templateToDelete) {
+      await deleteTemplate.mutateAsync(templateToDelete);
+      setTemplateToDelete(null)
     }
 
 
@@ -103,8 +112,10 @@ export function TemplateList(): any ({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -117,7 +128,6 @@ export function TemplateList(): any ({;
   const handleSetDefault = async (templateId: string) => {;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (isLoading) {;
     return (
@@ -155,6 +165,7 @@ export function TemplateList(): any ({;
 
 
 
+
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
@@ -162,6 +173,7 @@ export function TemplateList(): any ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               className="w-full"
@@ -198,13 +210,13 @@ export function TemplateList(): any ({;
               Use This Template;
             </Button>;
           </CardContent>;
+        </Card>;
+      ))}
 
-        </Card>))}
-      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete (null)}>;
+      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
-            <AlertDialogTitle > Delete Template</AlertDialogTitle>;
-
+            <AlertDialogTitle>Delete Template</AlertDialogTitle>;
             <AlertDialogDescription>;
               Are you sure you want to delete this template? This action cannot be undone.;
             </AlertDialogDescription>;
@@ -225,5 +237,7 @@ export function TemplateList(): any ({;
 
     </div>);
 }
+
+
 
 

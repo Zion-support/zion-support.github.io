@@ -7,11 +7,13 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {toast} from "sonner";
+
 
 
 
@@ -57,8 +59,8 @@ export const useJobApplications = (jobId?: string) => {
       let query = supabase
         .from("job_applications")
         .select(`
-          *,
-          job:jobs(*),
+          *;
+          job: jobs(*)
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
         `)
         .order("created_at", { ascending: false }),
@@ -132,7 +134,7 @@ export const useJobApplications = (jobId?: string) => {
 
       toast.error("Failed to fetch applications")
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
   }
@@ -150,7 +152,7 @@ export const useJobApplications = (jobId?: string) => {
         .insert({
 
           job_id: jobId;
-          talent_id: user.id;
+          talent_id: user && user.id;
           resume_id: resumeId;
           cover_letter: coverLetter
           status: "new"
@@ -223,9 +225,11 @@ export const useJobApplications = (jobId?: string) => {;
 
 
 
+
         }
         return false
       }
+
 
 
 
@@ -244,7 +248,9 @@ export const useJobApplications = (jobId?: string) => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -282,7 +288,6 @@ if ( { // Unique violation) {
   $2
 }
           toast.error ("You have already applied to this job");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           throw error;
         }
@@ -294,11 +299,13 @@ if ( { // Unique violation) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
       // Add the new application to the local state
       const newApplication = data as JobApplication;
@@ -459,8 +466,10 @@ if ( {) {
     refetch: fetch_applications;
     applyToJob;
 
-
-
+    updateApplicationStatus
+    markApplicationAsViewed
+  }
+}
 
 
 ;
@@ -537,6 +546,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -544,6 +554,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 };

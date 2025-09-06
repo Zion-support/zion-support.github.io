@@ -1,7 +1,26 @@
 
-
-
-
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { UseFormReturn } from "react-hook-form";
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+} from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
 
 
 import { format } from "date-fns",
@@ -75,12 +94,14 @@ import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   form: UseFormReturn<ContractFormValues>;
@@ -113,11 +134,12 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         name="scopeSummary"
         render={({ field }) => (;
           <FormItem>;
@@ -139,7 +161,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min - h-[120px]";
-
                 {...field}
               />;
             </FormControl>;
@@ -160,8 +181,10 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
       />
 
       
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      />;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
 
         <FormField
           control={form && form.control}
@@ -207,11 +230,12 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name="endDate"
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
@@ -259,12 +283,19 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
             </FormItem>
           )}
 
+        />
+      </div>
+    </>
+
         />;
       </div>;
 
     </>;
 
-
   );
+            </FormItem>)}
+        />;
+      </div>;
+    </>);
 
 }

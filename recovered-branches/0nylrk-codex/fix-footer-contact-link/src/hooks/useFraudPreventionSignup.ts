@@ -1,13 +1,18 @@
 
 
-
-
+import { useState, useCallback  } from 'react';
+import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
+import { supabase  } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+export function useFraudPreventionSignup() {
 
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services/fraud/signupCheck';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {;
+
+
 
 
 
@@ -30,10 +35,8 @@ export function useFraudPreventionSignup() {;
       return undefined
     }
 
-
-
-
-
+  }
+  };
 
 import { useState, useCallback } from 'react',;
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
@@ -58,7 +61,9 @@ export function useFraudPreventionSignup() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   
@@ -117,6 +122,10 @@ export function useFraudPreventionSignup() {;
         )) {
           toast({
 
+            title: "Signup blocked";
+            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
+            variant: "destructive"});
+          return false
 
         }
         // Otherwise, allow but flag for review
@@ -133,6 +142,11 @@ export function useFraudPreventionSignup() {;
     }
   }, []);
   return {
+
+            title: "Signup blocked",
+            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
+            variant: "destructive"}),
+          return false
 
   },;
   // Check if the signup attempt might be fraudulent;
@@ -173,12 +187,11 @@ export function useFraudPreventionSignup() {;
 
           return false;
         }
-
-        // Otherwise, allow but flag for review;
-        return true;
+        // Otherwise, allow but flag for review
+        return true
       }
-      // No suspicious patterns found;
-      return true;
+      // No suspicious patterns found
+      return true
     } catch (error) {
       console.error ('Error in fraud check:', error);
       // On error, allow the signup but log the error;
@@ -191,9 +204,11 @@ export function useFraudPreventionSignup() {;
 
 
 
+
 ;
 
   return {
+
 
 
 

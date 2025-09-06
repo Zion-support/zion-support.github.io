@@ -9,6 +9,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
+
   if (req && req.method !== 'GET') {
     return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed');
   }
@@ -26,6 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const base = LOCAL.find((t) => t.slug === slug) |null;
     if (!base) return res.status(404).json({ error: 'Not found' });
+
     const { item, translated } = applyTranslations(base, lang);
 
     return res.status(200).json({ item, translated })
@@ -33,6 +35,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message })
 }
 
+}
+}
+
 
 }
 
@@ -43,6 +48,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 }
+
 
 
 
@@ -61,5 +67,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

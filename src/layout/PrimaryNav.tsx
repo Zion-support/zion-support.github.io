@@ -37,10 +37,12 @@ import { MobileBottomNav } from '@/components/header/MobileBottomNav'
 
 
 
+
 import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
+
 
 import { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
@@ -80,12 +82,15 @@ function PrimaryNav() {
   let unread_count = 0;
 
   try {
-    const messaging = useMessaging()
-    unreadCount = messaging.unreadCount
+    const messaging = use_messaging ();
+    unread_count = messaging.unread_count;
   } catch {
 
     // context not available
 
+  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
 
   };
 ;
@@ -94,7 +99,9 @@ function PrimaryNav() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
@@ -160,7 +167,9 @@ export function PrimaryNav() {;
 
 
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+
           <div className='hidden lg:block order-1 flex-shrink-0'>
+
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
 
@@ -191,6 +200,7 @@ export function PrimaryNav() {;
           </div>
           
 
+
           {/* Actions container with responsive layout */}
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
@@ -199,6 +209,7 @@ export function PrimaryNav() {;
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={sugg => {
+
                   log_debug ('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
                   });                  // Handle different suggestion types with proper navigation;
@@ -223,8 +234,8 @@ if ( {) {
                     router.push (`/blog/${sugg.slug}`);
 
                   } else {
-                    // Default: search results page with query parameter
-                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
+                    // Default: search results page with query parameter;
+                    router.push (`/search?q=${encodeURIComponent (sugg.text)}`);
                   }
 
                 onSelectSuggestion={sugg => {;
@@ -360,7 +371,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
@@ -408,6 +421,7 @@ if ( {) {
                   >;
 
 
+
                     {t('auth.login')}
                   </Link>
                     onClick={e => {;
@@ -443,6 +457,7 @@ if ( {) {
             <LanguageSelector />
             {!isLoggedIn && (
               <Link
+
                 href='/auth/login'
                 className='text-sm hover:text-primary'
                 data-testid='login-link'
@@ -471,6 +486,7 @@ if ( {) {
                 }}
               >;
 
+
                 {t('auth.login')}
               </Link>
             )}
@@ -484,6 +500,7 @@ if ( {) {
               </Link>;
             )}
             {isLoggedIn && <UserMenu />}
+
           </div>;
 
 
@@ -539,7 +556,7 @@ if ( {) {
           </div>;
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
+            className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
@@ -547,7 +564,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -618,6 +637,7 @@ setLoginOpen (true)
 
 
 
+
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -634,6 +654,7 @@ setLoginOpen (true)
               exit = {
   { opacity: 0
   height: 0
+
           <button;
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
             on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
@@ -643,6 +664,8 @@ setLoginOpen (true)
               <X className='h - 6 w - 6' />) : (
               <Menu className='h - 6 w - 6' />)}
           </button>;
+
+
 
 }}
               transition={{ duration: 0.3 }}"
@@ -704,9 +727,17 @@ setLoginOpen (true)
 }
 ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
-
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={(returnToPath) => setLoginOpen(true)}
+            />;
+          </div>;
 
         </div>;
       </header>;
@@ -727,6 +758,7 @@ setLoginOpen (true)
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
 }
+
 
 return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />;
 }set_query ('');
@@ -845,5 +877,6 @@ setLoginOpen (true);
 }
 
 ;
+
 
 

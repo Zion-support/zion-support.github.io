@@ -3,12 +3,19 @@ import fs from 'fs';
 import path from 'path';
 
 
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+  const { talentSlug, requesterName, requesterEmail, projectInfo } =
+    req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
+
 
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
@@ -18,10 +25,12 @@ import path from 'path';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
   try {
+
     const timestamp = new Date().toISOString();
 
 
@@ -101,6 +110,8 @@ if ( {) {
 
 
 
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -112,4 +123,9 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
+
+    console.error('Request-to-hire failed', err);
+    return res.status(500).json({ error: 'Internal error' });
+  }
 

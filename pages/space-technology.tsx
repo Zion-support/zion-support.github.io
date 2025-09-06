@@ -3,6 +3,7 @@
 
 
 
+
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -17,6 +18,7 @@ import {
   Music, Film, BookOpenCheck, Building, MessageCircle
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react'
+
 
 
 
@@ -36,10 +38,11 @@ import {
 
 
 
+
+
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion',
 import {
   Rocket, Brain, Shield, Zap, Target, Atom, Cpu,
@@ -55,7 +58,9 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -128,6 +133,8 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
+
   ],
   const spaceCapabilities = [
     {
@@ -162,6 +169,7 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
   ],
   return (
     <Layout>
@@ -186,6 +194,7 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         title="Space Technology Solutions - Zion Tech Group"
         description="Revolutionary space technology solutions for the future. From resource mining to autonomous systems, explore the final frontier."
         keywords="space technology, space mining, AI space systems, brain-computer interface, autonomous vehicles, quantum space communications"
@@ -202,7 +211,9 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -224,7 +235,6 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-orange-600 bg-clip-text text-transparent">
                 Space Technology
@@ -233,6 +243,8 @@ const SpaceTechnologyPage: React.FC = () => {
                 Pioneering the future of space exploration with cutting-edge technology and intelligent systems
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+
 
 
 
@@ -247,6 +259,7 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -254,6 +267,7 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -306,12 +320,14 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -360,8 +376,10 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300"
@@ -379,11 +397,13 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
@@ -442,12 +462,14 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -510,7 +532,6 @@ const SpaceTechnologyPage: React.FC = () => {
 }
 
                 >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -538,7 +559,9 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -557,12 +580,14 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
@@ -571,6 +596,8 @@ const SpaceTechnologyPage: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+
+
 
 
 
@@ -597,12 +624,14 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
                   >
@@ -632,7 +661,9 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -659,7 +690,6 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Ready to Explore Space?
@@ -668,6 +698,8 @@ const SpaceTechnologyPage: React.FC = () => {
                 Join the space revolution and be part of humanity's next great adventure
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+
 
 
 
@@ -682,6 +714,7 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -689,6 +722,7 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -704,6 +738,8 @@ const SpaceTechnologyPage: React.FC = () => {
 
 }
 export default SpaceTechnologyPage;
+
+
 
 
 
@@ -739,6 +775,7 @@ export default SpaceTechnologyPage;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -750,5 +787,6 @@ export default SpaceTechnologyPage,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

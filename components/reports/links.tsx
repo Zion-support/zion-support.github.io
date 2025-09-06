@@ -7,7 +7,12 @@ export default function LinksReportRedirect() {
     }
   }, []);
 
+  return null
+}
 
+}
+export default function LinksReportRedirect(req, res) {
+  try {
 
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
@@ -18,17 +23,34 @@ export default function LinksReportRedirect() {
   return null;
 
 
-
-
-
+export default /**
+ * LinksReportRedirect - Function description
+ */
+function LinksReportRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      window.location.replace ('/reports / links / index.html');
+    }
+  }, []);
+  return null;export default /**
+ * LinksReportRedirect - Function description
+ */
+function LinksReportRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
 
 }
       window.location.replace ('/reports / links / index.html');
     }
   }, []);
   return null;
-
 }
+
 
 
 
@@ -43,5 +65,6 @@ export default function LinksReportRedirect() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -1,8 +1,15 @@
 Card,
   CardContent,
   CardDescription,
+  CardHeader,
+  CardTitle,
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
   CardHeader,;
   CardTitle;
+
 
 
 
@@ -37,6 +44,7 @@ export default function Partners() {;
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
 
 
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -60,7 +68,7 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-export default function Partners() {
+export default function Partners() {;
 
 
   logInfo('PartnersPage rendering')
@@ -74,10 +82,11 @@ export default function Partners() {
       try {
         const res = await fetch('/api/auth/health');
         setAuthServiceAvailable(res.ok);
+      } catch (err) {
         logErrorToProduction('Partner login auth health check failed', {
           data: err
         });
-        setAuthServiceAvailable(false);
+        setAuthServiceAvailable (false);
       }
     }
     checkHealth();  }, []);    checkHealth()
@@ -86,4 +95,12 @@ import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
+
+
+  logInfo('PartnersPage rendering'),
+  const [activeTab, setActiveTab] = useState("overview"),
+  const { t } = useTranslation(),
+  const { user, isAuthenticated } = useAuth(),
+  const router = useRouter(),
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
 

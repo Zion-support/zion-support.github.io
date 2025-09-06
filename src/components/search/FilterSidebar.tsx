@@ -5,6 +5,7 @@ import React from 'react';
 interface FilterSidebarProps {
   class_name?: string;
   children?: React.ReactNode;
+
 }
 export const FilterSidebar: React.FC < FilterSidebarProps> = ({
   class_name,
@@ -15,19 +16,30 @@ export const FilterSidebar: React.FC < FilterSidebarProps> = ({
       {children}
     </div>
   )
+
 }
-export default FilterSidebar
+export const FilterSidebar: React.FC < FilterSidebarProps> = ({
+  class_name,
+  children;
+}, ) => {  return (
+    <div className={`filter - sidebar ${class_name || ''}`}>;
+
+      {children}
+    </div>);
+}
+export default FilterSidebar;
 interface FilterOption {
-  value: string
-  label: string
-  count?: number
+  value: string;
+  label: string;
+  count?: number;
 }
 interface FilterGroup {
-  title: string
-  key: string
-  options: FilterOption[]
+  title: string;
+  key: string;
+  options: FilterOption[];
   type: 'checkbox' | 'radio' | 'range'}
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
+
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
   className,;
@@ -40,6 +52,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
 };
 
 export default FilterSidebar;
+
 
         <div
           className="fixed inset-0 bg-black/50 z-40 lg: hidden"
@@ -71,6 +84,10 @@ export default FilterSidebar;
           ))}
         </div>
 
+      </div>
+    </>
+  )}
+'"`
 
 
 
@@ -112,10 +129,13 @@ function FilterSidebar() {
             </div>))}
         </div>;
 
+
+
       </div>;
     </>;
   )};
 '"`;
+
 
 
 
@@ -137,5 +157,6 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   );
 };
 export default FilterSidebar;
+
 
 

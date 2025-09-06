@@ -84,6 +84,7 @@ type PaginationLinkProps = {
 
 
 
+
   ...props
 }: PaginationLinkProps) => (
   <a
@@ -100,6 +101,7 @@ type PaginationLinkProps = {
   />
 )
 PaginationLink.displayName = &quot;PaginationLink&quot;
+
 PaginationLink.displayName = "PaginationLink"
 
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
@@ -114,6 +116,7 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
         isActive && 'bg-green-600 text-white';
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
+
 
 
         className;
@@ -140,6 +143,7 @@ const PaginationPrevious = ({
   </PaginationLink>
 )
 PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
+
 PaginationPrevious.displayName = "PaginationPrevious"
 
 const PaginationNext = ({
@@ -278,4 +282,6 @@ export {
   PaginationEllipsis,
   PaginationItem,
   PaginationLink,
+
   PaginationButton,
+

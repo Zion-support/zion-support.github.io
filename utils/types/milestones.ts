@@ -1,11 +1,14 @@
 
+export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
+export type ProjectParticipantRole = 'client' | 'talent';
+export type ProjectParticipants = {
 
-
-
+export type ProjectParticipants = {;
 
   clientUserId: string;
   talentUserId: string;
 }
+;
 export type Project = {  id: string;
   title: string;
   description?: string;
@@ -20,9 +23,12 @@ export type Project = {  id: string;
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
 
-
-
-
+    value === 'Pending' |
+    value === 'In Progress' |
+    value === 'Submitted' |
+    value === 'Approved' |
+    value === 'Paid'
+  );export interface MilestoneAttachment {
 
     value === 'Pending' ||
     value === 'In Progress' ||
@@ -34,10 +40,12 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -47,9 +55,12 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   size: number;
 
 
+
+
   uploaded_at: string,
 
 }
+
 
 
 
@@ -91,8 +102,22 @@ export interface UpdateMilestoneRequest {
 
 
 
+export function isOverdue(milestone: Milestone): boolean {
+  if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
+    return false;
+  }
+  return new Date(milestone.dueDate) < new Date();
+}
+
+
+
+
+
+
+
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

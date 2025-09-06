@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -47,6 +48,7 @@ if (!performanceData) {;
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {
   `w-4 h-4 $ {
 
+
   isLoading ? 'animate-spin' : '' 
 }` 
 }/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData && performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement' ;
@@ -75,16 +77,22 @@ if (!performanceData) {;
 }</AnimatePresence> </>) ;
 
 
-=======
+
+
 //FCP recommendations // Check condition
 if ( {) {
   $2
 }
-=======
+
  //FCP recommendations if (metrics.fcp > 2000) {
 =======
 //FCP recommendations if (metrics.fcp > 2000) {
 =======
+ //FCP recommendations if (metrics.fcp > 2000) {
+
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+//FCP recommendations if (metrics.fcp > 2000) {
  //FCP recommendations if (metrics.fcp > 2000) {
 
   recs.push ({

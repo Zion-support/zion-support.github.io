@@ -3,6 +3,7 @@
 
 
 
+
 import { cn } from "@/lib/utils";
 import React from "react";
 interface FeatureCardProps {
@@ -66,11 +67,15 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
       </div>
 
 
+
       <div>
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
       </div>
 
+    </div>
+  );
+}
 
   )
 import { cn } from "@/lib/utils",;
@@ -104,6 +109,8 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

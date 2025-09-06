@@ -1,5 +1,7 @@
 
 
+
+
 import { useEffect, useState } from 'react';
 
 
@@ -10,11 +12,9 @@ import { useEffect, useState } from 'react';
 
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
+import { useEffect, useState } from 'react',;
+;
+import { useEffect, useState } from 'react';
 
 type Note = {
   id: string;
@@ -63,7 +63,7 @@ export default function AdminNotesConsole(req, res) {
         </label>
       </div>
       {loading ? (
-        <div>Loading…</div>
+        <div>Loading</div>
       ) : notes.length === 0 ? (
         <div className="opacity-70">No notes found.</div>
       ) : (
@@ -74,6 +74,7 @@ export default function AdminNotesConsole(req, res) {
               <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
               <div>{n.text}</div>
             </div>
+
 
 
 
@@ -157,6 +158,7 @@ export default function AdminNotesConsole(req, res) {
         setLoading(false);
         } catch (error) {
 
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -175,4 +177,6 @@ export default function AdminNotesConsole(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 

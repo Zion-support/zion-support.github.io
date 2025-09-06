@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
@@ -27,6 +28,7 @@ export function Web3Login() {
       setIsLoading(true);
       setIsLoading(true),
       
+
 
       // Check if wallet is available
       const ethereum = (window as any).ethereum;
@@ -95,6 +97,8 @@ export function Web3Login() {
 
 
 
+
+
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -151,6 +155,7 @@ export function Web3Login() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -161,13 +166,13 @@ export function Web3Login() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       )}
 
     </Button>;
   );
 }
 
-=======
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';

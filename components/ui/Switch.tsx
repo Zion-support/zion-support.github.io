@@ -3,6 +3,7 @@ import React from './react';
 ;
 
 interface SwitchProps {
+
 interface SwitchProps {;
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
@@ -17,6 +18,7 @@ const Switch: React.FC < SwitchProps> = ({
   class_name = "",
 
 }) => {
+
 const Switch: React.FC<SwitchProps> = ({;
   checked = false,;
   onCheckedChange,;
@@ -35,14 +37,14 @@ const Switch: React.FC<SwitchProps> = ({;
         checked ? "bg - blue - 600" : "bg - gray - 200";
       } ${class_name}`}
     >;
-      <span;
-        className={`inline - block h - 4 w - 4 transform rounded - full bg - white transition - transform ${
-          checked ? "translate - x-6" : "translate - x-1";
+      <span
+        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+          checked ? "translate-x-6" : "translate-x-1"
         }`}
       />;
-    </button>);
+    </button>;
+  );
 }
-;
 export { Switch }
 ;
 

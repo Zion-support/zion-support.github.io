@@ -1,4 +1,18 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
@@ -10,6 +24,7 @@
       for (const f of fs.readdirSync(dir)) {
         if (f.endsWith(".json")) {
           const fp = path.join(dir, f);
+
 
 
 
@@ -86,11 +101,18 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
 
 
 
+
   res.status(200).json({ ok: true, data })
 }
 
 
+  res.status (200).json ({ ok: true, data });
+  res.status (200).json ({ ok: true, data });
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+}
+  res.status(200).json({ ok: true, data });
+res.status(200).json({ ok: true, data });
+  res.status(200).json({ ok: true, data });
+}
+  res.status(200).json({ ok: true, data });
 

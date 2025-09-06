@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 import * as React from "react"
@@ -10,8 +11,10 @@ import {ChevronRight} from "lucide-react"
 
 
 
+
 const Breadcrumb = React.forwardRef<;
   HTMLElement;
+
 
 
 
@@ -22,6 +25,8 @@ import { ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
  
+
+
 
 
 
@@ -84,10 +89,54 @@ const BreadcrumbLink = React && React.forwardRef<;
     asChild?: boolean;
   }
 
->(({ className, asChild = false, ...props }, ref) => {;
-  const Comp = asChild ? Slot : "a";
-
-
+>(({ className, asChild = false, ...props }, ref) => {
+  const Comp = asChild ? Slot : "a"
+import * as React from './react';
+import { Slot } from '@radix - ui / react - slot';
+import { ChevronRight } from './lucide-react';
+import { cn } from '@/lib / utils';
+const Breadcrumb = React.forward_ref<;
+  HTMLElement;
+  React.ComponentPropsWithoutRef<"nav"> & {
+    separator?: React.ReactNode;
+  }
+>(({ class_name, separator, ...props }, ref) => (
+  <nav;
+    ref={ref}
+    aria - label="breadcrumb";
+    className={cn (
+      "inline - flex items - center gap - 1 text - sm text - zion - slate - light";
+      class_name)}
+    {...props}
+  />));
+Breadcrumb.display_name = "Breadcrumb";
+const BreadcrumbList = React.forward_ref<;
+  HTMLOListElement;
+  React.ComponentPropsWithoutRef<"ol">;
+>(({ class_name, ...props }, ref) => (
+  <ol;
+    ref={ref}
+    className={cn ("flex items - center gap - 1.5", class_name)}
+    {...props}
+  />));
+BreadcrumbList.display_name = "BreadcrumbList";
+const BreadcrumbItem = React.forward_ref<;
+  HTMLLIElement;
+  React.ComponentPropsWithoutRef<"li">;
+>(({ class_name, ...props }, ref) => (
+  <li;
+    ref={ref}
+    className={cn ("inline - flex items - center gap - 1.5", class_name)}
+    {...props}
+  />));
+BreadcrumbItem.display_name = "BreadcrumbItem";
+const BreadcrumbLink = React.forward_ref<;
+  HTMLAnchorElement;
+  React.ComponentPropsWithoutRef<"a"> & {
+    as_child?: boolean;
+  }
+>(({ class_name, as_child = false, ...props }, ref) => {
+  const Comp = as_child ? Slot : "a";
 
   return (
     <Comp;
@@ -100,6 +149,13 @@ const BreadcrumbLink = React && React.forwardRef<;
 BreadcrumbLink.display_name = "BreadcrumbLink";
 
 const BreadcrumbSeparator = ({
+
+    />;
+  );
+});
+BreadcrumbLink && BreadcrumbLink.displayName = "BreadcrumbLink";
+
+const BreadcrumbSeparator = ({;
 
   children;
 
@@ -131,6 +187,7 @@ const BreadcrumbEllipsis = ({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   >;
@@ -157,18 +214,24 @@ export {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
 
+  BreadcrumbEllipsis}
+
+export {
 
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
+
+
 
   BreadcrumbEllipsis}
 ;

@@ -1,5 +1,7 @@
 
-
+import { Job } from "@/types/jobs";
+export const JOB_POSTS: Job[] = [
+  {
 
 
 
@@ -14,6 +16,7 @@ export const JOB_POSTS: Job[] = [
 
 
 
+
 import { Job } from '@/types/jobs';
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
@@ -22,6 +25,7 @@ export const JOB_POSTS: Job[] = [
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -39,6 +43,23 @@ export const JOB_POSTS: Job[] = [
     updated_at: "2024-05-10"},
   {
 
+id: 'job-2',
+    client_id: 'client-2',
+    title: 'Part-time DevOps Engineer',
+    description: 'Looking for a DevOps expert to maintain CI/CD pipelines.',
+    category: 'development',
+    skills: ['DevOps', 'AWS', 'Terraform'],
+    budget: { min: 30, max: 60, currency: 'USD' },
+    deadline: '2024-06-15',
+    status: 'new',
+    created_at: '2024-05-05',
+    updated_at: '2024-05-05',
+  },
+];
+status: "new";
+created at: "2024-05-05";
+updated at: "2024-05-05" 
+}];
 
     id: "job-2",
     client_id: "client-2",
@@ -79,5 +100,7 @@ export const JOB_POSTS: Job[] = [;
     created_at: "2024-05-05";
     updated_at: "2024-05-05"}
 ];
+
+
 
 

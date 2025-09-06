@@ -1,4 +1,6 @@
 
+export interface Service {
+export interface Service {;
 
   id: string;
   name: string;
@@ -355,6 +357,7 @@
     tags: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics']
   }
   {
+
     id: 'quantum-materials-discovery'
     name: 'Quantum Materials Discovery Platform'
     description:
@@ -540,6 +543,7 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -813,6 +817,7 @@ export const emergingTech2027Services: Service[] = [;
 
 
 
+
     link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
 
@@ -827,4 +832,5 @@ export const emergingTech2027Services: Service[] = [;
 
   }
 ];
+
 

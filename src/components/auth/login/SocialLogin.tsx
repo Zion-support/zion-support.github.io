@@ -64,13 +64,17 @@ function SocialLogin() {
 
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
+
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+
           onClick={handleGoogle}
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
+
+
 
 
 
@@ -91,12 +95,15 @@ function SocialLogin() {
 
 
 
+
+
         </Button>
         <Web3Login />
       </div>
     </div>;
   );
 };
+
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
@@ -136,6 +143,7 @@ function SocialLogin() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
@@ -206,5 +214,7 @@ export function SocialLogin() {;
   );
 
 }
+
+
 
 

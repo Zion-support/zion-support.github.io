@@ -4,12 +4,28 @@ import { useState } from 'react';
 export type FeedbackContext = { actionType?: string; metadata?: any }
 export default function FeedbackModal({
 
+  isOpen
+  onClose
+  defaultContext
+  defaultKind = 'general'
+  userHeaders
+}: {
+  isOpen,
+  onClose,
+  defaultContext,
+  defaultKind = 'general',
+  userHeaders,
+}: {;
 
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
+
+
+export type FeedbackContext = { actionType?: string, metadata?: any };
+export default function FeedbackModal({
 
 
   isOpen;
@@ -49,23 +65,39 @@ export default function FeedbackModal({
 
       });
 
+    setLoading(false);
+    onClose(true);
 
 
 
 
 
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
+        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
+    } catch {}
+
+    } catch {}
 
     setLoading(false);
-    onClose(true)
+    onClose(true);
+  }
+
   }
   return (
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
+        <div className="text-lg font-medium">Was this helpful?</div>
+        <div className="flex gap-2">
+          {[1,2,3,4,5].map(n => (
 
 
 
             <button
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -73,6 +105,7 @@ export default function FeedbackModal({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               key={n}
               onMouseEnter={() => setHover(n)}
@@ -83,7 +116,7 @@ export default function FeedbackModal({
               }
               aria-label={`${n} stars`}
             >;
-              ★;
+              ;
             </button>;
           ))}
         </div>;
@@ -197,7 +230,7 @@ function submit() {
               }
               aria - label={`${n} stars`}
             >;
-              ★;
+              ;
             </button>))}
         </div>;
         <div className='text - sm'>;
@@ -273,6 +306,15 @@ function submit() {
         </div>;
       </div>;
     </div>;
+
+
+          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
+        </div>
+      </div>
+    </div>
+);
+}
+  );
 
 
 
@@ -367,12 +409,14 @@ function submit() {
   )
 
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

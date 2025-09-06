@@ -1,13 +1,12 @@
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
+import React from "react";
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
 
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string,
@@ -22,12 +21,14 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 }
 
@@ -49,6 +50,7 @@ function SidebarMenuItem() {
 
 
 
+
 export function SidebarMenuItem(): any ({ className, children, ...props }: SidebarMenuItemProps) {;
   return (
     <li
@@ -56,6 +58,7 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
       {...props}>;
       {children}
     </li>;
+
 
   );
 }
@@ -67,7 +70,9 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useParams, Link, useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
@@ -14,10 +15,13 @@ import {AppLayout} from "@/layout/AppLayout";
 
 
 
+
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
+
+
 
 
 
@@ -39,8 +43,7 @@ export default function BlogPost() {
 
   useEffect(() => {
     // Find the current post by slug
-    const currentPost = BLOG_POSTS.find(p => p.slug === slug),
-    
+    const currentPost = BLOG_POSTS.find(p => p.slug === slug);
     if (currentPost) {
       setPost(currentPost),
 
@@ -70,6 +73,8 @@ export default function BlogPost() {
 
   if (!post) {
 
+
+
     return (
 
       <AppLayout>
@@ -78,6 +83,8 @@ export default function BlogPost() {
         </div>
       </AppLayout>
     )
+
+
 
 
 
@@ -133,20 +140,18 @@ export default function BlogPost() {;
       </AppLayout>;
     );
   }
-
-;
-  // Helper function to get share URL;
-  const getShareUrl = (platform: string) => {;
-    const url = encodeURIComponent(window.location.href),;
-    const title = encodeURIComponent(post.title),;
-    switch (platform) {;
-      case 'facebook':;
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`,;
-      case 'twitter':;
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`,;
-      case 'linkedin':;
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,;
-      default: return '#';
+  // Helper function to get share URL
+  const getShareUrl = (platform: string) => {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(post.title)
+    switch (platform) {
+      case 'facebook':
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      case 'twitter':
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+      case 'linkedin':
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+      default: return '#'
     }
   },
 
@@ -155,7 +160,9 @@ export default function BlogPost() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   
@@ -320,8 +327,8 @@ export default function BlogPost() {;
                   {showShareMenu && (;
                     <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">;
                       <a
-                        href={getShareUrl('facebook')} 
-                        target="_blank" 
+                        href={getShareUrl('linkedin')}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
                         <Facebook className="h-4 w-4 mr-2" />;
@@ -338,13 +345,13 @@ export default function BlogPost() {;
                       <a
                         href={getShareUrl('linkedin')} 
                         target="_blank" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
                         <Linkedin className="h-4 w-4 mr-2" />;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
+
 
 
 
@@ -357,6 +364,7 @@ export default function BlogPost() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   )}
@@ -387,12 +395,14 @@ export default function BlogPost() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 }}
 
@@ -473,7 +483,6 @@ export default function BlogPost() {;
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           }}
                         />;
                       </div>;
@@ -487,6 +496,7 @@ export default function BlogPost() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -494,6 +504,7 @@ export default function BlogPost() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   ))}
@@ -533,6 +544,8 @@ export default function BlogPost() {;
                 <Link to="/blog">;
                   <ChevronLeft className="mr-2 h-4 w-4" />;
 
+
+
                   All Articles;
                 </Link>;
               </Button>;
@@ -545,6 +558,7 @@ export default function BlogPost() {;
 }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -552,4 +566,5 @@ export default function BlogPost() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

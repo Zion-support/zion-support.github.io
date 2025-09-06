@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -28,6 +29,7 @@ interface VideoCallRoomProps {
   onDisconnect?: () => void,
   className?: string
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 }
 
 
@@ -49,6 +51,8 @@ export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, cl
       </CardContent>
     </Card>
   )
+
+
 
 
 import React from 'react',;
@@ -85,6 +89,7 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
 
 
 
+
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -115,6 +120,7 @@ function VideoCallRoom() {
       </CardContent>;
     </Card>);
 }
+
 
 
 

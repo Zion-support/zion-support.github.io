@@ -6,9 +6,11 @@ import React from 'react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -18,6 +20,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+
 
 
 
@@ -60,6 +63,7 @@ function RoleManagement() {
       email: 'jamie@example.com'
       role: 'Recruiter'
       permissions: {
+
 
         view_candidates: true,
         edit_candidates: true,
@@ -266,12 +270,34 @@ export function RoleManagement() {;
         manageTeam: false,
         viewBilling: false,
 
+        manageBilling: false,
+      },
+    },
+  ]
+  const handlePermissionChange = (
+    _memberId: number,
+    permission: string,
+    value: boolean
+  ) => {    // In a real app, this would make an API call to update permissions
+    toast({
+      title: 'Permission updated',
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,
+    })
+  }
+  const roleDescriptions: Record<string, string> = {
+    Admin: 'Full access to all features and settings',
+    Recruiter: 'Can manage candidates and job postings',
+    Manager: 'Can view candidates and create jobs',
+    Viewer: 'Read-only access to candidates',
+  }
+        manageBilling: false}}],
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
 
 
   return (
@@ -297,6 +323,7 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
+
 
 
 
@@ -414,6 +441,7 @@ export function RoleManagement() {;
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
+
                     aria-label='View candidates'
                     aria-label="View candidates"
                     checked={member.permissions.viewCandidates}
@@ -769,6 +797,7 @@ export function RoleManagement() {;
                     aria-label="View candidates";
 
 
+
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
@@ -803,6 +832,7 @@ export function RoleManagement() {;
                 <TableCell className='text-center'>;
                   <Switch
                     aria-label='Edit candidates'
+
                     checked={member && member.permissions.editCandidates}
                     onCheckedChange={checked =>;
                       handlePermissionChange(;
@@ -835,12 +865,14 @@ export function RoleManagement() {;
 
 
 
+
                     checked={member.permissions.viewBilling}
 
       </div>;
     </div>;
   );
 };
+
 
 
 

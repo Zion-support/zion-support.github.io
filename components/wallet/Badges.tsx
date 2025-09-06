@@ -6,6 +6,43 @@ import React from 'react';
   id: string;
 label: string;
 
+threshold: number, //token balance threshold
+}
+const BADGES: Badge[] = [
+  { id: 'starter', label: 'Starter', threshold: 50 }
+  { id: 'rising', label: 'Rising Star', threshold: 200 }
+  { id: 'pro', label: 'Pro', threshold: 500 }
+  { id: 'elite', label: 'Elite', threshold: 1000 }
+];
+export function currentBadge(balance: number): Badge | null {
+
+export function currentBadge(balance: number): Badge | null {;
+  let current: Badge | null = null;
+threshold: number, //token balance threshold ;
+};
+
+const BADGES: Badge[] = [;
+  { id: 'starter', label: 'Starter', threshold: 50 },;
+  { id: 'rising', label: 'Rising Star', threshold: 200 },;
+  { id: 'pro', label: 'Pro', threshold: 500 },;
+  { id: 'elite', label: 'Elite', threshold: 1000 },;
+];
+
+import React from "react";
+export type Badge = {
+  id: string,
+  label: string,
+  threshold: number, // token balance threshold
+};
+
+const BADGES: Badge[] = [
+  { id: "starter", label: "Starter", threshold: 50 },
+  { id: "rising", label: "Rising Star", threshold: 200 },
+  { id: "pro", label: "Pro", threshold: 500 },
+  { id: "elite", label: "Elite", threshold: 1000 }],
+export function currentBadge(balance: number): Badge | null {
+  let current: Badge | null = null,
+import React from 'react';
 
 
 import React from 'react';
@@ -14,13 +51,20 @@ import React from 'react';
 label: string;
 threshold: number, //token balance threshold;
 }
-;
-const BADGES: Badge[] = [;
-  { id: 'starter', label: 'Starter', threshold: 50 },
-  { id: 'rising', label: 'Rising Star', threshold: 200 },
-  { id: 'pro', label: 'Pro', threshold: 500 },
-  { id: 'elite', label: 'Elite', threshold: 1000 },
+import React from 'react';
+
+import React from 'react';
+  id: string;
+label: string;
+threshold: number, //token balance threshold
+}
+const BADGES: Badge[] = [
+  { id: 'starter', label: 'Starter', threshold: 50 }
+  { id: 'rising', label: 'Rising Star', threshold: 200 }
+  { id: 'pro', label: 'Pro', threshold: 500 }
+  { id: 'elite', label: 'Elite', threshold: 1000 }
 ];
+
 
 
 ;
@@ -40,6 +84,7 @@ export default /**
  */
 function Badges() {
   const active = current_badge (balance);
+
 
 
   return (
@@ -76,8 +121,10 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -99,9 +146,11 @@ export default function Badges({ balance }: { balance: number }) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           }`}
@@ -110,6 +159,7 @@ export default function Badges({ balance }: { balance: number }) {
           {b.label}
         </span>))}
       {active && (
+
 
 
 
@@ -127,4 +177,5 @@ export default function Badges({ balance }: { balance: number }) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

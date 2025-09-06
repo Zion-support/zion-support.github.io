@@ -1,10 +1,9 @@
-
         "isDesktop":width >= 1024})},;
-
+;
     updateDimensions(),;
-    window && window.addEventListener(;
+    window.addEventListener(;
   'resize', updateDimensions),;
-    return () => window && window.removeEventListener(;
+    return () => window.removeEventListener(;
   'resize', updateDimensions)}, []),;
   return state},;
 export default useResponsive,;import { useState, useEffect } from 'react';
@@ -30,16 +29,15 @@ interface Breakpoints {
   xl: number;
   '2xl': number;
 }
-
-    window && window.addEventListener(;
-
-  'resize', updateDimensions);
-    return () => window && window.removeEventListener(;
-  'resize', updateDimensions)}, []);
-
+const defaultBreakpoints: Breakpoints = {
+  sm: 640
+  md: 768
+  lg: 1024
+  xl: 1280
+  '2xl': 1536
+}
 export default useResponsive;
 
-=======
 ;
   return state}
 export default useResponsive

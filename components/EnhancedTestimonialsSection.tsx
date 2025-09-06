@@ -4,28 +4,34 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
 
 
+import {
+  Star
+  Quote
+  Users
+  Award
+  TrendingUp
+  CheckCircle;
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
   Star,
   Quote,
   Users,
@@ -40,7 +46,10 @@ import React from 'react';
 
 
 
+
+
 } from 'lucide-react';
+
 interface Testimonial {;
   id: string;
   name: string;
@@ -68,15 +77,12 @@ import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react
   content: string,
   rating: number,
   avatar: string,
-category: string;
+  category: string;
 }
 
 
 const EnhancedTestimonialsSection: React.FC = () => {
-  const testimonials: Testimonial[] = [;
-
-const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testimonial[] = [
-
+  const testimonials: Testimonial[] = [
     {
       id: '1',
       name: 'Dr. Sarah Chen',
@@ -272,11 +278,25 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
 
+                <div className="flex items-center gap-1 mb-4">
+                  {renderStars(testimonial.rating)}
+                </div>
+                {/* Category Badge */}
+                <div className='mt-4'>
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                    {testimonial.category}                  <div className="flex-1">
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-white/70">{testimonial.title}</div>
+                    <div className="text-xs text-blue-400">{testimonial.company}</div>
+                  </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+                    {testimonial.category}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {testimonials.map(testimonial => (
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -328,7 +348,9 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   "{testimonial.content}"
                 </p>
@@ -362,6 +384,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                     {testimonial.category}
 
                     {testimonial.category}
+
 
 
 
@@ -416,6 +439,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               </div>;
               {/* Hover Effect */}
 
+
         </div>;
 
 
@@ -432,9 +456,11 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 
+
                   </span>
                 </div>
               </div>
+
               <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             </div>
 
@@ -447,8 +473,10 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         {/* CTA Section */}
@@ -464,8 +492,10 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               Ready to Join Our Success Stories?
@@ -476,7 +506,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               innovation journey.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Client Success Story Discussion'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -491,12 +520,16 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 
 
+
+
           ))}
         </div>
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
         {/* CTA Section */}
         <div className="text-center mt-16">
@@ -544,6 +577,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             </div>
           </div>
         </div>
+
 
 
 
@@ -614,21 +648,42 @@ className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 
         {/* Trust Indicators */}
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+};
+
+export default EnhancedTestimonialsSection;  );
+}
+export default EnhancedTestimonialsSection;  )
+}
+};
+
+export default EnhancedTestimonialsSection;  );
+};
+
 export default EnhancedTestimonialsSection;
 
 
-
-
-
-
+    </section>);
+}
+;
+export default EnhancedTestimonialsSection);
+}
+;
+export default EnhancedTestimonialsSection;
+;
+  );
+}
+};
 
 
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
+
 
 
 
@@ -639,4 +694,5 @@ export default EnhancedTestimonialsSection;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

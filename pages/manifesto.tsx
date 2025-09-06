@@ -19,7 +19,7 @@ export default function ManifestoPage(): JSX.Element {
           <section className="prose prose-gray max-w-none">
             <h2 id="our-mission">Our Mission</h2>
             <p>
-              Empower every builder, creator, and solver with sovereign tools to earn, collaborate, and grow—without gatekeepers. Zion is a
+              Empower every builder, creator, and solver with sovereign tools to earn, collaborate, and growwithout gatekeepers. Zion is a
               marketplace protocol and product suite that aligns incentives around talent, trust, and value creation.
             </p>
             <h2 id="why-zion-exists">Why Zion Exists</h2>
@@ -37,10 +37,10 @@ export default function ManifestoPage(): JSX.Element {
             </ul>
             <h2 id="ai-for-empowerment">AI for Empowerment, Not Exploitation</h2>
             <p>
-              AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching
+              AI should amplify human capability and agencynot replace it or capture its value. Zion is AI-native by design: matching
 
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize
-              transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.
+              transparency, auditability, and consent. Your data powers your outcomes, not someone elses moat.
             </p>
             <h2 id="our-decentralized-future">Our Decentralized Future</h2>
             <p>

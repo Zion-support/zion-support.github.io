@@ -5,6 +5,7 @@ import { ReactNode } from './react';
 
 type ModernLayoutProps = {
   children: ReactNode
+
 type ModernLayoutProps = {;
   children: ReactNode,;
   title?: string;
@@ -25,7 +26,6 @@ const ModernLayout = ({;
 
 }: ModernLayoutProps) => {;
 
-=======
 }: ModernLayoutProps) =>: any {
   return (
     <>;
@@ -56,7 +56,6 @@ const ModernLayout = ({;
 };
 
 
-=======
         <meta name="viewport" content="width = device - width, initial - scale = 1" />;
         <meta name="author" content="Zion Tech Group" />;
         <meta name="robots" content="index, follow" />;

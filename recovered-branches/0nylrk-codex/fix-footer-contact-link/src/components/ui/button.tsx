@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils"
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -21,11 +22,13 @@ import { cn } from "@/lib/utils"
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
   {
     variants: {
       variant: {
+
 
 
 
@@ -36,6 +39,7 @@ const buttonVariants = cva(;
   {;
     variants: {;
       variant: {;
+
         default: "bg-primary text-primary-foreground hover:bg-primary/90",;
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
         outline:;
@@ -63,9 +67,10 @@ const buttonVariants = cva(;
 
 
 
+
+
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80"
         ghost: "hover:bg-accent hover:text-accent-foreground"
@@ -81,10 +86,8 @@ const buttonVariants = cva(;
 )
 
 
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
+export interface ButtonProps;
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -187,14 +190,14 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
       <Comp;
         className={cn (button_variants ({ variant, size, class_name }))}
 
-
+    return (;
+      <Comp;
 
         className={cn(buttonVariants({ variant, size, className }))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ref={ref}
         {...props}
-      />
-    )
+      />;
+    );
   }
 )
 Button.displayName = "Button"
@@ -202,16 +205,8 @@ Button.displayName = "Button"
 export { Button, buttonVariants }
 
 
-
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
-
+export { Button, buttonVariants };
+;
+export { Button, buttonVariants }
+;
 

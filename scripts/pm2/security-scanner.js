@@ -97,6 +97,8 @@ scanner.run().catch(error = > {; process.exit(1)}));
 }),);
 
 
+
+
 #!/usr/bin/env node,;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -904,6 +906,9 @@ class SecurityScanner {;
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json');
     this.startTime = Date.now();
 };
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -918,7 +923,7 @@ class SecurityScanner {;
 ;
   async scanDependencies() {;
     try {;
-      this.log('🔒 Scanning dependencies for vulnerabilities...');
+      this.log(' Scanning dependencies for vulnerabilities...');
 ;
       const auditResult = execSync('npm audit --json', {;
         cwd: this.projectRoot, stdio: 'pipe',
@@ -951,7 +956,7 @@ class SecurityScanner {;
 ;
   async scanCode() {;
     try {;
-      this.log('🔍 Scanning code for security issues...');
+      this.log(' Scanning code for security issues...');
 ;
       // Check for common security issues in code;
       const securityIssues = [];
@@ -981,7 +986,7 @@ class SecurityScanner {;
 ;
   async scanConfigs() {;
     try {;
-      this.log('⚙️  Scanning configuration files...');
+      this.log('  Scanning configuration files...');
 ;
       const configIssues = [];
       const configFiles = [
@@ -1081,7 +1086,7 @@ class SecurityScanner {;
 };
 ;
   async run() {;
-    this.log('🛡️  Starting Security Scanner...');
+    this.log('  Starting Security Scanner...');
     this.log(`Project root: ${this.projectRoot}`);
 ;
     try {;
@@ -1097,7 +1102,7 @@ class SecurityScanner {;
       const configResults = await this.scanConfigs();
 ;
       // Generate report;
-      this.log('📊 Generating security report...');
+      this.log(' Generating security report...');
       const report = await this.generateReport(depResults, codeResults, configResults);
 ;
       // Save report;
@@ -1106,7 +1111,7 @@ class SecurityScanner {;
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Security Scanner Summary: '),
+      this.log('\n Security Scanner Summary: '),
       this.log(`Dependencies: ${report.summary.dependencies}`);
       this.log(`Code: ${report.summary.code}`);
       this.log(`Configs: ${report.summary.configs}`);
@@ -1114,16 +1119,16 @@ class SecurityScanner {;
       this.log(`Duration: ${duration}ms`);
 ;
       if (report.recommendations.length > 0) {;
-        this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,
+        this.log('\n Recommendations: '), report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
         });
       } else {;
-        this.log('\n✨ No security issues found!');
+        this.log('\n No security issues found!');
       };
 ;
     } catch (error) {;
-      this.log(`❌ Error running security scanner: ${error.message}`);
+      this.log(` Error running security scanner: ${error.message}`);
       process.exit(1);
 };
 };
@@ -1160,7 +1165,7 @@ class SecurityScanner {,
 ,
   async scanDependencies() {,
     try {,
-      this.log('🔒 Scanning dependencies for vulnerabilities...'),
+      this.log(' Scanning dependencies for vulnerabilities...'),
 ,
       const auditResult = execSync('npm audit --json', {,
         cwd: this.projectRoot,
@@ -1199,7 +1204,7 @@ class SecurityScanner {,
 ,
   async scanCode() {,
     try {,
-      this.log('🔍 Scanning code for security issues...'),
+      this.log(' Scanning code for security issues...'),
 ,
       // Check for common security issues in code,
       const securityIssues = [],
@@ -1231,7 +1236,7 @@ class SecurityScanner {,
 ,
   async scanConfigs() {,
     try {,
-      this.log('⚙️  Scanning configuration files...'),
+      this.log('  Scanning configuration files...'),
 ,
       const configIssues = [],
       const configFiles = [,
@@ -1343,7 +1348,7 @@ class SecurityScanner {,
   };
 ,
   async run() {,
-    this.log('🛡️  Starting Security Scanner...'),
+    this.log('  Starting Security Scanner...'),
     this.log(`Project root: ${this.projectRoot}`),
 ,
     try {,
@@ -1359,7 +1364,7 @@ class SecurityScanner {,
       const configResults = await this.scanConfigs(),
 ,
       // Generate report,
-      this.log('📊 Generating security report...'),
+      this.log(' Generating security report...'),
       const report = await this.generateReport(depResults, codeResults, configResults),
 ,
       // Save report,
@@ -1368,7 +1373,7 @@ class SecurityScanner {,
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n📊 Security Scanner Summary: '),
+      this.log('\n Security Scanner Summary: '),
       this.log(`Dependencies: ${report.summary.dependencies}`),
       this.log(`Code: ${report.summary.code}`),
       this.log(`Configs: ${report.summary.configs}`),
@@ -1376,17 +1381,17 @@ class SecurityScanner {,
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.recommendations.length > 0) {,
-        this.log('\n💡 Recommendations: '),
+        this.log('\n Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
           this.log(`    Action: ${rec.action}`),
         }),
       } else {,
-        this.log('\n✨ No security issues found!'),
+        this.log('\n No security issues found!'),
       };
 ,
     } catch (error) {,
-      this.log(`❌ Error running security scanner: ${error.message}`),
+      this.log(` Error running security scanner: ${error.message}`),
       process.exit(1),
     };
   };
@@ -1437,10 +1442,12 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -1,4 +1,5 @@
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,12 +33,6 @@ import {;
   Brain,;
   Star,;
 
-=======
-
-
-import React from "react";
-import Head from "next/head";
-import {
 
   Phone,
   Mail,
@@ -47,21 +42,21 @@ import {
   Brain,
   Star,;
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 
+
 export default function QuantumAIBCIPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
     s && s.link.endsWith("/quantum-ai-brain-computer-interface"),;
 
-=======
 
-    s.link.endsWith("/quantum-ai-brain-computer-interface"),;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
   if (!service) return null;
 
@@ -101,6 +96,7 @@ export default function QuantumAIBCIPage() {;
                 ))}
 
 
+
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">
@@ -123,10 +119,13 @@ export default function QuantumAIBCIPage() {;
                 </div>
               </div>
 
+
               <Button
                 href="/contact"
                 variant="quantum"
                 size="lg"
+
+
 
 import React from './react';
 import Head from './next / head';
@@ -152,7 +151,8 @@ function QuantumAIBCIPage() {
   // Check condition
 if (return null) {
   $2
-=======
+
+
                 className="w-full"
               >
                 Book a Demo
@@ -180,7 +180,9 @@ if (return null) {
   );
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 }
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -228,7 +230,9 @@ if (return null) {
                     </span>;
                   </div>;
                   <div className="text - slate - 400">;
+
                     {service.trial_days}-day free trial • Setup:{" "}
+
                     {service.setup_time}
                   </div>;
                 </div>;
@@ -265,5 +269,7 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

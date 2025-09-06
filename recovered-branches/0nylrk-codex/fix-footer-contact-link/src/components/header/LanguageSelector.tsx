@@ -4,13 +4,17 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 
-
-
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+DropdownMenuTrigger,;
 
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
@@ -18,6 +22,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
@@ -65,6 +70,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 
 
+
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger as_child>;
@@ -95,7 +101,9 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -118,9 +126,10 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   );
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

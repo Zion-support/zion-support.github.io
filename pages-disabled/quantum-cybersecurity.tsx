@@ -28,16 +28,24 @@ import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
+export default function QuantumCybersecurityPage() {
 
 
-
-
+  const features = [
+    {
+      icon: Shield
+      title: "Quantum-Resistant Encryption"
+      description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
+      color: "from-blue-500 to-cyan-500"
+    }
 
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
       color: "from-blue-500 to-cyan-500";
     };
+
+
 
 
 
@@ -80,7 +88,171 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
     "Protect against quantum computing attacks with future-proof encryption";
     "Reduce security incidents by 90% with AI-powered threat detection";
+import Head from 'next / head';
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, AlertTriangle, Zap, Cpu, Database, Globe, ArrowRight, CheckCircle, Star, Users} from 'lucide-react';
+import EnhancedNavigation from '../components / EnhancedNavigation';
+import EnhancedFooter from '../components / EnhancedFooter';
+export default /**
+ * QuantumCybersecurityPage - Function description
+ */
+function QuantumCybersecurityPage() {
+  const features = [;
+    {
+      icon: Shield,
+      title: "Quantum - Resistant Encryption",
+      description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
+      color: "from - blue - 500 to - cyan - 500";
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
+  Database, Globe, ArrowRight, CheckCircle, Star, Users
+ } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function QuantumCybersecurityPage() {
 
+  const features = [
+    {
+
+
+  const threats = [;
+    {;
+      type: "Quantum Attacks",;
+      description: "Future quantum computers could break current encryption standards",;
+      solution: "Quantum-resistant algorithms and post-quantum cryptography";
+    };
+    {;
+      type: "AI-Powered Threats",;
+      description: "Sophisticated attacks using artificial intelligence and machine learning",;
+      solution: "Advanced AI defense systems and behavioral analysis";
+    };
+    {;
+      type: "Supply Chain Attacks",;
+      description: "Compromised software or hardware in the supply chain",;
+      solution: "Comprehensive supply chain verification and integrity checks";
+    };
+    {;
+      type: "Ransomware",;
+      description: "Malicious software that encrypts data and demands payment",;
+      solution: "Real-time detection, automated backup, and rapid recovery";
+    }
+  ];
+  const pricing = [;
+    {;
+      plan: "Essential",;
+      price: "$799",;
+      period: "/month",;
+      description: "Basic quantum cybersecurity for small businesses",;
+      features: [;
+
+        "Quantum-resistant encryption";
+;
+  const threats = [;
+    {
+      type: "Quantum Attacks",
+      description: "Future quantum computers could break current encryption standards",
+      solution: "Quantum - resistant algorithms and post - quantum cryptography";
+    }
+    {
+      type: "AI - Powered Threats",
+      description: "Sophisticated attacks using artificial intelligence and machine learning",
+      solution: "Advanced AI defense systems and behavioral analysis";
+    }
+    {
+      type: "Supply Chain Attacks",
+      description: "Compromised software or hardware in the supply chain",
+      solution: "Comprehensive supply chain verification and integrity checks";
+    }
+    {
+      type: "Ransomware",
+      description: "Malicious software that encrypts data and demands payment",
+      solution: "Real - time detection, automated backup, and rapid recovery";
+    }
+  ];
+;
+  const pricing = [;
+    {
+      plan: "Essential",
+      price: "$799",
+      period: "/month",
+      description: "Basic quantum cybersecurity for small businesses",
+      features: [;
+        "Quantum - resistant encryption";
+        "Basic threat detection";
+        "24 / 7 monitoring";
+        "Email support";
+        "Up to 100 users";
+
+        "Standard compliance reports";
+      ],;
+      popular: false;
+    };
+    {;
+      plan: "Professional",;
+      price: "$1,999";
+      period: "/month",;
+      description: "Advanced security features for growing organizations",;
+      features: [;
+
+        "Standard compliance reports";
+      ],
+      popular: false;
+    }
+    {
+      plan: "Professional",
+      price: "$1, 999";
+      period: "/month",
+      description: "Advanced security features for growing organizations",
+      features: [;
+        "Everything in Essential";
+        "AI - powered threat detection";
+        "Zero - trust architecture";
+        "Priority support";
+        "Up to 1000 users";
+        "Custom security policies";
+        "Advanced compliance reporting";
+
+        "Incident response team";
+      ],;
+      popular: true;
+    };
+    {;
+      plan: "Enterprise",;
+      price: "Custom",;
+      period: "",;
+      description: "Full-scale security solution for large organizations",;
+      features: [;
+
+        "Incident response team";
+      ],
+      popular: true;
+    }
+    {
+      plan: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Full - scale security solution for large organizations",
+      features: [;
+        "Everything in Professional";
+        "Custom security architecture";
+        "Dedicated security team";
+        "Unlimited users";
+        "On - premise deployment";
+        "Custom training programs";
+        "SLA guarantees";
+
+        "Executive reporting";
+      ],;
+      popular: false;
+
+        "Executive reporting";
+      ],
+      popular: false;
+    }
+  ];
+;
 
   return (
     <>
@@ -94,6 +266,8 @@ import EnhancedFooter from '../components/EnhancedFooter';
         <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity" />
       </Head>
       <EnhancedNavigation />
+
+
 
 
       {/* Hero Section */}
@@ -137,6 +311,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200">;
                 Security Assessment;
               </a>;
@@ -157,6 +332,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
       {/* Features */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -176,6 +352,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -189,6 +366,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -219,6 +397,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -229,6 +408,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -253,7 +433,26 @@ import EnhancedFooter from '../components/EnhancedFooter';
                 {benefits.map((benefit, index) => (
                   <motion.div
 
-
+              transition={{ duration: 0 && 0.6 }}>;
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>;
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">;
+                Our advanced security platform provides comprehensive protection against both current and future threats. ;
+                Stay ahead of the curve with quantum-resistant technology.;
+              </p>;
+              <div className="space-y-4">;
+                {benefits && benefits.map((benefit, index) => (;
+                  <motion&& motion.div
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                Our advanced security platform provides comprehensive protection against both current and future threats.
+                Our advanced security platform provides comprehensive protection against both current and future threats. 
+                Stay ahead of the curve with quantum-resistant technology.
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
 
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
@@ -266,6 +465,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
                 ))}
               </div>
             </motion.div>
+
 
 
 
@@ -284,6 +484,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             <motion.div
@@ -311,6 +512,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
           </div>
         </div>
       </section>
+
 
 
 
@@ -356,6 +558,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
       {/* Threat Landscape */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -375,6 +578,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -388,6 +592,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -416,6 +621,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -423,6 +629,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
       {/* Compliance */}
@@ -439,6 +646,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
               Meet and exceed industry security standards with our comprehensive compliance framework.
             </p>
           </motion.div>
+
 
 
 
@@ -464,6 +672,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -487,6 +696,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -495,6 +705,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             <motion.div
@@ -517,6 +728,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -525,6 +737,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             <motion.div
@@ -547,6 +760,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -555,6 +769,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             <motion.div
@@ -572,6 +787,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
           </div>
         </div>
       </section>
+
 
 
 
@@ -649,6 +865,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
       {/* Pricing */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -668,6 +885,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -681,6 +899,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -728,10 +947,16 @@ import EnhancedFooter from '../components/EnhancedFooter';
                 </ul>
 
 
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
+                  <div className="text-4xl font-bold text-slate-900 mb-2">
+                    {plan.price}
+                    <span className="text-lg text-slate-600">{plan.period}</span>
+                  </div>
+                  <p className="text-slate-600">{plan.description}</p>
+                </div>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
@@ -757,6 +982,11 @@ import EnhancedFooter from '../components/EnhancedFooter';
           </div>;
         </div>;
       </section>;
+
+          </div>
+        </div>
+      </section>
+
 
 
 
@@ -795,8 +1025,22 @@ import EnhancedFooter from '../components/EnhancedFooter';
   );
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+    <>;
+      <Head>;
+        <title > Quantum Cybersecurity - Zion Tech Group</title>;
+        <meta name="description" content="Future - proof your security with quantum - resistant encryption and AI - powered threat detection. Protect your business against tomorrow's cyber threats today." />;
+        <meta name="keywords" content="quantum cybersecurity, quantum - resistant encryption, AI threat detection, zero - trust security, cybersecurity platform, threat intelligence" />;
+        <meta property="og:title" content="Quantum Cybersecurity - Zion Tech Group" />;
+        <meta property="og:description" content="Future - proof your security with quantum - resistant encryption and AI - powered threat detection." />;
+        <meta property="og:type" content="website" />;
+        <meta property="og:url" content="https://ziontechgroup.com / quantum - cybersecurity" />;
+      </Head>;
+      <EnhancedNavigation />;
+      {/* Hero Section */}
+      <section className="pt - 32 pb - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
 

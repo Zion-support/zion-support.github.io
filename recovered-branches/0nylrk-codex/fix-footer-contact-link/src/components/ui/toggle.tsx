@@ -14,12 +14,14 @@ import { cn } from "@/lib/utils"
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 const toggleVariants = cva(
   "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover: bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground"
@@ -32,11 +34,13 @@ const toggleVariants = cva(
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       size: {
@@ -59,13 +63,22 @@ const Toggle = React.forwardRef<ToggleRef, ToggleProps>(
       className={cn (toggle_variants ({ variant, size, class_name }))}
       {...props}
 
+    />
+  )
+)
+Toggle.displayName = TogglePrimitive.Root.displayName
+export { Toggle, toggleVariants }
 
+    />
+  )
+)
 
 
 Toggle.displayName = TogglePrimitive.Root.displayName
 
 export { Toggle, toggleVariants };
 ;
+
 
 
 
@@ -127,5 +140,6 @@ export { Toggle, toggle_variants }
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

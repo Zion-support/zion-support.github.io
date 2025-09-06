@@ -24,22 +24,26 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   }
   return series;
 }
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
-
-
-
+  const now = new Date()
+  const labels = Array.from({ length: 14 }, (_, i) => {
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
 
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
+    return `${d.getMonth() + 1}/${d.getDate()}`;
 
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
@@ -48,7 +52,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -372,10 +375,12 @@ if ( {) {
   }
 
 
+        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
+        dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
+        token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
+        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
+
   }
-
-
-
 
   res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
@@ -383,10 +388,6 @@ if ( {) {
         multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}}
   }
   res.status (200).json (response);
-  }
-
-  res.status(200).json(response)
-
 }
 
 

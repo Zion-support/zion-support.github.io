@@ -1,80 +1,20 @@
-<<<<<<< HEAD
-import Layout from '../../components/Layout';
-import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react';
-import Layout from '../../components/Layout';
-import { GraduationCap, Users, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
-    icon: GraduationCap,
-    title: 'Learning Management Systems,',
-    description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
-  Users, 
-  BookOpen, 
-  Laptop, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight ;
-} from 'lucide-react';
 
-const features = [
-  {
-    icon: GraduationCap,
-    title: 'Learning Management System',
-    description: 'Comprehensive LMS with course management and student tracking',
-    benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
-ursor/fix-syntax-push-and-merge-to-main-40de
-import Layout from '../../components/Layout';
-import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react';
-import Layout from '../../components/Layout';
-import { GraduationCap, Users, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
-    icon: GraduationCap,
-    title: 'Learning Management Systems,',
-    description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-  },
-  {}
+
     icon: Users,
     title: 'Student Information Systems,',
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
-=======
-
-
-  },
-  {}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-    icon: Users,
-    title: 'Student Information Systems,',
-    description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
-  },
-  {}
-    icon: BookOpen,
-    title: 'Digital Content Management,',
-    description: 'Platforms for creating, managing, and delivering educational content and resources.',
-  },
   {}
     icon: BookOpen,;
     title: 'Digital Content Management,',;
     description: 'Platforms for creating, managing, and delivering educational content and resources.',;
   },;
   {}
-<<<<<<< HEAD
+    icon: BookOpen,;
+    title: 'Digital Content Management,',;
+    description: 'Platforms for creating, managing, and delivering educational content and resources.',;
+  },;
+  {}
+
     icon: Globe,
     title: 'Accessibility Solutions,',
     description: 'ADA-compliant educational technology that ensures equal access for all students.'';
@@ -111,45 +51,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     icon: Users,
     title: 'Teacher Resources',
     description: 'Professional development and teaching support tools'
-=======
 
-    icon: Laptop,;
-    title: 'Virtual Classrooms,',;
-    description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'',;
-  },;
-  {}
-    icon: Globe,;
-    title: 'Accessibility Solutions,',;
-    description: 'ADA-compliant educational technology that ensures equal access for all students.'',;
-    title: 'Learning Management Systems',;
-    description: 'Comprehensive LMS platforms for online and blended learning';
-  },;
-  {;
-    icon: Users,;
-    title: 'Student Information Systems',;
-    description: 'Complete student data management and academic tracking';
-  },;
-  {}
-    icon: BookOpen,;
-    title: 'Digital Content Management',;
-    description: 'Interactive digital content creation and distribution';
-  },;
-  {;
-    icon: CheckCircle,;
-    title: 'Assessment Tools',;
-    description: 'Advanced testing and evaluation platforms';
-  },;
-  {;
-    icon: ArrowRight,;
-    title: 'Parent Portal',;
-    description: 'Communication and engagement tools for parents';
-  },;
-  {;
-    icon: Users,;
-    title: 'Teacher Resources',;
-    description: 'Professional development and teaching support tools';
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ;];
 const solutions = [;
@@ -226,7 +128,7 @@ const benefits = [;
   'Reduced operational costs',;
   'Accessible learning for all students';
 ];
-<<<<<<< HEAD
+
 export default function EducationSolutions() {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     title: 'Virtual Classrooms',
@@ -274,26 +176,25 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
 ;];
 const solutions = [;
-  'Learning Management Systems (LMS)',',
-  'Student Information Systems (SIS)',',
-  'Virtual Classroom Platforms',',
-  'Educational Mobile Applications',',
-  'Assessment & Testing Platforms',',
-  'Digital Content Management',',
-  'Campus Management Systems',',
-  'Online Course Creation Tools',',
-  'Student Analytics & Reporting',',
+  'Learning Management Systems (LMS)',',;
+  'Student Information Systems (SIS)',',;
+  'Virtual Classroom Platforms',',;
+  'Educational Mobile Applications',',;
+  'Assessment & Testing Platforms',',;
+  'Digital Content Management',',;
+  'Campus Management Systems',',;
+  'Online Course Creation Tools',',;
+  'Student Analytics & Reporting',',;
   'Educational Data Integration'';
 ;];
-export default function EducationSolutionsPage() {
-  return (;
-    <Layout );
-      title="Education Solutions - Zion Tech Group"";
-      description="Transform education with our comprehensive learning management systems, virtual classrooms, student information systems, and educational technology solutions.""
-    >;
+export default function EducationSolutionsPage() {;
+  return (
+    <Layout)
+      title="Education Solutions - Zion Tech Group""
+      description="Transform education with our comprehensive learning management systems, virtual classrooms, student information systems, and educational technology solutions."">;
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">"
+        <section className="relative py-20 overflow-hidden">";
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto text-center">";
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
@@ -303,7 +204,7 @@ export default function EducationSolutionsPage() {
                 </span>;
               </h1>;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-                Transform education with our comprehensive technology solutions. 
+                Transform education with our comprehensive technology solutions. ;
                 From learning management systems to virtual classrooms, we help;
                 educational institutions deliver exceptional learning experiences.;
               </p>;
@@ -320,56 +221,41 @@ export default function EducationSolutionsPage() {
           </div>;
         </section>;
         {/* Features Section */}
-        <section className="py-20">"
+        <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-white mb-4">";
                 Comprehensive Educational Technology Solutions;
               </h2>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                Our education solutions are designed to enhance learning outcomes, 
-                improve administrative efficiency, and support modern educational practices.,
+                Our education solutions are designed to enhance learning outcomes, ;
+                improve administrative efficiency, and support modern educational practices.,;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {features.map((feature, index) => (,
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
+              {features && features.map((feature, index) => (,;
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">";
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
-                    <feature.icon className="w-6 h-6 text-white" />";
+                    <feature && feature.icon className="w-6 h-6 text-white" />";
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
-                  <p className="text-gray-300">{feature.description}</p>"
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";
+                  <p className="text-gray-300">{feature && feature.description}</p>";
                 </div>;
-const benefits = [
-  'Improved student engagement and outcomes',
-  'Streamlined administrative processes',
-  'Enhanced communication between stakeholders',
-  'Better data-driven decision making',
-  'Reduced operational costs',
-  'Accessible learning for all students'
+const benefits = [;
+  'Improved student engagement and outcomes',;
+  'Streamlined administrative processes',;
+  'Enhanced communication between stakeholders',;
+  'Better data-driven decision making',;
+  'Reduced operational costs',;
+  'Accessible learning for all students';
 ];
 export default function EducationSolutions() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-export default function EducationSolutions() {;
-    title: 'Virtual Classrooms',;
-    description: 'Online learning platform with video conferencing and collaboration',;
-    benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording'];
-  }
-];
-
-export default function EducationSolutionsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -377,19 +263,14 @@ export default function EducationSolutionsPage() {;
       keywords="education solutions, learning management system, student information system, educational technology, digital learning">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         <section className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -422,37 +303,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 Comprehensive solutions designed to enhance learning experiences
                 and streamline educational operations.
               </p>
-<<<<<<< HEAD
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-indigo-600" />
                   </div>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -460,7 +320,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     {feature.description}
                   </p>
                 </div>
-=======
+
+
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },;
@@ -742,7 +603,7 @@ export default function EducationSolutionsPage() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD
+
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">
@@ -770,10 +631,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion && motion.div>;
               ))}
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -859,7 +717,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Education Guide;
-=======
+
+
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">;
@@ -871,13 +730,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Demo;
                   <ArrowRight className="w-5 h-5 ml-2" />;
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
+
                 </button>;
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
+
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -914,15 +775,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             </div>
           </div>
         </section>
@@ -947,23 +802,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </Layout>
-    </Layout>
-    </Layout>
-    </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    </>
-    </Layout>
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
-=======
+
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -995,4 +837,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     </>;
   ),;
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
+

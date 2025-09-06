@@ -1,11 +1,17 @@
 
-
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Resume  } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+export function useFetchResume() {
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
+
+
 
 
 
@@ -86,6 +92,7 @@ export function useFetchResume() {;
           return null;
 
 
+
         }
         throw resumeError
       }
@@ -136,6 +143,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -197,6 +205,73 @@ if ( {) {
       console && console.error('Error fetching resume:', e);
       setError(e && e.message);
       return null
+
+      // Fetch work experience;
+      const { data: work_data, error: work_error } = await supabase;
+        .from ('work_history');
+        .select ('*');
+        .eq ('resume_id', resume_data.id);
+        .order ('is_current', { ascending: false });
+        .order ('start_date', { ascending: false });
+;
+      // Check condition
+if (throw work_error) {
+  $2
+}
+      // Fetch education;
+      const { data: education_data, error: education_error } = await supabase;
+        .from ('education');
+        .select ('*');
+        .eq ('resume_id', resume_data.id);
+        .order ('is_current', { ascending: false });
+        .order ('start_date', { ascending: false });
+;
+      // Check condition
+if (throw education_error) {
+  $2
+}
+      // Fetch skills;
+      const { data: skills_data, error: skills_error } = await supabase;
+        .from ('resume_skills');
+        .select ('*');
+        .eq ('resume_id', resume_data.id);
+;
+      // Check condition
+if (throw skills_error) {
+  $2
+}
+      // Fetch certifications;
+      const { data: cert_data, error: cert_error } = await supabase;
+        .from ('certifications');
+        .select ('*');
+        .eq ('resume_id', resume_data.id);
+;
+      // Check condition
+if (throw cert_error) {
+  $2
+}
+      const full_resume: Resume = {
+        id: resume_data.id;
+        user_id: resume_data.user_id;
+        basic_info: {
+          id: resume_data.id;
+          title: resume_data.title;
+          headline: resume_data.headline,
+          summary: resume_data.summary;
+        }
+        work_experience: work_data || [];
+        education: education_data || [];
+        skills: skills_data || [];
+        certifications: cert_data || [],
+        is_active: resume_data.is_active;
+      }
+;
+      set_resume (full_resume);
+      return full_resume;
+    } catch (e: any) {
+      console.error ('Error fetching resume:', e);
+      set_error (e.message);
+      return null;
 
     } finally {
       setIsLoading (false);
@@ -262,6 +337,8 @@ if ( {) {
   },;
   return {;
     isLoading,;
+
+
 
 
     error;

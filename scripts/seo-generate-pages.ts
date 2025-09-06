@@ -6,6 +6,9 @@ import https from 'https';
 const HOST = process.env.SELF_HOST |'http: //localhost:3000'
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' }
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
@@ -47,9 +50,11 @@ async function main() {
 main().catch((e) => {
 
 
+
   console && console.error(e);
   process && process.exit(1)
 });
+
 
 
 
@@ -91,6 +96,7 @@ main ().catch ((e) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -99,5 +105,6 @@ main ().catch ((e) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

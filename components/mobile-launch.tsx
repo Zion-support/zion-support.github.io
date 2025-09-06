@@ -11,7 +11,9 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -34,6 +36,8 @@ function AppleBadge({ href }: { href: string }) {
 
 
 
+
+
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({;
   className = 'w-5 h-5 text-yellow-500',;
@@ -49,12 +53,13 @@ function StarIcon(): any ({;
 function AppleBadge(): any ({ href }: { href: string }) {;
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <svg
         width='24'
         height='24'
         viewBox='0 0 24 24'
         fill='currentColor'
+
+
 
 
         aria-hidden>;
@@ -127,6 +132,9 @@ function SmartBanner(): any ({;
 }) {  const [visible, setVisible] = useState(false);// Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {;
 
+
+// Simple icons using inline SVG to avoid external assets
+function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
 
 
   return (
@@ -405,6 +413,13 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);
 
 
+    const ua = navigator.userAgent || '';
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
+    if (isMobile) setVisible(true)
+  }, []);
+
+
+
   if (!visible) return null;
   const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const storeUrl = isIOS ? iosUrl : androidUrl;
@@ -441,6 +456,7 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -458,6 +474,7 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const IOS_APP_URL =
@@ -487,9 +504,14 @@ const testimonials = [
   }
 ];
 
-
-
-
+export default function MobileLaunchPage() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' }
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
+export default function MobileLaunchPage() {
 
 
 export default function MobileLaunchPage() {;
@@ -500,6 +522,8 @@ export default function MobileLaunchPage() {;
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
+
+
 
 
 
@@ -531,6 +555,8 @@ export default function MobileLaunchPage() {;
 
 
 
+
+
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -552,13 +578,74 @@ export default function MobileLaunchPage() {;
     );
     return () => clearInterval(t);
 
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
+              className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
+const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https: //play.google.com/store/apps/details?id=com.zion.app', const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open',
+
+const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
+
+const testimonials = [
+  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
+export default function MobileLaunchPage() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
+  const [error, setError] = useState('');
+
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-    }
-  }
 
+  }, []);
+  const qrHref = useMemo(() => {;
+    const target = SITE_BASE_URL;
+      ? `${SITE_BASE_URL}/download`;
+      : typeof window !== 'undefined';
+        ? `${window && window.location.origin}/download`;
+        : '/download';
+    const encoded = encodeURIComponent(target);
+    return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
+
+  const qrHref = useMemo(() => {;
+    const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window && window.location.origin}/download` : '/download');
+    const encoded = encodeURIComponent(target);
+    return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
+  }, []);
+
+
+
+
+
+      });
+      if (!res && res.ok) throw new Error(await res && res.text());
+      setStatus('success');
+      setEmail('');
+    } catch (err: any) {;
+      setStatus('error');
+      const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
+      if (!res.ok) throw new Error(await res.text());
+      setStatus('success');
+      setEmail('');
+    } catch (err: any) {;
+      setStatus('error');
+      setError(err?.message |'Something went wrong.')
+
+      setError(err?.message || 'Something went wrong.')
+      setError(err?.message || 'Something went wrong.');    }
 
 
     }
@@ -577,6 +664,7 @@ export default function MobileLaunchPage() {;
             <div className="opacity-80">Or tap a store badge above</div>;
         </div>;
       </section>;
+
       {/* Key features */}
       <section className='mt-10 grid md:grid-cols-3 gap-6'>;
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
@@ -617,30 +705,52 @@ export default function MobileLaunchPage() {;
           <div
             className='flex transition-transform duration-700'
             style={{
-
-
+              transform: `translateX(-${idx * 100}%)`
+              width: `${testimonials.length * 100}%`
+            }}
+          >;
+            {testimonials.map (t => (
+              <div key={t.name} className='w - full md:w - 1/3 flex - shrink - 0 pr - 4'>;
+                <div className='rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 5 bg - white dark:bg - gray - 950 h - full'>;
+                  <p className='text - sm'>{t.quote}</p>;
+                  <div className='mt - 3 text - xs opacity - 80'>;
+                    {t.name}  {t.role}
+                  </div>                </div>        <h2 className="mt-2 text-xl font-semibold">Why people love the Zion app</h2>
+        <div className="relative mt-4 overflow-hidden">
+          <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${idx * 100}%)`, width: `${testimonials.length * 100}%` }}>
+            {testimonials.map((t) => (
+              <div key={t.name} className="w-full md:w-1/3 flex-shrink-0 pr-4">
+                <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full">
+                  <p className="text-sm">{t.quote}</p>
+                  <div className="mt-3 text-xs opacity-80">{t.name}  {t.role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
               transform: `translateX(-${idx * 100}%)`,
               width: `${testimonials && testimonials.length * 100}%`,
             }}>;
             {testimonials && testimonials.map(t => (;
               <div key={t && t.name} className='w-full md:w-1/3 flex-shrink-0 pr-4'>;
                 <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full'>;
-                  <p className='text-sm'>“{t && t.quote}”</p>;
+                  <p className='text-sm'>{t && t.quote}</p>;
                   <div className='mt-3 text-xs opacity-80'>;
-                    {t && t.name} • {t && t.role}
+                    {t && t.name}  {t && t.role}
                   </div>                </div>        <h2 className="mt-2 text-xl font-semibold">Why people love the Zion app</h2>;
         <div className="relative mt-4 overflow-hidden">;
           <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${idx * 100}%)`, width: `${testimonials && testimonials.length * 100}%` }}>;
             {testimonials && testimonials.map((t) => (;
               <div key={t && t.name} className="w-full md:w-1/3 flex-shrink-0 pr-4">;
                 <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full">;
-                  <p className="text-sm">“{t && t.quote}”</p>;
-                  <div className="mt-3 text-xs opacity-80">{t && t.name} • {t && t.role}</div>;
+                  <p className="text-sm">{t && t.quote}</p>;
+                  <div className="mt-3 text-xs opacity-80">{t && t.name}  {t && t.role}</div>;
               </div>;
             ))}
           </div>;
         </div>;
       </section>;
+
       {/* Email opt-in */}
 
 
@@ -654,6 +764,7 @@ export default function MobileLaunchPage() {;
           <button
             type="submit"
             disabled={status === 'loading'}
+
 
 
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
@@ -678,6 +789,7 @@ export default function MobileLaunchPage() {;
 
 
 
+
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -692,7 +804,7 @@ export default function MobileLaunchPage() {;
       <section className="mt-10 text-sm opacity-80">
         <div className="flex flex-wrap items-center gap-4">
           <Link href="/open-app"><a className="underline">Deep link: /open-app</a></Link>
-          <span>•</span>
+          <span></span>
           <Link href="/download"><a className="underline">Shareable link: /download</a></Link>
         </div>
       </section>
@@ -817,8 +929,20 @@ export default function MobileLaunchPage() {;
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+    </EnhancedLayout>);
+;
+}return (<EnhancedLayout> <Head> <title > Zion Mobile App  iOS & Android</title> <meta name="description" content="Hire from anywhere, AI - match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI - match instantly. Track milestones on the go." /> </Head> <SmartBanner ios_url= {
+  IOS APP URL;
+}android_url= {
+  ANDROID APP URL;
+}deep_link= {
+  DEEP LINK URL;
+}/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity - 80" >Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950" > <div className="text - lg font - semibold" >AI - match instantly</div> <p className="mt - 2 text - sm opacity - 80" >Smart matching surfaces top candidates in seconds.</p> <div className="mt - 4 h - 36 rounded - xl bg - gradient - to - br from - purple - 100 to - pink - 100 dark:from - purple - 900 / 40 dark:to - pink - 900 / 40" /> </div> <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950" > <div className="text - lg font - semibold" >Track milestones</div> <p className="mt - 2 text - sm opacity - 80" >Manage deliverables, approvals, and progress on the go.</p> <div className="mt - 4 h - 36 rounded - xl bg - gradient - to - br from - indigo - 100 to - blue - 100 dark:from - indigo - 900 / 40 dark:to - blue - 900 / 40" /> </div> </section> <StarIcon key= {
+  i;
+}/>) );
+}<span className="text - sm opacity - 80" >4.9 average rating</span> </div> </div> </div>) );
+}</div> </div> </section> <input type="email" required > {
+  status === 'loading' ? 'Submitting…' : 'Notify me'
+}</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
+  );
 

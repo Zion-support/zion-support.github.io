@@ -1,6 +1,6 @@
 id: string;
     title: string;
-    client: {
+    client: {;
       name: string;
       avatar?: string
     },
@@ -9,6 +9,7 @@ id: string;
     status: string;
     totalAmount: string;
     progress: number;
+
 
 
 
@@ -33,6 +34,7 @@ import { toast } from 'sonner';
 
 
 
+
   const router = useRouter()
   const startProjectCall = () => {
     const roomId = `project-${project.id}`
@@ -49,7 +51,9 @@ import { toast } from 'sonner';
   }
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -104,6 +108,22 @@ interface ProjectViewProps {;
   },;
   milestones: Milestone[];
 
+
+  const router = useRouter()
+  const startProjectCall = () => {
+    const roomId = `project-${project.id}`
+    toast.success('Starting project call', {
+      description: 'Initializing video connection...'
+    })
+    router.push(`/call/${roomId}`)
+  }
+  const messageClient = () => {
+    toast.info('Opening message thread with client', {
+      description: `Messaging ${project.client.name}...`
+    })
+    // Navigate to messaging with this client
+  }
+
     description: string;
   };
   milestones: Milestone[];
@@ -153,6 +173,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 
 
 
+
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>
@@ -195,6 +216,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               <div>
                 <p className='text-muted-foreground'>End Date</p>
                 <p className='font-medium'>{project.endDate |'Not set'}</p>
+
                 <p className="text-muted-foreground">End Date</p>
                 <p className="font-medium">{project.endDate || "Not set"}</p>
               </div>
@@ -208,6 +230,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
             </div>
             
+
 
 
             <div>
@@ -228,6 +251,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               <Button
                 size='sm'
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
+
                 onClick={startProjectCall}              >
                 <Video className='h-4 w-4' /> Call
             
@@ -251,11 +275,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 <Video className="h-4 w-4" /> Call
 
 
+
               </Button>
             </div>
           </div>
         </CardContent>
       </Card>
+
       <section>
         <h2 className='text-lg font-medium mb-4'>Milestones</h2>
         <div className='space-y-3'>
@@ -276,6 +302,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   <div className="flex items-center gap-2">
                     {milestone.status === "completed" ? (
                       <CheckCircle className="h-5 w-5 text-green-500" />
+
 
 
                     ) : (
@@ -338,6 +365,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     </div>;
   );
 }
+
 
     <div className='space - y-6 px - 4 pb - 24'>;
                     <h3 className="font-medium">{milestone.title}</h3>
@@ -478,7 +506,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     <span>{milestone.dueDate}</span>
                   </div>
@@ -500,6 +530,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>
               </CardContent>
             </Card>
+
 
 
                   </Badge>;
@@ -542,3 +573,4 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
 
 ;
+

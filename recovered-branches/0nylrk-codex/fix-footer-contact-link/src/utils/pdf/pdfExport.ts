@@ -1,7 +1,17 @@
 
 
-
-
+import { Resume  } from '@/types/resume';
+import { jsPDF  } from 'jspdf';
+import 'jspdf-autotable';
+import { getPdfThemeColors  } from './themeConfig';
+import { loadCustomFonts, FontFamily  } from './fontConfig';
+import { addBasicInfoSection  } from './sections/basicInfoSection';
+import { addSkillsSection  } from './sections/skillsSection';
+import { addWorkExperienceSection  } from './sections/workExperienceSection';
+import { addEducationSection  } from './sections/educationSection';
+import { addCertificationsSection  } from './sections/certificationsSection';
+import { addPortfolioSection } from './sections/portfolioSection';
+export interface ExportOptions {
 
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
@@ -15,6 +25,8 @@ import {addEducationSection} from './sections/educationSection';
 import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
+
+
 
 
 
@@ -38,11 +50,10 @@ export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
 
-
-
-
-
-
+): Promise<Blob> {
+  const mergedOptions: ExportOptions = { ...defaultOptions, ...options }
+): Promise<Blob> {;
+  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
@@ -137,6 +148,7 @@ export async function exportResumeToPDF (
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -146,7 +158,7 @@ export async function exportResumeToPDF (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   }
   return doc.output ('blob');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

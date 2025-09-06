@@ -1,10 +1,30 @@
 
-
-
-
-
-
-
+import { useEffect, useState  } from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import { TokenTransaction  } from '@/types/tokens';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { useToast } from '@/hooks/use-toast';
+export default function TokenManager() {
+import {useEffect, useState} from 'react';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {TokenTransaction} from '@/types/tokens';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
+import {useToast} from '@/hooks/use-toast';
+export default function TokenManager() {;
 
   const { user } = useAuth();
   const { toast } = useToast();
@@ -83,8 +103,8 @@ if ( {) {
       })
     }
 
-
-
+  }
+  };
 
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
@@ -138,14 +158,12 @@ export default function TokenManager() {;
         description: err && err.error || 'Failed',;
         variant: 'destructive';
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -171,7 +189,8 @@ export default function TokenManager() {;
 
             <Tabs defaultValue="history">;
 
-=======
+
+
       const err = await res.json ();
       toast ({
         title: 'Error',
@@ -180,8 +199,10 @@ export default function TokenManager() {;
       });
     }
 
+
   }
 ;
+
 
 
   return (
@@ -210,14 +231,19 @@ export default function TokenManager() {;
                 <TabsTrigger value="history">Transaction History</TabsTrigger>;
               </TabsList>;
               <TabsContent value="history">;
-
+                <ul className="space-y-2">;
+                  {transactions && transactions.map(tx => (;
+                    <li key={tx && tx.id} className="flex justify-between border-b py-2 text-white">;
+                      <span>{tx && tx.user_id}</span>;
+                      <span>{tx && tx.transaction_type === 'earn' ? '+' : '-'}{tx && tx.amount}</span>;
+                    </li>;
+                  ))}
                 <ul className="space - y-2">;
                   {transactions.map (tx => (
                     <li key={tx.id} className="flex justify - between border - b py - 2 text - white">;
                       <span>{tx.user_id}</span>;
                       <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
                     </li>))}
-
                 </ul>;
               </TabsContent>;
             </Tabs>;

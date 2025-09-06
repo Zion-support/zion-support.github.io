@@ -1,7 +1,12 @@
 
 
 
-
+export type InterviewStatus =
+  | 'requested'
+  | 'confirmed'
+  | 'declined'
+  | 'rescheduled'
+  | 'completed'
 
 export type InterviewStatus = 
   | 'requested' 
@@ -20,9 +25,11 @@ export interface Interview {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   id: string;
   client_id: string;
@@ -40,6 +47,7 @@ export interface Interview {;
   interview_type: InterviewType;
   client_name?: string;
   talent_name?: string;
+
 
 
 
@@ -76,6 +84,7 @@ export interface InterviewResponse {;
 
   interview_id: string;
   status: InterviewStatus;
+
 
 
   message?: string
@@ -130,5 +139,7 @@ export interface InterviewResponse {;
   message?: string;
 }
 ;
+
+
 
 

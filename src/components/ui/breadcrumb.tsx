@@ -43,6 +43,8 @@ const Breadcrumb = React.forwardRef<
 
 
 
+
+
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
       className
     )}
@@ -85,7 +87,9 @@ BreadcrumbItem.display_name = 'BreadcrumbItem';
 const BreadcrumbLink = React.forward_ref<;
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<'a'> & {
+
     asChild?: boolean
+
   }
 
 >(({ className, asChild = false, ...props }, ref) => {
@@ -105,7 +109,9 @@ BreadcrumbLink.displayName = "BreadcrumbLink"
 
 
 
+
 const BreadcrumbSeparator = ({
+
 
 
 }: React.ComponentProps<"li">) => (
@@ -113,6 +119,7 @@ const BreadcrumbSeparator = ({
     role="presentation"
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+
     {...props}
 
 
@@ -120,6 +127,7 @@ const BreadcrumbSeparator = ({
     {children |<ChevronRight className='h-4 w-4' />}
   </li>
 )
+
 
 
 
@@ -164,7 +172,7 @@ const BreadcrumbEllipsis = ({;
   <li
     role="presentation"
     aria-hidden="true"
-    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+    className={cn("[&>svg]:size-3 && 3.5 text-zion-slate-light/70", className)}
     {...props}
 
   >;
@@ -182,6 +190,7 @@ const BreadcrumbEllipsis = ({;
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
+
 
 
 
@@ -211,6 +220,7 @@ export {;
   BreadcrumbEllipsis,;
 };);
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
+
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,;
@@ -223,6 +233,8 @@ BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
 
 
 
+
+
 export {
   Breadcrumb
   BreadcrumbList
@@ -230,10 +242,12 @@ export {
   BreadcrumbLink
 
 
+
 export {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -244,6 +258,8 @@ BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
 const BreadcrumbEllipsis = ({
   className,
   ...props
+
+
 
 
 
@@ -279,6 +295,8 @@ export {
   BreadcrumbSeparator,
 
 
+
   BreadcrumbEllipsis}
   BreadcrumbEllipsis}
 ;
+

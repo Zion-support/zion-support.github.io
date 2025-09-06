@@ -2,6 +2,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import {
@@ -10,12 +11,15 @@ import {
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
 
+
 } from "../../../../utils/auth";
 export default async function handler(
 
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+
+
 
 
 
@@ -65,6 +69,8 @@ export default async function handler(
 
 
 
+
+
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -73,6 +79,8 @@ export default async function handler(
 res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
+
+
 
 
 
@@ -154,10 +162,12 @@ export default async function handler(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

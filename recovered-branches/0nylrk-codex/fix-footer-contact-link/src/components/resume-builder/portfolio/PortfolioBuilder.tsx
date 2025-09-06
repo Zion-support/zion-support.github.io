@@ -1,6 +1,14 @@
 
 
-
+import { useState, useEffect  } from 'react';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { FilePlus, Loader2  } from 'lucide-react';
+import { ProjectCard  } from './ProjectCard';
+import { ProjectForm  } from './ProjectForm';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+export function PortfolioBuilder() {
 
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
@@ -11,6 +19,8 @@ import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {;
+
+
 
 
 
@@ -41,10 +51,8 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
 
-
-
-
-
+  }
+  };
 
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -81,10 +89,12 @@ export function PortfolioBuilder() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   
+
 
   if (isLoading) {
     return (
@@ -117,13 +127,19 @@ export function PortfolioBuilder() {;
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
 
-
-
-
+              {editingProject ? "Edit Project" : "Add New Project"}
+            </h2>
+            <ProjectForm
+              project={editingProject |undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {
+                setShowAddProject(false);
+                setEditingProject(null);
 
 
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>;
+
 
 
 
@@ -144,6 +160,7 @@ export function PortfolioBuilder() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               }}
             />;
@@ -181,7 +198,6 @@ export function PortfolioBuilder() {;
                 <Button
                   onClick={() => setShowAddProject(true)} ;
                   className="mt-2";
-=======
 import { useState, useEffect  } from './react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -302,7 +318,12 @@ if ( {) {
                 </Button>;
               </div>;
             </CardContent>;
-
+          </Card>;
+        );
+      )}
+    </div>;
+  );
+}
           </Card>))}
     </div>);
 }

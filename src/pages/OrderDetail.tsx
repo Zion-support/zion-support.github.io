@@ -21,17 +21,17 @@ interface OrderItem {
 }
 interface Order {
   id: string;
-  orderId: string;
+  order_id: string;
   date: string;
   status: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled';
   total: number;
   items: OrderItem[];
-  shippingAddress: {
+  shipping_address: {
     name: string;
     street: string;
     city: string;
     state: string;
-    zipCode: string;
+    zip_code: string;
     country: string;
   }
 
@@ -44,6 +44,7 @@ interface Order {
 const getStatusColor = (status: string) =>: any {
 
   switch (status) {
+
     case 'pending':
       return 'bg-yellow-100 text-yellow-800';
     case 'processing':
@@ -56,6 +57,7 @@ const getStatusColor = (status: string) =>: any {
       return 'bg-red-100 text-red-800';
     default:
       return 'bg-gray-100 text-gray-800';
+
   }
 }
 
@@ -63,6 +65,7 @@ const getStatusColor = (status: string) =>: any {
 const getStatusIcon = (status: string) =>: any {
 
   switch (status) {
+
     case 'delivered':
       return <CheckCircle className="h-4 w-4" />;
     case 'shipped':
@@ -71,6 +74,7 @@ const getStatusIcon = (status: string) =>: any {
       return <Clock className="h-4 w-4" />;
     default:
       return <Clock className="h-4 w-4" />;
+
   }
 }
 
@@ -101,12 +105,11 @@ const getStatusIcon = (status: string) => {
       return <Clock className="h-4 w-4" />;
   }
 
-
-
+}
+export default function OrderDetail() {
 };
 
 export default function OrderDetail() {;
-
 
   const router = useRouter();
   const { user } = useAuth();
@@ -189,6 +192,7 @@ export default function OrderDetailPage() {;
 
   const handleCopySummary = async () => {;
     if (!order) return;
+
     const summary = [;
       `Order #${order && order.orderId}`,;
       `Date: ${new Date(order && order.date).toLocaleDateString()}`,;
@@ -204,11 +208,14 @@ export default function OrderDetailPage() {;
       order && order.shippingAddress.street,;
       `${order && order.shippingAddress.city}, ${order && order.shippingAddress.state} ${order && order.shippingAddress.zip}`,;
 
+
     ].join('\n');
 
     await navigator && navigator.clipboard.writeText(summary);
     toast && toast.success('Order summary copied to clipboard');
   };
+
+
 
 
 
@@ -237,23 +244,31 @@ if ( {) {
   $2
 }
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="animate-pulse">
-          <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
-          <div className="space-y-4">
-            {[1, 2, 3].map(i => (
-              <div key={i} className="h-32 bg-gray-200 rounded"></div>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
+      <div className="container mx - auto px - 4 py - 8">;
+        <div className="animate - pulse">;
+          <div className="h - 8 bg - gray - 200 rounded w - 1/4 mb - 4"></div>;
+          <div className="space - y-4">;
+            {[1, 2, 3].map (index => (
+              <div key={i} className="h - 32 bg - gray - 200 rounded"></div>))}
+          </div>;
+        </div>;
+      </div>);
   }
 
   if (isLoading || !order) {;
     return (
 
-
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Order not found</h1>
+          <Link href="/orders">
+            <Button>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to orders
+            </Button>
+          </Link>
+        </div>
+      </div>
 
     );
   }
@@ -521,6 +536,7 @@ if ( {) {
 
 
 
+
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
                     <span className="text - sm">Delivered</span>;
@@ -626,3 +642,4 @@ export default function OrderDetailPage() {;
   }
 
   return (
+

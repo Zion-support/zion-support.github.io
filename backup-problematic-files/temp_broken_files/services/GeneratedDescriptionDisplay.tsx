@@ -100,34 +100,20 @@ setIsEditing (false);
 toast ({;
   ;
 };
-<<<<<<< HEAD
-:temp_broken_files/services/GeneratedDescriptionDisplay.tsx
-
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
 }</Button> </CardTitle> </CardHeader> <CardContent> {;
   isEditing ? (<Textarea value= {;
   editedDescription ;
 }</div>) ;
 }</CardContent> {;
-<<<<<<< HEAD
-:temp_broken_files/services/GeneratedDescriptionDisplay.tsx
-  isEditing && (<CardFooter> <Button onClick={;"  handleSave ";"}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
-}</Card>) ;"}'"
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   isEditing && (<CardFooter> <Button onClick={;
   handleSave ";
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
 }</Card>) ;
 }'"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

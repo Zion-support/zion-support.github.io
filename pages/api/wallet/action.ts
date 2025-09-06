@@ -1,5 +1,13 @@
 
+import type { NextApiRequest, NextApiResponse } from "next";
+import { handleAction } from "../../../utils/token/service";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+
+  } catch (err: any) {
+    return res.status(400).json({ error: err.message })
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { handleAction } from "../../../utils/token/service",;
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -19,7 +27,9 @@ import { handleAction } from "../../../utils/token/service",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,6 +42,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
 
+  };
+};
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { handleAction } from "../../../utils/token/service";
@@ -69,4 +81,8 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+  }
+}
+  }
+}
 

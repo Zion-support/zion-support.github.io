@@ -1,6 +1,6 @@
-// Security Configuration
-export const securityConfig = {
-  // Content Security Policy
+// Security Configuration;
+export const security_config = {
+  // Content Security Policy;
   csp: {
     directives: {
 

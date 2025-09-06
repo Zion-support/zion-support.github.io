@@ -1,4 +1,6 @@
 
+export interface SpaceMetaverseService {
+export interface SpaceMetaverseService {;
 
   id: string;
   name: string;
@@ -333,8 +335,17 @@
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
 
-
-
+      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'
+    ]
+    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform'
+    icon: '🥽'
+    color: 'from-orange-500 to-red-600'
+    popular: true
+    launchDate: '2024-01-20'
+    customers: 1800
+    rating: 4.7
+    reviews: 1400
+  }
 
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
@@ -408,8 +419,10 @@
     link: 'https://ziontechgroup.com / virtual - reality - enterprise - platform',
 
 
+
 ];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
     icon: '🥽',
     color: 'from - orange - 500 to - red - 600',
@@ -421,8 +434,30 @@
   },
 
 
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string,
+  price: {
+    monthly: number, yearly: number,
+    currency: string, trialDays: number,
+    setupTime: string,
+    enterprise: string
+    },
+    features: string[], benefits: string[],
+  targetAudience: string[], marketPosition: string,
+  competitors: string[], techStack: string[],
+  realImplementation: boolean, implementationDetails: string,
+  roi: string, useCases: string[],
+  integrations: string[], support: string,
+  compliance: string[], link: string,
+  icon: string, color: string,
+  popular: boolean, launchDate: string,
+  customers: number, rating: number,
+  reviews: number
+}
 
 
+];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations';
 
     ];
 
@@ -441,8 +476,12 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
+
+];
+;
+export interface SpaceMetaverseService {;
 
   id: string,;
   name: string,;
@@ -708,6 +747,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
 
 
 
+
   }
 ];
+
 

@@ -1,11 +1,18 @@
 
 
+import { Progress } from "@/components/ui/progress";
+import { ResumeProgressProps } from "./types";
+
+import { Progress } from "@/components/ui/progress",
+import { ResumeProgressProps } from "./types",
 
 import {Progress} from "@/components/ui/progress";
 import {ResumeProgressProps} from "./types";
 
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
+
+
 
 
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
@@ -18,9 +25,10 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
       <Progress value={progress} className="h-2 w-full sm: w-48" />
     </div>
 
+  );
+}
 
-
-
+};
 
   )
 },
@@ -41,6 +49,7 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {;
 
 
 
+
 import { Progress  } from '@/components / ui / progress';
 import { ResumeProgressProps  } from './types';
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) =>: any {
@@ -58,5 +67,6 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) =>: an
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

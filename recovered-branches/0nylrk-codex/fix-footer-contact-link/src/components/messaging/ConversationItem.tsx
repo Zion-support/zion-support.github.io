@@ -1,8 +1,14 @@
 
 
-
-
-
+import React from 'react';
+import { format  } from 'date-fns';
+import { cn  } from '@/lib/utils';
+import { Conversation  } from '@/types/messaging';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+interface ConversationItemProps {
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
 
 import React from 'react',;
 import { format } from 'date-fns',;
@@ -19,7 +25,9 @@ interface ConversationItemProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -32,6 +40,7 @@ interface ConversationItemProps {;
 }
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
+
 
 
 
@@ -70,6 +79,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
+
 
         {conversation.context_data?.title && (
           <div className="text - xs mt - 1 text - zion - cyan truncate">;
@@ -138,4 +148,8 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
   );
 }
 
+
+        </div>)}
+    </div>);
+}
 

@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,6 +12,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 interface ResultsHeaderProps {
   isLoading: boolean;
@@ -27,8 +29,15 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       ) : (
         <span>
 
-
-
+          {resultCount === 0
+            ? "No talents found. Try adjusting your filters."
+            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
+        </span>
+          {resultCount === 0 ? (
+            "No talents found. Try adjusting your filters."
+          ) : (
+            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
+import { Loader2 } from "lucide-react",;
 
 interface ResultsHeaderProps {;
   isLoading: boolean,;
@@ -52,11 +61,14 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           )}
         </span>;
       )}
     </div>
+
 
   );
 }
@@ -72,5 +84,6 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

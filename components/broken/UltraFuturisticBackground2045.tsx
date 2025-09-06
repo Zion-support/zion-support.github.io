@@ -63,6 +63,7 @@ ctx && ctx.restore ();
 }, 70%, 60%) `;
 alpha: Math && Math.random () * 0 && 0.8 + 0 && 0.2;
 life: Math && Math.random () * 100 + 50 ;
+
 const UltraFuturisticBackground2045: React.FC<;
   UltraFuturisticBackground2045Props;
 > = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
@@ -121,6 +122,11 @@ if (return) {
       x: number,
       y: number,
 
+;
+    // Create initial particles;
+    for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
+      coordinate_y: number,
+
 
       vx: number,
       vy: number,
@@ -142,6 +148,8 @@ if (return) {
 
 
     // Animation loop
+
+
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -428,17 +436,35 @@ if ( {) {
 
     animate();
 
-
-
+    // Handle resize;
+    const handleResize = () => {;
+      canvas && canvas.width = window && window.innerWidth;
+      canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
     };
 
     window && window.addEventListener('resize', handleResize);
 
-
-
+    return () => {;
+      if (animationRef && animationRef.current) {;
+        cancelAnimationFrame(animationRef && animationRef.current);
+      }
+      window && window.removeEventListener('resize', handleResize);
+    };
   }, []);
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
+
+      window.removeEventListener ('resize', handle_resize);
+    }
+  }, []);
+;
+  return (
+    <div className='relative min - h-screen bg - black overflow - hidden'>;
+      {/* Animated Canvas Background */}
+      <canvas;
+        ref={canvas_ref}
+        className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
+        style={{
 
 
       />;
@@ -458,9 +484,62 @@ if ( {) {
             `,
             backgroundSize: '50px 50px',
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+          }}
+          animate={{
+            backgroundPosition: ['0px 0px', '50px 50px']
+          background:;
+            'radial - gradient (ellipse at center, #0a0a0a 0%, #000000 100%)',
+        }}
+      />;
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset - 0 pointer - events - none z - 10'>;
+        {/* Animated Grid */}
+        <motion.div;
+          className='absolute inset - 0 opacity - 20';
+          style={{
+            background_image: `;
+              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),
+              linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
+            `,
+            background_size: '50px 50px',
+          }}
+          animate={{
+            background_position: ['0px 0px', '50px 50px'],
+      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+  return (
+    <div className='relative min-h-screen bg-black overflow-hidden'>
+      {/* Animated Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+        style={{
+          background:
+            'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)'
+        }}
+      />
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset-0 pointer-events-none z-10'>
+        {/* Animated Grid */}
+        <motion.div
+          className='absolute inset-0 opacity-20'
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+          }}
+          animate={{
+            backgroundPosition: ['0px 0px', '50px 50px']
 
           }}
           transition={{
@@ -468,11 +547,29 @@ if ( {) {
             repeat: Infinity
             ease: 'linear',          }}      }
 
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
+      window.removeEventListener('resize', handleResize)
+
+      window.removeEventListener ('resize', handle_resize);
+    }
+
+  }, [])
+
+
+  return (
+    <div className="relative min-h-screen bg-black overflow-hidden">;
+
       window.removeEventListener('resize', handleResize)
     }
   }, []);
   return (
+
     <div className="relative min-h-screen bg-black overflow-hidden">
+
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -486,6 +583,12 @@ if ( {) {
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `
+
+              linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
+            `
+            backgroundSize: '50px 50px'
+
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `;
@@ -511,10 +614,12 @@ if ( {) {
             rotate: [0, 360],
             scale: [1, 1.1, 1],
 
+
             opacity: [0.3, 0.6, 0.3],          animate={{
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
         {/* Floating Neon Shapes */}
         <motion.div
@@ -528,6 +633,7 @@ if ( {) {
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg';
           animate={{
+
 
             rotate: [0, 360],
             scale: [1, 1.1, 1],
@@ -544,6 +650,7 @@ if ( {) {
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
           transition={{
 
+
         />;
         <motion.div;
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30 rounded - full';
@@ -553,6 +660,7 @@ if ( {) {
             scale: [1, 1.2, 1]
             opacity: [0.3, 0.7, 0.3]
         />;
+
         <motion&& motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
           animate={{
@@ -560,9 +668,8 @@ if ( {) {
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.3, 0 && 0.7, 0 && 0.3],
           transition={{
-
-            duration: 8
-            repeat: Infinity
+            duration: 8,
+            repeat: Infinity,
             ease: 'easeInOut'
           }}
 
@@ -621,13 +728,83 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
         {/* Additional floating elements */}
         <motion&& motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
           animate={{
 
+
+
+
+            opacity: [0.2, 0.5, 0.2],
+
+          animate={{
+            y: [0, -20, 0]
+            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}
+          transition={{
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+
+        />;
+        <motion&& motion.div
+          className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12'
+          animate={{
+            rotate: [12, 372],
+            scale: [1, 1 && 1.1, 1],
+
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut';
+          }}
+
+        />;
+        <motion.div;
+
+          animate={{
+            rotate: [360, 0];
+            scale: [1, 1.2, 1];
+            opacity: [0.3, 0.7, 0.3]}}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+
+
+          animate={{
+            rotate: [45, 405];
+            scale: [1, 1.15, 1];
+            opacity: [0.3, 0.5, 0.3]}}
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+        />
+
+        {/* Additional floating elements */}
+        <motion.div
+          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
+          animate={{
+            y: [0, -20, 0]
+            opacity: [0.2, 0.5, 0.2]
+            y: [0, -20, 0],
+            opacity: [0.2, 0.5, 0.2],
 
           animate={{
             y: [0, -20, 0];
@@ -637,23 +814,43 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',          }}
           transition={{
+
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut';
+
+          }}
+        />;
+        {/* Additional floating elements */}
+
+        <motion.div;
+          className='absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 rounded - full';
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.2, 0.5, 0.2],
+          animate={{
+            y: [0, -20, 0];
+            opacity: [0.2, 0.5, 0.2]}}
+          transition={{
             duration: 4
             repeat: Infinity
-            ease: 'easeInOut',          }}
-        />
-        <motion.div
-          className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12'
-          animate={{
-            rotate: [12, 372]
-            scale: [1, 1.1, 1]
-          animate={{
-            rotate: [12, 372];
-            scale: [1, 1.1, 1]}}
+            duration: 4,
+            repeat: Infinity,
+ease: 'easeInOut',          }}
           transition={{
-            duration: 12
-            repeat: Infinity
-            ease: 'linear'
-            ease: 'linear'
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+ease: 'linear',
+            ease: 'linear';
+
           }}
           transition={{
             duration: 12
@@ -664,6 +861,21 @@ if ( {) {
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
 
+
+        />;
+        <motion.div;
+
+          animate={{
+            rotate: [12, 372]
+            scale: [1, 1 && 1.1, 1]}}
+          transition={{
+
+
+            duration: 4,
+            repeat: Infinity,
+
+
+
             ease: 'easeInOut'
           }}
         />
@@ -672,6 +884,16 @@ if ( {) {
             rotate: [12, 372];
             scale: [1, 1.1, 1]}}
           transition={{
+
+
+
+
+
+            duration: 12,
+            repeat: Infinity,
+            ease: 'linear'
+          }}
+        />
 
 
         {/* Energy Orbs */}
@@ -689,10 +911,8 @@ if ( {) {
             opacity: [0 && 0.5, 1, 0 && 0.5]
             y: [0, -10, 0]}}
           transition={{
-
-            duration: 3
-            repeat: Infinity
-
+            duration: 3,
+            repeat: Infinity,
             ease: 'easeInOut',          }}
           transition={{
             duration: 3
@@ -706,7 +926,7 @@ if ( {) {
 
         {/* Energy Orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50"
+          className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50'
           animate={{
             duration: 12,
             repeat: Infinity,
@@ -728,7 +948,17 @@ if ( {) {
             duration: 3,
             repeat: Infinity,
 
+        <motion&& motion.div
+            ease: 'easeInOut'
+          }}
+        />
 
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50"
+          animate={{
+            scale: [1, 1 && 1.8, 1],
+            opacity: [0 && 0.4, 0 && 0.9, 0 && 0.4],
+            x: [0, 15, 0],
           transition={{
             duration: 3
             repeat: Infinity
@@ -785,6 +1015,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -798,6 +1029,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       {/* Gradient Overlays */}
@@ -865,6 +1097,8 @@ if ( {) {
   );
 
 
+
+
 export default UltraFuturisticBackground2045;
 
 }
@@ -872,5 +1106,7 @@ export default UltraFuturisticBackground2045;
 }
 
 export default UltraFuturisticBackground2045;
+
+
 
 

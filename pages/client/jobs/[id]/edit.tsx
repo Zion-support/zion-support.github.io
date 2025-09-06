@@ -1,10 +1,14 @@
 
+import { useRouter  } from 'next/router';
+import {useRouter} from 'next/router';
 
 import useSWR from 'swr';
 
 import {useEffect, useState} from 'react';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 
+export default function EditJobPage() {
+export default function EditJobPage() {;
 
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
@@ -17,6 +21,7 @@ export default function EditJobPage(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -24,23 +29,26 @@ export default function EditJobPage(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
   const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
 
-
-
+  useEffect(() => {
+    if (job) {
+      setTitle(job.title |'');
+      setDescription(job.description |'');
+      setCategory(job.category |'');    }
 
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
 
 
-
-
-
-
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
 
   useEffect(() => {;
     if (job) {;
@@ -62,6 +70,8 @@ export default function EditJobPage(req, res) {
   }
 }
   if (!job) return <div>Loading…</div>,
+
+
 
 
   return (
@@ -88,12 +98,15 @@ export default function EditJobPage(req, res) {
 
 
 
+
+
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
 
@@ -123,5 +136,6 @@ export default function EditJobPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

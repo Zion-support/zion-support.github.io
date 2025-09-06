@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface GradientHeadingProps {
+
   text: string;
   className?: string;
 }
@@ -15,3 +16,4 @@ export const GradientHeading: React.FC<GradientHeadingProps> = ({
     </h1>
   );
 };
+

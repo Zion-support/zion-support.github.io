@@ -1,6 +1,8 @@
 
-
-
+import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',;
+;
+export default function InternationalProposals() {
 
 
       const res = await fetch('/api/proposals/list');
@@ -12,6 +14,36 @@
   }, [])
   async function updateStatus(id: string, status: string) {
 
+import React, { useEffect, useState } from 'react',
+;
+export default /**
+ * InternationalProposals - Function description
+ */
+function InternationalProposals() {
+  const [items, set_items] = useState < any[]>([]),
+  const [loading, set_loading] = useState (true),
+  useEffect (() => {
+    (async () => {
+      const res = await fetch ('/api / proposals / list'),
+      const data = await res.json (),
+      set_items (data.proposals || []),
+      set_loading (false);
+    })();
+  }, []),
+  async /**
+ * update_status - Function description
+ */
+function update_status() {
+    await fetch ('/api / proposals / status', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ id, status }) }),
+    const res = await fetch ('/api / proposals / list'),
+    const data = await res.json (),
+    set_items (data.proposals || []);
+  }
+    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
+    const res = await fetch('/api/proposals/list'),
+    const data = await res.json(),
+    setItems(data.proposals || [])
+import React, { useEffect, useState } from 'react';
 
 export default function InternationalProposals(req, res) {
   try {
@@ -33,6 +65,8 @@ export default function InternationalProposals(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
 
   }
 }
@@ -85,12 +119,14 @@ export default function InternationalProposals(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               </div>
               <div className="mt-3 flex items-center gap-2 text-xs">
@@ -100,13 +136,16 @@ export default function InternationalProposals(req, res) {
               </div>
             </div>
 
-
+          ))}
+          {!items.length && <div className="opacity-70">No proposals yet.</div>}
 
         </div>
       )}
     </div>
   );
 };
+
+
 
 
 
@@ -139,11 +178,13 @@ export default function InternationalProposals(req, res) {
   }
 
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

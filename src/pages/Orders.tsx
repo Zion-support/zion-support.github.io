@@ -1,7 +1,8 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 
-
-
+import Link from 'next/link'; // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
 
 import {
 
@@ -10,6 +11,7 @@ import {
   TableCell
   TableHead
   TableHeader
+
 
 
 
@@ -58,6 +60,7 @@ export default function OrdersPage() {;
 
 
   }
+
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth',
@@ -67,6 +70,7 @@ import {
   Table,
   TableBody,
   TableCell,
+
 
     switch (status) {
       case 'in_escrow':
@@ -96,6 +100,7 @@ import {
 
 
   return (
+
 
     <div className='container max-w-4xl py-10'>;
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>;
@@ -131,15 +136,16 @@ import {
               </TableRow>;
 
             ))}
-          </TableBody>
-        </Table>
-      ) : orders.length === 0 ? (
+          </TableBody>;
+        </Table>;
+      ) : orders && orders.length === 0 ? (;
         <EmptyState
           icon={<FileText className='h-10 w-10' />}
           title='No Orders'          description="You haven't purchased anything yet."
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
+
 
 
         />
@@ -155,11 +161,13 @@ import {
             </TableRow>
           </TableHeader>
           <TableBody>
+
             {orders.map(order => (              <TableRow key={order.orderId}>
                 <TableCell className='font-medium'>{order.orderId}</TableCell>
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
+
 
 
                 <TableCell>{formatDate(order.date)}</TableCell>
@@ -195,6 +203,7 @@ import {
                 <TableCell>{getStatusBadge(order && order.status)}</TableCell>;
                 <TableCell>;
                   <Link
+
                     href={`/orders/${order && order.orderId}`} // Changed to href
                     className='text-zion-purple underline'>;
                     View;
@@ -203,6 +212,8 @@ import {
               </TableRow>;
             ))}
 
+
+
           </TableBody>
         </Table>
       )}
@@ -210,7 +221,9 @@ import {
   );
 }
 
+
 ;
+
 
 
           </TableBody>;
@@ -223,6 +236,7 @@ import {
 
 
 ;
+
   TableRow,
 
 } from '@/components / ui / table';
@@ -329,5 +343,6 @@ function OrdersPage() {
     </div>);
 }
 ;
+
 
 

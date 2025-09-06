@@ -1,4 +1,12 @@
 
+import React from 'react';
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
+import {formatDistanceToNow} from "date-fns";
+import {JobMatch} from "@/types/jobs";
 
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
@@ -7,6 +15,46 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
 
+
+
+  onInvite?: (matchId: string) => void
+}
+export function JobMatchCard({
+  matchId;
+
+  talentId
+  name
+  title
+  company
+  avatar
+  location
+  category
+  matchPercent
+  skills;
+  onApply
+  onViewDetails
+  onInvite
+}: JobMatchProps) {
+  const handleApply = () => {
+    if (onApply) {
+      onApply(matchId)
+    }
+  }
+  const handleViewDetails = () => {
+    if (onViewDetails) {
+      onViewDetails(matchId)
+    }
+  }
+  const handleInvite = () => {
+    if (onInvite) {
+      onInvite(matchId)
+    }
+  }
+  // Generate a formatted date for display
+  const postedDate = new Date();
+
+import { formatDistanceToNow } from "date-fns",
+import { JobMatch } from "@/types/jobs",
 
 interface JobMatchProps {
   matchId: string,
@@ -25,6 +73,14 @@ interface JobMatchProps {
 
 
 
+
+
+
+  const handleInvite = () => {
+    if (onInvite) {
+      onInvite(matchId)
+    }
+  };
 
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
@@ -83,7 +139,9 @@ export function JobMatchCard({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   // Generate a formatted date for display
   const postedDate = new Date(),
@@ -179,15 +237,19 @@ import React from 'react';
               </Button>;
             )}
 
-
-
-
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
 
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+
 
 
 
@@ -204,9 +266,8 @@ import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';

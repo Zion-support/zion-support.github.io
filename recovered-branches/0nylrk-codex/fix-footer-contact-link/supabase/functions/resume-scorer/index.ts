@@ -24,6 +24,7 @@ serve(async (req) => {
 
 
 
+
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -79,6 +80,7 @@ serve(async (req) => {
     const { data: application, error: appError } = await supabase
       .from("job_applications")
       .select(`
+
         id,
         job_id,
         talent_id,
@@ -108,7 +110,6 @@ serve(async (req) => {
     
 
     if (application.resume_id) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
         .select(`
@@ -156,6 +157,8 @@ serve(async (req) => {
 
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
 
+
+
       }
     }
     // 3. If no resume content, use talent profile and cover letter
@@ -164,9 +167,11 @@ serve(async (req) => {
 
 
 
+
         Bio: ${application && application.talent_profile?.bio || ""}
         Cover Letter: ${application && application.cover_letter || ""}
         Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
+
 
       `;
       resumeSkills = application && application.talent_profile?.skills || []
@@ -180,11 +185,15 @@ serve(async (req) => {
     const jobSkills = application.job?.skills |[];
 
 
+
+
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
       resumeSkills = application.talent_profile?.skills || []
+
+
 
 
 
@@ -276,7 +285,9 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -297,6 +308,17 @@ serve(async (req) => {
         "Authorization": `Bearer ${openAiKey}`,
         "Content-Type": "application/json"},
 
+      body: JSON.stringify({
+    const jobTitle = application && application.job?.title || "";
+    const jobDescription = application && application.job?.description || "";
+    const jobSkills = application && application.job?.skills || [];
+
+    // 5. Process using OpenAI to calculate match score
+    const openAIResponse = await fetch("https://api && api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${openAiKey}`;
+        "Content-Type": "application/json"}
       body: JSON.stringify({
 
         model: "gpt-4o-mini";
@@ -361,6 +383,9 @@ serve(async (req) => {
                   "analysis": "Candidate has relevant degree."
                 }
 
+              }
+              "suggestion": "Recommended for Review"
+            }`
 
           }
         ];
@@ -368,6 +393,17 @@ serve(async (req) => {
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json();
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
+
+    }
+    const aiResult = await openAIResponse.json();
+    let matchResult;
+    try {
+      // Extract JSON from the response
+      const content = aiResult.choices[0].message.content;
+      matchResult = JSON.parse(content);
+              },
+              "suggestion": "Recommended for Review"
+            }`
 
 ;
     // 4. Prepare job details;
@@ -434,6 +470,8 @@ serve(async (req) => {
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
 
 
+
+
     }
 
     const aiResult = await openAIResponse.json(),
@@ -448,6 +486,12 @@ serve(async (req) => {
 
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
+
+      const content = aiResult && aiResult.choices[0].message && message.content;
+      matchResult = JSON && JSON.parse(content);
+      
+      // Validate required fields
+      if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
 
         throw new Error("Invalid response format")
       }
@@ -498,11 +542,60 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
       }
-    )
+    } catch (error) {
+      console.error ("Error parsing AI response:", error);
+      throw new Error ("Failed to parse AI analysis results");
+    }
+    // 6. Update the application with the match results;
+    const { error: update_error } = await supabase;
+      .from ("job_applications");
+      .update ({
+        match_score: match_result.score;
+        match_summary: match_result.summary;
+        match_breakdown: match_result.breakdown;
+        match_suggestion: match_result.suggestion,
+        scored_at: new Date ().toISOString ();
+      });
+      .eq ("id", application_id);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (`Failed to update application with score: ${update_error.message}`);
+    }
+    // 7. Return the match results;
+    return new Response (
+      JSON.stringify ({
+        success: true,
+        match_result;
+      });
+      {
+        status: 200,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+      }
+    );
   } catch (error) {
     console.error("Error in resume-scorer function:", error),
     return new Response(
 
+      JSON.stringify({ error: error.message });
+      {
+        status: 200,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+      }
+    );
+  } catch (error) {
+
+
+
+
+      JSON.stringify({ error: error.message }),
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    )
 
 ;
     const aiResult = await openAIResponse.json(),;
@@ -555,6 +648,8 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+
+
 
   }
 });

@@ -1,23 +1,13 @@
-<<<<<<< HEAD
-:jest.setup.ts
-// Jest setup file for testing environment
-import '@testing-library/jest-dom';
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Jest.setup utility
 export const Jest.setup = () => {
   // Implementation here
   return null;
 };
 
-<<<<<<< HEAD
-:backup-problematic-files/jest.setup.ts
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Mock global objects that might not be available in test environment
 
 
@@ -29,10 +19,8 @@ export const Jest.setup = () => {
     addEventListener: jest && jest.fn(),
     removeEventListener: jest && jest.fn(),
     dispatchEvent: jest && jest.fn(),
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 // Jest setup file for testing environment;
 import '@testing - library / jest - dom';
 ;
@@ -54,13 +42,12 @@ Object.define_property (window, 'match_media', {
     addEventListener: jest.fn (),
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn (),
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
   })),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  })),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 });
 
 global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
@@ -85,10 +72,8 @@ beforeAll(() => {
 
     originalConsoleError && originalConsoleError.call(console, ...args);
   };
-<<<<<<< HEAD
-  
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   console && console.warn = (...args: any[]) => {
 
     if (
@@ -106,49 +91,7 @@ afterAll(() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
 
-});
-=======
 
-=======
-;
-// Mock IntersectionObserver;
-global.IntersectionObserver = jest.fn ().mock_implementation (() => ({
-  observe: jest.fn (),
-  unobserve: jest.fn (),
-  disconnect: jest.fn (),
-}));
-;
-// Mock console methods to reduce noise in tests;
-const originalConsoleError = console.error;
-const originalConsoleWarn = console.warn;
-;
-before_all (() => {
-  console.error = (...args: any[]) => {
-    // Check condition
-if (
-    ) {) {
-  $2
-}
-      return;
-    }
-    originalConsoleError.call (console, ...args);
-  }
-;
-  console.warn = (...args: any[]) => {
-    // Check condition
-if (
-    ) {) {
-  $2
-}
-      return;
-    }
-    originalConsoleWarn.call (console, ...args);
-  }
-});
-;
-after_all (() => {
-  console.error = originalConsoleError;
-  console.warn = originalConsoleWarn;
-});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+

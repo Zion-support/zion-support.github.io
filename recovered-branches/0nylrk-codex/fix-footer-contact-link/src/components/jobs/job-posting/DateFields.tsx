@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -27,6 +28,7 @@ import { cn } from "@/lib/utils";
 
 
 
+
 import React from 'react',
 import { format } from 'date-fns',
 import { Label } from "@/components/ui/label",
@@ -41,7 +43,9 @@ import { cn } from "@/lib/utils",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -72,16 +76,10 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 
                   !startDate && "text-muted-foreground"
                 )}
-              >
-                {startDate ? (
-                  format(startDate, "PPP")
-                ) : (
-                  <span>Pick a date</span>
-                )}
-              </Button>
-            </FormControl>
-          </PopoverTrigger>
-          <PopoverContent className="w-auto p-0" align="start">
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
             <Calendar
               mode="single"
 
@@ -122,7 +120,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                   format(startDate, "PPP");
                 ) : (;
                   <span>Pick a date</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
               </Button>;
             </FormControl>;
@@ -141,12 +138,14 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               initialFocus
             />
@@ -169,22 +168,23 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                   !endDate && "text-muted-foreground"
                 )}
               >
-                {endDate ? (
-                  format(endDate, "PPP")
-                ) : (
-                  <span>Pick a date</span>
-                )}
-              </Button>
-            </FormControl>
-          </PopoverTrigger>
-          <PopoverContent className="w-auto p-0" align="start">
+                {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
             <Calendar
               mode="single"
               selected={endDate}
               onSelect={setEndDate}
 
-
-
+              disabled={(date) => date < new Date()}
+              initialFocus
+            />
+          </PopoverContent>
+        </Popover>
+      </div>
+    </div>
 
               disabled={(date) =>;
                 date < new Date();
@@ -202,6 +202,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -210,5 +211,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
+
 
 }

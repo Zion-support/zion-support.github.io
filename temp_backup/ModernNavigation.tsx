@@ -1,4 +1,6 @@
 
+
+
 import React from 'react';
 interface ModernNavigationProps {
   // Add props here as needed
@@ -10,4 +12,6 @@ export default function ModernNavigation({ }: ModernNavigationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
 

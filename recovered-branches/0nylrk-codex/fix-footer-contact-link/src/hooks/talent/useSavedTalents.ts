@@ -1,15 +1,40 @@
 
 
-
-
-
-
-
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {toast} from "@/hooks/use-toast";
+import {useAuthStatus} from "@/hooks/talent";
+export function useSavedTalents() {;
+  const { isAuthenticated, userDetails } = useAuthStatus();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+import { toast } from "@/hooks/use-toast";
+import { useAuthStatus } from "@/hooks/talent";
+export function useSavedTalents() {
+  const { isAuthenticated, userDetails } = useAuthStatus();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+import { toast } from "@/hooks/use-toast",
+import { useAuthStatus } from "@/hooks/talent",
+export function useSavedTalents() {
+  const { isAuthenticated, userDetails } = useAuthStatus(),
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
 
   // Fetch saved talents
   useEffect(() => {
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+    const fetchSavedTalents = async () => {
+      if (!isAuthenticated || !userDetails.id) {
+        setIsLoading(false),
+        return
+      }
 
 
     const fetchSavedTalents = async () => {
@@ -43,29 +68,58 @@
             if (talentError) throw talentError;
             setSavedTalents(talentData |[])
 
-
+          } else {
+            setSavedTalents([])
+      if (!isAuthenticated || !userDetails.id) {
+        setIsLoading(false),
+        return
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
+import { toast } from "@/hooks/use-toast",;
+import { useAuthStatus } from "@/hooks/talent",;
+export function useSavedTalents() {;
+  const { isAuthenticated, userDetails } = useAuthStatus(),;
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
 
   // Fetch saved talents;
-  useEffect(() => {;
-    const fetchSavedTalents = async () => {;
-      if (!isAuthenticated || !userDetails.id) {;
-        setIsLoading(false),;
+  useEffect (() => {
+    const fetchSavedTalents = async () => {
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsLoading (false);
         return;
       }
+      setIsLoading (true);
 ;
-      setIsLoading(true),;
-      try {;
+      try {
         // Get saved talent IDs;
-        const { data: savedData, error: savedError } = await supabase;
-          .from('saved_talents');
-          .select('talent_id');
-          .eq('user_id', userDetails.id),;
-        if (savedError) throw savedError,;
-        if (savedData) {;
-          const talentIds = savedData.map(item => item.talent_id),;
-          setSavedTalentIds(talentIds),;
-          if (talentIds.length > 0) {;
+        const { data: saved_data, error: saved_error } = await supabase;
+          .from ('saved_talents');
+          .select ('talent_id');
+          .eq ('user_id', user_details.id);
+;
+        // Check condition
+if (throw saved_error) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          const talent_ids = saved_data.map (item => item.talent_id);
+          setSavedTalentIds (talent_ids);
+;
+          // Check condition
+if ( {) {
+  $2
+}
             // Fetch full talent profiles for saved talents;
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -105,6 +159,7 @@ if (throw talent_error) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           }
@@ -178,6 +233,18 @@ if (throw talent_error) {
           title: "Removed from favorites"
           description: `${talent.full_name} has been removed from your favorites`})
 
+          .eq('user_id', userDetails && userDetails.id)
+          .eq('talent_id', talent && talent.id);
+          
+        if (error) throw error;
+        
+        setSavedTalents(prev => prev && prev.filter(t => t && t.id !== talent && talent.id));
+        setSavedTalentIds(prev => prev && prev.filter(id => id !== talent && talent.id));
+        
+        toast({
+          title: "Removed from favorites",
+          description: `${talent && talent.full_name} has been removed from your favorites`})
+
       } else {
         // Add to saved_talents
         const { error } = await supabase
@@ -202,11 +269,21 @@ if (throw talent_error) {
           title: "Added to favorites"
           description: `${talent.full_name} has been added to your favorites`})
 
+        setSavedTalentIds(prev => [...prev, talent && talent.id]);
+        
+        toast({
+          title: "Added to favorites",
+          description: `${talent && talent.full_name} has been added to your favorites`})
+
       }
     } catch (error) {
       console && console.error('Error toggling saved talent:', error);
       toast({
 
+        title: "Error";
+        description: "There was a problem updating your favorites. Please try again."
+        variant: "destructive"
+      })
 
     }
   }
@@ -223,6 +300,10 @@ if (throw talent_error) {
 
     isTalentSaved
 
+        title: "Error",
+        description: "There was a problem updating your favorites. Please try again.",
+        variant: "destructive"
+      })
 
       } catch (error) {;
         console.error('Error fetching saved talents:', error),;
@@ -314,6 +395,7 @@ if (throw error) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -321,6 +403,6 @@ if (throw error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,14 +1,13 @@
 
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card",
+import { Link } from "react-router-dom",
 
 export function EmptyState() {
   return (
@@ -23,6 +22,13 @@ export function EmptyState() {
         </Button>
       </CardContent>
 
+    </Card>
+  );
+}
+    </Card>;
+  );
+}
+    </Card>
 
   )
 import { Button } from "@/components/ui/button",;
@@ -44,5 +50,7 @@ export function EmptyState() {;
   );
 }
 ;
+
+
 
 

@@ -11,6 +11,10 @@ export default function AIMeetingNotesPage() {
 					<p className="mt-4 text-gray-300">Transcribe calls, summarize discussions, and capture action items automatically.</p>
 					<div className="mt-8 flex gap-3">
 
+						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</a>
+						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a>
+						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</Link>
+						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</Link>
 
 					</div>
 				</div>

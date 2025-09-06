@@ -29,15 +29,19 @@ import Button from '../components/ui/Button';
 
 
 
+
 export default function HolographicAICommunicationPage() {
 
   const contactInfo = {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
   }
+
+
 
 
 
@@ -54,10 +58,12 @@ export default function HolographicAICommunicationPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const features = [
@@ -70,8 +76,6 @@ export default function HolographicAICommunicationPage() {
   }
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
-
-
 export default function HolographicAICommunicationPage() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -90,7 +94,6 @@ export default function HolographicAICommunicationPage() {;
 
   const features = [;
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -136,7 +139,7 @@ export default function HolographicAICommunicationPage() {;
                 $1,899<span className='text-slate-400 text-base'>/month</span>;
               </div>;
               <div className='text-slate-400'>;
-                30-day free trial • Setup: 1 week;
+                30-day free trial  Setup: 1 week;
               </div>;
               <Button
                 href='/contact'
@@ -160,7 +163,7 @@ export default function HolographicAICommunicationPage() {;
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
                 </div>              </div>            <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit">;
               <div className="text-3xl font-bold text-white">$1,899<span className="text-slate-400 text-base">/month</span></div>;
-              <div className="text-slate-400">30-day free trial • Setup: 1 week</div>;
+              <div className="text-slate-400">30-day free trial  Setup: 1 week</div>;
               <Button href="/contact" variant="quantum" size="lg" className="w-full mt-4">Start Free Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
               <div className="mt-6 space-y-3 text-sm text-slate-300">;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo && contactInfo.mobile}</span></div>;
@@ -172,6 +175,8 @@ export default function HolographicAICommunicationPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
+
+
 
 
 
@@ -198,6 +203,7 @@ function HolographicAICommunicationPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -205,5 +211,6 @@ function HolographicAICommunicationPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

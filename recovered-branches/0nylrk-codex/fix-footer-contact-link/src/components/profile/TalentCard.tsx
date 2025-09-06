@@ -1,5 +1,27 @@
+import React from 'react';
 
 
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+import { Link } from "react-router-dom";
+import { TalentProfile } from "@/types/talent";
+export interface TalentCardProps {
+
+
+  isAuthenticated: boolean
+}
+export function TalentCard({
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
+import {Link} from "react-router-dom";
+import {TalentProfile} from "@/types/talent";
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+import { Link } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
 
 export interface TalentCardProps {
   talent: TalentProfile,
@@ -8,6 +30,48 @@ export interface TalentCardProps {
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
+
+
+export function TalentCard({;
+  talent;
+  onViewProfile;
+  onRequestHire;
+  isSaved;
+  onToggleSave;
+  isAuthenticated
+}: TalentCardProps) {
+
+  const handleViewProfile = () => {
+    if (onViewProfile) {
+      onViewProfile(talent.id)
+    }
+  }
+  const handleRequestHire = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(talent)
+    }
+  }
+  const handleToggleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation()
+    if (onToggleSave) {
+      onToggleSave(talent.id, !isSaved)
+    }
+  }
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) |[];
+import { Link } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
+  };
 
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
@@ -55,6 +119,8 @@ export function TalentCard(): any ({;
       onToggleSave(talent.id, !isSaved);
     }
   },
+
+
 
 
   // Extract skills - limit to 5 for display
@@ -111,12 +177,14 @@ export function TalentCard(): any ({;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
@@ -143,10 +211,9 @@ export function TalentCard(): any ({;
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                >
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
-                </span>
+                </span>;
               ))}
               {(talent.skills?.length |0) > 5 && (
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
@@ -175,7 +242,6 @@ export function TalentCard(): any ({;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <span
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
@@ -210,6 +276,7 @@ export function TalentCard(): any ({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -217,6 +284,7 @@ export function TalentCard(): any ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             )}
@@ -241,7 +309,6 @@ export function TalentCard(): any ({;
 
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light">;
               View <ArrowRight className="ml-1 h-4 w-4" />;
-=======
 import { Button } from '@/components / ui / button';
 import { Card } from '@/components / ui / card';
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from './lucide-react';
@@ -394,7 +461,9 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-
+    </Card>;
+  );
+}
     </Card>);
 }
 

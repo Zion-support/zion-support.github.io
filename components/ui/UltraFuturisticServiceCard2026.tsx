@@ -49,6 +49,22 @@ interface ServiceCardProps {
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
   const getVariantStyles = () => {
 
+  category: string,
+  icon: string,
+  market_price?: string;
+  competitors?: string[];
+  target_market?: string;
+  use_cases?: string[];
+  integration?: string[];
+  benefits?: string[];
+}
+interface ServiceCardProps {
+  service: Service,
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
+}
+const UltraFuturisticServiceCard2026: React.FC < ServiceCardProps> = ({ service, variant = 'default' }) => {
+  const getVariantStyles = () =>: any {
+
     switch (variant) {
       case 'ai':;
         return {
@@ -176,7 +192,9 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
         {/* Popular Badge */}
         {service && service.popular && (;
           <motion&& motion.div
@@ -303,7 +321,9 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -376,12 +396,14 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         {/* Enhanced Market Information */}
         {service.marketPrice && (
@@ -394,6 +416,19 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
               </div>
+
+        </div>;
+        {/* Enhanced Market Information */}
+        {service && service.marketPrice && (;
+          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">;
+            <div className="flex items-center justify-between text-xs">;
+              <span className="text-gray-400">Market Price:</span>;
+              <span className="text-green-400 font-semibold">{service && service.marketPrice}</span>;
+            </div>;
+            {service && service.competitors && (;
+              <div className="text-xs text-gray-500">;
+                Competes with: {service && service.competitors.slice(0, 2).join()}
+              </div>;
 
             )}
           </div>
@@ -447,6 +482,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         </div>
 
 
+
+
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -458,6 +495,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
+
 
 
 
@@ -474,5 +512,6 @@ export default UltraFuturisticServiceCard2026;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

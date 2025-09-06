@@ -4,6 +4,7 @@ return (
         title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
 
+
   const isMobile = useIsMobile();
 
 
@@ -21,6 +22,7 @@ return (
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />
+
       <div className='container mx-auto px-4 py-8'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
       
@@ -28,11 +30,13 @@ return (
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
 
 
+
           <div>
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Application Status Tracker</h1>
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
           </div>
         </div>
+
 
 
         <div className="grid grid-cols-1 gap-6">
@@ -47,6 +51,7 @@ return (
         <div className="grid grid-cols-1 gap-6">
           <Card>
             <CardHeader className="border-b bg-muted/50">
+
 
 
 
@@ -68,5 +73,6 @@ return (
 
 export default function ApplicationStatusTracker() {
   return (
+
 
 

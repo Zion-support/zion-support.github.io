@@ -34,7 +34,6 @@ describe('ServicesSection', () => {
   });
 });
 
-=======
     expect(screen.getByTestId('servicessection.dynamic'
   test('displays correct content'
   test('handles user interactions'

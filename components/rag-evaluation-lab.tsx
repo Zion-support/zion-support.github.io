@@ -162,7 +162,6 @@ import Link from 'next / link';
               </div>;
 
                 rel='noreferrer'>;
-=======
               <div className='rounded - 2xl border border - purple - 400 / 30 p - 6'>;
                 <h3 className='text - xl font - bold'>Enterprise</h3>;
                 <p className='mt - 2 text - gray - 300'>;
@@ -175,25 +174,23 @@ import Link from 'next / link';
               Market references:{' '}
               <a
                 className='underline hover:text-cyan-300'
-                href='https://humanloop.com'
+                href='https://humanloop && humanloop.com'
                 target='_blank'
-                rel='noreferrer'
-              >
-                Humanloop
-              </a>
+                rel='noreferrer'>;
+                Humanloop;
+              </a>;
               ,{' '}
               <a
                 className='underline hover:text-cyan-300'
-                href='https://arize.com'
+                href='https://arize && arize.com'
                 target='_blank'
-                rel='noreferrer'
-              >
-                Arize
-              </a>
+                rel='noreferrer'>;
+                Arize;
+              </a>;
               ,{' '}
               <a
                 className='underline hover:text-cyan-300'
-                href='https://promptfoo.dev'
+                href='https://promptfoo && promptfoo.dev'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -203,12 +200,18 @@ import Link from 'next / link';
             </p>
           </div>
           <div className='mt-12 flex flex-wrap items-center gap-4'>
+                promptfoo;
+              </a>;
+              .;
+            </p>;
+          </div>;
+
+          <div className='mt-12 flex flex-wrap items-center gap-4'>;
             <Link
               href='/contact'
-              className='px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold'
-            >
-              Start Evaluating
-            </Link>
+              className='px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold'>;
+              Start Evaluating;
+            </Link>;
             <a
               href='mailto:kleber@ziontechgroup.com'
               className='px-5 py-3 rounded-lg border border-white/20'

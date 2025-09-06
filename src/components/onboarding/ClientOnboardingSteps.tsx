@@ -12,6 +12,7 @@ function ClientOnboardingSteps() {
 
 
 
+
     {
       id: 'post - job',
       label: 'Post your first job',
@@ -36,6 +37,7 @@ function ClientOnboardingSteps() {
   ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard",
       action: "Check Dashboard"}],
+
 
 
 
@@ -76,6 +78,7 @@ export function ClientOnboardingSteps() {;
 
 
 
+
   const steps: OnboardingStep[] = [
     {
       id: "post-job",
@@ -93,3 +96,4 @@ export function ClientOnboardingSteps() {;
       id: "response",
       label: "Receive your first application",
       completed: onboardingStatus.responseReceived,
+

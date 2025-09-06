@@ -57,6 +57,52 @@ const features = [
   };
   {
 
+import Head from 'next / head';
+import Link from 'next / link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart, } from 'lucide-react';
+import Layout from '../components / layout / Layout';
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+const features = [;
+  {
+    title: 'Real - time Content Analytics',
+    description:;
+      'Monitor content performance across all channels with live dashboards and insights',
+    icon: BarChart3,
+    color: 'from - blue - 500 to - cyan - 500',
+  },
+  {
+    title: 'AI - Powered Optimization',
+    description:;
+      'Get intelligent suggestions for content improvement based on performance data',
+    icon: Brain,
+    color: 'from - purple - 500 to - pink - 500',
+  },
+  {
+    title: 'Predictive Performance Modeling',
+    description:;
+      'Forecast content success before publishing using advanced AI algorithms',
+    icon: TrendingUp,
+    color: 'from - green - 500 to - emerald - 500',
+  },  {
+    title: 'Multi - Channel Strategy',
+    description: 'Optimize content across all digital platforms simultaneously',
+    icon: Globe,
+    color: 'from - orange - 500 to - red - 500',
+  },
+  {
+    title: 'Competitor Analysis',
+    description:;
+      'Track competitor content performance and identify opportunities',
+    icon: Target,
+    color: 'from - indigo - 500 to - blue - 500',
+  },  {
+
 
     title: 'SEO Content Intelligence',
     description: 'AI - powered SEO optimization and keyword gap identification',
@@ -124,6 +170,101 @@ const useCases = [
     icon: Target
 
 
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+
+
+
+const pricingPlans = [
+  {
+    name: 'Starter',
+    price: '$2,500',
+    period: '/month',
+    description: 'Perfect for small businesses and content creators',
+    features: [
+      'Real-time content analytics',
+      'AI optimization suggestions',
+      'Basic performance tracking',
+      'SEO content insights',
+      'Email support',
+      'Up to 100 content pieces/month',
+    ],
+    popular: false,
+    color: 'from-gray-500 to-gray-600'
+  };
+  {
+    name: 'Professional',
+    price: '$5, 000',
+    period: '/month',
+    description: 'Ideal for growing businesses and marketing teams',
+
+    features: [;
+      'Everything in Starter',
+      'Predictive performance modeling',
+      'Advanced competitor analysis',
+      'Multi - channel optimization',
+      'Priority support',
+      'Up to 500 content pieces / month',
+      'Custom integrations',
+    ],
+    popular: true,
+    color: 'from - blue - 500 to - purple - 600',
+  },  {
+
+    name: 'Enterprise',
+    price: '$10, 000',
+    period: '/month',
+    description: 'For large organizations with complex content needs',
+
+const useCases = [
+  {
+    title: 'Content Marketing Optimization',
+    description:
+      'Optimize your content strategy based on real-time performance data and AI insights',
+    icon: Target,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    title: 'SEO Strategy Enhancement',
+    description:
+      'Identify content gaps and optimize for search engines with AI-powered recommendations',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    title: 'Social Media Management',
+    description:
+      'Create engaging content that performs across all social media platforms',
+    icon: Globe,
+    color: 'from-purple-500 to-pink-500',
+  },
+  {
+    title: 'E-commerce Content',
+    description:
+      'Optimize product descriptions and marketing content for better conversions',
+    icon: ShoppingCart,
+    color: 'from-orange-500 to-red-500',
+  },
+];
+
+import { motion } from 'framer-motion';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
+  Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award,;
+  Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code,;
+  ShoppingCart;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
 
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
@@ -259,6 +400,8 @@ const useCases = [;
 ],
 
 
+
+
 const integrations = [
 
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
@@ -278,10 +421,58 @@ export default function AIContentIntelligencePlatform() {
           </p>;
         </div>;
 
+    <Layout>
+      <Head>
+        <title>AI Content Intelligence Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your content creation with AI-powered intelligence and analytics. Get real-time insights, optimization suggestions, and predictive performance modeling." />
+        <meta name="keywords" content="AI content intelligence, content optimization, content analytics, AI content marketing, content performance, SEO optimization" />
+        <meta property="og:title" content="AI Content Intelligence Platform | Zion Tech Group" />
+        <meta property="og:description" content="Transform your content creation with AI-powered intelligence and analytics." />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-content-intelligence-platform" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-content-intelligence-platform" />
+      </Head>
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">AI Content Intelligence Platform</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Create, optimize, and manage content intelligently with our AI-powered content platform.
+          </p>
+        </div>
 
-
-
-
+      {/* Hero Section */}
+      <section className='relative py-20 lg:py-32 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
             >
               <div className="flex items-center space-x-2 mb-6">
@@ -316,22 +507,23 @@ export default function AIContentIntelligencePlatform() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
-                <div className="text-6xl mb-4">🧠</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Key Benefits</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-green-400">
-                    <CheckCircle className="w-5 h-5 mr-3" />
+              <div className='bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8'>
+                <div className='text-6xl mb-4'></div>
+                <h3 className='text-2xl font-bold text-white mb-4'>
+                  Key Benefits
+                </h3>
+                <div className='space-y-3'>
+                  <div className='flex items-center text-green-400'>
+                    <CheckCircle className='w-5 h-5 mr-3' />
                     <span>300%+ ROI improvement</span>
                   </div>
-                  <div className="flex items-center text-green-400">
-                    <CheckCircle className="w-5 h-5 mr-3" />
+                  <div className='flex items-center text-green-400'>
+                    <CheckCircle className='w-5 h-5 mr-3' />
                     <span>80% faster content optimization</span>
                   </div>
                   <div className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3" />
                     <span>Real-time performance insights</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 </div>
               </div>
@@ -348,20 +540,34 @@ export default function AIContentIntelligencePlatform() {
             viewport={{ once: true }}
             className='text-center mb-16'
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -375,12 +581,38 @@ export default function AIContentIntelligencePlatform() {
             {features.map((feature, index) => (
               <motion.div
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group relative'
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="group relative"
 
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -414,10 +646,11 @@ export default function AIContentIntelligencePlatform() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+
 
 
 
@@ -426,13 +659,27 @@ export default function AIContentIntelligencePlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
-
-
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -446,12 +693,38 @@ export default function AIContentIntelligencePlatform() {
             {useCases.map((useCase, index) => (
               <motion.div
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className='group'
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: index * 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="group"
 
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
@@ -485,10 +758,11 @@ export default function AIContentIntelligencePlatform() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Pricing Section */}
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+
 
 
 
@@ -497,13 +771,27 @@ export default function AIContentIntelligencePlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
-
-
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -517,12 +805,42 @@ export default function AIContentIntelligencePlatform() {
             {pricingPlans.map((plan, index) => (
               <motion.div
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className={`relative ${plan.popular ? 'scale-105' : ''}`}
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: index * 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`relative ${plan.popular ? 'scale-105' : ''}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
               >
                 {plan.popular && (
@@ -566,19 +884,28 @@ export default function AIContentIntelligencePlatform() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   </ul>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                    href="/contact"
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`}
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Integrations Section */}
 
@@ -589,7 +916,38 @@ export default function AIContentIntelligencePlatform() {
             viewport={{ once: true }}
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+          </div>;
+        </div>;
+      </section>;
+      {/* Integrations Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -659,6 +1017,7 @@ export default function AIContentIntelligencePlatform() {
           </div>;
         </div>;
       </section>;
+
 
 
 
@@ -866,6 +1225,7 @@ export default function AIContentIntelligencePlatform() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Strategy?
@@ -914,7 +1274,6 @@ export default function AIContentIntelligencePlatform() {
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 View All Services
               </Link>
             </div>
@@ -922,11 +1281,28 @@ export default function AIContentIntelligencePlatform() {
         </div>
       </section>
 
+    </Layout>
+);
+    </Layout>;
+);
 
-
-
-
+}
+    </Layout>
   )
+}
+                className='bg - white / 10 backdrop - blur - sm border border - gray - 600 rounded - lg p - 4 text - center hover:bg - white / 20 transition - colors duration - 300';
+              >;
+                <span className='text - white font - medium'>{integration}</span>              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Section */}
+      <section className='py - 20'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
 
           >;
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
@@ -991,5 +1367,7 @@ export default function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

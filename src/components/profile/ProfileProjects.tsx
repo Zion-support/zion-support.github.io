@@ -36,6 +36,31 @@ import { Badge } from "@/components/ui/badge";
 import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { ProfileProject } from '@/types/profile'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { FileText } from 'lucide-react'
+interface ProfileProjectsProps {
+  projects: ProfileProject[]
+export function ProfileProjects({ projects }: ProfileProjectsProps) {
+  return (
+    <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
+      <h3 className='text-xl font-bold text-white mb-4'>Projects</h3>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+        {projects.map(project => (
+          <Card
+            key={project.id}
+            className='bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300'
+          >    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {projects.map((project,) => (
+
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { ProfileProject } from "@/types/profile",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
 
 import { FileText } from 'lucide-react'
 
@@ -52,6 +77,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
         {projects.map((project) => (
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -62,13 +88,19 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 
 
 
+
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
 
-
-
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className='w-full h-full object-cover'
+                  loading='lazy'                />
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
 
               </AspectRatio>
             ) : (
@@ -76,6 +108,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
+
 
 
 
@@ -92,6 +125,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                     <Badge
                       key={i}
                       variant='outline'
+
                       className='text-xs border-zion-slate-dark text-zion-slate-light'
                     >                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
         {projects.map((project) => (
@@ -129,6 +163,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <img;
 
 
+
                   src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover"
@@ -149,6 +184,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
+
                       {tag}
                     </Badge>
 ;
@@ -167,12 +203,14 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 
 
 
+
                   ))}
 
 
 
                 </div>
               )}
+
 
 
 
@@ -183,6 +221,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 }
 }
 }
+
+
 
 
 
@@ -275,5 +315,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
     </div>);
 }
 ;
+
+
 
 

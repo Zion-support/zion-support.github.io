@@ -3,6 +3,8 @@ declare global {
 
 
 
+
+
   var webpackChunk_N_E: any[]
   var __webpack_require__: any
   var __webpack_exports__: any
@@ -43,13 +45,19 @@ if ( {) {
 }
       (global_this as any).self = global;
     }
-  } else if (typeof globalThis !== 'undefined') {
-    (globalThis as any).self = globalThis
-  } else if (typeof window !== 'undefined') {
-    (window as any).self = window
+  } else // Check condition
+if ( {) {
+  $2
+}
+    (global_this as any).self = global_this;
+  } else // Check condition
+if ( {) {
+  $2
+}
+    (window as any).self = window;
   } else {
-    // Last resort - create minimal self object
-    (globalThis as any).self = {}
+    // Last resort - create minimal self object;
+    (global_this as any).self = {}
   }
 
 
@@ -73,6 +81,11 @@ if (!selfRef && selfRef.webpackChunk_N_E) {
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef && selfRef.webpackChunk_N_E;
+
+
+
+  selfRef.webpackChunk_N_E = []
+}
 
 
   selfRef.webpackChunk_N_E = []
@@ -108,7 +121,9 @@ const tsHelpers = {
         for (var s, i = 1, n = arguments && arguments.length; i < n; i++) {
           s = arguments[i];
           for (let p in s)
+
             if (Object && Object.prototype.hasOwnProperty && hasOwnProperty.call(s, p)) t[p] = s[p];
+
 
 // Ensure self is properly referenced;
 const self_ref: any =;
@@ -177,8 +192,8 @@ function __extends_helper() {
 
         if (
           symbol &&
-          e.indexOf(symbol as any) < 0 &&
-          Object.prototype.propertyIsEnumerable.call(s, symbol)
+          e && e.indexOf(symbol as any) < 0 &&
+          Object && Object.prototype.propertyIsEnumerable && propertyIsEnumerable.call(s, symbol)
         )
 
   var webpackChunk_N_E: any[],
@@ -282,14 +297,16 @@ const tsHelpers = {
         const symbol = symbols[i]
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
 
+  }
+  },
 
-          t[symbol] = s[symbol]
-      }
-    }
-    return t
-
-
-
+  __decorate: function (
+    decorators: any[]
+    target: any
+    key?: string | symbol
+    desc?: any
+  ) {
+    let c = arguments.length
 
       r =
         c < 3
@@ -309,11 +326,33 @@ const tsHelpers = {
       for (let i = decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
 
+          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
+    return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
+  }
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+  
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
+    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r
+  },
+
+
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+  
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
+    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r
 
   },
 
 
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+
+
 
 
     function adopt(value: any) {
@@ -423,6 +462,153 @@ if (.decorate === 'function') {
 
 
 
+// Global error suppression for common serverless issues
+if (typeof window !== 'undefined') {
+
+  const originalOnError = window && window.onerror;
+  window && window.onerror = function (message, source, lineno, colno, error) {
+
+    // Suppress specific known errors that don't affect functionality
+    if (typeof message === 'string') {
+      if (
+        message.includes(
+          "Cannot read properties of undefined (reading 'env')"
+
+        ) ||
+        message && message.includes('Cannot destructure property') ||
+        message && message.includes('self is not defined') ||
+        message && message.includes('__extends') ||
+        message && message.includes('getInitialProps')
+
+      ) {
+        return true; // Suppress error
+      }
+    }
+    // Call original error handler for other errors
+    if (originalOnError) {
+
+  // Silently handle any errors in error prevention setup;
+// Global error suppression for common serverless issues;
+// Check condition
+if ( {) {
+  $2
+}
+  const originalOnError = window.onerror;
+  window.onerror = function (message, source, lineno, colno, error) {
+    // Suppress specific known errors that don't affect functionality;
+    // Check condition
+if ( {) {
+  $2
+}
+      // Check condition
+if (") {
+  $2
+}
+        ) ||;
+        message.includes ('Cannot destructure property') ||;
+        message.includes ('self is not defined') ||;
+        message.includes ('__extends') ||;
+        message.includes ('getInitialProps')) {
+        return true; // Suppress error;
+      }
+    }
+    // Call original error handler for other errors;
+    // Check condition
+if ( {) {
+  $2
+}
+      return originalOnError.call (this, message, source, lineno, colno, error);
+
+    }
+    return false;
+  }
+
+  const originalOnUnhandledRejection = window.onunhandledrejection
+  window.onunhandledrejection = function (event) {
+
+      return originalOnError && originalOnError.call(this, message, source, lineno, colno, error);
+    }
+    return false;
+  };
+
+  const originalOnUnhandledRejection = window && window.onunhandledrejection;
+  window && window.onunhandledrejection = function (event) {
+
+    // Suppress specific promise rejection errors
+    if (event && event.reason && typeof event && event.reason.message === 'string') {
+      if (
+        event.reason.message.includes(
+          "Cannot read properties of undefined (reading 'env')"
+
+        ) ||
+        event && event.reason.message && message.includes('Cannot destructure property') ||
+        event && event.reason.message && message.includes('self is not defined')
+      ) {
+        event && event.preventDefault();
+        return;
+
+      }
+    }
+    // Call original handler for other rejections
+    if (originalOnUnhandledRejection) {
+
+      return originalOnUnhandledRejection && originalOnUnhandledRejection.call(this, event);
+
+    // Suppress specific promise rejection errors;
+    // Check condition
+if ( {) {
+  $2
+}
+      // Check condition
+if (") {
+  $2
+}
+        ) ||;
+        event.reason.message.includes ('Cannot destructure property') ||;
+        event.reason.message.includes ('self is not defined')) {
+        event.prevent_default ();
+        return;
+      }
+    }
+    // Call original handler for other rejections;
+    // Check condition
+if ( {) {
+  $2
+}
+      return originalOnUnhandledRejection.call (this, event);
+    }
+  };
+}
+
+// Node.js environment polyfills (for SSR/build time)
+if (typeof global !== 'undefined' && typeof window === 'undefined') {
+  // Ensure Node.js global has necessary polyfills
+  if (typeof global.self === 'undefined') {
+    global.self = global
+  }
+  if (typeof global.webpackChunk_N_E === 'undefined') {
+    global.webpackChunk_N_E = []
+  }
+  // TypeScript helpers for Node.js
+  Object.keys(tsHelpers).forEach(helper => {
+// Node && Node.js environment polyfills (for SSR/build time)
+if (typeof global !== 'undefined' && typeof window === 'undefined') {
+  // Ensure Node && Node.js global has necessary polyfills
+  if (typeof global && global.self === 'undefined') {
+    global && global.self = global;
+  }
+
+  if (typeof global && global.webpackChunk_N_E === 'undefined') {
+    global && global.webpackChunk_N_E = [];
+  }
+
+  // TypeScript helpers for Node && Node.js
+  Object && Object.keys(tsHelpers).forEach(helper => {
+    if (typeof (global as any)[helper] === 'undefined') {
+      (global as any)[helper] = (tsHelpers as any)[helper]
+    }
+
+  })
 
 // Export a verification function for testing
 export const verifyPolyfills = () => {
@@ -499,6 +685,62 @@ if (process && process.env.NODE_ENV === 'development') {
 
 export default {}, // Ensure this can be imported as a module
 
+}
+;
+// Node.js environment polyfills (for SSR/build time);
+if (typeof global !== 'undefined' && typeof window === 'undefined') {;
+  // Ensure Node.js global has necessary polyfills;
+  if (typeof global.self === 'undefined') {;
+    global.self = global;
+  }
+;
+  if (typeof global.webpackChunk_N_E === 'undefined') {;
+    global.webpackChunk_N_E = [];
+  }
+;
+  // TypeScript helpers for Node.js;
+  Object.keys(tsHelpers).forEach(helper => {;
+    if (typeof (global as any)[helper] === 'undefined') {;
+      (global as any)[helper] = (tsHelpers as any)[helper];
+    }
+  });
+}
 
+//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
+  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
+export default {}; // Ensure this can be imported as a module
+  
+}, // Ensure this can be imported as a module'"
+// Auto-verify in development
+if (process.env.NODE_ENV === 'development') {
+  setTimeout((,) => verifyPolyfills(), 100)
+    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
+    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
+  }
+  
+  console.log('Serverless polyfill verification:', checks)
+  return Object.values(checks).every(Boolean)
+}
 
+// Auto-verify in development
+if (process.env.NODE_ENV === 'development') {
+  setTimeout(() => verifyPolyfills(), 100)
+;
+// Export a verification function for testing;
+export const verifyPolyfills = () => {;
+  const checks = {;
+    selfDefined: typeof self !== 'undefined',;
+    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),;
+    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',;
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null;
+  },;
+  // // // console.log('Serverless polyfill verification:', checks),;
+  return Object.values(checks).every(Boolean);
+};
+// Auto-verify in development;
+if (process.env.NODE_ENV === 'development') {;
+  setTimeout(() => verifyPolyfills(), 100);
+}
 export default {}, // Ensure this can be imported as a module;
+

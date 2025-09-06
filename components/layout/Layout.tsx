@@ -2,6 +2,7 @@
 
 
 
+
 import React from 'react';
 
 
@@ -38,11 +39,14 @@ import Footer from '../Footer';
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
   children: React && React.ReactNode;
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -57,20 +61,23 @@ interface LayoutProps {;
 
 
 
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
+
 export default function Layout({
-  children
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
-  canonical
-  ogTitle
-  ogDescription
-  ogImage
+  children,
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogImage,
   noIndex = false
+
 }: LayoutProps) {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -89,6 +96,7 @@ function Layout() {
       <Header />;
       <main>;
         {children}
+
 
 
       </main>;
@@ -116,10 +124,12 @@ export default function Layout({ children }: LayoutProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 <div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
     </div>;
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
+
 
 
   } catch (error) {
@@ -142,6 +152,7 @@ export default function Layout({
   keywords = "technology, AI, cloud, micro SaaS"
 }: LayoutProps) {
   return (
+
     <div className="min-h-screen bg-gray-50">
   } catch (error) {
     console.error("Error:", error);
@@ -187,5 +198,7 @@ export default function Layout({ children }: LayoutProps) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

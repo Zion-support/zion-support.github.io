@@ -7,6 +7,7 @@ export default function GitHubRedirect() {
 
 
 
+
   }
 }
 import React, { useEffect } from 'react';
@@ -16,10 +17,13 @@ import React, { useEffect } from 'react';
     }
 
 
+
   }, []);
   return (
     <>;
       <Head>;
+
+
 
 
 
@@ -35,7 +39,43 @@ export default function GitHubRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-	}, []),
+
+import React, { useEffect } from 'react';
+
+
+import Head from 'next / head';
+export default /**
+ * GitHubRedirect - Function description
+ */
+function GitHubRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      window.location.replace ('https: //github.com / Zion - Holdings'),
+    }
+
+      window.location.replace('https: //github.com/Zion-Holdings'),
+    };
+
+  }, []);
+  return (
+    <>;
+      <Head>;
+
+
+
+}
+
+
+export default function GitHubRedirect() {
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https: //github.com/Zion-Holdings')
+		}
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -72,5 +112,7 @@ export default function GitHubRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

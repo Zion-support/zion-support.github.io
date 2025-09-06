@@ -1,6 +1,7 @@
 
 
-
+import React, { useState, useEffect } from 'react';
+// Use the shared icon wrapper
 
 
 import {Bell} from '@/components/icons';
@@ -28,10 +29,12 @@ export const NotificationCenter: React.FC = () => {;
   const [error, setError] = useState<string | null>(null);
 import React, { useState, useEffect } from 'react',
 
+
 import React, { useState, useEffect } from 'react',
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -80,6 +83,52 @@ export const NotificationCenter: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
 
+          await fetchNotifications(),
+          setError(null)
+        } catch (err) {
+          console.error("Failed to fetch notifications:", err),
+          setError("Couldn't load notifications"),
+          toast.error("Failed to load notifications")
+        }
+      }
+      loadNotifications()
+    }
+  }, [open, fetchNotifications]);
+import React, { useState, useEffect } from 'react',;
+// Use the shared icon wrapper;
+import { Bell } from '@/components/icons',;
+import { Button } from '@/components/ui/button',;
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',;
+import { useNotifications } from '@/context/notifications/NotificationContext',;
+import { toast } from 'sonner',;
+import {;
+  NotificationFilter,;
+  NotificationHeader,;
+  NotificationList,;
+  NotificationFooter;
+} from '@/components/notifications',;
+import { FilterType } from '@/components/notifications/NotificationFilter',;
+export const NotificationCenter: React.FC = () => {;
+  const {;
+    filteredNotifications,;
+    unreadCount,;
+    markAsRead,;
+    markAllAsRead,;
+    dismissNotification,;
+    loading,;
+    filter,;
+    setFilter,;
+    fetchNotifications;
+  } = useNotifications(),;
+  const [open, setOpen] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+
+  // Refresh notifications when popover opens;
+  useEffect(() => {;
+    if (open) {;
+      const loadNotifications = async () => {;
+        try {;
+
           await fetchNotifications();
           setError(null);
         } catch (err) {;
@@ -87,16 +136,17 @@ export const NotificationCenter: React.FC = () => {
           setError("Couldn't load notifications");
           toast && toast.error("Failed to load notifications");
         }
-
-      },;
-      loadNotifications();
+      }
+      loadNotifications()
     }
   }, [open, fetchNotifications]),
 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -135,7 +185,6 @@ export const NotificationCenter: React.FC = () => {
 
   const handleMarkAllAsRead = async () => {;
     try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       await markAllAsRead();
       toast && toast.success("All notifications marked as read");
     } catch (err) {;
@@ -163,12 +212,14 @@ export const NotificationCenter: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
@@ -182,17 +233,20 @@ export const NotificationCenter: React.FC = () => {
           unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
 
-
+        />
+        <NotificationFilter
+          filter={filter as FilterType}
+          onFilterChange={handleFilterChange}
+        />
         <NotificationList
         
-
-
-
 
         <NotificationFilter 
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
         />
+
+
 
 
 
@@ -208,6 +262,13 @@ export const NotificationCenter: React.FC = () => {
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
 
+        />
+        <NotificationFooter onClose={() => setOpen(false)} />
+      </PopoverContent>
+    </Popover>
+  )
+}
+
 
         />;
 
@@ -215,6 +276,7 @@ export const NotificationCenter: React.FC = () => {
       </PopoverContent>;
     </Popover>;
   );
+
 
 
 
@@ -229,6 +291,7 @@ export const NotificationCenter: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

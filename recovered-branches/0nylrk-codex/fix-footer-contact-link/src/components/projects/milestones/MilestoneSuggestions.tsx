@@ -1,8 +1,27 @@
 
 
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Loader2, Sparkles, Check  } from 'lucide-react';
+import { Badge  } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
+interface MilestoneSuggestionsProps {
+  projectName: string,
+  scopeSummary: string,
+  startDate: Date,
+  endDate?: Date;
+  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
 
-
-
+export function MilestoneSuggestions({;
+  projectName;
+  scopeSummary;
+  startDate;
+  endDate;
+  projectType;
 
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -64,12 +83,17 @@ export function MilestoneSuggestions({
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
 
-
-
-
-
-
-
+      }
+    }
+  }
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
+    }
+  }
+  };
 
 ;
 export function MilestoneSuggestions({;
@@ -92,56 +116,10 @@ export function MilestoneSuggestions({;
     };
 
     const milestones = await generateMilestones(input);
-
-    if (milestones && milestones.length > 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    if (milestones.length > 0) {
       setShowSuggestions(true);
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
-      }
-    }
-
-import {Button} from '@/components / ui / button';
-import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
-import {Loader2, Sparkles, Check} from 'lucide-react';
-import {Badge} from '@/components / ui / badge';
-import {format, parseISO} from 'date - fns';
-interface MilestoneSuggestionsProps {
-  project_name: string,
-  scope_summary: string,
-  start_date: Date,
-  end_date?: Date;
-  project_type: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
-}
-export /**
- * MilestoneSuggestions - Function description
- */
-function MilestoneSuggestions() {
-  const { generate_milestones, generated_milestones, is_generating } = useMilestoneGenerator ();
-  const [show_suggestions, setShowSuggestions] = useState (false);
-;
-  const handleGenerateMilestones = async () => {
-    const input: MilestoneInput = {
-      scope: `${project_name}: ${scope_summary}`,
-      start_date: start_date.toISOString (),
-      end_date: end_date ? end_date.toISOString () : null,
-      project_type: project_type || "Other";
-    }
-;
-    const milestones = await generate_milestones (input);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      setShowSuggestions (true);
-      // Check condition
-if ( {) {
-  $2
-}
-        onMilestonesGenerated (milestones);
       }
     }
   }
@@ -163,6 +141,7 @@ if ( {) {
     }
 
   },
+
 
 
 
@@ -198,6 +177,7 @@ if ( {) {
           )}
         </Button>
       )}
+
 
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>

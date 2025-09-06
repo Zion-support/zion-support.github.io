@@ -28,6 +28,7 @@ import React, { useMemo, useState } from 'react';
 
 
 
+
 export default function ServiceDescriptionGeneratorPage() {;
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
@@ -44,10 +45,13 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
+
+
 
 
 
@@ -63,6 +67,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -72,10 +77,12 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
+
 
 
   const keyFeatures = useMemo(() => {
@@ -114,6 +121,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   function handleAccept() {
     setAccepted(true);  }
   function handleCopy() {
+
 
   const keyFeatures = useMemo(() => {;
     return featuresInput;
@@ -173,6 +181,8 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   function handleCopy() {;
 
 
+
+
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
     } catch (error) {
@@ -182,8 +192,10 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   return (
@@ -195,6 +207,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
       <form
         onSubmit={handleSubmit}
+
 
 
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
@@ -218,6 +231,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 
+
         <div>
           <label className="block text-sm font-medium mb-1">Service Title</label>
           <input
@@ -227,7 +241,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           />
         </div>
         <div>
@@ -288,8 +301,10 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
         <div className="flex items-center gap-3">
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           <button
@@ -318,7 +333,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
                 onClick={handleAccept}
                 className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Accept
               </button>
             </div>
@@ -338,6 +352,30 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
           />
           {accepted && (
 
+            <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
+              Accepted. You can copy and paste this into your CMS.
+            </div>          )}
+        </div>;
+      )}
+
+    </div>;
+  );
+
+            className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={generated}
+            onChange={(e) => setGenerated(e.target.value)}
+          />
+
+          {accepted && (
+            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
+          )}
+        </div>
+      )}
+    </div>
+);
+
+
+}
 
             <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
           )  } catch (error) {
@@ -376,6 +414,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -383,5 +422,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

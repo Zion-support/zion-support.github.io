@@ -151,13 +151,20 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           this.error(alert.message);,
 
 
+
         }
+
     } catch (error) {_;
 
 
 }};
 ; async checkSystemResources() {; try {; this && this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
+
+
+}}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
+      , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
+
 
 ; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
 ; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';
@@ -218,6 +225,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 const healthMonitor = new HealthMonitor();
 
 healthMonitor.run().catch(error = > {; process.exit(1)});
+
+
 
 };
 };
@@ -543,7 +552,7 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };
 ;
   async run() {;
-    this.log('🏥 Starting Health Monitor...');
+    this.log(' Starting Health Monitor...');
     this.log(`Project root: ${this.projectRoot}`);
 ;
     try {;
@@ -560,7 +569,7 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
       const logInfo = await this.checkLogHealth();
 ;
       // Generate report;
-      this.log('📊 Generating health report...');
+      this.log(' Generating health report...');
       const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo);
 ;
       // Save report;
@@ -569,7 +578,7 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Health Monitor Summary: '),
+      this.log('\n Health Monitor Summary: '),
       this.log(`System: ${report.summary.systemHealth}`);
       this.log(`Processes: ${report.summary.processHealth}`);
       this.log(`Application: ${report.summary.applicationHealth}`);
@@ -579,16 +588,16 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
       this.log(`Duration: ${duration}ms`);
 ;
       if (report.recommendations.length > 0) {;
-        this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,
+        this.log('\n Recommendations: '), report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
         });
       } else {;
-        this.log('\n✨ All systems are healthy!');
+        this.log('\n All systems are healthy!');
       };
 ;
     } catch (error) {;
-      this.log(`❌ Error running health monitor: ${error.message}`);
+      this.log(` Error running health monitor: ${error.message}`);
       process.exit(1);
 };
 };
@@ -605,7 +614,7 @@ healthMonitor.run().catch(error => {;
 ,
   async checkSystemResources() {,
     try {,
-      this.log('💻 Checking system resources...'),
+      this.log(' Checking system resources...'),
 ,
       const memInfo = execSync('free -m', { encoding: 'utf8' }),
       const diskInfo = execSync('df -h', { encoding: 'utf8' }),
@@ -655,7 +664,7 @@ healthMonitor.run().catch(error => {;
 ,
   async checkProcessHealth() {,
     try {,
-      this.log('🔄 Checking process health...'),
+      this.log(' Checking process health...'),
 ,
       const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }),
       const processes = JSON.parse(pm2List),
@@ -698,7 +707,7 @@ healthMonitor.run().catch(error => {;
 ,
   async checkApplicationHealth() {,
     try {,
-      this.log('🌐 Checking application health...'),
+      this.log(' Checking application health...'),
 ,
       const healthChecks = [],
 ,
@@ -759,7 +768,7 @@ healthMonitor.run().catch(error => {;
 ,
   async checkLogHealth() {,
     try {,
-      this.log('📝 Checking log health...'),
+      this.log(' Checking log health...'),
 ,
       const logsDir = path.join(this.projectRoot, 'logs/pm2'),
       const logFiles = [],
@@ -951,7 +960,7 @@ healthMonitor.run().catch(error => {;
   };
 ,
   async run() {,
-    this.log('🏥 Starting Health Monitor...'),
+    this.log(' Starting Health Monitor...'),
     this.log(`Project root: ${this.projectRoot}`),
 ,
     try {,
@@ -968,7 +977,7 @@ healthMonitor.run().catch(error => {;
       const logInfo = await this.checkLogHealth(),
 ,
       // Generate report,
-      this.log('📊 Generating health report...'),
+      this.log(' Generating health report...'),
       const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo),
 ,
       // Save report,
@@ -977,7 +986,7 @@ healthMonitor.run().catch(error => {;
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n📊 Health Monitor Summary: '),
+      this.log('\n Health Monitor Summary: '),
       this.log(`System: ${report.summary.systemHealth}`),
       this.log(`Processes: ${report.summary.processHealth}`),
       this.log(`Application: ${report.summary.applicationHealth}`),
@@ -987,17 +996,17 @@ healthMonitor.run().catch(error => {;
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.recommendations.length > 0) {,
-        this.log('\n💡 Recommendations: '),
+        this.log('\n Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
           this.log(`    Action: ${rec.action}`),
         }),
       } else {,
-        this.log('\n✨ All systems are healthy!'),
+        this.log('\n All systems are healthy!'),
       };
 ,
     } catch (error) {,
-      this.log(`❌ Error running health monitor: ${error.message}`),
+      this.log(` Error running health monitor: ${error.message}`),
       process.exit(1),
     };
   };
@@ -2006,6 +2015,7 @@ healthMonitor.run().catch(error => {,;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -2013,5 +2023,6 @@ healthMonitor.run().catch(error => {,;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

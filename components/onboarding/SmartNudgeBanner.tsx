@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -25,18 +29,17 @@ import { X } from 'lucide-react';
   user_id?: string | null;
   message: string;
 
-
-
-
-
-
+}
+export default function SmartNudgeBanner({
+  role
+  userId
+  message
+}: SmartNudgeBannerProps) {
+  const storageKey = React.useMemo(
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`
+    [role, userId]
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -45,9 +48,11 @@ import { X } from 'lucide-react';
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
 
-
-
-
+  role: 'talent' | 'client'
+  userId?: string | null;
+  message: string
+}
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
 
   role: 'talent' | 'client',;
   userId?: string | null;
@@ -55,6 +60,8 @@ import { X } from 'lucide-react';
 };
 
 export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
+
+
 
 
 
@@ -111,12 +118,14 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     } catch {}
@@ -133,6 +142,7 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
   );
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -145,6 +155,7 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

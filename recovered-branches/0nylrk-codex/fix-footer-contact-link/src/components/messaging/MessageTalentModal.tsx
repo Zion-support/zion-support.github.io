@@ -1,7 +1,12 @@
 
 
-
-
+import React, { useState } from 'react';
+import {
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+  DialogDescription;
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -11,6 +16,8 @@ import {useMessaging} from "@/context/MessagingContext";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
+
+
 
 
 
@@ -41,7 +48,9 @@ import { useNavigate } from "react-router-dom",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export interface MessageTalentModalProps {
@@ -55,6 +64,7 @@ export interface MessageTalentModalProps {
 
 
 
+
   jobTitle
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
@@ -62,6 +72,7 @@ export interface MessageTalentModalProps {
   const navigate = useNavigate();
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
+
 
   const [message, setMessage] = useState(
     jobTitle
@@ -80,6 +91,20 @@ export interface MessageTalentModalProps {
         title: "Message required"
         description: "Please enter a message before sending."
         variant: "destructive"
+
+  const [message, setMessage] = useState(;
+    jobTitle ;
+      ? `Hi ${talent && talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`;
+      : `Hi ${talent && talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`;
+  );
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSendMessage = async () => {;
+    if (!message && message.trim()) {;
+      toast({;
+        title: "Message required",;
+        description: "Please enter a message before sending.",;
+        variant: "destructive";
 
       });
       return;
@@ -269,7 +294,6 @@ export function MessageTalentModal({;
       });
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -286,7 +310,9 @@ export function MessageTalentModal({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -299,7 +325,6 @@ export function MessageTalentModal({;
             Send a direct message to start a conversation.
             {talent.professional_title && (
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </DialogDescription>;
@@ -321,20 +346,24 @@ export function MessageTalentModal({;
           </div>
         </div>
         <DialogFooter className="gap-2 sm:gap-0">
+              placeholder="Write your message here...";
+            />;
+          </div>;
+        </div>;
+
+        <DialogFooter className="gap-2 sm:gap-0">;
           <Button
             type="button"
             variant="outline"
             onClick={onClose}
-            className="border-zion-purple/30 text-white"
-          >
-            Cancel
-          </Button>
+            className="border-zion-purple/30 text-white">;
+            Cancel;
+          </Button>;
           <Button
             type="button"
             onClick={handleSendMessage}
             disabled={isSubmitting}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
             {isSubmitting ? 'Sending...' : 'Send Message'}
 
           </Button>
@@ -348,5 +377,7 @@ export function MessageTalentModal({;
       </DialogContent>;
     </Dialog>);
 }
+
+
 
 

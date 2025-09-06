@@ -9,6 +9,7 @@ interface ContractaiProps {
   // Add props here as needed
 
 }
+export default function Contractai({ }: ContractaiProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

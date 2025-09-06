@@ -7,16 +7,19 @@
 
 
 
+
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 
 
+
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
+
 
 
 
@@ -57,6 +60,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
       colors;
 
+
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
@@ -78,6 +82,8 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <span>{text}</span>
     </div>
   )
+
+
 
 
 
@@ -113,7 +119,6 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       text: "Top Rated",;
       colors: "bg-purple-500/20 text-purple-400"}},;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { icon: Icon, text, colors } = badgeConfig[type];
   return (
 
@@ -130,13 +135,13 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { BadgeCheck, Star, Clock, Award } from './lucide-react';
 import { cn } from '@/lib / utils';

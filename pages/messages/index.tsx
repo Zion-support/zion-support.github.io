@@ -14,6 +14,8 @@ const Messages: NextPage = () => {
         description="Start a conversation by requesting a quote or responding to an existing one."
 
 
+
+
         icon={<span>📫</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -34,5 +36,7 @@ const Messages: NextPage = () => {
   );
 },;
 export default Messages;
+
+
 
 

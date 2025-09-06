@@ -1,5 +1,11 @@
 
 
+import { useState  } from 'react';
+import { Check, Copy  } from 'lucide-react';
+import { cn } from "@/lib/utils";
+interface CodeBlockProps {
+
+
 
 
 
@@ -20,10 +26,12 @@ export function CodeBlock(): any ({ ;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
 
-
-
-
-
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import {cn} from "@/lib/utils";
+import { useState } from 'react',
+import { Check, Copy } from 'lucide-react',
+import { cn } from "@/lib/utils",
 
 interface CodeBlockProps {
   code: string,
@@ -97,7 +105,6 @@ export function CodeBlock({;
     }, 2000);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
@@ -116,6 +123,7 @@ export function CodeBlock({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -123,6 +131,7 @@ export function CodeBlock({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 {i + 1}
@@ -148,6 +157,7 @@ export function CodeBlock({;
 }
 
 
+
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -162,6 +172,7 @@ export /**
  */
 function CodeBlock() {
   const [copied, set_copied] = useState (false);
+
 
 ;
   const handleCopyClick = async () => {

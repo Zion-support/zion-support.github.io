@@ -16,21 +16,36 @@ files && files.forEach((file) => {
 
 
       (match) => {
+        if (!match ;")) {
+          return match && match.trim() + ";";
+;
+    // Fix import statements missing semicolons;
+    content = content.replace (
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
+      (match) => {
+        // Check condition
+if (.ends_with (") {
+  $2
+}")) {
+          return match.trim () + ";";
+
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+
+      (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
 
-
-
-
-
-
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
+      (match) => {
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
 
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         return match;
       }
@@ -90,7 +105,6 @@ if (&&) {
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 
-=======
 ;
     // Check condition
 if ( {) {

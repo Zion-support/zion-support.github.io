@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -14,11 +15,9 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 import _React from';react' "export": const InstallPrompt = () => { export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e.preventDefault() setDeferred(e)} window.addEventListener('beforeinstallprompt',handler) return () => window.removeEventListener('beforeinstallprompt',handler)},[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== 'accepted') {''';
-=======
-=======
 import React from\';react\' \"export\": const InstallPrompt = () => { export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e && e.preventDefault() setDeferred(e)} window && window.addEventListener(\'beforeinstallprompt\',handler) return () => window && window.removeEventListener(\'beforeinstallprompt\',handler)},[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== \'accepted\') {\''\';
 const React from";react" export: const InstallPrompt = () => { export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e && e.preventDefault() setDeferred(e)} window && window.addEventListener("beforeinstallprompt",handler) return () => window && window.removeEventListener("beforeinstallprompt",handler)},[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== "accepted") {""";"""
-
 import _React from';react' "export": const InstallPrompt = () => { export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e && e.preventDefault() setDeferred(e)} window && window.addEventListener('beforeinstallprompt',handler) return () => window && window.removeEventListener('beforeinstallprompt',handler)},[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== 'accepted') {''';
 

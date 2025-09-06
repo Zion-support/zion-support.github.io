@@ -6,6 +6,7 @@
     },
 
 
+
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
@@ -72,6 +73,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
       description: "Monitor project progress and approve milestones directly from your phone.";
     }
     {
+
       icon: <Mail className="h - 8 w - 8 text - zion - purple" />,
       title: "Instant Messaging",
       description: "Chat with candidates or clients and receive notifications in real - time.";
@@ -85,6 +87,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
     }
 
   ],
+
 
 
 
@@ -131,6 +134,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 '"},
 ;
 };
+
 
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
@@ -197,5 +201,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
 
 
+
 '"},
 }
+

@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -75,6 +76,7 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
     const largeArc = end - start > Math.PI ? 1 : 0
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
+
   })
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
@@ -118,12 +120,14 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 }
 
@@ -156,6 +160,7 @@ function Funnel({ data }: { data: Datum[] }) {
 
 
 
+
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })
 import React, { useCallback, useEffect, useMemo, useState } from 'react',
@@ -173,6 +178,7 @@ if (return result, ) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
   return result;
@@ -199,7 +205,6 @@ function PieChart() {
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${large_arc} 1 ${x2} ${y2} Z`,
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
   }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
 
@@ -235,6 +240,8 @@ function Funnel() {
 
 
 
+
+
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -245,7 +252,9 @@ function Funnel() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -266,7 +275,6 @@ function Funnel() {
 ;
 export default function UsageAnalytics(req, res) {
   try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000));
   const [end, setEnd] = useState<Date>(new Date());
   const [userType, setUserType] = useState<string>('all');
@@ -342,12 +350,14 @@ export default function UsageAnalytics(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               </ul>
             </div>
@@ -383,11 +393,13 @@ export default function UsageAnalytics(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

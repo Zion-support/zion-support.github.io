@@ -22,7 +22,12 @@
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
 
-
+    icon: <HardDrive className="w-10 h-10" />
+    link: "/equipment"
+    color: "from-amber-500 to-orange-600"}
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
 
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
@@ -34,7 +39,9 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -68,12 +75,18 @@ const categories = [
 const specialServices = [
   {
 
+    title: "IT Onsite Services"
+    link: "/it-onsite-services"
 
   }
 ];
 
 interface CategoriesSectionProps {
   showTitle?: boolean
+
+}
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"
 
 import { GradientHeading } from "./GradientHeading",;
 import { Link } from "react-router-dom",;
@@ -118,11 +131,13 @@ interface CategoriesSectionProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 }
@@ -249,6 +264,8 @@ function CategoriesSection() {
     </section>
   )
 
+}
+};
 
           </div>;
         </div>;
@@ -258,6 +275,15 @@ function CategoriesSection() {
             to="/categories" 
             className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors">;
 
+              </Link>))}
+          </div>;
+        </div>;
+        <div className="mt - 12 flex justify - center">;
+          <Link;
+            to="/categories";
+            className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors";
+          >;
+
             View All Categories →;
           </Link>;
         </div>;
@@ -266,13 +292,6 @@ function CategoriesSection() {
     </section>);
 }
 
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+;
+;
 

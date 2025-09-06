@@ -1,4 +1,20 @@
 
+import React, { useEffect, useState } from 'react',;
+import type { NextPage } from 'next',;
+import type { Review } from '../../types/reviews',;
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
+
+
+  async function refresh() {
+    const res = await fetch('/api/admin/debug/reviews'),
+    const data = await res.json(),
+    if (res.ok) {
+      setAll(data.reviews),
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
+    }
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
 
 
 
@@ -6,9 +22,21 @@
 
     if (res.ok) refresh()
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  }
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
+const AdminReviewsPage: NextPage = () => {;
+  const [pending, setPending] = useState<Review[]>([]);
+  const [all, setAll] = useState<Review[]>([]);
+  const [adminKey, setAdminKey] = useState('');
+  async function refresh() {;
+    const res = await fetch('/api/admin/debug/reviews');
+    const data = await res.json();
+    if (res.ok) {;
+      setAll(data.reviews);
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed));
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
   }
 }
@@ -45,8 +73,8 @@
         <div className="space-y-4">
           {pending.map((r) => (
             <div key={r.id} className="border rounded p-3">
-              <div className="text-sm text-gray-600 mb-1">Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
-              <div className="font-medium">{r.rating}★ — {r.text}</div>
+              <div className="text-sm text-gray-600 mb-1">Project: {r.projectId}  To: {r.toRole} {r.toId}</div>
+              <div className="font-medium">{r.rating}  {r.text}</div>
               <div className="mt-2 flex gap-2">
                 <button className="enhanced-button enhanced-button-primary" onClick={() => moderate('approve', r.id)}>Approve</button>
                 <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
@@ -65,9 +93,13 @@
     </main>
   )
 
+}
+export default AdminReviewsPage;
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+},
+export default AdminReviewsPage,
+},
+},
+export default AdminReviewsPage,
+},
 

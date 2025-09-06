@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -23,6 +24,7 @@ const DialogOverlay = React.forwardRef<
 ></typeof>(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
 
+
     ref={ref}
     className={cn(
 
@@ -37,7 +39,9 @@ const DialogOverlay = React.forwardRef<
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -54,7 +58,9 @@ const DialogContent = React.forwardRef<
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -72,12 +78,14 @@ const DialogContent = React.forwardRef<;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       ref={ref}
       className={cn(
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
@@ -90,7 +98,9 @@ const DialogContent = React.forwardRef<;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -98,7 +108,6 @@ const DialogContent = React.forwardRef<;
     </DialogPrimitive.Content>
   </DialogPortal>
 ))
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 DialogContent.displayName = DialogPrimitive.Content.displayName
 
 const DialogHeader = ({
@@ -127,6 +136,8 @@ const DialogFooter = ({
   ...props
 }: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
 
+
+
   <div
     className={cn(
 
@@ -153,6 +164,8 @@ const DialogTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
 
+
+
     ref={ref}
     className={cn(
 
@@ -167,7 +180,9 @@ const DialogTitle = React.forwardRef<
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -181,7 +196,9 @@ const DialogDescription = React.forwardRef<
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
     ref={ref}
     className={cn (
@@ -191,6 +208,8 @@ const DialogDescription = React.forwardRef<
   />
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
+
+
 
 
 
@@ -249,7 +268,9 @@ export {;
   DialogTitle,;
   DialogDescription,;
 };
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
 
 
@@ -273,6 +294,7 @@ export {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -280,5 +302,6 @@ export {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

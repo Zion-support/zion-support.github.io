@@ -1,4 +1,18 @@
 
+import Link from "next/link";
+export const metadata = {title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services";
+  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.";
+  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"}
+export default function EnterpriseITPage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
+  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
+  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
+export default function EnterpriseITPage() {;
+  return (;
+    <div className="min-h-screen">;
+
 import Link from './next / link';,
 export const metadata = {
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
@@ -10,7 +24,8 @@ export default /**
 function EnterpriseITPage() {
   return (
     <div className="min - h-screen">;
-=======
+
+
 import Link from "next/link",;
 export const metadata = {;
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
@@ -18,7 +33,6 @@ export const metadata = {;
   keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
 export default function EnterpriseITPage() {;
   return (;
-=======
 
 
     <div className="min-h-screen">;
@@ -114,13 +128,13 @@ export default function EnterpriseITPage() {;
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Cloud readiness assessment</li>;
-                <li>• Migration planning & execution</li>;
-                <li>• Multi - cloud strategy</li>;
-                <li>• Cost optimization</li>;
+                <li> Cloud readiness assessment</li>;
+                <li> Migration planning & execution</li>;
+                <li> Multi - cloud strategy</li>;
+                <li> Cost optimization</li>;
               </ul>;
               <Link href="/enterprise - it / cloud - migration" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* DevOps & Automation */}
@@ -140,13 +154,13 @@ export default function EnterpriseITPage() {;
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• CI / CD pipeline automation</li>;
-                <li>• Infrastructure as Code (IaC)</li>;
-                <li>• Container orchestration</li>;
-                <li>• Automated testing</li>;
+                <li> CI / CD pipeline automation</li>;
+                <li> Infrastructure as Code (IaC)</li>;
+                <li> Container orchestration</li>;
+                <li> Automated testing</li>;
               </ul>;
               <Link href="/enterprise - it / devops - automation" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Infrastructure Management */}
@@ -165,13 +179,13 @@ export default function EnterpriseITPage() {;
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Server provisioning</li>;
-                <li>• Network configuration</li>;
-                <li>• Performance optimization</li>;
-                <li>• Capacity planning</li>;
+                <li> Server provisioning</li>;
+                <li> Network configuration</li>;
+                <li> Performance optimization</li>;
+                <li> Capacity planning</li>;
               </ul>;
               <Link href="/enterprise - it / infrastructure - management" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Data Management */}
@@ -190,13 +204,13 @@ export default function EnterpriseITPage() {;
                 and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Data warehousing</li>;
-                <li>• Business intelligence</li>;
-                <li>• Data analytics</li>;
-                <li>• Master data management</li>;
+                <li> Data warehousing</li>;
+                <li> Business intelligence</li>;
+                <li> Data analytics</li>;
+                <li> Master data management</li>;
               </ul>;
               <Link href="/enterprise - it / data - management" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Security & Compliance */}
@@ -212,13 +226,13 @@ export default function EnterpriseITPage() {;
                 for SOC2, ISO 27001, and industry - specific regulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Security framework implementation</li>;
-                <li>• Compliance management</li>;
-                <li>• Threat detection & response</li>;
-                <li>• Security training</li>;
+                <li> Security framework implementation</li>;
+                <li> Compliance management</li>;
+                <li> Threat detection & response</li>;
+                <li> Security training</li>;
               </ul>;
               <Link href="/enterprise - it / security - compliance" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Managed Services */}
@@ -237,13 +251,13 @@ export default function EnterpriseITPage() {;
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• 24 / 7 monitoring</li>;
-                <li>• Proactive maintenance</li>;
-                <li>• Help desk support</li>;
-                <li>• Performance optimization</li>;
+                <li> 24 / 7 monitoring</li>;
+                <li> Proactive maintenance</li>;
+                <li> Help desk support</li>;
+                <li> Performance optimization</li>;
               </ul>;
               <Link href="/enterprise - it / managed - services" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
           </div>;

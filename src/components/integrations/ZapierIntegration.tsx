@@ -1,4 +1,15 @@
 
+import { Check, Copy, ExternalLink } from 'lucide-react'
+export function ZapierIntegration() {
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
+
+import React, { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { toast } from "sonner",
 
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
@@ -102,6 +113,7 @@ function ZapierIntegration() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -109,6 +121,7 @@ function ZapierIntegration() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -157,6 +170,7 @@ function ZapierIntegration() {
 
 
 
+
                 <Check className="h-4 w-4 text-green-500" />
                 <span>Create calendar events for interviews</span>
               </li>
@@ -199,6 +213,7 @@ function ZapierIntegration() {
 
 
 
+
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -227,6 +242,7 @@ function ZapierIntegration() {
 
 
 
+
                 Triggers when a talent applies to your job.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
@@ -243,6 +259,7 @@ function ZapierIntegration() {
 }
 
 
+
             
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
@@ -255,13 +272,16 @@ function ZapierIntegration() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
+
 
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
@@ -271,6 +291,7 @@ function ZapierIntegration() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -377,12 +398,22 @@ export function ZapierIntegration() {;
       </div>;
 
 
+
+          <div className='grid md:grid-cols-3 gap-4'>;
+            <div className='border rounded-md p-4'>;
+              <h4 className='font-medium mb-2'>New Job Posted</h4>;
+              <p className='text-xs text-muted-foreground mb-3'>;
+
                 Triggers when a new job is published on your account.;
               </p>;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;
               </Button>            </div>;
 
+
+            <div className='border rounded-md p-4'>;
+              <h4 className='font-medium mb-2'>New Application</h4>;
+              <p className='text-xs text-muted-foreground mb-3'>;
 
                 Triggers when a talent applies to your job.;
               </p>;
@@ -391,6 +422,10 @@ export function ZapierIntegration() {;
               </Button>;
             </div>;
 
+
+            <div className='border rounded-md p-4'>;
+              <h4 className='font-medium mb-2'>Contract Signed</h4>;
+              <p className='text-xs text-muted-foreground mb-3'>;
 
                 Triggers when a contract is signed by all parties.;
               </p>;
@@ -401,5 +436,7 @@ export function ZapierIntegration() {;
           </div>;
         </CardContent>;
       </Card>;
+
+
 
 

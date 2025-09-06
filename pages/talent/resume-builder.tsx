@@ -88,6 +88,7 @@ const ResumeBuilder: NextPage = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -95,15 +96,14 @@ const ResumeBuilder: NextPage = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             />
             <AIAssistant
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
 
-
-
+              defaultPrompt={improveSectionPrompt('summary', summary |'No content provided. Generate a summary based on role, years, and skills.')}
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
-
 
               onAccept={setSummary}
               authorizationToken={operatorToken}
@@ -131,12 +131,14 @@ const ResumeBuilder: NextPage = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             />
           </div>
@@ -150,10 +152,8 @@ const ResumeBuilder: NextPage = () => {
             buttonLabel="Improve with AI"
             title="Improve Experience"
 
-
-
+            defaultPrompt={improveSectionPrompt('experience section', experience |'Add experience details to improve.')}
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
-
 
             onAccept={setExperience}
             authorizationToken={operatorToken}
@@ -181,12 +181,14 @@ const ResumeBuilder: NextPage = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           />
         </div>
@@ -199,10 +201,8 @@ const ResumeBuilder: NextPage = () => {
             buttonLabel="Improve with AI"
             title="Improve Skills"
 
-
-
+            defaultPrompt={improveSectionPrompt('skills list', skillsText |`Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
-
 
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
@@ -230,12 +230,14 @@ const ResumeBuilder: NextPage = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           />
         </div>
@@ -244,9 +246,13 @@ const ResumeBuilder: NextPage = () => {
     </div>
   )
 
+}
+export default ResumeBuilder;
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+},
+export default ResumeBuilder,
+},
+},
+export default ResumeBuilder,
+},
 

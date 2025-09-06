@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -17,13 +18,13 @@ export default async function handler(
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
 
+
   }
 
 
   const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
@@ -31,6 +32,7 @@ export default async function handler(
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
+
 
 
     id: `action-${Date && Date.now()}`,
@@ -170,5 +172,6 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -11,7 +11,7 @@ import { execSync } from 'child_process';
 
     });
   } else {
-    console.log('✅ No security vulnerabilities found in dependencies');
+    console && console.log(' No security vulnerabilities found in dependencies');
   }
 } catch (error) {
 
@@ -20,7 +20,7 @@ import { execSync } from 'child_process';
 
 
 // Check for sensitive data in files
-console.log('\n🔍 Scanning for sensitive data...');
+console && console.log('\n Scanning for sensitive data...');
 const sensitivePatterns = [
   /password\s*=\s*["'][^"']+["']/gi,
   /api[_-]?key\s*=\s*["'][^"']+["']/gi,
@@ -30,20 +30,20 @@ const sensitivePatterns = [
 ];
 
 const scanDirectory = (dir, results = []) => {
-  const files = fs.readdirSync(dir);
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  const files = fs && fs.readdirSync(dir);
+  files && files.forEach(file => {
+    const filePath = path && path.join(dir, file);
+    const stat = fs && fs.statSync(filePath);
     
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+    if (stat && stat.isDirectory() && !file && file.startsWith('.') && file !== 'node_modules') {
       scanDirectory(filePath, results);
-    } else if (stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) {
+    } else if (stat && stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) {
       try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        sensitivePatterns.forEach(pattern => {
-          const matches = content.match(pattern);
+        const content = fs && fs.readFileSync(filePath, 'utf8');
+        sensitivePatterns && sensitivePatterns.forEach(pattern => {
+          const matches = content && content.match(pattern);
           if (matches) {
-            results.push({
+            results && results.push({
               file: filePath,
               matches: matches
             });
@@ -73,10 +73,10 @@ if (sensitiveResults && sensitiveResults.length > 0) {
 
 
 // Check for outdated dependencies
-console.log('\n📅 Checking for outdated dependencies...');
+console && console.log('\n Checking for outdated dependencies...');
 try {
   const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
-  const outdatedData = JSON.parse(outdatedResult);
+  const outdatedData = JSON && JSON.parse(outdatedResult);
   
 
   if (Object && Object.keys(outdatedData).length > 0) {
@@ -86,7 +86,7 @@ try {
 
     });
   } else {
-    console.log('✅ All dependencies are up to date');
+    console && console.log(' All dependencies are up to date');
   }
 } catch (error) {
 
@@ -97,13 +97,13 @@ try {
 // Generate security report
 const securityReport = {
   timestamp: new Date().toISOString(),
-  vulnerabilities: sensitiveResults.length,
+  vulnerabilities: sensitiveResults && sensitiveResults.length,
   recommendations: [
     'Run "npm audit fix" to resolve dependency vulnerabilities',
     'Review and remove any hardcoded secrets',
     'Update outdated dependencies',
     'Implement proper environment variable management',
-    'Add security headers to Next.js configuration'
+    'Add security headers to Next && Next.js configuration'
   ]
 };
 

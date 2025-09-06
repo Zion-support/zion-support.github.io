@@ -7,6 +7,7 @@
 
 
 
+
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -15,6 +16,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {useState} from "react";
 import {AnalyticsChart} from "./AnalyticsChart";
 type TimeRange = '7d' | '30d' | '90d' | '365d';
+
 
 
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
@@ -65,28 +67,23 @@ export function UserBehaviorStats() {
       // Get events grouped by type and date
       const { data, error } = await supabase.rpc('get_event_distribution', {
         days_back: days
-      }),
-      
+      });
       if (error) {
-        console.error('Error fetching behavior data:', error),
-        
+        console.error('Error fetching behavior data:', error);
         // Fallback to manual query if the RPC doesn't exist
-        const startDate = new Date(),
-        startDate.setDate(startDate.getDate() - days),
-        
+        const startDate = new Date();
+        startDate.setDate(startDate.getDate() - days);
         const { data: manualData, error: manualError } = await supabase
           .from('analytics_events')
           .select('event_type, created_at')
-          .gte('created_at', startDate.toISOString()),
-          
-        if (manualError) throw manualError,
-        
+          .gte('created_at', startDate.toISOString());
+        if (manualError) throw manualError;
         // Process data to count events by type and date
-        const eventsByDate: Record<string Record<string number>> = {},
+        const eventsByDate: Record<string, Record<string, number>> = {}
         manualData?.forEach(event => {
-          const date = new Date(event.created_at).toISOString().split('T')[0],
-          if (!eventsByDate[date]) eventsByDate[date] = {},
-          if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0,
+          const date = new Date(event.created_at).toISOString().split('T')[0];
+          if (!eventsByDate[date]) eventsByDate[date] = {}
+          if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0;
           eventsByDate[date][event.event_type]++
         }),
         
@@ -145,32 +142,79 @@ export function UserBehaviorStats() {;
 
         // Convert to array format for the chart;
         return Object && Object.entries(eventsByDate).map(([date, events]) => ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+import { use_query } from '@tanstack / react - query';
+import { supabase } from '@/integrations / supabase / client';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Skeleton } from '@/components / ui / skeleton';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { useState } from './react';
+import { AnalyticsChart } from './AnalyticsChart';
+type TimeRange = '7d' | '30d' | '90d' | '365d';
+;
+export /**
+ * UserBehaviorStats - Function description
+ */
+function UserBehaviorStats() {
+  const [time_range, setTimeRange] = useState < TimeRange>('7d');
+;
+  const { data: behavior_data, is_loading } = use_query ({
+    query_key: ['user - behavior - data', time_range];
+    query_fn: async () => {
+      // Convert time_range to days;
+      const days = parse_int (time_range.replace ('d', ''));
+;
+      // Get events grouped by type and date;
+      const { data, error } = await supabase.rpc ('get_event_distribution', {
+        days_back: days;
+      });
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        console.error ('Error fetching behavior data:', error);
+;
+        // Fallback to manual query if the RPC doesn't exist;
+        const start_date = new Date ();
+        start_date.set_date (start_date.get_date () - days);
+;
+        const { data: manual_data, error: manual_error } = await supabase;
+          .from ('analytics_events');
+          .select ('event_type, created_at');
+          .gte ('created_at', start_date.toISOString ());
+;
+        // Check condition
+if (throw manual_error) {
+  $2
+}
+        // Process data to count events by type and date;
+        const eventsByDate: Record < string, Record < string, number>> = {}
+        manual_data?.for_each (event => {
+          const date = new Date (event.created_at).toISOString ().split ('T')[0];
+          // Check condition
+if (eventsByDate[date] = {}) {
+  $2
+}
+          // Check condition
+if (eventsByDate[date][event.event_type] = 0) {
+  $2
+}
+          eventsByDate[date][event.event_type]++;
+        });
+;
+        // Convert to array format for the chart;
+        return Object.entries (eventsByDate).map (([date, events]) => ({
           date;
           ...events;
         }));
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
       }
-
-
-      return data || [];
+      return data |[]
     }
 
   });
+
 
 
 
@@ -198,6 +242,7 @@ export function UserBehaviorStats() {;
       Object.keys(item).forEach(key => {
         if (key !== 'date') allKeys.add(key)
       })
+
 
     });
     return Array.from(allKeys)
@@ -234,8 +279,8 @@ export function UserBehaviorStats() {;
           count={
             behaviorData?.reduce((sum, day) => sum + (day.button_click |0), 0) |0
           }
-          icon={
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14.5 12.5-4-4"/><path d="M8 6.2A3 3 0 1 0 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>
+          icon={;
+            <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14 && m14.5 12 && 12.5-4-4"/><path d="M8 6 && 6.2A3 3 0 1 0 6 && 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>;
           }
         />
 
@@ -245,7 +290,6 @@ export function UserBehaviorStats() {;
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day && day.button_click || 0), 0) || 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14 && m14.5 12 && 12.5-4-4"/><path d="M8 6 && 6.2A3 3 0 1 0 6 && 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>;
@@ -265,12 +309,14 @@ export function UserBehaviorStats() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           }
           icon={;
@@ -291,12 +337,14 @@ export function UserBehaviorStats() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           }
           icon={;
@@ -342,20 +390,20 @@ interface EventTypeCardProps {;
 }
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
   return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light">
-      <CardContent className="p-6">
-        <div className="flex items-center gap-4">
-          <div className="h-12 w-12 rounded-lg bg-zion-cyan/20 flex items-center justify-center text-zion-cyan">
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardContent className="p-6">;
+        <div className="flex items-center gap-4">;
+          <div className="h-12 w-12 rounded-lg bg-zion-cyan/20 flex items-center justify-center text-zion-cyan">;
             {icon}
-          </div>
-          <div>
-            <h4 className="text-lg font-medium text-white">{title}</h4>
-            <p className="text-sm text-zion-slate-light">{description}</p>
-            <div className="text-xl font-bold text-white mt-1">
-              {isLoading ? (
-                <Skeleton className="h-7 w-16 bg-zion-blue-light" />
-              ) : (
-                new Intl.NumberFormat().format(count)
+          </div>;
+          <div>;
+            <h4 className="text-lg font-medium text-white">{title}</h4>;
+            <p className="text-sm text-zion-slate-light">{description}</p>;
+            <div className="text-xl font-bold text-white mt-1">;
+              {isLoading ? (;
+                <Skeleton className="h-7 w-16 bg-zion-blue-light" />;
+              ) : (;
+                new Intl && Intl.NumberFormat().format(count);
               )}
 
             </div>
@@ -372,5 +420,7 @@ function EventTypeCard({ title, description, count, icon, isLoading }: EventType
 
     </Card>);
 }
+
+
 
 

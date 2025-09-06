@@ -7,22 +7,38 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
-
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
- } from 'lucide-react';
-
+  ArrowRight
+  Play
+  Star
+  Users
+  Award
+  TrendingUp
+  Brain
+  Shield
+  Rocket
+  Loader2
+  ChevronDown
+  Zap
+  Globe
+  Lock
+  Cpu
+  Database
+  Cloud
+  Palette
+  Heart
+  Phone
+  Mail
+  MapPin
+  Search
+  Grid
+  List
+  Atom
+  Target
+  Sparkles;
+} from 'lucide-react';
 import Link from 'next/link';
 
 // Import our new innovative services
-
-
-
-import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
-
-
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
@@ -37,6 +53,8 @@ const LoadingFallback = () => (;
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
+
+
 
 
 const LoadingFallback = () => (;
@@ -146,6 +164,59 @@ const Homepage2045: React.FC = () => {;
       }
     }
 
+  const backgroundVariants = {;
+    initial: { opacity: 0, scale: 0 && 0.8 },;
+    animate: { opacity: 1, scale: 1 },;
+    transition: { duration: 1 && 1.2, ease: 'easeOut' },  };
+  const getColorClasses = (index: number) => {;
+    const colors = [    transition: { duration: 1 && 1.2, ease: "easeOut" }
+  };
+  const getColorClasses = (index: number) => {;
+    const colors = [;
+      'from-cyan-400 to-blue-500',;
+      'from-purple-400 to-pink-500',;
+      'from-emerald-400 to-teal-500',;
+      'from-orange-400 to-red-500',;
+      'from-indigo-400 to-purple-500',;
+      'from-yellow-400 to-orange-500',;
+    ];
+    return colors[index % colors && colors.length];  };
+  if (isLoading) {;
+    return (
+
+
+  ArrowRight,
+  Play,
+  Star,
+  Users,
+  Award,
+  TrendingUp,
+  Brain,
+  Shield,
+  Rocket,
+  Loader2,
+  ChevronDown,
+  Zap,
+  Globe,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Palette,
+  Heart,
+  Phone,
+  Mail,
+  MapPin,
+  Search,
+  Grid,
+  List,
+  Atom,
+  Target,
+  Sparkles,
+} from 'lucide-react';
+
+import Link from 'next/link';import {
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
@@ -153,6 +224,8 @@ const Homepage2045: React.FC = () => {;
 import Link from 'next/link';
 
 // Import our new innovative services
+
+
 
 
 import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
@@ -164,15 +237,16 @@ import { innovative2040FuturisticServices } from '../data/innovative-2040-futuri
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 // Loading fallback component
 
 const LoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -320,6 +394,8 @@ if ( {) {
   }
 
 
+
+
   return (
     <Layout>
       <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>
@@ -352,6 +428,7 @@ if ( {) {
                 scale: [1, 1.2, 1]
                 opacity: [0.3, 0.7, 0.3]
               }}
+
               transition={{
                 duration: 6
                 repeat: Infinity
@@ -377,6 +454,7 @@ if ( {) {
               }}
 
 
+
             />
           </div>
 
@@ -398,12 +476,14 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -439,10 +519,12 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -458,19 +540,18 @@ if ( {) {
             >
               <Link
                 href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105'              >
-                Get Started
-              </Link>
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105'>;
+                Get Started;
+              </Link>;
               <Link
                 href='/services'
                 className='px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105'              >              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105">;
+                Get Started;
+              </Link>;
               <Link
                 href='/services'
                 className='px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105'                href="/services"
@@ -488,7 +569,9 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -510,7 +593,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -585,11 +670,14 @@ if ( {) {
             </motion && motion.div>;
           </div>;
         </section>;
+
         {/* Featured Services Section */}
         <section id='featured-services' className='py-20 relative'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section id="featured-services" className="py-20 relative">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
+
+
 
 
 
@@ -603,12 +691,14 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -624,7 +714,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -774,9 +866,11 @@ if ( {) {
 
 
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -809,8 +903,189 @@ if ( {) {
                 industries and pushing the boundaries of what's possible with;
                 technology.              </p>;
             </motion && motion.div>;
+
             {/* Service Categories Grid */}
 
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Brain className="w-12 h-12" />,
+                  title: "AI & Consciousness",
+                  description: "Revolutionary AI platforms with emotional intelligence and autonomous operations",
+                  color: "from-cyan-400 to-blue-500",
+                  href: "/ai-services"
+                };
+                {
+                  icon: <Atom className="w-12 h-12" />,
+                  title: "Quantum Technology",
+                  description: "Breakthrough quantum computing solutions for next-generation applications",
+                  color: "from-purple-400 to-pink-500",
+                  href: "/quantum-services"
+                };
+                {
+                  icon: <Rocket className="w-12 h-12" />,
+                  title: "Space Technology",
+                  description: "Advanced space exploration and resource management platforms",
+                  color: "from-emerald-400 to-teal-500",
+                  href: "/space-technology"
+                };
+                {
+                  icon: <Shield className="w-12 h-12" />,
+                  title: "Enterprise Solutions",
+                  description: "Advanced infrastructure and security solutions for modern enterprises",
+                  color: "from-orange-400 to-red-500",
+                  href: "/enterprise-solutions"
+                };
+                {
+                  icon: <Target className="w-12 h-12" />,
+                  title: "Micro SAAS",
+                  description: "Innovative business solutions that drive growth and efficiency",
+                  color: "from-indigo-400 to-purple-500",
+                  href: "/micro-saas"
+                };
+                {
+                  icon: <Sparkles className="w-12 h-12" />,
+                  icon: <Brain className='w - 12 h - 12' />,
+                  title: 'AI & Consciousness',
+                  description:;
+                    'Revolutionary AI platforms with emotional intelligence and autonomous operations',;
+                  color: 'from-cyan-400 to-blue-500',;
+                  href: '/ai-services',;
+                },;
+                {;
+                  icon: <Atom className='w-12 h-12' />,;
+                  title: 'Quantum Technology',;
+                  description:;
+                    'Breakthrough quantum computing solutions for next-generation applications',;
+                  color: 'from-purple-400 to-pink-500',;
+                  href: '/quantum-services',;
+                },;
+                {;
+                  icon: <Rocket className='w-12 h-12' />,;
+                  title: 'Space Technology',;
+                  description:;
+                    'Advanced space exploration and resource management platforms',;
+                  color: 'from-emerald-400 to-teal-500',;
+                  href: '/space-technology',;
+                },;
+                {;
+                  icon: <Shield className='w-12 h-12' />,;
+                  title: 'Enterprise Solutions',;
+                  description:;
+                    'Advanced infrastructure and security solutions for modern enterprises',;
+                  color: 'from-orange-400 to-red-500',;
+                  href: '/enterprise-solutions',;
+                },;
+                {;
+                  icon: <Target className='w-12 h-12' />,;
+                  title: 'Micro SAAS',;
+                  description:;
+                    'Innovative business solutions that drive growth and efficiency',;
+                  color: 'from-indigo-400 to-purple-500',;
+                  href: '/micro-saas',;
+                },;
+                {;
+                  icon: <Sparkles className='w-12 h-12' />,;
+                  title: 'Emerging Tech',;
+                  description:;
+                    'Cutting - edge technologies that define the future of innovation',
+                  color: 'from - yellow - 400 to - orange - 500',
+                  href: '/emerging - tech',
+                },              ].map ((service, index) => (                  icon: <Sparkles className="w - 12 h - 12" />,
+
+                  title: "Emerging Tech",
+                  description: "Cutting - edge technologies that define the future of innovation",
+                  color: "from - yellow - 400 to - orange - 500",
+                  href: "/emerging - tech";
+                }
+                {
+                  icon: <Atom className='w-12 h-12' />
+                  title: 'Quantum Technology'
+                  description:
+                    'Breakthrough quantum computing solutions for next-generation applications'
+                  color: 'from-purple-400 to-pink-500'
+                  href: '/quantum-services'
+                }
+                {
+                  icon: <Rocket className='w-12 h-12' />
+                  title: 'Space Technology'
+                  description:
+                    'Advanced space exploration and resource management platforms'
+                  color: 'from-emerald-400 to-teal-500'
+                  href: '/space-technology'
+                }
+                {
+                  icon: <Shield className='w-12 h-12' />
+                  title: 'Enterprise Solutions'
+                  description:
+                    'Advanced infrastructure and security solutions for modern enterprises'
+                  color: 'from-orange-400 to-red-500'
+                  href: '/enterprise-solutions'
+                }
+                {
+                  icon: <Target className='w-12 h-12' />
+                  title: 'Micro SAAS'
+                  description:
+                    'Innovative business solutions that drive growth and efficiency'
+                  color: 'from-indigo-400 to-purple-500'
+                  href: '/micro-saas'
+                }
+                {
+                  icon: <Sparkles className='w-12 h-12' />
+                  title: 'Emerging Tech'
+                  description:
+                    'Cutting-edge technologies that define the future of innovation'
+                  color: 'from-yellow-400 to-orange-500'
+                  href: '/emerging-tech'
+                },              ].map((service, index) => (                  icon: <Sparkles className="w-12 h-12" />
+                  title: "Emerging Tech"
+                  description: "Cutting-edge technologies that define the future of innovation"
+                  color: "from-yellow-400 to-orange-500"
+                  href: "/emerging-tech"
+                }
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  viewport={{ once: true }}
+                  className='group'
+                  <Link href={service && service.href}>;
+                    <div className='relative p-8 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25'>;
+                      <div
+                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        {service.icon}
+                      </div>
+                      <h3 className='text-2xl font-bold text-white mb-4'>
+                        {service.title}
+                      </h3>
+                      <p className='text-gray-400 mb-6'>
+                        {service.description}
+                      </p>
+                      <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors'>
+                        <span className='mr-2'>Learn More</span>
+                        <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                      </div>                      <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                      <p className="text-gray-400 mb-6">{service.description}</p>
+                      <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                        <span className="mr-2">Learn More</span>
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Latest Innovations Section */}
+        <section
+          id='latest-innovations'
+          className='py-20 relative bg-gray-900/30'
+        >
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div        <section id="latest-innovations" className="py-20 relative bg-gray-900/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -826,9 +1101,11 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -857,6 +1134,8 @@ if ( {) {
 
 
 
+
+
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
@@ -867,6 +1146,7 @@ if ( {) {
                 Explore our newest revolutionary services that are setting new;
                 standards in technology innovation.              </p>;
             </motion && motion.div>;
+
             {/* Featured New Services */}            >;
               <h2 className="text-4xl md:text-5xl font-bold mb-6">;
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">;
@@ -947,11 +1227,12 @@ if ( {) {
               </p>;
             </motion.div>;
             {/* Featured New Services */}
-            <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
               {revolutionary2043AdvancedServices;
                 .slice (0, 4);
                 .map ((service, index) => (
                   <motion.div;
+
 
 
                     key={service.id}
@@ -981,6 +1262,7 @@ if ( {) {
                             {service.price}
                             {service.period}
                           </div>;
+
                           <div className='flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors'>;
                             <span className='mr - 2 text - sm'>Learn More</span>;
                             <ArrowRight className='w - 4 h - 4 group - hover:translate - x-1 transition - transform' />;
@@ -989,6 +1271,44 @@ if ( {) {
                         </div>;
                       </div>;
                     </Link>;
+
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+className="group"
+                >
+                  <Link href={service.link}>
+                    <div className="relative p-6 bg-black/50 backdrop-blur-sm border border-gray-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="text-3xl">{service.icon}</div>
+                        {service.popular && (
+                          <span className="px-3 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full">
+                            New
+                          </span>
+                        )}
+                      </div>
+<h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                      <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+                      <div className="flex items-center justify-between">
+                        <div className="text-cyan-400 font-semibold">
+                          {service.price}{service.period}
+                        </div>
+                        <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                          <span className="mr-2 text-sm">Learn More</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
 
 
 
@@ -1065,7 +1385,9 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
             </motion.div>
@@ -1081,12 +1403,14 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               initial={{ opacity: 0, y: 30 }}
@@ -1123,6 +1447,7 @@ if ( {) {
     </Layout>
   )
 };
+
 export default Homepage2045;
                   </motion.div>))}            </div>                    </div>;
                   </Link>;
@@ -1213,9 +1538,8 @@ export default Homepage2045;
   staggerChildren: 0.1, delayChildren: 0.2 
 
 
-
-
-
+};
+};
 
 };
   /* CTA Buttons */ 
@@ -1225,7 +1549,6 @@ export default Homepage2045;
 }<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)
 }</div> </div> <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors" > <span className="mr-2 text-sm" >Learn More</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> </div> </div> </div> </a> </motion.div>) )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }</div> {
   /* View All Services CTA */;
 }<motion.div > <Link href="/services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105" > View All Services <ArrowRight className="ml - 2 w - 5 h - 5" /> </a> </motion.div> </div> </section> <motion.div initial= {
@@ -1240,14 +1563,16 @@ export default Homepage2045;
 }viewport= {
   {
 
-
-
+  once: true
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
+};export default Homepage2045;export default Homepage2045;
 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };export default Homepage2045;
 
 export default Homepage2045;
+
 
 
 
@@ -1256,6 +1581,7 @@ export default Homepage2045;
 
 export default Homepage2045;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   once: true 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
@@ -1268,9 +1594,11 @@ export default Homepage2045;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

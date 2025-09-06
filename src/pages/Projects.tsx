@@ -48,6 +48,7 @@ import Link from 'next/link'
 
 
 
+
 import { Clock, Briefcase } from 'lucide-react'
 
 
@@ -66,6 +67,7 @@ import { Clock, Briefcase } from 'lucide-react'
 function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
 
+
   const { projects, isLoading } = useProjects()
 
 function ProjectsContent() { const { projects, isLoading  } = useProjects(),;
@@ -77,6 +79,16 @@ function ProjectsContent() {;
       <SEO
         title='My Projects | Zion AI Marketplace'
         description='View and manage your projects.'
+
+      />
+      <main className='container mx-auto px-4 py-8'>
+        <div className='mb-8'>
+          <h1 className='text-3xl font-bold'>My Projects</h1>
+          <p className='text-muted-foreground mt-1'>
+            All of your current and past projects
+          </p>
+        </div>
+
 
 import React from "react";
 import { useProjects } from "@/hooks/useProjects";
@@ -102,18 +114,15 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
           <h1 className="text-3xl font-bold">My Projects</h1>
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
 
-
-
-
-
           <div className="grid gap-6">
             {projects.map((project) => (
-
-          <div className="grid gap-6">
-            {projects.map((project) => (
-          <div className="grid gap-6">
-            {projects.map((project) => (
-
-
-
+                  <p className='text-sm text-muted-foreground line-clamp-2'>
+                    {project.job?.description |'Project details'}
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
+            ))}
+          </div>
+        )}
 

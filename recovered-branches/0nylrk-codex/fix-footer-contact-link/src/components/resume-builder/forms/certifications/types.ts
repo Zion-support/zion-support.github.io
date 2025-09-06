@@ -4,6 +4,7 @@
 
 
 
+
 import {z} from 'zod';
 // Define schema for form validation
 export const certificationSchema = z.object({;
@@ -11,6 +12,7 @@ export const certificationSchema = z.object({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   name: z.string().min(1, 'Certification name is required');
@@ -37,7 +39,9 @@ export const certificationSchema = z.object({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export type CertificationFormValues = z.infer<typeof certificationSchema>;
 

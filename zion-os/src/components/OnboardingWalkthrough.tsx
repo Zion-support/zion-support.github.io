@@ -262,6 +262,14 @@ if ( {) {
     </>);
 }
 
+// Hook to add data attributes for walkthrough targeting;
+export function useWalkthroughTarget(id: string) {return {;
+;
+// Hook to add data attributes for walkthrough targeting;
+export function useWalkthroughTarget(id: string) {;
+  return {;
+    "data-walkthrough-target": id;
+
 export /**
  * useWalkthroughTarget - Function description
  */
@@ -269,7 +277,12 @@ function useWalkthroughTarget() {
   return {
     "data - walkthrough - target": id;
 
+export function useWalkthroughTarget(id: string) {return {;
+;
+// Hook to add data attributes for walkthrough targeting;
+export function useWalkthroughTarget(id: string) {;
+  return {;
+
     "data-walkthrough-target": id;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id}
 }

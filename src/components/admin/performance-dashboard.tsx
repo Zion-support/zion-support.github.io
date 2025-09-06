@@ -23,10 +23,30 @@ interface PerformanceMetrics {;
   loadTime: number;
   performanceScore: number;
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
-
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+import {
+  Activity
+  Zap
+  Package
+  TrendingUp
+  TrendingDown
+  AlertTriangle
+  CheckCircle
+  RefreshCw
+  BarChart3
+  Clock
+  Globe
+} from 'lucide-react'
+import { bundleMonitor } from '@/utils/bundleMonitor'
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
+interface PerformanceMetrics {
+  bundleSize: number
+  loadTime: number
+  performanceScore: number
 
   chunkCount: number;
 import React, { useState, useEffect } from 'react';
@@ -60,7 +80,7 @@ interface PerformanceMetrics {
   cls: number; // Cumulative Layout Shift;
   fid: number; // First Input Delay;
 
-interface BundleChunk {
+interface BundleChunk {;
   name: string;
   size: number;
   load_time: number;
@@ -404,6 +424,35 @@ export function PerformanceDashboard() {;
 
 
 
+
+  const formatSize = (bytes: number): string => {
+    if (bytes === 0) return '0 B',
+    const k = 1024,
+    const sizes = ['BKBMBGB'],
+    const i = Math.floor(Math.log(bytes) / Math.log(k)),
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
+  },
+
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-600',
+    if (score >= 70) return 'text-yellow-600',
+    return 'text-red-600'
+  },
+
+  const getScoreIcon = (score: number) => {
+    if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />,
+    if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />,
+    return <AlertTriangle className="w-4 h-4 text-red-600" />
+  },
+
+  useEffect(() => {
+    collectMetrics(),
+    const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds
+
+    return () => clearInterval(interval)
+  }, []),
+
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -505,6 +554,7 @@ export function PerformanceDashboard() {;
 
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
+
 
 
           {isLoading ? 'Collecting...' : 'Refresh'}
@@ -726,6 +776,7 @@ export function PerformanceDashboard() {;
           {chunks.length > 0 ? (
             <div className='space-y-2'>
               {chunks.slice(0, 10).map((chunk, index) => (
+
                 <div
                   key={chunk.name}
                   className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
@@ -738,6 +789,8 @@ export function PerformanceDashboard() {;
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
+
+
 
 
 
@@ -810,6 +863,7 @@ export function PerformanceDashboard() {;
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+
 
 
               <div>
@@ -1003,3 +1057,4 @@ export function PerformanceDashboard() {;
 }
 }
 }
+

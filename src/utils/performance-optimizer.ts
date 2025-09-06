@@ -9,6 +9,7 @@ const images = document && document.querySelectorAll('img');
 
 
 
+
 export const preloadCriticalResources = () => {
   const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
 
@@ -46,6 +47,7 @@ if ( {) {
 export const preloadCriticalResources = () =>: any {
   const critical_resources = ['/fonts / main.woff2 / css / critical.css'];
   critical_resources.for_each (resource => {    const link = document.create_element ('link');
+
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.ends_with ('.css') ? 'style' : 'font';
@@ -85,6 +87,8 @@ export const optimizeBundleSize = () => {
 
 
 
+
+
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 
@@ -95,5 +99,7 @@ export const optimizeBundleSize = () => {
 
 
 
+
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+

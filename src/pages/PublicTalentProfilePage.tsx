@@ -9,34 +9,94 @@ if (error) {
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
         setIsError(true)
 
-
-
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true),
-
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true)
         setIsError(true),
+        setProfileData (data);
+      } catch (error) {
+        logErrorToProduction (error instanceof Error ? error.message : String (error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
+        setIsError (true);
+        toast ({
+          title: "Error",
+          description: "Failed to load profile. Please try again later.",
+          variant: "destructive"});
+      } finally {
+
+import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+        setIsLoading(false)
+      }
+    }
+    if (profileId) {
+      fetchProfile()
+    }
+  }, [profileId])
+import { useState, useEffect } from "react",;
+import { useRouter } from "next/router",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/components/ui/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;
+import { logErrorToProduction } from '@/utils/productionLogger',;
+
+import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';
+export default function ProfilePage() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const router = useRouter(),;
+  const profileId = router.query.profileId as string,;
+  const [profileData, setProfileData] = useState<any>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [isError, setIsError] = useState(false),;
+  useEffect(() => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true),;
+      setIsError(false),;
+      try {;
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
+          .single();
+
+        if (error) {;
+          throw error;
+        }
+;
+        setProfileData(data);
+      } catch (error) {;
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),;
+        setIsError(true),;
+        toast({;
+          title: "Error",;
+          description: "Failed to load profile. Please try again later.",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    if (profileId) {;
+      fetchProfile();
+    }
+  }, [profileId]),
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <span className="loading loading-ring loading-lg"></span>
-      </div>
-    )
+      <div className="min-h-screen flex items-center justify-center">;
+        <span className="loading loading-ring loading-lg"></span>;
+      </div>;
+    );
   }
   if (isError |!profileData) {
     return (
@@ -56,7 +116,7 @@ if (error) {
     );
   }
   return (
-    <>
+    <>;
       <SEO
 
     return (
@@ -66,9 +126,7 @@ if (error) {
     )
   }
 
-
-
-
+        description = {profileData.bio |"View the profile of this talented individual.",}
         description = {profileData.bio || "View the profile of this talented individual.",}
 
 ;
@@ -77,6 +135,7 @@ if (error) {
       <SEO;
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
+
 
 
       />
@@ -154,6 +213,7 @@ if (error) {
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
               <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
+
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
             </div>
             </div>;
@@ -175,9 +235,8 @@ if (error) {
                       href = {link,}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-zion-cyan hover:text-white transition-colors"
-                    >
-                      <LinkIcon className="h-4 w-4 mr-2" />
+                      className="flex items-center text-zion-cyan hover:text-white transition-colors">;
+                      <LinkIcon className="h-4 w-4 mr-2" />;
                       {link}
                     </Link>
                   ))
@@ -202,10 +261,10 @@ if (error) {
             </div>;
 
             {/* Social Links */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
-              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
-              <div className="flex space-x-4">
-                {profileData.github_link && (
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
+              <div className="flex space-x-4">;
+                {profileData && profileData.github_link && (;
                   <a
                     href = {profileData && profileData.github_link,}
                     target="_blank"
@@ -226,6 +285,7 @@ if (error) {
                 {profileData.twitter_link && (;
                   <a;
                     href={profileData.twitter_link}
+
 
 
                     target="_blank"
@@ -281,6 +341,7 @@ if (error) {
 }'"};
 
 
+
           </div>;
         </div>;
       </div>;
@@ -292,6 +353,7 @@ if (error) {
     // Check condition
 if ( {) {
   $2
+
 }
       fetch_profile ();
     }
@@ -505,3 +567,4 @@ if ( {") {
 }'"}
 }
 ;
+

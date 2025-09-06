@@ -1,4 +1,10 @@
 
+import type { NextApiRequest } from 'next';
+export function extractClientIp(req: NextApiRequest): string | null {
+  const xff = (req.headers['x-forwarded-for'] as string) |'';
+
+export function extractClientIp(req: NextApiRequest): string | null {;
+  const xff = (req.headers['x-forwarded-for'] as string) || '';
 
   const ip =
     xff.split(',')[0]?.trim() |
@@ -9,6 +15,9 @@
   return ip;
 }
 
+export function getClientIp(req: any): string {
+
+export function getClientIp(req: any): string {;
 
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
@@ -29,10 +38,12 @@
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

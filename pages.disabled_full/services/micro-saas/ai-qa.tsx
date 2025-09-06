@@ -9,6 +9,7 @@ interface AiqaProps {
   // Add props here as needed
 
 }
+export default function Aiqa({ }: AiqaProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

@@ -1,4 +1,6 @@
 
+export interface ContentGenerationRequest {
+export interface ContentGenerationRequest {;
 
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
@@ -18,6 +20,7 @@
 
 
 
+
   content: string;
   word_count: number;
   seo_score: number;
@@ -25,6 +28,7 @@
   suggestions: string[];
   metadata: {
     title: string;
+
 
     description: string,
     tags: string[];
@@ -37,10 +41,12 @@
 
 
 
+
   id: string;
   name: string;
   description: string;
   type: string;
+
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
@@ -49,6 +55,10 @@
 
   price: number
 }
+
+export class AIContentGeneratorService {
+
+export class AIContentGeneratorService {;
 
   private apiKey: string;
 
@@ -66,6 +76,8 @@
         body: JSON.stringify(request)});
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`)
+
+
 
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
   topic: string,;
@@ -117,9 +129,20 @@ export class AIContentGeneratorService {;
       if (!response.ok) {;
         throw new Error(`Content generation failed: ${response.statusText}`);
 
-
       }
       return await response.json()
+      const response = await fetch(`${this && this.baseUrl}/content/generate`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify(request)});
+
+      if (!response && response.ok) {
+        throw new Error(`Content generation failed: ${response && response.statusText}`)
+      }
+
+      return await response && response.json()
 
     } catch (error) {
       // Fallback to mock data for demo purposes
@@ -127,15 +150,40 @@ export class AIContentGeneratorService {;
     }
   }
 
-
-
-
-
-
-
-
-  async getTemplates(): Promise<ContentTemplate[]> {
-    return [
+  preview: string,
+  price: number;
+}
+export class AIContentGeneratorService {
+  private api_key: string;
+  private base_url: string,
+  constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {
+    this.api_key = api_key,
+    this.base_url = base_url;
+  }
+  async generate_content (request: ContentGenerationRequest): Promise < ContentGenerationResponse> {
+    try {
+      // In a real implementation, this would call OpenAI, Claude, or similar API;
+      const response = await fetch (`${this.base_url}/content / generate`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this.api_key}`;
+          'Content - Type': 'application / json'}
+        body: JSON.stringify (request)});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (`Content generation failed: ${response.status_text}`);
+      }
+      return await response.json ();
+    } catch (error) {
+      // Fallback to mock data for demo purposes;
+      return this.generateMockContent (request);
+    }
+  }
+  async get_templates (): Promise < ContentTemplate[]> {
+    return [;
 
       {
         id: 'blog - post - starter';
@@ -166,7 +214,6 @@ export class AIContentGeneratorService {;
         preview: 'Build relationships and drive sales with email automation...',
         price: 39;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       {
         id: 'landing - page - copy';
@@ -216,7 +263,9 @@ export class AIContentGeneratorService {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
       }
@@ -229,11 +278,26 @@ export class AIContentGeneratorService {;
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
 
+This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
+## Key Points
+- Point 1: ${request.topic} is essential for modern businesses
+- Point 2: Implementing ${request.topic} can improve efficiency
+- Point 3: Best practices for ${request.topic} implementation
+## Conclusion
+${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+    const mockContent = `# ${request && request.topic}
+
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+## Conclusion
+
+${request && request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+
 
     return {
       content: mockContent;
@@ -258,8 +322,30 @@ export class AIContentGeneratorService {;
   }> {
     // Mock content analysis
     return {
-      seoScore: Math.floor(Math.random() * 30) + 70;
-      readabilityScore: Math.floor(Math.random() * 30) + 70;
+      content: mock_content;
+      word_count: mock_content.split (' ').length;
+      seo_score: 85;
+      readability_score: 78;
+      suggestions: [;
+        'Add more specific examples_include relevant statistics_optimize for target keywords';
+      ],
+      metadata: {
+        title: `${request.topic} - Complete Guide`;
+        description: `Learn everything about ${request.topic} and how to implement it effectively.`;
+        tags: [request.topic, request.type, 'guidetutorial'];
+      }
+    }
+  }
+  async analyze_content (content: string): Promise<{
+    seo_score: number;
+    readability_score: number;
+    suggestions: string[],
+    keyword_density: Record < string, number>;
+  }> {
+    // Mock content analysis;
+    return {
+      seoScore: Math && Math.floor(Math && Math.random() * 30) + 70;
+      readabilityScore: Math && Math.floor(Math && Math.random() * 30) + 70;
       suggestions: [
         'Add more headings for better structureInclude internal links to related contentOptimize meta description'
       ];
@@ -298,7 +384,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
     readability_score: number;
     suggestions: string[],
     keyword_density: Record < string, number>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }> {
     // Mock content analysis;
 
@@ -308,10 +393,25 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'marketing': 1 && 1.5
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+      seo_score: Math.floor (Math.random () * 30) + 70;
+      readability_score: Math.floor (Math.random () * 30) + 70;
+      suggestions: [;
+        'Add more headings for better structure_include internal links to related content_optimize meta description';
+      ];
+      keyword_density: {
+        'content': 2.1;
+        'seo': 1.8,
+        'marketing': 1.5;
+    return {;
+      seoScore: Math.floor(Math.random() * 30) + 70,;
+      readabilityScore: Math.floor(Math.random() * 30) + 70,;
+      suggestions: [;
+        'Add more headings for better structureInclude internal links to related contentOptimize meta description';
+      ],;
+      keywordDensity: {;
+        'content': 2.1,;
+        'seo': 1.8,;
+        'marketing': 1.5;
 
       }
     }
@@ -325,7 +425,9 @@ ${request.topic} represents a significant opportunity for organizations looking 
 
 
 
+
 // Pricing tiers for the AI Content Generator
+
 
 export const AI_CONTENT_PRICING = {
   starter: {
@@ -356,6 +458,9 @@ export const AI_CONTENT_PRICING = {
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
+
+  }
+}
 
 
 ;
@@ -392,6 +497,7 @@ export const AI_CONTENT_PRICING = {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -399,6 +505,7 @@ export const AI_CONTENT_PRICING = {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 };

@@ -3,6 +3,7 @@ import React from 'react';
 
 
 
+
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -13,6 +14,7 @@ import Link from 'next / link';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const PerformancePage: React.FC = () => {
@@ -74,10 +76,12 @@ const PerformancePage: React.FC = () => {
         { name: 'Throughput', value: '2.4k req / s', status: 'good', trend: '+8%' },
         { name: 'Error Rate', value: '0.02%', status: 'excellent', trend: '-15%' },
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+        { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%' }
+        { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
       ]
 
@@ -91,11 +95,15 @@ const PerformancePage: React.FC = () => {
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
 
 
+
+
         { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 
       ]
@@ -109,8 +117,10 @@ const PerformancePage: React.FC = () => {
         { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
 
-
-
+        { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%' }
+      ]
+    }
+  ];
 
 
         { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%'   } catch (error) {
@@ -129,7 +139,9 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   const recentReports = [
 
@@ -155,7 +167,8 @@ const PerformancePage: React.FC = () => {
 
       status: 'completed'
 
-
+    }
+  ];
 
 
       } catch (error) {
@@ -170,7 +183,9 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   const getStatusColor = (status: string) => {
@@ -188,18 +203,18 @@ const PerformancePage: React.FC = () => {
   const getTrendColor = (trend: string) => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
 
-
+  }
+  };
 
 
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-  };
   const getTrendColor = (trend: string) => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
   };
+
 
 
 
@@ -210,6 +225,7 @@ const PerformancePage: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
@@ -229,6 +245,7 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -236,9 +253,10 @@ const PerformancePage: React.FC = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            ← Back to Home
+             Back to Home
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Performance Reports
@@ -257,12 +275,14 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -292,8 +312,10 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <div className="mb-8">
@@ -362,7 +384,9 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         <div className="mb-8">
@@ -384,6 +408,7 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -391,11 +416,13 @@ const PerformancePage: React.FC = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{report.date}</span>
+
 
 
 
@@ -411,6 +438,7 @@ const PerformancePage: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                     className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
@@ -429,6 +457,13 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+                    className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
+                  >
+                    View Report 
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         {/* Performance Trends */  } catch (error) {
@@ -441,6 +476,7 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -448,13 +484,15 @@ const PerformancePage: React.FC = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
             <div className="text-center">
-              <div className="text-6xl font-bold text-cyan-400 mb-4">📈</div>
+              <div className="text-6xl font-bold text-cyan-400 mb-4"></div>
               <h3 className="text-xl font-semibold mb-2 text-white">Continuous Improvement</h3>
               <p className="text-gray-300 mb-6">
+
 
 
 
@@ -468,6 +506,7 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 ensuring consistent improvement across all metrics.
               </p>
@@ -493,9 +532,9 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
 
-
-
-
+        {/* Navigation */}
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link 
 
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
@@ -509,6 +548,7 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -516,18 +556,16 @@ const PerformancePage: React.FC = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
             All Reports
           </Link>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+          <Link
+          <Link 
+          <Link
 
             href="/reports/updates"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
@@ -535,12 +573,9 @@ const PerformancePage: React.FC = () => {
             Recent Updates
           </Link>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+          <Link
+          <Link 
+          <Link
 
             href="/automation-health"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
@@ -555,6 +590,7 @@ const PerformancePage: React.FC = () => {
 }
 
 
+
 ;
 
 
@@ -563,6 +599,7 @@ const PerformancePage: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export default PerformancePage;

@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
@@ -23,6 +24,7 @@ import {
 
 
 
+
 } from "../../../utils/data/proposals";
 import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
@@ -36,7 +38,6 @@ function buildIpfsClient() {
     process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
 
   if (!projectId || !projectSecret) return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const auth =
     "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
   return createIpfsClient({
@@ -44,6 +45,14 @@ function buildIpfsClient() {
     headers: { authorization: auth } as any
   });
 
+}
+
+
+
+async function generatePdfFromMarkdown(markdown: string, title: string) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ export: 'PDF export' });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
@@ -63,11 +72,18 @@ function buildIpfsClient() {
 
 }
 
+async function generatePdfFromMarkdown(markdown: string, title: string) {
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+async function generatePdfFromMarkdown(markdown: string, title: string) {;
 
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const fontSize = 11;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
@@ -81,10 +97,35 @@ function buildIpfsClient() {
       }
 
 
+    .replace(/\r\n/g, '\n')
+    .split('\n')
+    .flatMap((line) => {
+      const words = line.split(' ');
+      const wrapped: string[] = []; 
+      let current = '';
+      for (const word of words) {
+        const test = current.length ? current + ' ' + word : word;
+        const width = font.widthOfTextAtSize(test, fontSize);
+        if (width > maxWidth) {
+          if (current) wrapped.push(current);
+          current = word
+        } else {
+          current = test
+        }
+      }
+      if (current) wrapped.push(current);
+      return wrapped.length ? wrapped : [' ']
 
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
+      if (wrapped.push (current)) {
+  $2
+}
+      return wrapped.length ? wrapped : [" "];
+    });
+  let coordinate_y = page.get_height () - margin;
+  page.draw_text (title, { coordinate_x: margin, y, size: 16, font });
 
   y -= 24;
 
@@ -101,10 +142,16 @@ export default async function handler(
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
 
+  for (const line of lines) {
+    if (y < margin + 12) {
+      y = page.getHeight() - margin;
+      pdfDoc.addPage()
+    }
+    page.drawText(line, { x: margin, y, size: fontSize, font });
+    y -= 14
+  }
+}
 
-
-
-  try {
 
     const { id } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
@@ -154,15 +201,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (ipfs) {
       try {
 
-
-
-
-
-
-  }
-
-
-
+        const { cid } = await ipfs.add(markdown);
+        ipfsCid = cid.toString()
+        ipfsCid = cid.toString();
 
       } catch {}
     }
@@ -174,21 +215,53 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status (200).json ({ meta: updated });
   } catch (error: any) {
 
+    return res.status(500).json({ error: error?.message |"Export failed" });
 
+    return res.status(500).json({ error: error?.message || "Export failed" });
+      } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
   }
 }
-
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
+    return res.status(200).json({ meta: updated })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Export failed' })
+  }
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+
+    return res.status(500).json({ error: error?.message || "Export failed" });
+      } catch {  } catch (error) {
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -202,14 +275,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 }
-
-
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
+    return res.status(200).json({ meta: updated })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Export failed' })
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

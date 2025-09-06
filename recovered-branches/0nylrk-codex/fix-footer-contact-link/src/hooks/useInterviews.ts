@@ -1,7 +1,14 @@
 
 
-
-
+import { useState  } from 'react';
+import { useAuth } from "@/hooks/useAuth";
+import { supabase  } from '@/integrations/supabase/client';
+import { Interview, InterviewRequest, InterviewResponse  } from '@/types/interview';
+import { toast  } from '@/components/ui/use-toast';
+export function useInterviews() {
+  const [interviews, setInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null),
 
 import {useState} from 'react';
 import {useAuth} from "@/hooks/useAuth";
@@ -12,6 +19,8 @@ export function useInterviews() {;
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+
 
 
 
@@ -113,6 +122,16 @@ export function useInterviews() {
     } finally {
       setIsLoading(false)
 
+    }
+  }
+  // Fetch interviews for the current user (as client or talent)
+  const fetchInterviews = async (): Promise<Interview[]> => {
+    if (!user?.id) {
+      setInterviews([]);
+      return []
+    }
+    setIsLoading(true);
+    setError(null);
 
 import { useState } from 'react',;
 import { useAuth } from "@/hooks/useAuth",;
@@ -134,17 +153,14 @@ export function useInterviews() {;
       }),;
       return null;
     }
-
-;
-  // Fetch interviews for the current user (as client or talent);
-  const fetch_interviews = async (): Promise < Interview[]> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_interviews ([]);
-      return [];
+  }
+  // Fetch interviews for the current user (as client or talent)
+  const fetchInterviews = async (): Promise<Interview[]> => {
+    if (!user?.id) {
+      setInterviews([]);
+      return []
     }
+
 
 
 
@@ -163,6 +179,7 @@ if ( {) {
         .from ('interviews');
         .select (`;
           *;
+
 
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
 
@@ -304,6 +321,8 @@ if ( {) {
         .select('*')
         .eq('id', interviewId)
 
+        .single();
+      if (fetchError) {
 
         console.error("Error fetching interview:", fetchError);
         setError(fetchError.message);
@@ -311,20 +330,17 @@ if ( {) {
 
       }
       // Get the interview to notify the client;
-      const { data: interview, error: fetch_error } = await supabase;
-        .from ('interviews');
-        .select ('*');
-        .eq ('id', interview_id);
-        .single ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        console.error ("Error fetching interview:", fetch_error);
-        set_error (fetch_error.message);
+      const { data: interview, error: fetchError } = await supabase;
+        .from('interviews');
+        .select('*');
+        .eq('id', interviewId);
+        .single(),;
+      if (fetchError) {;
+        console.error("Error fetching interview:", fetchError),;
+        setError(fetchError.message),;
         return false;
       }
+;
       // Create notification for client;
       let notification_type = 'interview_confirmed';
 
@@ -344,6 +360,9 @@ if ( {) {
         message = `Your interview has been rescheduled to ${response.alternative_date |'a new time'}`
       }
 
+        .single(),
+
+      if (fetchError) {
 
         console.error("Error fetching interview:", fetchError),
         setError(fetchError.message),
@@ -456,6 +475,8 @@ if ( {) {
       }
 
 
+
+
       await createInterviewNotification(
         interview && interview.client_id;
         notificationType;
@@ -474,7 +495,6 @@ if ( {) {
       console && console.error("Error in respondToInterview:", err);
       setError(err && err.message);
       return false
-
 ;
       // Check condition
 if ( {) {
@@ -541,6 +561,13 @@ if ( {) {
     try {
       await supabase.from('notifications').insert({
 
+        user_id: userId;
+        type;
+        title;
+        message
+        related_id: relatedId})
+    } catch (error) {
+      console.error("Error creating notification:", error)
 
     }
   }
@@ -550,15 +577,18 @@ if ( {) {
     setIsLoading(true);
     setError(null)
     try {
-      // Get the interview first to check permissions and get IDs for notifications
-      const { data: interview, error: fetchError } = await supabase
-        .from('interviews')
-        .select('*')
-        .eq('id', interviewId)
-        .single();
-      if (fetchError) {
+      await supabase.from('notifications').insert({
         setError(fetchError.message);
         return false
+
+      }
+        user_id: userId,
+        type,
+        title,
+        message,
+        related_id: relatedId})
+    } catch (error) {
+      console.error("Error creating notification:", error)
 
 ;
       await createInterviewNotification(;
@@ -615,6 +645,8 @@ if ( {) {
         return false;
 
 
+
+
       }
 
       // Check if user is part of this interview
@@ -622,9 +654,23 @@ if ( {) {
         setError("You don't have permission to cancel this interview");
         return false
 
-
-
-
+      }
+      // Update the interview status
+      const { error: updateError } = await supabase
+        .from('interviews')
+        .update({
+          status: 'cancelled'
+          updated_at: new Date().toISOString()
+        })
+        .eq('id', interviewId);
+      if (updateError) {
+        setError(updateError && updateError.message);
+        return false
+      }
+      // Determine who to notify
+      const notifyUserId = interview.client_id === user.id
+        ? interview.talent_id
+        : interview.client_id;
 
 
 ;
@@ -654,7 +700,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       // Determine who to notify
@@ -757,7 +805,6 @@ if ( {) {
       console.error ("Error in cancel_interview:", err);
       set_error (err.message);
       return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -771,10 +818,14 @@ if ( {) {
     request_interview;
     fetch_interviews;
 
-
+  },;
+  return {;
+    interviews,;
+    isLoading,;
+    error,;
+    requestInterview,;
 
     fetchInterviews;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     respondToInterview;
 
     cancelInterview}

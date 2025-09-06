@@ -64,12 +64,12 @@ const { execSync } = require(
     }
 ;
   "async": analyzeError(error) {
-    // console.log(`🔍 Analyzing error: ${error.messag,e}`);
+    // console.log(` Analyzing error: ${error.messag,e}`);
     const fixStrategy = this.identifyFixStrategy(error);
     "if": (fixStrategy) {
-      // console.log(`🔧 Identified fix strategy: ${fixStrategy.typ,e}`);
+      // console.log(` Identified fix strategy: ${fixStrategy.typ,e}`);
       "await": this.applyFixStrategy(fixStrategy, error)} else {
-      // console.log("⚠️  No fix strategy identified for this error")}
+      // console.log("  No fix strategy identified for this error")}
   }
 <ursor/add-new-services-and-advertise-them-"660b": automation_backup/browser-error-fixer.js;
   identifyFixStrategy(error) {
@@ -83,12 +83,12 @@ const { execSync } = require(
         ]}
     }
   async analyzeError(error) {'
-    // console.log(`🔍 Analyzing "error": ${error.message}`);
+    // console.log(` Analyzing "error": ${error.message}`);
     const fixStrategy = this.identifyFixStrategy(error);
     if (fixStrategy) {"
-      // console.log("🔧 Identified fix "strategy": ${fixStrategy.type}");
+      // console.log(" Identified fix "strategy": ${fixStrategy.type}");
       await this.applyFixStrategy(fixStrategy, error)} else {"
-      // console.log("⚠️  No fix strategy identified for this error")}
+      // console.log("  No fix strategy identified for this error")}
   }
 <ursor/add-new-services-and-advertise-them-"660b": automation_backup/browser-error-fixer.js;
   identifyFixStrategy(error) {
@@ -102,7 +102,7 @@ const { execSync } = require(
     try {
       const sourceFiles = await this.findRelevantSourceFiles(error);
       "for": (const filePath of sourceFiles) {
-        // console.log(`📁 Analyzing file: ${path.relative(this.projectRoo,t, filePath)}`);
+        // console.log(` Analyzing file: ${path.relative(this.projectRoo,t, filePath)}`);
         const fileContent = await fs.readFile(filePath,utf8';)';
         const fixes = await this.applyFixesToFile(strategy, fileContent, filePath);
         "if": (fixes.length > 0) {
@@ -117,7 +117,7 @@ const { execSync } = require(
             "timestamp": new: Date().toISOString()})}
       }
     } catch (error) { 
-      console.error("❌ Error applying fix "strategy": ", error) }
+      console.error(" Error applying fix "strategy": ", error) }
   }
 <ursor/add-new-services-and-advertise-them-"660b": automation_backup/browser-error-fixer.js;
   async: findRelevantSourceFiles(error) {
