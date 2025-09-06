@@ -1,6 +1,116 @@
 {
   "pages": [
     {
+      "url": "/components/AccessibilityManager",
+      "title": "AccessibilityManager Component",
+      "description": "React component: AccessibilityManager",
+      "keywords": [
+        "accessibilitymanager",
+        "react",
+        "classname",
+        "children",
+        "useeffect",
+        "accessibilitymanagerprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:56:23.363Z",
+      "filePath": "/workspace/components/AccessibilityManager.tsx"
+    },
+    {
+      "url": "/components/Analytics",
+      "title": "Analytics Component",
+      "description": "React component: Analytics",
+      "keywords": [
+        "analytics",
+        "react",
+        "classname",
+        "children",
+        "useeffect",
+        "analyticsprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:56:23.363Z",
+      "filePath": "/workspace/components/Analytics.tsx"
+    },
+    {
+      "url": "/components/AnalyticsManager",
+      "title": "AnalyticsManager Component",
+      "description": "React component: AnalyticsManager",
+      "keywords": [
+        "analyticsmanager",
+        "react",
+        "classname",
+        "children",
+        "useeffect",
+        "analyticsmanagerprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:56:23.364Z",
+      "filePath": "/workspace/components/AnalyticsManager.tsx"
+    },
+    {
+      "url": "/components/AnalyticsTracker",
+      "title": "AnalyticsTracker Component",
+      "description": "React component: AnalyticsTracker",
+      "keywords": [
+        "analyticstracker",
+        "react",
+        "classname",
+        "children",
+        "useeffect",
+        "analyticstrackerprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:56:23.364Z",
+      "filePath": "/workspace/components/AnalyticsTracker.tsx"
+    },
+    {
+      "url": "/components/Badge",
+      "title": "Badge Component",
+      "description": "React component: Badge",
+      "keywords": [
+        "badge",
+        "react",
+        "classname",
+        "children",
+        "badgeprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "const",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:56:23.364Z",
+      "filePath": "/workspace/components/Badge.tsx"
+    },
+    {
       "url": "/components/ErrorBoundary",
       "title": "ErrorBoundary Component",
       "description": "React component: ErrorBoundary",
@@ -19,7 +129,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.064Z",
+      "lastModified": "2025-09-06T04:56:23.364Z",
       "filePath": "/workspace/components/ErrorBoundary.tsx"
     },
     {
@@ -41,7 +151,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.065Z",
+      "lastModified": "2025-09-06T04:56:23.365Z",
       "filePath": "/workspace/components/Header.tsx"
     },
     {
@@ -63,7 +173,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.066Z",
+      "lastModified": "2025-09-06T04:56:23.366Z",
       "filePath": "/workspace/components/OptimizedImage.tsx"
     },
     {
@@ -85,7 +195,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.066Z",
+      "lastModified": "2025-09-06T04:56:23.366Z",
       "filePath": "/workspace/components/PerformanceMonitor.tsx"
     },
     {
@@ -107,7 +217,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.067Z",
+      "lastModified": "2025-09-06T04:56:23.367Z",
       "filePath": "/workspace/components/Sidebar.tsx"
     },
     {
@@ -129,7 +239,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.067Z",
+      "lastModified": "2025-09-06T04:56:23.367Z",
       "filePath": "/workspace/components/SimpleLayout.tsx"
     },
     {
@@ -151,7 +261,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.067Z",
+      "lastModified": "2025-09-06T04:56:23.367Z",
       "filePath": "/workspace/components/SkeletonLoader.tsx"
     },
     {
@@ -173,7 +283,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.067Z",
+      "lastModified": "2025-09-06T04:56:23.368Z",
       "filePath": "/workspace/components/layout/EnhancedFooter.tsx"
     },
     {
@@ -195,7 +305,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.068Z",
+      "lastModified": "2025-09-06T04:56:23.368Z",
       "filePath": "/workspace/components/layout/Footer.tsx"
     },
     {
@@ -217,7 +327,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.068Z",
+      "lastModified": "2025-09-06T04:56:23.369Z",
       "filePath": "/workspace/components/layout/Header.tsx"
     },
     {
@@ -239,7 +349,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.068Z",
+      "lastModified": "2025-09-06T04:56:23.369Z",
       "filePath": "/workspace/components/layout/Layout.tsx"
     },
     {
@@ -261,7 +371,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.069Z",
+      "lastModified": "2025-09-06T04:56:23.369Z",
       "filePath": "/workspace/components/layout/MainLayout.tsx"
     },
     {
@@ -283,7 +393,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.069Z",
+      "lastModified": "2025-09-06T04:56:23.369Z",
       "filePath": "/workspace/components/layout/ModernLayout.tsx"
     },
     {
@@ -305,7 +415,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.069Z",
+      "lastModified": "2025-09-06T04:56:23.369Z",
       "filePath": "/workspace/components/performance/LazyComponent.tsx"
     },
     {
@@ -327,7 +437,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.069Z",
+      "lastModified": "2025-09-06T04:56:23.369Z",
       "filePath": "/workspace/components/performance/OptimizedImage.tsx"
     },
     {
@@ -349,7 +459,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.069Z",
+      "lastModified": "2025-09-06T04:56:23.370Z",
       "filePath": "/workspace/components/ui/Badge.tsx"
     },
     {
@@ -371,7 +481,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.069Z",
+      "lastModified": "2025-09-06T04:56:23.370Z",
       "filePath": "/workspace/components/ui/Card.tsx"
     },
     {
@@ -393,7 +503,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.069Z",
+      "lastModified": "2025-09-06T04:56:23.370Z",
       "filePath": "/workspace/components/ui/EnhancedMarketplaceCard.tsx"
     },
     {
@@ -415,7 +525,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.069Z",
+      "lastModified": "2025-09-06T04:56:23.370Z",
       "filePath": "/workspace/components/ui/ErrorBoundary.tsx"
     },
     {
@@ -437,7 +547,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.070Z",
+      "lastModified": "2025-09-06T04:56:23.370Z",
       "filePath": "/workspace/components/ui/InteractiveNavigation.tsx"
     },
     {
@@ -459,7 +569,7 @@
         "react"
       ],
       "type": "component",
-      "lastModified": "2025-09-06T04:52:49.070Z",
+      "lastModified": "2025-09-06T04:56:23.370Z",
       "filePath": "/workspace/components/ui/NotificationSystem.tsx"
     },
     {
@@ -475,7 +585,7 @@
         "group"
       ],
       "type": "page",
-      "lastModified": "2025-09-06T04:52:49.070Z"
+      "lastModified": "2025-09-06T04:56:23.370Z"
     },
     {
       "url": "/about",
@@ -489,7 +599,7 @@
         "history"
       ],
       "type": "page",
-      "lastModified": "2025-09-06T04:52:49.070Z"
+      "lastModified": "2025-09-06T04:56:23.370Z"
     },
     {
       "url": "/services",
@@ -503,7 +613,7 @@
         "development"
       ],
       "type": "page",
-      "lastModified": "2025-09-06T04:52:49.070Z"
+      "lastModified": "2025-09-06T04:56:23.370Z"
     },
     {
       "url": "/contact",
@@ -517,11 +627,11 @@
         "reach"
       ],
       "type": "page",
-      "lastModified": "2025-09-06T04:52:49.070Z"
+      "lastModified": "2025-09-06T04:56:23.370Z"
     }
   ],
   "metadata": {
-    "generated": "2025-09-06T04:52:49.060Z",
+    "generated": "2025-09-06T04:56:23.359Z",
     "version": "1.0.0"
   }
 }
