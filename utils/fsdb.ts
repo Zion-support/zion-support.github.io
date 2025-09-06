@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+=======
   }
 }
   }
@@ -17,15 +21,20 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   } catch (error) {
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   try {
-    const fs = require ('fs'),
-    if () {) {
-  $2
-}
-      const content = fs.readFileSync (file_path, 'utf8');
-      return JSON.parse (content);
+    const fs = require("fs");
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, "utf8");
+      return JSON.parse(content);
     }
   } catch (error) {
+<<<<<<< HEAD
+    console.error("Error reading file:", error);
+  }
+  return defaultValue;
+}
+=======
 =======
 
     }
@@ -36,12 +45,21 @@ export function read_json < T>(file_path: string, default_value: T): T {
   await writeAllDisputes(all);
   } catch (error) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
-    const dir = path && path.dirname(filePath),
-    if (!fs && fs.existsSync(dir)) {
-      fs && fs.mkdirSync(dir, { recursive: true });
-
+export function writeJson<T>(filePath: string, data: T): void {
+  try {
+    const fs = require("fs");
+    const path = require("path");
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
     }
+<<<<<<< HEAD
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+=======
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
 <<<<<<< HEAD
 =======
@@ -51,6 +69,7 @@ export function read_json < T>(file_path: string, default_value: T): T {
     return res.status(500).json({ error: "Internal server error" });
 
 
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   }
 }
 

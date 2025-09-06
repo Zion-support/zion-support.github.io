@@ -2,6 +2,60 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+module.exports = {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+          analyzerMode: 'static',
+          openAnalyzer: false,
+          reportFilename: 'bundle-analysis.html',
+        })
+      );
+    }
+    return config;
+  },
+<<<<<<< HEAD
+};
+=======
+  "analyzerMode": "static",
+          "openAnalyzer": false,
+          "reportFilename": "bundle-analysis.html"});
+      )}
+    return config}
+}
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",; openAnalyzer: 'false',; reportFilename: "bundle-analysis.html";,}); )} return config} }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+>>>>>>> main
+=======
+};
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Next.config.analyze utility
@@ -279,6 +333,9 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 },;
 ,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -334,3 +391,4 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

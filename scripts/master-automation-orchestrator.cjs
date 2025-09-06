@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14,7 +17,14 @@
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -27,6 +37,10 @@ console.log('=====')
 const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
   console.log('\n "Recommendations")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
   console.log('\n "Recommendations")
   console.log('\n "Recommendations")
@@ -317,5 +331,9 @@ if (require.main === module) {
 
 module.exports = MasterAutomationOrchestrator;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

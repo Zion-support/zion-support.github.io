@@ -2,6 +2,78 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+const filesToFix = [
+  'pages/about.tsx',
+  'pages/ITServices.tsx', 
+  'pages/ai-services.tsx',
+  'pages/api-docs.tsx',
+  'pages/api.tsx',
+  'pages/careers.tsx',
+  'pages/guides.tsx',
+  'pages/services.tsx',
+  'pages/contact.tsx',
+  'pages/micro-saas.tsx',
+  'pages/it-services.tsx',
+  'pages/index.tsx',
+  'pages/404.tsx',
+  'pages/cookies.tsx',
+  'pages/case-studies.tsx',
+  'pages/industries/index.tsx'
+];
+
+function resolveConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove merge conflict markers and keep the "theirs" version (after =======)
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD/g, '');
+    content = content.replace(/=======/g, '');
+    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed conflicts in ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+<<<<<<< HEAD
+filesToFix.forEach(resolveConflicts);
+console.log('All conflicts resolved!');
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
+=======
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node const fs = require("fs"); const path = require("path"); const { execSync } = require("child_process"); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {'`'"`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
+>>>>>>> main
+>>>>>>> main
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+resolveMergeConflicts();
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 
 =======
@@ -94,6 +166,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -174,3 +249,4 @@ resolveMergeConflicts();
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

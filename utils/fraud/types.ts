@@ -1,3 +1,13 @@
+// Fraud detection types
+export type AdminActionType =
+  | "ban_user"
+  | "suspend_user"
+  | "flag_content"
+  | "remove_content"
+  | "investigate"
+  | "dismiss"
+  | "escalate";
+
 export interface AdminAction {
 =======
 
@@ -13,6 +23,14 @@ export interface AdminAction {;
   id: string;
   case_id: string;
   type: AdminActionType;
+<<<<<<< HEAD
+  adminId: string;
+  reason: string;
+  details: Record<string, any>;
+  createdAt: string;
+  executedAt?: string;
+  status: "pending" | "executed" | "failed";
+=======
 
   admin_id: string;
   reason: string,
@@ -29,6 +47,7 @@ export interface FraudDetectionResult {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }
 
 
@@ -37,6 +56,10 @@ export interface FraudDetectionResult {;
   isFraud: boolean;
   confidence: number;
   reasons: string[];
+<<<<<<< HEAD
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;
+=======
 =======
 
   isFraud: boolean;
@@ -51,25 +74,54 @@ export interface FraudDetectionResult {;
 <<<<<<< HEAD
 export interface FraudDetectionConfig {
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }
 
 
 export interface FraudDetectionConfig {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   enabled: boolean;
   rules: {
     suspiciousActivity: {
       enabled: boolean;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       threshold: number,
     }
     fake_profile: {
       enabled: boolean;
+<<<<<<< HEAD
+      threshold: number;
+    };
+    fakeProfile: {
+      enabled: boolean;
+      threshold: number;
+    };
+    paymentFraud: {
+      enabled: boolean;
+      threshold: number;
+    };
+    spam: {
+      enabled: boolean;
+      threshold: number;
+    };
+  };
+  autoActions: {
+    enabled: boolean;
+    actions: AdminActionType[];
+    confidenceThreshold: number;
+  };
+=======
       threshold: number,
     }
     payment_fraud: {
@@ -99,6 +151,7 @@ export interface FraudDetectionConfig {;
 =======
 
 <<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

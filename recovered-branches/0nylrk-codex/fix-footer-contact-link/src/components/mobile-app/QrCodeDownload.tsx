@@ -1,47 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 import React from "react";
-import {QrCode} from "lucide-react";
-import {AppStoreButtons} from "./AppStoreButtons";
-=======
-import React from "react",
-import { QrCode } from "lucide-react",
-import { AppStoreButtons } from "./AppStoreButtons",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react";
-import {QrCode} from "lucide-react";
-import {AppStoreButtons} from "./AppStoreButtons";
-import React from "react",
 import { QrCode } from "lucide-react";
 import { AppStoreButtons } from "./AppStoreButtons";
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
   const googlePlayUrl = "#"; // Replace with actual Google Play URL
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -60,61 +24,18 @@ export const QrCodeDownload: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              <AppStoreButtons 
-                className="mb-8" 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />
-=======
-<AppStoreButtons
-                className="mb-8"
-              <AppStoreButtons
-                className="mb-8"
-              <AppStoreButtons 
-                className="mb-8" 
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />
-=======
-
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex gap-2 items-center text-sm text-gray-400">
                 <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex-shrink-0">
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white rounded-lg">
@@ -130,14 +51,7 @@ export const QrCodeDownload: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-import {QrCode} from "lucide-react";
-import {AppStoreButtons} from "./AppStoreButtons";
-=======
-
+  );
 };
 
 =======

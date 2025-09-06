@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,10 +53,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 export default function ServicesIndex() {
   const services = [
     {
@@ -121,6 +127,8 @@ export default function ServicesIndex() {
         <meta name=\"description\" content=\"Comprehensive technology services including AI, development, automation, and more.\" />
       </Head>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -151,10 +159,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
             {services.map((service, index) => (
               <div key={index} className=\"bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6\">
                 <div className=\"flex items-center mb-4\">
@@ -163,6 +175,25 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <h3 className=\"text-xl font-semibold text-gray-900\">{service.name}</h3>
                 </div>
+<<<<<<< HEAD
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">
+                      <Check className=\"w-4 h-4 text-green-500 mr-2\" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link 
+                  href={service.href}
+                  className=\"inline-flex items-center text-blue-600 hover:text-blue-700 font-medium\"
+                >
+                  Learn More
+                  <ArrowRight className=\"w-4 h-4 ml-1\" />
+                </Link>
+              </div>
+            ))}
+          </div>
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -310,10 +341,31 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <p className="text-lg text-gray-600 mb-8">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
               Contact us today to discuss your project and get a custom solution
             </p>
             <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">
               <Link 
+<<<<<<< HEAD
+                href=\"/contact\"
+                className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\"
+              >
+                Get Free Consultation
+              </Link>
+              <Link 
+                href=\"/pricing\"
+                className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors\"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -372,8 +424,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

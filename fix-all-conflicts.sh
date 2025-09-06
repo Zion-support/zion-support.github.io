@@ -13,10 +13,19 @@ for file in $files_with_conflicts; do
     echo "Fixing $file..."
     
     # Remove all merge conflict markers
+<<<<<<< HEAD:backup-problematic-files/fix-all-conflicts.sh
+<<<<<<< HEAD:fix-all-conflicts.sh
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:fix-all-conflicts.sh
 <<<<<<< HEAD
     sed -i '/<<<<<<< HEAD/,/>>>>>>>/d' "$file"
     sed -i '/=======/d' "$file"
 =======
+<<<<<<< HEAD:backup-problematic-files/fix-all-conflicts.sh
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/fix-all-conflicts.sh
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:fix-all-conflicts.sh
     sed -i '/^/,/^/d' "$file"
     sed -i '/^>>>>>>>/d' "$file"
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

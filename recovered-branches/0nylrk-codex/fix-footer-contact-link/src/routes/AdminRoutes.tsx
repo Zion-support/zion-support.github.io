@@ -1,28 +1,6 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-import {Fragment} from "react";
-import {Route, Routes} from "react-router-dom";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -181,11 +159,7 @@ const AdminRoutes = () => {;
             <QuoteManager />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      />;
-
+      />
 
 =======
       />;
@@ -265,11 +239,7 @@ const AdminRoutes = () => {;
             <ReviewsModeration />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      />;
-
+      />
 
 =======
       />;
@@ -283,11 +253,7 @@ const AdminRoutes = () => {;
             <WhitelabelManager />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      />;
-
+      />
 
 =======
       />;
@@ -301,11 +267,7 @@ const AdminRoutes = () => {;
             <PartnerManager />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      />;
-
+      />
 
 =======
       />;
@@ -319,11 +281,7 @@ const AdminRoutes = () => {;
             <AppMetadataManager />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      />;
-
+      />
 
 =======
       />;
@@ -337,11 +295,7 @@ const AdminRoutes = () => {;
             <SupportRequests />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      />;
-
+      />
 
 =======
       />;
@@ -355,11 +309,7 @@ const AdminRoutes = () => {;
             <FraudDetection />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      />;
-
+      />
 
 =======
       />;
@@ -371,10 +321,7 @@ const AdminRoutes = () => {;
             <TokenManager />;
           </ProtectedRoute>;
         }
-
-      />;
-<<<<<<< HEAD
-
+      />
 
       <Route
         path="/admin/integrations"
@@ -428,77 +375,12 @@ const AdminRoutes = () =>: any {
             <QuoteManager />;
           </ProtectedRoute>;
         }
-      />;
-      <Route;
-        path="/admin / reviews";
-        element={
-          <ProtectedRoute admin_only={true}>;
-            <ReviewsModeration />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin / whitelabel";
-        element={
-          <ProtectedRoute admin_only={true}>;
-            <WhitelabelManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin / partners";
-        element={
-          <ProtectedRoute admin_only={true}>;
-            <PartnerManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin / app - metadata";
-        element={
-          <ProtectedRoute admin_only={true}>;
-            <AppMetadataManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin / support - requests";
-        element={
-          <ProtectedRoute admin_only={true}>;
-            <SupportRequests />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin / fraud - detection";
-        element={
-          <ProtectedRoute admin_only={true}>;
-            <FraudDetection />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin / tokens";
-        element={
-          <ProtectedRoute admin_only={true}>;
-            <TokenManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin / integrations";
-        element={
-          <ProtectedRoute admin_only={true}>;
-            <IntegrationsPage />;
-          </ProtectedRoute>;
-        }
-      />;
-
-    </Routes>;
+      />
+    </Routes>
   );
-},;
-    </Routes>);
-}
+};
+
+export default AdminRoutes;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
