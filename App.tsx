@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { JSX } from 'react';
-
-import React, { JSX } from 'react';
-export default function App(): JSX.Element {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { JSX } from 'react';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
@@ -51,52 +38,44 @@ export default function App() {
       features: ['Threat Detection', 'Compliance', 'Penetration Testing', 'Security Audits'],
     },
     {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics and business intelligence solutions.',
-      icon: '📊',
-      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Custom Dashboards'],
+      title: 'Digital Transformation',
+      description: 'Transform your business with modern digital solutions and automation.',
+      icon: '🚀',
+      features: ['Process Automation', 'Digital Strategy', 'Change Management', 'ROI Optimization'],
     },
     {
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation services to modernize your business processes and improve efficiency.',
-      icon: '🚀',
-      features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
+      title: 'Consulting',
+      description: 'Expert consulting services to help you make informed technology decisions.',
+      icon: '💡',
+      features: ['Technology Strategy', 'Architecture Review', 'Best Practices', 'Training'],
     },
   ];
 
-
-export default function App(): JSX.Element {
-<<<<<<< HEAD
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
-    <main>
-
-    </main>
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <ParticleBackground />
+      <ScrollToTop />
       <Header />
-
-      <main className="relative">
+      
+      <main>
         {/* Hero Section */}
         <section className="relative py-20 px-4 text-center">
-          <div className="container mx-auto max-w-6xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Welcome to Zion Tech
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Transform Your Business with
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                {' '}AI & Technology
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Your trusted partner for AI and IT solutions. We help businesses transform through
-              cutting-edge technology and innovative solutions.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              We deliver cutting-edge AI solutions, cloud infrastructure, and cybersecurity services 
+              to help your business thrive in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -104,18 +83,14 @@ export default function App(): JSX.Element {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center text-white mb-12">
+              Our Services
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                  features={service.features}
-                />
+                <ServiceCard key={index} service={service} />
               ))}
             </div>
           </div>
@@ -128,12 +103,7 @@ export default function App(): JSX.Element {
         <HowItWorksSection />
 
         {/* Testimonials Section */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-            <TestimonialCarousel />
-          </div>
-        </section>
+        <TestimonialCarousel />
 
         {/* FAQ Section */}
         <FaqSection />
@@ -144,15 +114,6 @@ export default function App(): JSX.Element {
 
       <Footer />
       <ChatAssistant />
-      <ScrollToTop />
     </div>
   );
 }
-=======
-<<<<<<< HEAD
-  )}
-=======
-  );
-}
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
