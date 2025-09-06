@@ -35,20 +35,6 @@ export default async function handler(
         },
         {
           role: "user",
-          content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`,
-      messages: [
-        {
-          role: "system"
-          content:
-            "You are a professional translator for policy and development documents."
-        }
-        {
-          role: "user"
-          content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`
-        }
-      ]
-      temperature: 0.2
-    });
       .json({ error: error?.message || "Translation failed" });
   }
 }

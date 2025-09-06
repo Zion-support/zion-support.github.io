@@ -50,6 +50,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2))
       }
     }
+  } catch (e) {
+    console.error (e),
+    return res.status (500).json ({ error: 'Failed to schedule landing pages' });
 
 
     return res.status(200).json({ ok: true, count: 4 })

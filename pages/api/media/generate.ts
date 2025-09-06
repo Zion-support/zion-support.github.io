@@ -1,5 +1,17 @@
-
-
+      company_name = "Zion",
+      date = new Date ().toISOString ().substring (0, 10),
+      raise_amount,
+      description = "Innovative technology company",
+      contact_email = "press@zion.com",
+    } = req.body || {}
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      res.set_header ("Allow", "POST");
+      return res.status (405).json ({ error: "Method not allowed" });
+    }
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildPressRelease } from "../../../utils/mediaKit";
 export default async function handler(
@@ -8,34 +20,29 @@ export default async function handler(
 ) {
   try {
     const {
-      type = "launch",
-      companyName = "Zion",
-      date = new Date().toISOString().substring(0, 10),
-      raiseAmount,
-      description = "Innovative technology company",
-      contactEmail = "press@zion.com",;
-    } = req.body || {};
-
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
-      type = "launch",
-      company_name = "Zion",
-      date = new Date ().toISOString ().substring (0, 10),
-      raise_amount,
-      description = "Innovative technology company",
-
-
-    return res && res.status(200).json({
-      ok: true,
-      pressRelease,
-      downloadUrl: `/api/media/download/${pressRelease && pressRelease.id}`,
+    }
+    const pressRelease = await buildPressRelease({
+      type
+      companyName
+      date
+      raiseAmount
+      description
+      contactEmail
+    });
+    return res.status(200).json({
+      ok: true
+      pressRelease
+      downloadUrl: `/api/media/download/${pressRelease.id}`
     });
   } catch (error: any) {
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
+    console.error("Press release generation error:", error);
+    return res.status(500).json({
+      ok: false
+      error: "Failed to generate press release"
+    });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildPressRelease } from '../../../utils/mediaKit';
 
@@ -66,18 +73,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } catch (_) {
         // fall through to template
       }
-    console && console.error("Press release generation error:", error);
-    return res && res.status(500).json({
-      contact_email = "press@zion.com",
-    } = req.body || {}
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      res.set_header ("Allow", "POST");
-      return res.status (405).json ({ error: "Method not allowed" });
     }
+
+    const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
+    res.status(200).json({ ok: true, text, fallback: true });
+  } catch (e: any) {
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
+  }
 }
   } catch (error) {
     console.error("Error:", error);

@@ -36,12 +36,6 @@
           />
           <Card
           />
-          <Card
-            title="Data Analytics"
-            href="/services/data-analytics"
-            description="Advanced analytics and BI solutions that transform data into actionable insights."
-            icon="📊"
-          />
         </div>
       </section>
 

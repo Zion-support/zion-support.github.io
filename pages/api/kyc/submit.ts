@@ -59,7 +59,6 @@ function save(db: Record<string, KycProfile>) {
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
 
 
   // Compute simple risk score
@@ -148,6 +147,11 @@ function handler() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
+  db[userId] = profile;
+  save(db);
+  res.status(200).json({ ok: true, profile, aml: amlResult })
+}
   const db = load ();
   const profile = db[user_id];
   if (return res.status ($1).json ({$2})) {
@@ -251,6 +255,8 @@ if ( {) {
 ;
 res.status (200).json ({ ok: true, profile, aml: aml_result });
 }
-  profile.lastUpdatedAt = now;
-
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

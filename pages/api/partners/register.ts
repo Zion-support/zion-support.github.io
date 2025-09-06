@@ -1,21 +1,3 @@
-function sanitizeCode(input: string): string {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9-]/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  const { name, niche, socials, payout_method, desired_code } = req.body |{}
-  if (!name |!desired_code) return res.status($1).json({ $2 });
   const code = sanitizeCode(desired_code);
   if (!code) return res.status($1).json({ $2 });
   const usingPlaceholder =

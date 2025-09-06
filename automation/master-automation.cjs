@@ -56,13 +56,21 @@ const { execSync } = require('child_process');
 >>>>>>> origin/main
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -179,8 +187,11 @@ class MasterAutomation {}
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -190,6 +201,9 @@ class MasterAutomation {}
       });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -537,17 +551,26 @@ class MasterAutomation {}
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     const checks = [
       { command: 'npm run lint', description: 'Linting check' },
       { command: 'npm run type-check', description: 'TypeScript type check' },
     ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     const results = [];
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -634,8 +657,11 @@ class MasterAutomation {}
 >>>>>>> origin/main
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
     }
 
     this.log('✅ Quality checks completed');
@@ -698,6 +724,9 @@ class MasterAutomation {}
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -753,13 +782,19 @@ class MasterAutomation {}
 
     if (report.automation.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     // Save report
     const reportFile = path.join(
       this.logsDir,
       `automation-report-${Date.now()}.json`
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -793,8 +828,11 @@ class MasterAutomation {}
 >>>>>>> origin/main
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -804,6 +842,9 @@ class MasterAutomation {}
   async start() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1004,13 +1045,21 @@ class MasterAutomation {}
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1160,7 +1209,10 @@ module.exports = MasterAutomation;
         });
       break;
     default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
   }
 }
 module.exports = MasterAutomation;
@@ -1227,5 +1279,8 @@ module.exports = MasterAutomation;
 >>>>>>> origin/main
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

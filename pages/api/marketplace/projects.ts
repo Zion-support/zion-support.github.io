@@ -5,7 +5,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
-
 import {
   Project
   ProjectDocument
@@ -40,16 +39,9 @@ function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 
-
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({ ok: false, error: message })
-}
-
-
-
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
-  if (user && user.role === "client" && user && user.id === project && project.clientId) return true;
-  if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
+  if (user.role === "client" && user.id === project.clientId) return true;
+  if (user.role === "talent" && user.talentSlug === project.talentSlug)
     return true;
   return false;
   } catch (error) {
@@ -151,8 +143,6 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
           authorId: user.id,
           authorRole: user.role,
           content,
-          createdAtIso: new Date().toISOString()
-          createdAtIso: new Date().toISOString(),
         };
         project.notes.push(note);
         saveProject(project);
@@ -345,4 +335,3 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

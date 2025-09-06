@@ -1,55 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
-
-import {
-
-
-
-import {
-  assertClient
-  assertTalentOrClientForOffer
-  getDemoUser
-} from "../../../utils/marketplace/auth";
-import {
-  getOfferById
-  listOffers
-  saveOffer
-  saveProject
-
-import type { NextApiRequest, NextApiResponse } from "next";
-
-import { v4 as uuidv4 } from "uuid";
-
-import {
-
-  assertClient,
-  assertTalentOrClientForOffer,
-  getDemoUser,;
-} from "../../../utils/marketplace/auth";
-import {
-  getOfferById,
-  listOffers,
-  saveOffer,
-  saveProject,;
-} from "../../../utils/marketplace/store";
-import type { NextApiRequest, NextApiResponse } from "next";
-import { v4 as uuidv4 } from "uuid";
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
-import type { NextApiRequest, NextApiResponse } from 'next';
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({
-    ok: false,
-    error: message
-  });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { v4 as uuidv4 } from "uuid",
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth",
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store",
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types",
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({ ok: false, error: message })
-
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -90,7 +38,6 @@ if ( {) {
 }
         const offers = list_offers ({ talent_slug: user.talent_slug });
         return res.json ({ ok: true, offers });
-
       }
 import { v4 as uuidv4 } from "uuid";
 
@@ -300,17 +247,12 @@ if ( {) {
               ? existing.paymentTerms.milestones || []
               : [],
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
-
-
-
           documents: existing.agreementUrl
 
             ? [
                 {
                   id: uuidv4(),
                   name: "Agreement",
-          notes: []
-          notes: [],
         };
         saveProject(project);
         existing.projectId = project.id;

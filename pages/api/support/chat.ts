@@ -6,7 +6,6 @@ import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }> };
-  if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: 'Invalid messages' });
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const lastUser = [...messages].reverse().find((m) => m.role === 'user');
   const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] },

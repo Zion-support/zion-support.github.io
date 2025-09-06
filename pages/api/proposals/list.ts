@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listProposals } from "../../../utils/data/proposals";
 export default async function handler(
@@ -57,3 +56,5 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (error: any) {
     res.status(500).json({ error: error?.message || 'Failed to list proposals' });
   }
+  }
+}

@@ -29,7 +29,45 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
       const isTalentUser = isTalent(project, user);
       const status: string = body && body.status;
       const allowed =
-      res.status(404).json({ error: 'Milestone not found' });
+  const project = getProject(projectId);
+  if (!project) {
+    res.status(404).json({ error: 'Project not found' });
+    return;
+  }
+  if (!assertParticipantOrAdmin(project, user)) {
+    res.status(403).json({ error: 'Forbidden' });
+    return;
+  }
+    const body = req.body as any;
+    if (body.status && !isMilestoneStatus(body.status)) {
+      res.status(400).json({ error: 'Invalid status' });
+      return;
+    }
+    // Enforce status transition rules
+    if (body.status) {
+      const isClientUser = isClient(project, user);
+      const isTalentUser = isTalent(project, user);
+      const status: string = body.status;
+      const allowed =
+        (status === 'In Progress' && isClientUser) ||
+        (status === 'Submitted' && isTalentUser) ||
+        (status === 'Approved' && isClientUser) ||
+        (status === 'Paid' && isClientUser);
+      if (!allowed && user.role !== 'admin') {
+        res.status(403).json({ error: 'Not allowed to set this status' });
+        return;
+      }
+      // Add side-effects
+      if (status === 'Submitted') {
+        body.submittedByUserId = user.userId
+      }
+      if (status === 'Approved') {
+        body.approvedByUserId = user.userId
+      }
+      if (status === 'Paid') {
+        body.paidAt = new Date().toISOString()
+      }
+    }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'PATCH') {
@@ -202,8 +240,6 @@ export default function handler(req, res) {
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {;
       res.status(404).json({ error: 'Milestone not found' });
-
-
       return;
     }
     res.status (200).json ({ milestone: updated });
@@ -215,7 +251,6 @@ export default function handler(req, res) {
 
 
 
-res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
 }

@@ -1,4 +1,3 @@
-
   try {
     const {
       target_institution,
@@ -44,8 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       supportingMultiverses = [],
       title = 'Zion DAO Proposal',
       promptAssist,
-  }
-}
       language = 'en'
     } = req.body || {};
 
@@ -56,8 +53,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: SYSTEM_PROMPT },
-        { role: 'user', content: userPrompt }
       ],
       temperature: 0.3
     });

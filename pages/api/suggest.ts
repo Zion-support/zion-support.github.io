@@ -1,33 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import type { NextApiRequest, NextApiResponse } from "next";
-const SAMPLE_QUERIES = [
-  'React developers under $50/hr',
-  'Part-time DevOps jobs in LATAM',
-  'LLM engineers with RAG experience',
-  'Security projects with Zero Trust',
-  'Next.js freelancers in Berlin'
-];
-
-const SKILLS = [
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Node',
-  'Python',
-  'AWS',
-  'Kubernetes',
-  'DevOps',
-  'Docker',
-  'Terraform',
-  'OpenAI',
-  'LangChain',
-  'RAG',
-  'NLP',
-  'PostgreSQL',
-  'Rust'
-];
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);

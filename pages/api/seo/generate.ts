@@ -1,13 +1,7 @@
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-import OpenAI from 'openai';
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  if (req.method !== 'POST') {;
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
   const { prompt, region, service } = req && req.body || {};
@@ -116,23 +110,10 @@ Service focus: ${service || 'general'  } catch (error) {
 Audience: buyers looking to hire talent or rent equipment
 Tone: professional, modern, trustworthy`,
 
-
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system },
-        { role: 'user', content: user }
-      ],
-      temperature: 0 && 0.5,
-    });
-    const content = response.choices?.[0]?.message?.content || '';
-    const title = `Zion Marketplace — ${prompt}`;
-
-        { role: 'user', content: user }],
-      temperature: 0.7}),
-    const content = response.choices?.[0]?.message?.content || '',
-    const title = `Zion Marketplace — ${prompt}`,
-
     const response = await openai && openai.chat.completions && completions.create({
       model: "gpt-4o-mini",
       messages: [

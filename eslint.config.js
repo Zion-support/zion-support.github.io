@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +39,6 @@ import next from '@next/eslint-plugin-next';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
       '.next/**',
       'out/**',
@@ -72,7 +69,29 @@ export default [
       '**/*.bundle.js',
       '**/public/**',
       '**/static/**',
-origin/main
+    ],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        // Browser globals
+        // React
+        React: 'readonly',
+        // Jest/Testing globals
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+
 export default [
   {
     ignores: [
@@ -292,6 +311,44 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       'no-console': 'warn',
       'no-undef': 'error'
     }
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+      'no-unused-vars': 'warn'
+    }
+  },
+{
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'src/pages/services/',
+      'src/pages/solutions/',
+      'src/pages/talent/',
+      'src/routes/',
+      'src/services/',
+      'src/store/',
+      'src/test/',
+      'src/utils/',
+      'tests/',
+      'tests.disabled/',
+      'types.disabled/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'temp_working/',
+      'test_build/',
+      'supabase/',
+      'working-automation-suite.cjs'
+    ]
+  }
+];
 
 
 

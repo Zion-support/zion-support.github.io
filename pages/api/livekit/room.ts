@@ -1,11 +1,3 @@
-
-
-
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { RoomServiceClient, CreateRoomOptions } from "livekit-server-sdk";
-
-
 const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
 const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
@@ -133,6 +125,7 @@ export default async function handler(req, res) {
 
     console.error('Room create error', err);
   }
+  }
 }
   } catch (error) {
     console.error("Error:", error);
@@ -147,4 +140,3 @@ export default async function handler(req, res) {
 
   }
 }
-

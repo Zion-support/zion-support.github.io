@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
 const p = path.join(
   process.cwd()
   'data'
@@ -10,6 +9,20 @@ const p = path.join(
   'changelog.json'
 );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  }
+if (req.method === 'POST') {
+    try {
+      const data = fs.readFileSync (p, 'utf8');
+      const changelog = JSON.parse (data);
+      return res.status (200).json (changelog);
+    } catch (error) {
+      return res.status (500).json ({ error: 'Failed to read changelog' });
+    }
+  if (req && req.method === 'POST') {
+    try {
+      const { version, changes, date } = req && req.body;
+      if (!version || !changes || !Array && Array.isArray(changes)) {
+        return res && res.status(400).json({ error: 'Missing required fields' });
       }
       let changelog = [];
       try {
@@ -68,5 +81,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
