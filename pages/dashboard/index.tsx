@@ -36,6 +36,7 @@ const Dashboard: NextPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />
       </section>
+
       <section>
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
         <EmptyState

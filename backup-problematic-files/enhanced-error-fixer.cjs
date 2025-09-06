@@ -89,6 +89,8 @@ const path = require('path')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     content = content.replace(/className\s*=\s*['"]\s*;\s*([^'"]*)\s*['']
 =======
 <<<<<<< HEAD

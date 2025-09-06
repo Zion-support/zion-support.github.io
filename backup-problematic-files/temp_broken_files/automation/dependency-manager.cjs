@@ -356,4 +356,8 @@ if ( {})
     .catch(error => {})
       console.error('Dependency management "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
 module.exports = DependencyManager;
+=======
+module.exports = DependencyManager;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

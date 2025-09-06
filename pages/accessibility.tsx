@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -30,7 +25,6 @@ import MainLayout from '../components/layout/MainLayout';
 =======
 import Link from 'next / link';
 import MainLayout from '../components / layout / MainLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 
   Eye,
@@ -124,7 +118,6 @@ const accessibilityFeatures = [;
     ];
   }
 ];
-
 const standardsCompliance = [;
   {;
     standard: "WCAG 2 && 2.1 AA",;
@@ -155,7 +148,6 @@ const standardsCompliance = [;
     icon: Globe;
   }
 ];
-
 const accessibilityTools = [;
   {;
     name: "Screen Reader Testing",;
@@ -178,7 +170,6 @@ const accessibilityTools = [;
     frequency: "Quarterly";
   }
 ];
-
 const accessibilityGuidelines = [;
   {;
     category: "Content",;
@@ -238,8 +229,13 @@ import Layout from '../components/Layout';
 
 export default function AccessibilityPage() {
 =======
-export default function AccessibilityPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+interface AccessibilityProps {
+  className?: string;
+}
+
+const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -276,7 +272,33 @@ export default function AccessibilityPage() {;
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  Web Accessibility
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Ensuring digital inclusion for everyone
+              </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+            </motion.div>
+          </div>
+        </section>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -435,7 +457,6 @@ export default function AccessibilityPage() {;
                 Ready to make your digital products accessible to everyone? Contact us for a free accessibility audit.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
                 <motion&& motion.div
@@ -472,11 +493,9 @@ export default function AccessibilityPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </MainLayout>
-=======
             </div>;
           </div>;
         </section>;
-
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <div className="max-w-4xl mx-auto">;
@@ -505,12 +524,12 @@ export default function AccessibilityPage() {;
             </div>;
           </div>;
         </section>;
-
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Have Questions About Accessibility?;
@@ -531,10 +550,8 @@ export default function AccessibilityPage() {;
         </section>;
       </div>;
     </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
-=======
     title: "Visual Accessibility",
     description: "Features to support users with visual impairments",
     icon: Eye,
@@ -953,4 +970,42 @@ function AccessibilityPage() {
       </div>;
     </MainLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Have Questions About Accessibility?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                  Contact Accessibility Team
+                </a>
+                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                  General Contact
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+      </div>
+    </MainLayout>;
+  );
+};
+
+export default Accessibility;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

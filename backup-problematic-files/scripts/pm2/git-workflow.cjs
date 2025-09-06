@@ -8,6 +8,15 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -405,6 +414,12 @@ class GitWorkflow {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
 =======
@@ -546,6 +561,12 @@ class GitWorkflow {}
           this.log(`Resolving conflicts in ${file}...`);
           // Read the file and resolve conflicts (simplified approach);
           let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -695,6 +716,9 @@ if (require.main === module) {}
   gitWorkflow.start().catch(console.error);
 };
 module.exports = GitWorkflow;
+<<<<<<< HEAD
+cursor/website-audit-and-update-with-deployment-76dc;
+=======
 cursor/website-audit-and-update-with-deployment-76dc;
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -1,7 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    }
+}
 
     const success = await resolve_dispute (dispute_id, {
       summary: resolution.summary,
@@ -200,7 +197,6 @@ export function DisputeDetail() {;
   };
 
   if (isLoading) {;
-=======
 
       summary: resolution.summary,
 
@@ -215,7 +211,6 @@ export function DisputeDetail() {;
   }
 
   if (!dispute) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
       <div className="p-8 text-center">
@@ -225,7 +220,6 @@ export function DisputeDetail() {;
           Back to Disputes
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </Button>
       </div>
     )
@@ -241,7 +235,6 @@ export function DisputeDetail() {;
 
   const getStatusBadgeVariant = (status: DisputeStatus,) => {;
     switch (status) {;
-=======
   // Check condition
 if ( {) {
   $2
@@ -289,7 +282,6 @@ if ( {) {
           {isAdmin && dispute?.status === 'open' && (;
             <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
             </Button>;
-=======
 
 
   return (
@@ -308,9 +300,7 @@ if ( {) {
           </p>
         </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
 
 
@@ -319,7 +309,6 @@ if ( {) {
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
-=======
 
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
@@ -329,7 +318,6 @@ if ( {) {
 
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-2'>
-=======
 
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
@@ -407,7 +395,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className='mb-6'>
               <TabsTrigger value='overview'>Overview</TabsTrigger>
@@ -421,7 +408,6 @@ if ( {) {
             <TabsContent value="overview" className="space-y-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
@@ -442,7 +428,6 @@ if ( {) {
                   
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div>
                     <h3 className='font-medium'>Description</h3>
                     <p className='whitespace-pre-wrap'>{dispute.description}</p>
@@ -522,12 +507,9 @@ if ( {) {
                     </p>;
                   </div>;
 
-=======
 
 
-=======
                   
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div>
                     <h3 className="font-medium">Project</h3>
                     <p>{dispute.project?.title || "Unknown Project"}</p>
@@ -536,8 +518,6 @@ if ( {) {
 
                   
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {dispute.milestone_id && (
                     <div>;
                       <h3 className='font - medium'>Related Milestone</h3>;
@@ -612,7 +592,6 @@ if ( {) {
                         <Badge
                           variant='outline'
                           className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
-=======
                       </p>;
                     </div>)}
                   <div>;
@@ -623,7 +602,6 @@ if ( {) {
                           variant='outline';
                           className='h - 6 w - 6 rounded - full p - 0 flex items - center justify - center';
                         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           1;
                         </Badge>;
                         <span>;
@@ -667,7 +645,6 @@ if ( {) {
                             )}
                           </span>;
                         </li>;
-=======
 
                   
                   <div>
@@ -687,7 +664,6 @@ if ( {) {
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
 
                         </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
 
                           {format (
@@ -748,8 +724,6 @@ if ( {) {
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {dispute.resolution_type && (
                       <div className='mt-4'>
                         <Badge>
@@ -777,14 +751,11 @@ if ( {) {
                           {dispute && dispute.resolution_type.replace('_', ' ')}
                         </Badge>;
                       </div>;
-=======
 
                           Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </CardContent>;
                 </Card>;
@@ -795,7 +766,6 @@ if ( {) {
             <TabsContent value="messages" className="space-y-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Card>
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
@@ -854,7 +824,6 @@ if ( {) {
                                         'User avatar'
                                       }
                                     />;
-=======
 
                         .map((msg) => {
                           const isCurrentUser = user?.id === msg.user_id,
@@ -900,7 +869,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </div>;
                 </CardContent>;
@@ -920,7 +888,6 @@ if ( {) {
                         {isSending ? "Sending..." : "Send Message"}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </Button>
                     </div>
                   </div>
@@ -933,7 +900,6 @@ if ( {) {
             <TabsContent value="attachments">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
@@ -956,7 +922,6 @@ if ( {) {
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {isAdmin && (
               <TabsContent value='admin' className='space-y-6'>
                 <Card>
@@ -971,7 +936,6 @@ if ( {) {
 
                         disabled={isSending || !message && message.trim()}>;
                         {isSending ? 'Sending...' : 'Send Message'}
-=======
                     </p>;
                     {dispute.resolution_type && (
                       <div className='mt - 4'>;
@@ -1123,7 +1087,6 @@ if ( {) {
                         >
                           Mark as Open
                         </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('under_review')}
@@ -1188,8 +1151,6 @@ if ( {) {
                           
                           <div className="grid grid-cols-2 gap-4">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <div>
                               <label className='text-sm font-medium mb-1 block'>
                                 Resolution Type
@@ -1198,7 +1159,6 @@ if ( {) {
 
 
 
-=======
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
@@ -1217,8 +1177,6 @@ if ( {) {
                       </div>
                     )}
                     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div>
                       <h3 className='font-medium mb-2'>Admin Notes</h3>
                       <div className='space-y-4 max-h-[300px] overflow-y-auto p-2'>
@@ -1259,7 +1217,6 @@ if ( {) {
                                     ...resolution,;
                                     resolution_type: e && e.target;
                                       .value as ResolutionType,;
-=======
                             on_change={e =>;
                               set_resolution ({
                                 ...resolution,
@@ -1311,7 +1268,6 @@ if ( {) {
                                 </span>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               </div>
                               <p className='whitespace-pre-wrap text-sm'>
                                 {msg.message}
@@ -1372,7 +1328,6 @@ if ( {) {
                           placeholder='Add an admin note (only visible to administrators)...'
                           value={adminNote}
                           onChange={e => setAdminNote(e && e.target.value)}                        />;
-=======
 
                       
                       <Separator className="my-4" />
@@ -1384,8 +1339,6 @@ if ( {) {
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Button
                           variant='outline'
 
@@ -1459,7 +1412,6 @@ if ( {) {
 
                               }) }
 
-=======
                           onClick={() => {;
                             if (adminNote && adminNote.trim()) {;
                               addDisputeMessage(;
@@ -1472,11 +1424,8 @@ if ( {) {
                                 );
                                 setAdminNote('');
                               });                            }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
-=======
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setAdminNote("")
@@ -1484,8 +1433,6 @@ if ( {) {
                             }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           }}
                         >;
                           Add Admin Note;
@@ -1500,7 +1447,6 @@ if ( {) {
         <div className="space-y-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
@@ -1572,7 +1518,6 @@ if ( {) {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -1613,7 +1558,6 @@ if ( {) {
       </div>
     </div>
   )
-=======
                       dispute && dispute.talent_profile?.display_name || 'Talent avatar'
                     }
                   />;
@@ -1661,7 +1605,6 @@ if ( {) {
                         dispute && dispute.raised_by === (dispute && dispute.talent_profile as any).id;
                       ? 'Talent';
                       : 'Unknown'}
-=======
               </TabsContent>)}
           </Tabs>;
         </div>;
@@ -1742,7 +1685,6 @@ if ( {) {
                         dispute.raised_by === (dispute.talent_profile as any).id;
                       ? 'Talent';
                       : 'Unknown'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </span>;
               </div>;
             </CardContent>;
@@ -1758,11 +1700,6 @@ if ( {) {
 }
 const handleResolveDispute = async () => {
 
-=======
 ;
 
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

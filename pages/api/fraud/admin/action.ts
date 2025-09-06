@@ -17,7 +17,20 @@ export default async function handler(
   const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+import { AdminActionType } from "../../../../utils/fraud/types";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") {;
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+  const { fraudId, action, reason, adminId } = req.body |{}
+  if (!fraudId |!action) {
+    return res.status(400).json({ error: "Missing fraudId or action" });
+
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
@@ -33,9 +46,7 @@ export default async function handler(
     adminId,
     timestamp: new Date().toISOString(),
   };
-
-  store && store.addAdminAction(adminAction);
-
+store && store.addAdminAction(adminAction);
   return res && res.status(200).json({ success: true, action: adminAction });
 
 }

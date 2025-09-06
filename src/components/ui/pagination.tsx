@@ -1,4 +1,3 @@
-
 import * as React from &quot;react & quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 import { cn } from &quot;@/lib / utils & quot;
@@ -9,7 +8,6 @@ const Pagination = ({ class_name, ...props }: React.ComponentProps<&quot;nav & q
     role=&quot;navigation & quot;
     aria - label=&quot;pagination & quot;
     className={cn (&quot;mx - auto flex w - full justify - center & quot;, class_name)}
-=======
 
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react'
@@ -46,7 +44,6 @@ const PaginationContent = React.forward_ref<;
   React.ComponentProps<&quot;ul & quot;>;
 >(({ class_name, ...props }, ref) => (
   <ul;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn (&quot;flex flex - row items - center gap - 1&quot;, class_name)}
     {...props}
@@ -70,7 +67,6 @@ type PaginationLinkProps = {
   isActive?: boolean
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
@@ -83,22 +79,18 @@ const PaginationLink = ({
   isActive,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ...props
 }: PaginationLinkProps) => (
   <a
-    aria-current={isActive ? &quot;page" : undefined}
+    aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
 
 
 
-=======
         variant: isActive ? "outline" : "ghost",
 
         size}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
@@ -114,7 +106,7 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
   ({ page, isActive, className, ...props }, ref) => (
     <button
       ref={ref}
-      type=&quot;button"
+      type="button"
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
@@ -124,7 +116,6 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
         isActive && 'bg-green-600 text-white',;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className;
       )}
       {...props}
@@ -139,12 +130,12 @@ const PaginationPrevious = ({
   ...props
 }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
-    aria-label="Go to previous page&quot;
-    size=&quot;default"
+    aria-label="Go to previous page"
+    size="default"
     className={cn("gap-1 pl-2.5", className)}
     {...props}
   >
-    <ChevronLeft className="h-4 w-4&quot; />
+    <ChevronLeft className="h-4 w-4" />
     <span>Previous</span>
   </PaginationLink>
 )
@@ -159,13 +150,13 @@ const PaginationNext = ({
   ...props
 }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
-    aria-label=&quot;Go to next page&quot;
-    size=&quot;default"
+    aria-label="Go to next page"
+    size="default"
     className={cn("gap-1 pr-2.5", className)}
     {...props}
   >
     <span>Next</span>
-    <ChevronRight className="h-4 w-4&quot; />
+    <ChevronRight className="h-4 w-4" />
   </PaginationLink>
 )
 
@@ -177,14 +168,14 @@ PaginationNext.displayName = "PaginationNext"
 const PaginationEllipsis = ({
   className
   ...props
-}: React.ComponentProps<&quot;span">) => (
+}: React.ComponentProps<"span">) => (
   <span
     aria-hidden
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
     <MoreHorizontal className="h-4 w-4" />
-    <span className="sr-only&quot;>More pages</span>
+    <span className="sr-only">More pages</span>
   </span>
 )
 
@@ -283,7 +274,6 @@ const PaginationEllipsis = ({
     <span className="sr - only & quot;>More pages</span>;
   </span>);
 PaginationEllipsis.display_name = &quot;PaginationEllipsis";
-=======
 
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
@@ -295,7 +285,3 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationButton,
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

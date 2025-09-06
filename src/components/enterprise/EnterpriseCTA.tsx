@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -65,7 +62,6 @@ export function EnterpriseCTA() {
 import { Calendar } from 'lucide-react';
 
 
-=======
 
 
 import React from "react",
@@ -73,8 +69,6 @@ import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
@@ -257,7 +251,6 @@ export function EnterpriseCTA() {;
                       <span className="text-primary text-sm font-medium">4</span>;
                     </div>;
                     <p>Free consultation on implementation</p>;
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -381,7 +374,6 @@ function EnterpriseCTA() {
                       <span className="text - primary text - sm font - medium">4</span>;
                     </div>;
                     <p > Free consultation on implementation</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </li>;
                 </ul>;
               </div>;
@@ -393,10 +385,5 @@ function EnterpriseCTA() {
   );
 }
 
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

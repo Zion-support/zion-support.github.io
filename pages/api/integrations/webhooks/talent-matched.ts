@@ -52,9 +52,7 @@ function handler() {
       timestamp: Date.now (),
 
       payload: { match },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-=======
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
     s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })

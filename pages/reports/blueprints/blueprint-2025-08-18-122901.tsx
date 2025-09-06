@@ -15,7 +15,7 @@ const Blueprint20250818122901: React.FC = () => {
     id: 'blueprint-2025-08-18-122901',
 
     name: 'AI Content Factory Blueprint',
-    description: 'Automated content generation system with AI - powered optimization',
+    description: 'Automated content generation system with AI-powered optimization',
     category: 'Content Automation',
     status: 'deployed',
     complexity: 'high',
@@ -28,21 +28,30 @@ const Blueprint20250818122901: React.FC = () => {
 
     {
       name: 'Content Generator',
-      description: 'AI - powered content creation engine',
+      description: 'AI-powered content creation engine',
       status: 'active',
-      health: 'excellent';
+      health: 'excellent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'SEO Optimizer',
       description: 'Automated search engine optimization',
       status: 'active',
+<<<<<<< HEAD
       health: 'excellent';
+=======
+      health: 'excellent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Quality Controller',
       description: 'Content quality assessment and improvement',
       status: 'active',
+<<<<<<< HEAD
       health: 'excellent';
+=======
+      health: 'excellent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Distribution Engine',
@@ -59,11 +68,39 @@ const Blueprint20250818122901: React.FC = () => {
       description: 'Advanced NLP for human - like content creation',
       benefit: 'High - quality, engaging content',
       status: 'implemented';
+=======
+      health: 'excellent'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  ];
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const features = [
+    {
+      feature: 'Natural Language Generation',
+      description: 'Advanced NLP for human-like content creation',
+      benefit: 'High-quality, engaging content',
+      status: 'implemented'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'SEO Automation',
       description: 'Intelligent keyword optimization and meta tag generation',
       benefit: 'Improved search rankings',
+<<<<<<< HEAD
       status: 'implemented';
     },
     {
@@ -109,7 +146,6 @@ const Blueprint20250818122901: React.FC = () => {
 =======
 ;
   const getHealthColor = (health: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (health) {
 
       case 'excellent': return 'bg-green-500/20 text-green-400';

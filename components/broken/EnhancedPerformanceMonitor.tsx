@@ -68,6 +68,21 @@ if (!performanceData) {;
 if ( {) {
   $2
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+//FCP recommendations if (metrics.fcp > 2000) {
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+//FCP recommendations if (metrics.fcp > 2000) {
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   recs.push ({
 }return recs;
 }, []);

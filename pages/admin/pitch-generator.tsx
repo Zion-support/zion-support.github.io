@@ -6,7 +6,6 @@
   return result;
 
 };
-
 export default function PitchGenerator() {;
   const [builder, setBuilder] = useState<BuilderState>({;
     mission: '',;
@@ -30,6 +29,7 @@ export default function PitchGenerator() {;
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
+<<<<<<< HEAD
   const [history, setHistory] = useState<;
     { id: string; createdAt: string, version: string }[];
   >([]);
@@ -96,12 +96,10 @@ export default function PitchGenerator() {
     e && e.preventDefault();
     const files = Array && Array.from(e && e.dataTransfer.files || []);
     setBuilder(b => ({ ...b, assets: [...b && b.assets, ...files] }));  }, []);
-
   const prevent = (e: React && React.DragEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
   };
-
   const operatorPrompt = useMemo(;
     () =>;
       `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,;
@@ -110,20 +108,15 @@ export default function PitchGenerator() {
 
   );
   const autoFetchMetrics = useCallback(async () => {;
-=======
     const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
   }, []);
-
   const prevent = (e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation()
   };
-
   const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
-
   const autoFetchMetrics = useCallback(async () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/metrics');
@@ -151,7 +144,6 @@ if (return result) {
     try {
       const res = await fetch ('/api / admin / pitch / metrics');
       const data = await res.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return data;
 
     } catch (e) {;
@@ -162,7 +154,6 @@ if (return result) {
   }, []);
 
   const buildDeck = useCallback(async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setLoading(true);
     try {;
       const metrics = await autoFetchMetrics();
@@ -224,12 +215,84 @@ if (return) {
         set_slides (arr =>;
           arr.map ((s, i) =>;
             index === idx;
+=======
+  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),;
+  const activeSlide = slides[activeIndex];
+  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {;
+    e.preventDefault();
+    const files = Array.from(e.dataTransfer.files || []);
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }));
+  }, []),;
+  const prevent = (e: React.DragEvent) => {;
+    e.preventDefault();
+    e.stopPropagation();
+  };
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),;
+  const autoFetchMetrics = useCallback(async () => {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/metrics');
+      const data = await res.json();
+      return data;
+<<<<<<< HEAD
+    } catch (e) {
+      return {}
+    } finally {
+      setLoading(false);    }
+  }, []);
+  const buildDeck = useCallback(async () => {
+    setLoading(true);
+    try {
+      const metrics = await autoFetchMetrics();
+      const res = await fetch('/api/admin/pitch/generate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          operatorPrompt
+          inputs: builder
+          metrics
+        })
+      });
+      const json = await res.json();
+      const newSlides: Slide[] = json.slides |[];      setSlides(newSlides);
+      setActiveIndex(0);
+      const v = json.version |`v${new Date().toISOString()}`;
+      setVersionTag(v);
+      setHistory(h => [
+        { id: uid(), createdAt: new Date().toISOString(), version: v }
+        ...h
+      ]);
+    } catch (e) {
+      // noop
+    } finally {
+      setLoading(false);
+    }
+  }, [autoFetchMetrics, builder, operatorPrompt]);
+  const rephraseSlide = useCallback(
+    async (idx: number) => {
+      if (!slides[idx]) return;
+      setLoading(true)
+      try {
+        const res = await fetch('/api/admin/pitch/rewrite', {
+          method: 'POST'
+          headers: { 'Content-Type': 'application/json' }
+          body: JSON.stringify({ slide: slides[idx] })
+        });
+        const json = await res.json();
+        setSlides(arr =>
+          arr.map((s, i) =>
+            i === idx
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               ? {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
-=======
-
+<<<<<<< HEAD
   const rephraseSlide = useCallback(;
     async (idx: number) => {;
       if (!slides[idx]) return;
@@ -248,7 +311,6 @@ if (return) {
                   ...s,;
                   title: json && json.title || s && s.title,;
                   content: json && json.content || s && s.content,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }
 
     },;
@@ -362,7 +424,6 @@ if (return) {
 
 
   }, [slides && slides.length]);
-
   const exportPdf = useCallback(async () => {;
     setLoading(true);
     try {;
@@ -381,7 +442,6 @@ if (return) {
     } finally {;
       setLoading(false);    }
   }, [slides, versionTag]);
-
   const exportGoogleSlides = useCallback(async () => {;
     setLoading(true);
     try {;
@@ -393,7 +453,6 @@ if (return) {
           format: 'gslides',;
           version: versionTag,;
         }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const json = await res && res.json();
       if (json && json.url) {;
@@ -425,7 +484,15 @@ if (return) {
         <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
             <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+<<<<<<< HEAD
           ))}
+=======
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
@@ -450,6 +517,7 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {data.map((d) => (
                 <div key={d.label} className="border p-1 rounded">
                   <div className="font-medium">{d.label}</div>
@@ -464,7 +532,6 @@ if (return) {
               onClick={exportGoogleSlides}
               disabled={loading || slides && slides.length === 0}
               className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'>;
-=======
               : s));
       } catch (e) {
       } finally {
@@ -636,7 +703,37 @@ if (return null, ) {
       </div>
     )
   };
+=======
+<<<<<<< HEAD
+        </div>
+      </div>
+    );
+  }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </div>
+      </div>
+    )
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
 =======
 
@@ -686,7 +783,20 @@ if (return null, ) {
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
             </div>
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='font-medium mb-2'>Auto Data</div>
+              <button
+                onClick={autoFetchMetrics}
+                className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'
+              >
+                Refresh
+              </button>
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
@@ -719,7 +829,6 @@ if (return null, ) {
                 </div>;
               </div>;
             </div>;
-
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
               <div className='font-medium mb-2'>Auto Data</div>;
               <button
@@ -736,7 +845,6 @@ if (return null, ) {
                 <li>Notable clients or case studies</li>;
               </ul>;
             </div>;
-
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
               <div className='font-medium mb-2'>History</div>;
               <div className='text-xs text-gray-500 dark:text-gray-400'>;
@@ -773,7 +881,6 @@ if (return null, ) {
               </ul>;
             </div>;
           </div>;
-
           <div className='lg:col-span-2 space-y-4'>;
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
               <div className='flex items-center justify-between'>;
@@ -796,7 +903,6 @@ if (return null, ) {
                   onClick={addSlide}
 
                   className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'>;
-=======
         <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6'>;
           <div className='lg:col - span - 1 space - y-4'>;
             <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
@@ -944,7 +1050,6 @@ if (return null, ) {
                 </div>;
 
                 />;
-
                 <div className='mt-4 grid grid-cols-3 gap-2 text-sm'>;
                   <button
                     onClick={() =>;
@@ -1011,7 +1116,7 @@ if (return null, ) {
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="flex items-center justify-between">
                 <div className="font-medium">Slides</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
+<div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
               </div>
               <div className="mt-3 flex gap-3 overflow-x-auto py-2">
                 {slides.map((s, i) => (
@@ -1020,7 +1125,6 @@ if (return null, ) {
                 <button onClick={addSlide} className="w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500">+ Add Slide</button>
               </div>
             </div>
-
             {activeSlide && (
               <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
                 <div className="flex items-center justify-between">
@@ -1030,13 +1134,11 @@ if (return null, ) {
                   </div>
                 </div>
                 <textarea value={activeSlide.content} onChange={(e) => updateActiveSlide({ content: e.target.value })} className="w-full mt-3 border rounded px-2 py-1 bg-transparent" rows={10} />
-
                 <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
                   <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>
                   <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
                   <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
                 </div>
-
                 {renderChartPreview(activeSlide)}
               </div>
 
@@ -1123,12 +1225,84 @@ if (return null, ) {
     </EnhancedLayout>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 <textarea;
                   value={active_slide.content}
                   on_change={e => updateActiveSlide ({ content: e.target.value })}
                   className='w - full mt - 3 border rounded px - 2 py - 1 bg - transparent';
+=======
+<<<<<<< HEAD
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='font-medium mb-2'>History</div>
+              <div className='text-xs text-gray-500 dark:text-gray-400'>
+<<<<<<< HEAD
+                Version: {versionTag |'—'}
+=======
+                Version: {versionTag || '—'}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </div>
+              <ul className='mt-2 space-y-1 text-sm'>
+                {history.map(h => (
+                  <li
+                    key={h.id}
+                    className='flex justify-between border rounded px-2 py-1'
+                  >
+                    <span>{h.version}</span>
+                    <span className='text-gray-500 dark:text-gray-400'>
+                      {new Date(h.createdAt).toLocaleString()}
+                    </span>                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className='lg:col-span-2 space-y-4'>
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='flex items-center justify-between'>
+                <div className='font-medium'>Slides</div>
+                <div className='text-sm text-gray-500 dark:text-gray-400'>
+                  {slides.length} total
+                </div>
+              </div>
+              <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
+                {slides.map((s, i) => (
+                  <SlidePreview
+                    key={s.id}
+                    slide={s}
+                    isActive={i === activeIndex}
+                    onClick={() => setActiveIndex(i)}
+                  />
+                ))}
+                <button
+                  onClick={addSlide}
+                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'
+                >
+                  + Add Slide
+                </button>
+              </div>
+            </div>
+            {/* Active Slide Editor */}
+            {activeSlide && (
+              <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+                <div className='flex items-center justify-between'>
+                  <input
+                    value={activeSlide.title}
+                    onChange={e => updateActiveSlide({ title: e.target.value })}
+                    className='font-semibold text-lg bg-transparent border-b focus:outline-none'
+                  />
+                  <div className='flex gap-2'>
+                    <button
+                      onClick={() => rephraseSlide(activeIndex)}
+                      disabled={loading}
+                      className='px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50'
+                    >
+                      Rephrase
+                    </button>
+                  </div>
+                </div>
+                <textarea
+                  value={activeSlide.content}
+                  onChange={e => updateActiveSlide({ content: e.target.value })}
+                  className='w-full mt-3 border rounded px-2 py-1 bg-transparent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   rows={10}
                 />;
                 <div className='mt - 4 grid grid - cols - 3 gap - 2 text - sm'>;

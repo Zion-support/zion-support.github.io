@@ -1,5 +1,3 @@
-
-
 }
   {
     title: "Comprehensive Services"
@@ -27,7 +25,6 @@ const getDefaultCategories = (t: any) => [
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
     id: "talents"
     name: t('categories.talents')
@@ -251,7 +248,6 @@ export function CategoriesSection({
   
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -266,15 +262,11 @@ export function CategoriesSection({
 
 
         ...cat,
-=======
-=======
         ...cat,
 
 
         title: cat.name,
         icon: getIcon(cat.iconName)})),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
@@ -445,11 +437,8 @@ export function CategoriesSection(): any ({;
           </p>;
           <p className="text-zion-slate-light text-md">;
             {t('home && home.no_categories_support')}
-=======
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </p>;
         </div>;
       </section>;
@@ -458,7 +447,6 @@ export function CategoriesSection(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
@@ -480,7 +468,6 @@ export function CategoriesSection(): any ({;
               key={category.id}
               href={category.link || '#'}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
@@ -499,7 +486,6 @@ export function CategoriesSection(): any ({;
         </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
@@ -520,7 +506,6 @@ export function CategoriesSection(): any ({;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mt-12 flex justify-center">
           <Link
             href="/categories/all"
@@ -561,7 +546,6 @@ icon: getIcon (cat.iconName)
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
-=======
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
           {displayCategories && displayCategories.map((category,) => (;
@@ -608,10 +592,7 @@ icon: getIcon (cat.iconName)
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export /**
  * CategoriesSection - Function description
  */
@@ -751,12 +732,5 @@ if ( {) {
   t ('home.view all categories');
 }</Link> </div> </div> </section>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

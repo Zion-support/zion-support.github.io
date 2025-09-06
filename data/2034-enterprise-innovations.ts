@@ -57,7 +57,6 @@
     sdk: true,
 
       'AI-powered security',
-=======
     integrations: [;
       'GitHub',
       'GitLab',
@@ -80,7 +79,6 @@
     website: 'https://ziontechgroup.com / ai - autonomous - devops - platform',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -154,7 +152,6 @@
     website: 'https://ziontechgroup.com / quantum - edge - computing - orchestrator',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -229,7 +226,6 @@
     website: 'https://ziontechgroup.com / ai - powered - it - operations - center',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -311,7 +307,6 @@
     website: 'https://ziontechgroup.com / quantum - blockchain - infrastructure',
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -382,6 +377,7 @@
       'Energy efficiency',
       'Security compliance',
     ],
+<<<<<<< HEAD
     security: ['AI - powered security', 'Physical security', 'Access controls'],
     scalability: 'Unlimited data center management',
     uptime: '99 && 99.999% data center platform availability',
@@ -407,13 +403,11 @@
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     marketSize: '$38 && 38.9B by 2035';
-=======
     website: 'https://ziontechgroup.com / ai - autonomous - data - center',
   },
 ];      'Advanced AI algorithmsIoT sensors_machine learning systems_automation frameworks_predictive analytics_real - time monitoring';
     ];
     market_size: '$38.9B by 2035';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     competitors: ['VMwareMicrosoftDell'];
     competitive_advantage: 'Only fully autonomous AI - powered data center platform';
     implementation_time: '6 - 12 months';
@@ -440,6 +434,34 @@
 ];
 
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  description: string,;
+  category: string,;
+  price: string,;
+  features: string[],;
+  benefits: string[],;
+  useCases: string[],;
+  technology: string[],;
+  marketSize: string,;
+  competitors: string[],;
+  competitiveAdvantage: string,;
+  implementationTime: string,;
+  roi: string,;
+  support: string,;
+  documentation: string,;
+  api: boolean,;
+  sdk: boolean,;
+  integrations: string[],;
+  compliance: string[],;
+  security: string[],;
+  scalability: string,;
+  uptime: string,;
+  contact: string,;
+  website: string;
+}
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

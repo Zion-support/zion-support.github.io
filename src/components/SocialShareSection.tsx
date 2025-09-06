@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -14,7 +12,6 @@
 }'";
 };
 
-=======
           <div className="flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (
               <Button
@@ -105,7 +102,6 @@ export function SocialShareSection() {;
                 <span aria-hidden="true">{link.name}</span>
               </Button>
             ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </div>;
@@ -122,17 +118,14 @@ export function SocialShareSection() {;
 };
 }</div> </div> </div> </section>) ;
 }'";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 }</div> </div> </div> </section>)
 }'"
 }
-=======
 
 
 
-=======
       name: 'Twitter',
       icon: <Twitter className='h - 5 w - 5' aria - hidden='true' />,
       color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',
@@ -195,11 +188,4 @@ export function SocialShareSection() {;
 }</div> </div> </div> </section>);
 }'";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

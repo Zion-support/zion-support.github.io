@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
@@ -21,7 +19,6 @@ interface WorkspaceHeaderProps {
 
 
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
@@ -47,15 +44,12 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
-=======
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
 import { Bell, Users, Settings } from 'lucide-react'
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { type Company } from './CompanyDashboard';
@@ -87,7 +81,6 @@ function WorkspaceHeader() {
         </div>;
             <h1 className="text - 3xl font - bold tracking - tight">{company.name} Workspace</h1>;
             <p className="text - muted - foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface WorkspaceHeaderProps {
   company: Company;
 }
@@ -121,7 +114,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
             <img
 
-=======
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
               className="max-h-10 max-w-10"
@@ -130,7 +122,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           </div>
           <div>
 
-=======
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
               className="max-h-10 max-w-10"
@@ -140,7 +131,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           <div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
               {company.plan} Plan · {company.teamSize} team members
@@ -151,7 +141,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 
 
 
-=======
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
@@ -220,7 +209,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 
 
 }
-=======
               src={company && company.logoUrl || "/placeholder && placeholder.svg"}
               alt={company && company.name}
               className="max-h-10 max-w-10"
@@ -300,7 +288,6 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   );
 }
 
-=======
 export /**
  * WorkspaceHeader - Function description
  */
@@ -381,10 +368,4 @@ function WorkspaceHeader() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

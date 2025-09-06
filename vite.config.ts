@@ -60,14 +60,14 @@ import {defineConfig, splitVendorChunkPlugin} from 'vite';
 import react from '@vitejs/plugin-react';
 
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
-
+      jsxRuntime: 'automatic',
     }),
-    splitVendorChunkPlugin(),
   ],
   resolve: {
     alias: {
@@ -79,9 +79,9 @@ export default defineConfig({
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   build: {
-    target: 'esnext'
-    minify: 'terser'
-    sourcemap: false
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -338,7 +338,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
         passes: 2,
         unsafe: true,
         unsafe_comps: true,
@@ -350,7 +350,9 @@ export default defineConfig({
       mangle: {
         safari10: true,
         properties: {
-
+          regex: /^_/,
+        },
+      },
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
@@ -359,17 +361,43 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
-      'reactreact-domreact-router-domframer-motion',
-      'lucide-react@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar',
-      '@radix-ui/react-checkbox@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-label@radix-ui/react-popover@radix-ui/react-progress@radix-ui/react-radio-group',
-      '@radix-ui/react-scroll-area@radix-ui/react-select@radix-ui/react-separator@radix-ui/react-slider',
-      '@radix-ui/react-slot@radix-ui/react-switch@radix-ui/react-tabs@radix-ui/react-toast',
-      '@radix-ui/react-tooltip'
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-alert-dialog',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox',
+      '@radix-ui/react-collapsible',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-hover-card',
+      '@radix-ui/react-label',
+      '@radix-ui/react-menubar',
+      '@radix-ui/react-navigation-menu',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-progress',
+      '@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area',
+      '@radix-ui/react-select',
+      '@radix-ui/react-separator',
+      '@radix-ui/react-slider',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-switch',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-toast',
+      '@radix-ui/react-toggle',
+      '@radix-ui/react-tooltip',
     ],
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
-
+      target: 'esnext',
+    },
+  },
+  css: {
+    devSourcemap: false,
   },
   esbuild: {
     jsx: 'automatic',
@@ -383,7 +411,8 @@ export default defineConfig({
       overlay: false,
     },
     fs: {
-
+      allow: ['..'],
+    },
   },
   preview: {
     port: 4173,
@@ -393,7 +422,9 @@ export default defineConfig({
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+  },
+  envPrefix: ['VITE_', 'ZION_'],
   experimental: {
     renderBuiltUrl(filename, { hostType }) {
       if (hostType === 'js') {

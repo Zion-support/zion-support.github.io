@@ -1,6 +1,3 @@
-
-
-
 export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,12 +32,10 @@ export function EnhancedNewsletterForm() {;
     }
   }
 
-=======
       const data = await res.json().catch(() => ({})),
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
@@ -51,8 +46,6 @@ export function EnhancedNewsletterForm() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>;
@@ -63,7 +56,6 @@ export function EnhancedNewsletterForm() {;
         <div>;
           <h3 className='text-lg font-bold text-white'>Stay Updated</h3>;
           <p className='text-zion-slate-light text-sm'>;
-=======
     <div className='w - full max - w-lg mx - auto bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6'>;
       <div className='flex items - center mb - 4'>;
         <div className='p - 2 bg - zion - purple / 20 rounded - full text - zion - cyan mr - 3'>;
@@ -97,18 +89,15 @@ export function EnhancedNewsletterForm() {;
             </div>;
           ))}
 
-=======
             We&apos;ll keep you updated with the latest from Zion.
           </p>
 
-=======
       
 
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -118,7 +107,6 @@ export function EnhancedNewsletterForm() {;
           <Input
 
 
-=======
             type="email"
             id="enhanced-newsletter-email"
             name="email"
@@ -199,7 +187,6 @@ export function EnhancedNewsletterForm() {;
               {String.fromCharCode(65 + i)}
             </div>
           ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>;
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
@@ -207,10 +194,7 @@ export function EnhancedNewsletterForm() {;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       {is_submitted ? (
         <div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;
           <p className='text - white font - medium'>Thank you for subscribing!</p>;
@@ -257,11 +241,6 @@ export function EnhancedNewsletterForm() {;
         <span > Join 10, 000+ tech professionals who already subscribe</span>;
       </div>;
     </div>);
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

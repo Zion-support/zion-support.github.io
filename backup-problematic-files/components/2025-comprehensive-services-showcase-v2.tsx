@@ -3,10 +3,18 @@
 
 import {Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
+=======
+import React from 'react',;
+import SEO from '../components/SEO',;
+import { motion } from 'framer-motion',;
+import {;
+  Brain, Atom, Shield, Target, Rocket,;
+  ArrowRight, Check, Star, TrendingUp, Users,;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
-} from 'lucide-react';
+} from 'lucide-react',;
 // Import our new 2025 V2 innovative services;
-
+<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
@@ -21,7 +29,6 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
 
     ...emergingTechBreakthroughs2025V2
   ];
-
   const serviceCategories = [
     {
       id: 'micro-saas',
@@ -64,13 +71,11 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
       description: 'Breakthrough technologies of the future'
     }
   ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
@@ -265,7 +270,6 @@ function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section id="contact" className="py-16 px-4 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -274,11 +278,9 @@ function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="text - 3xl md:text - 4xl font - bold text - white mb - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 
@@ -290,22 +292,18 @@ function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="grid md:grid - cols - 3 gap - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 
@@ -314,15 +312,26 @@ function ComprehensiveServicesShowcase2025V2() {
                           Starting at {(service as any).pricing?.starter || service.price}
 
                         </div>;
+<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
                         <div className="text - sm text - gray - 400">;
+=======
+                        <div className="flex items-center text-sm text-green-400">;
+                          <Star className="w-4 h-4 mr-2" />;
+                          {service.growthRate}
+                        </div>;
+                      </div>;
+                      <div className="mb-6">;
+                        <div className="text-2xl font-bold text-white mb-2">;
+                          Starting at {(service as any).pricing?.starter || service.price}
+                        </div>;
+                        <div className="text-sm text-gray-400">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/components/2025-comprehensive-services-showcase-v2.tsx
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;
-=======
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
-          
           <motion.div 
             className="space-y-20"
             variants={staggerContainer}
@@ -343,7 +352,6 @@ function ComprehensiveServicesShowcase2025V2() {
                     {category.description}
                   </p>
                 </div>
-                
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
                     <motion.div
@@ -357,7 +365,6 @@ function ComprehensiveServicesShowcase2025V2() {
                       <p className="text-gray-300 mb-4">
                         {service.description}
                       </p>
-                      
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
@@ -368,7 +375,6 @@ function ComprehensiveServicesShowcase2025V2() {
                           {service.growthRate}
                         </div>
                       </div>
-                      
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {(service as any).pricing?.starter || service.price}
@@ -377,7 +383,6 @@ function ComprehensiveServicesShowcase2025V2() {
                           {(service as any).pricing?.professional ? 
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :
                             `${service.price} ${service.period}`
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           }
                         </div>;
                       </div>;
@@ -397,9 +402,7 @@ function ComprehensiveServicesShowcase2025V2() {
                     </motion.div>
 
                   ))}
-=======
                     </motion.div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>;
               </motion.div>))}
           </motion.div>;
@@ -410,42 +413,35 @@ function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
       <section className="py - 20 px - 4 bg - black / 20">;
         <div className="max - w-7xl mx - auto">;
           <motion.h2;
             className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 
           >
             Market Impact & Growth
           </motion.h2>
-          
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="text - 4xl md:text - 5xl font - bold text - white mb - 6";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 
@@ -457,22 +453,18 @@ function ComprehensiveServicesShowcase2025V2() {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="text - xl text - gray - 300 mb - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
             className="flex flex - col sm:flex - row gap - 4 justify - center";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
 

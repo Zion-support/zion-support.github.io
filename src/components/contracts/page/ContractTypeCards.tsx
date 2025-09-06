@@ -1,11 +1,4 @@
-
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <CardTitle className="flex items-center gap-2">
+<CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
             Standard Contracts
           </CardTitle>
@@ -26,7 +19,6 @@
         <CardFooter>
           <Button variant="outline" onClick={onStandardClick}>
 
-=======
 
           <Button variant="outline" onClick={onStandardClick}>
 
@@ -39,7 +31,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -88,15 +79,12 @@ import {;
   CardHeader,;
   CardTitle,;
 } from '@/components/ui/card';
-=======
 
 
-=======
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
@@ -127,7 +115,6 @@ export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: Con
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
-=======
 import { Button } from '@/components / ui / button';
 import {
   Card,
@@ -167,7 +154,6 @@ function ContractTypeCards() {
         <CardHeader>;
           <CardTitle className="flex items - center gap - 2">;
             <FileText className="h - 5 w - 5" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -257,13 +243,7 @@ function ContractTypeCards() {
   );
 }
 
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

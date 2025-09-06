@@ -1,8 +1,5 @@
-
-
-  onRetry
+onRetry
 },) => {
-=======
 } import React from 'react';
 import { ScrollArea } from '@/components / ui / scroll - area';
 import Skeleton from '@/components / ui / skeleton';
@@ -27,7 +24,6 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   on_dismiss,
   on_retry;
 }, ) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
@@ -60,35 +56,35 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
             size="sm" 
 
             className="mt-2"
-            onClick = {onRetry,}>;
-            Try Again;
-          </Button>;
-        </div>;
-      ) : loading ? (;
-        <div className="p-4 space-y-4">;
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
-        </div>;
-      ) : notifications && notifications.length === 0 ? (;
-        <div className="p-8">;
+            onClick={onRetry}
+          >
+            Try Again
+          </Button>
+        </div>
+      ) : loading ? (
+        <div className="p-4 space-y-4">
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+        </div>
+      ) : notifications.length === 0 ? (
+        <div className="p-8">
           <EmptyState
-            icon = {<Bell className="h-8 w-8" />,}
-            title="No Notifications";
-            description="You're all caught up.";
+            icon={<Bell className="h-8 w-8" />}
+            title="No Notifications"
+            description="You're all caught up."
             action={{ text: 'Refresh', onClick: onRetry }}
-            className="border-none bg-transparent";
-          />;
-        </div>;
-      ) : (;
-        notifications && notifications.map((notification,) => (;
+            className="border-none bg-transparent"
+          />
+        </div>
+      ) : (
+        notifications.map((notification) => (
           <NotificationItem
 
     </ScrollArea>;
   );
 };
 
-=======
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
           <Button;
@@ -124,15 +120,11 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
     </ScrollArea>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   );
 };
 ";
 
-=======
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
@@ -143,7 +135,3 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
     </ScrollArea>;
   );
 };
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

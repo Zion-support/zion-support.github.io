@@ -1,7 +1,4 @@
-
-
-
-  job: Job
+job: Job
   onClose: () => void
   onApplySuccess?: (jobId: string,) => Promise<void>
 
@@ -57,7 +54,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           title: selectedResume.title
           type: selectedResume.type
         } : null
-=======
       let full_message = message;
 import React, { useState } from 'react';
 import { Button  } from '@/components / ui / button';
@@ -144,7 +140,6 @@ if ( {) {
           title: selected_resume.title,
           type: selected_resume.type;
         } : null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       // Create conversation with the job client;
       await create_conversation (
@@ -164,7 +159,6 @@ if ( {) {
 
       
 
-=======
       }),
       return
     }
@@ -287,8 +281,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       onClose()
     } catch (error) {
       logErrorToProduction('Failed to send application:', { data: error })
@@ -415,8 +407,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       });
     } finally {;
       setIsSubmitting(false),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       toast ({
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
@@ -430,11 +420,9 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       });
     } finally {
       setIsSubmitting (false),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-  }
+  },
 
-=======
     }
 
   },
@@ -442,11 +430,8 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
 
           <MessageTab 
 
@@ -458,7 +443,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
         </TabsContent>
 
 
-=======
         
         <TabsContent value="message">
           <MessageTab 
@@ -490,9 +474,7 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
             Resume;
           </TabsTrigger>;
         </TabsList>;
-
         <TabsContent value="message">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <MessageTab
             message = {message,}
             setMessage = {setMessage,}
@@ -503,9 +485,7 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
-=======
           />;
         </TabsContent>;
 
@@ -518,14 +498,14 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       </Tabs>;
 
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           type="button"
           variant="outline"
-          onClick = {onClose,}
-          className="border-zion-purple/30 text-white">;
-          Cancel;
-        </Button>;
+          onClick={onClose}
+          className="border-zion-purple/30 text-white"
+        >
+          Cancel
+        </Button>
         <Button
 
 
@@ -600,17 +580,13 @@ return (<> <Tabs value= {
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application')
 }</Button> </div> </>)
 }'"}
-=======
         </Button>;
       </div>;
     </>;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <>;
       <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
         <TabsList className="w - full mb - 4 bg - zion - blue - dark / 30">;
@@ -727,12 +703,5 @@ return (<> <Tabs value= {
   is_submitting ? (<> <Loader2 className=" h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ('Submit Application');
 }</Button> </div> </>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

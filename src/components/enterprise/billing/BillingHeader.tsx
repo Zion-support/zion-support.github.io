@@ -1,6 +1,3 @@
-
-
-
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -19,7 +16,6 @@ export function BillingHeader() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
               <BarChart3 className="h-4 w-4" />
@@ -60,7 +56,6 @@ export function BillingHeader() {;
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-=======
 
   )
 import React from "react",;
@@ -85,7 +80,6 @@ export function BillingHeader() {;
           <Button variant="outline" size="sm" className="gap-1" asChild>;
             <Link href="/dashboard/client/analytics">;
               <BarChart3 className="h-4 w-4" />;
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Download, Mail, BarChart3 } from 'lucide-react';
@@ -138,7 +132,6 @@ function BillingHeader() {
           <Button variant="outline" size="sm" className="gap - 1" as_child>;
             <Link href="/dashboard / client / analytics">;
               <BarChart3 className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Analytics;
             </Link>;
           </Button>;
@@ -146,7 +139,6 @@ function BillingHeader() {
       </div>;
 
 
-=======
       <p className='text - muted - foreground'>;
         Manage your subscription, view invoice history, and update payment;
         methods.;
@@ -156,9 +148,4 @@ function BillingHeader() {
       </p>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

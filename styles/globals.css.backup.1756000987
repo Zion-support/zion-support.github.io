@@ -54,11 +54,14 @@ a {
 <<<<<<< HEAD
 >>>>>>> main
 /* Enhanced scrollbar */
-=======
-/* Import Inter font for modern typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
+<<<<<<< HEAD
+::-webkit-scrollbar {
+/* Enhanced scrollbar */::-webkit-scrollbar {
+
+::-webkit-scrollbar {
+
+=======
 /* CSS Variables for modern theming */
 :root {
   --background: #000000;
@@ -290,12 +293,9 @@ a {
 <<<<<<< HEAD
 >>>>>>> main
 .quantum-field-2029 {
-=======
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-}
 
+<<<<<<< HEAD
+=======
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
   border-radius: 6px;
@@ -1050,6 +1050,7 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: relative;
   overflow: hidden;
 }
@@ -1060,18 +1061,15 @@ body::after {
 }
 
 .quantum-field-2029::before {  content: '';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
 .quantum-field-2029 {  position: relative;
   overflow: hidden;
 }
 
 .quantum-field-2029::before {  content: '';
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1319,19 +1317,14 @@ body::after {
 <<<<<<< HEAD
 >>>>>>> main
 /* Hover effects */
-=======
-    rgba(59, 130, 246, 0.1),
-    transparent,
-    rgba(147, 51, 234, 0.1),
-    transparent,
-    rgba(16, 185, 129, 0.1),
-    transparent,
-    rgba(239, 68, 68, 0.1),
-    transparent
-  );
-  animation: quantumRotate 10s linear infinite;
-}
 
+<<<<<<< HEAD
+.hover-lift {
+/* Hover effects */.hover-lift {
+
+.hover-lift {
+
+=======
 @keyframes quantumRotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -1628,6 +1621,9 @@ body::after {
     background: none !important;
   }
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 <<<<<<< HEAD
 =======

@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -57,7 +53,6 @@ export default function ProjectMilestonesPage() {;
 
   // Demo cookie-based auth to hit API successfully;
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!role) return;
 
 
@@ -86,6 +81,7 @@ import { Milestone } from '../../../utils/types/milestones';
     (async () => {;
       setLoading(true);
       setError(null);
+<<<<<<< HEAD
       try {;
         const data = await fetchMilestones(projectId as string);
 
@@ -99,7 +95,6 @@ import { Milestone } from '../../../utils/types/milestones';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (!cancelled) setLoading(false);
-=======
 import {use_router} from 'next / router';
 import Head from 'next / head';
 import MilestoneForm from '../../../components / monetization / MilestoneForm';
@@ -176,7 +171,6 @@ if (return) {
         if (set_loading (false)) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     })();
     return () => {;
@@ -205,10 +199,40 @@ if (return) {
       } finally {
         if (!cancelled) setLoading(false)
       }
-    })();
+})();
     return () => {
       cancelled = true
     }
+=======
+      try {
+        const data = await fetchMilestones(projectId as string);
+<<<<<<< HEAD
+        if (!cancelled) setMilestones(data.milestones |[]);
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message |'Failed to load milestones');
+      } finally {
+=======
+        if (!cancelled) setMilestones(data.milestones || []);
+      } catch (error) {
+        if (!cancelled) setError(e?.message || 'Failed to load milestones');
+      } finally {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        if (!cancelled) setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    })();
+    return () => {;
+      cancelled = true;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+=======
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }, [projectId]);
 
 =======
@@ -227,6 +251,7 @@ if (return) {
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD
     setMilestones((prev) => [res.milestone, ...prev])
 
   },
@@ -242,7 +267,6 @@ if (return) {
     const map: Record<string, string> = {
 
     setMilestones(prev => [res && res.milestone, ...prev]);  };
-
   const handleAction = async (;
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',;
     milestoneId: string;
@@ -254,10 +278,19 @@ if (return) {
       approved: 'Approved',;
       paid: 'Paid',;
     };
+=======
+<<<<<<< HEAD
+      in_progress: 'In Progress'
+      submitted: 'Submitted'
+      approved: 'Approved'
+      paid: 'Paid'
+    }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const status = map[action];
     const res = await updateMilestoneStatus(projectId as string, milestoneId, {;
       status,;
     });
+<<<<<<< HEAD
     setMilestones(prev =>;
       prev && prev.map(m => (m && m.id === milestoneId ? res && res.milestone : m));
     );  };
@@ -272,12 +305,6 @@ if (return) {
           content='Track project deliverables and milestone payments'
 
           </p>
-        </div>
-        {role !== 'talent' && (
-          <div className='mb-8 p-4 rounded bg-gray-50 border'>
-            <div className='flex items-center justify-between mb-3'>
-              <h2 className='text-lg font-semibold'>Add Milestone</h2>
-              <span className='text-xs text-gray-500'>Role: {role}</span>            </div>
 =======
 =======
 
@@ -309,20 +336,17 @@ if (return) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
-
         {role !== 'talent' && (
           <div className="mb-8 p-4 rounded bg-gray-50 border">
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-lg font-semibold">Add Milestone</h2>
               <span className="text-xs text-gray-500">Role: {role}</span>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <MilestoneForm onSubmit={handleCreate} />
           </div>
 
         />;
       </Head>;
-
       <div className='max-w-5xl mx-auto px-4 py-8'>;
         <div className='mb-6'>;
           <h1 className='text-2xl font-bold'>Milestones</h1>;
@@ -331,7 +355,6 @@ if (return) {
 
           </p>;
         </div>;
-
         {role !== 'talent' && (;
           <div className='mb-8 p-4 rounded bg-gray-50 border'>;
             <div className='flex items-center justify-between mb-3'>;
@@ -438,7 +461,6 @@ if (return, ) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
         {error && <div className="text-red-600">{error}</div>}
-
         {!loading && !error && (
           <div className="space-y-4">
             {milestones.length === 0 && (
@@ -449,16 +471,98 @@ if (return, ) {
             ))}
           </div>
         )}
+=======
+<<<<<<< HEAD
+        )}
+        {loading && <div>Loading milestones...</div>}
+        {error && <div className='text-red-600'>{error}</div>}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+        {loading && <div>Loading milestones...</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {error && <div className="text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {!loading && !error && (
+          <div className="space-y-4">
+            {milestones.length === 0 && (
+<<<<<<< HEAD
+              <div className='text-gray-600'>
+                No milestones yet.{' '}
+                {role !== 'talent' ? 'Create the first one.' : ''}
+              </div>
+            )}
+            {milestones.map(m => (
+              <MilestoneCard
+                key={m.id}
+                milestone={m}
+                projectId={String(projectId)}
+                role={role}
+                onAction={handleAction}
+              />            ))}
+          </div>
+        )}
+        <div className='mt-12 text-xs text-gray-500'>
+          Integration hooks ready: on Approved &rarr; trigger payout intent; on
+          Paid &rarr; capture via Stripe/PayPal/Escrow.
+        </div>
+      </div>
+    </div>
+);
+<<<<<<< HEAD
+=======
+
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            {milestones.map((m) => (;
+              <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </div>)}
         <div className='mt - 12 text - xs text - gray - 500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;

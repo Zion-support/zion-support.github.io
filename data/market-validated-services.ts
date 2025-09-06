@@ -4,7 +4,7 @@
   name: string;
   tagline: string;
   price: string;
-  period: string;
+period: string;
   description: string;
   features: string[];
   category: string;
@@ -61,11 +61,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '30 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Eval datasets/versioning',
-=======
     id: 'ai - evals - observability',
     name: 'AI Evals & Observability',
     tagline:;
@@ -92,11 +90,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '1 hour',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Hybrid vector+BM25 + reranker',
-=======
     id: 'agentic - rag - platform',
     name: 'Agentic RAG Platform',
     tagline: 'Production RAG with hybrid search, chunking, tools, and evals',
@@ -124,7 +120,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   },
 
       'Auth/Z misconfig checks',
-=======
   // Security and APIs;
   {
     id: 'api - security - scanner',
@@ -152,11 +147,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '20 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'OTel traces/metrics/logs',
-=======
     id: 'api - observability',
     name: 'API Observability & SLA Guard',
     tagline: 'OTel tracing, SLOs, and error budgets for services',
@@ -211,7 +204,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '1 hour',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -240,7 +232,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '45 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -298,7 +289,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '25 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -327,7 +317,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '10 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -359,7 +348,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
       'HTML/Markdown to PDF',
       'Headers/footers',
-=======
   // Dev & Productivity;
   {
     id: 'pdf - render - api',
@@ -387,7 +375,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '10 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -416,7 +403,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '20 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -445,7 +431,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '30 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -503,7 +488,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '1 day',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -561,7 +545,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '10 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -640,7 +623,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     link: 'https://ziontechgroup.com / vector - search - starter',
 
     variant: 'quantum',
-    rating: 4 && 4.6,
+    rating: 4.6,
     customers: 410,
     trial_days: 14,
     setup_time: '2 hours',
@@ -670,12 +653,14 @@ export interface MarketValidatedService {;
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
   mobile: "+1 302 464 0950",
 	email: "kleber@ziontechgroup && ziontechgroup.com",
 	address: "364 E Main St STE 1008 Middletown DE 19709";
-
   website: "https://ziontechgroup && ziontechgroup.com";,
 =======
 	contactInfo: {
@@ -1435,7 +1420,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 },
 ];,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }}
 
   // Search and Knowledge;

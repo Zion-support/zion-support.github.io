@@ -1,6 +1,4 @@
-
-
-  const shareToTwitter = () => {
+const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
@@ -132,11 +130,9 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 }
 
 }
-=======
 
 
 
-=======
       icon: <Twitter className='h - 4 w - 4' />,
       label: 'Twitter',
       on_click: shareToTwitter,
@@ -172,12 +168,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     </div>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
   },
 
   const shareToFacebook = () => {
@@ -188,7 +180,6 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank')
   },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const copyLink = () => {
     if (typeof window === 'undefined') return,
 
@@ -203,7 +194,6 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 };
 };
 
-=======
   },
 
   const buttons = [
@@ -257,7 +247,3 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

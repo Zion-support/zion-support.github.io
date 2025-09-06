@@ -41,7 +41,6 @@ export default async function handler(
     }
 
     }
-
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 

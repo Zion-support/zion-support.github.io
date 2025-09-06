@@ -1,6 +1,3 @@
-
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +40,6 @@ export default function Internationalization() {;
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",;
     "url": "https://app && app.ziontechgroup.com/features/internationalization";
 
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -52,16 +48,13 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Internationalization() {
   const schema = {
-
-    "@context": "https: //schema.org",
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Internationalization",
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
     "url": "https://app.ziontechgroup.com/features/internationalization"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -95,19 +88,14 @@ export default function Internationalization() {
             </div>;
           </div>;
 
-=======
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
         canonical="https://app.ziontechgroup.com/features/internationalization"
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -160,7 +148,6 @@ export default function Internationalization() {
 
 ;
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -188,7 +175,6 @@ export default function Internationalization() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
@@ -210,9 +196,4 @@ export default function Internationalization() {;
       </main>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -40,11 +35,9 @@ export type ProposalForm = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   targetInstitution: string;
-=======
 ;
 export type ProposalForm = {
   target_institution: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type: ProposalType;
   regional_scope: string;
   budgetOrGoals: string;
@@ -67,10 +60,8 @@ export type ProposalForm = {
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = {
   targetInstitution: string,
-=======
   custom_prompt?: string;}export type ProposalForm = {
   target_institution: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type: ProposalType,
   regional_scope: string,
   budgetOrGoals: string,
@@ -86,7 +77,6 @@ export type ProposalForm = {
   language?: string;
   customPrompt?: string;
 };
-
 export default function ProposalGenerator() {;
   const [form, setForm] = useState<ProposalForm>({;
     targetInstitution: 'UNDP',;
@@ -107,7 +97,11 @@ export default function ProposalGenerator() {;
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
+<<<<<<< HEAD
   const [exportLinks, setExportLinks] = useState<{;
+=======
+  const [exportLinks, setExportLinks] = useState<{
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     pdfUrl?: string;
     jsonUrl?: string;
     mdUrl?: string;
@@ -151,6 +145,7 @@ export default function ProposalGenerator() {;
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
+<<<<<<< HEAD
     }
   }
 =======
@@ -185,6 +180,7 @@ export default function ProposalGenerator() {;
       console.error(e);
       setStatusMessage('Export failed')
     }
+<<<<<<< HEAD
   }
 =======
 
@@ -219,7 +215,6 @@ export default function ProposalGenerator() {;
 
     }
   }
-
   async function handleExport() {;
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {;
@@ -249,7 +244,6 @@ export default function ProposalGenerator() {;
       setStatusMessage('Export failed');
     }
   }
-
   async function handleSubmitBridge() {;
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {;
@@ -265,7 +259,6 @@ export default function ProposalGenerator() {;
       const data = await res && res.json();
       setStatusMessage(;
         `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     } catch (e) {;
       console && console.error(e);
@@ -493,16 +486,18 @@ export default function ProposalGenerator() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={handleGenerate}
-              disabled={isGenerating}>;
+              disabled={isGenerating}
+            >
               {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>;
+            </button>
             <button
 
 
               onClick={handleExport}
-              disabled={!draftMarkdown}>;
-              Export (PDF/JSON/MD);
-            </button>;
+              disabled={!draftMarkdown}
+            >
+              Export (PDF/JSON/MD)
+            </button>
             <button
 
 
@@ -535,12 +530,8 @@ export default function ProposalGenerator() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   custom_prompt?: string;
 }
 ;

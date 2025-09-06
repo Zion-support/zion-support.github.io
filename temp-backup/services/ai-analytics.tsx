@@ -44,10 +44,10 @@ interface AianalyticsProps {;
 export default function Aianalytics(): any ({ }: AianalyticsProps) {;
 
   return (
-    <div>;
-      <h1>Aianalytics</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Aianalytics</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 
 

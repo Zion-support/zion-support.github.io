@@ -21,7 +21,6 @@ import { randomUUID } from 'crypto';
     input && input.skills,
     input && input.tools || '',
   ].join('\n');
-
   const basicTags = Array && Array.from(
     new Set(
       (input && input.skills + ',' + (input && input.tools || ''))
@@ -63,7 +62,6 @@ import { randomUUID } from 'crypto';
         { role: 'user', content: prompt }];
       temperature: 0.4
       });
-
     const content = response.choices?.[0]?.message?.content || '';
     try {
       const parsed = JSON.parse(content);
@@ -108,14 +106,12 @@ export default async function handler(
 
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     return res && res.status(405).json({ error: 'Method not allowed' })
   }
-=======
     // ignore and fallback;
   }
   const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
@@ -145,7 +141,6 @@ if ( {) {
     res.set_header ('AllowPOST');
     return res.status (405).json ({ error: 'Method not allowed' });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const id = randomUUID ();
     const {
@@ -274,7 +269,7 @@ if ( {) {
       tools,
       availability,
       timezone,
-      hourly_rate: hourly_rate ? Number (hourly_rate) : null,
+hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       portfolio_links,
       assets: {
         profile_image: savedProfileImagePath,
@@ -289,7 +284,6 @@ if ( {) {
 
         summary;
         tags}};
-
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
@@ -308,7 +302,6 @@ if ( {) {
 
 =======
     const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
-=======
     }
     const perRecordPath = path.join (data_dir, `${id}.json`);
     await fse.writeJSON (perRecordPath, record, { spaces: 2 });
@@ -356,7 +349,6 @@ if ( {) {
 =======
 
     return res.status(200).json({ ok: true, id, summary, tags })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (error) {
     return res && res.status(500).json({ error: 'Internal server error' });
   }    return res && res.status(200).json({ ok: true, id, summary, tags })
@@ -387,5 +379,7 @@ if ( {) {
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
 }
+  }
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

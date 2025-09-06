@@ -7,9 +7,9 @@
         element.click ();
 
         break;
-      case 'type': // Handle typing;
+      case 'type': // Handle typing
         break;
-      case 'hover': // Handle hover;
+      case 'hover': // Handle hover
         break;
     }
 

@@ -21,8 +21,11 @@
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
+<<<<<<< HEAD
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -86,6 +89,9 @@ export default function AffiliateDashboard(req, res) {
         <p className="text-gray-600 dark: text-gray-300">No referral code found. Visit your referral link first or register on the Partners page.</p>
       </div>
     )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
 
@@ -130,6 +136,10 @@ export default function AffiliateDashboard(req, res) {
       </div>
     </div>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 function Stat({ label, value }: { label: string, value: number | string }) {
   return (
@@ -210,11 +220,33 @@ if ( {) {
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;
       <div className="grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4">;
+=======
+;
+  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
+  if (!code) {;
+    return (;
+      <div className="space-y-4">;
+        <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
+        <p className="text-gray-600 dark: text-gray-300">No referral code found. Visit your referral link first or register on the Partners page.</p>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  return (;
+    <div className="space-y-6">;
+      <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />;
         <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />;
         <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />;
         <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />;
       </div>;
+<<<<<<< HEAD
       <div className="p - 4 rounded border border - gray - 200 dark:border - gray - 800">;
         <div className="flex items - center justify - between">;
           <div>;
@@ -240,6 +272,9 @@ function Stat() {
       <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
+    </div>
+  )
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

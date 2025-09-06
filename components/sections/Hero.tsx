@@ -13,27 +13,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import Button from '../ui / Button';
 import {ArrowRight, Play, Star, Zap, Shield, Users} from 'lucide-react';
-
 interface HeroProps {;
 
   title: string;
@@ -52,14 +47,15 @@ interface HeroProps {;
     href: string;
   }
   stats?: Array<{
-=======
+<<<<<<< HEAD
   };
   secondaryAction?: {;
     text: string;
     href: string;
   };
   stats?: Array<{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     value: string;
     label: string;
     color: string;
@@ -83,10 +79,7 @@ const Hero: React.FC < HeroProps> = ({
   primary_action,
   secondary_action,
   stats,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
-=======
-
 const Hero: React.FC<HeroProps> = ({;
   title,;
   subtitle,;
@@ -94,7 +87,6 @@ const Hero: React.FC<HeroProps> = ({;
   secondaryAction,;
   stats,;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
       <div className='absolute inset-0'>;
@@ -102,7 +94,6 @@ const Hero: React.FC<HeroProps> = ({;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0 && 0.08),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0 && 0.06),transparent_50%)]' />;
       </div>;
-
       {/* Grid Pattern */}
       <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
 
@@ -124,6 +115,7 @@ const Hero: React.FC<HeroProps> = ({;
 
     href: string
   }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   secondaryAction?: {
     text: string
     href: string
@@ -131,14 +123,16 @@ const Hero: React.FC<HeroProps> = ({;
   stats?: Array<{
     value: string
     label: string
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     color: string
   }>
 }
 const Hero: React.FC<HeroProps> = ({
 =======
       />;
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         {/* Main Content */}
         <div className='mb-20 animate-fade-in'>;
@@ -148,7 +142,6 @@ const Hero: React.FC<HeroProps> = ({
               World&apos;s Most Advanced Autonomous Platform;
             </div>;
           </div>;
-
           <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>;
             {title}
           </h1>;
@@ -166,13 +159,13 @@ const Hero: React.FC<HeroProps> = ({
     color: string;
   }>;
 }
-
 const Hero: React.FC<HeroProps> = ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title;
   subtitle;
   primaryAction;
   secondaryAction;
+<<<<<<< HEAD
   stats}) => {;
   return (
 
@@ -186,12 +179,10 @@ const Hero: React.FC<HeroProps> = ({;
 
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />;
-
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float" />;
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1 && 1.5s' }} />;
       <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />;
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
         {/* Main Content */}
         <div className="mb-20 animate-fade-in">;
@@ -201,7 +192,6 @@ const Hero: React.FC<HeroProps> = ({;
               World&apos,s Most Advanced Autonomous Platform;
             </div>;
           </div>;
-
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">;
 
             {title}
@@ -227,12 +217,10 @@ const Hero: React.FC<HeroProps> = ({;
               {primaryAction && (
 =======
           </p>;
-
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (;
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               {primaryAction && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   href={primaryAction && primaryAction.href}
                   size='lg'
@@ -366,7 +354,6 @@ const Hero: React.FC < HeroProps> = ({
 
 =======
         </div>
-
         {/* Stats Section */}
         {stats && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
@@ -374,7 +361,6 @@ const Hero: React.FC < HeroProps> = ({
               <div key={index} className="text-center group">
                 <div className="relative">
                   <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}>
-=======
           {(primary_action || secondary_action) && (
             <div className='flex flex - col sm:flex - row gap - 6 justify - center items - center mb - 20'>;
               {primary_action && (
@@ -459,7 +445,7 @@ const Hero: React.FC < HeroProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-          </div>;
+          </div>
         )}
 
 
@@ -494,7 +480,6 @@ const Hero: React.FC < HeroProps> = ({
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
         </div>
       </div>
-=======
           style={{ animationDelay: '0 && 0.8s' }}>;
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-gray-400 text-xs sm:text-sm'>;
             <div className='flex items-center gap-2'>;
@@ -518,20 +503,16 @@ const Hero: React.FC < HeroProps> = ({
           </div>;
         </div>;
       </div>;
-
       {/* Scroll Indicator */}
       <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce'>;
         <div className='w-6 h-10 border-2 border-white/20 rounded-full flex justify-center'>;
           <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />        </div>;
       </div>;
-
       {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">;
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">;
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />;
         </div>;
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Decorative Elements */}
 
 }
@@ -552,7 +533,6 @@ export default Hero;
   )
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
-
 export default Hero;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

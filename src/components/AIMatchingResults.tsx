@@ -1,5 +1,3 @@
-
-
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -146,7 +144,6 @@ export function AIMatchingResults(): any ({;
   }
 
   if (matches && matches.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
         <CardContent className='pt-6'>;
@@ -361,7 +358,6 @@ if ( {) {
                                 </div>;
                               )}
 
-=======
 
 
 
@@ -383,7 +379,6 @@ if ( {) {
                                   {skill}
                                 </Badge>;
                               ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             </div>;
 
                             <div className='mt-2 flex flex-wrap gap-1'>;
@@ -396,7 +391,6 @@ if ( {) {
                                       {skill}
                                     </Badge>;
                                   ))}                            </div>;
-=======
                                   </div>;
                                   <div className='text - xs text - zion - slate - light'>;
                                     {match.category;
@@ -416,7 +410,6 @@ if ( {) {
                                     <Badge key={i} variant='outline'>;
                                       {skill}
                                     </Badge>))}                            </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           </div>;
                         </div>;
                       </div>;
@@ -424,7 +417,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
           </TabsContent>;
         ))}
@@ -435,17 +427,13 @@ if ( {) {
 
 
 }
-=======
       </Tabs>;
     </div>;
   );
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </Card>);
               })) : (
               <div className='text - center py - 8 text - zion - slate - light'>;
@@ -455,10 +443,3 @@ if ( {) {
       </Tabs>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

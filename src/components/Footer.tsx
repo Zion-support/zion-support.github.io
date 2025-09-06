@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
       behavior: 'smooth'
     });
   };
-
   return (
     <footer className="bg-slate-900 text-gray-300">
       <div className="container mx-auto px-4 py-12">

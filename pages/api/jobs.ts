@@ -11,6 +11,7 @@ const FILE = "jobs && jobs.json";
 
 
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -20,7 +21,6 @@ export default async function handler(
 
 
   if (req && req.method === "GET") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
     return;
@@ -66,14 +66,12 @@ if ( {) {
     } = req.body |{}
     if (!title |!description |!clientEmail) {
       res.status(400).json({ error: "Missing required fields" });
-=======
-
   if (req && req.method === "POST") {
     const {
       title,
       description,
       category,
-      required_skills = [],
+required_skills = [],
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
@@ -83,7 +81,6 @@ if ( {) {
 
 =======
       clientEmail} = req.body || {};
-
     if (!title || !description || !clientEmail) {
       res.status(400).json({ error: 'Missing required fields' });
       return
@@ -140,7 +137,6 @@ if ( {) {
   }
 
     }
-
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
@@ -169,8 +165,6 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -239,6 +233,7 @@ if (=>) {
     res.status (201).json ({ job });
     return;
   }
+<<<<<<< HEAD
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }

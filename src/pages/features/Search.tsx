@@ -1,6 +1,3 @@
-
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +40,6 @@ export default function SearchFeature() {;
     "description": "Quickly locate products, services and talent using intelligent search filters.";
     "url": "https://app && app.ziontechgroup.com/features/search";
 
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -52,16 +48,13 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
   const schema = {
-
-    "@context": "https: //schema.org",
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters.",
     "url": "https://app.ziontechgroup.com/features/search"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -97,19 +90,14 @@ export default function SearchFeature() {
             </div>;
           </div>;
 
-=======
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -162,7 +150,6 @@ export default function SearchFeature() {
 
 ;
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -190,7 +177,6 @@ export default function SearchFeature() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md:px-6">;
@@ -212,9 +198,4 @@ export default function SearchFeature() {;
       </main>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -29,7 +27,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       try {
         let query = supabase
           .from("jobs")
@@ -185,13 +182,10 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
       }
     };
 
-=======
     }
 
   },
 
-=======
-=======
   },
 
 
@@ -201,7 +195,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
       {jobs.map((job) => (
         <Card 
           key={job.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -229,7 +222,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
     },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fetchJobs();
   }, [user, filter]);
 
@@ -266,8 +258,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
         return "bg-gray-100 text-gray-800",;
       default:;
         return "bg-gray-100 text-gray-800";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const getStatusColor = (status: JobStatus, ) =>: any {
     switch (status) {
       case "new": return "bg - blue - 100 text - blue - 800";
@@ -279,7 +269,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
         return "bg - gray - 100 text - gray - 800",
       default:;
         return "bg - gray - 100 text - gray - 800";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
@@ -318,7 +307,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {skill}
                 </Badge>;
               ))}
@@ -353,7 +341,6 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 }</div>) ;
 }'"}
 
-=======
     <div className="grid gap - 6 md:grid - cols - 2">;
       {jobs.map ((job, ) => (
         <Card;
@@ -437,9 +424,6 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
 }</div> <div className="mt - 1 text - sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h - 4 w - 4" /> </Button> </div> </CardFooter> </Card>) );
 }</div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             </div>
             <div className="mt-3 text-sm">
               <span className="font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
@@ -465,6 +449,3 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
               </Button>
             </div>
           </CardFooter>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

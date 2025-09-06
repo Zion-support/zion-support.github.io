@@ -1,4 +1,3 @@
-
 // SEO optimizer utilities;
 export const generateMetaTags = () =>: any {
   console.log ('Generating meta tags...');
@@ -9,14 +8,11 @@ export const optimize_headings = () =>: any {
 }
 ;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 // SEO optimizer utilities
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
 
 };
-=======
 };
 
 export const optimizeHeadings = () => {;
@@ -47,7 +43,3 @@ export const generateStructuredData = pageData => {;
     }
   }
 };
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

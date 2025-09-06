@@ -6,6 +6,19 @@ import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
 ;
 
+import React, { useMemo, useState } from 'react';
+import Sidebar from './Sidebar';
+import EndpointDetail from './EndpointDetail';
+import v1 from '../../data/api-docs/v1';
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
+=======
+import React, { useMemo, useState } from 'react',;
+import Sidebar from './Sidebar',;
+import EndpointDetail from './EndpointDetail',;
+import v1 from '../../data/api-docs/v1',;
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
@@ -39,6 +52,9 @@ export default function ApiDocsPage() {
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
           </div>
         </header>
+<<<<<<< HEAD:components/docs/ApiDocsPage.tsx
+        {activeEndpoint ? (
+=======
 
 
         {_activeEndpoint ? (

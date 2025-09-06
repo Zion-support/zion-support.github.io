@@ -1,5 +1,3 @@
-
-
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -29,7 +27,6 @@ export function ComparisonSection() {
               </TableHeader>
               <TableBody>
                 {[                <TableRow className="border-b border-zion-purple/20">
-=======
 
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
@@ -52,7 +49,6 @@ export function ComparisonSection() {
             <Table>
               <TableHeader>
                 <TableRow className="border-b border-zion-purple/20">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <TableHead className="text-white">Service</TableHead>
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>
                   <TableHead className="text-white text-center">With Zion</TableHead>
@@ -155,7 +151,6 @@ function ComparisonSection() {
                     <TableCell className='text - center text - green - 400 font - bold'>;
                       {item.savings}
 
-=======
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -200,7 +195,6 @@ export function ComparisonSection() {
                   { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
                   { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" };
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -209,22 +203,17 @@ export function ComparisonSection() {
 
                   </TableRow>
 
-=======
                   </TableRow>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </TableBody>
             </Table>
           </div>
 
-=======
 
 
 
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="flex items-start">
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
               <p className="text-white">
@@ -237,11 +226,8 @@ export function ComparisonSection() {
 
               Calculate Your Savings
 
-=======
               Calculate Your Savings
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </div>
         </div>
@@ -365,7 +351,6 @@ export function ComparisonSection() {;
                   Up to 65%;
                 </span>;
                 <span className='block text-sm text-zion-slate-light mt-1'>;
-=======
                     </TableCell>                  </TableRow>;
                   { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%" }].map ((item, index) => (                  { service: "Marketplace Listings", traditional: "$99 / mo", zion: "Free", savings: "100%" }].map ((item, index) => (
                   <TableRow key={index} className="border - b border - zion - blue">;
@@ -385,7 +370,6 @@ export function ComparisonSection() {;
                   Up to 65%;
                 </span>;
                 <span className='block text - sm text - zion - slate - light mt - 1'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Results may vary based on specific requirements and service;
                   levels;
                 </span>;
@@ -411,10 +395,5 @@ export function ComparisonSection() {;
   );
 }
 
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

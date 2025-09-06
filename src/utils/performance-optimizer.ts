@@ -1,5 +1,4 @@
-
-  const images = document && document.querySelectorAll('img');
+const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
       img && img.loading = 'lazy';
@@ -61,25 +60,21 @@ export const optimizeBundleSize = () =>: any {
 }
 
   const loadComponent = componentName => {    return import(`./components/${componentName}`);
-=======
 
 export const lazyLoadComponents = () => {
   console.log('Lazy loading components...');
 
 };
 
-=======
 
-=======
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
 ;
-=======
   });
 };
 
 export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...');
-};
+  console.log('Lazy loading components...')
+}
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
@@ -94,10 +89,3 @@ export const optimizeBundleSize = () => {
 
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

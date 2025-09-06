@@ -57,6 +57,8 @@ return res;
     .end ('Method Not Allowed');    return res.status (201).json ({ ok: true });
   }
   return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
+  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

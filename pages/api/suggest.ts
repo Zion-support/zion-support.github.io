@@ -68,7 +68,7 @@ const SAMPLE_QUERIES = [;
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
-  }
+}
   const { q = "" } = req.query;
 
   if (req && req.method !== "GET") {
@@ -97,10 +97,6 @@ const SAMPLE_QUERIES = [;
   }
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export default /**
  * handler - Function description

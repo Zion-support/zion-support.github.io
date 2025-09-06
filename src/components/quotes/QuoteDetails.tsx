@@ -1,5 +1,3 @@
-
-
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
@@ -26,22 +24,19 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-
+;
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null;
-
+  if (!quote) return null,;
   const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified';    try {;
+    if (!dateString) return 'Not specified',;
+    try {;
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
       return dateString;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -51,7 +46,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
@@ -72,7 +66,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -94,7 +87,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
@@ -104,7 +96,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {quote.project_description && (
               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
@@ -133,7 +124,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
@@ -242,10 +232,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
 };
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from './react';
 import {
   Dialog;
@@ -372,5 +359,3 @@ if (return 'Not specified') {
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);
 }
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

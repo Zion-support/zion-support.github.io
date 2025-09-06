@@ -1,6 +1,3 @@
-
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +40,6 @@ export default function TalentMarketplace() {;
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",;
     "url": "https://app && app.ziontechgroup.com/features/talent-marketplace";
 
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -52,16 +48,13 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
   const schema = {
-
-    "@context": "https: //schema.org",
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -82,19 +75,14 @@ export default function TalentMarketplace() {
             </div>;
           </div>;
 
-=======
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -147,7 +135,6 @@ export default function TalentMarketplace() {
 
 ;
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -175,7 +162,6 @@ export default function TalentMarketplace() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md:px-6">;
@@ -197,9 +183,4 @@ export default function TalentMarketplace() {;
       </main>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

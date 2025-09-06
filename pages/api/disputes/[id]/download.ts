@@ -61,7 +61,6 @@ import fs from 'fs';
 import path from 'path';
 import { getDisputeById } from '../../../../utils/fsdb';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
@@ -69,7 +68,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res && res.status($1).json({ $2 });

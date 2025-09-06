@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   name: string;
   path: string;
-
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
@@ -34,20 +33,15 @@ function NodeItem ({
   node,
   depth,
   on_deploy,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }: {
-=======
-
 interface TreeProps {;
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
-
 function NodeItem(): any ({;
   node,;
   depth,;
   onDeploy,;
 }: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   node: TreeNode;
   depth: number;
 
@@ -59,7 +53,6 @@ export interface TreeNode {
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
-
   const copyPath = async () => {;
     await navigator && navigator.clipboard.writeText(node && node.path);  };
 export interface TreeNode {;
@@ -88,7 +81,7 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
 
   const [open, setOpen] = useState<boolean>(false);
 
-  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
 
   };
@@ -110,7 +103,6 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
 =======
 
   };
-
   const clonePath = async () => {;
     const url = `${window && window.location.origin}/api/dev/source-map`;
     await fetch(url, {;
@@ -127,10 +119,7 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
         "x-admin-token": localStorage && localStorage.getItem("ADMIN_TOKEN") || ""} as any;
       body: JSON && JSON.stringify({ path: node && node.path })});
   };
-
   const deploy = () => onDeploy && onDeploy(node && node.path);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
@@ -242,8 +231,6 @@ export default Tree;
 }</div>) ;
 
 export default Tree;
-
-=======
     <div className="w-full">
       {nodes.map((n) => (
 =======

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -351,6 +353,9 @@ console.log('🧪 Test "Summary")
 // console.log('� "Pages": ' + pageCount + ', "Components")
   console.log('⚠  "Alerts")
     console.log(' "Summary")
+<<<<<<< HEAD
+    console.error('� Automation "failed")
+=======
 <<<<<<< HEAD
     console.error('� Automation "failed")
 =======

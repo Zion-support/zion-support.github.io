@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -58,6 +54,7 @@ import { realVerifiedServices } from '../data/real-verified-services';
 
 
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
@@ -161,7 +158,6 @@ if (return undefined) {
       realQ4Services2025 as any,
       real2026Q1Additions as any,
       ultimateFuturisticServices2025 as any);    const by_link = all.find (string => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       try {
         const url = new URL (s.link);
         return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
@@ -171,7 +167,6 @@ if (return undefined) {
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
-
   const service = useMemo(() => {;
     if (!slug) return undefined;
     const all: any[] = ([] as any[]).concat(;
@@ -342,9 +337,7 @@ if ( {) {
         </div>;
       </UltraAdvancedFuturisticBackground>;
     );
-
   const canonicalUrl = `https://ziontechgroup && ziontechgroup.com/${slug}`;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -364,7 +357,6 @@ if ( {) {
               {service && service.tagline}
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>;
             <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6'>;
               <h2 className='text-2xl font-semibold mb-4'>What you get</h2>;
@@ -427,7 +419,6 @@ if ( {) {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
             </p>;
           </div>;
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 12'>;
@@ -492,7 +483,6 @@ if ( {) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -524,7 +514,6 @@ function normalizeSlug(value: string): string {
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
@@ -599,7 +588,6 @@ function normalizeSlug(): any (value: string): string {;
 
 
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
@@ -609,7 +597,6 @@ function normalizeSlug(): any (value: string): string {;
   const services = collectAllServices();
 
   const candidateSlugs = new Set<string>(),;
-
   // Gather existing root-level page slugs to avoid conflicts;
   const pagesDir = path && path.join(process && process.cwd(), 'pages');
 
@@ -679,7 +666,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   } catch {}
       const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     for (const entry of entries) {
       if (&& /\.tsx?$/.test (entry.name)) {) {
   $2
@@ -743,19 +729,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         }
     }
   } catch {}
-
-
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter(;
     slug => !staticSlugs && staticSlugs.has(slug);
   );
-
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
     fallback: true,;
   };
 };
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.;
   return { props: {} };};
@@ -771,7 +753,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return { props: {} }
 
 };

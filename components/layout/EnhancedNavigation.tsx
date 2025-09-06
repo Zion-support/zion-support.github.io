@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -216,15 +212,17 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
   className = "",;
 }) => {;
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
+  className = ""
+}) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
     };
-
     window && window.addEventListener("scroll", handleScroll);
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -240,6 +238,30 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
     website: "https://ziontechgroup.com",
+    {
+      name: "Solutions"
+      href: "/solutions"
+      hasDropdown: true
+      dropdownItems: [
+        { name: "Enterprise Solutions", href: "/solutions?type=enterprise" }
+        { name: "Startup Solutions", href: "/solutions?type=startup" }
+        { name: "Government Solutions", href: "/solutions?type=government" }
+        { name: "Healthcare Solutions", href: "/solutions?type=healthcare" }
+        { name: "Financial Solutions", href: "/solutions?type=financial" }
+      ]
+    }
+    { name: "Pricing", href: "/pricing" }
+    { name: "Resources", href: "/resources" }
+    { name: "Blog", href: "/blog" }
+    { name: "Contact", href: "/contact" }
+  ];
+
+  const contactInfo = {
+    mobile: "+1 302 464 0950"
+    email: "kleber@ziontechgroup.com"
+    address: "364 E Main St STE 1008 Middletown DE 19709"
+    website: "https://ziontechgroup.com"
+
   }
 ;
   return (
@@ -280,7 +302,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
 
                       />;
                     </button>;
-
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
@@ -319,7 +340,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Search */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
           </motion.div>;
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
@@ -380,7 +400,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Search */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
 
               transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
@@ -398,7 +417,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
             >;
               <Search className="w - 5 h - 5" />;
@@ -406,7 +424,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             {/* Notifications */}
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
 
               transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
@@ -497,7 +514,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                           key={dropdownItem && dropdownItem.name}
                           href={dropdownItem && dropdownItem.href}
                           onClick={() => setIsOpen(false)}
-                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm";
+className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm";
                         >;
                           {dropdownItem && dropdownItem.name}
                         </Link>;
@@ -546,7 +563,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
-=======
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
             >;
               <Bell className="w - 5 h - 5" />;
@@ -640,7 +656,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                   href="/contact";
                   on_click={() => setIsOpen (false)}
                   className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - all duration - 300";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Get Started Today;
                 </Link>;

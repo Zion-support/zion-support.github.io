@@ -1,7 +1,4 @@
-
-
-
-  return (
+return (
 
         disabled={isLoading || !title || !category}
         className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'>        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
@@ -10,14 +7,14 @@
         <Input
           id="category"
           value={category}
-          onChange={(e) => setCategory(e && e.target.value)}
-          placeholder="e && e.g. AI Tool, Digital Product, Service";
-          className="bg-zion-blue border border-zion-blue-light text-white";
+          onChange={(e) => setCategory(e.target.value)}
+          placeholder="e.g. AI Tool, Digital Product, Service"
+          className="bg-zion-blue border border-zion-blue-light text-white"
           disabled={isLoading}
-        />;
-      </div>;
-      <div className="space-y-2">;
-        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>;
+        />
+      </div>
+      <div className="space-y-2">
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
         <Textarea
 
 
@@ -82,7 +79,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
   return (
     <div className="space-y-4">
-=======
         />
 
 
@@ -98,12 +94,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           disabled={isLoading}
         />
       </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Title">Title</label>
         <Input
           id="title"
-=======
     <div className='space - y-4'>;
       <div className='space - y-2'>;
         <label;
@@ -114,7 +108,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         </label>;
         <Input;
           id='title';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           value={title}
           on_change={e => set_title (e.target.value)}
           placeholder='Enter your product or service title';
@@ -172,7 +165,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         disabled={is_loading || !title || !category}
         className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2'      >        className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2";
           id="title";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           value={title}
           on_change={(e) => set_title (e.target.value)}
           placeholder="Enter your product or service title";
@@ -187,7 +179,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           value={category}
 
 
-=======
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
@@ -290,12 +281,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       </div>;
       <Button;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onClick={handleSubmit}
 
         disabled={isLoading || !title || !category}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -314,13 +303,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }: AIListingFormProps) {
   if (!title |!category) {
   toast ({
-  return
+  return;
 }/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
+<<<<<<< HEAD
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)
 }</Button> </div>)
 }'"
 }
-=======
         />;
       </div>;
       <Button
@@ -334,7 +323,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
             <Sparkles className='h-4 w-4 mr-2' />            Generate Optimized Content            <Sparkles className="h-4 w-4 mr-2" />;
             Generate Optimized Content;
           </>;
-=======
 
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
 }</Button> </div>) 
@@ -344,21 +332,16 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }
 }
 
-=======
             <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content
           </>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
       </Button>;
     </div>;
   );
 
 
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           on_change={(e) => set_category (e.target.value)}
           placeholder="e.g. AI Tool, Digital Product, Service";
           className="bg - zion - blue border border - zion - blue - light text - white";
@@ -412,11 +395,5 @@ if ( {) {
 }</Button> </div>);
 }'";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -75,6 +71,14 @@ import {;
 
 } from "lucide-react";
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Clock,
+=======
+  Clock,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+} from "lucide-react";
   Clock
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
@@ -160,7 +164,6 @@ const benefits = [;
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
-=======
     title: 'Webinar Invitations',
     description: 'Receive invitations to our expert-led webinars and virtual events.',
     icon: Video
@@ -175,6 +178,8 @@ const benefits = [;
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp
   }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/automation-improvements-final
 =======
 =======
@@ -184,7 +189,6 @@ const benefits = [;
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 
 ;
@@ -219,7 +223,6 @@ const testimonials = [;
 ];
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
-=======
     name: 'Sarah Johnson',
     role: 'CTO, TechCorp',
     content: 'The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.',
@@ -238,6 +241,10 @@ export default function NewsletterPage() {
     rating: 5
   }
 ];
+<<<<<<< HEAD
+export default function NewsletterPage() {
+  const [email, setEmail] = useState('');
+=======
 
 
 
@@ -249,7 +256,6 @@ export default function NewsletterPage() {;
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
-=======
 const benefits = [;
   {;
     title: "Exclusive Content",;
@@ -276,7 +282,6 @@ const benefits = [;
     icon: TrendingUp,;
   },;
 ];
-
 const testimonials = [;
   {;
     name: "Sarah Johnson",;
@@ -300,15 +305,12 @@ const testimonials = [;
     rating: 5,;
   },;
 ];
-
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e) => {;
     e && e.preventDefault();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsLoading(true);
 
 
@@ -322,7 +324,6 @@ export default function NewsletterPage() {;
 =======
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     setIsSubscribed(true);
     setIsLoading(false);
   }
@@ -345,9 +346,7 @@ export default function NewsletterPage() {;
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
         />;
       </Head>;
-
       <div className="min-h-screen bg-gray-50">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -372,7 +371,6 @@ export default function NewsletterPage() {;
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
-=======
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
                 Stay Ahead with Our Newsletter;
@@ -381,11 +379,9 @@ export default function NewsletterPage() {;
                 Get exclusive insights, industry trends, and early access to new;
                 features delivered directly to your inbox.;
               </p>;
-
               {!isSubscribed ? (;
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">;
                   <div className="flex flex-col sm:flex-row gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <input
                       type="email"
                       placeholder="Enter your email address"
@@ -611,7 +607,6 @@ function NewsletterPage() {
             </div>
           </div>
         </section>
-=======
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 What You'll Get;
@@ -621,7 +616,6 @@ function NewsletterPage() {
                 the latest insights and updates.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
@@ -642,8 +636,6 @@ function NewsletterPage() {
             </div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Stats Section */}
         <section className="py-16 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -662,7 +654,6 @@ function NewsletterPage() {
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
-=======
                 transition={{ duration: 0 && 0.8, delay: 0 }}>;
                 <div className="text-4xl font-bold text-blue-600 mb-2">;
                   10K+;
@@ -670,7 +661,6 @@ function NewsletterPage() {
                 <div className="text-gray-600">Subscribers</div>;
               </motion && motion.div>;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -703,7 +693,6 @@ function NewsletterPage() {
             </div>
           </div>
         </section>
-=======
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 <div className="text-4xl font-bold text-blue-600 mb-2">;
                   Weekly;
@@ -721,8 +710,6 @@ function NewsletterPage() {
             </div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Testimonials Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -742,7 +729,6 @@ function NewsletterPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
-=======
                   </h3>;
                   <p className="text - gray - 600">{benefit.description}</p>;
                 </motion.div>))}
@@ -816,7 +802,6 @@ function NewsletterPage() {
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
               {testimonials.map ((testimonial, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={testimonial.name}
                   className="bg - gray - 50 rounded - lg p - 6";
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -835,7 +820,6 @@ function NewsletterPage() {
                 to say.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {testimonials && testimonials.map((testimonial, index) => (;
                 <motion&& motion.div
@@ -843,6 +827,7 @@ function NewsletterPage() {
                   className="bg-gray-50 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="flex items-center mb-4">;
                     {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
@@ -900,7 +885,6 @@ function NewsletterPage() {
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
-=======
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-4xl font-bold mb-6">;
                 Ready to Join Our Community?;
@@ -909,11 +893,9 @@ function NewsletterPage() {
                 Subscribe now and start receiving valuable insights delivered to;
                 your inbox every week.;
               </p>;
-
               {!isSubscribed && (;
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">;
                   <div className="flex flex-col sm:flex-row gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <input
                       type="email"
                       placeholder="Enter your email address"
@@ -944,7 +926,6 @@ function NewsletterPage() {
 
 
               <div className="mt-8 text-green-100 text-sm">;
-=======
                 >;
                   <div className="flex items - center mb - 4">;
                     {[...Array (testimonial.rating)].map ((_, i) => (
@@ -1028,4 +1009,3 @@ function NewsletterPage() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

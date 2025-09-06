@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <>;
       <SEO
         title='API & Integrations'
@@ -38,11 +36,9 @@
     </>
 
 
-=======
 
 ;
 
-=======
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -87,7 +83,6 @@ export default function IntegrationsFeature() {;
               src="https://placehold.co/800x400";
               alt="Screenshot showing integrations";
               className="object-cover";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
@@ -95,7 +90,6 @@ export default function IntegrationsFeature() {;
             <li>Trigger Slack notifications for new orders or messages.</li>;
             <li>Embed talent search or job listings directly on your site.</li>;
 
-=======
 import React, { useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -120,34 +114,31 @@ function IntegrationsFeature() {
   useEffect (() => {
     markSlackConnected ();
   }, [markSlackConnected]);
-  return (
+  return (;
     <>;
       <SEO;
-        title='API & Integrations';
-        description='Extend Zion by embedding widgets or using our REST API for custom workflows.';
-        keywords='Zion API, Slack integration, embed widget';
-        canonical='https://app.ziontechgroup.com / features / integrations';
+        title="API & Integrations";
+        description="Extend Zion by embedding widgets or using our REST API for custom workflows.";
+        keywords="Zion API, Slack integration, embed widget";
+        canonical="https://app.ziontechgroup.com/features/integrations";
       />;
-      {/* Use a normal script tag so JSON - LD is correctly parsed */}
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
-        type='application / ld + json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        type="application/ld+json";
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
       <Header />;
-      <main className='bg - background text - white py - 12'>;
-        <div className='container mx - auto px - 4 md:px - 6'>;
-          <GradientHeading className='mb - 4 text - center'>;
-            API & Integrations;
-          </GradientHeading>;
-          <p className='text - center text - zion - slate - light max - w-3xl mx - auto mb - 8'>;
-            Automate your workflows by connecting Zion with the tools you;
-            already use.;
+      <main className="bg-background text-white py-12">;
+        <div className="container mx-auto px-4 md: px-6">;
+          <GradientHeading className="mb-4 text-center">API & Integrations</GradientHeading>;
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">;
+            Automate your workflows by connecting Zion with the tools you already use.;
           </p>;
-          <div className='relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden'>;
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
             <img;
-              src='https://placehold.co / 800x400';
-              alt='Screenshot showing integrations';
-              className='object - cover';
+              src="https://placehold.co/800x400";
+              alt="Screenshot showing integrations";
+              className="object-cover";
             />;
           </div>;
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
@@ -155,7 +146,6 @@ function IntegrationsFeature() {
             <li > Trigger Slack notifications for new orders or messages.</li>;
             <li > Embed talent search or job listings directly on your site.</li>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <li>;
               Build custom analytics by pulling data from our REST endpoints.;
             </li>;
@@ -183,9 +173,4 @@ function IntegrationsFeature() {
       </main>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -17,16 +17,16 @@ interface CSPReport {
     'status-code': number;
     'script-sample'?: string}}
 export default function handler("req": NextApiReques t, "res": NextApiRespons e) {
-  if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method not allowed' })}
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })}
   try {
-    const "report": CSPRepor t = req && req.body;
+    const "report": CSPRepor t = req.body;
     // Validate the CSP report
     if (!report['csp-report']) {
-      return res && res.status(400).json({ error: 'Invalid CSP report format' })}
+      return res.status(400).json({ error: 'Invalid CSP report format' })}
     const cspData = report['csp-report'];
     // Log the CSP violation (in production, you might want to send to a monitoring service)
-    console && console.warn('CSP "Violation": ', {
+    console.warn('CSP "Violation": ', {
       "documentUri": cspDat a['document-uri'],
       "violatedDirective": cspDat a['violated-directive'],
       "blockedUri": cspDat a['blocked-uri'],

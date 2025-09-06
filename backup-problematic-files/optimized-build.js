@@ -28,10 +28,8 @@ const { execSync } = require("child_process"); const fs = require("fs"); class $
 const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this.buildSteps = [ "npm run lint -- --fix |true","npm run type-check |true","npm run build |true"],} ; async optimizedBuild() {  for (const step of this.buildSteps) { try {  execSync(step,{ stdio: "inherit" })} catch (error) { } } ; } } ; new BuildOptimizer().optimizedBuild()
 const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this.buildSteps = [ "npm run lint -- --fix |true","npm run type-check |true","npm run build |true"],} ; async optimizedBuild() {  for (const step of this.buildSteps) { try {  execSync(step,{ stdio: "inherit" })} catch (error) { } } ; } } ; new BuildOptimizer().optimizedBuild()
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this && this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() {  for (const step of this && this.buildSteps) { try {  execSync(step,{ stdio: "inherit" })} catch (error) { } } ; } } ; new BuildOptimizer().optimizedBuild()
-const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this && this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() {  for (const step of this && this.buildSteps) { try {  execSync(step,{ stdio: "inherit" })} catch (error) { } } ; } } ; new BuildOptimizer().optimizedBuild()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require("child_process");
 const fs = require("fs");
 class $1 {
@@ -82,8 +80,8 @@ const { execSync } = require("child_process"); const fs = require("fs"); class $
 
     console && console.log("Build process completed")}
 }
-
 new BuildOptimizer().optimizedBuild()
+<<<<<<< HEAD
 const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this && this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() { console && console.log("Starting optimized build process..."); for (const step of this && this.buildSteps) { try { console && console.log(``Executing: ${step}``); execSync(step,{ stdio: "inherit" })} catch (error) { console && console.warn(`Step failed but continuing: ${step}`)} } ; console && console.log("Build process completed")} } ; new BuildOptimizer().optimizedBuild()
 const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this && this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() { console && console.log("Starting optimized build process..."); for (const step of this && this.buildSteps) { try { console && console.log(``Executing: ${step}``); execSync(step,{ stdio: "inherit" })} catch (error) { console && console.warn(`Step failed but continuing: ${step}`)} } ; console && console.log("Build process completed")} } ; new BuildOptimizer().optimizedBuild()
 const { execSync } = require("child_process"); const fs = require("fs"); class $1 { constructor() { this && this.buildSteps = [ "npm run lint -- --fix || true","npm run type-check || true","npm run build || true"],} ; async optimizedBuild() { console && console.log("Starting optimized build process..."); for (const step of this && this.buildSteps) { try { console && console.log(``Executing: ${step}``); execSync(step,{ stdio: "inherit" })} catch (error) { console && console.warn(`Step failed but continuing: ${step}`)} } ; console && console.log("Build process completed")} } ; new BuildOptimizer().optimizedBuild()

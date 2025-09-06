@@ -141,6 +141,12 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
      };
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -505,8 +511,6 @@ automation.start().catch(error => {}),
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -548,8 +552,6 @@ automation.start().catch(error => {}),
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -589,8 +591,6 @@ automation.start().catch(error => {}),
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 300000
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 300000
@@ -630,8 +630,6 @@ automation.start().catch(error => {}),
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -710,8 +708,6 @@ automation.start().catch(error => {}),
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 120000
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 120000
@@ -769,6 +765,7 @@ automation.start().catch(error => {}),
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "success": true,
         "buildSize": buildSize,

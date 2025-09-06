@@ -135,6 +135,8 @@ module.exports = {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       "path"
 =======
 <<<<<<< HEAD

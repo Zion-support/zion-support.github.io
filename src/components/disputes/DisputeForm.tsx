@@ -1,22 +1,16 @@
-
-
-        if (onDisputeCreated) {
+if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
 
-=======
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 
-=======
-=======
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } finally {
       setIsSubmitting(false)
     }
@@ -30,7 +24,6 @@
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
@@ -40,7 +33,6 @@
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -58,7 +50,6 @@ import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Button } from "@/components/ui/button",;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
   Form,;
   FormControl,;
@@ -157,7 +148,6 @@ export function DisputeForm(): any ({;
       toast && toast.error('Failed to submit dispute. Please try again.');
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
@@ -174,7 +164,6 @@ export function DisputeForm(): any ({;
           <FormField
             control={form && form.control}
             name='reason_code'
-=======
       setIsSubmitting (true);
       const dispute = await create_dispute ({
         project_id: project_id,
@@ -220,7 +209,6 @@ if ( {) {
           <FormField;
             control={form.control}
             name='reason_code';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             render={({
               field
             }: {
@@ -234,7 +222,6 @@ if ( {) {
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
-=======
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,
                 'reason_code';
@@ -245,7 +232,6 @@ if ( {) {
                   onValueChange={field.on_change}
                   default_value={field.value}
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder='Select a reason' />;
@@ -259,7 +245,6 @@ if ( {) {
           <FormField
             control={form && form.control}
             name='description'
-=======
                     {Object.entries (disputeReasonLabels).map (
                       ([value, label]) => (
                         <SelectItem key={value} value={value}>;
@@ -272,7 +257,6 @@ if ( {) {
           <FormField;
             control={form.control}
             name='description';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             render={({
               field
             }: {
@@ -287,7 +271,6 @@ if ( {) {
                   <Textarea
                     placeholder='Please provide specific details about the issue...'
                     className='min-h-[150px]'
-=======
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,
                 'description';
@@ -298,7 +281,6 @@ if ( {) {
                   <Textarea;
                     placeholder='Please provide specific details about the issue...';
                     className='min - h-[150px]';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
@@ -338,12 +320,10 @@ if ( {) {
                             Remove;
                           </Button>;
                         </li>;
-=======
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {...field}
                   />
                 </FormControl>
@@ -353,7 +333,6 @@ if ( {) {
           />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
                     </ul>;
                   </div>;
@@ -364,13 +343,10 @@ if ( {) {
           <div className="flex justify-end space-x-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
               </Button>
-=======
-=======
               </FormItem>)}
           />;
           <FormItem>;
@@ -404,7 +380,6 @@ if ( {) {
                         </li>))}
                     </ul>;
                   </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </FormControl>;
             <FormMessage />;
@@ -464,10 +439,8 @@ description: values && values.description ;
 }</SelectContent> </Select> <FormMessage /> </FormItem>) ;
 }/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
-=======
 
 
-=======
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
 
 }</ul> </div>) ;
@@ -475,10 +448,7 @@ description: values && values.description ;
 }'"}
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   setIsSubmitting (true);
 const dispute = await create_dispute ({
   project id: project_id;
@@ -511,5 +481,3 @@ if ( {) {
 }</ul> </div>);
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

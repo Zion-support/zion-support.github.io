@@ -1,6 +1,4 @@
-
-
-            ))}
+))}
           </div>;
         )}
 
@@ -18,7 +16,6 @@
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {language}
         </div>;
       )}
@@ -28,9 +25,7 @@
 
 
 
-=======
 
-=======
     >;
       <pre;
         className={cn ('p - 4 overflow - auto', showLineNumbers && 'pl - 12 relative')}
@@ -55,9 +50,6 @@
         </div>)}
     </div>);
 export default CodeBlock;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 export default CodeBlock;
 ;
@@ -66,13 +58,8 @@ export default CodeBlock;
 }
 }
 
-=======
     </div>;
   );
 }
 ;
 export default CodeBlock;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

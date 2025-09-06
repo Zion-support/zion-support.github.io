@@ -12,27 +12,21 @@ interface CloudcostoptimizerProps {
 
 
 export default function Cloudcostoptimizer({ }: CloudcostoptimizerProps) {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -42,7 +36,6 @@ interface CloudcostoptimizerProps {;
   // Add props here as needed;
 }
 export default function Cloudcostoptimizer(): any ({ }: CloudcostoptimizerProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/services/cloud-cost-optimizer.tsx
   return (
     <div>;
       <h1>Cloudcostoptimizer</h1>;

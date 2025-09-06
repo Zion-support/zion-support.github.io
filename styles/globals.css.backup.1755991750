@@ -179,7 +179,13 @@ h3 {
 <<<<<<< HEAD
   right: 0;
   bottom: 0;
-=======
+  background: 
+  right: 0;
+  bottom: 0;  background: 
+
+  right: 0;
+  bottom: 0;
+
 }
 
 /* Custom scrollbar */
@@ -313,7 +319,7 @@ h3 {
 
 /* Enhanced futuristic backgrounds */
 .futuristic-bg {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
+
   background: 
 =======
 <<<<<<< HEAD
@@ -1276,6 +1282,7 @@ h3 {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
   
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   .particle-bg::before {
     display: none;
   }
@@ -1484,9 +1491,9 @@ h3 {
 <<<<<<< HEAD
 >>>>>>> main
 .quantum-field {
-=======
-}
 
+<<<<<<< HEAD
+=======
 /* Enhanced Utility Classes */
 .hover-glow:hover {
   animation: glow 2s ease-in-out infinite alternate;
@@ -1573,6 +1580,7 @@ h3 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: relative;
   overflow: hidden;
 }
@@ -2032,6 +2040,9 @@ h3 {
     0 0 10px rgba(59, 130, 246, 0.3),
     0 0 15px rgba(59, 130, 246, 0.1);
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
 <<<<<<< HEAD
 =======

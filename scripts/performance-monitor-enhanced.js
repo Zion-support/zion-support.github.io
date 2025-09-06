@@ -5,12 +5,9 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
-=======
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/performance-monitor-enhanced.js
 const fs = require('fs');
 const path = require('path');
-console && console.log('📊 Enhanced Performance Monitor Starting...');
+console.log('📊 Enhanced Performance Monitor Starting...');
 const performanceChecks = {
   "bundleSize": () => {
 
@@ -35,12 +32,12 @@ const performanceChecks = {
   }
 };
 // Run all performance checks
-Object && Object.entries(performanceChecks).forEach(([name, check]) => {
+Object.entries(performanceChecks).forEach(([name, check]) => {
   try {
     const result = check();
-    console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
+    console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
-    console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
+    console.log(`❌ ${name}: ERROR - ${error.message}`);
   }
 });
 

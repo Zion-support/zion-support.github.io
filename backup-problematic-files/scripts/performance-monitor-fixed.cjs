@@ -50,6 +50,15 @@ const path = require("path")
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,6 +189,15 @@ const { execSync } = require("child_process")
       const distPath = path.join(this.projectRoot, "dist")
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       const srcPath = path.join(this.projectRoot, "src")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -354,7 +372,6 @@ class PerformanceMonitor {
     this.reportFile = path.join(process.cwd(), "performance-report.json"),,
 }
     try {}
-
   async collectSystemMetrics() {
     try {
       console.log("💻 Collecting system metrics...")
@@ -427,7 +444,6 @@ class PerformanceMonitor {
         "dist/css",
         "dist/js",
         "dist/assets"]
-
       this.metrics.build.hasBuildArtifacts = buildFiles.some(file => ;
         fs.existsSync(path.join(this.projectRoot, file)))
       // Check build configuration;
@@ -471,7 +487,6 @@ class PerformanceMonitor {
       console.error("Error collecting web metrics: ", error.message),,
 }
       console.warn("⚠️  Could not collect build metrics: ", error.message)}
-
 }
   getDirectorySize(dirPath) {
     let totalSize = 0;
@@ -545,6 +560,8 @@ class PerformanceMonitor {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -606,7 +623,22 @@ class PerformanceMonitor {
         "Reduce First Input Delay - minimize JavaScript execution time"
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
+<<<<<<< HEAD
         "Optimize memory usage - check for memory leaks and optimize data structures"
+=======
+        "Optimize memory usage - check for memory leaks and optimize data structures"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  console.error("Fatal "error": ")  console.error("Fatal "error": ")
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+  console.error("Fatal "error": ")
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD

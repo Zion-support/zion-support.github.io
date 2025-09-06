@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -27,7 +23,26 @@ import React, { useEffect, useState } from 'react';
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
+=======
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import TrustBadge from '../components/ui/TrustBadge';
+import TrustRadar from '../components/ui/TrustRadar';
+import RiskIndicator from '../components/ui/RiskIndicator';
+<<<<<<< HEAD
+export default function TrustPage() {
+  const [userId, setUserId] = useState<string>('demo-user'),
+  const [data, setData] = useState<any>(null),
+=======
+export default function TrustPage() {;
+  const [userId, setUserId] = useState<string>('demo-user');
+  const [data, setData] = useState<any>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [loading, setLoading] = useState<boolean>(true);
+  const [showLogic, setShowLogic] = useState<boolean>(false);
+  useEffect(() => {
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u)
@@ -45,16 +60,22 @@ export default function TrustPage() {;
 
 
   }, []);
-
   useEffect(() => {;
     async function load() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(true);
 
 
     });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
       setData(json);
+=======
+      setLoading(true);
+      const res = await fetch(
+        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
+      );
+      const json = await res.json();
+      setData(json);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setLoading(false);
     }
     load();
@@ -62,7 +83,6 @@ export default function TrustPage() {;
 
 
   }
-
   async function submitAppeal(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     const form = e && e.target as HTMLFormElement;
@@ -76,8 +96,6 @@ export default function TrustPage() {;
     });
     alert('Appeal submitted');
     form && form.reset();  }
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     form && form.reset();
@@ -107,7 +125,6 @@ export default function TrustPage() {;
           </div>
 
         </div>
-=======
               Transparent logic;
             </label>          </div>      <div className="space-y-6">;
         <div className="flex items-center justify-between">;
@@ -115,8 +132,6 @@ export default function TrustPage() {;
           <div className="flex items-center gap-3">;
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
         </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {loading && <div>Loading...</div>}
 
         {!loading && data && (
@@ -127,6 +142,7 @@ export default function TrustPage() {;
                 <RiskIndicator status={data.riskLevel} />
 
               </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
@@ -193,6 +209,26 @@ export default function TrustPage() {;
               )}
 
 =======
+                        <span>{c.key}</span>
+                        <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
+                      </li>
+=======
+<<<<<<< HEAD
+  }
+
+  return (
+    <EnhancedLayout>
+
+                      </li>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+                      </li>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     ))}
                   </ul>
                 </div>
@@ -217,8 +253,6 @@ export default function TrustPage() {;
 =======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import TrustBadge from '../components / ui / TrustBadge';
 import TrustRadar from '../components / ui / TrustRadar';

@@ -4,13 +4,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 import {readReviews, writeReviews} from '../../../utils/dataStore';
-const ADMIN_KEY = process && process.env.ADMIN_KEY || 'dev-admin-key';
+const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
 
 
 
 
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process.env.ADMIN_KEY |'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
@@ -27,8 +28,6 @@ export default async function handler(
   const key = req && req.headers['x-admin-key'];
   if (key !== ADMIN_KEY) {
     return res && res.status(401).json({ error: 'Unauthorized' });  }
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   try {
 
     const idx = reviews && reviews.findIndex(r => r && r.id === reviewId);
@@ -101,7 +100,6 @@ if ( {) {
   $2
 }
           return res.status (400).json ({ error: 'Rating must be 1 - 5' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
         reviews[idx].rating = updates && updates.rating;
       }
@@ -129,13 +127,12 @@ if ( {) {
     const reviews = await readReviews();
     const idx = reviews.findIndex((r) => r.id === reviewId);
     if (idx < 0) return res.status(404).json({ error: 'Review not found' });
-
     if (action === 'approve') {
       reviews[idx].approved = true
     } else if (action === 'remove') {
       reviews[idx].removed = true
     } else if (action === 'edit') {
-      if (!updates) return res.status(400).json({ error: 'Missing updates' });
+if (!updates) return res.status(400).json({ error: 'Missing updates' });
       if (typeof updates.rating === 'number') {
         if (updates.rating < 1 || updates.rating > 5) {
           return res.status(400).json({ error: 'Rating must be 1-5' })
@@ -147,8 +144,7 @@ if ( {) {
       }
     } else {
       return res.status(400).json({ error: 'Invalid action' })
-    }
-
+}
     await writeReviews(reviews);
     return res.status(200).json({ message: 'OK' })
   } catch (error: any) {
@@ -182,6 +178,17 @@ if ( {) {
 
 }
         reviews[idx].text = updates.text.trim ();
+=======
+      if (!updates) return res.status(400).json({ error: 'Missing updates' });
+      if (typeof updates.rating === 'number') {
+        if (updates.rating < 1 |updates.rating > 5) {
+          return res.status(400).json({ error: 'Rating must be 1-5' });
+        }
+        reviews[idx].rating = updates.rating;
+      }
+      if (typeof updates.text === 'string') {
+        reviews[idx].text = updates.text.trim();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     } else {
       return res.status (400).json ({ error: 'Invalid action' });

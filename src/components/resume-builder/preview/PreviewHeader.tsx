@@ -1,5 +1,3 @@
-
-
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
@@ -13,14 +11,14 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 
         }
-        .no - print {
+        .no-print {
           display: none !important }
       }
 
 
         }
-        .print - section, .print - section * {
-          visibility: visible;
+        .print-section, .print-section * {
+          visibility: visible
         }
 
         .print-section {;
@@ -59,7 +57,6 @@ import { useIsMobile } from '@/hooks/use-mobile';
         <PdfExportButton resume={resume} />;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <Button
           variant='outline'
           onClick={handleBrowserPrint}
@@ -88,12 +85,8 @@ import { useIsMobile } from '@/hooks/use-mobile';
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         .print - section {
           position: absolute,
           left: 0,
@@ -138,11 +131,6 @@ import { useIsMobile } from '@/hooks/use-mobile';
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     </div>
   )
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,3 @@
-
-
-=======
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -10,7 +7,6 @@ import React, { useState } from 'react'; // Import useStateimport Image from 'ne
 import React, { useState } from 'react'; // Import useState;
 import { Star } from 'lucide-react';
 interface ListingScoreCardProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   title: string;
   description: string;
   image?: string;
@@ -19,7 +15,6 @@ interface ListingScoreCardProps {
   author?: string;
 
 export function ListingScoreCard(): any ({;
-=======
 
 
   tags,
@@ -37,7 +32,6 @@ export function ListingScoreCard(): any ({;
           <Image
 
 
-=======
             src={image} 
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -63,7 +57,6 @@ export function ListingScoreCard(): any ({;
           </Badge>
           {aiScore === undefined || aiScore === null ? (
             <div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           ) : (
             aiScore > 0 && (
               <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">
@@ -75,7 +68,6 @@ export function ListingScoreCard(): any ({;
         </div>
 
 
-=======
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
         
@@ -111,7 +103,6 @@ interface ListingScoreCardProps {;
 }
 ;
 export function ListingScoreCard({;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title,;
   description,;
   image,;
@@ -131,8 +122,6 @@ export function ListingScoreCard({;
     >;
       {image && !mainImageError && (;
         <div className='h-48 w-full overflow-hidden relative'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   author_image?: string;
   ai_score?: number;
   rating?: number;
@@ -147,7 +136,6 @@ function ListingScoreCard() {
     >;
       {image && !mainImageError && (
         <div className='h - 48 w - full overflow - hidden relative'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {' '}
           {/* Added relative for Image layout fill */}
           <Image;
@@ -245,7 +233,6 @@ function ListingScoreCard() {
                       : 'text-zion-slate-light'
                   )}                />;
 
-=======
                   className={cn(;
                     "h-4 w-4";
                     star <= Math.round(rating);
@@ -255,8 +242,6 @@ function ListingScoreCard() {
                 />;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </div>;
             <span className='text-sm text-zion-slate-light ml-1'>;
@@ -286,7 +271,6 @@ function ListingScoreCard() {
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
               <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>
-=======
 
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
           Request Quote;
@@ -296,8 +280,6 @@ function ListingScoreCard() {
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>;
             {authorImage && !authorImageError ? (;
               <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                   className={cn (
                     'h - 4 w - 4',
                     star <= Math.round (rating);
@@ -325,7 +307,6 @@ function ListingScoreCard() {
           <div className='flex items - center mt - 4 pt - 4 border - t border - zion - blue - light'>;
             {author_image && !authorImageError ? (
               <div className='relative h - 8 w - 8 rounded - full mr - 2 overflow - hidden'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {' '}
                 {/* Added relative and overflow - hidden */}
                 <Image;
@@ -337,7 +318,6 @@ function ListingScoreCard() {
   );
 }
 
-=======
                   className='object - cover rounded - full';
                   on_error={() => setAuthorImageError (true)}
                   priority={false}                />;
@@ -350,9 +330,6 @@ function ListingScoreCard() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                   className="object-cover rounded-full"
                   onError={() => setAuthorImageError(true)}
@@ -362,15 +339,12 @@ function ListingScoreCard() {
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {author.charAt(0)}
               </div>
             )}
 
 
-=======
             <span className="text-sm text-zion-slate-light">{author}</span>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         )}
       </div>;
@@ -379,6 +353,3 @@ function ListingScoreCard() {
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

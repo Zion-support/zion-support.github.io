@@ -18,7 +18,6 @@ interface Service {;
 
     setupTime?: string;
   };
-=======
     trial_days?: number;
     setup_time?: string;
   }
@@ -66,12 +65,10 @@ const UltraFuturisticServiceCard2026: React.FC < ServiceCardProps> = ({ service,
   integration?: string[];
   benefits?: string[];
 }
-
 interface ServiceCardProps {;
   service: Service,;
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
 }
-
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {;
   const getVariantStyles = () => {;
     switch (variant) {;
@@ -343,20 +340,16 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles && styles.iconBg} flex items-center justify-center border ${styles && styles.iconBorder} text-4xl backdrop-blur-sm`}>;
             {service && service.icon}
           </div>;
-
           <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">;
             {service && service.name}
           </h3>;
-
           <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
             {service && service.tagline}
           </p>;
-
           <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">;
             {service && service.price}
             <span className="text-lg text-gray-400 font-normal">/{service && service.period}</span>;
           </div>;
-
           {/* Category Badge */}
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gray-800/50 border border-gray-600/30 rounded-full text-xs text-gray-300">;
             <CategoryIcon className="w-3 h-3" />;
@@ -401,7 +394,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               </div>
 =======
         </div>;
-
         {/* Enhanced Market Information */}
         {service && service.marketPrice && (;
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">;
@@ -409,12 +401,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <span className="text-gray-400">Market Price:</span>;
               <span className="text-green-400 font-semibold">{service && service.marketPrice}</span>;
             </div>;
-
             {service && service.competitors && (;
               <div className="text-xs text-gray-500">;
                 Competes with: {service && service.competitors.slice(0, 2).join()}
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
         )}
@@ -444,13 +434,11 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <div className="text-gray-400 mb-2">Target Market:</div>;
               <div className="text-gray-300">{service && service.targetMarket}</div>;
             </div>;
-
             {service && service.useCases && (;
               <div className="text-xs mt-3">;
                 <div className="text-gray-400 mb-2">Use Cases:</div>;
                 <div className="text-gray-300">{service && service.useCases.slice(0, 3).join()}</div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
         )}
@@ -522,7 +510,6 @@ export default UltraFuturisticServiceCard2026;
             Get Started;
           </motion && motion.button>;
         </div>;
-
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>;
       </div>;

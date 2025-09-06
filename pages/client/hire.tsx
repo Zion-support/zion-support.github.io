@@ -26,7 +26,6 @@ import {useState} from 'react';
           ? { type: 'fixed', fixedAmountUsd }
 
           : { type: 'milestone', milestones: [] };
-
     const res = await fetch('/api/marketplace/offers', {;
       method: 'POST',;
       headers: {;
@@ -52,7 +51,6 @@ import {useState} from 'react';
       setResult(json && json.offer);
 
       setShowFeedback(true);    }
-=======
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed"
@@ -109,14 +107,11 @@ export default function ClientHirePage() {
       setShowFeedback(true)
     }
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   }
   return (
 
     <div className='max-w-3xl mx-auto p-6 space-y-6'>;
       <h1 className='text-xl font-semibold'>Hire Talent</h1>;
-
       <div className='space-y-4 border rounded p-4'>;
         <div>;
           <label className='block text-sm font-medium'>Talent</label>;
@@ -126,7 +121,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2';
           />;
         </div>;
-
         <div>;
           <label className='block text-sm font-medium'>Start date</label>;
           <input
@@ -136,7 +130,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2';
           />;
         </div>;
-
         <div>;
           <label className='block text-sm font-medium'>Scope summary</label>;
           <input
@@ -145,14 +138,12 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2';
           />;
         </div>;
-
         <div>;
           <label className='block text-sm font-medium'>Payment terms</label>;
           <select
             value={termsType}
             onChange={e => setTermsType(e && e.target.value)}
             className='w-full border rounded px-3 py-2';
-=======
 import FeedbackModal from '../../components / ui / FeedbackModal';
 export default /**
  * ClientHirePage - Function description
@@ -276,7 +267,6 @@ if ( {) {
 
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <h1 className="text-xl font-semibold">Hire Talent</h1>
-
       <div className="space-y-4 border rounded p-4">
 
 
@@ -286,17 +276,14 @@ if ( {) {
           <label className="block text-sm font-medium">Talent</label>
           <input value={talentSlug} onChange={(e) => setTalentSlug(e.target.value)} className="w-full border rounded px-3 py-2" />
         </div>
-
         <div>
           <label className="block text-sm font-medium">Start date</label>
           <input type="date" value={startDateIso} onChange={(e) => setStartDateIso(e.target.value)} className="w-full border rounded px-3 py-2" />
         </div>
-
         <div>
           <label className="block text-sm font-medium">Scope summary</label>
           <input value={scopeSummary} onChange={(e) => setScopeSummary(e.target.value)} className="w-full border rounded px-3 py-2" />
         </div>
-
         <div>
           <label className="block text-sm font-medium">Payment terms</label>
           <select value={termsType} onChange={(e) => setTermsType(e.target.value)} className="w-full border rounded px-3 py-2">
@@ -305,7 +292,7 @@ if ( {) {
             <option value="milestone">Milestone</option>
           </select>
         </div>
-
+<<<<<<< HEAD
         {termsType === "hourly" && (
 
 
@@ -340,7 +327,6 @@ if ( {) {
           <label className="block text-sm font-medium">Agreement URL (optional)</label>
           <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
         </div>
-
         <div className="flex justify-end">
           <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
 
@@ -351,9 +337,7 @@ if ( {) {
         </div>
 
       )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-        <div>;
+<div>;
           <label className='block text-sm font-medium'>;
             Agreement URL (optional);
           </label>;
@@ -364,7 +348,6 @@ if ( {) {
             className='w-full border rounded px-3 py-2';
           />;
         </div>;
-
         <div className='flex justify-end'>;
           <button
             onClick={sendOffer}
@@ -373,12 +356,10 @@ if ( {) {
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>;
         </div>;
       </div>;
-
       {result && (;
         <div className='border rounded p-4 bg-emerald-50'>;
           <div className='font-medium'>Offer sent</div>;
           <div className='text-sm'>Offer ID: {result && result.id}</div>        </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       )}
       <FeedbackModal
         isOpen={showFeedback}
@@ -399,8 +380,6 @@ if ( {) {
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {terms_type === 'hourly' && (
           <div>;
             <label className='block text - sm font - medium'>;
@@ -444,6 +423,54 @@ if ( {) {
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>;
         </div>;
       </div>;
+=======
+<<<<<<< HEAD
+        )}
+        {termsType === 'fixed' && (
+          <div>
+            <label className='block text-sm font-medium'>
+              Fixed amount (USD)
+            </label>
+            <input
+              type='number'
+              value={fixedAmountUsd}
+              onChange={e => setFixedAmountUsd(Number(e.target.value))}
+              className='w-full border rounded px-3 py-2'
+            />          </div>
+        )}
+=======
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {termsType === "fixed" && (
+          <div>
+            <label className="block text-sm font-medium">Fixed amount (USD)</label>
+            <input type="number" value={fixedAmountUsd} onChange={(e) => setFixedAmountUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
+          </div>
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        <div>
+          <label className="block text-sm font-medium">Agreement URL (optional)</label>
+          <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
+        </div>
+<<<<<<< HEAD
+        <div className='flex justify-end'>
+          <button
+            onClick={sendOffer}
+            disabled={loading}
+            className='px-4 py-2 rounded bg-indigo-600 text-white'
+          >
+            {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
+<<<<<<< HEAD
+        </div>
+      </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {result && (
         <div className='border rounded p - 4 bg - emerald - 50'>;
           <div className='font - medium'>Offer sent</div>;
@@ -459,6 +486,7 @@ if ( {) {
           'x - demo - user - role': 'client',
           'x - demo - user - id': 'client - 1',
         }}
+<<<<<<< HEAD
       />;
     </div>);
 ;

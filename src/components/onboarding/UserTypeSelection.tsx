@@ -1,12 +1,8 @@
-
-
-
-      id: 'serviceProvider'
+id: 'serviceProvider'
       name: 'Service Provider'
       description: 'I want to offer services on the platform'
       icon: Briefcase
     }
-=======
 import { useState } from 'react';
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components / ui / button';
@@ -29,7 +25,6 @@ function UserTypeSelection() {
       description: 'I want to offer services on the platform',
       icon: Briefcase,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       id: 'talent'
       name: 'Talent'
@@ -65,8 +60,6 @@ interface UserTypeOption {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className='space-y-6'>;
@@ -139,7 +132,6 @@ interface UserTypeOption {
         })}
 
                 />;
-=======
 
       
       <div className="grid gap-4 md: grid-cols-3">
@@ -165,7 +157,6 @@ interface UserTypeOption {
               </div>
 
 
-=======
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
@@ -230,35 +221,26 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
-              <div className='text-center'>;
-                <h4 className='font-medium'>{type && type.name}</h4>;
-                <p className='text-sm text-zion-slate-light mt-1'>;
-                  {type && type.description}
+              <div className="text-center">;
+                <h4 className="font-medium">{type.name}</h4>;
+                <p className="text-sm text-zion-slate-light mt-1">;
+                  {type.description}
                 </p>;
               </div>;
             </Button>;
           );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         })}
       </div>;
     </div>;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

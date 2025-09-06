@@ -1,5 +1,3 @@
-
-
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -164,7 +162,6 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
       badge: 'premium',;
     },;
 
-=======
 
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t  } = useTranslation(),
 
@@ -251,7 +248,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       badge: 'premium'
     }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
       >;
@@ -269,7 +265,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
           {features && features.map((feature, index) => (;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <Card
               key={index}
               className='overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50'>;
@@ -318,7 +313,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                   </CardDescription>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </CardHeader>
               <CardContent>
@@ -341,14 +335,12 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>
             </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
 
 
@@ -357,7 +349,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 }
 
 
-=======
         </div>;
       </div>;
     </section>;
@@ -367,7 +358,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
   )
 }
 
-=======
 import React from 'react';
 import {
   Card,
@@ -647,10 +637,4 @@ function FeatureCTAs() {
       </div>;
     </section>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

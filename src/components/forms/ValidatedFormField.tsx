@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -22,7 +20,6 @@ import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface ValidationRule {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   required?: boolean;
   minLength?: number;
   maxLength?: number;
@@ -92,7 +89,6 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
-=======
 import React, { useState, useEffect } from 'react';
 import {
   FormField,
@@ -174,7 +170,6 @@ if ( {) {
       setValidationState (error ? 'invalid' : 'valid');
     }, debounce_ms);
     setDebounceTimer (timer);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return () => {
       if (clear_timeout (timer)) {
   $2
@@ -257,10 +252,8 @@ if (return '') {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
 
-=======
 
 
-=======
 import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
@@ -385,7 +378,6 @@ export function ValidatedFormField(): any ({;
 
     switch (type) {
       case 'textarea':
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         return (
           <div className='relative'>;
             <Textarea
@@ -396,7 +388,6 @@ export function ValidatedFormField(): any ({;
               rows={4}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {...form.register(name)}
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
@@ -407,13 +398,11 @@ export function ValidatedFormField(): any ({;
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
           </div>;
         );
-=======
 
         ),
 
 
       case 'select':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
 
           <div className="relative">
@@ -428,7 +417,6 @@ export function ValidatedFormField(): any ({;
 
                     {option.label}
                   </SelectItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
 
 
@@ -436,9 +424,7 @@ export function ValidatedFormField(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       case 'checkbox':
-=======
               </SelectContent>;
             </Select>;
             <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
@@ -446,7 +432,6 @@ export function ValidatedFormField(): any ({;
         );
 
       case 'checkbox':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='flex items-center space-x-2'>;
             <Checkbox
@@ -463,7 +448,6 @@ export function ValidatedFormField(): any ({;
             >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {label}
             </label>;
             {getValidationIcon()}
@@ -473,14 +457,11 @@ export function ValidatedFormField(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       case 'password':
-=======
           </div>;
         );
 
       case 'password':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='relative'>;
             <Input
@@ -505,12 +486,10 @@ export function ValidatedFormField(): any ({;
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
                   <Eye className="h-4 w-4" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
 
@@ -518,21 +497,17 @@ export function ValidatedFormField(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       default:
-=======
               </Button>;
             </div>;
           </div>;
         );
 
       default:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='relative'>;
             <Input
 
-=======
 
               type={type}
               disabled={disabled}
@@ -572,8 +547,6 @@ export function ValidatedFormField(): any ({;
 
                   <p className="text-sm text-muted-foreground">{description}</p>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>;
             )}
@@ -688,7 +661,6 @@ if ( {) {
             {label}
             {validation.required && (
 
-=======
 
 
       />;
@@ -720,8 +692,6 @@ if ( {) {
 
                 <p className="text-sm text-muted-foreground">{description}</p>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           )}
@@ -800,7 +770,6 @@ export const common_validations = {
   }};
 
 
-=======
     />;
   );
 
@@ -845,17 +814,7 @@ export const commonValidations = {;
       return null;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   }},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     }
   }};
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
