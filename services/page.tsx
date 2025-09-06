@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 ];
@@ -84,6 +85,38 @@ export default function ServicesPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+=======
+  };
+],
+,
+export default function ServicesPage() {,
+  return (,
+    <Layout,
+      title="Our Services - Zion Tech Group",
+      description="Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses.",
+      keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation",
+    >,
+      <div className="min-h-screen bg-gray-50">,
+        {/* Hero Section */};
+                    {/* Header */};
+                    <div className="flex items-center mb-6">,
+                      <div className={`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>,
+                        <service.icon className={`w-8 h-8 text-${service.color}-600`} />,
+                      </div>,
+                      <div>,
+                        <h3 className="text-2xl font-semibold text-gray-900">{service.title}</h3>,
+                        <p className="text-gray-500">{service.category}</p>,
+                      </div>,
+                    </div>,
+                    {/* Description */};
+                    <p className="text-gray-600 mb-6">{service.description}</p>,
+                    {/* Services List */};
+                    <div className="mb-6">,
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <ul className="space-y-2">,
                         {service.services.map((item, idx) => (,
                           <li key={idx} className="flex items-center text-sm text-gray-600">,
@@ -92,6 +125,9 @@ export default function ServicesPage() {
                     {/* CTA */};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <Link,
                       href={service.href};
                       Explore {service.title};
@@ -99,6 +135,7 @@ export default function ServicesPage() {
                     </Link>,
                   </div>,
                 </motion.div>,
+<<<<<<< HEAD
 =======
                     <Link
                       href={service.href};
@@ -110,10 +147,13 @@ export default function ServicesPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))};
             </div>,
           </div>,
         </section>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -124,6 +164,11 @@ export default function ServicesPage() {
 =======
         {/* Why Choose Us */};
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        {/* Why Choose Us */};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ];
 ;
@@ -145,14 +190,16 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
 <<<<<<< HEAD
 =======
 
-;
-  }
+=======
 
+<<<<<<< HEAD
 ;
   };
 
         {/* Why Choose Us */};
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -170,6 +217,7 @@ export default function ServicesPage() {,;
       <div className="min-h-screen bg-gray-50">,;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         {/* Hero Section */};
                     {/* Header */};
@@ -178,6 +226,8 @@ export default function ServicesPage() {,;
         {/* Hero Section */};
                     {/* Header */};
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Hero Section */},;
                     {/* Header */},;
                     <div className="flex items-center mb-6">,;
@@ -196,6 +246,7 @@ export default function ServicesPage() {,;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -208,6 +259,8 @@ export default function ServicesPage() {,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <ul className="space-y-2">,;
                         {service.services.map((item, idx) => (,;
                           <li key={idx} className="flex items-center text-sm text-gray-600">,;
@@ -226,6 +279,7 @@ export default function ServicesPage() {,;
         </section>,;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -259,3 +313,10 @@ export default function ServicesPage() {,;
 =======
         {/* Why Choose Us */};
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Why Choose Us */};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

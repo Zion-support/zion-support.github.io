@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextPage } from 'next';
@@ -8,6 +9,9 @@ import EmptyState from '../../components/ui/EmptyState';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const Dashboard: NextPage = () => {
   return (
@@ -27,8 +31,11 @@ const Dashboard: NextPage = () => {
           description="Post your first job to get quotes from top talent."
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           icon={<span>🧰</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -46,6 +53,7 @@ const Dashboard: NextPage = () => {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -78,6 +86,12 @@ const Dashboard: NextPage = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />
       </section>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        />
+      </section>
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section>
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
         <EmptyState
@@ -93,6 +107,7 @@ const Dashboard: NextPage = () => {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,6 +179,31 @@ export default Dashboard,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+import type { NextPage } from 'next',
+import Head from 'next / head',
+import EmptyState from '../../components / ui / EmptyState',
+const Dashboard: NextPage = () => {
+  return (
+    <div className="space - y-6 pb - 16">;
+      <Head>;
+        <title > Dashboard - Zion</title>;
+      </Head>;
+      <h1 className="text - 2xl font - semibold">Dashboard</h1>;
+      <section>;
+        <h2 className="text - lg font - semibold mb - 2">My Jobs</h2>;
+        <EmptyState;
+          title="No jobs yet";
+          description="Post your first job to get quotes from top talent.";
+          icon={<span>🧰</span>}
+          primary_action={{ label: 'Post a job', href: '/jobs / post' }}
+          secondary_action={{ label: 'Explore talent', href: '/talent' }}
+        />;
+      </section>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>;
   );
 },;
@@ -172,9 +212,14 @@ export default Dashboard;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

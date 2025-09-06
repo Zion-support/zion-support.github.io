@@ -1,6 +1,7 @@
 
 
   try {
+<<<<<<< HEAD
   } catch (err: any) {
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -61,6 +62,13 @@ export default function handler(req, res) {
 }
   }
 }
+=======
+    const tx = feature;
+      ? burnForFeature (user_id, feature, metadata);
+      : burn_tokens (user_id, Math.floor (amount), reason || "burn", metadata),
+    return res.status (200).json ({ tx });
+  } catch (err: any) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 
@@ -69,3 +77,7 @@ export default function handler(req, res) {
     return res.status(400).json({ error: err.message })
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

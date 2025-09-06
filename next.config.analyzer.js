@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -10,17 +11,32 @@ export const Next.config.analyzer = () => {
 <<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 
 ,;
 ;};
 
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -30,6 +46,18 @@ export const Next.config.analyzer = () => {
 
 
 
+=======
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;}
 }
@@ -37,28 +65,45 @@ export const Next.config.analyzer = () => {
 
 
 
+<<<<<<< HEAD
 }
 ;}
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module && module.exports = {
   "webpack": (config, { isServer }) => {
     if ( {
       config && config.plugins.push(
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
           "analyzerMode": 'static',
           "openAnalyzer": 'false',
           "reportFilename": isServer ? '../analyze/server && server.html' : './analyze/client && client.html'})
+=======
+
+          "analyzerMode": 'static',
+          "openAnalyzer": 'false',
+          "reportFilename": isServer ? '../analyze/server && server.html' : './analyze/client && client.html'})
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       )}
     return config) {
      {
       config && config.plugins.push(
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           "analyzerMode": 'static',
           "openAnalyzer": false,
           "reportFilename": isServer ? '../analyze/server && server.html' : './analyze/client && client.html'})
       )}
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config}},};
+<<<<<<< HEAD
     return config}},
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
@@ -122,12 +167,15 @@ module && module.exports = {
           "reportFilename": isServer ? '../analyze/server && server.html' : './analyze/client && client.html'})
       )}
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config}},};
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     return config}},
 };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config}},};
     return config}}};
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -172,6 +220,8 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};    return config}},
 };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
@@ -179,6 +229,9 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
@@ -193,13 +246,17 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 ,
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -227,6 +284,11 @@ origin/automation-improvements-final
 };
 ,
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},}
     return config}}
 }
@@ -236,6 +298,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -249,6 +312,14 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && m
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config}},};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 ,
@@ -284,6 +355,7 @@ const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer'); module
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 };
@@ -303,3 +375,6 @@ origin/main
 },;
 ,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

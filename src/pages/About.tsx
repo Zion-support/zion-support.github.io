@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
@@ -156,6 +157,16 @@ const About: React.FC = () => {
         </motion.div>
       </div>
     </motion.div>
+=======
+import React from 'react';
+
+const About = () => {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This page is under construction.</p>
+    </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 };
 

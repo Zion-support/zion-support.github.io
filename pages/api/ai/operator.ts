@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -24,12 +25,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   if (!limited) {
     bucket.timestamps.push(now);
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -68,12 +75,16 @@ function isRateLimited(ip: string): boolean {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -83,6 +94,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -95,6 +110,7 @@ function isRateLimited(ip: string): boolean {
   // Drop old timestamps
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -103,6 +119,10 @@ function isRateLimited(ip: string): boolean {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -116,6 +136,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Auth via Bearer token
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -125,6 +146,10 @@ const authHeader = req.headers.authorization |''
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
@@ -153,6 +178,12 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
   } catch (err: any) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -237,6 +268,7 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 }
 
 
@@ -247,10 +279,13 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -265,8 +300,13 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
   ipToRequests[ip] = bucket;
@@ -319,6 +359,7 @@ export default async function handler(req, res) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -328,3 +369,7 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

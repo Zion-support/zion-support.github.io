@@ -16,6 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 
+<<<<<<< HEAD
   }
 }
   // TODO: Implement authentication logic here
@@ -100,3 +101,23 @@ export default function handler(req, res) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    return
+  }
+  // TODO: Implement authentication logic here
+  res.status(200).json({ message: 'Auth endpoint placeholder' })
+
+} 
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+  }
+}
+  // TODO: Implement authentication logic here
+  res.status(200).json({ message: 'Auth endpoint placeholder' })
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

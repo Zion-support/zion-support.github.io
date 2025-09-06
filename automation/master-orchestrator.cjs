@@ -305,6 +305,12 @@ if (require.main === module) {
 }
 
 module.exports = MasterOrchestrator;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -445,6 +451,107 @@ class MasterAutomationOrchestrator {
         build: 'completed',
         automation: 'completed'
       },
+<<<<<<< HEAD
+=======
+      summary: 'Master automation orchestrator completed successfully',
+>>>>>>> origin/main
+    };
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      "failed": total - passed,
+      "status": passed === total
+          ? 'HEALTHY'
+          : passed >= Math.floor(total * 0.8)
+            ? 'WARNING'
+            : 'CRITICAL'};
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    try {
+      fs.writeFileSync(
+        path.join(this.logsDir, 'master-orchestrator-report.json'),
+        JSON.stringify({ summary, results: this.results }, null, 2)
+      );
+    } catch {}
+<<<<<<< HEAD
+
+    this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
+=======
+    this.log(
+<<<<<<< HEAD
+      `Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
+    );
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    return passed === total;
+  }
+}
+
+if (require.main === module) {
+  const orchestrator = new MasterOrchestrator();
+  const command = process.argv[2] || 'check';
+  
+  switch (command) {
+    case 'check':
+      orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
+      break;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "default": 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    default:
+      console.log('Usage: node automation/master-orchestrator.cjs check');
+=======
+    const reportPath = path.join(
+      __dirname,
+      '..',
+      'automation-reports',
+      'master-orchestrator-report.json'
+    );
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`📊 Report saved to: ${reportPath}`);
+  }
+
+  async run() {
+    try {
+      this.log('🎯 Starting master automation orchestration...');
+
+      await this.runLinting();
+      await this.runBuildProcess();
+      await this.runAutomationScripts();
+      await this.generateReport();
+
+      this.log('🎉 Master automation orchestration completed successfully!');
+    } catch (error) {
+      this.log(`❌ Master automation orchestration failed: ${error.message}`);
+>>>>>>> origin/main
+      process.exit(1);
+    }
+  }
+}
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+module.exports = MasterOrchestrator;
+=======
+<<<<<<< HEAD
+module.exports = MasterOrchestrator;
+=======
+
+module.exports = MasterOrchestrator;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -598,4 +705,10 @@ const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
 
 module.exports = MasterOrchestrator;
+<<<<<<< HEAD
 orchestrator.run().catch(console.error);
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

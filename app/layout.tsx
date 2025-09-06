@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
@@ -118,6 +122,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 import React from 'react'; import Link from 'next / link'; import './globals.css'; export const metadata = { title: 'Zion Tech Group — AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software', authors: [{ name: 'Zion Tech Group' }], open_graph: { title: 'Zion Tech Group — AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', url: 'https: site_name: 'Zion Tech Group', locale: 'en_US', type: 'website', }, twitter: { card: 'summary_large_image', title: 'Zion Tech Group — AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', }, robots: { index: true, follow: true, google_bot: { index: true, follow: true, 'max - video - preview': -1, 'max - image - preview': 'large', 'max - snippet': -1, }, }, } /**
  * Header - Function description
@@ -133,3 +138,5 @@ function RootLayout() { return ( <html lang="en"> <body className="min - h-scree
 =======
 }
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

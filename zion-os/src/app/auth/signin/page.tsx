@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 "use client",;
 import { useState } from "react",;
@@ -95,6 +99,7 @@ function SignInPage() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 ;
 
@@ -158,6 +163,8 @@ export default function SignInPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div>;
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Email Address;

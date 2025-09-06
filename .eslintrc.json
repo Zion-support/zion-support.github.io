@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
@@ -9,17 +10,25 @@
   ],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 origin/automation-improvements-final
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
+<<<<<<< HEAD
     "es6": true,
     "jest": true
     "es6": true,
     "jest": true
     "es6": true,
     "jest": true
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "es2021": true
   },
   "globals": {
@@ -29,6 +38,7 @@ origin/automation-improvements-final
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
+<<<<<<< HEAD
     "es6": true,
     "jest": true
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -37,10 +47,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
+<<<<<<< HEAD
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
@@ -50,10 +65,14 @@ origin/automation-improvements-final
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
+<<<<<<< HEAD
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
@@ -63,6 +82,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   },
   "ignorePatterns": [
     "node_modules/",
@@ -135,6 +158,7 @@ origin/automation-improvements-final
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
+<<<<<<< HEAD
     "pages.disabled_auto/"
     "pages.disabled_auto/",
     "zion_academy/",
@@ -393,5 +417,11 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+    "pages.disabled_auto/"
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ]
 }

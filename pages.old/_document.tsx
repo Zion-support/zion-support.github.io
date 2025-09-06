@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
@@ -7,16 +8,23 @@ const { Html,Head,Main,NextScript } from "next/document"; export default functio
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
 const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 <<<<<<< HEAD
 
+import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+=======
+
 import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
 const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
@@ -31,3 +39,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

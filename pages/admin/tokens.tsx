@@ -1,10 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json())
@@ -12,6 +18,9 @@
     setTransactions(txRes.transactions |[])
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useEffect, useState } from "react";
@@ -34,8 +43,11 @@ export default function AdminTokens() {
 
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -49,10 +61,15 @@ export default function AdminTokens() {
   }, []),
   async function issue() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const res = await fetch("/api/admin/tokens/issue", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -61,6 +78,7 @@ export default function AdminTokens() {
     if (data.error) alert(data.error)
     await load()
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   async function revoke() {
@@ -142,6 +160,9 @@ export default function AdminTokens() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 ;
@@ -160,6 +181,7 @@ export default function AdminTokens() {
 }
 
   async function saveConfig() {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const res = await fetch("/api/admin/tokens/config", {
 
@@ -309,11 +331,16 @@ export default function AdminTokens() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    const res = await fetch("/api/admin/tokens/config", {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
     setConfig(data)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -338,6 +365,10 @@ export default function AdminTokens() {
     const data = await res.json(),
     setConfig(data)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -346,12 +377,17 @@ export default function AdminTokens() {
           <div className="grid sm:grid-cols-4 gap-2 text-sm">
             <input placeholder="userId" className="border rounded px-2 py-1" value={userId} onChange={(e) => setUserId(e.target.value)} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             <input type="number" placeholder="amount" className="border rounded px-2 py-1" value={amount} onChange={(e) => setAmount(parseInt(e.target.value || "0"))} />
 
 
+<<<<<<< HEAD
 =======
             <input type="number" placeholder="amount" className="border rounded px-2 py-1" value={amount} onChange={(e) => setAmount(parseInt(e.target.value || "0"))} />
 
@@ -361,6 +397,8 @@ export default function AdminTokens() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <input placeholder="reason" className="border rounded px-2 py-1" value={reason} onChange={(e) => setReason(e.target.value)} />
             <div className="flex gap-2">
               <button className="px-3 py-1 rounded border" onClick={issue}>Issue</button>
@@ -370,12 +408,17 @@ export default function AdminTokens() {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Conversion & Rules</h2>
           {config && (
@@ -383,12 +426,17 @@ export default function AdminTokens() {
               <div className="flex items-center gap-2">
                 <label className="w-40">USD per Token</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
                 <input type="number" step="0.01" className="border rounded px-2 py-1" value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value || "0") })} />
 
 
+<<<<<<< HEAD
 =======
                 <input type="number" step="0.01" className="border rounded px-2 py-1" value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value || "0") })} />
 
@@ -398,6 +446,8 @@ export default function AdminTokens() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <button className="px-3 py-1 rounded border" onClick={saveConfig}>Save</button>
               </div>
               <div className="text-xs text-gray-500">Example: 0.05 means 100 ZION$ = $5 credit.</div>
@@ -406,13 +456,19 @@ export default function AdminTokens() {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <h2 className="font-medium mb-3">Transactions</h2>
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
             {transactions.map((t) => (
@@ -422,6 +478,7 @@ export default function AdminTokens() {
                   <span className="text-gray-600">{t.userId}</span>
                   <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -450,6 +507,13 @@ export default function AdminTokens() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
+=======
+
+=======
+}
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useEffect, useState } from './react';,
 import EnhancedLayout from "../../components / layout / EnhancedLayout",
 export default /**
@@ -562,6 +626,7 @@ function save_config() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
 =======
 }
 
@@ -579,12 +644,15 @@ function save_config() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
 
               </div>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -673,3 +741,6 @@ function save_config() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

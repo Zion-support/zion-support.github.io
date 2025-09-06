@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export interface Branding {;
@@ -31,6 +32,12 @@ export interface Branding {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+export interface Branding {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
@@ -41,13 +48,18 @@ export interface Branding {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -55,6 +67,10 @@ export interface DeployModules {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -70,10 +86,15 @@ export interface DeployModules {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -86,6 +107,7 @@ export interface DeployModules {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   globalMap?: boolean;
   franchiseOnboarding?: boolean;
@@ -95,6 +117,8 @@ export interface DeployModules {;
   bookStore?: boolean;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface DeployInput {instanceName: string;
   defaultLanguage: string;
@@ -114,6 +138,7 @@ export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "eve
   path: string;
   description?: string;
 }
+<<<<<<< HEAD
 export interface DeployResult {success: boolean;
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
@@ -204,6 +229,13 @@ export interface DeployResult {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+;
+export interface DeployResult {;
+  success: boolean;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -212,20 +244,26 @@ export interface DeployResult {;
   version: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
 export interface Branding {
   logo_url?: string,
   primary_color?: string,
   secondary_color?: string,
   subdomain?: string;
+=======
 
 
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -233,6 +271,7 @@ export interface Branding {
 
 
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface DeployModules {
   marketplace: boolean,
@@ -286,9 +325,11 @@ export interface DeployResult {
 }
 export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 }
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
@@ -296,10 +337,13 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -326,3 +370,5 @@ export interface AccessControlConfig {;
   adminKeyConfigured: boolean;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

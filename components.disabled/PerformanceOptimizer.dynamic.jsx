@@ -2,6 +2,7 @@ const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{\
 const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{"; loading: () => <p>Loading.</p,>,}) export: "default PerformanceOptimizer" ,"""
 const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default PerformanceOptimizer' ,'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -17,3 +18,8 @@ const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; 
 ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> 207d7230e0649fa517bb469b27623282180528c9
+=======
+
+</p>'
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

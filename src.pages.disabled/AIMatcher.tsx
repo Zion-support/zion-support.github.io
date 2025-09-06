@@ -1,7 +1,18 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 "export\": default React.memo(function AIMatcherPage (function AIMatcherPage (function AIMatcherPage () {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> (\'all\') \'';\';\'' \"if\": (category.includes (\'talent\') || category === \'engineering\' || \''\'' category === \'data science\' || category === \'development\') {}\''\';\'' \"itemType\": = \'talent\'} else if (category.includes (\'equipment\') || category === \'hardware\') {}\''\';\'' \"itemType\": = \'equipment\'}\' toast ({}\''\';\'' \"title\": \'Match: Selected,\',\"description\": `You: & apos;ve: selected ${match.item.titl,e}`}) \'';\';\''`\''\';
 "export": default _React.memo(function AIMatcherPage (function AIMatcherPage (function AIMatcherPage () {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> ('all') '';';'' "if": (category.includes ('talent') || category === 'engineering' || '''' category === 'data science' || category === 'development') {}''';'' "itemType": = 'talent'} else if (category.includes ('equipment') || category === 'hardware') {}''';'' "itemType": = 'equipment'}' toast ({}''';'' "title": 'Match: Selected,',"description": `You: & apos;ve: selected ${match.item.titl,e}`}) '';';''`''';
 "export\": default React.memo(function AIMatcherPage (function AIMatcherPage (function AIMatcherPage () {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> (\'all\') \'';\';\'' \"if\": (category.includes (\'talent\') || category === \'engineering\' || \''\'' category === \'data science\' || category === \'development\') {}\''\';\'' \"itemType\": = \'talent\'} else if (category.includes (\'equipment\') || category === \'hardware\') {}\''\';\'' \"itemType\": = \'equipment\'}\' toast ({}\''\';\'' \"title\": \'Match: Selected,\',\"description\": `You: & apos;ve: selected ${match.item.titl,e}`}) \'';\';\''`\''\';
 "export": default _React.memo(function AIMatcherPage (function AIMatcherPage (function AIMatcherPage () {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> ('all') '';';'' "if": (category.includes ('talent') || category === 'engineering' || '''' category === 'data science' || category === 'development') {}''';'' "itemType": = 'talent'} else if (category.includes ('equipment') || category === 'hardware') {}''';'' "itemType": = 'equipment'}' toast ({}''';'' "title": 'Match: Selected,',"description": `You: & apos;ve: selected ${match.item.titl,e}`}) '';';''`''';
+<<<<<<< HEAD
 import React from 'react';
 "export\": default React && React.memo(function AIMatcherPage(): any (function AIMatcherPage(): any (function AIMatcherPage() {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> (\'all\') \'';\';\'' \"if\": (category && category.includes (\'talent\') || category === \'engineering\' || \''\'' category === \'data science\' || category === \'development\') {}\''\';\'' \"itemType\": = \'talent\'} else if (category && category.includes (\'equipment\') || category === \'hardware\') {}\''\';\'' \"itemType\": = \'equipment\'}\' toast ({}\''\';\'' \"title\": \'Match: Selected,\',\"description\": `You: & apos;ve: selected ${match && match.item.titl,e}`}) \'';\';\''`\''\';
 "export": default _React && _React.memo(function AIMatcherPage(): any (function AIMatcherPage(): any (function AIMatcherPage() {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> ('all') '';';'' "if": (category && category.includes ('talent') || category === 'engineering' || '''' category === 'data science' || category === 'development') {}''';'' "itemType": = 'talent'} else if (category && category.includes ('equipment') || category === 'hardware') {}''';'' "itemType": = 'equipment'}' toast ({}''';'' "title": 'Match: Selected,',"description": `You: & apos;ve: selected ${match && match.item.titl,e}`}) '';';''`''';
@@ -17,3 +28,6 @@ import React from 'react';
     ve: selected ${match && match.item.titl,e}`}) \'';\';\''`\''\';
 "export": default _React && _React.memo(function AIMatcherPage(): any (function AIMatcherPage(): any (function AIMatcherPage() {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> ('all') '';';'' "if": (category && category.includes ('talent') || category === 'engineering' || '''' category === 'data science' || category === 'development') {}''';'' "itemType": = 'talent'} else if (category && category.includes ('equipment') || category === 'hardware') {}''';'' "itemType": = 'equipment'}' toast ({}''';'' "title": 'Match: Selected,',"description": `You: & apos,;
     ve: selected ${match && match.item.titl,e}`}) '';';''`''';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

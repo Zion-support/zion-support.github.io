@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import {useRouter} from 'next/router';
 
@@ -11,13 +15,19 @@ import useSWR from 'swr';
 
 
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
 export default function EditJobPage() {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
@@ -27,6 +37,9 @@ export default function EditJobPage(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
@@ -34,24 +47,33 @@ export default function EditJobPage(req, res) {
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
 
+<<<<<<< HEAD
 =======
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       setTitle(job.title || '');
       setDescription(job.description || '');
       setCategory(job.category || '')
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, description, category })});
@@ -59,6 +81,7 @@ export default function EditJobPage(req, res) {
   }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }, [job]);
@@ -83,6 +106,8 @@ body: JSON.stringify({ title, description, category })});
     router.push('/client/dashboard')
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   useEffect(() => {;
     if (job) {;
       setTitle(job && job.title || '');
@@ -100,6 +125,7 @@ body: JSON.stringify({ title, description, category })});
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!job) return <div>Loading…</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -258,6 +284,9 @@ export default function EditJobPage(req, res) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
       body: JSON && JSON.stringify({ title, description, category }),;
     });
     router && router.push('/client/dashboard');  }
@@ -271,4 +300,9 @@ export default function EditJobPage(req, res) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

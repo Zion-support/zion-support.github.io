@@ -19,6 +19,7 @@ declare global {
     parent_element: HTMLElement | null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Global type declarations for DOM types
 declare global {
@@ -46,6 +47,8 @@ declare global {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   interface CSSStyleDeclaration {
     [key: string]: string;
@@ -53,12 +56,16 @@ declare global {
   interface HTMLElement extends Element {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     class_name: string;
     id: string;
     innerHTML: string;
     text_content: string | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     className: string;
@@ -68,6 +75,8 @@ declare global {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     style: CSSStyleDeclaration;
   }
   interface HTMLDivElement extends HTMLElement {}
@@ -79,27 +88,37 @@ declare global {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   // Define MessageEvent if not available;
   interface MessageEvent < T = any> extends Event {
 
+<<<<<<< HEAD
 =======
   // Define MessageEvent if not available
   interface MessageEvent<T = any> extends Event {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     data: T;
     origin: string;
     lastEventId: string;
     source: MessageEventSource | null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     ports: ReadonlyArray < MessagePort>;
   }
 
   // Define RequestInit if not available;
 
+<<<<<<< HEAD
 =======
     ports: ReadonlyArray<MessagePort>;
   }
@@ -109,6 +128,8 @@ declare global {
     ports: ReadonlyArray < MessagePort>;
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   interface RequestInit {
     body?: BodyInit | null;
     cache?: RequestCache;
@@ -122,6 +143,7 @@ declare global {
     referrer?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     referrer_policy?: ReferrerPolicy;
 =======
     referrerPolicy?: ReferrerPolicy;
@@ -129,10 +151,14 @@ declare global {
 =======
     referrer_policy?: ReferrerPolicy;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    referrer_policy?: ReferrerPolicy;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     signal?: AbortSignal | null;
     window?: any;
     timeout?: number;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -140,10 +166,16 @@ declare global {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  // Define AbortController if not available;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   interface AbortController {
     signal: AbortSignal;
     abort (): void;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // Define AbortSignal if not available;
@@ -158,6 +190,11 @@ declare global {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  // Define AbortSignal if not available;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   interface AbortSignal extends EventTarget {
     aborted: boolean;
     onabort: ((this: AbortSignal, ev: Event) => any) | null;
@@ -167,6 +204,9 @@ declare global {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export {};
 =======
 
@@ -178,6 +218,7 @@ export {};
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 =======
 // Re-export DOM types that might not be available
 export {}
@@ -265,8 +306,14 @@ export {};
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 // Re-export DOM types that might not be available
 export {}
 // Re - export DOM types that might not be available;
 export {}
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,4 +1,5 @@
 import Link from "next/link";
+<<<<<<< HEAD
 
 export const metadata = {
 <<<<<<< HEAD
@@ -116,15 +117,43 @@ export default function ServicesOverviewPage() {
         </div>
       </div>
 
+=======
+export const metadata = {
+  title: "Services | Zion Tech Group",
+  description:
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+};
+export default function ServicesOverviewPage() {
+  return (
+    <div className="animate-fade-in">
+      {" "}
+      <div className="text-center mb-16">
+        {" "}
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Our Services
+        </h1>{" "}
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          {" "}
+          Product engineering and AI-first consulting to deliver measurable
+          outcomes for your business.{" "}
+        </p>{" "}
+      </div>{" "}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS Solutions"
           description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
           bullets={[
+<<<<<<< HEAD
             "15+ specialized micro SaaS tools",
             "End-to-end development & deployment",
             "Revenue optimization & scaling"
+=======
+            "Foundational architecture",
+            "Billing + subscriptions", 
+            "Growth analytics"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           ]}
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
           icon="🚀"
@@ -133,18 +162,24 @@ export default function ServicesOverviewPage() {
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
+<<<<<<< HEAD
           description="Advanced AI solutions including LLM applications, RAG systems, and enterprise AI platforms"
           bullets={[
             "15+ AI service categories",
             "Custom LLM development",
             "Enterprise AI integration"
           ]}
+=======
+          description="LLM applications, RAG systems, and MLOps pipelines"
+          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           icon="🤖"
           pricing="From $5,000/project"
         />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
+<<<<<<< HEAD
           description="Comprehensive IT solutions including cloud migration, DevOps, security, and infrastructure management"
           bullets={[
             "15+ IT service categories",
@@ -191,6 +226,13 @@ export default function ServicesOverviewPage() {
           pricing="From $30,000/project"
         />
         <ServiceCard
+=======
+          description="Cloud migration, DevOps, and security solutions"
+          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+          icon="⚙️"
+        />
+        <ServiceCard
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           href="/services/blockchain-solutions"
           title="Blockchain Solutions"
           description="DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security"
@@ -204,11 +246,15 @@ export default function ServicesOverviewPage() {
           description="RPA, workflow automation, and AI-powered automation for maximum efficiency"
           bullets={["Process automation", "Workflow optimization", "AI automation"]}
           icon="⚡"
+<<<<<<< HEAD
           pricing="From $2,500/month"
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         />
         <ServiceCard
           href="/services/data-analytics"
           title="Data Analytics"
+<<<<<<< HEAD
           description="Business intelligence, predictive analytics, and data engineering for data-driven decisions"
           bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
           icon="📊"
@@ -255,6 +301,35 @@ export default function ServicesOverviewPage() {
       <CTA />{" "}
 =======
       <CTA />
+=======
+          description="Business intelligence, predictive analytics, and data engineering"
+          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
+          icon="📊"
+        />
+        <ServiceCard
+          href="/services/digital-transformation"
+          title="Digital Transformation"
+          description="Complete digital transformation solutions and legacy modernization"
+          bullets={["Process automation", "Legacy modernization", "Digital strategy"]}
+          icon="🔄"
+        />
+        <ServiceCard
+          href="/services/cybersecurity"
+          title="Cybersecurity"
+          description="Comprehensive security solutions and compliance management"
+          bullets={["Security assessment", "Threat detection", "Compliance"]}
+          icon="🔒"
+        />
+        <ServiceCard
+          href="/services/cloud-services"
+          title="Cloud Services"
+          description="Cloud migration, architecture, and optimization solutions"
+          bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
+          icon="☁️"
+        />
+      </div>
+      <CTA />{" "}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>
   );
 }
@@ -263,8 +338,12 @@ function ServiceCard({
   title,
   description,
   bullets,
+<<<<<<< HEAD
   icon,
   pricing
+=======
+  icon
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }: {
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
   href: string;
@@ -279,6 +358,7 @@ function ServiceCard({
       href={href}
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
+<<<<<<< HEAD
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
         {title}
@@ -326,6 +406,24 @@ function StatCard({
       <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
       <div className="text-sm text-gray-600">{description}</div>
     </div>
+=======
+      {" "}
+      <div className="text-4xl mb-4">{icon}</div>{" "}
+      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>{" "}
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
+      <ul className="text-gray-600 space-y-2">
+        {" "}
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex items-center">
+            {" "}
+            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
+          </li>
+        ))}{" "}
+      </ul>{" "}
+    </Link>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 }
 function CTA() {

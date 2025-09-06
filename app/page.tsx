@@ -103,11 +103,15 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/services"
+<<<<<<< HEAD
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <a
@@ -122,6 +126,10 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
+=======
+          <a
+            href="https://ziontechgroup.com"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             Visit Main Site
@@ -132,8 +140,12 @@ export default function HomePage() {
 <<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-12">
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <<<<<<< HEAD
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
@@ -219,10 +231,17 @@ export default function HomePage() {
             icon="🔒"
           />
           <Card
+<<<<<<< HEAD
             title="Data Analytics"
             href="/services/data-analytics"
             description="Business intelligence, predictive analytics and data science solutions."
             icon="📊"
+=======
+            title="Cloud Services"
+            href="/services/cloud-services"
+            description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
+            icon="☁️"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           />
 =======
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
@@ -240,8 +259,11 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <FeatureCard
             title="Fast Delivery"
             description="Rapid prototyping and deployment with modern tools and practices."
@@ -257,6 +279,7 @@ export default function HomePage() {
           <FeatureCard
             title="Cost Effective"
             description="Optimized solutions that reduce operational costs and improve efficiency."
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -345,6 +368,9 @@ export default function HomePage() {
             Call +1 302 464 0950
           </a>
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
+=======
+          />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
       </section>
     </div>
@@ -353,12 +379,16 @@ export default function HomePage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
   return (
     <Link
       href={href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
@@ -369,6 +399,8 @@ function Card({ title, description, href, icon }: { title: string; description: 
         {title}
       </h3>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -381,18 +413,23 @@ function Card({ title, description, href, icon }: { title: string; description: 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function FeatureCard({ title, description }: { title: string; description: string }) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
 =======
 function FeatureCard({ title, description }: { title: string; description: string }) {
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
+=======
+function FeatureCard({ title, description }: { title: string; description: string }) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/fix-website-loading-errors-final
@@ -401,3 +438,6 @@ function FeatureCard({ title, description }: { title: string; description: strin
 =======
 }
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

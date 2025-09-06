@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -10,6 +11,8 @@ import { useRouter } from 'next/router',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -25,6 +28,9 @@ export default function PostJobPage() {
   async function handleSubmit(e: React.FormEvent) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     e.preventDefault();
     setError(null);
@@ -32,6 +38,7 @@ export default function PostJobPage() {
     if (!title || !description || !category || !clientEmail) {
       setError('Please fill in all required fields.');
 
+<<<<<<< HEAD
 =======
     e.preventDefault()
     setError(null)
@@ -40,6 +47,8 @@ export default function PostJobPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return
     }
     try {
@@ -48,6 +57,7 @@ export default function PostJobPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,12 +79,19 @@ export default function PostJobPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message |'Something went wrong')
     } finally {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       setIsSubmitting(false),
 
@@ -153,6 +170,7 @@ export default function PostJobPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 
 
@@ -272,6 +290,8 @@ export default function PostJobPage(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -311,6 +331,7 @@ export default function PostJobPage(req, res) {
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             {isSubmitting ? 'Posting…' : 'Post Job'}
@@ -323,16 +344,21 @@ export default function PostJobPage(req, res) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   );
 };
 
+=======
             {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -342,6 +368,13 @@ export default function PostJobPage(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+}
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { useState } from 'react',
 import { use_router } from 'next / router',
 export default /**
@@ -456,6 +489,7 @@ if ( {) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -481,3 +515,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

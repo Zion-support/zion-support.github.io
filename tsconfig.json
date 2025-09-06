@@ -7,6 +7,35 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+<<<<<<< HEAD
     "esModuleInterop": true
   }
 }
+=======
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

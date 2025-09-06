@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
@@ -19,6 +22,7 @@ return <ServicePage {...props} />;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 }
 
@@ -61,3 +65,5 @@ return <ServicePage {...props} />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

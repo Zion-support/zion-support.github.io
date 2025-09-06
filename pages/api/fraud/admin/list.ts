@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -18,6 +19,9 @@ function ensureAdmin(req: NextApiRequest): boolean {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -35,10 +39,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     userId
     status: status as any
     label: label as any})
+<<<<<<< HEAD
 
   res.status(200).json({ items })
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  res.status(200).json({ items })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 }
@@ -54,6 +62,7 @@ if (return true, // allow if not configured) {
 }
   return token === process.env.ADMIN_TOKEN;
 =======
+<<<<<<< HEAD
 =======
 }
 
@@ -79,6 +88,11 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export default async /**
  * handler - Function description
@@ -97,6 +111,7 @@ if ( {) {
     res.status (401).json ({ error: 'Unauthorized' }),
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -166,6 +181,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   } catch (error) {
     console.error("Error:", error);
@@ -196,6 +214,7 @@ export default async function handler(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -219,3 +238,6 @@ export default async function handler(req, res) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

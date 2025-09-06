@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+import {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Calendar,
   Clock,
   Users,
@@ -9,6 +15,8 @@
   Video,
   MessageSquare,
   Building,;
+
+
 } from "lucide-react";
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" }
@@ -102,6 +110,147 @@ const teamMembers = [
   }
 ];
 export default function CalendarPage() {
+<<<<<<< HEAD
+=======
+=======
+import {;
+  Calendar,;
+  Clock,;
+  Users,;
+  CheckCircle,;
+  ArrowRight,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Video,;
+  MessageSquare,;
+  Building,;
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+<<<<<<< HEAD
+  Calendar
+  Clock
+  Users
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Video
+  MessageSquare
+  Building
+=======
+  Calendar,
+  Clock,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Video,
+  MessageSquare,
+  Building,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+} from "lucide-react";
+const timeSlots = [;
+  { time: "9:00 AM", available: true, type: "Video Call" },;
+  { time: "9:30 AM", available: true, type: "Phone Call" },;
+  { time: "10:00 AM", available: false, type: "Video Call" },;
+  { time: "10:30 AM", available: true, type: "In-Person" },;
+  { time: "11:00 AM", available: true, type: "Video Call" },;
+  { time: "11:30 AM", available: true, type: "Phone Call" },;
+  { time: "1:00 PM", available: true, type: "Video Call" },;
+  { time: "1:30 PM", available: false, type: "In-Person" },;
+  { time: "2:00 PM", available: true, type: "Video Call" },;
+  { time: "2:30 PM", available: true, type: "Phone Call" },;
+  { time: "3:00 PM", available: true, type: "In-Person" },;
+  { time: "3:30 PM", available: true, type: "Video Call" },;
+  { time: "4:00 PM", available: false, type: "Phone Call" },;
+  { time: "4:30 PM", available: true, type: "Video Call" },;
+  { time: "5:00 PM", available: true, type: "Phone Call" },;
+];
+const consultationTypes = [;
+  {;
+    title: "Free Discovery Call",;
+    duration: "30 minutes",;
+    description:;
+      "Discuss your project requirements and explore how we can help",;
+    price: "Free",;
+    icon: MessageSquare,;
+    features: [;
+      "Project assessment",;
+      "Solution recommendations",;
+      "Timeline discussion",;
+      "Budget estimation",;
+    ],;
+  },;
+  {;
+    title: "Technical Consultation",;
+    duration: "60 minutes",;
+    description:;
+      "Deep dive into technical requirements and architecture planning",;
+    price: "$200",;
+    icon: Building,;
+    features: [;
+      "Technical architecture review",;
+      "Technology stack recommendations",;
+      "Implementation planning",;
+      "Risk assessment",;
+    ],;
+  },;
+  {;
+    title: "Strategy Session",;
+    duration: "90 minutes",;
+    description:;
+      "Comprehensive business strategy and digital transformation planning",;
+    price: "$500",;
+    icon: Users,;
+    features: [;
+      "Business analysis",;
+      "Digital strategy planning",;
+      "ROI projections",;
+      "Implementation roadmap",;
+    ],;
+  },;
+];
+const teamMembers = [;
+  {;
+    name: "Sarah Johnson",;
+    role: "CEO & Founder",;
+    expertise: "Strategic Planning, AI Strategy",;
+    image: "/images/team/sarah-johnson && johnson.jpg",;
+    available: true,;
+  },;
+  {;
+    name: "Michael Chen",;
+    role: "CTO",;
+    expertise: "Cloud Architecture, Quantum Computing",;
+    image: "/images/team/michael-chen && chen.jpg",;
+    available: true,;
+  },;
+  {;
+    name: "Dr. Emily Rodriguez",;
+    role: "Head of AI Research",;
+    expertise: "Machine Learning, AI Research",;
+    image: "/images/team/emily-rodriguez && rodriguez.jpg",;
+    available: false,;
+  },;
+  {;
+    name: "David Kim",;
+    role: "Head of Cybersecurity",;
+    expertise: "Cybersecurity, Risk Management",;
+    image: "/images/team/david-kim && kim.jpg",;
+    available: true,;
+  },;
+];
+export default function CalendarPage() {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
       <Head>;
@@ -113,12 +262,54 @@ export default function CalendarPage() {
         <meta
           name="keywords"
           content="schedule, consultation, book call, free consultation, AI experts, IT consulting"
+<<<<<<< HEAD
+=======
+
+        />;
+      </Head>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero Section */}
       <section className="relative py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+            transition={{ duration: 0 && 0.8 }}
+            className="text-center">;
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">;
+              Schedule a <span className="text-blue-600">Consultation</span>;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">;
+              Book a free consultation with our experts to discuss your project;
+              requirements and explore how we can help transform your business.;
+            </p>;
+            <div className="flex flex-wrap justify-center gap-4">;
+              <div className="flex items-center text-blue-600">;
+                <CheckCircle className="w-5 h-5 mr-2" />;
+                <span className="font-semibold">;
+                  Free 30-minute Discovery Call;
+                </span>;
+              </div>;
+              <div className="flex items-center text-blue-600">;
+                <CheckCircle className="w-5 h-5 mr-2" />;
+                <span className="font-semibold">Expert Team Available</span>;
+              </div>;
+              <div className="flex items-center text-blue-600">;
+                <CheckCircle className="w-5 h-5 mr-2" />;
+                <span className="font-semibold">Flexible Scheduling</span>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Consultation Types */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-7xl mx-auto">;
@@ -171,6 +362,15 @@ export default function CalendarPage() {
                 </button>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Team Members */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -215,6 +415,15 @@ export default function CalendarPage() {
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Time Slots */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto">;
@@ -524,6 +733,15 @@ function CalendarPage() {
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Contact Information */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -616,6 +834,21 @@ function CalendarPage() {
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+
+            </motion.div>;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_x: 20 }}
+              whileInView={{ opacity: 1, coordinate_x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg - gradient - to - br from - blue - 600 to - purple - 600 rounded - 2xl p - 8 text - white";
+            >;
+              <h3 className="text - 2xl font - bold mb - 6">Quick Contact</h3>;
+              <div className="space - y-4">;
+                <div className="flex items - center">;
+                  <Clock className="w - 6 h - 6 mr - 4" />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <div>;
                     <div className="font - semibold">Business Hours</div>;
                     <div className="text - blue - 100">;
@@ -626,14 +859,46 @@ function CalendarPage() {
                 <div className="flex items - center">;
                   <Video className="w - 6 h - 6 mr - 4" />;
                   <div>;
+<<<<<<< HEAD
+=======
+                    <div className="font - semibold">Video Calls</div>;
+                    <div className="text - blue - 100">;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       Zoom, Teams, or Google Meet;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+                <div className="flex items - center">;
+                  <MessageSquare className="w - 6 h - 6 mr - 4" />;
+                  <div>;
+                    <div className="font - semibold">Live Chat</div>;
+                    <div className="text - blue - 100">;
+                      Available 24 / 7 on our website;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </div>;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+
+                  className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">;
+                  Contact Us Now;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* CTA Section */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -657,6 +922,27 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
+                Learn About Us;
+              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+=======
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                Learn About Us
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>;
   );
               <div className="mt - 8">;

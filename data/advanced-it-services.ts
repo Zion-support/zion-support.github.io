@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -28,10 +29,14 @@
     mobile: string;
     email: string;
     address: string;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   {
 
+=======
     id: 'edge - computing - orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -54,6 +59,52 @@
     ],
     popular: true,
 
+<<<<<<< HEAD
+=======
+=======
+    color: 'from - green - 600 to - emerald - 700',
+    text_color: 'text - green - 400',
+    link: 'https://ziontechgroup.com / edge - computing - orchestrator',
+    market_position:;
+      'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge',
+    target_audience:;
+      'IoT companies, Manufacturing, Smart cities, Transportation, Healthcare',
+    trial_days: 30,
+    setup_time: '2 weeks',
+    category: 'Edge Computing',
+    real_service: true,
+    technology: [;
+      'Edge Computing',
+      'AI / ML',
+      'IoT',
+      'Container Orchestration',
+      'Real - time Analytics',
+    ],
+    integrations: [;
+      'AWS IoT',
+      'Azure IoT',
+      'Google Cloud IoT',
+      'Kubernetes',
+      'Docker',
+    ],
+    use_cases: [;
+      'IoT management',
+      'Real - time analytics',
+      'Edge AI',
+      'Smart manufacturing',
+    ],
+    roi: '300% ROI within 6 months through reduced latency and improved performance',
+    competitors: [;
+      'AWS Greengrass ($1000+/month)',
+      'Azure IoT Edge ($2000+/month)',
+      'Google Cloud IoT',
+    ],
+    market_size: '$50B edge computing market',
+    growth_rate: '250% annual growth',
+    variant: 'edge - futuristic',
+    contact_info: {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -68,6 +119,7 @@
     reviews: 89,
   },
   {
+<<<<<<< HEAD
     id: 'ai-powered-cloud-migration'
     name: 'AI-Powered Cloud Migration'
     tagline: 'Intelligent cloud migration and optimization'
@@ -143,6 +195,88 @@
     rating: 4.8
     reviews: 45
   }
+=======
+
+=======
+    id: 'zero - trust - security - platform',
+    name: 'Zero Trust Security Platform',
+    tagline: 'Comprehensive zero trust security implementation',
+    price: '$3, 999',
+    period: '/month',
+    description:;
+      'Enterprise - grade zero trust security platform implementing the latest security principles with continuous verification, micro - segmentation, and advanced threat detection.',
+    features: [;
+
+      'Continuous identity verification',
+      'Micro - segmentation',
+      'Advanced threat detection',
+      'Behavioral analytics',
+      'Compliance tools',
+      'Real - time monitoring',
+      'Automated response',
+      'Integration APIs',
+      'Security dashboard',
+      '24 / 7 security support',
+    ],
+    popular: true,
+    icon: '🛡️',
+
+=======
+    color: 'from - red - 600 to - orange - 700',
+    text_color: 'text - red - 400',
+    link: 'https://ziontechgroup.com / zero - trust - security - platform',
+    market_position:;
+      'Comprehensive zero trust platform competing with Palo Alto Networks and CrowdStrike',
+    target_audience:;
+      'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
+    trial_days: 30,
+    setup_time: '1 month',
+    category: 'Cybersecurity',
+    real_service: true,
+    technology: [;
+      'Zero Trust Architecture',
+      'AI / ML',
+      'Identity Management',
+      'Network Security',
+      'Threat Intelligence',
+    ],
+    integrations: [;
+      'Active Directory',
+      'Okta',
+      'Palo Alto Networks',
+      'CrowdStrike',
+      'SIEM systems',
+    ],
+    use_cases: [;
+      'Enterprise security',
+      'Government compliance',
+      'Financial security',
+      'Healthcare compliance',
+    ],
+    roi: '400% ROI within 12 months through security improvements and compliance benefits',
+    competitors: [;
+      'Palo Alto Networks ($10000+/month)',
+      'CrowdStrike ($5000+/month)',
+      'Zscaler',
+    ],
+    market_size: '$30B zero trust market',
+    growth_rate: '200% annual growth',
+    variant: 'zero - trust - futuristic',
+    contact_info: {
+
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.',
+    launch_date: '2024 - 09 - 01',
+    customers: 89,
+    rating: 4 && 4.8,
+    reviews: 45,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   },
   {
 
@@ -170,6 +304,10 @@
     popular: true,
     icon: '⚡',
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - devops - platform',
@@ -229,6 +367,10 @@
   },
   {
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
@@ -252,6 +394,10 @@
     popular: true,
     icon: '🔗',
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -309,6 +455,10 @@
   },
   {
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
@@ -332,6 +482,10 @@
     popular: true,
     icon: '🏢',
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / quantum - data - center',
@@ -389,6 +543,10 @@
   },
   {
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
@@ -412,6 +570,10 @@
     popular: true,
     icon: '🔒',
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - powered - network - security',
@@ -469,6 +631,10 @@
   },
   {
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
@@ -492,6 +658,10 @@
     popular: true,
     icon: '📱',
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - green - 600 to - teal - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / quantum - iot - platform',
@@ -572,6 +742,10 @@
     popular: true,
     icon: '☁️',
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - powered - cloud - migration',
@@ -627,6 +801,7 @@
     rating: 4 && 4.8,
     reviews: 45,
   },
+=======
     id: 'ai-powered-cloud-migration'
     name: 'AI-Powered Cloud Migration'
     tagline: 'Intelligent cloud migration and optimization'
@@ -696,23 +871,28 @@
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
     launchDate: '2024-10-01'
     customers: 89
     rating: 4.8
     reviews: 45
   }
+=======
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
     launchDate: '2024-10-01',
     customers: 89,
     rating: 4.8,
     reviews: 45,
   },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
+<<<<<<< HEAD
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1247,6 +1427,8 @@
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
     launchDate: '2024-10-01';
@@ -1255,6 +1437,7 @@
 
     rating: 4 && 4.8,
     reviews: 45
+<<<<<<< HEAD
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1266,6 +1449,7 @@
   }
 
 ];
+<<<<<<< HEAD
 export interface AdvancedITService {;
   id: string,;
   name: string,;
@@ -1695,8 +1879,20 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4.8,;
     reviews: 45;
   }
+=======
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface AdvancedITService {;
 
   }
 ];
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

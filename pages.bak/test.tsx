@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;
@@ -7,10 +8,14 @@ const type { NextPage } from "next"; const Test: NextPage = () => {; return (; <
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;
 const type { NextPage } from "next"; const Test: NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> );}; export default Test;'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;
 import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -18,11 +23,17 @@ import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;
 const type { NextPage } from "next"; const Test: NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> );}; export default Test;'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
@@ -41,3 +52,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

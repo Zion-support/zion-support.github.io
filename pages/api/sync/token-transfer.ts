@@ -2,9 +2,13 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -19,6 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -38,6 +43,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  };
+  if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
+    return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   if (!txId |!token |typeof amount !== "number" |!fromSubnet |!toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
@@ -46,6 +58,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const event = {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string,
@@ -59,6 +74,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 =======
     eventId: uuidv4(), type: "token_transfer" as const,
     payload: {
@@ -73,6 +89,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -137,6 +155,9 @@ if (headers["x - zion - signature"] = sig, ) {
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
@@ -145,16 +166,20 @@ if (headers["x - zion - signature"] = sig, ) {
 }
 
 =======
+<<<<<<< HEAD
 =======
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       })),
   return res.status (200).json ({ status: "created", version, event_id: event.event_id });
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -357,6 +382,12 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -474,6 +505,7 @@ export default async function handler(req, res) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -483,3 +515,8 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

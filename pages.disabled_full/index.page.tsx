@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -26,3 +27,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+=======
+import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,and IT Solutions</title> <meta name=\"description\" content=\"AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group.\" /> </Head> <main className=\"min-h-screen bg-gray-50\"> <section className=\"max-w-6xl mx-auto px-4 py-16 text-center\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">Zion Tech Group</h1> <p className=\"text-lg text-gray-600 mb-8\">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\"> <Link href=\"/services\" className=\"bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700\">Explore Services</Link> </div> </section> </main> </> )}
+const React from "react"; import Head from "next/head"; import Link from "next/link"; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group AI,Micro SaaS,and IT Solutions</title> <meta name="description" content="AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group." /> </Head> <main className="min-h-screen bg-gray-50"> <section className="max-w-6xl mx-auto px-4 py-16 text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Zion Tech Group</h1> <p className="text-lg text-gray-600 mb-8">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Link href="/services" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Services</Link> </div> </section> </main> </> )}'"'"
+import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,and IT Solutions</title> <meta name="description" content="AI services,micro SaaS solutions,and enterprise IT by Zion Tech Group." /> </Head> <main className="min-h-screen bg-gray-50"> <section className="max-w-6xl mx-auto px-4 py-16 text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Zion Tech Group</h1> <p className="text-lg text-gray-600 mb-8">AI services,micro SaaS,and enterprise IT solutions that drive growth.</p> <div className="flex flex-col "sm": flex-row gap-4 justify-center"> <Link href="/services" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Services</Link> </div> </section> </main> </> )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

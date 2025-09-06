@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -12,7 +18,13 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -20,6 +32,10 @@ class MasterAutomation {
   }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   log(message) {
 class MasterAutomation {}
   constructor() {}
@@ -31,6 +47,7 @@ class MasterAutomation {}
     ];
   };
   log(message) {}
+<<<<<<< HEAD
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -39,6 +56,8 @@ class MasterAutomation {}
   }
 
   log(message, type = 'info') {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -62,6 +81,7 @@ class MasterAutomation {}
     const logFile = path.join(this.logsDir, 'master-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
+<<<<<<< HEAD
 
   async runCommand(command, description) {
   async runCommand(command, description) {
@@ -70,6 +90,17 @@ class MasterAutomation {}
 
 
   async runCommand(command, description) {
+=======
+  async runCommand(command, description) {
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -79,12 +110,16 @@ class MasterAutomation {}
       });
 
 
+<<<<<<< HEAD
     try {
       const { stdout, stderr } = await execAsync(command, { 
         cwd: process.cwd(), 
         timeout: 30000, 
         ...options 
       });
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -181,6 +216,7 @@ class MasterAutomation {}
       return { success: false, error: error.message };
     }
   }
+<<<<<<< HEAD
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
     } catch (error) {
@@ -188,6 +224,8 @@ class MasterAutomation {}
       return { success: false, error: error.message };
     }
   }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -208,6 +246,10 @@ class MasterAutomation {}
       if (!result.success) {
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       }
     }
@@ -216,12 +258,16 @@ class MasterAutomation {}
     return { success: true, results };
   }
 
+<<<<<<< HEAD
       }
     } else {
       this.log("Failed to get PM2 process list");
       return [];
     }
   }
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
@@ -343,6 +389,7 @@ class MasterAutomation {}
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
+<<<<<<< HEAD
     }
 
     this.log('✅ Quality checks completed');
@@ -402,8 +449,14 @@ class MasterAutomation {}
         failedScripts: 0,
       },
     };
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 
     this.log('✅ Quality checks completed');
@@ -466,6 +519,10 @@ class MasterAutomation {}
     };
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -501,14 +558,21 @@ class MasterAutomation {}
       this.logsDir,
       `automation-report-${Date.now()}.json`
     );
+<<<<<<< HEAD
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
   }
   async start() {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -518,6 +582,10 @@ class MasterAutomation {}
   async start() {
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -547,10 +615,13 @@ class MasterAutomation {}
       this.log("Generating daily report.");
       await this.generateReport();
     }, 24 * 60 * 60 * 1000);
+<<<<<<< HEAD
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
     this.log('🏁 Master Automation completed');
     return report;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 
@@ -598,10 +669,13 @@ class MasterAutomation {}
     return status;
   }
 }
+<<<<<<< HEAD
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
     this.log('🏁 Master Automation completed');
     return report;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 
@@ -697,9 +771,16 @@ class MasterAutomation {}
 // CLI interface
 
 
+<<<<<<< HEAD
 
 
 // CLI interface
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
@@ -707,6 +788,10 @@ if (require.main === module) {
   switch (command) {
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -811,6 +896,7 @@ module.exports = MasterAutomation;
   }
 }
 module.exports = MasterAutomation;
+<<<<<<< HEAD
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -820,3 +906,11 @@ module.exports = MasterAutomation;
 module.exports = MasterAutomation;
 module.exports = MasterAutomation;
 
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

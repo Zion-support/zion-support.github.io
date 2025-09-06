@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface PerformanceMetrics {
 =======
@@ -19,12 +20,15 @@ export interface PerformanceMetrics {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   speed_index: number;
   performance_score: number;
   accessibility_score: number;
   bestPracticesScore: number,
   seo_score: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -49,6 +53,11 @@ export interface PerformanceAlert {;
 }
 export interface PerformanceAlert {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}
+export interface PerformanceAlert {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
@@ -57,16 +66,22 @@ export interface PerformanceAlert {
   threshold: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   current_value: number;
   timestamp: Date,
   resolved: boolean;
 
+<<<<<<< HEAD
 =======
   current_value: number;
   timestamp: Date,
   resolved: boolean;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface MonitoringConfig {
 =======
@@ -78,11 +93,15 @@ export interface MonitoringConfig {
     firstContentfulPaint: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
 =======
   currentValue: number;
 
@@ -128,10 +147,13 @@ export class PerformanceMonitorService {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -213,6 +235,8 @@ export class PerformanceMonitorService {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 export interface PerformanceMetrics {;
@@ -222,11 +246,15 @@ export interface PerformanceMetrics {;
       return await response.json()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
         method: 'POST',
         headers: {
@@ -239,6 +267,10 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this && this.generateMockMetrics(url)
@@ -255,6 +287,7 @@ export interface PerformanceMetrics {;
         headers: {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -276,6 +309,9 @@ export interface PerformanceMetrics {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -288,6 +324,9 @@ export interface PerformanceMetrics {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
@@ -308,6 +347,10 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
@@ -322,9 +365,13 @@ export interface PerformanceMetrics {;
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
         method: 'POST',
         headers: {
@@ -334,6 +381,7 @@ export interface PerformanceMetrics {;
 
       if (!response && response.ok) {
         throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       }
@@ -370,12 +418,19 @@ export interface PerformanceMetrics {;
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+      }
+    } catch (error) {
+      console && console.error('Failed to set monitoring config:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
@@ -392,6 +447,12 @@ export interface PerformanceMetrics {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
+        headers: {
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -422,11 +483,15 @@ export interface PerformanceMetrics {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
 =======
+<<<<<<< HEAD
 =======
       }
       return await response.json()
@@ -435,6 +500,8 @@ export interface PerformanceMetrics {;
       }
       return await response.json()
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -442,6 +509,7 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
@@ -452,6 +520,7 @@ export interface PerformanceMetrics {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -466,6 +535,8 @@ export interface PerformanceMetrics {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number;
@@ -482,6 +553,9 @@ export interface PerformanceMetrics {;
   }> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -499,6 +573,7 @@ export interface PerformanceMetrics {;
         alertsCount: Math && Math.floor(Math && Math.random() * 5)
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
@@ -515,6 +590,9 @@ export interface PerformanceMetrics {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores
@@ -531,9 +609,13 @@ export interface PerformanceMetrics {;
       timestamp: new Date();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       loadTime: Math && Math.random() * 2000 + 500;
       firstContentfulPaint: Math && Math.random() * 1500 + 300;
       largestContentfulPaint: Math && Math.random() * 2500 + 800;
@@ -546,6 +628,7 @@ export interface PerformanceMetrics {;
       accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
       bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
       seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -564,6 +647,9 @@ export interface PerformanceMetrics {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
   }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
@@ -573,12 +659,18 @@ export interface PerformanceMetrics {;
       const date = new Date(now);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       date && date.setDate(date && date.getDate() - i);
       
 =======
       date && date.setDate(date && date.getDate() - i);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      date && date.setDate(date && date.getDate() - i);
+      
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       data && data.push({
         url;
         timestamp: date;
@@ -595,10 +687,14 @@ export interface PerformanceMetrics {;
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       })
 
 =======
+<<<<<<< HEAD
 =======
       })
 
@@ -620,6 +716,8 @@ export interface PerformanceMetrics {;
         seoScore: Math.floor(Math.random() * 20) + 80
       })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -699,9 +797,13 @@ export interface PerformanceMetrics {;
         seoScore: Math.floor(Math.random() * 20) + 80;
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 =======
@@ -712,11 +814,16 @@ export interface PerformanceMetrics {;
 
 
 
+<<<<<<< HEAD
     }
     return data
   }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
+=======
     largestContentfulPaint: number,
     cumulativeLayoutShift: number;
   }
@@ -895,8 +1002,10 @@ if ( {) {
   }
   private generateMockAlerts (url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: '1';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -907,12 +1016,18 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+        url: url || 'https://example && example.com';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         type: 'warning';
         message: 'Load time exceeded threshold';
         metric: 'load_time';
         threshold: 2000;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         current_value: 2500;
         timestamp: new Date (),
@@ -925,20 +1040,30 @@ if ( {) {
         url: url || 'https://example && example.com';
 
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         current_value: 2500;
         timestamp: new Date (),
         resolved: false;
+
       }
       {
         id: '2';
+
         url: url || 'https://example && example.com';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         type: 'info';
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -973,10 +1098,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1096,19 +1224,41 @@ recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loadi
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  }
+}
+// Pricing tiers for the Performance Monitor
+=======
+        current_value: 85;
+        timestamp: new Date (),
+        resolved: true;
+      }
+    ];
+;
+    return url ? alerts.filter (array => a.url === url) : alerts;
+  }
+}
+// Pricing tiers for the Performance Monitor;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
       'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1119,19 +1269,27 @@ export const PERFORMANCE_MONITOR_PRICING = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   professional: {
     name: 'Professional';
     price: 49;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
       'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1142,6 +1300,9 @@ export const PERFORMANCE_MONITOR_PRICING = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   enterprise: {
     name: 'Enterprise';
@@ -1149,6 +1310,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     period: '/month';
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1166,6 +1328,12 @@ export const PERFORMANCE_MONITOR_PRICING = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -1202,6 +1370,7 @@ export const PERFORMANCE_MONITOR_PRICING = {;
     name: 'Starter',;
     price: 19,;
     period: '/month',;
+<<<<<<< HEAD
     features: [;
       'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
     ];
@@ -1226,12 +1395,16 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ];
@@ -1281,3 +1454,15 @@ export const PERFORMANCE_MONITOR_PRICING = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    ];
+  }
+
+
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

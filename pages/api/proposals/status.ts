@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -20,10 +21,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+
+    res.status(200).json({ meta: updated })
+  } catch (error: any) {
+    res.status(500).json({ error: error?.message |'Failed to update status' })
+  }
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
 import { updateProposalMeta } from '../../../utils/data/proposals';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   try {
+<<<<<<< HEAD
     const { id, status } = req.body |{}
     if (!id |!status) return res.status(400).json({ error: 'id and status are required' })
     const updated = updateProposalMeta(id, (m) => ({ ...m, status }))
@@ -49,6 +62,8 @@ function handler() {
   $2
 }
   try {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const { id, status } = req.body || {},
     if (return res.status (400).json ({ error: 'id and status are required' }), ) {
   $2
@@ -67,6 +82,7 @@ function handler() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 
 
@@ -128,3 +144,5 @@ function handler() {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

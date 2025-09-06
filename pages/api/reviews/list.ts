@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     }
@@ -8,6 +9,45 @@
       return res.status(400).json({ error: 'Invalid targetType' })
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { readReviews, readProjects } from '../../../utils/dataStore';
+import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
+import { TALENT_PROFILES } from '../../../data/talent';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  try {;
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readReviews, readProjects } from "../../../utils/dataStore";
+import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
+import { TALENT_PROFILES } from "../../../data/talent";
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "GET") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  try {
+    const { targetType, targetId } = req.query as {
+      targetType?: string;
+      targetId?: string;
+    };
+>>>>>>> main
+
+    if (!targetType || !targetId) {
+      return res.status(400).json({ error: "Missing targetType or targetId" });
+    }
+    if (targetType !== "talent" && targetType !== "client") {
+      return res.status(400).json({ error: "Invalid targetType" });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 
     const all = await readReviews();
@@ -23,6 +63,7 @@
     const filtered = all.filter((r) => {
 
       if (r.removed || !r.approved) return false;
+<<<<<<< HEAD
       const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -186,6 +227,18 @@ const { targetType, targetId } = req.query as {
           x.toRole !== r.toRole &&
           x.approved &&
           !x.removed,
+=======
+      const matchesTarget =
+        r.toRole === (targetType as "talent" | "client") && r.toId === targetId;
+      if (!matchesTarget) return false;
+      const counterpartExists = all && all.some(
+        (x) =>
+          x.projectId === r.projectId &&
+          x.fromRole !== r.fromRole &&
+          x.toRole !== r.toRole &&
+          x.approved &&
+          !x.removed,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       );
       return counterpart_exists;
     });
@@ -242,8 +295,11 @@ const { targetType, targetId } = req.query as {
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
@@ -253,10 +309,15 @@ const { targetType, targetId } = req.query as {
         if (r && r.anonymous) authorName = "Anonymous";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
     // Map to public reviews (mask anonymous author);
     const public_reviews: PublicReview[] = filtered;
@@ -321,14 +382,26 @@ if (author_name = "Anonymous") {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const summary: ReviewsSummary = {
       average_rating,
       total_reviews,
       totalCompletedProjects,
 
 
+<<<<<<< HEAD
+=======
+=======
+      most_recent: public_reviews.slice (0, 5),
+    }
+;
+    return res.status (200).json ({ summary, reviews: public_reviews });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error: any) {
 
     return res;
@@ -337,6 +410,9 @@ if (author_name = "Anonymous") {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 }
@@ -346,6 +422,7 @@ if (author_name = "Anonymous") {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -354,6 +431,8 @@ if (author_name = "Anonymous") {
 
   }
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -376,6 +455,9 @@ if (author_name = "Anonymous") {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -4,10 +4,17 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+<<<<<<< HEAD
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+=======
+  server: {
+    port: 3000,
+    open: true,
+    host: true
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   },
   build: {
     outDir: 'dist',

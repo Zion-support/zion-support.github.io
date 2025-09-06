@@ -1,7 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -166,6 +177,24 @@ if (require.main === module) {
     });
 }
 #!/usr/bin/env node
+=======
+<<<<<<< HEAD
+console.log('♿ Running accessibility check...');
+console.log('✅ Accessibility check completed');
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+#!/usr/bin/env node
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -284,6 +313,25 @@ if (require.main === module) {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -292,6 +340,11 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -322,3 +375,8 @@ module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

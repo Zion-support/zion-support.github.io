@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -33,6 +34,14 @@ const Footer: React.FC = () => {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-slate-900 text-gray-300">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -94,6 +103,7 @@ const Footer: React.FC = () => {
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
+<<<<<<< HEAD
 =======
         <div className='mt-8 flex justify-end'>
           <button
@@ -112,6 +122,8 @@ const Footer: React.FC = () => {
           </button>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
 >>>>>>> origin/fix-website-loading-errors-final
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
       </div>
     </motion.footer>

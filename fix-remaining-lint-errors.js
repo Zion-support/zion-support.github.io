@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -18,6 +19,11 @@ function fixParsingErrors(content) {}}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8');  fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; } main().catch(console.error);
 #!/usr/bin/env node;
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8');  fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; } main().catch(console.error);
@@ -42,6 +48,9 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {'}
         files.push(fullPath);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 for (const item of, items) {}; const fullPath = path && path.join(dir, item) try {}; // Skip nodemodules, .git, and other common directories}; if (!['nodemodules && nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files && files.concat(findFiles(fullPath, extensions)) }} else if (extensions && extensions.some(ext = > item && item.endsWith(ext))) {}; files && files.push(fullPath) }} catch (error) {; // Skip files that can't be accessed'}; continue }}};// Function to fix specific parsing errors;
 function fixParsingErrors(content) {}};
@@ -124,10 +133,13 @@ function find_files() {'}
   $2
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     } catch (error) {
       // Skip files that can't be accessed'}
@@ -139,9 +151,13 @@ function find_files() {'}
 // Function to fix specific parsing errors;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   fixed = fixed && fixed.replace(/(\w+)\s+(\w+)\s*\)/g, '$1, $2)');',
   // Fix missing commas in object properties;
   fixed = fixed && fixed.replace(/(\w+):\s*([^,}\n]+)(\n\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1: $2,$3');',
@@ -153,6 +169,7 @@ function find_files() {'}
   fixed = fixed && fixed.replace(/(\{[^}]*?)(\n\s*[a-zA-Z_$])/g, '$1}$2');',
   // Fix missing closing parentheses;
   fixed = fixed && fixed.replace(/(\([^)]*?)(\n\s*[a-zA-Z_$])/g, '$1)$2');',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -193,6 +210,9 @@ function fixParsingErrors(content) {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return fixed;
 }
 // Function to fix unused variables;
@@ -200,11 +220,15 @@ function fixUnusedVariables(content) {}}
 // Function to fix specific syntax issues;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 function fixSyntaxIssues(content) {}; fixed = fixed && fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z_$])/g, (match, p1, p2) = > {}; if (p1 && p1.trim() && !p1 && p1.trim().endsWith() && !p1 && p1.trim().endsWith() && !p1 && p1.trim().endsWith('{_') && !p1 && p1.trim().endsWith('}')) {_'}; return p1 + + p2,' }};
 
 // Main function;
 function main() {}; if (content ! = = originalContent) {}; fs && fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),' const lines = result && result.split('\n'),' const lastLine = lines[lines && lines.length - 2] _ } catch (error) {}; _,' }}; fixedCount++}} catch (error) {_;  errorCount++}}
+<<<<<<< HEAD
 =======
 function fixSyntaxIssues(content) {}; fixed = fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z_$])/g, (match, p1, p2) = > {}; if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{_') && !p1.trim().endsWith('}')) {_'}; return p1 + + p2,' }}
 // Main function;
@@ -213,6 +237,8 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
 =======
 function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),' const lines = result.split('\n'),' const lastLine = lines[lines.length - 2] _ } catch (error) {}; _,' }}; fixedCount++}} catch (error) {_;  errorCount++}}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
  }
     } catch (error) {_;
       // Skip files that can't be accessed'}
@@ -221,6 +247,7 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
 }
 }
 // Function to fix specific parsing errors;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -263,6 +290,9 @@ function fixRemainingLintErrors(content) {
     );
   if (fixed.includes("<Link") && !fixed.includes("import Link  from "next/link)) {";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   for (const item of, items) {};
     const fullPath = path && path.join(dir, item),;
     try {};
@@ -274,6 +304,7 @@ function fixRemainingLintErrors(content) {
         files && files.push(fullPath);
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -282,6 +313,11 @@ function fixRemainingLintErrors(content) {
 =======
 // Function to fix specific parsing errors;function fixParsingErrors(content) {}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+#!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 /**
  * fixParsingErrors - Function description
  */
@@ -349,9 +385,13 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
 }
 #!/usr / bin / env node;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Function to fix remaining lint errors;
 /**
  * fixRemainingLintErrors - Function description
@@ -360,28 +400,40 @@ function fixRemainingLintErrors() {
   let fixed = content;
   // Fix unescaped entities;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   fixed = fixed && fixed.replace(/(?<!&)([^&])"([^&])/g, "$1&apos;$2");
   fixed = fixed && fixed.replace(/(?<!&)([^&])"([^&])/g, "$1&quot;$2")>;
   // Fix Next && Next.js link issues - replace <a> with <Link> for internal navigation;
   fixed = fixed && fixed.replace(;
     /<a\s+href=\/([^]+)"([^>]*)>/g,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "<Link href="/$1$2>";
   );
   fixed = fixed && fixed.replace(/<\/a>/g, "</Link>");
   // Add Link;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 // Main function;
 
 
 
+<<<<<<< HEAD
 =======
     fixed = fixed.replace(/import\s+([^]+);/, "import $1;\nimport Link from "next/link)"}
     } catch (error) {try {}
@@ -451,6 +503,8 @@ function fixRemainingLintErrors(content) {
     );
   if (fixed.includes("<Link") && !fixed.includes("import Link  from "next/link)) {";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   console.log(""\"nCompleted":${fixedCount} files fixed, ${errorCount} errors"")};function main() {}
       if (content !== originalContent) {}
@@ -501,12 +555,16 @@ console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -541,6 +599,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   for (const item of, items) {};
     const fullPath = path.join(dir, item),
     try {};
@@ -555,6 +617,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         files.push(fullPath)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     fixed = fixed && fixed.replace(
       /import\s+([^]+);/,
@@ -562,6 +627,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     );
   if (fixed && fixed.includes("<Link") && !fixed && fixed.includes("import Link  from "next/link)) {"
     fixed = fixed && fixed.replace(/import\s+([^]+)/, "import $1\nimport Link from "next/link)"}
+<<<<<<< HEAD
 
     } catch (error) {,
     try {}
@@ -745,6 +811,18 @@ function main() {};
 <<<<<<< HEAD
 
 =======
+=======
+
+    } catch (error) {,
+    try {}
+        // Skip node_modules, .git, and other common directories}
+        if (!['node_modules && node_modules.gitdistbuild.next'].includes(item)) {'}
+          files = files && files.concat(findFiles(fullPath, extensions))
+        }
+      } else if (extensions && extensions.some(ext => item && item.endsWith(ext))) {};
+        files && files.push(fullPath)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       };
     } catch (error) {,
       // Skip files that can't be accessed'};
@@ -752,12 +830,20 @@ function main() {};
     };
   };
 };
+<<<<<<< HEAD
 // Function to fix specific parsing errors,
 function fixParsingErrors(content) {};
+=======
+
+
+// Function to fix specific parsing errors,;function fixParsingErrors(content) {};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 // Function to fix unused variables,
 function fixUnusedVariables(content) {};
 };
+<<<<<<< HEAD
 // Function to fix specific syntax issues,
 function fixSyntaxIssues(content) {};
   fixed = fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z_$])/g, (match, p1, p2) => {};
@@ -787,18 +873,110 @@ function main() {};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+// Function to fix specific syntax issues,;
+
+function fixSyntaxIssues(content) {};
+  fixed = fixed && fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z_$])/g, (match, p1, p2) => {};
+    if (p1 && p1.trim() && !p1 && p1.trim().endsWith() && !p1 && p1.trim().endsWith() && !p1 && p1.trim().endsWith('{') && !p1 && p1.trim().endsWith('}')) {'};
+      return p1 +  + p2,';
+};
+
+// Main function,;
+
+function main() {};
+      if (content !== originalContent) {};
+        fs && fs.writeFileSync(file, content, 'utf8'),',;
+        fixedCount++,;
+        _console && _console.log(`✅ Fixe:d:${file}`);
+      };
+    } catch (error) {};
+      errorCount++,;
+      _console && _console.error(`❌ Error fixing ${file} `, error && error.message);
+};
+};
+  try {};
+    const result = execSync('npm run lint 2>&1', { encodin:g:'utf8' }),',;
+    const lines = result && result.split('\n'),',;
+    const lastLine = lines[lines && lines.length - 2],;
+    _console && _console.log(`📈 Lint:result:${lastLine}`);
+  } catch (error) {};
+    _console && _console.log('⚠️  Some lint errors remain. Check the output above.'),';
+};
+};
+        fixedCount++};
+
+    } catch (error) {,;
+  console && console.error(`Error processing ${file} `, error && error.message),;
+      errorCount++};
+  };
+,;
+
+  console && console.log(""\"nCompleted":${fixedCount} files fixed, ${errorCount} errors"")};
+;function main() {};
+      if (content !== originalContent) {};
+        fs && fs.writeFileSync(file, content, 'utf8'),',
+
+        fixedCount++,
+        _console && _console.log(`✅ Fixed: ${file}`)
+      };
+    } catch (error) {};
+      errorCount++,
+
+      _console && _console.error(`❌ Error fixing ${file}:`, error && error.message)
+};
+};  try {};
+
+    const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),',
+    const lines = result && result.split('\n'),',
+    const lastLine = lines[lines && lines.length - 2],
+    _console && _console.log(`📈 Lint result: ${lastLine}`)
+  } catch (error) {};
+
+    _console && _console.log('⚠️  Some lint errors remain. Check the output above.'),'
+};
+};
+        fixedCount++};
+    } catch (error) {;
+  console && console.error(`Error processing ${file}:`, error && error.message);
+      errorCount++}
+};
+;  console && console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+
+  // console && console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)};
+    const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),',
+    const lines = result && result.split('\n'),',
+    const lastLine = lines[lines && lines.length - 2],
+    _
+  } catch (error) {};
+    _,'
+}
+};
+        fixedCount++}
+    } catch (error) {_;
+  
+      errorCount++}
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   };
 };
         fixedCount++};
     } catch (error) {,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   console && console.error(`Error processing ${file}:`, error && error.message),
       errorCount++};
 
 
 
 =======
+<<<<<<< HEAD
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
@@ -866,11 +1044,20 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+<<<<<<< HEAD
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
 #!/usr/bin/env node; function fixRemainingLintErrors(content) { let fixed = content; fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&apos;$2"); fixed = fixed.replace(/(?<!&)([^&])"([^&])/g,"$1&quot;$2")>; fixed = fixed.replace(; /<a\s+href=\/([^]+)"([^>]*)>/g,"<Link href="/$1$2>"; ); fixed = fixed.replace(/<\/a>/g,"</Link>"); fixed = fixed.replace( /import\s+([^]+);/,"import $1;\nimport Link from \"next/link\";" ); if (fixed.includes("<Link") && !fixed.includes("import Link from "next/link)) {"; fixed = fixed.replace(/import\s+([^]+);/,"import $1;\nimport Link from "next/link)",} ; return fixed} ; async function $1() { const files = await glob("pages*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixRemainingLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8'); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} main().catch(console.error);
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 ;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
@@ -881,6 +1068,10 @@ console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
         // Skip node_modules, .git, and other common directories},;
         if (!['node_modules.gitdistbuild.next'].includes(item)) {'},;
           files = files.concat(findFiles(fullPath, extensions));
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         }
       } else if ()) {}) {
   $2
@@ -892,6 +1083,7 @@ console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
       continue;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
       } else if (extensions.some(ext => item.endsWith(ext))) {},;
@@ -938,12 +1130,16 @@ function main() {},;
         fixedCount++}
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {,;
   console.error(`Error processing ${file}:`, error.message),;
       errorCount++}
   },;
 ,;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")},;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1086,3 +1282,8 @@ function fixRemainingLintErrors() { let fixed = content; fixed = fixed.replace (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type Real2036InnovativeService = {
   id: string, name: string,
   tagline: string, description: string,
@@ -14,6 +17,7 @@ export type Real2036InnovativeService = {
 
 
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -34,6 +38,8 @@ export type Real2036InnovativeService = {
 =======
   features: string[];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
@@ -42,6 +48,7 @@ export type Real2036InnovativeService = {
   useCases?: string[]
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -65,6 +72,8 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     category: 'AI & Data',
     price: '$299',
     period: '/month',
@@ -79,6 +88,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -86,6 +96,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',
     launch_date: '2036 - 01 - 20',
     rating: 4.8,
@@ -120,9 +134,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
 <<<<<<< HEAD
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
       'Multi - party secure communication',
@@ -133,9 +151,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom deployment options',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered incident detection',
 =======
     link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',
@@ -173,9 +195,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     features: [;
       'AI - powered incident detection',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automated problem resolution',
       'Self - healing infrastructure',
       'Predictive maintenance',
@@ -185,10 +211,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Comprehensive monitoring',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / autonomous - devops - platform - enterprise',
     launch_date: '2036 - 01 - 30',
     rating: 4.7,
@@ -224,9 +255,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Satellite performance analytics',
       'Orbital mechanics calculations',
       'Space weather monitoring',
@@ -237,9 +272,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom reporting engine',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered threat detection',
 =======
     link: 'https://ziontechgroup.com / services / space - technology - analytics - platform',
@@ -275,9 +314,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     features: [;
       'AI - powered threat detection',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Behavioral analysis',
       'Automated incident response',
       'Threat intelligence feeds',
@@ -287,10 +330,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom security policies',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise',
     launch_date: '2036 - 02 - 10',
     rating: 4.8,
@@ -324,9 +372,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum algorithm optimization',
       'Hybrid quantum - classical ML',
       'Quantum neural networks',
@@ -337,10 +389,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Expert consultation',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform',
     launch_date: '2036 - 02 - 15',
     rating: 4.9,
@@ -375,9 +432,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Intelligent workload distribution',
       'Real - time optimization',
       'Multi - edge coordination',
@@ -388,9 +449,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom edge policies',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered personalization',
 =======
     link: 'https://ziontechgroup.com / services / edge - computing - orchestration - enterprise',
@@ -427,9 +492,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     features: [;
       'AI - powered personalization',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Omnichannel experience management',
       'Predictive customer behavior',
       'Automated customer service',
@@ -439,9 +508,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Performance analytics',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi-chain support',
 =======
     link: 'https://ziontechgroup.com / services / ai - customer - experience - platform',
@@ -479,9 +552,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     features: [;
       'Multi - chain support',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Smart contract development',
       'Deployment automation',
       'Security auditing',
@@ -491,9 +568,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Developer APIs',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered quality control',
 =======
     link: 'https://ziontechgroup.com / services / blockchain - infrastructure - enterprise',
@@ -530,9 +611,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     features: [;
       'AI - powered quality control',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Predictive maintenance',
       'Autonomous robotics',
       'Production optimization',
@@ -542,10 +627,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Performance analytics',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform',
     launch_date: '2036 - 03 - 05',
     rating: 4.7,
@@ -579,9 +669,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum encryption protocols',
       'Quantum - resistant algorithms',
       'Real - time threat detection',
@@ -592,9 +686,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom security policies',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered image analysis',
 =======
     link: 'https://ziontechgroup.com / services / quantum - internet - security - gateway',
@@ -631,9 +729,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     features: [;
       'AI - powered image analysis',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Symptom assessment',
       'Treatment recommendations',
       'Patient data integration',
@@ -643,10 +745,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Expert consultation',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / ai - healthcare - diagnostics - platform',
     launch_date: '2036 - 03 - 15',
     rating: 4.8,
@@ -678,9 +785,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Resource mapping algorithms',
       'Mining operation management',
       'Robotic control systems',
@@ -691,10 +802,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom mining strategies',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / space - resource - mining - platform',
     launch_date: '2036 - 03 - 20',
     rating: 4.7,
@@ -726,9 +842,13 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum market analysis',
       'High - frequency trading',
       'Risk management',
@@ -739,10 +859,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Performance analytics',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / quantum - financial - trading - platform',
     launch_date: '2036 - 03 - 25',
     rating: 4.9,
@@ -776,8 +901,11 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Demand forecasting',
       'Inventory optimization',
       'Route optimization',
@@ -787,6 +915,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Performance analytics',
       'Custom workflows',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1409,6 +1538,11 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ];
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization-platform';
+=======
+
+    ];
+    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2036-03-30';
 <<<<<<< HEAD
 
@@ -1478,6 +1612,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 =======
     rating: 4.7;
     marketSize: '$28.4B'
@@ -1920,3 +2055,11 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+export type Real2036InnovativeService = {;
+
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

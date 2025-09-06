@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 };
   return (;
@@ -6,6 +14,24 @@
 };
 };
 };
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
+>>>>>>> origin/automation-improvements-final
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -54,16 +80,32 @@ interface HTMLElement {;
   textContent: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
+=======
+
+
+interface HTMLAnchorElement extends HTMLElement {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   tagName: 'A';
   href: string;
   target: string;
 }
+<<<<<<< HEAD
 type Href = string | { pathname?: string; href?: string }
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href;
   children: React.ReactNode;
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+=======
+
+=======
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 };
   return (;
@@ -71,9 +113,22 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       {children};
 };
 };
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 };
 }
+=======
+
+};
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+function resolveHref(href: Href): string {
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 };
 };
@@ -94,6 +149,11 @@ import React from 'react';
   href: string;
   target: string;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+function resolveHref(href: Href): string {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
 }
@@ -110,6 +170,15 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 
     });
   }
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -148,12 +217,29 @@ export default function Link(): any ({ href, children, className, ...rest }: Lin
       ...rest,;
     });
   }
+<<<<<<< HEAD
 
+=======
+=======
+
+
+
+
+
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <a href={resolved} className={className} {...rest}>;
       {children}
     </a>;
   );
+<<<<<<< HEAD
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -162,6 +248,11 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 }
 import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
 }
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 }
 
@@ -173,9 +264,20 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
 }
+<<<<<<< HEAD
 
 ;
 // Define HTMLAnchorElement if not available;
@@ -185,6 +287,16 @@ interface HTMLElement {
   innerHTML: string;
   text_content: string | null;
   style: { [key: string]: string }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+}
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 interface HTMLAnchorElement extends HTMLElement {
   tag_name: 'A';
@@ -228,3 +340,7 @@ function Link() {
       {children}
     </a>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

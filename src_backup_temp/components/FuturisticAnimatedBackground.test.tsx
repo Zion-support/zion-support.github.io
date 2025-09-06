@@ -1,11 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,10 +38,16 @@ class ErrorBoundary extends React.Component {
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function FuturisticAnimatedBackground() {return ( <div className="min-h-screen bg-white"> <SEO title="FuturisticAnimatedBackground && FuturisticAnimatedBackground.test - Zion Tech Group" description="Professional FuturisticAnimatedBackground && FuturisticAnimatedBackground.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">FuturisticAnimatedBackground && FuturisticAnimatedBackground.test</h1> <pclassName="text-gray-300 text-lg"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }"
 import React from 'react',','' '''' import {SEO } from '@/components/SEO' export default function FuturisticAnimatedBackground() {return ( <div className="min-h-screen bg-white"> <SEO title="FuturisticAnimatedBackground && FuturisticAnimatedBackground.test - Zion Tech Group" description="Professional FuturisticAnimatedBackground && FuturisticAnimatedBackground.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">FuturisticAnimatedBackground && FuturisticAnimatedBackground.test</h1> <p className="text-gray-300 text-lg"> Professional FuturisticAnimatedBackground && FuturisticAnimatedBackground.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
@@ -613,3 +614,6 @@
   "/services/[slug]": "pages/services/[slug].js",
   "/support": "pages/support.js"
 {"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/404":"pages/404.html"}
+=======
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/404":"pages/404.html"}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

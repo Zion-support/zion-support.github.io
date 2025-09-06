@@ -1,6 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
   // Image optimization
+=======
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+  trailingSlash: true,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   images: {
     domains: [
       "localhost",
@@ -76,10 +90,17 @@ const nextConfig = {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
+<<<<<<< HEAD
             chunks: 'all',
           },
         },
       };
+=======
+            chunks: 'all'
+          }
+        }
+      }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 
     // Exclude apps directory from compilation
@@ -87,9 +108,9 @@ const nextConfig = {
       test: /\.(ts|tsx|js|jsx)$/,
       include: /apps\//,
       use: "ignore-loader"
-    });
+    })
 
-    return config;
+    return config
   },
   
   // Security headers
@@ -116,8 +137,12 @@ const nextConfig = {
           }
         ]
       }
-    ];
+    ]
   }
 }
 
+<<<<<<< HEAD
 export default nextConfig;
+=======
+export default nextConfig
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

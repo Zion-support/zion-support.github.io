@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
  * ITServicesPage - Function description
  */
@@ -60,6 +61,312 @@ function ITService({ title, description, price, features, benefits, icon, href }
         {solutions.map((solution) => (
           <li key={solution} className="flex items-center">
             <span className="text-blue-500 mr-2">•</span> {solution}
+=======
+export const metadata = { 
+  title: 'IT Services | Zion Tech Group',
+  description: 'Comprehensive IT services including cloud migration, DevOps, SRE, security, and infrastructure management. Engineered for uptime, efficiency, and scalability.'
+};
+
+export default function ITServicesPage() {
+  return (
+    <div className="animate-fade-in">
+      <section className="text-center py-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          IT Services & Solutions
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          Cloud, DevOps, SRE and security services engineered for uptime and efficiency. 
+          We help you build, secure, and scale your infrastructure for maximum performance.
+        </p>
+      </section>
+
+      <section className="py-12">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our IT Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ITServiceCard
+            title="Cloud Migration & Architecture"
+            description="Complete cloud migration with modern architecture patterns"
+            features={["Multi-cloud strategy", "Container orchestration", "Serverless architecture", "Cost optimization", "Disaster recovery"]}
+            price="$15k–$50k"
+            icon="☁️"
+          />
+          <ITServiceCard
+            title="DevOps & CI/CD Automation"
+            description="End-to-end DevOps implementation with automated pipelines"
+            features={["CI/CD pipelines", "Infrastructure as Code", "Automated testing", "Deployment automation", "Environment management"]}
+            price="$10k–$35k"
+            icon="🔄"
+          />
+          <ITServiceCard
+            title="Site Reliability Engineering (SRE)"
+            description="Proactive monitoring and reliability engineering"
+            features={["SLO/SLI definition", "Error budget management", "Incident response", "Capacity planning", "Performance optimization"]}
+            price="$20k–$60k"
+            icon="📊"
+          />
+          <ITServiceCard
+            title="Cybersecurity & Compliance"
+            description="Comprehensive security hardening and compliance management"
+            features={["Security assessment", "Zero Trust architecture", "Vulnerability management", "Compliance auditing", "Security monitoring"]}
+            price="$12k–$40k"
+            icon="🔒"
+          />
+          <ITServiceCard
+            title="Database & Data Management"
+            description="Database optimization and data pipeline management"
+            features={["Database migration", "Performance tuning", "Data backup & recovery", "Data pipeline automation", "Data governance"]}
+            price="$8k–$25k"
+            icon="🗄️"
+          />
+          <ITServiceCard
+            title="Network & Infrastructure"
+            description="Network design, optimization, and infrastructure management"
+            features={["Network architecture", "Load balancing", "CDN implementation", "VPN & connectivity", "Infrastructure monitoring"]}
+            price="$10k–$30k"
+            icon="🌐"
+          />
+          <ITServiceCard
+            title="API Development & Management"
+            description="RESTful and GraphQL API development with comprehensive management"
+            features={["API design", "Documentation", "Rate limiting", "Authentication", "Monitoring", "Version control"]}
+            price="$12k–$35k"
+            icon="🔌"
+          />
+          <ITServiceCard
+            title="Microservices Architecture"
+            description="Modern microservices implementation with container orchestration"
+            features={["Service design", "Container orchestration", "Service mesh", "API gateway", "Monitoring", "Scaling"]}
+            price="$25k–$70k"
+            icon="🏗️"
+          />
+          <ITServiceCard
+            title="Data Center & Colocation"
+            description="Physical infrastructure management and data center optimization"
+            features={["Hardware management", "Power optimization", "Cooling systems", "Physical security", "Uptime monitoring", "Disaster recovery"]}
+            price="$15k–$45k"
+            icon="🏢"
+          />
+          <ITServiceCard
+            title="IT Service Management (ITSM)"
+            description="Complete IT service delivery and support management"
+            features={["Service desk", "Incident management", "Change management", "Asset management", "Knowledge base", "SLA management"]}
+            price="$18k–$50k"
+            icon="🎯"
+          />
+          <ITServiceCard
+            title="Cloud Cost Optimization"
+            description="Intelligent cloud spending optimization and cost management"
+            features={["Cost analysis", "Resource optimization", "Reserved instances", "Auto-scaling", "Budget alerts", "Cost forecasting"]}
+            price="$8k–$25k"
+            icon="💰"
+          />
+          <ITServiceCard
+            title="Disaster Recovery & Business Continuity"
+            description="Comprehensive disaster recovery planning and implementation"
+            features={["Backup strategies", "Recovery testing", "RTO/RPO planning", "Failover systems", "Documentation", "Training"]}
+            price="$20k–$60k"
+            icon="🔄"
+          />
+          <ITServiceCard
+            title="IT Consulting & Strategy"
+            description="Strategic IT planning and digital transformation consulting"
+            features={["Technology roadmap", "Digital transformation", "IT governance", "Vendor evaluation", "Budget planning", "Risk assessment"]}
+            price="$8k–$25k"
+            icon="💡"
+          />
+          <ITServiceCard
+            title="Cloud Security & Compliance"
+            description="Advanced cloud security implementation and compliance management"
+            features={["Cloud security architecture", "Compliance frameworks", "Identity management", "Data encryption", "Audit preparation", "Security monitoring"]}
+            price="$15k–$45k"
+            icon="🔐"
+          />
+          <ITServiceCard
+            title="Application Performance Monitoring"
+            description="Comprehensive APM solutions with real-time monitoring and optimization"
+            features={["Real-time monitoring", "Performance analytics", "Error tracking", "User experience monitoring", "Alerting systems", "Performance optimization"]}
+            price="$10k–$30k"
+            icon="📈"
+          />
+          <ITServiceCard
+            title="IT Asset Management"
+            description="Complete IT asset lifecycle management and optimization"
+            features={["Asset inventory", "License management", "Lifecycle tracking", "Cost optimization", "Compliance reporting", "Automated discovery"]}
+            price="$12k–$35k"
+            icon="📋"
+          />
+          <ITServiceCard
+            title="Cloud Cost Management"
+            description="Intelligent cloud spending optimization and budget management"
+            features={["Cost analysis", "Budget forecasting", "Resource optimization", "Reserved instances", "Auto-scaling", "Cost alerts"]}
+            price="$8k–$25k"
+            icon="💰"
+          />
+          <ITServiceCard
+            title="IT Support & Help Desk"
+            description="24/7 IT support and help desk services for your organization"
+            features={["24/7 support", "Remote assistance", "Ticket management", "Knowledge base", "User training", "SLA management"]}
+            price="$3k–$15k/mo"
+            icon="🎧"
+          />
+          <ITServiceCard
+            title="Data Backup & Recovery"
+            description="Comprehensive data protection and recovery solutions"
+            features={["Automated backups", "Point-in-time recovery", "Cross-region replication", "Backup testing", "Recovery planning", "Compliance reporting"]}
+            price="$10k–$30k"
+            icon="💾"
+          />
+          <ITServiceCard
+            title="IT Training & Documentation"
+            description="Comprehensive IT training programs and technical documentation"
+            features={["Technical training", "Process documentation", "User manuals", "Video tutorials", "Certification programs", "Knowledge transfer"]}
+            price="$5k–$20k"
+            icon="📚"
+          />
+          <ITServiceCard
+            title="Mobile Device Management"
+            description="Enterprise mobile device security and management solutions"
+            features={["Device enrollment", "Policy enforcement", "App management", "Security controls", "Remote wipe", "Compliance monitoring"]}
+            price="$8k–$25k"
+            icon="📱"
+          />
+          <ITServiceCard
+            title="IT Governance & Risk Management"
+            description="IT governance framework and risk management implementation"
+            features={["Governance framework", "Risk assessment", "Policy development", "Compliance monitoring", "Audit support", "Risk mitigation"]}
+            price="$15k–$40k"
+            icon="⚖️"
+          />
+          <ITServiceCard
+            title="Cloud Migration Services"
+            description="Complete cloud migration planning and execution services"
+            features={["Migration planning", "Data migration", "Application migration", "Testing & validation", "Go-live support", "Post-migration optimization"]}
+            price="$20k–$80k"
+            icon="🚀"
+          />
+          <ITServiceCard
+            title="IT Infrastructure Monitoring"
+            description="Comprehensive infrastructure monitoring and alerting solutions"
+            features={["Server monitoring", "Network monitoring", "Application monitoring", "Log analysis", "Alerting systems", "Performance dashboards"]}
+            price="$8k–$25k"
+            icon="📊"
+          />
+          <ITServiceCard
+            title="IT Security Assessment"
+            description="Comprehensive security assessment and penetration testing"
+            features={["Vulnerability scanning", "Penetration testing", "Security audit", "Compliance assessment", "Risk analysis", "Remediation planning"]}
+            price="$10k–$35k"
+            icon="🔍"
+          />
+          <ITServiceCard
+            title="IT Project Management"
+            description="Professional IT project management and delivery services"
+            features={["Project planning", "Resource management", "Timeline management", "Risk management", "Quality assurance", "Stakeholder communication"]}
+            price="$12k–$40k"
+            icon="📅"
+          />
+          <ITServiceCard
+            title="Cloud Architecture Design"
+            description="Custom cloud architecture design and implementation"
+            features={["Architecture design", "Scalability planning", "Security design", "Cost optimization", "Performance tuning", "Documentation"]}
+            price="$15k–$50k"
+            icon="🏗️"
+          />
+          <ITServiceCard
+            title="IT Compliance & Auditing"
+            description="Compliance management and audit preparation services"
+            features={["Compliance assessment", "Audit preparation", "Policy development", "Control implementation", "Documentation", "Training"]}
+            price="$12k–$35k"
+            icon="📋"
+          />
+          <ITServiceCard
+            title="IT Vendor Management"
+            description="IT vendor evaluation, selection, and relationship management"
+            features={["Vendor evaluation", "Contract negotiation", "Performance monitoring", "Cost optimization", "Relationship management", "Risk assessment"]}
+            price="$8k–$25k"
+            icon="🤝"
+          />
+          <ITServiceCard
+            title="IT Change Management"
+            description="IT change management and release management services"
+            features={["Change planning", "Impact analysis", "Risk assessment", "Testing coordination", "Deployment management", "Rollback planning"]}
+            price="$10k–$30k"
+            icon="🔄"
+          />
+          <ITServiceCard
+            title="IT Capacity Planning"
+            description="IT capacity planning and resource optimization services"
+            features={["Capacity analysis", "Growth planning", "Resource optimization", "Performance modeling", "Cost forecasting", "Scaling strategies"]}
+            price="$8k–$25k"
+            icon="📈"
+          />
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">IT Service Categories</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Item 
+            title="Cloud & Infrastructure" 
+            details={[
+              "AWS, GCP, Azure multi-cloud strategies",
+              "Kubernetes orchestration and management",
+              "Serverless architecture implementation",
+              "Infrastructure as Code (Terraform, CloudFormation)",
+              "Auto-scaling and load balancing",
+              "Disaster recovery and backup solutions"
+            ]} 
+          />
+          <Item 
+            title="DevOps & SRE" 
+            details={[
+              "CI/CD pipeline design and implementation",
+              "Comprehensive observability and monitoring",
+              "Automated testing and quality gates",
+              "Chaos engineering and resilience testing",
+              "Incident response and post-mortem processes",
+              "Performance optimization and capacity planning"
+            ]} 
+          />
+          <Item 
+            title="Security & Compliance" 
+            details={[
+              "Security hardening and vulnerability management",
+              "Zero Trust network architecture",
+              "Compliance auditing (SOC2, ISO27001, GDPR)",
+              "Security monitoring and threat detection",
+              "Identity and access management (IAM)",
+              "Data protection and encryption"
+            ]} 
+          />
+        </div>
+      </section>
+
+      <Pricing />
+      <ContactSection />
+    </div>
+  );
+}
+
+function ITServiceCard({ title, description, features, price, icon }: { 
+  title: string; 
+  description: string; 
+  features: string[]; 
+  price: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-2">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-600">
+            <span className="text-green-500 mr-2">✓</span>
+            {feature}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </li>
         ))}
       </ul>
@@ -67,6 +374,7 @@ function ITService({ title, description, price, features, benefits, icon, href }
   );
 }
 
+<<<<<<< HEAD
 function ITBenefitCard({ title, description, icon }: { 
   title: string; 
   description: string; 
@@ -77,12 +385,27 @@ function ITBenefitCard({ title, description, icon }: {
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
+=======
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-start text-gray-600">
+            <span className="text-blue-500 mr-2 mt-1">•</span>
+            {detail}
+          </li>
+        ))}
+      </ul>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>
   );
 }
 
 function Pricing() {
   return (
+<<<<<<< HEAD
     <section className="mb-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">IT Service Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -91,16 +414,46 @@ function Pricing() {
           price="$4k–$10k" 
           features={["2 weeks", "Cloud review", "Security audit", "Roadmap", "Recommendations"]} 
           popular={false}
+=======
+    <section className="py-12">
+      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">IT Service Packages</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan 
+          name="IT Assessment" 
+          price="$4k–$10k" 
+          duration="2 weeks"
+          features={[
+            "Comprehensive cloud review",
+            "Security audit & assessment",
+            "Performance analysis",
+            "Cost optimization review",
+            "Technology roadmap",
+            "Implementation recommendations"
+          ]} 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         />
         <Plan 
           name="Implementation" 
           price="$15k–$50k" 
+<<<<<<< HEAD
           features={["4–8 weeks", "Infra as code", "CI/CD", "Monitoring", "Security hardening"]} 
           popular={true}
+=======
+          duration="4–8 weeks"
+          features={[
+            "Infrastructure as Code setup",
+            "CI/CD pipeline implementation",
+            "Monitoring & observability",
+            "Security hardening",
+            "Performance optimization",
+            "Documentation & training"
+          ]} 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         />
         <Plan 
           name="Managed Services" 
           price="$5k+/mo" 
+<<<<<<< HEAD
           features={["24/7 on-call", "SLO mgmt", "Cost optimization", "Reports", "Proactive maintenance"]} 
           popular={false}
         />
@@ -178,10 +531,52 @@ function PricingTier({ name, price, period, description, features, popular = fal
         }`}
       >
         {cta}
+=======
+          duration="Ongoing"
+          features={[
+            "24/7 monitoring & on-call",
+            "SLO management & reporting",
+            "Cost optimization",
+            "Security updates & patches",
+            "Performance tuning",
+            "Monthly health reports"
+          ]} 
+        />
+      </div>
+    </section>
+  );
+}
+
+function Plan({ name, price, duration, features }: { 
+  name: string; 
+  price: string; 
+  duration: string;
+  features: string[]; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
+      <div className="text-gray-600 mb-6">{duration}</div>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-gray-600">
+            <span className="text-green-500 mr-3">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <a 
+        href="tel:+13024640950" 
+        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+      >
+        Get Started
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </a>
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/fix-website-loading-errors-final
 =======
@@ -498,3 +893,38 @@ function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radi
 }
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
+=======
+
+function ContactSection() {
+  return (
+    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Optimize Your IT Infrastructure?
+        </h3>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss how we can improve your infrastructure's reliability, security, and performance. 
+          Our IT experts have managed 200+ enterprise systems.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

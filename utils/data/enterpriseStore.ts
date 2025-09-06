@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import {
   CompanyRecord,
@@ -11,6 +14,7 @@ import {
 } from '../types/enterprise';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',;
@@ -22,7 +26,10 @@ import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const generateId = () => Math.random().toString(36).slice(2, 10);
+<<<<<<< HEAD
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
   slug: 'acme';
@@ -120,6 +127,12 @@ const seed_company: CompanyRecord = {
     usage_limits: {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;
@@ -130,6 +143,7 @@ const seed_company: CompanyRecord = {
     usageLimits: {;
       monthlyJobPosts: 50,;
       budgetCapUsd: 10000}},;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
@@ -181,6 +195,7 @@ const seed_company: CompanyRecord = {
     const company = companiesById[company_id];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return company ? company.invoices : [];
+<<<<<<< HEAD
 <<<<<<< HEAD
   }}
 =======
@@ -306,3 +321,6 @@ export const store = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

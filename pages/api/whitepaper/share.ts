@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {};
@@ -16,6 +17,8 @@ import { randomUUID } from 'crypto',;
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import { randomUUID } from 'crypto';
 
@@ -36,11 +39,15 @@ export function getShared(id: string) {
   return store[id]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 }
 
 =======
+<<<<<<< HEAD
 =======
 }
 
@@ -64,6 +71,8 @@ export default async function handler(req, res) {
   const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { randomUUID } from 'crypto',
 // In - memory store for demo purposes. Replace with persistent storage in production.;
@@ -92,6 +101,7 @@ function get_shared() {
 <<<<<<< HEAD
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -159,3 +169,11 @@ export function getShared(id: string) {;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

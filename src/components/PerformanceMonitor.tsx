@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { usePerformance } from '../hooks/usePerformance';
 
@@ -27,3 +28,9 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+=======
+import React from 'react';
+
+import React from 'react';
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

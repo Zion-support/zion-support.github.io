@@ -1,5 +1,6 @@
 ;
 interface PerformanceMetrics {
+<<<<<<< HEAD
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -11,6 +12,8 @@ interface PerformanceMetrics {
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       const entries = list && list.getEntries();
       
@@ -22,9 +25,44 @@ interface PerformanceMetrics {
             loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
+<<<<<<< HEAD
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
+=======
+        if (entry && entry.entryType === 'paint') {
+
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
+
+              ...prev,
+              firstContentfulPaint: paintEntry && paintEntry.startTime,
+            }));
+          }
+        }
+        if (entry && entry.entryType === 'largest-contentful-paint') {
+          const lcpEntry = entry as PerformanceEntry;
+          setMetrics(prev => ({
+            ...prev,
+            largestContentfulPaint: lcpEntry && lcpEntry.startTime,
+          }));
+        }
+        if (entry && entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({
+            ...prev,
+            firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
+          }));
+        }
+        if (entry && entry.entryType === 'layout-shift') {
+          const clsEntry = entry as PerformanceEntry & { value: number };
+          setMetrics(prev => ({
+            ...prev,
+            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -111,6 +149,13 @@ if ( {) {
         }
       });
     });
+<<<<<<< HEAD
+=======
+
+      observer && observer.disconnect();
+    };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }, []);
   return { metrics, isSupported }
 }

@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 generateZionWiki;
   buildMarkdownFromWiki;
@@ -9,6 +10,8 @@ generateZionWiki;
   operatorPrompt;
   slugify} from '../utils/data/zionContent';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false)
   return (
@@ -36,7 +39,9 @@ export default function WikiPage() {
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
 
+=======
 import React, { useMemo, useState } from 'react',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React, { useMemo, useState } from 'react',
@@ -46,6 +51,8 @@ import React, { useMemo, useState } from 'react',;
 =======
 import React, { useMemo, useState } from 'react',;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {
   generateZionWiki,
   buildMarkdownFromWiki,
@@ -66,8 +73,11 @@ function CopyButton() {
         set_copied (true),
         set_timeout (() => set_copied (false), 1500);
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }}
       className="px - 3 py - 1 rounded border text - xs hover:bg - gray - 50 dark:hover:bg - gray - 900";
     >;
@@ -75,11 +85,17 @@ function CopyButton() {
     </button>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
@@ -103,6 +119,9 @@ function WikiPage() {
             <li key={s.id}>;
               <a href={`#${slugify (s.title)}`} className="opacity - 80 hover:opacity - 100">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {s.title}
 
@@ -120,12 +139,16 @@ function WikiPage() {
           ))}
           <li>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -224,10 +247,14 @@ export default function WikiPage() {
           <li>
             <a href=&quot;#references&quot; className=&quot;opacity-80 hover:opacity-100&quot;>References</Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </li>
         </ul>
       </aside>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -367,6 +394,9 @@ export default function WikiPage() {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
@@ -380,17 +410,23 @@ export default function WikiPage() {
         <p>{wiki.intro}</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {wiki.sections.map((s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -408,6 +444,15 @@ export default function WikiPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -422,6 +467,7 @@ export default function WikiPage() {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -429,6 +475,11 @@ export default function WikiPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
@@ -437,12 +488,17 @@ export default function WikiPage() {
         </ol>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -455,15 +511,20 @@ export default function WikiPage() {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 {md}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 {md  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -472,6 +533,11 @@ export default function WikiPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
@@ -479,6 +545,9 @@ export default function WikiPage() {
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
       </article>
 
@@ -537,8 +606,11 @@ export default function WikiPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
 =======
 }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         </div>
       </article>
@@ -559,6 +631,7 @@ export default function WikiPage() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -567,3 +640,7 @@ export default function WikiPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

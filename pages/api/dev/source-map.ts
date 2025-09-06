@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -22,9 +23,15 @@ import type { NextApiRequest, NextApiResponse } from "next",
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
 import { getGitStatus, requireRoles } from "../../../utils/devAccess",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),
   if (!identity) return,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === "GET") {
     const nodes = getSourceMapWithExistence()
     const git = getGitStatus()
@@ -43,6 +50,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader("Allow", "GET, POST")
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -248,8 +256,19 @@ export default function handler(req, res) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+=======
+
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 }
 }
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

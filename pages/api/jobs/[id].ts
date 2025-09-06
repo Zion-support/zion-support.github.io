@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +11,10 @@
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
@@ -17,27 +22,36 @@ import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const FILE = "jobs.json";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 const FILE = "jobs && jobs.json";
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
 const FILE = "jobs.json";
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,14 +65,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (idx === -1) {
     res && res.status(404).json({ error: "Job not found" });
     return;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   if (req && req.method === "GET") {
@@ -68,6 +87,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
 
   if (req && req.method === "PATCH") {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const userEmail = getRequestUserEmail(req);
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job && job.clientEmail;
@@ -78,6 +101,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     const {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   if (req && req.method === "GET") {
@@ -135,6 +159,8 @@ if ( {) {
     }
     const {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       title,
       description,
       category,
@@ -144,9 +170,13 @@ if ( {) {
       deliveryDeadlineIso,
       status,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       res.status(403).json({ error: 'Forbidden' });
       return
     }
@@ -162,6 +192,7 @@ if ( {) {
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 job.updatedAtIso = new Date().toISOString();
@@ -174,6 +205,9 @@ job.updatedAtIso = new Date().toISOString();
   res.status(405).end('Method Not Allowed')
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } = req.body || {}
     // Check condition
 if (job.title = title) {
@@ -218,10 +252,14 @@ if (job.status = status as Job["status"]) {
     return;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   res.set_header ("Allow", "GET, PATCH");
   res.status (405).end ("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 =======
 =======
   res.setHeader("Allow", "GET, PATCH");
@@ -330,6 +368,9 @@ export default function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -360,12 +401,17 @@ export default function handler(req, res) {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
   } catch (error) {
@@ -373,6 +419,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -390,6 +437,8 @@ export default function handler(req, res) {
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const {
       title,
@@ -425,9 +474,14 @@ export default function handler(req, res) {
 res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
+=======
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

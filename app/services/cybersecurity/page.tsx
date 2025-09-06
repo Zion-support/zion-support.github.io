@@ -2,6 +2,7 @@ export const metadata = {
   title: 'Cybersecurity Services | Zion Tech Group',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   description: 'Comprehensive cybersecurity services including penetration testing, security audits, compliance management, and incident response for enterprise protection.',
   keywords: 'cybersecurity, penetration testing, security audit, compliance, incident response, vulnerability assessment, security consulting'
 =======
@@ -9,10 +10,14 @@ export const metadata = {
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+  description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 
 export default function CybersecurityPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="animate-fade-in">
 <<<<<<< HEAD
@@ -100,6 +105,9 @@ export default function CybersecurityPage() {
             title="Monitoring & Maintenance"
             description="Ongoing monitoring, updates, and continuous security improvement"
 =======
+=======
+    <div className="animate-fade-in">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           Cybersecurity Services
@@ -175,13 +183,17 @@ export default function CybersecurityPage() {
             features={["24/7 monitoring", "Threat detection", "Incident response", "Security updates", "Vulnerability management", "Monthly reports"]}
             price="$5k–$15k/mo"
             icon="📊"
+<<<<<<< HEAD
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           />
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <section className="mb-16">
@@ -241,6 +253,8 @@ export default function CybersecurityPage() {
             solutions={["Student data protection", "Campus network security", "Online learning security", "FERPA compliance"]}
             icon="🎓"
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Cybersecurity Framework</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -323,16 +337,41 @@ export default function CybersecurityPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <CTASection />
 =======
       <ContactSection />
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+function CyberServiceCard({ title, description, features, price, icon }: { 
+  title: string; 
+  description: string; 
+  features: string[]; 
+  price: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-2">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-600">
+            <span className="text-green-500 mr-2">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function CybersecurityServiceCard({ title, description, features, price, icon }: { 
@@ -441,6 +480,17 @@ function IndustrySecurity({ title, description, solutions, icon }: {
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-start text-gray-600">
+            <span className="text-blue-500 mr-2 mt-1">•</span>
+            {detail}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </li>
         ))}
       </ul>
@@ -448,6 +498,7 @@ function IndustrySecurity({ title, description, solutions, icon }: {
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function CybersecurityBenefitCard({ title, description, icon }: { 
@@ -508,6 +559,10 @@ function Pricing() {
           features={["24/7 monitoring", "Incident response", "Compliance management", "Security updates", "Monthly reports"]} 
           popular={false}
 =======
+=======
+function Pricing() {
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <section className="py-12">
       <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Cybersecurity Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -560,6 +615,7 @@ function Pricing() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function Plan({ name, price, features, popular }: { 
   name: string; 
   price: string; 
@@ -580,6 +636,8 @@ function Plan({ name, price, features, popular }: {
           <li key={feature} className="flex items-center">
             <span className="text-blue-500 mr-3">✓</span> {feature}
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function Plan({ name, price, duration, features }: { 
   name: string; 
   price: string; 
@@ -596,14 +654,18 @@ function Plan({ name, price, duration, features }: {
           <li key={index} className="flex items-center text-gray-600">
             <span className="text-green-500 mr-3">✓</span>
             {feature}
+<<<<<<< HEAD
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </li>
         ))}
       </ul>
       <a 
         href="tel:+13024640950" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
@@ -616,6 +678,9 @@ function Plan({ name, price, duration, features }: {
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       >
         Get Started
       </a>
@@ -623,6 +688,7 @@ function Plan({ name, price, duration, features }: {
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function CTASection() {
@@ -654,6 +720,8 @@ function CTASection() {
       </div>
     </div>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function ContactSection() {
   return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
@@ -684,8 +752,11 @@ function ContactSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 >>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 }

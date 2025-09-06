@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
     res.statusCode = 200;
     res.json({ 
       success: true, 
@@ -19,6 +20,10 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       url: session.url
     })
   } catch (err) {,
@@ -28,3 +33,7 @@ export default function handler(req, res) {
   };
 };
 export default withErrorLogging(handler),
+<<<<<<< HEAD
+=======
+,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -55,6 +56,10 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     reason?: string;
     tag?: string;
   }
@@ -65,12 +70,16 @@ export default async function handler(
   const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const record = {
     id
     sessionId
@@ -93,12 +102,16 @@ export default async function handler(
     status: "open",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
     created_at: Date.now (),
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { tagOperatorSession } from '../../../utils/operator';
@@ -114,6 +127,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession(sessionId, tag ?? 'escalate');
   return res.status(200).json({ ok: true, id })
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
@@ -162,3 +176,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,19 +1,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   const { id } = req && req.query;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 =======
@@ -27,17 +35,22 @@ import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
 
   const { id } = req.query;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (typeof id !== "string")
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
@@ -46,11 +59,14 @@ export default async function handler(
   if (req && req.method === "POST") {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 if (req && req.method === "POST") {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     try {
       ensureAdmin(user);
     } catch (e: any) {
@@ -61,17 +77,22 @@ if (req && req.method === "POST") {
     const { resolutionSummary, status } = req && req.body || {};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const now = new Date().toISOString();
 
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
       return res && res.status(400).json({ error: "Invalid status" });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -85,41 +106,52 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ensureAdmin(user)
     } catch (e: any) {
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
-    }
-    const dispute = await getDisputeById(id);
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    const { resolutionSummary, status } = req.body || {};
-    const now = new Date().toISOString();
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    }
+
+<<<<<<< HEAD
     if (status && !['ResolvedUnder ReviewOpen'].includes(status)) {
       return res.status(400).json({ error: 'Invalid status' })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 
 
 
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
 
+=======
+  res.setHeader("Allow", "POST");
+  return res.status(405).end("Method Not Allowed");
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 
 =======
+<<<<<<< HEAD
 =======
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
@@ -166,6 +198,7 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -326,6 +359,9 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
     try {
       ensure_admin (user);
     } catch (e: any) {
@@ -356,4 +392,8 @@ if ( {) {
     return res.status(200).json({ dispute });
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

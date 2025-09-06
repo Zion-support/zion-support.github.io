@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     title: 'Senior Full-Stack Engineer (Next.js + AI)',
@@ -21,13 +22,21 @@ const Jobs: NextPage = () => {
     valid_through: new Date (Date.now () + 1000 * 60 * 60 * 24 * 30).toISOString ().slice (0, 10),
     base_salary: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       currency: 'USD',
       value: 160000,
       unit_text: 'YEAR'},
     hiring_organization: {
+=======
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       name: 'Zion Tech Solutions',
       same_as: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app / logo.png'},
@@ -35,12 +44,18 @@ const Jobs: NextPage = () => {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
 
     <div>;
@@ -48,6 +63,7 @@ const Jobs: NextPage = () => {
       <JobPostingJsonLd;
         date_posted={job.date_posted}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return (
@@ -126,11 +142,14 @@ const Jobs: NextPage = () => {
       <JobPostingJsonLd
         datePosted={job.datePosted}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         description={job.description}
         employmentType={job.employmentType}
         hiringOrganization={job.hiringOrganization}
         jobLocationType={job.jobLocationType}
         title={job.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -203,6 +222,13 @@ export default Jobs,;
         valid_through={job.valid_through}
         base_salary={job.base_salary}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       />;
       <main>;
         <h1 > Jobs</h1>;
@@ -211,12 +237,16 @@ export default Jobs,;
       </main>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>;
   );
 },;
@@ -225,9 +255,14 @@ export default Jobs;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

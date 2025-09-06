@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Accessibility"
   test('"page"
@@ -17,12 +21,16 @@ test && test.describe('"Accessibility"
     "await"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     "await"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const { test, expect } = require('@playwright/test')';
 test.describe('"Accessibility": Tests', () => {';
   test('"page": has proper heading structure', async ({ page }) => {';
@@ -137,6 +145,7 @@ test.describe('Accessibility Tests', () => {
     await expect(focusedElement).toBeVisible()})})';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -155,3 +164,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
     "await"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+    "await"
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
