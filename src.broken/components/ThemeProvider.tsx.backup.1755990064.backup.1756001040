@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { createContext, useContext, useEffect, useState } from "react"
 
@@ -49,19 +46,4 @@ export const useTheme = (): ThemeProviderState => {
   if (context === undefined)
     throw new Error("useTheme must be used within a ThemeProvider")
 
-  return context
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-import React from 'react';
-export function ThemeProvider() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-}
+  return context}

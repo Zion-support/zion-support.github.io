@@ -1,5 +1,4 @@
 export default function Page(){return null}
-=======
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -176,7 +175,6 @@ const About: NextPage = () => (
 
       <p className="mt-2 text-gray-600 dark:text-gray-300">Information coming soon.</p>
     </div>
-=======
       {/* Mission & Vision */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">

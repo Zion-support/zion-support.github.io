@@ -23,9 +23,6 @@ import {
   DeveloperRoutes,
   SellerRoutes
 } from './routes';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -48,39 +45,6 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-import Home from './pages/Home';
-import AIMatcherPage from './pages/AIMatcher';
-import TalentDirectory from './pages/TalentDirectory';
-import TalentsPage from './pages/TalentsPage';
-import MoreTalentsPage from './pages/MoreTalentsPage';
-import ServicesPage from './pages/ServicesPage';
-import EquipmentPage from './pages/EquipmentPage';
-import EquipmentDetail from './pages/EquipmentDetail';
-import Analytics from './pages/Analytics';
-import MobileLaunchPage from './pages/MobileLaunchPage';
-import CommunityPage from './pages/CommunityPage';
-import Categories from './pages/Categories';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import NewProductsPage from './pages/NewProductsPage';
-import Sitemap from './pages/Sitemap';
-import PartnersPage from './pages/Partners';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
-import OpenAppRedirect from './pages/OpenAppRedirect';
-import ContactPage from './pages/Contact';
-import ZionHireAI from './pages/ZionHireAI';
-import RequestQuotePage from './pages/RequestQuote';
-import Checkout from './pages/Checkout';
-import ProductPage from './pages/ProductPage';
-<<<<<<< HEAD
-=======
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/match', element: <AIMatcherPage /> },
@@ -95,16 +59,7 @@ const baseRoutes = [
   { path: '/equipment', element: <EquipmentPage /> },
   { path: '/equipment/:id', element: <EquipmentDetail /> },
   { path: '/new-products', element: <NewProductsPage /> },
-<<<<<<< HEAD
-  { path: '/product/:id', element: <ProductPage /> },
-=======
-<<<<<<< HEAD
-  { path: '/more-products', element: <MoreProductsPage /> },
-=======
-  { path: '/product/:id', element: <ProductPage /> },
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  { path: '/analytics', element: <Analytics /> },
+  { path: '/product/:id', element: <ProductPage /> },  { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/open-app', element: <OpenAppRedirect /> },
   {
@@ -122,16 +77,7 @@ const baseRoutes = [
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
-<<<<<<< HEAD
-  { path: '/cart', element: <Checkout /> },
-=======
-<<<<<<< HEAD
-  { path: '/wishlist', element: <WishlistPage /> },
-=======
-  { path: '/cart', element: <Checkout /> },
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  { path: '/blog', element: <Blog /> },
+  { path: '/cart', element: <Checkout /> },  { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },

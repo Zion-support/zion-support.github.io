@@ -82,8 +82,7 @@ function findFilesWithConflicts(dir) {
           }
         }
       }
-    }
-  }
+    }  }
   
   scanDirectory(dir);
   return files;

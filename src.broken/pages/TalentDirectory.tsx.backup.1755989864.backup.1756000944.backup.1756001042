@@ -11,24 +11,9 @@ import { useTalentDirectory } from '@/hooks/useTalentDirectory';
 import { SORT_OPTIONS } from '@/data/sortOptions';
 import { X } from 'lucide-react';
 
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import type { TalentProfile } from '@/types/talent';
-=======
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { FilterSidebar } from "@/components/talent/FilterSidebar";
-import { TalentResults } from "@/components/talent/TalentResults";
-import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
-import { ErrorBanner } from "@/components/talent/ErrorBanner";
-import { useTalentDirectory } from "@/hooks/useTalentDirectory";
-import { SORT_OPTIONS } from "@/data/sortOptions";
-import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { TalentProfile } from "@/types/talent";
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
-import {
+import type { TalentProfile } from '@/types/talent';import {
   Pagination,
   PaginationContent,
   PaginationItem,
@@ -169,8 +154,6 @@ export default function TalentDirectory() {
     // Navigate to the talent profile page
     router.push(`/talent/${id}`); // Changed to router.push
   };
-<<<<<<< HEAD
-=======
 
   if (isLoading) {
     return (
@@ -256,7 +239,6 @@ export default function TalentDirectory() {
                 clearFilters,
               }}
             />
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 
   // Add key prop to force re-render when route changes
   const pageKey = `talent-directory-${routeKey}-${router.asPath}`;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -483,15 +482,4 @@ export default function IntelligentProjectManagementSuite() {
         </div>
       </section>
     </div>
-  );
-=======
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-
-export async function getStaticProps() {
-	return (getSlugStaticProps as any)({ params: { slug: 'intelligent-project-management-suite' } });
-}
-
-export default function IntelligentProjectManagementSuite(props: any) {
-	return <ServicePage {...props} />;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e11d
-}
+  );}

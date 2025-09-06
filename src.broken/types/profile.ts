@@ -1,4 +1,4 @@
-// Type definitions for profile;
+// Type definitions for profile,;
 interface profile {;
-  // TODO: Add proper type definitions;
-};
+  // TODO:Add proper type definitions;
+},; 

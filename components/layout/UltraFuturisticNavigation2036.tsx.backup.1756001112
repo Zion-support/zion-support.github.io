@@ -492,10 +492,6 @@ export default function UltraFuturisticNavigation2036() {
       </AnimatePresence>
     </nav>
   );
-<<<<<<< HEAD
 };
 
 export default UltraFuturisticNavigation2036;
-=======
-}
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066

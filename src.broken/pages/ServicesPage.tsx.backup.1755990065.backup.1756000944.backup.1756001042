@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { SERVICES } from "@/data/servicesData";
@@ -13,13 +12,6 @@ import apiClient from "@/services/apiClient";
 import { captureException } from "@/utils/sentry";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
-
-
-
-
-
-
-
 
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
 import type { ProductListing } from '@/types/listings';
@@ -237,16 +229,6 @@ export default function ServicesPage() {
         />
         <TrustedBySection />
       </>
-    </ErrorBoundary>
-=======
-import React from 'react';
-export function ServicesPage() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
-  );
+    </ErrorBoundary>  );
 }
 

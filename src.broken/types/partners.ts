@@ -1,4 +1,4 @@
-// Type definitions for partners;
+// Type definitions for partners,;
 interface partners {;
-  // TODO: Add proper type definitions;
-};
+  // TODO:Add proper type definitions;
+},; 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -57,15 +56,5 @@ export default function Help() {
       </main>
       <SupportChatbot />
       <Footer />
-    </>
-=======
-import React from 'react';
-export function Help() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
-  );
+    </>  );
 }

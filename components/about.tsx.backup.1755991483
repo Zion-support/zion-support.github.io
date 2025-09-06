@@ -1,5 +1,4 @@
 export default function Page(){return null}
-=======
 import React from 'react';
 
 export default function AboutPage() {
@@ -18,7 +17,6 @@ const About: NextPage = () => (
 );
 
 export default About;
-=======
       <p className="mt-2 text-gray-600 dark:text-gray-300">Information coming soon.</p>
     </div>
   );

@@ -138,7 +138,6 @@
     "language_changed": "Idioma alterado para {{language}}",
     "switch_to_detected": "Mudar para {{language}}?"
   },
-<<<<<<< HEAD
   "features": {
     "ai_talent_matching": "Correspondência de Talentos IA",
     "ai_talent_matching_desc": "Nosso algoritmo conecta o talento ou trabalho perfeito baseado em habilidades e experiência",
@@ -263,11 +262,5 @@
       "additional_details": "Detalhes Adicionais"
     },
     "sending": "Enviando...",
-    "submit": "Receba sua Proposta Comercial Grátis"
-=======
-  "error_boundary": {
-    "message": "Algo deu errado.",
-    "retry": "Tentar novamente"
->>>>>>> origin/3ycx6d-codex/implement-global-error-boundary-with-toasts
-  }
+    "submit": "Receba sua Proposta Comercial Grátis"  }
 }

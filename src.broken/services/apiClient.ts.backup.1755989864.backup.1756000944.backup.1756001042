@@ -5,7 +5,6 @@ import axiosRetry from 'axios-retry';
 import { logErrorToProduction, logDebug } from '@/utils/productionLogger';
 import type { AxiosResponse } from 'axios';
 
-
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com/v1';
 
 // Global interceptor for all axios instances
@@ -103,7 +102,6 @@ axios.interceptors.response.use(
 
 const API_BASE = axios.defaults.baseURL;
 const apiClient = axios.create({
-<<<<<<< HEAD
   baseURL: `${API_BASE}/api/v1/services`,
 });
 
@@ -127,12 +125,7 @@ axiosRetry(apiClient, {
       axiosRetry.isNetworkError(error) ||
       axiosRetry.isIdempotentRequestError(error)
     );
-  },
-=======
-  baseURL: import.meta.env.VITE_API_URL || '/api',
-  withCredentials: true,
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
-});
+  },});
 
 apiClient.interceptors.response.use(
   (response: AxiosResponse) => response,

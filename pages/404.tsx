@@ -7,10 +7,7 @@ export default function Custom404() {
     <>
       <Head>
         <title>404 - Page Not Found</title>
-        <meta
-          name="description"
-          content="The page you are looking for does not exist."
-        />
+        <meta name="description" content="The page you are looking for does not exist." />
       </Head>
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">

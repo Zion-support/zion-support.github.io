@@ -1,4 +1,5 @@
-import React, { Suspense, ReactNode } from 'react';
+import React, { Suspense, ReactNode } from 'react';import LoadingSpinner from '../LoadingSpinner';
+import React, { Suspense, ComponentType, ReactNode } from 'react';
 import LoadingSpinner from '../LoadingSpinner';
 
 interface LazyComponentProps {
@@ -6,11 +7,15 @@ interface LazyComponentProps {
   fallback?: ReactNode;
 }
 
-const LazyComponent: React.FC<LazyComponentProps> = ({
-  children,
-  fallback = <LoadingSpinner />,
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+  children, 
+  fallback = <LoadingSpinner text="Loading component..." /> 
 }) => {
-  return <Suspense fallback={fallback}>{children}</Suspense>;
+  return (
+    <Suspense fallback={fallback}>
+      {children}
+    </Suspense>
+  );
 };
 
 export default LazyComponent;

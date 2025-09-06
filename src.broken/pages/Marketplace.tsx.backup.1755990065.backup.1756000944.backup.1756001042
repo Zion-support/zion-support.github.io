@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -34,10 +33,6 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 
-
-
-
-
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
@@ -53,7 +48,6 @@ import { fetchProducts } from '@/services/marketplace';
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import apiClient from '@/lib/apiClient';
-
 
 /**
  * Marketplace component props
@@ -498,12 +492,7 @@ export default function Marketplace() {
     );
   }
 
-  // Main marketplace render
-=======
-import React from 'react';
-export function Marketplace() {
->>>>>>> origin/automation-error-fixes
-  return (
+  // Main marketplace render  return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>

@@ -492,7 +492,6 @@ export default function ServicesPage() {
               <p className="text-lg text-gray-300">
                 Our most requested and highly-rated solutions
               </p>
-=======
       icon: <FlaskIcon className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
       color: 'from-blue-600 to-cyan-700'
@@ -770,7 +769,6 @@ export default function ServicesPage() {
               Showing {filteredServices.length} of {enhancedRealMicroSaasServices.length} services
             </div>
 
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href="/contact"
@@ -837,7 +835,6 @@ export default function ServicesPage() {
         </section>
       </div>
     </QuantumNeuralBackground>
-=======
           {viewMode === 'grid' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredServices.map((service, index) => (

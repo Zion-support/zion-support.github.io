@@ -6,7 +6,6 @@ export default function CloudComputingStrategies() {
     </div>
   );
 }
-=======
 export default function CloudComputingStrategiesPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -15,5 +14,4 @@ export default function CloudComputingStrategiesPage() {
     </div>
   );
 }
-=======
 export default function ChatContent2() { return <div className="py-10 text-white">Content coming soon.</div>; }

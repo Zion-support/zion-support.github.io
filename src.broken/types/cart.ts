@@ -1,4 +1,4 @@
-// Type definitions for cart;
+// Type definitions for cart,;
 interface cart {;
-  // TODO: Add proper type definitions;
-};
+  // TODO:Add proper type definitions;
+},; 

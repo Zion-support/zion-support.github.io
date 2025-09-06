@@ -201,7 +201,6 @@ export default function HomePage() {
 
   return (
     <UltraAdvancedQuantumBackground intensity={1.5} variant="quantum">
-=======
     aiServices: nextGenerationAIServices.length + innovativeAIServices.length + realMarketServices.filter(s => s.category.includes('AI')).length + revolutionary2025Services.filter(s => s.category.includes('AI')).length + nextGenInnovations2025.filter(s => s.category.includes('AI')).length + revolutionary2025MicroSaasServices.filter(s => s.category.includes('AI')).length + autonomousSpaceTech2025Services.filter(s => s.category.includes('AI')).length,
     emergingTech: emergingTechnologyServices.length + emergingTech2025Services.length + revolutionary2025MicroSaasServices.filter(s => s.category.includes('Emerging')).length + autonomousSpaceTech2025Services.filter(s => s.category.includes('Emerging')).length,
     itSolutions: comprehensiveITSolutions.length + enterpriseITServices.length,

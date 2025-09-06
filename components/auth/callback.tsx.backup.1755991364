@@ -18,7 +18,6 @@ const Callback: NextPage = () => {
 };
 
 export default Callback;
-=======
 import Head from "next/head";
 
 const Page: React.FC = () => {
@@ -36,5 +35,4 @@ const Page: React.FC = () => {
 };
 
 export default Page;
-=======
 export default function Callback() { return null; }
