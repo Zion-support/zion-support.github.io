@@ -296,12 +296,12 @@ import {
   CardTitle,
   CardDescription,
   CardFooter,
-} from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
+} from '@/components/ui/ card';
+import { Badge } from '@/components/ui/ badge';
+import { Button } from '@/components/ui/ button';
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
 import { format } from 'date - fns';
-import { JobMatch } from '@/types / jobs';
+import { JobMatch } from '@/types/ jobs';
 interface JobMatchCardProps {
   match: JobMatch;
   on_apply: (match_id: string, job_id: string) => void;

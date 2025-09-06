@@ -72,5 +72,4 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{}")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
-  const fullPath = path.join(dirPath, ")
-  const fullPath = path.join(dirPath, ")
+

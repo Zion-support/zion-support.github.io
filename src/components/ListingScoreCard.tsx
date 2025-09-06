@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import { cn } from '@/lib / utils';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
+import { Badge } from '@/components/ui/ badge';
+import { Button } from '@/components/ui/ button';
 import { StarIcon } from 'lucide-react';
 <<<<<<< HEAD
 =======

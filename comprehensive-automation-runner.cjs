@@ -3,10 +3,16 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 /**
  * Comprehensive Automation Runner
  * Runs all automation scripts and provides comprehensive testing and improvement
  */
+
+const { execSync, spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -119,6 +125,7 @@ class ComprehensiveAutomationRunner {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
     
     try {
+
       await this.runSyntaxFixes();
       await this.runBuildProcess();
       await this.runTests();
@@ -157,10 +164,4 @@ class ComprehensiveAutomationRunner {
 // Run if called directly
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
-  runner.runAllAutomations().catch(error => {
-    console.error('Comprehensive automation runner failed:', error);
-    process.exit(1);
-  });
-}
 
-module.exports = ComprehensiveAutomationRunner;

@@ -110,31 +110,31 @@ export function DynamicListingPage({
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;
 =======
 import { useState, useEffect } from 'react';
-import { use_router } from 'next / router';
-import { GradientHeading } from '@/components / GradientHeading';
-import { ProductListingCard } from '@/components / ProductListingCard';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input'; import { use_router } from 'next / router';
-import { GradientHeading  } from '@/components / GradientHeading';
-import { ProductListingCard  } from '@/components / ProductListingCard';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { log_info, logErrorToProduction } from '@/utils / production_logger';
+import { use_router } from 'next/router';
+import { GradientHeading } from '@/components/ GradientHeading';
+import { ProductListingCard } from '@/components/ ProductListingCard';
+import { Button } from '@/components/ui/ button';
+import { Input } from '@/components/ui/ input'; import { use_router } from 'next/router';
+import { GradientHeading  } from '@/components/ GradientHeading';
+import { ProductListingCard  } from '@/components/ ProductListingCard';
+import { Button  } from '@/components/ui/ button';
+import { Input  } from '@/components/ui/ input';
+import { log_info, logErrorToProduction } from '@/utils/ production_logger';
 import {
   Select,
   SelectValue,
   SelectTrigger,
   SelectContent,
   SelectItem,
-} from '@/components / ui / select';
-import { Checkbox } from '@/components / ui / checkbox';
-import Skeleton from 'react - loading - skeleton';
-import 'react - loading - skeleton / dist / skeleton.css';
-import { Slider } from '@/components / ui / slider';
-import { ProductListing, ListingView } from '@/types / listings';
+} from '@/components/ui/ select';
+import { Checkbox } from '@/components/ui/ checkbox';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import { Slider } from '@/components/ui/ slider';
+import { ProductListing, ListingView } from '@/types/ listings';
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
-import { toast } from '@/hooks / use - toast';
-import { capture_exception } from '@/utils / sentry';
+import { toast } from '@/hooks/ use - toast';
+import { capture_exception } from '@/utils/ sentry';
 interface PriceRange {
   min: number;
 max: number;

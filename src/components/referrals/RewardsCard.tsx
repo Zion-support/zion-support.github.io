@@ -9,11 +9,11 @@ import { BadgeDollarSign, Badge } from 'lucide-react'
 interface RewardsCardProps {
   rewards: ReferralReward[];
   is_loading: boolean;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
-import { ReferralReward  } from '@/types / referrals';
-import { format_date  } from '@/utils / referral_utils';
-import { Badge } from '@/components / ui / badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/ card';
+import { ReferralReward  } from '@/types/ referrals';
+import { format_date  } from '@/utils/ referral_utils';
+import { Badge } from '@/components/ui/ badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/ card';
 interface RewardsCardProps {
 
 

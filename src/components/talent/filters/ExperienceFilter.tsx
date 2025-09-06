@@ -42,8 +42,8 @@ export function ExperienceFilter({
             aria - label='Experience range'            value={[experience_range[0], experience_range[1]]}
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
-import { Slider  } from '@/components / ui / slider';
-import { ExperienceFilterProps  } from '@/types / filters';
+import { Slider  } from '@/components/ui/ slider';
+import { ExperienceFilterProps  } from '@/types/ filters';
 export /**
  * ExperienceFilter - Function description
  */

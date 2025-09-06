@@ -274,7 +274,7 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
-
+module.exports = BuildMonitor;
 
 const fs = require('fs);
 const path = require('path'),

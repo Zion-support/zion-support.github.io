@@ -14,8 +14,8 @@ import Image from 'next / image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ImageIcon, AlertTriangle } from 'lucide-react';
 import { cn } from '@/lib / utils';
-import { image_optimization } from '@/utils / performance';
-import { log_warn } from '@/utils / production_logger';
+import { image_optimization } from '@/utils/ performance';
+import { log_warn } from '@/utils/ production_logger';
 interface OptimizedImageProps {
   src: string;
   alt: string;

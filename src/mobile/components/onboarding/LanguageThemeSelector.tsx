@@ -204,10 +204,10 @@ export function LanguageThemeSelector() {
 };
 
 import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
-import { use_theme } from '@/hooks / use_theme';
+import { Button } from '@/components/ui/ button';
+import { use_theme } from '@/hooks/ use_theme';
 import { Moon, Sun, Check } from 'lucide-react';
-import { Card, CardContent } from '@/components / ui / card';
+import { Card, CardContent } from '@/components/ui/ card';
 interface Language {
   code: string;
   name: string;

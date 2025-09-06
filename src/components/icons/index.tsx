@@ -2796,7 +2796,7 @@ export const Icon: React.FC<IconProps> = ({;
 
 
 import React, { SVGProps } from 'react';
-import { log_warn } from '@/utils / production_logger';
+import { log_warn } from '@/utils/ production_logger';
 import {
   Home as LucideHome,
   Bot as LucideBot,

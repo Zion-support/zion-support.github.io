@@ -1,5 +1,9 @@
-
-
+// Security Configuration;
+export const security_config = {
+  // Content Security Policy;
+// Security Configuration;
+export const security_config = {
+  // Content Security Policy;
   csp: {
     directives: {
 
@@ -13,7 +17,6 @@
       objectSrc: ["'none'"],
       baseUri: ["'self'"],
       formAction: ["'self'"],
-
       upgradeInsecureRequests: [],
     },
   },
@@ -34,4 +37,3 @@
 };
 
 export default securityConfig;
-

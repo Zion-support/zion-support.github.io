@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -12,5 +14,4 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
     "email"
-    "password"
     "password"

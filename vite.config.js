@@ -12,23 +12,24 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: true,
-    minify: "esbuild",
+    minify: "terser",
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
-        },
+        }
+      }
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
       },
     },
   },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom'],
+    include: ["react", "react-dom", "framer-motion", "lucide-react"],
   },
 });

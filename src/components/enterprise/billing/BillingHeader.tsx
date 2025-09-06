@@ -115,7 +115,7 @@ export function BillingHeader() {;
             <Link href="/dashboard/client/analytics">;
               <BarChart3 className="h-4 w-4" />;
 import React from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { Download, Mail, BarChart3 } from 'lucide-react';
 import Link from 'next / link';
 export /**
@@ -144,7 +144,7 @@ function BillingHeader() {
             <Link href="/dashboard / client / analytics">;
               <BarChart3 className="h - 4 w - 4" />;
 import React from './react';
-import { Button  } from '@/components / ui / button';
+import { Button  } from '@/components/ui/ button';
 import Link from './next / link';
 export /**
  * BillingHeader - Function description

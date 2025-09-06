@@ -39,10 +39,10 @@ import { Search } from 'lucide-react'
   const current_path = router.pathname;
 export default ApiDocsLayout;
 import Link from 'next / link';
-import { use_router } from 'next / router';
+import { use_router } from 'next/router';
 import { Search } from 'lucide-react'import Link from 'next / link';
 import { Search } from 'lucide-react';
-import { EnhancedSearchInput  } from '@/components / search / EnhancedSearchInput';
+import { EnhancedSearchInput  } from '@/components/ search / EnhancedSearchInput';
 import { cn  } from '@/lib / utils';
 import {
 getDocsSearchPath;

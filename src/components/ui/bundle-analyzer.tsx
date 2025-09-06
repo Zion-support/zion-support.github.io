@@ -32,13 +32,13 @@ totalSize: number;
     collectBundleInfo()
   }, [])
 import React, { useState, useEffect } from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Progress } from '@/components / ui / progress';
+import { use_auth } from '@/hooks/ use_auth';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';
+import { Badge } from '@/components/ui/ badge';
+import { Button } from '@/components/ui/ button';
+import { Progress } from '@/components/ui/ progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react';
-import { logErrorToProduction } from '@/utils / production_logger';
+import { logErrorToProduction } from '@/utils/ production_logger';
 interface BundleInfo {
   total_size: number;
   gzipped_size: number;

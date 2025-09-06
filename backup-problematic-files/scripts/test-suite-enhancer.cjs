@@ -12,5 +12,4 @@ function log(message, level = 'INFO')
   "text"
   "sender"
   const jestSetupContent = "
-    log(` Test suite enhancement "failed"`)
-    log(` Test suite enhancement "failed"`)
+

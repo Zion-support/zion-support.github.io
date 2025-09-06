@@ -13,5 +13,4 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
       content = importLines.join('\n') + '\n\n'
         otherLines.join('\n') + '\n'
         '};\n\n'
-    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
-    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+

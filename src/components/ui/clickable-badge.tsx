@@ -117,7 +117,7 @@ export function ClickableBadge({;
 import React from 'react';
 import { X } from 'lucide-react';
 import { cn } from '@/lib / utils';
-import { badge_variants } from '@/components / ui / badge - variants';
+import { badge_variants } from '@/components/ui/ badge - variants';
 export interface ClickableBadgeProps;
   extends React.HTMLAttributes < HTMLDivElement> {
   on_remove?: () => void;
@@ -134,7 +134,7 @@ function ClickableBadge() {
           on_click={e => {
 import React from './react';
 import { cn  } from '@/lib / utils';
-import { badge_variants  } from '@/components / ui / badge - variants';
+import { badge_variants  } from '@/components/ui/ badge - variants';
 export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
   on_remove?: () => void;
   variant?: "default" | "secondary" | "destructive" | "outline";

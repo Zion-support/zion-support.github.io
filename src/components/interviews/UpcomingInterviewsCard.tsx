@@ -78,8 +78,8 @@ import Link from "next/link",;
 <<<<<<< HEAD
 =======
 import { Calendar, Clock, Video } from 'lucide-react';
-import { Avatar } from '@/components / ui / avatar';
-import { logErrorToProduction } from '@/utils / production_logger';
+import { Avatar } from '@/components/ui/ avatar';
+import { logErrorToProduction } from '@/utils/ production_logger';
 export /**
  * UpcomingInterviewsCard - Function description
  */

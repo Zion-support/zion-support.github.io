@@ -48,21 +48,21 @@ interface AIMilestoneGeneratorProps {
       endDate
       projectType
 import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
+import { Button } from '@/components/ui/ button';
+import { Card, CardContent } from '@/components/ui/ card';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components / ui / accordion';
+} from '@/components/ui/ accordion';
 import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
 import { format, parseISO } from 'date - fns';
   MilestoneInput,
   GeneratedMilestone,
   useMilestoneGenerator,
-} from '@/hooks / useMilestoneGenerator';
-import { Badge } from '@/components / ui / badge';
+} from '@/hooks/ useMilestoneGenerator';
+import { Badge } from '@/components/ui/ badge';
 interface AIMilestoneGeneratorProps {
   scope: string;
   start_date: string;

@@ -5,17 +5,32 @@ interface TalentCardAvatarProps {;
 
   profilePicture?: string;
   fullName: string;
+}
 
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+export function TalentCardAvatar({
+  profilePicture,
+  fullName,
+}: TalentCardAvatarProps) {
+  // Get initials for avatar fallback
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((part) => part[0])
+      .join("")
+      .toUpperCase();
+  };
 
-import React from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+  return (
+    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
+      <AvatarImage src={profilePicture || undefined} alt={fullName} />
+      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
+        {getInitials(fullName)}
+      </AvatarFallback>
+    </Avatar>
+  );
+}
 
-interface TalentCardAvatarProps {
-  profilePicture?: string,
-  fullName: string}
-
-=======}
+}
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 interface TalentCardAvatarProps {
@@ -36,3 +51,34 @@ function TalentCardAvatar() {
   }
 ;
 
+
+
+  return (
+    <Avatar className="w - 14 h - 14 border - 2 border - zion - blue - light">;
+      <AvatarImage src={profile_picture || undefined} alt={full_name} />;
+      <AvatarFallback className="bg - zion - purple / 20 text - zion - purple">;
+        {get_initials (full_name)}
+      </AvatarFallback>;
+    </Avatar>);
+}
+  ),;}
+ interface TalentCardAvatarProps {
+  profilePicture?: string;
+fullName: string 
+}profilePicture, fullName 
+}: TalentCardAvatarProps) {
+  //Get initials for avatar fallback const getInitials = (name: string) => {
+  return name .split (' ') .map (part => part[0]) .join ('') return (<Avatar className="w-14 h-14 border-2 border-zion-blue-light" > <AvatarImage src= {
+  profilePicture || undefined 
+}alt= {
+  fullName 
+}/> </AvatarFallback> </Avatar>) 
+}
+
+  );
+}
+
+  );
+}
+}
+;

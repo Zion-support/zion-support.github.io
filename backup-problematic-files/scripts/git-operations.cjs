@@ -8,5 +8,4 @@ const path = require('path')
       this.log('� Committing changes')
       this.log('� Pushing to current branch')
       const currentBranch = execSync('git branch --show-current')
-        "encoding"
-        "encoding"
+

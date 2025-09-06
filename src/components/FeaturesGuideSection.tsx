@@ -1083,7 +1083,7 @@ export function FeaturesGuideSection() {;
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;
 import Link from 'next / link';
 import { GradientHeading } from './GradientHeading';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/ tabs';
 import { Button } from './ui / button';
 import { fire_event } from '@/lib / analytics';
 import {
@@ -1104,7 +1104,7 @@ function FeaturesGuideSection() {
   const features = [;
     {import Link from './next / link';
 import { GradientHeading  } from './GradientHeading';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/ tabs';
 import { Button  } from './ui / button';
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';

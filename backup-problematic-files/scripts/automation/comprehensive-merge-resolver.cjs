@@ -127,5 +127,4 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
         "mergesSuccessful"
         "errors"
       "successRate"
-    const reportPath = path.join(this.logsDir, ")
-    const reportPath = path.join(this.logsDir, ")
+

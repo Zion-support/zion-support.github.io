@@ -61,7 +61,7 @@ import {
   Wrench,
   Lightbulb,
 } from 'lucide-react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
 export interface EmptyStateProps {

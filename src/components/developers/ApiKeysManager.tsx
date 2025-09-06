@@ -98,8 +98,8 @@ keys,
 import { useState } from 'react';
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
 import { format } from 'date - fns';
-import { useApiKeys, type ApiKeyScope } from '@/hooks / useApiKeys';
-import { Button } from '@/components / ui / button';
+import { useApiKeys, type ApiKeyScope } from '@/hooks/ useApiKeys';
+import { Button } from '@/components/ui/ button';
 import {
   Card,
   CardContent,
@@ -107,7 +107,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+} from '@/components/ui/ card';
   Dialog,
   DialogContent,
   DialogDescription,
@@ -115,20 +115,20 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components / ui / dialog';
-import { Input } from '@/components / ui / input';
-import { Checkbox } from '@/components / ui / checkbox';
-import { Label } from '@/components / ui / label';
-import { Badge } from '@/components / ui / badge';
+} from '@/components/ui/ dialog';
+import { Input } from '@/components/ui/ input';
+import { Checkbox } from '@/components/ui/ checkbox';
+import { Label } from '@/components/ui/ label';
+import { Badge } from '@/components/ui/ badge';
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components / ui / popover';
+} from '@/components/ui/ popover';
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
+} from '@/components/ui/ dropdown - menu';
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -137,7 +137,7 @@ import { Badge } from '@/components / ui / badge';
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from '@/components / ui / alert - dialog';
+} from '@/components/ui/ alert - dialog';
 import CodeBlock from './CodeBlock';
 export /**
  * ApiKeysManager - Function description
