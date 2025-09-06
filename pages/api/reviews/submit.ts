@@ -42,11 +42,9 @@ export default async function handler(
       return res.status(404).json({ error: "Project not found" });
     }
     if (project.status !== "Completed") {
-      return res
-        .status(400)
-        .json({
-          error: "Reviews can only be submitted after project completion",
-        });
+      return res.status(400).json({
+        error: "Reviews can only be submitted after project completion",
+      });
     }
 
     const toRole = counterpartRole(fromRole);
@@ -62,11 +60,9 @@ export default async function handler(
 
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
-      return res
-        .status(409)
-        .json({
-          error: "You have already submitted a review for this project",
-        });
+      return res.status(409).json({
+        error: "You have already submitted a review for this project",
+      });
     }
 
     const now = new Date().toISOString();
