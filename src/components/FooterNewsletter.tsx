@@ -228,6 +228,7 @@ export function FooterNewsletter(): React.ReactElement {;
       {/* Honeypot field */}
       <input
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -248,11 +249,14 @@ export function FooterNewsletter(): React.ReactElement {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
         onChange={e => setHoneypot(e && e.target.value)}
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Button
         type="submit"
@@ -283,6 +287,11 @@ export function FooterNewsletter(): React.ReactElement {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
@@ -666,6 +675,7 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -675,3 +685,5 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47

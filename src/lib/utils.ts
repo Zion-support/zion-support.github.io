@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
+<<<<<<< HEAD
 =======
 
 export function cn(...inputs: ClassValue[]) {
@@ -14,3 +14,6 @@ export function cn(...inputs: ClassValue[]) {
 =======
 }
 >>>>>>> main
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47

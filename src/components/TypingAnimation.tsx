@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 interface TypingAnimationProps {
   text: string;
   speed?: number;
   delay?: number;
   className?: string;
-  showCursor?: boolean;
   onComplete?: () => void;
 }
 
@@ -15,8 +13,12 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
   speed = 100,
   delay = 0,
   className = '',
+<<<<<<< HEAD
   showCursor = true,
   onComplete,
+=======
+  onComplete
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,27 +44,16 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
         setCurrentIndex(0);
       }, delay);
       return () => clearTimeout(timeout);
+    } else {
+      setCurrentIndex(0);
     }
   }, [delay]);
 
   return (
-    <motion.span
-      className={className}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <span className={className}>
       {displayedText}
-      {showCursor && (
-        <motion.span
-          animate={{ opacity: [1, 0, 1] }}
-          transition={{ duration: 0.8, repeat: Infinity }}
-          className="ml-1"
-        >
-          |
-        </motion.span>
-      )}
-    </motion.span>
+      {!isComplete && <span className="animate-pulse">|</span>}
+    </span>
   );
 };
 

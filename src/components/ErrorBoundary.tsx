@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 
 interface Props {
   children: ReactNode;

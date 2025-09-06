@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 const Profile = () => {
@@ -18,4 +19,6 @@ const Profile = () => {
 };
 
 >>>>>>> main
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 export default Profile;

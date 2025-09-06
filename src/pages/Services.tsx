@@ -1,103 +1,207 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ServiceCard from '../components/ServiceCard';
 import Card from '../components/Card';
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, Code, Database, Smartphone, Shield, Cloud, Globe } from 'lucide-react';
+import { Card } from '../components/ui/Card';
+import { Button } from '../components/ui/Button';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+import ScrollAnimation from '../components/ScrollAnimation';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 
 const Services: React.FC = () => {
+  const services = [
+    {
+      icon: <Code className="w-12 h-12" />,
+      title: 'AI Services',
+      description: 'Custom AI solutions powered by machine learning and deep learning technologies',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Chatbots',
+        'Process Automation'
+      ],
+      href: '/services/ai-services'
+    },
+    {
+      icon: <Database className="w-12 h-12" />,
+      title: 'IT Services',
+      description: 'Comprehensive IT infrastructure and digital transformation solutions',
+      features: [
+        'System Architecture',
+        'Database Design',
+        'API Development',
+        'Legacy System Migration',
+        'Performance Optimization',
+        'Technical Consulting'
+      ],
+      href: '/services/it-services'
+    },
+    {
+      icon: <Smartphone className="w-12 h-12" />,
+      title: 'Micro SaaS',
+      description: 'Scalable software-as-a-service solutions for growing businesses',
+      features: [
+        'SaaS Architecture',
+        'Multi-tenancy',
+        'Subscription Management',
+        'Payment Integration',
+        'User Management',
+        'Analytics Dashboard'
+      ],
+      href: '/services/micro-saas'
+    },
+    {
+      icon: <Shield className="w-12 h-12" />,
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your digital assets',
+      features: [
+        'Security Audits',
+        'Penetration Testing',
+        'Compliance Management',
+        'Threat Detection',
+        'Data Encryption',
+        'Security Training'
+      ],
+      href: '/services/cybersecurity'
+    },
+    {
+      icon: <Cloud className="w-12 h-12" />,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services',
+      features: [
+        'Cloud Migration',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Auto-scaling',
+        'Disaster Recovery',
+        'Cost Optimization'
+      ],
+      href: '/services/cloud-solutions'
+    },
+    {
+      icon: <Globe className="w-12 h-12" />,
+      title: 'Data Analytics',
+      description: 'Transform data into actionable insights with advanced analytics',
+      features: [
+        'Business Intelligence',
+        'Real-time Dashboards',
+        'Data Visualization',
+        'ETL Pipelines',
+        'Machine Learning Models',
+        'Custom Reports'
+      ],
+      href: '/services/data-analytics'
+    }
+  ];
+
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Comprehensive technology solutions designed to transform your business
-            and drive innovation across all sectors.
-          </p>
-        </div>
+    <>
+      <SEO
+        title="Our Services - Zion Tech Group"
+        description="Discover our comprehensive range of technology services including AI solutions, IT services, cybersecurity, cloud solutions, and more."
+        keywords="AI services, IT services, cybersecurity, cloud solutions, data analytics, micro SaaS, technology consulting"
+        url="/services"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Header />
         
-        {/* Main Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
-            title="AI & Machine Learning"
-            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
-            icon="🤖"
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
-            icon="🔒"
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
-            icon="☁️"
-          />
-          <ServiceCard
-            title="Digital Transformation"
-            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
-            icon="🚀"
-          />
-          <ServiceCard
-            title="Data Analytics"
-            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
-            icon="📊"
-          />
-          <ServiceCard
-            title="IoT Solutions"
-            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
-            icon="🌐"
-          />
-        </div>
-
-        {/* Service Categories */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card
-              title="Consulting Services"
-              description="Strategic technology consulting to help you make informed decisions about your digital future."
-            />
-            <Card
-              title="Implementation"
-              description="End-to-end implementation of technology solutions tailored to your specific business needs."
-            />
-            <Card
-              title="Support & Maintenance"
-              description="Ongoing support and maintenance to ensure your systems run smoothly and efficiently."
-            />
-            <Card
-              title="Training & Education"
-              description="Comprehensive training programs to help your team master new technologies and processes."
-            />
-            <Card
-              title="Custom Development"
-              description="Bespoke software development solutions designed specifically for your unique requirements."
-            />
-            <Card
-              title="Integration Services"
-              description="Seamless integration of new technologies with your existing systems and workflows."
-            />
-          </div>
-        </div>
-
-        {/* Industry Solutions */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏥</span>
-              </div>
-              <h3 className="text-lg font-semibold">Healthcare</h3>
+        <main>
+          {/* Hero Section */}
+          <section className="pt-20 pb-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <ScrollAnimation animation="slideUp" delay={0.2}>
+                <div className="text-center mb-16">
+                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                    Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Services</span>
+                  </h1>
+                  <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    Comprehensive technology solutions designed to accelerate your business growth 
+                    and digital transformation.
+                  </p>
+                </div>
+              </ScrollAnimation>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏦</span>
+          </section>
+
+          {/* Services Grid */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {services.map((service, index) => (
+                  <ScrollAnimation
+                    key={index}
+                    animation="scale"
+                    delay={index * 0.1}
+                    className="group"
+                  >
+                    <Card className="h-full p-8 bg-gray-800/50 backdrop-blur-sm border-gray-700/50 hover:bg-gray-800/70 transition-all duration-300 hover:border-cyan-400/50">
+                      <div className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        {service.icon}
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                        {service.title}
+                      </h3>
+                      
+                      <p className="text-gray-300 mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
+
+                      <ul className="space-y-2 mb-8">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-gray-300">
+                            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <Button variant="outline" className="w-full group-hover:bg-cyan-400 group-hover:text-black group-hover:border-cyan-400 transition-all duration-300" asChild>
+                        <Link to={service.href}>
+                          Learn More
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </Card>
+                  </ScrollAnimation>
+                ))}
               </div>
-              <h3 className="text-lg font-semibold">Finance</h3>
             </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
+            <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+              <ScrollAnimation animation="fadeIn" delay={0.2}>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Get Started?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Let's discuss your project and find the perfect solution for your business needs.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" asChild>
+                    <Link to="/contact">
+                      Get Free Consultation
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900" asChild>
+                    <Link to="/pricing">View Pricing</Link>
+                  </Button>
+                </div>
+              </ScrollAnimation>
+            </div>
+<<<<<<< HEAD
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏭</span>
@@ -424,8 +528,14 @@ const Services = () => {
           </div>
         </motion.div>
 >>>>>>> main
+=======
+          </section>
+        </main>
+
+        <Footer />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
       </div>
-    </div>
+    </>
   );
 };
 
