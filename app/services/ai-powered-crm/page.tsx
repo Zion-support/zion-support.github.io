@@ -7,6 +7,175 @@ export const metadata = {
   keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, customer insights, AI-powered sales'
 };
 
+interface FeatureCardProps {
+  icon: string;
+  title: string;
+  description: string;
+  benefits: string[];
+}
+
+export default function AIPoweredCRMPage() {
+  return (
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          AI-Powered CRM Platform
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Revolutionize your customer relationships with our AI-powered CRM that
+          automates interactions, predicts opportunities, and delivers personalized
+          experiences at scale.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI CRM Demo"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Try Free Demo
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Powerful AI Features
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FeatureCard
+              icon="🤖"
+              title="Intelligent Lead Scoring"
+              description="AI automatically scores and prioritizes leads based on behavior, demographics, and engagement patterns."
+              benefits={[
+                "95% accuracy in lead qualification",
+                "3x faster lead processing",
+                "Automated follow-up triggers"
+              ]}
+            />
+            <FeatureCard
+              icon="📊"
+              title="Predictive Analytics"
+              description="Advanced machine learning models predict customer behavior, churn risk, and sales opportunities."
+              benefits={[
+                "Predict customer lifetime value",
+                "Identify churn risk early",
+                "Optimize sales strategies"
+              ]}
+            />
+            <FeatureCard
+              icon="💬"
+              title="Automated Communication"
+              description="AI-powered chatbots and email automation that engage customers with personalized messages."
+              benefits={[
+                "24/7 customer support",
+                "Personalized email campaigns",
+                "Multi-channel communication"
+              ]}
+            />
+            <FeatureCard
+              icon="📈"
+              title="Sales Forecasting"
+              description="Accurate revenue predictions and sales pipeline analysis powered by advanced AI algorithms."
+              benefits={[
+                "90% accurate forecasts",
+                "Real-time pipeline insights",
+                "Revenue optimization"
+              ]}
+            />
+            <FeatureCard
+              icon="🎯"
+              title="Customer Segmentation"
+              description="Automatically segment customers based on behavior, preferences, and value for targeted marketing."
+              benefits={[
+                "Dynamic customer groups",
+                "Targeted marketing campaigns",
+                "Improved conversion rates"
+              ]}
+            />
+            <FeatureCard
+              icon="🔍"
+              title="Smart Insights"
+              description="AI-generated insights and recommendations to improve customer relationships and sales performance."
+              benefits={[
+                "Actionable recommendations",
+                "Performance analytics",
+                "Strategic guidance"
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Why Choose Our AI CRM?
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">50% Faster</h3>
+              <p className="text-gray-600">Sales process automation</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">40% Higher</h3>
+              <p className="text-gray-600">Conversion rates</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">💰</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">60% More</h3>
+              <p className="text-gray-600">Revenue per customer</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">95% Accurate</h3>
+              <p className="text-gray-600">Lead scoring</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-600 text-white text-center rounded-lg">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Transform Your Customer Relationships?
+          </h2>
+          <p className="text-xl mb-8">
+            Join 500+ companies already using our AI-powered CRM to drive growth and customer satisfaction.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=AI CRM Demo Request"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Get Started Today
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              Schedule Demo
+            </a>
+          </div>
+          <div className="mt-8 text-sm">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>📧 kleber@ziontechgroup.com</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
 
 function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {

@@ -7,6 +7,7 @@ export const metadata = {
   keywords: 'invoice automation, smart invoicing, AI billing, payment tracking, financial analytics, invoice generator'
 };
 
+export default function SmartInvoiceGeneratorPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -23,13 +24,15 @@ export const metadata = {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              >Get Started</Link>
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started
               </Link>
               <Link
                 href="#features"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              >Learn More</Link>
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Learn More
               </Link>
             </div>
           </div>
@@ -188,7 +191,7 @@ export const metadata = {
           <li key={index} className="flex items-center">
             <svg
               className="w-5 h-5 text-green-500 mr-3"
-              fill="currentColor"
+              fill="currentColor">
               viewBox="0 0 20 20">
             >
               <path

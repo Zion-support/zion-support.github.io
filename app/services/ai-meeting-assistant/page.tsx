@@ -7,6 +7,7 @@ export const metadata = {
   keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
 };
 
+export default function AIMeetingAssistantPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -22,16 +23,16 @@ export const metadata = {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Assistant Demo"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
           >
             Try Free Demo
           </a>
           <a
             href="tel:+13024640950"
-            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors">
+            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
           >
             Watch Demo
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -82,7 +83,7 @@ export const metadata = {
           </p>
           <Link
             href="/contact"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
             >
           </p>
         </div>
