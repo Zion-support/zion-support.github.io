@@ -25,8 +25,4 @@ const Home: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Home;
-=======
-export default Home;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-efe6

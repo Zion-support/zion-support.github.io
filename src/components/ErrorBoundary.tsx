@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Component, ReactNode, ErrorInfo } from 'react';
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-efe6
 
 interface Props {
   children: ReactNode;
