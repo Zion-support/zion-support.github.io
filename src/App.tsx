@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ToastContainer from './components/ToastContainer';
 import { ThemeProvider } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
-import BackToTop from './components/BackToTop';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
@@ -31,8 +29,6 @@ function App() {
               </Routes>
             </main>
             <Footer />
-            <ToastContainer />
-            <BackToTop />
           </div>
         </Router>
       </ErrorBoundary>

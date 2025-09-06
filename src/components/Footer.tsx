@@ -1,24 +1,3 @@
-import { FooterNewsletter } from '@/components/FooterNewsletter';
-import { 
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Github,
-  ChevronUp,
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-
-const Footer: React.FC = () => {
-  return (
-    <motion.footer
-      className="bg-slate-900 text-gray-300"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -73,39 +52,26 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">AI Solutions</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Cybersecurity</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Cloud Infrastructure</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Digital Transformation</a></li>
+              <li><a href="/services/ai-services" className="hover:text-white transition-colors">AI Solutions</a></li>
+              <li><a href="/services/cybersecurity" className="hover:text-white transition-colors">Cybersecurity</a></li>
+              <li><a href="/services/cloud-services" className="hover:text-white transition-colors">Cloud Infrastructure</a></li>
+              <li><a href="/services/micro-saas" className="hover:text-white transition-colors">Micro SaaS</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
+            © 2024 Zion Tech Group. All rights reserved. | 
+            <a href="tel:+13024640950" className="hover:text-white transition-colors ml-2">+1 302 464 0950</a> | 
+            <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors ml-2">kleber@ziontechgroup.com</a>
           </p>
-        <div className="border-t border-slate-700 mt-8 pt-8 flex justify-between items-center">
-          <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
+          <p className="text-gray-500 text-sm mt-2">
+            📍 364 E Main St STE 1008, Middletown DE 19709
           </p>
-          <button
-            type='button'
-            onClick={() => {
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-              });
-            }}
-            className='flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer'
-            aria-label='Back to top'
-          >
-            <ChevronUp className='h-4 w-4' aria-hidden='true' />
-            <span>Back to Top</span>
-          </button>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 
