@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,6 +31,42 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+=======
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+
+export default [
+  {
+    files: ['src/App.tsx', 'src/main.tsx', 'src/components/Header.tsx', 'src/components/Footer.tsx', 'src/components/Sidebar.tsx', 'src/components/PerformanceMonitor.tsx', 'src/components/ErrorBoundary.tsx', 'src/pages/Home.tsx', 'src/pages/About.tsx', 'src/pages/Services.tsx', 'src/pages/Pricing.tsx', 'src/pages/Contact.tsx'],
+    ignores: [
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+      'coverage/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'backup-merge-conflicts/**',
+      '**/*.backup.*',
+      '**/*.old.*',
+      '**/*.disabled.*',
+      '**/*.broken.*',
+      '**/*.corrupted.*',
+      '**/*.temp.*',
+      '**/*.test.*',
+      '**/*.spec.*',
+      '**/performance-*.txt',
+>>>>>>> de625fc3f4415ec676947cf1651e7f41ac915eec
       '**/zion-os/**',
       '**/zion-website/**',
       '**/zion-academy/**',
@@ -39,10 +76,32 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
       '**/*.bundle.js',
       '**/public/**',
       '**/static/**',
+<<<<<<< HEAD
 
+=======
+      'temp_exclude/**',
+      'temp_backup/**',
+      'temp_broken_files/**',
+      'temp_components/**',
+      'temp_conflicts/**',
+      'tests/**',
+      'types/**',
+      'utils/**',
+      'ultimate-*.cjs',
+      'zion-website/**',
+      'zion_academy/**',
+      'src_backup/**',
+      'supabase/**',
+      'start-dev.js',
+      'structural-fix.js',
+      'super-syntax-fixer.cjs',
+      'system-monitor.cjs',
+      'test-next.js',
+      'types/service-variants.js',
+>>>>>>> de625fc3f4415ec676947cf1651e7f41ac915eec
     ],
     languageOptions: {
-      parser: typescriptParser,
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -51,55 +110,10 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
         },
       },
       globals: {
-        // Browser globals
-
-        window: "readonly",
-        document: "readonly",
-        console: "readonly",
-        localStorage: "readonly",
-        sessionStorage: "readonly",
-        fetch: "readonly",
-        URL: "readonly",
-        URLSearchParams: "readonly",
-        location: "readonly",
-        navigator: "readonly",
-        performance: "readonly",
-        addEventListener: "readonly",
-        removeEventListener: "readonly",
-        requestAnimationFrame: "readonly",
-        setTimeout: "readonly",
-        clearTimeout: "readonly",
-        setInterval: "readonly",
-        clearInterval: "readonly",
-        self: "readonly",
-        // Node.js globals
-        process: "readonly",
-        Buffer: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        module: "readonly",
-        require: "readonly",
-        exports: "readonly",
-        global: "readonly",
-        // DOM types
-        Element: "readonly",
-        HTMLElement: "readonly",
-        HTMLInputElement: "readonly",
-        HTMLTextAreaElement: "readonly",
-        HTMLSelectElement: "readonly",
-        HTMLDivElement: "readonly",
-        MouseEvent: "readonly",
-        KeyboardEvent: "readonly",
-        Node: "readonly",
-        PerformanceObserver: "readonly",
-        PerformanceNavigationTiming: "readonly",
-        PerformanceEventTiming: "readonly",
-        LayoutShift: "readonly",
-        IntersectionObserver: "readonly",
-        IntersectionObserverEntry: "readonly",
-
-        // React
+        ...globals.browser,
+        ...globals.node,
         React: 'readonly',
+<<<<<<< HEAD
         // Jest/Testing globals
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -278,13 +292,21 @@ export default [
         "warn",
         { allowConstantExport: true }
       ],
+=======
+        jest: 'readonly',
+>>>>>>> de625fc3f4415ec676947cf1651e7f41ac915eec
         describe: 'readonly',
         it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
         beforeEach: 'readonly',
-        afterEach: 'readonly'
-      }
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+      },
     },
     plugins: {
+<<<<<<< HEAD
 
 
       '@typescript-eslint': typescript,
@@ -299,37 +321,63 @@ export default [
       'no-undef': 'off',
       "react/react-in-jsx-scope": "off"
 
+=======
+      '@typescript-eslint': tseslint,
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      'jsx-a11y': jsxA11y,
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+>>>>>>> de625fc3f4415ec676947cf1651e7f41ac915eec
     },
     settings: {
       react: {
-        version: "detect"
-      }
-    }
+        version: 'detect',
+      },
+    },
   },
   {
     files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
+      '**/*.cjs',
+      '**/scripts/**/*.js',
+      '**/automation/**/*.js',
+      '**/pm2/**/*.js',
     ],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: "script",
+      sourceType: 'script',
       globals: {
-        ...globals && globals.node,
-        console: "readonly",
-        process: "readonly",
-        require: "readonly",
-        module: "readonly",
-        exports: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        Buffer: "readonly",
-        global: "readonly"
-      }
+        ...globals.node,
+        console: 'readonly',
+        process: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+      },
     },
     rules: {
+<<<<<<< HEAD
       'no-unused-vars': 'warn'
     }
   },
@@ -366,3 +414,11 @@ export default [
   }
 ];
 
+=======
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error',
+    },
+  },
+];
+>>>>>>> de625fc3f4415ec676947cf1651e7f41ac915eec
