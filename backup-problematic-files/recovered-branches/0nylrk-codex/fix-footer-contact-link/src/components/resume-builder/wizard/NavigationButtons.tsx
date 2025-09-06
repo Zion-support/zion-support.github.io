@@ -17,7 +17,6 @@ export const NavigationButtons = ({;
         </Button>;
       )}
       {onNext && (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}

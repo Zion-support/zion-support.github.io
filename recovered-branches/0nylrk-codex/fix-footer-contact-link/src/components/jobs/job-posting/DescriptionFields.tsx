@@ -1,54 +1,24 @@
-
-
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-  FormMessage,;
-
-
-
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormDescription,
   FormMessage,;
-
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
-
-import { JobSchemaType } from "./validation";
-interface DescriptionFieldsProps {;
-
+import { JobSchemaType } from './validation';
+interface DescriptionFieldsProps {
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
-
-
-export function DescriptionFields(): any ({;
-  control,;
-  handleEditorChange,;
-  editorContent,;
-}: DescriptionFieldsProps) {;
-
-  return (
-    <>;
-      <FormField
-
-        control={control}
-        name="description"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Job Description</FormLabel>;
-            <FormControl>;
-              <Textarea
-
-
 
 import React from 'react',
 import { Control } from 'react-hook-form',
@@ -74,17 +44,13 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
   return (;
     <>;
       <FormField;
-
-
-
         control={control}
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
-
-
+              <Textarea 
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e && e.target.value);
@@ -135,10 +101,6 @@ function DescriptionFields() {
               Detailed description of the job role.;
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-
       <FormField
         control={control}
         name="responsibilities"
@@ -168,10 +130,6 @@ function DescriptionFields() {
               List the main responsibilities of this job.;
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-
       <FormField
         control={control}
         name="qualifications"
@@ -201,10 +159,6 @@ function DescriptionFields() {
               List the required qualifications for this job.;
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-
       <FormField
         control={control}
         name="benefits"
@@ -234,10 +188,6 @@ function DescriptionFields() {
               List the benefits offered for this job.;
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-
       <FormField
         control={control}
         name="application_instructions"
@@ -248,7 +198,6 @@ function DescriptionFields() {
               <Textarea
                 placeholder="Provide instructions on how to apply for this job"
                 className="resize-none min-h-[100px]"
-
           </FormItem>)}
       />;
       <FormField;
@@ -261,7 +210,6 @@ function DescriptionFields() {
               <Textarea;
                 placeholder="Provide instructions on how to apply for this job";
                 className="resize - none min - h-[100px]";
-
                 {...field}
               />;
             </FormControl>;
@@ -269,21 +217,6 @@ function DescriptionFields() {
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
-
-                {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              Provide instructions on how to apply for this job.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        )}
-
-      />;
-    </>;
-
-
   );
           </FormItem>)}
       />;

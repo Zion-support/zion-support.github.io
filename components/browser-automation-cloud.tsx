@@ -1,20 +1,22 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -24,8 +26,15 @@ import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 
-
-
+export default function BrowserAutomationCloudPage() {
+export default function BrowserAutomationCloudPage() {
+  const features = [
+    'Parallel Playwright/Puppeteer execution',
+    'Queued jobs with retries and rate limits',
+    'Artifacts: HAR, traces, screenshots, videos',
+    'Rotating proxies and geo targeting',
+    'Webhook callbacks and REST API',;
+  ];
 
   const features = [
     'Parallel Playwright/Puppeteer execution'
@@ -152,8 +161,6 @@ function BrowserAutomationCloudPage() {
           </div>;
         </section>;
       </main>;
-
-
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -182,7 +189,3 @@ function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }
-
-	),
-}
-

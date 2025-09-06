@@ -1,12 +1,3 @@
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "AI Business Intelligence - Zion Tech Group",;
-  description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.",;
-  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"};
-export default function AIBusinessIntelligencePage() {;
-  return (;
-
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 import Link from './next / link';,
@@ -21,8 +12,6 @@ function AIBusinessIntelligencePage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -102,10 +91,10 @@ function AIBusinessIntelligencePage() {
                 Forecast future trends and outcomes using advanced machine learning algorithms and historical data analysis.;
               </p>;
               <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;
-                <li>• Market trend prediction</li>;
-                <li>• Customer behavior forecasting</li>;
-                <li>• Risk assessment models</li>;
-                <li>• Demand forecasting</li>;
+                <li> Market trend prediction</li>;
+                <li> Customer behavior forecasting</li>;
+                <li> Risk assessment models</li>;
+                <li> Demand forecasting</li>;
               </ul>;
             </div>;
             {/* Natural Language Analytics */}
@@ -120,10 +109,10 @@ function AIBusinessIntelligencePage() {
                 Analyze unstructured text data from customer feedback, social media, and documents using NLP.;
               </p>;
               <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;
-                <li>• Sentiment analysis</li>;
-                <li>• Text classification</li>;
-                <li>• Entity extraction</li>;
-                <li>• Topic modeling</li>;
+                <li> Sentiment analysis</li>;
+                <li> Text classification</li>;
+                <li> Entity extraction</li>;
+                <li> Topic modeling</li>;
               </ul>;
             </div>;
             {/* Automated Reporting */}
@@ -138,10 +127,10 @@ function AIBusinessIntelligencePage() {
                 Generate comprehensive reports automatically with AI - powered insights and customizable dashboards.;
               </p>;
               <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;
-                <li>• Real - time dashboards</li>;
-                <li>• Custom report builder</li>;
-                <li>• Automated insights</li>;
-                <li>• Interactive visualizations</li>;
+                <li> Real - time dashboards</li>;
+                <li> Custom report builder</li>;
+                <li> Automated insights</li>;
+                <li> Interactive visualizations</li>;
               </ul>;
             </div>;
             {/* Customer Intelligence */}
@@ -156,10 +145,10 @@ function AIBusinessIntelligencePage() {
                 Deep insights into customer behavior, preferences, and lifetime value using AI analytics.;
               </p>;
               <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;
-                <li>• Customer segmentation</li>;
-                <li>• Churn prediction</li>;
-                <li>• Lifetime value analysis</li>;
-                <li>• Behavioral patterns</li>;
+                <li> Customer segmentation</li>;
+                <li> Churn prediction</li>;
+                <li> Lifetime value analysis</li>;
+                <li> Behavioral patterns</li>;
               </ul>;
             </div>;
             {/* Market Intelligence */}
@@ -174,10 +163,10 @@ function AIBusinessIntelligencePage() {
                 Comprehensive market analysis and competitive intelligence powered by AI and big data.;
               </p>;
               <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;
-                <li>• Competitive analysis</li>;
-                <li>• Market trend monitoring</li>;
-                <li>• Opportunity identification</li>;
-                <li>• Risk assessment</li>;
+                <li> Competitive analysis</li>;
+                <li> Market trend monitoring</li>;
+                <li> Opportunity identification</li>;
+                <li> Risk assessment</li>;
               </ul>;
             </div>;
             {/* Operational Intelligence */}
@@ -193,10 +182,10 @@ function AIBusinessIntelligencePage() {
                 Real - time monitoring and optimization of business operations using AI - powered analytics.;
               </p>;
               <ul className="text - sm text - gray - 300 space - y-1 mb - 4">;
-                <li>• Performance monitoring</li>;
-                <li>• Process optimization</li>;
-                <li>• Anomaly detection</li>;
-                <li>• Resource allocation</li>;
+                <li> Performance monitoring</li>;
+                <li> Process optimization</li>;
+                <li> Anomaly detection</li>;
+                <li> Resource allocation</li>;
               </ul>;
             </div>;
           </div>;

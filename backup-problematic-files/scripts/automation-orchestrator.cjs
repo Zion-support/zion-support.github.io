@@ -26,6 +26,9 @@ console.log(' Starting Automation Orchestrator...')
     console.log('\n "Recommendations")
 <<<<<<< HEAD
   console.error('Orchestrator "failed")
+<<<<<<< HEAD
 =======
   console.error('Orchestrator "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

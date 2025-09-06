@@ -1,16 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
   if (req.method === 'GET') {
-
-  if (req.method === 'GET') {;
-
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
-
-
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -95,9 +89,6 @@ if ( {) {
       seo: {
         meta_title: body.seo?.meta_title || body.title!,
         meta_description: body.seo?.meta_description || '',
-
-        metaTitle: body.seo?.metaTitle || body.title!,
-        metaDescription: body.seo?.metaDescription || '',
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',
@@ -108,7 +99,3 @@ if ( {) {
     write_posts (posts);
     return res.status (201).json (post);
   }
-
-
-
-

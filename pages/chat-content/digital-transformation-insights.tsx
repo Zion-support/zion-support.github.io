@@ -1,12 +1,17 @@
-
-
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const DigitalTransformationInsights: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>DigitalTransformationInsights - Zion Tech Solutions</title>
+        <meta name="description" content="DigitalTransformationInsights page" />
+      </Head>
       <main>
         <h1>DigitalTransformationInsights</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
-
-
       <main>;
         <h1>DigitalTransformationInsights</h1>;
         <p>This page is under construction.</p>;
@@ -14,9 +19,6 @@
     </div>;
   ),;
 };
-export default DigitalTransformationInsights;
-
-
 import Head from 'next / head';
       <main>;
         <h1 > DigitalTransformationInsights</h1>;
@@ -27,5 +29,6 @@ import Head from 'next / head';
 ;
 export default DigitalTransformationInsights;
 ;
+  )
 
 

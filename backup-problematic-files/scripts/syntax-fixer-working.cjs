@@ -12,6 +12,9 @@ const { execSync } = require('child_process')
         {"pattern": /\[\s*,\s*/g, "replacement"}]
 <<<<<<< HEAD
       this.log('\n Errors "encountered")
+<<<<<<< HEAD
 =======
       this.log('\n Errors "encountered")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

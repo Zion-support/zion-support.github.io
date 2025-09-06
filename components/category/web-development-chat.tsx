@@ -1,5 +1,3 @@
-
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -9,15 +7,28 @@ const WebDevelopmentChat: NextPage = () => {;
       <Head>;
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="WebDevelopmentChat blog post" />{" "}
-
-
 const WebDevelopmentChat: NextPage = () => {
   return (
     <div>
       <Head>
-
       </Head>;
 
+      <main>;
+        <h1>WebDevelopmentChat</h1>;
+        <p>Blog content coming soon...</p>;
+        <a href="/blog">Back to Blog</a>;
+      </main>;
+    </div>;
+  );
+};
+      </Head>
+      <main>
+        <h1>WebDevelopmentChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
+      </Head>;
 
       <main>;
         <h1>WebDevelopmentChat</h1>;
@@ -28,11 +39,6 @@ const WebDevelopmentChat: NextPage = () => {
   );
 }
 export default WebDevelopmentChat;
-
-
-
-        <title>WebDevelopmentChat - Zion Tech Solutions</title>
-
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -53,3 +59,4 @@ const WebDevelopmentChat: NextPage = () => {
 ;
 export default WebDevelopmentChat;
 ;
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>

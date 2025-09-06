@@ -1,48 +1,42 @@
+  }, []);
+  const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
+  return { favorites, remove }
+}
 
-
-import {useEffect, useMemo, useState} from 'react';
-import Head from 'next/head';
-
-
-import Link from 'next/link';
-import { TALENT_PROFILES } from '../data/talent';
-
-
-  const storageKey = 'zion_favorites';
-  const [favorites, setFavorites] = useState<string[]>([]);
-
-
+export default function FavoritesPage() {;
+  const { favorites, remove } = useFavorites();
+  const profiles = useMemo(
+    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
+    [favorites]
+  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
 
   return (
     <div>
       <Head>
-        <title>Favorites — Zion AI Marketplace</title>
+        <title>Favorites  Zion AI Marketplace</title>
       </Head>
-
-
-      <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
-
         <nav aria-label="Breadcrumb">
           <ol className="flex items-center gap-2">
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
-
-
   const remove = (slug: string) => setFavorites((prev) => prev && prev.filter((s) => s !== slug)),;
   return { favorites, remove };
 }
+
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(;
     () => TALENT_PROFILES && TALENT_PROFILES.filter(t => favorites && favorites.includes(t && t.slug)),;
     [favorites];
   );  const profiles = useMemo(() => TALENT_PROFILES && TALENT_PROFILES.filter((t) => favorites && favorites.includes(t && t.slug)), [favorites]);
+
   return (
     <div>;
       <Head>;
-        <title>Favorites — Zion AI Marketplace</title>;
+        <title>Favorites  Zion AI Marketplace</title>;
       </Head>;
+
       <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>;
         <nav aria-label='Breadcrumb'>;
           <ol className='flex items-center gap-2'>;
@@ -59,6 +53,7 @@ export default function FavoritesPage() {;
             </li>          </ol>;
         </nav>;
       </div>;
+
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>      <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">;
         <nav aria-label="Breadcrumb">;
           <ol className="flex items-center gap-2">;
@@ -67,6 +62,7 @@ export default function FavoritesPage() {;
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>;
         </nav>;
       </div>;
+
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>;
       {profiles && profiles.length === 0 ? (;
         <div className='rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center'>;
@@ -88,7 +84,7 @@ function FavoritesPage() {
   return (
     <div>;
       <Head>;
-        <title > Favorites — Zion AI Marketplace</title>;
+        <title > Favorites  Zion AI Marketplace</title>;
       </Head>;
       <div className='mb - 6 text - sm text - gray - 500 dark:text - gray - 400'>;
         <nav aria - label='Breadcrumb'>;
@@ -128,7 +124,6 @@ function FavoritesPage() {
               </a>;
             </Link>;
           </div>;
-
         </div>) : (
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {profiles.map (t => (
@@ -146,26 +141,10 @@ function FavoritesPage() {
                 <button;
                   on_click={() => remove (t.slug)}
                   className='text - xs text - pink - 600 border border - pink - 600 rounded px - 2 py - 1';
-
                 >;
                   Remove;
                 </button>;
               </div>;
-
-
-
-
-          </ol>
-        </nav>
-      </div>
-
-
-    </div>;
-  );
-}
-
-    </div>
-<<<<<<< HEAD
   );
 }
               <div className='mt - 3 text - xs text - gray - 500'>{t.location}</div>;

@@ -99,7 +99,3 @@ quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create 
 }> <Download size= {;
   16 ;
 }/> Export CSV </Button>) ;
-
-};
-'"
-

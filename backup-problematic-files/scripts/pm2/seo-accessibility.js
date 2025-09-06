@@ -26,7 +26,7 @@ class SEOAccessibility {,;
 ,;
   async checkSEO() {,;
     try {,;
-      this.log('🔍 Checking SEO...'),;
+      this.log(' Checking SEO...'),;
 ,;
       const seoIssues = [],;
       const pagesDir = path.join(this.projectRoot, 'pages'),;
@@ -97,7 +97,7 @@ class SEOAccessibility {,
 ,
   async checkSEO() {,
     try {,
-      this.log('🔍 Checking SEO...'),
+      this.log(' Checking SEO...'),
 ,
       const seoIssues = [],
       const pagesDir = path.join(this.projectRoot, 'pages'),

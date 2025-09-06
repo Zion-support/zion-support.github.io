@@ -1,8 +1,10 @@
-
  </div> </div> </div>) };
-
-
-</div> </div> </div>) };
+import React from 'react',
+import type { ReviewsSummary } from '../../types/reviews',
+import StarRating from './StarRating',
+type Props = {
+  summary: ReviewsSummary
+},
 
 
  </div> </div> </div>) }
@@ -46,5 +48,9 @@ export default ReviewSummary;      <div>
         </div>
       </div>
     </div>
-
+);
+}
+export default ReviewSummary;  )
+}
+export default ReviewSummary;
 

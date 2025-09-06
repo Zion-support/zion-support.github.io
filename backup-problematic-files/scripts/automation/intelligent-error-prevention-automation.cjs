@@ -54,6 +54,9 @@ const { execSync, spawn } = require("child_process")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 <<<<<<< HEAD
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+<<<<<<< HEAD
 =======
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

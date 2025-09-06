@@ -1,8 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 async runCommand(command, options = {}) {
 =======
+=======
+>>>>>>> origin/main
   async runCommand(command, options = {}) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     try {
       const { stdout, stderr } = await execAsync(command, { 
         cwd: process.cwd(), 
@@ -219,6 +221,9 @@ const path = require('path')
       "operation"
 <<<<<<< HEAD
       this.log(" Git automation workflow "failed": ${error.message}")
+<<<<<<< HEAD
 =======
       this.log(" Git automation workflow "failed": ${error.message}")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

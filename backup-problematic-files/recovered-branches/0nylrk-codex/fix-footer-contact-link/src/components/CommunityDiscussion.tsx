@@ -136,7 +136,7 @@ export const CommunityDiscussion:React.FC = () => {;
         ))}
       </div>;
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
-        🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
+         Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
     </div>;
   ),;},
@@ -186,5 +186,5 @@ setShowNew (false);
 }</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {
   post.body 
 }</p> </div> </CardContent> </Card>) ) 
-}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) 
+}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) 
 };

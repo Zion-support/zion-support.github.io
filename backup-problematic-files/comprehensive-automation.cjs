@@ -45,6 +45,9 @@ const path = require('path')
     this.log("� Scripts "Generated")
 <<<<<<< HEAD
     console.error('Automation "failed")
+<<<<<<< HEAD
 =======
     console.error('Automation "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

@@ -1,20 +1,13 @@
 
-
-
-
+export type Course = {;
+import Link from 'next / link';
+export type Course = {
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
   category: string;
-
-
-
-export default function CourseCard(): any ({ course }: { course: Course }) {;
-  return (
-
-
   certification_badge: string,
   description?: string;
 export default /**
@@ -30,11 +23,11 @@ function CourseCard() {
         </span>;
       </div>;
       <div className='text - xs text - gray - 500 mt - 1'>;
-        {course.category} • {course.level} •{' '}
+        {course.category}  {course.level} {' '}
         {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
         </span>;
       </div>;
-      <div className="text - xs text - gray - 500 mt - 1">{course.category} • {course.level} • {Math.round (course.duration_minutes / 60)}h</div>;
+      <div className="text - xs text - gray - 500 mt - 1">{course.category}  {course.level}  {Math.round (course.duration_minutes / 60)}h</div>;
       <div className="text - sm mt - 2 line - clamp - 2">{course.description}</div>;
       <div className="mt - 3 flex items - center justify - between">;
         <span className="text - xs bg - indigo - 50 text - indigo - 700 px - 2 py - 0.5 rounded">Badge: {course.certification_badge}</span>;
@@ -54,16 +47,5 @@ function CourseCard() {
         </Link>;
       </div>;
     </div>);
-        </Link>
-          <a className=&quot;text-blue-600 hover:underline text-sm&quot;>View course</a>
-        </a>
-
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-
-}
 
   );
-

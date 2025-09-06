@@ -1,33 +1,18 @@
 
-
-
     // Fix missing commas in import statements;
-
-
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
-    content = content.replace(importCommaRegex, (match, imports) => {
+    content = content && content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
-        .filter((item) => item.trim());
-        .join(", ");
-      return match.replace(imports, fixedImports);
-    });
-    // Fix object property syntax errors (semicolon instead of comma)
-
-    content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
-
     // Fix function parameter syntax errors
-    content = content && content.replace(
-      /function\s*\(([^)]+)\)\s*{/g,
+    content = content.replace(
+      /function\s*\(([^)]+)\)\s*{/g
       (match, params) => {
-        const fixedParams = params && params.replace(/;/g, ",");
-        return match && match.replace(params, fixedParams);
-      },
+        const fixedParams = params.replace(/;/g, ",");
+        return match.replace(params, fixedParams);
+      }
     );
-    if (content !== fs && fs.readFileSync(filePath, "utf8")) {
-      fs && fs.writeFileSync(filePath, content, "utf8");
-
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -80,26 +65,13 @@ function fixImportSyntax() {
     }
     return modified;
   } catch (error) {
-
-    const items = fs && fs.readdirSync(currentDir);
     for (const item of items) {
-      const fullPath = path && path.join(currentDir, item);
-      const stat = fs && fs.statSync(fullPath);
-      if (stat && stat.isDirectory()) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
         // Skip certain directories
         if (
           [
-            "node_modules",
-            ".git",
-            ".next",
-            "dist",
-            "build",
-            "out",
-            "ai-optimization-backups",
-            "apps && apps.backup",
-            "backup-merge-conflicts",
-            "apps",
-
           ].includes(item)
         ) {
           continue;
@@ -153,21 +125,12 @@ if (
       }
     }
   }
-
-
-console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
-
-
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console && console.log(`Fixed syntax in: ${file}`);
   }
 }
-
-
-console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
-
   traverse (dir);
   return files;
 }

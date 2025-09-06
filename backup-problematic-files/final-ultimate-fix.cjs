@@ -70,6 +70,7 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/final-ultimate-fix.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -77,6 +78,11 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:final-ultimate-fix.cjs
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 console.log(' Applying final ultimate fixes...')
@@ -113,10 +119,11 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
   .replace(/featured: tru e/g, '"featured")
   .replace(/"isAuthenticated": tru e/g, '"isAuthenticated")
   .replace(/isLoading: fals e/g, '"isLoading")
+<<<<<<< HEAD:backup-problematic-files/final-ultimate-fix.cjs
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:final-ultimate-fix.cjs
 <<<<<<< HEAD
   .replace(/user: nul l/g, '"user")
 =======
@@ -130,6 +137,7 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/final-ultimate-fix.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -137,3 +145,8 @@ const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'u
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:final-ultimate-fix.cjs
+>>>>>>> origin/main

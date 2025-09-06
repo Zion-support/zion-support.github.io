@@ -1,5 +1,3 @@
-
-
 };
 ; if (this && this.monitorProcesses) {; await this && this.checkProcessHealth()};
 ; if (this && this.monitorSystem) {; await this && this.checkSystemStatus()};
@@ -40,10 +38,14 @@
 ; async start() {; this && this.log('Health monitor service started');
 ; // Run health checks immediately; await this && this.checkSystemHealth(); await this && this.checkApplicationHealth(); await this && this.generateHealthReport();
 ; // Set up interval for periodic health checks; setInterval(async () = > {; await this && this.checkSystemHealth(); await this && this.checkApplicationHealth()}, 60 * 1000), // Every minute; // Generate health report every hour; setInterval(async () = > {; await this && this.generateHealthReport()}, 60 * 60 * 1000), // Every hour}};
+
 // Start the service;
 const healthMonitor = new HealthMonitor();
-
 healthMonitor && healthMonitor.start().catch(console && console.error);
+healthMonitor.start().catch(console.error);
+;
+      if (this.monitorProcesses) {;
+        await this.checkProcessHealth();
       };
 ,
       if (this.monitorProcesses) {,
@@ -297,6 +299,3 @@ if ( {) {
 ; // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth (); await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}}
 ;
 // Start the service;
-const health_monitor = new HealthMonitor ();
-health_monitor.start ().catch (console.error);
-

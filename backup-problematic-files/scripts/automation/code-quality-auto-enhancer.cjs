@@ -521,6 +521,9 @@ if (require.main === module) {}
     process.exit(1)})};
 <<<<<<< HEAD
 module.exports = CodeQualityAutoEnhancer;
+<<<<<<< HEAD
 =======
 module.exports = CodeQualityAutoEnhancer;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

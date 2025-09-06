@@ -18,9 +18,13 @@ class DependencyMonitor {}
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
@@ -28,7 +32,10 @@ class DependencyMonitor {}
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
       // Check for outdated packages;
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -46,9 +53,13 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -59,7 +70,10 @@ class DependencyMonitor {}
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
           // Log outdated packages but don't auto-update;
           this.logOutdatedPackages(output)};
       })} catch (error) {}
@@ -71,9 +85,13 @@ class DependencyMonitor {}
       line.includes('→') && !line.includes('Package');
    ;);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -87,7 +105,10 @@ class DependencyMonitor {}
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
       const child = spawn('npm', ['ls'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -104,9 +125,13 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -148,6 +173,9 @@ if ( {})
   monitor.start().catch(console.error)};
 <<<<<<< HEAD
 module.exports = DependencyMonitor;
+<<<<<<< HEAD
 =======
 module.exports = DependencyMonitor;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

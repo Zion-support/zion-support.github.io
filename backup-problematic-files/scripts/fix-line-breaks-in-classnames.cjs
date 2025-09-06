@@ -11,6 +11,9 @@ console.log(' Fixing line breaks in className attributes...')
 // console.log(` Fixed: ${path.relative('/workspace'`})
 <<<<<<< HEAD
 console.log('✨ Line break fixes completed!')
+<<<<<<< HEAD
 =======
 console.log('✨ Line break fixes completed!')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

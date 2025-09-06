@@ -1,56 +1,21 @@
 
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { Loader2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+interface PaymentButtonProps {
 
-
-
-
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
-import {useAuth} from "@/hooks/useAuth";
-import {toast} from "@/hooks/use-toast";
-import {supabase} from "@/integrations/supabase/client";
-import {Loader2} from "lucide-react";
-import {useNavigate} from "react-router-dom";
-interface PaymentButtonProps {;
-  amount: number,;
-  serviceId: string,;
-  providerId: string,;
+  amount: number
+  serviceId: string
+  providerId: string
 
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
-  redirectUrl?: string;
-}
-
-
-export function PaymentButton(): any ({;
-
-  amount;
-  serviceId;
-  providerId;
-
-  buttonText = "Purchase";
-  className;
-  onPaymentInitiated;
-  redirectUrl}: PaymentButtonProps) {;
-  const [isProcessing, setIsProcessing] = useState(false);
-  const { isAuthenticated, user } = useAuth();
-  const navigate = useNavigate();
-
-
-  const handlePaymentClick = async () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to make a purchase."}),;
-
-      navigate("/login", { ;
-        state: { from: window && window.location.pathname } ;
-
-      });
-      return;
-    }
-
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -61,21 +26,93 @@ interface PaymentButtonProps {
 
   redirectUrl?: string
 }
+export function PaymentButton({
+  amount;
+  serviceId;
+  providerId;
 
-
-
-      }
+  buttonText = "Purchase";
+  className;
+  onPaymentInitiated;
+  const [isProcessing, setIsProcessing] = useState(false);
+  const { isAuthenticated, user } = useAuth();
+  const navigate = useNavigate();
+  const handlePaymentClick = async () => {
+    if (!isAuthenticated) {
+      toast({
+        title: "Authentication required"
+        description: "Please sign in to make a purchase."})
+      navigate("/login", {
+        state: { from: window.location.pathname }
+      });
+    }
+    try {
+      setIsProcessing(true);
+      if (onPaymentInitiated) {
+        onPaymentInitiated()
+  redirectUrl}: PaymentButtonProps) {
+  const [isProcessing, setIsProcessing] = useState(false),
+  const { isAuthenticated, user } = useAuth(),
+  const navigate = useNavigate(),
+  
+  const handlePaymentClick = async () => {
+    if (!isAuthenticated) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to make a purchase."}),
       
+      navigate("/login", { 
+        state: { from: window.location.pathname } 
+      }),
+      return
+import { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { cn } from "@/lib/utils",;
+import { useAuth } from "@/hooks/useAuth",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Loader2 } from "lucide-react",;
+import { useNavigate } from "react-router-dom",;
+interface PaymentButtonProps {;
+  amount: number,;
+  serviceId: string,;
+  providerId: string,;
+  buttonText?: string,;
+  className?: string,;
+  onPaymentInitiated?: () => void,;
+  redirectUrl?: string;
+}
+;
+export function PaymentButton({;
+  amount,;
+  serviceId,;
+  providerId,;
+  buttonText = "Purchase",;
+  className,;
+  onPaymentInitiated,;
+  redirectUrl}: PaymentButtonProps) {;
+  const [isProcessing, setIsProcessing] = useState(false),;
+  const { isAuthenticated, user } = useAuth(),;
+  const navigate = useNavigate(),;
+  const handlePaymentClick = async () => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to make a purchase."}),;
+      navigate("/login", {;
+        state: { from: window.location.pathname } ;
+      }),;
+      return;
+    }
+;
+    try {;
+      setIsProcessing(true),;
+      if (onPaymentInitiated) {;
+        onPaymentInitiated();
+      }
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
-          amount,
-          serviceId,
-          providerId,
-          userId: user?.id,
-          successUrl: redirectUrl || window.location.href,
-          cancelUrl: window.location.href}}),
-      
       if (error) {
         throw error
       }
@@ -155,14 +192,6 @@ if ( {) {
       }
     } catch (error) {
 
-      console.error ("Payment error:", error);
-      toast ({
-        title: "Payment error",
-        description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive"});
-
-    } finally {
-
 
     try {;
       setIsProcessing(true);
@@ -175,8 +204,6 @@ if ( {) {
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
-
-
 ;
 
       // Call the create-checkout edge function;
@@ -208,22 +235,14 @@ if ( {) {
         variant: "destructive"});
     } finally {;
       // Reset button state after a short delay;
-      setTimeout(() => {;
-        setIsProcessing(false);
+      set_timeout (() => {
+        setIsProcessing (false);
       }, 1500);
     }
-  };
-
-  return (;
-    <Button;
-
-
-
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-
-        "relative min-w-[120px]"
+        "relative min-w-[120px]";
 
         className
       )}>;
@@ -235,16 +254,6 @@ if ( {) {
       ) : (;
         buttonText;
       )}
-
-    </Button>;
-  );
-
-    </Button>;
-  );
-    </Button>;
-  );
-
-
 }
 ;
   return (

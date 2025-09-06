@@ -1,12 +1,12 @@
 
-
-
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2  } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
-
-
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -19,38 +19,16 @@ import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
 
 export function AIEnhancementButton({;
-
-
   currentContent;
   enhancementType;
   context;
   onEnhanced;
-
-  buttonText = "Enhance with AI";
-
-
-  const handleEnhance = async () => {;
-    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
-
-      setError('Please enter at least some basic content before enhancing');
-      return;
-    }
-
-
-
     setError(null);
     const enhancedContent = await enhanceContent(;
       currentContent;
       enhancementType;
       context;
     );
-
-
-    if (enhancedContent) {;
-      onEnhanced(enhancedContent);
-    }
-  };
-
 
 
 import { useState } from 'react',;
@@ -82,8 +60,17 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
-
-
+;
+    setError(null),;
+    const enhancedContent = await enhanceContent(;
+      currentContent,;
+      enhancementType,;
+      context;
+    );
+    if (enhancedContent) {;
+      onEnhanced(enhancedContent);
+    }
+  },
   
   return (
     <Button
@@ -98,12 +85,6 @@ export function AIEnhancementButton({
       ) : (;
         <Sparkles className="h-3 w-3" />;
       )}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
-
-
 }
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 interface AIEnhancementButtonProps {
@@ -121,6 +102,3 @@ function AIEnhancementButton() {
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
 ;
-
-
-

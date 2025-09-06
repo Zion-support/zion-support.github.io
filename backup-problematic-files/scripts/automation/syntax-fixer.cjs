@@ -68,6 +68,9 @@ const { exec } = require("child_process")
   fixer.log("info", "Syntax Fixer started in continuous mode")
 <<<<<<< HEAD
   console.error("Syntax fixer "failed")
+<<<<<<< HEAD
 =======
   console.error("Syntax fixer "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

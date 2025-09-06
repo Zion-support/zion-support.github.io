@@ -11,6 +11,9 @@ const util = require("util")
     await this.log(" Starting syntax error fixing...")
 <<<<<<< HEAD
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+<<<<<<< HEAD
 =======
     fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

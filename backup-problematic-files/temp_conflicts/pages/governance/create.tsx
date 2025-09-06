@@ -13,7 +13,6 @@ export default function GovernanceCreatePage() {;
         <p className="text-lg mb-4">Submit a new governance proposal for community consideration.</p>;
         <div className="mt-4">;
           <a href="/governance" className="text-blue-600 hover:underline">;
-            ← Back to Governance;
           </a>;
         </div>;
       </div>;

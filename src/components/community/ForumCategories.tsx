@@ -1,35 +1,41 @@
-{
+import Link from "next/link",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
+  {
+
+    id: "getting-hired"
+    name: "Getting Hired"
+    description: "Tips, strategies, and questions about getting hired on the platform."
+    adminOnly: false
+    icon: "Briefcase"
+  }
+  {
+    id: "project-help"
+    name: "Project Help"
+    description: "Get help with your ongoing projects and collaboration."
+    adminOnly: false
+    icon: "MessageSquare"
+  }
+  {
+    id: "ai-tools"
+    name: "AI Tools Discussion"
+    description: "Discuss AI tools, frameworks, and best practices."
+    adminOnly: false
+    icon: "Code"
+  }
+  {
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
-
-
-  },
-
-
   {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
-const categories: ForumCategoryInfo[] = [;
-  {
-    id: "getting - hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    admin_only: false,
-    icon: "Briefcase";
-  }
-
-export const ForumCategories = () =>: any {
-  const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-  const visible_categories = categories.filter (
-    category => !category.admin_only || is_admin);
-
   return (
     <div className="grid gap - 4 md: grid - cols - 2 lg:grid - cols - 3">;
       {visible_categories.map ((category) => {
@@ -50,32 +56,10 @@ export const ForumCategories = () =>: any {
       })}
     </div>);
 }
-
-
-
-],
-
-const iconMap = {
-  Briefcase,
-  MessageSquare,
-  Code,
-  FileText,
-  Megaphone
-},
-
-export const ForumCategories = () => {
-  const { user } = useAuth(),
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
-
-  const visibleCategories = categories.filter(
-    category => !category.adminOnly || isAdmin
-  ),
-
-  return (
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-      {visibleCategories.map((category) => {
-        const Icon = iconMap[category.icon as keyof typeof iconMap],
-        return (
+export default ForumCategories
+"
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+export default ForumCategories
 
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
@@ -91,11 +75,9 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
-
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
 export default ForumCategories;
 ;
-
 import Link from "next/link",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -181,9 +163,7 @@ export const ForumCategories = () => {;
 export default ForumCategories;
 
 export default ForumCategories;
-
-
-export default ForumCategories;
 ";
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-export default ForumCategories;
+
+

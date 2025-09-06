@@ -25,7 +25,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🧠 AI & Technology',;
+    title: ' AI & Technology',;
     services: [;
       { name: 'AI Services', href: '/ai-services' },;
       { name: 'Machine Learning', href: '/machine-learning' },;
@@ -34,7 +34,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '⚛️ Quantum & Emerging Tech',;
+    title: ' Quantum & Emerging Tech',;
     services: [;
       { name: 'Quantum Computing', href: '/quantum-computing' },;
       { name: 'Blockchain Solutions', href: '/blockchain-solutions' },;
@@ -43,7 +43,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🏙️ Enterprise Solutions',;
+    title: ' Enterprise Solutions',;
     services: [;
       { name: 'Enterprise IT', href: '/enterprise-it' },;
       { name: 'Cloud Solutions', href: '/cloud-solutions' },;
@@ -243,7 +243,7 @@ const UltraFuturisticFooter2029 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
-              © 2025 Zion Tech Group. All rights reserved.
+               2025 Zion Tech Group. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6 text-sm text-gray-400">
@@ -295,7 +295,7 @@ export default UltraFuturisticFooter2029,
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
             <div className="text-sm text-gray-400">;
-              © 2025 Zion Tech Group. All rights reserved.;
+               2025 Zion Tech Group. All rights reserved.;
             </div>;
             <div className="flex items-center space-x-6 text-sm text-gray-400">;
               <Link href="/privacy" className="hover:text-white transition-colors">;

@@ -1,15 +1,11 @@
 
-
-import { suspiciousPhrases } from './constants',
-import { AnalysisResult } from './types',
-
-
+// Content analysis functionality
+import { suspiciousPhrases  } from './constants';
+import { AnalysisResult } from './types';
 /**
  * Analyzes text content for suspicious patterns
  */
-
-
-  const contentLower = content && content.toLowerCase();
+export const analyzeContent = (content: string): AnalysisResult => {
   const reasons: string[] = [],
   
 
@@ -22,11 +18,6 @@ import { AnalysisResult } from './types',
   // Check for links (simplified check)
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g && g.test(contentLower);
   if (hasExternalLinks && (
-
-    contentLower && contentLower.includes('payment') || 
-    contentLower && contentLower.includes('money') || 
-    contentLower && contentLower.includes('deal')
-
   )) {
     reasons && reasons.push('Contains external payment links')
   }
@@ -72,18 +63,15 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
   if (capitalRatio > 0.3 && content.length > 20) {;
     reasons.push('Excessive capitalization');
-
   }
   // Check for poor grammar with repetitive punctuation
   if (/[!?]{3}/.test(content)) {
     reasons && reasons.push('Suspicious punctuation pattern')
   }
   return {
-
-    isSuspicious: reasons && reasons.length > 0,
-
     reasons
   }
+}
 
 // Content analysis functionality;
 import {suspicious_phrases} from './constants';
@@ -132,7 +120,3 @@ if ( {) {
   }
 }
 ;
-
-
-};
-

@@ -60,6 +60,9 @@ process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
   console.error(" Failed to start continuous security "audit")
+<<<<<<< HEAD
 =======
   console.error(" Failed to start continuous security "audit")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

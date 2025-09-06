@@ -1,41 +1,29 @@
 
-
-
-
-
-import React, { useState } from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-
-interface BrowseItem {;
-  id: string,;
-  title: string,;
-  subtitle: string,;
-  description: string,;
-import React, { useState } from './react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-
+import React, { useState } from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 interface BrowseItem {
-  id: string,
-  title: string,
-  subtitle: string,
-  description: string,
+
+  id: string
+  title: string
+  subtitle: string
+  description: string
+  location?: string;
+  badges: string[]
+
   location?: string;
   badges: string[],;
   price?: string;
   image?: string;
   match?: number;
+  timePosted?: string;
+}
+interface BrowseCardsProps {
 
 
-
-
+export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
+  const [savedItems, setSavedItems] = useState<string[]>([]);
 
   const toggleSaved = (id: string) => {
     setSavedItems(prev =>
@@ -43,28 +31,6 @@ interface BrowseItem {
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
     )
-
-
-interface BrowseCardsProps {;
-  items: BrowseItem[],;
-  type: "jobs" | "talents",;
-  onViewDetails: (id: string) => void;
-}
-
-export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsProps) {;
-  const [savedItems, setSavedItems] = useState<string[]>([]);
-
-  const toggleSaved = (id: string) => {;
-    setSavedItems(prev => ;
-      prev && prev.includes(id) ;
-        ? prev && prev.filter(itemId => itemId !== id);
-        : [...prev, id];
-    );
-  };
-
-
-  },
-  
 
   return (
     <div className="space-y-4 pb-24">;
@@ -84,18 +50,9 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
-
-                  <div>;
-                    <h3 className="font-medium">{item && item.title}</h3>;
-                    <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
-                  </div>;
-                </div>;
-
-
                 <button
 
                 <button 
-
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
@@ -104,7 +61,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
-
 
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -184,48 +140,38 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
-
-
                     {badge}
                   </Badge>;
                 ))}
-
-              </div>;
-
-              <p className="mt-3 text-sm line-clamp-2">{item && item.description}</p>;
-
-              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;
-                {item && item.location && (;
-                  <div className="flex items-center gap-1">;
-                    <MapPin className="h-3 w-3" />;
-                    <span>{item && item.location}</span>;
-                  </div>;
+              </div>
+              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
+                {item.location && (
+                  <div className="flex items-center gap-1">
+                    <MapPin className="h-3 w-3" />
+                    <span>{item.location}</span>
+                  </div>
                 )}
-
-                {item && item.price && (;
-                  <div className="flex items-center gap-1">;
-                    <DollarSign className="h-3 w-3" />;
-                    <span>{item && item.price}</span>;
-                  </div>;
+                {item.price && (
+                  <div className="flex items-center gap-1">
+                    <DollarSign className="h-3 w-3" />
+                    <span>{item.price}</span>
+                  </div>
                 )}
-
-                {item && item.timePosted && (;
-                  <div className="flex items-center gap-1">;
-                    <Clock className="h-3 w-3" />;
-                    <span>{item && item.timePosted}</span>;
-                  </div>;
+                {item.timePosted && (
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-3 w-3" />
+                    <span>{item.timePosted}</span>
+                  </div>
                 )}
-
-                {item && item.match && (;
-                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
-                    {item && item.match}% match;
-                  </div>;
+                {item.match && (
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
+                    {item.match}% match
+                  </div>
                 )}
-              </div>;
-            </div>;
-
-            <div className="border-t border-border p-3 flex justify-end">;
-
+              </div>
+            </div>
+            <div className="border-t border-border p-3 flex justify-end">
               <Button
                 size="sm"
                 onClick={() => onViewDetails(item && item.id)}
@@ -237,11 +183,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
           </CardContent>;
         </Card>;
       ))}
-
-    </div>;
-  );
-}
-
   time_posted?: string;
 }
 interface BrowseCardsProps {

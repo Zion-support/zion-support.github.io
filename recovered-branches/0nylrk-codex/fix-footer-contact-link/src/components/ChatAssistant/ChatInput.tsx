@@ -1,19 +1,9 @@
-
-import React, {;
-  useState,;
-  useRef,;
-  useEffect,;
-  FormEvent,;
-  KeyboardEvent,;
-
-
 import React, {
   useState,
   useRef,
   useEffect,
   FormEvent,
   KeyboardEvent,;
-
 } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -26,32 +16,6 @@ interface ChatInputProps {;
 export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
-
-
-  useEffect(() => {;
-    // Focus input when component mounts;
-    inputRef && inputRef.current?.focus();
-  }, []);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
-    e && e.preventDefault();
-    if (message && message.trim() && !disabled) {;
-      (onSend(message), setMessage(""));
-    }
-  };
-
-  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;
-    if (e && e.key === "Enter" && !e && e.shiftKey) {;
-      e && e.preventDefault();
-      if (message && message.trim() && !disabled) {;
-
-        (onSend(message), setMessage(""));
-      }
-    }
-
-
-  };
-
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from "lucide-react",
@@ -89,9 +53,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       }
     }
   },
-
-
-
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
@@ -161,13 +122,12 @@ if (&& !disabled) {) {
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
-      />;
-
-        disabled={!message && message.trim() || disabled}>;
-        <Send className="h-5 w-5" />;
-      </Button>;
-    </form>;
-
+        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
+        disabled={!message.trim() |disabled}
+      >
+        <Send className="h-5 w-5" />
+      </Button>
+    </form>
   );
       <Button;
         type="submit";
@@ -178,10 +138,8 @@ if (&& !disabled) {) {
       </Button>;
     </form>);
 }
-
 );
   )
-
 }
   )
 }

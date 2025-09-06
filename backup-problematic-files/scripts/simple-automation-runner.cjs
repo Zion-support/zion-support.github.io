@@ -1,10 +1,17 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
 <<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')      return size}}
 
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -287,7 +294,14 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
+>>>>>>> origin/main
     totalSize = getDirectorySize(buildDir);
+    totalSize = getDirectorySize(buildDir);
+
     const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
@@ -312,6 +326,7 @@ if (require.main === module) {
     process.exit(1);
   });
 }
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -343,12 +358,20 @@ module.exports = { runSimpleAutomation }) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
+>>>>>>> origin/main
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
+
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
+
 module.exports = { runSimpleAutomation }}
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
@@ -371,10 +394,15 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
         "status"
+<<<<<<< HEAD
+=======
+        "status"
+>>>>>>> origin/main
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -402,3 +430,10 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+        "status"
+        "status"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
+>>>>>>> origin/main

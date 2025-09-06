@@ -117,12 +117,15 @@ files.forEach(file => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -137,7 +140,10 @@ const path = require('path')
     "replacement"
     "pattern"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
     "replacement"
 =======
@@ -151,6 +157,7 @@ const path = require('path')
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -229,3 +236,5 @@ filesToFix.forEach(file => {
 
 console.log(`Fixed final errors in ${fixedCount} files.`);
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

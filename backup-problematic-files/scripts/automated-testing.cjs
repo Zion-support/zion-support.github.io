@@ -11,6 +11,9 @@ console.log('🧪 Running Automated Tests...')
     execSync('npm audit --audit-level=moderate', { "stdio"})
 <<<<<<< HEAD
 console.log('🧪 Test "Summary")
+<<<<<<< HEAD
 =======
 console.log('🧪 Test "Summary")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

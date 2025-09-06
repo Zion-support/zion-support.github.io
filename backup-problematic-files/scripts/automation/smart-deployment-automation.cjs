@@ -39,16 +39,23 @@ class SmartDeploymentAutomation {}
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+        
+>>>>>>> origin/main
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -179,6 +186,9 @@ if ( {})
     automation.run().catch(console.error)};
 <<<<<<< HEAD
 module.exports = SmartDeploymentAutomation;
+<<<<<<< HEAD
 =======
 module.exports = SmartDeploymentAutomation;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

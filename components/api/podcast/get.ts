@@ -10,16 +10,16 @@ function ensureStorage() {
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  ensureStorage();
-  const { id } = req.query as { id?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const episode = episodes.find((e) => e.id === id);
 
   if (!episode) return res.status(404).json({ error: 'Not found' });
-<<<<<<< HEAD
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  const episode = episodes.find(e => e.id === id);
+  if (!episode) return res.status(404).json({ error: 'Not found' });
+  return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
+  if (!episode) return res.status(404).json({ error: 'Not found' });
+
   return res.status(200).json({ episode })
 }
 
@@ -45,42 +45,4 @@ function ensure_storage() {
   const dir = path.dirname (EPISODES_PATH);
   if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
-}
-  if ()) {
-  $2
-}
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json');
-;
-/**
- * ensure_storage - Function description
- */
-function ensure_storage() {
-  const dir = path.dirname (EPISODES_PATH);
-  if () fs.mkdir_sync (dir, { recursive: true })) {
-  $2
-}
-  if ()) {
-  $2
-}
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');  if () fs.writeFileSync (EPISODES_PATH, '[]utf8')) {
-  $2
-}
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  ensure_storage (),
-  const { id } = req.query as { id?: string }
-  const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[];
-  const episode = episodes.find (e => e.id === id);
-  if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
-}
-  return res.status (200).json ({ episode });  const episode = episodes.find ((e) => e.id === id);
-  if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
-}
-  return res.status (200).json ({ episode });
-
 }

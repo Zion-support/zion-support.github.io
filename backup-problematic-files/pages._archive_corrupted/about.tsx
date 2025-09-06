@@ -173,7 +173,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Let’s discuss how we can help transform your business.
+            Lets discuss how we can help transform your business.
           </p>
           <div className="flex flex-col "sm": flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
@@ -276,25 +276,25 @@ export default function AboutPage() {
               <ul className=\"space-y-3\">
                 <li className=\"flex items-start\">
                   <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
-                    <span className=\"text-sm\">✓</span>
+                    <span className=\"text-sm\"></span>
                   </div>
                   <span className=\"text-gray-700\">Proven track record of successful projects</span>
                 </li>
                 <li className=\"flex items-start\">
                   <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
-                    <span className=\"text-sm\">✓</span>
+                    <span className=\"text-sm\"></span>
                   </div>
                   <span className=\"text-gray-700\">Expert team with deep technical knowledge</span>
                 </li>
                 <li className=\"flex items-start\">
                   <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
-                    <span className=\"text-sm\">✓</span>
+                    <span className=\"text-sm\"></span>
                   </div>
                   <span className=\"text-gray-700\">Personalized approach to every project</span>
                 </li>
                 <li className=\"flex items-start\">
                   <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
-                    <span className=\"text-sm\">✓</span>
+                    <span className=\"text-sm\"></span>
                   </div>
                   <span className=\"text-gray-700\">Ongoing support and maintenance</span>
                 </li>

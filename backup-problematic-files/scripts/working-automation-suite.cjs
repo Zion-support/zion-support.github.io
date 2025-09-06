@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/working-automation-suite.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -108,6 +107,11 @@ module.exports = WorkingAutomationSuite;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/working-automation-suite.cjs
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -122,9 +126,7 @@ console.log('====')
       { "cmd": 'npm run type-check', "desc"}
       "recommendations"
     this.log(`Report saved "to"`)
-<<<<<<< HEAD
-      this.log(` Automation suite "failed"`)
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/working-automation-suite.cjs
 <<<<<<< HEAD
       this.log(` Automation suite "failed"`)
 =======
@@ -138,3 +140,9 @@ console.log('====')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+      this.log(` Automation suite "failed"`)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/working-automation-suite.cjs
+>>>>>>> origin/main

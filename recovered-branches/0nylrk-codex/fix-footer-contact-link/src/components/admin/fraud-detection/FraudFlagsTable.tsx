@@ -1,7 +1,9 @@
 
-
-
-
+import React from "react",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { FraudFlag } from "@/types/fraud",
+import { SeverityDisplay } from "./SeverityDisplay",
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -11,10 +13,7 @@ interface FraudFlagsTableProps {
 
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
-
-
-
-
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
 
   onAction
 }) => {
@@ -63,22 +62,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
-
-
-
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
-
-
-
-  return (
-
-
-              {flag.gpt_explanation || (
-
-
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
     <Table>;
       <TableHeader>;
@@ -127,31 +114,9 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                   : flag && flag.status === 'ignored'
                   ? 'outline'
                   : 'default'
-
-              }>;
-                {flag && flag.status}
-              </Badge>;
-            </TableCell>;
-            <TableCell>;
-              <ActionButtons
-                flagId={flag && flag.id} 
-                status={flag && flag.status} 
-                onAction={onAction} 
-              />;
-            </TableCell>;
-          </TableRow>;
-        ))}
       </TableBody>;
     </Table>;
   );
-
-
-      </TableBody>;
-    </Table>;
-  );
-
-
-
 };
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';

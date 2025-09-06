@@ -18,7 +18,7 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
+      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : ''}</div>
       <div className="grid grid-cols-1 gap-4">
         {items.map((n, idx) => (
           <div key={idx} className="border rounded p-4 space-y-1">

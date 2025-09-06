@@ -87,6 +87,7 @@ module.exports = { apps: [{ name: "error-prevention-linter","" script: "scripts/
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-prevention.config.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -94,6 +95,11 @@ module.exports = { apps: [{ name: "error-prevention-linter","" script: "scripts/
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-prevention.config.cjs
+>>>>>>> origin/main
 module.exports = {}
   "apps": [{}]
       name: 'error-prevention-linter',
@@ -171,10 +177,11 @@ module.exports = {}
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     };
   ];
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-prevention.config.cjs
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-prevention.config.cjs
 <<<<<<< HEAD
 };
 =======
@@ -188,6 +195,7 @@ module.exports = {}
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-prevention.config.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -195,3 +203,8 @@ module.exports = {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-prevention.config.cjs
+>>>>>>> origin/main

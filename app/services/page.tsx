@@ -1,12 +1,3 @@
-
-export const metadata = {;
-  title: "Services | Zion Tech Group",;
-  description:;
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
-
-
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
-
 };
 export default function ServicesOverviewPage() {;
   return (
@@ -33,11 +24,6 @@ export default function ServicesOverviewPage() {;
             "Foundational architecture"
             "Billing + subscriptions"
             "Growth analytics"
-import Link from './next / link';
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:;
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 }
 export default /**
  * ServicesOverviewPage - Function description
@@ -68,33 +54,23 @@ function ServicesOverviewPage() {
             "Billing + subscriptions",
             "Growth analytics",
           ]}
-          icon="🚀";
         />{" "}
         <ServiceCard;
           href="/services / ai - services";
           title="AI Services";
           description="LLM applications, RAG systems, and MLOps pipelines";
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-          icon="🤖";
+          icon="";
         />{" "}
         <ServiceCard;
           href="/services / it - services";
           title="IT Services";
           description="Cloud migration, DevOps, and security solutions";
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️";
+          icon="";
         />{" "}
       </div>{" "}
       <CTA />{" "}
-
-function ServiceCard(): any ({;
-  href,;
-  title,;
-  description,;
-  bullets,;
-  icon,;
-}: {;
-
   href: string;
   title: string;
   description: string;
@@ -110,9 +86,6 @@ function ServiceCard() {
   return (
     <Link;
       href={href}
-
-        Talk to our experts about your project. We'll help you choose the right;
-
         service and create a custom solution for your business needs.{" "}
       </p>{" "}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">;
@@ -139,7 +112,7 @@ function ServiceCard() {
         {bullets.map ((bullet) => (
           <li key={bullet} className="flex items - center">;
             {" "}
-            <span className="text - blue - 500 mr - 2">•</span> {bullet}{" "}
+            <span className="text - blue - 500 mr - 2"></span> {bullet}{" "}
           </li>))}{" "}
       </ul>{" "}
     </Link>);
@@ -176,7 +149,4 @@ function CTA() {
           Email Us{" "}
         </a>{" "}
       </div>{" "}
-
-    </div>);
-
 }

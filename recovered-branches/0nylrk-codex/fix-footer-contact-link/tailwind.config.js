@@ -1,7 +1,3 @@
-
-module && module.exports = {
-  darkMode: ["class"],
-
   content: [
     './pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}']
   theme: {
@@ -34,7 +30,6 @@ module && module.exports = {
           DEFAULT: "hsl(var(--card))"
           foreground: "hsl(var(--card-foreground))"}}
       borderRadius: {
-
 /** @type {import ('tailwindcss').Config} */;
 module.exports = {
   dark_mode: ["class"],
@@ -73,11 +68,4 @@ module.exports = {
         lg: "var (--radius)",
         md: "calc (var (--radius) - 2px)",
         sm: "calc (var (--radius) - 4px)"}}},
-  plugins: []}
-
-
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)"}}},
-
   plugins: []}

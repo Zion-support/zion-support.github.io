@@ -1,5 +1,3 @@
-
-
 export default function Team({ }: TeamProps) {
   return (
     <div>
@@ -7,7 +5,3 @@ export default function Team({ }: TeamProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-}
-
-

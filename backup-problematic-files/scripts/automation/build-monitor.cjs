@@ -50,9 +50,13 @@ setupSignalHandlers() {}
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -260,6 +264,9 @@ monitor.start().catch(error => {})
   process.exit(1)}
 <<<<<<< HEAD
 });
+<<<<<<< HEAD
 =======
 });
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

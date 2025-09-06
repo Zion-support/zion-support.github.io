@@ -1,15 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-const hasSupabase =
-
-  !!process && process.env.NEXT_PUBLIC_SUPABASE_URL &&
-  !!process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const SUPPORTED_LANGS = (process && process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh')
-  .split(',')
-  .map(x => x && x.trim());
-
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -28,14 +17,6 @@ export default async function handler(
     } catch (e: any) {
       return res && res.status(500).json({ error: e && e.message });
     }  }
-
-const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
-
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method === 'GET') {
-    try {
         } as any);
         // Check condition
 if (throw error) {
@@ -48,4 +29,3 @@ if (throw error) {
     } catch (e: any) {
       return res.status (500).json ({ error: e.message });
     }
-  }

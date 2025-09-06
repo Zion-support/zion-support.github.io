@@ -1,16 +1,30 @@
 
-
-
-
+import { useState } from "react",
+import { Link } from "react-router-dom",
+import { useForm, type UseFormReturn } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Mail } from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form",
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
-
-  email: z.string().email("Please enter a valid email")}),
-
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
-
-
+  email: z.string().email("Please enter a valid email")})
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+export default function ForgotPassword() {
+  const { resetPassword, isLoading } = useAuth();
+  const [submitted, setSubmitted] = useState(false);
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema)
@@ -20,11 +34,7 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email)
     setSubmitted(true)
-
-
-  },
-
-
+  }
 
   return (
     <>
@@ -140,23 +150,11 @@ export default function ForgotPassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-
-                    />;
-
-
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                       disabled={isLoading}>;
                       {isLoading ? "Sending..." : "Reset Password"}
-
-                    </Button>;
-
-                    <div className="text-center">;
-
-                      <Link
-                        to="/login"
-
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
@@ -258,32 +256,10 @@ function ForgotPassword() {
                         to="/login";
                         className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light";
                       >;
-
                         Back to login;
                       </Link>;
                     </div>;
                   </form>;
-
-            </div>;
-          </div>;
-        </div>;
-        <div className="hidden lg: block relative w-0 flex-1">;
-          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
-            <div className="flex flex-col justify-center items-center h-full px-8">;
-              <div className="max-w-md text-center">;
-                <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>;
-                <p className="text-lg text-white/80">;
-                </Form>)}
-            </div>;
-          </div>;
-        </div>;
-        <div className="hidden lg: block relative w - 0 flex - 1">;
-          <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - tr from - zion - blue - dark via - zion - purple to - zion - cyan opacity - 80">;
-            <div className="flex flex - col justify - center items - center h - full px - 8">;
-              <div className="max - w-md text - center">;
-                <h3 className="text - 3xl font - bold text - white mb - 4">Account Recovery</h3>;
-                <p className="text - lg text - white / 80">;
-
                   We'll help you get back into your account so you can continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -292,10 +268,11 @@ function ForgotPassword() {
         </div>;
       </div>;
       <Footer />;
-
+    </>;
+  );
+}
     </>);
 }
-
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
                       >
                         Back to login
@@ -303,9 +280,6 @@ function ForgotPassword() {
                     </div>
                   </form>
                 </Form>
-
-;
-
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -378,5 +352,3 @@ export default function ForgotPassword() {;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
-
-

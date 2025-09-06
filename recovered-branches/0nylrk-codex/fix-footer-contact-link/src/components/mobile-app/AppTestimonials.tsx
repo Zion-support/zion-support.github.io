@@ -1,8 +1,4 @@
 
-
-
-
-
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
@@ -11,9 +7,6 @@ import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
-
-
-
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -21,35 +14,11 @@ const testimonials = [
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
     rating: 5
     avatar: "/placeholder.svg"
-
-import React from './react';
-import { Star } from './lucide-react';
-import { Card, CardContent, CardFooter } from '@/components / ui / card';
-const testimonials = [;
-  {
-    name: "Alex Johnson",
-    role: "AI Developer",
-    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
-    rating: 5,
-    avatar: "/placeholder.svg";
-
   }
   {
     name: "Sarah Williams"
     role: "Tech Recruiter"
     text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
-
-
-  },
-  {
-    name: "Sarah Williams",
-    role: "Tech Recruiter",
-    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
-    rating: 5,
-    avatar: "/placeholder.svg"
-  },
-
-
   {
     name: "Michael Chen"
     role: "Full Stack Developer"
@@ -57,12 +26,7 @@ const testimonials = [;
     rating: 4
     avatar: "/placeholder.svg"
   }
-
-
-],
-
-
-
+];
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -101,8 +65,6 @@ export const AppTestimonials: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>
-
-
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -169,12 +131,11 @@ export const AppTestimonials: React.FC = () => {;
               </CardFooter>;
             </Card>;
           ))}
-
-        </div>;
-      </div>;
-    </section>;
-  );
-};
+        </div>
+      </div>
+    </section>
+  )
+}
 
     rating: 5,
     avatar: "/placeholder.svg";

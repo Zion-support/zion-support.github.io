@@ -1,7 +1,15 @@
 
-
-
-
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { Check, X } from "lucide-react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -23,11 +31,6 @@ export function EnterprisePricingTable() {
         { name: "Custom integrations", included: false }
         { name: "Dedicated success manager", included: false }]}
     {
-
-
-      name: "Business",;
-      price: "$1,999";
-
       name: "Business",
       price: "$1,999",
 
@@ -175,9 +178,6 @@ export function EnterprisePricingTable() {;
                     <div className="flex flex-col items-center">;
                       {plan && plan.popular && (;
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
-
-
-
                       )}
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;
@@ -215,19 +215,6 @@ export function EnterprisePricingTable() {;
                   ))}
                 </TableRow>;
               ))}
-
-            </TableBody>;
-          </Table>;
-        </div>;
-
-        <div className="mt-8 text-center text-sm text-muted-foreground">;
-          All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated support;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from './lucide-react';

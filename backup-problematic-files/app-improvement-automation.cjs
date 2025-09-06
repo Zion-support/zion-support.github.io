@@ -2,9 +2,13 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
 class AppImprovementAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -97,9 +101,13 @@ class AppImprovementAutomation {}
       };
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
     const reportPath = path.join(this.projectRoot, 'improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Improvement report generated: ${reportPath}`);
@@ -128,6 +136,9 @@ if (require.main === module) {}
 };
 <<<<<<< HEAD
 module.exports = AppImprovementAutomation;
+<<<<<<< HEAD
 =======
 module.exports = AppImprovementAutomation;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

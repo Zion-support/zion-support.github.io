@@ -10,8 +10,8 @@ interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonE
   href?: string;
   target?: string;
   badge?: React && React.ReactNode;
-
-
+import React, { forwardRef } from "react",
+import { ChevronDown } from "lucide-react",
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
@@ -29,7 +29,6 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,;
   target?: string,;
   badge?: React.ReactNode;
-
 }
 
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
@@ -58,12 +57,6 @@ if ( {) {
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
 
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-            active && "bg-accent font-medium text-accent-foreground",
-
-            className
-          )}>;
-
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
             active && "bg-accent font-medium text-accent-foreground",
 
@@ -77,8 +70,6 @@ if ( {) {
           {badge && <span>{badge}</span>}
         </a>
       )
-
-
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(;
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;
@@ -93,6 +84,7 @@ if ( {) {
           {badge && <span>{badge}</span>}
         </a>;
       );
+    }
 
           className={cn (
             "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
@@ -105,21 +97,10 @@ if ( {) {
           </div>;
           {badge && <span>{badge}</span>}
         </a>);
-
-
-
     }
     return (
       <button;
         ref={ref}
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-          active && "bg-accent font-medium text-accent-foreground",
-
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-          active && "bg-accent font-medium text-accent-foreground",
-
           className
         )}
         {...props}>;
@@ -131,12 +112,6 @@ if ( {) {
       </button>;
     );
   }
-
-
-),
-),
-
-
 
 SidebarMenuItem.displayName = "SidebarMenuItem",
 
@@ -151,24 +126,14 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
-
-
-SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
-
-interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+export { SidebarMenuItem, SidebarMenuGroup },
+),;
+SidebarMenuItem.displayName = "SidebarMenuItem",;
+interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
   title: string,;
   children: React && React.ReactNode;
 }
-
-const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {;
-  return (
-    <div className="space-y-1" {...props}>;
-      <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>;
-      <div className="pl-2">{children}</div>;
-    </div>;
-  );
-};
-
+export { SidebarMenuItem, SidebarMenuGroup }
 
         type="button";
         className={cn (
@@ -202,8 +167,4 @@ const SidebarMenuGroup: React.FC < SidebarMenuGroupProps> = ({ title, children, 
 ;
 export { SidebarMenuItem, SidebarMenuGroup }
 ;
-
-},
-
-
 export { SidebarMenuItem, SidebarMenuGroup };

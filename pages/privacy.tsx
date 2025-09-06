@@ -1,5 +1,9 @@
-
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,27 +27,168 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
-
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-import {;
-  Shield,;
-  Lock,;
-  Eye,;
-  Database,;
-  Mail,;
-  Phone,;
-  MapPin,;
+  Shield,
+  Lock,
+  Eye,
+  Database,
+  Mail,
+  Phone,
+  MapPin,
   Users,;
-
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
+import React from 'react';
 
+export default function PrivacyPage() {
+  return (
+    <MainLayout
+      title="Privacy Policy - Zion Tech Group"
+      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
+      keywords="privacy policy, data protection, personal information, GDPR compliance"
+      canonical="https://ziontechgroup.com/privacy"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Privacy Policy
+              </h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Your privacy is important to us. Learn how we collect, use, and
+                protect your information.
+              </p>
+            </motion.div>
+          </div>
+        </section>
 
+        {/* Content Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-white rounded-2xl shadow-lg p-8 md:p-12"
+            >
+              <div className="prose prose-lg max-w-none">
+                <h2 className="text-2xl font-bold mb-6">
+                  Information We Collect
+                </h2>
+                <p className="mb-6">
+                  We collect information you provide directly to us, such as
+                  when you create an account, use our services, or contact us
+                  for support.
+                </p>
+
+                <h3 className="text-xl font-semibold mb-4">
+                  Personal Information
+                </h3>
+                <ul className="list-disc pl-6 mb-6">
+                  <li>Name and contact information</li>
+                  <li>Email address</li>
+                  <li>Phone number</li>
+                  <li>Company information</li>
+                  <li>Payment information</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-4">
+                  Usage Information
+                </h3>
+                <ul className="list-disc pl-6 mb-6">
+                  <li>How you use our services</li>
+                  <li>Device information</li>
+                  <li>IP address</li>
+                  <li>Browser type and version</li>
+                  <li>Operating system</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold mb-6 mt-12">
+                  How We Use Your Information
+                </h2>
+                <p className="mb-6">
+                  We use the information we collect to provide, maintain, and
+                  improve our services.
+                </p>
+
+                <ul className="list-disc pl-6 mb-6">
+                  <li>Provide and maintain our services</li>
+                  <li>Process transactions</li>
+                  <li>Send you technical notices and support messages</li>
+                  <li>Respond to your comments and questions</li>
+                  <li>Improve our services and develop new features</li>
+                  <li>Monitor and analyze usage and trends</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold mb-6 mt-12">
+                  Information Sharing
+                </h2>
+                <p className="mb-6">
+                  We do not sell, trade, or otherwise transfer your personal
+                  information to third parties without your consent, except as
+                  described in this policy.
+                </p>
+
+                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
+                <p className="mb-6">
+                  We implement appropriate security measures to protect your
+                  personal information against unauthorized access, alteration,
+                  disclosure, or destruction.
+                </p>
+
+                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
+                <p className="mb-6">
+                  You have the right to access, update, or delete your personal
+                  information. You may also opt out of certain communications
+                  from us.
+                </p>
+
+                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
+                <p className="mb-6">
+                  If you have any questions about this Privacy Policy, please
+                  contact us at:
+                </p>
+
+                <div className="bg-gray-50 rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center mb-4">
+                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-start">
+                    <Users className="w-5 h-5 text-blue-600 mr-3 mt-1" />
+                    <div>
+                      <p>Zion Tech Group</p>
+                      <p>364 E Main St STE 1008</p>
+                      <p>Middletown, DE 19709</p>
+                    </div>
+                  </div>
+                </div>
+
+<p className="text-sm text-gray-600 mt-8">
+                  Last updated: January 2024
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+  );
+}
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
@@ -145,9 +290,6 @@ import {
 
   ];
 
-
-
-
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -168,9 +310,7 @@ export default function PrivacyPage() {
 export default function PrivacyPage() {;
   return (
 
-
-
-
+  return (
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -183,7 +323,19 @@ export default function PrivacyPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Privacy Policy
+              </h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Your privacy is important to us. Learn how we collect, use, and
+                protect your information.
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Your privacy is important to us. Learn how we collect, use, and protect your information.
+              </p>
+            </motion.div>
+          </div>
+        </section>
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -197,18 +349,12 @@ export default function PrivacyPage() {;
           </div>;
         </section>;
 
-
-
-
-
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
-
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEOOptimizer from '../components/SEOOptimizer',
@@ -743,15 +889,12 @@ const PrivacyPage: React.FC = () => {
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
-
-
                 </h2>
+                <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
-                  We collect information you provide directly to us, such as
-                  when you create an account, use our services, or contact us
-                  for support.
+                  We collect information you provide directly to us, such as when you create an account, 
+                  use our services, or contact us for support.
                 </p>
-
 
 
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
@@ -760,11 +903,21 @@ const PrivacyPage: React.FC = () => {
                   use our services, or contact us for support.
                 </p>
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
+                
+                <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
+                <ul className="list-disc pl-6 mb-6">
+                  <li>Name and contact information</li>
+                  <li>Email address</li>
+                  <li>Phone number</li>
+                  <li>Company information</li>
+                  <li>Payment information</li>
+                </ul>
 
 
-
-
-
+                <h3 className="text-xl font-semibold mb-4">
+                  Usage Information
+                </h3>
+                <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
@@ -776,26 +929,15 @@ const PrivacyPage: React.FC = () => {
                   <li>Browser type and version</li>
                   <li>Operating system</li>
                 </ul>
-
-
-
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
-                <p className="mb-6">
-                  We use the information we collect to provide, maintain, and
-                  improve our services.
-                </p>
-
-
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
-                
 
+                
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -804,10 +946,6 @@ const PrivacyPage: React.FC = () => {
                   <li>Improve our services and develop new features</li>
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
-
-
-
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -817,34 +955,49 @@ const PrivacyPage: React.FC = () => {
                   described in this policy.
 
 
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
+                <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
+                <p className="mb-6">
+                  We do not sell, trade, or otherwise transfer your personal information to third parties 
+                  without your consent, except as described in this policy.
+                </p>
+                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
+                <p className="mb-6">
+                  We implement appropriate security measures to protect your
+                  personal information against unauthorized access, alteration
+                  disclosure, or destruction.
+                </p>
+                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
+                <p className="mb-6">
+                  You have the right to access, update, or delete your personal
+                  information. You may also opt out of certain communications
+                  from us.
+                </p>
+                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
+                <p className="mb-6">
+                  If you have any questions about this Privacy Policy, please
+                  contact us at:
+                </p>
 
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
-
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.
-
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
                 <p className="mb-6">
-
                   You have the right to access, update, or delete your personal information. You may also 
                   opt out of certain communications from us.
-
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
-
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
-
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -863,10 +1016,8 @@ const PrivacyPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
-
-
-
+<p className="text-sm text-gray-600 mt-8">
+                <p className="text-sm text-gray-600 mt-8">
 <p className="text-sm text-gray-600 mt-8">
                 <p className="text-sm text-gray-600 mt-8">
                   Last updated: January 2024
@@ -876,7 +1027,6 @@ const PrivacyPage: React.FC = () => {
           </div>
         </section>
       </div>
-
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
@@ -910,7 +1060,6 @@ Shield
   Mail,
   Phone,
   MapPin,
-Users,
 } from './lucide-react';
 import MainLayout from "../components / layout / MainLayout";
 ;
@@ -959,72 +1108,50 @@ function PrivacyPage() {
                   Information We Collect;
                 </h2>;
                 <p className="mb - 6">;
-
+    <ErrorBoundary>
+      <SEOOptimizer />
+      <AnalyticsTracker />
+      <Layout>
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
-
-                <h3 className="text - xl font - semibold mb - 4">;
-                  Personal Information;
-                </h3>;
-                <ul className="list - disc pl - 6 mb - 6">;
-                  <li > Name and contact information</li>;
-                  <li > Email address</li>;
-                  <li > Phone number</li>;
-                  <li > Company information</li>;
-                  <li > Payment information</li>;
-                </ul>;
-                <h3 className="text - xl font - semibold mb - 4">;
-                  Usage Information;
-                </h3>;
-                <ul className="list - disc pl - 6 mb - 6">;
-                  <li > How you use our services</li>;
-                  <li > Device information</li>;
-                  <li > IP address</li>;
-                  <li > Browser type and version</li>;
-                  <li > Operating system</li>;
-                </ul>;
-                <h2 className="text - 2xl font - bold mb - 6 mt - 12">;
-                  How We Use Your Information;
-                </h2>;
-                <p className="mb - 6">;
-                  We use the information we collect to provide, maintain, and;
-                  improve our services.;
-                </p>;
-                <ul className="list - disc pl - 6 mb - 6">;
-                  <li > Provide and maintain our services</li>;
-                  <li > Process transactions</li>;
-                  <li > Send you technical notices and support messages</li>;
-                  <li > Respond to your comments and questions</li>;
-                  <li > Improve our services and develop new features</li>;
-                  <li > Monitor and analyze usage and trends</li>;
-                </ul>;
-                <h2 className="text - 2xl font - bold mb - 6 mt - 12">;
-                  Information Sharing;
-                </h2>;
-                <p className="mb - 6">;
 
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
 
-                <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
-                <p className="mb - 6">;
-                  We implement appropriate security measures to protect your;
-                  personal information against unauthorized access, alteration,
-                  disclosure, or destruction.;
-                </p>;
-                <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
-                <p className="mb - 6">;
-
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
 
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
 
+          {/* Contact Information */}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Email Us
+                  <a
+                    href="/contact"
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+                  >
+                    <User className="w-5 h-5" />
+                    Contact Form
                 </div>
               </motion.div>
             </div>
@@ -1032,25 +1159,158 @@ function PrivacyPage() {
         </main>
       </Layout>
     </ErrorBoundary>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                  <span>Last updated: {lastUpdated}</span>
+                </div>
+              </motion.div>
+            </div>
+          </section>
 
-  );
-};
-export default PrivacyPage;
+          {/* Overview */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
 
+                  <h2 className="text-4xl font-bold mb-6 text-white">
+                    Our Commitment to Privacy
+                  </h2>
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                    At Zion Tech Group, we are committed to protecting your privacy and ensuring the security 
+                    of your personal information. This Privacy Policy explains how we collect, use, disclose;
+                    and safeguard your information when you use our services.
+                  </p>
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                    We believe in transparency and want you to understand how your information is handled. 
+                    This policy applies to all users of our website, services, and applications.
+                  </p>
+                  <div className="flex items-center gap-4 text-cyan-400">
+                    <Lock className="w-6 h-6" />
+                    <span className="font-medium">Your data is safe with us</span>
+                  </div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </section>
 
+          {/* Privacy Principles */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                {privacySections.map((section, index) => (
+                  <motion.div
+                    key={section.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Your Rights */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                {rights.map((right, index) => (
+                  <motion.div
+                    key={right.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Detailed Policy */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                      </p>
+                    </div>
+
+                    <div>
+                      </p>
+                    </div>
+
+                    <div>
+                      </p>
+                    </div>
+
+                    <div>
+                      </p>
+                    </div>
+
+                    <div>
+                      </p>
+                    </div>
+
+                    <div>
+                      </p>
+                    </div>
+
+                    <div>
+                      </p>
+                    </div>
+
+                    <div>
+                      </p>
+                    </div>
+
+                    <div>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Contact Information */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                    Contact Form
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </main>
+      </Layout>
+    </ErrorBoundary>
   )
 };
+
 export default PrivacyPage;
 
  
-
-
-
-
- 
-
-
-
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
                 <p className="mb - 6">;
@@ -1085,3 +1345,6 @@ export default PrivacyPage;
       </div>;
     </MainLayout>);
 }
+
+
+ 

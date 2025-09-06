@@ -129,6 +129,9 @@ this.log(` Resolved conflicts "in": ${filePath}"`)
       "successRate"
 <<<<<<< HEAD
     const reportPath = path.join(this.logsDir, ")
+<<<<<<< HEAD
 =======
     const reportPath = path.join(this.logsDir, ")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

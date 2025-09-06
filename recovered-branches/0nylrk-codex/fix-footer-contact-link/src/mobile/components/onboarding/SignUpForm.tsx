@@ -1,22 +1,32 @@
 
+import React, { useState } from "react",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { AlertCircle } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+export function SignUpForm() {
 
-
-
+  const navigate = useNavigate();
+  const { signup, login, loginWithGoogle } = useAuth();
+  const [formData, setFormData] = useState({
+    email: ""
+    password: ""
+    name: ""})
+  const [isLoading, setIsLoading] = useState(false);
+  const [signupMode, setSignupMode] = useState(true);
+  const [error, setError] = useState("");
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setError("")
-
-
-  },
-  
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setError(""),
-    setIsLoading(true),
-    
-
-
+    e.preventDefault();
+    setError("");
+    setIsLoading(true)
     try {
       if (signupMode) {
         const { error } = await signup(formData.email, formData.password, {
@@ -26,12 +36,7 @@
         }
         navigate("/mobile")
       } else {
-
-
-        const { error } = await login(formData.email, formData.password),
-        
-
-
+        const { error } = await login(formData.email, formData.password);
         if (error) {
           throw new Error(error)
         }
@@ -97,98 +102,36 @@ export function SignUpForm() {;
         }
 
         navigate("/mobile");
-
-import React, { useState } from './react';
-import { Label } from '@/components / ui / label';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { use_navigate } from './react-router-dom';
-import { use_auth } from '@/hooks / use_auth';
-import { AlertCircle } from './lucide-react';
-import { Alert, AlertDescription } from '@/components / ui / alert';
-export /**
- * SignUpForm - Function description
- */
-function SignUpForm() {
-  const navigate = use_navigate ();
-  const { signup, login, loginWithGoogle } = use_auth ();
-;
-  const [form_data, setFormData] = useState ({
-    email: "",
-    password: "",
-    name: ""}),
-  const [is_loading, setIsLoading] = useState (false);
-  const [signup_mode, setSignupMode] = useState (true);
-  const [error, set_error] = useState ("");
-;
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const { name, value } = e.target;
-    setFormData (prev => ({ ...prev, [name]: value }));
-    set_error ("");
-  }
-;
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    set_error ("");
-    setIsLoading (true),
-    try {
-      // Check condition
-if ( {) {
-  $2
-}
-        const { error } = await signup (form_data.email, form_data.password, {
-          name: form_data.name}),
-        // Check condition
-if ( {) {
-  $2
-}
-          throw new Error (error);
-        }
-        navigate ("/mobile");
-      } else {
-        const { error } = await login (form_data.email, form_data.password);
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          throw new Error (error);
-        }
-        navigate ("/mobile");
-
-
       }
     } catch (err: any) {
       set_error (err.message);
     } finally {
       setIsLoading (false);
     }
+  const handleGoogleLogin = async () => {
+    try {
+      await loginWithGoogle()
+    } catch (err: any) {
+      setError(err.message)
+    }
+  }
 
   };
-
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
       setError(err && err.message);
+    } finally {;
+      setIsLoading(false);
     }
-  };
-
-
-
-  };
-
   
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
-
-
         <Button 
           variant="outline" 
-
-
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -265,11 +208,6 @@ if ( {) {
             />;
           </div>;
         )}
-
-
-        <div className="space-y-2">;
-          <Label htmlFor="email">Email address</Label>;
-
           <Input
             id="email"
             name="email"
@@ -278,13 +216,6 @@ if ( {) {
             onChange={handleInputChange}
             required
             placeholder="Enter your email"
-
-          />;
-        </div>;
-
-        <div className="space-y-2">;
-          <Label htmlFor="password">Password</Label>;
-
           <Input
             id="password"
             name="password"
@@ -293,12 +224,8 @@ if ( {) {
             onChange={handleInputChange}
             required
             placeholder="Create a password"
-
-
         <Button 
           type="submit" 
-
-
           className="w-full py-6"
           disabled={isLoading}
         >
@@ -341,15 +268,3 @@ if ( {) {
           onClick={() => setSignupMode(!signupMode)}
         >;
           {signupMode ? "Sign In" : "Sign Up"}
-
-        </Button>;
-      </p>;
-    </div>;
-  );
-
-
-}
-;
-
-
-

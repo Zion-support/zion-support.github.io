@@ -1,17 +1,17 @@
 
-import { ReactNode  } from './react';
-
+import { ReactNode } from "react";
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
+}
+export interface HelpCategory {
 
   last_updated: string;
   tags: string[];
 
 }
 export interface HelpCategory {
-
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
@@ -22,19 +22,12 @@ export interface HelpArticle {;
 }
 
 export interface HelpCategory {;
-
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
   articles: HelpArticle[]
 }
-
-
-
-export interface SupportTicket {;
-
-
   id: string;
   user_id: string;
   subject: string;
@@ -45,8 +38,6 @@ export interface SupportTicket {;
   created_at: string;
   updated_at: string;
 }
-
-
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
@@ -89,8 +80,6 @@ export interface SupportTicket {;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
   createdAt: string;
+
   updatedAt: string;
 }
-;
-
-

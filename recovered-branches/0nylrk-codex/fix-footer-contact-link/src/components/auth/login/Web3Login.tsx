@@ -8,13 +8,9 @@ export function Web3Login() {;
 
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleWeb3Login = async () => {;
-    try {;
-      setIsLoading(true);
-
-
-
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -41,31 +37,6 @@ export function Web3Login() {
     } finally {
       setIsLoading(false)
 
-
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {;
-        toast("Web3 wallet not found", {;
-          description: "Please install MetaMask or another compatible wallet"}),;
-        return;
-      }
-
-      await loginWithWeb3();
-
-    } catch (error: any) {;
-      toast("Login failed", {;
-        description: error && error.message || "Failed to connect wallet"}),;
-      console && console.error("Web3 login error:", error);
-    } finally {;
-      setIsLoading(false);
-
-    }
-  }
-    }
-
-  },
-
-
   return (
     <Button
       type="button"
@@ -88,8 +59,6 @@ export function Web3Login() {
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
-
-
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -140,16 +109,10 @@ export function Web3Login() {;
           <span className="sr-only">Sign in with Web3</span>;
           <Wallet className="h-5 w-5" />;
         </>;
-
-
-
-
       )}
-
-    </Button>;
-  );
+    </Button>
+  )
 }
-
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';

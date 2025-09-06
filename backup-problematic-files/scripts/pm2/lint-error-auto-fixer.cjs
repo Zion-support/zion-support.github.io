@@ -48,6 +48,9 @@ import { execSync, spawn } from;
     if (message.includes('single quotes')
 <<<<<<< HEAD
       lines[lineIndex] = line.replace(/"/g, ")
+<<<<<<< HEAD
 =======
       lines[lineIndex] = line.replace(/"/g, ")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

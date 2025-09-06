@@ -1,3 +1,21 @@
+import React from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useWishlist } from '@/hooks/useWishlist'
+import { useCart } from '@/context/CartContext'
+import { logWarn } from '@/utils/productionLogger'
+import {
+  Home
+  Search
+  MessageCircle
+  Heart
+  MessageSquare
+  ShoppingCart
+  User
+} from 'lucide-react'
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 interface MobileBottomNavProps {
   unread_count?: number;
 export /**
@@ -15,17 +33,12 @@ function MobileBottomNav() {
 if ( {) {
   $2
 }
-
-  const nav_items = [;
-
     {
       name: 'Home'
       href: '/'
       icon: Home
       matches: (path: string) => path === '/',    }
     {
-
-
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -45,21 +58,6 @@ import {;
 } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
-
-export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const router = useRouter(),
-  const { user } = useAuth(),
-  const isAuthenticated = !!user,
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length,
-
-  const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0,
-  if (cartContextValue && cartContextValue.items) {
-    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
-  } else {
-
-
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
   const navItems = [
@@ -68,43 +66,36 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       name: "Home",
       href: "/",
       icon: Home,
-
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
-
-
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
-
-
     {
       name: "Wishlist",
       href: "/wishlist",
       icon: Heart,
-
-
     },
     {
       name: "Messages",
       href: "/messages",
       icon: MessageSquare,
-
-
     },
     {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
-
-
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
+      matches: (path: string) => path.startsWith("/dashboard"),
+      authRequired: true
+    }
+  ],
 
 
   return (
@@ -207,9 +198,18 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     item => !item && item.authRequired || (item && item.authRequired && isAuthenticated);
   );
 
-              'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-              item && item.matches(router && router.pathname)
+  return (
+    <nav className='md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20'>;
+      <div className='flex justify-around items-center h-16'>;
+        {visibleItems && visibleItems.map(item => (;
+          <Link
+            key={item && item.name}
+            href={item && item.href}
+            aria-label={item && item.name}
+            className={cn(
+              'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
 
+              item.matches(router.pathname)
                 ? 'text-primary'
                 : 'text-foreground/70 hover:text-foreground'
             )}>;
@@ -238,7 +238,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               <item.icon className="h-5 w-5 mb-1" aria-hidden="true" />;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
@@ -248,18 +247,10 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
             </span>;
           </Link>;
         ))}
-
-
-;
-}
-
-
       </div>;
     </nav>;
   );
 }
-
-
 
       name: 'Browse',
       href: '/talent',
@@ -334,3 +325,5 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     </nav>);
 }
 ;
+
+

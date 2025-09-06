@@ -1,13 +1,6 @@
 
-
-
-import {SearchSuggestion, SearchHighlight} from "@/types/search";
-
 import React from "react",
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
-
-
-
 
 interface AutocompleteSuggestionsProps {
 
@@ -16,17 +9,6 @@ interface AutocompleteSuggestionsProps {
   onSelectSuggestion: (suggestion: string) => void
 
   visible: boolean
-
-
-import React from "react",;
-import { SearchSuggestion, SearchHighlight } from "@/types/search",;
-interface AutocompleteSuggestionsProps {;
-  suggestions: SearchSuggestion[],;
-  searchTerm: string,;
-  onSelectSuggestion: (suggestion: string) => void,;
-  visible: boolean;
-
-
 }
 // Helper function to highlight matching text
 
@@ -34,11 +16,6 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm |searchTerm.length === 0) {
     return { before: '', match: text, after: '' }
   }
-
-
-  
-
-
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
@@ -74,15 +51,10 @@ if ( {) {
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
   }
-
-
-};
-
-export function AutocompleteSuggestions({ 
-  suggestions, 
-  searchTerm, ;
-  onSelectSuggestion;
-
+}
+export function AutocompleteSuggestions({
+  suggestions
+  searchTerm
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
@@ -105,17 +77,11 @@ export function AutocompleteSuggestions({
 
   visible 
 }: AutocompleteSuggestionsProps) {
-  if (!visible || suggestions.length === 0) return null,
-  
   return (
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
-
-
-          const highlight = highlightMatch(suggestion.text, searchTerm),
-          
-
+          const highlight = highlightMatch(suggestion.text, searchTerm);
 
           return (
             <li key={`${suggestion.type}-${index}`}
@@ -180,13 +146,6 @@ export function AutocompleteSuggestions(): any ({ ;
             </li>;
           );
         })}
-
       </ul>;
-    </div>;
-  );
+    </div>);
 }
-}
-;
-
-
-

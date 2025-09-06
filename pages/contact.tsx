@@ -1,43 +1,14 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-
-
 import React from "react";
 import Layout from "../components/Layout";
 import React from 'react';
+import Layout from '../components/Layout';
 
-
-
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
 
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
-
-
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -97,9 +68,6 @@ export default function Contact() {
 }
   };
   return (
-
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 import React from 'react';
@@ -139,8 +107,8 @@ export default function Contact() {
       </div>
     </>
   );
-
 import Head from 'next/head';
+
 const ContactPage: React.FC = () => {
   return (
     <>
@@ -166,6 +134,7 @@ const ContactPage: React.FC = () => {
               <p className='text-xl text-slate-300 text-center mb-12'>
                 Ready to transform your business? Get in touch with our experts.
               </p>
+
               <div className='grid: md:grid-cols-2 gap-12'>
                 <div>
                   <h2 className='text-2xl font-bold mb-6'>Get In Touch</h2>
@@ -215,6 +184,7 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
                 <div>
                   <h2 className='text-2xl font-bold mb-6'>Send us a Message</h2>
                   <ContactForm />
@@ -222,32 +192,6 @@ const ContactPage: React.FC = () => {
               </div>
 
 }
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              Contact Us;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Get in touch with our team for your technology needs.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">Contact page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>;
-
-  );
 
     </>
 
@@ -283,15 +227,4 @@ function Contact() {
         </div>;
       </div>;
     </Layout>);
-}
-            </div>
-          </div>
-        </div>
-      </div>
-  );
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }

@@ -327,29 +327,6 @@ jest.mock ('react - redux', () => {
         wishlist: { items: [] }},
       return typeof selector === 'function' ? selector (mock_state) : mock_state;
     })}
-}),
-// Cart Context – simple noop implementation for tests;
-jest.mock ('@/context / CartContext', () => {
-  const use_cart = () =>: any ({ items: [], dispatch: jest.fn () }),
-  const CartProvider = ({ children }: { children: React.ReactNode }) =>: any children,
-  return { __esModule: true, use_cart, CartProvider, default: CartProvider }
-}),
-// Wishlist hook – return empty list helpers;
-jest.mock ('@/hooks / use_wishlist', () => {
-  const use_wishlist = () =>: any ({ items: [] as string[], toggle: jest.fn (), is_wishlisted: () => false }),
-  return { __esModule: true, use_wishlist, default: use_wishlist }
-}),
-// Polyfill IntersectionObserver for components that use it (e.g., embla - carousel);
-// Check condition
-if ( {) {
-  $2
-}
-  class MockIntersectionObserver {
-    constructor () {}
-    observe () {}
-    unobserve () {}
-    disconnect () {}
-    take_records () { return [] }
   }
   // @ts - ignore;
   window.IntersectionObserver = MockIntersectionObserver,
@@ -410,26 +387,3 @@ jest.mock ('msw / node', () => ({ setup_server: () => ({ listen: jest.fn (), res
 // Provide mock for missing component;
 jest.mock ('@/components / search / FilterSidebar', () => ({ FilterSidebar: () => null })),
 // Extend Vitest shim with timer helpers if not present;
-// @ts - ignore - vi is added by the vitest mock above;
-// Check condition
-if ( {) {
-  $2
-}
-  // @ts - ignore;
-  if (global.vi.useFakeTimers = jest.useFakeTimers.bind (jest), ) {
-  $2
-}
-  // @ts - ignore;
-  if (global.vi.useRealTimers = jest.useRealTimers.bind (jest)) {
-  $2
-}
-  // @ts - ignore;
-  if (global.vi.runAllTimers = jest.runAllTimers.bind (jest)) {
-  $2
-}
-  // @ts - ignore;
-  if (global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind (jest)) {
-  $2
-}
-}
-

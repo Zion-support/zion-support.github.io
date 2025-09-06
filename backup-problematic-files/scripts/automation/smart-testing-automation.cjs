@@ -240,6 +240,9 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
   files.push(...this.getAllFiles(fullPath")
 <<<<<<< HEAD
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+<<<<<<< HEAD
 =======
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

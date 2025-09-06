@@ -50,11 +50,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     } catch (error) {}
       this.log(`Dependency check "failed": ${error.message}`);
       return false;
-// Run the automation
-if (require.main === module) {
-  const automation = new ContinuousImprovement();
-  automation.run().catch(console.error);
-}
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;

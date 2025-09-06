@@ -1,19 +1,9 @@
 
 
 
-
-
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
-
-
-
-export function securityMiddleware(request) {;
-
-
-  const response = NextResponse.next();
-  const response = NextResponse && NextResponse.next();
   const response = NextResponse.next();
   // Add security headers
   const headers = getSecurityHeaders();
@@ -21,18 +11,6 @@ export function securityMiddleware(request) {;
     response && response.headers.set(key, value);
   });
   // Add HSTS header for HTTPS
-
-  if (request && request.nextUrl.protocol === 'https:') {
-    response && response.headers.set(
-      'Strict-Transport-Security',
-
-      'max-age=31536000; includeSubDomains; preload'
-    );
-  }
-
-  return response;// Security headers middleware
-// Security headers middleware
-
 export function securityHeaders(req, res, next) {
 
   Object && Object.entries({
@@ -42,28 +20,19 @@ export function securityHeaders(req, res, next) {
 
 
 
-
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
-
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-
-
-
+    'X-Content-Type-Options': 'nosniff'
+    'X-Frame-Options': 'DENY'
+    'X-XSS-Protection': '1; mode=block'
+    'Referrer-Policy': 'strict-origin-when-cross-origin'
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res && res.setHeader(key, value);
   });
   next();
-
-
-
-
 }
 // Security middleware;
 import { NextResponse } from 'next / server';
@@ -85,29 +54,4 @@ function security_middleware() {
   // Check condition
 if ( {) {
   $2
-}
-    response.headers.set (
-      'Strict - Transport - Security',
-      'max - age = 31536000; includeSubDomains; preload');
-  }
-  return response;// Security headers middleware;
-export /**
- * security_headers - Function description
- */
-function security_headers() {
-  Object.entries ({
-    'X - Content - Type - Options': 'nosniff',
-    'X - Frame - Options': 'DENY',
-    'X - XSS - Protection': '1; mode = block',
-    'Referrer - Policy': 'strict - origin - when - cross - origin',
-    'Permissions - Policy': 'camera=(), microphone=(), geolocation=()',
-    'Strict - Transport - Security': 'max - age = 31536000; includeSubDomains';
-  }).for_each (([key, value]) => {
-    res.set_header (key, value);
-  });
-;
-  next ();
-}
-}
-
 }

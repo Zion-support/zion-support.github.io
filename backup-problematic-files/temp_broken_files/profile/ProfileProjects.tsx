@@ -67,7 +67,3 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
 }</Badge>) ) ;
 }</div>) ;
 }</div> </CardContent> </Card>) ) ;
-
-}</div> </div>) ;
-}'"
-

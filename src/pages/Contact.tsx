@@ -1,92 +1,77 @@
 
-const Contact: React.FC = () => {
+const contactSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Please enter a valid email address'),
+  subject: z.string().min(5, 'Subject must be at least 5 characters'),
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+});
+
+export default function Contact() {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: ''
-          </p>
+          </div>
         </div>
       </div>
+      
+      <ChatAssistant />
+    </div>
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-gray-900">Phone</h4>
-                      <p className="text-gray-600">+1 302 464 0950</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-gray-900">Email</h4>
-                      <p className="text-gray-600">kleber@ziontechgroup.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-gray-900">Address</h4>
-                      <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+const Contact: React.FC = () => {;
+  return (
+    <div className="min-h-screen bg-gray-50">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>;
+        <p className="text-lg text-gray-600">;
+          Get in touch with us for any questions or inquiries.;
+        </p>;
+      </div>;
+    </div>;
+  );
+}
 
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Why Choose Zion Tech?</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Expert team with 15+ years experience
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Cutting-edge technology solutions
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    24/7 support and maintenance
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    Proven track record of success
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+export default Contact;
+import React from 'react';
+
+const Contact: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">Contact Us</h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Get in touch with our team to discuss your project.
+          </p>
         </div>
       </div>
     </div>
   )
 }
 
-export default Contact

@@ -1,27 +1,3 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import DeveloperPortal from "../pages/DeveloperPortal";
@@ -31,8 +7,13 @@ import ApiGettingStarted from "../pages/ApiGettingStarted";
 import ApiWebhooks from "../pages/ApiWebhooks";
 
 import ApiSampleCode from "../pages/ApiSampleCode";
-
-
+import React from "react",
+import { Navigate, Route, Routes } from "react-router-dom",
+import DeveloperPortal from "../pages/DeveloperPortal",
+import ApiDocsHub from "../pages/ApiDocsHub",
+import ApiReference from "../pages/ApiReference",
+import ApiGettingStarted from "../pages/ApiGettingStarted",
+import ApiWebhooks from "../pages/ApiWebhooks",
 export default function DeveloperRoutes() {
   return (
     <Routes>
@@ -46,9 +27,6 @@ export default function DeveloperRoutes() {
       <Route path="/docs/errors" element={<ApiErrorCodes />} />
     </Routes>
   )
-
-};
-
 import React from "react",;
 import { Navigate, Route, Routes } from "react-router-dom",;
 import DeveloperPortal from "../pages/DeveloperPortal",;
@@ -71,7 +49,6 @@ export default function DeveloperRoutes() {;
       <Route path="/docs/errors" element={<ApiErrorCodes />} />;
     </Routes>;
   );
-
 import React from './react';
 import { Navigate, Route, Routes } from './react-router-dom';
 import DeveloperPortal from "../pages / DeveloperPortal";
@@ -97,7 +74,5 @@ function DeveloperRoutes() {
       <Route path="/docs / errors" element={<ApiErrorCodes />} />;
     </Routes>);
 }
-
-
 }
 

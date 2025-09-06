@@ -1,5 +1,9 @@
 
+import React, { useState } from 'react';
 
+import React, { useState } from 'react',
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 export default function BlogPage() {
 	return (
 		<Layout>
@@ -13,9 +17,6 @@ export default function BlogPage() {
 			</section>
 		</Layout>
 	)
-
-}
-
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -35,11 +36,3 @@ return (
   </section>;
   </Layout>);
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-

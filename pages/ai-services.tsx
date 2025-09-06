@@ -1,48 +1,13 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
 import React from "react";
 import Layout from "../components/Layout";
 export default function AIServices() {
   return (
 <Layout
-
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and services.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">AI Services page is under construction.</p>
-
-
-
-
-
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
 import { ContactInfo  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
-
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -51,13 +16,12 @@ export default function AIServices() {
               { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
               <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
                 <div className="text-xl font-semibold">{c.title}</div>
-                <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
+                <div className="text-sm text-gray-400 mt-2">Implementationready with pricing and SLAs.</div>
               </Link>
             ))}
           </div>
         </div>
       </div>
-
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -96,17 +60,11 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
-
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
-
-    </Layout>;
-  );
-
-
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -115,6 +73,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
@@ -125,7 +84,6 @@ export default function AIServices() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-};
   const categories = [
     { id: 'all', name: 'All AI Services', count: 100 },
     { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
@@ -134,7 +92,6 @@ export default function AIServices() {
     { id: 'predictive', name: 'Predictive Analytics', count: 15 },
     { id: 'automation', name: 'AI Automation', count: 15 },
     { id: 'specialized', name: 'Specialized AI', count: 10 }
-];
   const services = [
     {
       id: 1,
@@ -145,17 +102,14 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
-};
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
       description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
-category: 'predictive',
       features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
-};
     {
       id: 3,
       name: 'AI Legal Document Analysis',
@@ -165,17 +119,14 @@ category: 'predictive',
       price: '$199/month',
       popular: false,
       useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
-};
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
       description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
-category: 'nlp',
       features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
       useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
-};
     {
       id: 5,
       name: 'AI-Powered Search & Discovery',
@@ -185,17 +136,14 @@ category: 'nlp',
       price: '$99/month',
       popular: false,
       useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
-};
     {
       id: 6,
       name: 'Computer Vision Solutions',
       description: 'Advanced image and video analysis for object detection, recognition, and processing.',
-category: 'computer-vision',
       features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
       useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
-};
     {
       id: 7,
       name: 'Machine Learning Model Training',
@@ -205,17 +153,14 @@ category: 'computer-vision',
       price: 'Custom Pricing',
       popular: false,
       useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
-};
     {
       id: 8,
       name: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
-category: 'nlp',
       features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
       useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
-};
     {
       id: 9,
       name: 'AI Process Automation',
@@ -225,27 +170,22 @@ category: 'nlp',
       price: '$159/month',
       popular: false,
       useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
-};
     {
       id: 10,
       name: 'Predictive Analytics Engine',
       description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
-category: 'predictive',
       features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
       useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
-};
     {
       id: 11,
       name: 'AI Content Generation',
       description: 'Intelligent content creation for marketing, documentation, and communication.',
-category: 'specialized',
       features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,
       useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
-};
     {
       id: 12,
       name: 'AI Chatbot Development',
@@ -256,7 +196,6 @@ category: 'specialized',
       popular: true,
       useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
     }
-];
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
@@ -264,12 +203,12 @@ category: 'specialized',
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
-<meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, autonomous agents, computer vision, NLP, predictive analytics" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/ai-services`} />
       </Head>
+      
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
@@ -290,10 +229,8 @@ category: 'specialized',
               </p>
             </div>
           </section>
+
           {/* Category Filter */}
-
-}
-
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -552,7 +489,6 @@ export default function AIServices() {
               </div>
             </div>
           </section>
-{/* CTA Section */}
 
 
           {/* CTA Section */  } catch (error) {
@@ -609,15 +545,12 @@ export default function AIServices() {
 
                 >
                   Email Us
-</a>
               </div>
             </div>
           </section>
         </main>
       </ErrorBoundary>
     </>
-
-
 }
 
 
@@ -762,6 +695,3 @@ export default function AIServicesPage(req, res) {
   }
 }
 ;
-
-
-

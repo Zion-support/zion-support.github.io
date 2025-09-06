@@ -18,9 +18,13 @@ class TypeChecker {}
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -28,7 +32,10 @@ class TypeChecker {}
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
       const child = spawn('npm', ['run', 'type-check'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -45,9 +52,13 @@ class TypeChecker {}
         errorOutput += data.toString()}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -59,7 +70,10 @@ class TypeChecker {}
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
           // Log type errors for manual review;
           this.logTypeErrors(output + errorOutput)};
       })} catch (error) {}
@@ -71,9 +85,13 @@ class TypeChecker {}
       line.includes('error TS') || line.includes('Type error');
    ;);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -112,6 +130,9 @@ if ( {})
   checker.start().catch(console.error)};
 <<<<<<< HEAD
 module.exports = TypeChecker;
+<<<<<<< HEAD
 =======
 module.exports = TypeChecker;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

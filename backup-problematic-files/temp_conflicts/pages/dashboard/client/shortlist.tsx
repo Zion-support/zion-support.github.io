@@ -187,7 +187,6 @@ export default function ClientShortlistPage() {;
                   </div>;
                 ) :(;
                   <div className="py-10 text-center text-sm text-gray-500">;
-                    No one shortlisted yet — <a href="/talent" className="text-indigo-600 underline">explore top matches</a>;
                   </div>;
                 )}
               </div>;
@@ -203,7 +202,6 @@ export default function ClientShortlistPage() {;
                   <span className="font-medium">{analytics.avgTimeToHireDays} days</span>;
                 </div>;
                 <div className="flex justify-between">;
-                  <span>Application → Hire</span>;
                   <span className="font-medium">{analytics.ratio}%</span>;
                 </div>;
                 <div className="mt-3">;

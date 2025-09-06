@@ -52,7 +52,3 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
 }/hr</span> <span>$ {;
   priceRange[1] ;
 }/hr</span> </div> <Slider /> </div>) ;
-
-}</div>) ;
-}"
-

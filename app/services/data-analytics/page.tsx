@@ -19,7 +19,7 @@ export default function DataAnalyticsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <AnalyticsServiceCategory
             title="Business Intelligence"
-            icon="📊"
+            icon=""
             description="Comprehensive BI solutions for data-driven decisions"
             services={[
               "Interactive dashboards",
@@ -32,7 +32,7 @@ export default function DataAnalyticsPage() {
           />
           <AnalyticsServiceCategory
             title="Predictive Analytics"
-            icon="🔮"
+            icon=""
             description="Machine learning models for forecasting and prediction"
             services={[
               "Predictive modeling",
@@ -45,7 +45,7 @@ export default function DataAnalyticsPage() {
           />
           <AnalyticsServiceCategory
             title="Real-time Analytics"
-            icon="⚡"
+            icon=""
             description="Live data processing and instant insights"
             services={[
               "Stream processing",
@@ -265,22 +265,22 @@ export default function DataAnalyticsPage() {
             <MetricCard
               metric="40%"
               description="Average efficiency improvement"
-              icon="📈"
+              icon=""
             />
             <MetricCard
               metric="25%"
               description="Cost reduction achieved"
-              icon="💰"
+              icon=""
             />
             <MetricCard
               metric="60%"
               description="Faster decision making"
-              icon="⚡"
+              icon=""
             />
             <MetricCard
               metric="90%"
               description="Data accuracy improvement"
-              icon="🎯"
+              icon=""
             />
           </div>
         </div>
@@ -328,7 +328,7 @@ function AnalyticsServiceCategory({ title, icon, description, services }: {
       <ul className="space-y-2">
         {services.map((service, index) => (
           <li key={index} className="flex items-center text-gray-600">
-            <span className="text-indigo-500 mr-2">•</span>
+            <span className="text-indigo-500 mr-2"></span>
             {service}
           </li>
         ))}
@@ -357,7 +357,7 @@ function AnalyticsSolution({ title, description, features, price, timeline, useC
       <ul className="space-y-1 mb-4">
         {features.map((feature, index) => (
           <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="text-green-500 mr-2">✓</span>
+            <span className="text-green-500 mr-2"></span>
             {feature}
           </li>
         ))}
@@ -433,7 +433,7 @@ function AnalyticsPricingPlan({ name, price, duration, features, popular }: {
       <ul className="space-y-3">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center text-gray-600">
-            <span className="text-green-500 mr-3">✓</span>
+            <span className="text-green-500 mr-3"></span>
             {feature}
           </li>
         ))}

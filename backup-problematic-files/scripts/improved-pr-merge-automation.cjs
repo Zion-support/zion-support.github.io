@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/improved-pr-merge-automation.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -15,12 +14,16 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/improved-pr-merge-automation.cjs
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/improved-pr-merge-automation.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -247,6 +250,11 @@ automation.runAutomation().then(() => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/improved-pr-merge-automation.cjs
+>>>>>>> origin/main
 // console.log(' Improved PR Merge Automation System')
 console.log('===')
   log(message, type = 'info')
@@ -265,9 +273,7 @@ console.log('===')
       console.log('\n⏭ Skipped "branches")
     console.log('\n Detailed report saved "to")
   console.error('Automation "failed")
-<<<<<<< HEAD
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/improved-pr-merge-automation.cjs
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
@@ -281,3 +287,9 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/improved-pr-merge-automation.cjs
+>>>>>>> origin/main

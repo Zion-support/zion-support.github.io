@@ -1,11 +1,9 @@
-
-
 const { test, expect } = require('@playwright/test')'
-test && test.describe('"Accessibility"'"
+test && test.describe('"Accessibility"
   test('"page"
-    "await"'"
+    "await"
   test('"images"
-    "await"'"
+    "await"
   test('"buttons"
     "await"
     "await"
@@ -122,5 +120,4 @@ test.describe('Accessibility Tests', () => {
     // Check if focus is visible'
     const focusedElement = page.locator(':focus');
     await expect(focusedElement).toBeVisible()})})';
-
     "await"

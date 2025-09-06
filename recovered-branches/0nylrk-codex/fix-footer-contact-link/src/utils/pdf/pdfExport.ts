@@ -1,19 +1,4 @@
 
-
-import {Resume} from '@/types/resume';
-import {jsPDF} from 'jspdf';
-import 'jspdf-autotable';
-import {getPdfThemeColors} from './themeConfig';
-import {loadCustomFonts, FontFamily} from './fontConfig';
-import {addBasicInfoSection} from './sections/basicInfoSection';
-import {addSkillsSection} from './sections/skillsSection';
-import {addWorkExperienceSection} from './sections/workExperienceSection';
-import {addEducationSection} from './sections/educationSection';
-import {addCertificationsSection} from './sections/certificationsSection';
-import {addPortfolioSection} from './sections/portfolioSection';
-export interface ExportOptions {;
-
-
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
 
@@ -29,12 +14,6 @@ const defaultOptions: ExportOptions = {
 export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
-
-
-): Promise<Blob> {;
-  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
-
-
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -48,29 +27,12 @@ export async function exportResumeToPDF(
   const colors = getPdfThemeColors(theme);
   // Set background color
 
-  doc && doc.setFillColor(colors && colors.background);
-  doc && doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
-  
-  // Set text color based on theme
-  doc && doc.setTextColor(colors && colors.text);
-  
-  // Add each section of the resume
-  let currentY = addBasicInfoSection(doc, resume && resume.basic_info, colors);
-  currentY = addSkillsSection(doc, resume && resume.skills, colors, currentY);
-  currentY = addWorkExperienceSection(doc, resume && resume.work_experience, colors, currentY);
-  currentY = addEducationSection(doc, resume && resume.education, colors, currentY);
-  currentY = addCertificationsSection(doc, resume && resume.certifications, colors, currentY);
-  
-
   // Add portfolio projects if needed
   if (includePortfolio && resume && resume.portfolio_projects && resume && resume.portfolio_projects.length > 0) {
     currentY = addPortfolioSection(doc, resume && resume.portfolio_projects, colors, currentY, maxProjects)
   }
-
-  
-  return doc && doc.output('blob')
+  return doc.output('blob')
 }
-
 import {Resume} from '@/types / resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf - autotable';
@@ -129,12 +91,6 @@ export async function exportResumeToPDF (
   current_y = addCertificationsSection (doc, resume.certifications, colors, current_y);
 ;
   // Add portfolio projects if needed;
-
-  if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {;
-    currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects);
-
-
-
   }
   return doc.output ('blob');
 }

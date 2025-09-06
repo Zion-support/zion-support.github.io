@@ -1,12 +1,10 @@
 
-
-
-}: {;
 export default function UseTokensButton({
-serviceId
   defaultType
 }: {
-
+  serviceId?: string;
+  defaultType?: RedemptionType;
+}: {;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
@@ -24,9 +22,42 @@ serviceId
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-
-export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
-
+      />
+    </>
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary"
+      >
+        Use Tokens
+      </button>
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+  );
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary"
+      >
+        Use Tokens
+      </button>
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+  );
       />
     </>
 
@@ -47,11 +78,24 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
       />;
     </>;
   );
-
+  const [open, setOpen] = useState(false);
+  return (
+    <>;
+      <button
+        onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary";
+      >;
+        Use Tokens;
+      </button>;
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />;
+    </>;
+  );
 }
-
-}
-
 import React, { useState } from './react';
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 ;
@@ -91,8 +135,4 @@ function UseTokensButton() {
         default_type={default_type}
       />;
     </>);
-    </>
-  )
-
 }
-

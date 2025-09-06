@@ -79,7 +79,7 @@ const ApiKeysManager: React.FC = () => {
                     Created on {new Date(apiKey.createdAt).toLocaleDateString()}
                     {apiKey.lastUsed && (
                       <span className="ml-2">
-                        • Last used: {new Date(apiKey.lastUsed).toLocaleDateString()}
+                         Last used: {new Date(apiKey.lastUsed).toLocaleDateString()}
                       </span>
                     )}
                   </CardDescription>
@@ -113,7 +113,7 @@ const ApiKeysManager: React.FC = () => {
                   <div className="flex items-center space-x-2">
                     <Input
                       id={`key-${apiKey.id}`}
-                      value={showKey === apiKey.id ? apiKey.key : '••••••••••••••••'}
+                      value={showKey === apiKey.id ? apiKey.key : ''}
                       readOnly
                       className="font-mono"
                     />

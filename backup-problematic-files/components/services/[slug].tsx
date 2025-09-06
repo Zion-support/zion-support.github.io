@@ -203,7 +203,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">${getPriceValue(service.price)}<span className="text-base font-medium text-gray-400">{service.period || '/month'}</span></div>
-							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join()}</div>
+							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days  Setup: {service.setupTime || 'Fast'}  Competitors: {(service.competitors || []).slice(0,3).join()}</div>
 							<div className="mt-6 flex gap-3">
 								<a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">Contact Sales</a>
 								<a href={service.link} className="flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all duration-300"><ExternalLink className="w-4 h-4 mr-2 inline" /> Learn More</a>
@@ -228,7 +228,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								{service.competitors?.length ? (
 									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join()}</p>
 								) : null}
-								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a>
+								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices </a>
 							</div>
 						</div>
 					</div>
@@ -321,7 +321,7 @@ export default ServiceDetail
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">;
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>;
 							<div className="text-3xl font-bold text-white">${getPriceValue(service.price)}<span className="text-base font-medium text-gray-400">{service.period || '/month'}</span></div>;
-							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join()}</div>;
+							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days  Setup: {service.setupTime || 'Fast'}  Competitors: {(service.competitors || []).slice(0,3).join()}</div>;
 							<div className="mt-6 flex gap-3">;
 								<a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">Contact Sales</a>;
 								<a href={service.link} className="flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all duration-300"><ExternalLink className="w-4 h-4 mr-2 inline" /> Learn More</a>;
@@ -344,7 +344,7 @@ export default ServiceDetail
 								{service.competitors?.length ? (;
 									<p className="leading-relaxed"><span className="text-gray-400">Competitors:</span> {service.competitors.slice(0,6).join()}</p>;
 								) : null}
-								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a>;
+								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices </a>;
 							</div>;
 						</div>;
 					</div>;

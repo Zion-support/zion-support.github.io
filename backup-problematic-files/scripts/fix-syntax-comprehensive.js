@@ -75,7 +75,7 @@ function fixFile(filePath) {
     if (hasChanges) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
 async function main() {
-  console.log('🔧 Starting comprehensive syntax fixes...');
+  console.log(' Starting comprehensive syntax fixes...');
   
   const patterns = [
     'src/**/*.tsx',
@@ -86,4 +86,3 @@ async function main() {
     'pages/**/*.ts'
   ];
   
-  let totalFixed = 0;

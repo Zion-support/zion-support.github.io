@@ -31,7 +31,3 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
   resultCount !== 1 ? 's' : '' ;
 }`) ;
 }</span>) ;
-
-}</div>) ;
-}'"
-

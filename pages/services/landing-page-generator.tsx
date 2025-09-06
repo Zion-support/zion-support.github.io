@@ -1,5 +1,4 @@
 
-
 const LandingPageGenerator: NextPage = () => {
   return (
     <div>
@@ -15,13 +14,4 @@ const LandingPageGenerator: NextPage = () => {
       </main>
     </div>
   )
-
-
-
 },
-export default LandingPageGenerator,
-
-},
-
-export default LandingPageGenerator,
-

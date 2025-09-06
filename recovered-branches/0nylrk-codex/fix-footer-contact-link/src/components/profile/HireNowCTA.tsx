@@ -1,49 +1,11 @@
 
-
-
-
-
-import {Button} from "@/components/ui/button";
-import {HireRequestModal} from "./hire-request";
-import {useState} from "react";
-import {TalentProfile} from "@/types/talent";
-interface HireNowCTAProps {;
-  talentProfile: {;
-    id: string,;
-
-import { Button } from '@/components / ui / button';
-import { HireRequestModal } from './hire - request';
-import { useState } from './react';
-import { TalentProfile } from '@/types / talent';
+import { Button } from "@/components/ui/button",
+import { HireRequestModal } from "./hire-request",
 interface HireNowCTAProps {
   talent_profile: {
     id: string,
     full_name?: string;
     professional_title?: string;
-    hourly_rate?: number;
-  }
-}
-
-
-export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const handleOpenModal = () => {;
-    setModalOpen(true);
-  };
-
-  const handleCloseModal = () => {;
-    setModalOpen(false);
-  };
-
-  // Check if we have minimum required data;
-  const canHire = talentProfile && talentProfile.id && talentProfile && talentProfile.full_name;
-
-  // Calculate talent profile completeness (simplified);
-
-  const profileCompleteness = calculateProfileCompleteness(talentProfile);
-  return (
-
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
@@ -53,31 +15,21 @@ interface HireNowCTAProps {
     hourly_rate?: number
   }
 }
-
-
-
+export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
+  const [modalOpen, setModalOpen] = useState(false),
 
   const handleOpenModal = () => {
     setModalOpen(true)
-
-  },
-
+  }
   const handleCloseModal = () => {
     setModalOpen(false)
-  },
-
+  }
   // Check if we have minimum required data
-  const canHire = talentProfile && talentProfile.id && talentProfile.full_name,
-
+  const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
   // Calculate talent profile completeness (simplified)
-  const profileCompleteness = calculateProfileCompleteness(talentProfile),
-
-
+  const profileCompleteness = calculateProfileCompleteness(talentProfile);
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
-
-      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
-
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           <span>Profile Completeness</span>
@@ -103,6 +55,34 @@ interface HireNowCTAProps {
         </Button>
       </div>
 
+      <HireRequestModal 
+      <HireRequestModal 
+import { Button } from "@/components/ui/button",;
+import { HireRequestModal } from "./hire-request",;
+import { useState } from "react",;
+import { TalentProfile } from "@/types/talent",;
+interface HireNowCTAProps {;
+  talentProfile: {;
+    id: string,;
+    full_name?: string,;
+    professional_title?: string,;
+    hourly_rate?: number;
+  }
+}
+;
+export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
+  const [modalOpen, setModalOpen] = useState(false),;
+  const handleOpenModal = () => {;
+    setModalOpen(true);
+  },;
+  const handleCloseModal = () => {;
+    setModalOpen(false);
+  },;
+  // Check if we have minimum required data;
+  const canHire = talentProfile && talentProfile.id && talentProfile.full_name,;
+  // Calculate talent profile completeness (simplified);
+  const profileCompleteness = calculateProfileCompleteness(talentProfile),;
+  return (;
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
 
@@ -131,22 +111,19 @@ interface HireNowCTAProps {
           Schedule Interview;
         </Button>;
       </div>;
-
-
-      <HireRequestModal
-
-
-      <HireRequestModal 
-      <HireRequestModal 
-
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
-
-          id: talentProfile.id,
-          user_id: talentProfile.id,
-          full_name: talentProfile && talentProfile.full_name || 'Talent',
-          professional_title: talentProfile && talentProfile.professional_title || 'Professional',
+          id: talentProfile.id
+          user_id: talentProfile.id
+          full_name: talentProfile.full_name |'Talent'
+          professional_title: talentProfile.professional_title |'Professional'
+          bio: ''
+          years_experience: 0
+          skills: []
+          availability_type: 'full_time'
+          timezone: ''
+          hourly_rate: talentProfile.hourly_rate
 export /**
  * HireNowCTA - Function description
  */
@@ -208,16 +185,11 @@ function HireNowCTA() {
           skills: [],
           availability_type: 'full_time',
           timezone: '',
-
-
-
-
-
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
-
+;
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
@@ -226,19 +198,15 @@ function calculateProfileCompleteness(): any (profile: any) {;
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
     'availability_type';
   ];
-
-
-
+  let completedFields = 0;
+  let totalFields = 0
+  fields.forEach(field => {
+    if (profile[field]) {
+      completedFields++
     }
     totalFields++;
   });
 
-  return Math.min(Math.round((completedFields / totalFields) * 100), 100);
-
-
-
-}
-  return Math && Math.min(Math && Math.round((completedFields / totalFields) * 100), 100);
 }
           hourly_rate: talent_profile.hourly_rate;
         } : null}

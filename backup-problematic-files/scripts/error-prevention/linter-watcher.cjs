@@ -17,9 +17,13 @@ class LinterWatcher {}
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
@@ -27,7 +31,10 @@ class LinterWatcher {}
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
       const child = spawn('npm', ['run', 'lint'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -41,9 +48,13 @@ class LinterWatcher {}
         errorOutput += data.toString()}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -63,15 +74,22 @@ class LinterWatcher {}
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
       const child = spawn('npm', ['run', '"lint": fix'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -108,6 +126,9 @@ if ( {})
   watcher.start().catch(console.error)};
 <<<<<<< HEAD
 module.exports = LinterWatcher;
+<<<<<<< HEAD
 =======
 module.exports = LinterWatcher;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

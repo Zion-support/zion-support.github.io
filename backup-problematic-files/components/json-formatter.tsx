@@ -512,7 +512,7 @@ export default function JSONFormatterPage() {;
                   </div>
                 ) : (
                   <div className="bg-gray-700 p-6 rounded-lg border border-gray-600 text-center">
-                    <div className="text-6xl mb-4">📄</div>
+                    <div className="text-6xl mb-4"></div>
                     <p className="text-gray-400">
                       Formatted JSON will appear here. Enter JSON data and click format to get started.
                     </p>
@@ -521,9 +521,9 @@ export default function JSONFormatterPage() {;
 
                 {formattedJson && (
                   <div className="text-sm text-gray-400">
-                    <p>• Characters: {formattedJson.length}</p>
-                    <p>• Lines: {formattedJson.split('\n').length}</p>
-                    <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
+                    <p> Characters: {formattedJson.length}</p>
+                    <p> Lines: {formattedJson.split('\n').length}</p>
+                    <p> Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
                   </div>
                 )}
               </div>;
@@ -545,7 +545,7 @@ export default function JSONFormatterPage() {;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">✨</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Smart Formatting</h3>
               <p className="text-gray-400">
                 Intelligent JSON formatting with customizable indentation and spacing options.
@@ -553,7 +553,7 @@ export default function JSONFormatterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">✅</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Real-time Validation</h3>
               <p className="text-gray-400">
                 Instant JSON validation with detailed error messages and syntax highlighting.
@@ -561,7 +561,7 @@ export default function JSONFormatterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📦</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Minification</h3>
               <p className="text-gray-400">
                 Compress JSON data by removing unnecessary whitespace and formatting.
@@ -569,7 +569,7 @@ export default function JSONFormatterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔢</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Line Numbers</h3>
               <p className="text-gray-400">
                 Optional line numbering for easier navigation and debugging of large JSON files.
@@ -577,7 +577,7 @@ export default function JSONFormatterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">💾</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Export Options</h3>
               <p className="text-gray-400">
                 Download formatted JSON files or copy to clipboard with a single click.
@@ -585,7 +585,7 @@ export default function JSONFormatterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">⚙️</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>
               <p className="text-gray-400">
                 Adjust indentation size, toggle compact mode, and customize display options.
@@ -609,54 +609,54 @@ export default function JSONFormatterPage() {;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">👨‍💻</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Developers</h3>
               <p className="text-gray-400 mb-6">
                 Format API responses, debug JSON data, and prepare configuration files with professional formatting.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• API development and testing</li>
-                <li>• Configuration file management</li>
-                <li>• Debug and troubleshooting</li>
+                <li> API development and testing</li>
+                <li> Configuration file management</li>
+                <li> Debug and troubleshooting</li>
               </ul>
             </Card>
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📊</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>
               <p className="text-gray-400 mb-6">
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• Data cleaning and preparation</li>
-                <li>• Report generation</li>
-                <li>• Data validation</li>
+                <li> Data cleaning and preparation</li>
+                <li> Report generation</li>
+                <li> Data validation</li>
               </ul>
             </Card>
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔧</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>
               <p className="text-gray-400 mb-6">
                 Manage configuration files, validate deployment manifests, and format infrastructure as code.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• Configuration management</li>
-                <li>• Infrastructure validation</li>
-                <li>• Deployment automation</li>
+                <li> Configuration management</li>
+                <li> Infrastructure validation</li>
+                <li> Deployment automation</li>
               </ul>
             </Card>
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📝</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>
               <p className="text-gray-400 mb-6">
                 Format JSON examples for documentation, tutorials, and technical specifications.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• Documentation examples</li>
-                <li>• API documentation</li>
-                <li>• Technical specifications</li>
+                <li> Documentation examples</li>
+                <li> API documentation</li>
+                <li> Technical specifications</li>
               </ul>
             </Card>
           </div>
@@ -706,42 +706,42 @@ export default function JSONFormatterPage() {;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">✨</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Smart Formatting</h3>;
               <p className="text-gray-400">;
                 Intelligent JSON formatting with customizable indentation and spacing options.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">✅</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Real-time Validation</h3>;
               <p className="text-gray-400">;
                 Instant JSON validation with detailed error messages and syntax highlighting.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📦</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Minification</h3>;
               <p className="text-gray-400">;
                 Compress JSON data by removing unnecessary whitespace and formatting.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🔢</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Line Numbers</h3>;
               <p className="text-gray-400">;
                 Optional line numbering for easier navigation and debugging of large JSON files.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">💾</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Export Options</h3>;
               <p className="text-gray-400">;
                 Download formatted JSON files or copy to clipboard with a single click.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">⚙️</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>;
               <p className="text-gray-400">;
                 Adjust indentation size, toggle compact mode, and customize display options.;
@@ -763,51 +763,51 @@ export default function JSONFormatterPage() {;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">👨‍💻</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">Developers</h3>;
               <p className="text-gray-400 mb-6">;
                 Format API responses, debug JSON data, and prepare configuration files with professional formatting.;
               </p>;
               <ul className="space-y-2 text-gray-300">;
-                <li>• API development and testing</li>;
-                <li>• Configuration file management</li>;
-                <li>• Debug and troubleshooting</li>;
+                <li> API development and testing</li>;
+                <li> Configuration file management</li>;
+                <li> Debug and troubleshooting</li>;
               </ul>;
             </Card>;
             <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📊</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>;
               <p className="text-gray-400 mb-6">;
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.;
               </p>;
               <ul className="space-y-2 text-gray-300">;
-                <li>• Data cleaning and preparation</li>;
-                <li>• Report generation</li>;
-                <li>• Data validation</li>;
+                <li> Data cleaning and preparation</li>;
+                <li> Report generation</li>;
+                <li> Data validation</li>;
               </ul>;
             </Card>;
             <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🔧</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>;
               <p className="text-gray-400 mb-6">;
                 Manage configuration files, validate deployment manifests, and format infrastructure as code.;
               </p>;
               <ul className="space-y-2 text-gray-300">;
-                <li>• Configuration management</li>;
-                <li>• Infrastructure validation</li>;
-                <li>• Deployment automation</li>;
+                <li> Configuration management</li>;
+                <li> Infrastructure validation</li>;
+                <li> Deployment automation</li>;
               </ul>;
             </Card>;
             <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📝</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>;
               <p className="text-gray-400 mb-6">;
                 Format JSON examples for documentation, tutorials, and technical specifications.;
               </p>;
               <ul className="space-y-2 text-gray-300">;
-                <li>• Documentation examples</li>;
-                <li>• API documentation</li>;
-                <li>• Technical specifications</li>;
+                <li> Documentation examples</li>;
+                <li> API documentation</li>;
+                <li> Technical specifications</li>;
               </ul>;
             </Card>;
           </div>;

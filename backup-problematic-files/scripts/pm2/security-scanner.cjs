@@ -8,15 +8,6 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -469,12 +460,6 @@ class SecurityScanner {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
 =======
@@ -510,6 +495,7 @@ class SecurityScanner {}
     try {}
       this.log('Scanning dependencies for vulnerabilities...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -527,6 +513,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -562,6 +550,7 @@ class SecurityScanner {}
       }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -579,6 +568,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -727,6 +718,7 @@ class SecurityScanner {}
         /token\s*=\s*['"][^'"]+['"]/gi;
       ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -744,6 +736,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -793,6 +787,7 @@ class SecurityScanner {}
       };
       this.log(`Found ${securityIssues.length} potential security issues in code`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -810,6 +805,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -855,6 +852,7 @@ class SecurityScanner {}
     try {}
       this.log('Scanning configuration files...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -872,6 +870,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -921,13 +921,6 @@ class SecurityScanner {}
       for (const file of configFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -988,6 +981,7 @@ class SecurityScanner {}
       };
       this.log(`Found ${configIssues.length} configuration security issues`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -1005,6 +999,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -1046,6 +1042,7 @@ class SecurityScanner {}
     const extensions = ['.js', '.jsx', '.ts', '.tsx', '.vue', '.svelte'];
     const sourceFiles = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -1063,6 +1060,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -1097,6 +1096,7 @@ class SecurityScanner {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           
@@ -1114,6 +1114,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
           
@@ -1152,6 +1154,7 @@ class SecurityScanner {}
       };
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -1169,6 +1172,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -1282,13 +1287,6 @@ class SecurityScanner {}
       const totalIssues = (report.dependencyScan.total || 0) + 
                          (report.codeScan.totalIssues || 0) + 
                          (report.configScan.totalIssues || 0);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1333,6 +1331,7 @@ class SecurityScanner {}
       } else {}
         this.log(`Security scan completed - found ${totalIssues} issues`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         
@@ -1350,6 +1349,8 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
         
@@ -1390,9 +1391,6 @@ class SecurityScanner {}
 if (require.main === module) {}
   const securityScanner = new SecurityScanner();
   securityScanner.start().catch(console.error);
-<<<<<<< HEAD
-};
-=======
 };
 <<<<<<< HEAD
 <<<<<<< HEAD

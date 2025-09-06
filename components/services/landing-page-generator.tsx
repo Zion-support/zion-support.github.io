@@ -1,30 +1,5 @@
-
-
-import Link from 'next/link';
-export default function Placeholder() {;
-  return (
-
-    <main className="min-h-screen p-8">;
-      <Head>;
-        <title>Services • Landing-page-generator - Placeholder</title>;
-        <meta name="robots" content="noindex" />;
-      </Head>;
-      <main>;
-        <h1>LandingPageGenerator</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
-      </main>;
-    </div>;
-
-
-    </div>
-
   );
-
 }
-
-}
-
 import Link from 'next / link';
 export default /**
  * Placeholder - Function description
@@ -33,7 +8,7 @@ function Placeholder() {
   return (
     <main className="min - h-screen p - 8">;
       <Head>;
-        <title > Services • Landing - page - generator - Placeholder</title>;
+        <title > Services  Landing - page - generator - Placeholder</title>;
         <meta name="robots" content="noindex" />;
       </Head>;
       <main>;
@@ -43,4 +18,3 @@ function Placeholder() {
       </main>;
     </div>);
 }
-

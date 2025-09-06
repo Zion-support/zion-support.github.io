@@ -75,7 +75,7 @@
       "command": "npm run build",
       "success": false,
       "description": "Build Application",
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:33:1)\n"
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n  Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:33:1)\n"
     },
     {
       "command": "npm test",

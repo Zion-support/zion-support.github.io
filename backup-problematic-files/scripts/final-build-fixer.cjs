@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fixer.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -85,6 +84,14 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/final-build-fixer.cjs
+>>>>>>> origin/main
 // console.log(' Final Build Fixer')
 console.log('=====')
       const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx']
@@ -95,9 +102,7 @@ console.log('=====')
           "replacement"
         {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
-<<<<<<< HEAD
-          "pattern"
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fixer.cjs
 <<<<<<< HEAD
           "pattern"
 =======
@@ -111,3 +116,9 @@ console.log('=====')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+          "pattern"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/final-build-fixer.cjs
+>>>>>>> origin/main

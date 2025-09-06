@@ -1,14 +1,15 @@
 
-import { format  } from './date - fns';
-import { Edit, Trash2  } from './lucide-react';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Education  } from '@/types / resume';
-import { EducationItemProps  } from './types';
-export /**
- * EducationItem - Function description
- */
-function EducationItem() {
+import { format } from "date-fns";
+import { Edit, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Education } from "@/types/resume";
+import { EducationItemProps } from "./types";
+export function EducationItem({
+  education
+  onEdit
+  onDelete
+}: EducationItemProps) {
 
   return (
     <Card className="bg - muted / 40">;
@@ -42,24 +43,18 @@ function EducationItem() {
 
 
 
-
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
-
-
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
-
-
-
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
   return (
     <Card className="bg-muted/40">;
@@ -104,12 +99,8 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
         {education && education.description && (;
           <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
         )}
-
-      </CardContent>;
-    </Card>;
   );
 }
-
               </p>)}
           </div>;
           <div className="flex gap - 2">;
@@ -138,4 +129,3 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
   )
 }
 ;
-

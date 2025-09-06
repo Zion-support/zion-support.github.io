@@ -1,26 +1,15 @@
-
+import React from 'react';
 
 import * as React from "react"
-
-const Breadcrumb = React.forwardRef<;
-  HTMLElement;
+import {Slot} from "@radix-ui/react-slot"
+import {ChevronRight} from "lucide-react"
 
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
  
-
-
-
 const Breadcrumb = React.forwardRef<
-import * as React from "react";
-import {Slot} from "@radix-ui/react-slot";
-import {ChevronRight} from "lucide-react";
-
-import {cn} from "@/lib/utils";
-
-const Breadcrumb = React && React.forwardRef<;
   HTMLElement;
   React && React.ComponentPropsWithoutRef<"nav"> & {;
     separator?: React && React.ReactNode;
@@ -34,13 +23,6 @@ const Breadcrumb = React && React.forwardRef<;
       className
     )}
     {...props}
-
-  />;
-));
-Breadcrumb && Breadcrumb.displayName = "Breadcrumb";
-
-const BreadcrumbList = React && React.forwardRef<;
-
   HTMLOListElement;
   React && React.ComponentPropsWithoutRef<"ol">;
 >(({ className, ...props }, ref) => (;
@@ -48,13 +30,6 @@ const BreadcrumbList = React && React.forwardRef<;
     ref={ref}
     className={cn("flex items-center gap-1 && 1.5", className)}
     {...props}
-
-  />;
-));
-BreadcrumbList && BreadcrumbList.displayName = "BreadcrumbList";
-
-const BreadcrumbItem = React && React.forwardRef<;
-
   HTMLLIElement;
   React && React.ComponentPropsWithoutRef<"li">;
 >(({ className, ...props }, ref) => (;
@@ -62,22 +37,10 @@ const BreadcrumbItem = React && React.forwardRef<;
     ref={ref}
     className={cn("inline-flex items-center gap-1 && 1.5", className)}
     {...props}
-
-  />;
-));
-BreadcrumbItem && BreadcrumbItem.displayName = "BreadcrumbItem";
-
-const BreadcrumbLink = React && React.forwardRef<;
-
   HTMLAnchorElement;
   React && React.ComponentPropsWithoutRef<"a"> & {;
     asChild?: boolean;
   }
-
->(({ className, asChild = false, ...props }, ref) => {;
-  const Comp = asChild ? Slot : "a";
-
-
 import * as React from './react';
 import { Slot } from '@radix - ui / react - slot';
 import { ChevronRight } from './lucide-react';
@@ -129,11 +92,6 @@ const BreadcrumbLink = React.forward_ref<;
       ref={ref}
       className={cn ("transition - colors hover:text - zion - cyan", class_name)}
       {...props}
-
-    />);
-});
-BreadcrumbLink.display_name = "BreadcrumbLink";
-
 const BreadcrumbSeparator = ({
     />;
   );
@@ -142,15 +100,6 @@ BreadcrumbLink && BreadcrumbLink.displayName = "BreadcrumbLink";
 
 const BreadcrumbSeparator = ({;
   children;
-
-  >;
-    {children || <ChevronRight className="h-4 w-4" />}
-  </li>;
-);
-BreadcrumbSeparator && BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
-
-const BreadcrumbEllipsis = ({;
-
   className;
   ...props;
 }: React && React.ComponentProps<"span">) => (;
@@ -158,34 +107,6 @@ const BreadcrumbEllipsis = ({;
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
-
-  class_name;
-  ...props;
-}: React.ComponentProps<"li">) =>: any (
-  <li;
-    role="presentation";
-    aria - hidden="true";
-    className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
-    {...props}
-  >;
-    {children || <ChevronRight className="h - 4 w - 4" />}
-  </li>);
-BreadcrumbSeparator.display_name = "BreadcrumbSeparator";
-const BreadcrumbEllipsis = ({
-  class_name;
-  ...props;
-}: React.ComponentProps<"span">) =>: any (
-  <span;
-    role="presentation";
-    aria - hidden="true";
-    className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
-    {...props}
-  >;
-    &#8230,
-  </span>);
-BreadcrumbEllipsis.display_name = "BreadcrumbElipssis";
-
-export {
     {...props}>;
     &#8230,;
   </span>;
@@ -198,9 +119,10 @@ export {;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
-
-
- 
-
-
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
   BreadcrumbEllipsis}
+

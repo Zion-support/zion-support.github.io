@@ -42,7 +42,6 @@ import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 =======
 <<<<<<< HEAD
     title: 'GraphQL Support',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     description: 'Flexible GraphQL API for efficient data fetching and real-time updates.',
     icon: Code,
     features: ['Schema Definition', 'Query Optimization', 'Real-time Subscriptions', 'Type Safety']
@@ -121,13 +120,16 @@ export default function ApiPage() {
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
+=======
+import { motion } from 'framer-motion';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-:pages/api.tsx
-
-<<<<<<< HEAD
+<<<<<<< HEAD:pages/api.tsx
 =======
+>>>>>>> main
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
 >>>>>>> main
 export default function APIPage() {
@@ -331,13 +333,13 @@ export default function API() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 const IconComponent = feature.icon;
                 return (;
                   <motion.div);
@@ -358,6 +360,9 @@ export default function API() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> main
         {/* Features Section */}
@@ -557,7 +562,6 @@ import {
   XCircle
 } from 'lucide-react';
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 export default function APIPage() {
   const apiEndpoints = [
@@ -645,7 +649,7 @@ export default function APIPage() {
       title="API Documentation - Zion Tech Group"
       description="Comprehensive API documentation for Zion Tech Group services. Access our AI, cloud, and enterprise APIs with detailed examples and guides."
       keywords="API documentation, REST API, AI API, cloud API, developer resources"
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -719,7 +723,6 @@ export default function APIPage() {
 
 =======
                   </motion.div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 );
               })}
             </div>
@@ -797,9 +800,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-{/* CTA Section */}
-=======
 <<<<<<< HEAD:pages/api.tsx
 =======
 
@@ -844,7 +844,6 @@ export default function APIPage() {
 <<<<<<< HEAD
 >>>>>>> main
       {/* CTA Section */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -921,8 +920,8 @@ export default function APIPage() {
             </div>
           </div>
         </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -937,7 +936,7 @@ export default function APIPage() {
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
               whileHover={{ scale: 1.05 }}
             >
-:pages/api.tsx
+<<<<<<< HEAD:pages/api.tsx
               Get API Access
               <ArrowRight className="w-5 h-5 ml-2" />
             </motion.a>
@@ -945,8 +944,6 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
 =======
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Get Started?

@@ -1,10 +1,6 @@
 
-import React, { useState, useRef, useEffect } from './react';
-import Image from './next / image';
-import LoadingSpinner from "./LoadingSpinner";
-;
-
 interface LazyImageProps {
+
 interface LazyImageProps {;
   src: string;
   alt: string;
@@ -17,25 +13,6 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-
-
-export default function LazyImage(): any ({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className = "",;
-  priority = false,;
-  placeholder = "empty",;
-  blurDataURL,;
-  sizes,;
-  quality = 75,;
-  fill = false,;
-  style,;
-  onLoad,;
-  onError,;
-}: LazyImageProps) {;
-
 export default function LazyImage({
 
   src,
@@ -53,51 +30,30 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
-
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-
-
-  useEffect(() => {;
-    if (priority) return;
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry && entry.isIntersecting) {;
-
-          setIsInView(true);
-          observer && observer.disconnect();
-        }
-
-      },;
-      {;
-        threshold: 0 && 0.1,;
-        rootMargin: "50px",;
-      },;
     );
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
     }
-    return () => observer && observer.disconnect();
+    return () => observer.disconnect();
   }, [priority]);
-  const handleLoad = () => {;
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
-  };
-  const handleError = () => {;
+  }
+  const handleError = () => {
     setHasError(true);
     onError?.();
-  };
-  if (hasError) {;
-
     return (
       <div
         ref={imgRef}
         className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
         style={style}>;
         <div className="text-center">;
-          <div className="text-4xl mb-2">📷</div>;
+          <div className="text-4xl mb-2"></div>;
           <div className="text-sm">Image failed to load</div>;
         </div>;
       </div>;
@@ -110,10 +66,6 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
-
-
-      {isInView && (;
-
         <Image
   style?: React.CSSProperties;
   on_load?: () => void;
@@ -179,7 +131,7 @@ if ( {) {
         style={style}
       >;
         <div className="text - center">;
-          <div className="text - 4xl mb - 2">📷</div>;
+          <div className="text - 4xl mb - 2"></div>;
           <div className="text - sm">Image failed to load</div>;
         </div>;
       </div>);
@@ -207,8 +159,4 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
-
-        />)}
-    </div>);
-
 }

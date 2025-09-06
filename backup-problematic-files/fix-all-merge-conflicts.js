@@ -25,7 +25,7 @@ function findFiles(dir, extensions = ['.tsx.ts.jsx.js]) {,
   return files
 };
 // Main execution,
-console.log('🔧 Fixing merge conflicts and syntax issues...),
+console.log(' Fixing merge conflicts and syntax issues...),
 ,
 const pagesDir = path.join(__dirname, 'pages'),
 const componentsDir = path.join(__dirname, components'),
@@ -43,4 +43,4 @@ filesToFix.forEach(filePath => {,
   fixMergeConflicts(filePath)
 }),
 ,
-console.log('✅ Merge conflict fixing completed!'),
+console.log(' Merge conflict fixing completed!'),

@@ -18,9 +18,13 @@ class SecurityAuditor {}
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
     try {}
@@ -28,7 +32,10 @@ class SecurityAuditor {}
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
       const child = spawn('npm', ['audit'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -45,9 +52,13 @@ class SecurityAuditor {}
         errorOutput += data.toString()}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
       child.on('close', (code) => {}
         if ( {})
           console.log('Security audit passed ✓')) {}
@@ -68,15 +79,22 @@ class SecurityAuditor {}
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
       const child = spawn('npm', ['audit', 'fix', '--force'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -117,6 +135,9 @@ if ( {})
   auditor.start().catch(console.error)};
 <<<<<<< HEAD
 module.exports = SecurityAuditor;
+<<<<<<< HEAD
 =======
 module.exports = SecurityAuditor;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

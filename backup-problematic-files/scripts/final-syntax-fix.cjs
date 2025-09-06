@@ -54,9 +54,13 @@ const filesToFix = [
 ];
 let totalFixed = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -66,7 +70,10 @@ for (const file of filesToFix) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     content = fixSpecificErrors(content);
@@ -82,6 +89,9 @@ for (const file of filesToFix) {
 console.log(`\n✅ Fixed ${totalFixed} files`);
 <<<<<<< HEAD
 console.log('🎉 Final syntax fix completed!');
+<<<<<<< HEAD
 =======
 console.log('🎉 Final syntax fix completed!');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

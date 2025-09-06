@@ -8,25 +8,25 @@ const servicesDropdown = [
     title: 'AI Services',
     href: '/ai-services',
     description: 'Artificial Intelligence Solutions',
-    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">🤖</div>
+    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center"></div>
   },
   {
     title: 'Web Development',
     href: '/web-development',
     description: 'Custom Web Applications',
-    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">🌐</div>
+    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center"></div>
   },
   {
     title: 'Mobile Apps',
     href: '/mobile-apps',
     description: 'iOS & Android Development',
-    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">📱</div>
+    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center"></div>
   },
   {
     title: 'Cloud Solutions',
     href: '/cloud-solutions',
     description: 'Cloud Infrastructure & Migration',
-    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">☁️</div>
+    icon: () => <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center"></div>
   }
 ];
 
@@ -35,20 +35,20 @@ const solutionsDropdown = [
     title: 'Digital Transformation',
     href: '/digital-transformation',
     description: 'Complete digital overhaul for your business',
-    icon: () => <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">🔄</div>
+    icon: () => <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center"></div>
   },
   {
     title: 'Automation',
     href: '/automation',
     description: 'Streamline your business processes',
-    icon: () => <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">⚙️</div>
+    icon: () => <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center"></div>
   }
 ];
 
 const industriesDropdown = [
-  { name: 'Healthcare', href: '/healthcare', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center">🏥</div> },
-  { name: 'Finance', href: '/finance', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center">💰</div> },
-  { name: 'E-commerce', href: '/ecommerce', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center">🛒</div> }
+  { name: 'Healthcare', href: '/healthcare', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center"></div> },
+  { name: 'Finance', href: '/finance', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center"></div> },
+  { name: 'E-commerce', href: '/ecommerce', icon: () => <div className="w-5 h-5 bg-red-100 rounded flex items-center justify-center"></div> }
 ];
 
 const navigation = [

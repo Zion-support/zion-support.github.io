@@ -1,8 +1,3 @@
-
-
-
-
-
 export type ServiceVariant =
   | 'default'
   | 'holographic'
@@ -109,12 +104,6 @@ export type ServiceVariant =
   | 'real-estate-futuristic'
   | 'industrial-futuristic'
   | 'neural-futuristic',
-
-
-
-  | 'neural-futuristic';
-
-
   | 'quantum - hologographic';
   | 'quantum - advanced';
   | 'holographic - advanced';

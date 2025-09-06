@@ -1,25 +1,3 @@
-
-
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import fs from 'fs';
-import path from 'path';
-
-
-    routes = json.routes || [];
-    generatedAt = json.generatedAt || ''
-  } catch {}
-  return { props: { routes, generatedAt } }
-}
-
-
-
-export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import path from 'path';
-type RouteInfo = { path: string, lastModified: string },;
-export async function getServerSideProps() {;
-  const file = path && path.join(process && process.cwd(), 'datasite-map && map.json');
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string }
@@ -31,6 +9,34 @@ import path from 'path';
 type RouteInfo = { path: string, lastModified: string },
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datasite-map.json');
+  let routes: RouteInfo[] = [];  let generatedAt = '';
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string }
+export async function getServerSideProps() {
+  const file = path.join(process.cwd(), 'datasite-map.json');
+  let routes: RouteInfo[] = [];  let generatedAt = '';
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+    routes = json.routes |[];
+    generatedAt = json.generatedAt |''
+
+  } catch {}
+  return { props: { routes, generatedAt } }
+}
+export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datasite-map && map.json');
   let routes: RouteInfo[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -49,20 +55,8 @@ function getServerSideProps() {
   return { props: { routes, generated_at } }
 }
 
-
-    </div>;
-
-
 );
 }
-          </tbody>;
-        </table>;
-      </div>;
-    </div>;
-  );
-}
-
-
 export default /**
  * SiteMapIntelPage - Function description
  */
@@ -70,7 +64,7 @@ function SiteMapIntelPage() {
   return (
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">AI Automation: Site Map Intelligence</h1>;
-      <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
+      <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : ''}</div>;
       <div className="overflow - auto border rounded">;
         <table className="min - w-full text - sm">;
           <thead className="bg - gray - 50">;
@@ -89,11 +83,4 @@ function SiteMapIntelPage() {
         </table>;
       </div>;
     </div>);
-            <tr>
-              <th className=&quot;text-left p-2&quot;>Route</th>
-              <th className=&quot;text-left p-2&quot;>Last Modified</th>
-    routes = json.routes || [];
-    generatedAt = json.generatedAt || ''
-  } catch {}
-  return { props: { routes, generatedAt } }
 }

@@ -11,6 +11,9 @@ console.log('� Running Health Check...')
     execSync('npm run type-check', { "stdio"})
 <<<<<<< HEAD
 console.log('� Overall "status")
+<<<<<<< HEAD
 =======
 console.log('� Overall "status")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

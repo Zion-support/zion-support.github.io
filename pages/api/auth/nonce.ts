@@ -1,14 +1,13 @@
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
   return res
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
+
   res.status(200).json({ nonce })
-
 }
-
+}
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 /**

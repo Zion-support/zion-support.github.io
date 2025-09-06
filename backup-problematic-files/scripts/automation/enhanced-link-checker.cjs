@@ -174,6 +174,9 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.error(" Link checker automation "failed": ")
 <<<<<<< HEAD
   console.error(" Link checker automation "failed")
+<<<<<<< HEAD
 =======
   console.error(" Link checker automation "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

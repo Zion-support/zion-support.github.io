@@ -1,15 +1,34 @@
+import { readJson  } from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
+export async function getStaticProps() {
+
 
 
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return { props: { articles } };
 
-
               ))}
           </div>;
         </div>;
       ))}
 
+import { readJson } from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
+export async function getStaticProps() {;
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  return { props: { articles }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
+  const categories = Array.from(new Set(articles.map((a) => a.category))),
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
@@ -26,11 +45,10 @@ export async function getStaticProps() {;
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
                   </a>
                 </Link>
-
-    </div>
-  )
-}
-
+              ))}
+          </div>
+        </div>
+      ))}
 import Link from 'next / link';
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
@@ -71,7 +89,6 @@ function HelpIndex() {
 
 }
 }
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -91,5 +108,3 @@ function HelpIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-

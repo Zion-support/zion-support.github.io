@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../../utils/kyc',;
@@ -8,8 +6,6 @@ export default function IdentitySettingsPage() {
   const [userId, setUserId] = useState('demo-user'),
   const [profile, setProfile] = useState<KycProfile | null>(null),
   const [error, setError] = useState(''),
-
-
 
 import React, { useEffect, useState } from 'react';
 
@@ -22,9 +18,21 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
   async function load() {
-
-
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../../utils/kyc';
+import { ProfileBadges } from '../../../components/ui/ProfileBadges';
+export default function IdentitySettingsPage(req, res) {
+  try {
+  const [userId, setUserId] = useState('demo-user');
+  const [profile, setProfile] = useState<KycProfile | null>(null);
+  const [error, setError] = useState('');
+  async function load() {;
     try {
+      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`)
+      const data = await res.json()
+      if (data.ok) setProfile(data.profile)
+      else setError(data.error |'Not found')
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
@@ -51,28 +59,10 @@ function load() {
   $2
 }
       else set_error (data.error || 'Not found');
-
-import React, { useEffect, useState } from 'react';
-
-import Head from 'next/head';
-import type { KycProfile } from '../../../utils/kyc';
-import { ProfileBadges } from '../../../components/ui/ProfileBadges';
-export default function IdentitySettingsPage() {
-
-  const [userId, setUserId] = useState('demo-user')
-  const [profile, setProfile] = useState<KycProfile | null>(null)
-  const [error, setError] = useState('')
-  async function load() {
     } catch (e) {
-
-      set_error ('Failed to fetch');
-
+      setError('Failed to fetch')
     }
   }
-
-
-  }, []),
-
 
   return (
     <>
@@ -83,9 +73,7 @@ export default function IdentitySettingsPage() {
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Identity</h1>
         <div className="mb-4">
-
 }
-
   useEffect (() => {
     load (),
     // eslint - disable - next - line react - hooks / exhaustive - deps;
@@ -102,34 +90,11 @@ export default function IdentitySettingsPage() {
           <ProfileBadges profile={profile || undefined} />;
         </div>;
         <div className="mb - 4 text - sm text - gray - 600">;
-          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.aml_status : 'unknown'}
         </div>;
         <a href="/verify" className="inline - block rounded bg - blue - 600 text - white px - 4 py - 2">Go to verification</a>;
         {error && <div className="mt - 3 text - sm text - red - 600">{error}</div>}
       </main>;
     </>);
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
-import type { KycProfile } from '../../../utils/kyc';
-import { ProfileBadges } from '../../../components/ui/ProfileBadges';
-export default function IdentitySettingsPage(req, res) {
-  try {
-  const [userId, setUserId] = useState('demo-user');
-  const [profile, setProfile] = useState<KycProfile | null>(null);
-  const [error, setError] = useState('');
-  async function load() {;
-    try {
-      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
-      const data = await res.json();
-      if (data.ok) setProfile(data.profile);
-      else setError(data.error || 'Not found');
-    } catch (error) {
-      setError('Failed to fetch');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
           <ProfileBadges profile={profile || undefined} />
         </div>
@@ -138,7 +103,6 @@ export default function IdentitySettingsPage(req, res) {
     </>
   );
 };
-
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -158,6 +122,3 @@ export default function IdentitySettingsPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
-

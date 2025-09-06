@@ -1,13 +1,10 @@
 
-
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {Skill} from '@/types/resume';
-import {useAuth} from '@/hooks/useAuth';
-import {handleResumeError, showSuccessToast} from './useResumeUtils';
-export function useSkills() {;
-
-
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Skill  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useSkills() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,9 +13,6 @@ export function useSkills() {;
     if (!user) {
       setError('You must be logged in to add skills')
       return false
-
-
-
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -32,45 +26,16 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to add skills'),;
       return false;
-
-
-
     }
-    
-    setIsLoading(true),
-    setError(null),
-    
     try {
       const { error } = await supabase
         .from('resume_skills')
         .insert({
-
-          name: skill && skill.name;
-          proficiency: skill && skill.proficiency;
-          category: skill && skill.category,
-          years_experience: skill && skill.years_experience
-
-        });
-      if (error) throw error;
-
-          resume_id: resumeId,
-          name: skill.name,
-          proficiency: skill.proficiency,
-          category: skill.category,
-          years_experience: skill.years_experience
-        }),
-      
-      if (error) throw error,
-      
-
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
-
-
-
 ;
     setIsLoading(true),;
     setError(null),;
@@ -96,34 +61,24 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to delete skills'),;
       return false;
-
-
-
     }
-    
-    setIsLoading(true),
-    setError(null),
-    
     try {
       const { error } = await supabase
         .from('resume_skills')
         .delete()
-
-
-        .eq('id', skillId),
-      
-      if (error) throw error,
-      
-
-
+        .eq('id', skillId);
+      if (error) throw error;
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
-
-
-
+    }
+  }
+  return {
+    isLoading;
+    error;
+    addSkill;
 
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -146,16 +101,6 @@ if ( {) {
       set_error ('You must be logged in to add skills'),
       return false;
     }
-
-  },;
-  return {;
-    isLoading,;
-    error;
-    addSkill;
-    deleteSkill;
-
-
-
   }
 }
 ;

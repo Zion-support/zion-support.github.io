@@ -1,7 +1,3 @@
-
-export default function SolutionsPage() {;
-  return (;
-
     <div className="min-h-screen bg-white">;
 export default /**
  * SolutionsPage - Function description
@@ -9,7 +5,6 @@ export default /**
 function SolutionsPage() {
   return (
     <div className="min - h-screen bg - white">;
-    <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - purple - 600 to - indigo - 700 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -47,7 +42,7 @@ function SolutionsPage() {
                 </p>;
                 <div className="flex items - center justify - between">;
                   <a href="/ai - autonomous - research - assistant" className="text - red - 600 hover:text - red - 700 font - medium">;
-                    Learn More →;
+                    Learn More ;
                   </a>;
                   <span className="text - sm text - gray - 500">Research Platform</span>;
                 </div>;
@@ -67,7 +62,7 @@ function SolutionsPage() {
                 </p>;
                 <div className="flex items - center justify - between">;
                   <a href="/quantum - neural - network - platform" className="text - purple - 600 hover:text - purple - 700 font - medium">;
-                    Learn More →;
+                    Learn More ;
                   </a>;
                   <span className="text - sm text - gray - 500">Quantum Platform</span>;
                 </div>;
@@ -87,7 +82,7 @@ function SolutionsPage() {
                 </p>;
                 <div className="flex items - center justify - between">;
                   <a href="/autonomous - business - operations - platform" className="text - indigo - 600 hover:text - indigo - 700 font - medium">;
-                    Learn More →;
+                    Learn More ;
                   </a>;
                   <span className="text - sm text - gray - 500">Business Platform</span>;
                 </div>;
@@ -107,7 +102,7 @@ function SolutionsPage() {
                 </p>;
                 <div className="flex items - center justify - between">;
                   <a href="/ai - powered - it - asset - management" className="text - orange - 600 hover:text - orange - 700 font - medium">;
-                    Learn More →;
+                    Learn More ;
                   </a>;
                   <span className="text - sm text - gray - 500">IT Platform</span>;
                 </div>;
@@ -127,7 +122,7 @@ function SolutionsPage() {
                 </p>;
                 <div className="flex items - center justify - between">;
                   <a href="/advanced - cybersecurity - suite" className="text - green - 600 hover:text - green - 700 font - medium">;
-                    Learn More →;
+                    Learn More ;
                   </a>;
                   <span className="text - sm text - gray - 500">Security Platform</span>;
                 </div>;
@@ -147,7 +142,7 @@ function SolutionsPage() {
                 </p>;
                 <div className="flex items - center justify - between">;
                   <a href="/advanced - ai - automation - services" className="text - blue - 600 hover:text - blue - 700 font - medium">;
-                    Learn More →;
+                    Learn More ;
                   </a>;
                   <span className="text - sm text - gray - 500">Automation Platform</span>;
                 </div>;

@@ -1,23 +1,10 @@
-
-
-
-import {Brain, Atom, Shield, Target, Rocket;
-  ArrowRight, Check, Star, TrendingUp, Users;
-import React from 'react',;
-import SEO from '../components/SEO',;
-import { motion } from 'framer-motion',;
-import {;
-  Brain, Atom, Shield, Target, Rocket,;
-  ArrowRight, Check, Star, TrendingUp, Users,;
-  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
-} from 'lucide-react',;
-// Import our new 2025 V2 innovative services;
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
+          
           <motion.div 
             className="space-y-20"
             variants={staggerContainer}
@@ -38,6 +25,7 @@ import {;
                     {category.description}
                   </p>
                 </div>
+                
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
                     <motion.div
@@ -51,6 +39,7 @@ import {;
                       <p className="text-gray-300 mb-4">
                         {service.description}
                       </p>
+                      
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
@@ -61,6 +50,7 @@ import {;
                           {service.growthRate}
                         </div>
                       </div>
+                      
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {(service as any).pricing?.starter || service.price}
@@ -74,19 +64,6 @@ import {;
                       </div>;
                       <a;
                         href={`/services/${service.slug}`}
-
-                        className="inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 200";
-
-                      >;
-                        Learn More <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                      </a>;
-
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
-                      >
-                        Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </motion.div>
-
                   ))}
                     </motion.div>))}
                 </div>;
@@ -95,8 +72,6 @@ import {;
         </div>;
       </section>;
       {/* Market Statistics */}
-
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
       <section className="py - 20 px - 4 bg - black / 20">;
@@ -107,13 +82,6 @@ import {;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-
-          >
-            Market Impact & Growth
-          </motion.h2>
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
@@ -121,8 +89,6 @@ import {;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text - 4xl md:text - 5xl font - bold text - white mb - 6";
@@ -130,13 +96,6 @@ import {;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-
-          >
-            Ready to Lead the Future?
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-gray-300 mb-8"
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text - xl text - gray - 300 mb - 8";
@@ -144,8 +103,6 @@ import {;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-
-
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="flex flex - col sm:flex - row gap - 4 justify - center";
@@ -153,5 +110,3 @@ import {;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-
-

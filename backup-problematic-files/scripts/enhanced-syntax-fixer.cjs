@@ -21,6 +21,9 @@ const { execSync } = require('child_process')
     const reportPath = 'enhanced-syntax-fix-report.json;'
 <<<<<<< HEAD
     console.error(' Enhanced syntax fixer "failed")
+<<<<<<< HEAD
 =======
     console.error(' Enhanced syntax fixer "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

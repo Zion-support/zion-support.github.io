@@ -251,7 +251,3 @@ return (<div ref= {;
   ... (otherProps as any) ;
 }/>) ;
 }
-
-}// Utility to preload critical images ;
-}'"
-

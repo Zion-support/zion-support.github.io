@@ -1,5 +1,3 @@
-
-
 import Link from 'next / link';
 import EnhancedMarketplaceCard from '../../components / ui / EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components / ui / EnhancedLoading';
@@ -14,24 +12,9 @@ function JobsListPage() {
     const t = set_timeout (() => set_loading (false), 500);
     return () => clear_timeout (t);
   }, []);
-;
-  const jobs = [;
-    {
-      slug: 'senior - ai - engineer',
-      title: 'Senior AI Engineer',
-      subtitle: 'Remote • Contract',
-      description: 'Build and optimize LLM - powered features in production.',
-    },
-    {
-      slug: 'mlops - specialist',
-      title: 'MLOps Specialist',
-      subtitle: 'Remote • Part - time',
-      description: 'Design pipelines for training / inference at scale.',
-    },
-  ];
-  const jobs = [
-    { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
-    { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
+
+import Link from 'next/link',
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
   return (
     <div className="space-y-4">
       <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />
@@ -42,4 +25,21 @@ function JobsListPage() {
           {jobs.map((j) => (
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
-                <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

@@ -8,15 +8,6 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -401,13 +392,6 @@ const fs = require('fs');
 const log = (message) => {}
   const timestamp = new Date().toISOString();
 };
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -484,13 +468,6 @@ const checkSystemHealth = () => {}
   const diskCheck = runCommand('df -h .', 'Checking disk space');
   // Check memory usage;
   const memoryCheck = runCommand('free -m', 'Checking memory usage');
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -546,6 +523,7 @@ const checkSystemHealth = () => {}
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -563,6 +541,8 @@ const checkSystemHealth = () => {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -599,6 +579,7 @@ const generateHealthReport = (results) => {}
     };
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   
@@ -616,6 +597,8 @@ const generateHealthReport = (results) => {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
   
@@ -665,13 +648,6 @@ const main = async () => {}
   log('Starting Health Monitor Process');
   // Check system health;
   const systemResults = checkSystemHealth();
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -765,6 +741,7 @@ const main = async () => {}
   log('Health Monitor Process completed');
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -782,6 +759,8 @@ const main = async () => {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -816,6 +795,7 @@ process.on('SIGINT', () => {}
 }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -833,6 +813,8 @@ process.on('SIGINT', () => {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -866,6 +848,7 @@ process.on('SIGTERM', () => {}
 }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -883,6 +866,8 @@ process.on('SIGTERM', () => {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -914,9 +899,6 @@ process.on('SIGTERM', () => {}
 main().catch(error => {})
   log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
-<<<<<<< HEAD
-}
-=======
 }
 <<<<<<< HEAD
 <<<<<<< HEAD

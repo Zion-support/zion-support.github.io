@@ -18,6 +18,9 @@ const path = require('path')
 // console.log('\n� Automation "Schedule")
 <<<<<<< HEAD
     console.log('\n  Useful PM2 "Commands")
+<<<<<<< HEAD
 =======
     console.log('\n  Useful PM2 "Commands")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

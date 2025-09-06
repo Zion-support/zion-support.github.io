@@ -26,42 +26,42 @@ export default function MobileDevelopmentPage() {
               description="High-performance iOS apps using Swift and SwiftUI"
               features={["Swift/SwiftUI", "Core Data", "Push notifications", "App Store optimization"]}
               price="Starting at $15k"
-              icon="📱"
+              icon=""
             />
             <MobileServiceCard 
               title="Native Android Development" 
               description="Robust Android apps using Kotlin and Jetpack Compose"
               features={["Kotlin/Java", "Room database", "Material Design", "Play Store optimization"]}
               price="Starting at $15k"
-              icon="🤖"
+              icon=""
             />
             <MobileServiceCard 
               title="Cross-Platform Development" 
               description="Single codebase for iOS and Android using React Native or Flutter"
               features={["React Native", "Flutter", "Code sharing", "Faster development"]}
               price="Starting at $20k"
-              icon="🔄"
+              icon=""
             />
             <MobileServiceCard 
               title="Progressive Web Apps" 
               description="Web apps that work like native mobile applications"
               features={["PWA features", "Offline support", "Push notifications", "App-like experience"]}
               price="Starting at $12k"
-              icon="🌐"
+              icon=""
             />
             <MobileServiceCard 
               title="Mobile Backend Development" 
               description="Scalable backend services and APIs for mobile applications"
               features={["RESTful APIs", "Real-time features", "Database design", "Cloud integration"]}
               price="Starting at $18k"
-              icon="⚙️"
+              icon=""
             />
             <MobileServiceCard 
               title="App Maintenance & Support" 
               description="Ongoing maintenance, updates, and technical support"
               features={["Bug fixes", "Feature updates", "Performance optimization", "24/7 support"]}
               price="Starting at $2k/mo"
-              icon="🔧"
+              icon=""
             />
           </div>
         </div>
@@ -75,28 +75,28 @@ export default function MobileDevelopmentPage() {
               description="Complete mobile shopping experiences with payment integration"
               features={["Product catalogs", "Shopping cart", "Payment processing", "Order tracking"]}
               price="$25k - $80k"
-              icon="🛒"
+              icon=""
             />
             <SpecializedMobileCard 
               title="Healthcare Mobile Apps" 
               description="HIPAA-compliant mobile solutions for healthcare providers"
               features={["Patient portals", "Telemedicine", "Health records", "Appointment booking"]}
               price="$30k - $100k"
-              icon="🏥"
+              icon=""
             />
             <SpecializedMobileCard 
               title="FinTech Mobile Apps" 
               description="Secure financial applications with advanced security features"
               features={["Banking features", "Payment processing", "Biometric auth", "Fraud detection"]}
               price="$35k - $120k"
-              icon="💰"
+              icon=""
             />
             <SpecializedMobileCard 
               title="Social & Communication Apps" 
               description="Engaging social platforms and messaging applications"
               features={["Real-time chat", "Media sharing", "User profiles", "Push notifications"]}
               price="$28k - $90k"
-              icon="💬"
+              icon=""
             />
           </div>
         </div>
@@ -128,25 +128,25 @@ export default function MobileDevelopmentPage() {
               title="Business Apps" 
               description="Productivity and business management solutions"
               price="$15k - $50k"
-              icon="💼"
+              icon=""
             />
             <AppCategoryCard 
               title="Gaming Apps" 
               description="Interactive games and entertainment applications"
               price="$20k - $80k"
-              icon="🎮"
+              icon=""
             />
             <AppCategoryCard 
               title="Educational Apps" 
               description="Learning platforms and educational tools"
               price="$18k - $60k"
-              icon="🎓"
+              icon=""
             />
             <AppCategoryCard 
               title="Lifestyle Apps" 
               description="Health, fitness, and lifestyle applications"
               price="$12k - $40k"
-              icon="🏃"
+              icon=""
             />
           </div>
         </div>
@@ -173,7 +173,7 @@ function MobileServiceCard({ title, description, features, price, icon }: {
       <ul className="text-gray-600 space-y-2 mb-4">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {feature}
+            <span className="text-blue-500 mr-2"></span> {feature}
           </li>
         ))}
       </ul>
@@ -197,7 +197,7 @@ function SpecializedMobileCard({ title, description, features, price, icon }: {
       <ul className="text-gray-600 space-y-2 mb-6">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
-            <span className="text-green-500 mr-2">•</span> {feature}
+            <span className="text-green-500 mr-2"></span> {feature}
           </li>
         ))}
       </ul>
@@ -213,7 +213,7 @@ function TechStackCard({ title, details }: { title: string; details: string[] })
       <ul className="text-gray-600 space-y-2">
         {details.map((detail) => (
           <li key={detail} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {detail}
+            <span className="text-blue-500 mr-2"></span> {detail}
           </li>
         ))}
       </ul>
@@ -244,14 +244,14 @@ function Pricing() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
           name="MVP Development" 
-          price="$15k–$35k" 
-          duration="8–12 weeks"
+          price="$15k$35k" 
+          duration="812 weeks"
           features={["Core features", "Basic UI/UX", "Single platform", "Testing"]} 
         />
         <Plan 
           name="Full App Development" 
-          price="$35k–$80k" 
-          duration="12–20 weeks"
+          price="$35k$80k" 
+          duration="1220 weeks"
           features={["Complete features", "Custom UI/UX", "Both platforms", "Backend integration"]} 
         />
         <Plan 
@@ -279,7 +279,7 @@ function Plan({ name, price, duration, features }: {
       <ul className="text-gray-600 space-y-3">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-2">✓</span> {feature}
+            <span className="text-blue-500 mr-2"></span> {feature}
           </li>
         ))}
       </ul>

@@ -78,6 +78,9 @@ const path = require("path")
       ` Final "Summary"
 <<<<<<< HEAD
     console.error(" CI pipeline "failed": ")
+<<<<<<< HEAD
 =======
     console.error(" CI pipeline "failed": ")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

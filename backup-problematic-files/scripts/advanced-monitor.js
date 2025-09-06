@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Advanced Monitoring Script
@@ -10,7 +9,7 @@ class AdvancedMonitor {
   constructor() {
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log")}
   async startMonitoring() {
-    console.log("🔍 Starting advanced monitoring...")
+    console.log(" Starting advanced monitoring...")
     setInterval(() => {
       this.checkSystemHealth()
       this.checkPM2Processes()

@@ -4,21 +4,24 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
-
 
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,12 +36,8 @@ const EnhancedNavigation = () =>: any {
       <div className='container mx - auto px - 4'>;
         <div className='flex justify - between items - center py - 4'>;
           {/* Logo */}
-
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-import { Star } from 'lucide-react';
-const EnhancedNavigation = () => {
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+
           <Link href='/' className='flex items - center space - x-2'>;
             <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;
               <span className='text - white font - bold text - xl'>Z</span>;
@@ -95,20 +94,14 @@ const EnhancedNavigation = () => {
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
           {/* Logo */}
-
-
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-
-
           </button>
         </div>
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-
-
               </Link>
               <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
                 Services
@@ -133,8 +126,6 @@ const EnhancedNavigation = () => {
         )}
       </div>
     </nav>
-
-
           <Link href="/" className="flex items - center space - x-2">;
             <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
               <span className="text - white font - bold text - xl">Z</span>;
@@ -260,4 +251,3 @@ const EnhancedNavigation = () => {
 export default EnhancedNavigation;},
 export default EnhancedNavigation;
 ;
-

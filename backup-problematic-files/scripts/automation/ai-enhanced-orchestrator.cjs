@@ -37,6 +37,9 @@ const os = require('os')
         '15min'
 <<<<<<< HEAD
       const result = execSync('top -bn1 | grep "Cpu(s)"
+<<<<<<< HEAD
 =======
       const result = execSync('top -bn1 | grep "Cpu(s)"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

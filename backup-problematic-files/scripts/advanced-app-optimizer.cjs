@@ -1081,13 +1081,6 @@ if (require.main === module) {
   optimizer.run().catch(console.error),,
 }
 <<<<<<< HEAD
-module.exports = AdvancedAppOptimizer;
-=======
-<<<<<<< HEAD
-module.exports = AdvancedAppOptimizer
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
 module.exports = AdvancedAppOptimizer
 >>>>>>> origin/main
 =======

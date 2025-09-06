@@ -200,7 +200,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {;
         <div key={item.id} className="border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between">
           <div>
             <div className="font-medium">{item.title}</div>
-            <div className="text-xs text-gray-500">{new Date(item.createdAt).toLocaleString()} • {item.status}</div>
+            <div className="text-xs text-gray-500">{new Date(item.createdAt).toLocaleString()}  {item.status}</div>
           </div>
           <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
             <option value="lead">Lead</option>

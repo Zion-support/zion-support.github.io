@@ -1,7 +1,5 @@
 
-
-
-
+import React from "react",
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
@@ -21,12 +19,6 @@ export const QrCodeDownload: React.FC = () => {
                 instantly, or use the buttons below to get it from your app
                 store of choice.
               </p>
-
-
-              <AppStoreButtons 
-                className="mb-8" 
-
-
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
@@ -56,7 +48,6 @@ import {QrCode} from "lucide-react";
 import {AppStoreButtons} from "./AppStoreButtons";
 
 };
-
   )
 },
 import React from "react",;
@@ -146,12 +137,6 @@ export const QrCodeDownload: React.FC = () => {
           </div>;
         </div>;
       </div>;
-
     </section>);
 }
 ;
-
-
-export default QrCodeDownload;
-
-

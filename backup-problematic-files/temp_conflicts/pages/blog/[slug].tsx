@@ -64,7 +64,6 @@ const PostPage:NextPage<Props> = ({ post, all }) => {;
       <article className="mx-auto max-w-3xl">;
         <h1 className="text-3xl font-bold">{post.title}</h1>;
         <div className="text-gray-600 dark:text-gray-300 mt-1">;
-          {new Date(post.publishDate).toLocaleDateString()} • {post.author}
         </div>;
         {toc.length > 0 && (;
           <nav className="mt-6 p-4 border rounded bg-gray-50 dark:bg-zinc-900">;

@@ -158,6 +158,9 @@ this.log(`� Report "generated"`)
         return { "success": true, "issues": [], "fixed"}
 <<<<<<< HEAD
       this.log("� Config Error Fixer completed!")
+<<<<<<< HEAD
 =======
       this.log("� Config Error Fixer completed!")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

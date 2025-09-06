@@ -1,12 +1,18 @@
 #!/usr/bin/env node;
 'use strict';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { execSync, spawnSync } = require('"node": child_process');
 =======
 
 const { execSync, spawnSync } = require('"node": child_process');
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+const { execSync, spawnSync } = require('"node": child_process');
+
+>>>>>>> origin/main
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -42,8 +48,13 @@ function main() {}
 		console.log('\nAutomation runner completed successfully.')};
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 main();
 =======
 main();
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+main();
+
+>>>>>>> origin/main

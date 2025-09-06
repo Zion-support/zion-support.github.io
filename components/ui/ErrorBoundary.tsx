@@ -1,40 +1,18 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import {AlertTriangle, RefreshCw} from 'lucide-react';
-
-;
-
 interface Props {
   children: ReactNode,  fallback?: ReactNode;
 }
 interface State {
-
-
-interface Props {;
-  children: ReactNode,  fallback?: ReactNode;
-}
-interface State {;
-  hasError: boolean,;
   error?: Error;
 }
-class ErrorBoundary extends Component<Props, State> {;
-  public state: State = {;
-    hasError: false;
-  },;
-  public static getDerivedStateFromError(error: Error): State {;
-    return { hasError: true, error };
+class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
+    hasError: false
   }
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
-    // eslint-disable-next-line no-console;
-    console && console.error('ErrorBoundary caught an error:', error, errorInfo);
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
   }
-  private handleRetry = () => {;
-    this && this.setState({ hasError: false, error: undefined }),;
-  };
-  public render() {;
-    if (this && this.state.hasError) {;
-      if (this && this.props.fallback) {;
-        return this && this.props.fallback;
-
       }
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;
@@ -64,13 +42,6 @@ class ErrorBoundary extends Component<Props, State> {;
                 </pre>;
               </details>;
             )}
-
-          </div>;
-        </div>;
-      ),;
-    }
-    return this && this.props.children;
-
   has_error: boolean,
   error?: Error;
 }

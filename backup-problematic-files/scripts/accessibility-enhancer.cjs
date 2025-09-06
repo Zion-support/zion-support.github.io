@@ -67,6 +67,9 @@ const path = require("path")
     this.log("♿ Starting accessibility enhancement...")
 <<<<<<< HEAD
     this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
+<<<<<<< HEAD
 =======
     this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

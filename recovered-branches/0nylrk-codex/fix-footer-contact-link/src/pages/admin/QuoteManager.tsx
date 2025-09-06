@@ -1,27 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -37,17 +14,23 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
-
-
-export default function QuoteManager() {;
+export default function QuoteManager() {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
-
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAdminQuotes } from "@/hooks/useAdminQuotes";
+import { useAuth } from "@/hooks/useAuth";
+import { 
+  Card;
+  CardContent
+} from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Navigate } from "react-router-dom",
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-
-  const {;
-
+  const {
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -84,29 +67,6 @@ function QuoteManager() {
     setSearchQuery;
     date_range;
     setDateRange;
-
-
-
-  const {
-    quotes,
-    isLoading,
-    error,
-    statusFilter,
-    setStatusFilter,
-    archiveFilter,
-    setArchiveFilter,
-    searchQuery,
-    setSearchQuery,
-    dateRange,
-    setDateRange,
-    updateStatus,
-    toggleArchive,
-    deleteQuote
-
-  } = useAdminQuotes(),
-
-
-
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -114,30 +74,17 @@ function QuoteManager() {
     accepted: quotes.filter(q => q.status === 'accepted').length
     responded: quotes.filter(q => q.status === 'responded').length
     closed: quotes.filter(q => q.status === 'closed').length
-
-
-  },
-
-
+  }
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
     setShowDetails(true)
-
-  },
-
-
-
+  }
   const handleResetFilters = () => {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined })
-
-
-  },
-
-
-
+  }
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
 
@@ -166,7 +113,6 @@ function QuoteManager() {
     return <Navigate to="/unauthorized" replace />;
   }
   return (
-
 
             
 import React, { useState } from "react",;
@@ -246,12 +192,8 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
-
-
-
             {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts} />;
-
+            <QuoteStatusCards statusCounts={statusCounts} />
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -263,18 +205,6 @@ export default function QuoteManager() {;
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
-
-            />;
-
-            {/* Tabs for Active/Archived */}
-            <Tabs defaultValue="active" className="mb-6">;
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
-                <TabsTrigger value="active">Active Quotes</TabsTrigger>;
-                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
-              </TabsList>;
-
-              <TabsContent value="active">;
-
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
@@ -288,50 +218,23 @@ export default function QuoteManager() {;
                   />;
                 </Card>;
               </TabsContent>;
-
-              <TabsContent value="archived">;
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-
-                  <QuotesTable
-                    quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
-                    isArchived={true}
-
-                  />;
-                </Card>;
-              </TabsContent>;
             </Tabs>;
           </div>;
         </div>;
-
-
 
 
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
-
-
           onClose={() => {;
             setShowDetails(false);
-            setSelectedQuote(null);
-
-
           }}
         />
         <Footer />
       </div>
     </ProtectedRoute>
   )
-}
-            setSelectedQuote(null);
-          }}
-        />;
-
-        <Footer />;
-      </div>;
-    </ProtectedRoute>;
-  );
 }
     update_status;
     toggle_archive;

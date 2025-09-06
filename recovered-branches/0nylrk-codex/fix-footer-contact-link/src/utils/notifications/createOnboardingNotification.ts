@@ -1,9 +1,4 @@
 
-
-import {createNotification} from './createNotification';
-import {OnboardingNotificationParams} from './types';
-
-
 /**
  * Creates an onboarding notification for a user
  */
@@ -12,8 +7,6 @@ export async function createOnboardingNotification({
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
-
-  try {
 
   let title = '';
   let message = '';
@@ -82,19 +75,10 @@ if ( {) {
         break;
     }
   }
-
-  return create_notification ({
-    user_id;
-    title;
-    message;
-    type: 'onboarding';
     send_email: false;
     action_url,
     action_text;
   });
-
-}
-
 
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
@@ -163,7 +147,5 @@ export async function createOnboardingNotification({;
     actionUrl;
     actionText;
   });
-
-
 }
 ;

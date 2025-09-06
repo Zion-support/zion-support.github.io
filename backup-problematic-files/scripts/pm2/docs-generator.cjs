@@ -8,15 +8,6 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -504,12 +495,6 @@ class DocsGenerator {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
 =======
@@ -545,6 +530,7 @@ class DocsGenerator {}
     try {}
       this.log('Generating API documentation...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -562,6 +548,8 @@ class DocsGenerator {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -609,6 +597,7 @@ class DocsGenerator {}
       execSync(jsdocCommand, { "stdio": 'pipe' }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -626,6 +615,8 @@ class DocsGenerator {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -720,6 +711,7 @@ class DocsGenerator {}
       // Generate component documentation;
       const componentDocs = this.generateComponentMarkdown(componentFiles);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -737,6 +729,8 @@ class DocsGenerator {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -772,6 +766,7 @@ class DocsGenerator {}
       const docsFile = path.join(docsDir, 'components.md');
       fs.writeFileSync(docsFile, componentDocs);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -789,6 +784,8 @@ class DocsGenerator {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -827,6 +824,7 @@ class DocsGenerator {}
     const extensions = ['.jsx', '.tsx', '.vue', '.svelte'];
     const componentFiles = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -844,6 +842,8 @@ class DocsGenerator {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -878,6 +878,7 @@ class DocsGenerator {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           
@@ -895,6 +896,8 @@ class DocsGenerator {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
           
@@ -933,6 +936,7 @@ class DocsGenerator {}
       };
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -950,6 +954,8 @@ class DocsGenerator {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -1009,13 +1015,6 @@ class DocsGenerator {}
       markdown += "**"File": ** \"${relativePath}\"\n\n";
       try {}
         const content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1204,6 +1203,7 @@ class DocsGenerator {}
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -1221,6 +1221,8 @@ class DocsGenerator {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -1330,6 +1332,7 @@ class DocsGenerator {}
     readme += "---\n\n";
     readme += `*Last "updated": ${timestamp}*\n\n`;`
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     
@@ -1347,6 +1350,8 @@ class DocsGenerator {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
     
@@ -1559,9 +1564,6 @@ class DocsGenerator {}
 if (require.main === module) {}
   const docsGenerator = new DocsGenerator();
   docsGenerator.start().catch(console.error);
-<<<<<<< HEAD
-};
-=======
 };
 <<<<<<< HEAD
 <<<<<<< HEAD

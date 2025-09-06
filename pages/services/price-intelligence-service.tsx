@@ -1,5 +1,4 @@
 
-
 const PriceIntelligenceService: NextPage = () => {
   return (
     <div>
@@ -15,13 +14,4 @@ const PriceIntelligenceService: NextPage = () => {
       </main>
     </div>
   )
-
-
-
 },
-export default PriceIntelligenceService,
-
-},
-
-export default PriceIntelligenceService,
-

@@ -1,7 +1,11 @@
 
-
-
-
+import { useState, useEffect } from "react",
+import { Link, useNavigate, useParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast",
 interface PostFormValues {
 
   title: string
@@ -12,85 +16,18 @@ interface PostFormValues {
 }
 // Mock post data
 
-import {useState, useEffect} from "react";
-import {Link, useNavigate, useParams} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {Button} from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
-import {useToast} from "@/hooks/use-toast";
-import {ForumPost, ForumCategory} from "@/types/community";
-import {useAuth} from "@/hooks/useAuth";
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
-}
-
-// Mock post data;
-const mockPost: ForumPost = {;
-  id: "1",;
-  title: "Best practices for AI model fine-tuning",;
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",;
-  authorId: "user1",;
-  authorName: "Alex Johnson",;
-  authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
-  authorRole: "Verified Talent",;
-  categoryId: "ai-tools",;
-  tags: ["machine-learning", "fine-tuning", "gpt"];
-  createdAt: "2025-04-01T12:00:00Z",;
-  updatedAt: "2025-04-01T12:00:00Z",;
-  upvotes: 48,;
-  downvotes: 2,;
-  replyCount: 12,;
-  isAnswered: true,;
-  isFeatured: true;
-};
-
-export default function EditPostPage() {;
-  const { postId } = useParams() as { postId?: string };
-
+export default function EditPostPage() {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
-
-
-const mockPost: ForumPost = {
-  id: "1",
-  title: "Best practices for AI model fine-tuning",
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
-  authorId: "user1",
-  authorName: "Alex Johnson",
-  authorAvatar: "https://i.pravatar.cc/150?img=3",
-  authorRole: "Verified Talent",
-  categoryId: "ai-tools",
-  tags: ["machine-learning", "fine-tuning", "gpt"],
-  createdAt: "2025-04-01T12:00:00Z",
-  updatedAt: "2025-04-01T12:00:00Z",
-  upvotes: 48,
-  downvotes: 2,
-  replyCount: 12,
-  isAnswered: true,
-  isFeatured: true
-},
-
-
-
-
-
+  
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
-
-
-  }, [postId]),
-  
-
-
+  }, [postId]);
   if (isLoading) {
 
   useEffect(() => {;
@@ -110,10 +47,7 @@ const mockPost: ForumPost = {
       </AppLayout>;
     );
   }
-
-
-  if (!post) {;
-
+  if (!post) {
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -125,26 +59,9 @@ const mockPost: ForumPost = {
       </AppLayout>;
     );
   }
-
-  if (!post) {
-    return (
-      <AppLayout>
-        <div className="container py-8">
-          <h1>Post not found</h1>
-          <Button asChild className="mt-4">
-            <Link to="/community">Back to Community</Link>
-          </Button>
-        </div>
-      </AppLayout>
-    )
-  }
   // Check if the user is the author or an admin
-
-  const isAuthor = user?.id === post.authorId,
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
-  
-
-
+  const isAuthor = user?.id === post.authorId;
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
   if (!isAuthor && !isAdmin) {
 
   // Check if the user is the author or an admin;
@@ -164,12 +81,6 @@ const mockPost: ForumPost = {
       </AppLayout>;
     );
   }
-
-
-  },
-
-
-
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally update the post in the database
@@ -177,12 +88,7 @@ const mockPost: ForumPost = {
       toast({
         title: "Post updated"
         description: "Your post has been updated successfully"
-
-
-      }),
-      
-
-
+      });
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
@@ -191,64 +97,22 @@ const mockPost: ForumPost = {
         description: "There was a problem updating your post"
         variant: "destructive"
       })
-
-
-  const initialValues: Partial<PostFormValues> = {;
-    title: post && post.title,;
-    content: post && post.content,;
-    categoryId: post && post.categoryId as ForumCategory,;
-    tags: post && post.tags.join(", ");
-  };
-
-  const handleSubmit = async (values: PostFormValues) => {;
-    try {;
-      // Here we would normally update the post in the database;
-      // For now, we'll just simulate a successful update;
-
-      toast({;
-        title: "Post updated",;
-        description: "Your post has been updated successfully";
-      });
-
-      // Redirect back to the post;
-      navigate(`/community/post/${postId}`);
-    } catch (error) {;
-      toast({;
-        title: "Error",;
-        description: "There was a problem updating your post",;
-        variant: "destructive";
-      });
-
-    }
-  }
-    }
-
-  },
-
-
-  return (
-
-    <AppLayout>;
-
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
-
-
+        <PostForm
+          initialValues={initialValues}
+          onSubmit={handleSubmit}
+          isEditing={true}
         <PostForm 
           initialValues={initialValues} 
           onSubmit={handleSubmit} 
           isEditing={true} 
-
-
         />
       </div>
     </AppLayout>
   )
-
-
-
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -394,43 +258,6 @@ export default function EditPostPage() {;
       </div>;
     </AppLayout>;
   );
-
-import { useState, useEffect } from './react';
-import { Link, use_navigate, use_params } from './react-router-dom';
-import { AppLayout } from '@/layout / AppLayout';
-import { SEO } from '@/components / SEO';
-import { Button } from '@/components / ui / button';
-import PostForm from "@/components / community / PostForm";
-import { use_toast } from '@/hooks / use - toast';
-import { ForumPost, ForumCategory } from '@/types / community';
-import { use_auth } from '@/hooks / use_auth';
-interface PostFormValues {
-  title: string,
-  content: string,
-  category_id: ForumCategory,
-  tags: string;
-}
-// Mock post data;
-const mock_post: ForumPost = {
-  id: "1",
-  title: "Best practices for AI model fine - tuning",
-  content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
-  author_id: "user1",
-  author_name: "Alex Johnson",
-  author_avatar: "https://i.pravatar.cc / 150?img = 3",
-  author_role: "Verified Talent",
-  category_id: "ai - tools",
-  tags: ["machine - learning", "fine - tuning", "gpt"];
-  created_at: "2025 - 04 - 01T12:00:00Z",
-  updated_at: "2025 - 04 - 01T12:00:00Z",
-  upvotes: 48,
-  downvotes: 2,
-  reply_count: 12,
-  is_answered: true,
-  is_featured: true;
-
-
-
 }
 ;
 export default /**

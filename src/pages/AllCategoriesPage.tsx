@@ -1,14 +1,9 @@
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-
-
-
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
 
 const categories = [
   {
-
-
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
 import ErrorBoundary from '@/components/GlobalErrorBoundary';
@@ -48,26 +43,23 @@ const categories = [;
 
 export default function AllCategoriesPage() {;
   return (
-    <div className='min-h-screen bg-zion-blue'>
-      <div className='container mx-auto px-4 py-12'>
-        <div className='text-center mb-12'>
+    <div className='min-h-screen bg-zion-blue'>;
+      <div className='container mx-auto px-4 py-12'>;
+        <div className='text-center mb-12'>;
           <GradientHeading
             level='h1'
-
-
             Explore our extensive range of AI services and products. Find;
             exactly what you're looking for to enhance your business or personal;
             projects.          </p>;
         </div>;
 
-
               <CategoryCard
-                key={category.id}
-                title={category.title}
-                description={category.description}
-                icon={category.icon}
-                href={category.href}
-              />
+                key={category && category.id}
+                title={category && category.title}
+                description={category && category.description}
+                icon={category && category.icon}
+                href={category && category.href}
+              />;
             ))}
 
           </div>;
@@ -128,27 +120,25 @@ export default function AllCategoriesPage() {;
           </p>;
         </div>;
         <ErrorBoundary>;
-
                 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
 
 }
-
                 // The CategoryCard itself is a Link to its specific category page;
                 // So we don't pass the category.link to a 'to' prop here directly;
                 // The 'link' in the categories array above is used by CategoryCard's internal Link;
               />;
             ))}
-
-          </div>;
-        </ErrorBoundary>;
-      </div>;
-    </div>;
+          </div>
+        </ErrorBoundary>
+      </div>
+    </div>
+  )
+}
   );
 }
-
         <ErrorBoundary>;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {categories.map (category => (
@@ -185,3 +175,5 @@ export default function AllCategoriesPage() {;
     </div>);
 }
 ;
+
+

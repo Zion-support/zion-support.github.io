@@ -69,7 +69,7 @@ export function TestimonialCarousel() {;
                     </CardContent>;
                     <CardFooter className="p-6 pt-0">;
                       <Button variant="link" className="text-zion-cyan p-0" asChild>;
-                        <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>;
+                        <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study </Link>;
                       </Button>;
                     </CardFooter>;
                   </Card>;

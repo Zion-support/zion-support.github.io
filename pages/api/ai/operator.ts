@@ -2,11 +2,11 @@
 
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
   if (!limited) {
     bucket.timestamps.push(now);
   }
-
-
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -23,8 +23,6 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
-
-
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -36,16 +34,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
-
-
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
 const ip = (req.headers['x-forwarded-for'] as string)?.split()[0]?.trim() |req.socket.remoteAddress |'unknown'
   if (isRateLimited(ip)) {
     return res.status(429).json({ error: 'Too Many Requests' })
+
   }
   try {
+
 const { prompt, system, temperature } = (typeof req.body === 'string') ? JSON.parse(req.body) : req.body
     if (!prompt |typeof prompt !== 'string') {
       return res.status(400).json({ error: 'Missing prompt' })
@@ -62,9 +60,6 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     const text = completion.choices?.[0]?.message?.content ?? ''
     return res.status(200).json({ text })
   } catch (err: any) {
-
-}
-
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -137,15 +132,10 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
     return res.status (500).json ({ error: 'Internal Server Error' });
   }
 }
-
-;
-
-
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
-
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
@@ -195,6 +185,3 @@ export default async function handler(req, res) {
   
 }
   
-
-}
-

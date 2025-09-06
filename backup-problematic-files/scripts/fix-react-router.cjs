@@ -14,6 +14,9 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
     content = content.replace(/to="/g, 'href=')
 <<<<<<< HEAD
         "
+<<<<<<< HEAD
 =======
         "
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

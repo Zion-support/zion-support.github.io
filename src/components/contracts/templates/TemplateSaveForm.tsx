@@ -1,3 +1,51 @@
+    }
+    setSaving(true)
+    try {
+      if (editTemplate) {
+        await updateTemplate.mutateAsync({
+          templateId: editTemplate.id
+          title: values.title
+          templateData: editTemplate.template_data
+          isDefault: values.isDefault
+        })
+      } else if (currentValues) {
+        await createTemplate.mutateAsync({
+          title: values.title
+          templateData: currentValues
+          isDefault: values.isDefault
+        })
+      }
+      onComplete()
+    } finally {
+      setSaving(false)
+
+import { useState } from "react",
+import { useForm, type ControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Loader2 } from 'lucide-react'
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",
+import { ContractTemplate } from "@/types/contracts",
+import { useContractTemplates } from "@/hooks/useContractTemplates",
+import { Button } from "@/components/ui/button",
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+const formSchema = z.object({
+  title: z.string().min(1, "Title is required"),
+  isDefault: z.boolean()}),
+
+type FormValues = z.infer<typeof formSchema>,
+
+interface TemplateSaveFormProps {
+  onCancel: () => void,
+  onComplete: () => void,
+  editTemplate?: ContractTemplate | null,
+  currentValues?: ContractFormValues
+import { useState } from "react",;
+import { useForm, type ControllerRenderProps } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -68,7 +116,6 @@ export function TemplateSaveForm(): any ({;
       onComplete();
     } finally {;
       setSaving(false);
-
 import { useState } from 'react';
 import { use_form, type ControllerRenderProps } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -142,28 +189,15 @@ if ( {) {
       on_complete ();
     } finally {
       set_saving (false);
-
     }
   }
 
   return (
     <Form {...form}>;
 
-      <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
-        <FormField;
-          control={form.control}
-          name='title';
-
-          render={({
-            field
-          }: {
-
     }
   },
   
-
-
-
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -173,156 +207,54 @@ if ( {) {
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
-
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
               </FormControl>
               <FormMessage />
             </FormItem>
-
-            field: ControllerRenderProps<FormValues, 'title'>;
-          }) => (            <FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-            field: ControllerRenderProps < FormValues, 'title'>;
-          }) => (            <FormItem>;
-              <FormLabel > Template Name</FormLabel>;
-
               <FormControl>;
                 <Input {...field} placeholder='Enter template name' />;
               </FormControl>;
               <FormMessage />;
-
             </FormItem>)}
         />;
         <FormField;
           control={form.control}
           name='is_default';
-
-          render={({
-            field
-          }: {
-
-            field: ControllerRenderProps<FormValues, 'isDefault'>;
-          }) => (;
-            <FormItem className='flex items-center justify-between'>;
-              <FormLabel className='cursor-pointer'>;
-                Set as default template;
-              </FormLabel>;
-              <FormControl>;
-
                 <Switch
                   aria-label='Default template'
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
-
-  };
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField;
-          control={form.control}
-          name="title";
-          render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (;
-            <FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-              <FormControl>;
-                <Input {...field} placeholder="Enter template name" />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
-        />;
-        <FormField;
-          control={form.control}
-          name="isDefault"
-          render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (
-            <FormItem className="flex items-center justify-between">
-              <FormLabel className="cursor-pointer">Set as default template</FormLabel>
-              <FormControl>
-                <Switch
-                  aria-label="Default template"
-          name="isDefault";
-          render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (;
-            <FormItem className="flex items-center justify-between">;
-              <FormLabel className="cursor-pointer">Set as default template</FormLabel>;
-              <FormControl>;
-                <Switch;
-                  aria-label="Default template";
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-
-        />
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
-
-
             Cancel
           </Button>
           <Button type='submit' disabled={saving}>
-            field: ControllerRenderProps < FormValues, 'is_default'>;
-          }) => (
-            <FormItem className='flex items - center justify - between'>;
-              <FormLabel className='cursor - pointer'>;
-                Set as default template;
-              </FormLabel>;
-              <FormControl>;
-                <Switch;
-                  aria - label='Default template';
-                  checked={field.value}
-                  onCheckedChange={field.on_change}                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <div className='flex gap - 2 justify - end'>;
-          <Button type='button' variant='outline' on_click={on_cancel}>;
-            Cancel;
-          </Button>;
-          <Button type='submit' disabled={saving}>;
             {saving ? (
-
-        />;
-
-        <div className='flex gap-2 justify-end'>;
-          <Button type='button' variant='outline' onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type='submit' disabled={saving}>;
-            {saving ? (;
               <>;
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
                 Saving...;
-              </>;
-            ) : (;
-              `${editTemplate ? 'Update' : 'Save'} Template`;
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
-
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
-
               `${editTemplate ? "Update" : "Save"} Template`
 
             )}
           </Button>;
         </div>;
       </form>;
-    </Form>;
-  );
-
-
 
   // Check condition
 if ( {) {
@@ -339,4 +271,3 @@ if ( {) {
 }</Button> </div> </form> </Form>);
 }"}
 }
-;

@@ -1,19 +1,9 @@
 
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-
-
-import { ArrowRight } from "lucide-react";
-
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+  CardTitle
 } from "@/components/ui/card";
 
 interface GeneratedContent {;
@@ -25,17 +15,10 @@ import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import { ArrowRight  } from './lucide-react';
 import {
-
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-
-  key_points: string[];
-
-}
-interface GeneratedContentDisplayProps {
-interface GeneratedContentDisplayProps {;
   CardTitle,;
 
 } from "@/components/ui/card";
@@ -46,9 +29,6 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-
-
-
 
 interface GeneratedContent {
   description: string,
@@ -75,14 +55,13 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
-
   content: GeneratedContent;
-
-
-
-export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-
-
+  onApply: () => void
+}
+export function GeneratedContentDisplay({
+  content
+  onApply
+}: GeneratedContentDisplayProps) {
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -95,57 +74,18 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           </h3>
           <p className="text-white">{content.description}</p>
         </div>
-
-
-        
-
-
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
           </h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
-
-
-export function GeneratedContentDisplay(): any ({;
-  content,;
-  onApply,;
-}: GeneratedContentDisplayProps) {;
-  return (
-    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-      <CardHeader>;
-        <CardTitle className="text-white">Generated Content</CardTitle>;
-      </CardHeader>;
-      <CardContent className="space-y-4">;
-        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
-            Description;
-          </h3>;
-          <p className="text-white">{content && content.description}</p>;
-        </div>;
-
-        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
-            Tags;
-          </h3>;
-          <div className="flex flex-wrap gap-2">;
-            {content && content.tags.map((tag, index) => (;
-
-              <Badge
-                key={index}
-                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
-
-              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
-
                 {tag}
               </Badge>;
             ))}
 
 
         
-
-
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -155,11 +95,6 @@ export function GeneratedContentDisplay(): any ({;
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-
-
-        
-
-
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -240,17 +175,13 @@ function GeneratedContentDisplay() {
         </div>;
       </CardContent>;
       <CardFooter>;
-
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
-        >
-          Apply to My Listing
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
-      </CardFooter>
-
-    </Card>
-
-
+  )
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
     </Card>;
   );
         <Button;
@@ -258,8 +189,7 @@ function GeneratedContentDisplay() {
           className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
         >;
           Apply to My Listing;
-          <ArrowRight className="ml - 2 h - 4 w - 4" />;
+          <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
-    </Card>);
 }

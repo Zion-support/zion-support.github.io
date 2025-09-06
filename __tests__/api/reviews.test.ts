@@ -22,13 +22,14 @@ describe('/api/reviews API Endpoint'
         "role"
         "userType"
         "productId"
-        "comment"'"
+        "comment"
         user: { id: 'supaUserId', "email"
         "access_token"
         "refresh_token"
         "token_type"
-        "method"'"body": { productId: 'prod1', "rating": 5, "comment"
-          "comment"'"
+        "method"
+        "body": { productId: 'prod1', "rating": 5, "comment"
+          "comment"
         user: { id: 'supaUserId', "email"
         "access_token"
         "refresh_token"
@@ -38,7 +39,8 @@ describe('/api/reviews API Endpoint'
         "method"
           "comment"
         "error"
-        "method"'"body": { productId: 'prod1', "rating": 6, "comment"
+        "method"
+        "body": { productId: 'prod1', "rating": 6, "comment"
         "error"
         "method"
         "error"
@@ -414,6 +416,4 @@ describe('/api/reviews API Endpoint', () => {
     })
   })
 })
-
         "error"
-

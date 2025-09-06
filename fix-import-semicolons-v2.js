@@ -1,17 +1,8 @@
-
-const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-let totalFixed = 0;
-files && files.forEach((file) => {
-
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
-
-    content = content ;/g,
-      (match) => {
-        return match && match.replace(",;", ";");
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -36,10 +27,9 @@ files.for_each ((file) => {
 
       },
     );
-
-    content = content && content.replace(
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-
+    // Fix import statements missing semicolons
+    content = content.replace(
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
       (match) => {
         if (!match ;")) {
           return match && match.trim() + ";";
@@ -56,27 +46,18 @@ if (.ends_with (") {
 
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
-
       (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
-
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-      (match) => {;
-
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
         }
         return match;
       }
     );
-
-    content = content && content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
-
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -124,10 +105,6 @@ if (&&) {
         return match;
       }
     );
-
-
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
-
 ;
     // Check condition
 if ( {) {

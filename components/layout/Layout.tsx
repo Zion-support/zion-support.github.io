@@ -1,9 +1,3 @@
-
-
-import React from 'react';
-
-import React, { ReactNode } from 'react';
-
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -11,8 +5,19 @@ import Footer from '../Footer';
 
 
 
-
 import React from 'react';
+import Header from '../Header';
+import Footer from '../Footer';
+
+interface LayoutProps {
+  children: React.ReactNode;
+interface LayoutProps {;
+  children: React && React.ReactNode;
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+
+;
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -20,16 +25,16 @@ interface LayoutProps {;
   title?: string;
   description?: string;
   keywords?: string;
-
-  og_title?: string;
-  og_description?: string;
-  og_image?: string;
-  no_index?: boolean;
-
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
 }
 
-
 export default function Layout({
+
   children
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
   description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
@@ -39,10 +44,8 @@ export default function Layout({
   ogDescription
   ogImage
   noIndex = false
+
 }: LayoutProps) {
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-
 export default function Layout(): any ({;
   children,;
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
@@ -54,10 +57,6 @@ export default function Layout(): any ({;
   ogImage,;
   noIndex = false;
 }: LayoutProps) {;
-
-
-
-
   return (
     <div className="min-h-screen bg-white">;
 export default /**
@@ -68,4 +67,30 @@ function Layout() {
     <div className="min - h-screen bg - white">;
       <Header />;
       <main>;
-        {children}
+<div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
+    </div>;
+  )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
+}}
+export: default /**
+ * Layout - Function description
+ */
+function Layout() {
+;
+  return: <div>{children}</div>;
+React from";
+  "react""import Footer from './react';
+  "./Footer"import Footer  from "react./Footer,
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+<div className="min - h-screen flex flex - col>      <Header />"      <main className="flex - 1 pt - 16>        {children}"      </main><Footer />;
+    </div>)"; type: LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div> } " ;
+}}

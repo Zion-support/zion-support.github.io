@@ -1,9 +1,4 @@
 
-
-
-import React from "react",
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
@@ -23,10 +18,6 @@ export default function CreateServiceProfile() {
       </div>
     </div>
   )
-
-import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-
-
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 
@@ -67,8 +58,3 @@ function CreateServiceProfile() {
       </div>;
     </div>);
 }
-
-;
-
-
-

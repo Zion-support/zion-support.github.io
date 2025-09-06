@@ -1,5 +1,4 @@
 
-
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -193,12 +192,9 @@ if ( {) {
       set_loading (false);
     }
   }
-
-
     setLoading(true),
     setError(null),
     setContract(''),
-
 
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
@@ -248,9 +244,6 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
-
-
-
     try {
       const body = {;
         talentName;
@@ -269,72 +262,17 @@ export default function ContractBuilderPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-            : {;
-                type: 'fixed',;
-                currency,;
-                totalAmount: fixedAmount,;
-                milestoneSummary: milestoneSummary || undefined,;
-                paymentSchedule},;
-        clauses: {;
-          nda,;
-          ipTransfer},;
-        governingLaw,;
-        revisionRounds},;
-      const res = await fetch('/api/ai-contract', {;
-        method: 'POST',;
-        headers: {;
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify(body)}),;
-      if (!res.ok) {;
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data?.error || `Request failed: ${res.status}`);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  function downloadAsTxt() {
+    if (!contract) return
+    const blob = new Blob([contract], { type: 'text/plain,charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`
+    a.click()
+
+    URL.revokeObjectURL(url)
   }
-}
-;
-      const data = (await res.json()) as { contract: string };
-      setContract(data.contract);
-    } catch (error) {
-      setError(e?.message || 'Failed to generate contract');
-    } finally {;
-      setLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function copyToClipboard() {;
-    if (!contract) return;
-    void navigator.clipboard.writeText(contract);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function downloadAsTxt() {;
-    if (!contract) return;
-    const blob = new Blob([contract], { type: 'text/plain,charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -425,11 +363,20 @@ export default function ContractBuilderPage(req, res) {
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
-
-
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
-
-
+            {loading ? 'Generating…' : 'Generate contract'}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>}
+            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>
       </form>
   /**
@@ -553,9 +500,6 @@ if (return, ) {
         </div>;
       </form>;
       {contract && (
-
-}
-
           </article>;
         </div>)}
     </div>);
@@ -569,10 +513,6 @@ if (return, ) {
             </div>
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
-
-  );
-};
-
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -591,6 +531,4 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
-

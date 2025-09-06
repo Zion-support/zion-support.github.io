@@ -92,6 +92,9 @@ console.log('⚡ Starting Advanced Build Optimization...')
           resolve({ "size": 0, "message"})
 <<<<<<< HEAD
     this.log(' Build Optimization "Summary")
+<<<<<<< HEAD
 =======
     this.log(' Build Optimization "Summary")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

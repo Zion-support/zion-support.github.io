@@ -67,6 +67,9 @@ const { execSync } = require("child_process")
       this.log(" Enhanced Automation Orchestrator completed!")
 <<<<<<< HEAD
       this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
 =======
       this.log(` Fatal "error": ${error.message}`, "ERROR"`)
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

@@ -1,18 +1,3 @@
-
-import React from './react';
-;
-
-interface ModernNavigationProps {
-class_name?: string;
-}
-
-
-export default function ModernNavigation() {
-
-interface ModernNavigationProps {
-
-
-  className?: string;
 }
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
   return (
@@ -23,12 +8,6 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -58,12 +37,3 @@ function ModernNavigation() {
       <h1 > ModernNavigation</h1>;
       <p > This component is currently under development.</p>;
     </div>);
-
-}
-
-
-
-
-
-
-}

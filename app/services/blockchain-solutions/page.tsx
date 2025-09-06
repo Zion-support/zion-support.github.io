@@ -26,42 +26,42 @@ export default function BlockchainSolutionsPage() {
               description="Secure, audited smart contracts for various blockchain platforms"
               features={["Solidity development", "Security audits", "Gas optimization", "Multi-chain support"]}
               price="Starting at $15k"
-              icon="📜"
+              icon=""
             />
             <BlockchainServiceCard 
               title="DeFi Protocols" 
               description="Decentralized finance applications and yield farming platforms"
               features={["DEX development", "Lending protocols", "Yield farming", "Liquidity pools"]}
               price="Starting at $25k"
-              icon="💰"
+              icon=""
             />
             <BlockchainServiceCard 
               title="NFT Marketplaces" 
               description="Complete NFT platforms with minting, trading, and auction features"
               features={["NFT minting", "Marketplace UI", "Royalty system", "Metadata management"]}
               price="Starting at $20k"
-              icon="🎨"
+              icon=""
             />
             <BlockchainServiceCard 
               title="Web3 Applications" 
               description="Decentralized applications with wallet integration and blockchain connectivity"
               features={["Wallet integration", "MetaMask support", "IPFS storage", "User authentication"]}
               price="Starting at $18k"
-              icon="🌐"
+              icon=""
             />
             <BlockchainServiceCard 
               title="Token Development" 
               description="Custom token creation and tokenomics design"
               features={["ERC-20/ERC-721", "Tokenomics design", "Vesting contracts", "Multi-signature wallets"]}
               price="Starting at $12k"
-              icon="🪙"
+              icon=""
             />
             <BlockchainServiceCard 
               title="Blockchain Integration" 
               description="Integrate blockchain functionality into existing applications"
               features={["API development", "Node management", "Transaction handling", "Event monitoring"]}
               price="Starting at $10k"
-              icon="🔗"
+              icon=""
             />
           </div>
         </div>
@@ -75,28 +75,28 @@ export default function BlockchainSolutionsPage() {
               description="Private blockchain solutions for enterprise use cases and supply chain management"
               features={["Hyperledger Fabric", "Consortium networks", "Supply chain tracking", "Data privacy"]}
               price="$50k - $200k"
-              icon="🏢"
+              icon=""
             />
             <SpecializedBlockchainCard 
               title="Gaming & Metaverse" 
               description="Blockchain gaming platforms and virtual world applications"
               features={["Play-to-earn games", "Virtual assets", "Cross-game compatibility", "VR integration"]}
               price="$40k - $150k"
-              icon="🎮"
+              icon=""
             />
             <SpecializedBlockchainCard 
               title="Identity & Authentication" 
               description="Decentralized identity solutions and KYC/AML compliance"
               features={["DID protocols", "Zero-knowledge proofs", "KYC integration", "Privacy preservation"]}
               price="$35k - $120k"
-              icon="🆔"
+              icon=""
             />
             <SpecializedBlockchainCard 
               title="Cross-Chain Solutions" 
               description="Interoperability solutions and cross-chain bridge development"
               features={["Bridge protocols", "Cross-chain swaps", "Asset migration", "Multi-chain DApps"]}
               price="$60k - $250k"
-              icon="🌉"
+              icon=""
             />
           </div>
         </div>
@@ -142,7 +142,7 @@ function BlockchainServiceCard({ title, description, features, price, icon }: {
       <ul className="text-gray-600 space-y-2 mb-4">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
-            <span className="text-orange-500 mr-2">•</span> {feature}
+            <span className="text-orange-500 mr-2"></span> {feature}
           </li>
         ))}
       </ul>
@@ -166,7 +166,7 @@ function SpecializedBlockchainCard({ title, description, features, price, icon }
       <ul className="text-gray-600 space-y-2 mb-6">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
-            <span className="text-purple-500 mr-2">•</span> {feature}
+            <span className="text-purple-500 mr-2"></span> {feature}
           </li>
         ))}
       </ul>
@@ -182,7 +182,7 @@ function TechStackCard({ title, details }: { title: string; details: string[] })
       <ul className="text-gray-600 space-y-2">
         {details.map((detail) => (
           <li key={detail} className="flex items-center">
-            <span className="text-orange-500 mr-2">•</span> {detail}
+            <span className="text-orange-500 mr-2"></span> {detail}
           </li>
         ))}
       </ul>
@@ -197,14 +197,14 @@ function Pricing() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
           name="Smart Contract Audit" 
-          price="$5k–$15k" 
-          duration="1–2 weeks"
+          price="$5k$15k" 
+          duration="12 weeks"
           features={["Code review", "Security analysis", "Gas optimization", "Vulnerability report"]} 
         />
         <Plan 
           name="DApp Development" 
-          price="$20k–$60k" 
-          duration="6–12 weeks"
+          price="$20k$60k" 
+          duration="612 weeks"
           features={["Frontend + backend", "Smart contracts", "Testing", "Deployment"]} 
         />
         <Plan 
@@ -232,7 +232,7 @@ function Plan({ name, price, duration, features }: {
       <ul className="text-gray-600 space-y-3">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
-            <span className="text-orange-500 mr-2">✓</span> {feature}
+            <span className="text-orange-500 mr-2"></span> {feature}
           </li>
         ))}
       </ul>

@@ -43,6 +43,7 @@ const nextConfig = {}
   "poweredByHeader": false,
   "generateEtags": false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   
@@ -60,6 +61,8 @@ const nextConfig = {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
   
@@ -93,6 +96,7 @@ const nextConfig = {}
     "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   
@@ -110,6 +114,8 @@ const nextConfig = {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
   
@@ -158,6 +164,7 @@ const nextConfig = {}
             "chunks": 'all'}}}};
     return confi}g},
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   
@@ -175,6 +182,8 @@ const nextConfig = {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
   
@@ -221,12 +230,6 @@ const nextConfig = {}
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]}};
 <<<<<<< HEAD
-module.exports = nextConfig;";
-      fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
-      console.log('Performance improvements completed')} catch (error) {}
-      console.error('Performance improvement "failed": ', error.message)};
-  };
-};
 =======
 <<<<<<< HEAD
 =======

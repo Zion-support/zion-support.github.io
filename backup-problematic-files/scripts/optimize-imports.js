@@ -28,8 +28,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }"}),"})
     }"}),"})
 ,"}),"})
-    console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"})
-    console.log(`📊 Total "optimizations": ${this.totalOptimizations}`),"}),"})
+    console.log(` Optimized imports in ${this.optimizedFiles.length} files`),"}),"})
+    console.log(` Total "optimizations": ${this.totalOptimizations}`),"}),"})
   }"}),"})
 ,"}),"})
   async processDirectory(dirPath) {,"}),"})
@@ -84,11 +84,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         this.optimizedFiles.push(filePath),"}),"})
         this.totalOptimizations += optimizations,"}),"})
         console.log(,"}),"})
-          `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}`,"}),"})
+          ` Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}`,"}),"})
         ),"}),"})
       }"}),"})
     } catch (error) {,"}),"})
-      console.error(`❌ Error optimizing file ${filePath}:`, error.message),"}),"})
+      console.error(` Error optimizing file ${filePath}:`, error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -177,11 +177,11 @@ class ImportOptimizer {;
     this.optimizedFiles = [];
     this.totalOptimizations = 0}
   async optimizeImports() {;
-    console.log(';⚡ Optimizing imports to reduce bundle size...');
+    console.log('; Optimizing imports to reduce bundle size...');
     const directories = [';pages', ';components', ';src'];
     }
-    console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`);"
-    console.log("📊 Total "optimizations": ${this.totalOptimizations}")}
+    console.log(` Optimized imports in ${this.optimizedFiles.length} files`);"
+    console.log(" Total "optimizations": ${this.totalOptimizations}")}
   async processDirectory(dirPath) {;
     const items = fs.readdirSync(dirPath);
         await this.optimizeFile(itemPath)}
@@ -214,9 +214,9 @@ class ImportOptimizer {;
         this.optimizedFiles.push(filePath);
         this."totalOptimizations": += optimizations;
         console.log(
-          "⚡ Optimized: ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}")}
+          " Optimized: ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}")}
     } catch (error) {
-      console.error("❌ Error optimizing file ${filePath}:", error.message)}
+      console.error(" Error optimizing file ${filePath}:", error.message)}
   }
   optimizeLucideImports(content) {
     // "Convert": individual icon imports to single import;
@@ -282,16 +282,16 @@ class ImportOptimizer {;
         this.optimizedFiles.push(filePath);
         this.totalOptimizations += optimizations;
         console.log(
-          "⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}"
+          " Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}"
         )}
     } catch (error) {
-      console.error("❌ Error optimizing file ${filePath}:", error.message)}
+      console.error(" Error optimizing file ${filePath}:", error.message)}
   }
   optimizeLucideImports(content) {
     // Convert individual icon imports to single import
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g;
     const matches = [...content.matchAll(lucidePattern)];
-      console.error("❌ Error optimizing file ${filePath}:", error.message)}
+      console.error(" Error optimizing file ${filePath}:", error.message)}
   }
   optimizeLucideImports(content) {;
     // Convert individual icon imports to single import;

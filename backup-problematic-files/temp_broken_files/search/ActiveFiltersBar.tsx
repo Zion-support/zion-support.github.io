@@ -153,7 +153,3 @@ value: labels[type] || type ;
 }variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) ;
 }<Button > Clear all </Button> </div>) ;
 };
-
-export default ActiveFiltersBar;
-'"
-

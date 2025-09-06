@@ -4,9 +4,13 @@
  * Advanced decision-making system for PM2 process management;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -36,6 +40,9 @@ const { execSync } = require('child_process')
       this.log(` Learning model update "failed"`)
 <<<<<<< HEAD
       this.log(` Fatal "error"`)
+<<<<<<< HEAD
 =======
       this.log(` Fatal "error"`)
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

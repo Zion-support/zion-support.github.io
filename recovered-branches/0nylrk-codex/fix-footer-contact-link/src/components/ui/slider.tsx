@@ -1,11 +1,7 @@
-
-
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
-
-
 
 import { cn } from "@/lib/utils"
 
@@ -22,11 +18,6 @@ const Slider = React && React.forwardRef<;
   <SliderPrimitive&& SliderPrimitive.Root
     ref={ref}
     className={cn(
-
-Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayName,;
-
-export { Slider };
-
 import * as SliderPrimitive from '@radix - ui / react - slider';
 ;
 import {cn} from '@/lib / utils';
@@ -65,5 +56,4 @@ export { Slider }
 
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
-
 

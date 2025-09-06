@@ -8,15 +8,6 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,12 +412,6 @@ class BuildOptimizer {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
 =======
@@ -458,6 +443,7 @@ class BuildOptimizer {}
     try {}
       this.log('Analyzing bundle size...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -475,6 +461,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -569,6 +557,7 @@ class BuildOptimizer {}
   getBundleFiles(dir) {}
     const files = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     
@@ -586,6 +575,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
     
@@ -620,6 +611,7 @@ class BuildOptimizer {}
           const itemPath = path.join(currentDir, item);
           const stat = fs.statSync(itemPath);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           
@@ -637,6 +629,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
           
@@ -680,6 +674,7 @@ class BuildOptimizer {}
       };
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -697,6 +692,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -735,6 +732,7 @@ class BuildOptimizer {}
     try {}
       this.log('Starting build optimization...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -752,6 +750,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -788,6 +788,7 @@ class BuildOptimizer {}
       const buildCommand = this.getOptimizedBuildCommand();
       this.log(`"Running": ${buildCommand}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -805,6 +806,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -838,6 +841,7 @@ class BuildOptimizer {}
       }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -855,6 +859,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -893,6 +899,7 @@ class BuildOptimizer {}
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
     const buildScript = packageJson.scripts?.build || 'npm run build';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     
@@ -910,6 +917,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
     
@@ -953,6 +962,7 @@ class BuildOptimizer {}
     try {}
       this.log('Checking tree shaking effectiveness...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -970,6 +980,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -1006,6 +1018,7 @@ class BuildOptimizer {}
       const bundleFiles = this.getBundleFiles(distDir);
       let unusedCodeFound = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -1023,6 +1036,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 
@@ -1063,6 +1078,7 @@ class BuildOptimizer {}
       };
       this.log(`Tree shaking check completed. Potential unused code in ${unusedCodeFound} files`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -1080,6 +1096,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -1125,6 +1143,7 @@ class BuildOptimizer {}
     try {}
       this.log('Checking code splitting implementation...');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -1142,6 +1161,8 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
       
@@ -1307,13 +1328,6 @@ class BuildOptimizer {}
       const report = await this.generateReport();
       if (report.optimization.success) {}
         this.log('Build optimization completed successfully');
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1366,9 +1380,6 @@ class BuildOptimizer {}
 if (require.main === module) {}
   const buildOptimizer = new BuildOptimizer();
   buildOptimizer.start().catch(console.error);
-<<<<<<< HEAD
-};
-=======
 };
 <<<<<<< HEAD
 <<<<<<< HEAD

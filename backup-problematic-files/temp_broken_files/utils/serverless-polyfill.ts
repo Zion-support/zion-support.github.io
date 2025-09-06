@@ -257,7 +257,6 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   step ( (generator = generator.apply (thisArg, arguments || []) ) .next () );
 });
 
-
 }
 };
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
@@ -275,7 +274,4 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {;
   return Object.values (checks) .every (Boolean);
 };
-
-  ;
-}, // Ensure this can be imported as a module'"
 

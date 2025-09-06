@@ -92,7 +92,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
               onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
             >
-              ✕
+              
             </button>
           </div>
         </div>
@@ -191,7 +191,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
               onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800";
             >;
-              ✕;
+              ;
             </button>;
           </div>;
         </div>;
@@ -241,7 +241,7 @@ export default function MobileLaunchPage() {;
   return (
     <EnhancedLayout>
       <Head>
-        <title>Zion Mobile App — iOS & Android</title>
+        <title>Zion Mobile App  iOS & Android</title>
         <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." />
         <link rel="canonical" href="/download" />
         <meta property="og:title" content="Zion Mobile App" />
@@ -271,7 +271,7 @@ export default function MobileLaunchPage() {;
                   <div className="text-xs font-semibold">Zion</div>
                   <div className="mt-2 flex-1 rounded-xl bg-white shadow-inner p-3">
                     <div className="font-semibold">Instant AI Matches</div>
-                    <div className="mt-2 text-xs text-gray-600">Top candidates matched to your role in seconds…</div>
+                    <div className="mt-2 text-xs text-gray-600">Top candidates matched to your role in seconds</div>
                     <div className="mt-3 h-28 rounded-md bg-gradient-to-br from-indigo-100 to-purple-100" />
                     <div className="mt-3 grid grid-cols-3 gap-2">
                       <div className="h-10 rounded-md bg-gray-100" />
@@ -327,8 +327,8 @@ export default function MobileLaunchPage() {;
             {testimonials.map((t) => (
               <div key={t.name} className="w-full md:w-1/3 flex-shrink-0 pr-4">
                 <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full">
-                  <p className="text-sm">“{t.quote}”</p>
-                  <div className="mt-3 text-xs opacity-80">{t.name} • {t.role}</div>
+                  <p className="text-sm">{t.quote}</p>
+                  <div className="mt-3 text-xs opacity-80">{t.name}  {t.role}</div>
                 </div>
               </div>
             ))}
@@ -338,7 +338,7 @@ export default function MobileLaunchPage() {;
       {/* Email opt-in */}
       <section className="mt-12 rounded-3xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
         <h3 className="text-lg font-semibold">Get early access to new features</h3>
-        <p className="mt-1 text-sm opacity-80">Join the list and we’ll let you know when new capabilities drop.</p>
+        <p className="mt-1 text-sm opacity-80">Join the list and well let you know when new capabilities drop.</p>
         <form onSubmit={handleSubmit} className="mt-4 flex flex-col sm:flex-row gap-3">
           <input
             type="email"
@@ -353,10 +353,10 @@ export default function MobileLaunchPage() {;
             disabled={status === 'loading'}
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
           >
-            {status === 'loading' ? 'Submitting…' : 'Notify me'}
+            {status === 'loading' ? 'Submitting' : 'Notify me'}
           </button>
         </form>
-        {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}
+        {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! Youre on the list.</div>}
         {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
       </section>
 
@@ -364,7 +364,7 @@ export default function MobileLaunchPage() {;
       <section className="mt-10 text-sm opacity-80">
         <div className="flex flex-wrap items-center gap-4">
           <Link href="/open-app"><a className="underline">Deep link: /open-app</a></a>
-          <span>•</span>
+          <span></span>
           <Link href="/download"><a className="underline">Shareable link: /download</a></a>
         </div>
       </section>

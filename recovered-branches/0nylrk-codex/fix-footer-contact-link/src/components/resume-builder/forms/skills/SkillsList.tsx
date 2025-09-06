@@ -1,33 +1,12 @@
 
-import { useState, useEffect  } from './react';
-import { Skill  } from '@/types / resume';
-import { SkillCategory  } from './SkillCategory';
 interface SkillsListProps {
   skills: Skill[];
-  onDeleteSkill: (id: string, category: string) => Promise < void>;
-
+  onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
   const [skillsByCategory, setSkillsByCategory] = useState<;
     Record < string, Skill[]>;
   >({});
-
-
-
-import {useState, useEffect} from 'react';
-import {Skill} from '@/types/resume';
-import {SkillCategory} from './SkillCategory';
-
-interface SkillsListProps {
-  skills: Skill[];
-  onDeleteSkill: (id: string, category: string) => Promise<void>
-}
-
-
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
-  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
-  
-
 
   useEffect(() => {
     // Group skills by category
@@ -49,10 +28,6 @@ if ( {) {
         }
         acc[category].push (skill);
         return acc;
-
-
-    return null
-
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
@@ -70,18 +45,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
       if (!acc[category]) {;
         acc[category] = [];
       }
-      acc[category].push(skill),;
-      return acc;
-    }, {} as Record<string Skill[]>),;
-    setSkillsByCategory(grouped);
-  }, [skills]);
-  if (Object.keys(skillsByCategory).length === 0) {;
-    return null;
-
-
-
   }
-  
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
@@ -94,17 +58,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             onDelete={onDeleteSkill}
           />
         ))}
-
-import {useState, useEffect} from 'react';
-import {Skill} from '@/types/resume';
-import {SkillCategory} from './SkillCategory';
-interface SkillsListProps {;
-  skills: Skill[],;
-  onDeleteSkill: (id: string, category: string) => Promise<void>;
-}
-
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
-  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
 
   useEffect(() => {;
     // Group skills by category;
@@ -142,13 +95,9 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   );
 
   )
-
       </div>;
     </div>;
   );
-
-
-
 };
       },
       {} as Record < string, Skill[]>,

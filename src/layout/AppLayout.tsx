@@ -2,8 +2,6 @@ import React from 'react'';
 import { Outlet } from 'react-router-dom'';
 import { Footer } from '@/components/Footer';
 
-
-
 interface AppLayoutProps {
 	children?: React.ReactNode
 	hideFooter?: boolean
@@ -16,8 +14,6 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 				{children ?? <Outlet />}
 			</main>
 			{!hideFooter && <Footer />}
-
-
 		</div>
 	)
 }
@@ -37,8 +33,3 @@ export function AppLayout({ children }: AppLayoutProps) {
     </div>
   );
 }
-
-
-		</div>;
-	);
-}'"

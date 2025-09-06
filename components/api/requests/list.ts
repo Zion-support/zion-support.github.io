@@ -1,13 +1,15 @@
-
-
+    const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
+    const items = JSON && JSON.parse(raw);
+    res && res.status(200).json({ items });
+  } catch {
+    res && res.status(200).json({ items: [] });
+  }
+    const raw = null;
     res.status(200).json({ items })
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
     res && res.status(200).json({ items });
   } catch {
-res && res.status(200).json({ items: [] });
-  }
-
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -24,12 +26,12 @@ function handler() {
     res.status (200).json ({ items: [] });
   }
   try {
-    const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
-    const items = JSON.parse (raw);
-    res.status (200).json ({ items });
+  try {;
+    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
+    const items = JSON.parse(raw);
+    res.status(200).json({ items });
   } catch {
     res.status (200).json ({ items: [] });
-
   }
 }
 }

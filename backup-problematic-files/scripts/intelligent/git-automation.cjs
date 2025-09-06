@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-"autoMerge"
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -583,7 +580,6 @@ gitAutomation.start().catch(console.error);
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       "autoMerge"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       "conflictResolution"
       "branchProtection"
       "mergeStrategy"
@@ -657,6 +653,10 @@ gitAutomation.start().catch(console.error);
 =======
 <<<<<<< HEAD
       console.error('Error loading "history")
+<<<<<<< HEAD
+=======
+      console.error('Error loading "history")
+>>>>>>> origin/main
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD

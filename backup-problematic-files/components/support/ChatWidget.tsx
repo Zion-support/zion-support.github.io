@@ -141,7 +141,7 @@ export default function ChatWidget() {;
             ))}
             {isLoading && (
               <div className="text-sm">
-                <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>
+                <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking</div>
               </div>
             )}
             <div ref={messagesEndRef} />
@@ -175,7 +175,7 @@ export default function ChatWidget() {;
                       onSend();
                     }
                   }}
-                  placeholder="Ask a question…"
+                  placeholder="Ask a question"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button

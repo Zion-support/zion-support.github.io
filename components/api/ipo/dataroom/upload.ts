@@ -1,19 +1,6 @@
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
-
-
-    );
-    fs && fs.copyFileSync(file && file.filepath, targetPath);
-    appendAuditLog({
-
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
-
 
     res.status(200).json({ ok: true })
       type: 'file_upload',
@@ -23,14 +10,8 @@ import path from 'path';
     res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
-
-
   })
-
 }
-
-}
-
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -73,6 +54,4 @@ function handler() {
   });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) });
     res.status (200).json ({ ok: true });
   });
-
 }
-

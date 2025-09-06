@@ -1,11 +1,7 @@
 
-import { SkillsForm, as, SkillsFormComponent  } from './skills';
-import { SkillsFormProps  } from './skills / types';
-export /**
- * SkillsForm - Function description
- */
-function SkillsForm() {
-
+import { SkillsForm as SkillsFormComponent  } from './skills';
+import { SkillsFormProps } from './skills/types';
+export function SkillsForm(props: SkillsFormProps) {
   return <SkillsFormComponent {...props} />;
 }
 import {SkillsForm, as, SkillsFormComponent} from './skills';
@@ -19,12 +15,9 @@ import {SkillsForm, as, SkillsFormComponent} from './skills';
 import {SkillsFormProps} from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {
   return <SkillsFormComponent {...props} />
-
 import { SkillsForm as SkillsFormComponent } from './skills',;
 import { SkillsFormProps } from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {;
   return <SkillsFormComponent {...props} />;
-
-
 }
 ;

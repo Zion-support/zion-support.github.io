@@ -27,6 +27,9 @@ const glob = require('glob')
           "description"
 <<<<<<< HEAD
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+<<<<<<< HEAD
 =======
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

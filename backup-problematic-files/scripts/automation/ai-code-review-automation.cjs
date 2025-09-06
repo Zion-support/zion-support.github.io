@@ -196,6 +196,9 @@ this.log("Review report "generated": ${reportPath}")
   console.log(" AI Code Review Automation completed")
 <<<<<<< HEAD
   console.error(" AI Code Review Automation "failed")
+<<<<<<< HEAD
 =======
   console.error(" AI Code Review Automation "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

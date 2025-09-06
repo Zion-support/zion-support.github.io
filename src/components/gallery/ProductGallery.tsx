@@ -1,34 +1,30 @@
-}
+import React, { useState, Suspense } from 'react'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+const ReactPlayer = React.lazy(() => import('react-player'))
+const ModelViewer = React.lazy(async () => {
+  await import('@google/model-viewer')
+  return {
+    default: (props: any) => React.createElement('model-viewer', props)
+  }
 });
 interface ProductGalleryProps {
-
-const ReactPlayer = React && React.lazy(() => import('react-player'));
-const ModelViewer = React && React.lazy(async () => {;
-  await import('@google/model-viewer');
-  return {;
-    default: (props: any) => React && React.createElement('model-viewer', props),;
-  };
-});
-interface ProductGalleryProps {;
-  images: string[];
-  videoUrl?: string;
-  modelUrl?: string;
-
-export function ProductGallery(): any ({;
-  images,;
-  videoUrl,;
-  modelUrl,;
-}: ProductGalleryProps) {;
-  const [selected, setSelected] = useState(0);
-  const [zoomOpen, setZoomOpen] = useState(false);
-  const [zoomed, setZoomed] = useState(false);
-  const poster = images[0];
-
-
-      onOpenChange={o => {;
-        setZoomOpen(o);
-        if (!o) setZoomed(false);
-
+  images: string[]
+  videoUrl?: string
+  modelUrl?: string
+export function ProductGallery({
+  images
+  videoUrl
+  modelUrl
+}: ProductGalleryProps) {
+  const [selected, setSelected] = useState(0)
+  const [zoomOpen, setZoomOpen] = useState(false)
+  const [zoomed, setZoomed] = useState(false)
+  const poster = images[0]
+      onOpenChange={o => {
+        setZoomOpen(o)
+        if (!o) setZoomed(false)
       }}
     >;
       <Tabs defaultValue='images' className='w-full'>;
@@ -64,13 +60,6 @@ export function ProductGallery(): any ({;
               ))}
             </div>;
           )}
-
-        </TabsContent>;
-
-        {videoUrl && (;
-          <TabsContent value='video' className='pt-4'>;
-            <AspectRatio ratio={16 / 9}>;
-
               <Suspense
                 fallback={
                   <img
@@ -91,12 +80,6 @@ export function ProductGallery(): any ({;
             </AspectRatio>;
           </TabsContent>;
         )}
-
-
-        {modelUrl && (;
-          <TabsContent value='model' className='pt-4'>;
-            <AspectRatio ratio={16 / 9}>;
-
               <Suspense
                 fallback={
                   <img
@@ -204,8 +187,15 @@ function ProductGallery() {
                 />;
               </Suspense>;
             </AspectRatio>;
-
-          >;
+          </TabsContent>;
+        )}
+      </Tabs>;
+      {images && images.length > 0 && (;
+        <DialogContent className='max-w-3xl p-0'>;
+          <div
+            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+            onClick={() => setZoomed(!zoomed)}
+          >
 
             <img
               src={images[selected] |images[0] |''}
@@ -214,15 +204,8 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>;
       )}
-
-    </Dialog>;
-  );
-
-    </Dialog>;
-  );
 };
 };
-
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;
@@ -244,10 +227,6 @@ interface ProductGalleryProps {;
   modelUrl?: string;
 
 }
-}
-
-}
-
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
@@ -264,5 +243,3 @@ interface ProductGalleryProps {;
         </DialogContent>)}
     </Dialog>);
 }
-
-;

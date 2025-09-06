@@ -1,12 +1,3 @@
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "News & Insights - Zion Tech Group | Latest Technology Updates",;
-  description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",;
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"};
-export default function NewsPage() {;
-  return (;
-
     <div className="min-h-screen">;
 import Link from './next / link';,
 export const metadata = {
@@ -19,7 +10,6 @@ export default /**
 function NewsPage() {
   return (
     <div className="min - h-screen">;
-    <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -156,7 +146,7 @@ function NewsPage() {
                 that significantly improves the reliability of quantum computations.;
               </p>;
               <Link href="/news / quantum - error - correction - breakthrough" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Read More →;
+                Read More ;
               </Link>;
             </article>;
             {/* News Article 2 */}
@@ -180,7 +170,7 @@ function NewsPage() {
                 organizations from increasingly sophisticated AI - generated cyber attacks.;
               </p>;
               <Link href="/news / ai - cybersecurity - framework" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Read More →;
+                Read More ;
               </Link>;
             </article>;
             {/* News Article 3 */}
@@ -204,7 +194,7 @@ function NewsPage() {
                 offices in London, Berlin, and Paris to better serve our international clients.;
               </p>;
               <Link href="/news / european - market - expansion" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Read More →;
+                Read More ;
               </Link>;
             </article>;
             {/* News Article 4 */}
@@ -228,7 +218,7 @@ function NewsPage() {
                 communication systems with improved bandwidth and reliability.;
               </p>;
               <Link href="/news / satellite - communication - advances" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Read More →;
+                Read More ;
               </Link>;
             </article>;
             {/* News Article 5 */}
@@ -252,7 +242,7 @@ function NewsPage() {
                 content, ensuring responsible development and deployment.;
               </p>;
               <Link href="/news / ai - content - generation - ethics" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Read More →;
+                Read More ;
               </Link>;
             </article>;
             {/* News Article 6 */}
@@ -276,7 +266,7 @@ function NewsPage() {
                 and Cambridge to advance AI and quantum computing technologies.;
               </p>;
               <Link href="/news / university - research - partnerships" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Read More →;
+                Read More ;
               </Link>;
             </article>;
           </div>;

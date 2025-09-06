@@ -93,7 +93,7 @@ export function CategoriesSection({ showTitle = true } CategoriesSectionProps) {
             to="/categories" ;
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors";
           >;
-            View All Categories →;
+            View All Categories ;
           </Link>;
         </div>;
       </div>;
@@ -135,5 +135,5 @@ interface CategoriesSectionProps {
 }</div> > {
   service.title 
 }</Link>) ) 
-}</div> </div> <div className="mt-12 flex justify-center" > <Link > View All Categories → </Link> </div> </div> </section>) 
+}</div> </div> <div className="mt-12 flex justify-center" > <Link > View All Categories  </Link> </div> </div> </section>) 
 }

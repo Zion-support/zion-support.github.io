@@ -1,3 +1,4 @@
+import React from 'react';
 
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
@@ -7,22 +8,23 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+import { useEffect, useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Bell, Calendar, X } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
+export function ProjectOfferBanner() {
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-
-
-
-
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers)
-
-
-
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -54,11 +56,7 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
-
-
-
   }
-  
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -75,7 +73,7 @@ export function ProjectOfferBanner() {;
                   <Bell className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">🎉 New Project Offer!</h4>
+                  <h4 className="font-semibold"> New Project Offer!</h4>
                   <p className="text-sm text-muted-foreground">
                     You've been selected for "{offer.job?.title}". Review and accept to get started.
                   </p>
@@ -150,9 +148,8 @@ export function ProjectOfferBanner() {;
             </CardContent>;
           </Card>;
         ))}
-
-    </div>;
-  );
+    </div>
+  )
 }
 import { useEffect, useState } from './react';
 import { use_navigate } from './react-router-dom';
@@ -170,6 +167,3 @@ function ProjectOfferBanner() {
   const [pending_offers, setPendingOffers] = useState < Project[]>([]);
   const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
 ;
-
-
-

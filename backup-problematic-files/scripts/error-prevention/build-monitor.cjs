@@ -18,9 +18,13 @@ class BuildMonitor {}
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    
+>>>>>>> origin/main
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
@@ -28,7 +32,10 @@ class BuildMonitor {}
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -45,9 +52,13 @@ class BuildMonitor {}
         errorOutput += data.toString()}
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -69,16 +80,23 @@ class BuildMonitor {}
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
       // Clean build directory;
       const cleanChild = spawn('npm', ['run', 'clean'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -120,6 +138,9 @@ if ( {})
   monitor.start().catch(console.error)};
 <<<<<<< HEAD
 module.exports = BuildMonitor;
+<<<<<<< HEAD
 =======
 module.exports = BuildMonitor;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

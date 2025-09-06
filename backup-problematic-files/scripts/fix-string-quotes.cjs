@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-string-quotes.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -79,6 +78,11 @@ filesToFix.forEach(filePath => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-string-quotes.cjs
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -100,9 +104,7 @@ const filesToFix = ['pages/api/docs.ts']
     "pattern"
     "replacement"
     "replacement": '"$1${$2}$3"
-<<<<<<< HEAD
-    "replacement": '"$1\\\\\n  $2"
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-string-quotes.cjs
 <<<<<<< HEAD
     "replacement": '"$1\\\\\n  $2"
 =======
@@ -116,3 +118,9 @@ const filesToFix = ['pages/api/docs.ts']
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+    "replacement": '"$1\\\\\n  $2"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-string-quotes.cjs
+>>>>>>> origin/main

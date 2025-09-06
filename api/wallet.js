@@ -1,4 +1,11 @@
 
+async function handler(req, res) {
+  if (req.method !== 'GET') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'GET');
+    res.end('Method Not Allowed');
+    return;
+  }
 
 const { withErrorLogging } = require(
   './withErrorLogging.cjs')';
@@ -21,9 +28,8 @@ const { withErrorLogging } = require(
     return}
   try {;
     // Authentication would normally be checked here;
-
-
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
 async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;
@@ -31,6 +37,7 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
+
   try {
     // Authentication would normally be checked here
     // This is a placeholder implementation
@@ -39,5 +46,3 @@ async function handler(req, res) {
     console.error(',
       'Wallet API "error": err);
     res.statusCode = 500;
-
-

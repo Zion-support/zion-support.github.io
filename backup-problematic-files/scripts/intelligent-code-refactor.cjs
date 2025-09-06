@@ -4,9 +4,13 @@
  * Automatically refactors and improves code quality;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -41,6 +45,9 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'
       this.log(` Intelligent Code Refactor "failed"`)
 <<<<<<< HEAD
     console.error('Intelligent Code Refactor "failed")
+<<<<<<< HEAD
 =======
     console.error('Intelligent Code Refactor "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

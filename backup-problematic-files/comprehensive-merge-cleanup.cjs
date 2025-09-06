@@ -133,8 +133,6 @@ cursor/website-audit-and-update-with-deployment-76dc;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 <<<<<<< HEAD

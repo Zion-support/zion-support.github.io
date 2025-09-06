@@ -1,5 +1,7 @@
-
-
+import React from 'react',;
+import SEO from '../components/SEO',;
+import React from 'react'
+import SEO from '../components/SEO'
 export default function AISustainabilityPlatformPage() {
   return (
     <div className="min-h-[60vh] px-6 py-24">
@@ -10,9 +12,6 @@ export default function AISustainabilityPlatformPage() {
       </div>
     </div>
   )
-
-}
-
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -28,10 +27,3 @@ function AISustainabilityPlatformPage() {
       </div>;
     </div>);
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-

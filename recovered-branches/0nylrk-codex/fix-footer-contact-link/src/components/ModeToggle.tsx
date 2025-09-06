@@ -1,19 +1,7 @@
-
-
-import {Moon, Sun} from "lucide-react";
-import {Button} from "@/components/ui/button";
-
-// Create a simplified theme hook for offline mode;
-const useTheme = () => ({;
-  theme: "dark",;
-  setTheme: (theme: string) => console && console.log(`Theme would change to: ${theme}`);
 });
-
-export function ModeToggle() {;
-
+export function ModeToggle() {
   const { theme, setTheme } = useTheme();
-
-
+// Create a simplified theme hook for offline mode
 
 
   return (
@@ -21,25 +9,13 @@ export function ModeToggle() {;
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-
-      <span className="sr-only">Toggle theme</span>;
-    </Button>;
-  );
-    >
-      {theme === "dark" ? (
-        <Sun className="h-5 w-5 text-yellow-300" />
-      ) : (
-        <Moon className="h-5 w-5 text-slate-300" />
-      )}
-      <span className="sr-only">Toggle theme</span>
-    </Button>
-
-  )
-
-
 }
 import { Moon, Sun  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
+
+  )
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
 // Create a simplified theme hook for offline mode;
 const use_theme = () =>: any ({
   theme: "dark",
@@ -58,9 +34,12 @@ function ModeToggle() {
       size="icon";
       on_click={() => set_theme (theme === "dark" ? "light" : "dark")}
     >;
-      {theme === "dark" ? (
-        <Sun className="h - 5 w - 5 text - yellow - 300" />) : (
-        <Moon className="h - 5 w - 5 text - slate - 300" />)}
-      <span className="sr - only">Toggle theme</span>;
-    </Button>);
+      {theme === "dark" ? (;
+        <Sun className="h-5 w-5 text-yellow-300" />;
+      ) : (;
+        <Moon className="h-5 w-5 text-slate-300" />;
+      )}
+      <span className="sr-only">Toggle theme</span>;
+    </Button>;
+  );
 }

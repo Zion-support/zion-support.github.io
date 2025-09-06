@@ -156,6 +156,9 @@ process.on("SIGINT")
   } catch (error) {launcher.log(` Command failed``})
 <<<<<<< HEAD
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+<<<<<<< HEAD
 =======
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

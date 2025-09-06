@@ -1,26 +1,3 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-
-
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -140,25 +117,50 @@ import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
-
-      "*.test && test.js",
-      "*.test && test.ts",
-      "*.test && test.tsx",
-      "*.spec && spec.js",
-      "*.spec && spec.ts",
-      "*.spec && spec.tsx",
-    ],
-
+export default [
+  {
+      "node_modules/",
+      ".next/",
+      "out/",
+      "dist/",
+      "build/",
+      "coverage/",
+      "*.config.js",
+      "*.config.cjs",
+      "*.config.mjs",
+      "scripts/",
+      "automation/",
+      "pm2-automation/",
+      "pages.disabled/",
+      "pages.disabled_auto/",
+      "pages.disabled_full/",
+      "pages.corrupted.*/",
+      "pages.broken/",
+      "pages.bak/",
+      "pages.blog.disabled/",
+      "pages._archive_corrupted/",
+      "pages._quarantine/",
+      "pages-disabled/",
+      "pages-quarantine/",
+      "pages.__backup/",
+      "pages-backup/",
+      "tests.disabled/",
+      "components.disabled/",
+      "*.test.js",
+      "*.test.ts",
+      "*.test.tsx",
+      "*.spec.js",
+      "*.spec.ts",
+      "*.spec.tsx"
+    ]
   },
-  js && js.configs.recommended,
+  js.configs.recommended,
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: "module",
       globals: {
-        ...globals && globals.browser,
-        ...globals && globals.node,
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -168,23 +170,12 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
-        afterAll: "readonly"
-      },
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
       react,
       "react-hooks": reactHooks
     },
     rules: {
-      ...react && react.configs.recommended && recommended.rules,
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
       "no-unused-vars": "warn",
       "no-console": "warn",
       "prefer-const": "error",
@@ -194,15 +185,13 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
     }
   },
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: "module",
+      sourceType: 'module',
       globals: {
-
-        ...globals && globals.browser,
-        ...globals && globals.node,
-
+        ...globals.browser,
+        ...globals.node,
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -212,16 +201,11 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
-
-        React: 'readonly',
         React: 'readonly',
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-
-
-
 export default [
   {
 
@@ -235,11 +219,42 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
-
-
-
-
+      },
+      globals: {
+        React: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        performance: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+        React: "readonly",
+        jest: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
         afterAll: "readonly"
+        afterAll: "readonly",
       },
       parser: tsparser,
       parserOptions: {
@@ -256,19 +271,10 @@ export default [
       "jsx-a11y": jsxA11y
     },
     rules: {
-
-      ...tseslint && tseslint.configs.recommended && recommended.rules,
-      ...react && react.configs.recommended && recommended.rules,
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
-      ...jsxA11y && jsxA11y.configs.recommended && recommended.rules,
-
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true }
       ],
-
-
-
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "react-hooks/exhaustive-deps": "warn",
@@ -276,7 +282,6 @@ export default [
       "no-unused-vars": "off",
       "no-console": "warn",
       "react/prop-types": "off",
-
         describe: 'readonly',
         it: 'readonly',
         beforeEach: 'readonly',
@@ -291,12 +296,28 @@ export default [
       'react-hooks': reactHooks
     },
     rules: {
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-undef": "off",
+      "no-unused-vars": "off",
+      "no-console": "warn",
+      "react/prop-types": "off",
 
 
 
 
       "react/react-in-jsx-scope": "off"
 
+      "react/react-in-jsx-scope": "off",
     },
     settings: {
       react: {
@@ -315,7 +336,7 @@ export default [
       ecmaVersion: 2021,
       sourceType: "script",
       globals: {
-        ...globals && globals.node,
+        ...globals.node,
         console: "readonly",
         process: "readonly",
         require: "readonly",
@@ -328,20 +349,15 @@ export default [
       }
     },
     rules: {
-
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
     }
-
   }
-];
-
-
       'no-unused-vars': 'warn'
     }
   },
-{
+  {
     ignores: [
       'node_modules/',
       '.next/',
@@ -369,9 +385,8 @@ export default [
       'supabase/',
       'working-automation-suite.cjs'
     ]
-
-
-
+  }
+];
 
 
   }
@@ -380,4 +395,10 @@ export default [
 
 
   }
+];
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      "no-undef": "error",
+    },
+  },
 ];

@@ -1,19 +1,18 @@
 
-
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { UseFormReturn  } from './react - hook - form';
-import { CertificationFormValues  } from './types';
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
+import { CertificationFormValues } from "./types";
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
 }
-
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
@@ -23,16 +22,12 @@ import {CertificationFormValues} from './types';
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
-
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
-
-
-
 }
 
 export function CertificationFormFields(): any ({ form }: CertificationFormFieldsProps) {;
@@ -42,18 +37,6 @@ export function CertificationFormFields(): any ({ form }: CertificationFormField
         <FormField
           control={form && form.control}
           name="name"
-
-export /**
- * CertificationFormFields - Function description
- */
-function CertificationFormFields() {
-  return (
-    <>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-        <FormField;
-          control={form.control}
-          name="name";
-
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Certification Name</FormLabel>;
@@ -61,32 +44,6 @@ function CertificationFormFields() {
                 <Input;
                   placeholder="AWS Certified Solutions Architect, PMP, etc.";
                   {...field}
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Certification Name</FormLabel>;
-              <FormControl>;
-                <Input placeholder="AWS Certified Solutions Architect, PMP, etc." {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-
-
-        <FormField
-          control={form && form.control}
-          name="issuing_organization"
-
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="issuing_organization";
-
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Issuing Organization</FormLabel>;
@@ -94,66 +51,9 @@ function CertificationFormFields() {
                 <Input;
                   placeholder="Amazon Web Services, PMI, etc.";
                   {...field}
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Issuing Organization</FormLabel>;
-              <FormControl>;
-                <Input placeholder="Amazon Web Services, PMI, etc." {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-      </div>;
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-        <FormField
-          control={form && form.control}
-          name="issue_date"
-
-
-                <Input 
-                  type="date" 
-                  {...field}
-                  value={field.value || ''}
-                />
-
-
               </FormControl>
               <FormMessage />
             </FormItem>
-          )}
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Issue Date</FormLabel>;
-              <FormControl>;
-                <Input
-
-        />;
-        <FormField;
-
-          control={form.control}
-          name="expiration_date"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Expiration Date (Optional)</FormLabel>
-              <FormControl>
-
-                <Input 
-
-                  type="date" 
-                  {...field}
-                  value={field && field.value || ''}
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-
-
-
           )}
         />;
 
@@ -174,17 +74,6 @@ function CertificationFormFields() {
               <FormMessage />;
             </FormItem>;
           )}
-        />;
-      </div>;
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-        <FormField
-          control={form && form.control}
-          name="credential_id"
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Credential ID (Optional)</FormLabel>;
                 />;
               </FormControl>;
               <FormMessage />;
@@ -228,20 +117,12 @@ function CertificationFormFields() {
                 <Input placeholder="ABC123XYZ" {...field} />;
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-
+            </FormItem>;
+          )}
+        />
         <FormField
           control={form && form.control}
           name="credential_url"
-
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="credential_url";
-
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Credential URL (Optional)</FormLabel>;
@@ -249,22 +130,6 @@ function CertificationFormFields() {
                 <Input;
                   placeholder="https://www.credential.com / verify / abc123";
                   {...field}
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Credential URL (Optional)</FormLabel>;
-              <FormControl>;
-                <Input placeholder="https://www && www.credential.com/verify/abc123" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-      </div>;
-    </>;
-  );
-}
-
                 />;
               </FormControl>;
               <FormMessage />;
@@ -277,4 +142,3 @@ function CertificationFormFields() {
   )
 }
 ;
-

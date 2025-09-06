@@ -45,7 +45,7 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
       {allDone ? (
         <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">
           <PartyPopper size={18} />
-          <span className="text-sm">All steps completed — great job!</span>
+          <span className="text-sm">All steps completed  great job!</span>
         </div>
       ) : null}
 ;

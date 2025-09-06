@@ -1,8 +1,3 @@
-
-
-export interface Job {;
-
-
   id: string;
   title: string;
   description: string;
@@ -11,15 +6,12 @@ export interface Job {;
   client_id: string
 }
 
-
-
 export interface ApplyToJobModalProps {;
   job: Job;
   isOpen: boolean;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
-
 
 export interface Job {;
   id: string,;
@@ -44,6 +36,4 @@ export interface ApplyToJobModalProps {;
   on_close: () => void;
   onApplySuccess?: (job_id: string) => Promise < void>;
 }
-
-;
 

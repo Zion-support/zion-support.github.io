@@ -1,13 +1,16 @@
-
-
-
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "../components/ProtectedRoute",
+import CommunityPage from "../pages/CommunityPage",
+import ForumCategoryPage from "../pages/ForumCategoryPage",
+import ForumPostPage from "../pages/ForumPostPage",
+import CreatePostPage from "../pages/CreatePostPage",
 
 const CommunityRoutes = () => {
 const CommunityRoutes = () => {;
   return (
     <Routes>;
       {/* Public routes */}
-
       {/* Protected routes */}
       <Route
         path="/community/create"
@@ -23,8 +26,6 @@ const CommunityRoutes = () => {;
           <ProtectedRoute>
             <EditPostPage />
           </ProtectedRoute>
-
-
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;
@@ -72,21 +73,13 @@ const CommunityRoutes = () =>: any {
           </ProtectedRoute>;
         }
       />;
-
-      <Route;
-        path="/community / edit/:post_id";
-
         element={
           <ProtectedRoute>;
             <EditPostPage />;
           </ProtectedRoute>;
         }
-
-      />;
-    </Routes>;
-  );
-
-},;
+      />
+    </Routes>
+  )
+}
 export default CommunityRoutes;
-
-

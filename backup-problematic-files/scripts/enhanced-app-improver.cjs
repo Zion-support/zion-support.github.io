@@ -104,6 +104,9 @@ module.exports = DeploymentAutomation";"
     fs.writeFileSync();      path.join(this.projectRoot, "enhanced-app-improvement-report.json"),";      JSON.stringify(report, null, 2);"
 <<<<<<< HEAD
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
+<<<<<<< HEAD
 =======
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

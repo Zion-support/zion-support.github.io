@@ -1,5 +1,3 @@
-
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -14,26 +12,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime',
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-      fullContent: `
-        <h2>Executive Summary</h2>
-        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
-
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
         and preventing them from meeting growing customer demands.</p>
-        
-        <h2>Challenge</h2>
-
-
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
@@ -68,16 +51,12 @@ import { useRouter } from 'next/router';
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
       `
-
-
     {
       id: 'content - generation - scale',
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
       industry: 'Marketing',
       results: '10x increase in content output, 85% improvement in engagement',
-
-
       fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study explores how autonomous AI systems can revolutionize content creation, enabling
@@ -127,16 +106,12 @@ import { useRouter } from 'next/router';
         while maintaining creative excellence. The system continues to learn and improve, positioning the agency
         for continued growth and success.</p>
       `
-
-
     {
       id: 'cloud - infrastructure - optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E - commerce Platform',
       industry: 'Technology',
       results: '50% reduction in cloud costs, 99.9% uptime achieved',
-
-
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically
         reduce costs while improving performance and reliability for high-traffic applications.</p>
@@ -187,6 +162,7 @@ import { useRouter } from 'next/router';
       `
     }
 
+  const caseStudy = caseStudies.find(study => study.id === id);
 
 
 
@@ -194,7 +170,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -376,8 +351,6 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
   if (!caseStudy) {
@@ -393,14 +366,10 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-xl text-white/80 mb-8">
                 The case study resource you're looking for doesn't exist.
               </p>
-
-
-
-
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
-                ← Back to Resources
+                 Back to Resources
               </Link>
             </div>
           </main>
@@ -411,11 +380,6 @@ export default function CaseStudyResourcePage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-}
-
-
   return (
     <>
       <Head>
@@ -429,21 +393,12 @@ export default function CaseStudyResourcePage(req, res) {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Resources
+                 Back to Resources
               </Link>
             </nav>
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-
-
-                  {caseStudy.industry  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -455,10 +410,17 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
-
-
-
-
+                className="prose prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+              />
+            </div>
+            <div className="text-center">
+              <div
+                className="prose prose-invert max-w-none"
+              />
+            </div>
+            <div className="text-center">
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -469,9 +431,6 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
-
-}
-
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
       full_content: `;
         <h2 > Executive Summary</h2>;
@@ -530,6 +489,11 @@ if ( {) {
   $2
 }
     return (
+  )
+  ];
+  const caseStudy = caseStudies.find(study => study.id === id);
+  if (!caseStudy) {;
+    return (;
       <>;
         <Head>;
           <title > Case Study Resource Not Found | Zion Tech Group</title>;
@@ -539,25 +503,12 @@ if ( {) {
             <div className="max - w-4xl mx - auto text - center">;
               <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
               <p className="text - xl text - white / 80 mb - 8">;
-  ];
-  const caseStudy = caseStudies.find(study => study.id === id);
-  if (!caseStudy) {;
-    return (;
-      <>;
-        <Head>;
-          <title>Case Study Resource Not Found | Zion Tech Group</title>;
-        </Head>;
-        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-          <main className="container mx-auto px-6 py-12">;
-            <div className="max-w-4xl mx-auto text-center">;
-              <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>;
-              <p className="text-xl text-white/80 mb-8">;
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
                 href="/resources";
               >;
-                ← Back to Resources;
+                 Back to Resources;
               </Link>;
             </div>;
           </main>;
@@ -568,4 +519,4 @@ if ( {) {
             </div>;
           </div>;
         </main>;
-      </div>;
+}

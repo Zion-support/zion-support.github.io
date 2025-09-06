@@ -1,11 +1,3 @@
-
-    this && this.metrics = {
-      bundleSize: 0,
-      loadTime: 0,
-      memoryUsage: 0,
-      timestamp: new Date().toISOString(),
-    };
-
   }
   async measureBundleSize() {
     try {
@@ -24,16 +16,6 @@
   }
   generateReport() {
     const report = {
-
-      timestamp: this && this.metrics.timestamp,
-      bundleSize: this && this.metrics.bundleSize,
-      memoryUsage: this && this.metrics.memoryUsage,
-      recommendations: [],
-    };
-
-    if (this && this.metrics.bundleSize > 1000000) {
-      report && report.recommendations.push(
-        "Consider code splitting to reduce bundle size",
 
       );
     }
@@ -92,8 +74,6 @@ if ( {) {
     return report;
   }
 }
-
-
 const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();

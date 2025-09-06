@@ -7,21 +7,21 @@
       "description": "Health Monitor",
       "status": "success",
       "duration": 1729,
-      "output": "🏥 Starting Health Monitor...\n🏥 Health Monitor completed. Status: critical\n📊 5 checks performed\n💡 1 recommendations generated\n"
+      "output": " Starting Health Monitor...\n Health Monitor completed. Status: critical\n 5 checks performed\n 1 recommendations generated\n"
     },
     {
       "name": "performance-analyzer.cjs",
       "description": "Performance Analyzer",
       "status": "success",
       "duration": 62,
-      "output": "⚡ Starting Performance Analyzer...\n⚡ Performance analysis completed. Score: 80/100\n🔧 1 optimization opportunities found\n"
+      "output": " Starting Performance Analyzer...\n Performance analysis completed. Score: 80/100\n 1 optimization opportunities found\n"
     },
     {
       "name": "security-auditor.cjs",
       "description": "Security Auditor",
       "status": "success",
       "duration": 1196,
-      "output": "🔒 Starting Security Auditor...\n🔒 Security audit completed. Score: 90/100\n🚨 1 vulnerabilities found\n💡 5 recommendations generated\n"
+      "output": " Starting Security Auditor...\n Security audit completed. Score: 90/100\n 1 vulnerabilities found\n 5 recommendations generated\n"
     }
   ],
   "reports": [

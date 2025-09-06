@@ -1,5 +1,30 @@
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+} from "@/components/ui/form";
 
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage
+} from "@/components/ui/form",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>,
+  parentId?: string
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
 import {;
   Form,;
   FormControl,;
@@ -27,35 +52,24 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 
-
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-
-
-interface ReplyFormValues {;
-
-  content: string;
-}
-
-FormMessage,;
-
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+}
+interface ReplyFormValues {
 
-  };
+interface ReplyFormValues {;
+  content: string;
+}
 
-
-
-  const form = useForm<ReplyFormValues>({;
-    defaultValues: {;
-      content: "",;
-    },;
-  });
-
-  const handleSubmit = async (values: ReplyFormValues) => {;
     setIsSubmitting(true);
     try {;
       (await onSubmit(values && values.content), form && form.reset());
@@ -64,9 +78,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
     }
 
   },
-
-
-
 
   return (
     <Card>;
@@ -80,7 +91,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
                 <FormItem>;
                   <FormControl>;
                     <Textarea
-
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   const [is_submitting, setIsSubmitting] = useState (false);
 ;
@@ -111,7 +121,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                 <FormItem>;
                   <FormControl>;
                     <Textarea;
-
                       placeholder={
                         parent_id;
                           ? "Write your reply...";
@@ -122,28 +131,11 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                     />;
                   </FormControl>;
                   <FormMessage />;
-
-                </FormItem>)}
-            />;
-            <div className="mt - 4 flex justify - end">;
-              <Button type="submit" disabled={is_submitting}>;
-                {is_submitting ? "Submitting..." : "Post Reply"}
-
               </Button>;
             </div>;
           </form>;
         </Form>;
       </CardContent>;
-
-    </Card>);
-}
-;
-export default ReplyForm;
-;
-
-
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -164,5 +156,4 @@ export default ReplyForm;
 
   )
 },
-
 

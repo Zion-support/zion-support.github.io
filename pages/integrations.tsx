@@ -1,32 +1,12 @@
 
-
 import {useEffect} from 'react';
-
-
-export default function IntegrationsRedirect() {;
-
-
-export default function IntegrationsRedirect() {;
-
+import {useRouter} from 'next/router';
+export default function IntegrationsRedirect() {
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/admin/integrations');
   }, [router]);
   return null;
-
-
-
-}
-
-
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-export default function IntegrationsRedirect() {
-  const router = useRouter();
-  useEffect(() => { router.replace('/admin/integrations') }, [router]);
-  return null
-}
-
 import {use_router} from 'next / router';
 ;
 export default /**
@@ -39,6 +19,12 @@ function IntegrationsRedirect() {
   }, [router]);
   return null;
 ;
-
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+export default function IntegrationsRedirect() {
+  const router = useRouter();
+  useEffect(() => { router.replace('/admin/integrations') }, [router]);
+  return null
+}
 
 

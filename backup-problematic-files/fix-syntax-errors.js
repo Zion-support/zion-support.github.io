@@ -6,7 +6,7 @@ fixAccessibility(),;
 fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
-// // // console.log('🎉 Syntax error fixes completed'),,
+// // // console.log(' Syntax error fixes completed'),,
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -14,7 +14,7 @@ fixAiServices(),
 fixApiDocs(),
 fixCareers(),
 ,
-console.log('🎉 Syntax error fixes completed'),
+console.log(' Syntax error fixes completed'),
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -25,7 +25,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🔧 Starting syntax error fixes...');
+console.log(' Starting syntax error fixes...');
 
 // Function to fix merge conflict markers and syntax errors
 function fixFile(filePath) {
@@ -65,11 +65,11 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(` Fixed: ${filePath}`);
       return true;
     }
   } catch (error) {
-    console.log(`❌ Error fixing ${filePath}:`, error.message);
+    console.log(` Error fixing ${filePath}:`, error.message);
   }
   return false;
 }
@@ -101,7 +101,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 const srcDir = path.join(__dirname, 'src');
 const files = findFiles(srcDir);
 
-console.log(`📁 Found ${files.length} files to check...`);
+console.log(` Found ${files.length} files to check...`);
 
 let fixedCount = 0;
 for (const file of files) {
@@ -110,13 +110,13 @@ for (const file of files) {
   }
 }
 
-console.log(`🎉 Fixed ${fixedCount} files`);
+console.log(` Fixed ${fixedCount} files`);
 
 // Try to run build again
-console.log('🏗️  Running build...');
+console.log('  Running build...');
 try {
   execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Build successful!');
+  console.log(' Build successful!');
 } catch (error) {
-  console.log('❌ Build still has errors, continuing with manual fixes...');
+  console.log(' Build still has errors, continuing with manual fixes...');
 }

@@ -3,7 +3,6 @@ import React from 'react';
 interface IndexProps {
   className?: string;
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function Index({ }: IndexProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,6 +28,7 @@ interface IndexProps {;
   // Add props here as needed;
 }
 export default function Index(): any ({ }: IndexProps) {;
+export default function Index({ }: IndexProps) {
   return (
     <div className={className || ''}>
       <h1>Index</h1>
@@ -37,4 +37,3 @@ export default function Index(): any ({ }: IndexProps) {;
   );
 }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

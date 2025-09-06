@@ -1,3 +1,5 @@
+
+
 import React from "react"
 import {format} from "date-fns"
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card"
@@ -12,85 +14,16 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
-
-
-  quote,
-  onViewDetails,
-  quote,
-  onViewDetails,
-
-
   onMarkAsResponded,
   onToggleArchive
 },) => {
   // Format date for display
   const formatDate = (dateString: string,) => {
-import React from './react';
-import { format } from './date - fns';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';
-import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from 'lucide-react';
-import type { QuoteRequest } from "@/types / quotes";
-type QuoteRequestCardProps = {
-  quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: string, is_archived: boolean) => void;
-}
-export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
-  quote;
-  onViewDetails;
-  onMarkAsResponded,
-  onToggleArchive;
-}, ) => {
-  // Format date for display;
-  const format_date = (date_string: string, ) =>: any {
     try {
-      return format(new Date(dateString), 'PP')
+      return format (new Date (date_string), 'PP');
     } catch (e) {
-
-import React from "react";
-import {format} from "date-fns";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
-import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from 'lucide-react';
-import type { QuoteRequest } from "@/types/quotes";
-type QuoteRequestCardProps = {;
-  quote: QuoteRequest,;
-  onViewDetails: (quote: QuoteRequest) => void,;
-  onMarkAsResponded?: (id: string) => void,;
-  onToggleArchive: (id: string, isArchived: boolean) => void;
-};
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
-  quote;
-  onViewDetails;
-  onMarkAsResponded,;
-  onToggleArchive;
-},) => {;
-  // Format date for display;
-  const formatDate = (dateString: string,) => {;
-    try {;
-      return format(new Date(dateString), 'PP');
-    } catch (e) {;
-      return dateString;
-
     }
-
-
-  },
-
-
-
   return (
-
-
-        
-        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
-        
-
-
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
@@ -99,52 +32,25 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
 
         
-
-
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
             size="sm"
-            onClick={() => onViewDetails(quote)}
+            onClick = {() => onViewDetails(quote),}
             className="flex items-center gap-1"
           >
             <Eye className="h-4 w-4" />
             View Details
           </Button>
-
-          
-
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => onMarkAsResponded(quote.id)}
-                className="flex items-center gap-1"
-              >
-                <MessageSquare className="h-4 w-4" />
-                Mark Responded
-              </Button>
-            )}
-
-            
-
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
-              className="flex items-center gap-1"
-            >
-              {quote.is_archived ? (
-                <RefreshCw className="h-4 w-4" />
-              ) : (
-                <ArchiveIcon className="h-4 w-4" />
-
   );
 };
 "};
 };
-
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -222,16 +128,13 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => onMarkAsResponded(quote.id)}
-                className="flex items-center gap-1"
-              >
-                <MessageSquare className="h-4 w-4" />
-                Mark Responded
-              </Button>
+                onClick = {(,) => onMarkAsResponded(quote && quote.id),}
+                className="flex items-center gap-1";
+              >;
+                <MessageSquare className="h-4 w-4" />;
+                Mark Responded;
+              </Button>;
             )}
-
-
-
             <Button
               variant="ghost"
               size="sm"
@@ -243,7 +146,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               ) : (;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
-
             </Button>;
           </div>;
         </div>;
@@ -251,7 +153,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
-
       return date_string;
     }
   }
@@ -315,4 +216,5 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>);
 }
 "},
-}
+
+

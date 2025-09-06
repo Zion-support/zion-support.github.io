@@ -10,10 +10,8 @@ function Skeleton() {
       className={cn (&quot;animate - pulse rounded - md bg - muted & quot;, class_name)}
       {...props}
     />);
-
 }
-
+export { Skeleton }
+export { Skeleton };
 ;
-
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

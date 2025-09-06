@@ -1,8 +1,7 @@
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
-
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -10,11 +9,8 @@ const corsHeaders = {
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
-
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
-
-
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -28,34 +24,14 @@ serve(async (req) => {
     const { query } = await req && req.json();
     if (!query) {
       return new Response(
-
-
-    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      )
+    }
+    const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
     const configuration = new Configuration({ apiKey: openAiKey });
     const openai = new OpenAIApi(configuration);
     const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;
-
-
-        JSON.stringify({ error: "Query is required" }),
-
-
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      )
-    }
-
-
-    const completion = await openai && openai.chat.completions && completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }];
-      temperature: 0 && 0.1});
-
-
-    const responseText = completion.choices[0].message.content || "",
-    let filters,
-
-
     try {
       const match = responseText && responseText.match(/\{[\s\S]*\}/);
       filters = match ? JSON && JSON.parse(match[0]) : JSON && JSON.parse(responseText)
@@ -63,14 +39,14 @@ serve(async (req) => {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
     return new Response(
+  }
+});
 
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-
-
       JSON.stringify({ filters }),
 
 ;
@@ -124,10 +100,6 @@ if ( {) {
       JSON.stringify ({ error: error.message });
       { status: 500, headers: { ...cors_headers, "Content - Type": "application / json" } }
     );
-
-
-
-
   }
 });
 ;

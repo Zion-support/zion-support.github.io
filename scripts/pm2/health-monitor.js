@@ -1,7 +1,3 @@
-
-
-
-
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
@@ -56,43 +52,181 @@
           this.error(alert.message);,
         }
 
-    } catch (error) {_;
-
-
 module.exports = HealthMonitor;
-
 }};
-; async checkSystemResources() {; try {; this && this.log('💻 Checking system resources...');
+; async checkSystemResources() {; try {; this && this.log(' Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
-
-}}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
-      , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
-
-; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
-; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';
-; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
-
-}}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
-      , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
-
+; // Parse memory info; const memLines = memInfo && memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
+; // Parse disk info; const diskLines = diskInfo && diskInfo.split('\n'); const rootDisk = diskLines && diskLines.find(line = > line && line.includes('/')); const diskUsage = rootDisk ? rootDisk && rootDisk.split(/\s+/)[4].replace('%', ''): '0';
+; // Parse CPU info; const cpuUsage = cpuInfo && cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo && cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
+; return {; success: true, memory: {
+      , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree),
     usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
     }
     disk: {
     usagePercent: parseInt(diskUsage)}; cpu: {
-    usagePercent: Math.round(cpuUsage)}}} catch (error) {return {; success: false, error: error.message, memory: null, disk: null, cpu: null}}}; async checkProcessHealth() {try {; this.log('🔄 Checking process health...'); const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }); const processes = JSON.parse(pm2List); const processHealth = {total: processes.length, online: 0, stopped: 0, errored: 0, processes: []}; processes.forEach(proc = > {const status = proc.pm2_env?.status |'unknown'; processHealth.processes.push({; name: proc.name, status: status, memory: proc.monit?.memory |0, cpu: proc.monit?.cpu |0, uptime: proc.pm2_env?.uptime |0}); if (status = = = 'online') processHealth.online++; else if (status = = = 'stopped') processHealth.stopped++; else if (status = = = 'errored') processHealth.errored++}); return {success: true
-    health: processHealth}} catch (error) {return {; success: false, error: error.message, health: null}}}; async checkApplicationHealth() {try {; this.log('🌐 Checking application health...'); const healthChecks = []; // Check if the application is running; try {; const pm2List = execSync('pm2 list', { encoding: 'utf8' }); const hasRunningApp = pm2List.includes('bolt-zion-app') && pm2List.includes('online'); healthChecks.push({name: 'PM2 App Status', status: hasRunningApp ? 'healthy': 'unhealthy', message: hasRunningApp ? 'Application is running': 'Application is not running'})} catch (error) {healthChecks.push({; name: 'PM2 App Status', status: 'error', message: 'Could not check PM2 status'})}; // Check if build files exist; const buildExists = fs.existsSync('dist') |fs.existsSync('.next'); healthChecks.push({name: 'Build Files', status: buildExists ? 'healthy': 'unhealthy', message: buildExists ? 'Build files exist': 'Build files missing'}); // Check if package.json exists and is valid; try {const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); healthChecks.push({; name: 'Package.json', status: 'healthy', message: 'Package.json is valid'})} catch (error) {healthChecks.push({; name: 'Package.json', status: 'unhealthy', message: 'Package.json is invalid or missing'})}; return {success: true
-    checks: healthChecks}} catch (error) {return {; success: false, error: error.message, checks: []}}}; async checkLogHealth() {try {; this.log('📝 Checking log health...'); const logsDir = path.join(this.projectRoot, 'logs/pm2'); const logFiles = []; if (fs.existsSync(logsDir)) {; const files = fs.readdirSync(logsDir); files.forEach(file = > {; if (file.endsWith('.log')) {; const filePath = path.join(logsDir, file); const stats = fs.statSync(filePath); logFiles.push({; name: file, size: stats.size, sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100
+    usagePercent: Math.round(cpuUsage)}}} catch (error) {return {; success: false, error: error.message, memory: null, disk: null, cpu: null}}}; async checkProcessHealth() {try {; this.log(' Checking process health...'); const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }); const processes = JSON.parse(pm2List); const processHealth = {total: processes.length, online: 0, stopped: 0, errored: 0, processes: []}; processes.forEach(proc = > {const status = proc.pm2_env?.status |'unknown'; processHealth.processes.push({; name: proc.name, status: status, memory: proc.monit?.memory |0, cpu: proc.monit?.cpu |0, uptime: proc.pm2_env?.uptime |0}); if (status = = = 'online') processHealth.online++; else if (status = = = 'stopped') processHealth.stopped++; else if (status = = = 'errored') processHealth.errored++}); return {success: true
+    health: processHealth}} catch (error) {return {; success: false, error: error.message, health: null}}}; async checkApplicationHealth() {try {; this.log(' Checking application health...'); const healthChecks = []; // Check if the application is running; try {; const pm2List = execSync('pm2 list', { encoding: 'utf8' }); const hasRunningApp = pm2List.includes('bolt-zion-app') && pm2List.includes('online'); healthChecks.push({name: 'PM2 App Status', status: hasRunningApp ? 'healthy': 'unhealthy', message: hasRunningApp ? 'Application is running': 'Application is not running'})} catch (error) {healthChecks.push({; name: 'PM2 App Status', status: 'error', message: 'Could not check PM2 status'})}; // Check if build files exist; const buildExists = fs.existsSync('dist') |fs.existsSync('.next'); healthChecks.push({name: 'Build Files', status: buildExists ? 'healthy': 'unhealthy', message: buildExists ? 'Build files exist': 'Build files missing'}); // Check if package.json exists and is valid; try {const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); healthChecks.push({; name: 'Package.json', status: 'healthy', message: 'Package.json is valid'})} catch (error) {healthChecks.push({; name: 'Package.json', status: 'unhealthy', message: 'Package.json is invalid or missing'})}; return {success: true
+    checks: healthChecks}} catch (error) {return {; success: false, error: error.message, checks: []}}}; async checkLogHealth() {try {; this.log(' Checking log health...'); const logsDir = path.join(this.projectRoot, 'logs/pm2'); const logFiles = []; if (fs.existsSync(logsDir)) {; const files = fs.readdirSync(logsDir); files.forEach(file = > {; if (file.endsWith('.log')) {; const filePath = path.join(logsDir, file); const stats = fs.statSync(filePath); logFiles.push({; name: file, size: stats.size, sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100
     lastModified: stats.mtime})}})}; return {success: true, logFiles: logFiles, totalSize: logFiles.reduce((sum, file) = > sum + file.size, 0)}} catch (error) {return {; success: false, error: error.message, logFiles: []
     totalSize: 0}}}; async generateReport(systemInfo, processInfo, appInfo, logInfo) {const report = {; timestamp: new Date().toISOString(), summary: {
       , systemHealth: 'unknown', processHealth: 'unknown', applicationHealth: 'unknown', logHealth: 'unknown', overallHealth: 'unknown'
     healthScore: 0
     }
-    details: {, system: systemInfo, processes: processInfo, application: appInfo, logs: logInfo}; recommendations: []}; // Calculate health scores; let totalScore = 0; let maxScore = 0; // System health; if (systemInfo.success) {const memUsage = systemInfo.memory?.usagePercent |0; const diskUsage = systemInfo.disk?.usagePercent |0; const cpuUsage = systemInfo.cpu?.usagePercent |0; if (memUsage < 80 && diskUsage < 80 && cpuUsage < 80) {; report.summary.systemHealth = 'healthy'; totalScore + = 25} else if (memUsage < 90 && diskUsage < 90 && cpuUsage < 90) {report.summary.systemHealth = 'warning'; totalScore + = 15} else {report.summary.systemHealth = 'unhealthy'; totalScore + = 5}}; maxScore + = 25; // Process health; if (processInfo.success && processInfo.health) {const health = processInfo.health; if (health.errored = = = 0 && health.stopped = = = 0) {; report.summary.processHealth = 'healthy'; totalScore + = 25} else if (health.errored = = = 0) {report.summary.processHealth = 'warning'; totalScore + = 15} else {report.summary.processHealth = 'unhealthy'; totalScore + = 5}}; maxScore + = 25; // Application health; if (appInfo.success) {const healthyChecks = appInfo.checks.filter(check = > check.status = = = 'healthy').length; const totalChecks = appInfo.checks.length; if (healthyChecks = = = totalChecks) {; report.summary.applicationHealth = 'healthy'; totalScore + = 25} else if (healthyChecks > = totalChecks * 0.5) {report.summary.applicationHealth = 'warning'; totalScore + = 15} else {report.summary.applicationHealth = 'unhealthy'; totalScore + = 5}}; maxScore + = 25; // Log health; if (logInfo.success) {const totalLogSize = logInfo.totalSize / (1024 * 1024), // MB; if (totalLogSize < 100) {; report.summary.logHealth = 'healthy'; totalScore + = 25} else if (totalLogSize < 500) {report.summary.logHealth = 'warning'; totalScore + = 15} else {report.summary.logHealth = 'unhealthy'; totalScore + = 5}}; maxScore + = 25; report.summary.healthScore = Math.round((totalScore / maxScore) * 100); // Determine overall health; if (report.summary.healthScore > = 80) {report.summary.overallHealth = 'healthy'} else if (report.summary.healthScore > = 60) {report.summary.overallHealth = 'warning'} else {report.summary.overallHealth = 'unhealthy'}; // Generate recommendations; if (systemInfo.success) {if (systemInfo.memory?.usagePercent > 80) {; report.recommendations.push({; priority: 'high', message: 'High memory usage detected', action: 'Consider restarting processes or increasing memory'})}; if (systemInfo.disk?.usagePercent > 80) {report.recommendations.push({; priority: 'high', message: 'High disk usage detected', action: 'Clean up logs and temporary files'})}}; if (processInfo.success && processInfo.health?.errored > 0) {report.recommendations.push({; priority: 'critical', message: 'Errored processes detected', action: 'Restart errored processes and investigate logs'})}; if (logInfo.success && logInfo.totalSize > 500 * 1024 * 1024) {report.recommendations.push({; priority: 'medium', message: 'Large log files detected', action: 'Implement log rotation or cleanup'})}; return report}; async saveReport(report) {try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })}; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}; async run() {this.log('🏥 Starting Health Monitor...'); this.log(`Project root: ${this.projectRoot}`); try {// Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })}; // Run all health checks; const systemInfo = await this.checkSystemResources(); const processInfo = await this.checkProcessHealth(); const appInfo = await this.checkApplicationHealth(); const logInfo = await this.checkLogHealth(); // Generate report; this.log('📊 Generating health report...'); const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo); // Save report; await this.saveReport(report); const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Health Monitor Summary: '); this.log(`System: ${report.summary.systemHealth}`); this.log(`Processes: ${report.summary.processHealth}`); this.log(`Application: ${report.summary.applicationHealth}`); this.log(`Logs: ${report.summary.logHealth}`); this.log(`Overall: ${report.summary.overallHealth}`); this.log(`Health Score: ${report.summary.healthScore}/100`); this.log(`Duration: ${duration}ms`); if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {this.log('\n✨ All systems are healthy!')}
-} catch (error) {this.log(`❌ Error running health monitor: ${error.message}`); process.exit(1)}}}
+    details: {, system: systemInfo, processes: processInfo, application: appInfo, logs: logInfo}; recommendations: []}; // Calculate health scores; let totalScore = 0; let maxScore = 0; // System health; if (systemInfo.success) {const memUsage = systemInfo.memory?.usagePercent |0; const diskUsage = systemInfo.disk?.usagePercent |0; const cpuUsage = systemInfo.cpu?.usagePercent |0; if (memUsage < 80 && diskUsage < 80 && cpuUsage < 80) {; report.summary.systemHealth = 'healthy'; totalScore + = 25} else if (memUsage < 90 && diskUsage < 90 && cpuUsage < 90) {report.summary.systemHealth = 'warning'; totalScore + = 15} else {report.summary.systemHealth = 'unhealthy'; totalScore + = 5}}; maxScore + = 25; // Process health; if (processInfo.success && processInfo.health) {const health = processInfo.health; if (health.errored = = = 0 && health.stopped = = = 0) {; report.summary.processHealth = 'healthy'; totalScore + = 25} else if (health.errored = = = 0) {report.summary.processHealth = 'warning'; totalScore + = 15} else {report.summary.processHealth = 'unhealthy'; totalScore + = 5}}; maxScore + = 25; // Application health; if (appInfo.success) {const healthyChecks = appInfo.checks.filter(check = > check.status = = = 'healthy').length; const totalChecks = appInfo.checks.length; if (healthyChecks = = = totalChecks) {; report.summary.applicationHealth = 'healthy'; totalScore + = 25} else if (healthyChecks > = totalChecks * 0.5) {report.summary.applicationHealth = 'warning'; totalScore + = 15} else {report.summary.applicationHealth = 'unhealthy'; totalScore + = 5}}; maxScore + = 25; // Log health; if (logInfo.success) {const totalLogSize = logInfo.totalSize / (1024 * 1024), // MB; if (totalLogSize < 100) {; report.summary.logHealth = 'healthy'; totalScore + = 25} else if (totalLogSize < 500) {report.summary.logHealth = 'warning'; totalScore + = 15} else {report.summary.logHealth = 'unhealthy'; totalScore + = 5}}; maxScore + = 25; report.summary.healthScore = Math.round((totalScore / maxScore) * 100); // Determine overall health; if (report.summary.healthScore > = 80) {report.summary.overallHealth = 'healthy'} else if (report.summary.healthScore > = 60) {report.summary.overallHealth = 'warning'} else {report.summary.overallHealth = 'unhealthy'}; // Generate recommendations; if (systemInfo.success) {if (systemInfo.memory?.usagePercent > 80) {; report.recommendations.push({; priority: 'high', message: 'High memory usage detected', action: 'Consider restarting processes or increasing memory'})}; if (systemInfo.disk?.usagePercent > 80) {report.recommendations.push({; priority: 'high', message: 'High disk usage detected', action: 'Clean up logs and temporary files'})}}; if (processInfo.success && processInfo.health?.errored > 0) {report.recommendations.push({; priority: 'critical', message: 'Errored processes detected', action: 'Restart errored processes and investigate logs'})}; if (logInfo.success && logInfo.totalSize > 500 * 1024 * 1024) {report.recommendations.push({; priority: 'medium', message: 'Large log files detected', action: 'Implement log rotation or cleanup'})}; return report}; async saveReport(report) {try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })}; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}; async run() {this.log(' Starting Health Monitor...'); this.log(`Project root: ${this.projectRoot}`); try {// Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })}; // Run all health checks; const systemInfo = await this.checkSystemResources(); const processInfo = await this.checkProcessHealth(); const appInfo = await this.checkApplicationHealth(); const logInfo = await this.checkLogHealth(); // Generate report; this.log(' Generating health report...'); const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo); // Save report; await this.saveReport(report); const duration = Date.now() - this.startTime; // Log summary; this.log('\n Health Monitor Summary: '); this.log(`System: ${report.summary.systemHealth}`); this.log(`Processes: ${report.summary.processHealth}`); this.log(`Application: ${report.summary.applicationHealth}`); this.log(`Logs: ${report.summary.logHealth}`); this.log(`Overall: ${report.summary.overallHealth}`); this.log(`Health Score: ${report.summary.healthScore}/100`); this.log(`Duration: ${duration}ms`); if (report.recommendations.length > 0) {this.log('\n Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {this.log('\n All systems are healthy!')}
+} catch (error) {this.log(` Error running health monitor: ${error.message}`); process.exit(1)}}}
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
-
-
+healthMonitor.run().catch(error = > {; process.exit(1)});
+};
+};
+;
+  async checkSystemResources() {;
+    try {;
+;
+      const memInfo = execSync('free -m', { encoding: 'utf8' });
+      const diskInfo = execSync('df -h', { encoding: 'utf8' });
+      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
+;
+      // Parse memory info;
+      const memLines = memInfo.split('\n');
+      const memTotal = memLines[1].split(/\s+/)[1];
+      const memUsed = memLines[1].split(/\s+/)[2];
+      const memFree = memLines[1].split(/\s+/)[3];
+;
+      // Parse disk info;
+      const diskLines = diskInfo.split('\n');
+      const rootDisk = diskLines.find(line => line.includes('/'));
+      const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', '') : '0';
+;
+      // Parse CPU info;
+      const cpuUsage = cpuInfo.includes('id') ?;
+        (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())) : 0;
+;
+      return {;
+        success: true, memory: {,
+          total: parseInt(memTotal), used: parseInt(memUsed),
+          free: parseInt(memFree), usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100),
+        ;
+        disk: {, usagePercent: parseInt(diskUsage),
+        ;
+        cpu: {, usagePercent: Math.round(cpuUsage),
+        ;
+      };
+    } catch (error) {;
+      return {;
+        success: false, error: error.message,
+        memory: null, disk: null,
+        cpu: null, ,
+};
+};
+;
+  async checkProcessHealth() {;
+    try {;
+;
+      const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });
+      const processes = JSON.parse(pm2List);
+;
+      const processHealth = {;
+        total: processes.length, online: 0,
+        stopped: 0, errored: 0,
+        processes: [], ,
+;
+      processes.forEach(proc => {;
+        const status = proc.pm2_env?.status || 'unknown';
+        processHealth.processes.push({;
+          name: proc.name, status: status,
+          memory: proc.monit?.memory || 0, cpu: proc.monit?.cpu || 0,
+          uptime: proc.pm2_env?.uptime || 0,
+        });
+;
+        if (status === 'online') processHealth.online++;
+        else if (status === 'stopped') processHealth.stopped++;
+        else if (status === 'errored') processHealth.errored++;
+      });
+;
+      return {;
+        success: true, health: processHealth,
+      ;
+    } catch (error) {;
+      return {;
+        success: false, error: error.message,
+        health: null, ,
+};
+};
+;
+  async checkApplicationHealth() {;
+    try {;
+;
+      const healthChecks = [];
+;
+      // Check if the application is running;
+      try {;
+        const pm2List = execSync('pm2 list', { encoding: 'utf8' });
+        const hasRunningApp = pm2List.includes('bolt-zion-app') && pm2List.includes('online');
+;
+        healthChecks.push({;
+          name: 'PM2 App Status', status: hasRunningApp ? 'healthy' : 'unhealthy',
+          message: hasRunningApp ? 'Application is running' : 'Application is not running',
+        });
+      } catch (error) {;
+        healthChecks.push({;
+          name: 'PM2 App Status', status: 'error',
+          message: 'Could not check PM2 status',
+        });
+      };
+;
+      // Check if build files exist;
+      const buildExists = fs.existsSync('dist') || fs.existsSync('.next');
+      healthChecks.push({;
+        name: 'Build Files', status: buildExists ? 'healthy' : 'unhealthy',
+        message: buildExists ? 'Build files exist' : 'Build files missing',
+      });
+;
+      // Check if package.json exists and is valid;
+      try {;
+        const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+        healthChecks.push({;
+          name: 'Package.json', status: 'healthy',
+          message: 'Package.json is valid',
+        });
+      } catch (error) {;
+        healthChecks.push({;
+          name: 'Package.json', status: 'unhealthy',
+          message: 'Package.json is invalid or missing',
+        });
+      };
+;
+      return {;
+        success: true, checks: healthChecks,
+      ;
+    } catch (error) {;
+      return {;
+        success: false, error: error.message,
+        checks: [], ,
+};
+};
+;
+  async checkLogHealth() {;
+    try {;
+;
+      const logsDir = path.join(this.projectRoot, 'logs/pm2');
+      const logFiles = [];
+;
+      if (fs.existsSync(logsDir)) {;
+        const files = fs.readdirSync(logsDir);
+        files.forEach(file => {;
+          if (file.endsWith('.log')) {;
+            const filePath = path.join(logsDir, file);
+            const stats = fs.statSync(filePath);
+            logFiles.push({;
+              name: file, size: stats.size,
+              sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100, lastModified: stats.mtime,
+            });
+          };
+        });
+          }
+        })
       };
 ;
       return {;
@@ -105,10 +239,6 @@ const healthMonitor = new HealthMonitor();
         logFiles: [], totalSize: 0,
       ;
 };
-
-
-
-
 };
 ;
   async generateReport(systemInfo, processInfo, appInfo, logInfo) {;
@@ -255,7 +385,7 @@ const healthMonitor = new HealthMonitor();
 };
 ;
   async run() {;
-    this.log('🏥 Starting Health Monitor...');
+    this.log(' Starting Health Monitor...');
     this.log(`Project root: ${this.projectRoot}`);
 ;
     try {;
@@ -272,7 +402,7 @@ const healthMonitor = new HealthMonitor();
       const logInfo = await this.checkLogHealth();
 ;
       // Generate report;
-      this.log('📊 Generating health report...');
+      this.log(' Generating health report...');
       const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo);
 ;
       // Save report;
@@ -281,7 +411,7 @@ const healthMonitor = new HealthMonitor();
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Health Monitor Summary: '),
+      this.log('\n Health Monitor Summary: '),
       this.log(`System: ${report.summary.systemHealth}`);
       this.log(`Processes: ${report.summary.processHealth}`);
       this.log(`Application: ${report.summary.applicationHealth}`);
@@ -291,16 +421,16 @@ const healthMonitor = new HealthMonitor();
       this.log(`Duration: ${duration}ms`);
 ;
       if (report.recommendations.length > 0) {;
-        this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,
+        this.log('\n Recommendations: '), report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
         });
       } else {;
-        this.log('\n✨ All systems are healthy!');
+        this.log('\n All systems are healthy!');
       };
 ;
     } catch (error) {;
-      this.log(`❌ Error running health monitor: ${error.message}`);
+      this.log(` Error running health monitor: ${error.message}`);
       process.exit(1);
 };
 };
@@ -311,22 +441,16 @@ const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error => {;
   process.exit(1);
 });
-
-
-
     };
   };
 ,
   async checkSystemResources() {,
     try {,
-      this.log('💻 Checking system resources...'),
+      this.log(' Checking system resources...'),
 ,
       const memInfo = execSync('free -m', { encoding: 'utf8' }),
       const diskInfo = execSync('df -h', { encoding: 'utf8' }),
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }),
-
-
-
 ,
       // Parse memory info,
       const memLines = memInfo.split('\n'),
@@ -371,7 +495,7 @@ healthMonitor.run().catch(error => {;
 ,
   async checkProcessHealth() {,
     try {,
-      this.log('🔄 Checking process health...'),
+      this.log(' Checking process health...'),
 ,
       const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }),
       const processes = JSON.parse(pm2List),
@@ -414,7 +538,7 @@ healthMonitor.run().catch(error => {;
 ,
   async checkApplicationHealth() {,
     try {,
-      this.log('🌐 Checking application health...'),
+      this.log(' Checking application health...'),
 ,
       const healthChecks = [],
 ,
@@ -475,7 +599,7 @@ healthMonitor.run().catch(error => {;
 ,
   async checkLogHealth() {,
     try {,
-      this.log('📝 Checking log health...'),
+      this.log(' Checking log health...'),
 ,
       const logsDir = path.join(this.projectRoot, 'logs/pm2'),
       const logFiles = [],
@@ -667,7 +791,7 @@ healthMonitor.run().catch(error => {;
   };
 ,
   async run() {,
-    this.log('🏥 Starting Health Monitor...'),
+    this.log(' Starting Health Monitor...'),
     this.log(`Project root: ${this.projectRoot}`),
 ,
     try {,
@@ -684,7 +808,7 @@ healthMonitor.run().catch(error => {;
       const logInfo = await this.checkLogHealth(),
 ,
       // Generate report,
-      this.log('📊 Generating health report...'),
+      this.log(' Generating health report...'),
       const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo),
 ,
       // Save report,
@@ -693,7 +817,7 @@ healthMonitor.run().catch(error => {;
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n📊 Health Monitor Summary: '),
+      this.log('\n Health Monitor Summary: '),
       this.log(`System: ${report.summary.systemHealth}`),
       this.log(`Processes: ${report.summary.processHealth}`),
       this.log(`Application: ${report.summary.applicationHealth}`),
@@ -703,17 +827,17 @@ healthMonitor.run().catch(error => {;
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.recommendations.length > 0) {,
-        this.log('\n💡 Recommendations: '),
+        this.log('\n Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
           this.log(`    Action: ${rec.action}`),
         }),
       } else {,
-        this.log('\n✨ All systems are healthy!'),
+        this.log('\n All systems are healthy!'),
       };
 ,
     } catch (error) {,
-      this.log(`❌ Error running health monitor: ${error.message}`),
+      this.log(` Error running health monitor: ${error.message}`),
       process.exit(1),
     };
   };
@@ -724,196 +848,19 @@ const healthMonitor = new HealthMonitor(),
 healthMonitor.run().catch(error => {,
   process.exit(1),
 }),
-
-
-      return processes;
-    } catch (error) {}
-      this.error(`Failed to get process info: ${error.message}`);,
-      return [];,
-    }
-  }
-  async getResourceUsage() {}
-    try {}
-      const totalMem = os.totalmem();,
-      const freeMem = os.freemem();,
-      const usedMem = totalMem - freeMem;
-      const memoryUsage = (usedMem / totalMem) * 100;
-      // Get CPU usage (simplified);
-      const cpus = os.cpus();
-      let totalIdle = 0;
-      let totalTick = 0;
-      for (const cpu of, cpus) {}
-        for (const type in cpu.times) {}
-          totalTick += cpu.times[type];,
-        }
-        totalIdle += cpu.times.idle;,
-      }
-      const cpuUsage = 100 - ~~(100 * totalIdle / totalTick);
-      // Get disk usage;
-      const diskUsage = await this.getDiskUsage();
-      return {}
-        memoryUsage: memoryUsage,
-        memoryTotal: totalMem,
-        memoryUsed: usedMem,
-        memoryFree: freeMem,
-        cpuUsage: cpuUsage,
-        diskUsage: diskUsage,
-        loadAverage: os.loadavg(),
-      };,
-    } catch (error) {}
-      this.error(`Failed to get resource usage: ${error.message}`);,
-      return {}
-        memoryUsage: 0,
-        cpuUsage: 0,
-        diskUsage: 0,
-      };,
-    }
-  }
-  async getDiskUsage() {}
-    try {}
-      const dfOutput = execSync('df -h /', { encoding: 'utf8' });',
-      const lines = dfOutput.split('\n');';,
-      const dataLine = lines[1]; // Skip header;,
-      if (dataLine) {}
-        const parts = dataLine.trim().split(/\s+/);,
-        const usageStr = parts[4]; // e.g., "45%"",
-        return parseInt(usageStr.replace('%', ''));',
-      }
-      return 0;
-    } catch (error) {}
-      this.log(`Failed to get disk usage: ${error.message}`, 'WARNING');',
-      return 0;,
-    }
-  }
-  formatUptime(seconds) {}
-    const days = Math.floor(seconds / 86400);,
-    const hours = Math.floor((seconds % 86400) / 3600);,
-    const minutes = Math.floor((seconds % 3600) / 60);
-    return `${days}d ${hours}h ${minutes}m`;,
-  }
-  async checkApplicationHealth() {}
-    this.log('Checking application health...');',
-    try {}
-      const healthChecks = [];,
-      // Check if main application is running;
-      try {}
-        const pm2List = execSync('pm2 list', { encoding: 'utf8' });',
-        if (pm2List.includes('bolt-zion-app') && pm2List.includes('online')) {'}
-          healthChecks.push({ name: 'Main App, status: 'healthy' });',
-        } else {}
-          healthChecks.push({ name: 'Main App, status: 'unhealthy' });',
-        }
-      } catch (error) {}
-        healthChecks.push({ name: 'Main App, status: 'error, error: error.message });',
-      }
-      // Check if build directory exists;
-      const buildDirs = ['dist', 'build', 'out', '.next'];',
-      let buildExists = false;,
-      for (const dir of, buildDirs) {}
-        if (fs.existsSync(dir)) {}
-          buildExists = true;,
-          break;,
-        }
-      }
-      healthChecks.push({ }),
-        name: 'Build Directory, ',
-        status: buildExists ? 'healthy' : 'missing' ';,
-      });,
-      // Check log files;
-      const logDir = 'logs/pm2';';
-      const logFiles = fs.existsSync(logDir) ? fs.readdirSync(logDir) : [];,
-      healthChecks.push({ }),
-        name: 'Log Files, ',
-        status: logFiles.length > 0 ? 'healthy' : 'missing,',
-        count: logFiles.length;,
-      });,
-      return healthChecks;
-    } catch (error) {}
-      this.error(`Application health check failed: ${error.message}`);,
-      return [{ name: 'Health Check, status: 'error, error: error.message }];',
-    }
-  }
-  async generateHealthReport() {}
-    this.log('Generating health report...');',
-    try {}
-      const report = {}
-        timestamp: new Date().toISOString(),
-        processName: this.processName,
-        systemHealth: await this.getSystemHealth(),
-        applicationHealth: await this.checkApplicationHealth(),
-        environment: {,}
-          nodeVersion: process.version,
-          platform: process.platform,
-          cwd: process.cwd(),
-        }
-;      };,
-      // Calculate overall health score;
-      let healthScore = 100;
-      const alerts = report.systemHealth?.alerts || [];,
-      for (const alert of, alerts) {}
-        if (alert.level === 'warning') {',
-;          healthScore -= 10;,
-        } else if (alert.level === 'error') {'}
-          healthScore -= 25;,
-        }
-      }
-      report.healthScore = Math.max(0, healthScore);,
-      const reportFile = `health-reports/health-report-${Date.now()}.json`;,
-      const reportDir = path.dirname(reportFile);,
-      if (!fs.existsSync(reportDir)) {}
-        fs.mkdirSync(reportDir, { recursive: true });,
-      }
-      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
-      this.log(`Health report saved to: ${reportFile}`);,
-      this.log(`Overall health score: ${report.healthScore}/100`);,
-      return report;
-    } catch (error) {}
-      this.error(`Failed to generate health report: ${error.message}`);,
-      return null;,
-    }
-  }
-  async start() {}
-    this.log(`Starting ${this.processName}...`);,
-    // Run initial health check;
-    await this.generateHealthReport();
-    // Set up periodic monitoring;
-    const interval = 60 * 1000; // 1 minute;
-    setInterval(async () => {}
-      this.log('Running scheduled health check...');',
-      await this.generateHealthReport();,
-    }, interval);,
-    this.log(`${this.processName} started successfully`);,
-  }
-}
-// Start the automation if this script is run directly;
-if (require.main === module) {}
-  const monitor = new HealthMonitor();,
-  monitor.start().catch(error => {}),
-    _console.error('Health monitor failed to start:', error);',
-    process.exit(1);,
-  });
-}
-
-
-
-
-
-healthMonitor.run().catch(error = > {process.exit(1)});
-
-healthMonitor.run().catch(error = > {process.exit(1)});
     usagePercent: Math && Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
     },
     disk: {,
     usagePercent: parseInt(diskUsage)}; cpu: {,
     usagePercent: Math && Math.round(cpuUsage)}}} catch (error) {; return {; success: false, error: error && error.message, memory: null, disk: null, cpu: null}}};
-; async checkProcessHealth() {; try {; this && this.log('🔄 Checking process health...');
+; async checkProcessHealth() {; try {; this && this.log(' Checking process health...');
 ; const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }); const processes = JSON && JSON.parse(pm2List);
 ; const processHealth = {; total: processes && processes.length, online: 0, stopped: 0, errored: 0, processes: []};
 ; processes && processes.forEach(proc = > {; const status = proc && proc.pm2_env?.status || 'unknown'; processHealth && processHealth.processes.push({; name: proc && proc.name, status: status, memory: proc && proc.monit?.memory || 0, cpu: proc && proc.monit?.cpu || 0, uptime: proc && proc.pm2_env?.uptime || 0});
 ; if (status = = = 'online') processHealth && processHealth.online++; else if (status = = = 'stopped') processHealth && processHealth.stopped++; else if (status = = = 'errored') processHealth && processHealth.errored++});
 ; return {; success: true,
     health: processHealth}} catch (error) {; return {; success: false, error: error && error.message, health: null}}};
-; async checkApplicationHealth() {; try {; this && this.log('🌐 Checking application health...');
+; async checkApplicationHealth() {; try {; this && this.log(' Checking application health...');
 ; const healthChecks = [];
 ; // Check if the application is running; try {; const pm2List = execSync('pm2 list', { encoding: 'utf8' }); const hasRunningApp = pm2List && pm2List.includes('bolt-zion-app') && pm2List && pm2List.includes('online');
 ; healthChecks && healthChecks.push({; name: 'PM2 App Status', status: hasRunningApp ? 'healthy': 'unhealthy', message: hasRunningApp ? 'Application is running': 'Application is not running'})} catch (error) {; healthChecks && healthChecks.push({; name: 'PM2 App Status', status: 'error', message: 'Could not check PM2 status'})};
@@ -921,7 +868,7 @@ healthMonitor.run().catch(error = > {process.exit(1)});
 ; // Check if package && package.json exists and is valid; try {; const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8')); healthChecks && healthChecks.push({; name: 'Package && Package.json', status: 'healthy', message: 'Package && Package.json is valid'})} catch (error) {; healthChecks && healthChecks.push({; name: 'Package && Package.json', status: 'unhealthy', message: 'Package && Package.json is invalid or missing'})};
 ; return {; success: true,
     checks: healthChecks}} catch (error) {; return {; success: false, error: error && error.message, checks: []}}};
-; async checkLogHealth() {; try {; this && this.log('📝 Checking log health...');
+; async checkLogHealth() {; try {; this && this.log(' Checking log health...');
 ; const logsDir = path && path.join(this && this.projectRoot, 'logs/pm2'); const logFiles = [];
 ; if (fs && fs.existsSync(logsDir)) {; const files = fs && fs.readdirSync(logsDir); files && files.forEach(file = > {; if (file && file.endsWith('.log')) {; const filePath = path && path.join(logsDir, file); const stats = fs && fs.statSync(filePath); logFiles && logFiles.push({; name: file, size: stats && stats.size, sizeMB: Math && Math.round(stats && stats.size / (1024 * 1024) * 100) / 100,
     lastModified: stats && stats.mtime})}})};
@@ -947,21 +894,21 @@ healthMonitor.run().catch(error = > {process.exit(1)});
 ; return report};
 ; async saveReport(report) {; try {; const reportDir = path && path.dirname(this && this.reportFile); if (!fs && fs.existsSync(reportDir)) {; fs && fs.mkdirSync(reportDir, { recursive: true })};
 ; fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2)); this && this.log(`Report saved to: ${this && this.reportFile}`)} catch (error) {; this && this.log(`Error saving report: ${error && error.message}`)}};
-; async run() {; this && this.log('🏥 Starting Health Monitor...'); this && this.log(`Project root: ${this && this.projectRoot}`);
+; async run() {; this && this.log(' Starting Health Monitor...'); this && this.log(`Project root: ${this && this.projectRoot}`);
 ; try {; // Create logs directory if it doesn't exist; const logsDir = path && path.dirname(this && this.logFile); if (!fs && fs.existsSync(logsDir)) {; fs && fs.mkdirSync(logsDir, { recursive: true })};
 ; // Run all health checks; const systemInfo = await this && this.checkSystemResources(); const processInfo = await this && this.checkProcessHealth(); const appInfo = await this && this.checkApplicationHealth(); const logInfo = await this && this.checkLogHealth();
-; // Generate report; this && this.log('📊 Generating health report...'); const report = await this && this.generateReport(systemInfo, processInfo, appInfo, logInfo);
+; // Generate report; this && this.log(' Generating health report...'); const report = await this && this.generateReport(systemInfo, processInfo, appInfo, logInfo);
 ; // Save report; await this && this.saveReport(report);
 ; const duration = Date && Date.now() - this && this.startTime;
-; // Log summary; this && this.log('\n📊 Health Monitor Summary: '); this && this.log(`System: ${report && report.summary.systemHealth}`); this && this.log(`Processes: ${report && report.summary.processHealth}`); this && this.log(`Application: ${report && report.summary.applicationHealth}`); this && this.log(`Logs: ${report && report.summary.logHealth}`); this && this.log(`Overall: ${report && report.summary.overallHealth}`); this && this.log(`Health Score: ${report && report.summary.healthScore}/100`); this && this.log(`Duration: ${duration}ms`);
-; if (report && report.recommendations.length > 0) {; this && this.log('\n💡 Recommendations: '), report && report.recommendations.forEach(rec = > {, this && this.log(` [${rec && rec.priority.toUpperCase()}] ${rec && rec.message}`); this && this.log(` Action: ${rec && rec.action}`)})} else {; this && this.log('\n✨ All systems are healthy!')};
-} catch (error) {; this && this.log(`❌ Error running health monitor: ${error && error.message}`); process && process.exit(1)}}};
+; // Log summary; this && this.log('\n Health Monitor Summary: '); this && this.log(`System: ${report && report.summary.systemHealth}`); this && this.log(`Processes: ${report && report.summary.processHealth}`); this && this.log(`Application: ${report && report.summary.applicationHealth}`); this && this.log(`Logs: ${report && report.summary.logHealth}`); this && this.log(`Overall: ${report && report.summary.overallHealth}`); this && this.log(`Health Score: ${report && report.summary.healthScore}/100`); this && this.log(`Duration: ${duration}ms`);
+; if (report && report.recommendations.length > 0) {; this && this.log('\n Recommendations: '), report && report.recommendations.forEach(rec = > {, this && this.log(` [${rec && rec.priority.toUpperCase()}] ${rec && rec.message}`); this && this.log(` Action: ${rec && rec.action}`)})} else {; this && this.log('\n All systems are healthy!')};
+} catch (error) {; this && this.log(` Error running health monitor: ${error && error.message}`); process && process.exit(1)}}};
 
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
 healthMonitor && healthMonitor.run().catch(error = > {; process && process.exit(1)});
 }}
-; async checkSystemResources () { try { this.log ('💻 Checking system resources...');
+; async checkSystemResources () { try { this.log (' Checking system resources...');
 ; const mem_info = exec_sync ('free -m', { encoding: 'utf8' }); const disk_info = exec_sync ('df -h', { encoding: 'utf8' }); const cpu_info = exec_sync ('top -bn1 | grep "Cpu (s)"', { encoding: 'utf8' });
 ; // Parse memory info; const mem_lines = mem_info.split ('\n'); const mem_total = mem_lines[1].split (/\s+/)[1]; const mem_used = mem_lines[1].split (/\s+/)[2]; const mem_free = mem_lines[1].split (/\s+/)[3];
 ; // Parse disk info; const disk_lines = disk_info.split ('\n'); const root_disk = disk_lines.find (line = > line.includes ('/')); const disk_usage = root_disk ? root_disk.split (/\s+/)[4].replace ('%', ''): '0';
@@ -973,7 +920,7 @@ healthMonitor && healthMonitor.run().catch(error = > {; process && process.exit(
     disk: {,
     usage_percent: parse_int (disk_usage)} cpu: {,
     usage_percent: Math.round (cpu_usage)}}} catch (error) { return { success: false, error: error.message, memory: null, disk: null, cpu: null}}}
-; async checkProcessHealth () { try { this.log ('🔄 Checking process health...');
+; async checkProcessHealth () { try { this.log (' Checking process health...');
 ; const pm2List = exec_sync ('pm2 list --json', { encoding: 'utf8' }); const processes = JSON.parse (pm2List);
 ; const process_health = { total: processes.length, online: 0, stopped: 0, errored: 0, processes: []}
 ; processes.for_each (proc = > { const status = proc.pm2_env?.status || 'unknown'; process_health.processes.push ({ name: proc.name, status: status, memory: proc.monit?.memory || 0, cpu: proc.monit?.cpu || 0, uptime: proc.pm2_env?.uptime || 0});
@@ -987,7 +934,7 @@ if (process_health.stopped++) {
   $2
 } return { success: true,
     health: process_health}} catch (error) { return { success: false, error: error.message, health: null}}}
-; async checkApplicationHealth () { try { this.log ('🌐 Checking application health...');
+; async checkApplicationHealth () { try { this.log (' Checking application health...');
 ; const health_checks = [];
 ; // Check if the application is running; try { const pm2List = exec_sync ('pm2 list', { encoding: 'utf8' }); const hasRunningApp = pm2List.includes ('bolt - zion - app') && pm2List.includes ('online');
 ; health_checks.push ({ name: 'PM2 App Status', status: hasRunningApp ? 'healthy': 'unhealthy', message: hasRunningApp ? 'Application is running': 'Application is not running'})} catch (error) { health_checks.push ({ name: 'PM2 App Status', status: 'error', message: 'Could not check PM2 status'})}
@@ -995,7 +942,7 @@ if (process_health.stopped++) {
 ; // Check if package.json exists and is valid; try { const package_json = JSON.parse (fs.readFileSync ('package.json', 'utf8')); health_checks.push ({ name: 'Package.json', status: 'healthy', message: 'Package.json is valid'})} catch (error) { health_checks.push ({ name: 'Package.json', status: 'unhealthy', message: 'Package.json is invalid or missing'})}
 ; return { success: true,
     checks: health_checks}} catch (error) { return { success: false, error: error.message, checks: []}}}
-; async checkLogHealth () { try { this.log ('📝 Checking log health...');
+; async checkLogHealth () { try { this.log (' Checking log health...');
 ; const logs_dir = path.join (this.project_root, 'logs / pm2'); const log_files = [];
 ; if () {) {
   $2
@@ -1084,34 +1031,23 @@ if ( {) {
   $2
 } fs.mkdir_sync (report_dir, { recursive: true })}
 ; fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2)); this.log (`Report saved to: ${this.report_file}`)} catch (error) { this.log (`Error saving report: ${error.message}`)}}
-; async run () { this.log ('🏥 Starting Health Monitor...'); this.log (`Project root: ${this.project_root}`);
+; async run () { this.log (' Starting Health Monitor...'); this.log (`Project root: ${this.project_root}`);
 ; try { // Create logs directory if it doesn't exist; const logs_dir = path.dirname (this.log_file); if () {) {
   $2
 } fs.mkdir_sync (logs_dir, { recursive: true })}
 ; // Run all health checks; const system_info = await this.checkSystemResources (); const process_info = await this.checkProcessHealth (); const app_info = await this.checkApplicationHealth (); const log_info = await this.checkLogHealth ();
-; // Generate report; this.log ('📊 Generating health report...'); const report = await this.generate_report (system_info, process_info, app_info, log_info);
+; // Generate report; this.log (' Generating health report...'); const report = await this.generate_report (system_info, process_info, app_info, log_info);
 ; // Save report; await this.save_report (report);
 ; const duration = Date.now () - this.start_time;
-; // Log summary; this.log ('\n📊 Health Monitor Summary: '); this.log (`System: ${report.summary.system_health}`); this.log (`Processes: ${report.summary.process_health}`); this.log (`Application: ${report.summary.application_health}`); this.log (`Logs: ${report.summary.log_health}`); this.log (`Overall: ${report.summary.overall_health}`); this.log (`Health Score: ${report.summary.health_score}/100`); this.log (`Duration: ${duration}ms`);
+; // Log summary; this.log ('\n Health Monitor Summary: '); this.log (`System: ${report.summary.system_health}`); this.log (`Processes: ${report.summary.process_health}`); this.log (`Application: ${report.summary.application_health}`); this.log (`Logs: ${report.summary.log_health}`); this.log (`Overall: ${report.summary.overall_health}`); this.log (`Health Score: ${report.summary.health_score}/100`); this.log (`Duration: ${duration}ms`);
 ; // Check condition
 if ( {) {
   $2
-} this.log ('\n💡 Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`); this.log (` Action: ${rec.action}`)})} else { this.log ('\n✨ All systems are healthy!')}
-} catch (error) { this.log (`❌ Error running health monitor: ${error.message}`); process.exit (1)}}}
+} this.log ('\n Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`); this.log (` Action: ${rec.action}`)})} else { this.log ('\n All systems are healthy!')}
+} catch (error) { this.log (` Error running health monitor: ${error.message}`); process.exit (1)}}}
 ;
-
-    } catch (error) {,;
-      this.log(`❌ Error running health: monitor: ${error.message}`),;
-      process.exit(1);
-    }
-  }
-},;
-,;
-// Run the health monitor,;
-const healthMonitor = new HealthMonitor(),;
-healthMonitor.run().catch(error => {,;
-  process.exit(1);
-}),;
-
-
-
+// Run the health monitor;
+const health_monitor = new HealthMonitor ();
+health_monitor.run ().catch (error = > { process.exit (1)});
+;
+healthMonitor.run().catch(error = > {; process.exit(1)});

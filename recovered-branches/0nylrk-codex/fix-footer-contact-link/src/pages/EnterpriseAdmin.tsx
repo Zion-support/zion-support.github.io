@@ -1,27 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -32,22 +9,20 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {;
   const { user } = useAuth();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+  // Check if user has enterprise admin role
 
-  // Check if user has enterprise admin role;
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
-
-  if (!isEnterpriseAdmin) {;
-    return <Navigate to="/unauthorized" />;
-
-
 
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />
   }
   return (
-
-
-
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -78,10 +53,6 @@ export default function EnterpriseAdmin() {;
       <Footer />;
     </ProtectedRoute>;
   );
-
-
-
-
 }
 import React from './react';
 import { Header } from '@/components / Header';

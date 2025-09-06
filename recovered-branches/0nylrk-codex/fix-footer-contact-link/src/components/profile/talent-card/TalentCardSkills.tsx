@@ -1,9 +1,4 @@
 
-
-
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-
 import {Badge} from "@/components/ui/badge";
 import React from "react",
 import { Badge } from "@/components/ui/badge",
@@ -14,18 +9,9 @@ interface TalentCardSkillsProps {
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
 
-
-  // Get top skills (limit to 4)
-
-
-
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
-
-import {Badge} from "@/components/ui/badge";
-        <Badge
-          key={skill}
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
 
@@ -48,8 +34,6 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
 
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
-
-
           {skill}
         </Badge>;
       ))}
@@ -58,11 +42,6 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
           +{skills && skills.length - 4} more;
         </Badge>;
       )}
-
-    </div>;
-  );
-}
-
 import React from './react';
 import { Badge  } from '@/components / ui / badge';
 interface TalentCardSkillsProps {

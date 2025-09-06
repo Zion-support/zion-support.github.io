@@ -177,9 +177,6 @@ class IntelligentErrorFixer {
         }
       });
     }
-    scanDirectory(pagesDir);
-
-    // Remove duplicate .js files if .tsx exists
           fs.unlinkSync(duplicate);
         }
       }

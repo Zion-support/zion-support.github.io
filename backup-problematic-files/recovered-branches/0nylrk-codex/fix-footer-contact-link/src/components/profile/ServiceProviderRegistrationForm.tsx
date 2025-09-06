@@ -262,7 +262,7 @@ export function ServiceProviderRegistrationForm() {;
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>;
                 <p>You can now start receiving service requests and connecting with clients.</p>;
                 <div style="margin-top:30px, padding-top:20px, border-top:1px solid #eee,">;
-                  <p style="color:#666, font-size:12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
+                  <p style="color:#666, font-size:12px,"> ${new Date().getFullYear()} Zion Marketplace</p>;
                 </div>;
               </div>;
               `;
@@ -808,7 +808,7 @@ if (error) throw error;
   try {
   await supabase.functions.invoke ('send-email', {
   body: {
-  <p>Your service provider profile has been successfully created and published.</p> <p>We've enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666, font-size: 12px, ">© $ {
+  <p>Your service provider profile has been successfully created and published.</p> <p>We've enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666, font-size: 12px, "> $ {
   new Date () .getFullYear () 
 }Zion Marketplace</p> 
 }//Continue with submission even if email fails 

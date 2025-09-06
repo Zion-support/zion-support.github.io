@@ -1,16 +1,13 @@
 
-import React from './react';
-import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-interface QuoteStatusCardsProps {
-  status_counts: {
-
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+interface QuoteStatusCardsProps {;
+  statusCounts: {;
     new: number;
     in_review: number;
     responded: number;
     accepted: number;
-
-
 
 interface QuoteStatusCardsProps {
   statusCounts: {
@@ -21,9 +18,6 @@ interface QuoteStatusCardsProps {
     closed: number
   }
 }
-
-export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
-
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
@@ -40,11 +34,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-
-
-      
-
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -58,11 +47,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-
-
-      
-
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -76,11 +60,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-
-
-      
-
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -94,11 +73,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-
-
-      
-
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -112,11 +86,23 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-
-export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
-  statusCounts,;
-}) => {;
-  return (
+  )
+},
+import React from "react",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+interface QuoteStatusCardsProps {;
+  statusCounts: {;
+    new: number,;
+    in_review: number,;
+    responded: number,;
+    accepted: number,;
+    closed: number;
+  }
+}
+;
+export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
+  return (;
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">;
       <Card className="bg-zion-blue-dark border border-zion-blue-light">;
         <CardHeader className="pb-2">;
@@ -150,77 +136,65 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
         </CardContent>;
       </Card>;
 
-      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
+      <Card className="bg-zion-blue-dark border border-zion-blue-light">;
+        <CardHeader className="pb-2">;
+          <CardTitle className="text-lg font-medium text-white flex justify-between items-center">;
             In Review;
-            <Badge className="bg - yellow - 500">{status_counts.in_review}</Badge>;
+            <Badge className="bg-yellow-500">{statusCounts && statusCounts.in_review}</Badge>;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-          <p className="text - sm text - zion - slate - light">;
-
+          <p className="text-sm text-zion-slate-light">;
             Quotes being evaluated;
           </p>;
         </CardContent>;
       </Card>;
 
-      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
+      <Card className="bg-zion-blue-dark border border-zion-blue-light">;
+        <CardHeader className="pb-2">;
+          <CardTitle className="text-lg font-medium text-white flex justify-between items-center">;
             Responded;
-            <Badge className="bg - purple - 500">{status_counts.responded}</Badge>;
+            <Badge className="bg-purple-500">{statusCounts && statusCounts.responded}</Badge>;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-          <p className="text - sm text - zion - slate - light">;
-
+          <p className="text-sm text-zion-slate-light">;
             Quotes with responses sent;
           </p>;
         </CardContent>;
       </Card>;
 
-      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
+      <Card className="bg-zion-blue-dark border border-zion-blue-light">;
+        <CardHeader className="pb-2">;
+          <CardTitle className="text-lg font-medium text-white flex justify-between items-center">;
             Accepted;
-            <Badge className="bg - green - 500">{status_counts.accepted}</Badge>;
+            <Badge className="bg-green-500">{statusCounts && statusCounts.accepted}</Badge>;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-          <p className="text - sm text - zion - slate - light">;
-
+          <p className="text-sm text-zion-slate-light">;
             Successfully converted quotes;
           </p>;
         </CardContent>;
       </Card>;
 
-      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
-        <CardHeader className="pb - 2">;
-          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
+      <Card className="bg-zion-blue-dark border border-zion-blue-light">;
+        <CardHeader className="pb-2">;
+          <CardTitle className="text-lg font-medium text-white flex justify-between items-center">;
             Closed;
-            <Badge className="bg - gray - 500">{status_counts.closed}</Badge>;
+            <Badge className="bg-gray-500">{statusCounts && statusCounts.closed}</Badge>;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-          <p className="text - sm text - zion - slate - light">;
-
+          <p className="text-sm text-zion-slate-light">;
             Finalized or declined quotes;
           </p>;
         </CardContent>;
       </Card>;
+    </div>;
+  );
+}
 
     </div>);
 }
 ;
-
-
-    </div>
-
-    </div>;
-);
-};
-
-
-export default QuoteStatusCards;
-

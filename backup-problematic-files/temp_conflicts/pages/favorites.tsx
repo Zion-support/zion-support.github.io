@@ -23,7 +23,6 @@ export default function FavoritesPage() {;
   return (;
     <div>;
       <Head>;
-        <title>Favorites — Zion AI Marketplace</title>;
       </Head>;
 ;
       <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">;

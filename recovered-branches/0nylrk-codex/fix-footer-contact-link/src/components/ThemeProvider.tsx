@@ -1,53 +1,29 @@
 
-
-
-import { createContext, useContext, useEffect, useState } from "react"
-
-type Theme = "dark" | "light" | "system"
-
-
-
+import { createContext, useContext, useEffect, useState } from &quot;react&quot;
+type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
 type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
 }
-
-
-;
-type ThemeProviderState = {;
-  theme: Theme;
-
+type ThemeProviderState = {theme: Theme;
   setTheme: (theme: Theme) => void;
 }
 const initialState: ThemeProviderState = {
-
-  theme: "system",
-
+  theme: &quot;system&quot;
   setTheme: () => null}
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 export function ThemeProvider({
-
-  children,;
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
-
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
 
   const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem("theme") as Theme) || defaultTheme
   )
   useEffect(() => {
     const root = window.document.documentElement
-
-    root.classList.remove("light", "dark")
-
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+    root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
+    if (theme === &quot;system&quot;) {
+      const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
         .matches
-        ? "dark"
-        : "light"
-
-
       root.classList.add(systemTheme)
       return
     }
@@ -59,11 +35,6 @@ export function ThemeProvider({
       localStorage.setItem(&quot;theme&quot;, theme)
       setTheme(theme)
     }}
-
-
-;
-
-
   return (;
 import { create_context, useContext, useEffect, useState } from &quot;react & quot;
 ;
@@ -115,15 +86,7 @@ if ( {) {
       {children}
     </ThemeProviderContext.Provider>);
 }
-
-export const use_theme = () =>: any {
-  const context = useContext (ThemeProviderContext);
-  // Check condition
-if (
-    throw new Error (&quot) {
-  $2
-}use_theme must be used within a ThemeProvider & quot);
-  return context;
+  if (context === undefined)
 
 }
 

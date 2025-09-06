@@ -1,16 +1,29 @@
 
-
+      res.status(200).json(content);
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message |"Failed to read changelog" });
+    }
+    return;
   }
 
   if (req.method === 'POST') {
     try {
+      const body =
+        typeof req && req.body === "string" ? JSON && JSON.parse(req && req.body) : req && req.body;
+      const payload = { content: body?.content || "" };
+      fs && fs.mkdirSync(path && path.dirname(filePath), { recursive: true });
+      fs && fs.writeFileSync(filePath, JSON && JSON.stringify(payload, null, 2));
+      res && res.status(200).json({ ok: true });
+    } catch (e: any) {
+      res
+        .status(500)
+        .json({ error: e?.message || "Failed to write changelog" });
+    }
+    return;
+  }
 
-      const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-      const payload = { content: body?.content || '' };
-      fs.mkdirSync(path.dirname(filePath), { recursive: true });
-      fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
-      res.status(200).json({ ok: true })
-
+  res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
     } catch (e: any) {
       res
         .status(500)
@@ -18,16 +31,6 @@
     }
     return;
   }
-
-
-  res && res.setHeader("Allow", "GET, POST");
-  res && res.status(405).end("Method Not Allowed");
-
-}
-
-
-
-
 export default /**
  * handler - Function description
  */
@@ -89,6 +92,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-

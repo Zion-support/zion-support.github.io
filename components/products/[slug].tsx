@@ -1,36 +1,27 @@
 import type { NextPage } from 'next';
 
-
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
-
-  const item = items.find((e) => e.slug === slug);
-
-
   if (!item) {
     return (
       <EnhancedLayout>
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
-
-        <div className="space-y-4">
-
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
       </EnhancedLayout>
     )
-
-
 import equipment from '@/data/equipment ;
 const EquipmentDetail: NextPage = () => {;
   const router = useRouter(),;
   const { slug } = router && router.query as { slug?: string };
   const items = equipment as any[];
   const item = items && items.find(e => e && e.slug === slug);  const item = items && items.find((e) => e && e.slug === slug);
+
   if (!item) {;
     return (
       <EnhancedLayout>;
@@ -50,6 +41,7 @@ const EquipmentDetail: NextPage = () => {;
         </div>;
       </EnhancedLayout>;
     );
+
   return (
     <EnhancedLayout>;
       <Head>;
@@ -111,15 +103,6 @@ const EquipmentDetail: NextPage = () => {;
       </div>;
     </EnhancedLayout>;
   );
-
-
-};
-
-
-
-
-export default EquipmentDetail;
-
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import Link from 'next / link';
@@ -214,4 +197,5 @@ if ( {) {
 }
 ;
 export default EquipmentDetail;
-;
+export default EquipmentDetail;
+export default EquipmentDetail;

@@ -125,6 +125,9 @@ function checkSyntaxErrors(content")
         "type": "syntax"
 <<<<<<< HEAD
   console.error(" Error detection "failed": ")
+<<<<<<< HEAD
 =======
   console.error(" Error detection "failed": ")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

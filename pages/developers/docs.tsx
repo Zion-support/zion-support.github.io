@@ -1,2 +1,13 @@
 
+const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false })
 
+const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false });
+export default function DocsRoute(req, res) {
+  try {
+  return <ApiDocsPage />;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}

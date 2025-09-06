@@ -1,7 +1,7 @@
 
-
-
-
+import React from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils",
 interface ChatMessageProps {
 
   message: string
@@ -9,11 +9,8 @@ interface ChatMessageProps {
 
   timestamp: Date
 }
-
-
-
-
-
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
+  
   return (
 
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
@@ -56,41 +53,12 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
         )}
-
-
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
-        isUser 
-          ? "bg-zion-purple text-white" 
-
-
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
-
-      </Avatar>;
-
-      <divclassName={cn(
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm"
-        isUser 
-          ? "bg-zion-purple text-white" 
-          : theme === "dark"
-            ? "bg-zion-blue-light text-white"
-            : "bg-gray-100 text-gray-800"
-      )}>;
-        <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />;
-        <divclassName={cn(
-          "text-xs mt-1"
-          isUser 
-            ? "text-white/70" 
-
-
-          "text-xs mt-1",
-          isUser 
-            ? "text-white/70" 
-
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -99,14 +67,6 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
         </div>;
       </div>;
     </div>;
-  );
-}
-
-
-  ),
-  
-
-
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
@@ -115,10 +75,6 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
   )
 
   return formattedMessage
-
-
-
-
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
@@ -192,10 +148,6 @@ function formatMessageWithLinks(): any (message: string): string {;
   ),;
 
   return formattedMessage;
-
-
-
-
 }
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';

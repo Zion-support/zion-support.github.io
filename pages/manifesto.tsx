@@ -1,7 +1,4 @@
 
-
-
-
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -9,13 +6,12 @@
           <header className="mb-12">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Manifesto</h1>
             <p className="mt-4 text-lg text-gray-700">
-              A public commitment to build an AI-native, trustless, and talent-first marketplace—in service of human sovereignty.
             </p>
           </header>
           <section className="prose prose-gray max-w-none">
             <h2 id="our-mission">Our Mission</h2>
             <p>
-              Empower every builder, creator, and solver with sovereign tools to earn, collaborate, and grow—without gatekeepers. Zion is a
+              Empower every builder, creator, and solver with sovereign tools to earn, collaborate, and growwithout gatekeepers. Zion is a
               marketplace protocol and product suite that aligns incentives around talent, trust, and value creation.
             </p>
             <h2 id="why-zion-exists">Why Zion Exists</h2>
@@ -33,16 +29,15 @@
             </ul>
             <h2 id="ai-for-empowerment">AI for Empowerment, Not Exploitation</h2>
             <p>
-              AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching
+              AI should amplify human capability and agencynot replace it or capture its value. Zion is AI-native by design: matching
 
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize
-              transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.
+              transparency, auditability, and consent. Your data powers your outcomes, not someone elses moat.
             </p>
             <h2 id="our-decentralized-future">Our Decentralized Future</h2>
             <p>
               Zion evolves from a product into a protocol: identity, reputation, escrow, and discovery as shared public goods. Governance
               transitions gradually, guided by real usage and contributor ownership. The end-state is a resilient, permissionless network
-              where anyone can build clients, services, and markets atop a common trust layer—talent-first, globally accessible, and
               credibly neutral.
             </p>
           </section>
@@ -50,9 +45,6 @@
       </main>
     </>
   )
-
-}
-
 import Head from 'next / head',
 import React from 'react',
 export default function ManifestoPage (): JSX.Element {
@@ -67,13 +59,13 @@ export default function ManifestoPage (): JSX.Element {
           <header className="mb - 12">;
             <h1 className="text - 4xl font - extrabold tracking - tight sm:text - 5xl">Zion Manifesto</h1>;
             <p className="mt - 4 text - lg text - gray - 700">;
-              A public commitment to build an AI - native, trustless, and talent - first marketplace—in service of human sovereignty.;
+              A public commitment to build an AI - native, trustless, and talent - first marketplacein service of human sovereignty.;
             </p>;
           </header>;
           <section className="prose prose - gray max - w-none">;
             <h2 id="our - mission">Our Mission</h2>;
             <p>;
-              Empower every builder, creator, and solver with sovereign tools to earn, collaborate, and grow—without gatekeepers. Zion is a;
+              Empower every builder, creator, and solver with sovereign tools to earn, collaborate, and growwithout gatekeepers. Zion is a;
               marketplace protocol and product suite that aligns incentives around talent, trust, and value creation.;
             </p>;
             <h2 id="why - zion - exists">Why Zion Exists</h2>;
@@ -91,15 +83,15 @@ export default function ManifestoPage (): JSX.Element {
             </ul>;
             <h2 id="ai - for - empowerment">AI for Empowerment, Not Exploitation</h2>;
             <p>;
-              AI should amplify human capability and agency—not replace it or capture its value. Zion is AI - native by design: matching,
+              AI should amplify human capability and agencynot replace it or capture its value. Zion is AI - native by design: matching,
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human - sovereign. We prioritize;
-              transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.;
+              transparency, auditability, and consent. Your data powers your outcomes, not someone elses moat.;
             </p>;
             <h2 id="our - decentralized - future">Our Decentralized Future</h2>;
             <p>;
               Zion evolves from a product into a protocol: identity, reputation, escrow, and discovery as shared public goods. Governance;
               transitions gradually, guided by real usage and contributor ownership. The end - state is a resilient, permissionless network;
-              where anyone can build clients, services, and markets atop a common trust layer—talent - first, globally accessible, and;
+              where anyone can build clients, services, and markets atop a common trust layertalent - first, globally accessible, and;
               credibly neutral.;
             </p>;
           </section>;
@@ -107,10 +99,3 @@ export default function ManifestoPage (): JSX.Element {
       </main>;
     </>);
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-

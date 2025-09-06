@@ -1,15 +1,15 @@
 
-import {TalentCard} from "@/components/talent/TalentCard";
-import {TalentProfile} from "@/types/talent";
-export interface TalentGridProps {;
-  talents: TalentProfile[],;
-  isLoading: boolean,;
-  onTalentClick: (id: string) => void,;
-  savedTalentIds: string[],;
-  onToggleSave: (id: string, isSaved: boolean) => void,;
-  isAuthenticated: boolean,;
-  viewProfile?: (id: string) => void,;
+import { TalentCard } from "@/components/talent/TalentCard";
+import { TalentProfile } from "@/types/talent";
+export interface TalentGridProps {
 
+  talents: TalentProfile[]
+  isLoading: boolean
+  onTalentClick: (id: string) => void
+  savedTalentIds: string[]
+  onToggleSave: (id: string, isSaved: boolean) => void
+  isAuthenticated: boolean
+  viewProfile?: (id: string) => void
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void;
 
@@ -31,7 +31,6 @@ export interface TalentGridProps {
 
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
-
   handleRequestHire?: (talent: TalentProfile) => void
 }
 export function TalentGrid({
@@ -41,21 +40,13 @@ export function TalentGrid({
   savedTalentIds
   onToggleSave
 
-
-
-export function TalentGrid({ 
-  talents, 
-  isLoading, 
-  onTalentClick, 
-  savedTalentIds, 
-
-
   handleRequestHire
 }: TalentGridProps) {
 
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent)
+
 import { TalentCard } from '@/components / talent / TalentCard';
 import { TalentProfile } from '@/types / talent';
 export interface TalentGridProps {
@@ -78,24 +69,18 @@ function TalentGrid() {
 if ( {) {
   $2
 }
-      handleRequestHire (talent);
     } else {
-
-;
-  const handleViewProfile = (id: string) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      view_profile (id);
-
+      // Default implementation;
+      console.log ("Request to hire:", talent.id);
+    }
+  }
+  const handleViewProfile = (id: string) => {
+    if (viewProfile) {
+      viewProfile(id)
     } else {
       onTalentClick (id);
     }
-
-      // Default implementation
-
-  };
+  }
 
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
@@ -138,9 +123,6 @@ export function TalentGrid({;
       onTalentClick(id);
     }
   },
-
-
-
   
   if (isLoading) {
     return <div className="py-8 text-center">
@@ -152,27 +134,6 @@ export function TalentGrid({;
     return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
       {clearFilters && (
-
-export function TalentGrid(): any ({ ;
-  talents, ;
-  isLoading, ;
-  onTalentClick, ;
-  savedTalentIds, ;
-  onToggleSave, ;
-  isAuthenticated;
-  viewProfile;
-  clearFilters;
-  handleRequestHire;
-}: TalentGridProps) {;
-  const handleRequestHireInternal = (talent: TalentProfile) => {;
-    if (handleRequestHire) {;
-      handleRequestHire(talent);
-    } else {;
-      // Default implementation;
-      console && console.log("Request to hire:", talent && talent.id);
-    }
-        <button
-          onClick={clearFilters}
           className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
         >
           Clear Filters
@@ -207,16 +168,12 @@ export function TalentGrid(): any ({ ;
         >
           Clear Filters
         </button>
-
-
       )}
     </div>;
   }
-
-
-
-
-
+      )}
+    </div>;
+  }
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {talents && talents.map((talent) => (;
@@ -230,12 +187,8 @@ export function TalentGrid(): any ({ ;
           isAuthenticated={isAuthenticated}
         />;
       ))}
-
-    </div>;
-  );
+    </div>
+  )
 }
   }
 ;
-
-
-

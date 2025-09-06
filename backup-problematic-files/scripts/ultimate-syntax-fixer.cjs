@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/ultimate-syntax-fixer.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -98,6 +97,11 @@ filesToFix.forEach(fixFile);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/ultimate-syntax-fixer.cjs
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -119,9 +123,7 @@ const filesToFix = ['pages/api/health.ts']
     content = content.replace(/\{"([^"]*?)\"\s*"\}/g, '{"$1"}
     content = content.replace(/"([^"]*?)"\s*"([^"]*?)"/g, '"$1$2"
     content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3"
-<<<<<<< HEAD
-    content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/ultimate-syntax-fixer.cjs
 <<<<<<< HEAD
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
 =======
@@ -135,3 +137,9 @@ const filesToFix = ['pages/api/health.ts']
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+    content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/ultimate-syntax-fixer.cjs
+>>>>>>> origin/main

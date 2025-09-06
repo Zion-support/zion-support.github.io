@@ -18,6 +18,9 @@ const { execSync } = require('child_process')
     console.log('\n� Security "Vulnerabilities")
 <<<<<<< HEAD
     console.log('\n "Recommendations")
+<<<<<<< HEAD
 =======
     console.log('\n "Recommendations")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

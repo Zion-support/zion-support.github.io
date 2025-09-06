@@ -1,7 +1,9 @@
 
-
-
-
+import { useState } from "react",
+import { Search } from "lucide-react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -11,12 +13,13 @@ interface CountryTabsProps {
 
   setSearchQuery: (query: string) => void
 }
+export function CountryTabs({
+  popularCountries;
 
-
-
-
-
-
+  filteredCountries
+  handleCountrySelect
+  searchQuery
+  setSearchQuery
 
 }: CountryTabsProps) {
   return (
@@ -40,14 +43,13 @@ interface CountryTabsProps {
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
-
-import {useState} from "react";
-import {Search} from "lucide-react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CountryServiceCard} from "@/components/services/CountryServiceCard";
-import {CountryPricing} from "@/data/onsiteServicePricing";
+import { useState } from "react",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
 interface CountryTabsProps {;
   popularCountries: string[],;
   filteredCountries: CountryPricing[],;
@@ -86,61 +88,20 @@ export function CountryTabs(): any ({ ;
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
             .map(country => (;
-              <CountryServiceCard
-                key={country && country.country} 
-                country={country} 
-
-
-              <CountryServiceCard 
-                key={country.country} 
-                country={country} 
-
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;
             ));
           }
-
-        </div>;
-      </TabsContent>;
-
-      <TabsContent value="all" className="mt-0">;
-        <div className="mb-6 max-w-md mx-auto">;
-          <div className="relative">;
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
-
             <Input
               type="text"
               placeholder="Search by country..."
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
               value={searchQuery}
-
-              onChange={(e) => setSearchQuery(e && e.target.value)}
-            />;
-          </div>;
-        </div>;
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">;
-          {filteredCountries && filteredCountries.slice(0, 12).map(country => (;
-            <CountryServiceCard
-              key={country && country.country} 
-              country={country} 
-
-
-            <CountryServiceCard 
-              key={country.country} 
-              country={country} 
-
               onSelect={handleCountrySelect}
               isPopular={popularCountries && popularCountries.includes(country && country.country)}
             />;
           ))}
-
-        </div>;
-
-        {filteredCountries && filteredCountries.length > 12 && (;
-          <div className="text-center mt-8">;
-
             <Button
               onClick={() => document && document.getElementById('pricing-table')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline";
@@ -150,12 +111,6 @@ export function CountryTabs(): any ({ ;
             </Button>;
           </div>;
         )}
-
-      </TabsContent>;
-    </Tabs>;
-  );
-}
-
 import { useState } from './react';
 import { Search } from './lucide-react';
 import { Input } from '@/components / ui / input';

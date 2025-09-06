@@ -35,7 +35,7 @@ export default function ApiObservabilityPage() {
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup: {service.setupTime}</div>
                 </div>
               </div>
               <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>

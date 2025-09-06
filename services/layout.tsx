@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,10 +27,11 @@ export default function ServicesLayout(): any ({;
 }: {;
   children: React && React.ReactNode;
 }) {;
-
 export default /**
  * ServicesLayout - Function description
  */
 function ServicesLayout() {
+  children: React.ReactNode;
+}) {
   return <div>{children}</div>;
 }

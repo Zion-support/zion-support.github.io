@@ -1,11 +1,15 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-deployment-automation.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-deployment-automation.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-deployment-automation.cjs
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -244,6 +248,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-deployment-automation.cjs
+>>>>>>> origin/main
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced Deployment Automation...')
           setTimeout(() => reject(new Error('Step timeout')
@@ -264,10 +273,8 @@ console.log(' Starting Enhanced Deployment Automation...')
       execSync('node scripts/optimize-images.cjs', { "stdio"})
     execSync('node scripts/performance-monitor.cjs', { "stdio"})
     const status = execSync('git status --porcelain', { "encoding"})
-<<<<<<< HEAD
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
-=======
-    execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-deployment-automation.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -303,3 +310,10 @@ console.log(' Starting Enhanced Deployment Automation...')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+  console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
+  console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/enhanced-deployment-automation.cjs
+>>>>>>> origin/main

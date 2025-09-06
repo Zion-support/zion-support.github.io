@@ -48,9 +48,13 @@ function processFile(filePath) {
     return 0}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -101,4 +105,7 @@ module.exports = { removeConsoleStatements, processFile };
 =======
 
 module.exports = { removeConsoleStatements, processFile };
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

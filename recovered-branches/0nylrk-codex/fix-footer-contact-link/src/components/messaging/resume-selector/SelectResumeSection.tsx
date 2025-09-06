@@ -1,6 +1,9 @@
-
-
-
+import React from 'react';
+import { FileText  } from 'lucide-react';
+import { ResumeOption  } from '../resume-selector/types';
+import { ResumePreviewCard  } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
@@ -13,7 +16,6 @@ export function SelectResumeSection({;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
-
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
@@ -36,13 +38,6 @@ interface SelectResumeSectionProps {;
   isLoading: boolean
 }
 export function SelectResumeSection({
-import {FileText} from 'lucide-react';
-import {ResumeOption} from '../resume - selector / types';
-import {ResumePreviewCard} from './ResumePreviewCard';
-
-                selectedResume?.id === option && option.id 
-                  ? 'bg-zion-purple/20 border border-zion-purple' 
-
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option && option.id)}
@@ -53,10 +48,6 @@ import {ResumePreviewCard} from './ResumePreviewCard';
               </div>;
             </button>;
           ))}
-
-
-          {selectedResume?.type === 'ai_resume' && selectedResume && selectedResume.resume && (;
-
             <ResumePreviewCard
               resume={selectedResume && selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
@@ -65,11 +56,6 @@ import {ResumePreviewCard} from './ResumePreviewCard';
           )}
         </>;
       )}
-
-    </div>;
-  );
-}
-
 import {Resume} from '@/types / resume';
 interface SelectResumeSectionProps {
   resume_options: ResumeOption[],

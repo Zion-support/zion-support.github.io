@@ -619,23 +619,6 @@ if ( {) {
       priority: this.getCategoryPriority (name);
     })),
     // Add additional categories for pages;
-    this.categories.push (
-      {
-        id: 'company',
-        name: 'Company',
-        slug: 'company',
-        icon: '🏢',
-        service_count: 0,
-        services: [],
-        priority: 1;
-      },
-      {
-        id: 'resources',
-        name: 'Resources',
-        slug: 'resources',
-        icon: '📚',
-        service_count: 0,
-        services: [],
         priority: 2;
       },
       {
@@ -650,11 +633,6 @@ if ( {) {
     return this.categories;
   }
   // Get category icon;
-  private getCategoryIcon (category_name: string): string {
-    const icon_map: { [key: string]: string } = {
-      'AI & Machine Learning': '🤖Cybersecurity': '🔒Infrastructure': '🏗️Blockchain': '⛓️Content & Marketing': '📝Research & Development': '🔬Creative AI': '🎨Legal AI': '⚖️Healthcare AI': '🏥';
-    },
-    return icon_map[category_name] || '🚀';
   }
   // Get category priority;
   private getCategoryPriority (category_name: string): number {
@@ -672,49 +650,6 @@ if ( {) {
     return priority_map[category_name] || 10;
   }
   // Generate header navigation;
-  generateHeaderNavigation (): NavigationItem[] {
-    return [;
-      {
-        id: 'home',
-        label: '🏠 Home',
-        href: '/',
-        priority: 1;
-      },
-      {
-        id: 'explore',
-        label: '🔍 Explore',
-        href: '/explore',
-        priority: 2;
-      },
-      {
-        id: 'services',
-        label: '🚀 Services',
-        href: '/services',
-        priority: 3;
-      },
-      {
-        id: 'automation',
-        label: '⚡ Automations',
-        href: '/automation',
-        priority: 4;
-      },
-      {
-        id: 'reports',
-        label: '📊 Reports',
-        href: '/reports',
-        priority: 5;
-      },
-      {
-        id: 'newsroom',
-        label: '📰 Updates',
-        href: '/newsroom',
-        priority: 6;
-      },
-      {
-        id: 'search',
-        label: '🔎 Search',
-        href: '/search',
-
         priority: 7;
       }
     ];

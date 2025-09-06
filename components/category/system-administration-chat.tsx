@@ -1,6 +1,25 @@
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-
-
+const SystemAdministrationChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <meta
+          name="description"
+          content="SystemAdministrationChat blog post"
+        />{" "}
+      </Head>
+      <main>
+        <h1>SystemAdministrationChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
       <main>;
         <h1>SystemAdministrationChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -10,25 +29,6 @@
   );
 }
 export default SystemAdministrationChat;
-
-
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
-
-
-const SystemAdministrationChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-
-        <title>SystemAdministrationChat - Zion Tech Solutions</title>
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -53,3 +53,4 @@ const SystemAdministrationChat: NextPage = () => {
 ;
 export default SystemAdministrationChat;
 ;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>

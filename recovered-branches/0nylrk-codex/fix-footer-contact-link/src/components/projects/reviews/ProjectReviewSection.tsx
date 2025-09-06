@@ -1,6 +1,20 @@
 
+import { useState } from "react";
+import { Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
+import { useReviews } from "@/hooks/useReviews";
 
-
+import { Project } from "@/types/projects";
+import { useAuth } from "@/hooks/useAuth";
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -10,7 +24,6 @@ import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
 import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
-
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -20,14 +33,10 @@ import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
 import { useAuth } from "@/hooks/useAuth",
-
-
-
 interface ProjectReviewSectionProps {
   project: Project;
 }
-
-
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 
   return (
     <Card className="mt-6">
@@ -209,40 +218,15 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
-
-
-
                     )}
                   </div>;
                 ) : null}
               </div>;
             )}
-
-
-
             <ReviewsList
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
-
-            />;
-          </div>;
-        ) : (;
-          <div className="bg-muted/20 rounded-lg p-6 text-center">;
-            <h3 className="font-medium mb-2">Reviews will be available once the project is completed</h3>;
-            <p className="text-sm text-muted-foreground">;
-              After the project is marked as completed, both parties will be able to leave reviews;
-            </p>;
-          </div>;
-        )}
-      </CardContent>;
-
-      {/* Review Modal */}
-      {(isClient || isTalent) && (;
-
-
-      {(isClient || isTalent) && (
-
         <LeaveReviewModal
           projectId={project && project.id}
           revieweeId={revieweeId}
@@ -251,11 +235,6 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
           onClose={() => setIsReviewModalOpen(false)}
         />;
       )}
-
-    </Card>;
-  );
-}
-
                     </p>;
                     {user_review.status === "pending" && (
                       <Button;

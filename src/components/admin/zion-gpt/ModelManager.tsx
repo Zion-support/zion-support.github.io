@@ -1,18 +1,21 @@
-// If activating, deactivate all other models with the same purpose;
+import { useState, useEffect  } from 'react';
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
       // Check condition
 if ( {) {
   $2
 }
         await supabase;
-
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
-
-
-      }
-
-      // Update this model;
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
+import { supabase  } from '@/integrations/supabase/client';
+import { ModelConfig  } from '@/utils/zion-gpt';
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  errorMessage?: string
+}
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -23,8 +26,7 @@ if ( {) {
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
-
-
+  }
         .order('createdAt', { ascending: false }),;
 
 
@@ -51,9 +53,6 @@ if ( {) {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
-
-  },
-
 
   return (
     <Card className="w-full">;
@@ -103,13 +102,6 @@ if ( {) {
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
-
-                    {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
-                  </TableCell>;
-                  <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
-                  <TableCell className="text-right">;
-                    {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
-
                       <Button
                         variant="ghost"
                         size="sm"
@@ -120,12 +112,6 @@ if ( {) {
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
-
-                    {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -136,13 +122,7 @@ if ( {) {
                       </Button>;
                     ) : model && model.trainingStatus === 'succeeded' ? (;
                       <Button
-
-
-                        variant={model.active ? "outline" : "default"}
-                        size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
-
-
                       >
                         {model.active ? (
                           <>
@@ -159,27 +139,12 @@ if ( {) {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-
-                        title = {model && model.errorMessage || "Training failed",}>;
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error;
-                      </Button>;
-
-                    )}
-                  </TableCell>;
-                </TableRow>;
-
-                        title={model.errorMessage || "Training failed"}
-
                         title = {model.errorMessage || "Training failed",}
                         title={model.errorMessage || "Training failed"}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-
-                  </TableCell>;
-                </TableRow>;
-
               ))}
             </TableBody>;
           </Table>;
@@ -188,10 +153,6 @@ if ( {) {
     </Card>;
   );
 }
-
-
-}
-
   },
   return (
     <Card className="w - full">;
@@ -280,4 +241,8 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
-}
+
+
+
+
+;

@@ -1,6 +1,4 @@
 
-
-
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -34,8 +32,16 @@
               or email{' '}
               <a
                 className='text-purple-400'
-
-}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  YouTube
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 import React from 'react',
 import Head from 'next/head',
 export default function CommunityPage() {
@@ -63,4 +69,7 @@ export default function CommunityPage() {
 				</div>
 			</div>
 		</div>
-	)
+;
+
+
+}

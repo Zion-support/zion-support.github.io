@@ -1,12 +1,10 @@
 
-
-export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
-
-
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
-
+interface AnalyticsContainerProps {
+  children: React.ReactNode
+}
 
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
@@ -63,14 +61,11 @@ import { SEO } from "@/components/SEO",;
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 interface AnalyticsContainerProps {;
-  children: React.ReactNode;
+  children: React && React.ReactNode;
 }
-;
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   const { isAuthenticated, isLoading, user } = useAuth();
+  // Check if user is admin (using either role or userType)
 
-  // Check if user is admin (using either role or userType);
-  const isAdmin = user?.role === "admin" || user?.userType === "admin";
 
   // If still loading auth status, show loading;
   if (isLoading) {;
@@ -80,16 +75,12 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
       </div>;
     );
   }
-
-
-  // If not authenticated, redirect;
-  if (!isAuthenticated) {;
+  // If not authenticated, redirect
+  if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
   }
-
-  // If not admin, redirect;
-  if (!isAdmin) {;
-
+  // If not admin, redirect
+  if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />;
   }
   return (
@@ -168,10 +159,3 @@ if ( {) {
         {children}
       </main>;
       <Footer />;
-
-    </div>);
-
-}
-}
-;
-

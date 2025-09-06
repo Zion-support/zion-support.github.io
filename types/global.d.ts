@@ -1,22 +1,13 @@
-
-  // Define Performance interface if not available;
-
   interface Performance {
     getEntriesByType (type: string): PerformanceEntry[];
     now (): number;
   }
-
-  // Define PerformanceEntry interface if not available;
-
   interface PerformanceEntry {
     name: string;
     entry_type: string;
     start_time: number;
     duration: number;
   }
-
-  // Define HTML element types if not available;
-
   interface Element {
     tag_name: string;
     attributes: NamedNodeMap;
@@ -40,19 +31,12 @@
     href: string;
     target: string;
   }
-
-  // Define MessageEvent if not available;
-  interface MessageEvent < T = any> extends Event {
-
     data: T;
     origin: string;
     lastEventId: string;
     source: MessageEventSource | null;
     ports: ReadonlyArray < MessagePort>;
   }
-
-  // Define RequestInit if not available;
-
   interface RequestInit {
     body?: BodyInit | null;
     cache?: RequestCache;
@@ -69,33 +53,21 @@
     window?: any;
     timeout?: number;
   }
-
-  // Define AbortController if not available;
-
   interface AbortController {
     signal: AbortSignal;
     abort (): void;
   }
-
-  // Define AbortSignal if not available;
-
   interface AbortSignal extends EventTarget {
     aborted: boolean;
     onabort: ((this: AbortSignal, ev: Event) => any) | null;
   }
 }
 
+export {};
+// Re-export DOM types that might not be available
+export {}
 
 export {};
+// Re-export DOM types that might not be available;
 
-
-
-
-
-
-// Re-export DOM types that might not be available
-export {}
-// Re-export DOM types that might not be available
-export {}
-// Re - export DOM types that might not be available;
-export {}
+export {};

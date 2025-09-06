@@ -13,10 +13,10 @@ export type LanguageContextType = {;
 },;
 ;
 const supportedLanguages = [;
-  { code:'en' as SupportedLanguage, name:'English', flag:'🇺🇸' },;
-  { code:'es' as SupportedLanguage, name:'Español', flag:'🇪🇸' },;
-  { code:'pt' as SupportedLanguage, name:'Português', flag:'🇧🇷' },;
-  { code:'ar' as SupportedLanguage, name:'العربية', flag:'🇸🇦' }
+  { code:'en' as SupportedLanguage, name:'English', flag:'' },;
+  { code:'es' as SupportedLanguage, name:'Espaol', flag:'' },;
+  { code:'pt' as SupportedLanguage, name:'Portugus', flag:'' },;
+  { code:'ar' as SupportedLanguage, name:'', flag:'' }
 ],;
 ;
 const defaultLanguageContext:LanguageContextType = {;

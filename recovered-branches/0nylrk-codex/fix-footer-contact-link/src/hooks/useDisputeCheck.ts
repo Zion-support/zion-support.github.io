@@ -1,13 +1,4 @@
 
-
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
-  const [isUnderDispute, setIsUnderDispute] = useState(false);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
-  const [disputeId, setDisputeId] = useState<string | null>(null);
-
-
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
 
@@ -17,36 +8,16 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
         return
       }
       try {
-
-
-        setIsLoading(true),
-        
+        setIsLoading(true);
         let query = supabase
           .from("disputes")
           .select("id, status")
-          .eq("project_id", projectId),
-        
-
-
+          .eq("project_id", projectId);
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
           query = query && query.eq("milestone_id", milestoneId)
         }
         // Order by status priority: open, under_review, resolved, closed
-
-        query = query && query.order("status", { ascending: true });
-        
-
-        const { data, error } = await query;
-        if (error) throw error;
-
-        query = query.order("status", { ascending: true }),
-        
-        const { data, error } = await query,
-        
-        if (error) throw error,
-        
-
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true);
@@ -110,26 +81,19 @@ if ( {) {
           setDisputeId (null);
         }
       } catch (err) {
-
-        console.error ("Error checking dispute status:", err);
-        setIsUnderDispute (false);
-        setDisputeStatus (null);
-        setDisputeId (null);
-
+        console && console.error("Error checking dispute status:", err);
+        setIsUnderDispute(false);
+        setDisputeStatus(null);
+        setDisputeId(null)
       } finally {
         setIsLoading (false);
       }
     }
-
-        console.error("Error checking dispute status:", err),
-        setIsUnderDispute(false),
-        setDisputeStatus(null),
-        setDisputeId(null)
-      } finally {
-        setIsLoading(false)
-
-    isLoading 
-
+    checkDispute()
+  }, [projectId, milestoneId]);
+  return {
+    isUnderDispute
+    disputeStatus
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -179,8 +143,5 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
-
-
-
   }
 }

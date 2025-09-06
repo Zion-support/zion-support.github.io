@@ -36,12 +36,12 @@ export default function CodeQualityCheckerPage() {
       gradient: 'from-purple-400 to-indigo-500'}],
 
   const supportedLanguages = [
-    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },
-    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },
-    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
-    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] },
-    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] },
-    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
+    { name: 'JavaScript/TypeScript', icon: '', features: ['ESLint rulesTypeScript checksReact best practices'] },
+    { name: 'Python', icon: '', features: ['PEP 8 complianceType hintsSecurity scanning'] },
+    { name: 'Java', icon: '', features: ['PMD rulesCheckstyleSonarQube integration'] },
+    { name: 'C++', icon: '', features: ['Clang-tidyStatic analysisMemory leak detection'] },
+    { name: 'Go', icon: '', features: ['Golangci-lintGo vetPerformance analysis'] },
+    { name: 'PHP', icon: '', features: ['PHPStanPHP CS FixerSecurity analysis'] }
   ],;
   const pricing = [;
     {;
@@ -305,7 +305,7 @@ export default function CodeQualityCheckerPage() {
                       <div>
                         <span className="text-gray-300 text-sm">{issue.message}</span>
                         <div className="text-xs text-gray-500 mt-1">
-                          Line {issue.line} • Severity: {issue.severity}
+                          Line {issue.line}  Severity: {issue.severity}
                         </div>;
                       </div>;
                     </div>;

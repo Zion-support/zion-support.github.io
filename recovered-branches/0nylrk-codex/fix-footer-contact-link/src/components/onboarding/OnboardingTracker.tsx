@@ -1,13 +1,41 @@
 
+import React from "react",
+import { CheckCircle, Circle, ArrowRight } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+export interface OnboardingStep {
 
+  id: string
+  label: string
+  completed: boolean
+  link: string
 
+  action?: string
+}
+interface OnboardingTrackerProps {
 
+  steps: OnboardingStep[]
 
-import React from "react";
-import {CheckCircle, Circle, ArrowRight} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
+  title?: string;
+  className?: string;
+}
+
+  title = "Complete Your Profile"
+  className
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+export interface OnboardingStep {
+  id: string,
+  label: string,
+  completed: boolean,
+  link: string,
+  action?: string
+import React from "react",;
+import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
 export interface OnboardingStep {;
   id: string,;
   label: string,;
@@ -15,24 +43,7 @@ export interface OnboardingStep {;
   link: string,;
   action?: string;
 }
-
-interface OnboardingTrackerProps {;
-  steps: OnboardingStep[],;
-
-  title?: string;
-  className?: string;
-}
-
-export interface OnboardingStep {
-  id: string,
-  label: string,
-  completed: boolean,
-  link: string,
-  action?: string
-
-
-  title = "Complete Your Profile", 
-  className 
+interface OnboardingTrackerProps {
 
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
@@ -46,12 +57,11 @@ export interface OnboardingStep {
       </div>
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-
-
-export function OnboardingTracker(): any ({ ;
-  steps;
-  title = "Complete Your Profile", ;
-  className ;
+;
+export function OnboardingTracker({;
+  steps,;
+  title = "Complete Your Profile",;
+  className;
 }: OnboardingTrackerProps) {;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
@@ -65,16 +75,6 @@ export function OnboardingTracker(): any ({ ;
 
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
-        <div
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-          style={{ width: `${progress}%` }}></div>;
-      </div>;
-
-
-
-        <div 
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-
           style={{ width: `${progress}%` }}
         ></div>
       </div>
@@ -88,29 +88,12 @@ export function OnboardingTracker(): any ({ ;
               ) : (;
                 <Circle className="h-5 w-5 text-zion-slate-light" />;
               )}
-
-            </div>;
-            <div className="flex-1">;
-              <div className="text-sm font-medium text-white">{step && step.label}</div>;
-            </div>;
-            {!step && step.completed && step && step.action && (;
-              <Button
-                asChild 
-                variant="ghost" 
-                size="sm" 
-                className="text-zion-purple hover:text-zion-cyan hover:bg-zion-blue">;
-                <Link to={step && step.link}>;
-                  {step && step.action} <ArrowRight className="ml-1 h-4 w-4" />;
-                </Link>;
-              </Button>;
-
             )}
           </div>;
         ))}
-
-      </div>;
-    </div>;
-  );
+      </div>
+    </div>
+  )
 }
 import React from './react';
 import { CheckCircle, Circle, ArrowRight } from './lucide-react';
@@ -136,6 +119,3 @@ function OnboardingTracker() {
   const completed_steps = steps.filter (step => step.completed).length;
   const progress = Math.round ((completed_steps / steps.length) * 100);
 ;
-
-
-

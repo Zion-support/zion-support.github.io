@@ -1,11 +1,75 @@
-return (
+import { QuoteRequestSteps } from '../QuoteRequestForm'
+import { CheckIcon } from 'lucide-react'
+import { cn } from '@/lib/utils'
+interface StepProgressProps {
+  currentStep: QuoteRequestSteps
+export function StepProgress({ currentStep }: StepProgressProps) {
+  const steps: { id: QuoteRequestSteps; label: string }[] = [
+    { id: 'service', label: 'Service' }
+    { id: 'details', label: 'Details' }
+    { id: 'timeline', label: 'Timeline' }
+    { id: 'budget', label: 'Budget' }
+    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
+
+    { id: "service", label: "Service" }
+    { id: "details", label: "Details" }
+    { id: "timeline", label: "Timeline" }
+    { id: "budget", label: "Budget" }
+    { id: "summary", label: "Summary" }
+  const getStepStatus = (stepId: QuoteRequestSteps) => {
+    const stepOrder = steps.findIndex(s => s.id === stepId)
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep)
+    if (stepOrder < currentStepOrder) return 'complete'
+    if (stepOrder === currentStepOrder) return 'current'
+    return 'upcoming'
+  const getStepStatus = (stepId: QuoteRequestSteps,) => {
+    const stepOrder = steps.findIndex(s => s.id === stepId)
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep)
+    if (stepOrder < currentStepOrder) return "complete"
+    if (stepOrder === currentStepOrder) return "current"
+    return "upcoming"
+  }
+import { QuoteRequestSteps } from '../QuoteRequestForm';
+import { CheckIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+interface StepProgressProps {;
+  currentStep: QuoteRequestSteps;
+
+export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
+  const steps: { id: QuoteRequestSteps; label: string }[] = [;
+    { id: 'service', label: 'Service' },;
+    { id: 'details', label: 'Details' },;
+    { id: 'timeline', label: 'Timeline' },;
+    { id: 'budget', label: 'Budget' },;
+    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [;
+    { id: "service", label: "Service" },;
+    { id: "details", label: "Details" },;
+    { id: "timeline", label: "Timeline" },;
+    { id: "budget", label: "Budget" },;
+    { id: "summary", label: "Summary" }
+
+  const getStepStatus = (stepId: QuoteRequestSteps) => {;
+    const stepOrder = steps && steps.findIndex(s => s && s.id === stepId);
+    const currentStepOrder = steps && steps.findIndex(s => s && s.id === currentStep);
+
+    if (stepOrder < currentStepOrder) return 'complete';
+    if (stepOrder === currentStepOrder) return 'current';
+    return 'upcoming';
+  const getStepStatus = (stepId: QuoteRequestSteps,) => {;
+    const stepOrder = steps && steps.findIndex(s => s && s.id === stepId),;
+    const currentStepOrder = steps && steps.findIndex(s => s && s.id === currentStep),;
+
+    if (stepOrder < currentStepOrder) return "complete",;
+    if (stepOrder === currentStepOrder) return "current",;
+    return "upcoming";
+  },;
+
+  return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
         <div
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
-
-
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
@@ -14,7 +78,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'timeline', label: 'Timeline' },
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
-
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
@@ -34,8 +97,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   ],
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
-
-
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
     
@@ -54,16 +115,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           }}
         />
       </div>
-
-            width: `${(steps && steps.findIndex(s => s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`,;
-          }}
-        />;
-      </div>;
-
-      <div className='flex justify-between relative'>;
-        {steps && steps.map(step => {;
-          const status = getStepStatus(step && step.id);
-
           return (
             <div key={step && step.id} className='flex flex-col items-center relative'>;
               <div
@@ -82,7 +133,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     {steps && steps.findIndex(s => s && s.id === step && step.id) + 1}
                   </span>;
                 )}
-              </div>;
+                ) : (
+                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
+                )}
+              </div>
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -91,18 +145,14 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
-
-
                   "text-zion-slate-light"
-
                 )}
-              <span
+              <span 
                 className = {cn(
-                  "text-xs mt-2 font-medium"
+                  "text-xs mt-2 font-medium",
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
-
 }/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
@@ -119,13 +169,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     </div>
   )
 }
-
-
                 ),}>;
                 {step && step.label}
-
-;
-
               <span 
                 className={cn(
                   "text-xs mt-2 font-medium",
@@ -218,8 +263,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     </div>;
   );
 }
-
-
   const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
     const step_order = steps.find_index (string => s.id === step_id);
     const currentStepOrder = steps.find_index (string => s.id === current_step);
@@ -316,3 +359,5 @@ if (return "current", ) {
     </div>);
 }
 ;
+
+

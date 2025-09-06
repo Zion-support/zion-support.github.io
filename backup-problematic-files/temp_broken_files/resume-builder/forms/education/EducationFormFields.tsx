@@ -232,7 +232,3 @@ export function EducationFormFields({ ;
 }/>) ;
 }</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;"}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="flex justify-between pt-2" > <Button >{';
   isEditing ? 'Cancel' : 'Back' ;
-
-}</Button> </Button> </div> </form> </Form>) ;
-}'"
-

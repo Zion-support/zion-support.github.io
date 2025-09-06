@@ -4,25 +4,27 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
-
-
 export default function LeadershipPage() {
 
-export default function LeadershipPage() {
+export default function LeadershipPage() {;
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -80,19 +82,11 @@ function LeadershipPage() {
               startups.;
             </p>;
           </div>;
-
-          <div className='p - 6 rounded - 2xl bg - black / 40 border border - cyan - 500 / 20'>;
-            <h2 className='text - white text - xl font - semibold mb - 2'>Advisors</h2>;
-            <p className='text - slate - 300'>;
-
               Advisors from cloud, security, data, and venture ecosystems.;
             </p>;
           </div>;
         </div>;
-
-        <div className='mt - 10 text - slate - 300'>;
           Contact:{' '}
-          <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
-            kleber@ziontechgroup.com;
+          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
+            kleber@ziontechgroup && ziontechgroup.com;
           </a>{' '}
-          •{' '}

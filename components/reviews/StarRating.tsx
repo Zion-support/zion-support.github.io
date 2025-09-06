@@ -30,8 +30,6 @@ class ErrorBoundary extends React.Component {
 
 
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-  const [hovered, setHovered] = useState<number | null>(null);
-
 
 type Props = {;
   value: number,;
@@ -44,8 +42,6 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 
   const stars = [1, 2, 3, 4, 5];
   return (
-
-
           <button
             key={star}
             type="button"
@@ -57,13 +53,10 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             aria-label={`${star} star`}
           >;
             <svg
-
-
               width={size}
               height={size}
               view_box='0 0 24 24';
               fill={active ? 'gold' : 'none'}
-
 
 export default StarRating;
 
@@ -100,6 +93,3 @@ export default StarRating;              width={size}
 }
 ;
 export default StarRating;
-
-;
-

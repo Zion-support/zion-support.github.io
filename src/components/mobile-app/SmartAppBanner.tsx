@@ -1,49 +1,42 @@
+
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage",
+import { X, ArrowRight } from 'lucide-react'
+import Link from "next/link";
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
+
+import React, { useState, useEffect } from "react";
+import { safeStorage } from "@/utils/safeStorage";
+import { X, ArrowRight } from 'lucide-react'import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile";
-interface SmartAppBannerProps {
+interface SmartAppBannerProps {;
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-
-
-
+  delay?: number, // Delay in milliseconds before showing the banner
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-<<<<<<< HEAD
-
-  appName = "Zion Marketplace",
-  appIconSrc,
-  appStoreUrl = "/download",
-  googlePlayUrl = "/download",
-  delay = 1500
-}) => {
-
-
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+  
+  useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
-
-
-      }, delay),
-      
+      }, delay)
       return () => clearTimeout(timer)
     }
     return undefined
-  }, [isMobile, delay]),
-  
+  }, [isMobile, delay])
   const dismissBanner = () => {
-    setIsVisible(false),
+    setIsVisible(false)
     safeStorage.setItem("smartBannerDismissed", "true")
-  },
-
+  }
   const resetBanner = () => {
-    safeStorage.removeItem("smartBannerDismissed"),
+    safeStorage.removeItem("smartBannerDismissed")
     setIsVisible(true)
-  },
-  
-
-
   // Only render on mobile devices
   if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
@@ -52,23 +45,15 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     ) : null
   }
-
-  delay?: number; // Delay in milliseconds before showing the banner;
-}
-
-
   
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
 
-
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
-
-
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
@@ -81,14 +66,12 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
         </div>
 
         
-
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
 
         
-
         <div className="flex items-center gap-3">
           <Link
             href="/open-app"
@@ -99,7 +82,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           </Link>
 
           
-
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
           </button>
@@ -107,10 +89,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
-
-'";
-;
-
 },
 import React, { useState, useEffect } from "react",;
 import { safeStorage } from "@/utils/safeStorage",;
@@ -177,20 +155,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
-
-        </div>;
-        <div className="flex-1">;
-          <h4 className="font-semibold text-white">{appName}</h4>;
-          <p className="text-xs text-gray-300">Get our app for the best experience</p>;
-        </div>;
-        <div className="flex items-center gap-3">;
-          <Link;
-            href="/open-app";
-            className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium";
-          >;
-            View;
-            <ArrowRight className="w-3 h-3 ml-1" />;
-          </Link>;
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">;
             <X className="h-5 w-5" />;
           </button>;
@@ -199,7 +163,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
     </div>;
   );
 };
-
   const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
 import React, { useState, useEffect } from './react';
 import { safe_storage  } from '@/utils / safe_storage';
@@ -281,4 +244,5 @@ if ( {) {
       </div>;
     </div>);
 }
-'";
+
+

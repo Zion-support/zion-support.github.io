@@ -184,14 +184,20 @@ class ComprehensiveAppImprover {}
 
     this.log(`Report "generated": ${reportFile}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
     
     
     
     
     
 
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
     if (this.fixesApplied.length > 0) {}
       console.log('\nFixes "Applied": ');
       this.fixesApplied.forEach(fix => console.log(`- ${fix}`));
@@ -252,6 +258,9 @@ if (require.main === module) {}
 };
 <<<<<<< HEAD
 module.exports = ComprehensiveAppImprover;
+<<<<<<< HEAD
 =======
 module.exports = ComprehensiveAppImprover;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

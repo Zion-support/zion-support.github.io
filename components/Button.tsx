@@ -1,10 +1,3 @@
-
-
-  variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'sm' | 'md' | 'lg';
-
-
-
   const variantClasses = {;
     primary:;
       'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600 focus:ring-cyan-500',;
@@ -13,27 +6,19 @@
     outline:;
       'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',;
   };
+
   const sizeClasses = {;
     sm: 'px-3 py-1 && 1.5 text-sm',;
     md: 'px-4 py-2 text-base',;
     lg: 'px-6 py-3 text-lg',;
   };
+
   const disabledClasses = disabled;
     ? 'opacity-50 cursor-not-allowed';
     : 'hover:scale-105 transform';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
-
-
-      >;
-
-      {children}
-    </button>;
-  );
-
-}  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',;
-
-
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
+
   class_name?: string;
   on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
@@ -78,27 +63,14 @@ function Button() {
       className={classes}
       on_click={on_click}
       disabled={disabled}
-
+      {children}
+    </button>
+);
+}
 
     >
       {children}
     </button>
   );
-
-    </button>);
-  
-  return (
-    <button
-      type={_type}
-      className={_classes}
-      onClick={_onClick}
-      disabled={_disabled}
-    >
-      {_children}
-    </button>
-  )
-
-}
-
 
 

@@ -135,7 +135,3 @@ profileType ;
 }AI Match: {;
   aiScore ;
 }% </div>) ;
-
-}</div> </div> </div> </div> </div> </div>) ;
-}'"
-

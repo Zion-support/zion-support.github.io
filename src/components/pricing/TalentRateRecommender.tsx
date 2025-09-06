@@ -1,12 +1,60 @@
+interface TalentRateRecommenderProps {
+  skills: string[]
+  yearsExperience: number
+  location?: string
+  onSuggestionApplied: (value: number) => void
+import React, { useState } from "react"
+import { Button } from "@/components/ui/button"
+import {logErrorToProduction} from '@/utils/productionLogger'
+import {
+  getTalentRateSuggestion
+  PricingSuggestion
+  TalentRateParams
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService"
+import { PricingSuggestionBox } from "./PricingSuggestionBox"
+import { useAuth } from "@/hooks/useAuth"
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import {logErrorToProduction} from '@/utils/productionLogger',
+import { 
+  getTalentRateSuggestion,
+  PricingSuggestion,
+  TalentRateParams,
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox",
+import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
+  skills: string[]
+  yearsExperience: number
+  location?: string
+  onSuggestionApplied: (value: number,) => void
 
-  skills: string[],
-  yearsExperience: number,
-  location?: string,
-  onSuggestionApplied: (value: number,) => void,
-  rateType: "hourly" | "fixed"
-
+  skills
+  yearsExperience
+  location
+  onSuggestionApplied
+  rateType}) => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
+  const { user } = useAuth()
+  const generateSuggestion = async () => {
+    }
+    setIsLoading(true)
+    try {
+      const params: TalentRateParams = {
+        skills
+        yearsExperience
+        location}
+    }
+  }
+  const handleApplySuggestion = () => {
+    if (suggestion) {
+      // We'll use the middle of the range as the suggested rate
+      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2)
+      onSuggestionApplied(suggestedRate)
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -111,19 +159,7 @@ if ( {) {
         });
       }
     }
-
-
-  },
-
-
-
   return (
-
-
-            onClick={generateSuggestion}
-            disabled={skills.length === 0 || yearsExperience <= 0}
-
-
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
@@ -143,7 +179,6 @@ if ( {) {
 };
 '"};
 };
-
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -155,8 +190,6 @@ if ( {) {
     </div>;
   );
 };
-
-
 
     <div className="space - y-4">;
       <div>;
@@ -194,4 +227,5 @@ return (<div className="space - y-4" > <div> {";
 }</div> </div>);
 }
 '"},
-}
+
+

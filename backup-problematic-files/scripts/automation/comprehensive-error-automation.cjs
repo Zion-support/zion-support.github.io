@@ -100,6 +100,9 @@ const logFile = path.join(this.logsDir, ")
     fs.writeFileSync(logFile")
 <<<<<<< HEAD
 console.error(")
+<<<<<<< HEAD
 =======
 console.error(")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

@@ -47,6 +47,9 @@ const path = require('path')
         execSync(step, { "stdio"})
 <<<<<<< HEAD
       this.log(` Process "failed"`)
+<<<<<<< HEAD
 =======
       this.log(` Process "failed"`)
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

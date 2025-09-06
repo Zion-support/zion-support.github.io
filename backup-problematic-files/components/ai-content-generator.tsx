@@ -86,35 +86,35 @@ export default function AIContentGeneratorPage() {
     {;
       title: 'Blog Writing',;
       description: 'Generate engaging blog posts, articles, and long-form content in minutes.',;
-      icon: '📝',;
+      icon: '',;
       examples: ['Tech reviewsHow-to guidesIndustry insightsProduct comparisons'];
     },;
     {;
       title: 'Marketing Copy',;
       description: 'Create compelling ad copy, landing pages, and marketing materials.',;
-      icon: '🎯',;
+      icon: '',;
       examples: ['Facebook adsGoogle adsLanding pagesEmail campaigns'];
     },;
     {;
       title: 'Social Media',;
       description: 'Generate engaging social media posts, captions, and hashtag suggestions.',;
-      icon: '📱',;
+      icon: '',;
       examples: ['Instagram postsTwitter threadsLinkedIn articlesTikTok captions'];
     },;
     {;
       title: 'E-commerce',;
       description: 'Write product descriptions, category pages, and promotional content.',;
-      icon: '🛍️',;
+      icon: '',;
       examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections'];
     }
   ],;
   const integrations = [;
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },;
-    { name: 'Shopify', icon: '🛒', description: 'E-commerce content automation' },;
-    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },;
-    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },;
-    { name: 'Slack', icon: '💬', description: 'Team collaboration' };
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
+    { name: 'WordPress', icon: '', description: 'Direct plugin integration' },;
+    { name: 'Shopify', icon: '', description: 'E-commerce content automation' },;
+    { name: 'HubSpot', icon: '', description: 'Marketing automation sync' },;
+    { name: 'Mailchimp', icon: '', description: 'Email campaign content' },;
+    { name: 'Slack', icon: '', description: 'Team collaboration' };
+    { name: 'Zapier', icon: '', description: '500+ app integrations' }
   ],
 
   return (

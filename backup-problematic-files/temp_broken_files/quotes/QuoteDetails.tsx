@@ -152,7 +152,3 @@ return (<Dialog open= {;
   quote.budget min ';
 }` : 'Not specified') ;
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
-
-};
-'"
-

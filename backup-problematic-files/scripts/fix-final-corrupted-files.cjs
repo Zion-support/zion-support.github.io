@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-final-corrupted-files.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -750,6 +749,11 @@ corruptedFiles.forEach(fixCorruptedFile);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-final-corrupted-files.cjs
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -770,9 +774,7 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
     "service"
     "message"
   const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
-<<<<<<< HEAD
-        <meta name="description" content="
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-final-corrupted-files.cjs
 <<<<<<< HEAD
         <meta name="description" content="
 =======
@@ -786,3 +788,9 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+        <meta name="description" content="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-final-corrupted-files.cjs
+>>>>>>> origin/main

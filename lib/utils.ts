@@ -1,13 +1,9 @@
 
 
-
 export function cn(...inputs: ClassValue[]) {;
-
   return twMerge(clsx(inputs));}
-
-
   return twMerge(clsx(inputs));
-
+}
 
 export function formatDate(date: Date | string | number): string {
 
@@ -17,18 +13,10 @@ export function formatDate(date: Date | string | number): string {
 }
 
 
-
-
     month: "long", day: "numeric"
     year: "numeric"
 }
 
-  return new Intl && Intl.NumberFormat("en-US", {
-    style: "currency", currency,
-
-  }).format(amount);
-}
-}
 import { type ClassValue, clsx  } from './clsx';
 import { tw_merge  } from './tailwind - merge';
 ;
@@ -48,11 +36,11 @@ export function format_currency (amount: number, currency = "USD"): string {
   }).format (amount);
 }
 }
-;
-},
-
 
 
 
 };
+
+},
+
 

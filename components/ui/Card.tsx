@@ -1,23 +1,15 @@
 
+const CardContent = React.forwardRef<
+  HTMLDivElement
 
-    ref={ref}
-    className={cn ("text - sm text - muted - foreground", class_name)}
-    {...props}
-
-const CardContent = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
-
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
 CardContent && CardContent.displayName = "CardContent";
 
-
-const CardFooter = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
+const CardFooter = React.forwardRef<
+  HTMLDivElement
 
   <div
   />));
@@ -38,11 +30,6 @@ const CardFooter = React.forward_ref<;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
-
-import React from 'react';
-
-import React from 'react',;
-
 
 interface CardProps {
   children: React.ReactNode;
@@ -74,10 +61,6 @@ const Card: React.FC<CardProps> = ({
 CardFooter.display_name = "CardFooter";
 ;
 import React from 'react',
-  />;
-));
-CardFooter.displayName = "CardFooter";
-
 interface CardProps {
   children: React.ReactNode,
   class_name?: string,
@@ -85,19 +68,14 @@ interface CardProps {
   on_click?: () => void,
   hover?: boolean;
 }
+  return (
+    <div;
       className={classes}
       style={style}
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
 
-      <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
-      {/* Content wrapper */}
-      <div className="relative z - 10">;
-        {children}
-
-
-      </div>;
-      {/* Hover glow effect */}
-      {hover && (
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };

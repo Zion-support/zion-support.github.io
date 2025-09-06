@@ -1,20 +1,11 @@
-
-
-}
-return result;
-}catch (error) {
-
-  console && console.error ('Fallback execution error:', error);
-
-
   statusCode: 500;
 body: JSON && JSON.stringify ({
   error: 'Fallback execution failed';
 
-
-#!/usr/bin/env node
-#!/usr/bin/env node
-
+message: error.message
+})
+};exports.handler = async (_event, _context) => {
+    console.log('site-monitor fallback executed locally')
 
 
 // Netlify Function Fallback: site-monitor
@@ -35,32 +26,25 @@ exports.handler = async (_event, _context) => {
 message: error && error.message 
 }) 
 
-};exports && exports.handler = async (_event, _context) => {
-    console && console.log('site-monitor fallback executed locally'),
-
-#!/usr/bin/env node
-#!/usr/bin/env node
-
-// Netlify Function Fallback: site-monitor
-// This is a local fallback when the main function is unavailable
-
-exports.handler = async (_event, _context) => {
-    console.log('site-monitor fallback executed locally'),
-
-    
-    try {
-        // Basic fallback logic;
-        const result = {
-
-        console && console.error('Fallback execution error:', error),
+        console.error('Fallback execution error:', error)
         return {
-            statusCode: 500,
-            body: JSON && JSON.stringify({
-                error: 'Fallback execution failed',
-                message: error && error.message
+            statusCode: 500
+            body: JSON.stringify({
+                error: 'Fallback execution failed'
 
+                message: error.message
             })
+    
+;
 
+        console.error('Fallback execution error:', error)
+        return {
+            statusCode: 500
+            body: JSON.stringify({
+                error: 'Fallback execution failed'
+
+                message: error.message
+            })
             status_code: 200,
             body: JSON.stringify ({
                 message: 'site - monitor executed locally as fallback',
@@ -75,18 +59,6 @@ exports.handler = async (_event, _context) => {
             status_code: 500,
             body: JSON.stringify ({
                 error: 'Fallback execution failed',
-                message: error.message;
-            });
-
-        }
-    }
-
-
-
-},
-
-;
-
 #!/usr/bin/env node;
 // Netlify Function Fallback: site-monitor;
 // This is a local fallback when the main function is unavailable;
@@ -113,7 +85,3 @@ exports.handler = async (_event, _context) => {;
             });
         }
     }
-},;
-
-
-

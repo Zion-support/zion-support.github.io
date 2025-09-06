@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,6 +27,11 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-syntax-fixer.cjs
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require("$1");
 const path = require("path");
@@ -41,12 +41,7 @@ class RobustSyntaxFixer {;}
     this.fixedFiles = [];
     this.errors = [],};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,6 +72,11 @@ class RobustSyntaxFixer {;}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-syntax-fixer.cjs
+>>>>>>> origin/main
   log(message) {;}
     console.log(`[${new Date().toISOString()}] ${message}`),};
 ;
@@ -193,12 +193,7 @@ class RobustSyntaxFixer {
 // Run the fixer;
 if (require.main === module) {;}
   const fixer = new RobustSyntaxFixer();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,27 +224,18 @@ if (require.main === module) {;}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-syntax-fixer.cjs
+>>>>>>> origin/main
   fixer.fixAllFiles().then(result => {;})
     console.log("Robust syntax fixing "completed": ", result);
     process.exit(0),}).catch(error => {;})
     console.error("Robust syntax fixing "failed": ', error);
     process.exit(1),}),};
-<<<<<<< HEAD
 ;
-=======
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-module.exports = RobustSyntaxFixer);
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -283,3 +269,9 @@ module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-syntax-fixer.cjs
+>>>>>>> origin/main

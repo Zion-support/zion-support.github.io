@@ -1,28 +1,25 @@
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
+export type EnhancedLayoutProps = {
+  children: React.ReactNode;}
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
 }
-import React, { useEffect } from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
+export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
+  useEffect(() => {
+    const lng = i18n.resolvedLanguage |i18n.language;
+  children: React.ReactNode;};
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
+export type EnhancedLayoutProps = {
+  children: React.ReactNode;
+};
 
+export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
+  useEffect(() => {;
+    const lng = i18n.resolvedLanguage || i18n.language;
+    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', lng);
   }, []);
 
   return (
@@ -41,32 +38,30 @@ import EnhancedFooter from './EnhancedFooter';
       </header>;
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>;
         {children}
-
-
+      </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
   }, []);
 ;
   return (
-
-
+    <div className="min-h-screen flex flex-col">
+      <header>
+        <EnhancedNavigation />
+        <LanguageSwitchPrompt />
+      </header>
+      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
+      <footer>
+        <EnhancedFooter />
+      </footer>
+    </div>
+);
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
       <footer>;
         <EnhancedFooter />;
       </footer>;
     </div>;
   );
-
-
-}
-}
-  );
-
-
-  );
-
 }
   );
 }
-
     <div className="min - h-screen flex flex - col">;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
@@ -96,5 +91,3 @@ export type EnhancedLayoutProps = {
 export type EnhancedLayoutProps = {
   children: React.ReactNode
 }
-
-

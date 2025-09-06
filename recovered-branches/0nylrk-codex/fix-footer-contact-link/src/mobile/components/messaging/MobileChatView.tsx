@@ -1,8 +1,4 @@
 
-
-
-
-
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -17,6 +13,12 @@ interface Message {;
   timestamp: string,;
   isMe: boolean,;
 
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
+import { cn } from "@/lib/utils",
 import React, { useState } from './react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
@@ -29,71 +31,53 @@ interface Message {
   id: string,
   content: string,
   timestamp: string,
-
-
 interface MobileChatViewProps {
   contact: {
 
     id: string
     name: string
     avatar?: string;
-
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
   isMe: boolean,
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
-
-
-
-
-  onSendMessage: (content: string) => void
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+  sender?: string,;
+  avatar?: string,;
+  status?: 'sent' | 'delivered' | 'read';
 }
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-
-
+;
 interface MobileChatViewProps {;
   contact: {;
     id: string,;
     name: string,;
-    avatar?: string;
+    avatar?: string,;
     status?: string;
-  };
+  },;
   messages: Message[],;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
 
-export function MobileChatView(): any ({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
-
-  const [newMessage, setNewMessage] = useState("");
-
-  const navigate = useNavigate();
-
-
-  const handleSend = () => {;
-    if (newMessage && newMessage.trim() !== "") {;
-
-      onSendMessage(newMessage);
-      setNewMessage("");
-    }
-
-
-  const [newMessage, setNewMessage] = useState(""),
-  const navigate = useNavigate(),
-  
-  const handleSend = () => {
-    if (newMessage.trim() !== "") {
-      onSendMessage(newMessage),
-      setNewMessage("")
-;
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
-  const [newMessage, setNewMessage] = useState(""),;
-  const navigate = useNavigate(),;
-  const handleSend = () => {;
-    if (newMessage.trim() !== "") {;
-      onSendMessage(newMessage),;
-      setNewMessage("");
-    }
+  onSendMessage: (content: string) => void
+}
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
   },;
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
     if (e.key === 'Enter' && !e.shiftKey) {;
@@ -101,37 +85,24 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend();
     }
   },
-
   
 
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
-
-
-    }),
-    
+    });
     // Navigate to video call page
     navigate(`/call/${roomId}`)
-  },
-  
-
-
+  }
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
     toast.success("Starting audio call", {
       description: `Connecting with ${contact.name}...`
-
-
-    }),
-    
+    });
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
-  },
-  
-
-
+  }
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -175,55 +146,20 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           >
             <div
               className={cn(
-
-
-                "max-w-[80%] rounded-2xl px-4 py-2",
-                message.isMe 
-                  ? "bg-primary text-primary-foreground rounded-tr-none" 
-
-
+                "max-w-[80%] rounded-2xl px-4 py-2";
+                message.isMe
+                  ? "bg-primary text-primary-foreground rounded-tr-none"
                   : "bg-muted rounded-tl-none"
               )}
             >
               <p>{message.content}</p>
               <div className={cn(
+                "text-xs mt-1 flex justify-end";
 
-    status?: string;
-  }
-  messages: Message[],
-  on_back: () => void,
-  onSendMessage: (content: string) => void;
-}
-export /**
- * MobileChatView - Function description
- */
-function MobileChatView() {
-  const [new_message, setNewMessage] = useState ("");
-  const navigate = use_navigate ();
-;
-  const handle_send = () =>: any {
-    // Check condition
-if (!== "") {) {
-  $2
-}
-      onSendMessage (new_message);
-      setNewMessage ("");
-    }
-  }
-;
-  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default (),
-      handle_send ();
-    }
-  }
-;
-  const startVideoCall = () =>: any {
-    const room_id = `mobile-${contact.id}`;
-    toast.success ("Starting video call", {
+  },;
+  const startVideoCall = () => {;
+    const roomId = `mobile-${contact.id}`,;
+    toast.success("Starting video call", {;
       description: `Connecting with ${contact.name}...`;
     });
 ;
@@ -379,22 +315,6 @@ if ( {) {
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
               )}>;
-              <p>{message && message.content}</p>;
-              <divclassName={cn(
-                "text-xs mt-1 flex justify-end"
-                message && message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>;
-                {message && message.timestamp}
-                {message && message.isMe && message && message.status && (;
-                  <span className="ml-1">;
-                    {message && message.status === 'read' ? '✓✓' : '✓'}
-                  </span>;
-
-
-                "text-xs mt-1 flex justify-end",
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>
-
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">
@@ -405,38 +325,10 @@ if ( {) {
             </div>;
           </div>;
         ))}
-
-      </div>;
-
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">;
-        <div className="flex items-center gap-2">;
-          <Button variant="ghost" size="icon">;
-            <PaperclipIcon className="h-5 w-5" />;
-          </Button>;
-
-
           <Input
             value={newMessage}
             onChange={(e) => setNewMessage(e && e.target.value)}
             onKeyDown={handleKeyDown}
-
-            placeholder="Type a message...";
-            className="flex-1";
-          />;
-
-          <Button
-            size="icon" 
-            onClick={handleSend}
-            disabled={!newMessage && newMessage.trim()}
-            className={!newMessage && newMessage.trim() ? "opacity-50" : ""}>;
-            <Send className="h-5 w-5" />;
-          </Button>;
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-
                   </span>)}
               </div>;
             </div>;
@@ -466,7 +358,3 @@ if ( {) {
       </div>;
     </div>);
 }
-
-}
-;
-

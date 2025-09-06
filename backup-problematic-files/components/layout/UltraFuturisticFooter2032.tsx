@@ -29,7 +29,7 @@ const mainNavigationRoutes = [;
 ],;
 const serviceCategories = [;
   {;
-    title: '🚀 2032 Revolutionary AI Services',;
+    title: ' 2032 Revolutionary AI Services',;
     services: [;
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform' },;
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' },;
@@ -38,7 +38,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '⚛️ 2032 Quantum & Emerging Tech',;
+    title: ' 2032 Quantum & Emerging Tech',;
     services: [;
       { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform' },;
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway' },;
@@ -47,7 +47,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🏙️ 2032 Enterprise IT Solutions',;
+    title: ' 2032 Enterprise IT Solutions',;
     services: [;
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },;
       { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },;
@@ -56,7 +56,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🌌 2032 Space & Metaverse Tech',;
+    title: ' 2032 Space & Metaverse Tech',;
     services: [;
       { name: 'Space Mining Automation', href: '/space-mining-automation-platform' },;
       { name: 'Metaverse Development', href: '/metaverse-development-platform' },;
@@ -65,7 +65,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🎯 2032 Innovative Micro SAAS',;
+    title: ' 2032 Innovative Micro SAAS',;
     services: [;
       { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite' },;
       { name: 'Quantum-Secure Communication', href: '/quantum-secure-communication-platform' },;
@@ -74,7 +74,7 @@ const serviceCategories = [;
     ];
   },;
   {;
-    title: '🔬 2032 Research & Development',;
+    title: ' 2032 Research & Development',;
     services: [;
       { name: 'Neuromorphic Computing', href: '/neuromorphic-computing-platform' },;
       { name: 'DNA Computing Platform', href: '/dna-computing-platform' },;
@@ -300,7 +300,7 @@ export default function UltraFuturisticFooter2032() {
           <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="flex items-center space-x-2 text-slate-400 text-sm">
-                <span>© 2024 Zion Tech Group. All rights reserved.</span>
+                <span> 2024 Zion Tech Group. All rights reserved.</span>
                 <span className="text-cyan-400">|</span>
                 <span>Leading the Future of Technology</span>
               </div>

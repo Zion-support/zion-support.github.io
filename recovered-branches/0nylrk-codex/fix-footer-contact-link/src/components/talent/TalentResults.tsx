@@ -1,7 +1,7 @@
 
-
-
-
+import React from "react",
+import { TalentProfile } from "@/types/talent",
+import { ActiveFilters } from "@/components/talent/ActiveFilters",
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -33,9 +33,14 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
     clearFilters: () => void
   }
 }
-
-
-
+export function TalentResults({
+  filteredTalents,
+  isLoading,
+  viewProfile,
+  handleRequestHire,
+  savedTalents,
+  handleToggleSave,
+  isAuthenticated,
   activeFiltersProps
 }: TalentResultsProps) {
   return (
@@ -70,10 +75,6 @@ interface TalentResultsProps {;
     clearFilters: () => void;
   }
 }
-
-
-export function TalentResults(): any ({;
-
   filteredTalents;
   isLoading;
   viewProfile;
@@ -85,20 +86,13 @@ export function TalentResults(): any ({;
 }: TalentResultsProps) {;
   return (
     <div className="flex-1">;
-
-
-
       {/* Active filters */}
-
-      <ActiveFilters {...activeFiltersProps} />;
-
+      <ActiveFilters {...activeFiltersProps} />
       {/* Results count */}
       <ResultsHeader
-        isLoading={isLoading} 
-        resultCount={filteredTalents && filteredTalents.length} 
-      />;
-
-
+        isLoading={isLoading}
+        resultCount={filteredTalents.length}
+      />
       {/* Talents grid */}
       <TalentGrid
         talents={filteredTalents}
@@ -131,46 +125,11 @@ interface TalentResultsProps {
     setExperienceRange: (range: [number, number]) => void;
     clear_filters: () => void;
   }
-}
-export /**
- * TalentResults - Function description
- */
-function TalentResults() {
-  return (
-    <div className="flex - 1">;
-      {/* Active filters */}
-      <ActiveFilters {...activeFiltersProps} />;
-      {/* Results count */}
-      <ResultsHeader;
-        is_loading={is_loading}
-        result_count={filtered_talents.length}
-      />;
-      {/* Talents grid */}
-      <TalentGrid;
-        talents={filtered_talents}
-        is_loading={is_loading}
-        onTalentClick={view_profile}
-        view_profile={view_profile}
-        handleRequestHire={handleRequestHire}
-        savedTalentIds={saved_talents}
-        onToggleSave={handleToggleSave}
-
-        clearFilters={activeFiltersProps && activeFiltersProps.clearFilters}
-        isAuthenticated={isAuthenticated}
-        clearFilters={activeFiltersProps.clearFilters}
-
-
-      />;
-    </div>;
-  );
-}
-
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;
     </div>);
 }
-
 ;
 
 

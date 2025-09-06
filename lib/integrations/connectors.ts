@@ -1,5 +1,7 @@
-
-
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
 
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
@@ -9,31 +11,28 @@ async function mockProviderCall<T>(
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
 
-  const log: SyncLogEntry = {
-
-}
-// CRM actions;
-export const crm = {
-
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  async addProjectNote(
+    connection: ProviderConnection,
+    note: Record<string, any>,
+  ) {
+    return mockProviderCall(connection, "add_project_note", { note });
+  },
+  async syncContact(
+    return mockProviderCall(connection, "sync_contact", { contact });
   }
 
 };
 
 // ATS actions
 export const ats = {
+  async updateStatus(
+    return mockProviderCall(connection, "update_status", { status });
+  }
+}
 
   async pushApplicant($2) {
     return simulateAction($3);
   },
-  async uploadResume($2) {
-    return simulateAction($3);
-  },
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-    return simulateAction(connection, 'ats.updateStatus', { change })
-  }};
-
   async sync_contact (
     connection: ProviderConnection,
     contact: Record < string, any>,

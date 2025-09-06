@@ -86,7 +86,7 @@ const WebhooksManager: React.FC = () => {
                     Created on {new Date(webhook.createdAt).toLocaleDateString()}
                     {webhook.lastTriggered && (
                       <span className="ml-2">
-                        • Last triggered: {new Date(webhook.lastTriggered).toLocaleDateString()}
+                         Last triggered: {new Date(webhook.lastTriggered).toLocaleDateString()}
                       </span>
                     )}
                   </CardDescription>

@@ -1,6 +1,25 @@
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-
-
+const QualityAssuranceTestingChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <meta
+          name="description"
+          content="QualityAssuranceTestingChat service"
+        />{" "}
+      </Head>
+      <main>
+        <h1>QualityAssuranceTestingChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
       <main>;
         <h1>QualityAssuranceTestingChat</h1>;
         <p>Service details coming soon...</p>;
@@ -10,25 +29,6 @@
   );
 }
 export default QualityAssuranceTestingChat;
-
-
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
-
-
-const QualityAssuranceTestingChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-
-        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -53,3 +53,4 @@ const QualityAssuranceTestingChat: NextPage = () => {
 ;
 export default QualityAssuranceTestingChat;
 ;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>

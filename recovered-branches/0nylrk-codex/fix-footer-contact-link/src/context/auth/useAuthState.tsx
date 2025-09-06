@@ -1,6 +1,5 @@
 
-
-
+import React, { useState } from "react",
 /**
  * Custom hook to manage auth state
  */
@@ -19,8 +18,6 @@ export function useAuthState() {
     setIsLoading,
     onboardingStep,
     setOnboardingStep
-
-
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
 /**;
@@ -50,9 +47,6 @@ function useAuthState() {
     setIsLoading;
     onboardingStep;
     setOnboardingStep;
-
-
-
   }
 }
 ;
@@ -63,9 +57,7 @@ function useAuthState() {
     set_user;
     is_loading;
     setIsLoading;
-
-    onboarding_step;
-
+    onboardingStep;
     setOnboardingStep;
   }
 }

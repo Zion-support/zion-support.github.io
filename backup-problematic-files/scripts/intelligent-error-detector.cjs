@@ -68,6 +68,9 @@ const { execSync } = require("child_process")
     this.scanDirectory(path.join(this.projectRoot, "components")
 <<<<<<< HEAD
     this.log("� Error detection completed!", "SUCCESS")
+<<<<<<< HEAD
 =======
     this.log("� Error detection completed!", "SUCCESS")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

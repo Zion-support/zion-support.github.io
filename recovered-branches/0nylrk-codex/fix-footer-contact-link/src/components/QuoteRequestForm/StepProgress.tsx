@@ -1,20 +1,26 @@
 
-
-
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from "@/components/icons",
 import { cn } from "@/lib/utils",
-
-
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
+export function StepProgress({ currentStep }: StepProgressProps) {
+  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
-    { id: "service", label: "Service" },
-    { id: "details", label: "Details" },
-    { id: "timeline", label: "Timeline" },
-    { id: "budget", label: "Budget" },
-
+    { id: "service", label: "Service" }
+    { id: "details", label: "Details" }
+    { id: "timeline", label: "Timeline" }
+    { id: "budget", label: "Budget" }
+    { id: "summary", label: "Summary" }
+  ];
+  const getStepStatus = (stepId: QuoteRequestSteps) => {
+    const stepOrder = steps.findIndex(s => s.id === stepId);
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
+    if (stepOrder < currentStepOrder) return "complete";
+    if (stepOrder === currentStepOrder) return "current"
+    return "upcoming"
+  }
 
   return (
     <div className="relative">
@@ -34,8 +40,29 @@ interface StepProgressProps {
               <div
                 className={cn(
 
-
-export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
+                  "text-zion-slate-light"
+                )}
+              >
+                {step.label}
+              </span>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+                  "text-xs mt-2 font-medium",
+                  status === "complete" ? "text-zion-cyan" : 
+                  status === "current" ? "text-white" : 
+                  "text-zion-slate-light"
+import { QuoteRequestSteps } from "../QuoteRequestForm",;
+import { CheckIcon } from "@/components/icons",;
+import { cn } from "@/lib/utils",;
+interface StepProgressProps {;
+  currentStep: QuoteRequestSteps;
+}
+;
+export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;
@@ -87,17 +114,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                 ) : (;
                   <span className="text-xs">{steps && steps.findIndex(s => s && s.id === step && step.id) + 1}</span>;
                 )}
-
-              </div>;
-              <span
-                className={cn(
-                  "text-xs mt-2 font-medium"
-
-
-                  "text-xs mt-2 font-medium",
-
-                  status === "complete" ? "text-zion-cyan" : 
-                  status === "current" ? "text-white" : 
                   "text-zion-slate-light"
                 )}>;
                 {step && step.label}
@@ -109,7 +125,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
-
 }
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from '@/components / icons';

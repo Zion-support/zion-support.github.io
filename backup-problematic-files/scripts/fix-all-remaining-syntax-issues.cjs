@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-all-remaining-syntax-issues.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -702,6 +701,11 @@ problematicFiles.forEach(fixFile);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-all-remaining-syntax-issues.cjs
+>>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -732,9 +736,7 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
       "description"
       "features"
         <meta name="description" content="
-<<<<<<< HEAD
-        <meta property="og:description" content="
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-all-remaining-syntax-issues.cjs
 <<<<<<< HEAD
         <meta property="og:description" content="
 =======
@@ -748,3 +750,9 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+        <meta property="og:description" content="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-all-remaining-syntax-issues.cjs
+>>>>>>> origin/main

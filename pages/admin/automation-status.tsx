@@ -1,5 +1,3 @@
-
-
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -12,13 +10,6 @@ const AutomationStatus: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-
-
-
-export default AutomationStatus,;
-
   );
 };
 export default AutomationStatus;
-
-

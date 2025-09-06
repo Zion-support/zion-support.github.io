@@ -10,10 +10,3 @@ module.exports = {
     mock_implementation: jest.fn,
     mockResolvedValue: (...args) => jest.fn ().mockResolvedValue (...args),
     // Provide any other helpers as needed;
-  },
-  expect: jest_globals.expect,
-  test: jest_globals.test,
-  describe: jest_globals.describe,
-  before_each: jest_globals.before_each,
-  after_each: jest_globals.after_each}
-

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-critical-errors.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,12 +27,33 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-critical-errors.cjs
+>>>>>>> origin/main
 #!/usr/bin/env node;
 /**
  * Fix Critical Errors - Comprehensive fix for all critical syntax errors;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-critical-errors.cjs
+>>>>>>> origin/main
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -50,21 +66,7 @@
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -223,6 +225,13 @@ module.exports = CriticalErrorFixer;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-critical-errors.cjs
+>>>>>>> origin/main
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -250,10 +259,8 @@ const path = require('path')
         this.log("Fixed ${fixesApplied} issues in ${path.basename(filePath)}"
       this.log("Error fixing ${filePath}: ${error.message}")
     this.log(" Total Fixes "Applied": ${report.totalFixes}")
-<<<<<<< HEAD
     this.log(" Total "Errors": ${report.totalErrors}")
-=======
-    this.log(" Total "Errors": ${report.totalErrors}")
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-critical-errors.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,3 +296,10 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
+      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-critical-errors.cjs
+>>>>>>> origin/main

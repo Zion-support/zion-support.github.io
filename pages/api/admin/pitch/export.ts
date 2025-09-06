@@ -1,7 +1,5 @@
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' })
@@ -9,8 +7,6 @@
   if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
   if (format === 'gslides') {
     // TODO: integrate Google Slides API and return created deck URL
-
-
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
@@ -29,10 +25,29 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
-<<<<<<< HEAD
-    .replace(/'/g, '&#039,')
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'POST') {
+      const { slides, format, version } = req.body || {};
+      if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' });
+
+      if (format === 'gslides') {
+        // TODO: integrate Google Slides API and return created deck URL
+        const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;
+        res.json({ url });
+      } else {
+        res.status(400).json({ error: 'Unsupported format' });
+      }
+    } else {
+      res.setHeader('Allow', 'POST');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-
-
-

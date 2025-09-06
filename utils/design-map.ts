@@ -1,9 +1,31 @@
-
-
+  colors: Record<string, string>;
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
+}
+  components: Record<string, any>;
   tokens: TokenSet;
 }
-
-
+export async function buildTokenSet(fileId: string): Promise<TokenSet> {
+  // Placeholder implementation
+  return {
+    colors: {
+      primary: '#007AFF'
+      secondary: '#5856D6'
+      success: '#34C759'
+      warning: '#FF9500'
+      error: '#FF3B30'
+    }
+    typography: {
+      heading1: { fontSize: 32, fontWeight: 'bold' }
+      heading2: { fontSize: 24, fontWeight: 'bold' }
+      body: { fontSize: 16, fontWeight: 'normal' }
+    }
+    spacing: {
+      xs: 4
+      sm: 8
+      md: 16
+      lg: 24
+      xl: 32
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -78,7 +100,6 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-
     };
   }
   if (kind === 'chakra') {
@@ -107,8 +128,6 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
     return null;
-
-
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -170,31 +189,25 @@ export interface FigmaNode {
   };
 }
 
-
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
-
-
-  const tokens = await buildTokenSet(fileId);
   const tokens = await buildTokenSet(fileId);
   return {
-
-    id,
-    type,
-    name,
-    properties,
-    children: []
-
-
-
-
-  };
+    components: {
+      button: {
+        primary: {
+          backgroundColor: tokens.colors.primary
+          padding: tokens.spacing.md
+        }
+      }
+    }
+    tokens
+  }
 }
-
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
       }
-    },
-    tokens;
-  }
+    }
+    tokens
+  };
+
 }

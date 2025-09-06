@@ -53,7 +53,3 @@ export const MobileAppHero:React.FC = () => {;
 }googlePlayUrl= {;"  googlePlayUrl ";"}/> </div> <Link href=" /open-app"> <Button variant=" outline"size=" lg"className=" flex gap-2 border-white text-white hover:bg-white/10" > Open App <ArrowRight size= {;
   20 ;
 }/> </Button> </Link> </div> </div> </div> </div> </div> </section>) ;
-
-};
-"
-

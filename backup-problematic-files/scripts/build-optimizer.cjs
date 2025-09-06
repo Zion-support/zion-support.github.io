@@ -8,6 +8,9 @@ const fs = require('fs')
     execSync('npm run build', { "stdio"})
 <<<<<<< HEAD
     console.error(' Build optimization "failed")
+<<<<<<< HEAD
 =======
     console.error(' Build optimization "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main

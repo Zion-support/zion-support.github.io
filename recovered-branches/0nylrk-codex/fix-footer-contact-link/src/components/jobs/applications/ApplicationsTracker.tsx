@@ -1,73 +1,15 @@
 
-
-import { useState } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { ApplicationCard } from "./ApplicationCard";
-import { LoadingState } from "./LoadingState";
-import { EmptyState } from "./EmptyState";
-import { ErrorState } from "./ErrorState";
-
-import { Button } from "@/components/ui/button";
-import { ApplicationStatus } from "@/types/jobs";
-
-export function ApplicationsTracker() {
-
-
-  const { applications, isLoading, error } = useJobApplications();
-
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
-    "all",;
-
-  );
-
-
-
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
 import { LoadingState } from "./LoadingState",
 import { EmptyState } from "./EmptyState",
 import { ErrorState } from "./ErrorState",
-import { Button } from "@/components/ui/button",
-import { ApplicationStatus } from "@/types/jobs",
-export function ApplicationsTracker() {
-  const { applications, isLoading, error } = useJobApplications(),
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
-  
-  if (isLoading) {
-
-    return <LoadingState />
-import { useState } from "react",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import { ApplicationCard } from "./ApplicationCard",;
-import { LoadingState } from "./LoadingState",;
-import { EmptyState } from "./EmptyState",;
-import { ErrorState } from "./ErrorState",;
-import { Button } from "@/components/ui/button",;
-import { ApplicationStatus } from "@/types/jobs",;
-export function ApplicationsTracker() {;
-  const { applications, isLoading, error } = useJobApplications(),;
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
-  if (isLoading) {;
-    return <LoadingState />;
-  }
-;
-
-  if (error) {;
-    return <ErrorState error={error} />;
-  }
-
-  if (applications && applications.length === 0) {;
-    return <EmptyState />;
-  }
-
   
   const filteredApplications = statusFilter === 'all' 
     ? applications
     : applications.filter(app => app.status === statusFilter),
   
-
-
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -117,21 +59,11 @@ export function ApplicationsTracker() {;
           size="sm"
           variant={statusFilter === "rejected" ? "default" : "outline"}
           onClick={() => setStatusFilter("rejected")}
-
-
-      
-
-
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
-
-
-      
-
-
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
@@ -154,11 +86,6 @@ function ApplicationsTracker() {
   const { applications, is_loading, error } = useJobApplications ();
   const [status_filter, setStatusFilter] = useState < ApplicationStatus | "all">(
     "all",
-      )}
-
-    </div>;
-
-
   );
 ;
   // Check condition
@@ -238,6 +165,21 @@ if ( {) {
         </Button>;
       </div>;
 
+      <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">;
+        {filteredApplications && filteredApplications.map((application) => (;
+          <ApplicationCard key={application && application.id} application={application} />;
+        ))}
+      </div>;
+
+      {filteredApplications && filteredApplications.length === 0 && (;
+        <div className="text-center p-8">;
+          <p className="text-muted-foreground">;
+            No applications with this status.;
+          </p>;
+        </div>;
+      )}
+    </div>;
+  );
       <div className="grid gap - 4 md:grid - cols - 1 lg:grid - cols - 2">;
         {filtered_applications.map ((application) => (
           <ApplicationCard key={application.id} application={application} />))}
@@ -249,5 +191,4 @@ if ( {) {
           </p>;
         </div>)}
     </div>);
-
 }

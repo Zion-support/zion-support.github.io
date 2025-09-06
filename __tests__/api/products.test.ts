@@ -154,6 +154,4 @@ describe('/api/products API Endpoint', () => {
       });
     });
   });
-
           "id"
-

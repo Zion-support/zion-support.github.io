@@ -114,6 +114,9 @@ if ( {})
     analyzer.run().catch(console.error)};
 <<<<<<< HEAD
 module.exports = AICodeAnalyzer;
+<<<<<<< HEAD
 =======
 module.exports = AICodeAnalyzer;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
