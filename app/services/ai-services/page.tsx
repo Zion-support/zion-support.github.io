@@ -183,6 +183,216 @@ export default function AIPage() {
               marketSize="$3.8B MLOps market"
               icon="⚙️"
             />
+            <AIServiceCard
+              title="AI-Powered Fraud Detection"
+              description="Advanced fraud detection systems using machine learning to identify and prevent fraudulent activities in real-time."
+              features={[
+                "Real-time fraud scoring",
+                "Behavioral pattern analysis",
+                "Anomaly detection algorithms",
+                "Multi-channel fraud prevention",
+                "Risk assessment models",
+                "Compliance reporting"
+              ]}
+              pricing="$12,000-60,000"
+              marketSize="$2.1B fraud detection market"
+              icon="🛡️"
+            />
+            <AIServiceCard
+              title="Voice AI & Speech Recognition"
+              description="Advanced voice AI solutions including speech-to-text, text-to-speech, and voice command processing."
+              features={[
+                "Multi-language speech recognition",
+                "Natural language understanding",
+                "Voice biometrics",
+                "Real-time transcription",
+                "Custom voice synthesis",
+                "Voice analytics & insights"
+              ]}
+              pricing="$6,000-35,000"
+              marketSize="$4.3B voice AI market"
+              icon="🎤"
+            />
+            <AIServiceCard
+              title="AI-Powered Recommendation Engine"
+              description="Intelligent recommendation systems for e-commerce, content, and personalized user experiences."
+              features={[
+                "Collaborative filtering",
+                "Content-based recommendations",
+                "Real-time personalization",
+                "A/B testing framework",
+                "Performance analytics",
+                "Multi-domain recommendations"
+              ]}
+              pricing="$8,000-45,000"
+              marketSize="$3.6B recommendation engine market"
+              icon="🎯"
+            />
+            <AIServiceCard
+              title="AI Content Moderation"
+              description="Automated content moderation using AI to detect and filter inappropriate content across text, images, and videos."
+              features={[
+                "Multi-modal content analysis",
+                "Real-time content filtering",
+                "Custom moderation rules",
+                "Human-in-the-loop workflows",
+                "Compliance monitoring",
+                "Detailed reporting & analytics"
+              ]}
+              pricing="$5,000-30,000"
+              marketSize="$1.7B content moderation market"
+              icon="🔍"
+            />
+            <AIServiceCard
+              title="AI-Powered Supply Chain Optimization"
+              description="Intelligent supply chain management with demand forecasting, route optimization, and inventory management."
+              features={[
+                "Demand forecasting models",
+                "Route optimization algorithms",
+                "Inventory optimization",
+                "Supplier risk assessment",
+                "Cost optimization",
+                "Real-time monitoring & alerts"
+              ]}
+              pricing="$15,000-80,000"
+              marketSize="$5.2B supply chain AI market"
+              icon="🚚"
+            />
+            <AIServiceCard
+              title="AI-Powered Healthcare Analytics"
+              description="Medical AI solutions for diagnosis assistance, treatment recommendations, and healthcare data analysis."
+              features={[
+                "Medical image analysis",
+                "Diagnostic assistance",
+                "Treatment recommendation",
+                "Patient risk stratification",
+                "Drug interaction analysis",
+                "HIPAA-compliant processing"
+              ]}
+              pricing="$20,000-100,000"
+              marketSize="$7.8B healthcare AI market"
+              icon="🏥"
+            />
+            <AIServiceCard
+              title="AI-Powered Financial Trading"
+              description="Algorithmic trading systems with market analysis, risk management, and automated trading strategies."
+              features={[
+                "Market sentiment analysis",
+                "Algorithmic trading strategies",
+                "Risk management models",
+                "Real-time market monitoring",
+                "Portfolio optimization",
+                "Regulatory compliance"
+              ]}
+              pricing="$25,000-150,000"
+              marketSize="$9.1B fintech AI market"
+              icon="📈"
+            />
+            <AIServiceCard
+              title="AI-Powered Legal Document Analysis"
+              description="Intelligent legal document processing with contract analysis, compliance checking, and legal research assistance."
+              features={[
+                "Contract analysis & review",
+                "Legal document classification",
+                "Compliance checking",
+                "Legal research assistance",
+                "Risk assessment",
+                "Document summarization"
+              ]}
+              pricing="$10,000-50,000"
+              marketSize="$2.4B legal AI market"
+              icon="⚖️"
+            />
+            <AIServiceCard
+              title="AI-Powered Real Estate Analytics"
+              description="Property valuation, market analysis, and investment recommendations using AI and machine learning."
+              features={[
+                "Property valuation models",
+                "Market trend analysis",
+                "Investment recommendations",
+                "Risk assessment",
+                "Price prediction",
+                "Market forecasting"
+              ]}
+              pricing="$8,000-40,000"
+              marketSize="$1.9B proptech AI market"
+              icon="🏠"
+            />
+            <AIServiceCard
+              title="AI-Powered Energy Management"
+              description="Smart energy management systems with consumption optimization, predictive maintenance, and sustainability analytics."
+              features={[
+                "Energy consumption optimization",
+                "Predictive maintenance",
+                "Renewable energy integration",
+                "Carbon footprint tracking",
+                "Cost optimization",
+                "Sustainability reporting"
+              ]}
+              pricing="$12,000-60,000"
+              marketSize="$3.1B energy AI market"
+              icon="⚡"
+            />
+            <AIServiceCard
+              title="AI-Powered Quality Assurance"
+              description="Automated quality testing and assurance systems for software, manufacturing, and service delivery."
+              features={[
+                "Automated test generation",
+                "Defect prediction models",
+                "Quality metrics analysis",
+                "Process optimization",
+                "Root cause analysis",
+                "Continuous improvement"
+              ]}
+              pricing="$6,000-35,000"
+              marketSize="$2.7B QA automation market"
+              icon="✅"
+            />
+            <AIServiceCard
+              title="AI-Powered Customer Churn Prediction"
+              description="Predictive analytics to identify customers at risk of churning and implement retention strategies."
+              features={[
+                "Churn prediction models",
+                "Risk scoring algorithms",
+                "Retention strategy recommendations",
+                "Customer segmentation",
+                "Lifetime value prediction",
+                "Intervention automation"
+              ]}
+              pricing="$7,000-40,000"
+              marketSize="$1.8B customer analytics market"
+              icon="📉"
+            />
+            <AIServiceCard
+              title="AI-Powered Cybersecurity"
+              description="Advanced threat detection and response systems using AI to protect against cyber attacks and security breaches."
+              features={[
+                "Threat detection & analysis",
+                "Behavioral anomaly detection",
+                "Automated incident response",
+                "Vulnerability assessment",
+                "Security orchestration",
+                "Compliance monitoring"
+              ]}
+              pricing="$15,000-75,000"
+              marketSize="$6.8B AI cybersecurity market"
+              icon="🔐"
+            />
+            <AIServiceCard
+              title="AI-Powered Personalization Engine"
+              description="Dynamic personalization platform that adapts user experiences based on behavior, preferences, and context."
+              features={[
+                "Real-time personalization",
+                "Behavioral analysis",
+                "Context-aware recommendations",
+                "A/B testing framework",
+                "Performance optimization",
+                "Multi-channel consistency"
+              ]}
+              pricing="$9,000-50,000"
+              marketSize="$4.2B personalization market"
+              icon="🎨"
+            />
           </div>
         </div>
       </section>

@@ -183,6 +183,216 @@ export default function ITServicesPage() {
               marketSize="$8.9B IT consulting market"
               icon="💡"
             />
+            <ITServiceCard
+              title="Edge Computing Solutions"
+              description="Edge computing infrastructure for low-latency applications, IoT devices, and distributed processing."
+              features={[
+                "Edge server deployment",
+                "IoT device management",
+                "Real-time data processing",
+                "Latency optimization",
+                "Distributed computing",
+                "Edge security implementation"
+              ]}
+              pricing="$8,000-40,000"
+              marketSize="$2.1B edge computing market"
+              icon="🌐"
+            />
+            <ITServiceCard
+              title="5G Network Implementation"
+              description="5G network design, deployment, and optimization for high-speed connectivity and IoT applications."
+              features={[
+                "5G network planning",
+                "Small cell deployment",
+                "Network optimization",
+                "IoT connectivity setup",
+                "Performance monitoring",
+                "Coverage analysis"
+              ]}
+              pricing="$15,000-75,000"
+              marketSize="$4.7B 5G infrastructure market"
+              icon="📡"
+            />
+            <ITServiceCard
+              title="Quantum Computing Integration"
+              description="Quantum computing solutions for cryptography, optimization, and advanced computational problems."
+              features={[
+                "Quantum algorithm development",
+                "Quantum cryptography",
+                "Optimization problems",
+                "Quantum simulation",
+                "Hybrid classical-quantum systems",
+                "Quantum security protocols"
+              ]}
+              pricing="$25,000-150,000"
+              marketSize="$1.2B quantum computing market"
+              icon="⚛️"
+            />
+            <ITServiceCard
+              title="Blockchain Infrastructure"
+              description="Blockchain network setup, smart contract development, and decentralized application infrastructure."
+              features={[
+                "Blockchain network design",
+                "Smart contract development",
+                "DeFi protocol implementation",
+                "NFT platform development",
+                "Consensus mechanism setup",
+                "Blockchain security audit"
+              ]}
+              pricing="$12,000-60,000"
+              marketSize="$3.4B blockchain infrastructure market"
+              icon="⛓️"
+            />
+            <ITServiceCard
+              title="IoT Platform Development"
+              description="Comprehensive IoT platform with device management, data processing, and analytics capabilities."
+              features={[
+                "IoT device connectivity",
+                "Data ingestion & processing",
+                "Real-time analytics",
+                "Device management",
+                "Security & encryption",
+                "Scalable architecture"
+              ]}
+              pricing="$10,000-50,000"
+              marketSize="$5.8B IoT platform market"
+              icon="🏠"
+            />
+            <ITServiceCard
+              title="AR/VR Infrastructure"
+              description="Augmented and virtual reality infrastructure for immersive experiences and enterprise applications."
+              features={[
+                "AR/VR application development",
+                "3D content creation",
+                "Spatial computing",
+                "Haptic feedback systems",
+                "Multi-user experiences",
+                "Performance optimization"
+              ]}
+              pricing="$15,000-80,000"
+              marketSize="$2.9B AR/VR market"
+              icon="🥽"
+            />
+            <ITServiceCard
+              title="High-Performance Computing"
+              description="HPC solutions for scientific computing, data analysis, and computationally intensive applications."
+              features={[
+                "HPC cluster setup",
+                "Parallel processing optimization",
+                "GPU computing",
+                "Distributed computing",
+                "Performance tuning",
+                "Scientific software integration"
+              ]}
+              pricing="$20,000-100,000"
+              marketSize="$4.2B HPC market"
+              icon="💻"
+            />
+            <ITServiceCard
+              title="Green IT & Sustainability"
+              description="Sustainable IT solutions with energy efficiency, carbon footprint reduction, and green technology implementation."
+              features={[
+                "Energy-efficient infrastructure",
+                "Carbon footprint tracking",
+                "Renewable energy integration",
+                "E-waste management",
+                "Green data centers",
+                "Sustainability reporting"
+              ]}
+              pricing="$5,000-30,000"
+              marketSize="$1.8B green IT market"
+              icon="🌱"
+            />
+            <ITServiceCard
+              title="Disaster Recovery & Business Continuity"
+              description="Comprehensive disaster recovery planning and business continuity solutions for critical business operations."
+              features={[
+                "Disaster recovery planning",
+                "Backup & recovery systems",
+                "Business continuity testing",
+                "Failover automation",
+                "Data replication",
+                "Recovery time optimization"
+              ]}
+              pricing="$8,000-45,000"
+              marketSize="$2.6B disaster recovery market"
+              icon="🚨"
+            />
+            <ITServiceCard
+              title="IT Asset Management"
+              description="Complete IT asset lifecycle management with tracking, optimization, and compliance monitoring."
+              features={[
+                "Asset inventory management",
+                "Lifecycle tracking",
+                "Cost optimization",
+                "Compliance monitoring",
+                "Software license management",
+                "Asset disposal & recycling"
+              ]}
+              pricing="$3,000-20,000"
+              marketSize="$1.5B IT asset management market"
+              icon="📋"
+            />
+            <ITServiceCard
+              title="Digital Workplace Solutions"
+              description="Modern digital workplace setup with collaboration tools, remote work infrastructure, and employee experience optimization."
+              features={[
+                "Collaboration platform setup",
+                "Remote work infrastructure",
+                "Employee experience optimization",
+                "Digital transformation",
+                "Change management",
+                "Productivity analytics"
+              ]}
+              pricing="$6,000-35,000"
+              marketSize="$3.7B digital workplace market"
+              icon="🏢"
+            />
+            <ITServiceCard
+              title="IT Compliance & Governance"
+              description="Comprehensive IT governance framework with compliance monitoring, risk management, and audit support."
+              features={[
+                "Compliance framework implementation",
+                "Risk assessment & management",
+                "Audit support & preparation",
+                "Policy development",
+                "Training & awareness",
+                "Continuous monitoring"
+              ]}
+              pricing="$4,000-25,000"
+              marketSize="$2.3B IT governance market"
+              icon="📊"
+            />
+            <ITServiceCard
+              title="Microservices Architecture"
+              description="Microservices architecture design and implementation for scalable, maintainable applications."
+              features={[
+                "Microservices design",
+                "API gateway setup",
+                "Service mesh implementation",
+                "Container orchestration",
+                "Service discovery",
+                "Monitoring & observability"
+              ]}
+              pricing="$10,000-50,000"
+              marketSize="$3.1B microservices market"
+              icon="🔧"
+            />
+            <ITServiceCard
+              title="IT Performance Optimization"
+              description="Comprehensive IT performance optimization with monitoring, analysis, and continuous improvement."
+              features={[
+                "Performance monitoring",
+                "Bottleneck identification",
+                "Optimization recommendations",
+                "Capacity planning",
+                "Performance testing",
+                "Continuous improvement"
+              ]}
+              pricing="$5,000-30,000"
+              marketSize="$2.4B IT performance market"
+              icon="⚡"
+            />
           </div>
         </div>
       </section>

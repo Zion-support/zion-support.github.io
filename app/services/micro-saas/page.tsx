@@ -183,6 +183,216 @@ export default function MicroSaasPage() {
               marketSize="$4.7B HR software market"
               icon="👥"
             />
+            <MicroSaaSCard
+              title="Lead Generation Engine"
+              description="AI-powered lead generation and qualification system with automated outreach and CRM integration."
+              features={[
+                "AI lead scoring & qualification",
+                "Automated email sequences",
+                "LinkedIn & social prospecting",
+                "CRM integration (Salesforce, HubSpot)",
+                "Lead nurturing workflows",
+                "ROI tracking & analytics"
+              ]}
+              pricing="$39-199/month"
+              marketSize="$3.2B lead generation market"
+              icon="🎯"
+            />
+            <MicroSaaSCard
+              title="Time Tracking & Productivity"
+              description="Advanced time tracking with AI insights, productivity analytics, and team performance optimization."
+              features={[
+                "AI-powered time categorization",
+                "Productivity analytics & insights",
+                "Team performance dashboards",
+                "Project profitability tracking",
+                "Automated timesheet generation",
+                "Integration with 50+ tools"
+              ]}
+              pricing="$12-79/month"
+              marketSize="$2.8B time tracking market"
+              icon="⏰"
+            />
+            <MicroSaaSCard
+              title="Customer Feedback Analytics"
+              description="AI-powered customer feedback analysis with sentiment tracking, trend identification, and actionable insights."
+              features={[
+                "Multi-channel feedback collection",
+                "AI sentiment analysis",
+                "Trend identification & alerts",
+                "Competitor analysis",
+                "Actionable insights dashboard",
+                "Custom reporting & exports"
+              ]}
+              pricing="$25-149/month"
+              marketSize="$1.9B feedback management market"
+              icon="💬"
+            />
+            <MicroSaaSCard
+              title="Inventory Management AI"
+              description="Intelligent inventory management with demand forecasting, automated reordering, and cost optimization."
+              features={[
+                "AI demand forecasting",
+                "Automated reorder points",
+                "Multi-location inventory sync",
+                "Cost optimization algorithms",
+                "Supplier performance tracking",
+                "Real-time stock alerts"
+              ]}
+              pricing="$45-299/month"
+              marketSize="$4.1B inventory management market"
+              icon="📦"
+            />
+            <MicroSaaSCard
+              title="Document Management System"
+              description="AI-powered document management with OCR, smart categorization, and automated workflow processing."
+              features={[
+                "OCR & text extraction",
+                "AI document categorization",
+                "Automated workflow processing",
+                "Version control & collaboration",
+                "Advanced search capabilities",
+                "Compliance & audit trails"
+              ]}
+              pricing="$19-129/month"
+              marketSize="$5.6B document management market"
+              icon="📄"
+            />
+            <MicroSaaSCard
+              title="Expense Management Pro"
+              description="Automated expense tracking with receipt scanning, policy compliance, and intelligent categorization."
+              features={[
+                "Receipt scanning & OCR",
+                "AI expense categorization",
+                "Policy compliance checking",
+                "Automated approval workflows",
+                "Multi-currency support",
+                "Integration with accounting systems"
+              ]}
+              pricing="$15-89/month"
+              marketSize="$2.3B expense management market"
+              icon="💰"
+            />
+            <MicroSaaSCard
+              title="Website Performance Monitor"
+              description="Comprehensive website monitoring with performance optimization, uptime tracking, and user experience analytics."
+              features={[
+                "Real-time performance monitoring",
+                "Uptime & availability tracking",
+                "User experience analytics",
+                "Core Web Vitals monitoring",
+                "Automated alerts & notifications",
+                "Performance optimization recommendations"
+              ]}
+              pricing="$29-199/month"
+              marketSize="$3.7B website monitoring market"
+              icon="🌐"
+            />
+            <MicroSaaSCard
+              title="API Management Platform"
+              description="Complete API lifecycle management with monitoring, security, documentation, and developer portal."
+              features={[
+                "API gateway & routing",
+                "Rate limiting & throttling",
+                "Authentication & authorization",
+                "API documentation generator",
+                "Developer portal",
+                "Analytics & monitoring"
+              ]}
+              pricing="$99-999/month"
+              marketSize="$4.8B API management market"
+              icon="🔌"
+            />
+            <MicroSaaSCard
+              title="A/B Testing Platform"
+              description="Advanced A/B testing platform with statistical significance, multivariate testing, and conversion optimization."
+              features={[
+                "Visual editor for tests",
+                "Statistical significance calculator",
+                "Multivariate testing",
+                "Conversion funnel analysis",
+                "Real-time results dashboard",
+                "Integration with analytics tools"
+              ]}
+              pricing="$49-399/month"
+              marketSize="$1.4B A/B testing market"
+              icon="🧪"
+            />
+            <MicroSaaSCard
+              title="Customer Onboarding Automation"
+              description="Automated customer onboarding with personalized journeys, progress tracking, and success metrics."
+              features={[
+                "Personalized onboarding flows",
+                "Progress tracking & analytics",
+                "Automated email sequences",
+                "In-app guidance & tooltips",
+                "Success metrics dashboard",
+                "Integration with CRM systems"
+              ]}
+              pricing="$35-199/month"
+              marketSize="$1.8B customer onboarding market"
+              icon="🚀"
+            />
+            <MicroSaaSCard
+              title="Subscription Billing Engine"
+              description="Flexible subscription billing with proration, dunning management, and revenue recognition."
+              features={[
+                "Flexible pricing models",
+                "Proration & billing adjustments",
+                "Dunning management",
+                "Revenue recognition",
+                "Tax calculation & compliance",
+                "Analytics & reporting"
+              ]}
+              pricing="$79-599/month"
+              marketSize="$2.9B subscription billing market"
+              icon="💳"
+            />
+            <MicroSaaSCard
+              title="White-Label Mobile App Builder"
+              description="No-code mobile app builder with white-label options, custom branding, and app store deployment."
+              features={[
+                "Drag-and-drop app builder",
+                "White-label customization",
+                "App store deployment",
+                "Push notifications",
+                "Analytics & user tracking",
+                "Custom integrations"
+              ]}
+              pricing="$199-1,999/month"
+              marketSize="$6.2B mobile app development market"
+              icon="📱"
+            />
+            <MicroSaaSCard
+              title="Workflow Automation Hub"
+              description="Visual workflow automation platform connecting 200+ apps with conditional logic and error handling."
+              features={[
+                "Visual workflow designer",
+                "200+ app integrations",
+                "Conditional logic & branching",
+                "Error handling & retry logic",
+                "Real-time execution monitoring",
+                "Custom webhook support"
+              ]}
+              pricing="$29-299/month"
+              marketSize="$5.1B workflow automation market"
+              icon="⚡"
+            />
+            <MicroSaaSCard
+              title="Data Backup & Recovery"
+              description="Automated data backup with point-in-time recovery, cross-platform sync, and disaster recovery planning."
+              features={[
+                "Automated backup scheduling",
+                "Point-in-time recovery",
+                "Cross-platform synchronization",
+                "Disaster recovery planning",
+                "Encryption & security",
+                "Compliance reporting"
+              ]}
+              pricing="$19-199/month"
+              marketSize="$3.4B data backup market"
+              icon="💾"
+            />
           </div>
         </div>
       </section>
