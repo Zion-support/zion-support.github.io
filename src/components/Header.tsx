@@ -172,7 +172,14 @@ const Header: React.FC = () => {
         )}
       </nav>
     </header>
+<<<<<<< HEAD
   );
 };
 
 export default Header;
+=======
+  )
+}
+
+export default Header;
+>>>>>>> 66a541ecfa0c49b2e5754a6b8507b357f85f30af

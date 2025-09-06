@@ -23,7 +23,10 @@ export default defineConfig({
   esbuild: {
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
-    exclude: [],
+    exclude: [
+      /src\/components\/video\//,
+      /src\/components\/DynamicListingPage\.tsx$/,
+    ],
   },
   build: {
     target: 'esnext',
