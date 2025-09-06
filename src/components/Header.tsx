@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -10,8 +12,6 @@ import { Menu, X } from 'lucide-react'
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
   ];
-
-
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
@@ -47,7 +47,6 @@ import { Menu, X } from 'lucide-react'
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
-
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -60,7 +59,7 @@ import { Menu, X } from 'lucide-react'
             ))}
           </div>
         )}
-      </nav>
+      </div>
     </header>
   )
 }
