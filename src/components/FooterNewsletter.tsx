@@ -116,8 +116,6 @@ export function FooterNewsletter(): React.ReactElement {
 
     setIsSubmitting(true),
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     try {
       const res = await fetch('/api/newsletter', {
@@ -216,35 +214,14 @@ export function FooterNewsletter(): React.ReactElement {;
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
-<<<<<<< HEAD
-
-
-      {/* Honeypot field */}
-{/* Honeypot field */}
-      <input
-        type="text"
-        name="honeypot"
-        value={honeypot}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         onChange={e => setHoneypot(e && e.target.value)}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
       />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       <Button
         type="submit"
         disabled={isSubmitting}
-
-=======
-      <Button
-        type="submit"
-        disabled={isSubmitting}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
@@ -255,8 +232,6 @@ export function FooterNewsletter(): React.ReactElement {;
         tabIndex={-1}
 
 
-<<<<<<< HEAD
-=======
         type='text'
         type="text"
         value={honeypot}
@@ -284,12 +259,9 @@ export function FooterNewsletter(): React.ReactElement {;
 }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -301,10 +273,6 @@ export function FooterNewsletter(): React.ReactElement {;
       >;
         {isSubmitting ? (;
           <>;
-<<<<<<< HEAD
-            <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
-<<<<<<< HEAD
-=======
             Subscribing...;
           </>;
         ) : (;
@@ -415,10 +383,7 @@ export function FooterNewsletter():React.ReactElement {;
         {isSubmitting ? (;
           <>;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Subscribing...;
           </>;
         ) : (;
@@ -426,17 +391,8 @@ export function FooterNewsletter():React.ReactElement {;
         )}
       </Button>;
     </form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 } ;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } ;
 
 import React, { useState, useRef } from 'react';
@@ -561,10 +517,6 @@ if ( {) {
     </form>);
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 
 
 };
@@ -577,7 +529,4 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
   );
 } ;
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

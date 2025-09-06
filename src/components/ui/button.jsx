@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export function Button({ 
-  children, 
-  variant = 'default', 
-  size = 'md', 
-  asChild = false, 
-  className = "", 
-  onClick, 
-  type = 'button', 
-  disabled = false 
-}) {
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';';
 export function Button({ children, variant = 'default', size = 'md', asChild = false, className="", onClick,  type = 'button', disabled = false }) {';
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
@@ -37,13 +21,6 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
       {children}
     </button>);
 }
-<<<<<<< HEAD
-}
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -61,20 +38,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   if (asChild) {
   }
   return (
-<<<<<<< HEAD
-    <button
-      className={classes}
-      onClick={onClick}
-      type={type}
-      disabled={disabled}
-    >
-      {children}
-    </button>
-  );
-<<<<<<< HEAD
-}
-
-=======
 
 }
 
@@ -91,8 +54,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 '
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 '
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
