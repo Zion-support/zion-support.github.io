@@ -125,12 +125,10 @@
   </head>
   <body>
     <h1>Zion Tech Nexus - Offline Development</h1>
-
     <div class="status-box offline">
-      <span class="network-indicator"></span>
-      <strong>OFFLINE MODE</strong> - Running with minimal functionality
+      <span class="network-indicator"></span><strong>OFFLINE MODE</strong> -
+      Running with minimal functionality
     </div>
-
     <div class="card">
       <h2>💻 Offline Development Mode</h2>
       <p>
@@ -141,7 +139,6 @@
         Checking network status...
       </div>
     </div>
-
     <div class="card warning">
       <h2>⚠️ TypeScript and Dependency Errors</h2>
       <p>
@@ -152,14 +149,10 @@
         <code
           >Cannot find module 'react' or its corresponding type
           declarations.</code
-        >
-        <br />
-        <code
+        ><br /><code
           >Cannot find module 'react-router-dom' or its corresponding type
           declarations.</code
-        >
-        <br />
-        <code>vite: not found</code>
+        ><br /><code>vite: not found</code>
       </div>
       <p>
         We've created temporary type declarations in
@@ -167,13 +160,11 @@
         these are only placeholders.
       </p>
     </div>
-
     <div class="tabs">
       <div class="tab active" onclick="showTab('online')">Online Solution</div>
       <div class="tab" onclick="showTab('offline')">Offline Workarounds</div>
       <div class="tab" onclick="showTab('proxy')">Proxy Settings</div>
     </div>
-
     <div id="online" class="tab-content active">
       <div class="steps">
         <h2>🌐 When Internet is Available</h2>
@@ -183,7 +174,6 @@
         <div class="command">npm run dev</div>
       </div>
     </div>
-
     <div id="offline" class="tab-content">
       <div class="steps">
         <h2>🔌 Offline Development Options</h2>
@@ -208,7 +198,6 @@
         </ol>
       </div>
     </div>
-
     <div id="proxy" class="tab-content">
       <div class="steps">
         <h2>🔒 Behind a Corporate Proxy?</h2>
@@ -222,54 +211,8 @@
         <div class="command">./setup.sh npm</div>
       </div>
     </div>
-
     <script>
-      function showTab(tabId) {
-        // Hide all tab contents
-        document.querySelectorAll('.tab-content').forEach(content => {
-          content.classList.remove('active');
-        });
-
-        // Deactivate all tabs
-        document.querySelectorAll('.tab').forEach(tab => {
-          tab.classList.remove('active');
-        });
-
-        // Show selected tab content
-        document.getElementById(tabId).classList.add('active');
-
-        // Activate selected tab
-        document.querySelectorAll('.tab').forEach(tab => {
-          if (tab.textContent.toLowerCase().includes(tabId.toLowerCase())) {
-            tab.classList.add('active');
-          }
-        });
-      }
-      // Check if we're online periodically
-      function checkOnlineStatus() {
-        fetch('/online-check')
-          .then(response => response.json())
-          .then(data => {
-            const statusBox = document.getElementById('online-check');
-            if (data.online) {
-              statusBox.textContent =
-                'Internet connection detected! You can now install dependencies.';
-              statusBox.classList.remove('offline');
-            } else {
-              statusBox.innerHTML =
-                "<span class='network-indicator'></span> " + data.message;
-            }
-          })
-          .catch(() => {
-            const statusBox = document.getElementById('online-check');
-            statusBox.innerHTML =
-              "<span class='network-indicator'></span> No internet connection detected";
-            statusBox.classList.add('offline');
-          });
-      }
-      // Check immediately and then every 30 seconds
-      checkOnlineStatus();
-      setInterval(checkOnlineStatus, 30000);
+      function showTab(tabId) { // Hide all tab contents document.querySelectorAll('.tab-content').forEach(content => { content.classList.remove('active'); }); // Deactivate all tabs document.querySelectorAll('.tab').forEach(tab => { tab.classList.remove('active'); }); // Show selected tab content document.getElementById(tabId).classList.add('active'); // Activate selected tab document.querySelectorAll('.tab').forEach(tab => { if (tab.textContent.toLowerCase().includes(tabId.toLowerCase())) { tab.classList.add('active'); } }); } // Check if we're online periodically function checkOnlineStatus() { fetch('/online-check') .then(response => response.json()) .then(data => { const statusBox = document.getElementById('online-check'); if (data.online) { statusBox.textContent = 'Internet connection detected! You can now install dependencies.'; statusBox.classList.remove('offline'); } else { statusBox.innerHTML = "<span class='network-indicator'></span> " + data.message; } }) .catch(() => { const statusBox = document.getElementById('online-check'); statusBox.innerHTML = "<span class='network-indicator'></span> No internet connection detected"; statusBox.classList.add('offline'); }); } // Check immediately and then every 30 seconds checkOnlineStatus(); setInterval(checkOnlineStatus, 30000);
     </script>
   </body>
 </html>

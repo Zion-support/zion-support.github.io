@@ -1,59 +1,83 @@
 #!/bin/bash
 
-echo "Starting merge conflict resolution...
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Script to automatically resolve merge conflicts by choosing main branch version
+echo "Resolving merge conflicts by choosing main branch version..."
 
-# List of critical files that we want to keep our version for
-CRITICAL_FILES=(
-    src/pages/Home.tsx"
-    "src/components/layout/MainSidebar.tsx
-    src/components/SEO.tsx"
-    "src/components/PerformanceOptimizer.tsx
-    src/components/EnhancedAccessibilityEnhancer.tsx"
-)
+# Get list of conflicted files
+git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+    echo "Resolving conflict in: $file"
+    # Choose the main branch version (ours)
+    git checkout --ours "$file"
+    git add "$file"
+done
 
-# Function to resolve conflicts for a file
-resolve_conflicts() {
-    local file="$1
-    
-    if [[ ! -f $file" ]]; then
-        echo "File $file does not exist, skipping...
-        return
+# Handle modify/delete conflicts by removing the files
+git status --porcelain | grep "^DU" | cut -c4- | while read file; do
+    echo "Removing deleted file: $file"
+    git rm "$file"
+done
+
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+echo "Starting conflict resolution..."
+
+# First, let's merge main into our branch
+git merge main
+
+# For most conflicts, we'll take the main branch version
+# But we want to keep our netlify.toml fix
+git checkout --ours netlify.toml
+
+# For other critical files, take main branch version
+git checkout --theirs package.json
+git checkout --theirs vite.config.ts
+git checkout --theirs tsconfig.json
+git checkout --theirs src/App.tsx
+git checkout --theirs src/main.tsx
+git checkout --theirs index.html
+git checkout --theirs src/index.css
+
+# For all other conflicts, take main branch version
+git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+    if [ "$file" != "netlify.toml" ]; then
+        echo "Resolving conflict in $file (taking main branch version)"
+        git checkout --theirs "$file"
+        git add "$file"
     fi
-    
-    if ! grep -q " "$file; then
-        echo No conflicts in $file, skipping..."
-        return
-    fi
-    
-    echo "Resolving conflicts in $file...
-    
-    # Check if it's a critical file
-    for critical in ${CRITICAL_FILES[@]}"; do
-        if [[ "$file == $critical" ]]; then
-            echo "Keeping our version for critical file: $file
-            # Use our version (HEAD) for critical files
-            git checkout --ours $file"
-            git add "$file
-            return
-        fi
-    done
-    
-    # For non-critical files, use the remote version (theirs)
-    echo Using remote version for: $file"
-    git checkout --theirs "$file
-    git add $file"
-}
+done
 
-# Get all files with merge conflicts
-conflict_files=$(grep -l " -r . --include=*.tsx" --include="*.ts --include=*.js" --include="*.jsx --include=*.json" 2>/dev/null)
+# Add all resolved files
+git add .
 
-echo "Found $(echo $conflict_files | wc -l) files with conflicts"
+echo "Conflict resolution completed. Checking status..."
+git status
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+# Script to automatically resolve merge conflicts by choosing main branch version
+echo "Resolving merge conflicts by choosing main branch version..."
 
-# Resolve conflicts for each file
-while IFS= read -r file; do
-    if [[ -n "$file ]]; then
-        resolve_conflicts $file"
-    fi
-done <<< "$conflict_files
+# Get list of conflicted files
+git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+    echo "Resolving conflict in: $file"
+    # Choose the main branch version (ours)
+    git checkout --ours "$file"
+    git add "$file"
+done
 
-echo Merge conflict resolution completed!"
+# Handle modify/delete conflicts by removing the files
+git status --porcelain | grep "^DU" | cut -c4- | while read file; do
+    echo "Removing deleted file: $file"
+    git rm "$file"
+done
+
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

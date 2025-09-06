@@ -1,15 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search } from 'lucide-react';
-
+import ErrorBoundary from '../components/ErrorBoundary';
+// import { Brain, TrendingUp, FileText, Eye, Database, Shield, Mic, Zap, Cog, Search, Users, Code } from 'lucide-react';
 export default function AIServices() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
+  /*
   const aiServices = [
     {
       icon: Brain,
@@ -827,311 +823,1181 @@ export default function AIServices() {
     },
     {
       icon: Brain,
-      name: 'AI-Powered Drug Discovery Platform',
-      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
+      name: 'Generative AI Content Studio',
+      description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
       features: [
-        'Molecular structure prediction and analysis',
-        'Drug-target interaction modeling',
-        'Side effect prediction and assessment',
-        'Clinical trial optimization',
-        'Biomarker discovery and validation',
-        'Regulatory compliance and documentation'
+        'Multi-modal content generation (text, image, video, audio)',
+        'Brand voice and style consistency training',
+        'Content optimization for SEO and engagement',
+        'Automated content scheduling and distribution',
+        'A/B testing and performance analytics',
+        'Copyright and plagiarism detection'
       ],
-      pricing: '$50,000 – $500,000 project',
-      perUnit: 'Custom pricing based on research scope',
-      timeline: '12–24 weeks',
+      pricing: '$2,000 – $15,000 setup',
+      perUnit: '$0.05 – $0.50 per content piece',
+      timeline: '4–8 weeks',
       benefits: [
-        '60% faster drug discovery process',
-        'Reduced research and development costs',
-        'Improved success rates in clinical trials',
-        'Enhanced drug safety profiles'
+        '95% faster content production',
+        'Consistent brand messaging across all channels',
+        'Reduced content creation costs by 70%',
+        'Improved content engagement and conversion rates'
       ]
     },
     {
       icon: Eye,
-      name: 'AI-Powered Medical Imaging Analysis',
-      description: 'Advanced computer vision for medical imaging diagnosis, radiology, and pathology analysis.',
+      name: 'AI-Powered Quality Assurance',
+      description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
       features: [
-        'Radiology image analysis and diagnosis',
-        'Pathology slide examination',
-        'Tumor detection and classification',
-        'Medical image enhancement and processing',
-        'Diagnostic report generation',
-        'Integration with medical systems'
+        'Real-time defect detection and classification',
+        'Predictive quality analytics and forecasting',
+        'Automated compliance monitoring and reporting',
+        'Root cause analysis and recommendations',
+        'Integration with manufacturing systems',
+        'Custom quality metrics and thresholds'
       ],
-      pricing: '$25,000 – $150,000 setup',
-      perUnit: '$0.50 – $5.00 per image',
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '$0.01 – $0.10 per inspection',
       timeline: '8–16 weeks',
       benefits: [
-        '95% accuracy in medical diagnosis',
-        'Faster diagnostic turnaround times',
-        'Reduced human error in analysis',
-        'Improved patient outcomes'
+        '99.5% accuracy in defect detection',
+        '50% reduction in quality control costs',
+        'Real-time quality monitoring and alerts',
+        'Improved product consistency and customer satisfaction'
       ]
     },
     {
       icon: TrendingUp,
-      name: 'AI-Powered Financial Trading Algorithm',
-      description: 'Sophisticated AI trading algorithms for automated investment strategies and risk management.',
+      name: 'AI Financial Risk Management',
+      description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
       features: [
-        'Algorithmic trading strategy development',
-        'Real-time market analysis and prediction',
-        'Risk assessment and portfolio optimization',
-        'High-frequency trading capabilities',
-        'Backtesting and performance analysis',
-        'Regulatory compliance and reporting'
-      ],
-      pricing: '$100,000 – $1,000,000 setup',
-      perUnit: 'Performance-based fees (10-20% of profits)',
-      timeline: '16–32 weeks',
-      benefits: [
-        'Superior risk-adjusted returns',
-        '24/7 automated trading',
-        'Reduced emotional trading decisions',
-        'Advanced market analysis capabilities'
-      ]
-    },
-    {
-      icon: Shield,
-      name: 'AI-Powered Cybersecurity Threat Intelligence',
-      description: 'Advanced AI system for real-time threat detection, analysis, and automated response.',
-      features: [
-        'Real-time threat detection and analysis',
-        'Behavioral anomaly identification',
-        'Automated incident response',
-        'Threat intelligence gathering',
-        'Vulnerability assessment and prioritization',
-        'Security orchestration and automation'
+        'Real-time fraud detection and prevention',
+        'Credit risk assessment and scoring',
+        'Market risk analysis and portfolio optimization',
+        'Regulatory compliance monitoring',
+        'Anomaly detection and alert systems',
+        'Automated reporting and documentation'
       ],
       pricing: '$15,000 – $100,000 setup',
-      perUnit: '$0.10 – $1.00 per event',
-      timeline: '8–16 weeks',
+      perUnit: '$0.02 – $0.20 per transaction',
+      timeline: '10–20 weeks',
       benefits: [
-        '99.9% threat detection accuracy',
-        'Real-time automated response',
-        'Reduced security incident impact',
-        'Enhanced security posture'
-      ]
-    },
-    {
-      icon: FileText,
-      name: 'AI-Powered Legal Document Analysis',
-      description: 'Advanced AI for legal document review, contract analysis, and compliance monitoring.',
-      features: [
-        'Contract analysis and risk assessment',
-        'Legal document review and summarization',
-        'Compliance monitoring and reporting',
-        'Due diligence automation',
-        'Legal research and case law analysis',
-        'Document generation and templating'
-      ],
-      pricing: '$10,000 – $75,000 setup',
-      perUnit: '$0.25 – $2.50 per document',
-      timeline: '6–12 weeks',
-      benefits: [
-        '90% reduction in document review time',
-        'Improved accuracy in legal analysis',
-        'Automated compliance monitoring',
-        'Reduced legal costs and risks'
+        '90% reduction in false positives',
+        'Real-time risk monitoring and mitigation',
+        'Automated compliance and regulatory reporting',
+        'Improved financial decision making'
       ]
     },
     {
       icon: Mic,
-      name: 'AI-Powered Real-Time Translation',
-      description: 'Advanced real-time translation system with voice recognition and natural language processing.',
+      name: 'AI Voice Analytics & Sentiment Analysis',
+      description: 'Advanced voice processing system that analyzes speech patterns, emotions, and sentiment for customer service, market research, and healthcare applications.',
       features: [
-        'Real-time voice translation',
-        'Multi-language support (100+ languages)',
-        'Context-aware translation',
-        'Offline translation capabilities',
-        'Custom domain adaptation',
-        'Integration with communication platforms'
+        'Real-time voice emotion and sentiment analysis',
+        'Speaker identification and verification',
+        'Conversation analytics and insights',
+        'Multi-language support and translation',
+        'Voice biometric authentication',
+        'Call center optimization and training'
       ],
       pricing: '$5,000 – $30,000 setup',
-      perUnit: '$0.01 – $0.10 per minute',
-      timeline: '4–8 weeks',
+      perUnit: '$0.01 – $0.05 per minute',
+      timeline: '6–12 weeks',
       benefits: [
-        '95% translation accuracy',
-        'Real-time communication support',
-        'Multi-language business expansion',
-        'Enhanced global collaboration'
+        '85% accuracy in emotion detection',
+        'Improved customer service quality',
+        'Real-time conversation insights',
+        'Enhanced security with voice biometrics'
       ]
     },
     {
       icon: Database,
-      name: 'AI-Powered Supply Chain Optimization',
-      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
+      name: 'AI Data Intelligence Platform',
+      description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
       features: [
-        'Demand forecasting and planning',
-        'Inventory optimization and management',
-        'Logistics route optimization',
-        'Supplier risk assessment',
-        'Supply chain visibility and tracking',
-        'Automated decision making'
+        'Automated data discovery and cataloging',
+        'Data quality assessment and cleaning',
+        'Intelligent data enrichment and augmentation',
+        'Automated data lineage and governance',
+        'Predictive data analytics and insights',
+        'Natural language data querying'
       ],
-      pricing: '$20,000 – $150,000 setup',
-      perUnit: '$0.05 – $0.50 per transaction',
+      pricing: '$8,000 – $50,000 setup',
+      perUnit: '$0.10 – $1.00 per GB processed',
       timeline: '8–16 weeks',
       benefits: [
-        '30% reduction in supply chain costs',
-        'Improved inventory turnover',
-        'Enhanced supply chain resilience',
-        'Optimized logistics operations'
+        '80% reduction in data preparation time',
+        'Improved data quality and accuracy',
+        'Automated data governance and compliance',
+        'Faster insights and decision making'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI Cybersecurity Threat Intelligence',
+      description: 'Advanced AI-powered cybersecurity system that provides real-time threat detection, incident response, and security intelligence.',
+      features: [
+        'Real-time threat detection and analysis',
+        'Automated incident response and remediation',
+        'Behavioral analytics and anomaly detection',
+        'Threat intelligence and attribution',
+        'Security orchestration and automation',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$12,000 – $80,000 setup',
+      perUnit: '$0.05 – $0.25 per event',
+      timeline: '10–18 weeks',
+      benefits: [
+        '95% reduction in false positive alerts',
+        'Real-time threat detection and response',
+        'Automated security incident handling',
+        'Improved security posture and compliance'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI Talent Acquisition & HR Analytics',
+      description: 'Intelligent HR platform that automates recruitment, employee analytics, and workforce optimization using advanced AI algorithms.',
+      features: [
+        'Automated resume screening and candidate matching',
+        'Predictive analytics for employee retention',
+        'Skills gap analysis and training recommendations',
+        'Performance prediction and optimization',
+        'Bias detection and fairness monitoring',
+        'Workforce planning and optimization'
+      ],
+      pricing: '$6,000 – $40,000 setup',
+      perUnit: '$0.50 – $5.00 per candidate',
+      timeline: '6–14 weeks',
+      benefits: [
+        '70% reduction in time-to-hire',
+        'Improved candidate quality and fit',
+        'Reduced bias in hiring decisions',
+        'Better employee retention and satisfaction'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI Code Generation & Optimization',
+      description: 'Advanced AI system that generates, optimizes, and maintains code while ensuring quality, security, and performance standards.',
+      features: [
+        'Automated code generation from specifications',
+        'Code optimization and performance tuning',
+        'Security vulnerability detection and fixing',
+        'Automated testing and quality assurance',
+        'Code documentation and maintenance',
+        'Legacy code modernization and refactoring'
+      ],
+      pricing: '$10,000 – $60,000 setup',
+      perUnit: '$0.10 – $1.00 per line of code',
+      timeline: '8–16 weeks',
+      benefits: [
+        '60% faster development cycles',
+        'Improved code quality and security',
+        'Automated testing and bug detection',
+        'Reduced technical debt and maintenance costs'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'AI Search & Recommendation Engine',
+      description: 'Intelligent search and recommendation system that provides personalized results, content discovery, and user experience optimization.',
+      features: [
+        'Semantic search and natural language processing',
+        'Personalized recommendation algorithms',
+        'Real-time content indexing and ranking',
+        'User behavior analysis and optimization',
+        'Multi-modal search (text, image, voice)',
+        'A/B testing and performance optimization'
+      ],
+      pricing: '$5,000 – $35,000 setup',
+      perUnit: '$0.01 – $0.10 per search',
+      timeline: '6–12 weeks',
+      benefits: [
+        '40% improvement in search relevance',
+        'Increased user engagement and conversion',
+        'Personalized user experiences',
+        'Better content discovery and recommendations'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI Customer Churn Predictor',
+      description: 'Advanced machine learning platform that predicts customer churn with 94% accuracy using behavioral analytics and predictive modeling.',
+      features: [
+        'Real-time churn prediction with 94% accuracy',
+        'Behavioral pattern analysis and scoring',
+        'Automated retention campaign triggers',
+        'Custom ML model training and optimization',
+        'API integration with CRM systems',
+        'Advanced analytics dashboard and insights'
+      ],
+      pricing: '$2,000 – $8,000 setup',
+      perUnit: '$0.02 – $0.20 per prediction',
+      timeline: '3–5 weeks',
+      benefits: [
+        'Reduce customer churn by 25-40%',
+        'Increase customer lifetime value',
+        'Optimize retention marketing spend',
+        'Improve customer satisfaction scores'
       ]
     },
     {
       icon: Brain,
-      name: 'AI-Powered Climate Change Modeling',
-      description: 'Advanced AI models for climate prediction, environmental impact assessment, and sustainability planning.',
+      name: 'AI Trading Platform',
+      description: 'Advanced AI-powered trading platform with algorithmic trading, risk management, and real-time market analysis for institutional and retail traders.',
       features: [
-        'Climate change prediction and modeling',
-        'Environmental impact assessment',
-        'Carbon footprint analysis',
-        'Renewable energy optimization',
-        'Sustainability planning and reporting',
-        'Environmental risk assessment'
+        'Market analysis and prediction algorithms',
+        'Automated trading execution and strategies',
+        'Risk management and portfolio optimization',
+        'Real-time market monitoring and alerts',
+        'Algorithmic trading strategy development',
+        'Performance analytics and reporting'
       ],
-      pricing: '$30,000 – $200,000 project',
-      perUnit: 'Custom pricing based on scope',
-      timeline: '12–24 weeks',
+      pricing: '$15,000 – $125,000 setup',
+      perUnit: 'Performance-based fees',
+      timeline: '8–12 weeks',
       benefits: [
-        'Accurate climate predictions',
-        'Improved sustainability planning',
-        'Reduced environmental impact',
-        'Enhanced corporate responsibility'
+        'Improved trading performance and returns',
+        'Automated risk management',
+        '24/7 market monitoring and execution',
+        'Data-driven trading decisions'
       ]
     },
     {
-      icon: Eye,
-      name: 'AI-Powered Autonomous Vehicle Systems',
-      description: 'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management.',
+      icon: Shield,
+      name: 'AI Financial Risk Assessment',
+      description: 'Advanced financial risk modeling and assessment using machine learning and big data analytics for comprehensive risk management.',
       features: [
-        'Autonomous navigation and path planning',
-        'Object detection and collision avoidance',
-        'Traffic pattern analysis and optimization',
-        'Fleet management and coordination',
-        'Predictive maintenance and diagnostics',
-        'Safety monitoring and compliance'
+        'Credit risk assessment and scoring',
+        'Market risk analysis and prediction',
+        'Operational risk identification',
+        'Fraud detection and prevention',
+        'Regulatory compliance monitoring',
+        'Stress testing and scenario analysis'
       ],
-      pricing: '$100,000 – $1,000,000 project',
-      perUnit: 'Custom pricing based on fleet size',
-      timeline: '24–48 weeks',
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$0.01 – $0.10 per assessment',
+      timeline: '8–16 weeks',
       benefits: [
-        'Enhanced vehicle safety',
-        'Reduced transportation costs',
-        'Improved fleet efficiency',
-        'Advanced autonomous capabilities'
+        '99.9% accuracy in risk assessment',
+        'Reduced financial losses',
+        'Automated risk monitoring',
+        'Better regulatory compliance'
       ]
     }
   ];
+  */
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import Layout from "../components/Layout";
+export default function AIServices() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+import Link from 'next/link',
+import Head from 'next/head';
+import { useState, useEffect  } from 'react';
+import { ContactInfo  } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function AIServices() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  useEffect(() => {
+    const timer = null;
+              { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
+              <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
+                <div className="text-xl font-semibold">{c.title}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              AI Services;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Transform your business with cutting-edge AI solutions and;
+              services.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">;
+import React from './react';
+import Layout from "../components / Layout";
+export default /**
+ * AIServices - Function description
+ */
+function AIServices() {
+  return (
+    <Layout;
+      title="AI Services - Zion Tech Group";
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              AI Services;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Transform your business with cutting - edge AI solutions and;
+              services.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">;
+              AI Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function AIServices() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer)
+  }, []);
+
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  const categories = [
+    { id: 'all', name: 'All AI Services', count: 100 },
+    { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
+    { id: 'nlp', name: 'Natural Language', count: 20 },
+    { id: 'computer-vision', name: 'Computer Vision', count: 15 },
+    { id: 'predictive', name: 'Predictive Analytics', count: 15 },
+    { id: 'automation', name: 'AI Automation', count: 15 },
+    { id: 'specialized', name: 'Specialized AI', count: 10 }
+  const services = [
+    {
+      id: 1,
+      name: 'Autonomous AI Agents',
+      description: 'Self-managing AI agents that can perform complex tasks independently with minimal human intervention.',
+      category: 'autonomous',
+      features: ['Task AutomationDecision MakingLearning CapabilitiesMulti-platform Integration'],
+      price: 'Custom Pricing',
+      popular: true,
+      useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
+    {
+      id: 2,
+      name: 'AI-Powered Financial Trading',
+      description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
+      features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
+      price: 'Custom Pricing',
+      popular: true,
+      useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
+    {
+      id: 3,
+      name: 'AI Legal Document Analysis',
+      description: 'Intelligent document review and analysis for legal professionals with contract insights.',
+      category: 'nlp',
+      features: ['Contract AnalysisRisk IdentificationCompliance CheckingDocument Summarization'],
+      price: '$199/month',
+      popular: false,
+      useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
+    {
+      id: 4,
+      name: 'AI-Powered Voice Analytics',
+      description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
+      features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
+      price: '$149/month',
+      popular: true,
+      useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
+    {
+      id: 5,
+      name: 'AI-Powered Search & Discovery',
+      description: 'Intelligent search solutions with semantic understanding and personalized results.',
+      category: 'specialized',
+      features: ['Semantic SearchPersonalizationNatural Language QueriesContext Awareness'],
+      price: '$99/month',
+      popular: false,
+      useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
+    {
+      id: 6,
+      name: 'Computer Vision Solutions',
+      description: 'Advanced image and video analysis for object detection, recognition, and processing.',
+      features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
+      price: '$179/month',
+      popular: true,
+      useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
+    {
+      id: 7,
+      name: 'Machine Learning Model Training',
+      description: 'Custom ML model development and training for specific business requirements.',
+      category: 'specialized',
+      features: ['Custom ModelsData PreprocessingModel OptimizationDeployment Support'],
+      price: 'Custom Pricing',
+      popular: false,
+      useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
+    {
+      id: 8,
+      name: 'Natural Language Processing',
+      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
+      features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
+      price: '$129/month',
+      popular: true,
+      useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
+    {
+      id: 9,
+      name: 'AI Process Automation',
+      description: 'Intelligent automation of complex business processes using AI and machine learning.',
+      category: 'automation',
+      features: ['Process MiningWorkflow OptimizationDecision AutomationIntegration APIs'],
+      price: '$159/month',
+      popular: false,
+      useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
+    {
+      id: 10,
+      name: 'Predictive Analytics Engine',
+      description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
+      features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
+      price: '$189/month',
+      popular: true,
+      useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
+    {
+      id: 11,
+      name: 'AI Content Generation',
+      description: 'Intelligent content creation for marketing, documentation, and communication.',
+      features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
+      price: '$79/month',
+      popular: false,
+      useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
+    {
+      id: 12,
+      name: 'AI Chatbot Development',
+      description: 'Intelligent conversational AI for customer service and engagement.',
+      category: 'automation',
+      features: ['Natural ConversationsMulti-channel SupportLearning CapabilitiesIntegration APIs'],
+      price: '$89/month',
+      popular: true,
+      useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
+    }
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+  return (
+    <>
       <Head>
-        <title>AI Services — Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including machine learning, computer vision, NLP, and automation solutions. Transform your business with cutting-edge AI technology." />
+        <title>AI Services - Zion Tech Group</title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <meta name="description" content="Advanced AI services including autonomous AI agents, financial trading systems, legal document analysis, and more." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <ErrorBoundary>
+=======
+<<<<<<< HEAD
+=======
+        <meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, autonomous agents, computer vision, NLP, predictive analytics" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/ai-services`} />
       </Head>
+      
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          {/* Hero Section */}
+          <section className="py-20 px-4 text-center" role="banner">
+            <div className="max-w-4xl mx-auto">
+              <h1 
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                AI Services
+              </h1>
+              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                100+ Advanced Artificial Intelligence Solutions
+              </p>
+              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                Harness the power of artificial intelligence with our comprehensive suite of AI services. 
+                From autonomous agents to predictive analytics, we provide cutting-edge AI solutions 
+                to transform your business operations.
+              </p>
+            </div>
+          </section>
 
-      <header className="py-20 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-          AI Services & Solutions
-        </h1>
-        <p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">
-          Transform your business with cutting-edge AI technology. From machine learning to computer vision, 
-          we deliver intelligent solutions that drive real results and measurable ROI.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
-          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
-        </div>
-      </header>
+          {/* Category Filter */}
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function AIServices() {
+  return (
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Advanced AI services including autonomous AI agents, financial trading systems, legal document analysis, and more."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <ErrorBoundary level="page">
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          <div className="container mx-auto px-4 py-16">
+            <h1 className="text-4xl font-bold text-center mb-8">AI Services</h1>
+            <p className="text-xl text-slate-300 text-center">
+              Advanced artificial intelligence solutions for your business.
+            </p>
+          </div>
+<<<<<<< HEAD
+        </main>
+      </ErrorBoundary>
+    </>
+  );
+}
+=======
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >;
+                AI Services;
+              </h1>;
+              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                100+ Advanced Artificial Intelligence Solutions;
+              </p>;
+              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                Harness the power of artificial intelligence with our comprehensive suite of AI services.;
+                From autonomous agents to predictive analytics, we provide cutting-edge AI solutions;
+                to transform your business operations.;
+              </p>;
+            </div>;
+          </section>;
+          {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+>>>>>>> main
+<<<<<<< HEAD
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+import { 
+  Brain, 
+  Bot, 
+  Eye, 
+  MessageSquare, 
+  CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
 
-      <main className="max-w-7xl mx-auto px-4 pb-24">
-        <div className="grid gap-8">
-          {aiServices.map((service, index) => (
-            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <service.icon className="w-6 h-6" />
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
+
+const aiServices = [
+  {
+    title: 'Natural Language Processing',
+    description: 'Advanced text analysis and language understanding for your business.',
+    icon: MessageSquare,
+    features: ['Text analysis', 'Sentiment analysis', 'Language translation', 'Content generation'],
+    price: '$1,500/month',
+    benefits: ['Better customer insights', 'Automated content', 'Multilingual support', 'Cost efficiency']
+  },
+  {
+    title: 'Computer Vision Solutions',
+    description: 'Image and video analysis powered by cutting-edge AI technology.',
+    icon: Eye,
+    features: ['Object detection', 'Image classification', 'Video analysis', 'Custom models'],
+    price: '$2,000/month',
+    benefits: ['Automated visual analysis', 'Quality control', 'Security monitoring', 'Process optimization']
+  },
+  {
+    title: 'AI Chatbots & Virtual Assistants',
+    description: 'Intelligent conversational agents for customer service and support.',
+    icon: Bot,
+    features: ['24/7 availability', 'Natural conversations', 'Multi-language support', 'Integration ready'],
+    price: '$800/month',
+    benefits: ['Improved customer service', 'Reduced support costs', 'Scalable solutions', 'Better user experience']
+  },
+  {
+    title: 'Machine Learning Models',
+    description: 'Custom ML models tailored to your specific business needs.',
+    icon: Brain,
+    features: ['Predictive analytics', 'Custom algorithms', 'Data training', 'Model optimization'],
+    price: '$3,000/month',
+    benefits: ['Data-driven decisions', 'Predictive insights', 'Competitive advantage', 'Scalable intelligence']
+  }
+];
+
+export default function AIServicesPage() {
+  return (
+    <MainLayout
+      title="AI Services - Zion Tech Group"
+      description="Cutting-edge AI solutions including natural language processing, computer vision, chatbots, and machine learning models."
+      keywords="AI services, machine learning, natural language processing, computer vision, chatbots, artificial intelligence"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl font-bold text-white mb-6">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with cutting-edge artificial intelligence solutions. 
+              From natural language processing to computer vision, we deliver AI that works.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {aiServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+              >
+                <div className="flex items-center mb-4">
+                  <service.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold mb-2">{service.name}</h2>
-                  <p className="text-slate-300 text-lg">{service.description}</p>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
-                  <ul className="space-y-2 text-slate-300">
+                
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
+                  <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-blue-400 mt-1">•</span>
-                        <span>{feature}</span>
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
-                  <ul className="space-y-2 text-slate-300">
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
+                  <ul className="space-y-2">
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">✓</span>
-                        <span>{benefit}</span>
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
+                        {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-              </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-blue-400">{service.price}</div>
+                  <Link
+                    href="/contact"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+                  >
+                    Get Started
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <div className="flex flex-wrap items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Pricing:</span>
-                    <span className="font-semibold text-blue-400">{service.pricing}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Per Unit:</span>
-                    <span className="font-semibold text-purple-400">{service.perUnit}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Timeline:</span>
-                    <span className="font-semibold text-green-400">{service.timeline}</span>
-                  </div>
-                  <div className="ml-auto flex gap-3">
-                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold">
-                      Request Quote
-                    </Link>
-                    <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="bg-blue-600 rounded-xl p-8 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us today to discuss your AI needs and get a custom solution.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+              <div className="flex items-center text-white">
+                <Phone className="h-5 w-5 mr-2" />
+                <span>{contactInfo.phone}</span>
+              </div>
+              <div className="flex items-center text-white">
+                <Mail className="h-5 w-5 mr-2" />
+                <span>{contactInfo.email}</span>
+              </div>
+              <div className="flex items-center text-white">
+                <MapPin className="h-5 w-5 mr-2" />
+                <span>{contactInfo.address}</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </MainLayout>
+  );
+}
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+=======
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function AIServices() {
+  return (
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Advanced AI services including autonomous AI agents, financial trading systems, legal document analysis, and more."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          <div className="container mx-auto px-4 py-16">
+            <h1 className="text-4xl font-bold text-center mb-8">AI Services</h1>
+            <p className="text-xl text-slate-300 text-center">
+              Advanced artificial intelligence solutions for your business.
+            </p>
+          </div>
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >;
+                AI Services;
+              </h1>;
+              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                100+ Advanced Artificial Intelligence Solutions;
+              </p>;
+              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                Harness the power of artificial intelligence with our comprehensive suite of AI services.;
+                From autonomous agents to predictive analytics, we provide cutting-edge AI solutions;
+                to transform your business operations.;
+              </p>;
+            </div>;
+          </section>;
+          {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-8 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {categories.map((category) => (
+                  <button
+                    key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
+                      selectedCategory === category.id;
+                        ? 'bg-purple-600 text-white';
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >;
+                    {category.name} ({category.count});
+                  </button>;
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </div>;
+          </section>;
+          {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4" role="main">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service, index) => (
+                  <div 
+                    key={service.id}
+                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    {service.popular && (
+                      <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        Popular
+                      </div>
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <h3 className="text-xl font-bold mb-3">{service.name}</h3>
+                    <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
+                      <ul className="text-slate-400 text-sm space-y-1">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center">
+                            <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 flex-shrink-0"></span>
+
+                            {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </li>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+{feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-green-400 mb-2">Use Cases:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {service.useCases.map((useCase, useCaseIndex) => (
+                          <span key={useCaseIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
+                            {useCase  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </span>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+{useCase}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-2xl font-bold text-green-400">{service.price}</span>
+                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('-', ' ')}</span>
+                    </div>
+                    <button className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                       Learn More
-                    </Link>
+                    </button>
                   </div>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </div>;
+          </section>;
+          {/* AI Capabilities Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4 bg-slate-900/40">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                Our AI Capabilities
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Machine Learning</h3>
+                  <p className="text-slate-400">Advanced ML algorithms for pattern recognition and predictive modeling</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Computer Vision</h3>
+                  <p className="text-slate-400">Image and video analysis with object detection and recognition</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Natural Language</h3>
+                  <p className="text-slate-400">Advanced NLP for text analysis, translation, and understanding</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Predictive Analytics</h3>
+                  <p className="text-slate-400">Data-driven insights and forecasting for business intelligence</p>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </section>
 
-        <section className="mt-16 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
-          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Our AI experts are ready to help you implement cutting-edge solutions that drive real business value. 
-            Contact us today for a free consultation and custom AI strategy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold">
-              Call {contact.phone}
-            </a>
-            <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">
-              Email {contact.email}
-            </a>
-          </div>
-        </section>
-      </main>
-    </div>
-  );
+          {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+          <section className="py-16 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                Ready to Harness AI Power?
+              </h2>
+              <p className="text-lg text-slate-300 mb-8">
+                Contact our AI experts to discuss how our advanced artificial intelligence services
+                can transform your business operations and drive innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
+                >
+                  Get AI Consultation
+                </Link>
+                <a
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+<a 
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
+className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
+                >
+                  Call {contact.phone  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </Link>
+                <a
+                  href={`mailto:${contact.email}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+                >
+                  Email Us
+              </div>
+            </div>
+          </section>
+        </main>
+      </ErrorBoundary>
+    </>
+}
+}
+    </Layout>);
+}
+
+          <section className="py-16 px-4 bg-slate-900/40">;
+            <div className="max-w-6xl mx-auto">;
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
+                Our AI Capabilities;
+              </h2>;
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Machine Learning</h3>;
+                  <p className="text-slate-400">Advanced ML algorithms for pattern recognition and predictive modeling</p>;
+                </div>;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Computer Vision</h3>;
+                  <p className="text-slate-400">Image and video analysis with object detection and recognition</p>;
+                </div>;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Natural Language</h3>;
+                  <p className="text-slate-400">Advanced NLP for text analysis, translation, and understanding</p>;
+                </div>;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Predictive Analytics</h3>;
+                  <p className="text-slate-400">Data-driven insights and forecasting for business intelligence</p>;
+                </div>;
+              </div>;
+            </div>;
+          </section>;
+          {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4">;
+            <div className="max-w-4xl mx-auto text-center">;
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">;
+                Ready to Harness AI Power?;
+              </h2>;
+              <p className="text-lg text-slate-300 mb-8">;
+                Contact our AI experts to discuss how our advanced artificial intelligence services;
+                can transform your business operations and drive innovation.;
+              </p>;
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
+                <Link;
+                  href="/contact";
+                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors";
+                >;
+                  Get AI Consultation;
+                </Link>;
+                <a;
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} ;
+                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors";
+                >;
+                  Call {contact.phone  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </a>;
+                <a;
+                  href={`mailto:${contact.email}`} ;
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors";
+                >;
+                  Email Us;
+                </a>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </ErrorBoundary>;
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Link from 'next/link';
+export default function AIServicesPage(req, res) {
+  try {
+  return (;
+    <UltraAdvancedFuturisticBackground>;
+      <SEO title="AI Services | Zion Tech Group" description="LLM apps, RAG, evaluation, guardrails, and automation with transparent pricing." canonical="https://ziontechgroup.com/ai-services/" />;
+      <div className="container mx-auto px-4 py-24 text-white">;
+        <div className="max-w-5xl mx-auto space-y-8">;
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services</h1>;
+          <p className="text-gray-300 text-lg">Productized AI solutions: evaluation labs, safety & guardrails, chatbots, agents, search/RAG, and automation. See <Link className="text-cyan-400 underline" href="/market-pricing">Market Pricing</Link> for typical vendor benchmarks.</p>;
+          <div className="grid md:grid-cols-3 gap-6">;
+            {[;
+              { title: 'RAG & Vector Search', href: '/vector-search-starter' },;
+              { title: 'AI Evaluation Lab', href: '/rag-evaluation-lab' },;
+              { title: 'AI Guardrails', href: '/ai-powered-cybersecurity' },;
+              { title: 'AI Content Generator', href: '/intelligent-content-automation-platform' };
+              { title: 'AI Customer Service', href: '/ai-customer-service' };
+              { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (;
+              <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">;
+                <div className="text-xl font-semibold">{c.title}</div>;
+                <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>;
+              </Link>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+          <div className="text-sm text-gray-400">Questions? <Link className="text-cyan-400 underline" href="/contact">Contact us</Link>.</div>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> main

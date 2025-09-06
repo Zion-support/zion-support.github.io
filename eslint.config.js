@@ -1,16 +1,122 @@
+import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
+<<<<<<< HEAD
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import next from '@next/eslint-plugin-next';
+import typescript from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
   {
+    ignores: [
+      'node_modules/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'backup-problematic-files/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion_academy/**',
+      'api/**',
+      'api-backup/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'backup/**',
+      'backups/**',
+      'broken_files_backup/**',
+      'corrupted-files-backup/**',
+      'cypress_backup/**',
+      'data_backup/**',
+      'deployment/**',
+      'e2e/**',
+      'server/**',
+      'temp_*/**',
+      'test_build/**',
+      'tests/**',
+      '__tests__/**',
+      'types/**',
+      '*.cjs',
+      '*.mjs',
+      'supabase/**',
+      'ultimate-*.cjs',
+      'advanced-*.js',
+      'comprehensive-*.js',
+      'enhanced-*.js',
+      'fix-*.js',
+      'merge-*.js',
+      'run-*.js',
+      'test-*.js',
+      '*.test.js',
+      '*.spec.js',
+      'aggressive-*.js',
+      'batch-*.js',
+      'clean-*.js',
+      'critical-*.js',
+      'execute-*.js',
+      'final-*.js',
+      'health-*.js',
+      'improve-*.js',
+      'maintenance-*.js',
+      'monitoring-*.js',
+      'optimized-*.js',
+      'performance-*.js',
+      'resolve-*.js',
+      'seo-*.js',
+      'simple-*.js',
+      'structural-*.js',
+      'system-*.js',
+      'ultimate-*.js',
+      '*.js'
+    ],
+  },
+  {
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+      },
+      parser: tsparser,
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import nextPlugin from '@next/eslint-plugin-next';
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
+
+export default [
+  ...compat.extends('next/core-web-vitals'),
+  {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
+>>>>>>> main
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -21,23 +127,24 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+<<<<<<< HEAD
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': next,
     },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...next.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      'react/display-name': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      'no-unused-vars': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
     },
     settings: {
       react: {
@@ -46,111 +153,37 @@ export default [
     },
   },
   {
-    files: ['**/*.cjs'],
+    files: ['**/*.js'],
     languageOptions: {
-      sourceType: 'commonjs',
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+      },
+    },
+    rules: {
+      'no-console': 'off',
     },
   },
-  {
-    ignores: [
-      // Node/build outputs
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      'out/**',
-      'coverage/**',
-
-      // Large/legacy sources and disabled dirs
-      'src/**',
-      'src.corrupted/**',
-      'src.disabled/**',
-      'src.broken/**',
-      'src.pages.disabled/**',
-      'solutions.disabled/**',
-      'components.disabled/**',
-      'components/**',
-      'components.corrupted/**',
-      'hooks/**',
-      'hooks.disabled/**',
-      'lib.disabled/**',
-      'lib/**',
-      'lib.corrupted/**',
-      'zion-os.disabled/**',
-      'zion_academy/**',
-      'contracts.disabled/**',
-      'corrupted-files-backup/**',
-      'corrupted_files_backup_2/**',
-      'cypress.disabled/**',
-      'cypress_backup/**',
-      'data/**',
-      'e2e/**',
-      'pages/**',
-      'pages.disabled/**',
-      'pages.disabled_backup/**',
-      'pages_backup/**',
-      'supabase/**',
-      'types/**',
-      'types.disabled/**',
-      'utils/**',
-
-      // Tests and mocks
-      '__tests__/**',
-      'tests/**',
-      'tests.disabled/**',
-      '*.test.*',
-
-      // Temp and backups
-      'backup/**',
-      'backup-pages/**',
-      'pages-backup/**',
-      'lib_backup/**',
-      'data_backup/**',
-      'styles_backup/**',
-      'api-backup/**',
-      'automation_backup/**',
-      'ai-optimization-backups/**',
-      'ai-analysis-reports/**',
-      'optimization-reports/**',
-      'public/reports/**',
-      'temp_backup/**',
-      'temp_broken_components/**',
-      'temp_working/**',
-      'temp_*/**',
-
-      // Scripts/configs and CJS files not intended for lint
-      'scripts/**',
-      'automation/**',
-      'netlify/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      '**/*.cjs',
-
-      // Public assets/scripts
-      'public/**',
-
-      // Root-level noisy files
-      'api/**',
-      '*.js',
-      '.*.js',
-      '*.ts',
-      '*.tsx',
-      '*.jsx',
-      'jest.config.*',
-      'fix-*.js',
-      'fix-*.jsx',
-
-      // Misc root configs that were being linted
-      '.eslintrc.js',
-      '.eslintrc.cjs',
-      '.eslintrc.disabled.js',
-      '.prettierrc.js',
-
-      // Page backups
-      'pages.__backup/**',
-      'pages-disabled/**',
-      'pages.disabled_auto/**',
-    ],
+=======
+      react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin,
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+    },
   },
+>>>>>>> main
 ];

@@ -1,4 +1,4 @@
-# 🚀 Enhanced PM2 Automation System for Zion Tech Group
+# Enhanced PM2 Automation System
 
 ## Overview
 
@@ -51,7 +51,11 @@ This enhanced PM2 automation system automatically detects, analyzes, and fixes p
 ### 1. Install Dependencies
 
 ```bash
-npm install
+# Start the enhanced error fixing automation
+bash start-enhanced-error-fixing-automation.sh
+
+# Or start the basic error fixing automation
+bash start-error-fixing-automation.sh
 ```
 
 ### 2. Start All Automations
@@ -62,17 +66,32 @@ pm2 start ecosystem.config.cjs
 
 ### 3. Monitor Automations
 
-```bash
-pm2 monit
-```
+````bash
+# View all running processes
+pm2 status
 
 ### 4. View Logs
 
 ```bash
 pm2 logs
-```
 
-## 📊 Automation Status
+# View specific app logs
+pm2 logs [app-name]
+
+# Restart specific app
+pm2 restart [app-name]
+
+# Stop specific app
+pm2 stop [app-name]
+
+# Monitor all processes in real-time
+pm2 monit
+
+# Clear all logs
+pm2 flush
+````
+
+## 📋 Available Automation Processes
 
 ### High Priority (Every 5-10 minutes)
 
@@ -97,7 +116,11 @@ pm2 logs
 - `smart-documentation-generator` - Documentation updates
 - `ai-code-analyzer` - AI-powered code analysis
 
-## 🔧 Manual Execution
+4. **JSX Error Fixer**
+   - **Name**: `jsx-error-fixer`
+   - **Schedule**: Every 8 minutes
+   - **Purpose**: Specialized JSX syntax error resolution
+   - **Memory**: 1GB
 
 ### Run Enhanced Error Fixer
 
@@ -132,13 +155,16 @@ node scripts/automation/intelligent-automation-orchestrator.cjs
 - Console statements
 - Security vulnerabilities
 - Code style violations
+- Unused imports and variables
+- Missing semicolons
+- Import/export issues
+- Syntax errors
 
 ### JSX/React Errors Fixed
 
 - Missing closing tags
-- Unescaped entities (`'`, `"`)
-- Invalid syntax
-- Component structure issues
+- Invalid JSX syntax
+- Component import issues
 
 ### Performance Issues Fixed
 
@@ -147,7 +173,12 @@ node scripts/automation/intelligent-automation-orchestrator.cjs
 - Bundle size optimization
 - Code splitting opportunities
 
-## 🎨 Code Quality Improvements
+### Import Errors
+
+- Relative path issues
+- Missing file extensions
+- Module not found errors
+- Circular dependency issues
 
 ### Formatting
 
@@ -180,18 +211,21 @@ node scripts/automation/intelligent-automation-orchestrator.cjs
 
 ### Real-time Monitoring
 
-```bash
+````bash
 # View all automation processes
 pm2 list
 
-# Monitor resource usage
-pm2 monit
+### Reports Generated
+- **Comprehensive Error Fixer Report**: Overall error fixing summary
+- **Targeted Error Resolution Report**: Specific error pattern fixes
+- **Error Analytics Dashboard**: Detailed error analytics
+- **Process Logs**: Individual process activity logs
 
-# View specific automation logs
-pm2 logs enhanced-error-fixer
-pm2 logs code-quality-automation
-pm2 logs intelligent-automation-orchestrator
-```
+### Log Files
+Each automation process generates three types of logs:
+- **Main Log**: General activity and success messages
+- **Error Log**: Error messages and failures
+- **Output Log**: Standard output and detailed information
 
 ### Generated Reports
 
@@ -216,9 +250,14 @@ pm2 logs intelligent-automation-orchestrator
     "unescapedEntities": 12
   }
 }
-```
+````
 
-## ⚙️ Configuration
+### Scheduling Optimization
+
+- Different schedules for different error types
+- Critical errors checked every minute
+- Less critical errors checked less frequently
+- AI processes run during off-peak hours
 
 ### Environment Variables
 
@@ -253,26 +292,22 @@ export QUALITY_INTERVAL=1200000    # 20 minutes
 
 #### Automation Not Starting
 
-```bash
-# Check PM2 status
-pm2 status
+````bash
+# View recent logs
+pm2 logs --lines 50
 
-# Restart specific automation
-pm2 restart enhanced-error-fixer
+# View specific app logs
+pm2 logs enhanced-comprehensive-error-fixer
 
-# View error logs
-pm2 logs enhanced-error-fixer --err
-```
+# Search for errors
+pm2 logs | grep "ERROR"
 
 #### High Memory Usage
 
 ```bash
 # Check memory usage
 pm2 monit
-
-# Restart with higher memory limit
-pm2 restart enhanced-error-fixer --max-memory-restart 2G
-```
+````
 
 #### Automation Failures
 
@@ -280,8 +315,12 @@ pm2 restart enhanced-error-fixer --max-memory-restart 2G
 # Check automation logs
 pm2 logs
 
-# Run automation manually to debug
-node scripts/automation/enhanced-error-fixer.cjs
+### Environment Variables
+- `NODE_ENV`: Production environment
+- `PM2_HOME`: PM2 home directory
+- `ERROR_FIXING_MODE`: Error fixing mode (comprehensive/intelligent)
+- `AUTO_FIX_ENABLED`: Enable automatic fixing
+- `REPORTING_ENABLED`: Enable reporting
 
 # Check generated reports
 cat enhanced-error-fixer-report.json
