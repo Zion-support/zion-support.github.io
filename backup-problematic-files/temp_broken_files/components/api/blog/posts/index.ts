@@ -34,5 +34,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     posts.unshift(post),
     writePosts(posts),
     return res.status(201).json(post)  }
-
+;
   return res.status(405).end()}

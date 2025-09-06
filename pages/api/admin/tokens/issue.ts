@@ -6,4 +6,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const tx = issueTokens(userId, Math.floor(amount), reason |"admin_issue")
     return res.status(200).json({ tx })
-
+;

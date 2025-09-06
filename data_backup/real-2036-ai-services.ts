@@ -339,4 +339,4 @@ export const real2036AIServices = [{
   'Traffic optimization',
   'Safety systems'
     ]
-]}
+]};

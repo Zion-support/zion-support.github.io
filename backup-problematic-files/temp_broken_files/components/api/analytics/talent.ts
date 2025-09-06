@@ -42,5 +42,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       successRate: 33.3,
       topTags: [
         { label: 'react', value: 2 },
-        { label: 'node', value: 1 },
+        { label: 'node', value: 1 },;
         { label: 'ai', value: 1 }]})  }}

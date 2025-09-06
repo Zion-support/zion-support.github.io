@@ -18,4 +18,4 @@ const NetworkEngineeringChat: NextPage = () => {
   )
 },
 
-export default NetworkEngineeringChat,
+export default NetworkEngineeringChat,;

@@ -41,5 +41,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     writeGrant(existing),
     return res.status(201).json({ update })  }
 
-  res.setHeader('AllowGET, POST'),
+  res.setHeader('AllowGET, POST'),;
   res.status(405).end('Method Not Allowed')}

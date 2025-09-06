@@ -18,4 +18,4 @@ const CloudMigrationServicesChat: NextPage = () => {
   )
 },
 
-export default CloudMigrationServicesChat,
+export default CloudMigrationServicesChat,;

@@ -82,5 +82,5 @@ export default function AIEvalsPage() {
 				</div>
 			</section>
 		</QuantumHolographicMatrixBackground>
-	)
+	);
 }

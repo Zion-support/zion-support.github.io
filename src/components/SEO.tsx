@@ -1,53 +1,53 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+import Head from 'next/head';
 
 interface SEOProps {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Leading AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI solutions, cybersecurity, and cloud infrastructure. Leading technology solutions for a smarter future.',
-  keywords = 'AI services, cybersecurity, cloud infrastructure, digital transformation, machine learning, technology solutions, business automation',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website'
-}) => {
+export const SEO = ({ 
+  title, 
+  description, 
+  keywords, 
+  image, 
+  url, 
+  type = 'website' 
+}: SEOProps) => {
+  const fullTitle = `${title} | Zion Tech Group`;
+  const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
+  const fullImage = image || 'https://ziontechgroup.com/og-image.jpg';
+
   return (
-    <Helmet>
-      <title>{title}</title>
+    <Head>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="robots" content="index,follow" />
-      <link rel="canonical" href={url} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={fullUrl} />
       
       {/* Open Graph */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImage} />
       
       {/* Additional SEO */}
       <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
-    </Helmet>
+      <meta name="theme-color" content="#000000" />
+    </Head>
   );
 };
-
-export default SEO;

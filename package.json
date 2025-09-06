@@ -136,7 +136,7 @@
     "syntax:start:continuous": "node automation/syntax-fix-launcher.js start continuous",
     "syntax:stop": "node automation/syntax-fix-launcher.js stop",
     "syntax:status": "node automation/syntax-fix-launcher.js status",
-    "syntax:quick-fix": "node automation/syntax-fix-launcher.js quick-fix",
+    "syntax:quick-fix": "node automation/syntax-fix-launcher.cjs quick-fix",
     "syntax:build-check": "node automation/syntax-fix-launcher.js build-check",
     "syntax:monitor": "node automation/syntax-error-monitor.js",
     "syntax:monitor:watch": "node automation/syntax-error-monitor.js --watch",

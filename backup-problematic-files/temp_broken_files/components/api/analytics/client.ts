@@ -53,5 +53,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       shortlisted: 5,
       funnel: [
         { label: 'Post', value: 3 },
-        { label: 'Invite', value: 2 },
+        { label: 'Invite', value: 2 },;
         { label: 'Hire', value: 2 }]})  }}

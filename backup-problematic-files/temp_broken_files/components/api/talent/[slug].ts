@@ -33,5 +33,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!base) return res.status(404).json({ error: 'Not found' }),
     const { item, translated } = applyTranslations(base, lang),
     return res.status(200).json({ item, translated })
-  } catch (e: any) {
+  } catch (e: any) {;
     return res.status(500).json({ error: e.message })  }}

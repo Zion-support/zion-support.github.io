@@ -4,4 +4,4 @@ test && test.describe('"Security"
   test('"security"
   test('"no"
       /tokens*[:=]s*['"][^'"
-      /tokens*[:=]s*['"][^'"
+      /tokens*[:=]s*['"][^'";

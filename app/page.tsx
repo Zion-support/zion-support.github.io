@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 import React from 'react';
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 import Link from 'next/link';
 
 interface CardProps {
@@ -83,11 +80,9 @@ export default function HomePage() {
           </Link>
           <a
             href="https://ziontechgroup.com"
-<<<<<<< HEAD
 =======
             target="_blank"
             rel="noopener noreferrer"
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             Visit Main Site
@@ -117,11 +112,9 @@ export default function HomePage() {
             ]}
             icon="🚀"
           />
-<<<<<<< HEAD
           <Card
 =======
           <ServiceCard
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
             title="AI Services"
             href="/services/ai-services"
             description="Cutting-edge AI solutions for automation, analytics, and intelligent decision making"
@@ -147,7 +140,6 @@ export default function HomePage() {
             ]}
             icon="💻"
           />
-<<<<<<< HEAD
           <Card
             title="Blockchain"
             href="/services/blockchain"
@@ -167,7 +159,6 @@ export default function HomePage() {
             icon="📊"
           />
 =======
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
         </div>
       </section>
 
@@ -180,7 +171,6 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
           <FeatureCard
             title="Fast Delivery"
             description="Rapid prototyping and deployment with modern tools and practices."
@@ -248,12 +238,10 @@ export default function HomePage() {
           >
             Call +1 302 464 0950
           </a>
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
 
 function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
@@ -278,7 +266,5 @@ function FeatureCard({ title, description }: { title: string; description: strin
   );
 }
 =======
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 }
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671

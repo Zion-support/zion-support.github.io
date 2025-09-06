@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const metadata = {
   title: 'About | Zion Tech Group',
   description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
 =======
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 
 export const metadata = {;
@@ -16,13 +13,10 @@ export const metadata = {;
 
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 };
 
 export default function AboutPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="animate-fade-in">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
@@ -131,9 +125,7 @@ function AboutPage() {
                 {" "}
                 To democratize access to enterprise - grade technology;
                 solutions, making AI, cloud infrastructure, and software;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
                 development accessible to businesses of all sizes.{" "}
               </p>{" "}
             </div>{" "}
@@ -184,18 +176,14 @@ function AboutPage() {
               href="/contact";
               className="inline - block bg - blue - 600 text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 700 transition - colors";
             >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {" "}
               Contact Us Today{" "}
             </a>{" "}
           </div>{" "}
         </div>{" "}
       </div>{" "}
-<<<<<<< HEAD
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 =======
 
     </div>);
 
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 }

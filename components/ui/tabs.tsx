@@ -4,5 +4,5 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
 export function TabsList({ children, className = ''
 export function TabsTrigger({ children, value, className = ''
           ? 'bg-purple-600 text-white'
-          : any
+          : any;
 export function TabsContent({ children, value, className = ''

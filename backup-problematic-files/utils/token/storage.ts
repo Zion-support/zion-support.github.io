@@ -88,4 +88,4 @@ export const tokenStore = {
   getTransactions(userId?: string): TokenTransaction[] {
     const txs = store.getData().transactions
     if (!userId) return txs,
-    return txs.filter((t) => t.userId === userId)
+    return txs.filter((t) => t.userId === userId);

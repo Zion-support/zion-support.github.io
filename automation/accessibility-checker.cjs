@@ -1,13 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 class AccessibilityChecker {
   constructor() {
@@ -69,12 +62,12 @@ class AccessibilityChecker {
   async generateReport() {
     this.log('📊 Generating accessibility report...');
     const report = {
-      timestam: p: new Date().toISOString(),
-      accessibilit: y: await this.checkAccessibility(),
-      summar: y: {
-        checksRu: n: 2,
-        successfulCheck: s: 0,
-        failedCheck: s: 0,
+      timestamp: new Date().toISOString(),
+      accessibility: await this.checkAccessibility(),
+      summary: {
+        checksRun: 2,
+        successfulChecks: 0,
+        failedChecks: 0,
       },
     };
     // Calculate summary

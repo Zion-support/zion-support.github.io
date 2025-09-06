@@ -37,5 +37,5 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       category: parsed.category || null,
       summary: parsed.summary || '',
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
-  } catch (e: any) {
+  } catch (e: any) {;
     return res.status(500).json({ error: e.message || 'OpenAI error' })  }}

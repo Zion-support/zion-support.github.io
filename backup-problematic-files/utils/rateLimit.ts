@@ -18,5 +18,5 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   store.set(key, timestamps),
   }
 
-  return true
+  return true;
 }

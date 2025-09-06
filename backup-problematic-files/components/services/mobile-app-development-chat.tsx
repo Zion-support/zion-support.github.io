@@ -18,4 +18,4 @@ const MobileAppDevelopmentChat: NextPage = () => {
   )
 },
 
-export default MobileAppDevelopmentChat,
+export default MobileAppDevelopmentChat,;

@@ -22,5 +22,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (error) return res.status(200).json({ ok: true }), // tolerate in dev
 
     return res.status(200).json({ ok: true })
-  } catch (e) {
+  } catch (e) {;
     return res.status(500).json({ error: 'Unexpected error' })  }}
