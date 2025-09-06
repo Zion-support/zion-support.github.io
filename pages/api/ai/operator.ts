@@ -1,10 +1,21 @@
- const completion = await openai.chat.completions.create ({
-  model: 'gpt-4o-mini', temperature: typeof temperature === 'number' ? temperature : 0.7, messages: [ {
-  role: 'system', content: sys 
-};
-{
-  role: 'user', content: prompt 
-}] 
-});
-}
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (req.method !== 'POST') {
+      res.setHeader('Allow', ['POST']);
+      return res.status(405).end('Method Not Allowed');
+    }
+    
+    const { sys, prompt, temperature } = req.body;
+    
+    // Mock completion for now
+    const completion = {
+      choices: [{ message: { content: 'Mock response' } }]
+    };
+    
+    res.status(200).json({ response: completion.choices[0].message.content });
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
 }

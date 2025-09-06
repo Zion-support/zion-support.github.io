@@ -1,5 +1,10 @@
- return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
-}
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ sourceMap: 'available' });
 }

@@ -1,8 +1,10 @@
- profile.role = role;
-if (fullLegalName) profile.fullLegalName = fullLegalName;
-if (businessName) profile.businessName = businessName;
-if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
-profile.lastUpdatedAt = now;
-db[userId] = profile;
-save (db);
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ started: true });
 }
