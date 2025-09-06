@@ -772,13 +772,6 @@ const PrivacyPage: React.FC = () => {
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
-                <ul className="list-disc pl-6 mb-6">
-                  <li>Name and contact information</li>
-                  <li>Email address</li>
-                  <li>Phone number</li>
-                  <li>Company information</li>
-                  <li>Payment information</li>
-                </ul>
 
 
 

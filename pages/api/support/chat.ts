@@ -52,7 +52,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [sysMessage, ...messages],
       temperature: 0.2
     });
-
   }
   if ()) {
   $2

@@ -24,17 +24,21 @@ export function Logo({ customLogo, customColor }) {};
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>";
       </div>;
 import React from 'react';
-    </Link>;  return (
-    <Link to="/" className="flex items-center space-x-3 group">
-      <div
-        className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react';
-    </Link>;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-import React from 'react';
+import { Link } from 'react-router-dom';
 
+export function Logo({ customLogo, customColor }) {;
+  const logoColor = customColor || '#22D3EE';
+
+      <divclassName="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react'
+import { Link } from 'react-router-dom'
+
+export function Logo({ customLogo, customColor }) {
+  const logoColor = customColor || '#22D3EE'
+
+  
+
+
+  
 
   
 
@@ -51,6 +55,7 @@ import React from 'react';
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
 
 
 ,

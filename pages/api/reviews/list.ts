@@ -25,6 +25,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
+      const matchesTarget =
+        r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
     const filtered = all.filter((r) => {
       if (r.removed |!r.approved) return false;
       const matchesTarget =

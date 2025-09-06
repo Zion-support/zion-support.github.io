@@ -12,47 +12,67 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     milestoneId: string;
     title: string;
     timestamp?: number;
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  res.status(200).json({ message: 'Manifesto day processed' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
-import { signPayload } from "../../../utils/sync/signature",
-import axios from "axios",
-import { v4 as uuidv4 } from "uuid",
-import { nextVersionFor } from "../../../utils/sync/versioning",
-export default async function handler(req, res) {
-  try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-  if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },
-  if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" }),
-  const version = nextVersionFor(state, milestoneId),
+
+  const version = nextVersionFor(state, milestoneId);
   const event = {
-    eventId: uuidv4()
-    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
-    payload: {
-      id: milestoneId
-      subjectId: milestoneId
-      score: 0
-      category: `milestone:${title}`
-      period: undefined
-      rank: undefined
-    }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: timestamp |Date.now()
+
+      id: milestoneId,
+      subjectId: milestoneId,
+import type { NextApiRequest, NextApiResponse } from './next';
+import {
+  read_state,
+  write_state,
+  upsert_event,
+} from '../../../utils / sync / storage';
+import { sign_payload  } from '../../../utils / sync / signature';
+import axios from './axios';
+import { v4, as, uuidv4  } from './uuid';
+import { nextVersionFor  } from '../../../utils / sync / versioning';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const state = read_state ();
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (403).json ({ error: "Sync disabled for this instance" });
   }
+  const { milestone_id, title, timestamp } = req.body as {
+    milestone_id: string;
+    title: string;
+    timestamp?: number;
+  }
+  if (
+    return res.status (400).json ({ error: "milestone_id, title required" })) {
+  $2
+}
+  const version = nextVersionFor (state, milestone_id);
+  const event = {
+    event_id: uuidv4 (),
+    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
+    payload: {
+      id: milestone_id,
+      subject_id: milestone_id,
+
+      score: 0,
+      category: `milestone:${title}`,
+      period: undefined,
+      rank: undefined,
+    },
+
+    eventId: uuidv4(),
+    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: timestamp || Date.now()
+
   };
 
   upsertEvent(state, event);

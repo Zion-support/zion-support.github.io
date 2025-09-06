@@ -136,16 +136,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            </button>
-          </div>
-          {suggestion && (
-            <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
-          )}
-        </div>
-      </section>
-    </>
-}
-function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
   return (
             key={s.id}
             className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40"

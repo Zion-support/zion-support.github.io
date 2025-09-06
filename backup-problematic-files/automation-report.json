@@ -23,9 +23,7 @@
       ],
       "fixed": 0
     },
-    "improvements": [
-      "Created performance monitoring script"
-    ]
+    "improvements": ["Created performance monitoring script"]
   },
   "summary": {
     "testsPassed": 0,
