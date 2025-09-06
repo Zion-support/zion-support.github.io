@@ -168,19 +168,28 @@ h2 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 h3 {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
+=======
+}
+>>>>>>> origin/main
 }
 h3 {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;}
+<<<<<<< HEAD
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
@@ -243,7 +252,10 @@ body {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 =======
@@ -285,8 +297,16 @@ h3 {
 >>>>>>> main
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;}
+>>>>>>> origin/main
 
 /* Futuristic font for special elements */
 .futuristic-font {

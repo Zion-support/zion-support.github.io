@@ -27,4 +27,3 @@ const AIChatAssistant = ({ className }) => {
   );
 };
 
-export default AIChatAssistant;

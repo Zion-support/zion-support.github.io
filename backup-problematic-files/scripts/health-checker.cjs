@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Health Checker;
@@ -238,6 +240,7 @@ if (require.main === module) {}
   checker.run().catch(console.error)};
 module.exports = HealthChecker;
 =======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -316,4 +319,7 @@ checker.checkFileExists('next.config.js', 'Next.js configuration');
 checker.checkPackageJson();
 checker.checkNodeModules();
 checker.generateReport();
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

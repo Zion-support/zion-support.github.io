@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import type { NextPage } from 'next';
 import Head from 'next/head';
+
+
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -18,16 +17,16 @@ const AutomationStatus: NextPage = () => {
       </main>
     </div>
 
+export default AutomationStatus,;
+
+  );
+};
+export default AutomationStatus;
 
 export default AutomationStatus,;
 
   );
 };
-  )
-}
 export default AutomationStatus;
 
-export default AutomationStatus,;
-  );
-};
-export default AutomationStatus;
+

@@ -25,7 +25,3 @@ const HRPlatform = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}
-}

@@ -1,23 +1,7 @@
-
-      permanent: false}}
-}
-export default function ResumeIndex() { return null }
-
-
-
-
-      destination: '/resume/preview',
-      permanent: false}}
-}
-export default function ResumeIndex() { return null }
-import { GetServerSideProps } from 'next',
-import { GetServerSideProps } from 'next';
-
-import { GetServerSideProps } from 'next',;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-      destination: '/resume / preview',
+      destination: '/resume/preview'
       permanent: false}}
 }
 export default function ResumeIndex() { return null }
@@ -41,3 +25,5 @@ export default function ResumeIndex() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

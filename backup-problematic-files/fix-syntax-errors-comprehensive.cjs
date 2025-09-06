@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
+=======
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 =======
@@ -142,6 +155,7 @@ const path = require('path');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function fixSyntaxErrors(filePath) {
   try {
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Fix common syntax errors
@@ -149,10 +163,39 @@ function fixSyntaxErrors(filePath) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix common syntax errors
+
+    // Fix unnecessary escape characters
+=======
+const fs = require('fs');
+const path = require('path');
+;
+function fixSyntaxErrors(filePath) {;
+  try {;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+;
+    // Fix common syntax errors;
+;
+    // Fix unnecessary escape characters;
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -163,10 +206,14 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\\\(/g, '(');
     content = content.replace(/\\\)/g, ')');
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 ;
     // Fix missing semicolons at end of statements;
     content = content.replace(/([^;}])\s*$/gm, '$1;');
@@ -180,6 +227,8 @@ function fixSyntaxErrors(filePath) {
     
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -295,6 +344,7 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -302,12 +352,42 @@ function fixSyntaxErrors(content, filePath) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+;
+    // Fix missing semicolons at end of statements;
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+;
+    // Fix missing commas in objects;
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1:$2,}');
+;
+    // Fix missing closing braces;
+    // Fix malformed CSS in JSX
+    content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
+    
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     // Fix malformed return statements in functions
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
     // Fix missing semicolons
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 <<<<<<< HEAD
     // Fix missing semicolons at end of statements
     content = content.replace(/([^;}])\s*$/gm, '$1;');
@@ -319,15 +399,21 @@ function fixSyntaxErrors(content, filePath) {
 }
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
     // Fix missing semicolons at end of statements
     content = content.replace(/([^;}])\s*$/gm, '$1;');
     // Fix missing commas in objects
-    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+>>>>>>> origin/main
     // Fix missing semicolons at end of statements
 =======
 <<<<<<< HEAD
@@ -386,6 +472,11 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
 =======
 =======
 =======
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
     // Fix missing semicolons at end of statements
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     content = content.replace(/([^;}])\s*$/gm, '$1;');
@@ -405,6 +496,7 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 
 =======
 <<<<<<< HEAD
@@ -414,6 +506,9 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
 =======
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -472,6 +567,7 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 }
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 <<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
@@ -479,7 +575,20 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+;
+    if (openBraces > closeBraces) {;}
+
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -576,6 +685,12 @@ function fixSyntaxErrors(content, filePath) {;
   fixed = fixed.replace(malformedArrayRegex, "$1$2$3,$4");
   return { fixed, changes }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> pr-12166
 // Function to process a single file;
 function processFile(filePath) {;
   try {;
@@ -624,6 +739,7 @@ function $1() {;
     if (changes > 0) {;
   processedFiles++;,
 }
+>>>>>>> origin/main
 // Main execution
 async function main() {
     const patterns = ['src/**/*.tsx',
@@ -654,13 +770,17 @@ async function main() {
     } else {
 =======
     } else {
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
 <<<<<<< HEAD
 =======
         
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         
@@ -756,8 +876,33 @@ console.log('\n🎯 Syntax error fixing completed!');
 =======
 =======
     if (openBraces > closeBraces) {
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
+    }
+
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+
+    if (openParens > closeParens) {
+      const missingParens = openParens - closeParens;
+      content += ')'.repeat(missingParens);
+      modified = true;
+    }
+
+    // Fix missing closing brackets
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+
+    if (openBrackets > closeBrackets) {
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
       const missingBraces = openBraces - closeBraces;
       content += '\n''}'.repeat(missingBraces);
       modified = true;
@@ -777,10 +922,22 @@ console.log('\n🎯 Syntax error fixing completed!');
     const closeBrackets = (content.match(/\]/g) || []).length;
 ;
     if (openBrackets > closeBrackets) {;
+>>>>>>> origin/main
       const missingBrackets = openBrackets - closeBrackets;
       content += ']'.repeat(missingBrackets);
       modified = true;
     }
+<<<<<<< HEAD
+
+    // Fix duplicate imports
+    const importLines = content
+      .split('\n')
+      .filter(line => line.trim().startsWith('import'));
+    const uniqueImports = [...new Set(importLines)];
+    if (importLines.length !== uniqueImports.length) {
+      const nonImportLines = content
+        .split('\n')
+=======
 ;
     // Fix duplicate imports;
     const importLines = content;
@@ -790,10 +947,53 @@ console.log('\n🎯 Syntax error fixing completed!');
     if (importLines.length !== uniqueImports.length) {;
       const nonImportLines = content;
         .split('\n');
+>>>>>>> origin/main
         .filter(line => !line.trim().startsWith('import'));
       content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
       modified = true;
     }
+<<<<<<< HEAD
+
+    // Fix missing React import
+    if (content.includes('React') && !content.includes('import React')) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+
+    // Fix semicolons in object properties
+    content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2,');
+
+    // Fix semicolons in array elements
+    content = content.replace(/([^}]);/g, '$1,');
+
+    // Fix semicolons in function parameters
+    content = content.replace(/(\w+)\s*;\s*\)/g, '$1)');
+
+    // Fix semicolons in JSX
+    content = content.replace(/<(\w+)\s*;\s*>/g, '<$1>');
+    content = content.replace(/<\/(\w+)\s*;\s*>/g, '</$1>');
+
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      modified = true;
+    }
+
+    return modified;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+<<<<<<< HEAD
+console.log('\n🎯 Syntax error fixing completed!');
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+=======
+function processDirectory(dirPath) {
+=======
 ;
     // Fix missing React import;
     if (content.includes('React') && !content.includes('import React')) {;
@@ -826,6 +1026,7 @@ console.log('\n🎯 Syntax error fixing completed!');
 }
 ;
 function processDirectory(dirPath) {;function processDirectory(dirPath) {
+>>>>>>> origin/main
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
 ;
@@ -856,6 +1057,7 @@ console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/fix-syntax-errors-comprehensive.cjs
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1069,4 +1271,16 @@ console.log(`Fixed ${fixedCount} files`);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

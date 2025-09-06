@@ -9,4 +9,3 @@ const WithAuth.js = ({ className }) => {
   );
 };
 
-export default WithAuth.js;

@@ -27,4 +27,3 @@ const FeatureCTAs = ({ className }) => {
   );
 };
 
-export default FeatureCTAs;

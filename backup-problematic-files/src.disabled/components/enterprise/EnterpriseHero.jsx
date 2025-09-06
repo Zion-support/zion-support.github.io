@@ -27,4 +27,3 @@ const EnterpriseHero = ({ className }) => {
   );
 };
 
-export default EnterpriseHero;

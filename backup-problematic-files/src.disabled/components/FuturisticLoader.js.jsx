@@ -9,4 +9,3 @@ const FuturisticLoader.js = ({ className }) => {
   );
 };
 
-export default FuturisticLoader.js;

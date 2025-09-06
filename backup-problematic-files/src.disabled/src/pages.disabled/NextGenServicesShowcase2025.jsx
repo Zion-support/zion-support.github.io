@@ -9,4 +9,3 @@ const NextGenServicesShowcase2025 = ({ className }) => {
   );
 };
 
-export default NextGenServicesShowcase2025;

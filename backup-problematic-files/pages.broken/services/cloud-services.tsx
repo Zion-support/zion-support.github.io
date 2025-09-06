@@ -13,4 +13,3 @@ const Cloud-services: React.FC<Cloud-servicesProps> = ({ className }) => {
     </div>
   );
 }
-}

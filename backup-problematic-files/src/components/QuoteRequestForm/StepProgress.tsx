@@ -90,4 +90,3 @@ export function StepProgress({ currentStep } StepProgressProps) {;
 }</span> </div>) ;
 }) ;
 }</div> </div>) ;
-}"

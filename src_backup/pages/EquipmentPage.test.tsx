@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',;
-import { Link } from 'react-router-dom',;
-import { SERVICE_CATEGORIES } from '@/data/servicesData',;
-export function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-    timeline: ''
-  }),
-
-  const [selectedService, setSelectedService] = useState(''),
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -37,36 +19,37 @@ export function ContactPage() {
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
-                📞 Call Now: +1 302 464 0950
+                 Call Now: +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
-                ✉️ Email Us
+                 Email Us
               </a>
             </div>
           </div>
         </div>
       </div>
+
       {/* Contact Info Banner */}
       <div className="bg-white border-b shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
             <div className="flex items-center gap-2">
-              <span className="text-blue-600">📍</span>
+              <span className="text-blue-600"></span>
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-blue-600">📱</span>
+              <span className="text-blue-600"></span>
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-blue-600">✉️</span>
+              <span className="text-blue-600"></span>
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-blue-600">🌐</span>
+              <span className="text-blue-600"></span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
                 ziontechgroup.com
               </a>
@@ -74,6 +57,7 @@ export function ContactPage() {
           </div>
         </div>
       </div>
+
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -83,8 +67,6 @@ export function ContactPage() {
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
             </p>
-            
-            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -102,6 +84,7 @@ export function ContactPage() {
                     placeholder="Your full name"
                   />
                 </div>
+                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -118,8 +101,6 @@ export function ContactPage() {
                   />
                 </div>
               </div>
-              
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -135,6 +116,7 @@ export function ContactPage() {
                     placeholder="Your company name"
                   />
                 </div>
+                
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
@@ -150,6 +132,7 @@ export function ContactPage() {
                   />
                 </div>
               </div>
+              
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service of Interest *
@@ -200,12 +183,10 @@ export function ContactPage() {
                           <option value="devops-automation">DevOps Automation & CI/CD Pipeline</option>
                         </>
                       )}
-                    </optgroup>;
+                    </optgroup>
                   ))}
                 </select>
               </div>
-              
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -226,6 +207,7 @@ export function ContactPage() {
                     <option value="over-500k">Over $500,000</option>
                   </select>
                 </div>
+                
                 <div>
                   <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Timeline
@@ -246,6 +228,7 @@ export function ContactPage() {
                   </select>
                 </div>
               </div>
+              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Project Details *
@@ -261,23 +244,25 @@ export function ContactPage() {
                   placeholder="Tell us about your project, goals, and requirements..."
                 />
               </div>
+              
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
               >
-                ✉️ Send Message
+                 Send Message
               </button>
             </form>
           </div>
+
           {/* Contact Information */}
-          <div className="space-y-8">;
+          <div className="space-y-8">
             {/* Direct Contact */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Direct Contact</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
-                    <span className="text-blue-600 text-xl">📱</span>
+                    <span className="text-blue-600 text-xl"></span>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Phone</p>
@@ -286,9 +271,10 @@ export function ContactPage() {
                     </a>
                   </div>
                 </div>
+                
                 <div className="flex items-center gap-4">
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">
-                    <span className="text-green-600 text-xl">✉️</span>
+                    <span className="text-green-600 text-xl"></span>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
@@ -297,9 +283,10 @@ export function ContactPage() {
                     </a>
                   </div>
                 </div>
+                
                 <div className="flex items-center gap-4">
                   <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">
-                    <span className="text-purple-600 text-xl">📍</span>
+                    <span className="text-purple-600 text-xl"></span>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Address</p>
@@ -309,9 +296,10 @@ export function ContactPage() {
                     </p>
                   </div>
                 </div>
+                
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">
-                    <span className="text-orange-600 text-xl">🌐</span>
+                    <span className="text-orange-600 text-xl"></span>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Website</p>
@@ -322,51 +310,8 @@ export function ContactPage() {
                 </div>
               </div>
             </div>
+
             {/* Business Hours */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Monday - Friday</span>
-                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Saturday</span>
-                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Sunday</span>
-                  <span className="font-semibold">Closed</span>
-                </div>
-                <div className="pt-3 border-t border-gray-200">
-                  <p className="text-sm text-gray-600">
-                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-lg p-8">;
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;
-              <div className="space-y-3">;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Monday - Friday</span>;
-                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>;
-                </div>;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Saturday</span>;
-                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>;
-                </div>;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Sunday</span>;
-                  <span className="font-semibold">Closed</span>;
-                </div>;
-                <div className="pt-3 border-t border-gray-200">;
-                  <p className="text-sm text-gray-600">;
-                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues;
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -375,31 +320,32 @@ export function ContactPage() {
                   href="tel:+13024640950"
                   className="block w-full bg-blue-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors"
                 >
-                  📞 Call Now
+                   Call Now
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="block w-full bg-green-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-green-700 transition-colors"
                 >
-                  ✉️ Send Email
+                   Send Email
                 </a>
                 <Link
                   to="/services"
                   className="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-purple-700 transition-colors"
                 >
-                  🚀 View Services
+                   View Services
                 </Link>
                 <a
                   href="https://ziontechgroup.com"
                   className="block w-full bg-gray-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-gray-700 transition-colors"
                 >
-                  🌐 Visit Website
+                   Visit Website
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -414,35 +360,15 @@ export function ContactPage() {
               href="tel: +13024640950"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
             >
-              📞 Call +1 302 464 0950
+               Call +1 302 464 0950
             </a>
             <a 
               href="mailto:kleber@ziontechgroup.com"
               className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
             >
-              ✉️ Get Free Consultation
+               Get Free Consultation
             </a>
           </div>
         </div>
       </div>
     </div>
-  )
-}
-  );
-};
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import EquipmentPage from './EquipmentPage';
-describe('EquipmentPage', () => {
-  it('renders equipment page correctly', () => {
-    render(
-      <MemoryRouter>
-        <EquipmentPage />
-      </MemoryRouter>
-    );
-    expect(screen.getByText('Equipment')).toBeInTheDocument();
-  });
-});
->>>>>>> main

@@ -27,4 +27,3 @@ const TrustedBySection = ({ className }) => {
   );
 };
 
-export default TrustedBySection;

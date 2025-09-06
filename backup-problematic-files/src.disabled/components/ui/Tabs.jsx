@@ -9,4 +9,3 @@ const Tabs = ({ className }) => {
   );
 };
 
-export default Tabs;

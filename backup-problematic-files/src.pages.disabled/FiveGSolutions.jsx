@@ -25,7 +25,3 @@ const FiveGSolutions = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}
-}

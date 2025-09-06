@@ -9,4 +9,3 @@ const AIMatcher = ({ className }) => {
   );
 };
 
-export default AIMatcher;

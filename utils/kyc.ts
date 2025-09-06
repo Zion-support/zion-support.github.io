@@ -1,5 +1,8 @@
-
-
+  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  url: string;
+  uploaded_at: string;
+  status: 'pending' | 'approved' | 'rejected';
+}
 export interface KycProfile {
   user_id: string;
 
@@ -7,6 +10,8 @@ export interface KycProfile {
 export interface KycProfile {;
 
   userId: string;
+export interface KycProfile {
+  user_id: string;
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -24,50 +29,16 @@ export interface KycProfile {;
     at: string;
     by: string;
     action: string;
-    details?: any
-  }>;
-// KYC (Know Your Customer) utilities
-export interface KycProfile {
-  userId: string;
-  role: 'client' | 'talent' | 'both';
-  fullLegalName: string;
-  businessName?: string;
-  businessRegistrationNumber?: string;
-  documents: KycDocument[];
-  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired';
-  submittedAt?: string;
-  reviewedAt?: string;
-  expiresAt?: string;
-  reviewerId?: string;
-  rejectionReason?: string;
-  notes?: string;
-}
-export function getRequiredDocuments (role: KycRole): string[] {
-  // Check condition
-if ( {) {
-  $2
-}
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
-}
-export function getOptionalDocuments (role: KycRole): string[] {
-  // Check condition
-if ( {) {
-  $2
 }
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
   }
 }
-
-
-
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
-
-
   const missing: string[] = [];
   
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
@@ -75,24 +46,13 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   }
   if (!profile && profile.country) {
     missing && missing.push('country');
-
-  
-  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name'),
-
+  const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {
+    missing.push('name');
   }
   
   if (!profile && profile.country) {
     missing && missing.push('country');
-  }
-
-  if (profile.role === 'client' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth');
-  }
-
-  }
-  if (profile.role === 'client' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth');
   }
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
@@ -105,13 +65,6 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   }
   return {
 
-    ok: missing && missing.length === 0,
-    missing
-  }
-export type KycRole = 'client' | 'talent' | 'enterprise';
-export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
-export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
-export interface KycDocumentMeta {
 
 export interface KycDocumentMeta {;
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
@@ -119,9 +72,6 @@ export interface KycDocumentMeta {;
   uploadedAt: string;
   status: 'pending' | 'approved' | 'rejected';
 }
-export interface KycProfile {
-
-export interface KycProfile {;
   userId: string;
   role: KycRole;
   fullLegalName?: string;
@@ -142,6 +92,7 @@ export interface KycProfile {;
     action: string;
     details?: any
   }>;
+}
 }
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
@@ -177,38 +128,3 @@ if ( {) {
 }
 
 
-export function getRequiredDocuments(role: KycRole): string[] {
-  if (role === 'client') {;
-    return ['government_id', 'proof_of_address'];
-  } else {
-    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
-  }
-}
-export function getOptionalDocuments(role: KycRole): string[] {
-  if (role === 'client') {;
-    return ['bank_statement', 'utility_bill'];
-  } else {
-    return ['bank_statement', 'utility_bill', 'tax_certificate'];
-  }
-}
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
-
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
-  const missing: string[] = [];
-  if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name');
-  }
-  if (!profile.country) {
-    missing.push('country');
-  }
-  if (profile.role === 'client' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth');
-  }
-  if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
-    missing.push('businessRegistrationNumber');
-  }
-  return {
-    ok: missing.length === 0
-    missing
-  }
-}

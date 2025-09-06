@@ -27,4 +27,3 @@ const AccountSettings = ({ className }) => {
   );
 };
 
-export default AccountSettings;

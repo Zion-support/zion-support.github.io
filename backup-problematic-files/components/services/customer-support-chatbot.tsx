@@ -4,7 +4,7 @@ export default function Placeholder() {
   return (
     <main className="min-h-screen p-8">
       <Head>
-        <title>Services • Customer-support-chatbot - Placeholder</title>
+        <title>Services  Customer-support-chatbot - Placeholder</title>
         <meta name="robots" content="noindex" />
       </Head>
       

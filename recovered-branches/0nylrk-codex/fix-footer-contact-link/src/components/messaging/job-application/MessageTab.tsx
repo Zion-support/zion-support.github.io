@@ -1,32 +1,4 @@
 
-
-export function MessageTab(): any ({;
-  message,;
-  setMessage,;
-  proposalLink,;
-  setProposalLink,;
-}: MessageTabProps) {;
-
-
-  return (
-    <div className="space-y-4">;
-      <div>;
-        <Label htmlFor="message" className="text-white">;
-          Application Message;
-        </Label>;
-        <Textarea
-          id="message"
-          value={message}
-import React from "react";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-export interface MessageTabProps {;
-  message: string;
-  setMessage: (message: string) => void;
-  proposalLink: string;
-  setProposalLink: (link: string) => void;
-
 import React from 'react',
 import { Textarea } from "@/components/ui/textarea",
 import { Input } from "@/components/ui/input";
@@ -54,64 +26,20 @@ export interface MessageTabProps {
 
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
   return (
-    <div className="space-y-4">
-      <div>
-        <Label htmlFor="message" className="text-white">Application Message</Label>
+    <div className="space-y-4">;
+      <div>;
+        <Label htmlFor="message" className="text-white">;
+          Application Message;
+        </Label>;
         <Textarea
           id="message"
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white"
-          placeholder="Write a message to the job poster..."
-        />
-      </div>
-
-          onChange={(e) => setMessage(e && e.target.value)}
-
-import React from 'react',;
-import { Textarea } from "@/components/ui/textarea",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-;
-export interface MessageTabProps {;
-  message:string,;
-  setMessage:(message:string) => void,;
-  proposalLink:string,;
-  setProposalLink:(link:string) => void;
-}
-;
-export function MessageTab({ message, setMessage, proposalLink, setProposalLink } MessageTabProps) {;
-  return (;
-    <div className="space-y-4">;
-      <div>;
-        <Label htmlFor="message" className="text-white">Application Message</Label>;
-        <Textarea;
-          id="message";
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white";
-          placeholder="Write a message to the job poster...";
-        />;
-      </div>;
-
-      
-
-      <div>
-        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
-      
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
         <Input
           id="proposalLink"
           type="url"
           value={proposalLink}
-          onChange={(e) => setProposalLink(e && e.target.value)}
-          className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
-          placeholder="https: //...";
-        />;
-      </div>;
-    </div>;
-  );
 import React from './react';
 import { Textarea  } from '@/components / ui / textarea';
 import { Input  } from '@/components / ui / input';
@@ -141,27 +69,6 @@ function MessageTab() {
         />;
       </div>;
       <div>;
-        <Label html_for="proposal_link" className="text - white">;
-          Link to Proposal / Portfolio (Optional);
-        </Label>;
-        <Input;
-          id="proposal_link";
-          type="url";
-          value={proposal_link}
-          on_change={(e) => setProposalLink (e.target.value)}
-          className="bg - zion - blue - dark / 20 border - zion - purple / 30 text - white";
-          placeholder="https: //...";
-        />;
-      </div>;
-    </div>);
-          onChange={(e) => setProposalLink(e.target.value)}
-          className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"
-          placeholder="https: //..."
-        />
-      </div>
-    </div>
-  );
-}
   )
 import React from 'react',;
 import { Textarea } from "@/components/ui/textarea",;
@@ -187,8 +94,6 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           placeholder="Write a message to the job poster...";
         />;
       </div>;
-}
-      ;
       <div>;
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>;
         <Input;
@@ -197,30 +102,6 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           value={proposalLink}
           onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
-    </div>
-
-    </div>;
-  );
-}
-
-
-          placeholder="https://...";
-        />;
-      </div>;
-    </div>;
-  );}
- export interface MessageTabProps {
-  message: string;
-setMessage: (message: string) => void;
-proposalLink: string;
-setProposalLink: (link: string) => void 
-}export function MessageTab ({
-  message, setMessage, proposalLink, setProposalLink 
-}: MessageTabProps) {
-  return (<div className="space-y-4" > message"className=" text-white">Application Message</Label> <Textarea id=" message"value= {
-  message 
-}/> </div> <div> <Label htmlFor=" proposalLink"className=" text-white">Link to Proposal/Portfolio (Optional) </Label> <Input className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"placeholder="https: //..." 
-}
           placeholder="https: //...";
         />;
       </div>;
@@ -228,3 +109,10 @@ setProposalLink: (link: string) => void
   );
 }
 ;
+
+    </div>;
+  );
+}
+
+
+}

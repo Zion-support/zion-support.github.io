@@ -9,4 +9,3 @@ const FuturisticHero = ({ className }) => {
   );
 };
 
-export default FuturisticHero;

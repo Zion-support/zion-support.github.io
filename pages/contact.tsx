@@ -1,111 +1,33 @@
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-
-
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
-
-
-
-
-import React from 'react';
-
-import Layout from '../components/Layout';
-
-import Layout from '../components/Layout';
-
-import Head from 'next/head';
-import { useState } from 'react';
-import { ContactInfo } from '../types';
-
-
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
-  const services = [
-    'AI Automation Platform',
-    'Cloud Infrastructure',
-    'Micro SaaS Development',
-    'Cybersecurity Solutions',
-    'Data Analytics & BI',
-    'Blockchain Solutions',
-    'Other'
-  ];
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  };
-  return (
-
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
-
-import React from 'react';
+    
     return this.props.children;
   }
 }
+
+
+
 import React from "react";
 import Layout from "../components/Layout";
 import React from 'react';
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
-ursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 origin/automation-improvements-final
@@ -172,33 +94,11 @@ export default function Contact() {
 }
   };
   return (
-    <Layout
-      title="Contact Us - Zion Tech Group"
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Contact Us
-            </h1>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
-import React from "react";
-import Layout from "../components/Layout";
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-origin/automation-improvements-final
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-origin/main
 
 import React from "react";
 import Layout from "../components/Layout";
@@ -233,17 +133,14 @@ export default function Contact() {
       </div>
     </>
   );
-}
-}
-}
 import Head from 'next/head';
+
 const ContactPage: React.FC = () => {
   return (
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta
-          name='description'
           content='Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation.'
         />
         <meta
@@ -263,6 +160,7 @@ const ContactPage: React.FC = () => {
               <p className='text-xl text-slate-300 text-center mb-12'>
                 Ready to transform your business? Get in touch with our experts.
               </p>
+
               <div className='grid: md:grid-cols-2 gap-12'>
                 <div>
                   <h2 className='text-2xl font-bold mb-6'>Get In Touch</h2>
@@ -312,79 +210,12 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
                 <div>
                   <h2 className='text-2xl font-bold mb-6'>Send us a Message</h2>
                   <ContactForm />
                 </div>
               </div>
-
-}
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-            </div>
-          </div>
-        </div>
-</div>
-    </>
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              Contact Us;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Get in touch with our team for your technology needs.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">Contact page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>;
-
-    </>
-
-  );
-
-
-  );
-}
-import React from './react';
-import Layout from "../components / Layout";
-;
-export default /**
- * Contact - Function description
- */
-function Contact() {
-  return (
-    <Layout;
-      title="Contact Us - Zion Tech Group";
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-              Contact Us;
-            </h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              Get in touch with our team for your technology needs.;
-            </p>;
-          </div>;
-          <div className="text - center">;
-            <p className="text - gray - 600">Contact page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>);
-}
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -700,13 +531,6 @@ function Contact() {
           </div>
         </div>
       </div>
-    </Layout>;
-    </>
-  );
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -9,4 +9,3 @@ const QuantumComputing = ({ className }) => {
   );
 };
 
-export default QuantumComputing;

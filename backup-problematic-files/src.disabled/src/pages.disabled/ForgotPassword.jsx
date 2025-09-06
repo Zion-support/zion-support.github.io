@@ -27,4 +27,3 @@ const ForgotPassword = ({ className }) => {
   );
 };
 
-export default ForgotPassword;

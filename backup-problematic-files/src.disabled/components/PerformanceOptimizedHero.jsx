@@ -27,4 +27,3 @@ const PerformanceOptimizedHero = ({ className }) => {
   );
 };
 
-export default PerformanceOptimizedHero;

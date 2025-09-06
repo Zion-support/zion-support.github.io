@@ -9,4 +9,3 @@ const ProjectRoom = ({ className }) => {
   );
 };
 
-export default ProjectRoom;

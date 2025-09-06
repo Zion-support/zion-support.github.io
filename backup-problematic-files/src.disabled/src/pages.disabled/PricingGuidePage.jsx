@@ -9,4 +9,3 @@ const PricingGuidePage = ({ className }) => {
   );
 };
 
-export default PricingGuidePage;

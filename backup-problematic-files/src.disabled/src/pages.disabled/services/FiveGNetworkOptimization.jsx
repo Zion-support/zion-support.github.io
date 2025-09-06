@@ -9,4 +9,3 @@ const FiveGNetworkOptimization = ({ className }) => {
   );
 };
 
-export default FiveGNetworkOptimization;

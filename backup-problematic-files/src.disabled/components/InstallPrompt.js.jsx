@@ -9,4 +9,3 @@ const InstallPrompt.js = ({ className }) => {
   );
 };
 
-export default InstallPrompt.js;

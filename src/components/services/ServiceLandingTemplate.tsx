@@ -1,14 +1,3 @@
-import React from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
-import React from 'react'
-import React from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import Image from "next/image",
 export interface Benefit {
   title: string;
   description: string;
@@ -16,19 +5,10 @@ export interface Benefit {
 }
 export interface Testimonial {
   name: string;
-name: string;
   role?: string;
   text: string;
   avatar?: string
 }
-interface ServiceLandingTemplateProps {
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
-import React from 'react'
-xport interface Benefit {
-  title: string;
-  description: string;
-  icon?: React.ReactNode
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -36,8 +16,6 @@ xport interface Benefit {
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import Image from "next/image",
 import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -54,20 +32,22 @@ export interface Benefit {
   icon?: React.ReactNode;
 }
 export interface Testimonial {
-
-  name: string;
+  name: string,
   role?: string;
-  text: string;
-  avatar?: string;
-
+  text: string,
+  avatar?: string
 }
 interface ServiceLandingTemplateProps {
-
-  title: string;
-  subtitle: string;
-  description: string;
-  benefits: Benefit[];
-  features?: string[];
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+  icon?: React.ReactNode;
+}
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -95,23 +75,6 @@ interface ServiceLandingTemplateProps {;
   testimonials: Testimonial[],;
   ctaText: string,;
   ctaLink: string;
-  stats?: Array<{ label: string; value: string }>;
-  cta_text: string;
-  cta_link: string;
-}
-export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
-
-
-export interface Benefit {
-  title: string;
-  description: string;
-  icon?: React.ReactNode
-
-
-}
-
-export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -120,15 +83,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   heroImage,
   description,
   benefits,
-  ctaLink}) => {
-  ctaLink,
-}) => {
   testimonials,
   ctaText,
-  ctaLink}) => {
-  ctaLink,
-}) => {
-  ctaLink}) => {
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -138,11 +94,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </GradientHeading>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          </p>
-        </div>
-      </section>
-}
 
 
 
@@ -154,116 +105,36 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           <h1 className="text - 4xl md:text - 6xl font - bold text - gray - 900 mb - 6">;
             {title}
           </h1>;
-          <p className="text - xl text - gray - 600 max - w-3xl mx - auto mb - 8">;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">;
             {subtitle}
           </p>;
-          <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
-
-            {description}
           </p>;
         </div>;
       </section>;
-          </p>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          {heroImage && (
-            <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
-              <Image
-                src={heroImage}
-                alt={title}
-                className="object-cover rounded-lg"
-                loading="lazy"
-              />
-            </div>
-          )}
-        </div>
-      </section>
+            </div>;
+          </div>;
+        </section>;
+      )}
+              ))}
+            </div>;
+          </div>;
+          <a
+            href={ctaLink}
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
+            {ctaText}
 
-      <section className="py-12 px-4">
-        <div className="container mx-auto text-center">
-          <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+          </a>;
+        </div>;
+      </section>;
+    </div>;
+  );
+
             {description}
           </p>
         </div>
       </section>
-      {benefits.length > 0 && (
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Benefits
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-                  {benefit.icon && (
-                    <div className="mb-4 text-blue-600">
-                      {benefit.icon}
-                    </div>
-                  )}
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-      {features.length > 0 && (
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
-                  <span className="text-gray-700">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-      {stats.length > 0 && (
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              {stats.map((stat, index) => (
-                <div key={index}>
-                  <div className="text-4xl font-bold text-blue-600 mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Contact us today to learn more about our services.
-          </p>
-          <a
-            href={ctaLink}
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-          >
-            {ctaText}
-          </a>
-        </div>
-      </section>
-    </div>
-  )
-}
 
-
-};
-;
-
+      <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             Benefits
@@ -277,7 +148,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
-                  </div>;
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -318,10 +188,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                       {t.role && (
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
-                    </div>;
-                  </div>;
-                </CardFooter>;
-              </Card>;
             ))}
           </div>
         </div>
@@ -333,38 +199,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
-          <a href={ctaLink}>{ctaText}</Link>
         </Button>
       </section>
     </div>
   )
-},
-},
-
-
-                  </div>;
-                  <div className="text - gray - 600">{stat.label}</div>;
-                </div>))}
-            </div>;
-          </div>;
-        </section>)}
-      <section className="py - 16 px - 4 bg - blue - 600">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <h2 className="text - 3xl font - bold text - white mb - 4">;
-            Ready to Get Started?;
-          </h2>;
-          <p className="text - xl text - blue - 100 mb - 8">;
-            Contact us today to learn more about our services.;
-          </p>;
-          <a;
-            href={cta_link}
-            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
-          >;
-            {cta_text}
-          </a>;
-        </div>;
-      </section>;
-    </div>);
-}
-
-},

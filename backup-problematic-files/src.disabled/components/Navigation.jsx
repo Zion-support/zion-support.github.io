@@ -9,4 +9,3 @@ const Navigation = ({ className }) => {
   );
 };
 
-export default Navigation;

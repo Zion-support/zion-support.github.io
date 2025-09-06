@@ -13,4 +13,3 @@ const Ai-development: React.FC<Ai-developmentProps> = ({ className }) => {
     </div>
   );
 }
-}

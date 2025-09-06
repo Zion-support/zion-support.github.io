@@ -9,4 +9,3 @@ const AdvancedServicesShowcase2025 = ({ className }) => {
   );
 };
 
-export default AdvancedServicesShowcase2025;

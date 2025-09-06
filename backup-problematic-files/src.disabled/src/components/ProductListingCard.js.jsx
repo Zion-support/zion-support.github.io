@@ -9,4 +9,3 @@ const ProductListingCard.js = ({ className }) => {
   );
 };
 
-export default ProductListingCard.js;

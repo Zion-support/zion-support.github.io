@@ -1,51 +1,3 @@
-import { Header } from '@/components/Header';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { TestimonialCarousel } from '@/components/TestimonialCarousel';
-import { FloatingCTA } from '@/components/FloatingCTA';
-import { HeroSection } from '@/components/HeroSection';
-import { CategoriesSection } from '@/components/CategoriesSection';
-import { BenefitsSection } from '@/components/BenefitsSection';
-import { HowItWorksSection } from '@/components/HowItWorksSection';
-import { WaitlistSection } from '@/components/WaitlistSection';
-import { BlogSection } from '@/components/BlogSection';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { FeaturedListingsSection } from '@/components/FeaturedListingsSection';
-import { FeaturesGuideSection } from '@/components/FeaturesGuideSection';
-import { SocialShareSection } from '@/components/SocialShareSection';
-import { useTranslation } from 'react-i18next';
-import { useLanguage } from '@/context/LanguageContext';
-import {
-  ArrowRight
-  Users
-  Zap
-  Settings
-  Search
-  MessageSquare
-  Sparkles
-  BarChart3
-  Smartphone
-} from 'lucide-react';
-  ArrowRight,
-  Users,
-  Zap,
-  Settings,
-  Search,
-  MessageSquare,
-  Sparkles,
-  BarChart3,;
-  Smartphone;
-} from 'lucide-react';
-export default function LandingPage() {;
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
-BarChart3,;
-  Smartphone,;
-} from 'lucide-react';
-
-
-
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -74,17 +26,22 @@ export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
   
+
+
+
   // Tools and features showcase
 
   const toolsFeatures = [
     {
-  
-
-      title: t('home.tool_ai_matcher')
-      description: t('home.tool_ai_matcher_desc')
-      icon: <Sparkles className='h-6 w-6 text-zion-cyan' />
-      link: '/match'
-    }
+export default /**
+ * LandingPage - Function description
+ */
+function LandingPage() {
+  const { t } = use_translation ();
+  const { isRTL } = use_language ();
+;
+  // Tools and features showcase;
+  const tools_features = [;
     {
       title: t('home.tool_talent')
       description: t('home.tool_talent_desc')
@@ -110,160 +67,6 @@ export default function LandingPage() {
       link: '/analytics'
     }
     {
-      title: 'Mobile App'
-      description:
-        'Take Zion with you on the go with our mobile app for iOS and Android'
-      icon: <Smartphone className='h-6 w-6 text-zion-purple' />
-      link: '/mobile-launch'
-    }
-  ];
-
-  return (
-    <div className='min-h-screen bg-zion-blue text-white'>
-      <SEO
-        title={t('home.seo_title')}
-        description={t('home.seo_description')}
-        keywords={t('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'      />
-      <Header />
-      <HeroSection />
-      title: t("home.tool_ai_matcher"),
-      description: t("home.tool_ai_matcher_desc"),
-      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
-      link: "/match"
-    },
-    {
-      title: t("home.tool_talent"),
-      description: t("home.tool_talent_desc"),
-      icon: <Users className="h-6 w-6 text-zion-purple" />,
-      link: "/talent"
-    },
-    {
-      title: t("home.tool_services"),
-      description: t("home.tool_services_desc"),
-      icon: <Zap className="h-6 w-6 text-zion-cyan" />,
-      link: "/services"
-    },
-    {
-      title: t("home.tool_equipment"),
-      description: t("home.tool_equipment_desc"),
-      icon: <Settings className="h-6 w-6 text-zion-purple" />,
-      link: "/equipment"
-    },
-    {
-      title: t("home.tool_analytics"),
-      description: t("home.tool_analytics_desc"),
-      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
-      link: "/analytics"
-    },
-    {
-      title: "Mobile App",
-      description: "Take Zion with you on the go with our mobile app for iOS and Android",
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
-      link: "/mobile-launch"
-    }
-  ],
-
-  return (
-    <div className='min-h-screen bg-zion-blue text-white'>
-      <SEO
-        title={t('home.seo_title')}
-        description={t('home.seo_description')}
-        keywords={t('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'      />
-      <Header />
-      <HeroSection />
-    <div className="min-h-screen bg-zion-blue text-white">
-      <SEO 
-        title={t("home.seo_title")} 
-        description={t("home.seo_description")} 
-        keywords={t("home.seo_keywords")}
-        canonical="https://app.ziontechgroup.com/"
-      />
-      <Header />
-      <HeroSection />
-      
-ursor/fix-website-loading-errors-and-merge-6662
-  // Tools and features showcase
-
-  const toolsFeatures = [
-    {
-
-
-  // Tools and features showcase;
-  const toolsFeatures = [;
-    {;
-      title: t('home && home.tool_ai_matcher'),;
-      description: t('home && home.tool_ai_matcher_desc'),;
-      icon: <Sparkles className='h-6 w-6 text-zion-cyan' />,;
-      link: '/match',;
-    },;
-    {;
-      title: t('home && home.tool_talent'),;
-      description: t('home && home.tool_talent_desc'),;
-      icon: <Users className='h-6 w-6 text-zion-purple' />,;
-      link: '/talent',;
-    },;
-    {;
-      title: t('home && home.tool_services'),;
-      description: t('home && home.tool_services_desc'),;
-      icon: <Zap className='h-6 w-6 text-zion-cyan' />,;
-      link: '/services',;
-    },;
-    {;
-      title: t('home && home.tool_equipment'),;
-      description: t('home && home.tool_equipment_desc'),;
-      icon: <Settings className='h-6 w-6 text-zion-purple' />,;
-      link: '/equipment',;
-    },;
-    {;
-      title: t('home && home.tool_analytics'),;
-      description: t('home && home.tool_analytics_desc'),;
-      icon: <BarChart3 className='h-6 w-6 text-zion-cyan' />,;
-      link: '/analytics',;
-    },;
-    {;
-      title: 'Mobile App',;
-      description:;
-        'Take Zion with you on the go with our mobile app for iOS and Android',;
-      icon: <Smartphone className='h-6 w-6 text-zion-purple' />,;
-      link: '/mobile-launch',;
-    },;
-
-export default /**
- * LandingPage - Function description
- */
-function LandingPage() {
-  const { t } = use_translation ();
-  const { isRTL } = use_language ();
-;
-  // Tools and features showcase;
-  const tools_features = [;
-    {
-      title: t ('home.tool_ai_matcher'),
-      description: t ('home.tool_ai_matcher_desc'),
-      icon: <Sparkles className='h - 6 w - 6 text - zion - cyan' />,
-      link: '/match',
-    },
-    {
-      title: t ('home.tool_talent'),
-      description: t ('home.tool_talent_desc'),
-      icon: <Users className='h - 6 w - 6 text - zion - purple' />,
-      link: '/talent',
-    },
-    {
-      title: t ('home.tool_services'),
-      description: t ('home.tool_services_desc'),
-      icon: <Zap className='h - 6 w - 6 text - zion - cyan' />,
-      link: '/services',
-    },
-    {
-      title: t ('home.tool_equipment'),
-      description: t ('home.tool_equipment_desc'),
-      icon: <Settings className='h - 6 w - 6 text - zion - purple' />,
-      link: '/equipment',
-    },
-    {
       title: t ('home.tool_analytics'),
       description: t ('home.tool_analytics_desc'),
       icon: <BarChart3 className='h - 6 w - 6 text - zion - cyan' />,
@@ -277,30 +80,8 @@ function LandingPage() {
       link: '/mobile - launch',
     },
   ];
-;
+
   return (
-
-        title={t('home && home.seo_title')}
-        description={t('home && home.seo_description')}
-        keywords={t('home && home.seo_keywords')}
-        canonical='https://app && app.ziontechgroup.com/'      />;
-      <Header />;
-      <HeroSection />;
-
-      
-      {/* Quick Access Tools Section */}
-      <section className='py-16 bg-zion-blue-dark'>;
-        <div className='container mx-auto px-4'>;
-          <div className='text-center mb-12'>;
-            <h2 className='text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4'>;
-              {t('home && home.explore_tools')}
-            </h2>;
-            <p className='text-zion-slate-light text-xl max-w-3xl mx-auto'>;
-              {t('home && home.tools_description')}
-            </p>;
-          </div>;
-
-
           <div
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
             {toolsFeatures && toolsFeatures.map((feature, index) => (;
@@ -328,7 +109,6 @@ function LandingPage() {
                   <span>{t("general && general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
               </Link>;
-
 import { Header } from "@/components/Header";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -397,9 +177,16 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
   return (
-
-
-
+    <div className="min-h-screen bg-zion-blue text-white">
+      <SEO 
+        title={t("home.seo_title")} 
+        description={t("home.seo_description")} 
+        keywords={t("home.seo_keywords")}
+        canonical="https://app.ziontechgroup.com/"
+      />
+      <Header />
+      <HeroSection />
+      
       {/* Quick Access Tools Section */}
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -410,15 +197,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
               {t("home.tools_description")}
             </p>
           </div>
-          <div
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
-          >
-            {toolsFeatures.map((feature, index) => (
-              <Link
-                key={index}
-                href={feature.link}
-                className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
-                <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
           
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
@@ -437,19 +215,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-      <CategoriesSection />
-      <BenefitsSection />
-      <CategoriesSection />
-      <BenefitsSection />
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
       <CategoriesSection />
       <BenefitsSection />
       {/* Add the comprehensive features guide section */}
@@ -464,137 +229,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
           </div>;
         </div>;
       </section>;
-
-      <CategoriesSection />;
-      <BenefitsSection />;
-      <CategoriesSection />;
-      <BenefitsSection />;
-
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
-
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
-      <CategoriesSection />;
-      <BenefitsSection />;
-
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
-
-
-
-;
-
-
-    <div className='min - h-screen bg - zion - blue text - white'>;
-      <SEO;
-        title={t ('home.seo_title')}
-        description={t ('home.seo_description')}
-        keywords={t ('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'      />;
-      <Header />;
-      <HeroSection />;
-      {/* Quick Access Tools Section */}
-      <section className='py - 16 bg - zion - blue - dark'>;
-        <div className='container mx - auto px - 4'>;
-          <div className='text - center mb - 12'>;
-            <h2 className='text - 3xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb - 4'>;
-              {t ('home.explore_tools')}
-            </h2>;
-            <p className='text - zion - slate - light text - xl max - w-3xl mx - auto'>;
-              {t ('home.tools_description')}
-            </p>;
-          </div>;
-          <div;
-            className={`grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 max - w-6xl mx - auto ${isRTL ? 'rtl' : ''}`}
-          >;
-            {tools_features.map ((feature, index) => (
-              <Link;
-                key={index}
-                href={feature.link}
-                className='bg - zion - blue border border - zion - blue - light hover:border - zion - purple / 50 rounded - lg p - 6 transition - all duration - 300'              >;
-                <div className='bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb - 4'>;
-                  {feature.icon}
-                </div>;
-                <h3 className='text - xl font - bold text - white mb - 2'>;
-                  {feature.title}
-                </h3>;
-                <p className='text - zion - slate - light mb - 4'>;
-                  {feature.description}
-                </p>;
-                <div;
-                  className={`flex items - center text - zion - cyan ${isRTL ? 'flex - row - reverse' : ''}`}
-                >;
-                  <span>{t ('general.explore')}</span>;
-                  <ArrowRight;
-                    className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`}
-                  />                </div>                <h3 className="text - xl font - bold text - white mb - 2">{feature.title}</h3>;
-                <p className="text - zion - slate - light mb - 4">{feature.description}</p>;
-                <div className={`flex items - center text - zion - cyan ${isRTL ? 'flex - row - reverse' : ''}`}>;
-                  <span>{t ("general.explore")}</span>;
-                  <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />;
-              </Link>))}
-          </div>;
-        </div>;
-      </section>;
-      <CategoriesSection />;
-      <BenefitsSection />;
-      <CategoriesSection />;
-      <BenefitsSection />;
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
-      <CategoriesSection />;
-      <BenefitsSection />;
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
-      <HowItWorksSection />;
-      <FeaturedListingsSection />;
-      <TestimonialCarousel />;
-      <TrustedBySection />;
-      <BlogSection />;
-
-
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />;
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />;
-      <FloatingCTA />;
-    </div>);
-}
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const LandingPage: React.FC = () => {
-  return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            Welcome to Zion Tech Group
-          </h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Advanced technology solutions for the modern world. We provide AI, cybersecurity, 
-            cloud infrastructure, and digital transformation services.
-          </p>
-          <div className="space-x-4">
-            <Link 
-              to="/services" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Our Services
-            </Link>
-            <Link 
-              to="/contact" 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
@@ -642,26 +276,60 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Let's discuss how our technology solutions can help your organization grow and succeed.
-          </p>
-          <Link 
-            to="/contact" 
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Get Started Today
-          </Link>
-        </div>
-      </section>
-    </div>
+      <SEO;
+        title={t("home.seo_title")} ;
+        description={t("home.seo_description")} ;
+        keywords={t("home.seo_keywords")}
+        canonical="https://app.ziontechgroup.com/";
+      />;
+      <Header />;
+      <HeroSection />;
+      {/* Quick Access Tools Section */}
+      <section className="py-16 bg-zion-blue-dark">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">;
+              {t("home.explore_tools")}
+            </h2>;
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              {t("home.tools_description")}
+            </p>;
+          </div>;
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
+            {toolsFeatures.map((feature, index) => (;
+              <Link;
+                key={index} ;
+                href={feature.link} ;
+                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300";
+              >;
+                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">;
+                  {feature.icon}
+                </div>;
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>;
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>;
+                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>;
+                  <span>{t("general.explore")}</span>;
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
+                </div>;
+              </Link>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+      <CategoriesSection />;
+      <BenefitsSection />;
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+      <HowItWorksSection />;
+      <FeaturedListingsSection />;
+      <TestimonialCarousel />;
+      <TrustedBySection />;
+      <BlogSection />;
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />;
+      <WaitlistSection />;
+      <FloatingCTA />;
+    </div>;
   );
-};
-
-export default LandingPage;
+}
 ;

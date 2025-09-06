@@ -9,4 +9,3 @@ const HomePage = ({ className }) => {
   );
 };
 
-export default HomePage;

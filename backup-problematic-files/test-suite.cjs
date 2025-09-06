@@ -20,6 +20,15 @@ const path = require('path')
     this.log(` Success "Rate"`)
 <<<<<<< HEAD
     console.error('Test suite "failed")
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('Test suite "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+    console.error('Test suite "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

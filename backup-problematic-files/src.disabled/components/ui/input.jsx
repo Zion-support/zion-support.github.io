@@ -27,4 +27,3 @@ const Input = ({ className }) => {
   );
 };
 
-export default Input;

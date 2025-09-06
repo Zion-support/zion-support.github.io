@@ -9,4 +9,3 @@ const CloudInfrastructure = ({ className }) => {
   );
 };
 
-export default CloudInfrastructure;

@@ -45,7 +45,7 @@ export default function SignUpPage() {;
           {/* Free Trial Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full">;
             <span className="text-green-400 text-sm font-medium">;
-              🚀 Free Trial Available;
+               Free Trial Available;
             </span>;
           </div>;
         </div>;
@@ -55,19 +55,19 @@ export default function SignUpPage() {;
           <h3 className="text-sm font-semibold text-zinc-300 mb-3">What you'll get:</h3>;
           <ul className="space-y-2 text-sm text-zinc-400">;
             <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
+              <span className="text-green-400"></span>;
               Launch new instances in minutes;
             </li>;
             <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
+              <span className="text-green-400"></span>;
               Access to marketplace templates;
             </li>;
             <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
+              <span className="text-green-400"></span>;
               Governance and identity tools;
             </li>;
             <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
+              <span className="text-green-400"></span>;
               Full admin dashboard access;
             </li>;
           </ul>;
@@ -177,9 +177,9 @@ export default function SignUpPage() {;
     </div>;
   ); return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800"> <div className="max-w-md w-full space-y-8 p-8"> <div className="text-center"> <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1> <p className="text-zinc-400 mb-4"> Start your free trial and launch sovereign AI-powered digital economies </p> {
   /* Free Trial Badge */ 
-}<div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full"> <span className="text-green-400 text-sm font-medium"> 🚀 Free Trial Available </span> </div> </div> {
+}<div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full"> <span className="text-green-400 text-sm font-medium">  Free Trial Available </span> </div> </div> {
   /* What You Get Section */ 
-}<div className="bg-zinc-800/30 rounded-lg p-4 border border-zinc-700/30"> <h3 className="text-sm font-semibold text-zinc-300 mb-3">What you'll get:</h3> <ul className="space-y-2 text-sm text-zinc-400"> <li className="flex items-center gap-2"> <span className="text-green-400">✓</span> Launch new instances in minutes </li> <li className="flex items-center gap-2"> <span className="text-green-400">✓</span> Access to marketplace templates </li> <li className="flex items-center gap-2"> <span className="text-green-400">✓</span> Governance and identity tools </li> <li className="flex items-center gap-2"> <span className="text-green-400">✓</span> Full admin dashboard access </li> </ul> </div> <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50"> <form onSubmit= {
+}<div className="bg-zinc-800/30 rounded-lg p-4 border border-zinc-700/30"> <h3 className="text-sm font-semibold text-zinc-300 mb-3">What you'll get:</h3> <ul className="space-y-2 text-sm text-zinc-400"> <li className="flex items-center gap-2"> <span className="text-green-400"></span> Launch new instances in minutes </li> <li className="flex items-center gap-2"> <span className="text-green-400"></span> Access to marketplace templates </li> <li className="flex items-center gap-2"> <span className="text-green-400"></span> Governance and identity tools </li> <li className="flex items-center gap-2"> <span className="text-green-400"></span> Full admin dashboard access </li> </ul> </div> <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50"> <form onSubmit= {
   handleSubmit 
 }className="space-y-6"> {
   error && (<div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3"> <p className="text-red-400 text-sm"> {

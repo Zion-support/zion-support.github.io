@@ -27,4 +27,3 @@ const Analytics = ({ className }) => {
   );
 };
 
-export default Analytics;

@@ -9,4 +9,3 @@ const Projects = ({ className }) => {
   );
 };
 
-export default Projects;

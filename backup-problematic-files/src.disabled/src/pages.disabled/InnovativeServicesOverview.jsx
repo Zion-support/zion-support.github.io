@@ -9,4 +9,3 @@ const InnovativeServicesOverview = ({ className }) => {
   );
 };
 
-export default InnovativeServicesOverview;

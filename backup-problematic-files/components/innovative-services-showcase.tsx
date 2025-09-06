@@ -41,7 +41,7 @@ export default function InnovativeServicesShowcase() {;
   },;
   const featuredServices = [;
     {;
-      title: '🔐 Quantum Internet Security Platform',;
+      title: ' Quantum Internet Security Platform',;
       description: 'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.',;
       price: '$8,999/month',;
       marketData: '$150B cybersecurity market, 300% annual growth',;
@@ -52,7 +52,7 @@ export default function InnovativeServicesShowcase() {;
       color: 'from-indigo-600 to-purple-700';
     },;
     {;
-      title: '🧬 AI-Powered Quantum Drug Discovery',;
+      title: ' AI-Powered Quantum Drug Discovery',;
       description: 'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.',;
       price: '$12,999/month',;
       marketData: '$150B AI in healthcare, 400% annual growth',;
@@ -63,7 +63,7 @@ export default function InnovativeServicesShowcase() {;
       color: 'from-emerald-600 to-teal-700';
     },;
     {;
-      title: '💰 Autonomous Quantum Trading System',;
+      title: ' Autonomous Quantum Trading System',;
       description: 'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.',;
       price: '$15,999/month',;
       marketData: '$15T algorithmic trading, 200% annual growth',;
@@ -74,7 +74,7 @@ export default function InnovativeServicesShowcase() {;
       color: 'from-yellow-600 to-orange-700';
     },;
     {;
-      title: '🧠 Neural Interface Development Platform',;
+      title: ' Neural Interface Development Platform',;
       description: 'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.',;
       price: '$19,999/month',;
       marketData: '$5B neural interface market, 500% annual growth',;
@@ -253,7 +253,7 @@ export default function InnovativeServicesShowcase() {;
                       {service.price}
                       <span className="text-sm text-gray-400">{service.period}</span>
                     </div>
-                    <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
+                    <div className="text-sm text-gray-400 mb-4">{service.marketSize}  {service.growthRate}</div>
                     <a
                       href={service.link}
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"
@@ -323,7 +323,7 @@ export default function InnovativeServicesShowcase() {;
                       {service.price}
                       <span className="text-sm text-gray-400">{service.period}</span>
                     </div>
-                    <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
+                    <div className="text-sm text-gray-400 mb-4">{service.marketSize}  {service.growthRate}</div>
                     <a
                       href={service.link}
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"

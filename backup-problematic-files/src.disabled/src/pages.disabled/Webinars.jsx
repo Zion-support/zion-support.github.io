@@ -9,4 +9,3 @@ const Webinars = ({ className }) => {
   );
 };
 
-export default Webinars;

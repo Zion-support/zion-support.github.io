@@ -9,4 +9,3 @@ const MobileNavigation.js = ({ className }) => {
   );
 };
 
-export default MobileNavigation.js;

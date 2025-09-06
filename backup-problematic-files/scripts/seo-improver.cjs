@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
+=======
+=======
+>>>>>>> pr-12166
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require("child_process")
@@ -35,6 +42,15 @@ Allow: /contact"
 // console.log(" Meta tags configuration created")
 <<<<<<< HEAD
     console.log(" SEO improvement completed!")
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(" SEO improvement completed!")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+    console.log(" SEO improvement completed!")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

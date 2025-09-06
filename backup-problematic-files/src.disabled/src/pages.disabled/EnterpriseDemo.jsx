@@ -9,4 +9,3 @@ const EnterpriseDemo = ({ className }) => {
   );
 };
 
-export default EnterpriseDemo;

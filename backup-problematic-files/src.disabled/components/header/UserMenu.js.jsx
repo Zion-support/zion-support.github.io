@@ -9,4 +9,3 @@ const UserMenu.js = ({ className }) => {
   );
 };
 
-export default UserMenu.js;

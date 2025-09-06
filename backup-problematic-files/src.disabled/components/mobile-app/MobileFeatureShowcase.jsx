@@ -9,4 +9,3 @@ const MobileFeatureShowcase = ({ className }) => {
   );
 };
 
-export default MobileFeatureShowcase;

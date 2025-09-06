@@ -9,4 +9,3 @@ const AIAutonomousHealthcarePhysician.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousHealthcarePhysician.js;

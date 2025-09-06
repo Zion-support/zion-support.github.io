@@ -1,5 +1,3 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -15,10 +13,14 @@ const SustainableTechnologyPractices: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-
-
   )
 }
+export default SustainableTechnologyPractices;
+
+},
+export default SustainableTechnologyPractices,
+
+
       <main>;
         <h1>SustainableTechnologyPractices</h1>;
         <p>This page is under construction.</p>;
@@ -27,6 +29,8 @@ const SustainableTechnologyPractices: NextPage = () => {
   ),;
 };
 export default SustainableTechnologyPractices;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > SustainableTechnologyPractices</h1>;
@@ -39,16 +43,3 @@ export default SustainableTechnologyPractices;
 ;
 
 
-
-export default SustainableTechnologyPractices
-
-  ),
-};
-
-export default SustainableTechnologyPractices;
-  )
-}
-export default SustainableTechnologyPractices;
-
-},
-export default SustainableTechnologyPractices,

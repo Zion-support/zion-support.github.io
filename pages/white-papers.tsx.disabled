@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 
 <:pages/white-papers.tsx.backup
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 <:pages/white-papers.tsx.backup
@@ -30,10 +37,14 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 const whitePapers = [;
   {}
@@ -109,29 +120,11 @@ const whitePapers = [;
     pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf""
 import { FileText, Download, Calendar, Eye } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
+=======
 <<<<<<< HEAD
-
-import React from 'react';
-
-import React from 'react';
-
-import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-
-import { motion } from 'framer-motion';
-
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
-
-import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-
+<<<<<<< HEAD
 =======
-=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 =======
 =======
@@ -142,11 +135,18 @@ import Link from 'next/link';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+<<<<<<< HEAD:pages/white-papers.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react';
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 =======
 
@@ -155,14 +155,18 @@ import React from 'react';
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -171,10 +175,13 @@ import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 ========
 import React, { useState } from 'react';
 import Head from 'next/head';
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -188,7 +195,23 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 >>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import Link from 'next/link';
+=======
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 import {
   FileText,
   Download,
@@ -202,6 +225,11 @@ import {
   Star,
   Clock,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <:pages/white-papers.tsx.backup
   Tag
 } from 'lucide-react';
@@ -211,6 +239,7 @@ import Layout from '../components/Layout';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -223,22 +252,50 @@ import Layout from '../components/Layout';
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
   Tag
 } from 'lucide-react';
 <<<<<<< HEAD
 import Layout from '../components/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+<<<<<<< HEAD
   Tag
 } from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> main
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 const whitePaperCategories = [
@@ -354,8 +411,11 @@ const stats = [
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> origin/main
+=======
 >>>>>>> main
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -367,6 +427,13 @@ import {
   ArrowRight, 
   Tag, 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 
   ExternalLink 
 } from 'lucide-react';
@@ -378,6 +445,7 @@ import {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
   ExternalLink 
 } from 'lucide-react';
@@ -387,20 +455,31 @@ import {
   Tag,
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 ========
   Tag,
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   ExternalLink 
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
 >>>>>>> main
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <:pages/white-papers.tsx.backup
@@ -416,7 +495,16 @@ import {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 const whitePapers = [
   {
@@ -426,10 +514,14 @@ const whitePapers = [
 
 =======
 <<<<<<< HEAD
+>>>>>>> main
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> main
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     author: "Dr. Sarah Chen",
     date: "2024-01-15",
     category: "Artificial Intelligence",
@@ -450,9 +542,12 @@ const whitePapers = [
 title: 'Cybersecurity Best Practices 2024',
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 title: 'Cybersecurity Best Practices 2024',
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 =======
 <<<<<<< HEAD
@@ -462,7 +557,10 @@ title: 'Cybersecurity Best Practices 2024',
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
     category: 'Cybersecurity',
     downloadCount: 1500,
@@ -471,10 +569,13 @@ title: 'Cybersecurity Best Practices 2024',
   }
 ;];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 ];
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 
 =======
@@ -496,6 +597,7 @@ title: 'Cybersecurity Best Practices 2024',
     description: "Discover how to leverage data analytics to drive business decisions and growth.",
     downloadCount: 750
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ];
@@ -520,11 +622,15 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 =======
+=======
+];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -534,7 +640,22 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+>>>>>>> main
+];
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 export default function WhitePapersPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -668,6 +789,8 @@ export default function WhitePapersPage() {
 <<<<<<< HEAD
 title="White Papers - Zion Tech Group"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     id: 3,
     title: "Cybersecurity in the Digital Age: Protecting Your Assets",
@@ -698,6 +821,7 @@ export default function WhitePapersPage() {
       title="White Papers - Zion Tech Group"
 
 =======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -714,7 +838,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
     >
@@ -740,10 +867,17 @@ export default function WhitePapersPage() {
                 </span>
               </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -761,15 +895,50 @@ export default function WhitePapersPage() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 In-depth research and insights on the latest technology trends and industry developments
 
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+  return (
+
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In-depth research and insights on the latest technology trends and industry developments
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+
   return (
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -786,7 +955,18 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
+>>>>>>> main
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -807,11 +987,17 @@ export default function WhitePapersPage() {
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <:pages/white-papers.tsx.backup
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -819,15 +1005,16 @@ export default function WhitePapersPage() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 
               </p>
-<<<<<<< HEAD
-=======
               
               <div className="mb-4">
                 <div className="flex items-center text-sm text-gray-600 mb-2">
@@ -858,6 +1045,9 @@ export default function WhitePapersPage() {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 <<<<<<< HEAD
@@ -870,12 +1060,16 @@ export default function WhitePapersPage() {
               </p>
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 <<<<<<< HEAD:pages/white-papers.tsx
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -890,24 +1084,37 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Access our comprehensive collection of technical white papers and research documents. 
+                Free downloads covering AI, cloud solutions, cybersecurity, and more.
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> origin/main
               </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </motion.div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
                 </motion.div>
 
                 </motion.div>
 
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> origin/main
 <<<<<<< HEAD
 </motion.div>
 =======
@@ -917,15 +1124,23 @@ export default function WhitePapersPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages/white-papers.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -1014,7 +1229,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
               ))}
             </div>
           </div>
@@ -1025,9 +1243,12 @@ export default function WhitePapersPage() {
 <section className="py-16 bg-gray-50">
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <section className="py-16 bg-gray-50">
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 =======
 <<<<<<< HEAD
@@ -1037,7 +1258,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Categories</h2>
@@ -1059,9 +1283,12 @@ export default function WhitePapersPage() {
                   <div className="text-2xl font-bold text-gray-900">{category.count}</div>
                   <div className="text-sm text-gray-500">papers</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 =======
 >>>>>>> main
@@ -1100,7 +1327,10 @@ export default function WhitePapersPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> main
 >>>>>>> main
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
                 </motion.div>
               ))}
             </div>
@@ -1108,10 +1338,22 @@ export default function WhitePapersPage() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
 </Link>
 
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1138,6 +1380,7 @@ export default function WhitePapersPage() {
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1159,7 +1402,19 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -1406,11 +1661,18 @@ export default function WhitePapersPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 
     </Layout>
 
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 </Layout>
@@ -1422,6 +1684,8 @@ export default function WhitePapersPage() {
 <<<<<<< HEAD
     </Layout>
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 <<<<<<< HEAD
     </Layout>
@@ -1430,20 +1694,33 @@ export default function WhitePapersPage() {
     </>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
 
 =======
 <<<<<<< HEAD
     </Layout>
 =======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -1477,8 +1754,11 @@ export default function WhitePapersPage() {
 
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> main
 >>>>>>> main
 <<<<<<< HEAD
@@ -1492,12 +1772,21 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
             </motion.div>
           </div>
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 
 <:pages/white-papers.tsx.backup
 
@@ -1513,6 +1802,7 @@ export default function WhitePapersPage() {
 
 =======
 <<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 <:pages/white-papers.tsx.backup
@@ -1539,6 +1829,11 @@ export default function WhitePapersPage() {
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 =======
@@ -1550,12 +1845,16 @@ export default function WhitePapersPage() {
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
     </>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -1575,6 +1874,23 @@ export default function WhitePapersPage() {
     </MainLayout>
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    </MainLayout>
+
+    </>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+=======
+    </MainLayout>
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   );
 }

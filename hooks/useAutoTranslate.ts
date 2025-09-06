@@ -1,26 +1,12 @@
-import { useEffect, useMemo, useState } from 'react';
-import { translateTextViaAI } from '../utils / translation';
 export type UseAutoTranslateResult = {
   translations: Record < string, string>;
   loading: boolean;
   error?: string;
 }
-import { useEffect, useMemo, useState } from 'react';
-import { translateTextViaAI } from '../utils/translation';
-export type UseAutoTranslateResult = {
-  translations: Record<string, string>;
-  loading: boolean,
-  error?: string
-};
-export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
-  const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
-  useEffect(() => {
-    if (!text || targets && targets.length === 0) {
       setTranslations({});
-      return
 ;
 export function useAutoTranslate (
   text: string,
@@ -43,9 +29,6 @@ if ( {) {
     let cancelled = false;
     const timer = set_timeout (async () => {
       try {
-        if (!cancelled) setTranslations(res)
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Translation failed')
         set_loading (true);
         set_error (undefined);
         const res = await translateTextViaAI (text, targets);
@@ -68,16 +51,14 @@ if ( {) {
   $2
 }
       }
-      clearTimeout(timer)
-    }, debounce_ms);
-;
-    return () => {
-      cancelled = true;
-      clear_timeout (timer);
     }
   }, [key, debounce_ms]);
 ;
   return { translations, loading, error }
+    }
+  }, [key, debounceMs]);
+  return { translations, loading, error }
+}
 }
     }
   }, [key, debounce_ms]);

@@ -1,5 +1,3 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -15,10 +13,14 @@ const Verify: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-
-
   )
 }
+export default Verify;
+
+},
+export default Verify,
+
+
       <main>;
         <h1>Verify</h1>;
         <p>This page is under construction.</p>;
@@ -27,6 +29,8 @@ const Verify: NextPage = () => {
   ),;
 };
 export default Verify;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > Verify</h1>;
@@ -39,16 +43,3 @@ export default Verify;
 ;
 
 
-
-export default Verify
-
-  ),
-};
-
-export default Verify;
-  )
-}
-export default Verify;
-
-},
-export default Verify,

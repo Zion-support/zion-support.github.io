@@ -1,32 +1,3 @@
-
-
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
-;
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-  const state = readState(),
-  const events = filterEventsByScope(state.events, state.config.scope),
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    treasuryTotals: {},
-    topContributors: [],
-    totalVoteCount: 0,
-    lastSyncedAt: Date.now()
-  });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-  const events = filterEventsByScope(state.events, state.config.scope),
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -43,6 +14,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
 
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
+;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -57,9 +42,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
-  const totalsByToken: Record<string, number> = {},
-  const contributionsBySubject: Record<string, number> = {},
-  let globalVotes = 0,
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
@@ -81,8 +63,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
   return res.status(200).json({
-}
-
     treasuryTotals: totalsByToken
     topContributors
     totalVoteCount: globalVotes
@@ -162,10 +142,12 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
+}
+}
 
 
 
       const p = e.payload as any,
 
-}
-}

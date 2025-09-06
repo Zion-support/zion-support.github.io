@@ -9,4 +9,3 @@ const TechnologyStackSection.js = ({ className }) => {
   );
 };
 
-export default TechnologyStackSection.js;

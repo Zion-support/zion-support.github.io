@@ -1,79 +1,3 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-
-export default [
-  {
-    files: ['src/App.tsx', 'src/main.tsx', 'src/components/Header.tsx', 'src/components/Footer.tsx', 'src/components/Sidebar.tsx', 'src/components/PerformanceMonitor.tsx', 'src/components/ErrorBoundary.tsx', 'src/pages/Home.tsx', 'src/pages/About.tsx', 'src/pages/Services.tsx', 'src/pages/Pricing.tsx', 'src/pages/Contact.tsx'],
-    ignores: [
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-      'coverage/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**',
-      'automation/**',
-      'backup-merge-conflicts/**',
-      '**/*.backup.*',
-      '**/*.old.*',
-      '**/*.disabled.*',
-      '**/*.broken.*',
-      '**/*.corrupted.*',
-      '**/*.temp.*',
-      '**/*.test.*',
-      '**/*.spec.*',
-      '**/performance-*.txt',
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/zion-academy/**',
-      '**/zion-film/**',
-      '**/zion-ai-assistant/**',
-      '**/*.min.js',
-      '**/*.bundle.js',
-      '**/public/**',
-      '**/static/**',
-      'temp_exclude/**',
-      'temp_backup/**',
-      'temp_broken_files/**',
-      'temp_components/**',
-      'temp_conflicts/**',
-      'tests/**',
-      'types/**',
-      'utils/**',
-      'ultimate-*.cjs',
-      'zion-website/**',
-      'zion_academy/**',
-      'src_backup/**',
-      'supabase/**',
-      'start-dev.js',
-      'structural-fix.js',
-      'super-syntax-fixer.cjs',
-      'system-monitor.cjs',
-      'test-next.js',
-      'types/service-variants.js',
-    ],
-    languageOptions: {
-      parser: tsparser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
@@ -82,25 +6,12 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
-        afterAll: 'readonly',
-      },
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      'jsx-a11y': jsxA11y,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
@@ -108,41 +19,22 @@ export default [
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
     },
     settings: {
       react: {
-        version: 'detect',
-      },
-    },
+        version: 'detect'
+      }
+    }
   },
   {
     files: [
       '**/*.cjs',
       '**/scripts/**/*.js',
       '**/automation/**/*.js',
-      '**/pm2/**/*.js',
+      '**/pm2/**/*.js'
     ],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'script',
       globals: {
         ...globals.node,
-        console: 'readonly',
-        process: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly',
-      },
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'no-undef': 'error',
-    },
-  },
-];

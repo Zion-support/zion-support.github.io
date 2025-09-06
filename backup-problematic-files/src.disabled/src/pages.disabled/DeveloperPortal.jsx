@@ -9,4 +9,3 @@ const DeveloperPortal = ({ className }) => {
   );
 };
 
-export default DeveloperPortal;

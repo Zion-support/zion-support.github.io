@@ -27,4 +27,3 @@ const ServicesShowcase = ({ className }) => {
   );
 };
 
-export default ServicesShowcase;

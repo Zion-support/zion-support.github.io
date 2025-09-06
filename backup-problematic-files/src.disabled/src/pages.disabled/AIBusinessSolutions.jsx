@@ -9,4 +9,3 @@ const AIBusinessSolutions = ({ className }) => {
   );
 };
 
-export default AIBusinessSolutions;

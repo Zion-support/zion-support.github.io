@@ -9,4 +9,3 @@ const LoadingSpinner.js = ({ className }) => {
   );
 };
 
-export default LoadingSpinner.js;

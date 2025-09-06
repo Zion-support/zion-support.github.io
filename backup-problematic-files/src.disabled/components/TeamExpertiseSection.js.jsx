@@ -9,4 +9,3 @@ const TeamExpertiseSection.js = ({ className }) => {
   );
 };
 
-export default TeamExpertiseSection.js;

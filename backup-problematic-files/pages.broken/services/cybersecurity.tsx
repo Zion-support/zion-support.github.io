@@ -13,4 +13,3 @@ const Cybersecurity: React.FC<CybersecurityProps> = ({ className }) => {
     </div>
   );
 }
-}

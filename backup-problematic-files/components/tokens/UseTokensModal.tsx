@@ -75,7 +75,7 @@ export default function UseTokensModal({;
           <div className="text-sm">
             <div className="mb-1">Wallet</div>
             {account ? (
-              <div className="rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2">Connected: {account.slice(0, 6)}…{account.slice(-4)}</div>
+              <div className="rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2">Connected: {account.slice(0, 6)}{account.slice(-4)}</div>
             ) : (
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
             )}
@@ -117,7 +117,7 @@ export default function UseTokensModal({;
           <div className="text-sm">;
             <div className="mb-1">Wallet</div>;
             {account ? (;
-              <div className="rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2">Connected: {account.slice(0, 6)}…{account.slice(-4)}</div>;
+              <div className="rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2">Connected: {account.slice(0, 6)}{account.slice(-4)}</div>;
             ) : (;
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>;
             )}

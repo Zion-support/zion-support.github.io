@@ -287,7 +287,7 @@ export default function EnhancedFooter() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
+               {currentYear} Zion Tech Group. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6 text-sm text-gray-400">
@@ -334,7 +334,7 @@ export default function EnhancedFooter() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">;
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">;
             <div className="text-gray-400 text-sm">;
-              © {currentYear} Zion Tech Group. All rights reserved.;
+               {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
             <div className="flex items-center space-x-6 text-sm text-gray-400">;
               <a href="/terms" className="hover: text-cyan-400 transition-colors duration-200">;

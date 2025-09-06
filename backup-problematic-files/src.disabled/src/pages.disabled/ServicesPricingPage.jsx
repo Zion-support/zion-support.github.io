@@ -9,4 +9,3 @@ const ServicesPricingPage = ({ className }) => {
   );
 };
 
-export default ServicesPricingPage;

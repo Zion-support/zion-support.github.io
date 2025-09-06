@@ -9,4 +9,3 @@ const AIAutonomousNetworkSecurity = ({ className }) => {
   );
 };
 
-export default AIAutonomousNetworkSecurity;

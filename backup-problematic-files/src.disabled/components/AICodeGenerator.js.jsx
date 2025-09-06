@@ -9,4 +9,3 @@ const AICodeGenerator.js = ({ className }) => {
   );
 };
 
-export default AICodeGenerator.js;

@@ -1,12 +1,5 @@
 ;
 interface PerformanceMetrics {
-  loadTime: number, firstContentfulPaint: number
-  largestContentfulPaint: number, firstInputDelay: number
-  cumulativeLayoutShift: number
-}
-export function usePerformanceMonitor() {
-
-export function usePerformanceMonitor() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -18,9 +11,6 @@ export function usePerformanceMonitor() {;
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
 
       const entries = list && list.getEntries();
       
@@ -32,34 +22,9 @@ export function usePerformanceMonitor() {;
             loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
-        if (entry && entry.entryType === 'paint') {
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
-              ...prev,
-              firstContentfulPaint: paintEntry && paintEntry.startTime,
-            }));
-          }
-        }
-        if (entry && entry.entryType === 'largest-contentful-paint') {
-          const lcpEntry = entry as PerformanceEntry;
-          setMetrics(prev => ({
-            ...prev,
-            largestContentfulPaint: lcpEntry && lcpEntry.startTime,
-          }));
-        }
-        if (entry && entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({
-            ...prev,
-            firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
-          }));
-        }
-        if (entry && entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
-          setMetrics(prev => ({
-            ...prev,
-            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -146,11 +111,10 @@ if ( {) {
         }
       });
     });
-      observer && observer.disconnect();
-    };
   }, []);
   return { metrics, isSupported }
 }
+
 ;
     // Observe different performance entry types;
     try {
@@ -165,4 +129,3 @@ if ( {) {
   }, []);
 ;
   return { metrics, is_supported }
-}

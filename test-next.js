@@ -1,5 +1,3 @@
-
-const { execSync } = require('child_process');
 console.log('Testing Next.js installation...');
 try {// Check if Next.js is installed;
   const nextVersion = execSync('npx next --version', { encoding: 'utf8' });
@@ -11,6 +9,8 @@ try {// Check if Next.js is installed;
 } catch (error) {console.error('Error:', error.message);
 const { execSync } = require('child_process'),;
 const { execSync } = require('child_process');
+
+
 console.log('Testing Next.js installation...'),;
 try {;
   // Check if Next.js is installed;

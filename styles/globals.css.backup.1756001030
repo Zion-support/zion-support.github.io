@@ -4,10 +4,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -28,14 +32,22 @@
 >>>>>>> main
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 /* CSS Variables for modern theming */
 
@@ -47,6 +59,7 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,23 +68,14 @@
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/main
 /* CSS Variables for modern theming */
-=======
 /* Enhanced Futuristic Design System with Superior Contrast */
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
-<<<<<<< HEAD
-:root {
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 :root {
 /* CSS Variables for modern theming */:root {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
 /* CSS Variables for modern theming */:root {
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
@@ -80,8 +84,13 @@
 >>>>>>> main
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   --background: #000000;
   --foreground: #ffffff;
   --primary: #3b82f6;
@@ -146,19 +155,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 /* Enhanced Selection */
 ::selection {
   background: rgba(0, 255, 255, 0.4);
+=======
+  color: white;
+>>>>>>> origin/main
   color: white;
 /* Enhanced Selection */
 ::selection {
   background: rgba(0, 255, 255, 0.4);  color: white;
+<<<<<<< HEAD
 
 /* Enhanced Selection */
 ::selection {
@@ -325,9 +343,12 @@ input, textarea, select {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
 =======
@@ -520,8 +541,16 @@ input, textarea, select {
 >>>>>>> main
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);  color: white;
+>>>>>>> origin/main
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 

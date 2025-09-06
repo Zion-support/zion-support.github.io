@@ -42,7 +42,7 @@ export default function PricingComparisonPage() {;
         'AI-powered content generationMultiple content formatsSEO optimizationTeam collaborationAPI accessCustom templates';
       ],;
       color: 'from-purple-500 to-indigo-600',;
-      icon: '🤖';
+      icon: '';
     },;
     {;
       service: 'Cloud Monitoring',;
@@ -81,7 +81,7 @@ export default function PricingComparisonPage() {;
         'Real-time monitoringMulti-cloud supportAI-powered alertingAdvanced analyticsCustom dashboardsAPI access';
       ],;
       color: 'from-green-500 to-emerald-600',;
-      icon: '☁️';
+      icon: '';
     },;
     {;
       service: 'DevOps Automation',;
@@ -120,7 +120,7 @@ export default function PricingComparisonPage() {;
         'CI/CD pipelinesInfrastructure as CodeSecurity automationMulti-cloud deploymentTeam collaborationCustom integrations';
       ],;
       color: 'from-blue-500 to-cyan-600',;
-      icon: '🚀';
+      icon: '';
     }
   ],
 

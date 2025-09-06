@@ -9,4 +9,3 @@ const AIAutonomousWriting = ({ className }) => {
   );
 };
 
-export default AIAutonomousWriting;

@@ -9,4 +9,3 @@ const HelpCenterPage = ({ className }) => {
   );
 };
 
-export default HelpCenterPage;

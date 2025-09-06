@@ -1,14 +1,29 @@
+export type WatchlistMatch = {
+export type WatchlistMatch = {;
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+  name: string;
+  score: number; // 0-1 match confidence
+  referenceId?: string;
+  detailsUrl?: string;
+
 
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
 
   score: number; // 0 - 1 match confidence;
-export type AmlCheckResult = {
+  reference_id?: string;
+  details_url?: string;
+}
+;
 
+export type AmlCheckResult = {
 };
 
 export type AmlCheckResult = {;
-
+export type WatchlistMatch = {
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+  name: string;
+export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
@@ -22,10 +37,11 @@ export interface AmlProvider {;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 
 }
+export interface AmlProvider {
+  check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult>;
+  check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
+}
 class MockAmlProvider implements AmlProvider {
-    const name = params && params.fullLegalName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } };
 // AML (Anti-Money Laundering) utilities
 export interface AmlCheck {
   id: string;
@@ -45,6 +61,7 @@ export interface AmlCheck {
   completedAt?: string;
   expiresAt: string;
 }
+
 export interface AmlProfile {
   userId: string;
   fullName: string;
@@ -62,6 +79,7 @@ export interface AmlProfile {
   flags: string[];
   notes?: string;
 }
+
 export interface AmlConfig {
   enabled: boolean;
   providers: {
@@ -81,10 +99,12 @@ export interface AmlConfig {
   checkInterval: number; // days
   retentionPeriod: number; // days
 }
+
 class AmlManager {
   private profiles: Map<string, AmlProfile> = new Map();
   private checks: Map<string, AmlCheck> = new Map();
   private config: AmlConfig;
+
   constructor() {
     this.config = {
       enabled: true,
@@ -106,6 +126,7 @@ class AmlManager {
       retentionPeriod: 365
     };
   }
+
   // Profile methods
   async createProfile(userId: string, fullName: string, additionalData?: Partial<AmlProfile>): Promise<AmlProfile> {
     const profile: AmlProfile = {
@@ -119,73 +140,43 @@ class AmlManager {
       flags: [],
       ...additionalData
     };
+
     this.profiles.set(userId, profile);
     return profile;
   }
+
   async getProfile(userId: string): Promise<AmlProfile | null> {
     return this.profiles.get(userId) || null;
   }
+
   async updateProfile(userId: string, updates: Partial<AmlProfile>): Promise<AmlProfile | null> {
     const profile = this.profiles.get(userId);
     if (!profile) return null;
+
     const updatedProfile = { ...profile, ...updates };
     this.profiles.set(userId, updatedProfile);
     return updatedProfile;
   }
+
   // Check methods
   async runAmlCheck(userId: string, checkType: AmlCheck['checkType']): Promise<AmlCheck> {
     const profile = this.profiles.get(userId);
     if (!profile) {
       throw new Error('Profile not found');
-export type WatchlistMatch = {
-export type WatchlistMatch = {;
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-  name: string;
-  score: number; // 0-1 match confidence
-  referenceId?: string;
-  detailsUrl?: string;
-}
-export type AmlCheckResult = {
-};
-
-export type AmlCheckResult = {;
-  status: 'clear' | 'match' | 'review' | 'unknown';
-  matches: WatchlistMatch[];
-  checkedAt: string; // ISO
-  provider: 'mock' | 'remote';
-}
-export interface AmlProvider {
-};
-export interface AmlProvider {;
-  checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
-  checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
-}
-class MockAmlProvider implements AmlProvider {
-  async checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-    const name = params.fullLegalName.toLowerCase();
-    if (name.includes('test') |name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } }
     }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
-    const name = params.businessName.toLowerCase();
-    if (name.includes('test') |name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } }
     }
     return { status: 'clear' }
   }
 }
-
-export function getAmlProvider (): AmlProvider {
-  return new MockAmlProvider ();
-}
-export function getAmlProvider(): AmlProvider {
-  return new MockAmlProvider();
 }
 
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
+}
+export function getAmlProvider (): AmlProvider {
+  return new MockAmlProvider ();
 }

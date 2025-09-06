@@ -9,4 +9,3 @@ const 404 = ({ className }) => {
   );
 };
 
-export default 404;

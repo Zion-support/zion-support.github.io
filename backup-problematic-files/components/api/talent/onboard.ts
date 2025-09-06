@@ -27,7 +27,7 @@ async function summarizeAndTag(input: {;
       .map((s) => s.toLowerCase());
   )),;
   if (!openaiApiKey) {;
-    const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,;
+    const summary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`,;
     return { summary, tags: basicTags.slice(0, 24) }
   }
 ;
@@ -54,7 +54,7 @@ async function summarizeAndTag(input: {;
     // ignore and fallback;
   }
 ;
-  const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,;
+  const fallbackSummary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`,;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 }
 ;

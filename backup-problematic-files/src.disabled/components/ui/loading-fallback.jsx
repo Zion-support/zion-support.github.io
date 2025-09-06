@@ -9,4 +9,3 @@ const Loading-fallback = ({ className }) => {
   );
 };
 
-export default Loading-fallback;

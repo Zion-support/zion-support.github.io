@@ -9,4 +9,3 @@ const FeatureCTAsSection = ({ className }) => {
   );
 };
 
-export default FeatureCTAsSection;

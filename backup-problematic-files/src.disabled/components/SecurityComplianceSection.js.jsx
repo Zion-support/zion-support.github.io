@@ -9,4 +9,3 @@ const SecurityComplianceSection.js = ({ className }) => {
   );
 };
 
-export default SecurityComplianceSection.js;

@@ -5,16 +5,6 @@ import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrenc
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { Settings, 
-  Brain, 
-  Shield, 
-  BarChart3, 
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
 import {
   Settings,
   Brain,
@@ -26,14 +16,11 @@ import {
   Wrench,
   Activity,
   Database,
-  FileText,
   Users;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-    title: 'Smart Factory Solutions,',
-    description: 'IoT-enabled manufacturing systems for intelligent production management.,',
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -185,14 +172,10 @@ export default function ManufacturingPage() {;
           </div>;
         </section>;
 ];
-export default function ManufacturingPage() {
   return (
     <Layout
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
-      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -204,40 +187,6 @@ export default function ManufacturingPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <div className="flex items-center justify-center mb-6">
-                <Settings className="w-12 h-12 text-blue-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Manufacturing
-                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Technology Solutions
-                  </span>
-                </h1>
-              </div>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize manufacturing with Industry 4.0 technologies including smart factories,
-                IoT networks, predictive maintenance, and digital twin solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Manufacturing Consultation
-                </Link>
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View Manufacturing Case Studies
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Services Section */}
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -576,4 +525,3 @@ export default function ManufacturingPage() {
   );
 };
 
-export default Manufacturing;

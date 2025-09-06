@@ -1,9 +1,9 @@
 
+
 export interface Job {;
 
 
 export interface Job {
-export interface Job {;
   id: string;
   title: string;
   description: string;
@@ -11,12 +11,6 @@ export interface Job {;
   budget?: string;
   client_id: string
 }
-
-
-
-export interface ApplyToJobModalProps {
-  job: Job;
-  isOpen: boolean;
 
 export interface ApplyToJobModalProps {;
   job: Job;
@@ -42,7 +36,5 @@ export interface ApplyToJobModalProps {;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
-;
-
-;
-;
+export interface ApplyToJobModalProps {
+  job: Job;

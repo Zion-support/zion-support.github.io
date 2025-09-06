@@ -27,4 +27,3 @@ const ScrollToTop = ({ className }) => {
   );
 };
 
-export default ScrollToTop;

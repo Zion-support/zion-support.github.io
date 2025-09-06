@@ -9,4 +9,3 @@ const UltraFuturisticBackground2034.js = ({ className }) => {
   );
 };
 
-export default UltraFuturisticBackground2034.js;

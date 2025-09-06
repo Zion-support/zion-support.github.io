@@ -80,6 +80,7 @@ const footerSections: FooterSection[] = [
 
 const socialLinks = [
 <<<<<<< HEAD
+<<<<<<< HEAD
   { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
   { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
   { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
@@ -102,6 +103,10 @@ const quickLinks = [
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 ];
 
+=======
+];
+
+>>>>>>> origin/main
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -350,6 +355,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -399,11 +405,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 </Link>
                 <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+=======
+>>>>>>> origin/main
                   Privacy Policy
                 </Link> | 
                 <Link href="/terms" className="hover:text-white transition-colors duration-200 ml-2">
                   Terms of Service
                 </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
               
@@ -433,6 +442,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 </Link>
               </motion.div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+=======
+>>>>>>> origin/main
             </div>
           </div>
         </motion.div>

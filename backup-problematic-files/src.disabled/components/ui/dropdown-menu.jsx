@@ -9,4 +9,3 @@ const Dropdown-menu = ({ className }) => {
   );
 };
 
-export default Dropdown-menu;

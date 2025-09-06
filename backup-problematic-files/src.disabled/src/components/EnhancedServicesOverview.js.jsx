@@ -9,4 +9,3 @@ const EnhancedServicesOverview.js = ({ className }) => {
   );
 };
 
-export default EnhancedServicesOverview.js;

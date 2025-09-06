@@ -9,4 +9,3 @@ const AIAutonomousCreativeDirector.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousCreativeDirector.js;

@@ -9,4 +9,3 @@ const FinancialSolutions = ({ className }) => {
   );
 };
 
-export default FinancialSolutions;

@@ -9,4 +9,3 @@ const ServiceTypeStep = ({ className }) => {
   );
 };
 
-export default ServiceTypeStep;

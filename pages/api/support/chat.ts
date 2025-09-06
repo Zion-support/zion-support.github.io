@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-import { readJson } from "../../../utils/fsDb";
-import { HelpArticle, matchIntent } from "../../../utils/support";
-import { logSupportEventToOperator } from "../../../utils/operator";
-const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
->>>>>>> main
 
   const { sessionId, messages } = req.body as {
     sessionId?: string;
@@ -82,18 +62,9 @@ export default async function handler(
       },
     });
   } catch (e: any) {
-<<<<<<< HEAD
-    return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
     return res.status(200).json({
       assistantMessage:
         "I could not reach the assistant right now. Please try again in a moment.",
     });
->>>>>>> main
   }
 }

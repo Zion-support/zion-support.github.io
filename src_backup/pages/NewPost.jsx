@@ -17,7 +17,6 @@ function NewPost() {
 }
 
 
-}
 import React from 'react';
 export default function NewPost() {;
   return (;
@@ -26,8 +25,7 @@ export default function NewPost() {;
       <p>Component placeholder - needs implementation</p>;
     </div>;
   );
+}
+;
 
-}
-;
-}
-;
+

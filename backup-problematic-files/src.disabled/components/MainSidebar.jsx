@@ -9,4 +9,3 @@ const MainSidebar = ({ className }) => {
   );
 };
 
-export default MainSidebar;

@@ -9,4 +9,3 @@ const ReplyForm.js = ({ className }) => {
   );
 };
 
-export default ReplyForm.js;

@@ -9,4 +9,3 @@ const EnhancedServicesPage = ({ className }) => {
   );
 };
 
-export default EnhancedServicesPage;

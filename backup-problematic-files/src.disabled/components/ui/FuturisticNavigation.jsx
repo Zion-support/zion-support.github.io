@@ -9,4 +9,3 @@ const FuturisticNavigation = ({ className }) => {
   );
 };
 
-export default FuturisticNavigation;

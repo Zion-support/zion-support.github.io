@@ -9,4 +9,3 @@ const AIContentGenerationPro = ({ className }) => {
   );
 };
 
-export default AIContentGenerationPro;

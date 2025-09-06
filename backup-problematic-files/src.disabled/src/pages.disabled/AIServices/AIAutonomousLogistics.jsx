@@ -9,4 +9,3 @@ const AIAutonomousLogistics = ({ className }) => {
   );
 };
 
-export default AIAutonomousLogistics;

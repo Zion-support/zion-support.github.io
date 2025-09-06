@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,7 +38,15 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-syntax-fixer.cjs
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 const fs = require("$1");
 const path = require("path");
@@ -39,6 +57,16 @@ class RobustSyntaxFixer {;}
     this.errors = [],};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,7 +98,15 @@ class RobustSyntaxFixer {;}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-syntax-fixer.cjs
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   log(message) {;}
     console.log(`[${new Date().toISOString()}] ${message}`),};
 ;
@@ -188,6 +224,16 @@ class RobustSyntaxFixer {
 if (require.main === module) {;}
   const fixer = new RobustSyntaxFixer();
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,7 +265,15 @@ if (require.main === module) {;}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-syntax-fixer.cjs
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   fixer.fixAllFiles().then(result => {;})
     console.log("Robust syntax fixing "completed": ", result);
     process.exit(0),}).catch(error => {;})
@@ -227,6 +281,9 @@ if (require.main === module) {;}
     process.exit(1),}),};
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
+=======
 =======
 ;
 <<<<<<< HEAD
@@ -241,6 +298,19 @@ module.exports = RobustSyntaxFixer);
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+module.exports = RobustSyntaxFixer);
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+>>>>>>> pr-12166
 <<<<<<< HEAD
 module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
 =======
@@ -262,4 +332,13 @@ module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/robust-syntax-fixer.cjs
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

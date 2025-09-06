@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -12,7 +6,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   const statCards = [
     {
-      title: "Total Referrals"
       value: stats.totalReferrals
       icon: <Share className="h-5 w-5 text-muted-foreground" />
       description: "People you've invited"
@@ -35,44 +28,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
-=======
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
-import { ReferralStats, as, ReferralStatsType  } from '@/types / referrals';
-import { Award, Share, Star, TrendingUp  } from './lucide-react';
-interface ReferralStatsProps {
-  stats: ReferralStatsType;
-  is_loading: boolean;
-}
-export /**
- * ReferralStats - Function description
- */
-function ReferralStats() {
-  const stat_cards = [;
-    {
-      title: "Total Referrals",
-      value: stats.total_referrals,
-      icon: <Share className="h - 5 w - 5 text - muted - foreground" />,
-      description: "People you've invited",
-    },
-    {
-      title: "Completed",
-      value: stats.completed_referrals,
-      icon: <Star className="h - 5 w - 5 text - muted - foreground" />,
-      description: "Signed up & completed onboarding",
-    },
-    {
-      title: "Pending",
-      value: stats.pending_referrals,
-      icon: <TrendingUp className="h - 5 w - 5 text - muted - foreground" />,
-      description: "Not yet completed onboarding",
-    },
-    {
-      title: "Total Rewards",
-      value: stats.total_rewards > 0 ? `$${stats.total_rewards.to_fixed (2)}` : "-",
-      icon: <Award className="h - 5 w - 5 text - muted - foreground" />,
-      description: "Credits earned from referrals",
-    },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -90,19 +45,9 @@ function ReferralStats() {
                 <div className="text - 2xl font - bold">{card.value}</div>;
                 <p className="text - xs text - muted - foreground">;
                   {card.description}
-
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
-import {Award, Share, Star, TrendingUp} from "lucide-react";
-
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats, as, ReferralStatsType } from "@/types/referrals";
 import { Award, Share, Star, TrendingUp } from "lucide-react";
->>>>>>> main
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean;
@@ -154,15 +99,10 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
                   {card.description}
                 </p>
               </>
-<<<<<<< HEAD
-=======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
 import { Award, Share, Star, TrendingUp } from "lucide-react",;
 
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
-import {Award, Share, Star, TrendingUp} from "lucide-react";
 interface ReferralStatsProps {;
   stats: ReferralStatsType,;
   isLoading: boolean;
@@ -210,43 +150,11 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
         </Card>;
       ))}
 
-    </div>;
-  );
+  )
 }
-
-=======
                 </p>;
               </>)}
           </CardContent>;
         </Card>))}
     </div>);
 }
-    </div>
-  );
-}
-;
-
-  ),;}
- interface ReferralStatsProps {
-  stats: ReferralStatsType;
-isLoading: boolean 
-}stats, isLoading 
-}: ReferralStatsProps) {
-  const statCards = [ {
-  icon: <Award className="h-5 w-5 text-muted-foreground" />;
-description: "Credits earned from referrals" 
-}];
-}</CardContent> </Card>) ) 
-}</div>) 
-}
-              </>;
-            )}
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  );
-}
-  )
-}
-;

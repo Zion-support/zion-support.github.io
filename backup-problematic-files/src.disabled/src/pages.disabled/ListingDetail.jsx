@@ -27,4 +27,3 @@ const ListingDetail = ({ className }) => {
   );
 };
 
-export default ListingDetail;

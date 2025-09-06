@@ -1,8 +1,8 @@
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = [];
@@ -133,57 +133,8 @@ class MergeConflictResolver {
 const resolver = new MergeConflictResolver();
 resolver.resolveMergeConflicts().catch(console.error);
 module.exports = MergeConflictResolver;
-=======
 
 <<<<<<< HEAD
-console.log('🔧 Starting comprehensive merge conflict resolution...');
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
-    // Remove merge conflict markers and keep the HEAD version (first part)
-    content = content.replace(/[\s\S]*?
-      // Extract only the HEAD part (before 
-    
-    // Handle incomplete conflicts (missing closing markers)
-    content = content.replace(/[\s\S]*?
-=======
-console.log('🚀 Starting comprehensive merge conflict resolution...');
-
-// Function to resolve modify/delete conflicts by removing the files
-function resolveModifyDeleteConflicts() {
-  console.log('📁 Resolving modify/delete conflicts...');
-  
-  try {
-    // Get list of conflicted files
-    const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
-    const conflictedFiles = statusOutput
-      .split('\n')
-      .filter(line => line.includes('CONFLICT (modify/delete)'))
-      .map(line => line.split(' ').pop())
-      .filter(file => file && !file.includes('temp_conflicts/'));
-    
-    console.log(`Found ${conflictedFiles.length} modify/delete conflicts`);
-    
-    // Remove the conflicted files (they were deleted in main)
-    conflictedFiles.forEach(file => {
-      if (fs.existsSync(file)) {
-        console.log(`Removing ${file} (deleted in main)`);
-        fs.unlinkSync(file);
-        execSync(`git add ${file}`);
-      }
-    });
-    
-    return conflictedFiles.length;
-  } catch (error) {
-    console.error('Error resolving modify/delete conflicts:', error.message);
-    return 0;
-  }
-}
-
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {
   console.log('📝 Resolving content conflicts...');
@@ -377,5 +328,10 @@ main();
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

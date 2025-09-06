@@ -27,4 +27,3 @@ const CommunityTrust = ({ className }) => {
   );
 };
 
-export default CommunityTrust;

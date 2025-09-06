@@ -9,4 +9,3 @@ const Accordion = ({ className }) => {
   );
 };
 
-export default Accordion;

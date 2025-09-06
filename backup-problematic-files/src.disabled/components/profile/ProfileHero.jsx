@@ -27,4 +27,3 @@ const ProfileHero = ({ className }) => {
   );
 };
 
-export default ProfileHero;

@@ -1,16 +1,3 @@
-import Head from 'next/head';
-import React from 'react';
-export default function ManifestoPage(): JSX.Element {
-  return (
-    <>
-      <Head>
-        <title>Zion Manifesto</title>
-
-
-
-
-
-        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -18,7 +5,6 @@ export default function ManifestoPage(): JSX.Element {
           <header className="mb-12">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Manifesto</h1>
             <p className="mt-4 text-lg text-gray-700">
-              A public commitment to build an AI-native, trustless, and talent-first marketplace—in service of human sovereignty.
             </p>
           </header>
           <section className="prose prose-gray max-w-none">
@@ -51,7 +37,6 @@ export default function ManifestoPage(): JSX.Element {
             <p>
               Zion evolves from a product into a protocol: identity, reputation, escrow, and discovery as shared public goods. Governance
               transitions gradually, guided by real usage and contributor ownership. The end-state is a resilient, permissionless network
-              where anyone can build clients, services, and markets atop a common trust layer—talent-first, globally accessible, and
               credibly neutral.
             </p>
           </section>
@@ -59,11 +44,6 @@ export default function ManifestoPage(): JSX.Element {
       </main>
     </>
   )
-}
-
-
-
-};
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

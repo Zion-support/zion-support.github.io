@@ -1,5 +1,3 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -15,10 +13,14 @@ const InnovationInEnterpriseTechnology: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-
-
   )
 }
+export default InnovationInEnterpriseTechnology;
+
+},
+export default InnovationInEnterpriseTechnology,
+
+
       <main>;
         <h1>InnovationInEnterpriseTechnology</h1>;
         <p>This page is under construction.</p>;
@@ -27,6 +29,8 @@ const InnovationInEnterpriseTechnology: NextPage = () => {
   ),;
 };
 export default InnovationInEnterpriseTechnology;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > InnovationInEnterpriseTechnology</h1>;
@@ -39,16 +43,3 @@ export default InnovationInEnterpriseTechnology;
 ;
 
 
-
-export default InnovationInEnterpriseTechnology
-
-  ),
-};
-
-export default InnovationInEnterpriseTechnology;
-  )
-}
-export default InnovationInEnterpriseTechnology;
-
-},
-export default InnovationInEnterpriseTechnology,

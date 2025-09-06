@@ -1,16 +1,17 @@
-export async function fetchMilestones() {
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {headers: { 'Content-Type': 'application/json' }
-    credentials: 'include'});
-  if (!res.ok) throw new Error('Failed to load milestones');
-  return res.json();
 }
-export async function createMilestone() {
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {method: 'POST';
-    headers: { 'Content-Type': 'application/json' }
-    credentials: 'include';
-    body: JSON.stringify(payload)});
-  if (!res.ok) throw new Error(await res.text());
+;
+export async function createMilestone(projectId: string, payload: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include',;
+    body: JSON.stringify(payload)}),;
+  if (!res.ok) throw new Error(await res.text()),;
   return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 export async function updateMilestoneStatus() {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH';
@@ -47,24 +48,6 @@ export async function createMilestone(projectId: string, payload: any) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-export async function fetchMilestones(projectId: string) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
-    headers: { 'Content-Type': 'application/json' },;
-
-}
-;
-export async function createMilestone(projectId: string, payload: any) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
-    method: 'POST',;
-    headers: { 'Content-Type': 'application/json' },;
-    credentials: 'include',;
-    body: JSON.stringify(payload)}),;
-  if (!res.ok) throw new Error(await res.text()),;
-  return res.json();
-
-
-}
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;
@@ -78,7 +61,3 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
-}
-}

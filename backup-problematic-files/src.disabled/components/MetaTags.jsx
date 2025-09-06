@@ -9,4 +9,3 @@ const MetaTags = ({ className }) => {
   );
 };
 
-export default MetaTags;

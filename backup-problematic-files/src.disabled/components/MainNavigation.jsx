@@ -27,4 +27,3 @@ const MainNavigation = ({ className }) => {
   );
 };
 
-export default MainNavigation;

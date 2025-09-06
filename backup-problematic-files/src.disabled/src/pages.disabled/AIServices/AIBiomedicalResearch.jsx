@@ -9,4 +9,3 @@ const AIBiomedicalResearch = ({ className }) => {
   );
 };
 
-export default AIBiomedicalResearch;

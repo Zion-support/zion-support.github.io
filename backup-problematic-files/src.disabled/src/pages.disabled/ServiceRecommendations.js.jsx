@@ -9,4 +9,3 @@ const ServiceRecommendations.js = ({ className }) => {
   );
 };
 
-export default ServiceRecommendations.js;

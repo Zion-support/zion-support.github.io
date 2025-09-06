@@ -9,4 +9,3 @@ const BundleAnalyzer.js = ({ className }) => {
   );
 };
 
-export default BundleAnalyzer.js;

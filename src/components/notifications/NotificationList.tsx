@@ -1,64 +1,3 @@
-
-import React from 'react';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import Skeleton from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { NotificationItem } from './NotificationItem';
-import { Notification } from '@/context/notifications';
-import { EmptyState } from '@/components/ui/empty-state';
-import { Bell } from 'lucide-react'
-interface NotificationListProps {
-}; import React from 'react'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import Skeleton from '@/components/ui/skeleton'
-import { Button } from '@/components/ui/button'
-import { NotificationItem } from './NotificationItem'
-import { Notification } from '@/context/notifications'
-import { EmptyState } from '@/components/ui/empty-state'
-import { Bell } from 'lucide-react'
-interface NotificationListProps {
-  loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-  onMarkAsRead: (id: string,) => Promise<void>,
-  onDismiss: (id: string,) => Promise<void>,
-  onRetry: () => void
-}
-
-export const NotificationList: React.FC<NotificationListProps> = ({
-  loading
-  error
-  notifications
-  onMarkAsRead
-
-import React from 'react',;
-import { ScrollArea } from '@/components/ui/scroll-area',;
-import Skeleton from '@/components/ui/skeleton',;
-import { Button } from '@/components/ui/button',;
-import { NotificationItem } from './NotificationItem',;
-import { Notification } from '@/context/notifications',;
-import { EmptyState } from '@/components/ui/empty-state',;
-import { Bell } from 'lucide-react';
-interface NotificationListProps {;
-  loading: boolean,;
-  error: string | null,;
-  notifications: Notification[],;
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>,;
-  onRetry: () => void;
-}
-
-
-onRetry
-},) => {
-} import React from 'react';
-import { ScrollArea } from '@/components / ui / scroll - area';
-import Skeleton from '@/components / ui / skeleton';
-import { Button } from '@/components / ui / button';
-import { NotificationItem } from './NotificationItem';
-import { Notification } from '@/context / notifications';
-import { EmptyState } from '@/components / ui / empty - state';
-import { Bell } from 'lucide-react';
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -79,46 +18,32 @@ export const NotificationList: React.FC < NotificationListProps> = ({
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
 
+import React from 'react',;
+import { ScrollArea } from '@/components/ui/scroll-area',;
+import Skeleton from '@/components/ui/skeleton',;
+import { Button } from '@/components/ui/button',;
+import { NotificationItem } from './NotificationItem',;
+import { Notification } from '@/context/notifications',;
+import { EmptyState } from '@/components/ui/empty-state',;
 import { Bell } from 'lucide-react';
 interface NotificationListProps {;
   loading: boolean,;
   error: string | null,;
   notifications: Notification[],;
-  onMarkAsRead: (id: string,) => Promise<void>,;
-  onDismiss: (id: string,) => Promise<void>,;
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>,;
   onRetry: () => void;
 }
+
+  loading: boolean
+  error: string | null
+  notifications: Notification[]
+  onMarkAsRead: (id: string,) => Promise<void>
+  onDismiss: (id: string,) => Promise<void>
 
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-
-  loading
-  error
-  notifications
-  onMarkAsRead
-  onDismiss
-  loading,
-  error,
-  notifications,
-  onMarkAsRead,
-export const NotificationList: React.FC<NotificationListProps> = ({;
-  loading;
-  error;
-  notifications;
-  onMarkAsRead;
-  onDismiss,;
-  onRetry;
-},) => {;
-  return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
-      {error ? (;
-        <div className="p-8 text-center text-amber-500">;
-          <p>{error}</p>;
-          <Button
-            variant="outline" 
-            size="sm" 
-
   onDismiss,
   onRetry
 }) => {
@@ -128,8 +53,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
         <div className="p-8 text-center text-amber-500">
           <p>{error}</p>
           <Button
-            variant="outline"
-            size="sm"
             className="mt-2"
             onClick={onRetry}
           >
@@ -155,29 +78,45 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
       ) : (
         notifications.map((notification) => (
           <NotificationItem
-            key={notification.id}
-            notification={notification}
-            onMarkAsRead={onMarkAsRead}
-            onDismiss={onDismiss}
-          />;
-        ));
-      )}
-    </ScrollArea>;
   );
 };
 
 
-            key = {notification.id,}
-            notification = {notification,}
-            onMarkAsRead = {onMarkAsRead,}
-            onDismiss = {onDismiss,}
-          />
-        ))
-      )}
-    </ScrollArea>
-  )
+        <div className="p - 8 text - center text - amber - 500">;
+          <p>{error}</p>;
+          <Button;
+            variant="outline";
+            size="sm";
+            className="mt - 2";
+            on_click = {on_retry, }
+          >;
+            Try Again;
+          </Button>;
+        </div>) : loading ? (
+        <div className="p - 4 space - y-4">;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+        </div>) : notifications.length === 0 ? (
+        <div className="p - 8">;
+          <EmptyState;
+            icon = {<Bell className="h - 8 w - 8" />, }
+            title="No Notifications";
+            description="You're all caught up.";
+            action={{ text: 'Refresh', on_click: on_retry }}
+            className="border - none bg - transparent";
+          />;
+        </div>) : (
+        notifications.map ((notification, ) => (
+          <NotificationItem;
+            key = {notification.id, }
+            notification = {notification, }
+            onMarkAsRead = {onMarkAsRead, }
+            on_dismiss = {on_dismiss, }
+          />)))}
+    </ScrollArea>);
 }
-"
+";
 
   );
 };

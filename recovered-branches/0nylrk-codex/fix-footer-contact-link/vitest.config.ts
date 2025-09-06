@@ -1,12 +1,8 @@
 
-
-
-
 import {defineConfig} from 'vitest/config';
 import path from 'node: path'
 
 export default defineConfig({
-      '@': path ;
   test: {
     environment: 'jsdom';
     setupFiles: './tests/setup && setup.ts',
@@ -22,16 +18,6 @@ export default define_config ({
   test: {
     environment: 'jsdom';
     setup_files: './tests / setup.ts',
-
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src')}}
-  test: {
-    environment: 'jsdom';
-
-    setupFiles: './tests/setup.ts'
-    globals: true}});
-
   resolve: {;
     alias: {;
       '@': path.resolve(__dirname, './src')}};
@@ -47,8 +33,4 @@ export default defineConfig({;
   test: {;
     environment: 'jsdom',;
     setupFiles: './tests/setup.ts';
-
-    globals: true}});
-;
-    globals: true}});
     globals: true}});

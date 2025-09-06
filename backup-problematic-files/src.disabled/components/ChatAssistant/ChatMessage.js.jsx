@@ -9,4 +9,3 @@ const ChatMessage.js = ({ className }) => {
   );
 };
 
-export default ChatMessage.js;

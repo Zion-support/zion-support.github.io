@@ -9,4 +9,3 @@ const Sidebar-main.js = ({ className }) => {
   );
 };
 
-export default Sidebar-main.js;

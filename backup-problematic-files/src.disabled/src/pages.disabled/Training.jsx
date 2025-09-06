@@ -9,4 +9,3 @@ const Training = ({ className }) => {
   );
 };
 
-export default Training;

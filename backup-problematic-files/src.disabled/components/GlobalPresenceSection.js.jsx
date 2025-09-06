@@ -9,4 +9,3 @@ const GlobalPresenceSection.js = ({ className }) => {
   );
 };
 
-export default GlobalPresenceSection.js;

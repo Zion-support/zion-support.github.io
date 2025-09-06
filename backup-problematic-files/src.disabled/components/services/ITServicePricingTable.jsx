@@ -9,4 +9,3 @@ const ITServicePricingTable = ({ className }) => {
   );
 };
 
-export default ITServicePricingTable;

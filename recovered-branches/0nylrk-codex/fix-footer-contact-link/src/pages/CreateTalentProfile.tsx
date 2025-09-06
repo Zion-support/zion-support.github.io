@@ -1,15 +1,18 @@
-
-import React from "react",
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
-
-
-import React from "react";
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
+
+
+import React from "react",
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
+
+import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
+import React from "react",
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
+
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -25,26 +28,11 @@ export default function CreateTalentProfile() {
       </div>
     </div>
   )
-
-
 import React from "react",;
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 
 export default function CreateTalentProfile() {;
   return (
-    <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
-
-import React from "react",;
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",;
-;
-export default function CreateTalentProfile() {;
-  return (;
-    <div className="bg-zion-blue min-h-screen py-8 md:py-12">;
-}
-import React from "react",;
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
-export default function CreateTalentProfile() {;
-  return (;
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
       <div className="container mx-auto px-4">;
         <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">;
@@ -54,18 +42,3 @@ export default function CreateTalentProfile() {;
             to get discovered for AI and tech projects on the Zion Marketplace.;
           </p>;
         </div>;
-    </div>);
-}
-
-;
-
-
-        ;
-        <TalentRegistrationForm />;
-      </div>;
-    </div>;
-  );
-}
-;
-}
-;

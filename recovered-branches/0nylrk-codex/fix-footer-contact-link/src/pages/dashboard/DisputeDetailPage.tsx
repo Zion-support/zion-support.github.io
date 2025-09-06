@@ -1,6 +1,3 @@
-
-
-import React from 'react';
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -17,8 +14,6 @@ import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { DisputeDetail } from '@/components/disputes',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
-
-
 function DisputeDetailPage() {
   return (
     <ProtectedRoute>
@@ -26,46 +21,31 @@ function DisputeDetailPage() {
 
         <SEO
           title="Dispute Details | Zion AI Marketplace"
-
-import React from 'react',;
-import { SEO } from '@/components/SEO',;
-import { AppHeader } from '@/layout/AppHeader',;
-import { Footer } from '@/components/Footer',;
-import { DisputeDetail } from '@/components/disputes',;
-import { ProtectedRoute } from '@/components/ProtectedRoute',;
-;
-function DisputeDetailPage() {;
-  return (;
+          description="View and manage dispute details"
+import React from 'react';
+import {SEO} from '@/components / SEO';
+import {AppHeader} from '@/layout / AppHeader';
+import {Footer} from '@/components / Footer';
+import {DisputeDetail} from '@/components / disputes';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+/**
+ * DisputeDetailPage - Function description
+ */
+function DisputeDetailPage() {
+  return (
     <ProtectedRoute>;
       <>;
-        <SEO ;
-          title="Dispute Details | Zion AI Marketplace" ;
+        <SEO;
+          title="Dispute Details | Zion AI Marketplace";
           description="View and manage dispute details";
         />;
         <AppHeader />;
         <DisputeDetail />;
         <Footer />;
       </>;
-;
-
-
 export default DisputeDetailPage;
 
-export default DisputeDetailPage;
-;
-    </ProtectedRoute>;
-  ),;
-}
-;
-export default DisputeDetailPage,; <ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details" /> <AppHeader /> <DisputeDetail /> <Footer /> </> </ProtectedRoute> export default DisputeDetailPage;
-          description="View and manage dispute details"
-        />
-        <AppHeader />
-        <DisputeDetail />
-        <Footer />
-      </>
-    </ProtectedRoute>
-  )
+    </ProtectedRoute>);
 }
 
 ;

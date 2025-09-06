@@ -9,4 +9,3 @@ const FiveGEnterpriseSolutions = ({ className }) => {
   );
 };
 
-export default FiveGEnterpriseSolutions;

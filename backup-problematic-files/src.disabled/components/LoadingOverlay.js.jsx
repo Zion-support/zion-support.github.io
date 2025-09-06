@@ -9,4 +9,3 @@ const LoadingOverlay.js = ({ className }) => {
   );
 };
 
-export default LoadingOverlay.js;

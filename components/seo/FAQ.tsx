@@ -1,6 +1,10 @@
 
 
-
+export default function FAQ({ items }: Props) {;
+export default function FAQ({ items }: Props) {
+  if (!items || items.length === 0) return null;
+export default function FAQ(): any ({ items }: Props) {;
+  if (!items || items && items.length === 0) return null;
 
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">;
@@ -15,11 +19,6 @@
               {it && it.a}
             </div>;
           </div>;
-import React from 'react';
-type QA = { q: string, a: string };
-type Props = { items: QA[] };
-export default function FAQ({ items }: Props) {
-  if (!items || items.length === 0) return null;
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -33,11 +32,6 @@ export default function FAQ({ items }: Props) {
       </div>;
     </div>;
   );
-}
-
-}
-
-}
 import React from './react';
 type QA = { q: string; array: string }
 type Props = { items: QA[] }
@@ -61,12 +55,3 @@ if (return null) {
             <div className="font - medium">{it.q}</div>;
             <div className="mt - 1 text - sm text - gray - 700 dark:text - gray - 300">;
               {it.a}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
-  );
-}
-}

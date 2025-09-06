@@ -27,4 +27,3 @@ const SecurityComplianceSection = ({ className }) => {
   );
 };
 
-export default SecurityComplianceSection;

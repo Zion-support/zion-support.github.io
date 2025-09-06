@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -9,6 +11,7 @@ const { execSync } = require('child_process')
         "recommendations"
     console.error(' Bundle analysis "failed")
 =======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -91,4 +94,7 @@ class BundleAnalyzer {
 const analyzer = new BundleAnalyzer();
 analyzer.analyzeBundle();
 analyzer.generateReport();
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

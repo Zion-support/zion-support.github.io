@@ -9,4 +9,3 @@ const AIContentCreationRevolution = ({ className }) => {
   );
 };
 
-export default AIContentCreationRevolution;

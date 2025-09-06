@@ -27,4 +27,3 @@ const ProfileProjects = ({ className }) => {
   );
 };
 
-export default ProfileProjects;

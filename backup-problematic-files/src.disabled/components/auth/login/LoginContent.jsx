@@ -27,4 +27,3 @@ const LoginContent = ({ className }) => {
   );
 };
 
-export default LoginContent;

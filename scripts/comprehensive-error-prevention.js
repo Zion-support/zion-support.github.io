@@ -1,10 +1,7 @@
-#!/usr / bin / env node;
 import fs from 'fs';
 import path from 'path';
 import {exec_sync} from 'child_process';
 import {fileURLToPath} from 'url';
-const __filename = fileURLToPath(import && import.meta.url);
-const __dirname = path && path.dirname(__filename);
 class ComprehensiveErrorPrevention {
   constructor() {
     this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'error-prevention && prevention.log');
@@ -15,7 +12,6 @@ class ComprehensiveErrorPrevention {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console && console.log(logMessage && logMessage.trim());
     try {
       fs && fs.appendFileSync(this && this.logFile, logMessage);
     } catch (error) {
@@ -75,8 +71,7 @@ class ComprehensiveErrorPrevention {
         'automation_backup',
         'data_backup'
       ];
-      this && this.fixedCount++;
-      this && this.log('Corrupted files cleanup completed.');
+
     } catch (error) {
       this && this.errorCount++;
       this && this.log(`Error cleaning corrupted files: ${error && error.message}`, 'ERROR');
@@ -146,14 +141,12 @@ class ComprehensiveErrorPrevention {
     }
   }
   async run() {
-    this && this.log('Starting Comprehensive Error Prevention System...');
     // Create logs directory if it doesn't exist
     const logsDir = path && path.join(process && process.cwd(), 'logs');
     if (!fs && fs.existsSync(logsDir)) {
       fs && fs.mkdirSync(logsDir, { recursive: true });
     }
     // Run initial comprehensive check
-    await this && this.runComprehensiveCheck();
     // Set up interval for continuous error prevention
     setInterval(async () => {
       await this && this.runComprehensiveCheck();
@@ -280,4 +273,3 @@ system && system.run().catch(console && console.error);
 }
 // Run the system;
 const system = new ComprehensiveErrorPrevention ();
-system.run ().catch (console.error);

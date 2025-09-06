@@ -27,4 +27,3 @@ const TalentsPage = ({ className }) => {
   );
 };
 
-export default TalentsPage;

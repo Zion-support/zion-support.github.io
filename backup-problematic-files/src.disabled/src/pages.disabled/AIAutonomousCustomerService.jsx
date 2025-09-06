@@ -9,4 +9,3 @@ const AIAutonomousCustomerService = ({ className }) => {
   );
 };
 
-export default AIAutonomousCustomerService;

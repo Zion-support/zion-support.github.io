@@ -9,4 +9,3 @@ const AIAutonomousData = ({ className }) => {
   );
 };
 
-export default AIAutonomousData;

@@ -1,11 +1,3 @@
-
-
-
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Filter, X, Star} from "lucide-react";
-import {FilterOptions} from "@/types/search";
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
@@ -25,12 +17,6 @@ interface FilterSidebarProps {
   onFilterChange: (filterType: string, value: string) => void
   onRatingChange: (rating: number | null) => void
 
-  },
-  filterOptions: FilterOptions,
-  onFilterChange: (filterType: string, value: string) => void,
-  onRatingChange: (rating: number | null) => void,
-  onClearFilters: () => void
-}
 
 export function FilterSidebar({;
   filters;
@@ -63,68 +49,33 @@ import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { Filter, X, Star } from "lucide-react",;
 import { FilterOptions } from "@/types/search",;
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Filter, X, Star} from "lucide-react";
+import {FilterOptions} from "@/types/search";
 interface FilterSidebarProps {;
   filters: {;
     selectedProductTypes: string[],;
     selectedLocations: string[],;
     selectedAvailability: string[],;
     selectedRating: number | null;
-  },;
+  };
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
   onRatingChange: (rating: number | null) => void,;
   onClearFilters: () => void;
 }
+
+export function FilterSidebar(): any ({;
+
   filters;
   filterOptions;
-;
-export function FilterSidebar({;
-  filters,;
-  filterOptions,;
   onFilterChange;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
-  return (;
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
-      <div className="flex items-center justify-between mb-4">;
-        <h3 className="text-lg font-medium text-white flex items-center">;
-          <Filter className="mr-2 h-5 w-5" /> Filters;
-        </h3>;
-        <Button;
-          variant="outline";
-          size="sm";
-          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
   return (
-
-
-  },
-  filterOptions: FilterOptions,
-  onFilterChange: (filterType: string, value: string) => void,
-  onRatingChange: (rating: number | null) => void,
-
-  onClearFilters: () => void
-}
-
-
-
-  onClearFilters
-}: FilterSidebarProps) {
-  return (
-
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-medium text-white flex items-center">
-          <Filter className="mr-2 h-5 w-5" /> Filters
-        </h3>
-
-
-        <Button 
-          variant="outline" 
-          size="sm"
-          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-
-
           onClick={onClearFilters}
         >
           Clear All
@@ -202,7 +153,6 @@ export function FilterSidebar({;
           ))}
         </div>
       </div>
-  return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white flex items-center">;
@@ -373,55 +323,27 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
             </div>;          ))}
         </div>;
       </div>;
-      ;
       {/* Rating Filter */}
       <div className="mb-6">;
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
           Minimum Rating;
         </label>;
         <div className="flex flex-wrap gap-2">;
-      {/* Rating Filter */}
-      <div className="mb-6">
-        <label className="text-sm font-medium text-zion-slate-light block mb-2">
-          Minimum Rating
-        </label>
-        <div className="flex flex-wrap gap-2">
-          {[null, ...filterOptions.ratingOptions].map((rating) => (
+          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
             <Button
               key={rating === null ? 'any' : rating}
               variant="outline"
               size="sm"
               onClick={() => onRatingChange(rating)}
-              className={`${;
-                filters && filters.selectedRating === rating ;
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
-                  : "border-zion-blue-light text-zion-slate-light";
-          {[null, ...filterOptions.ratingOptions].map((rating) => (;
-            <Button;
-              key={rating === null ? 'any' :rating}
-              variant="outline";
-              size="sm";
-              onClick={() => onRatingChange(rating)}
-              className={`${;
-                filters.selectedRating === rating ;
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
-                  :"border-zion-blue-light text-zion-slate-light";
               }`}
             >;
               {rating === null ? (;
                 "Any";
-              ) :(;
                 <div className="flex items-center">;
                   {[...Array(rating)].map((_, i) => (;
                     <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
                   ))}
                   <span className="ml-1">& Up</span>;
-                </div>;              )}
-            </Button>;
-          ))}
-        </div>;
-      </div>;
-    </div>;
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Checkbox } from '@/components / ui / checkbox';
@@ -556,44 +478,4 @@ function FilterSidebar() {
         </div>;
       </div>;
     </div>);
-}
-  ),;}
-  return (<div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4" > <div className="flex items-center justify-between mb-4" > <h3 className="text-lg font-medium text-white flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters outline"size=" sm"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick= {
-  onClearFilters 
-}> Clear All </Button> </div> > {
-  type.label 
-}</label> </div>) ) 
-}</div> </div> > {
-  location.label 
-}</label> </div>) ) 
-}</div> </div> > {
-  availability.label 
-}</label> </div>) ) 
-}</div> </div>) ) 
-}<span className=" ml-1" >& Up</span> </div>) 
-}</Button>) ) 
-}</div> </div> </div>) 
-}
-              className={`${
-                filters.selectedRating === rating
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple"
-                  : "border-zion-blue-light text-zion-slate-light"
-              }`}
-            >
-              {rating === null ? (
-                "Any"
-              ) : (
-                <div className="flex items-center">
-                  {[...Array(rating)].map((_, i) => (
-                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
-                  ))}
-                  <span className="ml-1">& Up</span>
-                </div>
-              )}
-            </Button>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
 }

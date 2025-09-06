@@ -137,6 +137,15 @@ console.log(" Applied ${updatesApplied} smart updates")
   console.log("� Starting Smart Dependency Manager...")
 <<<<<<< HEAD
   console.error(` Smart Dependency Manager "failed": "`)
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(` Smart Dependency Manager "failed": "`)
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+  console.error(` Smart Dependency Manager "failed": "`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

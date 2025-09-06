@@ -1,31 +1,9 @@
-
-
-
-
-}
-
-import React from 'react',;
-import ServiceLanding from '../components/sections/ServiceLanding',;
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
 
-			title="AI Predictive Maintenance Platform"
-			description="Predict equipment failures, schedule maintenance proactively, and reduce downtime with sensor analytics and AI models."
-			subtitle="Reliability at lower cost"
-			pricePerMonthUSD={499}
-			implementationWeeks="2-4 weeks"
-			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%"
-			features={[
-				"Sensor ingestion and anomaly detection"
-				"Remaining useful life (RUL) predictions"
-				"Work order automation and CMMS integration"
-				"Root cause analysis"
-				"Digital twin modeling"
-				"Edge and cloud deployment"
-				"Visualizations and alerting"
 
 				"APIs and event webhooks"
 			]}
@@ -34,6 +12,41 @@ export default function AIPredictiveMaintenancePlatform() {
   return <div>AI Predictive Maintenance Platform</div>;
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding',
+
+
+
+
+
+}
+
+import React from 'react',
+import ServiceLanding from '../components / sections / ServiceLanding',
+export default /**
+ * AIPredictiveMaintenancePlatform - Function description
+ */
+function AIPredictiveMaintenancePlatform() {
+return (
+  <ServiceLanding;
+  title="AI Predictive Maintenance Platform";
+  description="Predict equipment failures, schedule maintenance proactively, and reduce downtime with sensor analytics and AI models.";
+  subtitle="Reliability at lower cost";
+  pricePerMonthUSD={499}
+    implementation_weeks="2 - 4 weeks";
+  roi_note="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%";
+  features={[;
+    "Sensor ingestion and anomaly detection",
+    "Remaining useful life (RUL) predictions",
+    "Work order automation and CMMS integration",
+    "Root cause analysis",
+    "Digital twin modeling",
+    "Edge and cloud deployment",
+    "Visualizations and alerting",
+    "APIs and event webhooks";
+  ]}
+    industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
+    canonical="https: //ziontechgroup.com / ai - predictive - maintenance - platform";
+  />);
+}
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
@@ -55,6 +68,7 @@ export default function AIPredictiveMaintenancePlatform() {
   }
 }
 
+
 			implementationWeeks="2-4 weeks"
 			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%"
 			features={[
@@ -66,12 +80,6 @@ export default function AIPredictiveMaintenancePlatform() {
 				"Edge and cloud deployment",
 				"Visualizations and alerting",
 				"APIs and event webhooks"
-			]}
-			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
-			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
-		/>
-	)
-};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -117,4 +125,5 @@ export default function AIPredictiveMaintenancePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 

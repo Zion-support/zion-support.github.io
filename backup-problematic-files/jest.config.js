@@ -1,5 +1,3 @@
-module && module.exports = {,
-module.exports = {,
   "testEnvironment: 'jsdom,
   "setupFilesAfterEnv": ['<rootDir>/tests/setup && setup.t,s'],
   testMatch": [,
@@ -21,42 +19,9 @@ module.exports = {
   "moduleNameMapper": {
     "^@/(.*)$": "<root_dir>/$1";
   },
-
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>,
-
   "moduleNameMapping": {,
-    '^@/(.*)$': <rootDi,r>/$1'};
+    '^@/(.*)$': <root_di, r>/$1'}
 }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom,setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [, <rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}' ],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/** ],coverageThreshold: { global: { branche,s: '80, functions: 80, lines: 80, statements: 80'} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>,
-ursor/integrate-build-improve-and-re-verify-8f7d
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>,
-ursor/fix-lint-push-and-merge-to-main-ae4e
-  "moduleNameMapping": {
-    '^@/(.*)$': '<rootDi,r>/$1'}
-}</div></div></div></div>
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'; ],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'; ],coverageThreshold: { global: { branche,s: '80; functions: 80; lines: 80; statements: 80'} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-  "moduleNameMapping": {,
-    '^@/(.*)$': <rootDi,r>/$1'};
-}</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom,setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [, <rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}' ],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/** ],coverageThreshold: { global: { branche,s: '80, functions: 80, lines: 80, statements: 80'} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1} }</div></div></div></div>,
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: [<rootDir>/tests/setup.t,s'],testMatch: [, '<rootDir>/tests/unit*.test.{ts,tsx}<rootDir>/tests/integration*.test.{ts,tsx}],collectCoverageFrom: [, 'components*.{ts,tsx}lib*.{ts,tsx}pages*.{ts,tsx}!**node_modules/**'],coverageThreshold: { global: { branche,s: 80, functions: 80, lines: 80, statements: 80} },moduleNameMapping: { ^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>,
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
 module.exports = {
   "preset": "ts-jest"
   "testEnvironment": "jsdom"
@@ -71,8 +36,5 @@ module.exports = {
     "^.+\\.(js|jsx)$": "babel-jest"
   }
 }
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
-origin/main
 module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>
 module.exports = { testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/tests/setup.t,s'],testMatch: [; '<rootDir>/tests/unit*.test.{ts,tsx}','<rootDir>/tests/integration*.test.{ts,tsx}'],collectCoverageFrom: [; 'components*.{ts,tsx}','lib*.{ts,tsx}','pages*.{ts,tsx}','!**node_modules/**'],coverageThreshold: { global: { branche,s: 80; functions: 80; lines: 80; statements: 80} },moduleNameMapping: { '^@/(.*)$': '<rootDi,r>/$1'} }</div></div></div></div>

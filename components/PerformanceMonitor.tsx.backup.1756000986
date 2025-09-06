@@ -144,9 +144,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Format time values
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+=======
+>>>>>>> origin/main
   const formatTime = (ms: number): string => {
     if (ms === 0) return 'N/A';
     if (ms < 1000) return `${Math.round(ms)}ms`;

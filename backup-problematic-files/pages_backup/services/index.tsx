@@ -35,7 +35,7 @@ const ServicesIndex: NextPage = () => {
         'Fraud Detection & Risk Assessment'
       ],
       pricing: 'Starting at $2,500/month',
-      icon: '🧠',
+      icon: '',
       link: '/services/ai-development'
     },
     {
@@ -51,7 +51,7 @@ const ServicesIndex: NextPage = () => {
         'Disaster Recovery & Backup'
       ],
       pricing: 'Starting at $1,800/month',
-      icon: '☁️',
+      icon: '',
       link: '/services/cloud-solutions'
     },
     {
@@ -67,7 +67,7 @@ const ServicesIndex: NextPage = () => {
         'Blockchain Security Audits'
       ],
       pricing: 'Starting at $3,500/month',
-      icon: '🔗',
+      icon: '',
       link: '/services/blockchain'
     },
     {
@@ -83,7 +83,7 @@ const ServicesIndex: NextPage = () => {
         'Remote Device Control'
       ],
       pricing: 'Starting at $2,200/month',
-      icon: '🌐',
+      icon: '',
       link: '/services/iot-platforms'
     },
     {
@@ -99,7 +99,7 @@ const ServicesIndex: NextPage = () => {
         'Third-party Integrations'
       ],
       pricing: 'Starting at $1,500/month',
-      icon: '⚡',
+      icon: '',
       link: '/products/micro-saas'
     },
     {
@@ -115,7 +115,7 @@ const ServicesIndex: NextPage = () => {
         'Vulnerability Management'
       ],
       pricing: 'Starting at $2,000/month',
-      icon: '🔒',
+      icon: '',
       link: '/services/cybersecurity'
     },
     {
@@ -131,7 +131,7 @@ const ServicesIndex: NextPage = () => {
         'Performance Optimization'
       ],
       pricing: 'Starting at $1,200/month',
-      icon: '💻',
+      icon: '',
       link: '/services/web-development'
     },
     {
@@ -147,7 +147,7 @@ const ServicesIndex: NextPage = () => {
         'Custom Reporting Solutions'
       ],
       pricing: 'Starting at $1,800/month',
-      icon: '📊',
+      icon: '',
       link: '/services/data-analytics'
   const microSaasServices = [
     {
@@ -638,12 +638,6 @@ export default function ServicesIndex() {
                   {service && service.features.map((feature, idx) => (;
                     <li key={idx} className="mb-1">• {feature}</li>;
                   ))}
-                </ul>
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
-                  <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
-
-      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -686,9 +680,6 @@ export default function ServicesIndex() {
                     ))}
                   </div>;
                   <Link
-                    href={service.link}
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
                     Learn More
                   </Link>
                 </div>
@@ -715,12 +706,3 @@ export default function ServicesIndex() {
   );
 };
 export default ServicesIndex;
-export default ServicesIndex;
-      </div>
-    </>
-  );
-}
-      </div>
-    </>
-  );
-}

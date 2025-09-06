@@ -4,32 +4,8 @@ interface IntegrationState {
   overrides: any[];
 }
 let state: IntegrationState = {
-
-
-};
-
-export function getState(): IntegrationState {;
-  return { ...state };
 }
-
-export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
-
-
-  updater(state);
-  return { ...state }
-}
-export function resetState(): void {
-  state = {
-
-  connections: [],
-  logs: [],
-  overrides: [];
-  connections: []
-  logs: []
-  overrides: []
-}
-;
-export function get_state (): IntegrationState {
+export function getState(): IntegrationState {
   return { ...state }
 }
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
@@ -43,16 +19,25 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
   updater(state);
   return { ...state }
 }
+export function resetState(): void {
+  state = {
+
+  connections: [],
+  logs: [],
+  overrides: [];
+}
+;
+export function get_state (): IntegrationState {
+  return { ...state }
+}
+  updater(state);
+  return { ...state }
+}
 export function reset_state (): void {
   state = {
-    connections: []
-    logs: []
-    overrides: []
   }
 
     connections: [],
     logs: [],
     overrides: [];
   };
-}
-}

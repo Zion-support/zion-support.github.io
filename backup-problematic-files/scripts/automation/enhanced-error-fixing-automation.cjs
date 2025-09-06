@@ -174,6 +174,15 @@ export default function"
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
 <<<<<<< HEAD
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

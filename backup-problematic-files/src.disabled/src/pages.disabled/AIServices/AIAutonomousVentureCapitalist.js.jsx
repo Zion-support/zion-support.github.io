@@ -9,4 +9,3 @@ const AIAutonomousVentureCapitalist.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousVentureCapitalist.js;

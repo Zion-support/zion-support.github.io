@@ -1,19 +1,4 @@
 
-  const pct = Math.max(0, Math.min(100, value));
-
-  return (
-    <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
-      <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
-    </div>
-
-type ProgressBarProps = { value: number },
-import React from 'react';
-
-type ProgressBarProps = { value: number }
-type ProgressBarProps = { value: number };
-
-type ProgressBarProps = { value: number };
-
 export default function ProgressBar({ value }: ProgressBarProps) {
 export default function ProgressBar({ value }: ProgressBarProps) {;
   const pct = Math.max(0, Math.min(100, value));
@@ -21,15 +6,38 @@ export default function ProgressBar({ value }: ProgressBarProps) {;
     <div className='w-full h-3 bg-gray-200 dark:bg-gray-800 rounded'>
       <div className='h-3 bg-blue-600 rounded' style={{ width: `${pct}%` }} />
     </div>
-  );export default function ProgressBar({ value }: ProgressBarProps) {;
-  );export default function ProgressBar({ value }: ProgressBarProps) {
   const pct = Math.max(0, Math.min(100, value));
 
   return (
     <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
       <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
     </div>
+export default function ProgressBar({ value }: ProgressBarProps) {
+export default function ProgressBar({ value }: ProgressBarProps) {;
+  const pct = Math.max(0, Math.min(100, value));
+  return (
+  const pct = Math.max(0, Math.min(100, value));
+
+  return (
+    <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
+      <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
+    </div>
+type ProgressBarProps = { value: number };
 );
+}
+export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
+  const pct = Math && Math.max(0, Math && Math.min(100, value));
+  return (
+    <div className='w-full h-3 bg-gray-200 dark:bg-gray-800 rounded'>;
+      <div className='h-3 bg-blue-600 rounded' style={{ width: `${pct}%` }} />;
+    </div>;
+  );export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
+  const pct = Math && Math.max(0, Math && Math.min(100, value));
+  return (
+    <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">;
+      <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />;
+    </div>;
+  );
 }
 ;
 type ProgressBarProps = { value: number }
@@ -62,9 +70,3 @@ function ProgressBar() {
   );
 }
 
-
-
-  );
-}
-
-}

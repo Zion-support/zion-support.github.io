@@ -1,9 +1,3 @@
-
-import React from "react",
-import { cn } from "@/lib/utils",
-
-
-import React from "react";
 import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -20,50 +14,6 @@ export function SidebarMenu({
   ...props
 }: SidebarMenuProps) {
   return (
-
-import {cn} from "@/lib/utils";
-interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
-  className?: string;
-  children?: React && React.ReactNode;
-}
-
-  return (
-    <ul className={cn ("space - y-1", class_name)} {...props}>;
-      {children}
-export function SidebarMenu(): any ({ className, children, ...props }: SidebarMenuProps) {;
-  return (
-    <ul
-      className={cn("space-y-1", className)} 
-      {...props}>;
-      {children}
-    </ul>;
-  );
-  return (
-
-    <ul 
-      className={cn("space-y-1", className)} 
-    <ul 
-      className={cn("space-y-1", className)} 
-
-  );
-
-
-
-}
-    </ul>);
-}
-
-import React from "react",;
-import { cn } from "@/lib/utils",;
-;
-interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
-  className?:string,;
-  children?:React.ReactNode,;
-}
-;
-export function SidebarMenu({ className, children, ...props } SidebarMenuProps) {;
-  return (;
-    <ul ;
     <ul className={cn("space-y-1", className)} {...props}>
       {children}
     </ul>
@@ -79,19 +29,19 @@ export function SidebarMenu({ className, children, ...props } SidebarMenuProps) 
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
+
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
+import {cn} from "@/lib/utils";
+interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
   className?: string;
-  children?: React.ReactNode;
+  children?: React && React.ReactNode;
 }
-;
-export function SidebarMenu({ className, children, ...props }: SidebarMenuProps) {;
-  return (;
-    <ul;
-      className={cn("space-y-1", className)} ;
-      {...props}
-    >;
+  return (
+    <ul className={cn ("space - y-1", class_name)} {...props}>;
       {children}
-    </ul>;
-  );
+    </ul>);
 }
-}
-;

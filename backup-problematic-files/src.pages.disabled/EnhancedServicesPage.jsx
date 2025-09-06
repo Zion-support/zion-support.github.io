@@ -25,7 +25,3 @@ const EnhancedServicesPage = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}
-}
-}

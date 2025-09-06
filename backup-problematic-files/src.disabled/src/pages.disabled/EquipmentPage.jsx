@@ -9,4 +9,3 @@ const EquipmentPage = ({ className }) => {
   );
 };
 
-export default EquipmentPage;

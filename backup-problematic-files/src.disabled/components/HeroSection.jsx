@@ -9,4 +9,3 @@ const HeroSection = ({ className }) => {
   );
 };
 
-export default HeroSection;

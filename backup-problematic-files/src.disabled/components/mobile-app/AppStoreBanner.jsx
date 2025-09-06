@@ -27,4 +27,3 @@ const AppStoreBanner = ({ className }) => {
   );
 };
 
-export default AppStoreBanner;

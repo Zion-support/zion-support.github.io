@@ -27,4 +27,3 @@ const FuturisticServicesShowcase = ({ className }) => {
   );
 };
 
-export default FuturisticServicesShowcase;

@@ -9,4 +9,3 @@ const FeatureCTAs.js = ({ className }) => {
   );
 };
 
-export default FeatureCTAs.js;

@@ -9,4 +9,3 @@ const TrustIndicators.js = ({ className }) => {
   );
 };
 
-export default TrustIndicators.js;

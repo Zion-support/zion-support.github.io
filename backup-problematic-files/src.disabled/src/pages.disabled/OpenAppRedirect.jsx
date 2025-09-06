@@ -27,4 +27,3 @@ const OpenAppRedirect = ({ className }) => {
   );
 };
 
-export default OpenAppRedirect;

@@ -9,4 +9,3 @@ const Button = ({ className }) => {
   );
 };
 
-export default Button;

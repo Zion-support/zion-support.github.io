@@ -9,4 +9,3 @@ const BrokenLinkFixer = ({ className }) => {
   );
 };
 
-export default BrokenLinkFixer;

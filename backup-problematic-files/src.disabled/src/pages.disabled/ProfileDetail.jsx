@@ -27,4 +27,3 @@ const ProfileDetail = ({ className }) => {
   );
 };
 
-export default ProfileDetail;

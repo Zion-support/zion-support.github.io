@@ -9,4 +9,3 @@ const Navigation.js = ({ className }) => {
   );
 };
 
-export default Navigation.js;

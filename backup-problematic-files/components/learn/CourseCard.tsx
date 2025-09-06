@@ -19,7 +19,7 @@ export default function CourseCard({ course }: { course: Course }) {
           {course.isFree ? 'Free' : 'Paid'}
         </span>
       </div>
-      <div className="text-xs text-gray-500 mt-1">{course.category} • {course.level} • {Math.round(course.durationMinutes / 60)}h</div>
+      <div className="text-xs text-gray-500 mt-1">{course.category}  {course.level}  {Math.round(course.durationMinutes / 60)}h</div>
       <div className="text-sm mt-2 line-clamp-2">{course.description}</div>
       <div className="mt-3 flex items-center justify-between">
         <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded">Badge: {course.certificationBadge}</span>
@@ -49,7 +49,7 @@ export default function CourseCard({ course }: { course: Course }) {;
           {course.isFree ? 'Free' : 'Paid'}
         </span>;
       </div>;
-      <div className="text-xs text-gray-500 mt-1">{course.category} • {course.level} • {Math.round(course.durationMinutes / 60)}h</div>;
+      <div className="text-xs text-gray-500 mt-1">{course.category}  {course.level}  {Math.round(course.durationMinutes / 60)}h</div>;
       <div className="text-sm mt-2 line-clamp-2">{course.description}</div>;
       <div className="mt-3 flex items-center justify-between">;
         <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded">Badge: {course.certificationBadge}</span>;

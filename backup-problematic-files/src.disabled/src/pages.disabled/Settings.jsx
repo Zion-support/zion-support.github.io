@@ -9,4 +9,3 @@ const Settings = ({ className }) => {
   );
 };
 
-export default Settings;

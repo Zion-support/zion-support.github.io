@@ -27,4 +27,3 @@ const MicroSaasServicesSection = ({ className }) => {
   );
 };
 
-export default MicroSaasServicesSection;

@@ -9,4 +9,3 @@ const CustomerExperience = ({ className }) => {
   );
 };
 
-export default CustomerExperience;

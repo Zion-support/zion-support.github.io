@@ -27,4 +27,3 @@ const LanguageSelector = ({ className }) => {
   );
 };
 
-export default LanguageSelector;

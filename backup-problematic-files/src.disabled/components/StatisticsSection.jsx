@@ -27,4 +27,3 @@ const StatisticsSection = ({ className }) => {
   );
 };
 
-export default StatisticsSection;

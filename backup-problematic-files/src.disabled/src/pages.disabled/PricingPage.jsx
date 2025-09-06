@@ -9,4 +9,3 @@ const PricingPage = ({ className }) => {
   );
 };
 
-export default PricingPage;

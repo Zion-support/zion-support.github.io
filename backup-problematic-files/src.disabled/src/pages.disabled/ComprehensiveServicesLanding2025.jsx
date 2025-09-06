@@ -9,4 +9,3 @@ const ComprehensiveServicesLanding2025 = ({ className }) => {
   );
 };
 
-export default ComprehensiveServicesLanding2025;

@@ -1,17 +1,7 @@
-}
-import React from "react"
-import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
-import { logInfo } from '@/utils/productionLogger'
-import React from "react",
-import { QrCodeIcon } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons",
-import { logInfo } from '@/utils/productionLogger',
-xport const DownloadSection: React.FC = () => {
-}
-import React from "react"
-import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
-import { logInfo } from '@/utils/productionLogger'
 
+
+
+              
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
 import { AppStoreButtons } from "./AppStoreButtons",
@@ -30,20 +20,6 @@ export const DownloadSection: React.FC = () => {
               <p className="text-lg text-gray-300 mb-8">
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
-              <AppStoreButtons
-                className="mb-8"
-                appStoreUrl = {appStoreUrl,}
-                googlePlayUrl = {googlePlayUrl,}
-                onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
-                onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
-              />
-appStoreUrl = {appStoreUrl,}
-                googlePlayUrl = {googlePlayUrl,}
-                onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
-                onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
-
-
-
               
               <AppStoreButtons 
                 className="mb-8" 
@@ -52,18 +28,11 @@ appStoreUrl = {appStoreUrl,}
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />
-              
-              <div className="text-sm text-gray-400">
-              
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
-            <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
-            <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
-            
-            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
                 {/* This would be replaced with an actual QR code in production */}
@@ -74,19 +43,6 @@ appStoreUrl = {appStoreUrl,}
         </div>
       </div>
     </section>
-  );
-};
-";
-}
-"
-
-  );
-};
-";
-  )
-}
-"
-
 },
 import React from "react",;
 import { QrCodeIcon } from 'lucide-react';
@@ -113,12 +69,6 @@ export const DownloadSection: React.FC = () => {;
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
-              <div className="text-sm text-gray-400">;
-                <p>Compatible with iOS 14+ and Android 8.0+</p>;
-                <p>Free download, in-app purchases available</p>;
-              </div>;
-            </div>;
-            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">;
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;
                 {/* This would be replaced with an actual QR code in production */}
@@ -131,23 +81,9 @@ export const DownloadSection: React.FC = () => {;
     </section>;
   );
 };
-            
-            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
 
 ";
 
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
 
-              <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
-                <QrCodeIcon className="w-full h-full p-2" />
-                {/* This would be replaced with an actual QR code in production */}
-              </div>
-              <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  )

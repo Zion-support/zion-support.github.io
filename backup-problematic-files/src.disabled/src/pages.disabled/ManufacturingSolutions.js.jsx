@@ -9,4 +9,3 @@ const ManufacturingSolutions.js = ({ className }) => {
   );
 };
 
-export default ManufacturingSolutions.js;

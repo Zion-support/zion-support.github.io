@@ -9,4 +9,3 @@ const InnovativeNewServices2025 = ({ className }) => {
   );
 };
 
-export default InnovativeNewServices2025;

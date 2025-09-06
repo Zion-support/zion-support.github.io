@@ -9,4 +9,3 @@ const EnhancedAccessibility.js = ({ className }) => {
   );
 };
 
-export default EnhancedAccessibility.js;

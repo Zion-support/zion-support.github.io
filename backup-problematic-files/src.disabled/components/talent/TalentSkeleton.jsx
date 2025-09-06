@@ -27,4 +27,3 @@ const TalentSkeleton = ({ className }) => {
   );
 };
 
-export default TalentSkeleton;

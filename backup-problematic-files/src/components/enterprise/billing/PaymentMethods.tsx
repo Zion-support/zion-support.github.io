@@ -45,7 +45,7 @@ export function PaymentMethods() {;
               </div>;
               <div>;
                 <p className="font-medium">;
-                  {method.brand} •••• {method.last4}
+                  {method.brand}  {method.last4}
                   {method.isDefault && (;
                     <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">;
                       Default;

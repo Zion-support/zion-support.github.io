@@ -9,4 +9,3 @@ const AIContentFactory = ({ className }) => {
   );
 };
 
-export default AIContentFactory;

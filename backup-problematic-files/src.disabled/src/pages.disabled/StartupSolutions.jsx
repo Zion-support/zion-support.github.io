@@ -9,4 +9,3 @@ const StartupSolutions = ({ className }) => {
   );
 };
 
-export default StartupSolutions;

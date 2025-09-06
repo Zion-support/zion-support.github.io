@@ -1,6 +1,3 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -31,32 +28,6 @@ const AutoIndex: NextPage = () => {
         </ul>
       </main>
     </div>
-
-
-
-export default AutoIndex;
-
-
-export default AutoIndex;
-import Head from 'next / head';
-import Link from 'next / link';
-          </li>;
-        </ul>;
-      </main>;
-    </div>),
-}
-;
-export default AutoIndex;
-;
-
-export default AutoIndex
-
-  ),
-};
-
-  )
-}
-export default AutoIndex;
 
 },
 export default AutoIndex,
@@ -89,6 +60,6 @@ const AutoIndex: NextPage = () => {;
         </ul>;
       </main>;
     </div>;
-  );
-},;
+
+
 export default AutoIndex;

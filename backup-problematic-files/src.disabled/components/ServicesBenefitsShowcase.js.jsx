@@ -9,4 +9,3 @@ const ServicesBenefitsShowcase.js = ({ className }) => {
   );
 };
 
-export default ServicesBenefitsShowcase.js;

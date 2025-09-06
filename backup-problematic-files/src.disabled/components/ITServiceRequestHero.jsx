@@ -9,4 +9,3 @@ const ITServiceRequestHero = ({ className }) => {
   );
 };
 
-export default ITServiceRequestHero;

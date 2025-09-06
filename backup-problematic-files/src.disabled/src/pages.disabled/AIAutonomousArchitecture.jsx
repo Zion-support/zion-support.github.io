@@ -9,4 +9,3 @@ const AIAutonomousArchitecture = ({ className }) => {
   );
 };
 
-export default AIAutonomousArchitecture;

@@ -27,4 +27,3 @@ const ClientDashboard = ({ className }) => {
   );
 };
 
-export default ClientDashboard;

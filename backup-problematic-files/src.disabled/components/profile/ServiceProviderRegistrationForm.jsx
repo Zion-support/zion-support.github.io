@@ -9,4 +9,3 @@ const ServiceProviderRegistrationForm = ({ className }) => {
   );
 };
 
-export default ServiceProviderRegistrationForm;

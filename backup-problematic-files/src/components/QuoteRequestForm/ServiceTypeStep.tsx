@@ -247,4 +247,3 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 }/> </div>) ) ) : (<div className="text-center py-8 text-zion-slate-light" > No items found. Please try a different search. </div>) ;
 }</div> </div>) ;
 }</div>) ;
-}"

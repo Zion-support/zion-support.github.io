@@ -9,4 +9,3 @@ const HowItWorksSection.js = ({ className }) => {
   );
 };
 
-export default HowItWorksSection.js;

@@ -27,4 +27,3 @@ const ProfilePage = ({ className }) => {
   );
 };
 
-export default ProfilePage;

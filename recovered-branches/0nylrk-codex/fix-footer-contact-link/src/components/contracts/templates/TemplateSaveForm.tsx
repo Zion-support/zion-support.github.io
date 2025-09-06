@@ -1,5 +1,3 @@
-
-
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -12,19 +10,6 @@ import {Button} from "@/components/ui/button";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Switch} from "@/components/ui/switch";
-  editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues;
-}
-export function TemplateSaveForm(): any ({;
-  onCancel;
-  onComplete;
-  editTemplate;
-  currentValues;
-}: TemplateSaveFormProps) {;
-  const [saving, setSaving] = useState(false);
-  const { createTemplate, updateTemplate } = useContractTemplates();
-
-
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
   isDefault: z.boolean().default(false)})
@@ -32,39 +17,26 @@ type FormValues = z.infer<typeof formSchema>;
 interface TemplateSaveFormProps {
   onCancel: () => void
   onComplete: () => void
+const formSchema = z && z.object({;
+  title: z && z.string().min(1, "Title is required");
+  isDefault: z && z.boolean().default(false)}),;
+
+type FormValues = z && z.infer<typeof formSchema>;
+
+interface TemplateSaveFormProps {;
+  onCancel: () => void,;
+  onComplete: () => void,;
+
   editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues
+  currentValues?: ContractFormValues;
 }
-export function TemplateSaveForm({
   onCancel;
   onComplete;
   editTemplate;
-  currentValues
-}: TemplateSaveFormProps) {
+  currentValues;
+}: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      title: editTemplate?.title |""
-      isDefault: editTemplate?.is_default |false}})
-  const onSubmit = async (values: FormValues) => {
-    if (!currentValues && !editTemplate) {
-      return
-    }
-    setSaving(true);
-    try {
-      if (editTemplate) {
-        await updateTemplate.mutateAsync({
-          templateId: editTemplate.id
-          title: values.title
-          templateData: editTemplate.template_data
-          isDefault: values.isDefault})
-      } else if (currentValues) {
-        await createTemplate.mutateAsync({
-          title: values.title
-          templateData: currentValues
-          isDefault: values.isDefault})
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -77,7 +49,6 @@ import { Button } from "@/components/ui/button",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
-
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -89,42 +60,6 @@ interface TemplateSaveFormProps {
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
-}
-
-export function TemplateSaveForm({;
-  onCancel;
-  onComplete;
-  editTemplate;
-  currentValues
-}: TemplateSaveFormProps) {
-  const [saving, setSaving] = useState(false);
-  const { createTemplate, updateTemplate } = useContractTemplates();
-  
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false}}),
-  
-  const onSubmit = async (values: FormValues) => {
-    if (!currentValues && !editTemplate) {
-      return
-    }
-    
-    setSaving(true);
-    
-    try {
-      if (editTemplate) {
-        await updateTemplate.mutateAsync({
-          templateId: editTemplate.id,
-          title: values.title,
-          templateData: editTemplate.template_data,
-          isDefault: values.isDefault})
-      } else if (currentValues) {
-        await createTemplate.mutateAsync({
-          title: values.title,
-          templateData: currentValues,
-          isDefault: values.isDefault})
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -179,48 +114,19 @@ export function TemplateSaveForm({;
           title: values.title,;
           templateData: currentValues;
           isDefault: values.isDefault});
-
       }
       onComplete()
     } finally {
       setSaving(false)
     }
-
-
-  const form = useForm<FormValues>({;
-    resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      title: editTemplate?.title || "",;
-      isDefault: editTemplate?.is_default || false}}),;
-  const onSubmit = async (values: FormValues) => {;
-    if (!currentValues && !editTemplate) {;
-      return;
-    }
-    setSaving(true);
-    try {;
-      if (editTemplate) {;
-        await updateTemplate && updateTemplate.mutateAsync({;
-          templateId: editTemplate && editTemplate.id,;
-          title: values && values.title,;
-          templateData: editTemplate && editTemplate.template_data,;
-          isDefault: values && values.isDefault});
-      } else if (currentValues) {;
-        await createTemplate && createTemplate.mutateAsync({;
-          title: values && values.title,;
-          templateData: currentValues,;
-          isDefault: values && values.isDefault});
-      }
-      onComplete();
-    } finally {;
-      setSaving(false);
-    }
-  };
-
   }
 
   },
   };
   },
+  };
+  },
+  
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -236,7 +142,6 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
-        />;
         <FormField
           control={form && form.control}
           name="isDefault"
@@ -252,26 +157,6 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
-        />;
-        <div className="flex gap-2 justify-end">;
-          <Button type="button" variant="outline" onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={saving}>;
-            {saving ? (;
-              <>;
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                Saving...;
-              </>;
-            ) : (;
-              `${editTemplate ? "Update" : "Save"} Template`;
-            )}
-          </Button>;
-        </div>;
-      </form>;
-    </Form>;
-  );
-}
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';

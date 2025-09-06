@@ -306,7 +306,7 @@ export default function APIRateLimiterPage() {;
                 </div>
               ) : (
                 <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
-                  <div className="text-6xl mb-4">📊</div>
+                  <div className="text-6xl mb-4"></div>
                   <p className="text-gray-400">
                     Test results will appear here. Configure your settings and click "Test Rate Limiting" to see how it works.
                   </p>
@@ -330,7 +330,7 @@ export default function APIRateLimiterPage() {;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🛡️</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">DDoS Protection</h3>
               <p className="text-gray-400">
                 Advanced algorithms detect and prevent distributed denial of service attacks in real-time.
@@ -338,7 +338,7 @@ export default function APIRateLimiterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">⚡</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">High Performance</h3>
               <p className="text-gray-400">
                 Built on Redis and optimized for high-throughput applications with minimal latency.
@@ -346,7 +346,7 @@ export default function APIRateLimiterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🎯</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Flexible Rules</h3>
               <p className="text-gray-400">
                 Configure different limits for different endpoints, users, or IP addresses.
@@ -354,7 +354,7 @@ export default function APIRateLimiterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📊</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Real-time Analytics</h3>
               <p className="text-gray-400">
                 Monitor API usage, identify patterns, and optimize your rate limiting strategy.
@@ -362,7 +362,7 @@ export default function APIRateLimiterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔧</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
               <p className="text-gray-400">
                 Simple REST API and SDKs for Node.js, Python, Go, and other popular languages.
@@ -370,7 +370,7 @@ export default function APIRateLimiterPage() {;
             </Card>
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🌍</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-xl font-bold text-white mb-4">Global Distribution</h3>
               <p className="text-gray-400">
                 Edge locations worldwide ensure consistent performance and low latency for all users.
@@ -430,42 +430,42 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🛡️</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">DDoS Protection</h3>;
               <p className="text-gray-400">;
                 Advanced algorithms detect and prevent distributed denial of service attacks in real-time.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">⚡</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">High Performance</h3>;
               <p className="text-gray-400">;
                 Built on Redis and optimized for high-throughput applications with minimal latency.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🎯</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Flexible Rules</h3>;
               <p className="text-gray-400">;
                 Configure different limits for different endpoints, users, or IP addresses.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📊</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Real-time Analytics</h3>;
               <p className="text-gray-400">;
                 Monitor API usage, identify patterns, and optimize your rate limiting strategy.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🔧</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>;
               <p className="text-gray-400">;
                 Simple REST API and SDKs for Node.js, Python, Go, and other popular languages.;
               </p>;
             </Card>;
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🌍</div>;
+              <div className="text-4xl mb-4"></div>;
               <h3 className="text-xl font-bold text-white mb-4">Global Distribution</h3>;
               <p className="text-gray-400">;
                 Edge locations worldwide ensure consistent performance and low latency for all users.;

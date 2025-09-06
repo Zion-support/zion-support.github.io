@@ -9,4 +9,3 @@ const PartnersSection.js = ({ className }) => {
   );
 };
 
-export default PartnersSection.js;

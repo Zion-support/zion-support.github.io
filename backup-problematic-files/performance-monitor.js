@@ -1,9 +1,3 @@
-this && this.metrics = {
-      bundleSize: 0,
-      loadTime: 0,
-      memoryUsage: 0,
-      timestamp: new Date().toISOString(),
-    };
   }
   async measureBundleSize() {
     try {
@@ -22,14 +16,6 @@ this && this.metrics = {
   }
   generateReport() {
     const report = {
-      timestamp: this && this.metrics.timestamp,
-      bundleSize: this && this.metrics.bundleSize,
-      memoryUsage: this && this.metrics.memoryUsage,
-      recommendations: [],
-    };
-    if (this && this.metrics.bundleSize > 1000000) {
-      report && report.recommendations.push(
-        "Consider code splitting to reduce bundle size",
       );
     }
     if (this && this.metrics.memoryUsage > 100) {
@@ -87,13 +73,6 @@ if ( {) {
     return report;
   }
 }
-monitor && monitor.measureBundleSize();
-monitor && monitor.measureMemoryUsage();
-const report = monitor && monitor.generateReport();
-const reportPath = path && path.join(process && process.cwd(), "performance-report && report.json");
-fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
-console && console.log("Performance report generated:", reportPath);
-console.log('Performance report generated:', reportPath);
 const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();

@@ -27,4 +27,3 @@ const Orders = ({ className }) => {
   );
 };
 
-export default Orders;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import { useState  } from './react';
 import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -45,11 +43,6 @@ if ( {) {
           <img;
             src={project.image_url}
             alt={project.title}
-
-=======
-
-
-
 import {useState} from 'react';
 import {Card, CardContent, CardFooter} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -57,40 +50,19 @@ import {Badge} from '@/components/ui/badge';
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
 import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
-=======
-import { useState } from "react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
-import { PortfolioProject } from "@/types/resume";
->>>>>>> main
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void;
 }
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
-<<<<<<< HEAD
-      onDelete(project.id)
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -113,77 +85,21 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 
     }
-    setDeleteDialogOpen(false)
-  },
-  
-=======
-      onDelete(project.id);
-    }
     setDeleteDialogOpen(false);
   };
 
->>>>>>> main
   return (
-    <Card className="h-full flex flex-col">
-      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
-        {project.image_url ? (
+    <Card className="h-full flex flex-col">;
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
+        {project && project.image_url ? (;
           <img
-            src={project.image_url}
-            alt={project.title}
             className="w-full h-full object-cover"
           />;
         ) : (;
-
-import { useState } from 'react',;
-import { Card, CardContent, CardFooter } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',;
-import { PortfolioProject } from '@/types/resume',;
-;
-interface ProjectCardProps {;
-  project:PortfolioProject,;
-  onEdit:(project:PortfolioProject) => void,;
-  onDelete:(projectId:string) => void;
-}
-;
-export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false),;
-  ;
-  const handleDelete = () => {;
-    if (project.id) {;
-      onDelete(project.id),;
-    }
-    setDeleteDialogOpen(false),;
-  },;
-  ;
-  return (;
-    <Card className="h-full flex flex-col">;
-      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
-        {project.image_url ? (;
-          <img ;
-            src={project.image_url} ;
-            alt={project.title} ;
-            className="w-full h-full object-cover";
-          />;
-        ) :(;
           <div className="w-full h-full flex items-center justify-center bg-muted">;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
-      </div>
-<<<<<<< HEAD
-      <CardContent className="flex-grow pt-6">
-        <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{project.title}</h3>
-=======
-
-      <CardContent className="flex-grow pt-6">
-        <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{project.title}</h3>
-
->>>>>>> main
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">
               {project.description}
@@ -195,22 +111,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
-                </Badge>;
-              ))}
-            </div>;
-                  {tech}
-
-                </Badge>;
-              ))}
-            </div>;
-
-          )}
-        </div>
-      </CardContent>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
           {project.github_url && (
@@ -237,10 +137,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             </Link>
           )}
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>
             <Edit className="h-4 w-4" />
@@ -254,10 +150,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
           </Button>
         </div>
       </CardFooter>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>

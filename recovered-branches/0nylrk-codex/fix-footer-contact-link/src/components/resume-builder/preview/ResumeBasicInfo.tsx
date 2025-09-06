@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-
-import { ResumeBasicInfo  } from '@/types / resume';
-
-interface ResumeBasicInfoSectionProps {
-  basic_info: ResumeBasicInfo;
-}
-
-import {ResumeBasicInfo} from '@/types/resume';
-interface ResumeBasicInfoSectionProps {;
-  basicInfo: ResumeBasicInfo;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 import { ResumeBasicInfo } from "@/types/resume";
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
->>>>>>> main
 }
 
 export function ResumeBasicInfoSection({

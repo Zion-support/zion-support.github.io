@@ -9,4 +9,3 @@ const Accessibility.js = ({ className }) => {
   );
 };
 
-export default Accessibility.js;

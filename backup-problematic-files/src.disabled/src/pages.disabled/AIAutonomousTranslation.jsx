@@ -9,4 +9,3 @@ const AIAutonomousTranslation = ({ className }) => {
   );
 };
 
-export default AIAutonomousTranslation;

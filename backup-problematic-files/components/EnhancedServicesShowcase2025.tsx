@@ -400,7 +400,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
             animate={{ opacity: 1 }}
             className="text-center py-16"
           >
-            <div className="text-6xl mb-4">🔍</div>
+            <div className="text-6xl mb-4"></div>
             <h3 className="text-2xl font-bold text-gray-300 mb-2">No services found</h3>
             <p className="text-gray-400">Try adjusting your search terms or category filters</p>
           </motion.div>
@@ -437,7 +437,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
                   onClick={closeModal}
                   className="p-2 hover:bg-white/10 rounded-lg transition-colors"
                 >
-                  <span className="text-2xl">×</span>
+                  <span className="text-2xl"></span>
                 </button>
               </div>
 

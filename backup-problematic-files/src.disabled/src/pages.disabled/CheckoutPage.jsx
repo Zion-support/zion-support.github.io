@@ -27,4 +27,3 @@ const CheckoutPage = ({ className }) => {
   );
 };
 
-export default CheckoutPage;

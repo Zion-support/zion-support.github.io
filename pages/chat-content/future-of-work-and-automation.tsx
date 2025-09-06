@@ -1,5 +1,3 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -15,10 +13,14 @@ const FutureOfWorkAndAutomation: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-
-
   )
 }
+export default FutureOfWorkAndAutomation;
+
+},
+export default FutureOfWorkAndAutomation,
+
+
       <main>;
         <h1>FutureOfWorkAndAutomation</h1>;
         <p>This page is under construction.</p>;
@@ -27,6 +29,8 @@ const FutureOfWorkAndAutomation: NextPage = () => {
   ),;
 };
 export default FutureOfWorkAndAutomation;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > FutureOfWorkAndAutomation</h1>;
@@ -39,16 +43,3 @@ export default FutureOfWorkAndAutomation;
 ;
 
 
-
-export default FutureOfWorkAndAutomation
-
-  ),
-};
-
-export default FutureOfWorkAndAutomation;
-  )
-}
-export default FutureOfWorkAndAutomation;
-
-},
-export default FutureOfWorkAndAutomation,

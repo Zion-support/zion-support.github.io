@@ -27,4 +27,3 @@ const ContentGenerator = ({ className }) => {
   );
 };
 
-export default ContentGenerator;

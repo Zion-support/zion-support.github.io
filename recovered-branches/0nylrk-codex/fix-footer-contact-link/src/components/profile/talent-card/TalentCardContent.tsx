@@ -1,43 +1,11 @@
-<<<<<<< HEAD
-
 import React, { useState } from './react';
 import { MapPin  } from './lucide-react';
 import { TalentCardSkills  } from './TalentCardSkills';
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
-  skills: string[] | undefined
-
-import React, { useState } from "react";
-import {MapPin} from "lucide-react";
-import {TalentCardSkills} from "./TalentCardSkills";
-=======
-
-export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
-=======
-import React, { useState } from "react";
-import { MapPin } from "lucide-react";
-import { TalentCardSkills } from "./TalentCardSkills";
-interface TalentCardContentProps {
-  summary: string | undefined;
-  bio: string;
-  timezone: string | undefined;
-  skills: string[] | undefined;
-}
-
-export function TalentCardContent({
-  summary,
-  bio,
-  timezone,
-  skills,
-}: TalentCardContentProps) {
->>>>>>> main
   const [isHovering, setIsHovering] = useState(false);
 
 
@@ -60,19 +28,6 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 import React, { useState } from "react",;
 import { MapPin } from "lucide-react",;
 import { TalentCardSkills } from "./TalentCardSkills",;
-
-interface TalentCardContentProps {;
-  summary: string | undefined,;
-  bio: string,;
-  timezone: string | undefined,;
-  skills: string[] | undefined;
-}
-export function TalentCardContent(): any ({ summary, bio, timezone, skills }: TalentCardContentProps) {;
-  const [isHovering, setIsHovering] = useState(false);
-
-import React, { useState } from "react",;
-import { MapPin } from "lucide-react",;
-import { TalentCardSkills } from "./TalentCardSkills",;
 ;
 interface TalentCardContentProps {;
   summary:string | undefined,;
@@ -80,15 +35,15 @@ interface TalentCardContentProps {;
   timezone:string | undefined,;
   skills:string[] | undefined;
 }
-;
-export function TalentCardContent({ summary, bio, timezone, skills } TalentCardContentProps) {;
-  const [isHovering, setIsHovering] = useState(false),;
-;
-  return (;
+
+  const [isHovering, setIsHovering] = useState(false);
+  return (
     <div>;
 
 
 
+
+}
 
       {/* Location */}
       {timezone && (;
@@ -97,68 +52,11 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
           <span>{timezone}</span>;
         </div>;
       )}
-
-      {/* Short bio or summary - longer on hover for desktop */}
-      <div
-        className="overflow-hidden transition-all duration-300"
-        style={{ maxHeight: isHovering ? "8rem" : "3rem" }}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-      >
-        <p className="text-zion-slate mb-4">{summary || bio}</p>
-      </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>
   );
 }
-=======
-
-      {/* Short bio or summary - longer on hover for desktop */}
-      ;
-      {/* Short bio or summary - longer on hover for desktop */}
-      <div ;
-        className="overflow-hidden transition-all duration-300" ;
-        style={{ maxHeight:isHovering ? '8rem' :'3rem' }}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-      >;
-        <p className="text-zion-slate mb-4">;
-          {summary || bio}
-        </p>;
-      </div>;
-      ;
-      {/* Skills */}
-      <TalentCardSkills skills={skills} />;
-    </div>;
-  ),;}
- interface TalentCardContentProps {
-  summary: string | undefined;
-bio: string;
-timezone: string | undefined;
-skills: string[] | undefined 
-}export function TalentCardContent ({
-  summary, bio, timezone, skills 
-}: TalentCardContentProps) {
-  const [isHovering, setIsHovering] = useState (false);
-/* Location */ 
-}<span> {
-  timezone 
-}</span> </div>) 
-}{
-  /* Short bio or summary - longer on hover for desktop */ 
-}<div </p> </div> {
-  /* Skills */ 
-}<TalentCardSkills skills= {
-  skills 
-}/> </div>) 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * TalentCardContent - Function description
  */
@@ -186,4 +84,3 @@ function TalentCardContent() {
       <TalentCardSkills skills={skills} />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

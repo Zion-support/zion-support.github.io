@@ -27,4 +27,3 @@ const InterviewRequestForm = ({ className }) => {
   );
 };
 
-export default InterviewRequestForm;

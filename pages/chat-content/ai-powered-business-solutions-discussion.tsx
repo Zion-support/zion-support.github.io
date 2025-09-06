@@ -1,5 +1,3 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -15,10 +13,14 @@ const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-
-
   )
 }
+export default AiPoweredBusinessSolutionsDiscussion;
+
+},
+export default AiPoweredBusinessSolutionsDiscussion,
+
+
       <main>;
         <h1>AiPoweredBusinessSolutionsDiscussion</h1>;
         <p>This page is under construction.</p>;
@@ -27,6 +29,8 @@ const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
   ),;
 };
 export default AiPoweredBusinessSolutionsDiscussion;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > AiPoweredBusinessSolutionsDiscussion</h1>;
@@ -39,16 +43,3 @@ export default AiPoweredBusinessSolutionsDiscussion;
 ;
 
 
-
-export default AiPoweredBusinessSolutionsDiscussion
-
-  ),
-};
-
-export default AiPoweredBusinessSolutionsDiscussion;
-  )
-}
-export default AiPoweredBusinessSolutionsDiscussion;
-
-},
-export default AiPoweredBusinessSolutionsDiscussion,

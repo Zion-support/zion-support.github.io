@@ -9,4 +9,3 @@ const 3d-card-gallery = ({ className }) => {
   );
 };
 
-export default 3d-card-gallery;

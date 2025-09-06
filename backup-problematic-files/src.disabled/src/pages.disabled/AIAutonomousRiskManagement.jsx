@@ -9,4 +9,3 @@ const AIAutonomousRiskManagement = ({ className }) => {
   );
 };
 
-export default AIAutonomousRiskManagement;

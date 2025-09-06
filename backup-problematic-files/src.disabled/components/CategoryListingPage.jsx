@@ -9,4 +9,3 @@ const CategoryListingPage = ({ className }) => {
   );
 };
 
-export default CategoryListingPage;

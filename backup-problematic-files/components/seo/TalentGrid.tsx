@@ -44,7 +44,7 @@ export default function TalentGrid({ region, service }: Props) {
               <span key={sk} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">{sk}</span>
             ))}
           </div>
-          <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
+          <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr  {p.availability}</div>
         </div>
 ;
 export default function TalentGrid({ region, service }: Props) {;
@@ -73,7 +73,7 @@ export default function TalentGrid({ region, service }: Props) {;
               <span key={sk} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">{sk}</span>;
             ))}
           </div>;
-          <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>;
+          <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr  {p.availability}</div>;
         </div>;
       ))}
     </div>;

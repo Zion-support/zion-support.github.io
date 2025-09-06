@@ -9,4 +9,3 @@ const [id].js = ({ className }) => {
   );
 };
 
-export default [id].js;

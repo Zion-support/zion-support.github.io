@@ -1,3 +1,4 @@
+
 // Add basic type definitions for Node.js globals used in the project;
 interface Process {;
   env:{;

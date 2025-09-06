@@ -27,4 +27,3 @@ const SavedTalentsPage = ({ className }) => {
   );
 };
 
-export default SavedTalentsPage;

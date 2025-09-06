@@ -1,8 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method === "GET") {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -21,12 +16,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
     return res.status(201).json(created);
 
-
-  res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
@@ -126,3 +115,13 @@ export default function handler(req, res) {
   }
 }
 }
+
+
+}
+    return res.status (201).json (created);
+  }
+  res.set_header ("Allow", "GET, POST");
+  return res.status (405).end ("Method Not Allowed");
+}
+
+

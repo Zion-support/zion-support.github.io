@@ -4,14 +4,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 class ComprehensiveAutomationRunner {
   constructor() {
     this.projectRoot = process.cwd();
@@ -41,6 +33,10 @@ class ComprehensiveAutomationRunner {
       this.results.push({ script: scriptName, success: false, error: error.message });
       return { success: false, error: error.message };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 =======
 =======
@@ -81,9 +77,14 @@ class ComprehensiveAutomationRunner {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
     }
   }
 
@@ -93,6 +94,9 @@ class ComprehensiveAutomationRunner {
 this.log('🎯 Starting Comprehensive Automation Runner');
     this.log('
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 <<<<<<< HEAD
     this.log('🎯 Starting Comprehensive Automation Runner');
@@ -217,6 +221,17 @@ runner.runAllAutomations().catch(console.error);
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
 =======
     this.log('🎯 Starting Comprehensive Automation Runner');
     this.log('📋 Running all automation scripts...');
@@ -269,3 +284,4 @@ if (require.main === module) {
 
 module.exports = ComprehensiveAutomationRunner;
 >>>>>>> main
+>>>>>>> origin/main

@@ -27,4 +27,3 @@ const Signup = ({ className }) => {
   );
 };
 
-export default Signup;

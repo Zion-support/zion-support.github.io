@@ -9,4 +9,3 @@ const AnalyticsContainer = ({ className }) => {
   );
 };
 
-export default AnalyticsContainer;

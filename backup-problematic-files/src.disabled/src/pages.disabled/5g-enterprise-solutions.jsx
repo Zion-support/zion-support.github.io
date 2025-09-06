@@ -9,4 +9,3 @@ const 5g-enterprise-solutions = ({ className }) => {
   );
 };
 
-export default 5g-enterprise-solutions;

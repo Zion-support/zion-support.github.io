@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 
 
 
@@ -12,41 +9,11 @@ import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/
 import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
 import {Resume} from '@/types/resume';
 import {useResume} from '@/hooks/useResume';
-=======
-import { useState } from "react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
-import { Resume } from "@/types/resume";
-import { useResume } from "@/hooks/useResume";
->>>>>>> main
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
-  onResumeChange: (resumeId: string) => void;
+  onResumeChange: (resumeId: string) => void
 }
 
-<<<<<<< HEAD
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
-=======
-export function ResumeVersionSelector({
-  currentResume,
-  onResumeChange,
-}: ResumeVersionSelectorProps) {
->>>>>>> main
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState("");
@@ -61,11 +28,6 @@ export function ResumeVersionSelector({
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-<<<<<<< HEAD
-        setNewResumeTitle('')
-
-
-        setNewResumeTitle('')
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -100,55 +62,12 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
         setNewResumeTitle('');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
         setNewResumeTitle("");
->>>>>>> main
       }
       setIsLoading(false);
     }
-},
-      }
-      setIsLoading(false);
-    }
-  },
   };
   },
-
-  return (
-    <div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground">Resume:</span>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="gap-2">
-            {currentResume?.basic_info?.title || "My Resume"}
-            <ChevronDown className="h-4 w-4" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          {existingResumes.map((resume) => (
-            <DropdownMenuItem
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
-              className="cursor-pointer"
-            >
-              {resume.basic_info.title}
-            </DropdownMenuItem>
-          ))}
-          <DropdownMenuSeparator />
-          <DropdownMenuItem
-            onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer"
-          >
-            <Plus className="h-4 w-4 mr-2" />
-            Save as new version
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -168,16 +87,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
-
-            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
-              Cancel
-            </Button>
-            <Button
-onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() |isLoading}
-              onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() || isLoading}
-
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -188,23 +97,3 @@ onClick={handleCreateNewVersion}
         </DialogContent>
       </Dialog>
     </div>
-  );
-}
-
-};
-> {
-  resume.basic info.title 
-}</DropdownMenuItem>) ) 
-}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) 
-}
-  );
-}
-}
-;
-
-  );
-}
-  )
-}
-;
-;

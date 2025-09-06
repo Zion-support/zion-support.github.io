@@ -9,4 +9,3 @@ const ContentQualityDashboard.js = ({ className }) => {
   );
 };
 
-export default ContentQualityDashboard.js;

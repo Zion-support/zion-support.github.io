@@ -9,4 +9,3 @@ const OnsiteSupport = ({ className }) => {
   );
 };
 
-export default OnsiteSupport;

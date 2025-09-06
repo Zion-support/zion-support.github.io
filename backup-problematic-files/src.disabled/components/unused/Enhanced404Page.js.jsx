@@ -9,4 +9,3 @@ const Enhanced404Page.js = ({ className }) => {
   );
 };
 
-export default Enhanced404Page.js;

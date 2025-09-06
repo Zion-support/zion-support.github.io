@@ -9,4 +9,3 @@ const AIAutonomousMonitoring = ({ className }) => {
   );
 };
 
-export default AIAutonomousMonitoring;

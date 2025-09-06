@@ -9,4 +9,3 @@ const Infrastructure = ({ className }) => {
   );
 };
 
-export default Infrastructure;

@@ -9,4 +9,3 @@ const AIAutonomousOptimization = ({ className }) => {
   );
 };
 
-export default AIAutonomousOptimization;

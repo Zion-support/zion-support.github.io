@@ -1,47 +1,8 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
 
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import React from './react';
-import Head from './next / head';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-import {
-import {
-
-
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Linkedin
-  Twitter
-  Github
-  Award
-  Users
-  Globe
-  Code
-  Shield
   ArrowRight,
   Phone,
   Mail,
@@ -53,24 +14,19 @@ import {
   Users,
   Globe,
   Code,
-  Shield,;
 } from "lucide-react";
 import Layout from "../components/Layout";
 const teamMembers = [
   {
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
+
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
     department: "Leadership",
     bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",
-
-
-
-
-    expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Development"]
-  },
     id: 1
     name: "Kleber Santos"
     position: "CEO & Founder"
@@ -140,12 +96,6 @@ origin/automation-improvements-final
     github: "https://github.com/davidkim"
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
-Shield,
-} from './lucide-react';
-import Layout from "../components / Layout";
-;
-const team_members = [;
-  {
     image: "/api / placeholder / 300 / 300",
     linkedin: "https://linkedin.com / in / klebersantos",
     twitter: "https://twitter.com / klebersantos",
@@ -158,166 +108,6 @@ const team_members = [;
     ],
   },
   {
-    id: 2,
-    name: "Sarah Johnson",
-    position: "CTO",
-    department: "Technology",
-    bio: "Technology visionary with expertise in cloud computing, AI, and scalable architecture. Led digital transformations for Fortune 500 companies.",
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / sarahjohnson",
-    twitter: "https://twitter.com / sarahjohnson",
-    github: "https://github.com / sarahjohnson",
-    expertise: ["Cloud Computing", "AI / ML", "System Architecture", "DevOps"],
-  },
-  {
-    id: 3,
-    name: "Mike Chen",
-    position: "Head of Cybersecurity",
-    department: "Security",
-    bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Specializes in zero - trust architecture and threat intelligence.",
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / mikechen",
-    twitter: "https://twitter.com / mikechen",
-    github: "https://github.com / mikechen",
-    expertise: [;
-      "Cybersecurity",
-      "Zero - Trust",
-      "Threat Intelligence",
-      "Compliance",
-    ],
-  },
-  {
-    id: 4,
-    name: "Emily Rodriguez",
-    position: "Head of AI / ML",
-    department: "AI & Machine Learning",
-    bio: "AI researcher and practitioner with deep expertise in machine learning, natural language processing, and computer vision applications.",
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / emilyrodriguez",
-    twitter: "https://twitter.com / emilyrodriguez",
-    github: "https://github.com / emilyrodriguez",
-    expertise: ["Machine Learning", "NLP", "Computer Vision", "Deep Learning"],
-  },
-  {
-    id: 5,
-    name: "David Kim",
-    position: "Head of Data Analytics",
-    department: "Data & Analytics",
-    bio: "Data science leader with expertise in big data, predictive analytics, and business intelligence. Transforms data into actionable insights.",
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / davidkim",
-    twitter: "https://twitter.com / davidkim",
-    github: "https://github.com / davidkim",
-    expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"],
-  },
-  {
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / lisawang",
-    twitter: "https://twitter.com / lisawang",
-    github: "https://github.com / lisawang",
-    expertise: ["Product Strategy", "SaaS Development", "UX / UI", "Mobile Apps"],
-
-} from "lucide-react";
-import Layout from "../components/Layout";
-const teamMembers = [
-  {
-
-    id: 1,
-    name: "Kleber Santos",
-    position: "CEO & Founder",
-    department: "Leadership",
-    bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/klebersantos",
-    twitter: "https://twitter.com/klebersantos",
-    github: "https://github.com/klebersantos",
-expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Development"]
-  },
-
-    id: 1
-    name: "Kleber Santos"
-    position: "CEO & Founder"
-    department: "Leadership"
-    bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges."
-    image: "/api/placeholder/300/300"
-    linkedin: "https://linkedin.com/in/klebersantos"
-    twitter: "https://twitter.com/klebersantos"
-    github: "https://github.com/klebersantos"
-
-    expertise: [
-      "Strategic Leadership"
-      "AI/ML"
-      "Cloud Architecture"
-      "Business Development"
-    ]
-  }
-
-origin/main
-  {
-    id: 2
-    name: "Sarah Johnson"
-    position: "CTO"
-    department: "Technology"
-    bio: "Technology visionary with expertise in cloud computing, AI, and scalable architecture. Led digital transformations for Fortune 500 companies."
-    image: "/api/placeholder/300/300"
-    linkedin: "https://linkedin.com/in/sarahjohnson"
-    twitter: "https://twitter.com/sarahjohnson"
-    github: "https://github.com/sarahjohnson"
-    expertise: ["Cloud Computing", "AI/ML", "System Architecture", "DevOps"]
-  }
-  {
-    id: 3
-    name: "Mike Chen"
-    position: "Head of Cybersecurity"
-    department: "Security"
-    bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Specializes in zero-trust architecture and threat intelligence."
-    image: "/api/placeholder/300/300"
-    linkedin: "https://linkedin.com/in/mikechen"
-    twitter: "https://twitter.com/mikechen"
-    github: "https://github.com/mikechen"
-    expertise: [
-      "Cybersecurity"
-      "Zero-Trust"
-      "Threat Intelligence"
-      "Compliance"
-    ]
-  }
-  {
-    id: 4
-    name: "Emily Rodriguez"
-    position: "Head of AI/ML"
-    department: "AI & Machine Learning"
-    bio: "AI researcher and practitioner with deep expertise in machine learning, natural language processing, and computer vision applications."
-    image: "/api/placeholder/300/300"
-    linkedin: "https://linkedin.com/in/emilyrodriguez"
-    twitter: "https://twitter.com/emilyrodriguez"
-    github: "https://github.com/emilyrodriguez"
-    expertise: ["Machine Learning", "NLP", "Computer Vision", "Deep Learning"]
-  }
-  {
-    id: 5
-    name: "David Kim"
-    position: "Head of Data Analytics"
-    department: "Data & Analytics"
-    bio: "Data science leader with expertise in big data, predictive analytics, and business intelligence. Transforms data into actionable insights."
-    image: "/api/placeholder/300/300"
-    linkedin: "https://linkedin.com/in/davidkim"
-    twitter: "https://twitter.com/davidkim"
-    github: "https://github.com/davidkim"
-    expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
-  }
-  {
-    id: 6,
-    name: "Lisa Wang",
-    position: "Head of Product Development",
-    department: "Product",
-    bio: "Product strategist with experience building scalable SaaS platforms and mobile applications. Focuses on user experience and market fit.",
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/lisawang",
-    twitter: "https://twitter.com/lisawang",
-    github: "https://github.com/lisawang",
-    expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
-  },
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
@@ -345,10 +135,6 @@ origin/main
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
-  }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-  }
-origin/automation-improvements-final
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -359,45 +145,12 @@ origin/automation-improvements-final
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
-
-    name: 'Dr. Sarah Johnson',
-    role: 'Chief Technology Officer',
-    expertise: 'AI & Machine Learning',
-    icon: Brain,
-    description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.'
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Cloud Solutions Architect',
-    expertise: 'Cloud Infrastructure',
-    icon: Cloud,
-    description: 'Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.'
-  },
-  {
-    name: 'Emily Rodriguez',
-    role: 'Security Specialist',
-    expertise: 'Cybersecurity',
-    icon: Shield,
-    description: 'Ensuring enterprise-grade security with expertise in threat detection and prevention.'
-  },
-  {
-    name: 'David Thompson',
-    role: 'Team Lead',
-    expertise: 'Project Management',
-    icon: Users,
-    description: 'Leading our development teams with agile methodologies and client-focused delivery.'
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
   }
 ];
 
 ;
 const departments = [;
 
-  }
-];
-;
-const departments = [;
   {
     name: "Leadership"
     description: "Strategic vision and company direction"
@@ -467,6 +220,7 @@ import {;
   Shield,;
 } from "lucide-react";
 import Layout from "../components/Layout";
+
 const teamMembers = [;
   {;
     id: 1,;
@@ -552,8 +306,6 @@ const teamMembers = [;
   },;
 ];
 
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -796,7 +548,25 @@ origin/automation-improvements-final
             </Link>;
             <Link
               href="/contact"
-    </Layout>
+
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
+;
+const stats = [;
+  { number: "65+", label: "Team Members" },
+  { number: "15+", label: "Years Experience" },
+  { number: "25+", label: "Countries Represented" },
+  { number: "95%", label: "Employee Satisfaction" },
+];
+export default /**
+ * TeamPage - Function description
+ */
+function TeamPage() {
+  return (
+              Get in Touch;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
     <>
       <SEO
         title='Our Team | Zion Tech Group'
@@ -810,8 +580,6 @@ origin/automation-improvements-final
         </p>
       </div>
     </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
     </Layout>;
   );
 }
@@ -851,62 +619,11 @@ const teamMembers = [
     description:
       "Leading our development teams with agile methodologies and client-focused delivery."
   }
-
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
-;
-const stats = [;
-  { number: "65+", label: "Team Members" },
-  { number: "15+", label: "Years Experience" },
-  { number: "25+", label: "Countries Represented" },
-  { number: "95%", label: "Employee Satisfaction" },
-];
-export default /**
- * TeamPage - Function description
- */
-function TeamPage() {
-  return (
-              Get in Touch;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
-ursor/integrate-build-improve-and-re-verify-8f7d
-    <>
-      <SEO
-        title='Our Team | Zion Tech Group'
-        description='Meet the leadership team at Zion Tech Group.'
-        canonical='/team'
-      />
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">Our Team</h1>
-        <p className="text-gray-300 mb-8">
-          Profiles coming soon. For inquiries, contact us.
-        </p>
-      </div>
-    </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-    </>;
-  );
-  return (
-    <>
-      <SEO
-        title="Our Team | Zion Tech Group"
-        description="Meet the leadership team at Zion Tech Group."
-        canonical="/team"
-      />
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">Our Team</h1>
-        <p className="text-gray-300 mb-8">
-          Profiles coming soon. For inquiries, contact us.
-        </p>
-      </div>
-    </>
               className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
-className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
               Get Free Consultation;
             </Link>;
           </div>;
+
           {/* Contact Information */}
           <div className="grid md:grid-cols-3 gap-8 mt-12">;
             <div className="flex items-center justify-center">;
@@ -955,6 +672,8 @@ className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg fon
           </div>;
         </div>;
       </section>;
+
+
 const teamMembers = [;
   {;
     name: "Dr. Sarah Johnson",;
@@ -988,77 +707,21 @@ const teamMembers = [;
     description:;
       "Leading our development teams with agile methodologies and client-focused delivery.",;
   },;
-
-    </Layout>;
-
-  );
-}
-import Head from "next/head";
-import { motion } from "framer-motion";
-import { Brain, Cloud, Shield, Users } from "lucide-react";
-const teamMembers = [
-  {
-    name: "Dr. Sarah Johnson"
-    role: "Chief Technology Officer"
-    expertise: "AI & Machine Learning"
-    icon: Brain
-    description:
-      "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
-  }
-  {
-    name: "Michael Chen"
-    role: "Cloud Solutions Architect"
-    expertise: "Cloud Infrastructure"
-    icon: Cloud
-    description:
-      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications."
-  }
-  {
-    name: "Emily Rodriguez"
-    role: "Security Specialist"
-    expertise: "Cybersecurity"
-    icon: Shield
-    description:
-      "Ensuring enterprise-grade security with expertise in threat detection and prevention."
-  }
-  {
-    name: "David Thompson"
-    role: "Team Lead"
-    expertise: "Project Management"
-    icon: Users
-    description:
-      "Leading our development teams with agile methodologies and client-focused delivery."
-  }
-
 ];
+
 export default function TeamPage() {;
 
-
-
-    <>
   return (
-<>;
-
     <>
-
       <SEO
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
         canonical="/team"
 
 
-    </>;
-/>;
-      <div className="container mx-auto px-4 py-16">;
-        <h1 className="text-4xl font-bold mb-4">Our Team</h1>;
-        <p className="text-gray-300 mb-8">;
-          Profiles coming soon. For inquiries, contact us.;
-        </p>;
-      </div>;
-    </>;
+
 
     </>;
-
   );
   return (
     <>;
@@ -1075,30 +738,15 @@ export default function TeamPage() {;
       </div>;
     </>;
   );
-}
 import React from 'react';
 import SEO from '../components/SEO';
-export default function TeamPage() {
-	return (
-
-  );
-}
-import SEO from '../components/SEO';
-export default function TeamPage() {	return (
-import React from 'react',
-import SEO from '../components/SEO',
 export default function TeamPage() {
 	return (
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
-<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
-			</div>
-		</>
-	)
     </Layout>);
-</Layout>);
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';
@@ -1158,7 +806,6 @@ function TeamPage() {
       </div>;
     </>);
   return (
-
     <>;
       <SEO;
         title="Our Team | Zion Tech Group";
@@ -1180,8 +827,3 @@ function TeamPage() {
 
 ;
 
-}
-
-ursor/fix-lint-push-and-merge-to-main-ae4e
-}
-;

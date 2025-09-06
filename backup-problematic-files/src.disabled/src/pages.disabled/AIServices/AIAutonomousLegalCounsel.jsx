@@ -9,4 +9,3 @@ const AIAutonomousLegalCounsel = ({ className }) => {
   );
 };
 
-export default AIAutonomousLegalCounsel;

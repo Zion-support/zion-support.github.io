@@ -1,8 +1,3 @@
-
-import { format } from "date-fns",
-
-import { format } from "date-fns";
-import { format } from "date-fns",
 import {format} from "date-fns";
 import { format } from "date-fns",
 /**
@@ -23,20 +18,10 @@ export const format_date = (date_string: string): string => {
     return format (new Date (date_string), 'PP');
   } catch (e) {
 
-;
-
     return dateString
 
   };
 
-  try {
-    return format(new Date(dateString), 'PP')
-  } catch (e) {
-    return dateString
-  }
-}
-
-  };
 import { format } from "date-fns",;
 /**;
  * Formats a date string into a readable format;
@@ -49,5 +34,3 @@ export const formatDate = (dateString: string): string => {;
   } catch (e) {;
     return dateString;
   }
-};
-};

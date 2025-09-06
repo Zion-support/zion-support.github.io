@@ -1,4 +1,3 @@
-
 import AuthRoutes from "./AuthRoutes";
 import DashboardRoutes from "./DashboardRoutes";
 import MarketplaceRoutes from "./MarketplaceRoutes";
@@ -21,13 +20,7 @@ export {;
   ErrorRoutes;
   EnterpriseRoutes;
   CommunityRoutes;
-  DeveloperRoutes;
-}
-;
 
-
-  DeveloperRoutes
-};
 import AuthRoutes from "./AuthRoutes",
 import DashboardRoutes from "./DashboardRoutes",
 import MarketplaceRoutes from "./MarketplaceRoutes",
@@ -41,6 +34,10 @@ import CommunityRoutes from "./CommunityRoutes";
 import DeveloperRoutes from "./DeveloperRoutes";
 import CommunityRoutes from "./CommunityRoutes",
 import DeveloperRoutes from "./DeveloperRoutes",
+
+  DeveloperRoutes;
+}
+;
 export {
   AuthRoutes,
   DashboardRoutes,
@@ -53,15 +50,6 @@ export {
   EnterpriseRoutes,
   CommunityRoutes,
   DeveloperRoutes
-
-},
-  DeveloperRoutes;
-};
-  DeveloperRoutes;
-}
-;
-
-}
 },
 import AuthRoutes from "./AuthRoutes",;
 import DashboardRoutes from "./DashboardRoutes",;
@@ -90,19 +78,3 @@ export {;
 };
 
 export default Index;
-
-  CommunityRoutes,;
-  DeveloperRoutes;
-},; export {
-  AuthRoutes;
-DashboardRoutes;
-MarketplaceRoutes;
-TalentRoutes;
-AdminRoutes;
-MobileAppRoutes;
-ContentRoutes;
-ErrorRoutes;
-EnterpriseRoutes;
-CommunityRoutes;
-DeveloperRoutes 
-};

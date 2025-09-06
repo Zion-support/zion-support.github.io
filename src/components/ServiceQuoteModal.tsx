@@ -1,20 +1,11 @@
-...formData;            startDate: startDate?.toISOString(),
 
-            endDate: endDate?.toISOString()}
-...formData;            startDate: startDate?.toISOString()
-ursor/fix-website-loading-errors-and-merge-6662
-
-...formData;            startDate: startDate?.toISOString()
-...formData;            startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
         }
       })
 
 }
 }
-;
 
-;
 
 
 ...form_data;            start_date: start_date?.toISOString (),
@@ -23,10 +14,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       });
 }
 }
-
-
-
-;
 
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",

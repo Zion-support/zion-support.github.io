@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-all-final-syntax-issues.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -590,7 +591,15 @@ problematicFiles.forEach(fixFile);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-all-final-syntax-issues.cjs
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -629,6 +638,7 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
             <p style={{ "fontSize": '1.125rem', "color": '#94a3b8', "marginBottom": '2rem', "maxWidth": '600px', "margin"}
             <div style={{ "display": 'flex', "gap": '1rem', "justifyContent": 'center', "flexWrap"}
               <Link href="/careers" style={{ "background": 'linear-gradient(135deg, #3b82f6, #8b5cf6)', "color": 'white', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "transition"}
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-all-final-syntax-issues.cjs
 <<<<<<< HEAD
               <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
 =======
@@ -645,4 +655,13 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+              <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/fix-all-final-syntax-issues.cjs
+>>>>>>> origin/main
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

@@ -1,89 +1,20 @@
-export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
-export interface CompanyUsageLimits {monthlyJobPosts: number;
-  budgetCapUsd: number;
-}
-export interface CompanyPlan {tier: 'teams' | 'business' | 'enterprise-custom';
-  seatsPurchased: number;
-  seatsUsed: number;
-  usageLimits: CompanyUsageLimits;
-}
-export interface CompanyMember {id: string;
-  email: string;
-  name: string;
-  role: EnterpriseRole;
-
-}
-;
-export interface CompanyActivityEvent {;
-  id: string;
-  timestampIso: string;
-  actorEmail: string;
-  action: string;
-
-}
-export interface InvoiceRecord {id: string;
-export interface CompanyUsageLimits {;
-  monthlyJobPosts: number;
-  budgetCapUsd: number;
-export interface CompanyUsageLimits {;
-  monthlyJobPosts: number;
-  budgetCapUsd: number;
-}
-;
-export interface CompanyPlan {;
-  tier: 'teams' | 'business' | 'enterprise-custom';
-  seatsPurchased: number;
-  seatsUsed: number;
-  usageLimits: CompanyUsageLimits;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface CompanyPlan {;
-  tier: 'teams' | 'business' | 'enterprise-custom',;
-  seatsPurchased: number;
-  seatsUsed: number;
-  usageLimits: CompanyUsageLimits;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface CompanyMember {;
-  id: string;
-  email: string;
-  name: string;
-  role: EnterpriseRole;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface CompanyActivityEvent {;
-  id: string;
-  timestampIso: string;
-  actorEmail: string;
-  action: string;
-  meta?: Record<string unknown>;
-  meta?: Record<string, unknown>;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface InvoiceRecord {;
-  id: string;
   companyId: string;
   number: string;
   amountUsd: number;
   periodStartIso: string;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
+}
+export interface CompanyRecord {id: string;
+  name: string;
+  slug: string, // e.g. acme;
+  logoUrl?: string;
+  brandColor?: string;
+  plan: CompanyPlan;
+  members: CompanyMember[];
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
+
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
 export interface CompanyUsageLimits {
   monthlyJobPosts: number,
@@ -94,7 +25,6 @@ export interface CompanyUsageLimits {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
 export interface CompanyPlan {
   tier: 'teams' | 'business' | 'enterprise - custom',
@@ -128,40 +58,6 @@ export interface CompanyRecord {
   id: string,
   name: string,
   slug: string, // e.g. acme;
-
-
-  logoUrl?: string,;
-  brandColor?: string,;
-  plan: CompanyPlan,;
-  members: CompanyMember[];
-  activity: CompanyActivityEvent[];
-  invoices: InvoiceRecord[];
-}
-export interface CompanyRecord {id: string;
-  name: string;
-  slug: string, // e.g. acme;
-  logoUrl?: string;
-  brandColor?: string;
-  plan: CompanyPlan;
-  members: CompanyMember[];
-  activity: CompanyActivityEvent[];
-  invoices: InvoiceRecord[];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface CompanyRecord {;
-  id: string;
-  name: string;
-  slug: string, // e.g. acme;
-  logoUrl?: string;
-  brandColor?: string;
-  plan: CompanyPlan;
-  members: CompanyMember[];
-  activity: CompanyActivityEvent[];
-  invoices: InvoiceRecord[];
   logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
@@ -172,5 +68,6 @@ export interface CompanyRecord {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
 }

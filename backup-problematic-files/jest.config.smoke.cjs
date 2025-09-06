@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-12166
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -14,18 +18,34 @@ const customJestConfig = {
     '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
     '**/*.smoke.(js|jsx|ts|tsx)'
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> pr-12166
 module.exports = {
   testEnvironment: 'jsdom',
   testMatch: [
     '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
     '**/*.(test|spec).(js|jsx|ts|tsx)'
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
   ],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/.next/',
     '/out/',
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> pr-12166
     '/dist/',
     '/recovered-branches/',
     '/src_backup/',
@@ -50,6 +70,11 @@ module.exports = {
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> pr-12166
     '/dist/'
   ],
   collectCoverageFrom: [
@@ -65,5 +90,9 @@ module.exports = createJestConfig(customJestConfig)
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
   },
 
+<<<<<<< HEAD
+};
+=======
 };
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

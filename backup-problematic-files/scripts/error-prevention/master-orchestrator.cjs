@@ -111,9 +111,19 @@ class ErrorPreventionOrchestrator {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+      
+>>>>>>> origin/main
+=======
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -160,6 +170,15 @@ switch (command) {}
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
 <<<<<<< HEAD
     process.exit(1)};
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     process.exit(1)};
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+    process.exit(1)};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

@@ -27,4 +27,3 @@ const Login = ({ className }) => {
   );
 };
 
-export default Login;

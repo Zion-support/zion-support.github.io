@@ -9,4 +9,3 @@ const MobileLaunch = ({ className }) => {
   );
 };
 
-export default MobileLaunch;

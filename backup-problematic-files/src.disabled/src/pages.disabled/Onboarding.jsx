@@ -27,4 +27,3 @@ const Onboarding = ({ className }) => {
   );
 };
 
-export default Onboarding;

@@ -27,4 +27,3 @@ const EquipmentDetail = ({ className }) => {
   );
 };
 
-export default EquipmentDetail;

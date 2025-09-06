@@ -9,4 +9,3 @@ const AIBiotechDrugDiscovery.js = ({ className }) => {
   );
 };
 
-export default AIBiotechDrugDiscovery.js;

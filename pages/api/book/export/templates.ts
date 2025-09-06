@@ -1,10 +1,3 @@
-
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import type { NextApiRequest, NextApiResponse } from 'next',;
-;
 const templates = {
   lulu: {
     sizes: [
@@ -20,7 +13,6 @@ const templates = {
       { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }]}}
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json(templates)
   res.status(200).json(templates);
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -46,4 +38,7 @@ export default function handler(req, res) {
   }
 }
 }
-}
+
+
+
+

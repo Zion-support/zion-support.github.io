@@ -9,4 +9,3 @@ const ServiceInnovationHub = ({ className }) => {
   );
 };
 
-export default ServiceInnovationHub;

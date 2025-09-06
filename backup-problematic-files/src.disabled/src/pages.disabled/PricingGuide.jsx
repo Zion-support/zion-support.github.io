@@ -9,4 +9,3 @@ const PricingGuide = ({ className }) => {
   );
 };
 
-export default PricingGuide;

@@ -1,4 +1,3 @@
-
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
@@ -14,30 +13,10 @@ export async function createHireRequestNotifications({;
   requesterName;
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
-import { createNotification } from './createNotification',
-import { HireRequestNotificationParams } from './types',
 /**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
-
-  try {
-  const projectInfo = projectType 
-    ? `${projectType} project` 
-
-  talentId;
-  adminId;
-  requesterName;
-
-  requesterEmail
-
-  projectType;
-  projectSummary;
-  hireRequestId
-}: HireRequestNotificationParams) {
-
-  const projectInfo = projectType
-    ? `${projectType} project`
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -66,16 +45,6 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
-  talentId,
-  adminId,
-  requesterName,
-
-      success: talentNotification.success && adminNotification.success;
-      talentNotification
-      adminNotification
-  talentId,
-  adminId,
-  requesterName,
   requesterEmail, 
   projectType,
   projectSummary,
@@ -165,13 +134,9 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification;
       adminNotification;
-
     }
   }
   return {
-
-    success: talentNotification && talentNotification.success,
-
     talentNotification
 import {create_notification} from './create_notification';
 import {HireRequestNotificationParams} from './types';
@@ -227,11 +192,5 @@ if ( {) {
   return {
     success: talent_notification.success,
     talent_notification;
-    }
-  }
-  return {
-    success: talentNotification.success
-
-    talentNotification
   }
 }

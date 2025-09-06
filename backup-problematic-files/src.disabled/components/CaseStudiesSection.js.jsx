@@ -9,4 +9,3 @@ const CaseStudiesSection.js = ({ className }) => {
   );
 };
 
-export default CaseStudiesSection.js;

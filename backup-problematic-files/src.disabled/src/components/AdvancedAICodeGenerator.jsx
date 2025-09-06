@@ -9,4 +9,3 @@ const AdvancedAICodeGenerator = ({ className }) => {
   );
 };
 
-export default AdvancedAICodeGenerator;

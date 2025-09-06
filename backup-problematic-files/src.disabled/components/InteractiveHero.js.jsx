@@ -9,4 +9,3 @@ const InteractiveHero.js = ({ className }) => {
   );
 };
 
-export default InteractiveHero.js;

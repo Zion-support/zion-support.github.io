@@ -2,12 +2,18 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Final Syntax Fix');
+<<<<<<< HEAD
+=======
 console.log('====');
 =======
 
+=======
+>>>>>>> pr-12166
 console.log('🔧 Final Syntax Fix');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -59,9 +65,19 @@ const filesToFix = [
 ];
 let totalFixed = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -71,7 +87,14 @@ for (const file of filesToFix) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     content = fixSpecificErrors(content);
@@ -87,6 +110,15 @@ for (const file of filesToFix) {
 console.log(`\n✅ Fixed ${totalFixed} files`);
 <<<<<<< HEAD
 console.log('🎉 Final syntax fix completed!');
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 console.log('🎉 Final syntax fix completed!');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+console.log('🎉 Final syntax fix completed!');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

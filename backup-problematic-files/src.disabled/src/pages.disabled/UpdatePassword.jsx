@@ -27,4 +27,3 @@ const UpdatePassword = ({ className }) => {
   );
 };
 
-export default UpdatePassword;

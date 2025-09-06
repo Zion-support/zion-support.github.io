@@ -9,4 +9,3 @@ const ServicePortfolioDashboard = ({ className }) => {
   );
 };
 
-export default ServicePortfolioDashboard;

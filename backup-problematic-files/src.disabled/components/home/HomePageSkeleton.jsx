@@ -27,4 +27,3 @@ const HomePageSkeleton = ({ className }) => {
   );
 };
 
-export default HomePageSkeleton;

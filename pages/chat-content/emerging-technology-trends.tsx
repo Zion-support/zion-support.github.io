@@ -1,5 +1,3 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -15,10 +13,14 @@ const EmergingTechnologyTrends: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-
-
   )
 }
+export default EmergingTechnologyTrends;
+
+},
+export default EmergingTechnologyTrends,
+
+
       <main>;
         <h1>EmergingTechnologyTrends</h1>;
         <p>This page is under construction.</p>;
@@ -27,6 +29,8 @@ const EmergingTechnologyTrends: NextPage = () => {
   ),;
 };
 export default EmergingTechnologyTrends;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > EmergingTechnologyTrends</h1>;
@@ -39,16 +43,3 @@ export default EmergingTechnologyTrends;
 ;
 
 
-
-export default EmergingTechnologyTrends
-
-  ),
-};
-
-export default EmergingTechnologyTrends;
-  )
-}
-export default EmergingTechnologyTrends;
-
-},
-export default EmergingTechnologyTrends,

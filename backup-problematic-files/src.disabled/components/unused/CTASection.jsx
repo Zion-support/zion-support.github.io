@@ -27,4 +27,3 @@ const CTASection = ({ className }) => {
   );
 };
 
-export default CTASection;

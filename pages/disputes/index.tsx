@@ -1,13 +1,14 @@
-
-
-
 import useSWR from 'swr',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import Link from 'next/link',
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
-
-
-
+import EnhancedLayout from '../../components / layout / EnhancedLayout',
+import Link from 'next / link',
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
+export default /**
+ * DisputesIndexPage - Function description
+ */
+function DisputesIndexPage() {
+  const { data } = useSWR ('/api / disputes', fetcher),
+  const disputes = data?.disputes || [],
+  return (
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
 
 
@@ -36,7 +37,18 @@ const fetcher = (url: string) => fetch(url).then(r => r.json()),
                 </tr>
               ))}
               {disputes.length === 0 && (
-  return (
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+};
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
     <EnhancedLayout>;
       <div className="max - w-4xl mx - auto">;
         <div className="flex items - center justify - between mb - 4">;
@@ -62,9 +74,9 @@ const fetcher = (url: string) => fetch(url).then(r => r.json()),
                   <td className="px - 3 py - 2">{d.status}</td>;
                 </tr>))}
               {disputes.length === 0 && (
-}
 
 }
+
                 <tr>;
                   <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
                 </tr>)}
@@ -72,56 +84,9 @@ const fetcher = (url: string) => fetch(url).then(r => r.json()),
           </table>;
         </div>;
       </div>;
-    </EnhancedLayout>);
-        </div>
-        <div className=&quot;overflow-auto border rounded&quot;>
-          <table className=&quot;min-w-full text-sm&quot;>
-            <thead className=&quot;bg-gray-50 dark:bg-gray-900&quot;>
-              <tr>
-                <th className=&quot;text-left px-3 py-2&quot;>Case ID</th>
-                <th className=&quot;text-left px-3 py-2&quot;>Project</th>
-                <th className=&quot;text-left px-3 py-2&quot;>Created At</th>
-                <th className=&quot;text-left px-3 py-2&quot;>Status</th>
-                <tr key={d.id} className="border-t">
-                  <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</a></Link></td>
-                  <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</Link></Link></td>
-                  <td className="px-3 py-2">{d.projectId}</td>
-                  <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
-                  <td className="px-3 py-2">{d.status}</td>
-                </tr>
-              ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
-              {disputes.length === 0 && (
-                <tr>
-                  <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </EnhancedLayout>
-  );
-};
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </tbody>;
-          </table>;
-        </div>;
-      </div>;
-    </EnhancedLayout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}

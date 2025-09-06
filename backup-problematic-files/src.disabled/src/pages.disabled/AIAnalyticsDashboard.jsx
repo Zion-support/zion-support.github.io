@@ -9,4 +9,3 @@ const AIAnalyticsDashboard = ({ className }) => {
   );
 };
 
-export default AIAnalyticsDashboard;

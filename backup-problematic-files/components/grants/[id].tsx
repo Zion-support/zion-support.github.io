@@ -31,7 +31,7 @@ export default function GrantDetailPage() {;
       <div className="flex items-center justify-between mb-4">
         <div>
           <h1 className="text-2xl font-semibold">{item.projectName}</h1>
-          <div className="text-sm text-gray-600 dark:text-gray-400">{item.sector || 'General'} • {item.region || 'Global'} • {item.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">{item.sector || 'General'}  {item.region || 'Global'}  {item.program === 'incubator' ? 'Incubator' : 'Grant'}</div>
         </div>
         <div className="flex gap-2 items-center">
           {item.program === 'incubator' && <span className="px-2 py-1 text-xs rounded bg-purple-100 text-purple-700">Incubated by Zion</span>}

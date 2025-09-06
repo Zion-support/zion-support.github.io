@@ -9,4 +9,3 @@ const AIAutonomousTesting.js = ({ className }) => {
   );
 };
 
-export default AIAutonomousTesting.js;
