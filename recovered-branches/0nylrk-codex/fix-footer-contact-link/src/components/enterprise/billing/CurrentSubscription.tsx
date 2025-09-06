@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,10 @@ import { Badge } from "@/components/ui/badge",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function CurrentSubscription() {
   // Mock subscription data
 
@@ -30,16 +35,26 @@ export function CurrentSubscription() {
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
 
+<<<<<<< HEAD
     amount: "$1,999.00";
     billingCycle: "Annual",
     startDate: "May 1, 2025",
     nextBillingDate: "May 1, 2026",
     amount: "$1,999.00",
+=======
+    }
+  }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     teamSeats: {
       used: 32
       total: 50
@@ -49,6 +64,7 @@ export function CurrentSubscription() {
 
   return (
 
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
@@ -106,6 +122,12 @@ export function CurrentSubscription() {
   )
 
 
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -184,6 +206,15 @@ export function CurrentSubscription() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 
+=======
+=======
+      <CardFooter className="flex justify - between">;
+        <Button variant="outline">Change Plan</Button>;
+        <Button variant="destructive">Cancel Subscription</Button>;
+      </CardFooter>;
+    </Card>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

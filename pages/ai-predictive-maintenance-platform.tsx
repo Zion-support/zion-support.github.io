@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -14,8 +15,18 @@ export default function AIPredictiveMaintenancePlatform() {
   return <div>AI Predictive Maintenance Platform</div>;
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding',
+=======
 
 
+
+
+
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+<<<<<<< HEAD
 
 
 
@@ -24,6 +35,12 @@ import ServiceLanding from '../components/sections/ServiceLanding',
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
@@ -32,7 +49,10 @@ export default function AIPredictiveMaintenancePlatform() {
 			subtitle="Reliability at lower cost"
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 			implementationWeeks="2-4 weeks"
 			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%"
 			features={[
@@ -44,6 +64,7 @@ export default function AIPredictiveMaintenancePlatform() {
 				"Edge and cloud deployment",
 				"Visualizations and alerting",
 				"APIs and event webhooks"
+<<<<<<< HEAD
 
 
 			]  } catch (error) {
@@ -97,3 +118,8 @@ export default function AIPredictiveMaintenancePlatform() {
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

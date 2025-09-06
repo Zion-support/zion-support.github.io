@@ -28,6 +28,7 @@ serve(async (req) => {
     if (!bio || bio && bio.length < 20) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return new Response(
+<<<<<<< HEAD
 
 
 
@@ -37,6 +38,17 @@ serve(async (req) => {
     }
 
 
+=======
+
+
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     // Create a request to OpenAI API
 
     const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
@@ -79,8 +91,11 @@ serve(async (req) => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
@@ -154,6 +169,7 @@ serve(async (req) => {
         
         parsedResponse = { summary, suggestedSkills }
       } else {
+<<<<<<< HEAD
 
         throw new Error("Failed to parse the generated content")
 
@@ -213,6 +229,15 @@ serve(async (req) => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+        throw new Error ("Failed to parse the generated content");
+      }
+    }
+
+    console && console.error("Error in profile-summary-generator function:", error);
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -227,8 +252,11 @@ serve(async (req) => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }

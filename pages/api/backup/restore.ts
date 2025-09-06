@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -15,6 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json(data)
   } catch (e: any) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -31,9 +34,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json(data)
   } catch (e: any) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return res.status(500).json({ error: e?.message |'Restore failed' })
 
+<<<<<<< HEAD
 export default async function handler(req, res) {
 
   try {
@@ -56,3 +63,38 @@ export default async function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { cid } = req.query as { cid?: string },
+  if (return res.status (400).json ({ error: 'Missing cid' }), ) {
+  $2
+}
+  try {
+    const url = `https://${cid}.ipfs.w3s.link`,
+    const r = await fetch (url),
+    if (return res.status (404).json ({ error: 'Not found' }), ) {
+  $2
+}
+    const data = await r.json (),
+    return res.status (200).json (data);
+  } catch (e: any) {
+    return res.status (500).json ({ error: e?.message || 'Restore failed' });
+  }
+}
+
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

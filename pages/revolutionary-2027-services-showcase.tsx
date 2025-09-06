@@ -9,16 +9,23 @@ import Head from 'next/head';
   Mail,
   Phone,
   MapPin,
+<<<<<<< HEAD
 
   MessageSquare,;
   Globe,;
 
+=======
+<<<<<<< HEAD
+  MessageSquare,
+  Globe,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components / ui / UltraQuantumHolographicBackground';
 import {revolutionary2027AIServices} from '../data / revolutionary - 2027 - ai - services';
 import {revolutionary2027ITServices} from '../data / revolutionary - 2027 - it - services';
 import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027 - micro - saas';
 ;
+<<<<<<< HEAD
 
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -121,6 +128,8 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
     });
     return filtered;  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: all_services.length },
     { id: 'ai', name: 'AI Services', icon: '🧠', count: ai_count },
@@ -138,6 +147,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
       icon: '🎭',
       count: holographic_count,
     },  ];
+<<<<<<< HEAD
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' }
     { id: 'under-500', name: 'Under $500', range: 'Under $500' }
@@ -285,6 +295,33 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
   const microSaasCount = allServices.filter(service => service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health')).length;
   const holographicCount = allServices.filter(service => service.category.includes('Holographic')).length;
 
+=======
+;
+  const price_ranges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'under - 500', name: 'Under $500', range: 'Under $500' },
+    { id: '500 - 2000', name: '$500 - $2, 000', range: '$500 - $2, 000' },
+    { id: '2000 - 10000', name: '$2, 000 - $10, 000', range: '$2, 000 - $10, 000' },
+    { id: 'over - 10000', name: 'Over $10, 000', range: 'Over $10, 000' },  ];
+;
+  const sort_options = [;
+
+    { id: 'name', name: 'Name' },
+    { id: 'price', name: 'Price' },
+    { id: 'rating', name: 'Rating' },
+    { id: 'customers', name: 'Customers' },
+
+=======
+        if (selectedCategory === 'quantum') return service.category.includes('Quantum');
+        if (selectedCategory === 'it') return service.category.includes('IT') || service.category.includes('Infrastructure');
+        if (selectedCategory === 'micro-saas') return service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health');
+        if (selectedCategory === 'holographic') return service.category.includes('Holographic');
+        return true
+      })
+    }
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },;
@@ -344,6 +381,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
         if (selectedCategory === 'holographic');
           return service && service.category.includes('Holographic');
         return true;
+<<<<<<< HEAD
 
       });
       } catch (error) {
@@ -450,17 +488,22 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
   }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       });    }
 
 
         if (selectedPriceRange === 'under-500') return price < 500;
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8">
               Revolutionary 2027
@@ -533,6 +576,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
             </div>
             {/* CTA Buttons */}
 
+<<<<<<< HEAD
             <div className='flex flex-wrap items-center justify-center gap-4'>
               <a
                 href='/contact'
@@ -551,6 +595,9 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Get Started Today
               </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
@@ -623,6 +670,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 }
                 </select>;
               </div>;
+<<<<<<< HEAD
 
               {/* Price Range Filter */  } catch (error) {
     console.error("Error:", error);
@@ -652,6 +700,13 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
   }
 }
 
+=======
+
+
+              {/* Price Range Filter */}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
@@ -666,9 +721,20 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
                   ))}
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+              {/* Sort By */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
                 <select
@@ -731,15 +797,21 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 </div>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Services Grid */}
       <section className='py-12 px-4'>
@@ -809,6 +881,8 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                         <div className="flex items-start justify-between mb-4">
                           <div className="text-4xl">{service.icon}</div>
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 </select>;
               </div>;
@@ -827,8 +901,13 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                   <span className='text-sm'> services</span>                </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                          )}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
                               POPULAR
@@ -919,6 +998,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                                 <CheckCircle className="w-3 h-3 text-emerald-400 flex-shrink-0" />
                                 <span className="line-clamp-1">{feature}</span>
                               </li>
+<<<<<<< HEAD
 
                             ))  } catch (error) {
     console.error("Error:", error);
@@ -937,6 +1017,9 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           <div>
                             <div className="text-lg font-bold text-cyan-400">{service.customers}</div>
                             <div className="text-xs text-gray-400">Customers</div>
@@ -995,9 +1078,12 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                             <ArrowRight className="w-4 h-4 mr-1" />
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             Learn More
                           </Link>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1016,7 +1102,31 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                     </div>;
                   </motion && motion.div>;
 
+<<<<<<< HEAD
 
+=======
+=======
+                        <div className="flex gap-2">
+                          <a 
+                            href={service.link} className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover: from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
+                            <ArrowRight className="w-4 h-4 mr-1" />
+                            Learn More
+                          </a>
+                          <a 
+                            href="/contact" className="px-4 py-2 border border-gray-600 text-gray-200 hover:bg-gray-700 hover:border-gray-500 transform hover:scale-105 transition-all duration-300">
+                            <MessageSquare className="w-4 h-4" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                ))}
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1027,8 +1137,32 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
             ) : (;
               <motion&& motion.div
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+      {/* Contact CTA Section */}
+      <section className='py-16 px-4'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+                initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1 }} className="text-center py-16">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <button
                   onClick={() => {
                     setSearchTerm(''),
@@ -1038,12 +1172,15 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                   Clear Filters
                 </button>
               </motion.div>
+<<<<<<< HEAD
 
 
                 animate={{ opacity: 1 }} className="text-center py-16">;
                 <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               Ready to Transform Your Business?
             </h2>
@@ -1058,7 +1195,19 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               Ready to Transform Your Business?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+<<<<<<< HEAD
 
+=======
+                className='text - center py - 16';
+              >;
+                <div className='text - 6xl mb - 4'>🔍</div>;
+                <h3 className='text - 2xl font - bold text - white mb - 2'>;
+                  No services found;
+                </h3>;
+                <p className='text - gray - 400 mb - 6'>;
+                  Try adjusting your search criteria or filters;
+                </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <button;
                   on_click={() => {
                     setSearchTerm ('');
@@ -1072,6 +1221,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
           </AnimatePresence>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
       {/* Contact CTA Section */  } catch (error) {
     console.error("Error:", error);
@@ -1116,6 +1266,8 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <Phone className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.mobile}</span>
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Contact CTA Section */}
       <section className='py - 16 px - 4'>;
         <div className='max - w-4xl mx - auto text - center'>          <motion.div;
@@ -1136,11 +1288,14 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
             </p>;
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
               <div className="flex items-center gap-2 text-purple-400">
                 <Mail className="w-5 h-5" />
@@ -1162,10 +1317,15 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <Rocket className="w-5 h-5 mr-2" />
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Start Your Transformation
               </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
@@ -1184,5 +1344,18 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </UltraQuantumHolographicBackground>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

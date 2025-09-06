@@ -122,12 +122,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
+<<<<<<< HEAD
 
         <motion.div
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
@@ -143,8 +146,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -190,6 +196,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion.div>
         {/* Category Filter */}
 
+<<<<<<< HEAD
 
 
 
@@ -198,6 +205,19 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+            </span>;
+            <br />;
+            <span className="text-white">Services</span>;
+          </h2>;
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
+            Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions. ;
+            Transform your business with services that were once science fiction.;
+          </p>;
+        </motion && motion.div>;
+        {/* Category Filter */}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -227,11 +247,14 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </span>
             </button>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -246,7 +269,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -261,6 +288,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -270,6 +298,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+<<<<<<< HEAD
+              style={{ perspective: '1000px' }}>;
+              <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
+              <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Background Effects */}
 
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>;
@@ -406,6 +440,84 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   </div>
                 )}
 
+<<<<<<< HEAD
+=======
+                {/* Popular Badge */}
+                {service && service.popular && (;
+                  <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
+                    <Star className='w-3 h-3 inline mr-1' />                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">;
+                    <Star className="w-3 h-3 inline mr-1" />;
+                    POPULAR;
+                  </div>;
+                )}
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* Service Header */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      <div>
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+=======
+        <motion.div;
+          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
+          variants={container_variants}
+          initial='hidden';
+          whileInView='visible'          viewport={{ once: true }}          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12";
+          variants={container_variants}
+          initial="hidden";
+          whileInView="visible";
+        >;
+          {filtered_services.slice (0, visible_services).map ((service, index) => (
+            <motion.div;
+              key={service.id}
+              variants={item_variants}
+              className='group relative cursor - pointer';
+              style={{ perspective: '1000px' }}
+            >;
+              <div className='absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75'></div>;
+              <div className='relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full'>;
+                {/* Background Effects */}
+                <div className='absolute inset - 0 rounded - 2xl overflow - hidden'>;
+                  <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500'></div>;
+                  <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700'></div>                </div>;
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
+                    <Star className='w - 3 h - 3 inline mr - 1' />                    POPULAR              style={{ perspective: '1000px' }}
+            >;
+              <div className="absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75"></div>;
+              <div className="relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full">;
+                {/* Background Effects */}
+                <div className="absolute inset - 0 rounded - 2xl overflow - hidden">;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500"></div>;
+                  <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700"></div>;
+                </div>;
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
+                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300">;
+                    <Star className="w - 3 h - 3 inline mr - 1" />;
+                    POPULAR;
+                  </div>)}
+                {/* Service Header */}
+                <div className='relative z - 10'>;
+                  <div className='flex items - start justify - between mb - 4'>;
+                    <div className='flex items - center space - x-3'>;
+                      <div className='text - 4xl'>{service.icon}</div>;
+                      <div>;
+                        <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Service Header */}
                 <div className='relative z-10'>
                   <div className='flex items-start justify-between mb-4'>
@@ -701,12 +813,25 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
         </motion && motion.div>;
         {/* Load More Button */}
+<<<<<<< HEAD
 
         {visibleServices < filteredServices.length && (
           <motion.div
+=======
+        {visibleServices < filteredServices && filteredServices.length && (;
+          <motion&& motion.div
+            className='text-center'            initial={{ opacity: 0 }}          <motion && motion.div 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             className="text-center"
+<<<<<<< HEAD
 
+=======
+=======
+
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             className="text-center"
 
         {/* Load More Button */}
@@ -718,8 +843,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
@@ -733,8 +861,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               Load More Revolutionary Services
             </button>
@@ -744,6 +877,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+<<<<<<< HEAD
 
 
         {/* Call to Action */}
@@ -757,6 +891,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -825,9 +961,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 export default RevolutionaryServicesShowcase;  );
 
@@ -835,6 +974,7 @@ export default RevolutionaryServicesShowcase;  );
 
 };
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default RevolutionaryServicesShowcase;
@@ -854,3 +994,8 @@ export default RevolutionaryServicesShowcase;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

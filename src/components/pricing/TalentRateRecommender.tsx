@@ -1,5 +1,6 @@
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
+<<<<<<< HEAD
 
 
   skills: string[]
@@ -8,17 +9,24 @@ interface TalentRateRecommenderProps {
   onSuggestionApplied: (value: number,) => void
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
+<<<<<<< HEAD
 
 
 }
 
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -126,6 +134,7 @@ if ( {) {
   }
   },
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -133,6 +142,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-4">
       <div>
@@ -164,11 +177,14 @@ if ( {) {
 '"};
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -180,11 +196,14 @@ if ( {) {
     </div>;
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

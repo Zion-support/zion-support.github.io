@@ -52,10 +52,24 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value
 }
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+export default function InteractiveStats() {
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+export default function InteractiveStats() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
@@ -137,10 +151,14 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
   );
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 function Stat({
   label
   value
@@ -149,6 +167,45 @@ function Stat({
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+    </div>);
+    </div>);
+}
+/**
+ * Stat - Function description
+ */
+function Stat() {
+  return (
+    <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur">;
+      <div className="text - 3xl font - bold">{value}{suffix}</div>;
+      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
+    </div>);
+/**
+ * Stat - Function description
+ */
+function Stat() {
+  return (
+    <div className='p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur'>;
+      <div className='text - 3xl font - bold'>;
+        {value}
+        {suffix}
+      </div>;
+      <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      </div>
+      <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
+    </div>
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

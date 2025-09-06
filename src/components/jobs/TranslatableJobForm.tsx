@@ -1,8 +1,103 @@
+<<<<<<< HEAD
 }
   }
   // Ensure all translations are available;
   const ensureAllTranslations = async () => {
 
+=======
+
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent } from "@/components/ui/card",
+import { Loader2, Globe } from 'lucide-react'
+import { useTranslation } from "react-i18next",
+import { useTranslationService } from "@/hooks/useTranslationService",
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
+
+    en: "",
+    es: "",
+    fr: "",
+    pt: "",
+
+        description: t('translation.content_translated')
+      })
+    } catch (error) {
+      logErrorToProduction('Error translating ${field}:', { data: error })
+      toast({
+        title: t('translation.translation_failed')
+        description: error instanceof Error ? error.message : t('translation.unknown_error')
+        variant: "destructive"
+      })
+
+    ar: ""}),
+  
+  const [description, setDescription] = useState<Record<SupportedLanguage string>>({
+    en: "",
+    es: "",
+    fr: "",
+    pt: "",
+    ar: ""}),
+  
+  const [requirements, setRequirements] = useState<Record<SupportedLanguage string>>({
+    en: "",
+    es: "",
+    fr: "",
+    pt: "",
+    ar: ""}),
+  
+  const [budget, setBudget] = useState(""),
+  const [deadline, setDeadline] = useState(""),
+  
+  // Handle text changes
+  const handleTitleChange = (value: string) => {
+    setTitle({ ...title, [activeTab]: value })
+  },
+  
+  const handleDescriptionChange = (value: string) => {
+    setDescription({ ...description, [activeTab]: value })
+  },
+  
+  const handleRequirementsChange = (value: string) => {
+    setRequirements({ ...requirements, [activeTab]: value })
+  },
+  
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    
+    // Complete any missing translations with auto-translation
+    await ensureAllTranslations(),
+    
+    onSubmit({
+      title,
+      description,
+      requirements,
+      budget,
+      deadline})
+  },
+  
+  // Auto translate content when language tab changes
+  const handleTabChange = async (tab: string) => {
+    const selectedLanguage = tab as SupportedLanguage,
+    if (selectedLanguage !== activeTab) {
+      setActiveTab(selectedLanguage)
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Loader2, Globe } from 'lucide-react';
+import { useTranslation } from "react-i18next",;
+import { useTranslationService } from "@/hooks/useTranslationService",;
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",;
+import { toast } from "@/components/ui/use-toast",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void;
   isSubmitting?: boolean;}
@@ -53,10 +148,17 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     } catch (error) {;
       logErrorToProduction('Error translating ${field}:', { data: error });
       toast({;
+<<<<<<< HEAD
         title: t('translation && translation.translation_failed'),;
         description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
         variant: "destructive";
       });
+=======
+        title: t('translation.translation_failed'),;
+        description: error instanceof Error ? error.message : t('translation.unknown_error'),;
+        variant: "destructive"});
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   };
 
@@ -261,6 +363,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             t('jobs.post_job_button')
           )}
 
+<<<<<<< HEAD
 
         </Button>;
       </div>;
@@ -268,3 +371,5 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
   );
 }
 ;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

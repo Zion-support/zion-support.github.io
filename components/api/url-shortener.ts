@@ -279,6 +279,7 @@ export async function getServerSideProps({
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
+<<<<<<< HEAD
 
   };      destination: shortUrl.originalUrl;
       permanent: false
@@ -291,3 +292,10 @@ export async function getServerSideProps({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      destination: shortUrl.originalUrl,
+      permanent: false,
+    },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

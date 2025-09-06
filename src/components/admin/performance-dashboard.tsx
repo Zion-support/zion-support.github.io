@@ -22,6 +22,7 @@ interface PerformanceMetrics {;
   bundleSize: number;
   loadTime: number;
   performanceScore: number;
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -50,6 +51,8 @@ interface PerformanceMetrics {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   chunkCount: number;
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -424,6 +427,7 @@ export function PerformanceDashboard() {;
       });    }
 
 
+<<<<<<< HEAD
 
 
     return scriptEntries.map(entry => ({
@@ -472,6 +476,8 @@ export function PerformanceDashboard() {;
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -573,6 +579,7 @@ export function PerformanceDashboard() {;
 
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -580,6 +587,10 @@ export function PerformanceDashboard() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {isLoading ? 'Collecting...' : 'Refresh'}
 
         </Button>;
@@ -612,6 +623,7 @@ export function PerformanceDashboard() {;
               
               {lastUpdated && (
                 <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -619,6 +631,10 @@ export function PerformanceDashboard() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
                     </Badge>;
@@ -818,8 +834,11 @@ export function PerformanceDashboard() {;
                       {index + 1}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -888,6 +907,7 @@ export function PerformanceDashboard() {;
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -895,6 +915,10 @@ export function PerformanceDashboard() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
@@ -906,6 +930,7 @@ export function PerformanceDashboard() {;
               </div>
             </div>
             
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -913,6 +938,10 @@ export function PerformanceDashboard() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
@@ -927,11 +956,14 @@ export function PerformanceDashboard() {;
                 </div>
               </div>
             )}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         </CardContent>;
       </Card>;
@@ -995,11 +1027,14 @@ export function PerformanceDashboard() {;
     </div>;
   );
 } ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

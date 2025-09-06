@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 
 type Props = {
   room: Room | null;
@@ -27,6 +28,8 @@ type Props = {
   room: Room | null
   onLeave: () => void
   accent?: 'blue' | 'cyan'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
@@ -71,6 +74,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
+<<<<<<< HEAD
 
   }
 
@@ -105,6 +109,18 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
 }
 
 
+=======
+    }
+
+  };
+
+  return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled);
+    } catch (e) {;
+      console && console.warn('Screen share failed', e);
+  };
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
@@ -209,8 +225,17 @@ if (return) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 
 
 
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

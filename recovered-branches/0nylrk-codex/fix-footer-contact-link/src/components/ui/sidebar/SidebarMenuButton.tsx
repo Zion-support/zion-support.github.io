@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import React, { forwardRef } from "react",
@@ -7,6 +8,8 @@ import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot",
 import { cn } from "@/lib/utils",
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
@@ -26,10 +29,17 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
 
           "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors"
           "text-muted-foreground hover: text-foreground hover:bg-accent"
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string,
   children?: React.ReactNode,
@@ -58,8 +68,11 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         )}
         ref={ref as any}
         {...props}>;
@@ -75,8 +88,11 @@ SidebarMenuButton.displayName = "SidebarMenuButton";
 SidebarMenuButton.displayName = "SidebarMenuButton",
 );
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 SidebarMenuButton.displayName = "SidebarMenuButton";

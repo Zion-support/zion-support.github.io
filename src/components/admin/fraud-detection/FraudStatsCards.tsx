@@ -8,6 +8,7 @@ return (
         </CardHeader>
       </Card>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -15,6 +16,10 @@ return (
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -25,6 +30,7 @@ return (
         </CardHeader>
       </Card>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -32,6 +38,10 @@ return (
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -42,6 +52,7 @@ return (
         </CardHeader>
       </Card>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -49,6 +60,10 @@ return (
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -59,6 +74,7 @@ return (
         </CardHeader>
       </Card>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -66,6 +82,10 @@ return (
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
@@ -73,6 +93,7 @@ return (
         </CardHeader>
       </Card>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -80,6 +101,10 @@ return (
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -87,6 +112,7 @@ return (
         </CardHeader>
       </Card>
     </div>
+<<<<<<< HEAD
 
 
   );
@@ -103,6 +129,10 @@ import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
 import { FraudStats } from "@/types/fraud",;
 
 
+=======
+
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats } from "@/types/fraud";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface FraudStatsCardsProps {;
   stats: FraudStats;
 }
@@ -163,11 +193,14 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
     </div>;
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
   return (

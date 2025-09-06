@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -20,6 +23,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`
     } catch (err) {
       // keep original if AI fails;
     }
+<<<<<<< HEAD
 
 res.status(200).json({ title, content })
   } catch (e: any) {
@@ -30,6 +34,12 @@ res.status(200).json({ title, content })
     if (req.method === 'POST') {
       const { slide } = req.body;
       if (!slide) return res.status(400).json({ error: 'Slide required' });
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
@@ -66,5 +76,8 @@ ${slide.content}`;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

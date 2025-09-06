@@ -85,7 +85,23 @@ const testimonials = [
 export function EnterpriseTestimonials() {;
   return (
 
+<<<<<<< HEAD
 
+=======
+=======
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-bold">{testimonial.author}</p>
+                      <p className="text-sm text-muted-foreground">
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -138,12 +154,29 @@ export function EnterpriseTestimonials() {;
                   </blockquote>;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
+<<<<<<< HEAD
+=======
+
+import React from './react';
+import { Quote  } from './lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components / ui / carousel';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <img;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

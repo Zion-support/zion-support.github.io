@@ -34,11 +34,14 @@ export const AppScreenshots: React.FC = () => {;
   },
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
 
     <section className="py-16 bg-zion-blue-dark">;
@@ -55,11 +58,14 @@ export const AppScreenshots: React.FC = () => {;
 
         
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="relative">
           <Button
             variant="ghost"
@@ -72,27 +78,36 @@ export const AppScreenshots: React.FC = () => {;
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             aria-label="Scroll left";
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>;
             {mockScreenshots && mockScreenshots.map((screenshot,) => (;
               <div
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 key = {screenshot && screenshot.id,}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;
 
@@ -132,11 +147,14 @@ export const AppScreenshots: React.FC = () => {;
           </div>
           
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Button
             variant="ghost"
             size="icon"
@@ -151,6 +169,7 @@ export const AppScreenshots: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 
 
   );
@@ -228,6 +247,9 @@ export const AppScreenshots: React.FC = () => {;
             onClick={() => scroll("right")}
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             aria-label="Scroll right";
           >;
             <ChevronRight className="h-6 w-6" />;
@@ -237,11 +259,14 @@ export const AppScreenshots: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 '"},;
 
 };

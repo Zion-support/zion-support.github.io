@@ -60,6 +60,7 @@ interface AddMilestoneFormProps {
   projectEndDate?: string
   projectType?: string
 }
+<<<<<<< HEAD
 export function AddMilestoneForm({
   onSubmit
   isSubmitting
@@ -94,6 +95,39 @@ export function AddMilestoneForm({
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
         })
         return
+=======
+export /**
+ * AddMilestoneForm - Function description
+ */
+function AddMilestoneForm() {
+  const form = use_form < MilestoneFormValues>({
+    resolver: zod_resolver (form_schema),
+    default_values: {
+      title: '',
+      description: '',
+      amount: 0}}),
+  const handle_submit = (values: MilestoneFormValues) =>: any {
+    on_submit (values);    form.reset ();
+  }
+  const handleAddMilestones = (milestones: GeneratedMilestone[], ) =>: any {
+    // If there's only one milestone, submit it directly;
+    // Check condition
+if ( {) {
+  $2
+}
+      const milestone = milestones[0];
+      // Check condition
+if ( {) {
+  $2
+}
+        on_submit ({
+          title: milestone.title,
+          description: milestone.description,
+          due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
+          amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+        });
+        return;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     }
     // If there are multiple milestones, submit them one by one;
@@ -201,6 +235,7 @@ export function AddMilestoneForm({;
     })
   },
 
+<<<<<<< HEAD
 
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
@@ -388,6 +423,8 @@ export function AddMilestoneForm(): any ({;
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {;
     onSubmit({;
       title: milestone && milestone.title,;
@@ -406,6 +443,7 @@ export function AddMilestoneForm(): any ({;
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -427,6 +465,8 @@ export function AddMilestoneForm(): any ({;
           onAddMilestone = {handleAddMilestone,}
         />
       )}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
 
@@ -434,8 +474,11 @@ export function AddMilestoneForm(): any ({;
     <div className="space-y-6">
       {/* AI Milestone Generator */}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
           scope={projectScope}
@@ -445,6 +488,7 @@ export function AddMilestoneForm(): any ({;
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
         />;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -453,6 +497,11 @@ export function AddMilestoneForm(): any ({;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )}
 
       <Form {...form}>
@@ -499,6 +548,7 @@ export function AddMilestoneForm(): any ({;
 
             render={({ field }: { field: any }) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
               <FormItem>
                 <FormLabel>Title</FormLabel>
                 <FormControl>
@@ -517,6 +567,8 @@ export function AddMilestoneForm(): any ({;
             control={form.control}
             name="description"
             render={({ field }: { field: any }) => (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <FormItem>
@@ -646,11 +698,14 @@ export function AddMilestoneForm(): any ({;
               name="amount"
               render={({ field }: { field: any }) => (
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
@@ -697,6 +752,7 @@ export function AddMilestoneForm(): any ({;
               >;
                 Cancel;
               </Button>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -704,6 +760,10 @@ export function AddMilestoneForm(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             )}
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? (

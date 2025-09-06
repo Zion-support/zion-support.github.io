@@ -1066,7 +1066,10 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
     implementation_details: 'Portal + integrations + reports.';
     launch_date: '2025 - 01 - 19';
     customers: 6;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   {
 
@@ -1397,6 +1400,7 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
   {
 
 
+<<<<<<< HEAD
   {
 
 
@@ -1405,6 +1409,9 @@ import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-service
 
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -2121,5 +2128,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

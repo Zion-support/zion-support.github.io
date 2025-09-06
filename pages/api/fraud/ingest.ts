@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
+<<<<<<< HEAD
 
   AdminActionRecord
   GptClassification
@@ -14,6 +18,10 @@ import {
   MonitoredSource
   StoredFraudRecord
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
@@ -21,7 +29,10 @@ import {
   StoredFraudRecord,;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
 const allowedSources: MonitoredSource[] = [
@@ -110,9 +121,12 @@ if ( {) {
     });
 
   } catch (e: any) {
+<<<<<<< HEAD
 
     res
       .status(500)
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -139,18 +153,102 @@ export default async function handler(req, res) {
 
   }
 }
+<<<<<<< HEAD
 
 
+=======
+=======
+      status: 'PENDING'};
+    const saved = await store.saveEvent(stored);
+    if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
+      const prior = await store.countFlaggedForUser(userId);
+      if (prior <= 1 && combinedLabel !== 'SAFE') {
+        await sendWarningEmail({
+          toUserId: userId, subject: 'Marketplace warning: suspicious activity detected',
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
+      }
+    }
+    res.status(200).json({
+      id: saved.id, flagged: combinedLabel !== 'SAFE',
+      label: combinedLabel, heuristic,
+      gpt,
+      autoHidden: saved.autoHidden,
+      createdAt: saved.createdAt})
+  } catch (e: any) {
+    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 
     res;
       .status (500);
       .json ({ error: "Internal error", details: e?.message || String (e) });
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    res.status(200).json({;
+      id: saved.id,;
+      flagged: combinedLabel !== 'SAFE',;
+      label: combinedLabel,;
+      heuristic,;
+      gpt;
+      autoHidden: saved.autoHidden;
+      createdAt: saved.createdAt});
+  } catch (error) {
+    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

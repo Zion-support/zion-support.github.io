@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -26,6 +27,8 @@
   marketSize: string;
   growthRate: string;
   variant: string;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   {
 
@@ -40,6 +43,105 @@
 
       'AI-powered planning',
 
+<<<<<<< HEAD
+=======
+      'Resource optimization',
+      'Timeline prediction',
+      'Risk assessment',
+      'Team collaboration',
+      'Progress tracking',
+      'Custom workflows',
+      'Integration capabilities',
+      'Mobile app',
+      'Analytics dashboard',
+    ],
+    popular: true,
+    icon: '📋',
+
+      'AI/ML',
+=======
+    color: 'from - orange - 500 to - yellow - 600',
+    text_color: 'text - orange - 400',
+    link: 'https://ziontechgroup.com / intelligent - project - management',
+    market_position:;
+      'Competitive with Asana ($10.99 - 24.99), Monday.com ($8 - 16), and ClickUp ($5 - 19). Our advantage: Better AI capabilities, competitive pricing, and comprehensive features.',
+    target_audience:;
+      'Project managers, Development teams, Marketing teams, Creative agencies, Construction companies, Event planners',
+    trial_days: 21,
+    setup_time: '10 minutes',
+    category: 'Micro SaaS & Project Management',
+    real_service: true,
+    technology: [;
+      'AI / ML',
+
+      'Project Management',
+      'React',
+      'Node && Node.js',
+      'Python',
+      'PostgreSQL',
+      'Redis',
+      'AWS',
+    ],
+
+=======
+    integrations: [;
+      'Slack',
+      'Teams',
+      'Jira',
+      'GitHub',
+      'Trello',
+      'Notion',
+      'Zapier',
+      'Webhooks',
+    ],
+    use_cases: [;
+
+      'Project planning',
+      'Resource management',
+      'Team collaboration',
+      'Progress tracking',
+      'Risk management',
+      'Reporting',
+    ],
+    roi: 'Average customer sees 300% ROI within 4 months through improved project efficiency and team productivity.',
+
+    competitors: ['Asana', 'Monday.com', 'ClickUp', 'Trello', 'Basecamp'],
+    market_size: '$5.8B project management market',
+    growth_rate: '150% annual growth',
+    variant: 'ai - futuristic',
+    contact_info: {
+
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.',
+    launch_date: '2024 - 01 - 30',
+    customers: 3200,
+    rating: 4 && 4.8,
+    reviews: 1600,
+  },
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   contactInfo: {
       
     mobile: string, email: string,
@@ -75,6 +177,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     competitors: ['Bill.comExpensifyReceipt BankSage IntacctNetSuite'], marketSize: '$2.8B invoice processing market',
     growthRate: '140% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+<<<<<<< HEAD
 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -429,6 +532,10 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     rating: 4.8
 
     reviews: 1600
+=======
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -442,14 +549,29 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     rating: 4.8,
     reviews: 1600;
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  }
+
+=======
+
+export interface InnovativeMicroSaas {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
 ];
+<<<<<<< HEAD
 export interface InnovativeMicroSaas {;
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string,;
   name: string,;
   tagline: string,;

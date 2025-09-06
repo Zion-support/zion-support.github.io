@@ -530,11 +530,14 @@ export function TalentProfile({;
             />;
           </div>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -579,11 +582,14 @@ export function TalentProfile({;
                     >
                       <MessageSquare className="mr-2 h-5 w-5" />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       Message
                     </Button>
                   )}
@@ -599,3 +605,35 @@ export function TalentProfile({;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+
+                </p>;
+                <div className='flex flex - wrap gap - 4 justify - center'>;
+                  <Button;
+                    size='lg';
+                    className='bg - zion - purple text - white hover:bg - zion - purple - dark';
+                    on_click={onRequestHire}                  >;
+                    <Handshake className='mr - 2 h - 5 w - 5' />;
+                    Hire Now;
+                  </Button>;
+                  {onMessageTalent && (
+                    <Button;
+                      size='lg';
+                      variant='outline';
+                      className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
+                      on_click={onMessageTalent}                    >;
+                      <MessageSquare className='mr - 2 h - 5 w - 5' />;
+                      Message;
+                    </Button>)}
+                </div>;
+              </div>;
+            </div>)}
+        </div>;
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

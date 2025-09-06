@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { useAuthStatus } from "./talent/useAuthStatus",
@@ -7,6 +8,17 @@ import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
+=======
+import { useAuthStatus } from './talent / useAuthStatus';
+import { useTalentData } from './talent / useTalentData';
+import { useFilterTalents } from './talent / useFilterTalents';
+import { useUIState } from './talent / useUIState';
+export /**
+ * useTalentDirectory - Function description
+ */
+function useTalentDirectory() {
+  // Fetch auth status and saved talents;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const {
     is_authenticated;
@@ -140,10 +152,18 @@ export function useTalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     expanded_sections;
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -230,8 +250,11 @@ export function useTalentDirectory() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

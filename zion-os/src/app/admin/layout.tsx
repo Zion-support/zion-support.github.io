@@ -1,8 +1,28 @@
 
 import { ReactNode } from "react";
+<<<<<<< HEAD
 export default function AdminLayout({ children }: { children: ReactNode }) {return (;
 export default function AdminLayout({ children }: { children: ReactNode }) {;
   return (;
+=======
+
+export default function AdminLayout({ children }: { children: ReactNode }) {;
+  return (;
+
+
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
+=======
+import { ReactNode  } from './react';
+export default /**
+ * AdminLayout - Function description
+ */
+function AdminLayout() {
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - gray - 800 to - black">;
+=======
+import { ReactNode } from "react";
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
 
       {/* Admin Header */}
@@ -51,7 +71,11 @@ export default function AdminLayout({ children }: { children: ReactNode }) {;
 export default Layout;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

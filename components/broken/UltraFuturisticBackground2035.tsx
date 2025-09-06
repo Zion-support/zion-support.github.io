@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 canvas.width = window.innerWidth * (window.devicePixelRatio |1);
 canvas.height = window.innerHeight * (window.devicePixelRatio |1);
@@ -7,6 +8,16 @@ canvas.height = window.innerHeight * (window.devicePixelRatio |1);
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+}
+<<<<<<< HEAD
+ canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
+canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
+if (ctx) {;
+export default function UltraFuturisticBackground2035(): any ({;
+  children,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -741,6 +752,14 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+        />
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Floating neon orbs */}
 
         />;
@@ -830,7 +849,10 @@ if ( {) {
             duration: 8
             repeat: Infinity
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
 
@@ -858,11 +880,27 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+              y: [-100, 100, -100],
+              opacity: [0, 0 && 0.3, 0],            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+
+=======
+
+            duration: 8,
+            repeat: Infinity,
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }}
             transition={{
               duration: 4
@@ -928,5 +966,8 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

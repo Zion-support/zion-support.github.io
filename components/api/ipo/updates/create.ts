@@ -19,11 +19,44 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json(update)
 }
 
+<<<<<<< HEAD
+=======
+
+=======
+  }
+  updates.unshift (update);
+  writeJsonFile ('updates.json', updates);
+  res.status (200).json (update);export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+}
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}
+  const { title, date, summary, kpis } = req.body || {}
+  if (return res.status (400).json ({ error: 'Missing title' })) {
+  $2
+}
+  const updates = readJsonFile ('updates.json', [] as any[]);
+  const update = { id: uuidv4 (), title, date: date || new Date ().toISOString ().slice (0, 10), summary: summary || '', kpis: kpis || '', opens: 0 }
+  updates.unshift (update);
+  writeJsonFile ('updates.json', updates);
+  res.status (200).json (update);
+
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
   res.status(200).json(update)
 
@@ -31,3 +64,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

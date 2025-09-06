@@ -11,7 +11,10 @@ import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -82,11 +85,14 @@ export default function VideoCall() {;
       isVideoEnabled: true,;
       isMuted: false;
     }
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const handleJoinCall = () => {;
@@ -160,6 +166,7 @@ export default function VideoCall() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+<<<<<<< HEAD
 
 
   ]),;
@@ -204,6 +211,10 @@ export default function VideoCall() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
 
@@ -242,6 +253,7 @@ export default function VideoCall() {;
           </div>
         )}
 
+<<<<<<< HEAD
       </main>
       <Footer />
     </>
@@ -249,6 +261,24 @@ export default function VideoCall() {;
 }
 
 
+=======
+=======
+
+
+      </main>;
+      <Footer />;
+    </>;
+  );
+}
+
+      id: 'user - 1',
+      name: 'You',
+      isVideoEnabled: true,
+      is_muted: false;
+    }
+  ]);
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleJoinCall = () =>: any {
     setIsJoining (true);
     // Simulate connection delay;
@@ -327,6 +357,18 @@ export default function VideoCall() {;
     </>);
 }
 
+<<<<<<< HEAD
+=======
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

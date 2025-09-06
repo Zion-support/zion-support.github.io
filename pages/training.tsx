@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 import React from 'react';
@@ -19,6 +20,12 @@ export default function Training() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+import React from 'react';
+
+export default function Training() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Layout
       title="Training & Education - Zion Tech Group"
@@ -46,12 +53,22 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 export default function Training() {
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
+=======
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -297,6 +314,7 @@ export default function TrainingPage() {
 
   const getCategoryColor = (category: string) => {
     const colors = {
+<<<<<<< HEAD
 
       'ai-consciousness': 'cyan',
       'quantum-computing': 'purple',
@@ -304,6 +322,11 @@ export default function TrainingPage() {
       'enterprise-it': 'blue',
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     };
     return colors[category as keyof typeof colors] || 'gray'
@@ -366,6 +389,7 @@ export default function TrainingPage() {
 };
 
 
+<<<<<<< HEAD
 export default Training;
 };export default Training;
         </section>
@@ -1107,6 +1131,8 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>
     </Layout>
   ),
@@ -1118,6 +1144,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
 }
   )
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1183,20 +1220,37 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 };export default Training;
 
+<<<<<<< HEAD
 origin/main
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 
 export default Training;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 }  )
 ursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+};export default Training;
+
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  )
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 
 export default Training;
+<<<<<<< HEAD
 };export default Training;
 
 
@@ -1225,6 +1279,27 @@ export default Training,
                 </a>;
               </div>;
             </motion.div>;
+=======
+<<<<<<< HEAD
+import Layout from '../components / Layout';
+;
+export default /**
+ * Training - Function description
+ */
+function Training() {
+  return (
+    <Layout;
+      title="Training & Education - Zion Tech Group";
+      description="Professional training and education services for technology professionals.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">Training & Education</h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Professional training and education services for technology professionals.;
+            </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">Training page is under construction.</p>;
@@ -1241,8 +1316,12 @@ export default Training;
 
 }export default Training;
 ;
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import useSWR from 'swr';
 
 import {useEffect, useState} from 'react';
@@ -8,6 +9,21 @@ const fetcher = (url: string) => fetch(url).then(r => r.json());
 
 
 
+=======
+import {useRouter} from 'next/router';
+
+
+import useSWR from 'swr';
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+export default function EditJobPage() {;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
@@ -18,12 +34,16 @@ export default function EditJobPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
+<<<<<<< HEAD
 
 
   const [title, setTitle] = useState('');
@@ -35,10 +55,19 @@ export default function EditJobPage(req, res) {
       setDescription(job.description |'');
       setCategory(job.category |'');    }
 
+=======
+
+      setTitle(job.title || '');
+      setDescription(job.description || '');
+      setCategory(job.category || '')
+    }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
 
+<<<<<<< HEAD
 
 
 
@@ -47,6 +76,16 @@ export default function EditJobPage(req, res) {
   const [category, setCategory] = useState('');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, description, category })});
+    router.push('/client/dashboard')
+  }
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   useEffect(() => {;
     if (job) {;
       setTitle(job && job.title || '');
@@ -58,6 +97,7 @@ export default function EditJobPage(req, res) {
     await fetch(`/api/jobs/${id}`, {;
       method: 'PATCH',;
       headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
 
       body: JSON.stringify({ title, description, category })});
     router.push('/client/dashboard');
@@ -113,3 +153,22 @@ export default function EditJobPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+      body: JSON && JSON.stringify({ title, description, category }),;
+    });
+    router && router.push('/client/dashboard');  }
+  if (!job) return <div>Loading…</div>;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

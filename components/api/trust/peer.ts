@@ -66,6 +66,7 @@ return res.status (200).json ({ ok: true, review });
   try {
     await supabase.from('trust_peer_reviews').insert(review)
   } catch {}
+<<<<<<< HEAD
 return res.status(200).json({ ok: true, review });
 }
 
@@ -74,9 +75,16 @@ return res.status(200).json({ ok: true, review });
 }
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
 
+=======
+<<<<<<< HEAD
+return res.status (200).json ({ ok: true, review });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

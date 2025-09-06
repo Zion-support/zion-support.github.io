@@ -643,6 +643,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026EmergingTechService {;
@@ -686,6 +687,21 @@ export interface Innovative2026EmergingTechService {;
   reviews: number;
 
 
+=======
+
+
+};
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+reviews: 30;
+}];
+export const getEmergingTechServicesByCategory = (category: string) =>: any {
+  return innovative2026EmergingTechServices.filter (service =>;
+    service.category.toLowerCase ().includes (category.toLowerCase ()));
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 export const getEmergingTechServicesByPriceRange = (
@@ -704,6 +720,10 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

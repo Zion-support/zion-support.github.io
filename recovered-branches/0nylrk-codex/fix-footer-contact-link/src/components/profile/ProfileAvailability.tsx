@@ -1,14 +1,21 @@
 
+<<<<<<< HEAD
 
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
+=======
+import { Availability } from '@/types / profile';
+import { Badge } from '@/components / ui / badge';
+import { Calendar, Clock, Check } from './lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface ProfileAvailabilityProps {
   availability: Availability
 }
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
 
+<<<<<<< HEAD
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
     switch(status) {;
       case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
@@ -34,6 +41,11 @@ interface ProfileAvailabilityProps {
 import { Availability } from "@/types/profile",;
 import { Badge } from "@/components/ui/badge",;
 import { Calendar, Clock, Check } from "lucide-react",;
+=======
+import {Availability} from "@/types/profile";
+import {Badge} from "@/components/ui/badge";
+import {Calendar, Clock, Check} from "lucide-react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface ProfileAvailabilityProps {;
   availability: Availability;
@@ -57,6 +69,7 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
       default: return '';
 
     }
+<<<<<<< HEAD
 
 
 
@@ -64,6 +77,13 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">

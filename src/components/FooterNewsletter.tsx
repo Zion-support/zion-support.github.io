@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useRef } from 'react';
 import { Input } from './ui/input';
@@ -87,6 +88,12 @@ export function FooterNewsletter(): React.ReactElement {
         onChange={(e) => setHoneypot(e.target.value)}
         style={{ display: 'none' }}
 
+=======
+{/* Honeypot field */}
+      <input
+
+        onChange={e => setHoneypot(e && e.target.value)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
@@ -95,7 +102,10 @@ export function FooterNewsletter(): React.ReactElement {
       <Button
         type="submit"
         disabled={isSubmitting}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
@@ -252,5 +262,8 @@ if ( {) {
     </form>);
 }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }

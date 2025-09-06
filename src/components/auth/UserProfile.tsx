@@ -174,10 +174,13 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
   }
 
 
+<<<<<<< HEAD
 
   if (loading) {
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
@@ -196,6 +199,7 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
   return (
+<<<<<<< HEAD
 
 
     <Card className="w-full max-w-sm">
@@ -226,6 +230,8 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
         </div>
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           Sign Out
@@ -236,11 +242,14 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
 }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
@@ -249,11 +258,14 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
         </Button>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <Card className='w-full max-w-sm'>;
       <CardHeader>;

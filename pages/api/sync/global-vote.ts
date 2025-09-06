@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -25,6 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const merkleRoot = computeMerkleRootFromVotes(votes)
   const version = (state.latestVersionByEntityId[proposalId] |0) + 1
   const event = {
+<<<<<<< HEAD
 
     eventId: uuidv4()
     type: "proposal" as const
@@ -40,6 +44,10 @@ merkleRoot}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     timestamp: Date.now(),
     merkleRoot};
 
@@ -59,6 +67,14 @@ merkleRoot}
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 
+<<<<<<< HEAD
+=======
+=======
+  return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId });
+};
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -120,6 +136,10 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -143,10 +163,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 }
       })
   ),
@@ -250,5 +267,8 @@ export default async function handler(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

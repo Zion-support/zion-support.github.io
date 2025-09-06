@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
@@ -17,12 +18,15 @@ export function UploadSection(): any ({;
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Upload, FileText } from 'lucide-react';
 
 interface UploadSectionProps {
 
+<<<<<<< HEAD
   custom_file: File | null;
   onFileUpload: (e: React.ChangeEvent < HTMLInputElement>) => void;
 export /**
@@ -97,6 +101,8 @@ interface UploadSectionProps {;
   isProcessing: boolean;
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function UploadSection({
   customFile,
   onFileUpload,
@@ -163,6 +169,7 @@ export function UploadSection({
       )}
     </div>
   );
+<<<<<<< HEAD
 
 };
 }
@@ -210,3 +217,6 @@ export function UploadSection({
 ;
 
 
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

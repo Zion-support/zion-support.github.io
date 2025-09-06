@@ -20,6 +20,16 @@ class ErrorBoundary extends React.Component {
 }
 
 
+<<<<<<< HEAD
+=======
+import React from 'react';
+import SEO from '../components / SEO';
+import {Check, ExternalLink} from 'lucide-react';
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const features = [
     'Parallel Playwright/Puppeteer execution'
     'Queued jobs with retries and rate limits'

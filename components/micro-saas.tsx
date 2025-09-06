@@ -1363,6 +1363,7 @@ export default function MicroSaasPage() {;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 
               <Button
@@ -1396,6 +1397,102 @@ export default function MicroSaasPage() {;
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            <div className="flex flex - col sm:flex - row gap - 6 justify - center">;
+              <Button;
+                href="#services";
+                variant="secondary";
+                size="lg";
+                className="bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald - 700 shadow - 2xl";
+              >;
+                Explore Services;
+                <ArrowRight className="w - 5 h - 5 ml - 2" />;
+              </Button>;
+              <Button;
+                href="/pricing";
+                variant="outline";
+                size="lg";
+                className="border - green - 500 text - green - 400 hover:bg - green - 500 hover:text - white";
+              >;
+                View All 75 Services;
+                <ArrowRight className="w - 5 h - 5 ml - 2" />;
+              </Button>;
+            </div>;
+          </div>;
+        </section>;
+        {/* Services Section */}
+        <section id="services" className="py - 24 bg - gray - 900">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+            <div className="text - center mb - 16">;
+              <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 6">;
+                Professional Micro SaaS Solutions;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                Each service is designed to solve specific business problems with enterprise - grade quality and competitive pricing.;
+              </p>;
+            </div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+              {microSaasServices.map ((service, index) => (
+                <div key={index} className="bg - gray - 800 rounded - 2xl p - 6 border border - gray - 700 hover:border - green - 500 / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - green - 500 / 10">;
+                  <div className="flex items - center justify - between mb - 4">;
+                    <span className="text - 3xl">{service.icon}</span>;
+                    {service.popular && (
+                      <span className="px - 3 py - 1 bg - green - 500 / 20 text - green - 400 text - xs font - medium rounded - full border border - green - 500 / 30">;
+                        Popular;
+                      </span>)}
+                  </div>;
+                  <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
+                  <p className="text - gray - 400 text - sm mb - 4">{service.tagline}</p>;
+                  <div className="mb - 4">;
+                    <span className="text - 3xl font - bold text - white">{service.price}</span>;
+                    <span className="text - gray - 400">{service.period}</span>;
+                  </div>;
+                  <p className="text - gray - 300 mb - 6 leading - relaxed">{service.description}</p>;
+                  <div className="mb - 6">;
+                    <h4 className="text - white font - semibold mb - 3">Key Features:</h4>;
+                    <ul className="space - y-2">;
+                      {service.features.slice (0, 4).map ((feature, idx) => (
+                        <li key={idx} className="flex items - start text - sm text - gray - 400">;
+                          <Check className="w - 4 h - 4 text - green - 400 mr - 2 mt - 0.5 flex - shrink - 0" />;
+                          <span>{feature}</span>;
+                        </li>))}
+                    </ul>;
+                  </div>;
+                  <div className="mb - 6 p - 4 bg - gray - 700 / 50 rounded - lg">;
+                    <div className="text - sm text - gray - 300 mb - 2">;
+                      <strong > Market Position:</strong> {service.market_position}
+                    </div>;
+                    <div className="text - sm text - gray - 300 mb - 2">;
+                      <strong > Target Audience:</strong> {service.target_audience}
+                    </div>;
+                    <div className="text - sm text - gray - 300">;
+                      <strong > Setup Time:</strong> {service.setup_time}
+                    </div>;
+                  </div>;
+                  <div className="flex flex - col gap - 3">;
+                    <a;
+                      href={service.link}
+                      target="_blank";
+                      rel="noopener noreferrer";
+                      className="w - full bg - gradient - to - r from - green - 500 to - emerald - 600 text - white font - medium py - 3 px - 4 rounded - lg text - center hover:from - green - 600 hover:to - emerald - 700 transition - all duration - 300 flex items - center justify - center";
+                    >;
+                      Start Free Trial ({service.trial_days} days);
+                      <ExternalLink className="w - 4 h - 4 ml - 2" />;
+                    </a>;
+                    <a;
+                      href={service.link}
+                      target="_blank";
+                      rel="noopener noreferrer";
+                      className="text - green - 400 text - sm text - center hover:text - green - 300 transition - colors";
+                    >;
+                      Visit {service.link.replace ('https://', '')}
+                    </a>;
+                  </div>;
+                </div>))}
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* CTA Section */}
         <section className="py - 24 bg - gradient - to - r from - green - 600 to - emerald - 700 relative overflow - hidden">;
           <div className="absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size: 20px_20px] opacity - 10" />;
@@ -1435,6 +1532,7 @@ export default function MicroSaasPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
 
 
@@ -1443,6 +1541,8 @@ export default function MicroSaasPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1480,8 +1580,16 @@ export default function MicroSaasPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1546,6 +1654,13 @@ export default function MicroSaasPage() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {/* Pricing */}
                   <div>;
                     <h4 className="text-xl font-bold text-white mb-4 flex items-center">;
@@ -1578,8 +1693,16 @@ export default function MicroSaasPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
                   <h4 className="text-xl font-bold text-blue-400 mb-4 flex items-center">
@@ -1606,10 +1729,23 @@ export default function MicroSaasPage() {;
                   </div>
                 </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                  </div>;
+                </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* CTA */}
                 <div className="mt-8 text-center">;
                   <Button
@@ -1636,7 +1772,11 @@ export default function MicroSaasPage() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />;
@@ -1660,12 +1800,155 @@ export default function MicroSaasPage() {;
               href="/contact"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
+=======
+
+              className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl">;
+                  </div>;
+                  <div className="flex - 1">;
+                    <h3 className="text - 3xl font - bold text - white mb - 4">{service.title}</h3>;
+                    <p className="text - xl text - gray - 300 mb - 4">{service.description}</p>;
+                    <p className="text - gray - 400 leading - relaxed">{service.long_description}</p>;
+                  </div>;
+                </div>;
+                <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
+                  {/* Features */}
+                  <div>;
+                    <h4 className="text - xl font - bold text - white mb - 4 flex items - center">;
+                      <Zap className="w - 5 h - 5 mr - 2 text - blue - 400" />;
+                      Key Features;
+                    </h4>;
+                    <ul className="space - y-3">;
+                      {service.features.map ((feature, feature_index) => (
+                        <li key={feature_index} className="flex items - start text - gray - 300">;
+                          <Check className="w - 4 h - 4 text - blue - 400 mr - 3 mt - 0.5 flex - shrink - 0" />;
+                          <span className="text - sm">{feature}</span>;
+                        </li>))}
+                    </ul>;
+                  </div>;
+                  {/* Pricing */}
+                  <div>;
+                    <h4 className="text - xl font - bold text - white mb - 4 flex items - center">;
+                      <DollarSign className="w - 5 h - 5 mr - 2 text - green - 400" />;
+                      Pricing Plans;
+                    </h4>;
+                    <div className="space - y-4">;
+                      {Object.entries (service.pricing).map (([plan, details]) => (
+                        <div key={plan} className="bg - gray - 700 / 50 rounded - lg p - 4">;
+                          <div className="flex justify - between items - center mb - 3">;
+                            <h5 className="font - semibold text - white capitalize">{plan}</h5>;
+                            <span className="text - 2xl font - bold text - green - 400">{details.price}</span>;
+                          </div>;
+                          <ul className="space - y-1">;
+                            {details.features.map ((feature, feature_index) => (
+                              <li key={feature_index} className="text - xs text - gray - 400 flex items - center">;
+                                <Check className="w - 3 h - 3 text - blue - 400 mr - 2 flex - shrink - 0" />;
+                                {feature}
+                              </li>))}
+                          </ul>;
+                        </div>))}
+                    </div>;
+                  </div>;
+                </div>;
+                {/* Market Data */}
+                <div className="mt - 8 bg - blue - 900 / 20 border border - blue - 500 / 20 rounded - lg p - 6">;
+                  <h4 className="text - xl font - bold text - blue - 400 mb - 4 flex items - center">;
+                    <BarChart3 className="w - 5 h - 5 mr - 2" />;
+                    Market Analysis;
+                  </h4>;
+                  <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4">;
+                    <div>;
+                      <div className="text - sm text - gray - 400">Market Size</div>;
+                      <div className="text - lg font - bold text - white">{service.market_data.size}</div>;
+                    </div>;
+                    <div>;
+                      <div className="text - sm text - gray - 400">Growth Rate</div>;
+                      <div className="text - lg font - bold text - green - 400">{service.market_data.growth}</div>;
+                    </div>;
+                    <div>;
+                      <div className="text - sm text - gray - 400">Key Competitors</div>;
+                      <div className="text - sm text - white">{service.market_data.competitors.join (', ')}</div>;
+                    </div>;
+                    <div>;
+                      <div className="text - sm text - gray - 400">Our Advantage</div>;
+                      <div className="text - sm text - blue - 400">{service.market_data.our_advantage}</div>;
+                    </div>;
+                  </div>;
+                </div>;
+                {/* Use Cases */}
+                <div className="mt - 8">;
+                  <h4 className="text - xl font - bold text - white mb - 4 flex items - center">;
+                    <Users className="w - 5 h - 5 mr - 2 text - purple - 400" />;
+                    Perfect For;
+                  </h4>;
+                  <div className="flex flex - wrap gap - 3">;
+                    {service.use_cases.map ((use_case, useCaseIndex) => (
+                      <span key={useCaseIndex} className="px - 4 py - 2 bg - gray - 700 rounded - full text - sm text - gray - 300">;
+                        {use_case}
+                      </span>))}
+                  </div>;
+                </div>;
+                {/* CTA */}
+                <div className="mt - 8 text - center">;
+                  <Button;
+                    href="/pricing";
+                    size="lg";
+                    className={`bg - gradient - to - r ${service.gradient} hover:opacity - 90 transition - opacity`}
+                  >;
+                    View Pricing & Start Trial;
+                    <ArrowRight className="w - 5 h - 5 ml - 2" />;
+                  </Button>;
+                </div>;
+              </div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py - 20 bg - gradient - to - r from - blue - 600 to - blue - 700 relative overflow - hidden">;
+        <div className="absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size: 20px_20px] opacity - 10" />;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center relative z - 10">;
+          <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 8">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text - xl text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed">;
+            Start your 14 - day free trial today. No credit card required. Experience the power of AI - powered micro SaaS services.;
+          </p>;
+          <div className="flex flex - col sm:flex - row gap - 6 justify - center">;
+            <Button;
+              href="/pricing";
+              variant="secondary";
+              size="lg";
+              className="bg - white text - blue - 600 hover:bg - gray - 100 shadow - 2xl";
+            >;
+              View Pricing;
+              <ArrowRight className="w - 5 h - 5 ml - 2" />;
+            </Button>;
+            <Button;
+              href="/contact";
+              variant="outline";
+              size="lg";
+              className="border - white text - white hover:bg - white hover:text - blue - 600 shadow - 2xl";
+            >;
+
+              Contact Sales;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
   );

@@ -6,6 +6,7 @@
   }
   },
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -13,6 +14,10 @@
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -22,6 +27,7 @@
           <Textarea
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -48,6 +54,13 @@
           disabled={isEnhancing || !bulkSkills.trim()}
 
 
+=======
+            value = {bulkSkills,}
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           className="gap-2"
         >
           {isEnhancing ? (
@@ -57,8 +70,11 @@
           )}
           Categorize with AI
         </Button>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       set_error (err.message || 'Failed to categorize skills');
     }
@@ -125,8 +141,11 @@
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 '"
 

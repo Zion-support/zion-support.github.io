@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -13,6 +16,7 @@ import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 
 export function PartnerReferralLinks() {;
+<<<<<<< HEAD
 
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -25,6 +29,8 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function PartnerReferralLinks() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -38,6 +44,7 @@ import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
 
+<<<<<<< HEAD
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -45,6 +52,10 @@ export function PartnerReferralLinks() {
   const [customParam, setCustomParam] = useState<string>(""),
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   
   // Get the base referral link
@@ -144,6 +155,7 @@ export function PartnerReferralLinks() {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
+<<<<<<< HEAD
 
             <Button
               variant="outline"
@@ -219,6 +231,19 @@ export function PartnerReferralLinks() {;
     link.click();
     document.body.removeChild(link);
 
+=======
+
+
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
+    const url = URL && URL.createObjectURL(blob);
+    const link = document && document.createElement("a");
+    link && link.setAttribute("href", url);
+    link && link.setAttribute("download", "zion_referral_links && zion_referral_links.csv");
+    link && link.style.visibility = 'hidden';
+    document && document.body.appendChild(link);
+    link && link.click();
+    document && document.body.removeChild(link);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   };
 
   return (
@@ -227,16 +252,23 @@ export function PartnerReferralLinks() {;
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Button
               variant="outline" 
               size="sm" 
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;
               <Download className="h-4 w-4" />;

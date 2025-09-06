@@ -177,6 +177,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
           <ReviewStats
             averageRating={averageRating}
             totalReviews={ratingCount}
+<<<<<<< HEAD
             ratingDistribution={ratingDistribution}          />
         </div>
         <div className='md:w-2/3'>
@@ -214,6 +215,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             
             <TabsContent value="positive">
               <ReviewsList
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             ratingDistribution={ratingDistribution}
@@ -266,11 +269,24 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value="positive">
               <ReviewsList
 
+<<<<<<< HEAD
 
 
 
                 reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
+=======
+                reviews={reviews.filter((r) => r.rating >= 4)}
+                isLoading={isLoading}
+                onReportReview={reportReview}              />;
+            </TabsContent>;
+
+            <TabsContent value='positive'>;
+
+
+              <ReviewsList
+                reviews={reviews && reviews.filter(r => r && r.rating >= 4)}                isLoading={isLoading}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 onReportReview={reportReview}
               />
             </TabsContent>
@@ -291,7 +307,10 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               />;
             </TabsContent>;
@@ -308,19 +327,25 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
 }
 }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { useState, useEffect } from 'react';

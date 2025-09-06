@@ -17,8 +17,11 @@ if (error) {
         setIsError(true),
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         toast({
           title: "Error"
           description: "Failed to load profile. Please try again later."
@@ -96,6 +99,7 @@ export default function ProfilePage() {;
     }
   }, [profileId]),
 
+<<<<<<< HEAD
 
 
 
@@ -108,6 +112,11 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -152,10 +161,13 @@ export default function ProfilePage() {;
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
+<<<<<<< HEAD
 
 
         description = {profileData.bio |"View the profile of this talented individual.",}
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         description = {profileData.bio || "View the profile of this talented individual.",}
 
@@ -165,6 +177,7 @@ export default function ProfilePage() {;
       <SEO;
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -173,6 +186,11 @@ export default function ProfilePage() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
@@ -230,6 +248,7 @@ export default function ProfilePage() {;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -238,6 +257,11 @@ export default function ProfilePage() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -326,6 +350,7 @@ export default function ProfilePage() {;
                 {profileData.twitter_link && (;
                   <a;
                     href={profileData.twitter_link}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -333,6 +358,10 @@ export default function ProfilePage() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -354,6 +383,7 @@ export default function ProfilePage() {;
                     <Linkedin className="h-6 w-6" />
                   </a>
                   </Link>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -361,6 +391,10 @@ export default function ProfilePage() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 )}
 
               </div>;
@@ -382,6 +416,7 @@ export default function ProfilePage() {;
                 professional_title: profileData?.professional_title || '',
 
 
+<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
                 hourly_rate: profileData?.hourly_rate || 0,
                 hourly_rate: profileData?.hourly_rate || 0
@@ -432,6 +467,11 @@ if (isLoading) {"
   /* Placeholder for other sidebar elements */
 }</div> </div> </div> </>)
 }'"}
+=======
+              }}
+            />
+            {/* Placeholder for other sidebar elements */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   /* Placeholder for other sidebar elements */ ;

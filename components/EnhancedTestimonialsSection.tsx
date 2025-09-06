@@ -268,7 +268,10 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -291,6 +294,10 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -332,10 +339,14 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 {/* Testimonial Text */}
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -373,8 +384,11 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </span>
                 </div>
               </div>
@@ -438,6 +452,11 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -445,9 +464,12 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               Ready to Join Our Success Stories?
@@ -594,8 +616,24 @@ className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 export default EnhancedTestimonialsSection;
 
 
+<<<<<<< HEAD
+=======
+=======
+    </section>);
+}
+;
+export default EnhancedTestimonialsSection);
+}
+;
+export default EnhancedTestimonialsSection;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
@@ -608,3 +646,8 @@ export default EnhancedTestimonialsSection;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

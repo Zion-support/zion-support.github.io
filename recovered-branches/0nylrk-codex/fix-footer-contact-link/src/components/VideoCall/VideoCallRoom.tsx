@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import React from 'react',
@@ -13,6 +14,22 @@ import { Button } from "@/components/ui/button",
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+interface VideoCallRoomProps {;
+
+  room?: string;
+  token?: string;
+  serverUrl?: string;
+  onDisconnect?: () => void;
+  className?: string;
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface VideoCallRoomProps {
   room?: string,
   token?: string,
@@ -25,6 +42,7 @@ interface VideoCallRoomProps {
 
 export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (
+<<<<<<< HEAD
 
     <Card className={className |"w-full max-w-3xl mx-auto"}>
       <CardHeader>
@@ -43,6 +61,12 @@ export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, cl
   )
 
 
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -73,7 +97,10 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
     </Card>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -106,6 +133,14 @@ function VideoCallRoom() {
     </Card>);
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 
 
+=======
+import { Helmet } from './react - helmet - async';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface SEOProps {
 
   title: string
@@ -27,6 +32,7 @@ interface SEOProps {
   ogImage?: string,
   ogUrl?: string,
   canonical?: string,
+<<<<<<< HEAD
   noindex?: boolean
 }
 
@@ -36,6 +42,14 @@ export function SEO({
   description,
   keywords,
 
+=======
+
+  noindex?: boolean
+}
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Default to the Google Drive image URL
 
   ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
@@ -96,11 +110,20 @@ function SEO() {
       {canonical && <link rel="canonical" href={canonical} />}
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
+<<<<<<< HEAD
 
     </Helmet>
   )
 
 
+=======
+
+
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
@@ -153,9 +176,15 @@ export function SEO({;
   );
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

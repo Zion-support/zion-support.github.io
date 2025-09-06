@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Briefcase, Star, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,10 @@ import { Button } from "@/components/ui/button",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface UserTypeOption {
 
   id: "serviceProvider" | "talent" | "client"
@@ -32,23 +37,30 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     {
 
 
+<<<<<<< HEAD
       icon: Briefcase
     }
     },
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       id: "serviceProvider",
       name: "Service Provider",
       description: "I want to offer services on the platform",
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
 
       id: "talent"
@@ -126,7 +138,22 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
             <Button;
               key={type.id}
 
+<<<<<<< HEAD
 
+=======
+=======
+              }`}
+            >
+              <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
+                <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
+              </div>
+              <div className="text-center">
+                <h4 className="font-medium">{type.name}</h4>
+                <p className="text-sm text-zion-slate-light mt-1">
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -207,9 +234,12 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 
 
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
 
+=======
+
+import {
+  CompanyRecord,
+  CompanyMember,
+  EnterpriseRole,
+  InvoiceRecord,
+} from '../types/enterprise';
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const generateId = () => Math.random().toString(36).slice(2, 10);
 
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
@@ -86,11 +98,32 @@ export const store = {getCompanyBySlug(slug: string) {;
     return true;
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',
+const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
+const seed_company: CompanyRecord = {
+  id: 'cmp_acme',
+  name: 'Acme Corporation',
+  slug: 'acme',
+  logo_url: '/logo - acme.svg',
+  brand_color: '#4F46E5',
+  plan: {
+    tier: 'business',
+    seats_purchased: 25,
+    seats_used: 3,
+    usage_limits: {
+      monthlyJobPosts: 50,
+      budgetCapUsd: 10000}},
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;
@@ -113,6 +146,7 @@ export const store = {getCompanyBySlug(slug: string) {;
 
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
+<<<<<<< HEAD
 
 
 const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
@@ -136,6 +170,10 @@ export const store = {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       brandColor: input.brandColor || '#111827',;
       plan: input.plan || {;
         tier: 'teams',;
@@ -150,6 +188,7 @@ export const store = {;
     return record;
   },;
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {;
+<<<<<<< HEAD
 
 
     const company = companiesById[companyId];
@@ -161,10 +200,15 @@ export const store = {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),;
     return member;
   },;
   removeMember(companyId: string, memberId: string): boolean {;
+<<<<<<< HEAD
 
 
     const company = companiesById[companyId];
@@ -186,15 +230,24 @@ export const store = {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),;
     return true;
   },;
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
+<<<<<<< HEAD
 
     const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
 

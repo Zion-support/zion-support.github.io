@@ -33,6 +33,7 @@ export function EnterpriseTrustBadges() {
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -41,6 +42,11 @@ import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -70,6 +76,7 @@ export function EnterpriseTrustBadges() {
       </div>
 
 
+<<<<<<< HEAD
     </section>;
   );
 };
@@ -80,6 +87,13 @@ export function EnterpriseTrustBadges() {
 import React from "react";
 
 
+=======
+
+    </section>
+
+
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
   return (

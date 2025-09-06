@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -8,12 +11,21 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
+<<<<<<< HEAD
 
   getConversationById
   getMessages
   sendMessage
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  getConversationById,
+  getMessages,
+  sendMessage,;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from "../../../utils/messaging/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const user = requireUser(req, res);
@@ -92,7 +104,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+<<<<<<< HEAD
 
+=======
+=======
+    res.status (200).json ({ conversation, message });
+  } else {
+    res.status (405).json ({ error: "Method not allowed" });
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 
@@ -115,6 +135,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

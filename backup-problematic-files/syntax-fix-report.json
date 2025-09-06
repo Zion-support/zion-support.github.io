@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -40,6 +41,18 @@
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
+=======
+
+
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   "timestamp": "2025-09-06T00:33:39.754Z",
   "duration": "6853ms",
   "fixedFiles": 517,
@@ -563,7 +576,11 @@ origin/automation-improvements-final
     "/workspace/src/utils/seo-optimizer.ts",
     "/workspace/src/utils/serverless-polyfill.ts"
   ],
+<<<<<<< HEAD
   "errorDetails": []
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -602,6 +619,7 @@ origin/automation-improvements-final
     "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImportAndPrintAndShare.jsx"
   ],
   "summary": "Successfully fixed syntax errors in 31 files"
+<<<<<<< HEAD
   "errorDetails": []
 }
   "errorDetails": []}
@@ -613,5 +631,24 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 origin/main
 origin/automation-improvements-final
+=======
+
+=======
+
+  "errorDetails": []}
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+}
+
+"errorDetails": []
+}
+
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 "errorDetails": []
 }

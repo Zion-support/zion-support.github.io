@@ -1,13 +1,21 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
@@ -16,10 +24,21 @@ import { toast } from '@/hooks / use - toast';
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
 ;
 
+<<<<<<< HEAD
+=======
+export interface ApiKey {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface ApiKey {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   name: string;
   key_prefix: string;
@@ -27,10 +46,14 @@ export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:
   created_at: string;
   last_used_at: string | null;
 
+<<<<<<< HEAD
   expires_at: string | null
   is_active: boolean
 }
 export interface ApiLog {
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   expires_at: string | null,
@@ -42,17 +65,23 @@ export interface ApiLog {
 export interface ApiLog {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   endpoint: string;
   method: string;
   status_code: number;
   created_at: string;
+<<<<<<< HEAD
 
   ip_address?: string
   response_time_ms?: number
 }
 export function useApiKeys() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   ip_address?: string,
@@ -62,7 +91,10 @@ export function useApiKeys() {
 export function useApiKeys() {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -152,6 +184,7 @@ export function useApiKeys() {
       if (!session) {
         setError("Authentication required"),
         return
+<<<<<<< HEAD
       }
       const response = await fetch(`${getApiUrl()}/keys`, {
         method: 'GET'
@@ -167,6 +200,47 @@ export function useApiKeys() {
 
 
 
+=======
+
+
+      const result = await response && response.json();
+      
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to fetch API keys')
+      }
+
+      setKeys(result && result.keys || [])
+
+    } catch (err) {
+      console && console.error('Error fetching API keys:', err);
+      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+      toast({
+        variant: "destructive";
+
+
+
+
+
+=======
+        title: "Error fetching API keys",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  ip_address?: string,
+  response_time_ms?: number;
+}
+export /**
+ * useApiKeys - Function description
+ */
+function useApiKeys() {
+  const { user } = use_auth ();
+  const [keys, set_keys] = useState < ApiKey[]>([]);
+  const [logs, set_logs] = useState < ApiLog[]>([]);
+  const [total_logs, setTotalLogs] = useState (0);
+  const [loading, set_loading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+  const [newApiKey, setNewApiKey] = useState < string | null>(null);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   // Helper to get the base URL for API functions;
   const getApiUrl = () =>: any {
@@ -216,9 +290,15 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       setKeys(result.keys || [])
+=======
+
+      setKeys(result.keys || [])
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } catch (err) {
       console.error('Error fetching API keys:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
@@ -269,7 +349,11 @@ if ( {) {
       });
 
 
+<<<<<<< HEAD
 
+=======
+      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
@@ -280,9 +364,17 @@ if ( {) {
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
       setKeys(result.keys || []);
     } catch (err) {;
@@ -328,9 +420,13 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
       
@@ -389,6 +485,11 @@ if ( {) {
         body: JSON.stringify({ keyId })
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
       // Add the new key to the list;
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),;
@@ -439,8 +540,11 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Update the key in the list
       setKeys(prev => prev.map(key =>
         key.id === keyId ? { ...result, key: undefined } : key
@@ -508,6 +612,11 @@ if ( {) {
         body: JSON.stringify({ keyId })
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
       // Update the key in the list;
       setKeys(prev => prev.map(key =>;
@@ -559,8 +668,11 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Update the key's active status in the list
       setKeys(prev => prev.map(key =>
         key.id === keyId ? { ...key, is_active: false } : key
@@ -617,6 +729,18 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+      setLogs(result && result.logs || []);
+      setTotalLogs(result && result.count || 0);
+=======
+
+
+      setLogs(result.logs || []);
+      setTotalLogs(result.count || 0);
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
       // Update the key's active status in the list;
       setKeys(prev => prev.map(key =>;
@@ -668,16 +792,22 @@ if ( {) {
       setTotalLogs(result.count || 0),
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       
       return result
     } catch (err) {
       console && console.error('Error fetching API logs:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
+<<<<<<< HEAD
         variant: "destructive";
         title: "Error fetching API logs"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
@@ -685,6 +815,41 @@ if ( {) {
 
       setLoading(false)
 
+=======
+
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+=======
+            'Authorization': `Bearer ${session.access_token}`;
+            'Content - Type': 'application / json';
+          }
+        }
+      );
+;
+      const result = await response.json ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (result.error || 'Failed to fetch API logs');
+      }
+      set_logs (result.logs || []);
+      setTotalLogs (result.count || 0);
+;
+      return result;
+    } catch (err) {
+      console.error ('Error fetching API logs:', err);
+      set_error (err instanceof Error ? err.message : 'An unknown error occurred');
+      toast ({
+        variant: "destructive";
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      set_loading (false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
 
@@ -703,6 +868,7 @@ if ( {) {
     revokeApiKey;
     fetchApiLogs;
 
+<<<<<<< HEAD
 
 
 ;
@@ -734,12 +900,18 @@ if ( {) {
     fetchApiLogs;
     clearNewApiKey: () => setNewApiKey(null);
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     clearNewApiKey: () => setNewApiKey (null);
 
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 ;

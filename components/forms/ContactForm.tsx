@@ -19,6 +19,60 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+
+'use client';
+'use client';
+'use client';
+;
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
+
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Send,;
+  CheckCircle,;
+  AlertCircle,;
+=======
+<<<<<<< HEAD
+
+'use client';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+<<<<<<< HEAD
+  Mail
+  Phone
+  MapPin
+  Send
+  CheckCircle
+  AlertCircle;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+<<<<<<< HEAD
+  CheckCircle,
+  AlertCircle,
+} from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+
+const ContactForm: React.FC = () => {;
+  const [formData, setFormData] = useState({;
+    name: '',;
+    email: '',;
+    company: '',;
+    phone: '',;
+    service: '',;
+    message: '',;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<;
@@ -279,10 +333,14 @@ const ContactForm: React.FC = () => {
           {/* Contact Information */}
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, x: -30 }}
@@ -322,11 +380,15 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="w-6 h-6 text-white" />
@@ -351,7 +413,11 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Additional Info */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -402,11 +468,19 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Contact Form */}
           <motion&& motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -419,11 +493,15 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             {submitStatus === 'success' ? (
               <motion.div
@@ -598,11 +676,14 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   />
                 </div>
                 {submitStatus === 'error' && (
@@ -637,6 +718,7 @@ export default ContactForm;
 
 
 
+<<<<<<< HEAD
 export default ContactForm;  )
 }
 export default ContactForm;
@@ -649,3 +731,7 @@ export default ContactForm;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

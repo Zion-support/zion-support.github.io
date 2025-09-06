@@ -1,6 +1,7 @@
 import React from 'react';
 import React from 'react';
 
+<<<<<<< HEAD
 
 
 export default function MainLayout({
@@ -27,3 +28,8 @@ export default function MainLayout({
 },;
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

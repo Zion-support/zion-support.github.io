@@ -1,4 +1,5 @@
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
+<<<<<<< HEAD
 
 
 import Link from 'next/link';
@@ -136,6 +137,11 @@ interface InteractiveFeaturesProps {;
   className?: string,;
 
 
+=======
+import Link from 'next / link';
+import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
+  class_name?: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   style?: React.CSSProperties;
 }
 interface InteractiveFeaturesProps {
@@ -281,7 +287,10 @@ export function InteractiveFeatures(): any ({;
             <Card;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
@@ -291,6 +300,11 @@ export function InteractiveFeatures(): any ({;
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -301,6 +315,10 @@ export function InteractiveFeatures(): any ({;
               </CardHeader>
               <div
                 className={cn(
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   'transition-all duration-300',
 
                   openIndex === index
@@ -323,6 +341,12 @@ export function InteractiveFeatures(): any ({;
                 )}
               >
                 <CardContent className="text-sm text-zion-slate-light p-0">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <p>{feature.details}</p>
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
@@ -334,18 +358,24 @@ export function InteractiveFeatures(): any ({;
             </Card>
           ))}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default InteractiveFeatures;
 ;
 }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>;
       </div>;
     </section>;

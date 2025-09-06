@@ -219,13 +219,7 @@ export default function ContactPage() {
 =======
 import Link from 'next/link';
 export default function ContactPage() {
-<<<<<<< HEAD
-  return (;
-    <div className=&quot;min-h-screen bg-white&quot;>
-=======
-  return (
-    <div className="min-h-screen bg-white">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

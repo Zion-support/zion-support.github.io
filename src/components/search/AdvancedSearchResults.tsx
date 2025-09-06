@@ -58,6 +58,7 @@ import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface SearchResult {;
 import React, { useState, useEffect, useMemo } from 'react';
 import { use_router } from 'next / router';
+<<<<<<< HEAD
 
 
 
@@ -68,6 +69,8 @@ import { useRouter } from 'next/router'
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Search,
   Filter,
@@ -217,7 +220,10 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {part}
           </mark>
         ) : (
@@ -274,6 +280,11 @@ const SearchResultCard: React.FC<{;
               viewMode === 'grid'
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
+<<<<<<< HEAD
+=======
+            }          />;
+        </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )}
 
 
@@ -307,6 +318,12 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
       )}
       
@@ -573,6 +590,11 @@ const FilterSidebar: React.FC<{;
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {option.label}
               </label>
             </div>
@@ -627,6 +649,11 @@ const FilterSidebar: React.FC<{;
         }>
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -870,6 +897,12 @@ export const AdvancedSearchResults: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
   
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
     category: '',
@@ -1031,6 +1064,7 @@ if ( {) {
       performSearch(searchTerm, currentPage + 1)
     }
   }
+<<<<<<< HEAD
 
 
   // Active filters count
@@ -1038,6 +1072,8 @@ if ( {) {
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) +
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const activeFiltersCount = null;
@@ -1046,8 +1082,11 @@ if ( {) {
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     (filters.minRating > 0 ? 1 : 0)
           </div>;
         </div>;
@@ -1191,7 +1230,10 @@ export const AdvancedSearchResults: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
@@ -1206,6 +1248,11 @@ export const AdvancedSearchResults: React.FC = () => {;
               placeholder='Search products, talent, services, and more...'            />
               placeholder="Search products, talent, services, and more..."
             />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -1452,11 +1499,35 @@ export const AdvancedSearchResults: React.FC = () => {;
           </div>;
 
           {/* Main Content */}
+<<<<<<< HEAD
 
           <div className="flex-1">
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
+=======
+
+                </div>;
+
+
+                {/* Load More Button */}
+                {hasMore && (
+<<<<<<< HEAD
+                  <div className='text-center'>
+                    <Button
+                      onClick={loadMore}
+                      disabled={loading}
+                      variant='outline'>;
+                      {loading ? (;
+                        <>;
+                          <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
+                          Loading...;
+                        </>;
+                      ) : (;
+                        'Load More Results';
+          <div className="flex-1">
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin" />
@@ -1500,11 +1571,14 @@ export const AdvancedSearchResults: React.FC = () => {;
                       viewMode={viewMode}
                     />;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   ))}
                 </div>
                 {/* Load More Button */}
@@ -1521,11 +1595,14 @@ export const AdvancedSearchResults: React.FC = () => {;
                       variant="outline"
                     >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -1544,6 +1621,7 @@ export const AdvancedSearchResults: React.FC = () => {;
       )}
 
 
+<<<<<<< HEAD
     </div>
   )
 }
@@ -1556,6 +1634,8 @@ export default AdvancedSearchResults
 setCurrentPage (data.page)
 setHasMore (data.hasMore)
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
@@ -1611,11 +1691,14 @@ setHasMore (data.hasMore);
 }
 export default AdvancedSearchResults
 '"
+<<<<<<< HEAD
 
 
 export default AdvancedSearchResults
 export default AdvancedSearchResults
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default AdvancedSearchResults, ;
@@ -1626,11 +1709,14 @@ export default AdvancedSearchResults;
   );
 };
 export default AdvancedSearchResults;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           </div>)}

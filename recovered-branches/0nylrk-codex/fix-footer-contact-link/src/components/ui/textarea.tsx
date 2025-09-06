@@ -3,7 +3,6 @@ import { cn } from &quot;@/lib/utils&quot;
 export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
 import * as React from "react"
 
-import { cn } from "@/lib/utils"
 
 export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
 export type TextareaProps = React.ComponentProps<"textarea">
@@ -12,8 +11,13 @@ export type TextareaProps = React.ComponentProps<"textarea">
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
@@ -29,14 +33,32 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
       />);
   }
 
+<<<<<<< HEAD
 )
 Textarea.displayName = &quot;Textarea&quot;
+=======
+);
+Textarea.display_name = &quot;Textarea & quot;
+
+export { Textarea }
+=======
+
+export { Textarea };
+
+=======
+Textarea.displayName = "Textarea"
+
+export { Textarea }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

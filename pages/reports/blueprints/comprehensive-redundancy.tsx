@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -7,6 +10,10 @@ import Link from 'next / link';
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const ComprehensiveRedundancyBlueprint: React.FC = () => {
   const architecture_components = [;
     {
@@ -115,6 +122,7 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       description: 'Multi - region storage with replication',
       status: 'active',
       instances: 3,
+<<<<<<< HEAD
 
 
       } catch (error) {
@@ -123,10 +131,15 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
   ];
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const redundancyFeatures = [
 
     {
@@ -158,6 +171,7 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       description: 'Automated backup and recovery procedures',
       benefit: 'Data protection and business continuity',
 
+<<<<<<< HEAD
 
       } catch (error) {
     console.error("Error:", error);
@@ -169,6 +183,11 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      status: 'implemented'
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const performanceMetrics = [
 
     { metric: 'Uptime', value: '99.97%', target: '99.9%', status: 'exceeded' },
@@ -177,16 +196,23 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
     { metric: 'Failover Time', value: '2.3s', target: '5s', status: 'exceeded' },
 
 
+<<<<<<< HEAD
     { metric: 'Recovery Time', value: '15s', target: '30s', status: 'exceeded'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -195,9 +221,16 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       case 'excellent': return 'text-green-400';
       default: return 'text-gray-400';
 
+<<<<<<< HEAD
     }
 
 
+=======
+  };
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -208,8 +241,11 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const getHealthColor = (health: string) => {
 
     switch (health) {
@@ -220,9 +256,16 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       case 'critical': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400';
 
+<<<<<<< HEAD
     }
 
 
+=======
+  };
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -231,10 +274,15 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   };
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
       <Head>
@@ -251,10 +299,14 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -274,10 +326,14 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-indigo-400">Status</h3>
@@ -308,9 +364,12 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Architecture Components</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -326,10 +385,14 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{component.description}</p>
@@ -365,10 +428,14 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Redundancy Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -387,8 +454,11 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
@@ -412,9 +482,12 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -458,8 +531,11 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </tbody>
               </table>
             </div>
@@ -473,10 +549,14 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Architecture Overview</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -484,11 +564,18 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
               <div className="text-6xl font-bold text-indigo-400 mb-4">🏗️</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Multi-Layer Architecture</h3>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
 
                 Our comprehensive redundancy system employs a multi-layered approach with
                 automatic failover, health monitoring, and geographic distribution to ensure
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 maximum availability and performance.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-center">
@@ -524,10 +611,14 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Implementation Details</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -555,10 +646,19 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Navigation */}
 
 
+=======
+
+
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link 
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -570,30 +670,45 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             All Blueprints
           </Link>
 
+<<<<<<< HEAD
           <Link
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             href="/reports/performance"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
             Performance Reports
           </Link>
 
+<<<<<<< HEAD
           <Link
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             href="/automation-health"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
@@ -604,9 +719,16 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
     </div>
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default ComprehensiveRedundancyBlueprint;

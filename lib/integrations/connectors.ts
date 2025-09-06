@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { ProviderConnection, SyncLogEntry } from "./types";
@@ -9,6 +10,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -27,6 +30,7 @@ async function mockProviderCall<T>(
 }
 // CRM actions;
 export const crm = {
+<<<<<<< HEAD
 
 
 
@@ -40,12 +44,18 @@ export const crm = {
 
     return mockProviderCall(connection, "sync_contact", { contact });
 
+=======
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
 };
 
 // ATS actions
 export const ats = {
+<<<<<<< HEAD
 
 
 
@@ -60,6 +70,8 @@ export const ats = {
     return mockProviderCall(connection, "update_status", { status });
   }
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
@@ -71,6 +83,7 @@ export const ats = {
     return executeProviderAction(connection, 'createCandidate', { candidate });
   },
 };
+<<<<<<< HEAD
 
 
 
@@ -90,3 +103,7 @@ export const email = {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

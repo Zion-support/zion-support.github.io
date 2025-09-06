@@ -30,6 +30,7 @@ const Jobs: NextPage = () => {
         jobLocationType={job.jobLocationType}
         title={job.title}
 
+<<<<<<< HEAD
 
 export default Jobs,;
 
@@ -74,6 +75,12 @@ export default Jobs,;
   }
 }
 
+=======
+
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       />;
       <main>;
         <h1 > Jobs</h1>;
@@ -87,7 +94,12 @@ export default Jobs,;
 export default Jobs;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

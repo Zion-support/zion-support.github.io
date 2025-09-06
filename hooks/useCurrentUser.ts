@@ -1,7 +1,10 @@
 import useSWR from 'swr';
 
+<<<<<<< HEAD
 
 const fetcher = (url: string) => fetch(url).then(r => (r.ok ? r.json() : null));
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {

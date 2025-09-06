@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
 
 export interface TreeNode {;
 
@@ -11,6 +12,9 @@ export interface TreeNode {
 export interface TreeNode {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   name: string;
   path: string;
   type: 'folder' | 'file';
@@ -29,7 +33,32 @@ function NodeItem({
   depth
   onDeploy
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import React, { useState } from "react";
+
+
+export interface TreeNode {
+
+
+  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle = () => setOpen(v => !v);
+  const copyPath = async () => {;
+    await navigator && navigator.clipboard.writeText(node && node.path);  };
+export interface TreeNode {;
+  name: string,;
+  path: string,;
+  type: "folder" | "file",;
+
+=======
+
+  name: string,
+  path: string,
+  type: "folder" | "file",;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -68,6 +97,15 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+              node={child}
+              depth={depth + 1}
+              on_deploy={on_deploy}
+            />          ))}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           ))}
         </div>
       )}
@@ -79,6 +117,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
+<<<<<<< HEAD
   );  )
 }
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -88,6 +127,13 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
       ))}
 
 
+=======
+=======
+
+    </div>;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 
 
@@ -120,10 +166,13 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
+<<<<<<< HEAD
 
   onDeploy
 }/>) )
 }</div>)
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   onDeploy 
 }/>) ) ;
@@ -137,5 +186,45 @@ export default Tree;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
+      ))}
+    </div>
+  );
+
+
+
+=======
+  child.path;
+}node= {
+  child;
+}depth= {
+  depth + 1;
+}on_deploy= {
+  on_deploy;
+}/>) );
+}</div>);
+}</div>);
+}export /**
+ * Tree - Function description
+ */
+function Tree() {
+  return (<div className="w - full"> {
+  nodes.map ( (n) => (<NodeItem key= {
+  n.path;
+}node= {
+  n;
+}depth= {
+  0;
+}on_deploy= {
+  on_deploy;
+}/>) );
+}</div>);
+}export default Tree;}
+export default Tree;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

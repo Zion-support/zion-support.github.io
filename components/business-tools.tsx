@@ -51,6 +51,7 @@ import {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {
   ExternalLink
@@ -99,6 +100,10 @@ import {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -152,6 +157,7 @@ export default function BusinessToolsPage() {
           icon: <Calendar className='w-6 h-6' />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
+<<<<<<< HEAD
 
       ]
     },    {          icon: <Calendar className="w-6 h-6" />
@@ -162,6 +168,15 @@ export default function BusinessToolsPage() {
       category: 'Communication & Collaboration'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+      ];
+    };
+      category: 'Communication & Collaboration',
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       tools: [
         {
           name: 'Slack'
@@ -436,6 +451,7 @@ export default function BusinessToolsPage() {
         }
       ]
 
+<<<<<<< HEAD
     },  ];          icon: <TrendingUp className="w-6 h-6" />
           color: 'bg-gradient-to-br from-purple-500 to-pink-600'
         }
@@ -445,6 +461,47 @@ export default function BusinessToolsPage() {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+      category: 'Analytics & Business Intelligence',
+      tools: [;
+        {
+          name: 'Google Analytics',
+
+
+    }
+
+  ];
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const businessInsights = [
     {
       title: 'Remote Work Tools'
@@ -752,6 +809,7 @@ export default function BusinessToolsPage() {
                 key={index}
                 className="card-hover border-gradient-blue text-center"
 
+<<<<<<< HEAD
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
@@ -760,6 +818,8 @@ export default function BusinessToolsPage() {
                   {insight.trend}
                 </div>
               </Card>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             ))}
           </div>
@@ -771,8 +831,12 @@ export default function BusinessToolsPage() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Business Tools */}
 
       <section className="section-padding bg-gradient-cursor">
@@ -1047,6 +1111,15 @@ export default function BusinessToolsPage() {
                       </ul>
                     </div>
 
+<<<<<<< HEAD
+=======
+                      </ul>;
+                    </div>;
+
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1102,13 +1175,46 @@ export default function BusinessToolsPage() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {productivityTips.map((tip, index) => (
 
+<<<<<<< HEAD
+=======
+=======
+      <section className="section-padding bg-gradient-cursor-accent">
+        <div className="container-cursor">
+          <div className="text-center mb-16">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Productivity Tips & Best Practices
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Maximize the value of your business tools with these proven strategies and best practices.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {productivityTips.map((tip, index) => (
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue text-center"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex justify-center mb-4">
+=======
+        </div>
+      </section>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Productivity Tips */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-16'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               Productivity Tips & Best Practices
 
@@ -1142,6 +1248,7 @@ export default function BusinessToolsPage() {
 
               </Card>
 
+<<<<<<< HEAD
 
 
 
@@ -1152,6 +1259,8 @@ export default function BusinessToolsPage() {
       </section>
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
@@ -1177,8 +1286,11 @@ export default function BusinessToolsPage() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1187,10 +1299,13 @@ export default function BusinessToolsPage() {
 
             Ready to Transform Your Business Operations?
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           </h2>
@@ -1219,6 +1334,25 @@ export default function BusinessToolsPage() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+              Explore Micro SaaS
+            </Button>
+
+            <Button
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

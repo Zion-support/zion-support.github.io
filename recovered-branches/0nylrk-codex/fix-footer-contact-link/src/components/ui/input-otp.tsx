@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input-otp';
@@ -5,6 +6,19 @@ import {Dot} from 'lucide-react';
 
 
 
+=======
+
+
+
+=======
+import * as React from "react"
+import { OTPInput, OTPInputContext } from "input-otp"
+import { Dot } from "lucide-react"
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { cn } from "@/lib/utils"
 
 const InputOTP = React.forwardRef<
@@ -61,11 +75,14 @@ const InputOTPSlot = React && React.forwardRef<;
 
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
@@ -98,6 +115,7 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 
+<<<<<<< HEAD
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
 
@@ -109,3 +127,6 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

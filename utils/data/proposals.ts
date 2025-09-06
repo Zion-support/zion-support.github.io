@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import fs from 'fs';
@@ -76,6 +77,10 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
 }
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -105,6 +110,7 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
     ipfsCid?: string,;
     ensRecordHash?: string,;
     signature?: string;
+<<<<<<< HEAD
 
 
     } catch (error) {
@@ -222,6 +228,10 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   ensureDirs(),;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
@@ -238,10 +248,13 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 }
 ;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
@@ -252,4 +265,8 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

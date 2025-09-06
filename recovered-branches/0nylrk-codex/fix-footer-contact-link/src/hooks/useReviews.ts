@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -22,6 +23,34 @@ export function useReviews(projectId?: string) {
   const [isSubmitting, setIsSubmitting] = useState(false),
   
 
+=======
+import { useState } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { use_auth } from '@/hooks / use_auth';
+import { Review, ReviewReport } from '@/types / reviews';
+import { toast } from '@/hooks / use - toast';
+export /**
+ * use_reviews - Function description
+ */
+function use_reviews() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [reviews, set_reviews] = useState < Review[]>([]);
+  const [user_review, setUserReview] = useState < Review | null>(null);
+  const [is_submitting, setIsSubmitting] = useState (false);
+;
+  // Fetch reviews for a project;
+  const fetchProjectReviews = async (project_id: string) => {
+    // Check condition
+if (return) {
+  $2
+}
+    setIsLoading (true),
+
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Fetch reviews for a project
 
   const fetchProjectReviews = async (projectId: string) => {
@@ -211,11 +240,15 @@ export function useReviews(projectId?: string) {
           description: "Failed to submit review",
           variant: "destructive"})
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       return false;
     } finally {
@@ -224,6 +257,10 @@ export function useReviews(projectId?: string) {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },;
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (userId: string) => {;
@@ -309,8 +346,11 @@ export function useReviews(projectId?: string) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
@@ -398,6 +438,7 @@ export function useReviews(projectId?: string) {
       console.error("Error reporting review:", err),
       toast({
 
+<<<<<<< HEAD
         title: "Error";
         description: "Failed to report review"
         variant: "destructive"})
@@ -421,6 +462,10 @@ export function useReviews(projectId?: string) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     submitReview;
     updateReview;
 

@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 
 
 
@@ -29,6 +30,8 @@ import {
   LineChart,
   BarChart,;
   DonutChart,;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 type InsightResponse = {
 
@@ -48,6 +51,7 @@ type InsightResponse = {;
   minHourlyUsd: number;
   maxHourlyUsd: number;
   confidence: number;
+<<<<<<< HEAD
 
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
@@ -64,12 +68,45 @@ type InsightResponse = {;
   gptRecommendation?: string
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  recommendedMonthlyUsd: number,
+  medianHourlyUsd: number,
+  minHourlyUsd: number,
+  maxHourlyUsd: number,
+  confidence: number,
+trend_monthly: { label: string, value: number }[],
+  regional_comparison: { region: string, medianHourlyUsd: number }[],
+  tags: string[],
+
+  gptRecommendation?: string;};  recommendedHourlyUsd: number,;
+  recommendedMonthlyUsd: number,;
+  medianHourlyUsd: number,;
+  minHourlyUsd: number,;
+  maxHourlyUsd: number,;
+  confidence: number,;
+  trendMonthly: { label: string, value: number }[],;
+  regionalComparison: { region: string, medianHourlyUsd: number }[],;
+  tags: string[],;
+  gptRecommendation?: string;
+export default function SalaryInsightsPage() {;
+
+=======
+
+
+export default function SalaryInsightsPage() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -160,6 +197,19 @@ function SalaryInsightsPage() {
     } finally {
       setLoading(false)
 
+<<<<<<< HEAD
+=======
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);    }      if (!res && res.ok) throw new Error('Failed to fetch insights');
+      const json = (await res && res.json()) as InsightResponse;
+      setData(json);
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     }
   }
@@ -224,12 +274,23 @@ function SalaryInsightsPage() {
 
 
         alert('Insight saved locally');
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
+=======
+
+
+
+=======
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       } catch {}
     })();
   }
@@ -702,6 +763,7 @@ function SalaryInsightsPage() {
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             </div>
           </div>
@@ -716,6 +778,9 @@ function SalaryInsightsPage() {
 
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               )}
 
 
@@ -729,7 +794,10 @@ function SalaryInsightsPage() {
 
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -774,5 +842,86 @@ function SalaryInsightsPage() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+
+=======
+  );
+}
+                      donut_data.map ((d, i) => ({
+                        label: d.label,
+                        value: d.value,
+                      })) as any;
+                    }
+                  />;
+                  <div className='flex gap - 2 flex - wrap justify - center text - xs'>;
+                    {donut_data.map (d => (
+                      <span;
+                        key={d.label}
+                        className='rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5';
+                      >;
+                        {d.label}
+                      </span>                    ))}
+                  </div>;
+                </div>) : (
+                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items - center gap - 3">;
+                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
+                  <div className="flex gap - 2 flex - wrap justify - center text - xs">;
+                    {donut_data.map ((d) => (
+                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5">{d.label}</span>;
+                  </div>;
+                </div>) : (
+                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded" />)}
+            </div>;
+          </div>;
+          {data?.gpt_recommendation && (
+            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
+              <h3 className='font - medium mb - 2'>GPT Recommendation</h3>;
+              <p className='text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap'>;
+                {data.gpt_recommendation}
+              </p>            </div>)}
+          {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
+              <h3 className="font - medium mb - 2">GPT Recommendation</h3>;
+              <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
+            </div>)}
+          {data && (
+            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
+              <h3 className='font - medium mb - 3'>Signals</h3>;
+              <div className='flex gap - 2 flex - wrap'>;
+                <span className='rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs'>;
+                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr;
+                </span>;
+                {data.tags.map (t => (
+                  <span;
+                    key={t}
+                    className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs';
+                  >;
+                    {t}
+                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
+              <h3 className="font - medium mb - 3">Signals</h3>;
+              <div className="flex gap - 2 flex - wrap">;
+                <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
+                {data.tags.map ((t) => (
+                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs">{t}</span>;
+              </div>;
+            </div>)}
+        </div>;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

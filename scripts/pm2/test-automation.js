@@ -201,6 +201,7 @@ origin/automation-improvements-final
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 class TestAutomation {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async runTests() {try {; this.log('🧪 Running test suite...'); const startTime = Date.now(); // Run tests; const testResult = execSync('npm test', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); const duration = Date.now() - startTime; return {success: true, output: testResult, duration: duration}} catch (error) {return {; success: false, error: error.message, output: error.stdout |error.stderr |''
     duration: 0}}}; async runLintTests() {try {; this.log('🔍 Running lint tests...'); const lintResult = execSync('npm run lint', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); return {success: true
@@ -250,6 +251,8 @@ class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.
 // Run the test automation;
 const testAutomation = new TestAutomation();
 testAutomation.run().catch(error = > {; process.exit(1)});
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 class TestAutomation {;
@@ -856,8 +859,19 @@ origin/main
 origin/automation-improvements-final
 testAutomation.run().catch(error = > {process.exit(1)});
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+testAutomation.run().catch(error = > {process.exit(1)});
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
 #!/usr/bin/env node,;
 const fs = require('fs'),;
@@ -1271,6 +1285,18 @@ class TestAutomation {,;
 
 
 
+=======
+// Run the test automation;
+const testAutomation = new TestAutomation();
+testAutomation && testAutomation.run().catch(error = > {; process && process.exit(1)});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+const fs = require ('fs');
+const path = require ('path');
+const { exec_sync } = require ('child_process');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 
     } catch (error) {,;
@@ -1287,7 +1313,12 @@ testAutomation.run().catch(error => {,;
 }),;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

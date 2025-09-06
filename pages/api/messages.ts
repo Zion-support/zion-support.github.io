@@ -1,7 +1,12 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -55,6 +60,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
 
+<<<<<<< HEAD
     const conversations = readJsonFile<Conversation[]>(FILE, []);
     const idx = conversations.findIndex((c) => c.id === String(conversationId));
     if (idx === -1) {
@@ -78,6 +84,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     res.status(201).json({ message: msg });
     return
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -85,6 +93,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (req.method === "GET") {
 
 
@@ -92,6 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
 
+<<<<<<< HEAD
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {
       res.status(404).json({ error: "Conversation not found" });
@@ -115,6 +128,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       return;
     }
     res && res.status(200).json({ conversation: conv });
@@ -140,7 +159,10 @@ res.setHeader("AllowGET, POST");
   }
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
@@ -153,9 +175,15 @@ res.setHeader("AllowGET, POST");
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

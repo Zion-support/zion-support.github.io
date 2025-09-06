@@ -1,5 +1,6 @@
 {
     icon: <Award className="h - 10 w - 10 text - zion - cyan" />,
+<<<<<<< HEAD
 
 import React from "react",
 import { Brain, Clock, Award, Zap } from 'lucide-react'
@@ -25,6 +26,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
   },
   }
   },
+=======
+    title: "Resume Builder",
+
+    description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -33,6 +39,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
     title: "Real - time Notifications",
     description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
   }
+<<<<<<< HEAD
 
 
 ],
@@ -40,6 +47,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 ]
 ],
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -64,6 +73,7 @@ export const AppFeatures: React.FC = () => {
           {features.map((feature, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">
               <CardHeader>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -71,6 +81,10 @@ export const AppFeatures: React.FC = () => {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <div className="mb-4">{feature.icon}</div>
                 <CardTitle className="text-white">{feature.title}</CardTitle>
               </CardHeader>
@@ -78,6 +92,7 @@ export const AppFeatures: React.FC = () => {
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
+<<<<<<< HEAD
           ))}
         </div>
       </div>
@@ -86,6 +101,14 @@ export const AppFeatures: React.FC = () => {
 };
 
 
+=======
+
+
+import React from 'react';
+};
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   feature.description 
 }</CardDescription>
 }</div> </div> </section>) 
@@ -93,11 +116,14 @@ export const AppFeatures: React.FC = () => {
 ";
 ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { Brain, Clock, Award, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -150,11 +176,14 @@ export const AppFeatures: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 "
 

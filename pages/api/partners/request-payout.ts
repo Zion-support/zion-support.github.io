@@ -1,15 +1,27 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
+<<<<<<< HEAD
 
   req: NextApiRequest
   res: NextApiResponse
 ) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, amount } = req.body |{}
   if (!code) return res.status($1).json({ $2 });
@@ -44,7 +56,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+<<<<<<< HEAD
   } catch (e: any) {
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -82,9 +98,13 @@ export default async function handler(req, res) {
 
 
     return res.status(500).json({ error: e?.message });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     return res.status(500).json({ error: e?.message });
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const { error } = await supabase.from('payout_requests').insert({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       partner_code: String(code).toLowerCase(),

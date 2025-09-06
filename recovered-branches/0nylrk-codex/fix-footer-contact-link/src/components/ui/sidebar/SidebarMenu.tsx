@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from "react";
 
@@ -26,6 +27,18 @@ import { cn } from "@/lib/utils",;
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
+=======
+import {cn} from "@/lib/utils";
+interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   className?: string;
   children?: React && React.ReactNode;
 }
@@ -54,8 +67,30 @@ export function SidebarMenu(): any ({ className, children, ...props }: SidebarMe
       {children}
     </ul>;
   );
+<<<<<<< HEAD
+=======
+=======
+  return (
+
+    <ul 
+      className={cn("space-y-1", className)} 
+=======
+    <ul 
+      className={cn("space-y-1", className)} 
+
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </ul>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

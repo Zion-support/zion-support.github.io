@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -44,14 +45,22 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     }
   ];    features: [
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       "Emerging tech breakthroughs";
       "Innovation platform";
       "Future capabilities";
+<<<<<<< HEAD
 
       "Advanced features",
       "Expert insights"
 
+=======
+      "Advanced features";
+      "Expert insights";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     ];
     link: "/services/2029-emerging-tech-breakthrough", category: "Emerging Tech Breakthroughs 2029"
     realImplementation: true
@@ -176,7 +185,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Innovation platform",
       "Future capabilities",
       "Advanced features",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       "Expert insights"
     ],
     link: "/services/2029-emerging-tech-breakthrough",

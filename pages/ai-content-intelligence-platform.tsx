@@ -56,6 +56,103 @@ const features = [
   };
   {
 
+<<<<<<< HEAD
+=======
+    title: 'SEO Content Intelligence',
+    description: 'AI - powered SEO optimization and keyword gap identification',
+    icon: Zap,
+
+    color: 'from - yellow - 500 to - orange - 500',
+  }, ];
+;
+const pricing_plans = [;
+  {
+    name: 'Starter',
+    price: '$2, 500',
+    period: '/month',
+    description: 'Perfect for small businesses and content creators',
+    features: [;
+      'Real - time content analytics',
+      'AI optimization suggestions',
+      'Basic performance tracking',
+      'SEO content insights',
+      'Email support',
+      'Up to 100 content pieces / month',
+    ],
+    popular: false,
+    color: 'from - gray - 500 to - gray - 600',
+
+  },  {
+    name: 'Professional'
+    price: '$5,000'
+    period: '/month'
+    description: 'Ideal for growing businesses and marketing teams'
+    features: [
+      'Everything in Starter'
+      'Predictive performance modeling'
+      'Advanced competitor analysis'
+      'Multi-channel optimization'
+      'Priority support'
+      'Up to 500 content pieces/month'
+      'Custom integrations'
+    ]
+    popular: true
+    color: 'from-blue-500 to-purple-600'
+  },  {
+    name: 'Enterprise'
+    price: '$10,000'
+    period: '/month'
+    description: 'For large organizations with complex content needs'
+    features: [
+      'Everything in Professional'
+      'Custom AI models'
+      'Advanced analytics'
+      'Dedicated account manager'
+      '24/7 phone support'
+      'Unlimited content pieces'
+      'White-label solutions'
+      'API access'
+    ]
+    popular: false
+    color: 'from-purple-500 to-pink-600'
+  },];
+const useCases = [
+  {
+    title: 'Content Marketing Optimization'
+    description:
+      'Optimize your content strategy based on real-time performance data and AI insights'
+    icon: Target
+<<<<<<< HEAD
+      'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month'
+    ];
+    popular: false,
+    color: 'from-gray-500 to-gray-600'
+  };
+  {
+    name: 'Professional',
+    price: '$5, 000',
+    period: '/month',
+    description: 'Ideal for growing businesses and marketing teams',
+
+    features: [;
+      'Everything in Starter',
+      'Predictive performance modeling',
+      'Advanced competitor analysis',
+      'Multi - channel optimization',
+      'Priority support',
+      'Up to 500 content pieces / month',
+      'Custom integrations',
+    ],
+    popular: true,
+    color: 'from - blue - 500 to - purple - 600',
+  },  {
+
+    name: 'Enterprise',
+    price: '$10, 000',
+    period: '/month',
+    description: 'For large organizations with complex content needs',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -180,6 +277,7 @@ const useCases = [;
     description:;
       'Optimize product descriptions and marketing content for better conversions',;
     icon: ShoppingCart,;
+<<<<<<< HEAD
 
     color: 'from-orange-500 to-red-500';
     } catch (error) {
@@ -190,6 +288,17 @@ const useCases = [;
 ],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    color: 'from-orange-500 to-red-500',;
+  },;
+=======
+=======
+
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const integrations = [
 
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
@@ -208,7 +317,13 @@ export default function AIContentIntelligencePlatform() {
           </p>;
         </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* Hero Section */}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <div className="flex items-center space-x-2 mb-6">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
@@ -282,6 +397,7 @@ export default function AIContentIntelligencePlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -307,6 +423,14 @@ export default function AIContentIntelligencePlatform() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Powerful Features for Content Success
@@ -319,6 +443,7 @@ export default function AIContentIntelligencePlatform() {
             {features.map((feature, index) => (
               <motion.div
 
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -355,6 +480,9 @@ export default function AIContentIntelligencePlatform() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -392,7 +520,21 @@ export default function AIContentIntelligencePlatform() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* Use Cases Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Perfect For Every Content Need
@@ -405,6 +547,7 @@ export default function AIContentIntelligencePlatform() {
             {useCases.map((useCase, index) => (
               <motion.div
 
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -441,6 +584,9 @@ export default function AIContentIntelligencePlatform() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -478,7 +624,21 @@ export default function AIContentIntelligencePlatform() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* Pricing Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Flexible Pricing Plans
@@ -491,6 +651,7 @@ export default function AIContentIntelligencePlatform() {
             {pricingPlans.map((plan, index) => (
               <motion.div
 
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -531,6 +692,9 @@ export default function AIContentIntelligencePlatform() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -577,8 +741,13 @@ export default function AIContentIntelligencePlatform() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           >
@@ -905,11 +1074,99 @@ export default function AIContentIntelligencePlatform() {
         </div>
       </section>
 
+<<<<<<< HEAD
     </Layout>
+=======
+
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>;
+                View All Services;
+              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </Layout>;
+  );
+
+
+=======
+  )
+}
+                className='bg - white / 10 backdrop - blur - sm border border - gray - 600 rounded - lg p - 4 text - center hover:bg - white / 20 transition - colors duration - 300';
+              >;
+                <span className='text - white font - medium'>{integration}</span>              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Section */}
+      <section className='py - 20'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >;
+            <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 6'>;
+              Ready to Transform Your Content Strategy?;
+            </h2>;
+            <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
+              Get in touch with our team to discuss how our AI Content;
+              Intelligence Platform can revolutionize your content creation and;
+              optimization.;
+            </p>;
+            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12'>;
+              <div className='flex flex - col items - center space - y-3'>;
+                <div className='w - 12 h - 12 bg - blue - 500 / 20 rounded - full flex items - center justify - center'>;
+                  <Phone className='w - 6 h - 6 text - blue - 400' />;
+                </div>;
+                <div>;
+                  <h3 className='text - white font - semibold'>Call Us</h3>;
+                  <p className='text - gray - 400'>{contact_info.mobile}</p>;
+                </div>;
+              </div>;
+              <div className='flex flex - col items - center space - y-3'>;
+                <div className='w - 12 h - 12 bg - green - 500 / 20 rounded - full flex items - center justify - center'>;
+                  <Mail className='w - 6 h - 6 text - green - 400' />;
+                </div>;
+                <div>;
+                  <h3 className='text - white font - semibold'>Email Us</h3>;
+                  <p className='text - gray - 400'>{contact_info.email}</p>;
+                </div>;
+              </div>;
+              <div className='flex flex - col items - center space - y-3'>;
+                <div className='w - 12 h - 12 bg - purple - 500 / 20 rounded - full flex items - center justify - center'>;
+                  <MapPin className='w - 6 h - 6 text - purple - 400' />;
+                </div>;
+                <div>;
+                  <h3 className='text - white font - semibold'>Visit Us</h3>;
+                  <p className='text - gray - 400'>{contact_info.address}</p>;
+                </div>;
+              </div>;
+            </div>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <Link;
+                href='/contact';
+                className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 200 transform hover:scale - 105';
+              >;
+                Start Your Free Trial;
+                <ArrowRight className='w - 5 h - 5 ml - 2' />;
+              </Link>;
+              <Link;
+                href='/2025 - innovative - new - services - showcase';
+                className='inline - flex items - center px - 8 py - 4 bg - white / 10 backdrop - blur - sm border border - gray - 600 text - white font - semibold rounded - lg hover:bg - white / 20 transition - all duration - 200'              >;
+=======
+<<<<<<< HEAD
+);
+=======
+=======
+<<<<<<< HEAD
+    </Layout>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 );
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   )
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -918,3 +1175,70 @@ export default function AIContentIntelligencePlatform() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+          >;
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
+              Ready to Transform Your Content Strategy?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Get in touch with our team to discuss how our AI Content Intelligence Platform can revolutionize your content creation and optimization.;
+            </p>;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
+              <div className="flex flex-col items-center space-y-3">;
+                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">;
+                  <Phone className="w-6 h-6 text-blue-400" />;
+                </div>;
+                <div>;
+                  <h3 className="text-white font-semibold">Call Us</h3>;
+                  <p className="text-gray-400">{contactInfo.mobile}</p>;
+                </div>;
+              </div>;
+              <div className="flex flex-col items-center space-y-3">;
+                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">;
+                  <Mail className="w-6 h-6 text-green-400" />;
+                </div>;
+                <div>;
+                  <h3 className="text-white font-semibold">Email Us</h3>;
+                  <p className="text-gray-400">{contactInfo.email}</p>;
+                </div>;
+              </div>;
+              <div className="flex flex-col items-center space-y-3">;
+                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">;
+                  <MapPin className="w-6 h-6 text-purple-400" />;
+                </div>;
+                <div>;
+                  <h3 className="text-white font-semibold">Visit Us</h3>;
+                  <p className="text-gray-400">{contactInfo.address}</p>;
+                </div>;
+              </div>;
+            </div>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <Link;
+                href="/contact";
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105";
+              >;
+                Start Your Free Trial;
+                <ArrowRight className="w-5 h-5 ml-2" />;
+              </Link>;
+              <Link;
+                href="/2025-innovative-new-services-showcase";
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200";
+              >;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                View All Services;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+<<<<<<< HEAD
+    </Layout>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

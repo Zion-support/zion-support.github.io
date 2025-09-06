@@ -161,6 +161,74 @@ if ( {) {
     }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    // Neural network node class
+    class NeuralNode {
+=======
+      maxLife: number;      x: number,;
+      y: number,;
+      vx: number,;
+      vy: number,;
+      size: number,;
+      color: string,;
+      alpha: number,;
+      life: number,;
+      maxLife: number,;
+        this && this.x = x;
+        this && this.y = y;
+        this && this.vx = (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed;
+        this && this.vy = (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed;
+        this && this.size = Math && Math.random() * 3 + 1;
+        this && this.color = getColorSchemeColor();
+        this && this.alpha = Math && Math.random() * 0 && 0.8 + 0 && 0.2;
+        this && this.life = Math && Math.random() * 100 + 50;
+        this && this.maxLife = this && this.life;      }        this && this.maxLife = this && this.life;
+      }
+      update() {;
+        this && this.x += this && this.vx;
+        this && this.y += this && this.vy;
+        this && this.life--;
+        // Bounce off edges;
+        if (this && this.x <= 0 || this && this.x >= canvas && canvas.width) this && this.vx *= -1;
+        if (this && this.y <= 0 || this && this.y >= canvas && canvas.height) this && this.vy *= -1;
+        // Wrap around;
+        if (this && this.x < 0) this && this.x = canvas && canvas.width;
+        if (this && this.x > canvas && canvas.width) this && this.x = 0;
+        if (this && this.y < 0) this && this.y = canvas && canvas.height;
+        if (this && this.y > canvas && canvas.height) this && this.y = 0;
+        // Fade out;
+        this && this.alpha = this && this.life / this && this.maxLife;      }        this && this.alpha = this && this.life / this && this.maxLife;
+      }
+      draw() {;
+        ctx && ctx.save();
+        ctx && ctx.globalAlpha = this && this.alpha;
+        ctx && ctx.fillStyle = this && this.color;
+        ctx && ctx.beginPath();
+        ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
+        ctx && ctx.fill();
+        ctx && ctx.restore();      }        ctx && ctx.restore();
+      }
+    }
+    // Neural network node class;
+    class NeuralNode {;
+=======
+<<<<<<< HEAD
+        ctx.restore();      }        ctx.restore()
+=======
+        ctx.restore();      }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+    }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     // Neural network node class
     class NeuralNode {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -177,7 +245,17 @@ if ( {) {
         this && this.activation = Math && Math.max(0, Math && Math.min(1, this && this.activation));
         this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;      }        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;
       }
+<<<<<<< HEAD
 
+=======
+=======
+            ctx.stroke();
+          }
+        });
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ctx.restore();      }
 
       }
@@ -213,6 +291,7 @@ if ( {) {
           }
         });
         ctx && ctx.restore();
+<<<<<<< HEAD
 
 
 
@@ -222,6 +301,8 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
 
@@ -265,8 +346,28 @@ if ( {) {
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+          ctx.stroke()
+
+        }
+        ctx.restore()
+
+      }
+
+=======
+
+
+
+
+
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ctx.restore();      }
 
       }
@@ -506,6 +607,7 @@ if ( {) {
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]);
+<<<<<<< HEAD
 
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
@@ -514,6 +616,10 @@ if ( {) {
 
         ctx.restore()
         ctx.restore();      }
+=======
+
+        
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
@@ -524,6 +630,7 @@ if ( {) {
 
       }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -531,6 +638,15 @@ if ( {) {
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
@@ -995,6 +1111,7 @@ Math.random() * canvas.width;
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -1005,6 +1122,11 @@ Math.random() * canvas.width;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }
           });
         });
@@ -1052,7 +1174,11 @@ Math.random() * canvas.width;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1170,6 +1296,7 @@ Math.random() * canvas.width;
 
 };
 export default UltraAdvancedFuturisticBackground2026;
+<<<<<<< HEAD
 
 
             }}
@@ -1185,3 +1312,28 @@ export default UltraAdvancedFuturisticBackground2026;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+              ease: 'easeInOut',              ease: "easeInOut";
+            }}
+          />;
+        </div>)}
+      {children}
+    </div>);
+}
+;
+export default UltraAdvancedFuturisticBackground2026;      {children}
+    </div>);
+}
+;
+export default UltraAdvancedFuturisticBackground2026;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+              duration: 10,
+              repeat: Infinity,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

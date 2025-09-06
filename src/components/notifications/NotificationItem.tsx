@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -55,14 +56,23 @@ import { Badge } from '@/components/ui/badge',
 import { formatDistanceToNow } from 'date-fns',
 import { cn } from '@/lib/utils',
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
+<<<<<<< HEAD
 
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { useNavigate } from 'react-router-dom';
+=======
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import { useRouter } from 'next/router';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Notification, NotificationType } from '@/context/notifications';
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -70,6 +80,7 @@ import { Badge } from '@/components/ui/badge';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
 
+<<<<<<< HEAD
 
   TooltipTrigger} from '@/components/ui/tooltip',
 import { useRouter } from 'next/router',
@@ -146,6 +157,34 @@ interface NotificationItemProps {
 }
 export const NotificationItem: React.FC<NotificationItemProps> = ({
 
+=======
+const getNotificationIcon = (type: NotificationType) => {
+  switch (type) {
+    case 'success':
+      return <span className="text-green-500">✅</span>;
+    case 'error':
+      return <span className="text-red-500">❌</span>;
+    case 'warning':
+      return <span className="text-yellow-500">⚠️</span>;
+    case 'info':
+      return <span className="text-blue-500">ℹ️</span>;
+    case 'message':
+      return <span className="text-blue-500">💬</span>;
+    case 'project':
+      return <span className="text-orange-500">📦</span>;
+    default:
+      return <span className="text-gray-500">📣</span>;
+  }
+};
+
+interface NotificationItemProps {
+  notification: Notification;
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
+}
+
+export const NotificationItem: React.FC<NotificationItemProps> = ({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   notification,
   onMarkAsRead,
   onDismiss,
@@ -179,6 +218,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
 
+<<<<<<< HEAD
   },;
   return (;
     <div;
@@ -573,3 +613,27 @@ if ( {) {
     </div>
   )
 
+=======
+            {notification.actionUrl && (
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="h-6 px-2"
+                  >
+                    <ChevronRight className="h-3 w-3" />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>View details</p>
+                </TooltipContent>
+              </Tooltip>
+            )}
+          </div>
+        </div>
+      </div>
+    </TooltipProvider>
+  );
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

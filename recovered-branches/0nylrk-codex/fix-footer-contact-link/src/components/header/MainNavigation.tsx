@@ -1,12 +1,28 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 
 
+=======
+import {Link} from 'react-router-dom';
+import { cn } from '@/lib / utils';
+import { NavLink } from './react-router-dom';
+
+=======
+
+
+import {Link} from 'react-router-dom';
+import {cn} from "@/lib/utils";
+import {NavLink} from "react-router-dom";
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -17,6 +33,8 @@ interface MainNavigationProps {
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -77,6 +95,7 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
       <NavLink
         to="/signup"
         className={({ isActive }) =>
+<<<<<<< HEAD
 
           cn(
             "text-sm font-medium transition-colors hover: text-primary";
@@ -98,3 +117,8 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

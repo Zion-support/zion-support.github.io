@@ -1,5 +1,24 @@
 
 
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4, as, uuidv4 } from "uuid";
+import { readJsonFile, writeJsonFile } from "../../utils/db";
+import type { Job } from "../../utils/types";
+import { rateLimit } from "../../utils/rateLimit";
+
+
+const FILE = "jobs && jobs.json";
+
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  try {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (!rateLimit(req, res)) return;
 
 
@@ -8,10 +27,13 @@
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
     return;
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -111,6 +133,7 @@ if ( {) {
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
 
+<<<<<<< HEAD
 
 
 
@@ -209,6 +232,8 @@ export default async function handler(req, res) {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs),;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     res.status(201).json({ job });
     return;
@@ -234,6 +259,7 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
   }
 }
@@ -244,11 +270,17 @@ export default async function handler(req, res) {
 
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     res.status(201).json({ job });
     return
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -259,4 +291,80 @@ export default async function handler(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+      client_email,
+    } = req.body || {}
+    // Check condition
+if ( {) {
+  $2
+}
+      res.status (400).json ({ error: "Missing required fields" });
+      return;
+    }
+    const now_iso = new Date ().toISOString ();
+    const job: Job = {
+      id: uuidv4 (),
+      title: String (title),
+      description: String (description),
+      category: String (category || ""),
+      required_skills: Array.is_array (required_skills);
+        ? required_skills.map (String);
+        : [],
+      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
+      deliveryDeadlineIso: deliveryDeadlineIso;
+        ? String (deliveryDeadlineIso);
+        : undefined,
+      client_email: String (client_email),
+      status: "New",
+      createdAtIso: now_iso,
+      updatedAtIso: now_iso,
+    }
+    // Auto - assign category via AI (placeholder). In production, call OpenAI based on description / skills.;
+    // Check condition
+if ( {) {
+  $2
+}
+      const skills = (job.required_skills || []).map ((s) => s.toLowerCase ());
+      // Check condition
+if (=>) {
+  $2
+}
+            s.includes ("openai") ||;
+            s.includes ("langchain") ||;
+            s.includes ("rag"),
+        ));
+        job.category = "LLM App";
+      else // Check condition
+if (=>) {
+  $2
+}
+            s.includes ("aws") ||;
+            s.includes ("kubernetes") ||;
+            s.includes ("terraform"),
+        ));
+        job.category = "Cloud";
+      else job.category = "General";
+    }
+    const jobs = readJsonFile < Job[]>(FILE, []);
+    jobs.unshift (job);
+    writeJsonFile < Job[]>(FILE, jobs);
+    res.status (201).json ({ job });
+    return;
+  }
+  res.set_header ("Allow", "GET, POST");
+  res.status (405).end ("Method Not Allowed");
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

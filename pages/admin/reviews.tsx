@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
@@ -47,6 +48,13 @@ const AdminReviewsPage: NextPage = () => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    if (res.ok) refresh()
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
     } catch (error) {
@@ -99,6 +107,7 @@ const AdminReviewsPage: NextPage = () => {;
       </section>
     </main>
   )
+<<<<<<< HEAD
 
 
 
@@ -108,9 +117,21 @@ export default AdminReviewsPage;
 },
 export default AdminReviewsPage,
 },
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+},
+
+export default AdminReviewsPage,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

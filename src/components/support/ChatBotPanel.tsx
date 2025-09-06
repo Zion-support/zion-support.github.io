@@ -30,6 +30,7 @@ type Message = {
   timestamp: Date;
 
 }
+<<<<<<< HEAD
 
 
 export /**
@@ -221,6 +222,8 @@ export function ChatBotPanel() {;
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       id: `bot-escalation-${Date.now()}`,
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
@@ -605,6 +608,9 @@ export function ChatBotPanel() {;
   },
 
   const handleQuickReply = (text: string) => {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     handleSendMessage(text)

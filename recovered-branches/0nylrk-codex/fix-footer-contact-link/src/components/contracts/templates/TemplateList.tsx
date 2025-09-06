@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -10,6 +14,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {useState} from "react";
+<<<<<<< HEAD
 
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
@@ -120,6 +125,8 @@ import {;
   AlertDialogTitle} from "@/components/ui/alert-dialog",;
 import { useState } from "react",;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface TemplateListProps {;
   templates: ContractTemplate[],;
   isLoading: boolean,;
@@ -145,6 +152,16 @@ export function TemplateList(): any ({;
       await deleteTemplate && deleteTemplate.mutateAsync(templateToDelete);
       setTemplateToDelete(null);
     }
+<<<<<<< HEAD
+=======
+  };
+=======
+interface TemplateListProps {
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate) => void,
+  onEdit: (template: ContractTemplate) => void
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -195,6 +212,7 @@ export function TemplateList(): any ({;
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
+<<<<<<< HEAD
 
                 </div>
                 <p className="text-xs text-muted-foreground">
@@ -223,6 +241,15 @@ export function TemplateList(): any ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+            <Button 
+              onClick={() => onSelect(template)} 
+              variant="outline" 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="w-full"
             >
               Use This Template

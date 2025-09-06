@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -17,6 +20,7 @@ import {ServiceProcessSteps} from "@/components/services/PageSections/ServicePro
 import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
+<<<<<<< HEAD
 
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
@@ -45,6 +49,8 @@ export default function ITOnsiteServicesPage() {
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
   // Check for success parameter in URL
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const success = searchParams.get("success");
@@ -58,6 +64,7 @@ export default function ITOnsiteServicesPage() {
 
 
   
+<<<<<<< HEAD
 
   // Check for success parameter in URL
   const success = searchParams.get("success"),
@@ -66,6 +73,10 @@ export default function ITOnsiteServicesPage() {
   
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -187,10 +198,15 @@ export default function ITOnsiteServicesPage() {;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Hero Section with Features */}
 
           <PageHero />;
@@ -244,6 +260,42 @@ export default function ITOnsiteServicesPage() {;
 }
 }
 
+<<<<<<< HEAD
+=======
+=======
+import { useState, useEffect } from './react';
+import { useSearchParams } from './react-router-dom';
+import { AppLayout } from '@/layout / AppLayout';
+import { ITServicePricingTable } from '@/components / services / ITServicePricingTable';
+import { GlobalServiceSection } from '@/components / GlobalServiceSection';
+import { QuoteFormSection } from '@/components / QuoteFormSection';
+import { TrustedBySection } from '@/components / TrustedBySection';
+import { CountryPricing, onsiteServicePricing } from '@/data / onsiteServicePricing';
+import { toast } from '@/hooks / use - toast';
+import { PageHero } from '@/components / services / PageSections / PageHero';
+import { CountryTabs } from '@/components / services / PageSections / CountryTabs';
+import { ServiceDetailsSection } from '@/components / services / PageSections / ServiceDetailsSection';
+import { ServiceProcessSteps } from '@/components / services / PageSections / ServiceProcessSteps';
+import { ServiceIncludes } from '@/components / services / PageSections / ServiceIncludes';
+import { EnterpriseCallToAction } from '@/components / services / PageSections / EnterpriseCallToAction';
+export default /**
+ * ITOnsiteServicesPage - Function description
+ */
+function ITOnsiteServicesPage() {
+  const [search_params] = useSearchParams ();
+  const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);
+  const [search_query, setSearchQuery] = useState ("");
+;
+  // Check for success parameter in URL;
+  const success = search_params.get ("success");
+;
+  // Show success toast if redirected from successful payment;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       toast ({
         title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
@@ -326,9 +378,18 @@ if (return 1) {
       <QuoteFormSection />;
     </AppLayout>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

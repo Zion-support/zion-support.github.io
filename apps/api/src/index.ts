@@ -116,12 +116,16 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   });
   return { items }
 });
+<<<<<<< HEAD
 
 const port = Number(process.env.API_PORT |4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   (process as any).exit(1);
 });  (process as any).exit(1)
 });

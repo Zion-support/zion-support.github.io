@@ -3,19 +3,93 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
+<<<<<<< HEAD
 import {
 
 
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-DropdownMenuTrigger,;
+=======
+
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+  return (
+    <DropdownMenu>;
+      <DropdownMenuTrigger asChild>;
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-white hover:bg-zion-purple/10">;
+          <Globe className="h-5 w-5" />;
+          <span className="sr-only">{t("general && general.select_language")}</span>;
+        </Button>;
+      </DropdownMenuTrigger>;
+      <DropdownMenuContent
+        align="end"
+        className="bg-zion-blue-dark border border-zion-purple/20">;
+        {supportedLanguages && supportedLanguages.map((lang) => (;
+          <DropdownMenuItem
+            key={lang && lang.code}
+            className={`cursor-pointer ${
+              currentLanguage === lang && lang.code
+                ? "bg-zion-purple/20 text-zion-cyan"
+                : "text-white hover:bg-zion-purple/10"
+            }`}
+            onClick={() => changeLanguage(lang && lang.code)}
+          >;
+            <div className="flex items-center gap-2">;
+              <span className="text-lg">{lang && lang.flag}</span>;
+              <span>{t(`language.${lang && lang.code}`)}</span>;
+            </div>;
+          </DropdownMenuItem>;
+        ))}
+      </DropdownMenuContent>;
+    </DropdownMenu>;
+  );
+=======
+import React from './react';
+import { use_translation  } from './react - i18next';
+import { Button  } from '@/components / ui / button';
+import { Globe  } from './lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
+export /**
+ * LanguageSelector - Function description
+ */
+function LanguageSelector() {
+  const { t } = use_translation ();
+  const { current_language, change_language, supported_languages } = use_language ();
+;
+=======
+import {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+<<<<<<< HEAD
+
+export function LanguageSelector() {;
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React from 'react',
@@ -63,9 +137,12 @@ export function LanguageSelector() {
               currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -80,10 +157,14 @@ export function LanguageSelector() {
       </DropdownMenuContent>;
     </DropdownMenu>;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

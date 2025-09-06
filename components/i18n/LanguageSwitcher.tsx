@@ -24,10 +24,13 @@ import { supportedLocales, isRtl } from '../../utils/i18n';
 import {supportedLocales, isRtl} from '../../utils/i18n';
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const localeToFlag: Record<string, string> = {
 
   en: 'us',
@@ -35,12 +38,20 @@ const localeToFlag: Record<string, string> = {
   es: 'es',
   ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
+<<<<<<< HEAD
 
   en: 'lang.english'
   pt: 'lang.portuguese'
   es: 'lang.spanish'
   ar: 'lang.arabic'
 };  ar: 'lang.arabic'}
+=======
+  en: 'lang.english',
+  pt: 'lang.portuguese',
+  es: 'lang.spanish',
+  ar: 'lang.arabic'},
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function LanguageSwitcher() {
 
   en: 'lang.english',
@@ -50,9 +61,13 @@ export default function LanguageSwitcher() {
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';

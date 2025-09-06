@@ -21,6 +21,7 @@ interface ProfileBadgeProps {;
 }</span>
 }'"  )
 }
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -29,6 +30,8 @@ import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface ProfileBadgeProps {
@@ -36,7 +39,10 @@ interface ProfileBadgeProps {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   className?: string
 }
 
@@ -44,6 +50,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
       icon: BadgeCheck,
+<<<<<<< HEAD
 
 
       text: "Verified",
@@ -57,6 +64,12 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     featured: {
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       icon: Star,
       text: "Featured",
       colors: "bg-yellow-500/20 text-yellow-400"},
@@ -66,9 +79,12 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors: "bg-green-500/20 text-green-400"},
     "top-rated": {
       icon: Award,
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';

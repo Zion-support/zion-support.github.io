@@ -525,12 +525,7 @@ export default function DeploymentNotification({;
                       ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
 =======
                   onClick={() => handleAction(update.id, action.action)}
-<<<<<<< HEAD
-                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${action.action === 'deploy' |action.action === 'retry';
-=======
-                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
-                    action.action === 'deploy' || action.action === 'retry';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       : action.action === 'view';

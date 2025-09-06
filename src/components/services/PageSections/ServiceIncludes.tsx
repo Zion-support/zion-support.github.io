@@ -11,6 +11,7 @@
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,10 @@
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
             <div>
               <h3 className="text-white font-medium">First Hour of Service</h3>
@@ -31,6 +36,7 @@
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -38,6 +44,10 @@
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
             <div>
               <h3 className="text-white font-medium">Technical Assessment</h3>
@@ -54,6 +64,7 @@
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -61,6 +72,10 @@
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
             <div>
               <h3 className="text-white font-medium">Basic Hardware Diagnostics</h3>
@@ -74,6 +89,7 @@
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -81,6 +97,10 @@
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
             <div>
               <h3 className="text-white font-medium">Network Connectivity</h3>
@@ -164,11 +184,14 @@ export function ServiceIncludes() {
             </div>
             <div>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
             </div>
@@ -177,6 +200,7 @@ export function ServiceIncludes() {
       </div>
 
 
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -184,6 +208,10 @@ export function ServiceIncludes() {
     </div>
   )
 }
+=======
+
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { Check } from 'lucide-react';
@@ -400,11 +428,14 @@ function ServiceIncludes() {
 
   );
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </div>);
 }

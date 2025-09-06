@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
 export function issueTokens(userId: string, amount: number, reason: string) {
@@ -6,6 +7,12 @@ export function issueTokens(userId: string, amount: number, reason: string) {
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
 
+=======
+
+  const actualAmount = Math && Math.min(amount, currentBalance);
+  
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return addTransaction({
     userId
     type: 'spend'

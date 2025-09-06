@@ -26,6 +26,7 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
 
+<<<<<<< HEAD
 
 
   const router = useRouter()
@@ -38,6 +39,11 @@ export default function TalentProfilePage() {
   const { isAuthenticated, user } = useAuth()
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user
     ? {
@@ -100,6 +106,7 @@ export default function TalentProfilePage() {
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
     points: 0
+<<<<<<< HEAD
 
 
   },
@@ -113,13 +120,20 @@ export default function TalentProfilePage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
       toast({
 
 
+<<<<<<< HEAD
         title: 'Error loading profile'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         title: 'Error loading profile',
 
 
@@ -521,11 +535,14 @@ return (<> <SEO title= {
         profile = {profile,}
         onRequestHire = {handleRequestHire,}
         onMessageTalent = {handleMessageTalent,}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -600,12 +617,16 @@ export default function TalentProfilePage() {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
+<<<<<<< HEAD
 
 
         title: 'Authentication required',
@@ -743,6 +764,8 @@ return (<> <SEO title= {
     setIsHireModalOpen(true)
   },
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       {/* Sticky action buttons that appear when scrolling */}
@@ -773,11 +796,14 @@ return (<> <SEO title= {
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             onClick = {handleMessageTalent,}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
@@ -838,8 +864,11 @@ return (<> <SEO title= {
       <HireRequestModal 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
@@ -852,12 +881,56 @@ return (<> <SEO title= {
       <MessageTalentModal
         talent = {profile,}
         isOpen = {isMessageModalOpen,}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         onClose = {() => setIsMessageModalOpen(false),}      />;
 
 ;
+<<<<<<< HEAD
+=======
+
+      
+      {/* Request to Hire Modal */}
+      <HireRequestModal;
+        talent={profile}
+        isOpen={isHireModalOpen}
+        onClose={() => setIsHireModalOpen(false)}
+        userDetails={userProfile}
+      />;
+      {/* Message Talent Modal */}
+      <MessageTalentModal;
+        talent={profile}
+        isOpen={isMessageModalOpen}
+        onClose={() => setIsMessageModalOpen(false)}
+      />;
+
+    </div>;
+    </>;
+  );
+}
+
+
+      {/* Request to Hire Modal */}
+      <HireRequestModal;
+        talent = {profile, }
+        is_open = {isHireModalOpen, }
+        on_close = {(, ) => setIsHireModalOpen (false), }
+        user_details = {user_profile, }
+      />;
+      {/* Message Talent Modal */}
+      <MessageTalentModal;
+        talent = {profile, }
+        is_open = {isMessageModalOpen, }
+        on_close = {() => setIsMessageModalOpen (false), }      />;
+    </div>;
+    </>);
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

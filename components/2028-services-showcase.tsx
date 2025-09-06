@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
   CheckCircle
   ArrowRight
@@ -35,6 +36,8 @@ import {
   Gamepad2;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   CheckCircle,
@@ -66,6 +69,151 @@ import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+<<<<<<< HEAD
+  Music,
+  Gamepad2,} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
+  Building, Factory, Camera, Video, Music, Gamepad2;
+import UltraFuturisticNavigation2028 from '../components / layout / UltraFuturisticNavigation2028';
+import UltraFuturisticFooter2028 from '../components / layout / UltraFuturisticFooter2028';
+import { futuristic2028Services } from '../data / 2028 - futuristic - innovations';
+import { emergingTech2028Services } from '../data / 2028 - emerging - tech - services';
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com';
+}
+;
+const service_categories = [;
+  {
+    title: '🚀 2028 Futuristic Innovations',
+    description: 'Beyond the future of technology',
+    icon: Rocket,
+color: 'from - violet - 600 to - purple - 600',
+    services: futuristic2028Services.slice (0, 4),
+  },  {    services: futuristic2028Services.slice (0, 4);
+  }
+  {
+    title: '🏙️ Smart City & Infrastructure',
+    description: 'Intelligent urban solutions',
+    icon: Building,
+color: 'from - blue - 600 to - cyan - 600',
+    services: emergingTech2028Services;
+      .filter (
+        string =>;
+          s.category.includes ('Smart City') ||;
+          s.category.includes ('Infrastructure'));
+      .slice (0, 4),
+  },  {    services: emergingTech2028Services.filter (string => s.category.includes ('Smart City') || s.category.includes ('Infrastructure')).slice (0, 4);
+  }
+  {
+    title: '⚛️ Quantum & Advanced Tech',
+    description: 'Quantum computing and beyond',
+    icon: Atom,
+color: 'from - indigo - 600 to - blue - 600',
+    services: futuristic2028Services;
+      .filter (string => s.category.includes ('Quantum'));
+      .slice (0, 4),
+  },  {    services: futuristic2028Services.filter (string => s.category.includes ('Quantum')).slice (0, 4);
+  }
+  {
+    title: '🤖 AI & Machine Learning',
+    description: 'Next - generation AI solutions',
+    icon: Brain,
+    color: 'from - emerald - 600 to - teal - 600',
+    services: emergingTech2028Services;
+      .filter (string => s.category.includes ('AI'));
+      .slice (0, 4),
+  },  {    services: emergingTech2028Services.filter (string => s.category.includes ('AI')).slice (0, 4);
+  }
+  {
+    title: '⛓️ Blockchain & Web3',
+    description: 'Decentralized solutions',
+    icon: Globe,
+color: 'from - orange - 600 to - red - 600',
+    services: emergingTech2028Services;
+      .filter (string => s.category.includes ('Blockchain'));
+      .slice (0, 4),
+  },  {    services: emergingTech2028Services.filter (string => s.category.includes ('Blockchain')).slice (0, 4);
+  }
+  {
+    title: '🚗 Autonomous & Mobility',
+    description: 'Self - driving and mobility solutions',
+    icon: Car,
+    <>
+      <Head>
+        <title>2028 Futuristic Services Showcase - Zion Tech Group</title>
+        <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />
+        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />
+        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />
+        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />
+
+export default function ServicesShowcase2028() {_return (_<>
+      <Head>
+        <title>2028 Futuristic Services Showcase - Zion Tech Group</title>
+        <meta name="description" content="Explore our cutting-edge 2028 services including AI, _quantum computing, _autonomous systems, _and futuristic innovations. Transform your business with next-generation technology." />
+        <meta name="keywords" content="2028 technology, _AI services, _quantum computing, _autonomous systems, _futuristic innovations, _Zion Tech Group" />
+        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />
+        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, _quantum computing, _autonomous systems, _and futuristic innovations." />
+
+        <meta property="og:url" content="https://ziontechgroup.com/2028-services-showcase" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />
+      </Head>
+<UltraFuturisticNavigation2028 />
+          href='https://ziontechgroup && ziontechgroup.com/2028-services-showcase'
+        />      </Head>        <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />;
+        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />;
+        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />;
+        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />;
+        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2028-services-showcase" />;
+        <meta property="og:type" content="website" />;
+        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/2028-services-showcase" />;
+      <UltraFuturisticNavigation2028 />;
+      {/* Hero Section */}
+        <div className='absolute inset-0'>;
+          <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>;
+          <div className='absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>;
+          <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>;
+        </div>;
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
+=======
+  Music,;
+  Gamepad2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -146,6 +294,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
+<<<<<<< HEAD
             {/* Stats */}
 
 
@@ -153,6 +302,9 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
             </div>
           </motion.div>
@@ -284,10 +436,15 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <Link
 
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
@@ -316,7 +473,11 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Featured Services */}
 
 
@@ -384,7 +545,11 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Market Analysis */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -409,9 +574,18 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
             <motion.div
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -487,10 +661,25 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
           <motion&& motion.div
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -500,11 +689,15 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -711,7 +904,20 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
       <UltraFuturisticFooter2028 />;
     </>);
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  );
+
+=======
+
+    </>
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

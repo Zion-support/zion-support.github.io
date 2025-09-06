@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -15,6 +16,11 @@ import { ListingScoreCard } from "@/components/ListingScoreCard",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -25,6 +31,10 @@ const SAMPLE_LISTINGS: ListingItem[] = [
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
   
@@ -81,6 +91,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
+<<<<<<< HEAD
 
             onClick={() => handleTypeSelect("service")}
           >
@@ -92,6 +103,13 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+          <Card 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -105,10 +123,17 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             </p>
           </Card>
 
+<<<<<<< HEAD
           <Card
           <Card 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+          <Card 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -125,7 +150,10 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       </div>
       {formData.serviceType && (
         <div className="space-y-4">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
@@ -133,8 +161,15 @@ import {Input} from "@/components/ui/input";
 import {Card} from "@/components/ui/card";
 import {Search} from "lucide-react";
 import {ListingScoreCard} from "@/components/ListingScoreCard";
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
@@ -239,9 +274,12 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
             <Input;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               placeholder={`Search ${formData.serviceType}...`}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               value={searchQuery}

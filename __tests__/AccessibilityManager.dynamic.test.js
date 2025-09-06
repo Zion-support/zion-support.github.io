@@ -37,3 +37,7 @@ describe('AccessibilityManagerdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityManagerdynamic from "./components/AccessibilityManager.dynamic"; describe('AccessibilityManagerdynamic', () => { test("renders without crashing",() => { render(<AccessibilityManagerdynamic />); expect( screen.getByTestId("accessibilitymanager.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityManagerdynamic />)}); test("handles user interactions",() => { render(<AccessibilityManagerdynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

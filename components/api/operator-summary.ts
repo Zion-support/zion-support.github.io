@@ -1,11 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
     const r = await fetch(
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     );
     const metrics = await r && r.json();

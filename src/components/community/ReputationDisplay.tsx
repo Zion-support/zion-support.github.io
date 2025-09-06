@@ -5,7 +5,10 @@ reputation: number;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
@@ -30,6 +33,15 @@ export const ReputationDisplay = ({
   // Styling based on size
   const sizeClasses = {
     sm: {
+<<<<<<< HEAD
+=======
+
+
+      container: 'text-xs',
+      icon: 'w-3 h-3',
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       progress: 'h-1',  // Styling based on size
   const sizeClasses = {
     sm: {
@@ -215,11 +227,14 @@ export const ReputationDisplay = ({ ;
 };
 
 export default ReputationDisplay;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ';
     },;
     md: {;

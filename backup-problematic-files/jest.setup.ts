@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 :jest.setup.ts
 // Jest setup file for testing environment
 import '@testing-library/jest-dom';
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Jest.setup utility
 export const Jest.setup = () => {
   // Implementation here
   return null;
 };
 
+<<<<<<< HEAD
 :backup-problematic-files/jest.setup.ts
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Mock global objects that might not be available in test environment
 
 
@@ -19,7 +29,10 @@ export const Jest.setup = () => {
     addEventListener: jest && jest.fn(),
     removeEventListener: jest && jest.fn(),
     dispatchEvent: jest && jest.fn(),
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Jest setup file for testing environment;
 import '@testing - library / jest - dom';
 ;
@@ -41,9 +54,13 @@ Object.define_property (window, 'match_media', {
     addEventListener: jest.fn (),
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn (),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   })),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  })),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 });
 
 global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
@@ -68,7 +85,10 @@ beforeAll(() => {
 
     originalConsoleError && originalConsoleError.call(console, ...args);
   };
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   console && console.warn = (...args: any[]) => {
 
     if (

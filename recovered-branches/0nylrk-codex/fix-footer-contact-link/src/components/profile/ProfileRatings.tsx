@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -8,6 +11,7 @@ import {ReviewsList} from "@/components/reviews/ReviewsList";
 import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from "react",
@@ -20,6 +24,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
   userId: string;
 
+=======
+
+interface ProfileRatingsProps {;
+  userId: string,;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   averageRating?: number;
   ratingCount?: number;
 }
@@ -44,6 +54,7 @@ interface ProfileRatingsProps {
   userId: string,
   averageRating?: number,
   ratingCount?: number
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from "react",;
@@ -78,6 +89,10 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   // Fetch reviews when component mounts
   useEffect(() => {
@@ -142,4 +157,10 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

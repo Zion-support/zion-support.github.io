@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+=======
+
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
+=======
+}const completion = await client.chat.completions.create ({
+  model: 'gpt - 4o - mini', messages: [ {
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.';
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
@@ -186,9 +199,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   // Adjustments
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+  const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
+  const regionalComparison = Object.entries(byRegion)
+    .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
+    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
+    .slice(0, 8);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Tags
 
   const undersupplied = (skills || []).some(s =>
@@ -369,6 +391,12 @@ if ( {  } catch {) {
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

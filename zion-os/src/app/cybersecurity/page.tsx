@@ -180,11 +180,7 @@ export default function CybersecurityPage() {;
 =======
               <h3 className="text-xl font-semibold mb-3">Compliance Management</h3>;
               <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Ensure compliance with industry standards including SOC2, ISO 27001;
-=======
-                Ensure compliance with industry standards including SOC2, ISO 27001,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 GDPR, and industry-specific regulations.;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </p>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -12,6 +13,8 @@
     trialDays: number;
     setupTime: string;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   {
@@ -330,6 +333,7 @@
     support:
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
 
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'
     ]
@@ -342,6 +346,8 @@
     rating: 4.7
     reviews: 1400
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
@@ -441,8 +447,35 @@
     rating: 4 && 4.7,
 
     reviews: 1400
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    rating: 4.7,
+    reviews: 1400;
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+export interface SpaceMetaverseService {;
+
+  }
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+=======
+<<<<<<< HEAD
+  }
+];
+=======
+export interface SpaceMetaverseService {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string,;
   name: string,;
   tagline: string,;

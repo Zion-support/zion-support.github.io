@@ -48,6 +48,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const statusPath = path && path.join(dataDir, 'agents-status && status.json');
   const existing = fs && fs.existsSync(statusPath) ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')) : { agents: [] };
 
+<<<<<<< HEAD
+=======
+
+  const merged = {
+    ...existing;
+    ...body;
+    updatedAt: new Date().toISOString()};
+  fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2));
+  res && res.status(200).json({ ok: true })
+}
+
+
+=======
+import { isInternalAgentRequest } from '../../../utils / admin_auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
     res.status (405).json ({ error: 'Method Not Allowed' });
     return;
@@ -111,6 +133,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
   res.status(200).json({ ok: true })
 
@@ -118,3 +141,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

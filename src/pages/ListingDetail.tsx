@@ -14,6 +14,7 @@ export default function ListingDetail() {;
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
+<<<<<<< HEAD
 
 
 
@@ -21,6 +22,8 @@ export default function ListingDetail() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
@@ -193,6 +196,7 @@ export default function ListingDetail() {;
   },
 
   return (
+<<<<<<< HEAD
 
 
     <>
@@ -210,6 +214,8 @@ export default function ListingDetail() {;
                       className="object-cover"
                       fallbackSrc="/placeholder.svg"
                     />
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                   ) : (
@@ -225,13 +231,22 @@ export default function ListingDetail() {;
                   <div className="flex p-4 gap-2 overflow-x-auto">
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {listing.images.map((image, index) => (
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
 
                         className={cn(
+<<<<<<< HEAD
+=======
+
+                          'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           index === selectedImageIndex
                             ? 'border-zion-purple'
                             : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
@@ -262,6 +277,10 @@ export default function ListingDetail() {;
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}
                           className="object-cover"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           fallbackSrc="/placeholder.svg"
                         />
                       </div>
@@ -342,11 +361,47 @@ export default function ListingDetail() {;
                   {listing.description}
                 </p>;
                 {/* Features */}
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+                <div className='mt - 8'>;
+                  <h3 className='text - xl font - bold text - white mb - 4'>;
+                    Key Features;
+                  </h3>;
+                  <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+                    <div className='flex items - start gap - 3'>;
+                      <div className='p - 2 rounded - full bg - zion - purple / 20'>;
+                        <Brain className='h - 5 w - 5 text - zion - purple' />;
+                      </div>;
+                      <div>;
+                        <h4 className='font - medium text - white'>Advanced AI</h4>;
+                        <p className='text - sm text - zion - slate - light'>;
+                          State - of - the - art machine learning techniques;
+                        </p>;
+                      </div>;
+                    </div>;
+                    <div className='flex items - start gap - 3'>;
+                      <div className='p - 2 rounded - full bg - zion - cyan / 20'>;
+                        <Shield className='h - 5 w - 5 text - zion - cyan' />;
+                      </div>;
+                      <div>;
+                        <h4 className='font - medium text - white'>;
+                          Enterprise Security;
+                        </h4>;
+                        <p className='text - sm text - zion - slate - light'>;
+                          Built - in data protection and encryption;
+                        </p>                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+                {/* Features */}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
@@ -502,8 +557,11 @@ export default function ListingDetail() {;
                   {listing.featured && (
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
                       Featured
                     </Badge>
@@ -519,11 +577,21 @@ export default function ListingDetail() {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={cn(
+<<<<<<< HEAD
+=======
+
+
+                            'h-5 w-5',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             i < Math.floor(listing.rating!)
 
                               ? 'text-zion-cyan fill-zion-cyan'
@@ -610,6 +678,10 @@ export default function ListingDetail() {;
                       Custom Pricing
                     </div>
                   )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>;
 
 
@@ -617,6 +689,7 @@ export default function ListingDetail() {;
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>                ;
                 {/* Action Buttons */}
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -680,6 +753,8 @@ export default function ListingDetail() {;
                           title: "Payment Processing",
                           description: "Redirecting to secure checkout..."
                         })
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <div className="space-y-3 mb-8">;
                   {listing.price !== null ? (;
                     <PaymentButton;
@@ -892,6 +967,7 @@ export default function ListingDetail() {;
                   </Button>
                 </div>
                 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -900,6 +976,11 @@ export default function ListingDetail() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -909,6 +990,7 @@ export default function ListingDetail() {;
                         <ImageWithRetry
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
+<<<<<<< HEAD
 
 
                           className='object-cover'
@@ -922,6 +1004,8 @@ export default function ListingDetail() {;
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -976,6 +1060,7 @@ export default function ListingDetail() {;
                     )}
 
                     <div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -983,12 +1068,17 @@ export default function ListingDetail() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <p className="font-medium text-white">{listing.author.name}</p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
                   </div>
                 </div>
                 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -996,6 +1086,10 @@ export default function ListingDetail() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Additional Info */}
 
                 <div className="border-t border-zion-blue-light mt-6 pt-6">
@@ -1204,11 +1298,14 @@ export default function ListingDetail() {;
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
@@ -1218,10 +1315,13 @@ export default function ListingDetail() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             profileType="service"
           />
         </DialogContent>

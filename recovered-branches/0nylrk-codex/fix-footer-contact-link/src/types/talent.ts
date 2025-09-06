@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
   id: string;
@@ -77,6 +78,9 @@
   key_projects?: {;
     title: string,;
 
+=======
+    title: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     description: string;
   }[];
 }
@@ -100,7 +104,10 @@ export interface HireRequest {
 
     max: number,
     currency: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   timeline: {
     start_date: string;
@@ -112,6 +119,12 @@ export interface HireRequest {
 
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export interface TalentProfile {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

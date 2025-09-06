@@ -7,18 +7,24 @@ interface Speaker {
   linkedin?: string
 }
 interface Speaker {
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   name: string,
   title: string,
   avatar: string,
   twitter?: string
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -27,8 +33,11 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   linkedin?: string
 }
 
@@ -63,6 +72,7 @@ interface Speaker {
   linkedin?: string
 }
 const speakers: Speaker[] = [
+<<<<<<< HEAD
 
 
   {
@@ -323,3 +333,6 @@ export function SpeakersSection() {;
 ;
 
 
+=======
+  {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

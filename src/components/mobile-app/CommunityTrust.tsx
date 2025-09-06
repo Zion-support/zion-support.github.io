@@ -6,7 +6,10 @@ import { Star } from 'lucide-react';
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { Star } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -77,9 +80,12 @@ export const CommunityTrust: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ]
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
@@ -87,15 +93,21 @@ export const CommunityTrust: React.FC = () => {
     { value: "12M+", label: "Matches Made" }
   ],
 
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">

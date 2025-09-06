@@ -19,12 +19,19 @@ interface Listing {
   description: string;
   price: number;
   category: string;
+<<<<<<< HEAD
 
   subcategory?: string;
   image?: string;
   tags?: string[];
   author?: string;
 
+=======
+  rating: number;
+  image: string;
+  tags: string[];
+  createdAt: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 interface CategoryListingPageProps {
@@ -304,9 +311,45 @@ export function CategoryListingPage(): any ({;
   }
 
   return (
+<<<<<<< HEAD
 
     <>;
 
+=======
+    <div className="container mx-auto px-4 py-8">
+      <GradientHeading text={`${category} Listings`} />
+      
+      {/* Search and Filters */}
+      <div className="mb-8 space-y-4">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex-1">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+              <Input
+                placeholder="Search listings..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10"
+              />
+            </div>
+          </div>
+          
+          <Select value={sortBy} onValueChange={setSortBy}>
+            <SelectTrigger className="w-full sm:w-48">
+              <ArrowDownAZ className="h-4 w-4 mr-2" />
+              Sort by
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="newest">Newest</SelectItem>
+              <SelectItem value="oldest">Oldest</SelectItem>
+              <SelectItem value="price-low">Price: Low to High</SelectItem>
+              <SelectItem value="price-high">Price: High to Low</SelectItem>
+              <SelectItem value="rating">Rating</SelectItem>
+              <SelectItem value="name-asc">Name: A-Z</SelectItem>
+              <SelectItem value="name-desc">Name: Z-A</SelectItem>
+            </SelectContent>
+          </Select>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           <Select value={filterBy} onValueChange={setFilterBy}>
             <SelectTrigger className="w-full sm:w-48">
@@ -332,6 +375,7 @@ export function CategoryListingPage(): any ({;
         </p>
       </div>
 
+<<<<<<< HEAD
 
 
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -750,3 +794,41 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 }
 
 
+=======
+      {/* Listings Grid */}
+      {filteredListings.length === 0 ? (
+        <div className="text-center py-12">
+          <div className="text-gray-400 mb-4">
+            <Search className="h-12 w-12 mx-auto" />
+          </div>
+          <h3 className="text-lg font-medium text-gray-900 mb-2">No listings found</h3>
+          <p className="text-gray-500">
+            Try adjusting your search terms or filters.
+          </p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredListings.map((listing) => (
+            <ListingScoreCard
+              key={listing.id}
+              listing={listing}
+              onView={() => {
+                // Handle view action
+                console.log('View listing:', listing.id);
+              }}
+              onEdit={() => {
+                // Handle edit action
+                console.log('Edit listing:', listing.id);
+              }}
+              onDelete={() => {
+                // Handle delete action
+                console.log('Delete listing:', listing.id);
+              }}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

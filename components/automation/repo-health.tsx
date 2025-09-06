@@ -1,10 +1,14 @@
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -43,7 +47,10 @@ export default function RepoHealth(): any ({ report }: Props) {;
 
 
 
+<<<<<<< HEAD
 export default function RepoHealth({ report }: Props) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

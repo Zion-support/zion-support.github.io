@@ -1,7 +1,15 @@
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+=======
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ServiceProfileData {
   name: string;
   title: string;
@@ -15,8 +23,11 @@ import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ServiceProfileData {
   name: string,
   title: string,
@@ -119,8 +130,11 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         { headers, status: 500 }
       );
     }
@@ -186,6 +200,7 @@ if ( {) {
         JSON.stringify({
 
 
+<<<<<<< HEAD
           details: responseData});
         { headers, status: 500 }
       )
@@ -199,6 +214,18 @@ if ( {) {
           services: parsedContent.services});
 
 
+=======
+    const responseData = await response && response.json();
+    
+    if (!response && response.ok) {
+      console && console.error("OpenAI API error:", responseData);
+      return new Response(
+        JSON && JSON.stringify({
+          error: "Failed to generate enhanced profile content",
+
+          details: responseData});
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     const response_data = await response.json ();
 ;
@@ -215,6 +242,7 @@ if ( {) {
         { headers, status: 500 }
       );
     }
+<<<<<<< HEAD
 
 ;
     try {;
@@ -228,12 +256,24 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    try {
+
+      const content = responseData && responseData.choices[0].message && message.content;
+      const parsedContent = JSON && JSON.parse(content);
+      
+=======
+
+          error: "Failed to generate enhanced profile content",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         { headers, status: 200 }
       )
     } catch (error) {
       console.error("Error parsing AI response:", error),
 
       return new Response(
+<<<<<<< HEAD
 
         JSON.stringify({
 
@@ -246,6 +286,8 @@ if ( {) {
           error: "Failed to parse AI response",;
           raw: responseData.choices[0]?.message?.content}),;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         JSON && JSON.stringify({
           summary: parsedContent && parsedContent.summary,
           services: parsedContent && parsedContent.services});
@@ -259,9 +301,12 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         { headers, status: 500 }
       );
     }
@@ -282,11 +327,15 @@ if ( {) {
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     );
   }

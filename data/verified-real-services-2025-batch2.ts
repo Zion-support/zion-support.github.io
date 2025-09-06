@@ -14,11 +14,16 @@ export interface VerifiedRealService2025Batch2 {
     email: string;
     address: string;
   };
+<<<<<<< HEAD
 
 }
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     address: string;
   }

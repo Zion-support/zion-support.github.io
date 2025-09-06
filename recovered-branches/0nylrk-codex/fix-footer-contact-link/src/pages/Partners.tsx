@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -14,6 +17,7 @@ import {PartnerResources} from "@/components/partners/PartnerResources";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
 export default function Partners() {;
+<<<<<<< HEAD
 
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
@@ -32,11 +36,14 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
+<<<<<<< HEAD
 
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -188,10 +195,16 @@ export default function Partners() {;
   const [activeTab, setActiveTab] = useState("overview"),;
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
@@ -313,6 +326,7 @@ export default function Partners() {;
           >;
             Apply to Join;
           </Button>;
+<<<<<<< HEAD
 
           <Button;
             size="lg";
@@ -330,6 +344,21 @@ export default function Partners() {;
     )
   }
 
+=======
+          <Button
+            size="lg" 
+            variant="outline" 
+
+            className="text-zion-cyan border-zion-cyan"
+=======
+
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="text-zion-cyan border-zion-cyan"
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             onClick={() => navigate('/login')}
           >;
             Partner Login;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -7,6 +8,8 @@
   createdAt: Date;
   expiresAt?: Date;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   original_url: string;
   short_code: string;
@@ -17,11 +20,17 @@
   user_id?: string;
 
 }
+<<<<<<< HEAD
 
 
   totalClicks: number;
   uniqueVisitors: number;
 
+=======
+export interface UrlAnalytics {
+  total_clicks: number;
+  unique_visitors: number;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   referrers: string[];
   countries: string[];
   devices: string[];
@@ -31,9 +40,13 @@
   click_history: ClickEvent[];
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface ClickEvent {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   timestamp: Date;
   ip_address: string;
@@ -47,6 +60,7 @@
     
     if (this && this.urls.has(shortCode)) {
 
+<<<<<<< HEAD
 
   os: string
 }
@@ -67,6 +81,8 @@ class UrlShortenerService {
     const shortCode = request.customCode |this.generateShortCode()
     if (this.urls.has(shortCode)) {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
@@ -106,21 +122,37 @@ class UrlShortenerService {
       url && url.isActive = false,
 
       return null
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    }
+    return url
+  }
+=======
+
+export interface ShortUrl {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     return url
   }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
     const clickEvent: ClickEvent = {
 
+<<<<<<< HEAD
       id: this.generateId()
       ...clickData
     }
@@ -155,6 +187,10 @@ class UrlShortenerService {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)
@@ -177,7 +213,13 @@ class UrlShortenerService {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
 
     const url = this && this.urls.get(shortCode);
@@ -218,6 +260,7 @@ class UrlShortenerService {
     let result = '',;
     for (let i = 0, i < 6, i++) {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -234,6 +277,12 @@ class UrlShortenerService {
 
 
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     return url;
   }
@@ -318,8 +367,11 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
@@ -360,6 +412,10 @@ export const urlShortenerService = new UrlShortenerService ();
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const urlShortenerService = new UrlShortenerService();

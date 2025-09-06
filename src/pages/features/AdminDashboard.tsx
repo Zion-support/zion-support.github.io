@@ -49,6 +49,7 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
 
 
 
@@ -63,6 +64,8 @@ import { GradientHeading } from "@/components/GradientHeading",
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function AdminDashboard() {
@@ -76,6 +79,7 @@ export default function AdminDashboard() {
   };
 
   return (
+<<<<<<< HEAD
 
 
     <>
@@ -88,6 +92,9 @@ export default function AdminDashboard() {
         description="Gain insight into your marketplace with powerful administration tools."
         keywords="admin dashboard, analytics, manage listings"
         canonical="https://app.ziontechgroup.com/features/admin-dashboard"
+=======
+    <>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       />
@@ -108,6 +115,7 @@ export default function AdminDashboard() {
               src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
               className="object-cover"
+<<<<<<< HEAD
 
 
             />
@@ -136,6 +144,8 @@ export default function AdminDashboard() {
               className="object-cover"
             />
           </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -167,6 +177,7 @@ export default function AdminDashboard() {
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
             <div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -175,6 +186,11 @@ export default function AdminDashboard() {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <p className="font-semibold">Who can access the dashboard?</p>
               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
             </div>
@@ -191,6 +207,7 @@ export default function AdminDashboard() {
         </div>
       </main>
     </>
+<<<<<<< HEAD
 
 
   );
@@ -236,6 +253,8 @@ export default function AdminDashboard() {;
               src="https: //placehold.co/800x400";
               alt="Screenshot of admin dashboard";
               className="object-cover";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             />;

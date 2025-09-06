@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -47,6 +48,8 @@ interface ProjectDetailsFieldsProps {
 import { format } from "date-fns",;
 import { CalendarIcon } from "lucide-react",;
 import { UseFormReturn } from "react-hook-form",;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {;
   FormField,;
   FormItem,;
@@ -70,12 +73,20 @@ import {;
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   form: UseFormReturn<ContractFormValues>;
 }
 
@@ -101,10 +112,14 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
       />;
       <FormField;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         name="scopeSummary"
@@ -189,10 +204,14 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
         />;
         <FormField;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name="endDate"
@@ -217,6 +236,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                 <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
                     mode="single"
+<<<<<<< HEAD
 
                     selected={field.value |undefined}
                     onSelect={field.onChange}
@@ -238,6 +258,8 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
       </div>;
     </>;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
@@ -245,7 +267,20 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                     initialFocus;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+
+        />;
+      </div>;
+    </>;
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 
 }

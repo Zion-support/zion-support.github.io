@@ -40,6 +40,7 @@ isOpen;
   }
 
 
+<<<<<<< HEAD
 
 
 import { TemplateManager } from "./templates/TemplateManager",
@@ -51,6 +52,8 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
   return (
@@ -66,6 +69,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
             
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -73,6 +77,10 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -111,6 +119,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 
               
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -128,24 +137,84 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
             </div>
           </div>
           <TabsContent value="form" className="pt-4">
+=======
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick = {() => setShowSmartContractBuilder(true),}
+
+              >;
+                Smart Contract Builder;
+              </Button>;
+            </div>;
+          </div>;
+
+          <TabsContent value="form" className="pt-4">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             <ContractForm
 
             <ContractForm 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
 <<<<<<< HEAD
+<<<<<<< HEAD
             />
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <ContractPreview
 
               <ContractPreview 
+<<<<<<< HEAD
+=======
+
+                contractContent = {generatedContract,}
+                talent = {talent,}
+                onClose = {onClose,}
+                status="ready"
+              />;
+            )}
+
+          </TabsContent>;
+        </Tabs>;
+
+
+        <TemplateManager
+          isOpen = {templateManagerOpen,}
+          onClose = {() => setTemplateManagerOpen(false),}
+          onSelectTemplate = {handleLoadTemplate,}
+          currentValues = {formValues,}
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+
+  handleContractGenerated;
+}/> </TabsContent> />);
+}</TabsContent> </Tabs> <TemplateManager is_open= {
+  templateManagerOpen;
+}on_close= {
+  () => setTemplateManagerOpen (false);
+}onSelectTemplate= {
+  handleLoadTemplate;
+}current_values= {
+  form_values;
+}/> </DialogContent> </Dialog>);
+}"}
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

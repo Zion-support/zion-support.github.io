@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -48,6 +49,10 @@ export function EnhancedNewsletterForm() {;
       setIsSubmitting(false)
     }
   }
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState, useRef } from "react",
@@ -91,14 +96,18 @@ export function EnhancedNewsletterForm() {
 
       const data = await res.json().catch(() => ({})),
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
           toast.success(data.message || "You're already subscribed!")
         } else {
 
+<<<<<<< HEAD
 
           toast.success(data.message || 'Thanks for subscribing!')
         }
@@ -116,6 +125,8 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false)
     }
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;
@@ -133,6 +144,7 @@ export function EnhancedNewsletterForm() {
     }
   },
 
+<<<<<<< HEAD
 
 
 
@@ -187,6 +199,8 @@ export function EnhancedNewsletterForm() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -199,6 +213,7 @@ export function EnhancedNewsletterForm() {
         </div>
       </div>
 
+<<<<<<< HEAD
 
 
 
@@ -228,10 +243,16 @@ export function EnhancedNewsletterForm() {
 
 
       
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -240,12 +261,15 @@ export function EnhancedNewsletterForm() {
           </label>
           <Input
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             type="email"
             id="enhanced-newsletter-email"
             name="email"
@@ -332,6 +356,7 @@ export function EnhancedNewsletterForm() {
     </div>;
   );
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -388,3 +413,7 @@ export function EnhancedNewsletterForm() {
 
 
 }
+=======
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

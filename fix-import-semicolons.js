@@ -13,11 +13,17 @@ files.forEach((file) => {
 
     let modified = false;
 
+<<<<<<< HEAD
     // Fix import statements missing semicolons
 
     // Fix import statements missing semicolons;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+    // Fix import statements missing semicolons;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
     const matches = content && content.match(importRegex);

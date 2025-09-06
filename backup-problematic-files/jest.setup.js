@@ -19,6 +19,7 @@ jest.mock("next/router", () => ({
         off: jest.fn(),
         emit: jest.fn()
       },
+<<<<<<< HEAD
 
 :jest.setup.js
       isFallback: false,
@@ -27,6 +28,8 @@ jest.mock("next/router", () => ({
     }
   }
 }));
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
@@ -49,6 +52,7 @@ jest.mock("next/image", () => {
     return <img src={src} alt={alt} {...props} />;
   };
 });
+<<<<<<< HEAD
 
 :jest.setup.js
 
@@ -65,6 +69,10 @@ jest.mock("next/link", () => {
 });
 
 main:jest.setup.js
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
@@ -108,6 +116,7 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
+<<<<<<< HEAD
 };
 
 
@@ -117,3 +126,9 @@ beforeEach(() => {
   jest.clearAllMocks();
 });
 
+=======
+
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

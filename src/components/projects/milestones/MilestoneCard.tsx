@@ -228,8 +228,11 @@ export function MilestoneCard({;
     };
   }
   
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -237,6 +240,7 @@ export function MilestoneCard({;
           <div>
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
+<<<<<<< HEAD
 
 
 
@@ -248,6 +252,8 @@ export function MilestoneCard({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <p className="text-sm text-muted-foreground">
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>
@@ -266,7 +272,13 @@ export function MilestoneCard({;
 
 
 
+<<<<<<< HEAD
 
+=======
+              <DisputeStatusBadge status={disputeStatus} />
+            )}
+          </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
       </CardContent>
       <CardFooter className='pt-2 flex justify-between'>
@@ -478,11 +490,14 @@ export function MilestoneCard({;
     </Card>;
   );
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   );
 }

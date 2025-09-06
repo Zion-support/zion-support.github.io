@@ -1,8 +1,17 @@
 
+<<<<<<< HEAD
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
+=======
+
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
@@ -11,6 +20,7 @@ export type DisputeReason =;
   | 'Communication Breakdown';
 
   | 'Other',;
+<<<<<<< HEAD
 
 
 
@@ -140,6 +150,10 @@ export type UserSummary = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   role: 'admin' | 'client' | 'talent';
 }
 };

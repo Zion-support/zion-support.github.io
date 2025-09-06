@@ -148,8 +148,11 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     </Badge>;

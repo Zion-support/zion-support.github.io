@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 
 
 
@@ -32,6 +33,9 @@ export function MicroTestimonial({
 }: {;
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   quote: string;
   author: string;
 }) {;
@@ -68,8 +72,38 @@ export function MicroTestimonial({
   );
 }
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+export /**
+ * MicroTestimonial - Function description
+ */
+function MicroTestimonial() {
+  return (
+    <figure className="border rounded - md p - 3 text - sm">;
+      <blockquote className="italic opacity - 90">“{quote}”</blockquote>;
+      <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;
+    </figure>);
+    </span>
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+=======
+
+    </figure>
+  );
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

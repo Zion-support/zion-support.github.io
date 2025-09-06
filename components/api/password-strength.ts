@@ -379,6 +379,7 @@ export default async function handler(
   } catch (error) {
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
+<<<<<<< HEAD
 
   }      suggestions.push('Make it at least 12 characters long');
       suggestions.push('Avoid personal information and common words')
@@ -408,6 +409,8 @@ export default async function handler(
     res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error);
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     res.status(500).json({ error: 'Internal server error' })
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -415,5 +418,10 @@ export default async function handler(
 }
   }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

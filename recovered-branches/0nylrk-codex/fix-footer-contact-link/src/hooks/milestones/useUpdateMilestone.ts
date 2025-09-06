@@ -1,14 +1,22 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 
 export const useUpdateMilestone = () => {
   const { user } = useAuth();
@@ -19,13 +27,21 @@ export const useUpdateMilestone = () => {
     try {
       setIsSubmitting(true);
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -124,6 +140,7 @@ export const useUpdateMilestone = () => {
   }
 }
 
+<<<<<<< HEAD
 
         .eq('id', milestoneId),
       
@@ -213,4 +230,7 @@ export const useUpdateMilestone = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 };
+=======
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

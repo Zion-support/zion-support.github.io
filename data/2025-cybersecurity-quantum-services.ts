@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -12,6 +13,8 @@
     trialDays: number;
     setupTime: string;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   {
@@ -328,6 +331,7 @@
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
+<<<<<<< HEAD
 
       '24/7 technical support, security consulting, custom development, and dedicated success manager.'
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS']
@@ -341,6 +345,21 @@
     reviews: 1900
   }
 
+=======
+
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
+    icon: '🔍',
+    color: 'from-green-500 to-emerald-600',
+    popular: true,
+    launchDate: '2024-02-15',
+    customers: 2500,
+    rating: 4.8,
+    reviews: 1900,
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
     ];
@@ -441,8 +460,35 @@
     rating: 4 && 4.8,
 
     reviews: 1900
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    rating: 4.8,
+    reviews: 1900;
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+export interface CybersecurityQuantumService {;
+
+  }
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+=======
+<<<<<<< HEAD
+  }
+];
+=======
+export interface CybersecurityQuantumService {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string,;
   name: string,;
   tagline: string,;

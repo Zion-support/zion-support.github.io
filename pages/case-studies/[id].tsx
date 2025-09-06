@@ -57,6 +57,90 @@ export default function CaseStudyPage() {
 
     {
       id: 'content - generation - scale',
+<<<<<<< HEAD
+=======
+        <h2>Background</h2>
+        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes. 
+        High downtime, _inefficient production scheduling, _and quality control issues were impacting their bottom line.</p>
+        
+        <h2>Challenge</h2>
+        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
+        and reducing operational costs. They required a solution that could adapt to changing production demands 
+        and minimize human intervention.</p>
+        
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+export default function CaseStudyPage() {
+  const router = useRouter(),
+  const { id } = router.query,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+<<<<<<< HEAD
+export default function CaseStudyPage() {
+  const router = useRouter()
+  const { id } = router.query
+  // Case studies data - this should match the data in case-studies.tsx
+  const caseStudies = [
+    {
+      id: 'ai-automation-manufacturing'
+      title: 'AI-Powered Manufacturing Automation'
+      company: 'Global Manufacturing Corp'
+      industry: 'Manufacturing'
+      challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.'
+      solution: 'Implemented autonomous AI systems with predictive maintenance and real-time optimization.'
+      results: ['40% increase in production efficiency60% reduction in downtime25% improvement in quality control']
+      duration: '6 months'
+      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
+      fullContent: `
+        <h2>Background</h2>
+        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
+        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line.</p>
+        <h2>Challenge</h2>
+        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards
+        and reducing operational costs. They required a solution that could adapt to changing production demands
+        and minimize human intervention.</p>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <h2>Solution</h2>
+        <p>We implemented a comprehensive AI automation system that included:</p>
+        <ul>
+          <li>Predictive maintenance algorithms</li>
+          <li>Real-time production optimization</li>
+          <li>Automated quality control systems</li>
+          <li>Intelligent scheduling and resource allocation</li>
+        </ul>
+<<<<<<< HEAD
+        
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <h2>Results</h2>
+        <p>The implementation delivered exceptional results:</p>
+        <ul>
+          <li><strong>40% increase in production efficiency</strong> - Streamlined processes and reduced bottlenecks</li>
+          <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
+          <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
+        </ul>
+<<<<<<< HEAD
+        
+        <h2>Implementation Timeline</h2>
+        <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
+        The system was deployed in phases, allowing for gradual adoption and optimization.</p>
+      `
+    },
+    {
+      id: 'content-generation-scale',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
       industry: 'Marketing',
@@ -134,6 +218,15 @@ export default function CaseStudyPage() {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function CaseStudyPage(req, res) {
   try {
@@ -260,9 +353,13 @@ export default function CaseStudyPage(req, res) {
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
   if (!caseStudy) {
@@ -279,11 +376,17 @@ export default function CaseStudyPage(req, res) {
                 The case study you're looking for doesn't exist.
               </p>
 
+<<<<<<< HEAD
               <Link
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -323,10 +426,14 @@ export default function CaseStudyPage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -459,10 +566,14 @@ export default function CaseStudyPage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </ul>
                 </div>
 
@@ -485,6 +596,7 @@ export default function CaseStudyPage(req, res) {
 
 
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+<<<<<<< HEAD
 
 
               <div
@@ -503,6 +615,12 @@ export default function CaseStudyPage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -513,6 +631,7 @@ export default function CaseStudyPage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 
 
   )
@@ -521,6 +640,8 @@ export default function CaseStudyPage(req, res) {
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>;
                   <div className="space-y-3">;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     <div>;
                       <h3 className="font - semibold text - cyan - 400 text - lg mb - 2">Challenge</h3>;
@@ -554,6 +675,23 @@ export default function CaseStudyPage(req, res) {
                     <div>;
                       <span className="text - white / 60 text - sm">Industry:</span>;
                       <p className="text - white font - medium">{case_study.industry}</p>;
+<<<<<<< HEAD
+=======
+=======
+                  </ul>;
+                </div>;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>;
+                  <div className="space-y-3">;
+                    <div>;
+                      <span className="text-white/60 text-sm">Duration:</span>;
+                      <p className="text-white font-medium">{caseStudy.duration}</p>;
+                    </div>;
+                    <div>;
+                      <span className="text-white/60 text-sm">Industry:</span>;
+                      <p className="text-white font-medium">{caseStudy.industry}</p>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </div>;
                   </div>;
                 </div>;
@@ -576,6 +714,7 @@ export default function CaseStudyPage(req, res) {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
 
     </>;
   );
@@ -590,3 +729,14 @@ export default function CaseStudyPage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

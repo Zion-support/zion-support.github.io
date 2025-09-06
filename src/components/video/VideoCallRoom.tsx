@@ -6,6 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
 
+<<<<<<< HEAD
 
 
   roomId: string
@@ -60,6 +61,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleVideo
   onToggleScreenShare
   className
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   participants = [], ;
@@ -70,11 +73,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleScreenShare,
   className 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },) => {
   const [isMuted, setIsMuted] = useState(false)
   const [isVideoEnabled, setIsVideoEnabled] = useState(true)
@@ -272,11 +278,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
           {participants.length > 0 ? (
             participants.map((participant) => (
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
 
@@ -332,6 +341,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
           )}
         </div>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -339,6 +349,10 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
 
                 <div className="video-metadata flex items-center space-x-2">;
@@ -425,6 +439,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
             onClick={handleLeaveCall}
             aria-label="Leave call"
           >
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -432,17 +447,24 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Phone className="rotate-135" />
           </Button>
         </div>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 
 
 }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             aria-label="Leave call">;
             <Phone className="rotate-135" />;

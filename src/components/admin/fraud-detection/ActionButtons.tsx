@@ -2,6 +2,7 @@
         <Eye className="h-4 w-4" />
       </Button>
       <Button
+<<<<<<< HEAD
 
 
         variant='ghost'
@@ -48,6 +49,17 @@
   )
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+};
+'"},;
+  );
+};
+
+
+<<<<<<< HEAD
 
 
 };
@@ -58,14 +70,8 @@
 
 
 
-};
-'"},;
-  );
-};
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         variant="ghost"
         size="icon"
         title="Send Warning"
@@ -111,11 +117,14 @@
 
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

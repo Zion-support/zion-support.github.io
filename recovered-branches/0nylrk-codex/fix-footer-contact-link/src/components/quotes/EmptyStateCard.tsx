@@ -1,9 +1,15 @@
 
+<<<<<<< HEAD
 
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from "lucide-react";
+=======
+type EmptyStateCardProps = {;
+  type: 'active' | 'archived';
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 type EmptyStateCardProps = {
@@ -30,8 +36,11 @@ import { MessageSquare, ArchiveIcon } from "lucide-react",
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 type EmptyStateCardProps = {
   type: 'active' | 'archived'
 },
@@ -56,6 +65,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
           {isActive ? "No hire requests yet" : "No archived requests"}
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
+<<<<<<< HEAD
 
           {isActive
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
@@ -78,6 +88,9 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
             <ArchiveIcon className="h-8 w-8 text-white" />;
           )}
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>;
         <h3 className="text-xl font-medium text-white mb-2">;
           {isActive ? 'No hire requests yet' : 'No archived requests'}
@@ -91,8 +104,20 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+          {isActive 
+            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+=======
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

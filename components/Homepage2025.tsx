@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
@@ -36,6 +37,15 @@ import {
   emergingTechServicesEnhanced2025
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
+=======
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
 import { ;
@@ -48,7 +58,11 @@ import { ;
   emergingTechServicesEnhanced2025 ;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '../data/2025-emerging-tech-services-enhanced';
 
 
@@ -61,7 +75,25 @@ import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026'
 import Link from 'next/link';
 
 
+<<<<<<< HEAD
 
+=======
+import {;
+  ArrowRight,;
+  Star,;
+  Brain,;
+  Atom,;
+  Shield,;
+  Zap,;
+  Users,;
+  Globe,;
+  TrendingUp,;
+  Rocket,;
+  Cpu,;
+  Lock,;
+  BarChart3,;
+  Cloud,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';
 interface Homepage2025Props {;
   showInternalNav?: boolean;
@@ -155,6 +187,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
                   <span className="text-white font-bold text-xl">ZionTech Group</span>
                 </motion.div>
                 {/* Desktop Navigation */}
+<<<<<<< HEAD
                 <div className="hidden lg:flex space-x-8">
                   {navigationSections.map((section) => (
                     <button
@@ -163,6 +196,124 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                <div className='hidden lg:flex space-x-8'>;
+                  {navigationSections && navigationSections.map(section => (                    <button}
+  return (
+    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">;
+      {showInternalNav && (;
+        <>;
+          {/* Navigation */}
+          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">;
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+              <div className="flex justify-between items-center h-16">;
+                <motion&& motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+
+                  className="flex items-center space-x-2">;
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>;
+                  <span className="text-white font-bold text-xl">ZionTech Group</span>;
+                </motion && motion.div>;
+    { id: 'contact', label: 'Contact', icon: '📞' },  ];
+;
+  const features = [;
+    {    { id: 'contact', label: 'Contact', icon: '📞' }
+  ];
+;
+  const features = [;
+    {
+      title: 'AI - Powered Innovation',
+      description:;
+        'Cutting - edge artificial intelligence solutions that transform business operations and drive growth',
+      icon: Brain,
+    },
+    {
+      title: 'Quantum Computing',
+      description:;
+        'Next - generation quantum solutions for complex problem - solving and advanced cryptography',
+      icon: Atom,
+    },
+    {
+      title: 'Cybersecurity Excellence',
+      description:;
+        'Enterprise - grade security solutions with AI - powered threat detection and response',
+      icon: Shield,
+    },
+    {
+      title: 'Process Automation',
+      description:;
+        'Intelligent automation that streamlines operations and enhances productivity',
+      icon: Zap,
+    },  ];      title: "Process Automation",
+      description: "Intelligent automation that streamlines operations and enhances productivity",
+      icon: Zap;
+    }
+  const item_variants = {
+    initial: { opacity: 0, coordinate_y: 20 },
+    animate: { opacity: 1, coordinate_y: 0 },
+    transition: { duration: 0.6 },  }    transition: { duration: 0.6 }
+  }
+;
+  const stagger_container = {
+    initial: {},
+    animate: {
+      transition: {
+        stagger_children: 0.1,
+      },
+    },
+  }
+;
+  return (
+    <UltraFuturisticBackground2026 intensity='medium' theme='quantum'>;
+      {showInternalNav && (
+        <>;
+          {/* Navigation */}
+          <nav className='fixed top - 0 left - 0 right - 0 z - 50 bg - black / 20 backdrop - blur - xl border - b border - white / 10'>;
+            <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+              <div className='flex justify - between items - center h - 16'>;
+                <motion.div;
+                  initial={{ opacity: 0, coordinate_x: -20 }}
+                  animate={{ opacity: 1, coordinate_x: 0 }}
+                  className='flex items - center space - x-2';
+                >;
+                  <div className='w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg'></div>;
+                  <span className='text - white font - bold text - xl'>;
+                    ZionTech Group;
+                  </span>;
+                </motion.div>;
+                {/* Desktop Navigation */}
+                <div className='hidden lg:flex space - x-8'>;
+                  {navigation_sections.map (section => (                    <button  }
+;
+  return (
+    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">;
+      {showInternalNav && (
+        <>;
+          {/* Navigation */}
+          <nav className="fixed top - 0 left - 0 right - 0 z - 50 bg - black / 20 backdrop - blur - xl border - b border - white / 10">;
+            <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+              <div className="flex justify - between items - center h - 16">;
+                <motion.div;
+                  initial={{ opacity: 0, coordinate_x: -20 }}
+                  animate={{ opacity: 1, coordinate_x: 0 }}
+                  className="flex items - center space - x-2";
+                >;
+                  <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - lg"></div>;
+                  <span className="text - white font - bold text - xl">ZionTech Group</span>;
+                </motion.div>;
+
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex space - x-8">;
+                  {navigation_sections.map ((section) => (
+                    <button;
+=======
+
+                  {navigationSections.map(section => (                    <button  };
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -185,7 +336,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -216,7 +371,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
                 {isMobileMenuOpen && (;
@@ -237,11 +396,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -312,8 +474,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">;
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     >;
                       <span>{section.icon}</span>;
                       <span>{section.label}</span>;
@@ -422,6 +588,69 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
           </nav>;
         </>)}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      {/* Hero Section */}
+      <section;
+        id='hero';
+        className='relative min - h-screen flex items - center justify - center px - 4 sm:px - 6 lg:px - 8 pt - 16';
+      >;
+        <div className='text - center z - 10 max - w-6xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text - center max - w-6xl mx - auto relative z - 10'          >;
+            <motion.div;
+              animate={{ coordinate_y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
+              className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            >      <section id="hero" className="relative min - h-screen flex items - center justify - center px - 4 sm:px - 6 lg:px - 8 pt - 16">;
+        <div className="text - center z - 10 max - w-6xl mx - auto">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text - center max - w-6xl mx - auto relative z - 10'            className="text - center max - w-6xl mx - auto relative z - 10";
+          >;
+            <motion.div;
+              animate={{ coordinate_y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'              className="w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center";
+            >;
+              <motion.div;
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+
+                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+                className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'>;
+                <Star className='w-5 h-5' />;
+                <span>Innovation Leader 2025-2026</span>;
+              </motion && motion.div>;
+
+              <h1 className='text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>;
+                Zion Tech Group;
+              </h1>;
+              <p className='text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed'>;
+                Pioneering the future of technology with innovative solutions;
+                that drive business transformation;
+              </p>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Enhanced CTA Section */}
+              <motion&& motion.div
+                variants={itemVariants}
+
+      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+        <div className="text-center z-10 max-w-6xl mx-auto">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -452,6 +681,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               {/* Enhanced CTA Section */}
@@ -478,6 +708,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
                 </Link>
               </motion.div>              >
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
@@ -568,6 +800,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -577,6 +810,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -596,11 +834,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
           <motion.div
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -610,11 +855,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Comprehensive Technology Solutions
@@ -672,8 +921,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -699,11 +951,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
           <motion&& motion.div
             className="text-center mb-16"
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -720,8 +978,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             whileInView={{ opacity: 1, y: 0 }}
 
                 className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
@@ -1062,8 +1323,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
                 onClick={() => (window.location.href = service.link)}
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -1105,11 +1371,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
@@ -1120,6 +1394,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+            initial={{ opacity: 0, y: 40 }}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             whileInView={{ opacity: 1, y: 0 }}
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1238,8 +1520,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
             className="text-center"
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1282,6 +1570,7 @@ export default Homepage2025;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 export default Homepage2025;  )
 }
 export default Homepage2025;
@@ -1291,3 +1580,8 @@ export default Homepage2025;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

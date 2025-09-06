@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
   Star
   TrendingUp
@@ -41,6 +42,8 @@ import {
   ExternalLink,;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 class ErrorBoundary extends React.Component {
@@ -94,9 +97,12 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
   ExternalLink,;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -106,8 +112,11 @@ import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-service
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const contactInfo = {
 
     mobile: '+1 302 464 0950',
@@ -117,8 +126,11 @@ export default function InnovativeServicesShowcase() {
 
   };
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -189,6 +201,7 @@ export default function InnovativeServicesShowcase() {
         'Zero-trust architecture'
       ]
       link: 'https://ziontechgroup.com/quantum-internet-security-platform'
+<<<<<<< HEAD
       color: 'from-indigo-600 to-purple-700'
     }
 
@@ -250,6 +263,12 @@ export default function InnovativeServicesShowcase() {
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
+=======
+=======
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
   };
@@ -552,8 +571,13 @@ export default function InnovativeServicesShowcase() {;
               initial={{ opacity: 0, y: 30 }}
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -637,6 +661,11 @@ export default function InnovativeServicesShowcase() {;
                 >;
                   <div className='mb - 6'>;
                     <h3 className='text - 2xl font - bold text - white mb - 4'>;
+<<<<<<< HEAD
+=======
+=======
+                  className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -842,16 +871,39 @@ export default function InnovativeServicesShowcase() {;
                   <motion.div
                     key={service.id}
 
+<<<<<<< HEAD
+=======
+=======
+
+        {/* Emerging Tech Services */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+=======
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+<<<<<<< HEAD
 
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1040,11 +1092,14 @@ export default function InnovativeServicesShowcase() {;
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+<<<<<<< HEAD
 
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1128,18 +1183,37 @@ export default function InnovativeServicesShowcase() {;
                     <p className="text - gray - 300 text - sm mb - 4">{service.description}</p>;
                     <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {service.price}
                       <span className="text - sm text - gray - 400">{service.period}</span>;
                     </div>;
                     <div className="text - sm text - gray - 400 mb - 4">{service.market_size} • {service.growth_rate}</div>;
                     <a;
                       href={service.link}
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+                      className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 4 py - 2 rounded - lg text - sm font - semibold hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300 inline - flex items - center space - x-2";
+                    >;
+                      <span > Learn More</span>;
+                      <ArrowRight className="w - 4 h - 4" />;
+                    </a>;
+                  </UltraFuturisticCard>;
+                </motion.div>))}
+            </div>;
+            <motion.div;
+              className="text - center mt - 16";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
@@ -1177,11 +1251,18 @@ export default function InnovativeServicesShowcase() {;
             <motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1220,6 +1301,7 @@ export default function InnovativeServicesShowcase() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
+<<<<<<< HEAD
 
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                 >
@@ -1263,6 +1345,8 @@ export default function InnovativeServicesShowcase() {;
       </div>
     </UltraAdvancedFuturisticBackground>
 );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             >;
               <motion.a;
@@ -1459,6 +1543,7 @@ export default function InnovativeServicesShowcase() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+<<<<<<< HEAD
 
   );
 }
@@ -1467,3 +1552,6 @@ export default function InnovativeServicesShowcase() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

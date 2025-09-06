@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {formatDistanceToNow} from "date-fns";
 import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -9,6 +12,7 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 
 
 import { formatDistanceToNow } from "date-fns",
@@ -23,12 +27,17 @@ interface ReplyCardProps {
 
   reply: ForumReply
 
+=======
+interface ReplyCardProps {;
+  reply: ForumReply,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
 
+<<<<<<< HEAD
 
 export const ReplyCard = ({
   reply;
@@ -38,6 +47,11 @@ import { ForumReply } from "@/types/community",
 import { cn } from "@/lib/utils",
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -120,8 +134,11 @@ export const ReplyCard = ({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {reply.authorRole}
               </Badge>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -171,6 +188,9 @@ export default ReplyCard;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default ReplyCard;

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   try {
@@ -10,6 +13,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (err: any) {
 
+<<<<<<< HEAD
     return res.status(400).json({ error: err.message })
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { burnTokens, burnForFeature } from "../../../utils/token/service",;
@@ -85,3 +89,17 @@ export default function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+    return res.status(400).json({ error: err.message })
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

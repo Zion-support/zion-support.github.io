@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,6 +8,36 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+=======
+
+import React, { useState } from 'react';
+import Head from 'next / head';
+
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+import {;
+  Search,;
+  Star,;
+  Users,;
+  TrendingUp,;
+  DollarSign,;
+  Clock,;
+  CheckCircle,;
+  ArrowRight,;
+  Rocket,;
+  Monitor,;
+  Cpu,;
+  Zap,;
+  Database,;
+  Cloud,;
+  Lock,;
+  Code,;
+  Sparkles,;
+  Target,;
+  Award,;
+  Lightbulb,;} from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -217,6 +248,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
       opacity: 1,;
       y: 0,;
       transition: {;
+<<<<<<< HEAD
 
         duration: 0.5;
         } catch (error) {
@@ -290,6 +322,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
   }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         duration: 0 && 0.5,;
       },;
     },;
@@ -302,8 +336,12 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <div className="flex items-center justify-center mb-6">
                 <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
@@ -319,6 +357,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 Discover our cutting-edge solutions that are transforming industries and driving the future of technology
               </p>
               {/* Service Statistics */}
+<<<<<<< HEAD
 
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>
@@ -339,6 +378,32 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+              <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-cyan-400'>;
+                    {allServices && allServices.length}
+                  </div>;
+                  <div className='text-gray-400'>Total Services</div>;
+                </div>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-purple-400'>;
+                    {aiCount + quantumCount}
+                  </div>;
+                  <div className='text-gray-400'>AI & Quantum</div>;
+                </div>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-green-400'>;
+                    {blockchainCount + iotCount}
+                  </div>;
+                  <div className='text-gray-400'>Emerging Tech</div>;
+                </div>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-pink-400'>;
+                    {spaceCount + cybersecurityCount}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-purple-400">{aiCount + quantumCount}</div>
@@ -359,6 +424,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
         </section>
         {/* Search and Filters */}
 
+<<<<<<< HEAD
         <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <div className='bg-gray-800/40 border border-gray-700 rounded-2xl p-6'>
@@ -386,6 +452,9 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -550,10 +619,13 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
@@ -620,10 +692,13 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       <div className="flex items-center space-x-1 text-green-400">
                         <TrendingUp className="w-4 h-4" />
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         <span>Average ROI</span>
                       </div>
                       <div className="flex items-center space-x-1 text-blue-400">
@@ -642,10 +717,14 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     <div className="flex gap-3">
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <a
                         href={service && service.link}
                         target='_blank'
@@ -655,6 +734,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                         <ArrowRight className='w-4 h-4 ml-2' />;
                       </a>;
                       <a
+<<<<<<< HEAD
 
                         href="/contact" className="flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500">
                         Contact Us
@@ -679,6 +759,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                        href='/contact'
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
@@ -737,8 +822,29 @@ export default function EnhancedServicesShowcase2025(req, res) {
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -747,6 +853,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
+<<<<<<< HEAD
 
               {/* Contact Information */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
@@ -766,6 +873,9 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </div>
                   <span className="text-lg text-white">+1 302 464 0950</span>
                 </div>
@@ -793,10 +903,14 @@ export default function EnhancedServicesShowcase2025(req, res) {
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
@@ -804,6 +918,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <Rocket className='ml-2 w-6 h-6' />;
                 </a>;
                 <a
+<<<<<<< HEAD
                   href="/pricing" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline">
                   <span className="relative">View Pricing</span>
                   <DollarSign className="ml-2 w-6 h-6" />
@@ -814,6 +929,90 @@ export default function EnhancedServicesShowcase2025(req, res) {
         </section>
       </div>
     </EnhancedFuturisticBackground>
+=======
+                  href='/pricing'
+
+
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </EnhancedFuturisticBackground>;
+  );
+
+
+=======
+  )
+}
+                animate={{ opacity: 1 }}
+                className='text - center py - 16';
+              >;
+                <div className='text - 6xl mb - 4'>🔍</div>;
+                <h3 className='text - 2xl font - semibold text - white mb - 2'>;
+                  No services found;
+                </h3>;
+                <p className='text - gray - 400'>;
+                  Try adjusting your search criteria or filters;
+                </p>              </motion.div>)}
+          </div>;
+        </section>;
+        {/* Call to Action */}
+        <section className='relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='max - w-4xl mx - auto text - center'>            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+            >;
+              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className='text - xl text - gray - 300 mb - 8'>;
+                Join thousands of companies achieving breakthrough results with;
+                our revolutionary services;
+              </p>;
+              {/* Contact Information */}
+              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
+                <div className='flex items - center justify - center space - x-3'>;
+                  <div className='w - 12 h - 12 bg - cyan - 500 / 20 rounded - full flex items - center justify - center'>;
+                    <Target className='w - 6 h - 6 text - cyan - 400' />;
+                  </div>;
+                  <span className='text - lg text - white'>+1 302 464 0950</span>;
+                </div>;
+                <div className='flex items - center justify - center space - x-3'>;
+                  <div className='w - 12 h - 12 bg - purple - 500 / 20 rounded - full flex items - center justify - center'>;
+                    <Award className='w - 6 h - 6 text - purple - 400' />;
+                  </div>;
+                  <span className='text - lg text - white'>;
+                    kleber@ziontechgroup.com;
+                  </span>;
+                </div>;
+                <div className='flex items - center justify - center space - x-3'>;
+                  <div className='w - 12 h - 12 bg - green - 500 / 20 rounded - full flex items - center justify - center'>;
+                    <Lightbulb className='w - 6 h - 6 text - green - 400' />;
+                  </div>;
+                  <span className='text - lg text - white'>;
+                    364 E Main St STE 1008 Middletown DE 19709;
+                  </span>                </div>;
+              </div>;
+              {/* Action Buttons */}
+              <div className='flex flex - col sm: flex - row gap - 4 justify - center'>;
+                <a;
+                  href='/contact';
+                  className='inline - flex items - center justify - center font - semibold transition - all duration - 300 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - black disabled:opacity - 50 disabled:cursor - not - allowed relative overflow - hidden group rounded - xl transform hover:scale - 105 active:scale - 95 px - 6 py - 3 text - lg bg - gradient - to - r from - blue - 600 via - blue - 500 to - blue - 600 hover:from - blue - 500 hover:via - blue - 400 hover:to - blue - 500 text - white shadow - lg hover:shadow - xl border border - blue - 500 / 20 no - underline';
+                >;
+                  <span className='relative'>Start Your Transformation</span>;
+                  <Rocket className='ml - 2 w - 6 h - 6' />;
+                </a>;
+                <a;
+                  href='/pricing';
+                  className='inline - flex items - center justify - center font - semibold transition - all duration - 300 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - black disabled:opacity - 50 disabled:cursor - not - allowed relative overflow - hidden group rounded - xl transform hover:scale - 105 active:scale - 95 px - 6 py - 3 text - lg bg - gradient - to - r from - gray - 700 via - gray - 600 to - gray - 700 hover:from - gray - 600 hover:via - gray - 500 hover:to - gray - 600 text - white shadow - lg hover:shadow - xl border border - gray - 500 / 20 no - underline';
+                >;
+                  <span className='relative'>View Pricing</span>;
+                  <DollarSign className='ml - 2 w - 6 h - 6' />                </a>;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 );
   )
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
@@ -870,6 +1069,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </EnhancedFuturisticBackground>;
   );
 
@@ -880,3 +1080,19 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+<<<<<<< HEAD
+    </EnhancedFuturisticBackground>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

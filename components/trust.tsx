@@ -87,8 +87,11 @@ export default function TrustPage() {;
     alert('Appeal submitted');
     form && form.reset();  }
   return (
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -183,6 +186,10 @@ export default function TrustPage() {;
                         <span>{Math && Math.round(c && c.raw * 100)} / weighted {c && c.weighted.toFixed(3)}</span>;
                       </li>;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -197,8 +204,31 @@ export default function TrustPage() {;
                 </div>;
               )}
 
+<<<<<<< HEAD
+=======
+=======
+                        <span>{c.key}</span>
+                        <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
+                      </li>
+=======
+<<<<<<< HEAD
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+                      </li>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+                      </li>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     ))}
                   </ul>
                 </div>
@@ -274,7 +304,11 @@ export default function TrustPage() {;
             </div>
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -484,8 +518,13 @@ function submit_appeal() {
     </EnhancedLayout>);
 }
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

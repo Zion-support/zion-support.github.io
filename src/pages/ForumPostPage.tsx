@@ -2,6 +2,7 @@ export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
+<<<<<<< HEAD
 
 
   const router = useRouter()
@@ -27,6 +28,8 @@ export default function ForumPostPage() {
 }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 class ErrorBoundary extends React.Component {
@@ -42,8 +45,11 @@ class ErrorBoundary extends React.Component {
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
       return;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const router = useRouter(),
   const postId = router.query.postId as string,
   const { user } = useAuth(),
@@ -175,11 +181,14 @@ class ErrorBoundary extends React.Component {
 
   const handlePinPost = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!isAdminOrMod) return,
     
     if (!isAdminOrMod) return;
     if (!isAdminOrMod) return,
     
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     setPost({ ...post, isPinned: !post.isPinned }),
@@ -190,6 +199,7 @@ class ErrorBoundary extends React.Component {
   },
 
   const handleLockPost = () => {
+<<<<<<< HEAD
 
 
     if (!isAdminOrMod) return,
@@ -197,6 +207,8 @@ class ErrorBoundary extends React.Component {
     if (!isAdminOrMod) return;
     if (!isAdminOrMod) return,
     
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     setPost({ ...post, isLocked: !post.isLocked }),

@@ -7,19 +7,31 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   CheckCircle,;
   AlertTriangle,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+=======
+import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 export default function APIRateLimiterPage() {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
   const [timeWindow, setTimeWindow] = useState('1m');
@@ -27,6 +39,7 @@ export default function APIRateLimiterPage() {;
   const [isTesting, setIsTesting] = useState(false);
   const [apiKey, setApiKey] = useState('');
 
+<<<<<<< HEAD
   const timeWindows = [
     { value: '1s', label: '1 Second', description: 'Per second rate limiting' }
     { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' }
@@ -51,6 +64,23 @@ export default function APIRateLimiterPage() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+  ];
+
+    { value: '10', label: '10 requests', description: 'Very strict' },
+    { value: '100', label: '100 requests', description: 'Standard' },
+    { value: '1000', label: '1000 requests', description: 'High volume' },
+
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+=======
+
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
@@ -67,7 +97,6 @@ export default function APIRateLimiterPage() {;
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const testRateLimiting = async () => {
     if (!endpoint.trim() |!rateLimit |!timeWindow) return;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -151,9 +180,137 @@ export default function APIRateLimiterPage() {;
         return <CheckCircle className='w-5 h-5 text-green-400' />;
       case 'rate_limited':;
         return <AlertTriangle className='w-5 h-5 text-red-400' />;
+<<<<<<< HEAD
 
 
 
+=======
+
+=======
+  };
+  const testRateLimiting = async () => {
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+    setIsTesting(true);
+    setTestResults([]);
+    const limit = parseInt(rateLimit);
+;
+  const rate_limits = [;
+    { value: '10', label: '10 requests', description: 'Very strict' },
+    { value: '100', label: '100 requests', description: 'Standard' },
+    { value: '1000', label: '1000 requests', description: 'High volume' },
+    { value: '10000', label: '10000 requests', description: 'Enterprise' },
+  ];
+;
+  const generateApiKey = () =>: any {
+    const key =;
+      'zt_' +;
+      Math.random ().to_string (36).substr (2, 9) +;
+      '_' +;
+      Date.now ().to_string (36);
+    setApiKey (key);  }
+;
+  const testRateLimiting = async () => {
+    if (|| !rate_limit || !time_window) return) {
+  $2
+}
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+;
+  const generateApiKey = () =>: any {
+    const key = 'zt_' + Math.random ().to_string (36).substr (2, 9) + '_' + Date.now ().to_string (36);
+    setApiKey (key);
+  }
+;
+  const testRateLimiting = async () => {
+    if (|| !rate_limit || !time_window) return) {
+  $2
+}
+    setIsTesting (true);
+    setTestResults ([]);
+;
+    const limit = parse_int (rate_limit);
+    const results = [];
+;
+    // Simulate API calls to test rate limiting;
+    for (let index = 1; i <= limit + 5; i++) {
+      await new Promise (resolve => set_timeout (resolve, 100));
+;
+      const is_allowed = i <= limit;
+      const status = is_allowed ? 'success' : 'rate_limited';
+      const status_code = is_allowed ? 200 : 429;
+;
+      results.push ({
+        request: i,
+        timestamp: new Date ().toLocaleTimeString (),
+        status,
+        status_code,
+        response_time: Math.random () * 100 + 50,
+        headers: {
+          'X - RateLimit - Limit': limit,
+          'X - RateLimit - Remaining': Math.max (0, limit - i),
+          'X - RateLimit - Reset': new Date (Date.now () + 60000).toISOString (),
+        },
+      });
+;
+      // Check condition
+if (break) {
+  $2
+}
+    }
+    setTestResults (results);
+    setIsTesting (false);
+  }
+;
+  const copyToClipboard = (text: string) =>: any {
+    navigator.clipboard.write_text (text);  }    setIsTesting (true);
+    setTestResults ([]);
+;
+    const limit = parse_int (rate_limit);
+
+    const results = [];
+;
+    // Simulate API calls to test rate limiting;
+    for (let index = 1, i <= limit + 5, i++) {
+      await new Promise (resolve => set_timeout (resolve, 100));
+;
+      const is_allowed = i <= limit;
+      const status = is_allowed ? 'success' : 'rate_limited';
+      const status_code = is_allowed ? 200 : 429;
+;
+      results.push ({
+        request: i,
+        timestamp: new Date ().toLocaleTimeString (),
+        status;
+        status_code;
+        response_time: Math.random () * 100 + 50,
+        headers: {
+          'X - RateLimit - Limit': limit;
+          'X - RateLimit - Remaining': Math.max (0, limit - i);
+          'X - RateLimit - Reset': new Date (Date.now () + 60000).toISOString ();
+        }
+      });
+;
+      // Check condition
+if (break) {
+  $2
+}
+    }
+    setTestResults (results);
+    setIsTesting (false);
+  }
+;
+  const copyToClipboard = (text: string) =>: any {
+    navigator.clipboard.write_text (text);
+  }
+;
+  const getStatusIcon = (status: string) =>: any {
+    switch (status) {
+
+      default:
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
 
     }
@@ -161,8 +318,11 @@ export default function APIRateLimiterPage() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   };
 
   const getStatusColor = (status: string) => {
@@ -409,6 +569,31 @@ export default function APIRateLimiterPage() {;
                       >
                         <div className=&quot;font-medium&quot;>{limit.label}</div>
                         <div className=&quot;text-xs text-gray-400 mt-1&quot;>{limit.description}</div>
+<<<<<<< HEAD
+=======
+=======
+                {/* API Endpoint */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    API Endpoint
+                  ">
+                    API Endpoint
+                  </label>
+                  <input
+                    type="text"
+                    value={endpoint}
+                    onChange={(e) => setEndpoint(e.target.value)}
+                    placeholder="e.g., /api/users, /api/data, /api/analytics"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  />
+                </div>
+                {/* Rate Limit */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Rate Limit
+                  </label>
+                  <div className='grid grid-cols-2 gap-3'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         key={limit.value}
@@ -438,6 +623,7 @@ export default function APIRateLimiterPage() {;
                     Time Window
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
+<<<<<<< HEAD
 
                     {timeWindows.map(window => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
                     Time Window
@@ -446,6 +632,8 @@ export default function APIRateLimiterPage() {;
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {timeWindows.map((window) => (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -466,9 +654,22 @@ export default function APIRateLimiterPage() {;
                       </button>
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+                    ))}
+                  </div>
+                </div>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* API Key Generation */}
 
 
@@ -519,7 +720,22 @@ export default function APIRateLimiterPage() {;
             </Card>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            {/* Test Results */}
+            <Card className='p-8 bg-gray-800 border border-gray-700'>;
+              <div className='flex items-center justify-between mb-6'>;
+                <h3 className='text-2xl font-bold text-white flex items-center'>;
+                  <BarChart3 className='w-6 h-6 mr-3 text-blue-400' />                  Test Results            <Card className="p-8 bg-gray-800 border border-gray-700">;
+              <div className="flex items-center justify-between mb-6">;
+                <h3 className="text-2xl font-bold text-white flex items-center">;
+                  <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />;
+                </h3>;
+                {testResults && testResults.length > 0 && (;
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -637,9 +853,17 @@ export default function APIRateLimiterPage() {;
               </div>;
             </Card>;
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Test Results */}
             <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
@@ -720,8 +944,11 @@ export default function APIRateLimiterPage() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </h3>
                 {testResults.length > 0 && (
                   <Button
@@ -754,6 +981,7 @@ export default function APIRateLimiterPage() {;
                           <span className="text-gray-400">Response Time:</span>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
+<<<<<<< HEAD
 
 
 
@@ -762,6 +990,8 @@ export default function APIRateLimiterPage() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
@@ -811,11 +1041,31 @@ export default function APIRateLimiterPage() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        </div>
+                      </div>
+                      {result.status === 'rate_limited' && (
+
+
+                        </div>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       )}
                     </div>;
                   ))}
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               )}
             </Card>
           </div>
@@ -827,8 +1077,12 @@ export default function APIRateLimiterPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -838,11 +1092,15 @@ export default function APIRateLimiterPage() {;
               Advanced Rate Limiting Features
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Enterprise-grade rate limiting with intelligent algorithms and
@@ -1203,6 +1461,53 @@ const endpoint = '${endpoint || '/api/users'}';
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
 
+<<<<<<< HEAD
+=======
+
+console && console.log('Response:', response && response.data);
+console && console.log('Rate Limit Info:', {;
+  limit: response && response.headers['x-ratelimit-limit'],;
+  remaining: response && response.headers['x-ratelimit-remaining'],;
+  reset: response && response.headers['x-ratelimit-reset'];
+
+});`}
+                </pre>;
+              </div>;
+              <Button
+                onClick={() =>;
+                  copyToClipboard(`const axios = require('axios');}),`}
+                </pre>;
+              </div>;
+              <Button
+                onClick={() => copyToClipboard(`const axios = require('axios');
+
+const apiKey = '${apiKey || 'your_api_key_here'}';
+const endpoint = '${endpoint || '/api/users'}';
+
+// Make API request with rate limiting;
+const response = await axios && axios.get(\`https://api && api.zion.tech\${endpoint}\`, {;
+  headers: {;
+    'Authorization': \`Bearer \${apiKey}\`,;
+    'X-RateLimit-Limit': '${rateLimit}',;
+
+    'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
+=======
+}),`}
+                </pre>
+              </div>
+              <Button
+                onClick={() => copyToClipboard(`const axios = require('axios');
+
+const apiKey = '${apiKey || 'your_api_key_here'}';
+const endpoint = '${endpoint || '/api/users'}';
+
+// Make API request with rate limiting
+const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
+  headers: {
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
@@ -1210,10 +1515,22 @@ const endpoint = '${endpoint || '/api/users'}';
     'X-RateLimit-Window': '${timeWindow}'  }
 
 
+<<<<<<< HEAD
+=======
+=======
+    'Authorization': \`Bearer \${apiKey}\`,
+    'X-RateLimit-Limit': '${rateLimit}',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 });
 
@@ -1265,12 +1582,19 @@ response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
 
+<<<<<<< HEAD
 response = requests.get(
 
 response = requests.get(;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+response = requests.get(;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     f'https://api.zion.tech{endpoint}';
 
     headers=headers
@@ -1350,11 +1674,14 @@ response = requests.get(
 response = requests.get(
 
 
+<<<<<<< HEAD
 
 response = requests.get(;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     f'https://api.zion.tech{endpoint}';
 
     headers=headers
@@ -1492,6 +1819,7 @@ console.log ('Rate Limit Info:', {
       </section>
       {/* CTA Section */}
 
+<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-green-600 to-blue-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
@@ -1534,3 +1862,26 @@ console.log ('Rate Limit Info:', {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+              View Pricing;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+  );    </>;
+  );
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </>);    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

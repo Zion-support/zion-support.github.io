@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 declare module 'react' {
   const React: any;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   export default React,
   // Basic overloads for useRef to handle common cases;
@@ -9,7 +12,10 @@ declare module 'react' {
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
@@ -31,12 +37,20 @@ declare module 'react' {
   export const clone_element: any;
   export type ReactNode = any;
 
+<<<<<<< HEAD
   export type ReactElement = any
   export type ComponentType<P = {}> = (props: P) => any
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  export type ReactElement = any,
+  export type ComponentType<P = {}> = (props: P) => any,;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
@@ -58,6 +72,22 @@ declare module 'react' {
 
 
 }
+<<<<<<< HEAD
+=======
+declare module 'react-dom' {
+  export * from 'react-dom / index';
+}
+
+declare module 'react / jsx - runtime' {
+  export const jsx: any;
+  export const jsxs: any,
+  export const Fragment: any;
+
+}
+=======
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 declare module 'react-dom' {
   export * from 'react-dom/index'
@@ -69,8 +99,12 @@ declare module 'react/jsx-runtime' {;
   export const Fragment: any;
 };
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -117,6 +151,7 @@ declare module 'react' {;
   export type LegacyRef<T = any> = any,;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
+<<<<<<< HEAD
 
 
 }
@@ -128,14 +163,21 @@ declare module 'react/jsx-runtime' {
   export const jsxs: any
 
   export const Fragment: any
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 declare module 'react/jsx-runtime' {;
   export const jsx: any,;
@@ -147,5 +189,8 @@ declare module 'react/jsx-runtime' {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

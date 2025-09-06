@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
@@ -61,6 +62,8 @@ export interface UserDetails {;
   createdAt?: string,;
   updatedAt?: string;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -81,9 +84,12 @@ export interface UserDetails {
 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 export interface AuthContextType {;
@@ -245,6 +251,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
+<<<<<<< HEAD
 
       console.warn("No wallet detected");
       return
@@ -296,6 +303,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 }
 
 
+=======
+
+
+// Custom hook to use the auth context
+export function useAuth(): AuthContextType {;
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error("useAuth must be used within an AuthProvider")
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       console.warn("No wallet detected"),
       return
 ;
@@ -607,10 +625,13 @@ export function useAuth(): any (): AuthContextType {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   return context;
 }

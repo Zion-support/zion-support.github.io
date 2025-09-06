@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+import { defineConfig } from 'vite';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 
@@ -27,12 +31,28 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
+<<<<<<< HEAD
 
 
 
       '@assets': path.resolve(__dirname, './src/assets'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+=======
+      '@assets': path.resolve(__dirname, './src/assets')
+    }
+  },
+  css: {
+    postcss: false
+  },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: [
+      /src\/components\/video\//,
+      /src\/components\/DynamicListingPage\.tsx$/,
+    ],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },
 
 
@@ -87,8 +107,13 @@ export default defineConfig({
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
 
           return 'assets/[name]-[hash].[ext]';
+<<<<<<< HEAD
         },
       },
+=======
+        }
+      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
     terserOptions: {
       compress: {
@@ -235,6 +260,7 @@ export default defineConfig({
       } else {
         return { relative: true };
       }
+<<<<<<< HEAD
     },
   },
 
@@ -244,3 +270,8 @@ export default defineConfig({
 
 
 
+=======
+    }
+  }
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -183,7 +183,12 @@ export default function AIServices() {;
     </>;
   );
 }
+<<<<<<< HEAD
 :temp_conflicts/pages/ai-services.tsx
 ;
 }
 :backup-problematic-files/temp_conflicts/pages/ai-services.tsx
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

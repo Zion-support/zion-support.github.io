@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 origin/main
 origin/automation-improvements-final
 import {
+<<<<<<< HEAD
 
   Code
   Check
@@ -21,6 +22,8 @@ import {
   Cpu
   Cloud
   XCircle
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   Code,
   Check,
@@ -32,9 +35,13 @@ import {
   Cloud,
   XCircle,;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -86,7 +93,10 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
@@ -108,6 +118,16 @@ export default /**
  */
 function APIPage() {
   const api_endpoints = [;
+<<<<<<< HEAD
+=======
+=======
+  XCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from "lucide-react";
+export default function APIPage() {
+  const apiEndpoints = [
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: "auth",
       title: "Authentication",
@@ -161,6 +181,15 @@ function APIPage() {
       ],
     },
 
+<<<<<<< HEAD
+=======
+  }'`,
+        },
+      ],
+    },;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
 ;
   const response_examples = {

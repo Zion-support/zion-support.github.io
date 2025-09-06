@@ -7,19 +7,31 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Settings,;
   Trash2,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+=======
+import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 export default function URLShortenerPage() {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
@@ -341,6 +353,118 @@ export default function URLShortenerPage() {;
               </h3>
 
 
+<<<<<<< HEAD
+=======
+                <Button
+                  onClick={generateShortUrl}
+                  disabled={!longUrl && longUrl.trim() || isShortening}
+                  className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'>;
+                  {isShortening ? (;
+                    <>;
+                      <RefreshCw className='w-5 h-5 mr-2 animate-spin' />                      Creating Short URL...;
+                    </>;
+                  ) : (;
+                    <>;
+                      <Link className='w-5 h-5 mr-2' />                      Create Short URL                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed";
+                >;
+                  {isShortening ? (;
+                    <>;
+                      <RefreshCw className="w-5 h-5 mr-2 animate-spin" />;
+                      Creating Short URL...;
+                    </>;
+                  ) : (;
+                    <>;
+                      <Link className='w-5 h-5 mr-2' />                      <Link className="w-5 h-5 mr-2" />;
+                      Create Short URL;
+                    </>;
+                  )}
+                </Button>;
+                <div className='text-sm text-gray-400'>                  <p>• Professional, branded short URLs</p>                <div className="text-sm text-gray-400">;
+                  <p>• Professional, branded short URLs</p>;
+                  <p>• Click tracking and analytics</p>;
+                  <p>• QR code generation</p>;
+                  <p>• Custom aliases available</p>;
+                </div>;
+              </div>;
+            </Card>;
+            {/* Statistics */}
+            <Card className='p-8 bg-gray-800 border border-gray-700'>;
+              <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>;
+                <BarChart3 className='w-6 h-6 mr-3 text-red-400' />;
+                Your Statistics;
+              </h3>;
+              <div className='space-y-6'>;
+                <div className='grid grid-cols-2 gap-4'>;
+                  <div className='text-center p-4 bg-gray-700 rounded-lg'>;
+                    <div className='text-3xl font-bold text-orange-400 mb-2'>;
+                      {getTotalUrls()}
+                    </div>;
+                    <div className='text-sm text-gray-400'>Total URLs</div>;
+                  </div>;
+                  <div className='text-center p-4 bg-gray-700 rounded-lg'>;
+                    <div className='text-3xl font-bold text-red-400 mb-2'>;
+                      {getTotalClicks()}
+
+                    </div>;
+                    <div className='text-sm text-gray-400'>Total Clicks</div>                  </div>;
+                </div>;
+
+                {shortenedUrls && shortenedUrls.length === 0 ? (                Your Statistics;
+              </h3>;
+
+              <div className="space-y-6">;
+                <div className="grid grid-cols-2 gap-4">;
+                  <div className="text-center p-4 bg-gray-700 rounded-lg">;
+                    <div className="text-3xl font-bold text-orange-400 mb-2">;
+
+                      {getTotalUrls()}
+                    </div>
+                    <div className="text-sm text-gray-400">Total URLs</div>
+                  </div>
+                  <div className="text-center p-4 bg-gray-700 rounded-lg">
+                    <div className="text-3xl font-bold text-red-400 mb-2">
+                      {getTotalClicks()}
+
+
+                    </div>;
+                    <div className="text-sm text-gray-400">Total Clicks</div>;
+                  </div>;
+                </div>;
+                {shortenedUrls && shortenedUrls.length === 0 ? (;
+                  <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>;
+                    <div className='text-6xl mb-4'>📊</div>;
+                    <p className='text-gray-400'>;
+                      Your URL statistics will appear here. Create your first;
+                      short URL to get started.;
+                  </div>;
+                ) : (;
+                  <div className='space-y-3'>;
+                    <h4 className='text-lg font-semibold text-white mb-3'>;
+                      Recent URLs;
+                    </h4>;
+                    {shortenedUrls && shortenedUrls.slice(0, 3).map(url => (;
+                      <div key={url && url.id} className='p-3 bg-gray-700 rounded-lg'>;
+                        <div className='flex items-center justify-between'>;
+                          <div className='flex-1 min-w-0'>;
+                            <div className='text-sm text-orange-400 font-medium truncate'>;
+                              {url && url.shortUrl}
+                            </div>;
+                            <div className='text-xs text-gray-400 truncate'>;
+                              {url && url.longUrl}
+                            </div>;
+                          </div>;
+                          <div className='text-right ml-3'>;
+                            <div className='text-sm text-white font-medium'>                              {url && url.clicks} clicks                          <div className="text-right ml-3">;
+                            <div className="text-sm text-white font-medium">;
+                              {url && url.clicks} clicks;
+                            </div>;
+                          </div>;
+                        </div>;
+                      </div>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     ))}
                   </div>
                 )}
@@ -355,8 +479,12 @@ export default function URLShortenerPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 
@@ -595,8 +723,16 @@ export default function URLShortenerPage() {;
       )}
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Features */}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -755,6 +891,7 @@ export default function URLShortenerPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600'>
@@ -790,6 +927,10 @@ export default function URLShortenerPage() {;
     </>
 
 
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -1521,6 +1662,7 @@ export default function URLShortenerPage() {;
       </section>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1530,3 +1672,20 @@ export default function URLShortenerPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </>);
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

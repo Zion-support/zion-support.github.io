@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { rateLimit } from '../../utils/rate-limit';
 import { readJsonFile, writeJsonFile } from '../../utils/file-utils';
@@ -33,6 +34,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       writeJsonFile<Application[]>(FILE, apps)
       res.status(200).json({ application: existing })
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       return
     }
     const app: Application = {
@@ -58,6 +61,7 @@ type Application = {
   createdAtIso: string;
 };
 
+<<<<<<< HEAD
 const FILE = 'applications.json';
 
 
@@ -121,3 +125,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

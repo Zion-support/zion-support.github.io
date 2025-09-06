@@ -1,5 +1,15 @@
 
 
+<<<<<<< HEAD
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+export default function CaseStudyResourcePage() {
+  const router = useRouter(),
+  const { id } = router.query,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -189,6 +199,15 @@ export default function CaseStudyResourcePage() {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function CaseStudyResourcePage(req, res) {
   try {
@@ -373,9 +392,13 @@ export default function CaseStudyResourcePage(req, res) {
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
   if (!caseStudy) {
@@ -392,11 +415,17 @@ export default function CaseStudyResourcePage(req, res) {
                 The case study resource you're looking for doesn't exist.
               </p>
 
+<<<<<<< HEAD
               <Link
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -436,10 +465,14 @@ export default function CaseStudyResourcePage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -451,6 +484,7 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+<<<<<<< HEAD
 
 
               <div
@@ -469,6 +503,12 @@ export default function CaseStudyResourcePage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -479,6 +519,7 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 
 
   )
@@ -486,6 +527,8 @@ export default function CaseStudyResourcePage(req, res) {
   const caseStudy = caseStudies.find(study => study.id === id);
   if (!caseStudy) {;
     return (;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       <>;
         <Head>;
@@ -496,6 +539,24 @@ export default function CaseStudyResourcePage(req, res) {
             <div className="max - w-4xl mx - auto text - center">;
               <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
               <p className="text - xl text - white / 80 mb - 8">;
+<<<<<<< HEAD
+=======
+=======
+  ];
+  const caseStudy = caseStudies.find(study => study.id === id);
+  if (!caseStudy) {;
+    return (;
+      <>;
+        <Head>;
+          <title>Case Study Resource Not Found | Zion Tech Group</title>;
+        </Head>;
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+          <main className="container mx-auto px-6 py-12">;
+            <div className="max-w-4xl mx-auto text-center">;
+              <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>;
+              <p className="text-xl text-white/80 mb-8">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
@@ -556,6 +617,7 @@ export default function CaseStudyResourcePage(req, res) {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
 
     </>;
   );
@@ -570,3 +632,14 @@ export default function CaseStudyResourcePage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

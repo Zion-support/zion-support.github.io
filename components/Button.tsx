@@ -79,6 +79,7 @@ function Button() {
       className={classes}
       on_click={on_click}
       disabled={disabled}
+<<<<<<< HEAD
 
       {children}
     </button>
@@ -86,11 +87,17 @@ function Button() {
 }
 
 
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     >
       {children}
     </button>
   );
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -100,3 +107,25 @@ function Button() {
 
 
 
+=======
+    </button>);
+  
+  return (
+    <button
+      type={_type}
+      className={_classes}
+      onClick={_onClick}
+      disabled={_disabled}
+    >
+      {_children}
+    </button>
+  )
+
+}
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

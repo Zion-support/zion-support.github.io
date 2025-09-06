@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from "react";
 import Link from "next/link";
+<<<<<<< HEAD
 
 
   Phone,
@@ -72,6 +73,18 @@ import {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import {;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+  Instagram,;
+  ArrowRight,;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from "lucide-react";
 origin/main
 import React from 'react;';
@@ -83,10 +96,14 @@ origin/automation-improvements-final
 export default function Footer() {
 export default function Footer() {;
 
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function Footer() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export default function Footer() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
@@ -215,6 +232,7 @@ export default function Footer() {;
       <div className="container mx-auto px-4 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
+<<<<<<< HEAD
 
           <div className="lg:col-span-2">
             <Link href="/" className="text-2xl font-bold text-white mb-4 block">
@@ -227,6 +245,21 @@ export default function Footer() {;
             </p>
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+          <div className="lg:col-span-2">;
+            <Link href="/" className="text-2xl font-bold text-white mb-4 block">;
+              Zion Tech Group;
+            </Link>;
+            <p className="text-gray-300 mb-6 max-w-md">;
+              Leading technology solutions provider specializing in AI,;
+              cybersecurity, cloud infrastructure, quantum computing,;
+              blockchain, IoT, and digital transformation services.;
+            </p>;
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               quantum computing, blockchain, IoT, and digital transformation services.
@@ -237,11 +270,15 @@ origin/automation-improvements-final
               cybersecurity, cloud infrastructure, quantum computing
               blockchain, IoT, and digital transformation services.
             </p>
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -382,6 +419,11 @@ origin/automation-improvements-final
                     {link.name}
                   </Link>
                 </li>
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -458,16 +500,42 @@ origin/automation-improvements-final
           </div>
 
 
+<<<<<<< HEAD
+=======
+=======
+                    href={link && link.href}
+                    className="text-gray-300 hover:text-white transition-colors">;
+                    {link && link.name}
+                  </Link>;
+                </li>;
+              ))}
+            </ul>;
+          </div>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Company & Resources */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
@@ -498,12 +566,18 @@ origin/automation-improvements-final
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (

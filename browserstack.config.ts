@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { defineConfig, devices } from '@playwright/test';
 
@@ -5,6 +6,10 @@ import { defineConfig, devices } from '@playwright/test';
     baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
     trace:'on-first-retry'}
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -22,6 +27,7 @@ import { defineConfig, devices } from '@playwright/test';
     {name:'Mobile Chrome';
       use:{;
         browserName:'chromium';
+<<<<<<< HEAD
 
   ],;
   reporter:[;
@@ -81,6 +87,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ...devices['Pixel 5']}
     }
     {name:'Mobile Safari';
@@ -90,6 +98,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     }
   ];
   reporter:[;
+<<<<<<< HEAD
+=======
+    ['list'];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -146,14 +158,27 @@ import { defineConfig, devices } from '@playwright/test';
 
     }
 
+<<<<<<< HEAD
+=======
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+});
+
+=======
+
+
+    ['list'];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

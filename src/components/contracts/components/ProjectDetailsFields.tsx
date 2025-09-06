@@ -33,6 +33,7 @@ import {
   FormMessage 
 } from "@/components/ui/form",
 
+<<<<<<< HEAD
 
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -46,6 +47,11 @@ import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
 
 
+=======
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
 
@@ -66,12 +72,15 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
 
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
@@ -111,7 +120,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
@@ -167,6 +179,28 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
       />;
       <FormField;
         control={form.control}
+<<<<<<< HEAD
+=======
+        name='scope_summary';
+
+        render={({
+          field
+        }: {
+
+          field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>;
+        }) => (          <FormItem>;
+            <FormLabel>Scope Summary</FormLabel>;
+            <FormControl>;
+              <Textarea
+                placeholder='Describe the project scope, deliverables, and expectations...'
+                className='min-h-[120px]'                {...field}        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> },) => (;
+
+
+      <FormField
+        control={form && form.control}
+        name="scopeSummary"
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
@@ -282,16 +316,20 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         )}
       />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control={form.control}
+<<<<<<< HEAD
 
 
           name='startDate'
@@ -311,6 +349,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>Start Date</FormLabel>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <Popover>
@@ -323,11 +363,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
@@ -425,11 +468,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                   <Calendar
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     initialFocus
                   />
                 </PopoverContent>
@@ -437,6 +483,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
 
 
         />
@@ -461,6 +508,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>End Date (Optional)</FormLabel>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <Popover>
@@ -473,11 +522,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (

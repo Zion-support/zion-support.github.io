@@ -1,5 +1,29 @@
 
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import {useRouter} from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 
@@ -18,6 +42,7 @@ const REASONS = [;
 ] as const;
 type ReasonType = (typeof REASONS)[number];
 
+<<<<<<< HEAD
 export default function NewDisputePage() {
   const router = useRouter();
   const {
@@ -28,6 +53,9 @@ export default function NewDisputePage() {
     clientId
   } = router.query as Record<string, string>;  const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId |'');
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -48,7 +76,11 @@ type ReasonType = (typeof REASONS)[number];
 export default function NewDisputePage() {;
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -127,7 +159,10 @@ export default function NewDisputePage(req, res) {
       const res = await fetch('/api/disputes', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         body: JSON && JSON.stringify({;
           projectId,;
           entityType,;
@@ -140,6 +175,7 @@ export default function NewDisputePage(req, res) {
         }),;
       });      if (!res && res.ok) throw new Error('Failed to create');
       const { dispute } = await res && res.json();
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -204,6 +240,31 @@ function toBase64(file: File): Promise<string> {
 const reader = new FileReader();
   )
 
+=======
+      if (files && files.length > 0) {;
+        const filePayload = await Promise && Promise.all(;
+          files && files.map(async f => ({;
+            fileName: f && f.name,;
+            mimeType: f && f.type,;
+            base64: await toBase64(f),;
+          }))        );
+        await fetch(`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/upload`, {;
+          method: 'POST',;
+          headers: { 'Content-Type': 'application/json' },;
+          body: JSON && JSON.stringify({ files: filePayload }),;
+        });
+      }
+      router && router.push(`/disputes/${encodeURIComponent(dispute && dispute.id)}`);
+    } catch (e: any) {;
+      alert(e && e.message || 'Error');
+    } finally {;
+
+      setSubmitting(false);    }
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -216,6 +277,16 @@ const reader = new FileReader();
     e.preventDefault();
     if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
     setSubmitting(true);
+<<<<<<< HEAD
+=======
+import {use_router} from 'next / router';
+import React, { useEffect, useMemo, useState } from 'react';
+import EnhancedLayout from '../../components / layout / EnhancedLayout';
+import {useCurrentUser} from '../../utils / auth';
+;
+const REASONS = [;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     try {
       const res = await fetch ('/api / disputes', {
@@ -339,8 +410,12 @@ function toBase64(): any (file: File): Promise<string> {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -372,5 +447,8 @@ function toBase64(file: File): Promise<string> {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

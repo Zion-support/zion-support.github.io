@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState, useEffect } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -12,6 +15,7 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
+<<<<<<< HEAD
 
   resumeId?: string;
   initialData?: Partial<BasicInfoFormData>;
@@ -27,6 +31,8 @@ import { basicInfoSchema, BasicInfoFormData } from "./schema",
 import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ContactFields } from "./ContactFields";
 export interface BasicInfoFormProps {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   resumeId?: string;
 
@@ -46,10 +52,17 @@ export interface BasicInfoFormProps {
   yearsExperience?: number,
   onComplete?: () => void
 }
+<<<<<<< HEAD
 
 
 export function BasicInfoForm({
 
+=======
+
+
+export function BasicInfoForm(): any ({;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   resumeId;
 
   initialData = {}
@@ -57,6 +70,7 @@ export function BasicInfoForm({
   skills = [];
   yearsExperience = 0;
 
+<<<<<<< HEAD
   resumeId,
   initialData = {},
   onSave,
@@ -67,6 +81,17 @@ export function BasicInfoForm({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+  onComplete?: () => void
+}
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
@@ -148,6 +173,7 @@ export function BasicInfoForm({;
           form.setValue(key as keyof BasicInfoFormData, value as any);
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         }
@@ -168,6 +194,19 @@ export function BasicInfoForm({;
 
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+      });
+    }
+
+
+=======
+
+  };
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
@@ -181,8 +220,12 @@ export function BasicInfoForm({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
 

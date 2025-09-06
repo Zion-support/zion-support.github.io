@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Calendar, RefreshCw } from "@/components/icons",
 import { Card, CardContent } from "@/components/ui/card",
@@ -21,6 +22,11 @@ import type { QuoteStatus } from "@/types/quotes",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -36,6 +42,7 @@ interface QuotesFilterProps {
 }
 
 
+<<<<<<< HEAD
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery;
   setSearchQuery;
@@ -44,6 +51,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter;
   setArchiveFilter;
   dateRange;
+=======
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   setSearchQuery;
   status_filter;
@@ -98,6 +108,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Select>;
           </div>;
 
+<<<<<<< HEAD
           <div>;
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>;
             <Popover>;
@@ -129,11 +140,17 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+<<<<<<< HEAD
 
                 />
               </PopoverContent>
@@ -161,3 +178,60 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+
+},
+
+
+=======
+          <div>;
+            <p className="text - zion - slate - light text - sm mb - 2">Date Range</p>;
+            <Popover>;
+              <PopoverTrigger as_child>;
+                <Button;
+                  variant="outline";
+                  className="w - full justify - start text - left font - normal bg - zion - blue border - zion - blue - light text - white";
+                >;
+                  <Calendar className="mr - 2 h - 4 w - 4 text - zion - slate - light" />;
+                  {date_range?.from ? (
+                    date_range.to ? (
+                      <>;
+                        {format (date_range.from, "LLL dd, y")} -{" "}
+                        {format (date_range.to, "LLL dd, y")}
+                      </>) : (
+                      format (date_range.from, "LLL dd, y"))) : (
+                    <span > Date range</span>)}
+                </Button>;
+              </PopoverTrigger>;
+              <PopoverContent className="w - auto p - 0 bg - zion - blue - dark border - zion - blue - light" align="start">;
+                <CalendarComponent;
+                  initial_focus;
+                  mode="range";
+                  default_month={date_range?.from}
+                  selected={date_range}
+                  on_select={setDateRange}
+                  numberOfMonths={2}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                />;
+              </PopoverContent>;
+            </Popover>;
+          </div>;
+        </div>;
+
+        <div className="mt - 4 flex justify - end">;
+          <Button;
+            variant="outline";
+            on_click={on_reset}
+            className="border - zion - blue - light text - zion - slate - light";
+          >;
+            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -21,15 +21,40 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+<<<<<<< HEAD
+=======
+=======
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
+=======
+  className = '',;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {;
   className?: string;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+interface UltraFuturisticNavigationProps {
+  className?: string
+
+}
+
+
+
+export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -105,14 +130,20 @@ interface UltraFuturisticNavigationProps {;
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
 
+<<<<<<< HEAD
     { name: 'Pricing', href: '/pricing' },  ];
 
   ];
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -130,7 +161,34 @@ interface UltraFuturisticNavigationProps {;
 
 export default function UltraFuturisticNavigation(): any ({ className = '' }: UltraFuturisticNavigationProps) {;
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+
+
+        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
+      ];
+    };
+    { name: 'Solutions', href: '/solutions' },;
+    { name: 'About', href: '/about' },;
+    { name: 'Contact', href: '/contact' },;
+    { name: 'Pricing', href: '/pricing' }
+
+
+
+    >;
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+        <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
+    <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         : 'bg-transparent'
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -221,7 +279,11 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {/* Dropdown Menu */}
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
@@ -302,6 +364,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                                     <dropdownItem.icon className='w-5 h-5 text-white' />
                                   </div>
 
+<<<<<<< HEAD
                                   <div>
                                     <div className='text-white font-medium group-hover/item:text-cyan-300 transition-colors'>
                                       {dropdownItem.name}
@@ -328,6 +391,11 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                                 </Link>
                               ))}
                             </div>
@@ -345,9 +413,12 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   >
                     {item.name}
                   </Link>
@@ -356,15 +427,78 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               </div>;
             ))}
 
+<<<<<<< HEAD
+=======
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  >
+=======
+                          className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden';
+                        >;
+                          <div className='p - 4'>;
+                            <div className='grid gap - 3'>                              {item.dropdown_items?.map ((dropdown_item, idx) => (
+                                <Link;
+                                  key={dropdown_item.name}
+                                  href={dropdown_item.href}
+                                  className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 300 group / item'                          className="absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden";
+                        >;
+                          <div className="p - 4">;
+                            <div className="grid gap - 3">;
+                                <Link;
+                                  key={dropdown_item.name}
+                                  href={dropdown_item.href}
+                                  className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 300 group / item';
+                                >;
+                                  <div;
+                                    className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / item:scale - 110 transition - transform duration - 300`}
+                                  >;
+                                    <dropdown_item.icon className='w - 5 h - 5 text - white' />;
+                                  </div>;
+                                  <div>;
+                                    <div className='text - white font - medium group - hover / item:text - cyan - 300 transition - colors'>;
+                                      {dropdown_item.name}
+                                    </div>;
+                                    {dropdown_item.name ===;
+                                      'View All Services' && (
+                                      <div className='text - xs text - gray - 400'>;
+                                        Explore our complete portfolio;
+                                      </div>                                    )}                                >;
+                                  <div className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / item:scale - 110 transition - transform duration - 300`}>;
+                                    <dropdown_item.icon className="w - 5 h - 5 text - white" />;
+                                  </div>;
+                                  <div>;
+                                    <div className="text - white font - medium group - hover / item:text - cyan - 300 transition - colors">;
+                                      {dropdown_item.name}
+                                    </div>;
+                                    {dropdown_item.name === 'View All Services' && (
+                                      <div className="text - xs text - gray - 400">Explore our complete portfolio</div>)}
+                                  </div>;
+                                </Link>))}
+                            </div>;
+                          </div>;
+                        </motion.div>)}
+                    </AnimatePresence>;
+                  </div>) : (
+                  <Link;
+                    href={item.href}
+                    className='text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                  >                    className="text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
+                  >;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
           </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Contact Info & CTA */}
 
 
@@ -391,11 +525,15 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
@@ -439,11 +577,19 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -486,8 +632,13 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {activeDropdown === item.name && (
                         <motion.div
 
@@ -507,9 +658,12 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         >
                           {item.dropdownItems?.map(dropdownItem => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -545,11 +699,14 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                               </span>
                             </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -568,8 +725,11 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                       onClick={() => setIsOpen(false)}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       {item.name}
@@ -597,11 +757,14 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -789,6 +952,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
       </AnimatePresence>
     </nav>
+<<<<<<< HEAD
 
 
 }
@@ -801,3 +965,14 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

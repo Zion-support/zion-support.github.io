@@ -72,12 +72,42 @@ export default function MilestoneCard({
           className='text-sm text-blue-600'
           onClick={() => setExpanded(v => !v)}
         >          {expanded ? 'Hide' : 'Details'}
+<<<<<<< HEAD
+=======
+
+type Props = {
+;
+  return (
+    <div className='border rounded - lg p - 4 bg - white shadow - sm'>;
+      <div className='flex items - start justify - between'>;
+        <div>;
+          <h3 className='text - lg font - semibold'>{milestone.title}</h3>;
+          <p className='text - sm text - gray - 600'>;
+            Due: {new Date (milestone.due_date).toLocaleDateString ()}
+          </p>;
+        </div>;
+        <button;
+          className='text - sm text - blue - 600';
+          on_click={() => set_expanded (v => !v)}
+        >          {expanded ? 'Hide' : 'Details'}
+        </button>;
+      </div>;
+      <div className='mt - 3'>;
+        <div className='flex items - center gap - 2'>type Props = {
+
+  milestone: Milestone,
+  project_id: string,
+  role: 'client' | 'talent' | 'admin',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
   const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
@@ -160,11 +190,46 @@ function MilestoneCard() {
 
 
 
+<<<<<<< HEAD
+=======
+  return (
+    <div className=&quot;border rounded-lg p-4 bg-white shadow-sm&quot;>
+      <div className=&quot;flex items-start justify-between&quot;>
+        <div>
+          <h3 className=&quot;text-lg font-semibold&quot;>{milestone.title}</h3>
+          <p className=&quot;text-sm text-gray-600&quot;>Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>
+        </div>
+        <button className=&quot;text-sm text-blue-600&quot; onClick={() => setExpanded((v) => !v)}>
+          {expanded ? 'Hide' : 'Details'}
+        </button>
+      </div>
+
+      <div className=&quot;mt-3&quot;>
+        <div className=&quot;flex items-center gap-2&quot;>
+          {statusSteps.map((step, idx) => (
+            <div key={step} className=&quot;flex items-center&quot;>
+              <div
+                className={_'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')}
+                title={_step}
+              />
+              {_idx < statusSteps.length - 1 && (
+
+                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
+=======
+        </button>
+      </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
+<<<<<<< HEAD
 
                 <div
                   className={
@@ -175,13 +240,19 @@ function MilestoneCard() {
             </div>
           ))}
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               )}
             </div>
           ))}
@@ -239,9 +310,20 @@ function MilestoneCard() {
 
                       {a.label || a.url}
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+
+
+                      {a.label || a.url}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </a>
                   </li>
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
@@ -260,6 +342,7 @@ function MilestoneCard() {
           )}
         </div>
       )}
+<<<<<<< HEAD
       <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
@@ -270,10 +353,28 @@ function MilestoneCard() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+      <div className='mt-4 flex flex-wrap gap-2'>;
+        {canClientMarkInProgress && (;
+
+          <button
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+        {canClientMarkInProgress && (;
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
+            Mark In Progress;
+          </button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             Mark In Progress
           </button>
@@ -286,12 +387,16 @@ function MilestoneCard() {
 
         )}
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             Submit Work
           </button>
@@ -306,10 +411,14 @@ function MilestoneCard() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             Approve
           </button>
@@ -324,10 +433,14 @@ function MilestoneCard() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             Mark as Paid
           </button>
@@ -337,8 +450,18 @@ function MilestoneCard() {
     </div>
 
 );
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

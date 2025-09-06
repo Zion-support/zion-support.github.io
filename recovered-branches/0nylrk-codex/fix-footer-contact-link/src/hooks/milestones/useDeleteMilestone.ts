@@ -1,12 +1,20 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
+<<<<<<< HEAD
 
 export const useDeleteMilestone = () => {
   const { user } = useAuth();
@@ -15,6 +23,15 @@ export const useDeleteMilestone = () => {
     if (!user) return false;
 
 
+=======
+
+
+export const useDeleteMilestone = () => {;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -58,6 +75,7 @@ export const useDeleteMilestone = () => {
       return false
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
 
 
 import { useState } from 'react',;
@@ -93,5 +111,9 @@ export const useDeleteMilestone = () => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 };

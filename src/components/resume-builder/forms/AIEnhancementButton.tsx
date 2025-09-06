@@ -6,6 +6,7 @@ export function AIEnhancementButton({
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
+<<<<<<< HEAD
 
 
   const { enhanceContent, isEnhancing } = useResumeEnhancer()
@@ -34,6 +35,11 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       return
     }
     setError(null)
@@ -112,9 +118,12 @@ if ( {) {
 }
       on_enhanced (enhanced_content);
     }
+<<<<<<< HEAD
 
 
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -124,8 +133,11 @@ if ( {) {
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <Button
@@ -139,12 +151,16 @@ if ( {) {
       disabled={isEnhancing}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
+<<<<<<< HEAD
 
 
         <Sparkles className="h-3 w-3" />
@@ -166,6 +182,8 @@ if ( {) {
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }

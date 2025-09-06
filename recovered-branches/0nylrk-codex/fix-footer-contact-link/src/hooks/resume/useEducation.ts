@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
@@ -9,7 +12,10 @@ import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeU
 export function useEducation() {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -21,6 +27,10 @@ export function useEducation() {;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -37,8 +47,11 @@ export function useEducation() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     
     setIsLoading(true),
@@ -79,6 +92,7 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
     }
   }
@@ -88,6 +102,12 @@ export function useEducation() {;
       return false
 
 
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     setError(null),;
@@ -121,8 +141,11 @@ export function useEducation() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     
     setIsLoading(true),
@@ -163,6 +186,7 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
     }
   }
@@ -172,6 +196,12 @@ export function useEducation() {;
       return false
 
 
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     setError(null),;
@@ -205,8 +235,11 @@ export function useEducation() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     
     setIsLoading(true),
@@ -227,6 +260,7 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not delete education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
     }
   }
   return {
@@ -236,10 +270,28 @@ export function useEducation() {;
     updateEducation;
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
+=======
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {Education} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export /**
+ * use_education - Function description
+ */
+function use_education() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
     // Check condition
@@ -260,8 +312,11 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

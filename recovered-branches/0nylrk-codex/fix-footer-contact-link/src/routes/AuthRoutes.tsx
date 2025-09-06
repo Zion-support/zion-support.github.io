@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import Login from "@/pages/Login",
@@ -75,6 +76,12 @@ import ServiceOnboarding from "@/pages/ServiceOnboarding",;
 
 const AuthRoutes = () => {
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const AuthRoutes = () => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const AuthRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -113,6 +120,7 @@ const AuthRoutes = () => {;
       />;
     </Routes>;
   );
+<<<<<<< HEAD
 
 
 
@@ -120,4 +128,15 @@ const AuthRoutes = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+};
+
+
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default AuthRoutes;

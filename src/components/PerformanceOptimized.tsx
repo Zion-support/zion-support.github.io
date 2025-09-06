@@ -7,8 +7,11 @@
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 }
 }
@@ -40,11 +43,14 @@ export const usePerformanceMetrics = () => {
   return { metrics, recordRender }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react';
 
 export default function PerformanceOptimized() {

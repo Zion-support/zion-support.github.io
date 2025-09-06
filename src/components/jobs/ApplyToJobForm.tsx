@@ -12,6 +12,7 @@ import { Job } from "@/types/jobs";
 import { toast } from "sonner";
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -19,6 +20,10 @@ import { toast } from "sonner",
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ApplyToJobFormProps {
 
   job: Job
@@ -26,12 +31,19 @@ interface ApplyToJobFormProps {
   onSuccess?: () => void
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
   const { resumes, isLoading: isResumesLoading } = useResume()
@@ -46,6 +58,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply")
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
+<<<<<<< HEAD
 
 
       return
@@ -54,6 +67,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError("Please provide a cover letter")
       return
     }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       return;
@@ -66,8 +81,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     setIsSubmitting(true)
     setError(null)
     try {
@@ -76,12 +94,18 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         coverLetter
 
 
+<<<<<<< HEAD
         selectedResumeId |undefined
         resumeFile |undefined
         selectedResumeId || undefined
         resumeFile || undefined
 
 
+=======
+        selectedResumeId || undefined
+        resumeFile || undefined
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )
       if (success) {
         toast.success("Your application has been submitted!")
@@ -123,6 +147,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       
       if (success) {
         toast.success("Your application has been submitted!"),
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -131,6 +156,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         if (onSuccess) {
           onSuccess()
         }
@@ -226,6 +256,7 @@ if ( {) {
         </p>
       </div>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -233,6 +264,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -343,6 +378,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
           </p>
         </div>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -350,6 +386,10 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -532,11 +572,14 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                       </SelectItem>;
                     );
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   }
                   return null;
                 })}
@@ -582,10 +625,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="flex justify-end gap-2">
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
           />;
@@ -605,11 +651,14 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           onClick={() => {;
             if (onSuccess) onSuccess();
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
         >;
           Cancel;
@@ -623,6 +672,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (;
             "Submit Application";
           )}
+<<<<<<< HEAD
 
 
         </Button>
@@ -650,6 +700,8 @@ handleSubmit
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
 }"}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;

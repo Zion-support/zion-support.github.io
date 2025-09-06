@@ -20,12 +20,25 @@ interface AIMilestoneGeneratorProps {
 
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
+<<<<<<< HEAD
 
 
 export function AIMilestoneGenerator(): any ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export function AIMilestoneGenerator(): any ({;
+
+=======
+
+
+
+export function AIMilestoneGenerator({;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   scope;
   startDate;
   endDate;
@@ -35,6 +48,7 @@ export function AIMilestoneGenerator(): any ({;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
+<<<<<<< HEAD
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
   const handleGenerateMilestones = async () => {
     if (!scope |!startDate |!projectType) {
@@ -80,6 +94,15 @@ export function AIMilestoneGenerator(): any ({;
     }
 
 
+=======
+
+=======
+    }
+
+  };
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -165,7 +188,11 @@ export function AIMilestoneGenerator({;
   },
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

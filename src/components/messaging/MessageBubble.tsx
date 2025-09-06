@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Message } from '@/types/messaging';
 
@@ -28,8 +29,15 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             {message.attachment_name || 'Attachment'}
           </a>
         )}
+=======
+import React from 'react';
+import { format } from 'date-fns';
+import { PaperclipIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
 
 
@@ -74,6 +82,8 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface MessageBubbleProps {
   message: Message;
   isUserMessage: boolean;

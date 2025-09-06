@@ -6,8 +6,11 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
   // Set top/popular countries
   useEffect(() => {
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -28,6 +31,7 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -36,10 +40,16 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     setTopCountries(top)
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
+<<<<<<< HEAD
 
 
     const country =
@@ -51,6 +61,8 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
   },
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { useState, useEffect } from 'react';
@@ -269,6 +281,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -277,6 +290,11 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
@@ -286,11 +304,14 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
     </div>
   )
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Set top / popular countries;
   useEffect (() => {
     const popular = [;
@@ -354,3 +375,14 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 
 
 ;
+<<<<<<< HEAD
+=======
+
+          </div>;
+        </SelectContent>;
+      </Select>;
+    </div>;
+  );
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

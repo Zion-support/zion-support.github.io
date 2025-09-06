@@ -1,12 +1,25 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 #!/usr/bin/env node;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -137,6 +150,73 @@ analyzeBundleSize () {
       return { "error": error && error.message };",
 
 
+<<<<<<< HEAD
+=======
+    return ['example - unused - package'];',
+  }
+  generate_recommendations () {
+#!/usr / bin / env node;
+const fs = require ('fs');
+const path = require ('path');
+const { exec_sync } = require ('child_process');
+class PerformanceOptimizer {ursor / migrate - github - actions - to - pm2 - and - clean - up - 5599;
+  constructor () {
+    this.optimizations = [];
+    this.log_file = path.join (__dirname, 'logs', 'performance - optimizer.log');
+    this.ensureLogDirectory ();
+  }
+  ensureLogDirectory () {
+    const log_dir = path.dirname (this.log_file);
+    if () {) {
+  $2
+}
+      fs.mkdir_sync (log_dir, { "recursive": true });
+    }
+  }
+  log (message, level = 'INFO') {
+    const timestamp = new Date ().toISOString ();
+    const log_message = `[${timestamp}] [${level}] ${message}\n`;
+    fs.appendFileSync (this.log_file, log_message);
+
+  }
+  async optimize_performance () {
+    try {
+
+
+      };
+
+
+      this.saveReport(report);
+      this.log('Performance optimization completed');
+=======
+        "timestamp": new Date().toISOString(),
+        "bundleSize": bundleAnalysis,
+        "imageOptimization": imageOptimization,
+        "dependencies": dependencyAnalysis,
+        "recommendations": this && this.generateRecommendations()
+      };
+      this && this.saveReport(report);
+      this && this.log('Performance optimization completed');
+=======
+      this.log('Starting performance optimization...');
+      // Analyze bundle size
+      const bundleAnalysis = this.analyzeBundleSize();
+      // Optimize images
+      const imageOptimization = this.optimizeImages();
+      // Check for unused dependencies
+      const dependencyAnalysis = this.analyzeDependencies();
+      // Generate optimization report
+      const report = {
+        "timestamp": new Date().toISOString()
+        "bundleSize": bundleAnalysis
+        "imageOptimization": imageOptimization
+        "dependencies": dependencyAnalysis
+        "recommendations": this.generateRecommendations()
+
+      this.saveReport(report);
+      this.log('Performance optimization completed');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       return report;
     } catch (error) {
       this && this.log(`Performance optimization "failed": ${error && error.message}`, 'ERROR');
@@ -179,6 +259,98 @@ analyzeBundleSize () {
 
       return { "error": error && error.message };
 
+<<<<<<< HEAD
+=======
+=======
+  "total_size": "2.1MB, "gzipped_size": ;
+"650KB";
+"total_size": '2.1MB',
+        "gzipped_size": '650KB',
+        "recommendations": ['Consider code splitting', 'Remove unused dependencies'];
+      }
+    } catch (error) {
+      return { "error": error.message }
+    }
+  }ursor / migrate - github - actions - to - pm2 - and - clean - up - 5599;
+  optimize_images () {
+    try {
+
+      // Placeholder for image optimization;
+      return { optimized: 0, "total_images": 0, "savings": '0KB' }
+    } catch (error) {
+
+      return { "error": error.message }
+    }
+  }
+  analyze_dependencies () {
+try {
+
+      return { "error": error && error.message };
+    }
+  }
+  analyzeDependencies() {
+  try {
+  const packageJson = JSON && JSON.parse(fs && fs.readFileSync(path && path.resolve(import && import.meta.url, "../package ;
+      const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || { /* empty */ });
+      const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || { /* empty */ });
+try {
+      const packageJson = JSON && JSON.parse(fs && fs.readFileSync(path && path.resolve(__dirname, '../package && package.json'), 'utf8'));
+      const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {});
+      const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+      return {
+        "totalDependencies": dependencies && dependencies.length + devDependencies && devDependencies.length,
+        "productionDependencies": dependencies && dependencies.length,
+        "devDependencies": devDependencies && devDependencies.length,
+        "potentialUnused": this && this.findUnusedDependencies()
+      };
+    } catch (error) {
+      return { "error": error && error.message };
+
+=======
+  const package_json = JSON.parse (fs.readFileSync (path.resolve (import.meta.url, "../package.json"), "utf8"));
+      const dependencies = Object.keys (package_json.dependencies || { /* empty */ });
+      const dev_dependencies = Object.keys (package_json.dev_dependencies || { /* empty */ });
+try {
+      const package_json = JSON.parse (fs.readFileSync (path.resolve (__dirname, '../package.json'), 'utf8'));
+      const dependencies = Object.keys (package_json.dependencies || {});
+      const dev_dependencies = Object.keys (package_json.dev_dependencies || {});ursor / migrate - github - actions - to - pm2 - and - clean - up - 5599;
+      return {
+        "total_dependencies": dependencies.length + dev_dependencies.length,
+        "production_dependencies": dependencies.length,
+        "dev_dependencies": dev_dependencies.length,
+        "potential_unused": this.findUnusedDependencies ();
+      }
+    } catch (error) {
+      return { "error": error.message }
+    }
+  }
+  findUnusedDependencies () {
+    // Placeholder for unused dependency detection;
+    return ['example - unused - package'];
+  }
+
+  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React && React.memo for expensive components";
+    // // // // // // // // console && console.log(;
+
+  "Performance report:", report);
+}
+  generate_recommendations () {
+return [";Implement code splitting for better performance_optimize images using WebP format_remove unused dependencies, Enable gzip compression, Use React.memo for expensive components";
+    // // // // // // // // console.log (
+  "Performance report:", report);
+},
+});
+}}}}}}}}}}}}}}}
+    // // // // // // // // }
+})}}}}}}}}}}}}}}}
+
+return ['Implement code splitting for better performance',
+      'Optimize images using WebP format',
+      'Remove unused dependencies',
+      'Enable gzip compression',
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }};
@@ -215,6 +387,7 @@ optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 
 
@@ -226,3 +399,6 @@ optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

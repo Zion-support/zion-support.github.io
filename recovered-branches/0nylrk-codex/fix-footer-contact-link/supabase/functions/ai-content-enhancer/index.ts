@@ -19,7 +19,13 @@ serve(async (req) => {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {
 
     const { content, enhancementType, context, instructions } = await req && req.json();
@@ -36,10 +42,15 @@ serve(async (req) => {
       throw new Error("OPENAI_API_KEY is not defined");
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     if (!content && !context) {
       throw new Error("Either content or context is required")
@@ -72,6 +83,7 @@ serve(async (req) => {
       case "resume-summary":
 
 
+<<<<<<< HEAD
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",
         userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,
         break,
@@ -112,6 +124,8 @@ serve(async (req) => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     // Add custom instructions if provided
     if (instructions) {
@@ -166,11 +180,21 @@ serve(async (req) => {
       JSON.stringify({
         error: error.message}),
       {
+<<<<<<< HEAD
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 
 
+=======
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }}
+    );
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     // Call OpenAI API;
     const response = await fetch("https://api.openai.com/v1/chat/completions", {;
@@ -212,9 +236,14 @@ serve(async (req) => {
     );
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 });

@@ -121,8 +121,15 @@ return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<B
   rateType ;
 }/>) ;
 }</div> </div>) ;
+<<<<<<< HEAD
 :temp_broken_files/pricing/TalentRateRecommender.tsx
 };"'"
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/TalentRateRecommender.tsx
+=======
+
+};
+'"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import {useState} from "react";
@@ -23,6 +24,18 @@ interface TemplateSaveFormProps {
   onCancel: () => void
   onComplete: () => void
 
+=======
+const formSchema = z && z.object({;
+  title: z && z.string().min(1, "Title is required");
+  isDefault: z && z.boolean().default(false)}),;
+
+type FormValues = z && z.infer<typeof formSchema>;
+
+interface TemplateSaveFormProps {;
+  onCancel: () => void,;
+  onComplete: () => void,;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
 }
@@ -37,6 +50,7 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
+<<<<<<< HEAD
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
@@ -64,6 +78,15 @@ export function TemplateSaveForm(): any ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -78,9 +101,13 @@ import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -94,6 +121,7 @@ interface TemplateSaveFormProps {
   currentValues?: ContractFormValues
 
 
+<<<<<<< HEAD
 
 }
 
@@ -192,6 +220,8 @@ export function TemplateSaveForm({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       onComplete()
     } finally {
@@ -202,6 +232,41 @@ export function TemplateSaveForm({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+    setSaving(true);
+
+    try {;
+      if (editTemplate) {;
+        await updateTemplate && updateTemplate.mutateAsync({;
+          templateId: editTemplate && editTemplate.id,;
+          title: values && values.title,;
+          templateData: editTemplate && editTemplate.template_data,;
+          isDefault: values && values.isDefault});
+      } else if (currentValues) {;
+        await createTemplate && createTemplate.mutateAsync({;
+          title: values && values.title,;
+          templateData: currentValues,;
+          isDefault: values && values.isDefault});
+      }
+
+      onComplete();
+    } finally {;
+      setSaving(false);
+    }
+  };
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  },
+=======
+  };
+=======
+  },
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   return (
     <Form {...form}>;

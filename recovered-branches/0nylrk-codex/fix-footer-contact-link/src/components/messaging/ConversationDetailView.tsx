@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
@@ -14,7 +17,10 @@ import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth();
   const {
     activeConversation;
@@ -30,6 +36,7 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]);
+<<<<<<< HEAD
 
   useEffect(() => {
     scrollToBottom()
@@ -70,11 +77,33 @@ export function ConversationDetailView() {;
     }
   }, [activeConversation?.id, loadMessages]),
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {format} from 'date-fns';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+import {format} from 'date - fns';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import {MessageSquare} from 'lucide-react';
+import {use_messaging} from '@/context / MessagingContext';
+import {Button} from '@/components / ui / button';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
+import {AspectRatio} from '@/components / ui / aspect - ratio';
+import {use_auth} from '@/hooks / use_auth';
+import {MessageBubble} from './MessageBubble';
+import {DateDivider} from './DateDivider';
+
+  }, [activeConversation?.id, loadMessages]),
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   useEffect(() => {
     scrollToBottom()
@@ -107,7 +136,11 @@ import {format} from 'date-fns';
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -125,6 +158,11 @@ import {format} from 'date-fns';
 
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 
   // Group messages by date;
@@ -147,8 +185,11 @@ import {format} from 'date-fns';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
@@ -249,6 +290,7 @@ import {format} from 'date-fns';
           <textarea
             value={messageText}
 
+<<<<<<< HEAD
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -265,6 +307,13 @@ import {format} from 'date-fns';
   )
 
 
+=======
+            onChange={(e) => setMessageText(e && e.target.value)}
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
@@ -282,11 +331,19 @@ import {format} from 'date-fns';
           </Button>;
         </form>;
       </div>;
+<<<<<<< HEAD
 
     </div>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

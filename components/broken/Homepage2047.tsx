@@ -1,5 +1,34 @@
 
+<<<<<<< HEAD
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect, useState, useCallback } from 'react';
+
+
+=======
+import {motion, AnimatePresence} from 'framer-motion';
+import Link from 'next / link';
+import {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -59,7 +88,10 @@
   Target as TargetIcon,;} from 'lucide-react';import { ;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -439,10 +471,14 @@ if (return allInnovativeServices) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
@@ -510,11 +546,45 @@ if (return allInnovativeServices) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+      
+=======
+  const fadeInUp = {
+    initial: { opacity: 0, coordinate_y: 60 },
+    animate: { opacity: 1, coordinate_y: 0 },
+    transition: { duration: 0.6 },  }    transition: { duration: 0.6 }
+  }
+<<<<<<< HEAD
+;
+  const stagger_container = {
+    animate: {
+      transition: {
+        stagger_children: 0.1,
+      },
+    },
+  }
+;
+  return (
+    <div className='min - h-screen bg - gradient - to - br from - black via - gray - 900 to - black text - white overflow - hidden'>;
+      {/* Futuristic Background */}
+      <UltraFuturisticBackground2047 />  }
+;
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - black text - white overflow - hidden">;
+      {/* Futuristic Background */}
+      <UltraFuturisticBackground2047 />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* CTA Buttons */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -525,11 +595,15 @@ if (return allInnovativeServices) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
@@ -568,11 +642,19 @@ if (return allInnovativeServices) {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
@@ -586,11 +668,15 @@ if (return allInnovativeServices) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -617,14 +703,26 @@ if (return allInnovativeServices) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </motion && motion.div>;
             </motion && motion.div>;
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Right Content - Featured Service */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -640,11 +738,19 @@ if (return allInnovativeServices) {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -657,8 +763,16 @@ if (return allInnovativeServices) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
@@ -908,13 +1022,17 @@ if (return allInnovativeServices) {
       </section>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Services Overview */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -924,14 +1042,22 @@ if (return allInnovativeServices) {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
+=======
+            viewport={{ once: true }}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -965,6 +1091,7 @@ if (return allInnovativeServices) {
           </motion && motion.div>;
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -974,6 +1101,14 @@ if (return allInnovativeServices) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Category Cards */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -1023,12 +1158,25 @@ if (return allInnovativeServices) {
       </section>
 
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+      {/* Featured Services Grid */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto">;
+          <motion&& motion.div
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -1038,7 +1186,10 @@ if (return allInnovativeServices) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
                     category.id === 'all';
@@ -1080,7 +1231,10 @@ if (return allInnovativeServices) {
       </section>;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Featured Services Grid */}
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
@@ -1099,8 +1253,12 @@ if (return allInnovativeServices) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -1134,6 +1292,7 @@ if (return allInnovativeServices) {
           </motion && motion.div>;
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1143,6 +1302,14 @@ if (return allInnovativeServices) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Services Grid */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -1203,11 +1370,15 @@ if (return allInnovativeServices) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
@@ -1219,6 +1390,7 @@ if (return allInnovativeServices) {
             <Link
               href="/2025-innovative-services-showcase-v2"
 
+<<<<<<< HEAD
               className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
             >
               <span>View All {allInnovativeServices.length}+ Services</span>
@@ -1227,6 +1399,16 @@ if (return allInnovativeServices) {
           </motion.div>
         </div>
       </section>
+=======
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25">;
+              <span>View All {allInnovativeServices && allInnovativeServices.length}+ Services</span>;
+              <ArrowRight className="w-5 h-5" />;
+            </Link>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* CTA Section */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
@@ -1295,15 +1477,118 @@ export default Homepage2047;  );
 export default Homepage2047;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+                    </p>;
+                    <div className='flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200'>;
+                      <span className='text - sm font - medium'>Learn More</span>;
+                      <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 200' />                    </div>;
+                    <div className="flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200">;
+                      <span className="text - sm font - medium">Learn More</span>;
+                      <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 200" />;
+                  </div>;
+                </Link>;
+              </motion.div>))}
+          </motion.div>;
+          {/* View All Services CTA */}
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text - center mt - 16';
+          >;
+            <Link;
+              href='/2025 - innovative - services - showcase - v2';
+              className='inline - flex items - center space - x-3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - purple - 500 / 25';
+            >;
+              <span > View All {allInnovativeServices.length}+ Services</span>;
+              <ArrowRight className='w - 5 h - 5' />            </Link>          >;
+            <Link;
+              href="/2025 - innovative - services - showcase - v2";
+              className="inline - flex items - center space - x-3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - purple - 500 / 25";
+            >;
+              <span > View All {allInnovativeServices.length}+ Services</span>;
+              <ArrowRight className="w - 5 h - 5" />;
+            </Link>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
+        <div className='max - w-4xl mx - auto text - center'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-4xl mx - auto text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+              Ready to Transform Your Business?;
+            </h2>;
+            <p className='text - xl text - gray - 300 mb - 8 leading - relaxed'>;
+              Join thousands of organizations already leveraging our;
+              revolutionary AI, quantum, and IT infrastructure solutions;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <Link;
+                href='/contact';
+                className='bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25'              >;
+                Get Started Today;
+              </Link>;
+              <Link;
+                href='/2025 - innovative - services - showcase - v2';
+                className='border border - cyan - 500 / 50 text - cyan - 400 px - 8 py - 4 rounded - xl font - semibold text - lg hover:bg - cyan - 500 / 10 transition - all duration - 200'              >              Ready to Transform Your Business?;
+            </h2>;
+            <p className="text - xl text - gray - 300 mb - 8 leading - relaxed">;
+              Join thousands of organizations already leveraging our revolutionary AI, quantum, and IT infrastructure solutions;
+            </p>;
+            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+              <Link;
+                href="/contact";
+                className="bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25";
+              >;
+                Get Started Today;
+              </Link>;
+              <Link;
+                href='/2025 - innovative - services - showcase - v2';
+                className='border border - cyan - 500 / 50 text - cyan - 400 px - 8 py - 4 rounded - xl font - semibold text - lg hover:bg - cyan - 500 / 10 transition - all duration - 200'                href="/2025 - innovative - services - showcase - v2";
+                className="border border - cyan - 500 / 50 text - cyan - 400 px - 8 py - 4 rounded - xl font - semibold text - lg hover:bg - cyan - 500 / 10 transition - all duration - 200";
+              >;
+                Explore Services;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Footer */}
+      <UltraFuturisticFooter2047 />;
+    </div>);
+}
+;
+export default Homepage2047);
+}
+;
+export default Homepage2047;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
 
+<<<<<<< HEAD
 }
 };
 
@@ -1322,3 +1607,10 @@ export default Homepage2047;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

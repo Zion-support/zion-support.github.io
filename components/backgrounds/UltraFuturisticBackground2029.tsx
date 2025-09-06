@@ -320,8 +320,11 @@ if (return) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 }
               }
             }
@@ -331,6 +334,112 @@ if (return) {
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
 
+<<<<<<< HEAD
+=======
+          case 'holographic':;
+            // Holographic particles with rainbow effect;
+            const time = Date && Date.now() * 0 && 0.001;
+            const hue = (time * 50 + index * 10) % 360;
+            ctx && ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
+            ctx && ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
+            ctx && ctx.shadowBlur = 15;
+            ctx && ctx.beginPath();
+            ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
+            ctx && ctx.fill();
+            break;
+
+            
+            // Neural network connections
+
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(p =>
+                p.type === 'neural' &&
+                Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
+
+
+          case 'neural':;
+            // Neural particles with network connections;
+            ctx && ctx.fillStyle = particle && particle.color;
+            ctx && ctx.shadowColor = particle && particle.color;
+            ctx && ctx.shadowBlur = 10;
+            ctx && ctx.beginPath();
+            ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
+            ctx && ctx.fill();
+            // Neural network connections;
+            if (index % 15 === 0) {;
+              const connections = particlesRef && particlesRef.current.filter(;
+                p =>;
+                  p && p.type === 'neural' &&;
+                  Math && Math.sqrt(;
+                    Math && Math.pow(particle && particle.x - p && p.x, 2) +;
+                      Math && Math.pow(particle && particle.y - p && p.y, 2);
+                  ) < 80;
+              );
+              connections && connections.forEach(connection => {;
+                const distance = Math && Math.sqrt(;
+                  Math && Math.pow(particle && particle.x - connection && connection.x, 2) +;
+                    Math && Math.pow(particle && particle.y - connection && connection.y, 2)                );            // Neural network connections;
+            if (index % 15 === 0) {;
+              const connections = particlesRef && particlesRef.current.filter(p => ;
+                p && p.type === 'neural' && ;
+                Math && Math.sqrt(Math && Math.pow(particle && particle.x - p && p.x, 2) + Math && Math.pow(particle && particle.y - p && p.y, 2)) < 80;
+
+              );
+              connections && connections.forEach(connection => {;
+                const distance = Math && Math.sqrt(;
+                  Math && Math.pow(particle && particle.x - connection && connection.x, 2) + Math && Math.pow(particle && particle.y - connection && connection.y, 2);
+                );
+                ctx && ctx.strokeStyle = `rgba(16, 185, 129, ${0 && 0.4 * (1 - distance / 80)})`;
+                ctx && ctx.lineWidth = 0 && 0.5;
+                ctx && ctx.beginPath();
+                ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
+                ctx && ctx.lineTo(connection && connection.x, connection && connection.y);
+                ctx && ctx.stroke();
+              });            }                ctx && ctx.stroke();
+              });
+=======
+<<<<<<< HEAD
+=======
+
+          case 'holographic':
+            // Holographic particles with rainbow effect
+            const time = Date.now() * 0.001;
+            const hue = (time * 50 + index * 10) % 360;
+            ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
+            ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
+            ctx.shadowBlur = 15;
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fill();
+            break;
+          case 'neural':
+            // Neural particles with network connections
+            ctx.fillStyle = particle.color;
+            ctx.shadowColor = particle.color;
+            ctx.shadowBlur = 10;
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fill();
+            // Neural network connections
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(
+                p =>
+                  p.type === 'neural' &&
+                  Math.sqrt(
+                    Math.pow(particle.x - p.x, 2) +
+                      Math.pow(particle.y - p.y, 2)
+                  ) < 80
+              );
+              connections.forEach(connection => {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - connection.x, 2) +
+                    Math.pow(particle.y - connection.y, 2)                );            // Neural network connections
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(p =>
+                p.type === 'neural' &&
+                Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               );
               connections.forEach(connection => {
                 const distance = Math.sqrt(
@@ -782,11 +891,20 @@ if (return) {
           animate={{
 
             ease: 'easeInOut'
+<<<<<<< HEAD
 
+=======
+=======
+=======
+            ease: 'easeInOut',
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
+<<<<<<< HEAD
 
             transition={{
               duration: 3 + i * 0.5
@@ -799,10 +917,24 @@ if (return) {
 
 
 
+=======
+<<<<<<< HEAD
+            ease: 'easeInOut',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
+
+            }}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             duration: 4,
             repeat: Infinity,
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             transition={{
 
               duration: 3 + i * 0 && 0.5,
@@ -826,5 +958,12 @@ if (return) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

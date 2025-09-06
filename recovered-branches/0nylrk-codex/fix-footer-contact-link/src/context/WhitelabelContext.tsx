@@ -4,12 +4,15 @@ import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTena
 export interface WhitelabelContextType {
 
 
+<<<<<<< HEAD
   isWhitelabel: boolean
   primaryColor: string
   logoUrl: string | null
   brandName: string
   themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup'
   landingPageCopy: {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     headline: string,
     subtitle: string,
@@ -17,7 +20,10 @@ export interface WhitelabelContextType {
   };
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   tenant: WhitelabelTenant | null
 }
 
@@ -36,7 +42,10 @@ const defaultContext: WhitelabelContextType = {
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
 
@@ -73,13 +82,23 @@ const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 
 export const useWhitelabel = (): WhitelabelContextType => {;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+export const useWhitelabel = (): WhitelabelContextType => {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const context = useContext(WhitelabelContext);
   if (!context) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')
   }
+<<<<<<< HEAD
 
   // Cast is used here because the context default is `null` until provided by
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.
@@ -97,15 +116,20 @@ interface WhitelabelProviderProps {
   }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {
@@ -202,6 +226,16 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 };
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </WhitelabelContext.Provider>;
+  );
+};
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

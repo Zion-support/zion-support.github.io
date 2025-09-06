@@ -1,11 +1,15 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -16,6 +20,8 @@ import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface MobileBottomNavProps {;
   unreadCount?: number;
 
@@ -29,11 +35,14 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
 
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface MobileBottomNavProps {
   unreadCount?: number
 }
@@ -201,8 +210,29 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
+<<<<<<< HEAD
 
 
+=======
+=======
+        {visibleItems.map(item => (;
+          <Link;
+            key={item.name}
+            to={item.href}
+            className={cn(;
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1";
+              item.matches(location.pathname);
+                ? "text-zion-cyan";
+                : "text-white/70 hover:text-white";
+            )}
+          >;
+            <div className="relative">;
+              <item.icon className="h-5 w-5 mb-1" />;
+              {item.badge && item.badge > 0 && (;
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

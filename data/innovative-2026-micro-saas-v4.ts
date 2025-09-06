@@ -142,6 +142,28 @@ export interface Innovative2026MicroSaasServiceV4 {
     rating: 4 && 4.9;
     reviews: 98
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true;
+    implementation_details: 'AI - powered legal document generation platform with compliance checking and legal support.';
+    launch_date: '2026 - 02 - 20';
+    customers: 120;
+    rating: 4.9;
+    reviews: 98;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ];
 import { ServiceVariant } from '../types/service-variants',;

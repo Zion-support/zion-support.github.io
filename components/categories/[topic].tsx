@@ -88,6 +88,7 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
                 }),
               }).catch (() => {});
             }
+<<<<<<< HEAD
 
           />
         </div>
@@ -112,6 +113,22 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
   return { props: { topic, posts } }
 }
 export default TopicPage;      </Head>
+=======
+          />;
+        </div>;
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
+          {posts.map (p => (
+            <BlogCard key={p.id} post={p} />))}
+        </div>;
+        <div className='mt - 6'>;
+          <Link href='/blog' className='underline'>;
+            Back to Blog;
+          </Link>;
+        </div>;
+      </div>;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
@@ -140,6 +157,7 @@ export default TopicPage;      </Head>;
           {posts && posts.map((p) => (;
             <BlogCard key={p && p.id} post={p} />;
           ))}
+<<<<<<< HEAD
 
         </div>
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
@@ -150,6 +168,27 @@ export default TopicPage;      </Head>;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const topic = String(ctx.params?.topic || '');
+=======
+
+        </div>;
+        <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
+      </div>;
+    </div>;
+  );
+};
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+  const topic = String(ctx && ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
+
+=======
+
+=======
+};
+
+
+  const topic = String(ctx.params?.topic || '');
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return { props: { topic, posts } }

@@ -1,7 +1,33 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+import {useState} from 'react';
+import {zodResolver} from "@hookform/resolvers/zod";
+import {useForm} from "react-hook-form";
+import {z} from "zod";
+import {WorkExperience} from "@/types/resume";
+import {Button} from "@/components/ui/button";
+import {Calendar} from "@/components/ui/calendar";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {Textarea} from "@/components/ui/textarea";
+import {cn} from "@/lib/utils";
+import {Switch} from "@/components/ui/switch";
+import {format} from "date-fns";
+import {CalendarIcon, Loader2} from "lucide-react";
+import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
+import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -22,10 +48,14 @@ import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDi
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Define form schema
 
 const formSchema = z.object({
@@ -54,12 +84,18 @@ interface WorkExperienceItemFormProps {
   onSubmit: (data: WorkExperience) => Promise<void>,
   onCancel: () => void
 }
+<<<<<<< HEAD
 
 
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onCancel}: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
@@ -357,6 +393,7 @@ function WorkExperienceItemForm() {
                   </FormControl>;
                   <FormMessage />;
 
+<<<<<<< HEAD
 
 
                 </FormItem>;
@@ -371,6 +408,9 @@ function WorkExperienceItemForm() {
             />
             <FormField
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               control={form.control}
               name="role_title";
               render={({ field }) => (
@@ -400,12 +440,16 @@ function WorkExperienceItemForm() {
             <FormField
             />;
             <FormField;
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               control={form.control}
               name="is_current";
               render={({ field }) => (

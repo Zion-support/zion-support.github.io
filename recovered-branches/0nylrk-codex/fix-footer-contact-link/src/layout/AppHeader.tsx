@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+=======
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -8,6 +15,7 @@ import {MainNavigation} from './MainNavigation';
 import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
+<<<<<<< HEAD
 
 import {MobileMenu} from '@/components/header/MobileMenu';
 import {useIsMobile} from '@/hooks/use-mobile';
@@ -15,6 +23,11 @@ import {MobileBottomNav} from '@/components/header/MobileBottomNav';
 export function AppHeader() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -37,7 +50,16 @@ function AppHeader() {
 
   } catch (error) {
     console.warn ('Messaging context not available');
+<<<<<<< HEAD
 
+=======
+=======
+  } catch (error) {
+    console.warn('Messaging context not available')
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -61,8 +83,11 @@ export function AppHeader() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   
   return (

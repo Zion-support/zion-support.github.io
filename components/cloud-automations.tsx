@@ -1,8 +1,32 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function CloudAutomationsPage() {
+=======
+
+export default function CloudAutomationsPage() {;
+  const [data, setData] = useState<any>(null);
+  useEffect(() => {;
+    fetch('/api/cloud-automations-status');
+      .then(r => r && r.json());
+      .then(setData);
+      .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
+      .then(setData);
+      .catch(() => setData({ ok: false }));
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {

@@ -20,6 +20,7 @@ interface StepProps {
   className?: string
 }
 export function Step({
+<<<<<<< HEAD
   status,
   label,
   description,
@@ -29,6 +30,8 @@ export function Step({
   status,
   label,
   description,
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   className}: StepProps) {
@@ -44,7 +47,10 @@ export function Step({
           "opacity-60": status === "incomplete"},
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className
       )}
     >
@@ -158,6 +164,11 @@ export function Step({;
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface StepsProps {
   currentStep: number
   className?: string
@@ -176,6 +187,7 @@ interface StepsProps {;
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
   
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -184,10 +196,16 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
+<<<<<<< HEAD
 
 
           if (!React.isValidElement(child)) return null
@@ -196,6 +214,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index === currentStep) status = "current"
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -217,13 +237,17 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -231,16 +255,23 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface StepsProps {;
@@ -257,3 +288,137 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 }/> </div> </div> </div>) 
 }"};
 ;
+<<<<<<< HEAD
+=======
+
+;
+export function Steps({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React.Children.toArray(children),;
+  return (;
+
+    <div className={cn("w-full", className)}>;
+      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
+        {React.Children.map(childrenArray, (child, index) => {;
+          if (!React.isValidElement(child)) return null,;
+          let status: "incomplete" | "current" | "complete" = "incomplete",;
+          if (index < currentStep) status = "complete";
+          if (index === currentStep) status = "current";
+          return React.cloneElement(child as React.ReactElement<StepProps>, {;
+            status});
+        })}
+      </ol>;
+      <div className="hidden md:flex md:mt-4">;
+        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
+          <div;
+            className="h-full bg-zion-purple transition-all";
+            style={{;
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+          />;
+        </div>;
+      </div>;
+    </div>;
+  );
+
+
+
+          // Check condition
+if (status = "complete") {
+  $2
+}
+          // Check condition
+if (status = "current") {
+  $2
+}
+interface StepProps {
+  status: "incomplete" | "current" | "complete",
+  label: string,
+  description?: string;
+  class_name?: string;
+}
+export /**
+ * Step - Function description
+ */
+function Step() {
+  return (
+    <li;
+      className={cn (
+        "relative flex items - center";
+        {
+          "opacity - 60": status === "incomplete"}
+        class_name)}
+    >;
+      <div;
+        className={cn (
+          "shrink - 0 h - 9 w - 9 rounded - full border flex items - center justify - center text - center font - medium" {
+            "bg - zion - blue - dark border - zion - blue - light text - zion - slate - light":;
+              status === "incomplete";
+            "bg - zion - blue border - zion - cyan text - white":;
+              status === "current";
+            "bg - zion - purple border - zion - purple text - white":;
+              status === "complete", }
+        )}
+      >;
+        {status === "complete" ? (
+          <CheckIcon className="h - 5 w - 5" />) : (
+          <span>;
+            {/* Step number would go here */}
+          </span>)}
+      </div>;
+      <div className="ml - 4 min - w-0">;
+        <h3;
+          className={cn ("text - sm font - medium", {
+            "text - zion - slate - light": status === "incomplete";
+            "text - white": status === "current" || status === "complete"})}
+        >;
+          {label}
+        </h3>;
+        {description && (
+          <p className="text - sm text - zion - slate - light">{description}</p>)}
+      </div>;
+    </li>);
+}
+interface StepsProps {
+  current_step: number,
+  class_name?: string;
+  children: React.ReactNode;
+}
+export /**
+ * Steps - Function description
+ */
+function Steps() {
+  const children_array = React.Children.to_array (children);
+  return (
+    <div className={cn ("w - full", class_name)}>;
+      <ol className="space - y-6 md:flex md:space - y-0 md:space - x-16">;
+        {React.Children.map (children_array, (child, index) => {
+          if () return null) {
+  $2
+}
+          let status: "incomplete" | "current" | "complete" = "incomplete",
+          // Check condition
+if (status = "complete") {
+  $2
+}
+          // Check condition
+if (status = "current") {
+  $2
+}
+          return React.clone_element (child as React.ReactElement < StepProps>, {
+            status});
+        })}
+      </ol>;
+      <div className="hidden md:flex md:mt - 4">;
+        <div className="ml-[18px] w-[calc (100%-36px)] h - 0.5 bg - zion - blue - light">;
+          <div;
+            className="h - full bg - zion - purple transition - all";
+            style={{
+              width: `${(current_step / (children_array.length - 1)) * 100}%`}}
+          />;
+        </div>;
+      </div>;
+    </div>);
+}/> </div> </div> </div>);
+}"}
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

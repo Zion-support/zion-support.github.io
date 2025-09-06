@@ -3,8 +3,11 @@ import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const POPULAR_SKILLS = [
 
@@ -63,8 +66,11 @@ export function SkillsFilter(): any ({;
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -75,8 +81,11 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
       >
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <span>Skills</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -219,6 +228,7 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -226,6 +236,10 @@ const POPULAR_SKILLS = [;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
@@ -243,9 +257,12 @@ const POPULAR_SKILLS = [;
               </label>
             </div>
           ))}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </div>;
   );
@@ -311,9 +328,12 @@ function SkillsFilter() {
       )}
       )};
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>;
   );
 };

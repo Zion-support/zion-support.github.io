@@ -51,6 +51,7 @@ function ApplicationProgress() {
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -58,6 +59,10 @@ function ApplicationProgress() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -105,6 +110,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     rejected: 5},
 
   const currentRank = statusRank[current],
+<<<<<<< HEAD
 
 
   const statusRank_ = statusRank[status]
@@ -115,6 +121,8 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -123,8 +131,11 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -132,6 +143,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     // This is the current step
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
+<<<<<<< HEAD
 
 
     // This step is upcoming;
@@ -148,6 +160,10 @@ import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 
 
+=======
+
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;
   className?: string;

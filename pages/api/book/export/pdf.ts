@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
@@ -86,6 +87,10 @@ export default async function handler(req, res) {
   const browser = await puppeteer.launch({;
     headless: true;
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
   try {
@@ -116,18 +121,73 @@ export default async function handler(req, res) {
 
 
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
 
 }
+<<<<<<< HEAD
 
+=======
+    res.status (400).json ({ error: 'Missing html' }),
+    return;
+  }
+  const browser = await puppeteer.launch ({
+    headless: true,
+    args: ['--no - sandbox--disable - setuid - sandbox']}),
+  try {
+const page = await browser.new_page (),
+    await page.set_content (html, { wait_until: 'networkidle0' }),
+    const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),
+    await browser.close (),
+    res.set_header ('Content - Typeapplication / pdf'),
+    res.set_header ('Content - Dispositionattachment, filename="zion - os - book.pdf"'),
+    res.status (200).send (pdf_buffer);
+  } catch (e: any) {
+    try { await browser.close () } catch {}
+    res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
+=======
+=======
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import puppeteer from 'puppeteer';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const config = {;
+  api: {;
+    bodyParser: {;
+      sizeLimit: '10mb'}}};
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

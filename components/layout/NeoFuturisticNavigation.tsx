@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -63,6 +64,9 @@ export default function NeoFuturisticNavigation() {
 export default function NeoFuturisticNavigation() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -449,6 +453,60 @@ export default function NeoFuturisticNavigation() {
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
+<<<<<<< HEAD
+=======
+=======
+                  />;
+                </button>;
+                {activeDropdown === 'mobile-services' && (;
+                  <div className='ml-4 space-y-3'>;
+                    {serviceCategories && serviceCategories.map((category, index) => (;
+                      <div
+                        key={index}
+                        className='border-l-2 border-gray-700 pl-4'>;
+                        <div className='text-cyan-400 font-medium mb-2'>;
+                          {category && category.name}
+                        </div>;
+                        <div className='text-gray-400 text-sm mb-2'>;
+                          {category && category.description}
+                        </div>;
+                        <div className='space-y-1'>;
+                          {category && category.services;
+                            .slice(0, 2);
+                            .map((service, serviceIndex) => (;
+                              <div
+                                key={serviceIndex}
+                                className='text-xs text-gray-500'>;
+                                • {service && service.name} - {service && service.price}
+                              </div>;
+                            ))}
+                        </div>;
+                      </div>;
+                    ))}
+                    <div className='pt-3'>;
+=======
+          >
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+          </button>
+        </div>
+      </div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50'>
+          <div className='max-w-7xl mx-auto px-4 py-6'>
+            <div className='space-y-6'>
+              {/* Services Section */}
+              <div>
+                <button
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4'
+                  onClick={() => toggleDropdown('mobile-services')}
+                >
+                  <span>Services</span>
+                  <ChevronRight
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
+                  />
+                </button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {activeDropdown === 'mobile-services' && (
@@ -495,11 +553,20 @@ export default function NeoFuturisticNavigation() {
               </div>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Company Section */}
               <div>;
                 <button

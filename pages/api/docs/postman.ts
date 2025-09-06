@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 function toPostman() {
@@ -6,6 +7,9 @@ function toPostman() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     info: {
 
         "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json",
@@ -34,6 +38,7 @@ function toPostman() {
       })),
     ),
     variable: [
+<<<<<<< HEAD
 
 
       { key: "baseUrl", value: "https://api.zion.os" }
@@ -53,6 +58,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     info: {
       name: 'Zion Tech Group API',
       description: 'Postman collection for Zion Tech Group API',
+=======
+<<<<<<< HEAD
+      { key: "baseUrl", value: "https://api && api.zion.os" },
+      { key: "token", value: "" },
+    ],
+  };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     },
@@ -63,6 +75,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           method: 'GET',
           header: [],
           url: {
+<<<<<<< HEAD
 
             raw: '{{baseUrl}}/api/health',
             host: ['{{baseUrl}}'],
@@ -179,3 +192,20 @@ export default function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            raw: `{{base_url}}${ep.path}`,
+            host: ["{{base_url}}"],
+            path: ep.path.replace (/^\//, "").split ("/"),
+          },
+          body: ep.requestBodySchema;
+            ? { mode: "raw", raw: JSON.stringify ({}, null, 2) }
+            : undefined,
+        },
+      })),
+    ),
+    variable: [;
+      { key: "base_url", value: "https://api.zion.os" },
+      { key: "token", value: "" },
+    ],
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

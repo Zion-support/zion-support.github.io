@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { BookProject } from '../book/bookTypes';
@@ -11,6 +12,12 @@ export function buildPrintableHtml(project: BookProject): string {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const chapterHtml = chapters;
     .map(;
       (c) => `;
@@ -19,6 +26,7 @@ export function buildPrintableHtml(project: BookProject): string {;
         <div class="content">${paragraphize(c.content)}</div>;
       </section>;
     `);
+<<<<<<< HEAD
 
 
     .join('\n\n');
@@ -32,6 +40,12 @@ export function buildPrintableHtml(project: BookProject): string {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 
   return `<!doctype html>;
@@ -40,6 +54,7 @@ export function buildPrintableHtml(project: BookProject): string {;
 <meta charset="utf-8" />;
 <title>${escapeHtml(meta.title)}</title>;
 <style>;
+<<<<<<< HEAD
 
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
@@ -79,6 +94,15 @@ function paragraphize(text: string): string {if (!text) return '';
 }
 
 
+=======
+
+
+;
+function escapeHtml(s: string): string {;
+  return s;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -206,10 +230,15 @@ function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
@@ -225,5 +254,8 @@ function paragraphize(text: string): string {;
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

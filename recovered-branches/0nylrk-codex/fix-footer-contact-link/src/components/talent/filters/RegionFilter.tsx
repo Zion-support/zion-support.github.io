@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
@@ -14,6 +15,10 @@ import { RegionFilterProps } from "@/types/filters",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
@@ -103,9 +108,12 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               >
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {region.label}
               </label>
             </div>
@@ -114,14 +122,41 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
         </div>;
       )}
 
+<<<<<<< HEAD
 
 
     </div>
 
   );
 }
+=======
+    </div>;
+  );
+=======
+    </div>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 
+=======
+=======
+import { ChevronDown, ChevronUp  } from './lucide-react';
+import { Checkbox  } from '@/components / ui / checkbox';
+import { RegionFilterProps  } from '@/types / filters';
+const REGION_OPTIONS = [;
+  { id: "North America", label: "North America" },
+  { id: "Europe", label: "Europe" },
+  { id: "Asia", label: "Asia" },
+  { id: "South America", label: "South America" },
+  { id: "Australia", label: "Australia" },
+  { id: "Africa", label: "Africa" },
+];
+;
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

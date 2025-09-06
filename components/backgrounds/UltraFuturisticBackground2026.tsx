@@ -382,6 +382,33 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
 
+<<<<<<< HEAD
+=======
+          }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+            duration: 10,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'linear',            ease: "linear"
+          }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        />
+      </div>
+      {/* Energy Field Effects */}
+      <div className='fixed inset-0 pointer-events-none z-20'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
@@ -408,6 +435,7 @@ if ( {) {
             coordinate_y: ['-100%100%'];
           }}
           transition={{
+<<<<<<< HEAD
 
 
 
@@ -415,6 +443,8 @@ if ( {) {
             repeat: Infinity
             ease: 'linear',            ease: "linear"
           }}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             duration: 20,
             repeat: Infinity,
@@ -422,6 +452,18 @@ if ( {) {
           }}
 
 
+<<<<<<< HEAD
+=======
+            duration: 20,
+            repeat: Infinity,
+
+          }}
+
+
+=======
+            duration: 20,
+            repeat: Infinity,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -474,7 +516,13 @@ export default UltraFuturisticBackground2026;
 
 };
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default UltraFuturisticBackground2026;
       <div className="fixed inset - 0 pointer - events - none z - 40">;
         <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 400 / 2 to - transparent" />;
@@ -493,6 +541,7 @@ export default UltraFuturisticBackground2026;
         <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 export default UltraFuturisticBackground2026;
@@ -507,3 +556,12 @@ export default UltraFuturisticBackground2026;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

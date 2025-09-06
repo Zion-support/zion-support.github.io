@@ -4,9 +4,12 @@ interface ResultsHeaderProps {;
   resultCount: number;
 }
 
+<<<<<<< HEAD
 
 
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -57,7 +60,10 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
           {resultCount === 0 ? (
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`

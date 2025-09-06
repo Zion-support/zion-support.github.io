@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -36,6 +37,9 @@ import { Footer } from "@/components/Footer",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
@@ -256,6 +260,33 @@ function ForgotPassword() {
                 <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>;
                 <p className="text-lg text-white/80">;
 
+<<<<<<< HEAD
+=======
+                  We'll help you get back into your account so you can continue your journey in the Zion marketplace.;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+
+    </>);
+}
+
+=======
+                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
+                      >
+                        Back to login
+                      </Link>
+                    </div>
+                  </form>
+                </Form>
+
+;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -332,5 +363,8 @@ export default function ForgotPassword() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

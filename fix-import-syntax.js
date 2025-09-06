@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 import fs from "fs";
@@ -17,6 +18,14 @@ function fixImportSyntax(filePath) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+    // Fix missing commas in import statements;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items

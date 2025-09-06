@@ -5,10 +5,7 @@ export default function AnimatedBackground() {
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
 =======
 import React from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>

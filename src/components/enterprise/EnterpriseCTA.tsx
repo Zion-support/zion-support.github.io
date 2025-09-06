@@ -69,11 +69,14 @@ import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
@@ -134,6 +137,7 @@ export function EnterpriseCTA() {
       </div>
 
 
+<<<<<<< HEAD
     </section>;
   );
 };
@@ -145,6 +149,14 @@ import React from "react",;
 import { Button } from "@/components/ui/button";
 
 
+=======
+
+    </section>
+
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Calendar, ArrowRight } from 'lucide-react';
 export function EnterpriseCTA() {;
   return (
@@ -394,11 +406,14 @@ function EnterpriseCTA() {
 
   );
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </section>);
 }

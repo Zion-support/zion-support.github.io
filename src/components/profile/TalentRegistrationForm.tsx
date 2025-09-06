@@ -106,7 +106,10 @@ if ( {) {
         throw new Error(error.message)
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       name: user?.displayName || "",
       title: "",
       bio: "",
@@ -222,10 +225,21 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       
     } catch (error: any) {
@@ -274,6 +288,14 @@ export function TalentRegistrationForm() {;
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
+<<<<<<< HEAD
+=======
+
+
+            if (true) {}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ) {
               newSkills.push(skill)
 import {;
@@ -584,6 +606,12 @@ if ( {) {
 
   },
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -604,10 +632,48 @@ if ( {) {
             </div>
           </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
       toast({
+<<<<<<< HEAD
+=======
+
+          to: email,
+          subject: 'Your Zion Talent Profile Has Been Enhanced',
+          html: `;
+          <div style="font - family: Arial, sans - serif; max - width: 600px; margin: 0 auto;">;
+            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>;
+            <p > Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
+            <p > We've added a professional summary and categorized your skills to help you stand out.</p>;
+            <p > You can review and edit these enhancements in your profile dashboard.</p>;
+            <div style="margin - top: 30px; padding - top: 20px; border - top: 1px solid #eee;">;
+              <p style="color: #666; font - size: 12px;">© ${new Date ().getFullYear ()} Zion Marketplace</p>;
+            </div>;
+          </div>;
+          `,
+        },
+      });
+    } catch (error) {
+      logErrorToProduction ('Failed to send notification email:', {
+        data: error,
+      });
+    }
+  }
+  // Handle form submission;
+  const on_submit = async (values: TalentFormValues, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         title: 'Skills required',
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
@@ -617,8 +683,11 @@ if ( {) {
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       })
 
       return;
@@ -630,7 +699,15 @@ if ( {) {
       if (!user?.id) {
         throw new Error('User not authenticated')
 
+<<<<<<< HEAD
 
+=======
+        title: "Skills required",
+        description: "Please add at least one skill to your profile.",
+        variant: "destructive"}),
+      return
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     setIsSubmitting(true),
 
@@ -644,6 +721,32 @@ if ( {) {
 
       });
 
+<<<<<<< HEAD
+=======
+    setIsSubmitting(true),
+
+    try {
+      // For actual implementation with Supabase
+      if (!user?.id) {
+        throw new Error("User not authenticated")
+      }
+      
+      // Enhance profile if not already done
+      let finalSummary = "",
+      let finalSkills = skillTags,
+      
+      if (values.enhancedProfile && !generatedContent) {
+        try {
+          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
+            body: {
+              talentData: {
+                name: values.name,
+                title: values.title,
+                bio: values.bio,
+                skills: skillTags,
+                location: values.location
+  },;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Handle form submission;
   const onSubmit = async (values: TalentFormValues) => {;
     if (skillTags.length === 0) {;
@@ -784,6 +887,13 @@ if ( {) {
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
+<<<<<<< HEAD
+=======
+
+
+          title: 'Profile Created Successfully',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           description:
             'Your talent profile has been published and is now visible in the directory.'
         })
@@ -798,6 +908,12 @@ if ( {) {
           sendEnhancementNotification(user.id, userEmail)
         }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         setIsSubmitting(false)
       }, 1500)
         
@@ -1398,6 +1514,11 @@ if (throw error) {
                             className="w-full h-full object-cover"
                             loading="lazy"
                           />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
@@ -1498,6 +1619,11 @@ if (throw error) {
                   render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <FormControl>
                         <Textarea
                           className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
@@ -1511,6 +1637,12 @@ if (throw error) {
                       </FormDescription>
                     </FormItem>
                   )}
+<<<<<<< HEAD
+=======
+                />;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* AI Enhancement Option */}
                 <FormField
                   control={form && form.control}
@@ -1530,6 +1662,15 @@ if (throw error) {
                 </h3>;
                 <FormField;
                   control={form.control}
+<<<<<<< HEAD
+=======
+                  name='enhancedProfile'
+                  render={({ field }: { field: any }) => (
+                    <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>
+                      <div className='space-y-0.5'>
+                        <FormLabel className='text-white flex items-center'>
+                          <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 />;
                 {/* AI Enhancement Option */}
                 <FormField;
@@ -1565,6 +1706,7 @@ if (throw error) {
                         : 'Generate Enhanced Profile'}
                     </Button>;
                   </div>;
+<<<<<<< HEAD
 
 
 
@@ -1626,6 +1768,30 @@ if (throw error) {
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
 
 
+=======
+
+
+                        </FormLabel>
+                        <FormDescription className="text-zion-slate-light">
+                          Let AI help optimize your profile for better visibility and engagement
+                        </FormDescription>
+                      </div>
+                      <FormControl>
+                        <Switch
+
+                          aria-label="AI profile enhancement"
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          className="data-[state=checked]:bg-zion-purple"
+                        />
+
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </Button>
                   </div>
                 )}
@@ -1672,8 +1838,11 @@ if (throw error) {
                                 <Badge;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
@@ -1691,11 +1860,14 @@ if (throw error) {
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                                       {skill}
                                     </Badge>
                                   ))}
@@ -1730,8 +1902,11 @@ if (throw error) {
                         <div className="flex gap-2">
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
@@ -1844,11 +2019,14 @@ if (throw error) {
                     {skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     )}
 
                   </div>;
@@ -2056,8 +2234,11 @@ if (throw error) {
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                                 Currently Unavailable
                               </label>
                             </div>
@@ -2081,8 +2262,11 @@ if (throw error) {
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Button
                   type="button"
                   variant="outline"
@@ -2102,11 +2286,14 @@ if (throw error) {
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </Button>
               </div>
             </CardFooter>
@@ -2141,8 +2328,11 @@ if (throw error) {
     </div>);
 
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 //Generate enhanced profile with AI return;
 }
 
@@ -2186,12 +2376,17 @@ if (Array.isArray (categorySkills) ) {
   if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {
 })
 }
+<<<<<<< HEAD
 //Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {
   try {'
   await supabase.functions.invoke ('send-email', {
   body: {'"
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
   new Date () .getFullYear ()
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   new Date () .getFullYear () 
 
 

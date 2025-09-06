@@ -6,8 +6,11 @@ const images = document && document.querySelectorAll('img');
     if (!img.decoding) {
       img.decoding = 'async'
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export const preloadCriticalResources = () => {
   const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
@@ -81,9 +84,12 @@ export const lazyLoadComponents = () => {
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 
@@ -92,10 +98,13 @@ export const optimizeBundleSize = () => {
   return { loadComponent };
 };
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';

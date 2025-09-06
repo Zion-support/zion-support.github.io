@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
 
 
@@ -39,6 +40,15 @@ export const OfflineIndicator = () => {
       
 
 
+=======
+
+import { WifiOff, Wifi } from 'lucide-react'
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
@@ -87,6 +97,7 @@ export const OfflineIndicator = () => {;
         // Show brief "back online" message then hide;
         setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
         setTimeout(() => setShowOfflineAlert(false), 3000);
+<<<<<<< HEAD
 
 
 
@@ -95,6 +106,31 @@ export const OfflineIndicator = () => {;
   }, [showOfflineAlert]),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+
+      }
+    };
+
+    // Set initial status;
+    updateOnlineStatus();
+
+    // Listen for online/offline events;
+    window && window.addEventListener('online', updateOnlineStatus);
+    window && window.addEventListener('offline', updateOnlineStatus);
+
+
+
+    }
+  }, [showOfflineAlert]);
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   if (!showOfflineAlert) return null;
 
@@ -127,3 +163,25 @@ export const OfflineIndicator = () => {;
       </Alert>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+
+};
+    <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
+      <Alert variant={is_online ? 'default' : 'destructive'}>;
+        <div className='flex items - center gap - 2'>;
+            <Wifi className='h - 4 w - 4' />) : (
+            <WifiOff className='h - 4 w - 4' />)}
+          <AlertDescription>;
+            {is_online;
+              ? 'Connection restored';
+              : 'You are offline. Some features may not work.'}          </AlertDescription>            {is_online ? (
+              'Connection restored') : (
+              'You are offline. Some features may not work.')}
+        </div>;
+      </Alert>;
+    </div>);
+} }
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

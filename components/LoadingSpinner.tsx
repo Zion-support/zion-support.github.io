@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LoadingSpinnerProps {
@@ -37,11 +40,18 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
           {text}
         </p>;
       )}
+<<<<<<< HEAD
 
     </div>
   );
   if (fullScreen) {
 
+=======
+
+
+  if (fullScreen) {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return (
       <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">;
         {spinner}
@@ -115,10 +125,21 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 }
 export default LoadingSpinner;
+<<<<<<< HEAD
 
 
 
 
+=======
+=======
+export default LoadingSpinner;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function LoadingSpinner() {
   return (
     <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -128,9 +149,13 @@ export default function LoadingSpinner() {
       </div>
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>
   );
   } catch (error) {
@@ -140,6 +165,7 @@ export default function LoadingSpinner() {
 }
 
 
+<<<<<<< HEAD
 
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
@@ -156,3 +182,6 @@ export default LoadingSpinner;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

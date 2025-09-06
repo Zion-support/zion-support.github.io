@@ -1,12 +1,34 @@
 
+<<<<<<< HEAD
 
 
+=======
+export type ProjectStatus = 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
   | 'in_progress'
   | 'completed'
   | 'canceled';
+<<<<<<< HEAD
+=======
+=======
+export type ProjectStatus =;
+  | 'offer_sent';
+  | 'offer_accepted';
+  | 'changes_requested';
+  | 'in_progress';
+  | 'completed';
+  | 'canceled';
+
+
+
+export interface Project {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   id: string;
   client_id: string;
@@ -36,11 +58,19 @@
   }
 }
 
+<<<<<<< HEAD
 export interface ProjectNote {
 
 export interface ProjectNote {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+export interface ProjectNote {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   project_id: string;
   user_id: string;
@@ -80,6 +110,7 @@ export interface Project {;
   client_profile?: {;
     display_name: string,;
     avatar_url?: string;
+<<<<<<< HEAD
 
   }
 }
@@ -98,5 +129,9 @@ export interface ProjectNote {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }

@@ -63,12 +63,16 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     default:
       break
   }
   
   return (
+<<<<<<< HEAD
 
 
     <Tooltip>
@@ -119,6 +123,9 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   return (;
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className='flex items-center gap-1'>;
@@ -137,3 +144,16 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
+=======
+
+
+
+
+    </Tooltip>);
+}
+
+      </TooltipContent>
+    </Tooltip>
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

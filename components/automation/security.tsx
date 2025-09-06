@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 export default function SecurityAudit({ report }: Props) {
 };
 </pre> </div>)
@@ -13,6 +14,9 @@ export default function SecurityAudit({ report }: Props) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -24,6 +28,7 @@ export default function SecurityAudit({ report }: Props) {
       {report.generatedAt && (
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
+<<<<<<< HEAD
 
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
 {JSON.stringify(report, null, 2)}
@@ -31,6 +36,13 @@ export default function SecurityAudit({ report }: Props) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+    </div>;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 );
 }
   );

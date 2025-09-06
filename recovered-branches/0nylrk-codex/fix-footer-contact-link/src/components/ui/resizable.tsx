@@ -42,15 +42,32 @@ const ResizableHandle = ({
     )}
   </ResizablePrimitive.PanelResizeHandle>;
 );
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { GripVertical } from &quot;lucide-react & quot;
 import * as ResizablePrimitive from &quot;react - resizable - panels & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
 
+<<<<<<< HEAD
+=======
+=======
+export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
+=======
+export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const ResizablePanelGroup = ({
   class_name,
   ...props;
@@ -81,7 +98,11 @@ const ResizableHandle = ({
       </div>)}
   </ResizablePrimitive.PanelResizeHandle>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

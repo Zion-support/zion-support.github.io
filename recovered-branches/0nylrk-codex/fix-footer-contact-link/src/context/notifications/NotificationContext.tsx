@@ -8,6 +8,7 @@ import { NotificationContextType } from './types';
 // `createContext` call returns `{}` instead of the expected shape.
 
 
+<<<<<<< HEAD
 const defaultContext: NotificationContextType = {
   notifications: []
   filteredNotifications: []
@@ -25,6 +26,21 @@ const NotificationContext = createContext(
 );
 
 
+=======
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {useNotificationOperations} from './useNotificationOperations';
+import {NotificationContextType} from './types';
+=======
+
+
+export const useNotifications = (): NotificationContextType => {;
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -59,8 +75,12 @@ export const useNotifications = (): NotificationContextType => {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   return context
 },
@@ -93,6 +113,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
           (payload) => {
             console.log('Notification change received:', payload);
             notificationOps.fetchNotifications()
+<<<<<<< HEAD
           }
         )
         .subscribe();
@@ -107,6 +128,14 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     </NotificationContext.Provider>
   )
 
+=======
+
+
+};
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return context;
 };
 
@@ -222,9 +251,18 @@ if ( {) {
     </NotificationContext && NotificationContext.Provider>;
   );
 };
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -83,9 +83,13 @@ type PaginationLinkProps = {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
@@ -100,16 +104,20 @@ const PaginationLink = ({
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ...props
 }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -118,6 +126,11 @@ const PaginationLink = ({
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         variant: isActive ? "outline" : "ghost",
         size}),
       className
@@ -140,6 +153,7 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
         isActive && 'bg-green-600 text-white';
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -147,6 +161,10 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className;
       )}
       {...props}

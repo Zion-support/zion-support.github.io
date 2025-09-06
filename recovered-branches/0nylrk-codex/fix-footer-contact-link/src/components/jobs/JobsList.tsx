@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -11,6 +14,7 @@ import {Badge} from "@/components/ui/badge";
 import {Loader2, Edit, X, Eye} from "lucide-react";
 import {format} from "date-fns";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from "react",
@@ -26,6 +30,8 @@ import { Link } from "react-router-dom";
 import { format } from "date-fns",
 import { Link } from "react-router-dom",
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface JobsListProps {;
 
   filter?: JobStatus;
@@ -42,16 +48,20 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 
+<<<<<<< HEAD
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth();
@@ -60,6 +70,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth(),
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   useEffect(() => {
@@ -153,10 +165,15 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
                 <Badge key={index} variant="outline" className="text-xs">;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {skill}
                 </Badge>;
               ))}

@@ -1,7 +1,12 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -36,10 +41,15 @@ import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
@@ -91,6 +101,7 @@ interface ContractFormProps {
   deployOptions?: DeploymentOptions,
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
+<<<<<<< HEAD
 
 
 export function ContractForm({
@@ -101,6 +112,11 @@ export function ContractForm({
   onContractGenerated,
   deployOptions,
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onDeployOptionsChange
 }: ContractFormProps) {
   const [isGenerating, setIsGenerating] = useState(false);
@@ -136,8 +152,89 @@ export function ContractForm({
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import { useState, useEffect } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { Loader2 } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { Form } from "@/components/ui/form",;
+import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
+import { useToast } from "@/hooks/use-toast",;
+import { TalentProfile } from "@/types/talent",;
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
+import { generateContract } from "../utils/contractUtils",;
+import { ProjectDetailsFields } from "./ProjectDetailsFields",;
+import { PaymentTermsFields } from "./PaymentTermsFields",;
+import { AdditionalClausesFields } from "./AdditionalClausesFields",;
+import { DeploymentOptions } from "@/types/smart-contracts",;
+const formSchema = z.object({;
+  projectName: z.string().min(1, "Project name is required"),;
+  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),;
+  startDate: z.date({;
+    required_error: "Start date is required"}),;
+  endDate: z.date().optional(),;
+  paymentTerms: z.enum(["hourly", "fixed", "milestone"]),;
+  paymentAmount: z.string().min(1, "Payment amount is required"),;
+  additionalClauses: z.array(z.string()).default([])}),;
+export type ContractFormValues = z.infer<typeof formSchema>,;
+interface ContractFormProps {;
+  talent: TalentProfile,;
+  clientName: string,;
+  initialValues?: ContractFormValues,;
+  onFormValuesChange?: (values: ContractFormValues) => void,;
+  onContractGenerated: (contractContent: string) => void,;
+  deployOptions?: DeploymentOptions,;
+  onDeployOptionsChange?: (options: DeploymentOptions) => void;
+}
+;
+export function ContractForm({;
+  talent,;
+  clientName,;
+  initialValues,;
+  onFormValuesChange,;
+  onContractGenerated,;
+  deployOptions,;
+  onDeployOptionsChange;
+}: ContractFormProps) {;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),;
+  const { toast } = useToast(),;
+
+  const form = useForm<ContractFormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: initialValues || {;
+      projectName: "",;
+      scopeSummary: "",;
+      startDate: new Date(),;
+
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",;
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",;
+      additionalClauses: ["nda", "ip"]}}),;
+  // Update form when initialValues change;
+  useEffect(() => {;
+    if (initialValues) {;
+      Object.keys(initialValues).forEach((key) => {;
+        const typedKey = key as keyof ContractFormValues,;
+        form.setValue(typedKey, initialValues[typedKey]);
+      });
+    }
+  }, [initialValues, form]),;
+  // Track form values for template saving;
+  useEffect(() => {;
+    if (onFormValuesChange) {;
+      const subscription = form.watch((value) => {;
+        onFormValuesChange(value as ContractFormValues);
+      }),;
+      return () => subscription.unsubscribe();
+    }
+  }, [form, onFormValuesChange]),
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
@@ -252,6 +349,7 @@ export function ContractForm({
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -265,6 +363,8 @@ export function ContractForm({
             form={form}
           />
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Create a professional contract for your project with {talent && talent.full_name}
         </DialogDescription>;
       </DialogHeader>;
@@ -276,12 +376,35 @@ export function ContractForm({
           />;
 
 
+<<<<<<< HEAD
+=======
+          <PaymentTermsFields
+            form={form}
+            talent={talent}
+            handleMilestonesGenerated={handleMilestonesGenerated}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+          <AdditionalClausesFields
+            form={form}
+          />;
+
+          <Button
+            type="submit" 
+
+=======
+
+          
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
+<<<<<<< HEAD
 
           />;
           <AdditionalClausesFields;
@@ -295,6 +418,11 @@ export function ContractForm({
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;

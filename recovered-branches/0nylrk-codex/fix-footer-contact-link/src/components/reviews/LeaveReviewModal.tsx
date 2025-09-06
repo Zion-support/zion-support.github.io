@@ -1,7 +1,21 @@
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+import {useState, useEffect} from "react";
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {ReviewForm} from "./ReviewForm";
+import {useReviews} from "@/hooks/useReviews";
+=======
+import { useState, useEffect } from "react",
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Dialog;
   DialogContent;
@@ -11,6 +25,7 @@ import {
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+<<<<<<< HEAD
 
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
@@ -58,6 +73,15 @@ export function LeaveReviewModal({
         handleOpenChange(false)
 
 
+=======
+
+import {useState, useEffect} from "react";
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {ReviewForm} from "./ReviewForm";
+import {useReviews} from "@/hooks/useReviews";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface LeaveReviewModalProps {;
   projectId: string,;
   revieweeId: string,;
@@ -103,6 +127,7 @@ export function LeaveReviewModal(): any ({;
       const success = await submitReview(formValues);
       if (success) {;
         handleOpenChange(false);
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -113,6 +138,35 @@ export function LeaveReviewModal(): any ({;
 
 
   };
+=======
+=======
+
+import { ReviewForm } from "./ReviewForm",
+import { useReviews } from "@/hooks/useReviews",
+
+interface LeaveReviewModalProps {
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  isOpen: boolean,
+  onClose: () => void
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      }
+      return success;
+    }
+
+  };
+
+
+=======
+
+  },
+=======
+  };
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },
 
 

@@ -3,6 +3,7 @@ import React from "react";
 
 
 
+<<<<<<< HEAD
 import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
@@ -12,6 +13,9 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
 }
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
@@ -84,6 +88,7 @@ baseToast.success = (message: string) => {
 },
 
 // Export the callable toast function.
+<<<<<<< HEAD
 
 export const toast = baseToast as typeof baseToast & {;
   title: (title: string) => void;
@@ -134,4 +139,7 @@ export const toast = baseToast as typeof baseToast & {;
   success: (message: string) => void;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

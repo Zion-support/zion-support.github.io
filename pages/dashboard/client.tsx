@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -8,6 +9,10 @@ const STEPS = [
   { key: 'invite', label: 'First invite sent' }
   { key: 'response', label: 'First response received' }
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -19,6 +24,7 @@ const STEPS = [
 type StepKey = typeof STEPS[number]['key'];
 
 export default function ClientDashboard() {
+<<<<<<< HEAD
 
 
 
@@ -32,6 +38,9 @@ export default function ClientDashboard() {
 
   });
 
+=======
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
@@ -73,9 +82,27 @@ export default function ClientDashboard() {;
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+    try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {}
+  }, [completed]);
+  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
+  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
+=======
+<<<<<<< HEAD
+import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedButton from '../../components/ui/EnhancedButton';
+<<<<<<< HEAD
+
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -103,6 +130,7 @@ export default function ClientDashboard() {;
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
+<<<<<<< HEAD
 
                 <EnhancedButton
                   onClick={() => toggle(s.key)}
@@ -119,6 +147,16 @@ export default function ClientDashboard() {;
 );
 
 
+=======
+
+
+=======
+
+
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -141,6 +179,20 @@ export default function ClientDashboard() {;
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

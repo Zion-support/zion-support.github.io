@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -8,15 +11,29 @@ import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -31,6 +48,7 @@ export function PartnerDashboard() {
   },
   
   return (
+<<<<<<< HEAD
 
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -137,6 +155,8 @@ export function PartnerDashboard() {;
   };
   return (;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <div className="space-y-6">;
       {/* Stats Overview */}
 
@@ -212,3 +232,104 @@ export function PartnerDashboard() {;
 
 }
 ;
+<<<<<<< HEAD
+=======
+  return (
+    <div className="space - y-6">;
+      {/* Stats Overview */}
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
+        <Card className="bg - zion - blue - dark border - zion - blue - light">;
+          <CardHeader className="flex flex - row items - center justify - between pb - 2">;
+            <CardTitle className="text - sm font - medium">;
+              Total Referrals;
+            </CardTitle>;
+            <Users className="h - 4 w - 4 text - zion - cyan" />;
+          </CardHeader>;
+          <CardContent>;
+            <div className="text - 2xl font - bold">{stats.total_referrals}</div>;
+            <p className="text - xs text - zion - slate - light">;
+              {stats.completed_referrals} completed, {stats.pending_referrals}{" "}
+              pending;
+            </p>;
+          </CardContent>;
+        </Card>;
+        <Card className="bg - zion - blue - dark border - zion - blue - light">;
+          <CardHeader className="flex flex - row items - center justify - between pb - 2">;
+            <CardTitle className="text - sm font - medium">;
+              Conversion Rate;
+            </CardTitle>;
+            <TrendingUp className="h - 4 w - 4 text - zion - purple" />;
+          </CardHeader>;
+          <CardContent>;
+            <div className="text - 2xl font - bold">{stats.conversion_rate}%</div>;
+            <p className="text - xs text - zion - slate - light">;
+              Of clicks that convert to sign - ups;
+            </p>;
+          </CardContent>;
+        </Card>;
+        <Card className="bg - zion - blue - dark border - zion - blue - light">;
+          <CardHeader className="flex flex - row items - center justify - between pb - 2">;
+            <CardTitle className="text - sm font - medium">;
+              Total Earnings;
+            </CardTitle>;
+            <DollarSign className="h - 4 w - 4 text - green - 500" />;
+          </CardHeader>;
+          <CardContent>;
+            <div className="text - 2xl font - bold">${stats.total_revenue}</div>;
+            <p className="text - xs text - zion - slate - light">;
+              ${stats.pending_revenue} pending payout;
+            </p>;
+          </CardContent>;
+        </Card>;
+      </div>;
+      {/* Performance Chart */}
+      <Card className="bg - zion - blue - dark border - zion - blue - light">;
+        <CardHeader>;
+          <CardTitle > Performance Overview</CardTitle>;
+          <CardDescription>;
+            Track your referral performance over time;
+          </CardDescription>;
+        </CardHeader>;
+        <CardContent className="flex justify - center items - center p - 6">;
+          <div className="text - center p - 12 border border - dashed border - zion - blue - light rounded - lg w - full">;
+            <LineChart className="h - 16 w - 16 mx - auto text - zion - slate - light mb - 4" />;
+            <p className="text - zion - slate - light">;
+              Detailed analytics will be available soon;
+            </p>;
+          </div>;
+        </CardContent>;
+      </Card>;
+      {/* Recent Referrals */}
+      <Card className="bg - zion - blue - dark border - zion - blue - light">;
+        <CardHeader className="flex flex - row items - center justify - between">;
+          <div>;
+            <CardTitle > Recent Referrals</CardTitle>;
+            <CardDescription > Your latest partner referrals</CardDescription>;
+          </div>;
+          <Button variant="outline" size="sm">;
+            View All;
+          </Button>;
+        </CardHeader>;
+        <CardContent>;
+          <div className="text - center p - 12 border border - dashed border - zion - blue - light rounded - lg">;
+            <Users className="h - 16 w - 16 mx - auto text - zion - slate - light mb - 4" />;
+            <p className="text - zion - slate - light mb - 4">No referrals yet</p>;
+            <p className="text - xs text - zion - slate - light">;
+
+              Start sharing your referral links to earn rewards;
+            </p>;
+          </div>;
+        </CardContent>;
+      </Card>;
+
+
+  )
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

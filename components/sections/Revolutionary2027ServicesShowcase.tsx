@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 
 } from 'lucide-react';
@@ -141,6 +142,14 @@ const Revolutionary2027ServicesShowcase = () => {
       growthRate: '500% annual growth'
     }
 
+=======
+
+
+      icon: Brain,
+      color: 'from - purple - 600 to - indigo - 700',
+      category: 'Quantum AI & Neuroscience',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
 
 
@@ -376,11 +385,15 @@ const Revolutionary2027ServicesShowcase = () => {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -394,9 +407,19 @@ const Revolutionary2027ServicesShowcase = () => {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Category Overview */}
         <motion&& motion.div
           variants={containerVariants}
@@ -445,6 +468,7 @@ const Revolutionary2027ServicesShowcase = () => {;
           ))}
         </motion.div>
 
+<<<<<<< HEAD
 
 
 
@@ -453,6 +477,8 @@ const Revolutionary2027ServicesShowcase = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -799,6 +825,7 @@ stagger_children: 0.1,
 
                     ))}
 
+<<<<<<< HEAD
 
 
 
@@ -807,6 +834,8 @@ stagger_children: 0.1,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='flex justify-between items-center text-sm text-gray-400'>
@@ -867,8 +896,27 @@ stagger_children: 0.1,
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                      href={`/services/${service && service.id}`}
+                      className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-lg hover:shadow-purple-500/25'>;
+                      <span>Explore</span>;
+                      <ArrowRight className='w-4 h-4' />                    </Link>                      {service && service.price}
+                      <span className="text-lg text-gray-400">{service && service.period}</span>;
+                    </div>;
+                    <Link
+                      href={`/services/${service && service.id}`}
+                      className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-lg hover:shadow-purple-500/25">;
+                      <span>Explore</span>;
+                      <ArrowRight className="w-4 h-4" />;
+                    </Link>;
+                  </div>;
+                </div>;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -879,6 +927,7 @@ stagger_children: 0.1,
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         >
@@ -892,6 +941,8 @@ stagger_children: 0.1,
               digital transformation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               <Link
                 href='https://ziontechgroup.com/contact'
@@ -968,6 +1019,7 @@ export default Revolutionary2027ServicesShowcase;
 export default Revolutionary2027ServicesShowcase;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
@@ -978,3 +1030,60 @@ export default Revolutionary2027ServicesShowcase;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+              <Link;
+                href='https://ziontechgroup.com / contact';
+                className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25';
+              >;
+                <span > Get Started Today</span>;
+                <ArrowRight className='w - 5 h - 5' />;
+              </Link>;
+              <a;
+                href='tel:+13024640950';
+                className='inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl'              >        >;
+          <div className="bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12">;
+            <h3 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
+              Join the future of technology with our revolutionary 2027 services.;
+              Get in touch to discover how we can accelerate your digital transformation.;
+            </p>;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+              <Link;
+                href="https://ziontechgroup.com / contact";
+                className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25";
+              >;
+                <span > Get Started Today</span>;
+                <ArrowRight className="w - 5 h - 5" />;
+              </Link>;
+              <a;
+                href="tel:+13024640950";
+                className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl";
+              >;
+                <span > Call +1 302 464 0950</span>;
+              </a>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>);
+}
+;
+export default Revolutionary2027ServicesShowcase);
+}
+;
+export default Revolutionary2027ServicesShowcase;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

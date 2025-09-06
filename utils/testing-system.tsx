@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 };
 };
@@ -74,6 +75,12 @@ export class TestingSystem {
 import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: &apos;click&apos; | &apos;type&apos; | &apos;hover&apos; ) { switch (action) { case &apos;click&apos;: element.click(); break; case &apos;type&apos;: break; case &apos;hover&apos;: break; default: break} } }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import "@testing-library/jest-dom";
 // Type definition for HTMLElement
 interface HTMLElement {
@@ -160,6 +167,19 @@ origin/automation-improvements-final
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+}};
+},;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

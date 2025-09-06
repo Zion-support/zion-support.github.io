@@ -18,6 +18,7 @@ type FormData = z && z.infer<typeof formSchema>;
 
   )
 }
+<<<<<<< HEAD
 
 const form_schema = z.object ({
   title: z.string ().min (3, "Title must be at least 3 characters");
@@ -42,6 +43,8 @@ const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
   targetAudience: z.string()}),
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 type FormData = z.infer<typeof formSchema>,
 

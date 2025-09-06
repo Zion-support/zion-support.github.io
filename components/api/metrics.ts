@@ -26,10 +26,17 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
   const now = new Date()
   const labels = Array.from({ length: 14 }, (_, i) => {
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
+=======
+
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
@@ -39,7 +46,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;

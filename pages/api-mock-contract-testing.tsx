@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react',
 import Head from 'next/head';
@@ -8,10 +9,48 @@ import Head from 'next/head';
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+=======
+import Head from 'next / head';
+import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
+import Layout from '../components / layout / Layout';
+import ServiceAds from '../components / sections / ServiceAds';
+export default /**
+ * ApiMockContractTestingPage - Function description
+ */
+function ApiMockContractTestingPage() {
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     website: 'https://ziontechgroup.com',  }
 ;
   const ad_items = [;
     {
+<<<<<<< HEAD
 
       title: '🧪 API Mock & Contract Testing Platform'
       description:
@@ -43,6 +82,40 @@ import Head from 'next/head';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      title: '🧪 API Mock & Contract Testing Platform',
+      description:;
+        'Spin up OpenAPI / GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
+      price: 'Starting at $69 / month',
+      features: [;
+        'OpenAPI / GraphQL import and live mock server',
+        'Contract tests gated in CI (GitHub / GitLab / Bitbucket)',
+        'Dynamic data generators and scenario templates',
+        'Snapshot diffs and changelog with approvals',
+      ],
+      link: 'https://ziontechgroup.com / api - mock - contract - testing',
+      contact_info,
+    },
+  ];
+;
+  const tiers = [;
+    {
+      name: 'Starter',
+      price: '$69 / month',
+      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks'],
+    },
+    {
+      name: 'Team',
+      price: '$149 / month',
+      items: ['5 projects', 'Unlimited mocks', 'Record / replay', 'Slack alerts'],
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      items: ['SAML / SSO', 'RBAC', 'Private cloud / VPC', 'Premium support'],
+    },  ];
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Layout>
       <Head>
@@ -135,17 +208,24 @@ import Head from 'next/head';
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           </div>;
 
@@ -170,11 +250,22 @@ import Head from 'next/head';
                 className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'>;
 
 
+<<<<<<< HEAD
+=======
+=======
+
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 }
 
     </Layout>);
 ;
+<<<<<<< HEAD
 
 
 
@@ -182,3 +273,13 @@ import Head from 'next/head';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -100,7 +100,38 @@ const EnhancedFuturisticBackground: React.FC<;
       x: number,
       y: number,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      opacity: number,
+      life: number,
+
+        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
+        this.opacity = Math.random() * settings.opacity;
+        this.life = Math.random() * 100;
+        this.maxLife = 100
+      }
+
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+        // Wrap around edges
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
+        // Fade out near end of life
+        if (this.life < 20) {
+
+          this.opacity *= 0.95
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       }
 
@@ -149,7 +180,10 @@ const EnhancedFuturisticBackground: React.FC<;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -343,6 +377,7 @@ constructor(p1: Particle, p2: Particle) {
       }
       // Create connections between nearby particles
       connections = [];
+<<<<<<< HEAD
 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -370,6 +405,11 @@ constructor(p1: Particle, p2: Particle) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }
         }
       }
@@ -585,5 +625,59 @@ if (< 0.5) {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    return () => {;
+      if (animationRef && animationRef.current) {;
+        cancelAnimationFrame(animationRef && animationRef.current);
+      }
+      window && window.removeEventListener('resize', resizeCanvas);
+    };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
+      }
+      window && window.removeEventListener('resize', resizeCanvas);
+    }
+
+
+  return (
+    <div className={`relative min-h-screen ${className}`}>;
+      <canvas
+        ref={canvasRef}
+
+
+        style={{ background: 'transparent' }}
+      />;
+      {/* Overlay gradient */}
+      <div;
+        className='fixed inset - 0 pointer - events - none z - 0';
+        style={{
+
+
+
+      {/* Content */}
+      <div className='relative z-10'>{children}</div>;
+    </div>;
+  );
+}
+export default EnhancedFuturisticBackground;
+
+
+=======
+
+export default EnhancedFuturisticBackground;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
+        }}
+      />;
+{/* Content */}
+      <div className='relative z - 10'>{children}</div>;
+    </div>);
+}
+;
+export default EnhancedFuturisticBackground;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

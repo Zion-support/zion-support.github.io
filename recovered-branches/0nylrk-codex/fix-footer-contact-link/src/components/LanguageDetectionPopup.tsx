@@ -1,5 +1,12 @@
 
 
+<<<<<<< HEAD
+=======
+
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -15,7 +22,10 @@ import {
   LanguageContextType,;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
 
@@ -54,9 +64,22 @@ export function LanguageDetectionPopup() {
   const languageName =;
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
     detectedLanguage;
+<<<<<<< HEAD
 
 
 
+=======
+
+  const handleAccept = async () => {;
+
+    await changeLanguage(detectedLanguage);
+    setOpen(false);
+  }
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -95,7 +118,11 @@ export function LanguageDetectionPopup() {;
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
@@ -120,6 +147,7 @@ export function LanguageDetectionPopup() {;
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={handleAccept}
+<<<<<<< HEAD
 
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
@@ -130,6 +158,15 @@ export function LanguageDetectionPopup() {;
     </AlertDialog>
 
 
+=======
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
+            {t("general && general.yes")}
+=======
+
+);
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
@@ -144,8 +181,50 @@ export function LanguageDetectionPopup() {;
     </AlertDialog>;
   );
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import { useState, useEffect  } from './react';
+import { use_translation  } from './react - i18next';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '../components / ui / alert - dialog';
+import {
+  use_language,
+  SupportedLanguage,
+  LanguageContextType,
+} from '../context / LanguageContext';
+export /**
+ * LanguageDetectionPopup - Function description
+ */
+function LanguageDetectionPopup() {
+  const [open, set_open] = useState (false);
+  const { t } = use_translation ();
+  const { change_language, current_language, supported_languages } =;
+    use_language () as LanguageContextType;
+  const [detected_language, setDetectedLanguage] =;
+    useState < SupportedLanguage | null>(null);
+;
+  useEffect (() => {
+    // Check if this is first visit;
+    const has_visited = local_storage.get_item ("zion_has_visited");
+    // Check condition
+if (return) {
+  $2
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }

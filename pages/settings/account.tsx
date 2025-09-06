@@ -22,23 +22,50 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
 
 import Head from 'next/head';
 export default function AccountSettingsPage() {
 
 
+=======
+
+
+  const [user, setUser] = useState<{;
+    address: string;
+    chain: 'evm' | 'sol';
+  } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+
+
+=======
+export default function AccountSettingsPage() {
+  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
+  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+<<<<<<< HEAD
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
+=======
+=======
+export default function AccountSettingsPage(req, res) {
+  try {
+  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -544,16 +571,21 @@ export default function AccountSettingsPage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
             <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>
           </div>
         </section>
+<<<<<<< HEAD
 
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
@@ -561,6 +593,14 @@ export default function AccountSettingsPage(req, res) {
 );
 
 
+=======
+
+
+
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -571,16 +611,28 @@ export default function AccountSettingsPage(req, res) {
     </>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         {status && <div className='text - sm text - gray - 600'>{status}</div>}
       </div>;
     </>);
 ;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

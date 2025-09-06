@@ -72,6 +72,7 @@ import { Menu } from 'lucide-react'
 import Link from "next/link",
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
+<<<<<<< HEAD
 
 
   return (
@@ -111,6 +112,8 @@ export function EnterpriseStickyNav() {
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -123,6 +126,7 @@ export function EnterpriseStickyNav() {
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation";
             aria-expanded={open}
+<<<<<<< HEAD
 
 
           >
@@ -139,6 +143,8 @@ export function EnterpriseStickyNav() {
               <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>
             </li>
             <li>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
@@ -150,6 +156,7 @@ export function EnterpriseStickyNav() {
   );
 };
     </nav>
+<<<<<<< HEAD
 
 
   )
@@ -168,6 +175,8 @@ export function EnterpriseStickyNav() {;
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation";
             aria-expanded={open}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           >;

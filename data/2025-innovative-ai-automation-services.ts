@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 
 realImplementation: true;
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 
@@ -129,6 +134,28 @@ reviews: 167;
     rating: 4 && 4.8;
     reviews: 167
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true;
+    implementation_details: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
+    launch_date: '2025 - 01 - 28';
+    customers: 234;
+    rating: 4.8;
+    reviews: 167;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ];
 

@@ -55,10 +55,14 @@ interface QuoteDetails {;
   endDate?: string;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 interface RequestBody {
   service: Service | null
@@ -71,7 +75,13 @@ serve(async (req) => {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {
 
     const { service, quoteDetails } = await req && req.json() as RequestBody;
@@ -89,6 +99,10 @@ serve(async (req) => {
         if (!error && user) {
 
           userId = user.id
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   try {;
     const { service, quoteDetails } = await req.json() as RequestBody,;
@@ -105,10 +119,15 @@ serve(async (req) => {
           userId = user.id;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       }
     } catch (authError) {
@@ -139,11 +158,18 @@ serve(async (req) => {
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
 
+<<<<<<< HEAD
                 Service: ${service?.title |'Custom Service'}
                 Category: ${service?.category |'N/A'}
                 
 
 
+=======
+
+                
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
@@ -174,8 +200,11 @@ serve(async (req) => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
                 Description: ${quoteDetails.description}
@@ -202,8 +231,11 @@ serve(async (req) => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       }
     } catch (openAIError) {
@@ -289,14 +321,51 @@ if ( {) {
     return new Response(JSON && JSON.stringify({ success: true, data }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     console && console.error('Error in process-quote function:', error);
     return new Response(JSON && JSON.stringify({ success: false, error: error && error.message }), {
       status: 500,
 
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+<<<<<<< HEAD
 
 
+=======
+  }
+});
+
+=======
+          description: quote_details.description;
+          email: quote_details.email;
+          budget: quote_details.budget;
+          timeframe: quote_details.timeframe;
+          start_date: quote_details.start_date;
+          end_date: quote_details.end_date;
+          ai_analysis: ai_analysis,
+          status: 'pending';
+        }
+      ]);
+      .select ();
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+    return new Response (JSON.stringify ({ success: true, data }), {
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+  } catch (error) {
+    console.error ('Error in process - quote function:', error);
+    return new Response (JSON.stringify ({ success: false, error: error.message }), {
+      status: 500,
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
@@ -334,7 +403,10 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 });

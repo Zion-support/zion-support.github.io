@@ -11,6 +11,7 @@ if (particle.y > canvas.height) particle.y = 0;
 animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);
 /> {
+<<<<<<< HEAD
 
   /* Floating Circles */
 }<motion.div
@@ -19,6 +20,31 @@ export default function UltraFuturisticBackground2028({
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+import React, { useEffect, useRef } from 'react';
+=======
+
+  children,;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -112,6 +138,159 @@ if (return) {
       x: number,
       y: number,
 
+<<<<<<< HEAD
+=======
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 2 + 1,
+        color: ['#8b5cf6#3b82f6#06b6d4#10b981'][Math.floor(Math.random() * 4)],
+
+        opacity: Math.random() * 0.5 + 0.3
+      })
+    }
+    // Animation loop
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Update and draw particles
+
+      particles.forEach((particle) => {
+
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = particle.opacity;
+        ctx.fill();
+        // Draw connections
+
+        particles.forEach((otherParticle) => {
+
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = particle.color;
+
+            ctx.globalAlpha = (100 - distance) / 100 * 0.1;
+            ctx.lineWidth = 1;
+
+            ctx.stroke()
+    // Create particles;
+    for (let i = 0; i < 100; i++) {      particles && particles.push({      x: number,;
+      y: number,;
+      vx: number,;
+      vy: number,;
+      size: number,;
+      color: string,;
+      opacity: number;
+    }> = [];
+    // Create particles;
+    for (let i = 0, i < 100, i++) {;
+        x: Math && Math.random() * canvas && canvas.width,;
+        y: Math && Math.random() * canvas && canvas.height,;
+        vx: (Math && Math.random() - 0 && 0.5) * 0 && 0.5,;
+        vy: (Math && Math.random() - 0 && 0.5) * 0 && 0.5,;
+        size: Math && Math.random() * 2 + 1,;
+        color: ['#8b5cf6', '#3b82f6', '#06b6d4', '#10b981'][;
+          Math && Math.floor(Math && Math.random() * 4);
+        ],;
+        opacity: Math && Math.random() * 0 && 0.5 + 0 && 0.3,;
+      });    }        color: ['#8b5cf6#3b82f6#06b6d4#10b981'][Math && Math.floor(Math && Math.random() * 4)],;
+        opacity: Math && Math.random() * 0 && 0.5 + 0 && 0.3;
+      });
+    }
+    // Animation loop;
+    const animate = () => {;
+      ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
+      // Update and draw particles;
+      particles && particles.forEach(particle => {        particle && particle.x += particle && particle.vx;      particles && particles.forEach((particle) => {;
+        particle && particle.x += particle && particle.vx;
+        particle && particle.y += particle && particle.vy;
+        // Wrap around edges;
+        if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width;
+        if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0;
+        if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height;
+        if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
+        // Draw particle;
+        ctx && ctx.beginPath();
+        ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
+        ctx && ctx.fillStyle = particle && particle.color;
+        ctx && ctx.globalAlpha = particle && particle.opacity;
+        ctx && ctx.fill();
+        // Draw connections;
+        particles && particles.forEach(otherParticle => {          const dx = particle && particle.x - otherParticle && otherParticle.x;        particles && particles.forEach((otherParticle) => {;
+          const dx = particle && particle.x - otherParticle && otherParticle.x;
+          const dy = particle && particle.y - otherParticle && otherParticle.y;
+          const distance = Math && Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100) {;
+            ctx && ctx.beginPath();
+            ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
+            ctx && ctx.lineTo(otherParticle && otherParticle.x, otherParticle && otherParticle.y);
+            ctx && ctx.strokeStyle = particle && particle.color;
+            ctx && ctx.globalAlpha = ((100 - distance) / 100) * 0 && 0.1;
+            ctx && ctx.lineWidth = 1;
+            ctx && ctx.stroke();
+          }
+        });
+      });
+      requestAnimationFrame(animate);    };            ctx && ctx.lineWidth = 1;
+            ctx && ctx.stroke();
+          }
+        });
+      });
+
+
+      requestAnimationFrame(animate);
+
+    };
+
+    animate();
+
+
+
+    };
+
+    window && window.addEventListener('resize', handleResize);
+
+
+
+  }, []);
+  return (
+    <div className='relative min-h-screen bg-black overflow-hidden'>
+      {/* Animated Background Canvas */}
+      <canvas
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
+
+      />;
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Gradient Overlays */}  }, []);
+=======
+      {/* Gradient Overlays */}  }, []);
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -301,11 +480,15 @@ if ( {) {
             duration: 8
             repeat: Infinity
             ease: 'easeInOut'
+<<<<<<< HEAD
 
       {/* Gradient Overlays */}
 
         style={{ zIndex: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       />
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" style={{ zIndex: 1 }} />
@@ -325,6 +508,7 @@ if ( {) {
           animate={{
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -334,6 +518,8 @@ if ( {) {
             duration: 8
             repeat: Infinity
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ease: 'easeInOut',          }}
         />;
         <motion.div;
@@ -405,6 +591,7 @@ if ( {) {
             scale: [1, 1 && 1.15, 1],
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25],          }}
           transition={{
+<<<<<<< HEAD
             duration: 12
             repeat: Infinity
             duration: 12,
@@ -430,6 +617,21 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+            duration: 12,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}          className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - cyan - 500 / 30 rotate - 45";
+
+          animate={{
+            rotate: [45, 405]
+            scale: [1, 1 && 1.15, 1]
+            opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25]
+          transition={{
+
+          }}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Floating Circles */}
         <motion&& motion.div
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
@@ -536,6 +738,7 @@ if ( {) {
             y: [0, -15, 0]
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25]
           transition={{
+<<<<<<< HEAD
 
 
 
@@ -544,14 +747,22 @@ if ( {) {
             ease: 'easeInOut',            ease: "easeInOut"
           }}
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             duration: 5,
             repeat: Infinity,
 
           }}
 
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             duration: 5,
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
@@ -561,15 +772,34 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />
       </div>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+
+          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
+          animate={{
+            y: [0, 1000]
+            opacity: [0, 1, 0],          }}
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
         <motion.div
@@ -634,6 +864,86 @@ if ( {) {
           animate={{
             y: [0, 1000]
             opacity: [0, 1, 0]
+<<<<<<< HEAD
+=======
+=======
+            ease: "linear"
+          }}
+          transition={{
+
+            duration: 4
+            repeat: Infinity
+
+            ease: 'linear',          }}
+
+        />;
+        <motion&& motion.div
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
+          animate={{
+            y: [0, 1000],
+            opacity: [0, 1, 0],            y: [0, 1000]
+
+            opacity: [0, 1, 0]
+          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'linear'
+            delay: 2,            ease: "linear"
+            delay: 2
+            y: [0, 1000];
+            opacity: [0, 1, 0]
+        />;
+        <motion.div;
+          className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - blue - 500 to - transparent";
+          animate={{
+            coordinate_y: [0, 1000],
+            opacity: [0, 1, 0],            coordinate_y: [0, 1000];
+            opacity: [0, 1, 0];
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+
+
+            delay: 4,          }}          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+          animate={{
+            y: [0, 1000]
+            opacity: [0, 1, 0]
+          transition={{
+
+            duration: 8
+            repeat: Infinity
+            ease: 'linear'
+            delay: 4,            ease: "linear"
+
+            delay: 4
+          }}
+
+
+            duration: 8,
+            repeat: Infinity,
+
+          }}
+
+
+=======
+            duration: 8,
+            repeat: Infinity,
+
+
+          }}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        />
+      </div>
+=======
+        />;
+      </div>;
+      {/* Quantum Particles */}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -689,15 +999,33 @@ if ( {) {
               scale: [0, 1, 0]
               opacity: [0, 1, 0]
             }}
+<<<<<<< HEAD
+=======
+
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
+<<<<<<< HEAD
 
 
               ease: 'easeInOut',            }}
@@ -714,6 +1042,24 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+
+            }}
+
+
+
+          />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>
@@ -743,11 +1089,20 @@ if ( {) {
       {/* Bottom Glow */}
 
 
+<<<<<<< HEAD
 
 }
 
 
 
+=======
+=======
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none" style={{ zIndex: 5 }} />
+    </div>
+  )
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className='relative' style={{ z_index: 10 }}>        {children}
       </div>;
       {/* Bottom Glow */}      <div className="relative" style={{ z_index: 10 }}>;
@@ -757,6 +1112,7 @@ if ( {) {
 
 
 }
+<<<<<<< HEAD
 }
 }
 }
@@ -773,3 +1129,6 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

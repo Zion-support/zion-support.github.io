@@ -17,6 +17,36 @@ const FILE = path && path.join(DATA_DIR, "profiles && profiles.json");
 
 function load(): Record<string, KycProfile> {
   try {
+<<<<<<< HEAD
+=======
+
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw)
+
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import type { KycProfile } from "../../../utils / kyc";
+import { getRequiredDocuments, getOptionalDocuments  } from '../../../utils / kyc';
+import fs from './fs';
+import path from './path';
+;
+const DATA_DIR = path.join (process.cwd (), "data", "kyc");
+const FILE = path.join (DATA_DIR, "profiles.json");
+;
+function load (): Record < string, KycProfile> {
+  try {
+    const raw = fs.readFileSync (FILE, "utf8");
+    return JSON.parse (raw);
+import type { NextApiRequest, NextApiResponse } from "next";
+import type { KycProfile } from "../../../utils/kyc";
+import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
+import fs from "fs";
+import path from "path";
+const DATA_DIR = path.join(process.cwd(), "data", "kyc");
+const FILE = path.join(DATA_DIR, "profiles.json");
+function load(): Record<string, KycProfile> {
+  try {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const raw = fs.readFileSync(FILE, "utf8");
     return JSON.parse(raw);
   } catch {
@@ -38,6 +68,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     optionalDocuments: getOptionalDocuments(profile.role)
   });
 }
+<<<<<<< HEAD
 
 
 
@@ -138,3 +169,11 @@ function load (): Record < string, KycProfile> {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

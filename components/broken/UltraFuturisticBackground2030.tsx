@@ -112,9 +112,16 @@ if (return) {
             scale: [1, 1.1, 1]
             opacity: [0.3, 0.6, 0.3],          }}
           transition={{
+<<<<<<< HEAD
             duration: 20
             repeat: Infinity
             ease: 'linear'
+=======
+
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
         />
         <motion.div
@@ -145,6 +152,7 @@ if (return) {
             rotate: -360
             scale: [1, 0.9, 1];
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
           transition={{
@@ -157,6 +165,16 @@ if (return) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+        />;
+        <motion&& motion.div
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
+          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+          animate={{
+            rotate: -360,
+            scale: [1, 0 && 0.9, 1]
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         {/* Floating Circles */}
         <motion&& motion.div
@@ -226,6 +244,7 @@ if (return) {
             y: [0, 20, 0]
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           transition={{
+<<<<<<< HEAD
 
 
 
@@ -239,6 +258,11 @@ if (return) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+          }}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Animated Lines */}
         <motion&& motion.div
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
@@ -318,6 +342,12 @@ ease: "easeInOut"
             opacity: [0.3, 0.8, 0.3]
           }}
           transition={{
+<<<<<<< HEAD
+=======
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           }}
@@ -351,6 +381,13 @@ ease: "easeInOut"
         {/* Top gradient */}
 
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />;
+<<<<<<< HEAD
+=======
+=======
+=======
+            duration: 8,
+            repeat: Infinity,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         />
       </div>
@@ -498,14 +535,80 @@ ease: "easeInOut"
             }}
           />;
         ))}
+<<<<<<< HEAD
       </div>
+=======
+
+      </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
+=======
+};
+export default UltraFuturisticBackground2030;      </div>;
+    </div>;
+  );
+
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default UltraFuturisticBackground2030;      </div>
+    </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  )
+};
+export default UltraFuturisticBackground2030;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`;
+            }}
+            animate={{
+              coordinate_y: [0, -100, 0];
+              opacity: [0, 1, 0];
+              scale: [0, 1, 0];
+            }}
+            transition={{
+              duration: Math.random () * 10 + 10,
+              repeat: Infinity,
+              delay: Math.random () * 10,
+              ease: 'easeInOut',            }}              ease: "easeInOut";
+            }}
+          />))}
+      </div>;
+      {/* Neon Glow Effects */}
+      <div className='fixed inset - 0 pointer - events - none z - 25'>;
+        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - cyan - 500 / 5 rounded - full blur - 3xl' />;
+        <div className='absolute top - 1/3 right - 1/4 w - 80 h - 80 bg - purple - 500 / 5 rounded - full blur - 3xl' />;
+        <div className='absolute bottom - 1/4 left - 1/3 w - 72 h - 72 bg - pink - 500 / 5 rounded - full blur - 3xl' />;
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2030;      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2030;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
+<<<<<<< HEAD
 
 
               ease: 'easeInOut',            }}
@@ -521,12 +624,17 @@ ease: "easeInOut"
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
         <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
 
+<<<<<<< HEAD
 
       </div>
     </div>
@@ -535,12 +643,17 @@ ease: "easeInOut"
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>
     </div>
   );
 };
 
 
+<<<<<<< HEAD
 
 export default UltraFuturisticBackground2030;      </div>
     </div>
@@ -554,11 +667,16 @@ export default UltraFuturisticBackground2030;
 
 
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default UltraFuturisticBackground2030;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

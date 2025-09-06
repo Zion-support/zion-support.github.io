@@ -31,7 +31,10 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
@@ -43,10 +46,13 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface RewardsCardProps {
 
   rewards: ReferralReward[]
@@ -67,6 +73,7 @@ interface RewardsCardProps {
             <BadgeDollarSign className="h-5 w-5" />
 
 
+<<<<<<< HEAD
 
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
@@ -74,6 +81,8 @@ interface RewardsCardProps {
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -84,15 +93,21 @@ interface RewardsCardProps {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     )
   }
   if (rewards.length === 0) {
@@ -103,6 +118,7 @@ interface RewardsCardProps {
             <BadgeDollarSign className='h-5 w-5' />
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -110,6 +126,10 @@ interface RewardsCardProps {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Your Rewards
           </CardTitle>
           <CardDescription>
@@ -139,8 +159,11 @@ interface RewardsCardProps {
     )
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   return (
     <Card>
@@ -150,11 +173,14 @@ interface RewardsCardProps {
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -208,9 +234,13 @@ interface RewardsCardProps {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="space-y-4">
           {rewards.map((reward, index) => (
             <div 
@@ -424,3 +454,46 @@ if ( {) {
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
+
+        <div className='space - y-4'>          {rewards.map ((reward, index) => (
+            <div;
+              key={reward.id}
+        <div className="space - y-4">;
+          {rewards.map ((reward, index, ) => (
+            <div;
+              key = {reward.id, }
+              className={`flex justify - between items - start ${
+                index !== rewards.length - 1 ? 'border - b pb - 3' : '';
+              }`}
+            >;
+              <div>;
+                <div className='flex items - center gap - 2'>;
+                  {reward.reward_type === 'credit' ? (
+                    <BadgeDollarSign className='h - 4 w - 4 text - green - 600' />) : (
+                    <Badge className='h - 4 w - 4 text - blue - 600' />)}
+                  <p className='font - medium'>                    {reward.reward_type === 'credit'                  <p className="font - medium">;
+                    {reward.reward_type === 'credit';
+                      ? `$${reward.amount?.to_fixed (2)} Credit`;
+                      : 'Visibility Boost'}
+                  </p>;
+                </div>;
+                <p className='text - xs text - muted - foreground mt - 1'>;
+                  Earned on {format_date (reward.created_at)}
+                </p>;
+                {reward.expires_at && (
+                  <p className='text - xs text - muted - foreground'>                    Expires on {format_date (reward.expires_at)}                <p className="text - xs text - muted - foreground mt - 1">;
+                  Earned on {format_date (reward.created_at)}
+                </p>;
+                {reward.expires_at && (
+                  <p className="text - xs text - muted - foreground">;
+                  </p>)}
+              </div>;
+            </div>))}
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

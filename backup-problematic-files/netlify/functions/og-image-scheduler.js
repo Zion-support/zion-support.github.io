@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/og-image-scheduler.js
 :backup-problematic-files/netlify/functions/og-image-scheduler.js
 const path = require('path'),;
@@ -25,6 +26,11 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/og-image-scheduler.js
 :backup-problematic-files/netlify/functions/og-image-scheduler.js
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -62,6 +68,7 @@ exports.handler = async () => {
     body: logs.join('\n')
   }
 };function runNode(relPath, args = []) {
+<<<<<<< HEAD
 :netlify/functions/og-image-scheduler.js
   const abs = path.resolve(__dirname, '....', relPath)
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
@@ -82,6 +89,8 @@ exports.handler = async () => {
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
@@ -106,6 +115,7 @@ exports.handler = async () => {
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 },
+<<<<<<< HEAD
 main:netlify/functions/og-image-scheduler.js
 :backup-problematic-files/netlify/functions/og-image-scheduler.js
 :netlify/functions/og-image-scheduler.js
@@ -113,3 +123,11 @@ main:netlify/functions/og-image-scheduler.js
 }
 main:netlify/functions/og-image-scheduler.js
 :backup-problematic-files/netlify/functions/og-image-scheduler.js
+=======
+
+=======
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/og-image-scheduler.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

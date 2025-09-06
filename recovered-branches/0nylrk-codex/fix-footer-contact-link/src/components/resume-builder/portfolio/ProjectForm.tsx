@@ -15,7 +15,10 @@ import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Define schema for form validation
 
 const projectSchema = z.object({
@@ -25,17 +28,50 @@ const projectSchema = z.object({
   image_url: z.string().optional()
   github_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
+<<<<<<< HEAD
 
 
 }
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
+=======
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import {useState} from 'react';
+import {use_form} from 'react - hook - form';
+import {zod_resolver} from '@hookform / resolvers / zod';
+import {z} from 'zod';
+import {Button} from '@/components / ui / button';
+import {Input} from '@/components / ui / input';
+import {Textarea} from '@/components / ui / textarea';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
+import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
+
+  pdf_url: z && z.string().optional()}),;
+
+type ProjectFormValues = z && z.infer<typeof projectSchema>;
+
+interface ProjectFormProps {;
+  project?: PortfolioProject;
+  onSuccess: () => void,;
+  onCancel: () => void;
+}
+
+export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -160,9 +196,22 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
         onSuccess();
         form && form.reset();
+<<<<<<< HEAD
+=======
+=======
+;
+      if (success) {;
+        onSuccess();
+        form.reset();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     } catch (error) {;
       console && console.error('Error saving project:', error);

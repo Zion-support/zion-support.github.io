@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 function summarizeModules(
@@ -126,9 +129,23 @@ export default async function handler(
       access,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
+<<<<<<< HEAD
+=======
+  } catch (err: any) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   } catch (err: any) {
+<<<<<<< HEAD
 
+=======
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+    return res.status (500).json ({ error: err.message || "Internal error" });
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return res.status(500).json({ error: err.message |"Internal error" });
     return res.status(500).json({ error: err.message || "Internal error" });
 
@@ -387,7 +404,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
   } catch (error) {

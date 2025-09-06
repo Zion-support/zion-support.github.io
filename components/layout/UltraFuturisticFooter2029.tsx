@@ -4,7 +4,10 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   Phone,
   Mail,
@@ -43,6 +46,308 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 
+<<<<<<< HEAD
+=======
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
+      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
+      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
+      { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' }
+    ]
+  };
+  {
+    title: '🧠 AI & Technology',
+    services: [
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'Machine Learning', href: '/machine-learning' },
+      { name: 'Natural Language Processing', href: '/nlp-services' },
+      { name: 'Computer Vision', href: '/computer-vision' }
+    ]
+  };
+
+  {
+    title: '⚛️ Quantum & Emerging Tech'
+    services: [
+
+      { name: 'Quantum Computing', href: '/quantum-computing' },
+      { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+      { name: 'IoT Platforms', href: '/iot-platforms' },
+      { name: 'Space Technology', href: '/space-tech' }
+    ]
+  };
+
+  {
+    title: '🏙️ Enterprise Solutions'
+    services: [
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Globe,;
+  ArrowRight,;
+  Star,;
+  Rocket,;
+  Brain,;
+  Atom,;
+  Building,;
+  Briefcase,;
+  Microscope,;
+  Twitter,;
+  Facebook,;
+  Linkedin,;
+  Instagram,;
+  Youtube,;
+  Github,;
+  Zap,;
+  Sparkles,;
+  Shield,;
+  Cpu,;
+  Database,;} from 'lucide-react';import { ;
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, ;
+  Rocket, Brain, Atom, Building, Briefcase, Microscope;
+  Twitter, Facebook, Linkedin, Instagram, Youtube;
+  Github, Zap, Sparkles, Shield, Cpu, Database;
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
+};
+const serviceCategories = [;
+  {;
+    title: 'AI & Machine Learning',;
+    icon: Brain,;
+    services: [;
+      {;
+        name: 'AI Consciousness Evolution',;
+        href: '/ai-consciousness-evolution-2029',;
+      },;
+      {;
+        name: 'Quantum Neural Networks',;
+        href: '/quantum-neural-network-platform',;
+      },;
+      {;
+        name: 'Autonomous Business Operations',;
+        href: '/autonomous-business-operations-platform',;
+      },;
+      {;
+        name: 'AI-Powered IT Asset Management',;
+        href: '/ai-powered-it-asset-management',;
+      },;
+    ],;
+  },  {      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },;
+      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },;
+      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },;
+      { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' }
+    ];
+  };
+    title: '🧠 AI & Technology',;
+    services: [;
+      { name: 'AI Services', href: '/ai-services' },;
+      { name: 'Machine Learning', href: '/machine-learning' },;
+      { name: 'Natural Language Processing', href: '/nlp-services' },;
+      { name: 'Computer Vision', href: '/computer-vision' },;
+    ],;
+  },  {      { name: 'Computer Vision', href: '/computer-vision' }
+    ];
+  };
+  {;
+    title: '⚛️ Quantum & Emerging Tech',;
+    services: [;
+      { name: 'Quantum Computing', href: '/quantum-computing' },;
+      { name: 'Blockchain Solutions', href: '/blockchain-solutions' },;
+      { name: 'IoT Platforms', href: '/iot-platforms' },;
+      { name: 'Space Technology', href: '/space-tech' },;
+    ],;
+  },  {      { name: 'Space Technology', href: '/space-tech' }
+    ];
+  };
+  {;
+    title: '🏙️ Enterprise Solutions',;
+    services: [;
+      { name: 'Enterprise IT', href: '/enterprise-it' },;
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },;
+      { name: 'Cybersecurity', href: '/cybersecurity' },;
+      { name: 'DevOps Automation', href: '/devops-automation' },;
+    ],;
+
+  },];      { name: 'DevOps Automation', href: '/devops-automation' }
+    ];
+  }
+];
+
+      { name: 'Enterprise IT', href: '/enterprise-it' },
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'DevOps Automation', href: '/devops-automation' }
+    ]
+=======
+<<<<<<< HEAD
+import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Star
+  Rocket
+  Brain
+  Atom
+  Building
+  Briefcase
+  Microscope
+  Twitter
+  Facebook
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  Zap
+  Sparkles
+  Shield
+  Cpu
+  Database;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Rocket,
+  Brain,
+  Atom,
+  Building,
+  Briefcase,
+  Microscope,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  Zap,
+  Sparkles,
+  Shield,
+<<<<<<< HEAD
+  Cpu,
+  Database,} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star,
+  Rocket, Brain, Atom, Building, Briefcase, Microscope;
+  Twitter, Facebook, Linkedin, Instagram, Youtube;
+  Github, Zap, Sparkles, Shield, Cpu, Database;
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }  website: 'https://ziontechgroup.com';
+}
+;
+const service_categories = [;
+  {
+    title: 'AI & Machine Learning',
+    icon: Brain,
+    services: [;
+      {
+        name: 'AI Consciousness Evolution',
+        href: '/ai - consciousness - evolution - 2029',
+      },
+      {
+        name: 'Quantum Neural Networks',
+        href: '/quantum - neural - network - platform',
+      },
+      {
+        name: 'Autonomous Business Operations',
+        href: '/autonomous - business - operations - platform',
+      },
+      {
+        name: 'AI - Powered IT Asset Management',
+        href: '/ai - powered - it - asset - management',
+      },
+    ],
+  },  {      { name: 'AI Consciousness Evolution', href: '/ai - consciousness - evolution - 2029' },
+      { name: 'Quantum Neural Networks', href: '/quantum - neural - network - platform' },
+      { name: 'Autonomous Business Operations', href: '/autonomous - business - operations - platform' },
+      { name: 'AI - Powered IT Asset Management', href: '/ai - powered - it - asset - management' }
+    ];
+  }
+    title: '🧠 AI & Technology',
+    services: [;
+      { name: 'AI Services', href: '/ai - services' },
+      { name: 'Machine Learning', href: '/machine - learning' },
+      { name: 'Natural Language Processing', href: '/nlp - services' },
+      { name: 'Computer Vision', href: '/computer - vision' },
+    ],
+  },  {      { name: 'Computer Vision', href: '/computer - vision' }
+    ];
+  }
+  {
+    title: '⚛️ Quantum & Emerging Tech',
+    services: [;
+      { name: 'Quantum Computing', href: '/quantum - computing' },
+      { name: 'Blockchain Solutions', href: '/blockchain - solutions' },
+      { name: 'IoT Platforms', href: '/iot - platforms' },
+      { name: 'Space Technology', href: '/space - tech' },
+    ],
+  },  {      { name: 'Space Technology', href: '/space - tech' }
+    ];
+  }
+  {
+    title: '🏙️ Enterprise Solutions',
+    services: [;
+      { name: 'Enterprise IT', href: '/enterprise - it' },
+      { name: 'Cloud Solutions', href: '/cloud - solutions' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'DevOps Automation', href: '/devops - automation' },
+    ],
+  }, ];      { name: 'DevOps Automation', href: '/devops - automation' }
+    ];
+
+  }
+];
+;
+const quick_links = [;
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Rocket },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Blog', href: '/blog', icon: BookOpen },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
+  { name: 'Support', href: '/support', icon: MessageCircle },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   { name: 'Privacy', href: '/privacy', icon: Shield }
 ];
 
@@ -159,6 +464,7 @@ const UltraFuturisticFooter2029 = () =>: any {
     ];
 
   }
+<<<<<<< HEAD
 
             <p className='text-gray-400 mb-6 leading-relaxed'>
               Leading the revolution in AI, quantum computing, and autonomous
@@ -252,10 +558,19 @@ const UltraFuturisticFooter2029 = () => {
 
               ))}
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+];
+
+
+              ))}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>;
           </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -275,6 +590,10 @@ const UltraFuturisticFooter2029 = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+          {/* Service Categories */}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               {serviceCategories.map((category, index) => (
                 <div key={index}>
@@ -328,14 +647,20 @@ const UltraFuturisticFooter2029 = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>;
           </div>;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -347,11 +672,15 @@ const UltraFuturisticFooter2029 = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Link
                   key={link.name}
                   href={link.href}
@@ -372,8 +701,11 @@ const UltraFuturisticFooter2029 = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -395,6 +727,12 @@ const UltraFuturisticFooter2029 = () => {
                   <ul className='space-y-2'>;
                     {section && section.links.map(link => (;
                       <li key={link && link.name}>;
+<<<<<<< HEAD
+=======
+=======
+            </div>
+          </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Footer Sections */}
@@ -760,9 +1098,25 @@ export default UltraFuturisticFooter2029;  );
 export default UltraFuturisticFooter2029;
 
 
+<<<<<<< HEAD
+=======
+=======
+    </footer>);
+}
+;
+export default UltraFuturisticFooter2029);
+}
+;
+export default UltraFuturisticFooter2029;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
 export default UltraFuturisticFooter2029;  )
 }
 export default UltraFuturisticFooter2029;
@@ -780,3 +1134,7 @@ export default UltraFuturisticFooter2029;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

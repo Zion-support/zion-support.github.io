@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,6 +14,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -65,6 +70,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         throw new Error(error.message)
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
@@ -125,6 +132,7 @@ function AIListingGenerator() {
   const [is_loading, setIsLoading] = useState (false);
   const [generated_content, setGeneratedContent] = useState < GeneratedContent | null>(null);
 ;
+<<<<<<< HEAD
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast(),;
@@ -152,6 +160,30 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  const handle_generate = async ({
+
+    title;
+    category;
+    key_features;
+    target_audience;
+  }: {
+
+    title: string,
+    category: string,
+    key_features: string,
+    target_audience: string;
+  }) => {
+    setIsLoading (true);
+;
+
+    try {
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       if (data.error) {
         throw new Error(data.error)
@@ -169,6 +201,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
+<<<<<<< HEAD
 
     } finally {
       setIsLoading(false)
@@ -205,6 +238,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
       // Check condition
 if ( {) {
@@ -306,14 +342,20 @@ if ( {) {
           </p>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <AIListingForm
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initialValues={initialValues}
           />;
         </CardContent>;

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -10,6 +11,8 @@ import { TalentProfile } from "@/types/talent";
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -27,11 +30,14 @@ interface UseHireRequestFormProps {
 
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -43,6 +49,7 @@ interface UseHireRequestFormProps {
 
 
 
+<<<<<<< HEAD
     id?: string
   }
 }
@@ -67,6 +74,10 @@ interface UseHireRequestFormProps {;
   userDetails?: {;
     name?: string,;
     email?: string,;
+=======
+
+    email?: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     id?: string;
   }
 }
@@ -173,6 +184,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
+<<<<<<< HEAD
 
 
 ;
@@ -247,6 +259,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 
   }
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
     } catch (error) {
@@ -256,6 +270,11 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     } finally {
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -269,8 +288,11 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

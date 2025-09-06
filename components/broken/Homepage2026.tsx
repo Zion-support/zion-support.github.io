@@ -6,7 +6,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 class ErrorBoundary extends React.Component {
@@ -58,6 +61,13 @@ const Homepage2026: React.FC = () => {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
+=======
+=======
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               {/* Company Badge */}
               <motion&& motion.div
@@ -83,7 +93,10 @@ const Homepage2026: React.FC = () => {;
   ArrowRight, Star, ;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail;
 const Homepage2026: React.FC = () => {
@@ -91,12 +104,20 @@ const Homepage2026: React.FC = () => {
     <Layout>;
       {/* Main Content */}
 
+<<<<<<< HEAD
+=======
+      <main className='relative z-10'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Hero Section */}
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
           {/* Background Elements */}
@@ -128,11 +149,16 @@ const Homepage2026: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -143,11 +169,15 @@ const Homepage2026: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
@@ -332,6 +362,7 @@ const Homepage2026: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -341,6 +372,11 @@ const Homepage2026: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -560,10 +596,14 @@ const Homepage2026: React.FC = () => {
               {/* AI Automation Services */}
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, x: -20 }}
@@ -574,11 +614,15 @@ const Homepage2026: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <div className='text-5xl mb-6'>🤖</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -633,15 +677,25 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* IT Infrastructure Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -652,11 +706,15 @@ const Homepage2026: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <div className='text-5xl mb-6'>🏗️</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -712,14 +770,77 @@ const Homepage2026: React.FC = () => {
               </motion.div>
 
 
+<<<<<<< HEAD
+=======
+                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
+                className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'>;
+                <div className='text-5xl mb-6'>🏗️</div>;
+                <h3 className='text-2xl font-semibold text-white mb-4'>;
+                  IT Infrastructure Services;
+                </h3>;
+                <p className='text-gray-300 mb-6'>;
+                  Robust infrastructure solutions for modern digital businesses.;
+                  Edge computing, zero trust security, and hybrid cloud;
+                  management for enterprise-grade performance.;
+                </p>;
+                <div className='space-y-3 mb-6'>;
+                  <div className='flex items-center space-x-2 text-sm text-gray-300'>;
+                    <CheckCircle className='w-4 h-4 text-green-400' />;
+                    <span>Edge Computing Orchestration - $599/month</span>;
+                  </div>;
+                  <div className='flex items-center space-x-2 text-sm text-gray-300'>;
+                    <CheckCircle className='w-4 h-4 text-green-400' />;
+                    <span>Zero Trust Security Platform - $799/month</span>;
+                  </div>;
+                  <div className='flex items-center space-x-2 text-sm text-gray-300'>;
+                    <CheckCircle className='w-4 h-4 text-green-400' />;
+                    <span>Hybrid Cloud Management - $499/month</span>;
+                  </div>;
+                </div>;
+                <Link href='/comprehensive-2025-services-showcase'>;
+                  <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>                    Learn More              >;
+                <div className="text-5xl mb-6">🏗️</div>;
+                <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>;
+                <p className="text-gray-300 mb-6">;
+                  Robust infrastructure solutions for modern digital businesses. ;
+                  Edge computing, zero trust security, and hybrid cloud management for enterprise-grade performance.;
+                </p>;
+                <div className="space-y-3 mb-6">;
+                  <div className="flex items-center space-x-2 text-sm text-gray-300">;
+                    <CheckCircle className="w-4 h-4 text-green-400" />;
+                    <span>Edge Computing Orchestration - $599/month</span>;
+                  </div>;
+                  <div className="flex items-center space-x-2 text-sm text-gray-300">;
+                    <CheckCircle className="w-4 h-4 text-green-400" />;
+                    <span>Zero Trust Security Platform - $799/month</span>;
+                  </div>;
+                  <div className="flex items-center space-x-2 text-sm text-gray-300">;
+                    <CheckCircle className="w-4 h-4 text-green-400" />;
+                    <span>Hybrid Cloud Management - $499/month</span>;
+                  </div>;
+                </div>;
+                <Link href="/comprehensive-2025-services-showcase">;
+                  <button className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">;
+                    Learn More;
+                  </button>;
+                </Link>;
+              </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Micro SAAS Solutions */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -730,11 +851,15 @@ const Homepage2026: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <div className='text-5xl mb-6'>🚀</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -789,15 +914,25 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Cutting-Edge AI Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -808,11 +943,15 @@ const Homepage2026: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <div className='text-5xl mb-6'>🧠</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -1046,8 +1185,52 @@ className="space-y-6"
 export default Homepage2026;
 
 
+<<<<<<< HEAD
+=======
+=======
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+                <a;
+                  href='mailto:kleber@ziontechgroup.com';
+                  className='inline - flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105';
+                >;
+                  <span > Get Started Today</span>;
+                  <ArrowRight className='w - 5 h - 5' />;
+                </a>;
+                <a;
+                  href='tel:+13024640950';
+                  className='px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300'                >                <a;
+                  href="mailto:kleber@ziontechgroup.com";
+                  className="inline - flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105";
+                >;
+                  <span > Get Started Today</span>;
+                  <ArrowRight className="w - 5 h - 5" />;
+                </a>;
+                <a;
+                  href="tel:+13024640950";
+                  className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300";
+                >;
+                  Call Now;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </main>;
+    </Layout>);
+}
+;
+export default Homepage2026);
+}
+;
+export default Homepage2026;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 export default Homepage2026;  )
 }
 export default Homepage2026;
@@ -1060,3 +1243,8 @@ export default Homepage2026;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

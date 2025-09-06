@@ -8,7 +8,10 @@
   },
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   "announcements": {
     id: "announcements"
     name: "Announcements"
@@ -69,11 +72,21 @@ function CategoryContent({
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Apply search filter
   const filteredPosts = searchQuery
     ? categoryPosts.filter(post =>
@@ -81,6 +94,11 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -91,6 +109,12 @@ function CategoryContent({
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
@@ -103,9 +127,12 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'luc
 import { logInfo } from '@/utils/productionLogger';
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -204,16 +231,22 @@ function CategoryContent({;
   const handleFollow = () => {;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       return;
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
     } else {
       follow(categoryId)
     }
+<<<<<<< HEAD
   }
   logInfo('CategoryContent - categoryId:', { data: categoryId })
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts })
@@ -235,11 +268,14 @@ function CategoryContent({;
   );
 };
   },;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
+<<<<<<< HEAD
   return (;
     <div className="container py-8">;
       <div className="flex items-center gap-3 mb-6">;
@@ -269,6 +305,25 @@ function CategoryContent({;
           </Button>
         </div>
       </div>
+=======
+  const category = categoryId ? categoriesInfo[categoryId] : null;
+  const IconComponent = category ? iconMap[category && category.icon as keyof typeof iconMap] : null;
+
+}
+  );
+
+}
+<<<<<<< HEAD
+
+
+  )
+}
+
+
+
+  );
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 /**
  * CategoryContent - Function description

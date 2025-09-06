@@ -104,11 +104,14 @@ export default Solutions;
   opacity: 0, y: 30
 }whileInView= {
   {
+<<<<<<< HEAD
 
   opacity: 1, y: 0
 }transition= {
   {
   duration: 0.8, delay: categoryIndex * 0.2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }viewport= {
@@ -119,6 +122,7 @@ export default Solutions;
 export default Solutions;}
 ;
 export default Solutions;
+<<<<<<< HEAD
 
 
 
@@ -129,3 +133,8 @@ export default Solutions;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
@@ -6,6 +7,8 @@ import { getServerSupabase } from '../../../../utils/supabase/server',;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     }
@@ -21,6 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 
+<<<<<<< HEAD
 
 
 
@@ -29,6 +33,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -55,5 +64,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

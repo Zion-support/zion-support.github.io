@@ -1,21 +1,46 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {Briefcase, Users, Check} from "lucide-react";
+<<<<<<< HEAD
 
 
 
+=======
+
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { Briefcase, Users, Check } from './lucide-react';
+;
+type UserRole = "talent" | "client" | null;
+;
+
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from "lucide-react",
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 type UserRole = "talent" | "client" | null,
 
@@ -24,9 +49,12 @@ interface RolePickerProps {
 }
 
 
+<<<<<<< HEAD
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
   const [selectedRole, setSelectedRole] = useState<UserRole>(null),
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const handleSelect = (role: UserRole) => {
@@ -61,14 +89,27 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               {selectedRole === 'talent' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
+<<<<<<< HEAD
 
             </div>
           </CardContent>
         </Card>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+        <Card
+=======
+
+        <Card 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? "border-primary bg-primary/5"
@@ -84,6 +125,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 
     </div>);
 }
+<<<<<<< HEAD
 ;
 
 
@@ -91,3 +133,11 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

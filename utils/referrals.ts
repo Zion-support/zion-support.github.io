@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
     await fetch('/api/referrals/track', {;
@@ -9,6 +10,8 @@
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',
 export async /**
@@ -28,6 +31,11 @@ if (return, ) {
 
   } catch {}
 }
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     await fetch('/api/referrals/track', {;
       method: 'POST',;
@@ -39,4 +47,8 @@ if (return, ) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

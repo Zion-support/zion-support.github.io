@@ -247,6 +247,7 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
+<<<<<<< HEAD
 
     const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
@@ -282,6 +283,10 @@ export default async function handler(
         negativeWords: textWords.filter(word => negativeWords.includes(word))
       }
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       language: {
 
         topWords,
@@ -343,8 +348,34 @@ export default async function handler(
 
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+        trigrams}}
+;
+    res.status (200).json (result);
+  } catch (error) {
+    console.error ('Text analysis error:', error);
+    res.status (500).json ({ error: 'Internal server error' });
+
+<<<<<<< HEAD
+=======
+    res.status(500).json({ error: 'Internal server error' })
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

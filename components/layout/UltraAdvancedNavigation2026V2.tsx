@@ -180,7 +180,109 @@ export default function UltraAdvancedNavigation2026V2() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
 
+<<<<<<< HEAD
 
+=======
+=======
+      setIsScrolled(window.scrollY > 20)
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+  const navigationItems = [
+    {
+      name: 'Home',
+      href: '/',
+icon: <Zap className="w-4 h-4" />
+    };
+    {
+      name: 'Services',
+      href: '/services',
+      icon: <Brain className="w-4 h-4" />,
+      dropdown: [
+        { name: 'AI & Machine Learning', href: '/services?category=ai', icon: <Brain className="w-4 h-4" /> },
+        { name: 'Quantum & Space Tech', href: '/services?category=quantum', icon: <Atom className="w-4 h-4" /> },
+        { name: 'Emerging Technologies', href: '/services?category=emerging', icon: <Microscope className="w-4 h-4" /> },
+        { name: 'Micro SaaS', href: '/services?category=micro-saas', icon: <Code className="w-4 h-4" /> },
+        { name: 'Metaverse & VR', href: '/services?category=metaverse', icon: <Gamepad2 className="w-4 h-4" /> },
+        { name: 'Cybersecurity', href: '/services?category=cybersecurity', icon: <Shield className="w-4 h-4" /> },
+        { name: 'Space Technology', href: '/services?category=space', icon: <Rocket className="w-4 h-4" /> },
+        { name: 'Biotech & Healthcare', href: '/services?category=biotech', icon: <TestTube className="w-4 h-4" /> },
+        { name: 'Blockchain & Web3', href: '/services?category=blockchain', icon: <Database className="w-4 h-4" /> },
+        { name: 'Autonomous Vehicles', href: '/services?category=transportation', icon: <Car className="w-4 h-4" /> },
+        { name: 'Cloud & Infrastructure', href: '/services?category=cloud', icon: <Cloud className="w-4 h-4" /> },
+        { name: 'Edge Computing', href: '/services?category=edge', icon: <Server className="w-4 h-4" /> },
+        { name: 'IoT & Connectivity', href: '/services?category=iot', icon: <Network className="w-4 h-4" /> },
+        { name: 'Semiconductor Tech', href: '/services?category=semiconductor', icon: <Cpu className="w-4 h-4" /> },
+        { name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className="w-4 h-4" /> },
+        { name: 'Global Solutions', href: '/services?category=global', icon: <Globe className="w-4 h-4" /> }
+      ]
+<<<<<<< HEAD
+    };
+=======
+    },    {
+<<<<<<< HEAD
+      name: 'Showcase'
+      href: '/enhanced-services-showcase-2026-v2'
+      icon: <Rocket className='w-4 h-4' />
+    }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    {
+      name: 'Showcase',
+      href: '/enhanced-services-showcase-2026-v2',
+      icon: <Rocket className="w-4 h-4" />
+    };
+    {
+      name: 'Pricing',
+      href: '/pricing-enhanced-2026',
+      icon: <Database className="w-4 h-4" />
+    };
+    {
+      name: 'About',
+      href: '/about',
+      icon: <Globe className="w-4 h-4" />
+    };
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: <Mail className="w-4 h-4" />
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Brain,
+  Atom,
+  Microscope,
+  Gamepad2,
+  Shield,
+  Rocket,
+  Database,
+  TestTube,
+  Car,
+  Globe,
+  Code,
+  Palette,
+  Cloud,
+  Server,
+  Network,
+  Cpu,
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default /**
+ * UltraAdvancedNavigation2026V2 - Function description
+ */
+function UltraAdvancedNavigation2026V2() {
+  const [is_open, setIsOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
+;
+  useEffect (() => {
+    const handle_scroll = () =>: any {
+      setIsScrolled (window.scroll_y > 20);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
     window.addEventListener ('scroll', handle_scroll);
@@ -339,11 +441,14 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className='flex items-center space-x-2'>
@@ -416,6 +521,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
 
+<<<<<<< HEAD
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
                     >
                       {item.icon}
@@ -441,6 +547,9 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -454,6 +563,7 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     >
@@ -491,6 +601,10 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             </span>
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -512,26 +626,40 @@ export default function UltraAdvancedNavigation2026V2() {;
 
             {/* CTA Button */}
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   Get Started
                 </button>
               </Link>
             </div>
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -634,7 +762,10 @@ export default function UltraAdvancedNavigation2026V2() {;
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           >
 
@@ -696,11 +827,30 @@ export default function UltraAdvancedNavigation2026V2() {;
                         href={item.href}
                         onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+=======
+                      </div>                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                      >                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       >
                         {item.icon}
                         <span>{item.name}</span>
@@ -726,6 +876,7 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -733,6 +884,15 @@ export default function UltraAdvancedNavigation2026V2() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
@@ -747,9 +907,13 @@ export default function UltraAdvancedNavigation2026V2() {;
           transition={{ duration: 0.3 }}
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
 
         />
 
+=======
+        />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )}
       {/* Spacer for fixed navigation */}
 
@@ -764,20 +928,42 @@ export default function UltraAdvancedNavigation2026V2() {;
   );
 
 }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+
+=======
+          className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
+          on_click={() => setIsOpen (false)}
+        />)}
+      {/* Spacer for fixed navigation */}
+      <div className='h - 32'></div>;
+    </>);      <div className="h - 32"></div>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
 
           onClick={() => setIsOpen(false)}
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />
       )}
 
@@ -785,6 +971,7 @@ export default function UltraAdvancedNavigation2026V2() {;
       <div className='h-32'></div>
     </>
 
+<<<<<<< HEAD
   );
 
 );      <div className="h-32"></div>
@@ -799,3 +986,7 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

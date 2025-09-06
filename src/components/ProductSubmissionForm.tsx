@@ -1,6 +1,7 @@
 try {
       // Create the product listing;
       const product_data = {
+<<<<<<< HEAD
 
 import {
 
@@ -164,6 +165,8 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         title: values.title,
         description: values.description,
         price: parse_float (values.price),
@@ -171,8 +174,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         currency: 'USD', // Default currency;
         tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],
         author: {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       let imagePublicUrl: string | undefined;
       // If we have an image, upload it;
@@ -301,6 +307,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -321,6 +328,8 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
@@ -676,18 +685,26 @@ export function ProductSubmissionForm() {;
       
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
 
+<<<<<<< HEAD
 
         title: 'Publication Failed'
         title: 'Publication Failed',
 
 
+=======
+        title: 'Publication Failed',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
         variant: 'destructive'
@@ -704,6 +721,7 @@ export function ProductSubmissionForm() {;
     }
   },
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -711,6 +729,10 @@ export function ProductSubmissionForm() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -725,6 +747,7 @@ export function ProductSubmissionForm() {;
       <TabsContent value='manual'>
       
       <TabsContent value="manual">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -732,6 +755,10 @@ export function ProductSubmissionForm() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
           className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
@@ -796,6 +823,7 @@ export function ProductSubmissionForm() {;
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {
                 const { onChange, onBlur, value, ref } = field,
                 return (
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -803,6 +831,10 @@ export function ProductSubmissionForm() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
@@ -897,8 +929,11 @@ export function ProductSubmissionForm() {;
                       className="min-h-32";
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {...field}
                     />
                   </FormControl>
@@ -922,6 +957,7 @@ export function ProductSubmissionForm() {;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormField
                 control={form.control}
+<<<<<<< HEAD
 
 
                 name="price"
@@ -938,6 +974,9 @@ export function ProductSubmissionForm() {;
                   <FormItem>
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
@@ -1077,8 +1116,11 @@ export function ProductSubmissionForm() {;
                   <FormItem>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
@@ -1150,6 +1192,7 @@ export function ProductSubmissionForm() {;
               name="tags"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
                 <FormItem>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1157,6 +1200,10 @@ export function ProductSubmissionForm() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
                     <Input
@@ -1165,6 +1212,7 @@ export function ProductSubmissionForm() {;
                     />
                   </FormControl>
                   <FormDescription>
+<<<<<<< HEAD
 
 
                     Add relevant tags to help users find your product (e.g., ai
@@ -1192,6 +1240,11 @@ export function ProductSubmissionForm() {;
                 <FormItem>;
 
 
+=======
+
+                field: ControllerRenderProps<ProductFormValues, 'tags'>;
+              }) => (                <FormItem>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Tags</FormLabel>;
                   <FormControl>;
                     <Input
@@ -1207,6 +1260,7 @@ export function ProductSubmissionForm() {;
                 </FormItem>;
               )}
             />;
+<<<<<<< HEAD
 
 
             <FormField;
@@ -1218,6 +1272,17 @@ export function ProductSubmissionForm() {;
                   <FormControl>
 
 
+=======
+
+
+            <FormField
+              control={form && form.control}
+              name='image'
+              render={() => (;
+                <FormItem>;
+                  <FormLabel>Product Image</FormLabel>;
+                  <FormControl>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <Input
                       type='file'
                       accept='image/*'
@@ -1229,6 +1294,7 @@ export function ProductSubmissionForm() {;
                       onChange={handleImageChange}
                       className="cursor-pointer"
                     />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1236,6 +1302,10 @@ export function ProductSubmissionForm() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </FormControl>
                   <FormDescription>
                     Upload a high-quality image of your product (recommended
@@ -1243,6 +1313,7 @@ export function ProductSubmissionForm() {;
                   </FormDescription>
                   <FormMessage />
                   
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1250,6 +1321,10 @@ export function ProductSubmissionForm() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {imagePreview && (
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3 / 2}>
@@ -1269,6 +1344,7 @@ export function ProductSubmissionForm() {;
                           alt='Product image preview'                          width={600} // Example width, adjust as needed
                           alt="Product image preview"
                           width={600} // Example width, adjust as needed
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1276,6 +1352,10 @@ export function ProductSubmissionForm() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
                           priority={false} // Preview images are not LCP
@@ -1421,8 +1501,11 @@ export function ProductSubmissionForm() {;
               render={() => (
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -1444,11 +1527,14 @@ export function ProductSubmissionForm() {;
               name="model"
               render={() => (
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
@@ -1461,6 +1547,7 @@ export function ProductSubmissionForm() {;
                 </FormItem>
               )}
             />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1471,16 +1558,21 @@ export function ProductSubmissionForm() {;
                 disabled={isSubmitting}
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'              >
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </Button>
             </div>
           </form>
@@ -1675,11 +1767,14 @@ const {
 }catch (error) {
   toast ({
 }finally {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   setIsSubmitting (false);
 
 
@@ -1695,6 +1790,7 @@ const {
       </TabsContent>;
     </Tabs>;
   );
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1702,6 +1798,10 @@ const {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 }className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
 }";

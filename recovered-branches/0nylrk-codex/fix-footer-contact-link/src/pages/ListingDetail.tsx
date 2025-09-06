@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -23,6 +26,7 @@ export default function ListingDetail() {;
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useParams } from "react-router-dom",
@@ -46,6 +50,9 @@ export default function ListingDetail() {
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   // Find the listing from our shared data source - now also checking equipment listings
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default function ListingDetail() {
@@ -226,9 +233,24 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+                      >;
+                        <img;
+                          src={image} ;
+                          alt={`${listing.title} - image ${index + 1}`} ;
+                          className="w-full h-full object-cover";
+                          onError={(e) => {;
+                            const target = e.target as HTMLImageElement,;
+                            target.src = "/placeholder.svg";
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           }}
                         />;
                       </div>;
@@ -243,10 +265,14 @@ export default function ListingDetail() {;
                 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -317,9 +343,12 @@ export default function ListingDetail() {;
                             "h-5 w-5",
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           )}
@@ -378,10 +407,14 @@ export default function ListingDetail() {;
                         });
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       }}
                     />
                   ) : (
@@ -400,6 +433,44 @@ export default function ListingDetail() {;
 
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 
+<<<<<<< HEAD
+=======
+                  <Button
+                    variant="outline" 
+                    onClick={handleContact}
+                    disabled={isLoading}
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
+                    <MessageSquare className="h-4 w-4 mr-2" />;
+                    Contact Publisher;
+                  </Button>;
+                </div>;
+
+                {/* Publisher Info */}
+                <div className="border-t border-zion-blue-light pt-6">;
+                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>;
+                  <div className="flex items-center gap-3">;
+                    {listing && listing.author.avatarUrl ? (;
+                      <img
+                        src={listing && listing.author.avatarUrl} 
+                        alt={listing && listing.author.name} 
+                        className="h-12 w-12 rounded-full"
+                        onError={(e) => {;
+                          const target = e && e.target as HTMLImageElement;
+                          target && target.src = "https: //ui-avatars && avatars.com/api/?name=" + encodeURIComponent(listing && listing.author.name);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                        }}
+                      />;
+                    ) : (;
+                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;
+                        <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
+                      </div>;
+                    )}
+
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -467,6 +538,24 @@ export default function ListingDetail() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 
+=======
+=======
+      {/* Contact Dialog */}
+      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
+        <DialogContent className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md">;
+          <DialogHeader>;
+            <DialogTitle className="text - xl font - bold text - white">Contact Publisher</DialogTitle>;
+          </DialogHeader>;
+          <ProfileContact;
+            email={listing.author.email} // TypeScript now knows this might be undefined;
+            profile_name={listing.author.name}
+            profile_type="service";
+          />;
+        </DialogContent>;
+      </Dialog>;
+    </AppLayout>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

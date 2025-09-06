@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import * as React from 'react';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
@@ -5,6 +6,18 @@ import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+import * as React from "react"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+=======
+=======
+import * as React from "react"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { cn } from "@/lib/utils"
 
@@ -29,16 +42,32 @@ const TooltipContent = React.forwardRef<
     {...props}
   />;
 ));
+<<<<<<< HEAD
 
 TooltipContent.displayName = TooltipPrimitive.Content.displayName;
 
 
+=======
+
+TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
+=======
+
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+;
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

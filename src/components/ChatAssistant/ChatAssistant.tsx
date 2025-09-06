@@ -155,6 +155,7 @@ if ( {) {
     }
 
 
+<<<<<<< HEAD
   }, [
     isGuest
     initialMessages
@@ -183,6 +184,8 @@ if ( {) {
     } else {
       const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
 
@@ -467,6 +470,7 @@ export function ChatAssistant(): any ({;
             className="text-white hover:bg-zion-purple/10 rounded-full"
             onClick = {onClose,}
             onClick={onClose}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -474,6 +478,10 @@ export function ChatAssistant(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -515,6 +523,7 @@ export function ChatAssistant(): any ({;
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -522,6 +531,10 @@ export function ChatAssistant(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {q}
                     </Button>;
                   ))}
@@ -566,8 +579,11 @@ export function ChatAssistant(): any ({;
                 onClick={handleModalCancel}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
@@ -576,11 +592,14 @@ export function ChatAssistant(): any ({;
                 onClick = {handleModalSendConfirm,}
                 onClick={handleModalSendConfirm}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -597,6 +616,7 @@ export function ChatAssistant(): any ({;
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -605,4 +625,8 @@ export function ChatAssistant(): any ({;
 
 }
 
+=======
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }

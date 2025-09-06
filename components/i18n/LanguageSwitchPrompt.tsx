@@ -11,7 +11,15 @@ const localeLabelKey: Record<string, string> = {
 
 export default function LanguageSwitchPrompt() {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
@@ -131,11 +139,14 @@ export default function LanguageSwitchPrompt() {;
       </div>
     </div>
 
+<<<<<<< HEAD
   );
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 }
 export default /**

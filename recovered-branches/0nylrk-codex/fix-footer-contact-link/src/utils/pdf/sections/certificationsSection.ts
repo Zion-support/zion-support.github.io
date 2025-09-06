@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -8,7 +11,10 @@ import {formatDate} from '../formatters';
 export function addCertificationsSection(;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   doc: jsPDF;
   certifications: Certification[];
   colors: PdfThemeColors;
@@ -42,6 +48,7 @@ export function addCertificationsSection(;
       yPos = 20
     }
 
+<<<<<<< HEAD
 
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
 import { jsPDF } from 'jspdf',;
@@ -92,6 +99,10 @@ export function addCertificationsSection(;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     yPos += 16
   }

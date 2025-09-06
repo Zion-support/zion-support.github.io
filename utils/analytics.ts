@@ -1,7 +1,11 @@
 
+<<<<<<< HEAD
 
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
 
+=======
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type TrackEventPayload = {
   name: string;
   page?: string;
@@ -21,6 +25,7 @@ function track_event() {
       keepalive: true as any});
   } catch (e) {
 
+<<<<<<< HEAD
     // swallow
   userType?: UserType,;
   properties?: Record<string, any>,;
@@ -30,11 +35,19 @@ export async function trackEvent(payload: TrackEventPayload) {;
   try {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  }
+}
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
       keepalive: true as any});
+<<<<<<< HEAD
 
 
   } catch (error) {
@@ -56,3 +69,10 @@ export async function trackEvent(payload: TrackEventPayload) {;
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

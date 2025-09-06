@@ -10,6 +10,7 @@ interface SeverityIndicatorProps {
   showIcon?: boolean,
   showText?: boolean,
   size?: "sm" | "md" | "lg",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,6 +18,10 @@ interface SeverityIndicatorProps {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   className?: string
 }
 
@@ -27,10 +32,13 @@ export function SeverityIndicator({
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           "text-green-500"
         )} />;
 ;
@@ -59,10 +67,13 @@ export function SeverityIndicator ({
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>

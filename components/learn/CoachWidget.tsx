@@ -124,6 +124,10 @@ function ask() {
       const data = await resp.json();
       setReply(data.text |'')
 
+<<<<<<< HEAD
+=======
+  return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } finally {
@@ -131,8 +135,11 @@ function ask() {
     }
   }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className=&quot;border rounded p-3&quot;>
       <div className=&quot;font-medium mb-2&quot;>ZionGPT Coach</div>
@@ -143,11 +150,24 @@ function ask() {
       {reply && <div className=&quot;mt-2 text-sm text-gray-800 dark:text-gray-200&quot;>{reply}</div>}
     </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

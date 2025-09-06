@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from 'react';
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from '@/integrations/supabase/client';
@@ -94,6 +97,7 @@ export function useInterviews() {
       console && console.error("Error in requestInterview:", err);
       setError(err && err.message);
       return null
+<<<<<<< HEAD
     } finally {
       setIsLoading(false)
 
@@ -107,6 +111,58 @@ export function useInterviews() {
     }
 
 
+=======
+=======
+    setIsLoading (true);
+    set_error (null);
+;
+    try {
+      // Insert the interview into the database;
+      const { data, error: insert_error } = await supabase;
+        .from ('interviews');
+        .insert ({
+          client_id: interview_request.client_id;
+          talent_id: interview_request.talent_id;
+          scheduled_date: interview_request.scheduled_date;
+          duration_minutes: interview_request.duration_minutes;
+          notes: interview_request.notes;
+          meeting_link: interview_request.meeting_link;
+          meeting_platform: interview_request.meeting_platform;
+          interview_type: interview_request.interview_type;
+          title: interview_request.title,
+          status: 'requested'});
+        .select ('*');
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        console.error ("Error requesting interview:", insert_error);
+        set_error (insert_error.message);
+        return null;
+      }
+      // Create notification for talent;
+      await createInterviewNotification (
+        interview_request.talent_id;
+        'interview_requestNew Interview Request';
+        `You have received an interview request for ${interview_request.scheduled_date}`;
+        data.id);
+;
+      return data;
+    } catch (err: any) {
+      console.error ("Error in request_interview:", err);
+      set_error (err.message);
+      return null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+
+=======
+      setIsLoading(false)
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
@@ -140,7 +196,12 @@ if ( {) {
     }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     setIsLoading(true),
     setError(null),
@@ -279,6 +340,7 @@ if ( {) {
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
+<<<<<<< HEAD
 
         .single();
       if (fetchError) {
@@ -287,6 +349,29 @@ if ( {) {
         setError(fetchError.message);
         return false
 
+=======
+
+    setIsLoading (true);
+    set_error (null);
+;
+    try {
+      // Update the interview status;
+      const { error: update_error } = await supabase;
+        .from ('interviews');
+        .update ({
+          status: response.status,
+          updated_at: new Date ().toISOString ();
+        });
+        .eq ('id', interview_id);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        console.error ("Error responding to interview:", update_error);
+        set_error (update_error.message);
+        return false;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       // Get the interview to notify the client;
       const { data: interview, error: fetch_error } = await supabase;
@@ -318,6 +403,7 @@ if ( {) {
       } else if (response && response.status === 'rescheduled') {
         notificationType = 'interview_rescheduled';
         title = 'Interview Rescheduled';
+<<<<<<< HEAD
         message = `Your interview has been rescheduled to ${response.alternative_date |'a new time'}`
       }
 
@@ -436,6 +522,13 @@ if ( {) {
         title = 'Interview Rescheduled',;
         message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`;
       }
+=======
+
+        message = `Your interview has been rescheduled to ${response && response.alternative_date || 'a new time'}`
+
+      }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -522,6 +615,7 @@ if ( {) {
   ) => {
     try {
       await supabase.from('notifications').insert({
+<<<<<<< HEAD
 
         user_id: userId;
         type;
@@ -617,6 +711,10 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
 
       // Check if user is part of this interview
@@ -624,6 +722,7 @@ if ( {) {
         setError("You don't have permission to cancel this interview");
         return false
 
+<<<<<<< HEAD
       }
       // Update the interview status
       const { error: updateError } = await supabase
@@ -639,6 +738,18 @@ if ( {) {
       }
 
 
+=======
+      const notifyUserId = interview && interview.client_id === user && user.id
+        ? interview && interview.talent_id
+        : interview && interview.client_id;
+
+
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
       // Check if user is part of this interview;
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
@@ -661,9 +772,13 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
@@ -774,8 +889,20 @@ if ( {) {
     error;
     request_interview;
     fetch_interviews;
+<<<<<<< HEAD
 
 
+=======
+=======
+  },;
+  return {;
+    interviews,;
+    isLoading,;
+    error,;
+    requestInterview,;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     fetchInterviews;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     respondToInterview;

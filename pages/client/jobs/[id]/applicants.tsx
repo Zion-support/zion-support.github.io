@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import useSWR from 'swr';
@@ -14,11 +15,16 @@ export default function JobApplicantsPage() {
     id ? `/api/applications?jobId=${id}` : null
     fetcher
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
 
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
+<<<<<<< HEAD
 
 
 import { useRouter } from 'next/router'
@@ -39,6 +45,8 @@ export default function JobApplicantsPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -113,6 +121,7 @@ export default function JobApplicantsPage() {_const _router = useRouter();
             </div>
           );
         })}
+<<<<<<< HEAD
 
       </div>
     </div>
@@ -133,12 +142,17 @@ export default function JobApplicantsPage() {_const _router = useRouter();
   }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>;
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

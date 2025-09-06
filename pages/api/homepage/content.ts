@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -25,7 +28,10 @@ async function fetchFromGitHub() {
 
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=600');
   try {
@@ -47,20 +53,44 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   try {
     const localPath = path && path.join(process && process.cwd(), "data", "homepage && homepage.json");
     if (fs && fs.existsSync(localPath)) {
       const local = JSON && JSON.parse(fs && fs.readFileSync(localPath, "utf-8"));
       return res && res.status(200).json(local);
+<<<<<<< HEAD
 
+=======
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+return res.status (405).json ({ error: "Method not allowed" });
+  }
+  try {
+    const local_path = path.join (process.cwd (), "data", "homepage.json");
+    if () {) {
+  $2
+}
+      const local = JSON.parse (fs.readFileSync (local_path, "utf - 8"));
+      return res.status (200).json (local);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   } catch {
     // fall back to remote;
   }
 
+<<<<<<< HEAD
   const remote = await fetchFromGitHub();
   if (remote) return res.status(200).json(remote);
   return res.status(200).json(null);
@@ -186,3 +216,25 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  if (remote) return res && res.status(200).json(remote);
+  return res && res.status(200).json(null);
+}
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  const remote = await fetchFromGitHub ();
+  if (return res.status (200).json (remote)) {
+  $2
+}
+  return res.status (200).json (null);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

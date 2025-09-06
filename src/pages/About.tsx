@@ -1,7 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import { GradientHeading } from '../components/GradientHeading';
@@ -94,6 +97,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Stats Section */}
+<<<<<<< HEAD
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
@@ -103,6 +107,19 @@ const About: React.FC = () => {
               <div className="text-gray-300 text-sm md:text-base">
                 {stat.label}
               </div>
+=======
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
           ))}
         </div>
@@ -272,8 +289,14 @@ const About: React.FC = () => {
 
     </div>
   );
+<<<<<<< HEAD
 
 };
 
 export default About;
 
+=======
+};
+
+export default About;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

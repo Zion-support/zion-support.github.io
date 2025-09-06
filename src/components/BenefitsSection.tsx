@@ -1,4 +1,5 @@
 const getBenefits = (t: any) => [
+<<<<<<< HEAD
 
 
 
@@ -31,6 +32,8 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   {
@@ -80,6 +83,7 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
   {
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
+<<<<<<< HEAD
 
 
     icon: <TrendingDown className='w-8 h-8' />,
@@ -95,6 +99,9 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
 
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
@@ -102,7 +109,10 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         </div>
 
 
+<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
 
 
@@ -231,6 +241,7 @@ function BenefitsSection() {
 
           {benefits.map((benefit, index) => (;
             <FeatureCard;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -238,6 +249,10 @@ function BenefitsSection() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               key={index}
 
               title={benefit.title}
@@ -265,6 +280,7 @@ export default /**
  */
 function Page() {
   {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -272,16 +288,23 @@ function Page() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       "Direct provider connections",";
       "Competitive pricing",";
       "Bulk discount options",";
       "Transparent cost structure" ];
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />
           ))}

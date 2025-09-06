@@ -23,6 +23,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext";
 interface LogoProps {
   customLogo?: string;
 
+<<<<<<< HEAD
 
   customColor?: string;
 }
@@ -39,11 +40,17 @@ export function Logo({ customLogo, customColor }: LogoProps) {
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel(),
   
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Use the white-label logo if available and no specific customLogo is provided
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null),
   // Use the white-label color if available and no specific customColor is provided
   const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined),
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (logoToUse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
@@ -59,11 +66,21 @@ export function Logo({ customLogo, customColor }: LogoProps) {
         {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
       </div>
     </Link>
+<<<<<<< HEAD
 
   );
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
+=======
+
+=======
+  )
+
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

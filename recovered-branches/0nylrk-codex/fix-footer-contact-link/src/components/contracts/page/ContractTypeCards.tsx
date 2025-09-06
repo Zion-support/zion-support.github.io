@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import {
+<<<<<<< HEAD
 
   Card
   CardContent
@@ -9,21 +10,31 @@ import {
   CardHeader
   CardTitle
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
 
   CardTitle,;
 
 } from "@/components/ui/card";
 import { FileText, ShieldCheck } from "lucide-react";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
 interface ContractTypeCardsProps {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onStandardClick: () => void;
   onSmartClick: () => void
 }
@@ -65,10 +76,14 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -94,6 +109,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+<<<<<<< HEAD
 
           <Button
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
@@ -105,6 +121,19 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       </Card>
 
 
+=======
+
+
+export function ContractTypeCards(): any ({;
+  onStandardClick,;
+  onSmartClick,;
+}: ContractTypeCardsProps) {;
+  return (
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -183,6 +212,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -190,3 +220,14 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+    </div>);
+
+}
+=======
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

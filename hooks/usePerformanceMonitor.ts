@@ -1,5 +1,6 @@
 ;
 interface PerformanceMetrics {
+<<<<<<< HEAD
 
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
@@ -21,6 +22,13 @@ interface PerformanceMetrics {
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
 
+=======
+
+      const entries = list && list.getEntries();
+      
+      entries && entries.forEach((entry) => {
+        if (entry && entry.entryType === 'navigation') {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({
             ...prev,

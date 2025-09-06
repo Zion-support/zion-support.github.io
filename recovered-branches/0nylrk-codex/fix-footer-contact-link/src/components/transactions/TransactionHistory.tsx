@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -13,6 +17,7 @@ import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
@@ -123,6 +128,8 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns",;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface Transaction {;
   id: string,;
   user_id: string,;
@@ -145,6 +152,7 @@ interface Transaction {;
 }
 
 export function TransactionHistory() {;
+<<<<<<< HEAD
   const { user } = useAuth(),;
   const { toast } = useToast(),;
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),;
@@ -184,6 +192,49 @@ export function TransactionHistory() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  const { user } = useAuth();
+  const { toast } = useToast();
+
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
+
+
+import React, { useState } from './react';
+import { use_query } from '@tanstack / react - query';
+import { supabase } from '@/integrations / supabase / client';
+import { use_auth } from '@/hooks / use_auth';
+import { use_toast } from '@/hooks / use - toast';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Skeleton } from '@/components / ui / skeleton';
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from './lucide-react';
+import { formatDistanceToNow } from './date - fns';
+=======
+
+interface Transaction {
+  id: string,
+  user_id: string,
+  provider_id: string,
+  service_id: string,
+  amount: number,
+  currency: string,
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled',
+  in_escrow: boolean,
+  created_at: string,
+  completed_at?: string;
+  refunded_at?: string;
+  cancelled_at?: string;
+  provider?: {
+
+    display_name?: string
+  },
+  service?: {
+    title?: string
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -530,8 +581,11 @@ export function TransactionHistory() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           )}
                         </CardDescription>
                       </div>
@@ -553,10 +607,15 @@ export function TransactionHistory() {;
                       </span>
                     </div>
 
+<<<<<<< HEAD
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :

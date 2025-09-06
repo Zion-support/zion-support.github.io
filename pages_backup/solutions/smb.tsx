@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+=======
+
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -44,6 +76,7 @@ export default function SMBSolutionsPage() {;
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -68,6 +101,24 @@ import {
 
 export default function SMBSolutionsPage() {
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+=======
+
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import React from 'react';
+import Layout from "../../components/Layout";";
+import { motion } from 'framer-motion';
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {;
   const smbServices = [;
@@ -102,6 +153,7 @@ export default function SMBSolutionsPage() {;
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
   return (
@@ -110,6 +162,21 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
   
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <Layout
+      title="SMB Solutions - Zion Tech Group"
+
+  
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     >
       <div className="min-h-screen bg-gray-50">
 =======
@@ -122,6 +189,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -129,6 +197,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 SMB Solutions;
+=======
+
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center"">;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">", SMB Solutions,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </h1>;
               <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
                 Technology solutions designed specifically for small and medium businesses. ;
@@ -138,9 +212,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -153,6 +239,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -242,6 +329,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">";
           <div className="container mx-auto px-4 text-center">";

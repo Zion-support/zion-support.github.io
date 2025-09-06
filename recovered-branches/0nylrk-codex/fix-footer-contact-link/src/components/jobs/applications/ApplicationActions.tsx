@@ -1,7 +1,19 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
+import {Eye, ChevronDown, Loader2} from "lucide-react";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { 
@@ -18,10 +30,14 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -37,6 +53,7 @@ export function ApplicationActions({;
   application;
   processingId;
   onViewApplication;
+<<<<<<< HEAD
 
 
 export function ApplicationActions({
@@ -44,6 +61,14 @@ export function ApplicationActions({
   processingId,
   onViewApplication,
 
+=======
+  onStatusChange;
+}: ApplicationActionsProps) {;
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onStatusChange
 }: ApplicationActionsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -71,6 +96,7 @@ export function ApplicationActions({
             ) : (;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
+<<<<<<< HEAD
 
           </Button>
         </DropdownMenuTrigger>
@@ -101,6 +127,14 @@ export function ApplicationActions({
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+      <Button 
+        variant="default" 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         size="sm"
         asChild
       >
@@ -192,6 +226,7 @@ function ApplicationActions() {
       </Button>;
     </div>);
 }
+<<<<<<< HEAD
 ;
 
 
@@ -199,3 +234,11 @@ function ApplicationActions() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

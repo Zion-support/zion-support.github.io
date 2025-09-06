@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -10,6 +11,19 @@
   features: string[];
   link: string;  launchDate?: string;  rating?: number;
 
+=======
+<<<<<<< HEAD
+export type Real2036SpecializedService = {
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string, price: string,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
@@ -18,6 +32,7 @@
 
 
   {
+<<<<<<< HEAD
 
     id: 'neuromorphic-computing-platform'
     name: 'Neuromorphic Computing Platform'
@@ -483,6 +498,9 @@
   {
     id: 'synthetic-biology-platform';
 
+=======
+    id: 'synthetic - biology - platform';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     name: 'Synthetic Biology Platform';
     tagline: 'Design and engineer biological systems with AI'
     description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.';

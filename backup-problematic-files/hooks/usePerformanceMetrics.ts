@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :hooks/usePerformanceMetrics.ts
 import { useEffect, useState } from "react";
 import { PerformanceMetrics } from "../types";
@@ -37,6 +38,18 @@ import { useEffect, useState } from "react";
 import { PerformanceMetrics } from "../types";
 
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
+=======
+
+
+export function usePerformanceMetrics() {;
+
+=======
+
+import { useEffect, useState } from "react";
+import { PerformanceMetrics } from "../types";
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function usePerformanceMetrics() {
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -64,10 +77,17 @@ export function usePerformanceMetrics() {
       }, 0);
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
+<<<<<<< HEAD
 :hooks/usePerformanceMetrics.ts
 
 main:hooks/usePerformanceMetrics.ts
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
+=======
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/usePerformanceMetrics.ts
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -75,6 +95,7 @@ main:hooks/usePerformanceMetrics.ts
         cumulativeLayoutShift: cls
         firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
       });
+<<<<<<< HEAD
 :hooks/usePerformanceMetrics.ts
     };
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
@@ -94,14 +115,24 @@ export function usePerformanceMetrics() {;
     if (typeof window === 'undefined' || !('performance' in window)) {;
       return;
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
+=======
+
+    };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     // Wait for all performance entries to be available
     const timer = setTimeout(measurePerformance, 1000);
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
+<<<<<<< HEAD
 :hooks/usePerformanceMetrics.ts
 }
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     // Wait for all performance entries to be available
     const timer = setTimeout(measurePerformance, 1000);
@@ -110,7 +141,15 @@ export function usePerformanceMetrics() {;
   }, []);
 
   return { metrics, isSupported };
+<<<<<<< HEAD
 main:hooks/usePerformanceMetrics.ts
 }
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
+=======
+
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

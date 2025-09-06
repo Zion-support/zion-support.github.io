@@ -4,6 +4,7 @@ import type { QuoteRequest } from "@/types/quotes";
 
 
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 
 
 import { Button } from '@/components/ui/button'
@@ -114,6 +115,11 @@ import { Button } from "@/components/ui/button"
 import type { QuoteRequest } from "@/types/quotes"
 
 
+=======
+import { Download } from 'lucide-react'
+import type { QuoteRequest } from "@/types/quotes";
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string
@@ -300,8 +306,11 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 '"
   } }
   return (
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { Button } from "@/components/ui/button",
@@ -355,6 +364,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   );
 };
 
+<<<<<<< HEAD
 
 
 
@@ -363,6 +373,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     ].join('\n'),
     
     // Create download link

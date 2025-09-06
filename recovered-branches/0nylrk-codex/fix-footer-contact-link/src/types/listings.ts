@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
   id: string;
@@ -11,6 +12,13 @@ export interface ProductListing {
 export interface ProductListing {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  description: string,
+  icon: string;
+
+}
+export interface ProductListing {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   title: string;
   description: string;
@@ -40,13 +48,18 @@ export interface ProductListing {;
   availability?: string, // Adding availability property to fix TypeScript errors;
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface ListingItem {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   title: string;
   category: string;
 
+<<<<<<< HEAD
 
   image?: string
   description?: string
@@ -94,9 +107,18 @@ export interface ListingItem {;
 }
 ;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   image?: string,
   description?: string;
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export interface ListingCategory {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type ListingView = 'grid' | 'list';

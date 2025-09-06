@@ -134,6 +134,7 @@ export const process_env =;
         NEXT_PUBLIC_SUPABASE_URL: ''
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
       }
+<<<<<<< HEAD
 
 
 console.log('✅ Environment polyfill loaded successfully')
@@ -151,9 +152,21 @@ export default safeEnv;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
+=======
+export default safeEnv;
+export default safeEnv;
+}
+}
+}
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     (globalThis as any).process.env = { ...defaultEnv }
   }
 }
@@ -199,11 +212,14 @@ export function isProduction(): boolean {
 }
 
 export default safeEnv;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -33,6 +33,7 @@ export type LandingPayload = {
   body_html: string;
   region?: string;
 
+<<<<<<< HEAD
   service?: string;
 
 
@@ -45,11 +46,22 @@ export type LandingPayload = {
     if (!router.isReady || !slug) return,;
     const dataParam = (router.query?.data as string) || '';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const router = useRouter();
+  const { slug } = router && router.query as { slug?: string };
+  const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
+  React && React.useEffect(() => {;
+    if (!router && router.isReady || !slug) return;
+    const dataParam = (router && router.query?.data as string) || '';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     if (dataParam) {;
       try {;
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
 
+<<<<<<< HEAD
 
       } catch {  } catch (error) {
     console.error("Error:", error);
@@ -64,6 +76,16 @@ export type LandingPayload = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+        return
+      } catch {}
+    }
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]),
@@ -105,7 +127,10 @@ export type LandingPayload = {
       </div>
       <FAQ items={payload.faq} />
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         dangerouslySetInnerHTML={{ __html: payload && payload.bodyHtml }}
@@ -123,7 +148,21 @@ export type LandingPayload = {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

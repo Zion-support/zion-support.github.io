@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
 export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
@@ -9,17 +10,43 @@ export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 ursor/fix-lint-push-and-merge-to-main-ae4e
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
 export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
 export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
+<<<<<<< HEAD
 module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
 export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+=======
+
+
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
 module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
 =======
 module && module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

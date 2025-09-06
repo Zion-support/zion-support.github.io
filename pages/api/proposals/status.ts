@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -12,6 +13,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ meta: updated })
   } catch (error: any) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -26,9 +29,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ meta: updated })
   } catch (error: any) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     res.status(500).json({ error: error?.message |'Failed to update status' })
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -76,3 +83,36 @@ export default function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { updateProposalMeta } from '../../../utils / data / proposals',
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  try {
+    const { id, status } = req.body || {},
+    if (return res.status (400).json ({ error: 'id and status are required' }), ) {
+  $2
+}
+    const updated = updateProposalMeta (id, (m) => ({ ...m, status })),
+    res.status (200).json ({ meta: updated });
+  } catch (error: any) {
+    res.status (500).json ({ error: error?.message || 'Failed to update status' });
+  }
+}
+
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

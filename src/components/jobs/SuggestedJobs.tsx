@@ -1,11 +1,14 @@
 interface SuggestedJobsProps {
   talent_id?: string;
 }
+<<<<<<< HEAD
 
 
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export /**
  * SuggestedJobs - Function description
@@ -37,12 +40,16 @@ function SuggestedJobs() {
   const currentTalentId = talentId || user?.id,
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { 
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
+<<<<<<< HEAD
 
 
       newMatches,
@@ -70,6 +77,8 @@ function SuggestedJobs() {
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
   },
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -96,10 +105,13 @@ import { NoJobsCard } from "./NoJobsCard";
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",;
@@ -140,20 +152,27 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
+<<<<<<< HEAD
 
 
       {newMatches.length > 0 && (
@@ -166,19 +185,29 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+          <div className="grid gap-4 md:grid-cols-2">;
+            {newMatches && newMatches.map(match => (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <JobMatchesCard
                 key = {match && match.id,}
 
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               />;
 
 
@@ -202,8 +231,11 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
@@ -211,8 +243,11 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       {/* Previously Viewed Section */}
@@ -224,19 +259,25 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
           <div className="grid gap-4 md:grid-cols-2">;
             {viewedMatches && viewedMatches.map(match => (;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <JobMatchesCard
                 key = {match && match.id,}
 
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               />;
 
 
@@ -260,8 +301,11 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
@@ -271,9 +315,12 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>
 
 
+<<<<<<< HEAD
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <JobMatchesCard 
 
 
@@ -305,15 +352,21 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline={handleDecline}
                 showApplied={true}
               />;
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ))}
           </div>;
         </div>;

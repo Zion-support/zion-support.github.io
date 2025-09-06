@@ -76,8 +76,11 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   },
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
@@ -97,6 +100,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`})
     }, 1000)
   },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -225,6 +229,18 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />;
 
 
+=======
+
+
+
+
+
+  return (
+
+    <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
+      <h3 className='text - xl font - bold text - white mb - 4 flex items - center'>;
+        <Mail className='mr - 2 h - 5 w - 5 text - zion - cyan' />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         Contact;
       </h3>;
 

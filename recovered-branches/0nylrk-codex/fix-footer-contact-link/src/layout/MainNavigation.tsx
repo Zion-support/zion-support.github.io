@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
+<<<<<<< HEAD
 
 
 import { Link, useLocation } from "react-router-dom",
@@ -14,6 +18,8 @@ import { MessageSquare } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface MainNavigationProps {;
 
   isAdmin?: boolean;
@@ -29,11 +35,14 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
 
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
@@ -125,9 +134,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               )}
             >
               {link.name}
@@ -167,10 +179,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           </li>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         )}
 
       </ul>;

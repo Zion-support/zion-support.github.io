@@ -11,6 +11,7 @@ if (?.error) {) {
         description: 'AI has created optimized listing content for you.',
       });
     } catch (error) {
+<<<<<<< HEAD
 
 
       logErrorToProduction('Error generating content:', { data: error })
@@ -70,6 +71,8 @@ interface AIListingGeneratorProps {;
     targetAudience?: string;
   }
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -202,8 +205,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         variant: "destructive"
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       })
     } finally {
       setIsLoading (false);
@@ -312,11 +318,14 @@ if ( {) {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -352,11 +361,14 @@ if ( {) {
               disabled={isLoading}
             />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
           <div className="space-y-2">
             <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
@@ -375,11 +387,14 @@ if ( {) {
               disabled={isLoading}
             />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
           <div className="space-y-2">
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
@@ -398,11 +413,14 @@ if ( {) {
               disabled={isLoading}
             />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
           <div className="space-y-2">
             <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
@@ -564,6 +582,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -571,6 +590,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {isLoading ? (
               <>Generating Optimized Content...</>
             ) : (
@@ -726,7 +749,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )}
 
       {generatedContent && !isLoading && (
@@ -772,6 +798,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               <div className='flex flex-wrap gap-2'>;
                 {generatedContent && generatedContent.tags.map((tag, index) => (                  <Badge key={index}>{tag}</Badge>;
             
+<<<<<<< HEAD
 
 
             <div>
@@ -783,6 +810,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               </div>
             </div>
             
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             <div>
@@ -877,14 +906,18 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             >
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </CardFooter>
         </Card>
       )}
+<<<<<<< HEAD
 
 
     </div>
@@ -896,16 +929,22 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
   case 'title': setTitle (e.target.value)
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   value: string ;
 }, field: string) => {;
   switch (field) {;
   case 'title': setTitle (e.target.value);
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 break;'
 case 'category': setCategory (e.target.value)
 break;'
@@ -942,12 +981,16 @@ if ( {) {
 }setIsLoading (true);
 }catch (error) {';
   logErrorToProduction ('Error generating content:', {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>;
   );
 
@@ -1004,8 +1047,11 @@ toast ({
 }finally {
   setIsLoading (false);
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const handle_apply = () =>: any {
   // Check condition
@@ -1030,10 +1076,13 @@ toast ({
 }</div>);
 }'"  );
 }
+<<<<<<< HEAD
   )
 }
 
 }
     </div>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 }

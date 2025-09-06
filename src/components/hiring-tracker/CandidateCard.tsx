@@ -23,8 +23,11 @@ const handleSaveNotes = () => {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -34,11 +37,14 @@ const handleSaveNotes = () => {
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -152,8 +158,11 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
             {...provided.draggableProps}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
@@ -213,11 +222,14 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </div>
                 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant='ghost' className='h-8 w-8 p-0'>
@@ -324,6 +336,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   className="flex-1"
                   asChild
                 >
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -331,6 +344,10 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className='h-3 w-3 mr-1' /> Message
                   </Link>
@@ -343,6 +360,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   className="flex-1"
                   asChild
                 >
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -350,6 +368,10 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {application.resume?.file_url ? (
               <div className='flex justify-between mt-2 gap-1'>;
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
@@ -381,6 +403,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   onClick={() => setShowHireModal(true)}                >;
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
                 </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
             </CardContent>
@@ -475,16 +498,22 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 }'"}
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   handleHireConfirmed 
 }/> </>) 
 }'"};
 ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 
                 <Button 
                   variant="default" 

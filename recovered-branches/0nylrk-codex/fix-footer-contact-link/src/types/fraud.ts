@@ -1,10 +1,22 @@
 
+<<<<<<< HEAD
 
 
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
+;
+
+export interface FraudFlag {
+=======
+
+export interface FraudFlag {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   user_id: string;
   user_email?: string;
@@ -20,27 +32,41 @@ export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
   reviewed_at?: string;
   action_taken?: 'none' | 'warning' | 'suspension' | 'ban';
   gpt_classification?: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   gpt_explanation?: string,
   is_false_positive?: boolean;
 
 }
+<<<<<<< HEAD
+=======
+export interface FraudStats {
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export interface FraudStats {
 
 export interface FraudStats {;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
   dangerous_count: number;
 
+<<<<<<< HEAD
 
   actioned_count: number
 }
@@ -79,3 +105,9 @@ export interface FraudStats {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  false_positives: number,
+  actioned_count: number;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -2,6 +2,7 @@ import React, { create_context, useContext, useEffect, useState } from 'react';
 ;
 type UserRole = 'talent' | 'client';
 
+<<<<<<< HEAD
 type AuthContextType = {
   role: UserRole;
   setRole: (role: UserRole) => void;
@@ -25,11 +26,24 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
         setRoleState(stored);      }
 
 
+=======
+
+      if (stored === 'talent' || stored === 'client') {
+
+
+=======
+      if (stored === 'talent' || stored === 'client') {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     } catch {}
   }, []);
@@ -111,9 +125,32 @@ export function useAuth() {;
   return useContext(AuthContext);
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+    <AuthContext.Provider value={{ role, set_role }}>;
+      {children}
+    </AuthContext.Provider>);
+;
+export /**
+ * use_auth - Function description
+ */
+function use_auth() {
+  return useContext (AuthContext);    <AuthContext.Provider value={{ role, set_role }}>{children}</AuthContext.Provider>);
+}
+export /**
+ * use_auth - Function description
+ */
+function use_auth() {
+return useContext (AuthContext);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
@@ -122,14 +159,23 @@ export function useAuth() {;
 
 export function useAuth() {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 return useContext(AuthContext);
 }
+=======
+return useContext(AuthContext);
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -8,6 +9,10 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     res.status(200).json({ items })
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
@@ -32,12 +37,18 @@ function handler() {
     res.status (200).json ({ items: [] });
   }
   try {
+<<<<<<< HEAD
 
 
     const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON.parse(raw);
     res.status(200).json({ items });
 
+=======
+    const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
+    const items = JSON.parse (raw);
+    res.status (200).json ({ items });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch {
     res.status (200).json ({ items: [] });
 

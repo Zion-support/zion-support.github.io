@@ -4,6 +4,7 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+<<<<<<< HEAD
 
 
 import Link from "next/link",
@@ -15,6 +16,11 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string,
   delay?: number, // Delay in milliseconds before showing the banner
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
@@ -35,6 +41,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   delay = 1500
 }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
@@ -42,6 +49,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const isMobile = useIsMobile(),
   
   useEffect(() => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     // Only show banner on mobile devices and if it hasn't been dismissed
@@ -78,6 +87,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     setIsVisible(true)
   },
   
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -85,6 +95,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Only render on mobile devices
   if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
@@ -93,16 +107,20 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     ) : null
   }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   delay?: number; // Delay in milliseconds before showing the banner;
 }
 
 
+<<<<<<< HEAD
 
 
   // Detect iOS or Android
@@ -112,8 +130,23 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   // Detect iOS or Android
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
+  
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
@@ -122,15 +155,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 <<<<<<< HEAD
 
 
-
-
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
-  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
-  
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
@@ -143,22 +169,28 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
         </div>
         
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
         
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="flex items-center gap-3">
           <Link
             href="/open-app"
@@ -169,11 +201,14 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           </Link>
           
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
           </button>
@@ -181,12 +216,15 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 
 }
 '"
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 '";
 ;
@@ -279,11 +317,14 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
     </div>;
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
 import React, { useState, useEffect } from './react';

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 interface ApiResponse {
   nodes: TreeNode[],
   status: { gitConnected: boolean, gitBranch?: string }
@@ -35,6 +36,29 @@ export default function DevTreePage() {
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
   const fetchTree = async (token?: string) => {
+=======
+import React, { useEffect, useState } from 'react';
+
+
+
+
+
+import Tree, { TreeNode } from '../../components / ui / Tree';
+interface ApiResponse {
+  nodes: TreeNode[],
+status: {
+  git_connected: boolean, git_branch?: string;
+export default /**
+ * DevTreePage - Function description
+ */
+function DevTreePage() {
+  const [nodes, set_nodes] = useState < TreeNode[] | null>(null);
+  const [error, set_error] = useState < string | null>(null);
+  const [git, set_git] = useState < ApiResponse['status'] | null>(null);
+  const [admin_token, setAdminToken] = useState < string>('');
+;
+  const fetch_tree = async (token?: string) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     try {
       const resp = await fetch('/api/dev/source-map', {
         headers: token ? { 'x-admin-token': token } : undefined
@@ -74,6 +98,7 @@ export default function DevTreePage() {
       await fetchTree(adminToken);
     } catch (e: any) {
 
+<<<<<<< HEAD
 
       const resp = await fetch("/api/dev/source-map", {
         headers: token ? { "x-admin-token": token } : undefined}),
@@ -175,6 +200,8 @@ export default function DevTreePage() {
   }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const fetchTree = async (token?: string) => {;
     try {;
       const resp = await fetch('/api/dev/source-map', {;
@@ -219,11 +246,14 @@ export default function DevTreePage() {
     } catch (e: any) {;
       setError(e && e.message || 'Deploy failed');    }
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {nodes ? (
         <div className="rounded border p-3 bg-white">
           <Tree nodes={nodes} onDeploy={onDeploy} />
@@ -231,12 +261,26 @@ export default function DevTreePage() {
         </div>
       ) : (
         <div>Loading...</div>
+<<<<<<< HEAD
 
       )}
     </div>
 );
 
 
+=======
+
+
+            onClick={handleSaveToken}>            Save Token;
+=======
+
+
+}
+}
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -369,6 +413,20 @@ export default function DevTreePage(req, res) {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

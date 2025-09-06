@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -17,6 +18,10 @@ import { PricingSuggestion } from "@/services/pricingSuggestionService",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -26,10 +31,22 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
+<<<<<<< HEAD
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Loader2, Info, ThumbsUp} from "lucide-react";
+import {PricingSuggestion} from "@/services/pricingSuggestionService";
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   onApplySuggestion
@@ -83,6 +100,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
             </p>;
           </div>;
         </CardContent>;
+<<<<<<< HEAD
 
       </Card>;
     );
@@ -93,6 +111,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   if (!suggestion) {
     return null
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
 
@@ -152,7 +172,19 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   )
 
 
+<<<<<<< HEAD
 
+=======
+  if (!suggestion) {;
+    return null;
+  }
+
+=======
+
+};
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },
 ;
 
@@ -213,5 +245,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+export default PricingSuggestionBox;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -11,6 +15,7 @@ import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
@@ -21,6 +26,19 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+import React, { useState } from './react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from './lucide-react';
+import { cn } from '@/lib / utils';
+import { use_navigate } from './react-router-dom';
+import { toast } from './sonner';
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface Message {
   id: string,
   content: string,
@@ -33,6 +51,7 @@ interface MobileChatViewProps {
     id: string
     name: string
     avatar?: string;
+<<<<<<< HEAD
 
     status?: string
   }
@@ -46,6 +65,8 @@ interface Message {
   id: string,
   content: string,
   timestamp: string,
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   isMe: boolean,
   sender?: string,
@@ -53,6 +74,7 @@ interface Message {
   status?: 'sent' | 'delivered' | 'read'
 
 
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -82,6 +104,8 @@ interface MobileChatViewProps {;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   onSendMessage: (content: string) => void
@@ -129,10 +153,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }
   },
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
@@ -219,6 +246,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 "text-xs mt-1 flex justify-end";
 
 
+<<<<<<< HEAD
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
                 "text-xs mt-1 flex justify-end",
@@ -230,6 +258,44 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     const roomId = `mobile-${contact.id}`,;
     toast.success("Starting video call", {;
 
+=======
+    status?: string;
+  }
+  messages: Message[],
+  on_back: () => void,
+  onSendMessage: (content: string) => void;
+}
+export /**
+ * MobileChatView - Function description
+ */
+function MobileChatView() {
+  const [new_message, setNewMessage] = useState ("");
+  const navigate = use_navigate ();
+;
+  const handle_send = () =>: any {
+    // Check condition
+if (!== "") {) {
+  $2
+}
+      onSendMessage (new_message);
+      setNewMessage ("");
+    }
+  }
+;
+  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      e.prevent_default (),
+      handle_send ();
+    }
+  }
+;
+  const startVideoCall = () =>: any {
+    const room_id = `mobile-${contact.id}`;
+    toast.success ("Starting video call", {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       description: `Connecting with ${contact.name}...`;
     });
 ;
@@ -385,10 +451,30 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
               )}>;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+              <p>{message && message.content}</p>;
+              <divclassName={cn(
+                "text-xs mt-1 flex justify-end"
+                message && message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>;
+                {message && message.timestamp}
+                {message && message.isMe && message && message.status && (;
+                  <span className="ml-1">;
+                    {message && message.status === 'read' ? '✓✓' : '✓'}
+                  </span>;
+
+=======
+
+                "text-xs mt-1 flex justify-end",
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">

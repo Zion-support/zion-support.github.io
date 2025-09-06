@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
+<<<<<<< HEAD
 
 
 
@@ -15,6 +16,8 @@ import { Badge } from '@/components/ui/badge'
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Bookmark,
   BookmarkCheck,
@@ -98,8 +101,11 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
@@ -151,6 +157,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     <div className="space-y-4 pb-24">
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
+<<<<<<< HEAD
 
 
 
@@ -168,6 +175,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
@@ -217,6 +231,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     className="text-xs font-normal"
 
 
+<<<<<<< HEAD
 
 
                   onClick={() => toggleSaved(item.id)}
@@ -230,6 +245,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
                   ) : (
@@ -237,6 +254,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
+<<<<<<< HEAD
 
 
               <div className='mt-3 flex flex-wrap gap-1'>
@@ -253,6 +271,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     </div>
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   )}
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
@@ -271,7 +292,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </button>
               </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
@@ -279,6 +303,11 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     key={index} 
                     variant="outline" 
                     className="text-xs font-normal"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   )}
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
@@ -317,10 +346,19 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     variant="outline";
                     className="text-xs font-normal";
                   >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {badge}
                   </Badge>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
@@ -341,6 +379,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <span>{item.timePosted}</span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
                   </div>
@@ -577,12 +622,15 @@ function BrowseCards() {
 
       ))}
 
+<<<<<<< HEAD
 
     </div>
   )
 }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>;
   );
 };

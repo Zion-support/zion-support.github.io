@@ -115,15 +115,21 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
         />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       ) : (
         <User className="h-4 w-4" />
       )}
     </AvatarPrimitive>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Sub - component for avatar to handle its own error state;
 const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =>: any {
   const [avatar_error, setAvatarError] = useState (false),
@@ -331,7 +337,10 @@ export function ApplicationsTable({
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <>
       <div className="rounded-md border">
@@ -350,11 +359,14 @@ export function ApplicationsTable({
             {applications.map((application) => (
               <TableRow key={application.id}>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
@@ -395,17 +407,21 @@ export function ApplicationsTable({
                       onClick={() => onViewScore(application)}
                     >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {application.match_score}%
                     </ClickableBadge>
                   ) : (
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
+<<<<<<< HEAD
 
 
                 <TableCell className='text-right'>
@@ -454,6 +470,8 @@ export function ApplicationsTable({
 }h-4 w-4"/>)
 }</AvatarPrimitive>)
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;

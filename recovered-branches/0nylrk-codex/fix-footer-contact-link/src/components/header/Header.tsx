@@ -1,11 +1,19 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 
+=======
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {Link} from 'react-router-dom';
 import {Logo} from './Logo';
 import {UserMenu} from './UserMenu';
 import {LanguageSelector} from './LanguageSelector';
+<<<<<<< HEAD
 
 import {MainNavigation} from '@/layout/MainNavigation';
 import {useAuth} from '@/hooks/useAuth';
@@ -19,6 +27,21 @@ export interface HeaderProps {;
   customLogo?: string;
 
 
+=======
+
+
+  // If we have a white-label tenant and no specific customTheme is provided;
+  // use the tenant's primary color;
+  const effectiveTheme = customTheme || (isWhitelabel ? {;
+
+    primaryColor;
+    backgroundColor: '#0f172a', // Default dark background;
+    textColor: '#ffffff', // Default light text;
+  } : undefined);
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { Logo } from './Logo',
@@ -33,8 +56,11 @@ import { useNavigate } from "react-router-dom",
 import { useState } from "react",
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
@@ -45,6 +71,7 @@ export interface HeaderProps {
     textColor: string
   }
 }
+<<<<<<< HEAD
 
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
@@ -76,6 +103,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor
     color: effectiveTheme.textColor
@@ -112,12 +145,19 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
 
+<<<<<<< HEAD
           />
         </form>
         <div className="flex items-center gap-2">
           <LanguageSelector />
 
 
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { Link } from 'react-router-dom',;
 import { Logo } from './Logo',;
@@ -188,10 +228,16 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           <LanguageSelector />;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {!hideLogin && <UserMenu />}
         </div>;
       </div>;

@@ -1,7 +1,20 @@
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -143,10 +156,15 @@ if ( {) {
         // Add more job types as needed;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       // Update job status
       await supabaseAdmin
@@ -237,6 +255,7 @@ async function processResumeScoring(supabase, applicationId) {
         method: "POST";
         headers: {
 
+<<<<<<< HEAD
 
         body: JSON.stringify({ applicationId })}
     );
@@ -247,8 +266,11 @@ async function processResumeScoring(supabase, applicationId) {
 
     }
     console.log(`Successfully scored application ${applicationId}`);
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           "Content-Type": "application/json",
 
+<<<<<<< HEAD
 
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
 ;
@@ -316,6 +338,16 @@ async function processResumeScoring(supabase, applicationId) {;
       throw new Error(`Resume scoring failed: ${JSON && JSON.stringify(errorData)}`)
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    if (!response && response.ok) {
+      const errorData = await response && response.json();
+      throw new Error(`Resume scoring failed: ${JSON && JSON.stringify(errorData)}`)
+=======
+
+          "Content-Type": "application/json",
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
     console && console.log(`Successfully scored application ${applicationId}`);
@@ -394,6 +426,7 @@ async function processContentGeneration(supabase, contentType) {
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
 
+<<<<<<< HEAD
 
 ;
     // // // console.log(`Successfully scored application ${applicationId}`),;
@@ -451,6 +484,8 @@ async function processContentGeneration(supabase, contentType) {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     const contentData = await response && response.json();
@@ -501,9 +536,12 @@ async function processContentGeneration(supabase, contentType) {;
         })
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     }
     return contentData

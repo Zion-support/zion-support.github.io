@@ -87,6 +87,7 @@ function fixFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false}
 }
+<<<<<<< HEAD
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -94,6 +95,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 async function main() {
   console.log('🔧 Starting comprehensive syntax fixes...');
   
@@ -153,6 +159,7 @@ main().catch(console.error);
   console.log('🎉 Comprehensive syntax fixes completed!');
 }
 
+  console.log(`\nFixed ${totalFixed} files`)}
 main().catch(console.error);
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de

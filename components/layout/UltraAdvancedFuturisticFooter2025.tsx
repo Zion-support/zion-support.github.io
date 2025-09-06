@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 
 
   Mail,
@@ -42,6 +43,9 @@ import { motion } from 'framer-motion';
   Atom,;
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';
 
 
@@ -574,8 +578,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       {/* Animated Background Elements */}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
@@ -663,8 +670,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     ziontechgroup.com
                   </a>
                 </div>
@@ -831,7 +846,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Social Links & Newsletter */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -843,11 +862,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -897,6 +920,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
 
 
+<<<<<<< HEAD
 
 
 
@@ -905,6 +929,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -916,9 +942,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 </p>
@@ -944,8 +973,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -958,14 +990,33 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         </div>
 
 
+<<<<<<< HEAD
+=======
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ scale: 0 && 0.95 }}>;
+                    Subscribe;
+                  </motion && motion.button>;
+                </div>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Bottom Bar */}
         <motion&& motion.div
                       </Link>;
@@ -1060,11 +1111,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -1110,8 +1165,82 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+              <div className='flex items-center space-x-4 text-gray-400 text-sm'>;
+                <span>Powered by</span>;
+                <div className='flex items-center space-x-2'>;
+                  <Brain className='w-4 h-4 text-cyan-400' />                  <span>AI Consciousness</span>;
+                </div>;
+                <span>•</span>;
+                <div className='flex items-center space-x-2'>;
+                  <Atom className='w-4 h-4 text-purple-400' />;
+                  <span>Quantum Computing</span>;
+                </div>;
+                <span>•</span>;
+                <div className='flex items-center space-x-2'>;
+                  <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">;
+                  <Rocket className="w-4 h-4 text-pink-400" />;
+                  <span>Space Technology</span>;
+          className='border - t border - gray - 800 / 50 bg - gray - 900 / 50 backdrop - blur - xl';
+        >;
+          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 6'>;
+            <div className='flex flex - col md:flex - row items - center justify - between gap - 4'>;
+              <div className='text - gray - 400 text - sm'>;
+                © 2024 Zion Tech Group. All rights reserved. |;
+                <Link;
+                  href='/privacy';
+                  className='hover:text - white transition - colors duration - 200 ml - 2';
+                >;
+                  Privacy Policy;
+                </Link>{' '}
+                |;
+                <Link;
+                  href='/terms';
+                  className='hover:text - white transition - colors duration - 200 ml - 2';
+                >;
+                  Terms of Service;
+                </Link>;
+              </div>;
+              <div className='flex items - center space - x-4 text - gray - 400 text - sm'>;
+                <span > Powered by</span>;
+                <div className='flex items - center space - x-2'>;
+                  <Brain className='w - 4 h - 4 text - cyan - 400' />                  <span > AI Consciousness</span>;
+                </div>;
+                <span>•</span>;
+                <div className='flex items - center space - x-2'>;
+                  <Atom className='w - 4 h - 4 text - purple - 400' />;
+                  <span > Quantum Computing</span>;
+                </div>;
+                <span>•</span>;
+                <div className='flex items - center space - x-2'>;
+                  <Rocket className='w - 4 h - 4 text - pink - 400' />                  <span > Space Technology</span>                <div className="flex items - center space - x-2">;
+                  <Rocket className="w - 4 h - 4 text - pink - 400" />;
+                  <span > Space Technology</span>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+
+};
+export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button>;
+    </footer>;
+  );
+
+
+      {/* Scroll to Top Button */}
+      <motion.button
+        onClick={scrollToTop}
+
+        className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -1123,6 +1252,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     </footer>
   );
 
+<<<<<<< HEAD
 }
 };
 
@@ -1143,3 +1273,10 @@ export default UltraAdvancedFuturisticFooter2025;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

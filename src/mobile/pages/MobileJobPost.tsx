@@ -130,7 +130,10 @@ export function MobileJobPost() {;
   },
   
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")
@@ -281,6 +284,7 @@ function DetailsStep() {
           </SelectContent>
         </Select>
       </div>
+<<<<<<< HEAD
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
         <Textarea 
@@ -298,6 +302,8 @@ function DetailsStep() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <div className="min - h-screen flex flex - col">;
 
@@ -315,6 +321,7 @@ function DetailsStep() {
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 
+<<<<<<< HEAD
 
 
   return (
@@ -328,6 +335,8 @@ function DetailsStep() {
           placeholder="Describe the job role and responsibilities" 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react",;
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",;
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",;
@@ -475,6 +484,7 @@ function DetailsStep() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -489,6 +499,18 @@ function RequirementsStep() {
 
 
 
+=======
+
+
+
+
+
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="space-y-2">
         <Label htmlFor="experience">Experience Level</Label>
         <Select>
@@ -504,6 +526,7 @@ function RequirementsStep() {
         </Select>
       </div>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -511,6 +534,10 @@ function RequirementsStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="space-y-2">
         <Label htmlFor="education">Education</Label>
         <Select>
@@ -527,8 +554,11 @@ function RequirementsStep() {
           </SelectContent>
         </Select>
       </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           </Button>;
         </div>;
@@ -595,8 +625,11 @@ function DetailsStep() {;
   );
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
     "React", "TypeScript", "Node.js";
@@ -651,6 +684,7 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -659,6 +693,11 @@ function RequirementsStep() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       
 
       <div className="space-y-2">
@@ -692,6 +731,7 @@ function RequirementsStep() {;
         <Textarea 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
+<<<<<<< HEAD
 
 
           rows = {4,}
@@ -704,6 +744,8 @@ function RequirementsStep() {;
       </div>;
     </div>;
   );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -713,6 +755,7 @@ function BudgetStep() {
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Budget & Timeline</h2>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -720,6 +763,10 @@ function BudgetStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="space-y-2">
         <Label htmlFor="paymentType">Payment Type</Label>
         <Select>
@@ -734,6 +781,7 @@ function BudgetStep() {
         </Select>
       </div>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -741,6 +789,10 @@ function BudgetStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="space-y-2">
         <Label>Salary Range</Label>
         <div className="flex gap-4 items-center">
@@ -760,6 +812,7 @@ function BudgetStep() {
         </div>
       </div>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -767,11 +820,16 @@ function BudgetStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="space-y-2">
         <Label htmlFor="deadline">Application Deadline</Label>
         <Input type="date" id="deadline" />
       </div>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -779,11 +837,16 @@ function BudgetStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="space-y-2">
         <Label htmlFor="startDate">Expected Start Date</Label>
         <Input type="date" id="startDate" />
       </div>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -791,6 +854,10 @@ function BudgetStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="space-y-2">
         <Label htmlFor="duration">Project Duration</Label>
         <Select>
@@ -807,6 +874,7 @@ function BudgetStep() {
           </SelectContent>
         </Select>
       </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -815,12 +883,18 @@ function BudgetStep() {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       
       <div className="space-y-2">
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
         <Textarea 
           id="additionalInfo" 
           placeholder="Any additional information about budget or payment" 
+<<<<<<< HEAD
 
 
           rows = {3,}
@@ -833,6 +907,8 @@ function BudgetStep() {
       </div>;
     </div>;
   );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -842,6 +918,7 @@ function PreviewStep() {
     <div className="space-y-4">
       <h2 className="text-lg font-medium mb-2">Job Preview</h2>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -849,11 +926,16 @@ function PreviewStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card>
         <CardContent className="p-4">
           <h3 className="font-bold text-lg">Senior React Developer</h3>
           <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>
           
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -861,12 +943,17 @@ function PreviewStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="flex gap-2 my-3">
             <Badge variant="outline">React</Badge>
             <Badge variant="outline">TypeScript</Badge>
             <Badge variant="outline">Node.js</Badge>
           </div>
           
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -874,11 +961,16 @@ function PreviewStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="space-y-1 text-sm mt-4">
             <p className="font-medium">Salary Range:</p>
             <p>$80,000 - $120,000 USD / year</p>
           </div>
           
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -886,11 +978,16 @@ function PreviewStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Experience Level:</p>
             <p>Senior</p>
           </div>
           
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -898,11 +995,16 @@ function PreviewStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Application Deadline:</p>
             <p>December 15, 2023</p>
           </div>
           
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -910,13 +1012,20 @@ function PreviewStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="mt-4 pt-3 border-t border-border">
             <h4 className="font-medium mb-2">Description</h4>
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
           </div>
         </CardContent>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         </div>;
         <div className="flex gap-2">;

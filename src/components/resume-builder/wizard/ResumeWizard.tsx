@@ -5,7 +5,15 @@ if (isLoading) {
       </div>;
     );
   }
+<<<<<<< HEAD
   
+=======
+
+
+  
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (error) {
 
   if (error) {;
@@ -39,18 +47,24 @@ if (isLoading) {
       />;
     );
   }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
   
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -68,8 +82,11 @@ if (isLoading) {
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -92,6 +109,7 @@ if (isLoading) {
         </div>
       </div>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -99,17 +117,24 @@ if (isLoading) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           
@@ -181,16 +206,20 @@ if ( {) {
             {resume && (;
 
               <ResumeStepContent
+<<<<<<< HEAD
 
 
             {resume && (
               <ResumeStepContent 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
                 onPrevStep = {prevStep,}
+<<<<<<< HEAD
 
 
               />
@@ -198,8 +227,105 @@ if ( {) {
 
             )}
 
+=======
+              />
+            )}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+};
+
+};
+<AlertTitle>Error</AlertTitle> <AlertDescription> {;
+  error ;
+}</AlertDescription> </Alert>) ;
+
+}if (showNewResumeForm) {;
+
+  () => setShowNewResumeForm (false) ;
+}isLoading= {;
+  isLoading ;
+}/>) ;
+}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {
+  activeTab 
+}onValueChange= {
+  setActiveTab 
+}> <ResumeStepssteps= {
+  RESUME STEPS 
+}activeTab= {
+  activeTab 
+}onChange= {
+  setActiveTab 
+}/> {;
+  resume && (<ResumeStepContentactiveTab= {
+  activeTab 
+      <Card>;
+        <CardContent className="pt - 6">;
+          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
+            <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
+            <ResumeProgress resume={resume} progress={progress} />;
+          </div>;
+          <Tabs value={active_tab} onValueChange={setActiveTab}>;
+            <ResumeSteps;
+              steps = {RESUME_STEPS, }
+              active_tab = {active_tab, }
+              on_change = {setActiveTab, }
+            />;
+            {resume && (
+              <ResumeStepContent;
+                active_tab = {active_tab, }
+                resume = {resume as Resume, }
+                onNextStep = {next_step, }
+                onPrevStep = {prev_step, }
+              />)}
+          </Tabs>;
+        </CardContent>;
+      </Card>;
+    </div>);
+}
+}
+<AlertTitle > Error</AlertTitle> <AlertDescription> {
+  error;
+}</AlertDescription> </Alert>);
+}// Check condition
+if ( {) {
+  $2
+}
+  () => setShowNewResumeForm (false);
+}is_loading= {
+  is_loading;
+}/>);
+}> <FilePlus className="h - 4 w - 4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {
+  active_tab;
+}onValueChange= {
+  setActiveTab;
+}> <ResumeSteps steps= {
+  RESUME STEPS;
+}active_tab= {
+  active_tab;
+}on_change= {
+  setActiveTab;
+}/> {
+  resume && (<ResumeStepContent active_tab= {
+  active_tab;
+
+}resume= {
+  resume as Resume;
+}onNextStep= {
+  next_step;
+}onPrevStep= {
+
+
+
+  prev_step;
+}/>);
+}</Tabs> </CardContent> </Card> </div>);
+}'"}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -37,7 +37,10 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
   }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -268,6 +271,10 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
 
           <FormField
+<<<<<<< HEAD
+=======
+            control={form && form.control}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel className='flex items-center gap-2'>;
@@ -336,6 +343,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 
+<<<<<<< HEAD
             name="github_url"
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -346,6 +354,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -371,8 +381,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                   <Link className="h-4 w-4" />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -409,8 +422,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FileImage className="h-4 w-4" />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -429,11 +445,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Cancel
           </Button>
           <Button type="submit" disabled={isLoading}>

@@ -4,14 +4,19 @@
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
 
+<<<<<<< HEAD
 
           const target = e.currentTarget as HTMLImageElement
+=======
+          const target = e.currentTarget as HTMLImageElement,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
+<<<<<<< HEAD
 
 
 import React from 'react',;
@@ -19,23 +24,31 @@ import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
   author: BlogAuthor;
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
         <p>{author.bio}</p>
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -70,11 +83,14 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
 }</p>;
 }'"};
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 export function AuthorBio({ author }: AuthorBioProps) {;
   if (!author.bio) return null;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { ResumeSelector, ResumeOption } from "../resume-selector";
@@ -41,6 +42,13 @@ export function ResumeTab({
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
 
+=======
+
+
+import React from './react';
+import { ResumeSelector, ResumeOption  } from '../resume - selector';
+import { Button  } from '@/components / ui / button';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface ResumeTabProps {
 
   selectedResumeId?: string | null;
@@ -81,10 +89,14 @@ export function ResumeTab(): any ({;
           
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
@@ -97,10 +109,14 @@ export function ResumeTab(): any ({;
     </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 
 }

@@ -13,6 +13,7 @@ import {;
   SelectContent,;
   SelectItem,;
   SelectTrigger,;
+<<<<<<< HEAD
 
 
   SelectValue;
@@ -22,6 +23,12 @@ import { cn } from '@/lib/utils'
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 
 
+=======
+  SelectValue,;
+} from '@/components/ui/select';import { Checkbox } from '@/components/ui/checkbox';
+import { cn } from '@/lib/utils';
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Button } from '@/components/ui/button';
 
 interface ValidationRule {;
@@ -29,6 +36,7 @@ interface ValidationRule {;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
+<<<<<<< HEAD
 
 
   custom?: (value: any) => string | null
@@ -44,6 +52,8 @@ interface ValidatedFormFieldProps {
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   name: string
@@ -68,8 +78,11 @@ interface ValidatedFormFieldProps {
   showValidIcon?: boolean
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -218,8 +231,48 @@ if ( {) {
       return validation.custom(value)
     }
 
+<<<<<<< HEAD
 
     return null
+=======
+    // Check condition
+if ( {) {
+  $2
+}
+      // Check condition
+if ( {) {
+  $2
+}
+        return `${label} must be at least ${validation.min_length} characters`;
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        return `${label} must not exceed ${validation.max_length} characters`;
+      }
+      if () {) {
+  $2
+}
+        return `${label} format is invalid`;
+      }
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      return validation.custom (value);
+    }
+    return null;
+  }
+  const getValidationIcon = () =>: any {
+    // Check condition
+if (return null) {
+  $2
+}
+    switch (validation_state) {
+      case 'validating':;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   }
@@ -370,6 +423,7 @@ export function ValidatedFormField(): any ({;
 
     return null
   },
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -410,6 +464,15 @@ export function ValidatedFormField(): any ({;
 
 
 
+=======
+
+
+
+
+  const getValidationIcon = () => {
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     switch (type) {
       case 'textarea':
         return (
@@ -421,6 +484,7 @@ export function ValidatedFormField(): any ({;
               disabled={disabled}
               className={baseClasses}
               rows={4}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -428,6 +492,10 @@ export function ValidatedFormField(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {...form.register(name)}
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
@@ -455,8 +523,11 @@ export function ValidatedFormField(): any ({;
                   <SelectItem key={option.value} value={option.value}>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {option.label}
                   </SelectItem>
                 ))}
@@ -469,6 +540,7 @@ export function ValidatedFormField(): any ({;
         )
         ),
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -476,6 +548,10 @@ export function ValidatedFormField(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       case 'checkbox':
               </SelectContent>;
             </Select>;
@@ -497,6 +573,7 @@ export function ValidatedFormField(): any ({;
               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -504,6 +581,10 @@ export function ValidatedFormField(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {label}
             </label>;
             {getValidationIcon()}
@@ -511,6 +592,7 @@ export function ValidatedFormField(): any ({;
         )
         ),
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -518,6 +600,10 @@ export function ValidatedFormField(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       case 'password':
           </div>;
         );
@@ -534,8 +620,11 @@ export function ValidatedFormField(): any ({;
               className={cn(baseClasses, 'pr-20')}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
@@ -555,11 +644,14 @@ export function ValidatedFormField(): any ({;
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
@@ -571,6 +663,7 @@ export function ValidatedFormField(): any ({;
         )
         ),
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -578,6 +671,10 @@ export function ValidatedFormField(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       default:
               </Button>;
             </div>;
@@ -621,8 +718,11 @@ export function ValidatedFormField(): any ({;
                   <FormMessage className="text-sm text-red-500">
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {fieldError.message}
                   </FormMessage>
                 )}
@@ -630,11 +730,14 @@ export function ValidatedFormField(): any ({;
                   <p className='text-sm text-muted-foreground'>{description}</p>
                   <p className="text-sm text-muted-foreground">{description}</p>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 )}
               </div>;
             )}
@@ -673,12 +776,16 @@ export function ValidatedFormField(): any ({;
                   <AlertCircle className="h-3 w-3" />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {fieldError.message}
                 </FormMessage>
               )}
               {description && !fieldError && (
+<<<<<<< HEAD
                 <p className='text-sm text-muted-foreground'>{description}</p>
                 <p className="text-sm text-muted-foreground">{description}</p>
 
@@ -729,14 +836,89 @@ export const commonValidations = {
       return null
     }
   }
+=======
+
+                <p className="text-sm text-muted-foreground">{description}</p>
+
+              )}
+            </div>;
+          )}
+        </FormItem>;
+      )}
+
+              <span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
+          <FormControl>{render_field ()}</FormControl>;
+          {(field_error || description) && (
+            <div className='space - y-1'>;
+              {field_error && (
+                <FormMessage className='text - sm text - red - 500 flex items - center gap - 1'>;
+                  <AlertCircle className='h - 3 w - 3' />;
+                  {field_error.message}
+                </FormMessage>)}
+              {description && !field_error && (
+                <p className='text - sm text - muted - foreground'>{description}</p>)}
+            </div>)}
+        </FormItem>)}
+    />);
+// Validation helpers for common patterns;
+export const validation_patterns = {
+  email: /^[a - z_a - Z0 - 9._%+-]+@[a - z_a - Z0 - 9.-]+\.[a - z_a - Z]{2}$/,
+  phone: /^[\+]?[1 - 9][\d]{0, 15}$/,
+  url: /^https?:\/\/.+/,
+  strong_password:;
+    /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d)(?=.*[@$!%*?&])[A - Za - z\d@$!%*?&]{8}$/,
+}
+// Pre - configured validation rules;
+export const common_validations = {
+  required: { required: true },
+  email: {
+    required: true,
+    pattern: validation_patterns.email,
+    custom: (value: string, ) => {
+      if () {) {
+  $2
+}
+        return 'Please enter a valid email address';
+      }
+      return null;
+    },
+  },
+  password: {
+    required: true,
+    min_length: 8,
+    custom: (value: string, ) => {
+      if () {) {
+  $2
+}
+        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
+      }
+      return null;
+    },
+  },
+  phone: {
+    pattern: validation_patterns.phone,
+    custom: (value: string, ) => {
+      if () {) {
+  $2
+}
+        return 'Please enter a valid phone number';
+      }
+      return null;
+    },
+  },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
     }
   }}
     }
+<<<<<<< HEAD
 
 
   }}
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   }},

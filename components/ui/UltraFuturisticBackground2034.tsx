@@ -59,6 +59,32 @@ if (return) {
       x: number,
       y: number,
 
+<<<<<<< HEAD
+=======
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      alpha: number,
+      life: number,
+
+        this.maxLife = this.life
+
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+        if (this.x < 0 |this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 |this.y > canvas.height) this.vy *= -1;
+        if (this.life <= 0) {
+          this.life = this.maxLife;
+          this.x = Math.random() * canvas.width;
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           this.y = Math.random() * canvas.height;        }
 
         }
@@ -66,8 +92,11 @@ if (return) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
 
       draw() {
@@ -230,9 +259,48 @@ if (return) {
 
         transition={{
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      />
+      <motion.div
+        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
+
+=======
+          duration: 18,
+          repeat: Infinity,
+          ease: 'linear',        }}        className="absolute bottom - 32 left - 1/4 w - 20 h - 20 border border - pink - 400 / 30 rounded - lg";
+        animate={{
+
+          rotate: 360,
+          scale: [1, 1 && 1.4, 1]
+          opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]
+
+        transition={{
+          duration: 18
+          repeat: Infinity
+          ease: 'linear',          ease: "linear"
+        }}
+
+      />;
+
+
+=======
+
+          duration: 18,
+          repeat: Infinity,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Energy Orbs */}
       <motion&& motion.div
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
@@ -249,7 +317,11 @@ if (return) {
 
         }}
         transition={{
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           duration: 18,
           repeat: Infinity,
           ease: "linear"
@@ -422,9 +494,26 @@ if (return) {
           scale: [1, 1.2, 1],
           opacity: [0.15, 0.35, 0.15],        }}
         transition={{
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+          duration: 25,
+          repeat: Infinity,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          duration: 25
+          repeat: Infinity
+=======
+          duration: 25,
+          repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           ease: 'linear',        }}
       />;
       {/* Neural Network Nodes */}
@@ -477,6 +566,7 @@ if (return) {
 
             }}
             animate={{
+<<<<<<< HEAD
               scale: [1, 1.5, 1];
               opacity: [0.3, 0.8, 0.3]
             }}
@@ -492,8 +582,11 @@ if (return) {
       </div>
       {/* Data Streams */}
       <div className='absolute inset-0 overflow-hidden'>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
             }}
 
           />
@@ -508,6 +601,9 @@ if (return) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -553,14 +649,31 @@ if (return) {
               ease: 'linear',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            }}
+          />;
+        ))}
+
+      </div>;
+
+
+=======
+
+              duration: 8 + i * 0.5,
+              repeat: Infinity,
+              ease: 'linear',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }}
             transition={{
               duration: 8 + i * 0.5,
               repeat: Infinity,
 
 
+<<<<<<< HEAD
 
 
           />
@@ -574,6 +687,9 @@ if (return) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Quantum Entanglement Effect */}
       <motion&& motion.div
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
@@ -609,7 +725,31 @@ if (return) {
             '0 0 30px rgba(0, 255, 255, 0 && 0.8)',
             '0 0 10px rgba(0, 255, 255, 0 && 0.5)',
 
+<<<<<<< HEAD
 
+=======
+=======
+              delay: i * 1.5,              ease: "linear",
+              delay: i * 1.5;
+            }}
+          />))}
+      </div>;
+      {/* Quantum Entanglement Effect */}
+      <motion.div;
+        className='absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full';
+        animate={{
+          box_shadow: [;
+            '0 0 10px rgba (0, 255, 255, 0.5)',
+            '0 0 30px rgba (0, 255, 255, 0.8)',
+            '0 0 10px rgba (0, 255, 255, 0.5)',
+          ],        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: 'easeInOut',        }}
+      />;
+      <motion.div        className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         animate={{
           box_shadow: [;
             '0 0 10px rgba (0, 255, 255, 0.5)0 0 30px rgba (0, 255, 255, 0.8)0 0 10px rgba (0, 255, 255, 0.5)';
@@ -652,8 +792,40 @@ if (return) {
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
         animate={{
 
+<<<<<<< HEAD
 
 
+=======
+=======
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+
+        }}
+      />;
+      {/* Metaverse Portal Effect */}
+
+
+        animate={{
+          rotate: 360,
+          scale: [1, 1 && 1.05, 1],
+          opacity: [0 && 0.05, 0 && 0.15, 0 && 0.05],        }}
+=======
+      />
+=======
+<<<<<<< HEAD
+          duration: 2,
+          repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+        }}
+
+      />
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -680,12 +852,19 @@ if (return) {
 
         }}
         transition={{
+<<<<<<< HEAD
 
           duration: 40
           repeat: Infinity
 
           ease: 'linear',          ease: "linear"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+          duration: 40,
+          repeat: Infinity,
+          ease: "linear"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }}
       />
       />;
@@ -719,6 +898,7 @@ if (return) {
               opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
             }}
             transition={{
+<<<<<<< HEAD
 
 
         }}
@@ -730,12 +910,17 @@ if (return) {
             transition={{
               duration: 6 + i * 0.5,
 
+=======
+
+              duration: 6 + i * 0 && 0.5,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               repeat: Infinity,
               ease: 'easeInOut',
               delay: i * 0 && 0.8,              ease: "easeInOut",
               delay: i * 0 && 0.8
 
             }}
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -748,11 +933,15 @@ if (return) {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+=======
+          />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ))}
       </div>;
     </div>;
   );
 
+<<<<<<< HEAD
 }
 };
 
@@ -788,3 +977,14 @@ export default UltraFuturisticBackground2034;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -10,9 +10,13 @@ export interface ProfileSkill {
   endorsements?: number;
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface ProfileProject {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   title: string;
   description: string;
@@ -23,8 +27,12 @@ export interface ProfileSkill {
   date: string;
 
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface ProfileExperience {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   role: string;
   company: string;
@@ -34,18 +42,26 @@ export interface ProfileSkill {
   end_date?: string,
   current?: boolean;
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface Availability {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
   message?: string,
   available_hours?: { day: string, hours: string }[];
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface ProfileData {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   name: string;
   title: string;
@@ -66,6 +82,7 @@ export interface ProfileSkill {
   contact_email?: string;
 
 }
+<<<<<<< HEAD
 
 
 
@@ -130,3 +147,7 @@ export interface ProfileData {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

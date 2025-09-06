@@ -13,11 +13,14 @@
           headers: {
 
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -28,11 +31,14 @@ interface Msg {
   role: 'user' | 'assistant'
   message: string
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -40,6 +46,7 @@ import { ChatMessage, ChatInput } from '@/components/ChatAssistant',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -143,12 +150,26 @@ export function SupportChatbot() {
 
 
 
+=======
+
+
+// Fallback responses when API is unavailable
+
+const FALLBACK_RESPONSES = [
+
+  "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
+  "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
+  "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
+  "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
         res = await fetch('/api/kb-chat', {
           method: 'POST'
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({
+<<<<<<< HEAD
 
 
             messages: [
@@ -167,6 +188,8 @@ export function SupportChatbot() {
           ''
         const finalMsg =
           message.trim() |
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         const message = null;
@@ -179,8 +202,11 @@ export function SupportChatbot() {
           message.trim() ||
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -204,12 +230,15 @@ export function SupportChatbot() {
         let buffer = ''
         let accumulated = ''
         while (!done) {
+<<<<<<< HEAD
 
 
           const result = await reader.read()
           done = result.done
           buffer += decoder.decode(result.value |new Uint8Array())
           const lines = buffer.split('\n')
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           const result = await reader.read();
@@ -218,8 +247,11 @@ export function SupportChatbot() {
           const lines = buffer.split('\n');
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue
@@ -233,9 +265,12 @@ export function SupportChatbot() {
                 const json = JSON.parse(line)
 
 
+<<<<<<< HEAD
                 const token =
                   json.choices?.[0]?.delta?.content |
                   json.choices?.[0]?.text |
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 const token = null;
                   json.choices?.[0]?.delta?.content ||
                   json.choices?.[0]?.text ||
@@ -472,6 +507,7 @@ if ( {) {
                       m.id === bot_id ? { ...m, message: accumulated } : m));
                   accumulated += token,;
                   setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m));
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -480,6 +516,11 @@ if ( {) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 }
               } catch (_) {
                 // ignore parse errors;
@@ -488,10 +529,13 @@ if ( {) {
           }
 
 
+<<<<<<< HEAD
           buffer = lines[lines.length - 1] |''
         }
         const final =
           accumulated.trim() |
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         const final = null;
           accumulated.trim() ||
 
@@ -534,9 +578,12 @@ if ( {) {
       setTyping(false)
     }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   if (!open) {
     
@@ -547,11 +594,14 @@ if ( {) {
         aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
@@ -597,6 +647,7 @@ if ( {) {
         aria-label="Open help chat"
       >
         <MessageSquare className="h-5 w-5" />
+<<<<<<< HEAD
 
 
       </Button>
@@ -612,6 +663,11 @@ if ( {) {
         <MessageSquare className='h-5 w-5' />
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </Button>
     )
   }
@@ -634,11 +690,14 @@ if ( {) {
         >
           <X className="h-5 w-5" />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-4" style={{ maxHeight: '400px' }}>
@@ -706,6 +765,7 @@ if ( {) {
             role='assistant'
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?"
           />;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -714,6 +774,11 @@ if ( {) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         )}
         {messages && messages.map(m => (;
           <ChatMessage key={m && m.id} role={m && m.role} message={m && m.message} />;
@@ -722,6 +787,7 @@ if ( {) {
         {typing && (
           <ChatMessage role="assistant" message="..." />
         )}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -729,6 +795,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div ref={endRef} />
       </div>
       <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>

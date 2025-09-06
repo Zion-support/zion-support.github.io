@@ -1,9 +1,12 @@
 declare global {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   var webpackChunk_N_E: any[]
@@ -282,6 +285,7 @@ const tsHelpers = {
       for (let i = 0; i < symbols.length; i++) {
         const symbol = symbols[i]
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -290,10 +294,16 @@ const tsHelpers = {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           t[symbol] = s[symbol]
       }
     }
     return t
+<<<<<<< HEAD
 
 
   }
@@ -306,6 +316,8 @@ const tsHelpers = {
     desc?: any
   ) {
     let c = arguments.length
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       r =
@@ -325,6 +337,7 @@ const tsHelpers = {
     else
       for (let i = decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
+<<<<<<< HEAD
 
 
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
@@ -338,13 +351,18 @@ const tsHelpers = {
     else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
     return c > 3 && r && key && Object.defineProperty(target, key, r), r
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
 
 
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
     let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
@@ -354,8 +372,11 @@ const tsHelpers = {
   },
   
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     function adopt(value: any) {
       return value instanceof P
         ? value
@@ -707,9 +728,12 @@ if ( {) {
 
   })
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -785,6 +809,7 @@ if (process && process.env.NODE_ENV === 'development') {
 
 export default {}, // Ensure this can be imported as a module
 
+<<<<<<< HEAD
 
 }
 ;
@@ -807,6 +832,8 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {;
   });
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
 export default {}; // Ensure this can be imported as a module
@@ -843,6 +870,9 @@ export const verifyPolyfills = () => {;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default {}, // Ensure this can be imported as a module;

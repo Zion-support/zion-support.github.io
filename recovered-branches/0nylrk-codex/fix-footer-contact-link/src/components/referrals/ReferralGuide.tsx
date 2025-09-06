@@ -1,11 +1,26 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ReferralGuide() {
 
   const steps = [
@@ -17,6 +32,10 @@ export function ReferralGuide() {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
     {
@@ -26,6 +45,31 @@ export function ReferralGuide() {
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]
 
+<<<<<<< HEAD
+=======
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>How Referrals Work</CardTitle>
+        <CardDescription>Follow these steps to earn rewards through referrals</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {steps.map((step, index) => (
+            <div key={index} className="flex gap-4">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                {index + 1}
+              </div>
+              <div className="space-y-1">
+                <h4 className="font-medium">{step.title}</h4>
+                <p className="text-sm text-muted-foreground">{step.description}</p>
+              </div>
+            </div>
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
 export function ReferralGuide() {;
@@ -57,9 +101,15 @@ export function ReferralGuide() {;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

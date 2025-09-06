@@ -6,8 +6,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from 'lucide-react'
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <div className='min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4'>;
       <div className='text - red - 400 mb - 4 text - xl'>;
@@ -27,6 +30,7 @@ interface ProfileErrorStateProps {
   error: string | null
 }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
@@ -96,6 +100,11 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>
       <Button asChild>
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Talent Directory
@@ -103,6 +112,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       </Button>
 
 
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -114,6 +124,10 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import Link from "next/link";
+=======
+
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { ArrowLeft } from 'lucide-react';

@@ -98,8 +98,15 @@ return (<div className="space-y-4" > <FormField control= {;"  control ";"}name="
 }rateType= {;
   rateType ;
 }/> </CardContent> </Card> </div>) ;
+<<<<<<< HEAD
 :temp_broken_files/resume-builder/forms/RateOptimizationSection.tsx
 };""
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/RateOptimizationSection.tsx
+=======
+
+};
+"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

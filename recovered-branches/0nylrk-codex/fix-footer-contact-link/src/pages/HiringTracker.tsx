@@ -30,6 +30,7 @@ function HiringTrackerContent() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="Hiring Tracker | Zion AI Marketplace"
@@ -72,6 +73,13 @@ function HiringTrackerContent() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+=======
+
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -193,7 +201,11 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

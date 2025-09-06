@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import type { Wallet, TokenTransaction } from '@/types/tokens';
@@ -16,6 +17,33 @@ export function useWallet() {;
       setLoading(false);
       return
 
+=======
+import {useEffect, useState} from 'react';
+import {use_auth} from '@/hooks / use_auth';
+import {supabase} from '@/integrations / supabase / client';
+import type { Wallet, TokenTransaction } from '@/types / tokens';
+export /**
+ * use_wallet - Function description
+ */
+function use_wallet() {
+  const { user } = use_auth ();
+  const [wallet, set_wallet] = useState < Wallet | null>(null);
+  const [transactions, set_transactions] = useState < TokenTransaction[]>([]);
+  const [loading, set_loading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  async /**
+ * fetch_wallet - Function description
+ */
+function fetch_wallet() {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_wallet (null);
+      set_loading (false);
+      return;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     try {
       set_loading (true);
@@ -177,8 +205,11 @@ export function useWallet() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     fetchTransactions;
     earnTokens;
 

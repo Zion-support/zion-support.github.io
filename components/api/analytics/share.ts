@@ -11,9 +11,15 @@ function ensure() {
 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (req.method !== 'POST') return res.status(405).end();
   ensure()
   const { url, title, network, utm } = req.body |{}
@@ -31,7 +37,11 @@ function ensure() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   list.push(entry);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
@@ -40,6 +50,25 @@ function ensure() {
 }
 
 
+<<<<<<< HEAD
+=======
+  const entry = {
+    url,
+    title,
+    network,
+    utm,
+
+=======
+
+  res.status(200).json({ ok: true });
+
+=======
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (req.method !== 'POST') return res.status(405).end();
   ensure();
   const { url, title, network, utm } = req.body || {};
@@ -61,6 +90,7 @@ function ensure() {
   res.status (200).json ({ ok: true });
 
 }
+<<<<<<< HEAD
 
 
 
@@ -70,3 +100,6 @@ function ensure() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

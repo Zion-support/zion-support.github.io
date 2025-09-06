@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -44,14 +45,22 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     }
   ];    features: [
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       "Immersive experiences";
       "Digital reality";
       "Metaverse platform";
+<<<<<<< HEAD
 
       "Advanced graphics",
       "Social interactions"
 
+=======
+      "Advanced graphics";
+      "Social interactions";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     ];
     link: "/services/2026-metaverse-digital-reality", category: "Metaverse Digital Reality 2026"
     realImplementation: true
@@ -176,7 +185,7 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Digital reality",
       "Metaverse platform",
       "Advanced graphics",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       "Social interactions"
     ],
     link: "/services/2026-metaverse-digital-reality",

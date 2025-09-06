@@ -1,6 +1,7 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
 
+<<<<<<< HEAD
 import {useTranslation} from 'react-i18next';
 import {supabase} from '../integrations/supabase/client';
 import {toast} from '../components/ui/use-toast';
@@ -8,6 +9,9 @@ export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 export type LanguageContextType = {
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
@@ -16,7 +20,10 @@ export type LanguageContextType = {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const supportedLanguages = [
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
@@ -32,6 +39,7 @@ const defaultLanguageContext: LanguageContextType = {
 
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
+<<<<<<< HEAD
 
 interface LanguageProviderProps {
   children: ReactNode
@@ -40,6 +48,8 @@ interface LanguageProviderProps {
     user: { id?: string } | null
   }
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -49,7 +59,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 }) => {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
@@ -228,6 +241,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
           if (error) {;
 
+<<<<<<< HEAD
 
 
             console.error('Error updating language preference:', error);
@@ -236,6 +250,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }
         } catch (err) {;
           console && console.error('Error syncing language with profile:', err);
@@ -244,7 +261,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
   const changeLanguage = async (lang: SupportedLanguage) => {
@@ -296,10 +317,15 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
           console.error('Error updating language preference:', error);
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       }
     } catch (err) {;
@@ -308,7 +334,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <LanguageContext.Provider
       value={{
@@ -332,12 +362,19 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
       }}
     >
       {children}
+<<<<<<< HEAD
     </LanguageContext.Provider>
   )
 
 }
 
 };
+=======
+
+};
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </LanguageContext.Provider>;
   );
 };
@@ -353,8 +390,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

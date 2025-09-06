@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Fetch resume data when component mounts
   useEffect((,) => {
@@ -13,6 +14,12 @@ import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
 import { Label } from "@/components/ui/label",;
 
+=======
+import React, { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Plus, Loader2 } from 'lucide-react';
 import { useResume } from '@/hooks/useResume';
 import { exportResumeToPDF } from '@/utils/pdfExport';
@@ -189,6 +196,7 @@ export const ResumeSelector: React.FC<ResumeSelectorProps> = ({
       )}
     </div>
   );
+<<<<<<< HEAD
 
 }
 
@@ -201,3 +209,6 @@ export const ResumeSelector: React.FC<ResumeSelectorProps> = ({
 ;
 
 
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

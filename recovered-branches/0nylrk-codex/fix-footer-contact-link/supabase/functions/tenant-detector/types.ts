@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
   id: string;
@@ -51,6 +52,12 @@ export interface TenantResponse {;
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    subtitle: string,
+    cta: string;
+  }
+  is_active: boolean;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export interface TenantResponse {
@@ -58,12 +65,22 @@ export interface TenantResponse {
   error?: string;
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 }
 ;
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface TenantInfo {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

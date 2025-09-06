@@ -1,27 +1,40 @@
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { AuthContextType } from "@/types/auth";
+=======
+import type { AuthContextType } from "@/types/auth";
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { createContext } from "react",
 import type { AuthContextType } from "@/types/auth",
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Create the AuthContext and export it. We avoid providing a generic
 // parameter to `createContext` because in environments where the React
 // type definitions are unavailable, calling an untyped function with type
 // arguments causes a TypeScript error (TS2347). Instead, we cast the
 
+<<<<<<< HEAD
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined),
 import { createContext } from "react",;
 import type { AuthContextType } from "@/types/auth",;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Create the AuthContext and export it. We avoid providing a generic;
 // parameter to `createContext` because in environments where the React;
 // type definitions are unavailable, calling an untyped function with type;

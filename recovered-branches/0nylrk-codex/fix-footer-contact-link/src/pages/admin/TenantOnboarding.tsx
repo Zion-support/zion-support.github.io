@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const [formData, setFormData] = useState({
@@ -36,8 +40,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -57,6 +64,7 @@ export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
@@ -100,6 +108,18 @@ export default function TenantOnboarding() {
     custom_domain: ""
     is_co_branded: true
 
+=======
+  const [formData, setFormData] = useState({;
+    brand_name: "",;
+    subdomain: "",;
+    logo_url: "",;
+    primary_color: "#9b87f5",;
+    theme_preset: "light",;
+    company_size: "",;
+    industry: "",;
+    custom_domain: "",;
+    is_co_branded: true;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   });
 
   // Check if user has admin role;
@@ -239,6 +259,216 @@ export default function TenantOnboarding() {
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
                   <TabsList className="mb-4 grid grid-cols-3 w-full">;
 
+<<<<<<< HEAD
+=======
+                    <TabsTrigger value="company">Company Info</TabsTrigger>;
+                    <TabsTrigger value="branding">Branding</TabsTrigger>;
+                    <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
+                  </TabsList>;
+
+                      />;
+                    </div>;
+
+                    <div className="space-y-2">;
+                      <Label htmlFor="industry">Industry</Label>;
+                      <Select
+                        name="industry" 
+                        value={formData && formData.industry} 
+                        onValueChange={(value) => handleSelectChange("industry", value)}
+=======
+                  <TabsContent value="company" className="space - y-4">;
+                    <div className="space - y-2">;
+                      <Label html_for="brand_name">Company Name</Label>;
+                      <Input;
+                        id="brand_name";
+                        name="brand_name";
+                        value={form_data.brand_name}
+                        on_change={handleInputChange}
+                        placeholder="Acme Corporation";
+                        required;
+                      />;
+                    </div>;
+                    <div className="space - y-2">;
+                      <Label html_for="industry">Industry</Label>;
+                      <Select;
+                        name="industry";
+                        value={form_data.industry}
+                        onValueChange={(value) => handleSelectChange ("industry", value)}
+
+                      >;
+                        <SelectTrigger>;
+                          <SelectValue placeholder="Select industry" />;
+                        </SelectTrigger>;
+                        <SelectContent>;
+                          <SelectItem value="technology">Technology</SelectItem>;
+                          <SelectItem value="healthcare">Healthcare</SelectItem>;
+                          <SelectItem value="finance">Finance</SelectItem>;
+                          <SelectItem value="education">Education</SelectItem>;
+                          <SelectItem value="retail">Retail</SelectItem>;
+                          <SelectItem value="manufacturing">Manufacturing</SelectItem>;
+                          <SelectItem value="services">Professional Services</SelectItem>;
+                          <SelectItem value="other">Other</SelectItem>;
+                        </SelectContent>;
+                      </Select>;
+                    </div>;
+
+                    <div className="space - y-2">;
+                      <Label html_for="company_size">Company Size</Label>;
+                      <Select;
+                        name="company_size";
+                        value={form_data.company_size}
+                        onValueChange={(value) => handleSelectChange ("company_size", value)}
+
+                      >;
+                        <SelectTrigger>;
+                          <SelectValue placeholder="Select company size" />;
+                        </SelectTrigger>;
+                        <SelectContent>;
+
+                          <SelectItem value="1 - 10">1 - 10 employees</SelectItem>;
+                          <SelectItem value="11 - 50">11 - 50 employees</SelectItem>;
+                          <SelectItem value="51 - 200">51 - 200 employees</SelectItem>;
+                          <SelectItem value="201 - 500">201 - 500 employees</SelectItem>;
+                          <SelectItem value="501 - 1000">501 - 1000 employees</SelectItem>;
+
+                          <SelectItem value="1000+">1000+ employees</SelectItem>;
+                        </SelectContent>;
+                      </Select>;
+                    </div>;
+                  </TabsContent>;
+
+                        placeholder="https://example && example.com/logo && logo.png"
+                      />;
+                      <p className="text-xs text-muted-foreground">;
+                        Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
+                      </p>;
+                    </div>;
+
+                    <div className="space-y-2">;
+                      <Label htmlFor="primary_color">Primary Brand Color</Label>;
+                      <div className="flex items-center gap-2">;
+
+                        <Input
+                          id="primary_color"
+                          name="primary_color"
+                          type="color"
+                          value={formData && formData.primary_color}
+                          onChange={handleInputChange}
+                          className="w-12 p-1 h-10"
+                        />;
+                        <Input
+                          name="primary_color"
+                          value={formData && formData.primary_color}
+                          onChange={handleInputChange}
+                          placeholder="#9b87f5"
+
+                        />;
+                      </div>;
+                    </div>;
+
+                    <div className="space-y-2">;
+                      <Label htmlFor="theme_preset">Theme Preset</Label>;
+                      <Select
+                        name="theme_preset" 
+                        value={formData && formData.theme_preset} 
+                        onValueChange={(value) => handleSelectChange("theme_preset", value)}
+=======
+                  <TabsContent value="branding" className="space - y-4">;
+                    <div className="space - y-2">;
+                      <Label html_for="logo_url">Logo URL</Label>;
+                      <Input;
+                        id="logo_url";
+                        name="logo_url";
+                        value={form_data.logo_url}
+                        on_change={handleInputChange}
+                        placeholder="https://example.com / logo.png";
+                      />;
+                      <p className="text - xs text - muted - foreground">;
+                        Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
+                      </p>;
+                    </div>;
+                    <div className="space - y-2">;
+                      <Label html_for="primary_color">Primary Brand Color</Label>;
+                      <div className="flex items - center gap - 2">;
+                        <Input;
+                          id="primary_color";
+                          name="primary_color";
+                          type="color";
+                          value={form_data.primary_color}
+                          on_change={handleInputChange}
+                          className="w - 12 p - 1 h - 10";
+                        />;
+                        <Input;
+                          name="primary_color";
+                          value={form_data.primary_color}
+                          on_change={handleInputChange}
+                          placeholder="#9b87f5";
+                        />;
+                      </div>;
+                    </div>;
+                    <div className="space - y-2">;
+                      <Label html_for="theme_preset">Theme Preset</Label>;
+                      <Select;
+                        name="theme_preset";
+                        value={form_data.theme_preset}
+                        onValueChange={(value) => handleSelectChange ("theme_preset", value)}
+
+                      >;
+                        <SelectTrigger>;
+                          <SelectValue placeholder="Select theme" />;
+                        </SelectTrigger>;
+                        <SelectContent>;
+                          <SelectItem value="light">Light</SelectItem>;
+                          <SelectItem value="dark">Dark</SelectItem>;
+                          <SelectItem value="corporate">Corporate</SelectItem>;
+                          <SelectItem value="startup">Startup</SelectItem>;
+                          <SelectItem value="neon">Neon</SelectItem>;
+                        </SelectContent>;
+                      </Select>;
+                    </div>;
+
+                      />;
+                    </div>;
+                  </TabsContent>;
+
+                  <TabsContent value="domain" className="space-y-4">;
+                    <div className="space-y-2">;
+                      <Label htmlFor="subdomain">Subdomain</Label>;
+                      <div className="flex items-center">;
+
+                        <Input
+                          id="subdomain"
+                          name="subdomain"
+                          value={formData && formData.subdomain}
+                          onChange={handleInputChange}
+                          placeholder={formData && formData.brand_name ? formData && formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '') : "company"}
+                          className="rounded-r-none"
+
+                        />;
+                        <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">;
+                          .ziontechmarketplace && ziontechmarketplace.com;
+                        </div>;
+                      </div>;
+                      <p className="text-xs text-muted-foreground">;
+                        Leave blank to auto-generate from company name;
+                      </p>;
+                    </div>;
+
+                    <div className="space-y-2">;
+                      <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>;
+
+                      <Input
+                        id="custom_domain"
+                        name="custom_domain"
+                        value={formData && formData.custom_domain}
+                        onChange={handleInputChange}
+
+                        placeholder="hire && hire.yourcompany.com"
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -459,11 +689,19 @@ export default function TenantOnboarding() {;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 
     </>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

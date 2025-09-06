@@ -3,7 +3,10 @@ import { ServiceVariant } from '../types/service-variants';
 
 
 
+<<<<<<< HEAD
 import { ServiceVariant  } from "../types/service-variants";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export interface CuttingEdge2029Service {
 
@@ -11,9 +14,16 @@ export interface CuttingEdge2029Service {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+export interface CuttingEdge2029Service {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   name: string;
   tagline: string;

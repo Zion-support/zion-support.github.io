@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -19,6 +20,10 @@ export default async function handler(
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -47,6 +52,7 @@ export default async function handler(
     );
     return res && res.status(200).json({ ok: true });
   } catch (e: any) {
+<<<<<<< HEAD
 
     return res.status(500).json({ error: e?.message |"Verify failed" });
     return res.status(500).json({ error: e?.message || "Verify failed" });
@@ -57,6 +63,8 @@ import { ethers } from 'ethers';
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req, res) {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
 
 
@@ -66,7 +74,28 @@ export default async function handler(req, res) {
 
 }
 
+<<<<<<< HEAD
 
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import jwt from './jsonwebtoken';
+import { ethers  } from './ethers';
+const JWT_SECRET = process.env.JWT_SECRET || "dev - secret - change - me";
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).end ()) {
+  $2
+}
+  const { message, signature, address, chain_id } = req.body || {}
+  if (
+    return res.status (400).json ({ error: "Missing fields" })) {
+  $2
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {
     const recovered = ethers.utils;
       .verify_message (message, signature);
@@ -108,6 +137,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

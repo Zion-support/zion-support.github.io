@@ -4,6 +4,7 @@ rating?: number;
   quality_rating?: number;
   timeliness_rating?: number;
   would_work_again?: boolean;
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { Star } from 'lucide-react'
@@ -18,6 +19,8 @@ interface ReviewFormValues {
   is_anonymous?: boolean
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   is_anonymous?: boolean;
 }
 

@@ -133,12 +133,16 @@ export function AIEnhancementButton(): any ({;
       setGeneratedContent(null),
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
+<<<<<<< HEAD
 
 
   }
@@ -153,6 +157,10 @@ export function AIEnhancementButton(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },
   
   const handleRegenerate = async () => {
@@ -164,7 +172,10 @@ export function AIEnhancementButton(): any ({;
     setGeneratedContent(null)
   },
   
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   if (showActions) {
@@ -300,11 +311,14 @@ if ( {) {
 }"}
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />

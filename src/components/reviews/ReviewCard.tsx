@@ -5,6 +5,7 @@ return (
             key={star}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
           />;
+<<<<<<< HEAD
 
 
 
@@ -69,8 +70,29 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { Star, Flag, User } from 'lucide-react'
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import {
+  Dialog,
+
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -88,6 +110,7 @@ import {
   DialogTitle,
           />
         ))}
+<<<<<<< HEAD
 
 
       </div>
@@ -191,6 +214,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
             <Avatar>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <AvatarFallback className="bg-muted">
@@ -348,7 +373,10 @@ if (return null) {
                 <AvatarImage src={review && review.reviewer_profile.avatar_url} alt={review && review.reviewer_profile.display_name} />;
               ) : (;
                 <AvatarFallback>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {review && review.reviewer_profile?.display_name ? ;
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
@@ -505,6 +533,14 @@ if (return null) {
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -528,6 +564,14 @@ if (return null) {
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
+<<<<<<< HEAD
+=======
+
+
+                If you believe this review violates our community guidelines,
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -593,9 +637,13 @@ if (return null) {
 
               className="min-h-[100px]"
             />
+<<<<<<< HEAD
             
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
@@ -612,11 +660,24 @@ if (return null) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
+<<<<<<< HEAD
+=======
+
+                disabled={!reportReason && reportReason.trim() || isReporting}>;
+                {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
+              </Button>;
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>;
     </div>;
   );
@@ -652,11 +713,19 @@ if (return null) {
           </DialogContent>;
         </Dialog>;
       </div>;
+<<<<<<< HEAD
 };"
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+    </div>);
+}</div>);
+}";
+return (<div className="border rounded - lg p - 4 bg - card"> <div className="flex justify - between items - start mb - 3"> <div className="flex items - center gap - 3"> {";
+  review.is anonymous ? (<Avatar> <AvatarFallback className="bg - muted"> <User className="h - 4 w - 4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
   review.reviewer profile.avatar url;
 }alt= {

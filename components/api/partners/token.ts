@@ -5,6 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
 
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -27,6 +28,8 @@ export default async function handler(
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "POST") {
@@ -100,9 +103,12 @@ if ( {) {
   );
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
+<<<<<<< HEAD
 
     {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id;
       apiKeyId: key && key.id;
@@ -114,8 +120,45 @@ if ( {) {
   return res && res.status(200).json({ token, partner: { id: partner && partner.id, name: partner && partner.name } })
 }
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      sub: partner.id,
+      apiKeyId: key.id,
+      name: partner.name,
+      entity_type: partner.entity_type,
+      useCaseType: partner.useCaseType,
+    } as any,
+    typeof ttl_seconds === 'number';
+      ? Math.max (300, Math.min (86400, ttl_seconds));
+      : 3600);
+  return res;
+    .status (200);
+    .json ({ token, partner: { id: partner.id, name: partner.name } });      sub: partner.id;
+      apiKeyId: key.id;
+      name: partner.name;
+      entity_type: partner.entity_type,
+      useCaseType: partner.useCaseType} as any;
+    typeof ttl_seconds === "number" ? Math.max (300, Math.min (86400, ttl_seconds)) : 3600);
+  return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name } });
+  }
+  const { partner, apiKey: key } = match,
+  const token = signJwt(
+    {
+      sub: partner.id,
+      apiKeyId: key.id,
+      name: partner.name,
+      entityType: partner.entityType,
+      useCaseType: partner.useCaseType} as any,
+    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
+  ),
+  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
+  return res.status(200).json({_token, _partner: { id: partner.id, _name: partner.name} });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -126,5 +169,8 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

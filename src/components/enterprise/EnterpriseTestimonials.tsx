@@ -12,9 +12,12 @@ import {
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -44,6 +47,7 @@ export function EnterpriseTestimonials() {
                   <div className='flex items-center gap-4'>
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>
                       <img
+<<<<<<< HEAD
 
 
                         src={testimonial.image}
@@ -67,6 +71,9 @@ export function EnterpriseTestimonials() {
             <CarouselPrevious />
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <CarouselNext />
           </div>
         </Carousel>
@@ -76,11 +83,14 @@ export function EnterpriseTestimonials() {
 };
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                       />
                     </div>
@@ -238,8 +248,11 @@ export function EnterpriseTestimonials() {;
                       <p className='font-bold'>{testimonial && testimonial.author}</p>;
                       <p className='text-sm text-muted-foreground'>                        {testimonial && testimonial.title}, {testimonial && testimonial.company}                      <p className="font-bold">{testimonial && testimonial.author}</p>;
                       <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {testimonial && testimonial.title}, {testimonial && testimonial.company}
                       </p>;
                     </div>;
@@ -249,8 +262,11 @@ export function EnterpriseTestimonials() {;
             ))}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <CarouselNext />
           </div>
         </Carousel>

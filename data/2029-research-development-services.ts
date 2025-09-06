@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -370,6 +371,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   ];    features: [
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
@@ -559,6 +563,27 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     exit: 'IPO or biotech acquisition',
     contact: {
 
+<<<<<<< HEAD
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
+
+    }
+  }
+
+=======
+
+export interface ResearchDevelopmentService2029 {;
+
+    }
+  }
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
 

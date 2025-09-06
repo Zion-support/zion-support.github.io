@@ -298,6 +298,7 @@ if ( {) {
 ; // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth (); await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}}
 ;
 // Start the service;
+<<<<<<< HEAD
 const healthMonitor = new HealthMonitor();
 healthMonitor.start().catch(console.error);
 },;
@@ -305,3 +306,12 @@ healthMonitor.start().catch(console.error);
 // Start the service,;
 const healthMonitor = new HealthMonitor(),;
 healthMonitor.start().catch(console.error),;
+=======
+const health_monitor = new HealthMonitor ();
+health_monitor.start ().catch (console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

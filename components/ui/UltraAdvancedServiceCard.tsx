@@ -62,8 +62,11 @@ import {
 ;
 interface UltraAdvancedServiceCardProps {
   service: {import {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import {;
@@ -126,12 +129,19 @@ interface UltraAdvancedServiceCardProps {;
       website: string;
     }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     reviews: number;
   };
 
+=======
+
+    reviews: number;
+  };
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -227,6 +237,81 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     if (category.includes('Internet') |category.includes('Network')) return <Globe className="w-4 h-4" />
     return <Zap className="w-4 h-4" />
 
+<<<<<<< HEAD
+=======
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({;
+  service,;
+}) => {  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const getCategoryIcon = (category: string) => {    contactInfo: {;
+      mobile: string,;
+      email: string,;
+      address: string,;
+      website: string;
+    };
+    realImplementation: boolean,;
+    implementationDetails: string,;
+    launchDate: string,;
+    customers: number,;
+    rating: number,;
+    reviews: number;
+  }
+}
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {;
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const getCategoryIcon = (category: string) => {;
+    if (category && category.includes('AI') || category && category.includes('Machine Learning'));
+      return <Brain className='w-4 h-4' />;
+    if (category && category.includes('Quantum')) return <Zap className='w-4 h-4' />;
+    if (category && category.includes('Space')) return <Rocket className='w-4 h-4' />;
+    if (category && category.includes('Biotech') || category && category.includes('Healthcare'));
+      return <Dna className='w-4 h-4' />;
+    if (category && category.includes('Finance') || category && category.includes('Trading'));
+      return <DollarSign className='w-4 h-4' />;
+    if (category && category.includes('Security') || category && category.includes('Cybersecurity'));
+      return <Lock className='w-4 h-4' />;
+    if (category && category.includes('Internet') || category && category.includes('Network'));
+      return <Globe className='w-4 h-4' />;
+    return <Zap className='w-4 h-4' />;  };
+  const containerVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: {      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0 && 0.6,;
+        ease: 'easeOut' as const,;
+      },;
+    },    hover: {;
+      y: -10,;
+      transition: {;
+        duration: 0 && 0.3,;
+        ease: 'easeOut' as const,;
+      },;
+    },  };
+
+  const contentVariants = {;
+    hidden: { opacity: 0, height: 0 },;
+    visible: {    if (category && category.includes('AI') || category && category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
+    if (category && category.includes('Quantum')) return <Zap className="w-4 h-4" />;
+    if (category && category.includes('Space')) return <Rocket className="w-4 h-4" />;
+    if (category && category.includes('Biotech') || category && category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
+    if (category && category.includes('Finance') || category && category.includes('Trading')) return <DollarSign className="w-4 h-4" />;
+    if (category && category.includes('Security') || category && category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
+    if (category && category.includes('Internet') || category && category.includes('Network')) return <Globe className="w-4 h-4" />,;
+    return <Zap className="w-4 h-4" />;
+  const containerVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: {    visible: { ;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0 && 0.6,;
+        ease: 'easeOut' as const,;
+      },;
+    },        ease: "easeOut" as const;
+      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     };
     hover: {;
       y: -10,;
@@ -246,11 +331,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         onHoverStart={() => setIsHovered (true)}
       onHoverEnd={() => setIsHovered (false)}
     >;
+<<<<<<< HEAD
 
         onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Glow Effect */}
       <div  return (
     <motion.div;
@@ -279,12 +367,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         <div className='bg - gray - 900 / 90 backdrop - blur - xl rounded - 2xl p - 6 h - full'>        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${
           is_hovered ? 'opacity - 100' : 'opacity - 50';
         }`}
+<<<<<<< HEAD
 
         style={{
           background: `linear-gradient(135deg, ${service.color})`;
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
       />
       {/* Main Card */}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       <div 
 
@@ -292,9 +383,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       <div 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
@@ -333,10 +429,17 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             {service.popular && (
               <motion.div
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        style={{;
+          background: `linear-gradient(135deg, ${service && service.color})`;
+          transform: isHovered ? 'scale(1 && 1.05)' : 'scale(1)'}}
+      />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -385,8 +488,11 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
           </div>
           {/* Quick Stats */}
@@ -499,6 +605,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -508,6 +615,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
+=======
+=======
+          </div>
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Expandable Content */}
           <AnimatePresence>;
             {isExpanded && (;
@@ -534,7 +650,11 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Features */}
 
 
@@ -543,10 +663,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* ROI */}
                 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
@@ -557,8 +682,16 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
                 {/* Contact Info */}
                 <div className='bg-gray-800/50 rounded-lg p-3'>
@@ -641,11 +774,18 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>;
             <motion&& motion.button
@@ -826,6 +966,24 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+            <motion&& motion.button
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
+                isExpanded
+                  ? 'border-gray-600 text-gray-400'
+                  : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
+=======
+
+                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
@@ -835,6 +993,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             </motion.button>
           </div>
 
+<<<<<<< HEAD
+=======
+            </motion && motion.button>;
+          </div>;
+
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -873,6 +1040,7 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
     </motion && motion.div>;
   );
 
+<<<<<<< HEAD
 
           </motion.div>
         </div>
@@ -886,3 +1054,78 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+};
+export default UltraAdvancedServiceCard;  );
+};
+
+
+export default UltraAdvancedServiceCard;
+
+
+=======
+          <div className='flex space - x-3 mt - 6'>;
+            <motion.button;
+              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6">;
+            <motion.button;
+              className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2";
+              while_hover={{ scale: 1.02 }}
+              while_tap={{ scale: 0.98 }}
+              on_click={() => window.open (service.link, '_blank')}
+            >;
+              <span > Learn More</span>;
+              <ExternalLink className='w - 4 h - 4' />;
+            </motion.button>;
+            <motion.button;
+              className={`px - 4 py - 3 rounded - lg border - 2 transition - all duration - 300 flex items - center justify - center ${
+                is_expanded;
+                  ? 'border - gray - 600 text - gray - 400';
+                  : 'border - cyan - 400 text - cyan - 400 hover:bg - cyan - 400 hover:text - black'              }`}            </motion.button>;
+            <motion.button;
+              className={`px - 4 py - 3 rounded - lg border - 2 transition - all duration - 300 flex items - center justify - center ${
+                is_expanded;
+                  ? 'border - gray - 600 text - gray - 400';
+                  : 'border - cyan - 400 text - cyan - 400 hover: bg - cyan - 400 hover:text - black';
+              }`}
+              while_hover={{ scale: 1.02 }}
+              while_tap={{ scale: 0.98 }}
+              on_click={() => setIsExpanded (!is_expanded)}
+            >;
+              {is_expanded ? 'Show Less' : 'Details'}
+            </motion.button>;
+          </div>;
+          {/* Expand / Collapse Indicator */}
+          <motion.div;
+            className='flex justify - center mt - 4';
+            animate={{ rotate: is_expanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >;
+            <ArrowRight className='w - 5 h - 5 text - gray - 400' />          </motion.div>;
+        </div>;
+      </div>;
+    </motion.div>);
+}
+;
+export default UltraAdvancedServiceCard;            className="flex justify - center mt - 4";
+            animate={{ rotate: is_expanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >;
+            <ArrowRight className="w - 5 h - 5 text - gray - 400" />;
+        </div>;
+      </div>;
+    </motion.div>);
+}
+;
+export default UltraAdvancedServiceCard);
+}
+;
+export default UltraAdvancedServiceCard;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+};
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

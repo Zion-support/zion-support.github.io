@@ -1,7 +1,19 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, writeState } from "../../../utils/sync/storage",;
+import { Peer } from "../../../utils/sync/types",;
+import { v4 as uuidv4 } from "uuid",;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -13,9 +25,13 @@ import { Peer } from "../../../utils/sync/types",
 import { v4 as uuidv4 } from "uuid",
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
@@ -23,7 +39,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!peer.baseUrl) return res.status(400).json({ error: "baseUrl required" }),
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const id = peer.id || uuidv4(),
   const existing = state.config.peers.find((p) => p.baseUrl === peer.baseUrl),
   if (existing) {
@@ -33,6 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 import { Peer } from "../../../utils/sync/types";
@@ -79,3 +99,6 @@ export default function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

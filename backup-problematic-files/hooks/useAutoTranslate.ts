@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :hooks/useAutoTranslate.ts
 import { useEffect, useMemo, useState  } from 'react';
 :backup-problematic-files/hooks/useAutoTranslate.ts
@@ -40,25 +41,45 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   return { translations, loading, error }
 }
 :backup-problematic-files/hooks/useAutoTranslate.ts
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useEffect, useMemo, useState } from 'react';
 :backup-problematic-files/hooks/useAutoTranslate.ts
 import { translateTextViaAI } from '../utils/translation';
 
+<<<<<<< HEAD
 export type UseAutoTranslateResult = {
 export type UseAutoTranslateResult = {;
+=======
+export type UseAutoTranslateResult = {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   translations: Record<string, string>;
   loading: boolean;
   error?: string;
 }
 export function useAutoTranslate(
+<<<<<<< HEAD
   text: string
   targets: string[]
   debounceMs = 600
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   text: string,
   targets: string[],
   debounceMs = 600;
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -91,6 +112,7 @@ export function useAutoTranslate(
   }, [key, debounceMs]);
 
   return { translations, loading, error }
+<<<<<<< HEAD
 :hooks/useAutoTranslate.ts
     }
   }, [key, debounceMs]);
@@ -99,3 +121,9 @@ export function useAutoTranslate(
 }
 main:hooks/useAutoTranslate.ts
 :backup-problematic-files/hooks/useAutoTranslate.ts
+=======
+
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

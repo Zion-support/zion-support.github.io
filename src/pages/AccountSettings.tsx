@@ -1,5 +1,6 @@
 toast.success (
         `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
+<<<<<<< HEAD
 
 
 
@@ -170,6 +171,21 @@ export default function AccountSettings() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+    } catch (error: any) {
+      toast.error (error.message || 'Failed to connect wallet');
+    }
+  },
+
+  return (
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
@@ -182,7 +198,10 @@ export default function AccountSettings() {;
         
         <div className="grid gap-6 md:grid-cols-2">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -470,6 +489,27 @@ export default function AccountSettings() {;
                     <p className='text-sm font-medium'>Profile Data</p>;
                     <p className='text-xs text-gray-500'>;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
+<<<<<<< HEAD
+=======
+                    </p>;
+                  </div>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Resume Data</p>;
+                    <p className='text-xs text-gray-500'>;
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>;
+                  </div>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Project History</p>;
+                    <p className='text-xs text-gray-500'>;
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>;
+                  </div>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Reviews</p>;
+                    <p className='text-xs text-gray-500'>;
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             <CardContent className='space - y-6'>;
               <div className='space - y-2'>;
@@ -560,6 +600,7 @@ export default function AccountSettings() {;
                 <p className='text - xs text - gray - 500 mt - 1'>;
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
+<<<<<<< HEAD
                     </p>
                   </div>
                 </div>
@@ -579,6 +620,8 @@ export default function AccountSettings() {;
                     ? 'Restore your profile data from decentralized storage' 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     : 'Enable backup first to use this feature'}
                 </p>;
               </div>;
@@ -586,3 +629,12 @@ export default function AccountSettings() {;
           </Card>;
         </div>;
       </main>;
+<<<<<<< HEAD
+=======
+
+
+
+    </>);
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
 import Head from 'next/head';
@@ -9,7 +12,14 @@ import Head from 'next/head';
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
 
+<<<<<<< HEAD
 import type {
+=======
+import type {;
+  AuthError,;
+  User,;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   AuthError,
   User,
@@ -23,13 +33,41 @@ import {;
   logErrorToProduction,;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
 
+<<<<<<< HEAD
+=======
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,;
+  CardTitle,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+} from '@/components/ui/card';
+const LoginPage = () => {;
+
+=======
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+import Link from 'next/link';
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+import Head from 'next/head';
+import { signIn } from 'next-auth/react';
+import { supabase } from '@/utils/supabase/client';
+=======
+import {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Card
   CardContent
   CardDescription
@@ -53,6 +91,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+<<<<<<< HEAD
 const LoginPage = () => {;
 
 
@@ -60,6 +99,15 @@ const LoginPage = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+=======
+const LoginPage = () => {;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -346,12 +394,17 @@ const LoginPage = () => {;
         if (mounted) {;
           setIsCheckingSession(false);
           setSessionChecked(true);
+<<<<<<< HEAD
 
 
 
           logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
 
+=======
+          logInfo(;
+            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           );        }
       }
 
@@ -621,6 +674,7 @@ const LoginPage = () => {;
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
+<<<<<<< HEAD
 
             if (
               signInError.message
@@ -694,6 +748,12 @@ const LoginPage = () => {;
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
 
 
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -723,9 +783,28 @@ const LoginPage = () => {;
   }, [isEmailUnverified, verificationEmailSent, email, router]);
 
 
+<<<<<<< HEAD
+=======
+=======
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+      }, 3000),;
+      return () => clearTimeout(timer);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return undefined, // Explicitly return undefined if condition is not met
+  }, [isEmailUnverified, verificationEmailSent, email, router]),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -772,6 +851,26 @@ const LoginPage = () => {;
     logWarn(
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
 
+<<<<<<< HEAD
+=======
+  // --- Rendering Logic ---
+
+  // 1. Primary Loading State: During initial session check
+  if (isCheckingSession) {
+
+    return (
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <p className=&quot;text-gray-600&quot;>Checking authentication...</p>
+          <p className=&quot;text-sm text-gray-500 mt-2&quot;>This should only take a moment</p>
+
+        </div>
+      </div>
+
+
+  // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // This is a safeguard against the component's content persisting on other auth routes.;
 
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
@@ -784,6 +883,7 @@ const LoginPage = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
@@ -801,17 +901,27 @@ const LoginPage = () => {;
 
   return (
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     );
     return null; // Or a minimal loader/empty div  }
   return (
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
@@ -892,6 +1002,7 @@ const LoginPage = () => {;
                 </label>
                 <Input
 
+<<<<<<< HEAD
                   id="email"
                   type="email"
                   value={email  } catch (error) {
@@ -913,6 +1024,26 @@ const LoginPage = () => {;
                 />
               </div>
 
+=======
+
+                />;
+              </div>;
+              <div className='space-y-2'>;
+                <label htmlFor='password' className='text-sm font-medium'>;
+                  Password;
+                </label>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                <Input
+                  id='password'
+                  type='password'
+                  value={password}
+                  onChange={e => setPassword(e && e.target.value)}                  required;
+
+=======
+              
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -938,11 +1069,17 @@ const LoginPage = () => {;
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </Link>
               </p>
             </div>
@@ -950,11 +1087,20 @@ const LoginPage = () => {;
         </Card>
       </div>
     </>
+<<<<<<< HEAD
 
 );
 };export default LoginPage;
 
 
+=======
+
+
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 },
 export default LoginPage,
@@ -992,6 +1138,17 @@ export default LoginPage,
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+=======
+},;
+export default LoginPage;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -24,6 +24,22 @@ canvas.height = dimensions.height;
   coordinate_x: number;
 coordinate_y: number;
 
+<<<<<<< HEAD
+=======
+useEffect ( () => {
+  const updateDimensions = () => {
+  setDimensions ({
+  updateDimensions ();
+window.addEventListener ('resize', updateDimensions);
+setIsVisible (true);
+}, []);
+canvas.width = dimensions.width;
+canvas.height = dimensions.height;
+// Particle system class Particle {
+  x: number;
+y: number;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 vx: number;
 vy: number;
 size: number;
@@ -170,11 +186,16 @@ if (return) {
           if (this.y > dimensions.height) {
             this.y = -10;
 
+<<<<<<< HEAD
             this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            this.vy = Math.random() * 2 + 1
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }
         }
       }
@@ -403,8 +424,35 @@ if (return) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+          particles[index] = new Particle()
+
+        }
+      });
+      // Draw quantum entanglement lines
+      ctx.strokeStyle = colors.primary;
+      ctx.lineWidth = 0.5;
+      ctx.globalAlpha = 0.3;
+
+      
+
+      for (let i = 0, i < particles.length, i += 10) {
+        for (let j = i + 10, j < particles.length, j += 10) {
+          const p1 = particles[i];
+          const p2 = particles[j];
+          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
+
+          
+          if (distance < 100 && p1.life > 0 && p2.life > 0) {
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke()
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }
         }
       }
@@ -504,6 +552,7 @@ if (return) {
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
+<<<<<<< HEAD
 
         className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
@@ -527,6 +576,10 @@ if (return) {
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`
               `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ],          }}
           transition={{
             duration: 8
@@ -622,6 +675,7 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               transition={{
+<<<<<<< HEAD
 
                 duration: 2
                 delay: i * 0.1
@@ -653,20 +707,28 @@ if (return) {
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           }}
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />
       </div>
 
@@ -681,6 +743,7 @@ if (return) {
 
 
 
+<<<<<<< HEAD
 
 
             ease: 'easeInOut',            ease: "easeInOut"
@@ -701,11 +764,18 @@ if (return) {
 );  )
 }
     </div>
+=======
+            duration: 4,
+            repeat: Infinity,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

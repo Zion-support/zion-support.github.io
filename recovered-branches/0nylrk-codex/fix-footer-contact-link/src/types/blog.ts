@@ -1,15 +1,22 @@
+<<<<<<< HEAD
 
 
   name: string;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   title: string,
   avatar_url: string;
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface BlogPost {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   title: string;
   slug: string;
@@ -38,6 +45,7 @@ export interface GeneratedBlogContent {
   tweet_summary?: string,
   image_prompt?: string;
 }
+<<<<<<< HEAD
 // Type for generated newsletter content
 export interface GeneratedNewsletterContent {;
   subject: string;
@@ -82,6 +90,8 @@ export interface GeneratedBlogContent {;
   imagePrompt?: string;
 }
 ;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Type for generated newsletter content;
 export interface GeneratedNewsletterContent {
   subject: string;
@@ -90,6 +100,7 @@ export interface GeneratedNewsletterContent {
   cta: string;
 
 }
+<<<<<<< HEAD
 ;
 
 
@@ -98,3 +109,10 @@ export interface GeneratedNewsletterContent {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+export interface BlogAuthor {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

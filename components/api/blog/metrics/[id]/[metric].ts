@@ -21,11 +21,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ ok: true, metrics: post.metrics })
 }
 
+<<<<<<< HEAD
 }
 
 
 
 }
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { increment_metric } from '@/utils / data / blog_store';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const { id, metric } = req.query;
+  if (return res.status (405).end ()) {
+  $2
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (
     return res.status (400).json ({ error: 'Invalid params' })) {
   $2
@@ -60,8 +75,12 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 
@@ -69,7 +88,11 @@ function handler() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

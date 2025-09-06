@@ -1,10 +1,18 @@
 
 
+<<<<<<< HEAD
 
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+export interface SmartContractInfo {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
@@ -15,7 +23,10 @@ export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
   createdAt: string;
   createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
 export interface SmartContractInfo {
@@ -31,21 +42,32 @@ export interface SmartContractInfo {
   status: 'draft' | 'deployed' | 'executed' | 'cancelled';
 
 }
+<<<<<<< HEAD
+=======
+export interface EscrowContractDetails {
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export interface EscrowContractDetails {
 
 export interface EscrowContractDetails {;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   client: string;
   talent: string;
   amount: number;
   currency: string;
   deliverables: string;
+<<<<<<< HEAD
 
   completionDeadline: string
   arbitrator?: string
@@ -53,6 +75,14 @@ export interface EscrowContractDetails {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+export interface DeploymentOptions {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
@@ -93,7 +123,12 @@ export interface DeploymentOptions {
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

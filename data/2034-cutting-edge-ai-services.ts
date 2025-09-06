@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -23,9 +24,61 @@
 }
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
+=======
+<<<<<<< HEAD
+export type CuttingEdgeAIService = {
+      'CBT-guided prompts',
+  launch_date?: string;
+  real_service?: boolean;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   {
 
 
+<<<<<<< HEAD
+=======
+      'PRD templates',
+      'Story generation',
+      'Acceptance criteria',
+      'Analytics alignment',
+    ],
+    integrations: ['Jira', 'Linear'],
+
+    use_cases: ['Faster planning', 'Better alignment'],
+    link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
+    real_service: true,
+
+  },
+  {
+
+=======
+    id: 'ai - creative - studio',
+    name: 'AI Creative Studio',
+    description:;
+      'Generate brand - consistent images and short - form videos with approvals and rights management.',
+    category: 'AI Creativity',
+    pricing: { starter: '$149 / mo' },
+    features: [;
+
+      'Brand kit',
+      'Image & video gen',
+      'Review & approvals',
+      'Rights management',
+    ],
+    integrations: ['Canva', 'Figma'],
+
+    use_cases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup.com / services / ai - creative - studio',
+    real_service: true,
+
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ];	id: string;
 
 

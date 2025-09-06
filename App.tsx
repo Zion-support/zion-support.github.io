@@ -11,6 +11,7 @@ import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
+<<<<<<< HEAD
 
 
 
@@ -46,9 +47,50 @@ export default function App() {
 
 
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+=======
+export default function App() {;
+  return (
+    <ErrorBoundary>;
+      <Router>;
+        <div className="min-h-screen bg-gray-50">;
+          <Header />;
+          <Sidebar />;
+          <main className="flex-1 lg:ml-80">;
+            <Routes>;
+              <Route path="/" element={<HomePage />} />;
+              <Route path="/about" element={<AboutPage />} />;
+              <Route path="/contact" element={<ContactPage />} />;
+              <Route path="/services" element={<ServicesPage />} />;
+              <Route path="/pricing" element={<PricingPage />} />;
+            </Routes>;
+          </main>;
+          <Footer />;
+        </div>;
+      </Router>;
+    </ErrorBoundary>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  );
+}
+=======
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+  return (
+    <main>;
+      <h1 > Hello App</h1>;
+    </main>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

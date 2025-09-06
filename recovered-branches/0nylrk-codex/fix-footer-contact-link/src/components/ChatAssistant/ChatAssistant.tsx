@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import {ChatMessage} from './ChatMessage';
@@ -24,6 +27,7 @@ export interface Message {
   timestamp: Date,
   read?: boolean
 
+<<<<<<< HEAD
 }
 
 
@@ -42,12 +46,17 @@ export interface ChatAssistantProps {
 
     id: string
     name: string
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     id: string,
     name: string,;
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     avatarUrl?: string;
     role?: string
   }
@@ -57,12 +66,19 @@ export interface ChatAssistantProps {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
+<<<<<<< HEAD
 
 export function ChatAssistant({
 
 export function ChatAssistant({;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+import {ChatMessage} from './ChatMessage';
+import {ChatInput} from './ChatInput';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   isOpen;
   onClose;
   recipient;
@@ -70,6 +86,7 @@ export function ChatAssistant({;
 
   initialMessages = [];
   onSendMessage;
+<<<<<<< HEAD
 
   contextHeader
 }: ChatAssistantProps) {
@@ -118,6 +135,8 @@ export function ChatAssistant({;
   initialMessages = [],;
   onSendMessage,;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   contextHeader;
 }: ChatAssistantProps) {;
 
@@ -128,12 +147,15 @@ export function ChatAssistant({;
       setMessages(initialMessages);
     }
   }, [initialMessages]),
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -382,7 +404,20 @@ if (return null) {
     </div>);
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
+          <ChatInput onSend={handleSendMessage} />
+        </div>
+      </div>
+    </div>
+  )
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Routes, Route, Navigate } from "react-router-dom",
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",
@@ -19,6 +20,8 @@ import { useAuth } from "@/hooks/useAuth",
 export function MobileApp() {
   const { isAuthenticated } = useAuth(),
   
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <MobileThemeProvider>
@@ -40,7 +43,10 @@ export function MobileApp() {
       </Routes>
     </MobileThemeProvider>
   )
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from "react";
 import {Routes, Route, Navigate} from "react-router-dom";
@@ -54,6 +60,11 @@ import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
 import {MobileJobPost} from "./pages/MobileJobPost";
 import {useAuth} from "@/hooks/useAuth";
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { Routes, Route, Navigate } from "react-router-dom",;
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
@@ -91,6 +102,15 @@ export function MobileApp() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 
+=======
+=======
+        <Route path="/post - job" element={<MobileJobPost />} />;
+        <Route path="/profile" element={<div > Profile page</div>} />;
+        <Route path="*" element={<Navigate to="/" replace />} />;
+      </Routes>;
+    </MobileThemeProvider>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

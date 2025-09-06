@@ -1,7 +1,22 @@
 
+<<<<<<< HEAD
+=======
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+};
+
+const notesStore: Note[] = [];
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 
+<<<<<<< HEAD
 
 type Note = {
   id: string
@@ -12,6 +27,8 @@ type Note = {
   createdAt: number
 }
 const notesStore: Note[] = []
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true'
@@ -21,6 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
   if (req.method === 'POST') {
+<<<<<<< HEAD
 
     const authorId = String(req.headers['x-admin-user'] |'admin')
     const { targetType, targetId, text } = req.body |{}
@@ -78,12 +96,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.setHeader('Allow', 'GET, POST');
       res.status(405).end('Method Not Allowed');
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
     if (!targetType || !targetId || !text?.trim()) {
       return res.status(400).json({ error: 'Missing fields' });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     const note: Note = {
       id: randomUUID(),
@@ -99,15 +122,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

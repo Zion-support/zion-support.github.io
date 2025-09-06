@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface ApplyToJobFormProps {
@@ -7,8 +11,11 @@ interface ApplyToJobFormProps {
 
   onSuccess?: () => void
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -23,6 +30,7 @@ import {AlertCircle, FileText, Loader2} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplyToJobFormProps {
@@ -30,6 +38,11 @@ interface ApplyToJobFormProps {
   job: Job
 
   onSuccess?: () => void
+=======
+interface ApplyToJobFormProps {;
+  job: Job,;
+  onSuccess?: () => void;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
@@ -39,6 +52,7 @@ interface ApplyToJobFormProps {
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
+<<<<<<< HEAD
 
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
@@ -50,6 +64,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
   const { resumes, isLoading: isResumesLoading } = useResume()
 
+=======
+  const { resumes, isLoading: isResumesLoading } = useResume(),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const navigate = useNavigate();
 
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);
@@ -262,6 +279,7 @@ if ( {) {
       </div>;
 
       <div className="flex justify-end gap-2">;
+<<<<<<< HEAD
 
         <Button;
           type="button";
@@ -271,6 +289,10 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();

@@ -15,6 +15,7 @@ interface MobileHeaderProps {
 
   onSettingsClick?: () => void
 export function MobileHeader({
+<<<<<<< HEAD
   title
 export function MobileHeader({
   title
@@ -28,6 +29,9 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   title,
   showBack = false,
@@ -42,6 +46,22 @@ export function MobileHeader({
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 
+<<<<<<< HEAD
+=======
+
+  title,
+  showBack = false,
+  showNotifications = false,
+  showSettings = false,
+  className,
+  onNotificationsClick,
+  onSettingsClick}: MobileHeaderProps) {
+  const router = useRouter(),
+
+  return (
+    <header className={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -129,14 +149,18 @@ export function MobileHeader(): any ({;
             <Button 
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               variant="ghost" 
               size="icon"
               onClick={onSettingsClick}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
+<<<<<<< HEAD
 
 
           )}
@@ -147,16 +171,22 @@ export function MobileHeader(): any ({;
 }
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 }
 }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </Button>
 import React from "react",;
 import { useRouter } from 'next/router',;
@@ -230,3 +260,9 @@ export function MobileHeader({;
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
           )}
+<<<<<<< HEAD
+=======
+
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

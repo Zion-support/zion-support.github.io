@@ -6,17 +6,27 @@ function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
@@ -82,6 +92,7 @@ document.getElementById('signIn').addEventListener('click', async () => {
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
 
+<<<<<<< HEAD
 
 ;
 document.querySelectorAll('.example').forEach((btn) => {;
@@ -89,6 +100,27 @@ document.querySelectorAll('.example').forEach((btn) => {;
     document.getElementById('prompt').value = btn.dataset.text || '';
 
 
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+/**
+ * getUserId - Function description
+ */
+function getUserId() {
+  chrome.storage.local.get (['user_id'], ({ user_id }) => cb (user_id));
+}
+/**
+ * setUserId - Function description
+ */
+function setUserId() {
+  chrome.storage.local.set ({ user_id: id });
+}
+document.querySelectorAll ('.example').for_each ((btn) => {
+  btn.addEventListener ('click', () => {
+    document.getElementById ('prompt').value = btn.dataset.text || '';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   });
 
 }),;
@@ -140,7 +172,12 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 }),;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

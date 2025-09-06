@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
   doc: jsPDF;
@@ -7,6 +8,10 @@
   startY: number
 ): number {
 
+=======
+  if (education && education.length === 0) return startY;
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   let yPos = startY;
   // Check if we need to add a new page
@@ -73,6 +78,10 @@
 
     } else {
       yPos += 20
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { jsPDF } from 'jspdf',;
 import { Education } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -138,9 +147,13 @@ export function addEducationSection(;
       yPos += 20;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   return yPos + 5

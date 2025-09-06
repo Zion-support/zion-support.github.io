@@ -26,15 +26,27 @@ export default function ScrollToTop() {
 import { ChevronUp } from 'lucide-react';
 
 
+<<<<<<< HEAD
 export default function ScrollToTop() {
 export default function ScrollToTop() {;
   const [isVisible, setIsVisible] = useState(false);
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const ScrollToTop: React.FC = () => {
 
 >>>>>>> origin/automation-improvements-final
+<<<<<<< HEAD
 
+=======
+=======
+
+=======
+export default function ScrollToTop() {;
+  const [isVisible, setIsVisible] = useState(false);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const ScrollToTop: React.FC = () => {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -91,6 +103,11 @@ origin/main
   if (!isVisible) {
     return null;
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -123,9 +140,13 @@ origin/automation-improvements-final
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <svg
             className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
             fill='none'
@@ -162,8 +183,16 @@ export default ScrollToTop;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default ScrollToTop;  )
 }
 export default ScrollToTop;
@@ -176,8 +205,17 @@ export default ScrollToTop;
 export default ScrollToTop;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+export default ScrollToTop;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

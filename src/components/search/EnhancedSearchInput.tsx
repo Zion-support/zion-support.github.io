@@ -16,7 +16,10 @@ import { logInfo, logWarn } from '@/utils/productionLogger',
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -28,6 +31,15 @@ interface EnhancedSearchInputProps {
   placeholder?: string;  /**
    */
 
+<<<<<<< HEAD
+=======
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -41,6 +53,11 @@ export function EnhancedSearchInput({
   placeholder = "Search..."
   searchSuggestions
 }: EnhancedSearchInputProps) {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   searchSuggestions;
 }: EnhancedSearchInputProps) {;
 
@@ -58,13 +75,18 @@ export function EnhancedSearchInput({
   searchSuggestions
 }: EnhancedSearchInputProps) {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
         if (!query.trim()) {
+<<<<<<< HEAD
           setApiSuggestions([])
           return
           setApiSuggestions([]),
@@ -95,6 +117,14 @@ interface EnhancedSearchInputProps {;
   value: string,;
   onChange: (value: string) => void,;
 
+=======
+
+;
+import { log_info, log_warn } from '@/utils / production_logger';
+interface EnhancedSearchInputProps {
+  value: string,
+  on_change: (value: string, ) => void,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   /**;
    * Optional callback when a suggestion is selected. This allows parent;
    * components to perform actions such as navigation.;
@@ -133,7 +163,10 @@ export function EnhancedSearchInput({;
           setApiSuggestions([]),;
           return;
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         set_loading (true);
 
         try {
@@ -724,6 +757,7 @@ if ( {) {
         break
     }
   }
+<<<<<<< HEAD
 
     switch(e && e.key) {;
 
@@ -760,6 +794,10 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+    switch(e && e.key) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       case 'ArrowDown':;
         if (isFocused && filteredSuggestions.length > 0) {;
           e.preventDefault(),;
@@ -801,11 +839,14 @@ if ( {) {
         setEnterHandledPostFocus(false),;
         break;
     }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   };
 
       // Provide a sensible default navigation if the parent did not supply a handler
@@ -837,6 +878,7 @@ if ( {) {
         <Input
           ref = {inputRef,}
           ref={inputRef}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -844,6 +886,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           type="text"
           id="enhanced-search-input"
           name="search"
@@ -922,8 +968,11 @@ if ( {) {
           aria-label={t('general.search')}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
@@ -952,11 +1001,14 @@ if ( {) {
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
@@ -1022,11 +1074,14 @@ setHighlightedIndex (-1)
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           on_blur={(e) => {

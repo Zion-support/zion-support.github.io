@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+<<<<<<< HEAD
   ArrowRight
   Star
   TrendingUp
@@ -27,6 +28,8 @@ import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   ArrowRight,
   Star,
@@ -50,9 +53,34 @@ import { emergingTech2027Services } from '../../data/2027-emerging-tech-services
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Target,
+  CheckCircle,
+  ExternalLink,
+  Search,
+  Filter,
+  Grid,
+  List,;
+  ChevronDown,;} from 'lucide-react';
+import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
+import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
+  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
  } from 'lucide-react';
@@ -153,8 +181,13 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       <option key={category} value={category}>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {category === 'all' ? 'All Categories' : category}
                       </option>;
                     ))}
@@ -457,6 +490,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     <List className="w-5 h-5" />
 
 
+<<<<<<< HEAD
                   </button>
 
 
@@ -464,6 +498,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
               </div>
             </div>
@@ -554,8 +591,80 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               key='grid'              initial={{ opacity: 0, scale: 0 && 0.95 }}
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+        {/* Services Grid/List */}
+        <AnimatePresence mode='wait'>;
+          {viewMode === 'grid' ? (;
+            <motion&& motion.div
+              key='grid'        <AnimatePresence mode="wait">;
+          {viewMode === 'grid' ? (;
+            <motion&& motion.div
+              key="grid"
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 && 0.95 }}
+              transition={{ duration: 0 && 0.3 }}
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {filteredServices && filteredServices.map((service, index) => (;
+                <motion&& motion.div
+                  key={service && service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  className='group'>;
+                  <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2'>;
+                    {/* Header */}
+                    <div className='flex items-start justify-between mb-4'>;
+                      <div
+
+              className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'              className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
+            >;
+              {filtered_services.map ((service, index) => (
+                <motion.div;
+                  key={service.id}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className='group';
+                >;
+                  <div className='bg - gray - 800 / 50 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl p - 6 h - full hover:border - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 20 transition - all duration - 300 hover:-translate - y-2'>;
+                    {/* Header */}
+                    <div className='flex items - start justify - between mb - 4'>;
+                      <div;
+                        className={`p - 3 rounded - xl bg - gradient - to - br ${getCategoryColor (service.category)} shadow - lg`}
+                      >;
+                        {getCategoryIcon (service.category)}
+                      </div>;
+                      <div className='text - right'>;
+                        <div className='text - 2xl font - bold text - cyan - 400'>;
+
+                          {service.price}
+                        </div>;
+                        <div className='text - sm text - gray - 400'>;
+                          ROI: {service.roi}
+
+                        </div>                      </div>;
+                    </div>;
+
+                    {/* Content */}
+                    <h3 className='text - xl font - bold text - white mb - 3 group - hover:text - cyan - 400 transition - colors'>;
+                      {service.name}
+
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+=======
+
+
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -564,12 +673,20 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+<<<<<<< HEAD
+=======
+                  className='group'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
@@ -638,6 +755,22 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     {/* Features */}
 
 
+<<<<<<< HEAD
+=======
+
+                      {service.description}
+                    </p>
+
+                    {/* Features */}
+
+                            {feature}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </ul>
@@ -658,8 +791,15 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-6'>
                       {service.tags.slice(0, 3).map((tag, idx) => (
@@ -678,14 +818,18 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           {tag}
                         </span>;
                       ))}
                     </div>
 
                     </div>;
+<<<<<<< HEAD
 
 
 
@@ -697,6 +841,18 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+=======
+                    </div>
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {/* CTA */}
                     <Link
                       href={service.link}
@@ -723,11 +879,15 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
@@ -739,8 +899,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -749,12 +917,20 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+<<<<<<< HEAD
+=======
+                  className='group'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
@@ -825,6 +1001,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       {/* Stats and CTA */}
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -832,6 +1009,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {/* Stats and CTA */}
                       <div className='flex flex-col items-end space-y-3'>
                         <div className='text-right'>
@@ -900,7 +1079,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -923,14 +1106,26 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
           className="mt-20 text-center"
+<<<<<<< HEAD
+=======
+=======
+
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
+
+          className="mt-20 text-center"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
@@ -1081,6 +1276,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
 /* Search and Filters */
 };
@@ -1090,6 +1286,20 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
+=======
+
+<<<<<<< HEAD
+  /* Search and Filters */ 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+/* Search and Filters */ 
+=======
+  /* Search and Filters */ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
   category
@@ -1207,6 +1417,7 @@ export default Enhanced2027ServicesShowcase;
   /* CTA Section */ 
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
 };
+<<<<<<< HEAD
 
 export default Enhanced2027ServicesShowcase;
 
@@ -1220,3 +1431,7 @@ export default Enhanced2027ServicesShowcase;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

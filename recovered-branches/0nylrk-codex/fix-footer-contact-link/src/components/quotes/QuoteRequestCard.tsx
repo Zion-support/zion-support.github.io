@@ -1,8 +1,20 @@
 
+<<<<<<< HEAD
 
 import React from "react";
 
 
+=======
+
+import {format} from "date-fns";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
+import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",
 import { format } from "date-fns",
 import { 
@@ -19,16 +31,20 @@ import type { QuoteRequest } from "@/types/quotes";
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
+<<<<<<< HEAD
 
 
 type QuoteRequestCardProps = {
@@ -46,6 +62,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   onViewDetails,
   onMarkAsResponded,
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onToggleArchive
 }) => {
   // Format date for display
@@ -92,7 +113,34 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             size="sm"
             onClick={() => onViewDetails(quote)}
 
+<<<<<<< HEAD
 
+=======
+=======
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => onMarkAsResponded(quote.id)}
+                className="flex items-center gap-1"
+              >
+                <MessageSquare className="h-4 w-4" />
+                Mark Responded
+              </Button>
+            )}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
+              className="flex items-center gap-1"
+            >
+              {quote.is_archived ? (
+                <RefreshCw className="h-4 w-4" />
+              ) : (
+                <ArchiveIcon className="h-4 w-4" />
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -190,5 +238,17 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               )}
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            </Button>;
+          </div>;
+        </div>;
+      </CardContent>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

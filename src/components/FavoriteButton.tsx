@@ -2,6 +2,7 @@ return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
+<<<<<<< HEAD
 
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
@@ -83,6 +84,8 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 )}              />;
             </button>;
@@ -121,6 +124,7 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
+<<<<<<< HEAD
 
           <TooltipTrigger as_child>;
 
@@ -143,6 +147,10 @@ className: {`w-4 h-4 transition-all duration-300 ${
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+          <TooltipTrigger as_child>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <button;
               class_name = {cn (
                 'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
@@ -165,11 +173,14 @@ className: {`w-4 h-4 transition-all duration-300 ${
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Add to favorites`;
       // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
   return ();

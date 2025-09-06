@@ -7,6 +7,12 @@ import Head from 'next / head';
 ;
 
 interface Partner {
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   id: string;
   code: string;
@@ -63,6 +69,7 @@ const AdminPartnersPage: React.FC = () => {;
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
+<<<<<<< HEAD
 
   useEffect(() => {
     // Simulate loading partners
@@ -84,12 +91,18 @@ const AdminPartnersPage: React.FC = () => {;
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     const json = await res.json();
     setFlags(json.flags |[]);
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
@@ -154,16 +167,22 @@ export default function AdminPartners() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -231,6 +250,10 @@ export default function AdminPartners() {
 
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
       <div className='overflow-auto'>;
@@ -264,6 +287,23 @@ export default function AdminPartners() {
                     onClick={() =>;
                       updatePartner(p && p.code, { status: 'approved' });
 
+<<<<<<< HEAD
+=======
+=======
+                    on_blur={e =>;
+                      update_partner (p.code, {
+                        commission_rate: Number (e.target.value),
+                      });
+                    }
+                    className='w - 24 border rounded px - 2 py - 1';
+                  />;
+                </td>;
+                <td className='py - 2 pr - 4 space - x-2'>;
+                  <button;
+                    className='px - 2 py - 1 rounded border';
+                    on_click={() =>;
+                      update_partner (p.code, { status: 'approved' });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     }
                   >;
@@ -277,11 +317,14 @@ export default function AdminPartners() {
                   </button>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -627,15 +670,22 @@ export default function AdminPartners() {
   );
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 }
 }
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -652,5 +702,8 @@ export default function AdminPartners() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

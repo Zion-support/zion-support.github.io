@@ -1,6 +1,14 @@
 
+<<<<<<< HEAD
 
 
+=======
+import {useState} from 'react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import { TalentProfile } from '@/types / talent';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface HireRequestData {
   talent: {
     id: string;
@@ -20,9 +28,12 @@ export interface HireRequestData {
     timeline: string;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -32,8 +43,12 @@ export interface HireRequestData {
     id: string;
     full_name: string;
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -54,16 +69,27 @@ export interface HireRequestData {
     overview: string,
     timeline: string,
     budgetMin: number,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     budgetMax: number
   }
 }
 
+<<<<<<< HEAD
 export function useHireRequest() {
 
 export function useHireRequest() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export function useHireRequest() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -155,10 +181,17 @@ if (throw error) {
     error;
 
 
+<<<<<<< HEAD
+=======
+      setError(errorMessage);
+      toast({
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
       
+<<<<<<< HEAD
 
 
       return { success: false, error: errorMessage }
@@ -247,7 +280,13 @@ export function useHireRequest() {;
   }
 }
 ;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
+<<<<<<< HEAD
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

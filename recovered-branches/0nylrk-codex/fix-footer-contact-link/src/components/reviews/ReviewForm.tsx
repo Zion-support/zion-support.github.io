@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {useForm} from "react-hook-form";
@@ -11,6 +14,7 @@ import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
 
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { Star } from "lucide-react",
@@ -47,6 +51,33 @@ interface ReviewFormValues {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+import { useState } from './react';
+import { Star } from './lucide-react';
+import { use_form } from './react - hook - form';
+import { Button } from '@/components / ui / button';
+import { Textarea } from '@/components / ui / textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
+import { Switch } from '@/components / ui / switch';
+import { Review } from '@/types / reviews';
+interface ReviewFormValues {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  rating?: number;
+  review_text?: string;
+  communication_rating?: number;
+  quality_rating?: number;
+  timeliness_rating?: number;
+  would_work_again?: boolean;
+  is_anonymous?: boolean;
+}
+
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -69,12 +100,26 @@ interface ReviewFormProps {;
   defaultValues?: Review;
   isSubmitting: boolean;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export function ReviewForm(): any ({;
 
+<<<<<<< HEAD
+=======
+  projectId;
+  revieweeId;
+  revieweeName;
+  onSubmit;
+  defaultValues;
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
@@ -138,6 +183,7 @@ export function ReviewForm({
       timeliness_rating: undefined
       would_work_again: undefined
       is_anonymous: false}
+<<<<<<< HEAD
 
 
   });
@@ -154,6 +200,10 @@ export function ReviewForm({
   const watchRating = form.watch("rating");
 
 
+=======
+  });
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
       ...values,;
@@ -171,10 +221,15 @@ export function ReviewForm({
   const watchRating = form.watch("rating"),
   
   return (
+<<<<<<< HEAD
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    <Form {...form}>;
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Main Rating */}
         <FormField
           control={form && form.control}
@@ -214,6 +269,7 @@ export function ReviewForm({
               </div>;
             </FormItem>;
           )}
+<<<<<<< HEAD
 
   },;
   const watchRating = form.watch("rating"),;
@@ -221,15 +277,21 @@ export function ReviewForm({
     <Form {...form}>;
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         />;
 
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -264,8 +326,11 @@ export function ReviewForm({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Communication */}
             <FormField
               control={form && form.control}

@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface TemplateManagerProps {
@@ -19,8 +23,11 @@ interface TemplateManagerProps {
   const [mode, setMode] = useState<"list" | "save">("list"),
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {useContractTemplates} from "@/hooks/useContractTemplates";
 import {ContractTemplate} from "@/types/contracts";
@@ -30,6 +37,7 @@ import {TemplateList} from "./TemplateList";
 import {TemplateSaveForm} from "./TemplateSaveForm";
 import {ContractFormValues} from "@/components/contracts/components/ContractForm";
 import {useToast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TemplateManagerProps {
@@ -39,6 +47,13 @@ interface TemplateManagerProps {
   onSelectTemplate: (template: ContractFormValues) => void
 
   currentValues?: ContractFormValues
+=======
+interface TemplateManagerProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  onSelectTemplate: (template: ContractFormValues) => void,;
+  currentValues?: ContractFormValues;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
@@ -49,6 +64,7 @@ export function TemplateManager({;
   isOpen;
   onClose;
   onSelectTemplate;
+<<<<<<< HEAD
 
 
 export function TemplateManager({
@@ -59,6 +75,12 @@ export function TemplateManager({
 }: TemplateManagerProps) {
   const [mode, setMode] = useState<"list" | "save">("list"),
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
+=======
+  currentValues;
+}: TemplateManagerProps) {;
+  const [mode, setMode] = useState<"list" | "save">("list");
+  const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const { templates, isLoading } = useContractTemplates();
   const { toast } = useToast();
@@ -105,6 +127,7 @@ export function TemplateManager({
                 variant="outline" 
                 onClick={() => setMode("save")}
 
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { useContractTemplates } from "@/hooks/useContractTemplates",;
@@ -158,18 +181,25 @@ export function TemplateManager({;
             <div className="flex justify-end">;
               <Button;
                 variant="outline";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 onClick={() => setMode("save")}
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 disabled={!currentValues}
               >
                 Save Current as Template
               </Button>
             </div>
 
+<<<<<<< HEAD
             <TemplateList
             <TemplateList 
 
@@ -193,6 +223,89 @@ export function TemplateManager({;
 
 
 
+=======
+          </DialogTitle>;
+        </DialogHeader>;
+
+        {mode === "list" ? (;
+          <div className="space-y-4">;
+            <div className="flex justify-end">;
+              <Button
+                variant="outline" 
+                onClick={() => setMode("save")}
+                disabled={!currentValues}
+=======
+import { useState } from './react';
+import { useContractTemplates } from '@/hooks / useContractTemplates';
+import { ContractTemplate } from '@/types / contracts';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
+import { Button } from '@/components / ui / button';
+import { TemplateList } from './TemplateList';
+import { TemplateSaveForm } from './TemplateSaveForm';
+import { ContractFormValues } from '@/components / contracts / components / ContractForm';
+import { use_toast } from '@/hooks / use - toast';
+interface TemplateManagerProps {
+  is_open: boolean,
+  on_close: () => void,
+  onSelectTemplate: (template: ContractFormValues) => void,
+  current_values?: ContractFormValues;
+}
+export /**
+ * TemplateManager - Function description
+ */
+function TemplateManager() {
+  const [mode, set_mode] = useState<"list" | "save">("list");
+  const [selected_template, setSelectedTemplate] = useState < ContractTemplate | null>(null);
+  const { templates, is_loading } = useContractTemplates ();
+  const { toast } = use_toast ();
+;
+  const handleSelectTemplate = (template: ContractTemplate) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      onSelectTemplate (template.template_data);
+      on_close (),
+      toast ({
+        title: "Template loaded",
+        description: `Template "${template.title}" has been loaded.`});
+    }
+  }
+;
+  const handleSaveComplete = () =>: any {
+    set_mode ("list");
+    setSelectedTemplate (null);
+  }
+;
+  return (
+    <Dialog open={is_open} onOpenChange={on_close}>;
+      <DialogContent className="sm:max - w-lg max - h-[90vh] overflow - y-auto">;
+        <DialogHeader>;
+          <DialogTitle>;
+            {mode === "list" ? "Contract Templates" : "Save Template"}
+          </DialogTitle>;
+        </DialogHeader>;
+        {mode === "list" ? (
+          <div className="space - y-4">;
+            <div className="flex justify - end">;
+              <Button;
+                variant="outline";
+                on_click={() => set_mode ("save")}
+                disabled={!current_values}
+
+              >;
+                Save Current as Template;
+              </Button>;
+            </div>;
+
+
+            <TemplateList 
+
+
+              templates={templates}
+              isLoading={isLoading}
+              onSelect={handleSelectTemplate}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               onEdit={(template) => {;
                 setSelectedTemplate(template);
                 setMode("save");
@@ -206,11 +319,20 @@ export function TemplateManager({;
               setMode("list");
               setSelectedTemplate(null);
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+              setMode("list"),
+              setSelectedTemplate(null)
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}

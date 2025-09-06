@@ -1,4 +1,5 @@
 ;
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,8 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface UserBadgesProps {
   badges: Badge[];
@@ -48,6 +51,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
 
+<<<<<<< HEAD
 
 
 
@@ -61,17 +65,25 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 
 
 
+=======
+  return (
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 export default UserBadges;
 }
 }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
         return (
@@ -112,3 +124,20 @@ const iconMap = {;
   Star;
   MessageSquare;
 };
+<<<<<<< HEAD
+=======
+
+export const UserBadges = ({ badges }: UserBadgesProps) => {;
+  if (!badges?.length) return null;
+  return (
+    <div className="flex flex-wrap gap-2">;
+      {badges && badges.map((badge,) => {;
+        // Get the correct icon component based on the badge's icon name;
+        const IconComponent = iconMap[badge && badge.icon as keyof typeof iconMap] || Trophy;
+
+    <div className="flex flex - wrap gap - 2">;
+      {badges.map ((badge, ) => {
+        // Get the correct icon component based on the badge's icon name;
+        const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
+export default UserBadges;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

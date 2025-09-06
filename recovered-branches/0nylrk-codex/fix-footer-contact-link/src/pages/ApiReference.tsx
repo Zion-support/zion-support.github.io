@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import React, { useState } from "react",
@@ -9,6 +10,8 @@ export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export function ApiReference() {
@@ -204,6 +207,7 @@ export function ApiReference() {;
         "201": {
           description: "Job created successfully"
           example: `{
+<<<<<<< HEAD
 
   "id": "job-456",
   "title": "UX Designer",
@@ -277,6 +281,8 @@ export function ApiReference() {;
       "category": "development",;
       "budget": {;
         "min": 5000,;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         "max": 10000,;
         "currency": "USD";
@@ -375,11 +381,39 @@ export function ApiReference() {;
 }`;
         }
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  "id": "job-456",
+  "title": "UX Designer",
+  "description": "Looking for a UX designer with 3+ years experience...",
+  "category": "design",
+  "budget": {
+
+    "min": 3000,
+    "max": 5000,
+    "currency": "USD"
+  },
+  "status": "open",
+  "created_at": "2023-05-15T10:12:00Z"
+}`
+        },
+
+        "400": {
+          description: "Bad request"
+          example: `{
+  "error": "validation_error",
+  "message": "Invalid input",
+  "details": [
+    {
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -638,12 +672,26 @@ export function ApiReference() {;
                             'bg-red-950 text-red-500'
                           }`}>
                             {status}
+<<<<<<< HEAD
                           </span>
                           <span className="text-white">{response.description}</span>
                         </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                        <CodeBlock
+                          code={response && response.example} 
+
+=======
+
+                        
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         <CodeBlock 
                           code={response.example} 
                           language="json"
@@ -669,8 +717,20 @@ export function ApiReference() {;
 
 export default ApiReference;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+            </div>) : (
+            <div className="p - 8 border border - zinc - 800 rounded - lg text - center">;
+              <p className="text - zinc - 400">Select an endpoint from the list to view details</p>;
+            </div>)}
+        </div>;
+      </div>;
+    </ApiDocsLayout>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default ApiReference;
 
 ;

@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -238,6 +239,12 @@ import ContractBuilder from "@/pages/ContractBuilder",;
 
 const DashboardRoutes = () => {
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const DashboardRoutes = () => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const DashboardRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -413,4 +420,17 @@ const DashboardRoutes = () => {;
       <Route
         path="/contract-builder"
 
+<<<<<<< HEAD
+=======
+        element={
+          <ProtectedRoute>;
+            <ContractBuilder />;
+          </ProtectedRoute>;
+
+
+},
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default DashboardRoutes;

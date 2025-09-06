@@ -1,6 +1,18 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+export default function ToolPage() {
+  const [currentQuestion, setCurrentQuestion] = useState(0),
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
+  const [showResults, setShowResults] = useState(false),
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -31,6 +43,7 @@ export default function ToolPage() {
   ]
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
+<<<<<<< HEAD
 
   }
   const calculateScore = () => {
@@ -49,6 +62,8 @@ export default function ToolPage() {
       setShowResults(true)
     }
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -59,6 +74,28 @@ export default function ToolPage(req, res) {
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});
   const [showResults, setShowResults] = useState(false);
 
+<<<<<<< HEAD
+=======
+  const nextQuestion = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1)
+
+=======
+
+
+
+=======
+import React, { useState } from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+export default /**
+ * ToolPage - Function description
+ */
+function ToolPage() {
+  const [current_question, setCurrentQuestion] = useState (0),
+  const [answers, set_answers] = useState<{ [key: string]: number }>({}),
+  const [show_results, setShowResults] = useState (false),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const questions = [;
     {
       id: 'current - automation',
@@ -129,10 +166,15 @@ export default function ToolPage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },
   const resetAssessment = () => {
     setCurrentQuestion(0)
@@ -177,6 +219,7 @@ export default function ToolPage(req, res) {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
 
+<<<<<<< HEAD
                   <button
                     onClick={resetAssessment}
                     onClick={resetAssessment  } catch (error) {
@@ -184,24 +227,40 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <button 
+
+                    onClick={resetAssessment}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
                   </button>
 
+<<<<<<< HEAD
                   <Link
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
                   >
@@ -217,8 +276,11 @@ export default function ToolPage(req, res) {
   }
   const currentQ = questions[currentQuestion]
 
+<<<<<<< HEAD
 }
   const currentQ = questions[currentQuestion],
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <>
       <Head>
@@ -247,10 +309,14 @@ export default function ToolPage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
             </div>
 
@@ -392,10 +458,14 @@ export default function ToolPage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -407,6 +477,7 @@ export default function ToolPage(req, res) {
               <div className="flex justify-between">
 
 
+<<<<<<< HEAD
                 <button
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   disabled={currentQuestion === 0}
@@ -427,16 +498,94 @@ export default function ToolPage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
+<<<<<<< HEAD
 
                 <button
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
 
                   onClick={nextQuestion  } catch (error) {
+=======
+
+=======
+}
+
+=======
+  },
+  const reset_assessment = () =>: any {
+    setCurrentQuestion (0),
+    set_answers ({}),
+    setShowResults (false);
+  },
+  // Check condition
+if ( {) {
+  $2
+}
+    const result = calculate_score (),
+    return (
+      <>;
+        <Head>;
+          <title > Automation Readiness Assessment - Results | Zion Tech Group</title>;
+          <meta name="description" content="View your automation readiness assessment results and get personalized recommendations." />;
+        </Head>;
+        <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
+          <main className="container mx - auto px - 6 py - 12">;
+            <div className="max - w-4xl mx - auto">;
+              <nav className="mb - 8">;
+                <Link href="/resources" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
+                  ← Back to Resources;
+                </Link>;
+              </nav>;
+              <div className="text - center mb - 12">;
+                <h1 className="text - 4xl font - bold text - white mb - 4">Assessment Results</h1>;
+                <p className="text - white / 80 text - lg">Your automation readiness evaluation is complete</p>;
+              </div>;
+              <div className="bg - gradient - to - r from - cyan - 500 / 10 to - fuchsia - 500 / 10 rounded - 2xl p - 8 border border - cyan - 500 / 20 mb - 8">;
+                <h2 className={`text - 3xl font - bold mb - 4 ${result.color}`}>Level: {result.level}</h2>;
+                <p className="text - white / 90 text - lg mb - 6">{result.description}</p>;
+                <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8">;
+                  {questions.map ((q, index) => (
+                    <div key={q.id} className="bg - white / 10 rounded - lg p - 4 border border - white / 20">;
+                      <h3 className="font - semibold text - cyan - 400 mb - 2">{q.question}</h3>;
+                      <p className="text - white / 80 text - sm">Score: {answers[q.id] || 0}/5</p>;
+                    </div>))}
+                </div>;
+                <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                  <button;
+                    on_click={reset_assessment}
+                    className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
+                  >;
+                    Retake Assessment;
+                  </button>;
+                  <Link;
+                    href="/contact";
+                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - cyan - 400 / 50 transition - all duration - 300";
+                  >;
+                    Get Personalized Recommendations;
+                  </Link>;
+                </div>;
+              </div>;
+            </div>;
+          </main>;
+        </div>;
+      </>);
+=======
+
+=======
+
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -497,6 +646,34 @@ export default function ToolPage(req, res) {
                   className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed";
                 >;
                   {current_question === questions.length - 1 ? 'Get Results' : 'Next'}
+<<<<<<< HEAD
+=======
+=======
+  );
+};
+=======
+                <button
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  onClick={nextQuestion  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  disabled={!answers[currentQ.id]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </button>;
               </div>;
             </div>;
@@ -512,8 +689,14 @@ export default function ToolPage(req, res) {
   }
 
 }
+<<<<<<< HEAD
 }
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

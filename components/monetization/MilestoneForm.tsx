@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
 
 type Props = {
   onSubmit: (payload: {
@@ -30,6 +31,20 @@ type Props = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+};
+export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+
+};
+
+export default function MilestoneForm({ onSubmit }: Props) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -163,9 +178,36 @@ type Props = {
 
         {loading ? 'Adding...' : 'Add Milestone'}
 
+<<<<<<< HEAD
 
   );
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      </button>;
+    </form>;
+  );
+=======
+
+  );
+
+}
+=======
+
+}
+  );
+}
+      <button;
+        type='submit';
+        className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50";
+        disabled={loading}
+      >;
+        {loading ? 'Adding...' : 'Add Milestone'}
+      </button>;
+    </form>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

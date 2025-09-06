@@ -1,9 +1,14 @@
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
+import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface CreateWebhookRequest {
   name: string;
@@ -28,7 +33,10 @@ interface CreateWebhookRequest {
   secret?: string
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 interface WebhookTestRequest {;
@@ -152,9 +160,12 @@ serve(async (req) => {;
         return await deleteWebhook(user.id, webhookId);
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
@@ -164,7 +175,11 @@ serve(async (req) => {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400
       headers: { 'Content-Type': 'application/json' }})
@@ -190,8 +205,214 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
       return new Response(JSON && JSON.stringify({ error: 'Failed to create webhook' }), {
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    if (error || !data || data && data.length === 0) {
+      console && console.error('Error toggling webhook:', error);
+      return new Response(JSON && JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
+=======
+    return new Response (JSON.stringify ({
+      webhook: data[0],
+      message: 'Webhook created successfully';
+    }), {
+      status: 201,
+      headers: { 'Content - Type': 'application / json' }});
+  } catch (error) {
+    console.error ('Error in create_webhook:', error);
+    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
+      status: 500,
+      headers: { 'Content - Type': 'application / json' }});
+  }
+}
+async /**
+ * getUserWebhooks - Function description
+ */
+function getUserWebhooks() {
+  try {
+    const { data, error } = await supabase;
+      .from ('webhook_configs');
+      .select ('id, name, url, event_types, is_active, created_at, last_triggered_at');
+      .eq ('user_id', user_id);
+      .order ('created_at', { ascending: false });
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      console.error ('Error fetching webhooks:', error);
+      return new Response (JSON.stringify ({ error: 'Failed to fetch webhooks' }), {
+        status: 500,
+        headers: { 'Content - Type': 'application / json' }});
+    }
+    return new Response (JSON.stringify ({ webhooks: data }), {
+      status: 200,
+      headers: { 'Content - Type': 'application / json' }});
+  } catch (error) {
+    console.error ('Error in getUserWebhooks:', error);
+    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
+      status: 500,
+      headers: { 'Content - Type': 'application / json' }});
+  }
+}
+async /**
+ * toggle_webhook - Function description
+ */
+function toggle_webhook() {
+  try {
+    const { data, error } = await supabase;
+      .from ('webhook_configs');
+      .update ({ is_active: is_active });
+      .eq ('id', webhook_id);
+      .eq ('user_id', user_id);
+      .select ('id, name, is_active');
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      console.error ('Error toggling webhook:', error);
+      return new Response (JSON.stringify ({ error: 'Failed to update webhook or webhook not found' }), {
+
+        status: error ? 500 : 404,
+        headers: { 'Content - Type': 'application / json' }});
+    }
+
+    console && console.error('Error in toggleWebhook:', error);
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+
+      headers: { 'Content-Type': 'application/json' }})
+  }
+}
+async function deleteWebhook(userId: string, webhookId: string) {
+  try {
+    const { data, error } = await supabase
+      .from('webhook_configs')
+      .delete()
+      .eq('id', webhookId)
+      .eq('user_id', userId)
+      .select('id');
+    if (error) {
+
+=======
+;
+    return new Response(JSON.stringify({ error: 'Invalid action' }), {;
+      status: 400,;
+      headers: { 'Content-Type': 'application/json' }});
+  } catch (error) {;
+    console.error('Error processing request:', error),;
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {;
+      status: 500,;
+      headers: { 'Content-Type': 'application/json' }});
+  }
+}),;
+async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {;
+  try {;
+    const { data, error } = await supabase;
+      .from('webhook_configs');
+      .insert({;
+        user_id: userId,;
+        name,;
+        url,;
+        event_types: eventTypes,;
+        secret;
+      });
+      .select('id, name, url, event_types, is_active, created_at'),;
+    if (error) {;
+      console.error('Error creating webhook:', error),;
+      return new Response(JSON.stringify({ error: 'Failed to create webhook' }), {;
+        status: 500,;
+        headers: { 'Content-Type': 'application/json' }});
+    }
+;
+    return new Response(JSON.stringify({;
+      webhook: data[0],;
+      message: 'Webhook created successfully';
+    }), {;
+      status: 201,;
+      headers: { 'Content-Type': 'application/json' }});
+  } catch (error) {;
+    console.error('Error in createWebhook:', error),;
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {;
+      status: 500,;
+      headers: { 'Content-Type': 'application/json' }});
+  }
+}
+;
+async function getUserWebhooks(userId: string) {;
+  try {;
+    const { data, error } = await supabase;
+      .from('webhook_configs');
+      .select('id, name, url, event_types, is_active, created_at, last_triggered_at');
+      .eq('user_id', userId);
+      .order('created_at', { ascending: false }),;
+    if (error) {;
+      console.error('Error fetching webhooks:', error),;
+      return new Response(JSON.stringify({ error: 'Failed to fetch webhooks' }), {;
+        status: 500,;
+        headers: { 'Content-Type': 'application/json' }});
+    }
+;
+    return new Response(JSON.stringify({ webhooks: data }), {;
+      status: 200,;
+      headers: { 'Content-Type': 'application/json' }});
+  } catch (error) {;
+    console.error('Error in getUserWebhooks:', error),;
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {;
+      status: 500,;
+      headers: { 'Content-Type': 'application/json' }});
+  }
+}
+;
+async function toggleWebhook(userId: string, webhookId: string, isActive: boolean) {;
+  try {;
+    const { data, error } = await supabase;
+      .from('webhook_configs');
+      .update({ is_active: isActive });
+      .eq('id', webhookId);
+      .eq('user_id', userId);
+      .select('id, name, is_active'),;
+    if (error || !data || data.length === 0) {;
+      console.error('Error toggling webhook:', error),;
+      return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {;
+        status: error ? 500 : 404,;
+        headers: { 'Content-Type': 'application/json' }});
+    }
+;
+    return new Response(JSON.stringify({;
+      message: `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`,;
+      webhook: data[0];
+    }), {;
+      status: 200,;
+      headers: { 'Content-Type': 'application/json' }});
+  } catch (error) {;
+    console.error('Error in toggleWebhook:', error),;
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {;
+      status: 500,;
+      headers: { 'Content-Type': 'application/json' }});
+  }
+}
+;
+async function deleteWebhook(userId: string, webhookId: string) {;
+  try {;
+    const { data, error } = await supabase;
+      .from('webhook_configs');
+      .delete();
+      .eq('id', webhookId);
+      .eq('user_id', userId);
+      .select('id'),;
+    if (error) {;
+      console.error('Error deleting webhook:', error),;
+      return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {;
+        status: 500,;
+        headers: { 'Content-Type': 'application/json' }});
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     if (!data |data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
@@ -200,7 +421,13 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
     }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
 
@@ -412,8 +639,17 @@ function createTestPayload(eventType: string) {
           client_id: crypto.randomUUID ();
           job_id: crypto.randomUUID ();
           created_at: timestamp,
+<<<<<<< HEAD
 
 
+=======
+=======
+        data: {
+          message: 'This is a test webhook event'
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     return new Response(JSON.stringify({;
       message: 'Webhook deleted successfully',;
@@ -588,10 +824,16 @@ function createTestPayload(eventType: string) {;
           message: 'This is a test webhook event';
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       }
   }

@@ -1,8 +1,19 @@
 
+<<<<<<< HEAD
 
 import React from "react";
 
 
+=======
+
+
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {HireRequestForm} from "./HireRequestForm";
+import {TalentProfile} from "@/types/talent";
+import {UserProfile} from "@/types/auth";
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { HireRequestForm } from "./HireRequestForm",
@@ -10,10 +21,15 @@ import { TalentProfile } from "@/types/talent",
 import { UserProfile } from "@/types/auth",
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
@@ -28,10 +44,18 @@ export function HireRequestModal({
   userDetails
 }: HireRequestModalProps) {
   const handleClose = () => {
+<<<<<<< HEAD
 
     onClose();
 
 
+=======
+
+
+  };
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     onClose()
   },
 
@@ -45,14 +69,48 @@ import {HireRequestForm} from "./HireRequestForm";
 import {TalentProfile} from "@/types/talent";
 import {UserProfile} from "@/types/auth";
 
+<<<<<<< HEAD
+=======
+import React from "react",;
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
+import { HireRequestForm } from "./HireRequestForm",;
+import { TalentProfile } from "@/types/talent",;
+import { UserProfile } from "@/types/auth",;
+
+interface HireRequestModalProps {;
+  talent: TalentProfile | null,;
+  isOpen: boolean,;
+  onClose: () => void,;
+  userDetails?: UserProfile;
+}
+
+export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {;
+  const handleClose = () => {;
+    onClose();
+  };
+
+  if (!talent) return null;
+
+  return (
+    <Dialog open={isOpen} onOpenChange={handleClose}>;
+      <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">;
+        <DialogHeader>;
+          <DialogTitle className="text-xl font-bold text-white">;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
         <HireRequestForm 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}

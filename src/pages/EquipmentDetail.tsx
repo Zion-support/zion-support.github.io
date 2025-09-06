@@ -244,7 +244,10 @@ export default function EquipmentDetail() {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { NextSeo } from '@/components/NextSeo',
@@ -409,6 +412,10 @@ export default function EquipmentDetail() {;
 
     loadEquipment()
   }, [id]),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -417,12 +424,15 @@ export default function EquipmentDetail() {;
   const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
+<<<<<<< HEAD
 
 
         title: 'Authentication Required'
         description: 'Please log in to add items to cart'
         variant: 'destructive'
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         title: 'Authentication Required',
         description: 'Please log in to add items to cart',
@@ -437,6 +447,30 @@ export default function EquipmentDetail() {;
 
 
 
+<<<<<<< HEAD
+=======
+    try {
+      dispatch({
+        type: 'ADD_ITEM'
+        payload: {
+
+    load_equipment ();
+  }, [id]);
+  const handleAddToCart = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Authentication Required',
+        description: 'Please log in to add items to cart',
+        variant: 'destructive',
+      });
+      return;
+    }
+  }
+  const inCart = items.some(item => item.id === equipment?.id)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           quantity}}),
 
 
@@ -463,11 +497,14 @@ export default function EquipmentDetail() {;
 
           quantity}}),
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Loading state
   if (loading) {
     return (
@@ -623,6 +660,7 @@ if ( {) {
               <h1 className="text-3xl font-bold text-white mb-4">
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
+<<<<<<< HEAD
 
 
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
@@ -663,6 +701,11 @@ if ( {) {
                 >
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   Browse Equipment
                 </Button>
               </div>
@@ -679,12 +722,24 @@ if ( {) {
         description = {equipment.description,}
         openGraph={{
 
+<<<<<<< HEAD
 
 
 
 
               : undefined,
 <<<<<<< HEAD
+=======
+          title: `${equipment && equipment.name} - Zion Marketplace`,
+          description: equipment && equipment.description,
+          images:
+            equipment && equipment.images.length> 0 && equipment && equipment.images[0];
+              ? [{ url: equipment && equipment.images[0] }];
+              : undefined,;
+
+
+              : undefined,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
     loadEquipment();
@@ -796,8 +851,11 @@ if ( {) {
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         }}
@@ -822,6 +880,7 @@ if ( {) {
               onClick={() => router.push('/equipment')}
               className="text-zion-cyan hover:text-white transition-colors"
             >
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -829,6 +888,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               Equipment
             </button>
             <span className="mx-2 text-zion-slate-light">/</span>
@@ -849,11 +912,14 @@ if ( {) {
 
           <div className="grid lg:grid-cols-2 gap-12">
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Images */}
             <motion.div 
               className="space-y-4"
@@ -904,8 +970,11 @@ if ( {) {
                         className="object-cover"
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       />
                     </button>
                   ))}
@@ -920,6 +989,7 @@ if ( {) {
               className='space-y-6'
             <motion.div 
               className="space-y-6"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -927,6 +997,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
@@ -993,11 +1067,14 @@ if ( {) {
                             i < Math.floor(equipment.rating!);
                               ? 'text-yellow-400 fill-current';
                               : 'text-zion-slate-light';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                           }`}
                         />;
@@ -1014,6 +1091,7 @@ if ( {) {
 
 
               {/* Price */}
+<<<<<<< HEAD
 
 
               <div className='bg-zion-blue-light rounded-lg p-4'>;
@@ -1392,6 +1470,13 @@ if ( {) {
 
                 {/* Warranty */}
                 {equipment.warranty && (
+=======
+;
+
+;
+                {/* Return Policy */}
+                {equipment.returnPolicy && (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <div className="flex gap-3 text-zion-slate-light">
                     <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />
                     <div>
@@ -1400,6 +1485,7 @@ if ( {) {
                     </div>
                   </div>
                 )}
+<<<<<<< HEAD
 
 ;
 
@@ -1426,6 +1512,8 @@ if ( {) {
                 )}
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   equipment.returnPolicy 
@@ -1433,11 +1521,14 @@ if ( {) {
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"};
 ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               </div>;

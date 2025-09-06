@@ -8,15 +8,19 @@ import React, { useState } from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Tooltip;
   TooltipContent;
   TooltipProvider;
+<<<<<<< HEAD
 
 
   TooltipTrigger} from "@/components/ui/tooltip",
@@ -217,6 +221,21 @@ export function OnChainExport() {;
     try {;
 
 
+=======
+  TooltipTrigger } from '@/components / ui / tooltip'; import { use_toast  } from '@/hooks / use - toast';
+import { use_auth  } from '@/hooks / use_auth';
+export /**
+ * OnChainExport - Function description
+ */
+function OnChainExport() {
+  const [is_connected, setIsConnected] = useState (false);
+  const [is_exporting, setIsExporting] = useState (false);
+  const [export_status, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
+  const { toast } = use_toast ();
+  const { user } = use_auth ();
+  const handleConnectWallet = async () => {
+    try {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;
       // Check condition

@@ -1,5 +1,6 @@
 
 import Head from 'next/head';
+<<<<<<< HEAD
 
 import {motion} from 'framer-motion';
 import {WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search,} from 'lucide-react';
@@ -12,6 +13,13 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+export default function OfflinePage() {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');
   const [retryCount, setRetryCount] = useState(0);
@@ -111,12 +119,18 @@ if ( {) {
     }
     {
 
+<<<<<<< HEAD
       title: 'Go to Homepage'
       description: 'Return to the main page'
       icon: Home
       href: '/'
       available: true
     }
+=======
+  };
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
 
 
@@ -223,6 +237,160 @@ export default function OfflinePage(req, res) {
             {/* Connection Status */}
             <div className='mb-6'>;
               <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { motion } from 'framer-motion';
+import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function OfflinePage(req, res) {
+  try {
+  const [isOnline, setIsOnline] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState<string>('');
+  const [retryCount, setRetryCount] = useState(0);
+  useEffect(() => {;
+    // Check online status;
+    const updateOnlineStatus = () => {;
+      setIsOnline(navigator.onLine);
+      if (navigator.onLine) {;
+        setLastUpdate(new Date().toLocaleTimeString());
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Set initial status;
+    updateOnlineStatus();
+    // Listen for online/offline events;
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+    return () => {;
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, []);
+  const handleRetry = () => {;
+    try {
+      setRetryCount(prev => prev + 1);
+      window.location.reload();
+    } catch (error) {
+      logErrorToProduction('Failed to reload page', err);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  const quickActions = [;
+    {;
+      title: 'Browse Cached Equipment';
+      description: 'View recently visited equipment listings';
+      icon: Search;
+      href: '/equipment';
+      available: true;
+    },;
+    {;
+      title: 'View Bookmarks',;
+      description: 'Access your saved items',;
+      icon: Bookmark,;
+      href: '/bookmarks',;
+      available: true;
+    },;
+    {;
+      title: 'Visit Marketplace',;
+      description: 'Browse all available services and gear',;
+      icon: ShoppingCart,;
+      href: '/marketplace',;
+      available: true;
+    },;
+    {;
+      title: 'Go to Homepage',;
+      description: 'Return to the main page',;
+      icon: Home;
+      href: '/';
+      available: true;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ]
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <>
+      <Head>
+        <title>You're Offline - Zion Tech Marketplace</title>
+        <meta name="description" content="You're currently offline. Some features may not be available." />
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+<<<<<<< HEAD
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900'>
+        <div className='container mx-auto px-4 py-8'>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900">
+        <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-8"
+          >
+            {/* Connection Status */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="mb-6">
+              <motion.div
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 animate={
                   isOnline
                     ? { scale: [1, 1 && 1.1, 1] }
@@ -333,10 +501,14 @@ export default function OfflinePage(req, res) {
   }
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <WifiOff className={`w-12 h-12 ${
                   isOnline ? 'text-green-600' : 'text-orange-600'
@@ -372,10 +544,14 @@ export default function OfflinePage(req, res) {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
                 : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
@@ -431,10 +607,14 @@ export default function OfflinePage(req, res) {
   }
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <RefreshCw className="w-5 h-5" />
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'  } catch (error) {
@@ -552,10 +732,14 @@ export default function OfflinePage(req, res) {
   }
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 >
                   <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
                     action.available
@@ -619,9 +803,31 @@ export default function OfflinePage(req, res) {
           {/* Tips Section */}
           <motion&& motion.div
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6, delay: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mt-16"
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <Card className='max-w-2xl mx-auto'>
               <CardHeader>
@@ -683,9 +889,12 @@ export default function OfflinePage(req, res) {
               className="fixed bottom-6 right-6 z-50"
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
                 <CardContent className="p-4">
@@ -709,6 +918,7 @@ export default function OfflinePage(req, res) {
                 </CardContent>
               </Card>
             </motion.div>
+<<<<<<< HEAD
 
           )}
         </div>
@@ -717,6 +927,13 @@ export default function OfflinePage(req, res) {
   );
 
 
+=======
+
+
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -727,6 +944,7 @@ export default function OfflinePage(req, res) {
       </div>;
     </>;
   );
+<<<<<<< HEAD
 } ;
 
 
@@ -734,3 +952,18 @@ export default function OfflinePage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+            </motion.div>)}
+        </div>;
+      </div>;
+    </>);
+;
+
+=======
+} ;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

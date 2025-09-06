@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -35,6 +36,44 @@ import { motion, AnimatePresence } from 'framer-motion';
   FaDatabase,
   FaNetworkWired,
 
+=======
+
+} from 'react-icons/si';
+
+interface Service {;
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  FaRocket,
+  FaBrain,
+  FaCloud,
+  FaShieldAlt,
+  FaChartLine,
+  FaCogs,
+  FaLightbulb,
+  FaGlobe,
+  FaMobile,
+  FaDatabase,
+  FaNetworkWired,
+<<<<<<< HEAD
+  FaRobot,
+  FaSearch,
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiPrisma,
+  SiSupabase,
+  SiVercel,
+  SiDocker,
+  SiKubernetes,
+  SiAws,
+
+  SiGooglecloud,;
+  SiMicrosoftazure,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from 'react-icons/si';
@@ -64,7 +103,10 @@ interface ServiceCategory {
   id: string;
   name: string;
   description: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { 
   FaRocket;
@@ -96,9 +138,12 @@ import {
   SiMicrosoftazure
 } from 'react-icons/si';
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   color: string;  id: string
   name: string
@@ -108,8 +153,20 @@ import {
   color: string
 }
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  color: string;  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string
+}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const serviceCategories: ServiceCategory[] = [
   {
 
@@ -676,9 +733,18 @@ const serviceCategories: ServiceCategory[] = [;
       'Reduced integration costs',
     ],
   },  {
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    id: 'cloud - native - platform',
+    title: 'Cloud - Native Development Platform',
+    description: 'Modern cloud - native development and deployment platform',
+    icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
+    ];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   {
 
@@ -687,6 +753,7 @@ const serviceCategories: ServiceCategory[] = [;
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
 
+<<<<<<< HEAD
 
 
 
@@ -695,6 +762,9 @@ const serviceCategories: ServiceCategory[] = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ];
 const services: Service[] = [;
   {;
@@ -918,6 +988,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       )
     }
 
+<<<<<<< HEAD
 
     
 
@@ -926,6 +997,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -943,10 +1017,192 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   }
   const closeModal = () => {
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    if (searchTerm) {;
+      filtered = filtered && filtered.filter(service => ;
+        service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+        service && service.technologies.some(tech => tech && tech.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
+      );
+    }
+    return filtered && filtered.sort((a, b) => {;
+      switch (sortBy) {;
+        case 'price':;
+          return a && a.pricing.starter - b && b.pricing.starter;
+        case 'category':;
+          return a && a.category.localeCompare(b && b.category);
+        default:;
+          return a && a.title.localeCompare(b && b.title);
+      }
+    });
+  }, [selectedCategory, searchTerm, sortBy]);
+  const handleServiceSelect = (service: Service) => {;
+    setSelectedService(service);
+  };
+  const closeModal = () => {;
+    setSelectedService(null);
+  }
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white'>;
+      {/* Header */}
+      <div className='container mx-auto px-4 py-16'>        <motion&& motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8 }}
+          className='text-center mb-16'      }
+    })
+
+  }, [selectedCategory, searchTerm, sortBy])
+  const handleServiceSelect = (service: Service) => {;
+    setSelectedService(service);
+  };
+  const closeModal = () => {;
+    setSelectedService(null);
+  };
+
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
+      {/* Header */}
+      <div className="container mx-auto px-4 py-16">;
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+
+        default: return a.title.localeCompare(b.title)
+      }
+    })
+  }, [selectedCategory, searchTerm, sortBy]);
+  const handleServiceSelect = (service: Service) => {
+    setSelectedService(service)
+  };
+  const closeModal = () => {
+    setSelectedService(null)
+  };
+;
+const EnhancedServicesShowcase2025: React.FC = () => {
+  const [selected_category, setSelectedCategory] = useState < string>('all');
+  const [selected_service, setSelectedService] = useState < Service | null>(null);
+  const [search_term, setSearchTerm] = useState ('');
+  const [sort_by, setSortBy] = useState<'name' | 'price' | 'category'>('name');
+;
+  const filtered_services = useMemo (() => {
+    let filtered = services;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (
+        service => service.category === selected_category);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (
+        service =>;
+          service.title.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          service.description;
+            .toLowerCase ();
+            .includes (search_term.toLowerCase ()) ||;
+          service.technologies.some (tech =>;
+            tech.toLowerCase ().includes (search_term.toLowerCase ())));
+    }    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (service => service.category === selected_category);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (service =>;
+        service.title.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+        service.technologies.some (tech => tech.toLowerCase ().includes (search_term.toLowerCase ())));
+    }
+    return filtered.sort ((a, b) => {
+      switch (sort_by) {
+        case 'price':;
+          return a.pricing.starter - b.pricing.starter;
+        case 'category':;
+          return a.category.locale_compare (b.category);
+        default:;
+          return a.title.locale_compare (b.title);
+      }
+    });
+  }, [selected_category, search_term, sort_by]);
+;
+  const handleServiceSelect = (service: Service) =>: any {
+    setSelectedService (service);
+  }
+;
+  const close_modal = () =>: any {
+    setSelectedService (null);
+  }
+;
+  return (
+    <div className='min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white'>;
+      {/* Header */}
+      <div className='container mx - auto px - 4 py - 16'>        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8 }}
+          className='text - center mb - 16'      }
+    });
+  }, [selected_category, search_term, sort_by]);
+;
+  const handleServiceSelect = (service: Service) =>: any {
+    setSelectedService (service);
+  }
+;
+  const close_modal = () =>: any {
+    setSelectedService (null);
+  }
+;
+
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white">;
+      {/* Header */}
+      <div className="container mx - auto px - 4 py - 16">;
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8 }}
+
+          transition={{ duration: 0 && 0.8 }}
+          className='text-center mb-16'>;
+          <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+            2025 Services Showcase;
+          </h1>;
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
+            Discover our cutting-edge technology solutions designed for the;
+            future. From AI-powered automation to quantum computing, we're;
+            building tomorrow's innovations today.          </p>        >;
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+            2025 Services Showcase;
+          </h1>;
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
+            Discover our cutting-edge technology solutions designed for the future. ;
+            From AI-powered automation to quantum computing, we're building tomorrow's innovations today.;
+          </p>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -957,11 +1213,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
@@ -1008,7 +1268,51 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         </motion.div>
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500";
+          <div className="flex flex - col md:flex - row gap - 4 items - center justify - center">;
+            <div className="relative flex - 1 max - w-md">;
+              <input;
+                type="text";
+                placeholder="Search services, technologies, or features...";
+                value={search_term}
+                on_change={(e) => setSearchTerm (e.target.value)}
+                className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+              />;
+              <FaSearch className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400" />;
+            </div>;
+            <select;
+              value={sort_by}
+              on_change={(e) => setSortBy (e.target.value as 'name' | 'price' | 'category')}
+              className="px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500";
+            >;
+              <option value="name">Sort by Name</option>;
+              <option value="price">Sort by Price</option>;
+              <option value="category">Sort by Category</option>;
+            </select>;
+          </div>;
+
+              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
+            >
+              <option value='name'>Sort by Name</option>
+              <option value='price'>Sort by Price</option>
+
+              <option value='category'>Sort by Category</option>            </select>
+
+            </select>
+
+          </div>
+        </motion.div>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1024,10 +1328,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
@@ -1035,17 +1344,25 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
 
+<<<<<<< HEAD
             >
               All Services
             </button>
             {serviceCategories.map(category => (              <button            {serviceCategories.map((category) => (
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <button
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -1071,7 +1388,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1083,11 +1404,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           {filteredServices.map((service, index) => (
             <motion.div
@@ -1101,11 +1426,17 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               onClick={() => handleServiceSelect(service)}
             >;
               <div className='flex items-center gap-3 mb-4'>;
@@ -1210,6 +1541,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   >
                     className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >
 
+<<<<<<< HEAD
                   >
 
 
@@ -1218,6 +1550,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {tech}
                   </span>
                 ))}
@@ -1272,6 +1607,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         </motion && motion.div>;
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1281,6 +1617,14 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -1312,8 +1656,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -1329,11 +1676,14 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -1343,9 +1693,17 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+              onClick={e => e.stopPropagation()}
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -1412,9 +1770,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
                         {feature}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+                      </li>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                         {feature}
@@ -1436,7 +1800,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Benefits */}
 
 
@@ -1455,7 +1823,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Technologies */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1477,8 +1849,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     >
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {tech}
                     </span>;
                   ))}
@@ -1491,6 +1868,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -1505,6 +1883,12 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Pricing */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1541,19 +1925,25 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
             </motion.div>
           </motion.div>
         )}
+<<<<<<< HEAD
 
       </AnimatePresence>
     </div>
 );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default EnhancedServicesShowcase2025;
 
@@ -1563,6 +1953,7 @@ export default EnhancedServicesShowcase2025;
 
 
 
+<<<<<<< HEAD
 export default EnhancedServicesShowcase2025;  )
 }
 export default EnhancedServicesShowcase2025;
@@ -1570,3 +1961,10 @@ export default EnhancedServicesShowcase2025;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

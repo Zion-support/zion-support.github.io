@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState } from "react",
@@ -9,6 +10,17 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
+=======
+
+import React, { useState } from './react';
+import { MessageCircle  } from './lucide-react';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+import { Avatar, AvatarFallback  } from '@/components / ui / avatar';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface DiscussionPost {
 
   id: number;
@@ -16,11 +28,17 @@ interface DiscussionPost {
   avatar?: string;
   time: string;
   title: string;
+<<<<<<< HEAD
 
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface DiscussionPost {
   id: number,
   author: string,
@@ -44,6 +62,7 @@ const initial_posts: DiscussionPost[] = [;
     title: "Quick tip: How to rank your Zion listing higher",
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
 
+<<<<<<< HEAD
 
     id: 1
     author: "Anna Zhou"
@@ -85,6 +104,8 @@ export const CommunityDiscussion: React.FC = () => {
   const [showNew, setShowNew] = useState(false),
   const [newTitle, setNewTitle] = useState(""),
   const [newBody, setNewBody] = useState(""),
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -212,8 +233,14 @@ export const CommunityDiscussion: React.FC = () => {;
               onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
                 setNewBody(e && e.target.value);
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]";
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
@@ -241,6 +268,7 @@ export const CommunityDiscussion: React.FC = () => {;
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 
       )}
       <div className="flex flex-col gap-6">
@@ -283,6 +311,27 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>
     </div>
 
+=======
+=======
+                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
+=======
+            <div className="flex gap - 3 justify - end">;
+              <Button;
+                variant="secondary";
+                size="sm";
+                className="bg - zion - blue text - white hover:bg - zion - blue - dark";
+                on_click={() => setShowNew (false)}
+              >;
+                Cancel;
+              </Button>;
+              <Button;
+                size="sm";
+                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
+                on_click={handleAddPost}
+                disabled={!new_title.trim () || !new_body.trim ()}
+              >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Post;
               </Button>;
             </div>;
@@ -293,7 +342,10 @@ export const CommunityDiscussion: React.FC = () => {;
 );
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </AvatarFallback>;
               </Avatar>;
               <div>;
@@ -322,7 +374,10 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         </Card>)}
       <div className="flex flex - col gap - 6">;
@@ -369,6 +424,10 @@ export const CommunityDiscussion: React.FC = () => {;
 }
 ;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 };

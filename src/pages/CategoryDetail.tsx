@@ -7,6 +7,7 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
+<<<<<<< HEAD
 
 
 ]
@@ -69,6 +70,8 @@ import { Header } from "@/components/Header",;
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const AUTO_SERVICE_TITLES = [;
   "AI - Powered Customer Support";
@@ -92,6 +95,7 @@ function generateInnovationListing (index: number): ProductListing {
     'talents': {
 
 
+<<<<<<< HEAD
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists",
       icon: <Brain className="w-6 h-6" />
@@ -101,6 +105,8 @@ function generateInnovationListing (index: number): ProductListing {
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     'innovation': {
@@ -111,7 +117,10 @@ function generateInnovationListing (index: number): ProductListing {
     },
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
@@ -156,6 +165,11 @@ function generateInnovationListing (index: number): ProductListing {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
 
     'developer-tools': {
@@ -172,9 +186,12 @@ function generateInnovationListing (index: number): ProductListing {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
     'business-solutions': {
       title: "Business Solutions",
@@ -281,12 +298,126 @@ function generateInnovationListing (index: number): ProductListing {
     : 'Category | Zion Marketplace',
   const seoDescription =
     category.description || 'Explore listings in this category.',
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
+<<<<<<< HEAD
+=======
+
+  useEffect(() => {
+    async function load() {
+      setIsLoading(true),
+      try {
+        // Find the category data based on slug
+        const currentCategory = categoryData[slug as keyof typeof categoryData] || {
+          title: slug
+            ?.split('-')
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ') || 'Category',
+          description: 'Explore our collection in this category',
+          icon: <Bot className="w-6 h-6" />},
+
+        setCategory(currentCategory),
+        innovationCounterRef.current = 0,
+
+        // Filter listings by category
+        const categoryTitle = currentCategory.title,
+        const filteredListings = MARKETPLACE_LISTINGS.filter(
+          (listing) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
+        ),
+
+        // If we don't have real listings for this category, generate placeholder listings
+        const listingsToShow =
+          filteredListings.length > 0
+            ? filteredListings
+            : Array(4)
+                .fill(null)
+                .map((_, index) => ({
+                  id: `${slug}-${index}`,
+                  title: `${currentCategory.title} Product ${index + 1}`,
+                  description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
+                  category: currentCategory.title,
+                  price: Math.floor(Math.random() * 500) + 50,
+                  currency: '$',
+                  tags: [`${slug}`, 'aitool'],
+                  author: {
+                    name: `Provider ${index + 1}`,
+                    id: `author-${index + 1}`,
+                    avatarUrl: undefined},
+                  images: [`/placeholder.svg`],
+                  createdAt: new Date().toISOString(),
+                  rating: Math.floor(Math.random() * 5) + 1,
+                  reviewCount: Math.floor(Math.random() * 100)})),
+
+        setListings(listingsToShow)
+      } catch (err) {
+        logErrorToProduction('Category load error:', { data: err }),
+        toast({ title: 'Error', description: 'Failed to load category' })
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    load()
+  }, [slug]),
+
+  useEffect(() => {
+    if (slug !== 'innovation') return,
+
+    const interval = setInterval(() => {
+      innovationCounterRef.current += 1,
+      setListings((prev) => [
+        generateInnovationListing(innovationCounterRef.current),
+        ...prev])
+    }, 120000), // every 2 minutes
+
+    return () => clearInterval(interval)
+  }, [slug]),
+
+  // Handle requesting a quote
+  const handleRequestQuote = (listingId: string) => {
+    const listing = listings.find(item => item.id === listingId),
+    
+    if (listing) {
+      toast({
+        title: "Quote Requested",
+        description: `Your quote request for ${listing.title} has been sent.`
+      }),
+      
+      // Navigate to the quote request page with the listing information
+      const queryParams = new URLSearchParams({
+        serviceType: listing.category,
+        itemId: listing.id,
+        itemTitle: listing.title,
+        itemCategory: listing.category,
+        ...(listing.images?.[0] && { itemImage: listing.images[0] })
+      }),
+      
+      router.push(`/request-quote?${queryParams.toString()}`)
+    }
+  },
+
+  const seoTitle = category.title
+    ? `${category.title} | Zion Marketplace`
+    : 'Category | Zion Marketplace',
+  const seoDescription =
+    category.description || 'Explore listings in this category.',
+
+
+        setCategory(currentCategory)
+        innovationCounterRef.current = 0
+    : 'Category | Zion Marketplace'
+  const seoDescription = null;
+    category.description || 'Explore listings in this category.'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
@@ -620,11 +751,42 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>;
         </div>;
       </Suspense>;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+
+            </p>;
+          </div>;
+          {is_loading ? (
+            <ListingGridSkeleton />) : (
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">;
+              {listings.map ((listing, ) => (
+                <ProductListingCard;
+                  key = {listing.id, }
+                  listing = {listing, }
+                  onRequestQuote = {handleRequestQuote, }
+                  detailBasePath="/marketplace / listing";
+                />))}
+            </div>)}
+          </div>;
+        </div>;
+      </Suspense>;
+    </>);
+}
+;
+
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

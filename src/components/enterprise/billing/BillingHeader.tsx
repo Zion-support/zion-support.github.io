@@ -13,6 +13,7 @@ export function BillingHeader() {
             Contact Billing Support
           </Button>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -21,6 +22,11 @@ export function BillingHeader() {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
               <BarChart3 className="h-4 w-4" />

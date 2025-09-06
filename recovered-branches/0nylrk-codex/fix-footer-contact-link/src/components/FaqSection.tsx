@@ -1,7 +1,33 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+const faqs = [;
+  {;
+    question: "How do I publish my AI product or service on Zion?",;
+    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."};
+  {;
+    question: "What types of AI jobs can I find or post on Zion?",;
+    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."};
+  {;
+    question: "What IT equipment is available for purchase or rental?",;
+    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."};
+  {;
+    question: "How does Zion ensure 24x7x365 global availability?",;
+    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."};
+  {;
+    question: "What is Zion's Green IT and recycling program?",;
+    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."};
+  {;
+    question: "Are there any fees for listing my products or services?",;
+
+    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -11,9 +37,13 @@ import {
 import { FileText } from "lucide-react",
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
@@ -85,7 +115,17 @@ function FaqSection() {
 
                   {faq.question}
 
+<<<<<<< HEAD
 
+=======
+=======
+                </AccordionTrigger>
+                <AccordionContent className="text-zion-slate-light">
+
+};
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -147,7 +187,10 @@ export function FaqSection() {;
     </section>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 </AccordionContent>;
               </AccordionItem>))}
@@ -157,6 +200,16 @@ export function FaqSection() {;
     </section>);
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

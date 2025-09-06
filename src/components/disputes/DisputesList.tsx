@@ -26,6 +26,7 @@ import { Dispute, DisputeStatus  } from '@/types / disputes';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import {
+<<<<<<< HEAD
 
 
   Table
@@ -80,6 +81,18 @@ TableBody,
   TableHeader,
 
 
+=======
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow } from '@/components / ui / table';
+import Skeleton from "@/components / ui / skeleton";
+import { formatDistanceToNow  } from './date - fns';
+import Link from './next / link';
+type DisputesListProps = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React, { useState } from 'react';
@@ -210,6 +223,7 @@ function DisputesList() {
         return "default";
 
 
+<<<<<<< HEAD
 
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
@@ -236,6 +250,8 @@ function DisputesList() {
         </div>
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="border rounded-md">
           <Table>
             <TableHeader>
@@ -249,7 +265,10 @@ function DisputesList() {
                 <TableHead className="text-right">Actions</TableHead>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -340,6 +359,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
       </div>;
 
     );
+<<<<<<< HEAD
+=======
+
+
+
+  }
+
+  if (disputes && disputes.length === 0) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
@@ -356,6 +384,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
   }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   }
@@ -369,12 +398,17 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
           No active disputes match the selected filter
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -436,12 +470,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
+<<<<<<< HEAD
     <div className="space-y-4">
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
@@ -453,15 +490,21 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         <Button
           variant={statusFilter === "open" ? "default" : "outline"}
           onClick={() => setStatusFilter("open")}
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           size="sm"
         >
           Open
@@ -469,15 +512,21 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         <Button
           variant={statusFilter === "under_review" ? "default" : "outline"}
           onClick={() => setStatusFilter("under_review")}
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           size="sm"
         >
           Under Review
@@ -485,15 +534,21 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         <Button
           variant={statusFilter === "resolved" ? "default" : "outline"}
           onClick={() => setStatusFilter("resolved")}
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           size="sm"
         >
           Resolved
@@ -501,15 +556,21 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         <Button
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           size="sm"
         >
           Closed
@@ -518,6 +579,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
       <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">
 
       <div className="border rounded-md overflow-hidden">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -526,6 +588,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Table>
           <TableHeader>
             <TableRow>
@@ -545,6 +612,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -552,6 +620,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs'>
@@ -560,7 +632,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 <TableCell>
 
 
+<<<<<<< HEAD
                   {dispute.project?.title |'Unknown Project'}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {dispute.project?.title || 'Unknown Project'}
 
 
@@ -578,11 +653,14 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
                 <TableCell>
                   {formatDistanceToNow(new Date(dispute.created_at), {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
@@ -608,15 +686,21 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                     </span>
                     <span>
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </span>
                   </div>
                 </TableCell>
@@ -732,9 +816,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   </Badge>
                 </TableCell>
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <TableCell className="text-right">
                   <Button asChild size="sm">
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
@@ -758,6 +845,7 @@ if ( {") {
 }className="h - 10 w - 24" /> ";
 }</div> <div className="border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   [...Array (5) ].map ( (, i) => (<TableRow key= {
+<<<<<<< HEAD
 
 
   i "
@@ -773,6 +861,8 @@ if ( {") {
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> </div>)
 }"}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   addSuffix: true 
@@ -785,10 +875,13 @@ if ( {") {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </TableBody>;
         </Table>;
       </div>;

@@ -78,7 +78,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   isLoading,
   onApplySuggestion,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return (
       <Card className="border border-dashed border-muted">
         <CardContent className="flex items-center justify-center p-6">
@@ -298,8 +301,11 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </p>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 
 
@@ -308,11 +314,14 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 "  );
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },
 ;
   const confidenceColor = {;
@@ -366,11 +375,14 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>;
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

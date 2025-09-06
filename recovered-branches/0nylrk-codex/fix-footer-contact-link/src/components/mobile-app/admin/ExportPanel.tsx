@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -16,6 +17,10 @@ import { toast } from "sonner",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -26,6 +31,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
   const handleExport = (format: 'json' | 'csv') => {
     try {
+<<<<<<< HEAD
 
       let content: string
       let fileName: string
@@ -33,6 +39,46 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
 
+=======
+
+import React from "react";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Download} from "lucide-react";
+import {AppPlatform, AppMetadataValues} from "./MetadataManager";
+import {toast} from "sonner";
+interface ExportPanelProps {;
+  platform: AppPlatform,;
+  metadata: AppMetadataValues;
+}
+
+export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {;
+  const handleExport = (format: 'json' | 'csv') => {;
+    try {;
+      let content: string,;
+      let fileName: string,;
+
+      if (format === 'json') {;
+        content = JSON && JSON.stringify(metadata, null, 2);
+        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.json`;
+      } else {;
+        // Convert object to CSV format;
+
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
+        const values = [;
+          metadata && metadata.appTitle;
+          metadata && metadata.shortDescription;
+          metadata && metadata.longDescription;
+          metadata && metadata.version;
+          metadata && metadata.platform;
+        ];
+
+
+      let content: string,
+      let fileName: string,
+      
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
@@ -130,12 +176,20 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -234,10 +288,18 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 
     </Card>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

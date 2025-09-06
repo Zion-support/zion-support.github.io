@@ -6,6 +6,7 @@
   FormDescription;
 
 
+<<<<<<< HEAD
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
@@ -18,11 +19,15 @@ import { Card, CardContent } from "@/components/ui/card",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -188,6 +193,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>;
   );
 };
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -206,7 +213,11 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       </Card>;
     </div>);
 }
+<<<<<<< HEAD
 "},
 }
 
 
+=======
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

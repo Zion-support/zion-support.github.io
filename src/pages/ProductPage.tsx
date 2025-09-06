@@ -11,6 +11,15 @@ if (!id) return;
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
       }
+<<<<<<< HEAD
+=======
+
+
+    };
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct();
@@ -40,11 +49,14 @@ if (!id) return;
     // Only fetch if id is available (from router);
     if (id) {;
       fetchProduct();
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }, [id]), // id is now from router && router.query;
 
@@ -106,6 +118,7 @@ if (!id) return;
         <p className="mb-6">{product.description}</p>
         <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+<<<<<<< HEAD
 
 
         </Button>
@@ -137,6 +150,8 @@ product.title ;
 ;
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </Button>;
       </div>;
     </>;
@@ -176,6 +191,7 @@ if ( {) {
     }
   }, [id]);
 ;
+<<<<<<< HEAD
 
 
   useEffect (() => {
@@ -256,6 +272,8 @@ if (return) {
           {in_cart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </Button>;
       </div>;
     </>;

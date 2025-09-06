@@ -35,6 +35,7 @@ import { motion } from 'framer-motion';
   life: number;
 
 
+<<<<<<< HEAD
 
 interface EnergyField {
   x: number;
@@ -48,6 +49,18 @@ export default function UltraFuturisticBackground2029({
 
 
   children: React.ReactNode;
+=======
+  children,
+}: {;
+
+
+  children: React.ReactNode;
+=======
+  children,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  children: React.ReactNode;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -89,10 +102,20 @@ interface EnergyField {;
 }
 
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+
+
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -369,9 +392,12 @@ interface EnergyField {
             ease: 'easeInOut',            ease: "easeInOut"
             duration: 10,
             repeat: Infinity,
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           }}
@@ -381,8 +407,11 @@ interface EnergyField {
             repeat: Infinity,
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -398,5 +427,12 @@ interface EnergyField {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
