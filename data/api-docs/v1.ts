@@ -135,19 +135,17 @@ const v1: ApiDocsSpec = {
           description: 'Send a message between users.', path: '/v1/messages',
           method: 'POST', visibility: 'public',
           auth: ['jwt'],
-          requestBodySchema: { type: 'object', properties: { to: { type: 'string' }, body: { type: 'string' } }, required: ['to', 'body']
+          requestBodySchema: { type: 'object', properties: { to: { type: 'string' }, body: { type: 'string' } }, required: ['to', 'body'] }
         }
       ],
       responseBodySchema: { type: 'object', properties: { id: { type: 'string' } } },
       samples: [
-      
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'`
-      };
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>Content-Type': 'application/json' }, body: JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r.json()),`
-      };
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
-    ];
-          versions: ['v1']}]};
+        { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
+        { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r.json())` },
+        { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
+      ],
+      versions: ['v1']
+    },
     {
       id: 'wallet', title: 'ZION$ Wallet API',
       endpoints: [
@@ -156,16 +154,17 @@ const v1: ApiDocsSpec = {
           description: 'Fetch wallet balance for the current user.', path: '/v1/wallet/balance',
           method: 'GET', visibility: 'public',
           auth: ['walletjwt'],
-          responseBodySchema: { type: 'object', properties: { balance: { type: 'number' }, currency: { type: 'string' } } };
+          responseBodySchema: { type: 'object', properties: { balance: { type: 'number' }, currency: { type: 'string' } } },
           samples: [
-      
-            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'`
-      };
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),`
-      };
+            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/wallet/balance', headers={'Authorization':'Bearer <token>'}).json()` }
-    ];
-          versions: ['v1']}]};
+          ],
+          versions: ['v1']
+        }
+      ],
+      versions: ['v1']
+    },
     {
       id: 'dao', title: 'DAO & Proposals',
       endpoints: [
@@ -174,16 +173,17 @@ const v1: ApiDocsSpec = {
           description: 'List DAO proposals.', path: '/v1/dao/proposals',
           method: 'GET', visibility: 'public',
           auth: ['jwt'],
-          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } } } };
+          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } } } },
           samples: [
-      
-            { language: 'curl', code: `curl '${baseUrl}/v1/dao/proposals' -H 'Authorization: Bearer <token>'`
-      };
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/dao/proposals', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),`
-      };
+            { language: 'curl', code: `curl '${baseUrl}/v1/dao/proposals' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/dao/proposals', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/dao/proposals', headers={'Authorization':'Bearer <token>'}).json()` }
-    ];
-          versions: ['v1']}]};
+          ],
+          versions: ['v1']
+        }
+      ],
+      versions: ['v1']
+    },
     {
       id: 'voting', title: 'Voting + Treasury logs',
       endpoints: [
@@ -192,16 +192,17 @@ const v1: ApiDocsSpec = {
           description: 'Fetch treasury transactions and snapshots.', path: '/v1/treasury/logs',
           method: 'GET', visibility: 'partner',
           auth: ['jwt'],
-          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } } } };
+          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } } } },
           samples: [
-      
-            { language: 'curl', code: `curl '${baseUrl}/v1/treasury/logs' -H 'Authorization: Bearer <token>'`
-      };
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/treasury/logs', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),`
-      };
+            { language: 'curl', code: `curl '${baseUrl}/v1/treasury/logs' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/treasury/logs', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/treasury/logs', headers={'Authorization':'Bearer <token>'}).json()` }
-    ];
-          versions: ['v1']}]};
+          ],
+          versions: ['v1']
+        }
+      ],
+      versions: ['v1']
+    },
     {
       id: 'nation', title: 'Nation Module',
       endpoints: [
@@ -210,15 +211,12 @@ const v1: ApiDocsSpec = {
           description: 'Aggregate stats across the Zion Nation module.', path: '/v1/nation/stats',
           method: 'GET', visibility: 'internal',
           auth: ['jwt'],
-          responseBodySchema: { type: 'object', properties: { members: { type: 'number' }, proposals: { type: 'number' } } };
+          responseBodySchema: { type: 'object', properties: { members: { type: 'number' }, proposals: { type: 'number' } } },
           samples: [
-      
-            { language: 'curl', code: `curl '${baseUrl}/v1/nation/stats' -H 'Authorization: Bearer <token>'`
-      };
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),`
-      };
+            { language: 'curl', code: `curl '${baseUrl}/v1/nation/stats' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` }
-    ];
+          ],
           versions: ['v1']}]}]};
 
 export default v1;

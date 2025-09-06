@@ -7,13 +7,13 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  children;
-  variant = 'primary';
-  size = 'md';
-  className = '';
-  onClick;
-  disabled = false;
-  type = 'button';
+  children,
+  variant = 'primary',
+  size = 'md',
+  className = '',
+  onClick,
+  disabled = false,
+  type = 'button'
 }) => {
   const baseClasses = 'font-semibold rounded-lg transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900',
   const variantClasses = {

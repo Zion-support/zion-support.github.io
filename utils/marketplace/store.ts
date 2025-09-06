@@ -428,71 +428,9 @@ export async function deleteMessage(id: string): Promise<boolean> {
 }
 
 // Utility functions
-export function createProject(
-  title: string,
-  summary: string,
-  clientId: string,
-  additionalData?: Partial<Project>
-): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
-  return {
-    title,
-    summary,
-    clientId,
-    startDateIso: new Date().toISOString(),
-    status: 'DRAFT',
-    timeline: [],
-    documents: [],
-    ...additionalData
-  };
-}
 
-export function createOffer(
-  clientId: string,
-  talentSlug: string,
-  scopeSummary: string,
-  paymentTerms: Offer['paymentTerms'],
-  additionalData?: Partial<Offer>
-): Omit<Offer, 'id' | 'createdAtIso'> {
-  return {
-    clientId,
-    talentSlug,
-    startDateIso: new Date().toISOString(),
-    scopeSummary,
-    paymentTerms,
-    status: 'SENT',
-    ...additionalData
-  };
-}
 
-export function createApplication(
-  projectId: string,
-  talentSlug: string,
-  additionalData?: Partial<Application>
-): Omit<Application, 'id' | 'appliedAtIso'> {
-  return {
-    projectId,
-    talentSlug,
-    status: 'PENDING',
-    ...additionalData
-  };
-}
 
-export function createMessage(
-  conversationId: string,
-  senderId: string,
-  recipientId: string,
-  body: string,
-  additionalData?: Partial<Message>
-): Omit<Message, 'id' | 'sentAtIso'> {
-  return {
-    conversationId,
-    senderId,
-    recipientId,
-    body,
-    isRead: false,
-    ...additionalData
-  };
-}
 
 export function generateId(prefix: string = 'item'): string {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;

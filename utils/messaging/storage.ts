@@ -544,34 +544,7 @@ export async function searchMessages(query: string, userId: string, limit?: numb
 }
 
 // Utility functions
-export function createMessage(
-  conversationId: string,
-  senderId: string,
-  recipientId: string,
-  body: string,
-  additionalData?: Partial<Message>
-): Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'> {
-  return {
-    conversationId,
-    senderId,
-    recipientId,
-    body,
-    ...additionalData
-  };
-}
 
-export function createConversation(
-  participants: string[],
-  additionalData?: Partial<Conversation>
-): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
-  return {
-    participants,
-    lastMessageAtIso: new Date().toISOString(),
-    isArchived: false,
-    isMuted: false,
-    ...additionalData
-  };
-}
 
 export function generateMessageId(): string {
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;

@@ -19,9 +19,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const event = {
     eventId: uuidv4(),
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
-    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined };
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
     originInstanceId: state.config.instanceId, version,
-    timestamp: timestamp || Date.now()};
+    timestamp: timestamp || Date.now()
+  };
 
   upsertEvent(state, event);
   writeState(state);

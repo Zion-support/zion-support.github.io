@@ -34,14 +34,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
 
     const meta = createProposal({
-      title;
-      targetInstitution;
-      type;
-      regionalScope;
-      budgetOrResolution;
-      supportingMultiverses;
-      contentMarkdown;
-      language});
+      title,
+      targetInstitution,
+      type,
+      regionalScope,
+      budgetOrResolution,
+      supportingMultiverses,
+      contentMarkdown,
+      language
+    });
 
     return res.status(200).json({ meta, markdown: contentMarkdown })
   } catch (error: any) {
