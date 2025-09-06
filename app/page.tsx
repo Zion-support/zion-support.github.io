@@ -107,7 +107,7 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how we can help you achieve your technology goals
+            Let&apos;s discuss how we can help you achieve your technology goals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

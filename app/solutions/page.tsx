@@ -53,7 +53,7 @@ export default function SolutionsPage() {
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project and discover how our solutions can accelerate your business growth.
+            Let&apos;s discuss your project and discover how our solutions can accelerate your business growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

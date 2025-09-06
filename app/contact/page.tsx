@@ -14,7 +14,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Ready to transform your business with AI, micro SaaS, and IT solutions? 
-            Let's discuss your project and how we can help you succeed.
+            Let&apos;s discuss your project and how we can help you succeed.
           </p>
         </div>
 

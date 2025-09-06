@@ -63,7 +63,7 @@ function TestimonialCard({ quote, author, role, company }: {
 }) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg">
-      <p className="text-gray-600 mb-4 italic">"{quote}"</p>
+      <p className="text-gray-600 mb-4 italic">&ldquo;{quote}&rdquo;</p>
       <div>
         <p className="font-semibold text-gray-900">{author}</p>
         <p className="text-sm text-gray-500">{role}, {company}</p>
