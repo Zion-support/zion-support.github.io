@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -37,3 +38,31 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 =======
     expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import OptimizedImage from '../components/OptimizedImage.dynamic';
+
+describe('OptimizedImage', () => {
+  test('renders without crashing', () => {
+    render(<OptimizedImage />);
+    expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<OptimizedImage />);
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+  });
+
+  test('handles user interactions', () => {
+    render(<OptimizedImage />);
+    // Add interaction tests here
+  });
+
+  test('applies correct styling', () => {
+    render(<OptimizedImage />);
+    // Add styling tests here
+  });
+});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580

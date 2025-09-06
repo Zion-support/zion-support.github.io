@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PageTransition from '../components/PageTransition';
+<<<<<<< HEAD
 <<<<<<< HEAD
 describe('PageTransition', () => {
   test('renders without crashing', () => {
@@ -33,3 +37,17 @@ describe('PageTransition';
 import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import PageTransition from \'../components/PageTransition\'; describe(\'PageTransition\',() => { test(\'renders without crashing\',() => { render(<PageTransition />); expect(screen && screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<PageTransition />); expect(screen && screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import PageTransition from "./components/PageTransition"; describe('PageTransition', () => { test("renders without crashing",() => { render(<PageTransition />); expect(screen && screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+describe('PageTransition', () => {
+  test('renders without crashing', () => {
+    render(<PageTransition />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<PageTransition />);
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+  });
+});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580

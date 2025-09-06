@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ModernLayout from '../components/ModernLayout.dynamic';
+<<<<<<< HEAD
 describe('ModernLayout', () => {
   test('renders without crashing', () => {
     render(<ModernLayout />);
@@ -33,3 +37,27 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 =======
     expect(screen && screen.getByTestId('modernlayout ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ModernLayoutdynamic from "./components/ModernLayout ; describe('ModernLayoutdynamic', () => { test("renders without crashing",() => { render(<ModernLayoutdynamic />); expect(screen && screen.getByTestId("modernlayout && modernlayout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ModernLayoutdynamic />)}); test("handles user interactions",() => { render(<ModernLayoutdynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+describe('ModernLayout', () => {
+  test('renders without crashing', () => {
+    render(<ModernLayout />);
+    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+    render(<ModernLayout />);
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+  });
+
+  test('handles user interactions', () => {
+    render(<ModernLayout />);
+    // Add interaction tests here
+  });
+
+  test('applies correct styling', () => {
+    render(<ModernLayout />);
+    // Add styling tests here
+  });
+});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580

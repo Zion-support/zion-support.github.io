@@ -1,9 +1,14 @@
 <<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
 interface ModernNavigationProps {
   className?: string;
 }
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
+=======
+
+export default function ModernNavigation() {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
