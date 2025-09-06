@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -56,6 +57,27 @@ const PerformanceMonitor: React.FC = () => {
       {metrics.isSlow && <div className="text-red-600 font-semibold">⚠️ Slow</div>}
     </div>
   );
+=======
+import React, { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Basic performance monitoring
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
+        }
+      }
+    });
+    
+    observer.observe({ entryTypes: ['navigation'] });
+    
+    return () => observer.disconnect();
+  }, []);
+
+  return null; // This component doesn't render anything
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-efe6
 };
 
 export default PerformanceMonitor;
