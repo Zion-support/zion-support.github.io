@@ -7,5 +7,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState();
   state.config.paused = Boolean(paused);
   writeState(state);
-  return res.status(200).json({ paused: state.config.paused })
+  return res.status(200).json({ paused: state.config.paused });
 }

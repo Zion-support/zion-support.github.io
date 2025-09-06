@@ -6,8 +6,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!userId || typeof amount !== "number") return res.status(400).json({ error: "userId and amount required" });
   try {
     const result = redeemToCredits(userId, Math.floor(amount));
-    return res.status(200).json(result)
+    return res.status(200).json(result);
   } catch (err: any) {
-    return res.status(400).json({ error: err.message })
+    return res.status(400).json({ error: err.message });
   }
 }

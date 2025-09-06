@@ -9,7 +9,7 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw)
+    return JSON.parse(raw);
   } catch {
     return {}
   }

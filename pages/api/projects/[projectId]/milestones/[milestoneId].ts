@@ -49,7 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         body.approvedByUserId = user.userId
       }
       if (status === 'Paid') {
-        body.paidAt = new Date().toISOString()
+        body.paidAt = new Date().toISOString();
       }
     }
 
@@ -63,5 +63,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.setHeader('AllowPATCH');
-  res.status(405).end('Method Not Allowed')
+  res.status(405).end('Method Not Allowed');
 }

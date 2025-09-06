@@ -1,8 +1,42 @@
 {
-
-    "Run \"npm audit fix\" to resolve dependency vulnerabilities",
-    "Review and remove any hardcoded secrets",
-    "Update outdated dependencies",
-    "Implement proper environment variable management",
-    "Add security headers to Next.js configuration"
-
+  "timestamp": "2025-09-06T05:21:58.638Z",
+  "securityScore": 90,
+  "vulnerabilities": [
+    {
+      "type": "file_permissions",
+      "file": "next.config.js",
+      "permissions": "755",
+      "severity": "medium",
+      "description": "File has overly permissive permissions"
+    }
+  ],
+  "recommendations": [
+    "Run npm audit fix to address dependency vulnerabilities",
+    "Regularly update dependencies to latest secure versions",
+    "Implement Content Security Policy (CSP) headers",
+    "Use environment variables for sensitive configuration",
+    "Enable security headers in production"
+  ],
+  "checks": [
+    {
+      "name": "Dependency Vulnerabilities",
+      "status": "error",
+      "error": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    },
+    {
+      "name": "File Permissions",
+      "status": "fail",
+      "issues": 1
+    },
+    {
+      "name": "Environment Variables",
+      "status": "pass",
+      "issues": 0
+    },
+    {
+      "name": "Code Security",
+      "status": "pass",
+      "issues": 0
+    }
+  ]
+}

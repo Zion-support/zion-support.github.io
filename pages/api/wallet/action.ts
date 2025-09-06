@@ -6,8 +6,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!userId || !action) return res.status(400).json({ error: "userId and action required" });
   try {
     const tx = handleAction(userId, action, metadata);
-    return res.status(200).json({ tx })
+    return res.status(200).json({ tx });
   } catch (err: any) {
-    return res.status(400).json({ error: err.message })
+    return res.status(400).json({ error: err.message });
   }
 }

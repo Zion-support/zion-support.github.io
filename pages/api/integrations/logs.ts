@@ -5,5 +5,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { providerId } = req.query as { providerId?: string };
   const state = readState();
   const logs = providerId ? state.logs.filter(l => l.providerId === providerId) : state.logs;
-  res.status(200).json({ logs })
+  res.status(200).json({ logs });
 }
