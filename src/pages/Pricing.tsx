@@ -14,7 +14,9 @@ const Pricing: React.FC = () => {
         "Mobile responsive design",
         "Basic SEO optimization",
         "3 months support",
-        "SSL certificate"
+        "SSL certificate",
+        "Contact form",
+        "Basic analytics"
       ],
       color: "from-gray-500 to-gray-600",
       popular: false
@@ -32,7 +34,9 @@ const Pricing: React.FC = () => {
         "E-commerce integration",
         "6 months support",
         "Performance optimization",
-        "Analytics setup"
+        "Analytics setup",
+        "Social media integration",
+        "Email marketing setup"
       ],
       color: "from-blue-500 to-purple-600",
       popular: true
@@ -50,7 +54,9 @@ const Pricing: React.FC = () => {
         "24/7 priority support",
         "Dedicated project manager",
         "Training and documentation",
-        "Ongoing maintenance"
+        "Ongoing maintenance",
+        "Custom API development",
+        "Advanced security features"
       ],
       color: "from-purple-500 to-pink-600",
       popular: false
@@ -60,28 +66,57 @@ const Pricing: React.FC = () => {
   const servicePricing = [
     {
       service: "Micro SaaS Development",
-      starting: "$8,000",
+      starting: "$5,000",
+      monthly: "$2,500",
       description: "End-to-end product development with billing, auth, and analytics"
     },
     {
       service: "AI Services",
-      starting: "$5,000",
+      starting: "$3,500",
+      monthly: "$1,500",
       description: "LLM applications, RAG systems, and MLOps pipelines"
     },
     {
       service: "IT Services",
-      starting: "$4,000",
+      starting: "$2,500",
+      monthly: "$1,200",
       description: "Cloud migration, DevOps, and security solutions"
     },
     {
       service: "Blockchain Development",
-      starting: "$10,000",
+      starting: "$4,000",
+      monthly: "$2,000",
       description: "Smart contracts, DeFi protocols, and Web3 applications"
     },
     {
       service: "Data Analytics",
-      starting: "$6,000",
+      starting: "$2,000",
+      monthly: "$800",
       description: "Business intelligence, predictive modeling, and real-time analytics"
+    },
+    {
+      service: "Cybersecurity",
+      starting: "$3,000",
+      monthly: "$1,500",
+      description: "Security audits, threat monitoring, and compliance management"
+    },
+    {
+      service: "Cloud Migration",
+      starting: "$4,500",
+      monthly: "$2,200",
+      description: "Seamless migration to AWS, Azure, or Google Cloud"
+    },
+    {
+      service: "DevOps & SRE",
+      starting: "$3,500",
+      monthly: "$1,800",
+      description: "CI/CD pipelines, infrastructure automation, and monitoring"
+    },
+    {
+      service: "Mobile Development",
+      starting: "$3,000",
+      monthly: "$1,500",
+      description: "Native and cross-platform mobile applications"
     }
   ];
 
@@ -146,8 +181,56 @@ const Pricing: React.FC = () => {
         </div>
       </div>
 
-      {/* Service Pricing */}
+      {/* Monthly Service Packages */}
       <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Monthly Service Packages</h2>
+            <p className="text-xl text-gray-600">Ongoing support and maintenance for your technology needs</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic Support</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-2">$999<span className="text-lg text-gray-600">/month</span></div>
+              <p className="text-gray-600 mb-6">Perfect for small businesses</p>
+              <ul className="space-y-2 text-left">
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 5 hours of support</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Basic maintenance</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Email support</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Monthly reports</li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center ring-2 ring-purple-200">
+              <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block">Most Popular</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Support</h3>
+              <div className="text-4xl font-bold text-purple-600 mb-2">$2,499<span className="text-lg text-gray-600">/month</span></div>
+              <p className="text-gray-600 mb-6">Ideal for growing businesses</p>
+              <ul className="space-y-2 text-left">
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 15 hours of support</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Priority support</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Phone & email support</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Performance monitoring</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Security updates</li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Support</h3>
+              <div className="text-4xl font-bold text-green-600 mb-2">$4,999<span className="text-lg text-gray-600">/month</span></div>
+              <p className="text-gray-600 mb-6">For large organizations</p>
+              <ul className="space-y-2 text-left">
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 40 hours of support</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 24/7 priority support</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Dedicated account manager</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Custom integrations</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Training & documentation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Service Pricing */}
+      <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Service Pricing</h2>
@@ -158,14 +241,23 @@ const Pricing: React.FC = () => {
               <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.service}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-blue-600">Starting at {service.starting}</span>
-                  <Link
-                    to="/contact"
-                    className="text-blue-600 hover:text-blue-800 font-semibold"
-                  >
-                    Get Quote →
-                  </Link>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-semibold text-gray-700">Starting Price:</span>
+                    <span className="text-xl font-bold text-blue-600">{service.starting}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-semibold text-gray-700">Monthly:</span>
+                    <span className="text-xl font-bold text-green-600">{service.monthly}</span>
+                  </div>
+                  <div className="pt-2">
+                    <Link
+                      to="/contact"
+                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                    >
+                      Get Quote →
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}

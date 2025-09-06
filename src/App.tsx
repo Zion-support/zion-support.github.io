@@ -17,6 +17,12 @@ const Services = React.lazy(() => import('./pages/Services'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 
+// Service pages
+const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity'));
+const CloudMigration = React.lazy(() => import('./pages/CloudMigration'));
+const DevOps = React.lazy(() => import('./pages/DevOps'));
+const MobileDevelopment = React.lazy(() => import('./pages/MobileDevelopment'));
+
 const HomePage = () => (
   <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
     <div className="container mx-auto px-4 py-16">
@@ -86,6 +92,12 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contact" element={<Contact />} />
+                
+                {/* Service pages */}
+                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                <Route path="/services/cloud-migration" element={<CloudMigration />} />
+                <Route path="/services/devops" element={<DevOps />} />
+                <Route path="/services/mobile-development" element={<MobileDevelopment />} />
               </Routes>
             </Suspense>
           </main>

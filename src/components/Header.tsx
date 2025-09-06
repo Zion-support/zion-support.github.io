@@ -18,6 +18,10 @@ const Header: React.FC = () => {
         { name: 'IT Services', href: '/services/it-services' },
         { name: 'Blockchain', href: '/services/blockchain' },
         { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Cloud Migration', href: '/services/cloud-migration' },
+        { name: 'DevOps & SRE', href: '/services/devops' },
+        { name: 'Mobile Development', href: '/services/mobile-development' },
       ]
     },
     { name: 'Pricing', href: '/pricing' },

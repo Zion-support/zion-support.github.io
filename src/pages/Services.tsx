@@ -6,42 +6,83 @@ const Services: React.FC = () => {
     {
       title: "Micro SaaS Development",
       description: "End-to-end product development with billing, auth, and analytics",
-      features: ["Foundational architecture", "Billing + subscriptions", "Growth analytics"],
+      features: ["Foundational architecture", "Billing + subscriptions", "Growth analytics", "Multi-tenant systems", "API development"],
       icon: "🚀",
       color: "from-blue-500 to-purple-600",
-      href: "/services/micro-saas"
+      href: "/services/micro-saas",
+      price: "Starting at $5,000/month"
     },
     {
       title: "AI Services",
       description: "LLM applications, RAG systems, and MLOps pipelines",
-      features: ["RAG and agents", "Evals + guardrails", "MLOps pipelines"],
+      features: ["RAG and agents", "Evals + guardrails", "MLOps pipelines", "Computer vision", "NLP solutions"],
       icon: "🤖",
       color: "from-green-500 to-blue-600",
-      href: "/services/ai-services"
+      href: "/services/ai-services",
+      price: "Starting at $3,500/month"
     },
     {
       title: "IT Services",
       description: "Cloud migration, DevOps, and security solutions",
-      features: ["Cloud migration", "DevOps + SRE", "Security"],
+      features: ["Cloud migration", "DevOps + SRE", "Security", "Infrastructure as Code", "Monitoring & Alerting"],
       icon: "⚙️",
       color: "from-purple-500 to-pink-600",
-      href: "/services/it-services"
+      href: "/services/it-services",
+      price: "Starting at $2,500/month"
     },
     {
       title: "Blockchain",
       description: "Smart contracts, DeFi protocols, and Web3 applications",
-      features: ["Smart contracts", "DeFi protocols", "NFT platforms"],
+      features: ["Smart contracts", "DeFi protocols", "NFT platforms", "Tokenization", "Web3 integration"],
       icon: "⛓️",
       color: "from-orange-500 to-red-600",
-      href: "/services/blockchain"
+      href: "/services/blockchain",
+      price: "Starting at $4,000/month"
     },
     {
       title: "Data Analytics",
       description: "Business intelligence, predictive modeling, and real-time analytics",
-      features: ["BI dashboards", "Predictive analytics", "Real-time insights"],
+      features: ["BI dashboards", "Predictive analytics", "Real-time insights", "Data warehousing", "Machine learning"],
       icon: "📊",
       color: "from-indigo-500 to-purple-600",
-      href: "/services/data-analytics"
+      href: "/services/data-analytics",
+      price: "Starting at $2,000/month"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions to protect your digital assets",
+      features: ["Security audits", "Penetration testing", "Compliance management", "Threat monitoring", "Incident response"],
+      icon: "🔒",
+      color: "from-red-500 to-orange-600",
+      href: "/services/cybersecurity",
+      price: "Starting at $3,000/month"
+    },
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud platforms with zero downtime",
+      features: ["AWS/GCP/Azure migration", "Data migration", "Application modernization", "Cost optimization", "Performance tuning"],
+      icon: "☁️",
+      color: "from-cyan-500 to-blue-600",
+      href: "/services/cloud-migration",
+      price: "Starting at $4,500/month"
+    },
+    {
+      title: "DevOps & SRE",
+      description: "Automated deployment, monitoring, and reliability engineering",
+      features: ["CI/CD pipelines", "Infrastructure automation", "Monitoring & alerting", "Disaster recovery", "Performance optimization"],
+      icon: "🔧",
+      color: "from-teal-500 to-green-600",
+      href: "/services/devops",
+      price: "Starting at $3,500/month"
+    },
+    {
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile applications",
+      features: ["iOS & Android apps", "React Native", "Flutter", "App store optimization", "Push notifications"],
+      icon: "📱",
+      color: "from-pink-500 to-purple-600",
+      href: "/services/mobile-development",
+      price: "Starting at $3,000/month"
     }
   ];
 
@@ -60,7 +101,7 @@ const Services: React.FC = () => {
       {/* Services Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
                 <div className={`h-2 bg-gradient-to-r ${service.color} rounded-t-2xl`}></div>
@@ -82,6 +123,10 @@ const Services: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+                  <div className="mb-6">
+                    <div className="text-2xl font-bold text-gray-900 mb-2">{service.price}</div>
+                    <div className="text-sm text-gray-500">Flexible pricing based on project scope</div>
+                  </div>
                   <Link
                     to={service.href}
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
