@@ -6,7 +6,6 @@ export default function TechnologyImplementationStrategies() {
     </div>
   );
 }
-=======
 export default function TechnologyImplementationStrategiesPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -15,5 +14,4 @@ export default function TechnologyImplementationStrategiesPage() {
     </div>
   );
 }
-=======
 export default function ChatContent10() { return <div className="py-10 text-white">Content coming soon.</div>; }

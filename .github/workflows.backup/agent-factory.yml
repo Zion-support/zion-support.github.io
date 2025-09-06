@@ -85,7 +85,7 @@ jobs:
             exit 0
           fi
 
-<<<<<<< HEAD:.github/workflows.backup/agent-factory.yml
+:.github/workflows.backup/agent-factory.yml
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -94,12 +94,10 @@ jobs:
       - name: Install linkinator
         run: npm install -g linkinator
 
-=======
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
->>>>>>> origin/chore/fix-build-nav-links:.github/workflows/agent-factory.yml
       - name: Run crawler (linkinator) on shard
         run: |
           set -e

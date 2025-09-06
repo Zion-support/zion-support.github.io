@@ -17,7 +17,6 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-<<<<<<< HEAD
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
@@ -44,10 +43,6 @@ import { newServices2026 } from '../../data/2026-new-services';
 import { enterpriseITSolutions } from '../../data/2034-enterprise-it-solutions';
 import { innovativeMicroSaasSolutions } from '../../data/2034-innovative-micro-saas-solutions';
 import { cuttingEdgeAIServices } from '../../data/2034-cutting-edge-ai-services';
-=======
-import { newDiversifiedServices } from '../../data/new-2026-2027-additions';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1503
-
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 const contactInfo = {
@@ -70,7 +65,6 @@ function getPriceValue(price: Service['price']): string {
 function getAllServices(): Service[] {
 		.concat(real2032ServiceExpansions as unknown as Service[])
 		.concat(real2025Q4FreshAdditions as unknown as Service[]);
-=======
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
@@ -83,7 +77,6 @@ function getAllServices(): Service[] {
 		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
 		.concat(realMarketAugmentations2025 as unknown as Service[])
-<<<<<<< HEAD
 		.concat(additionalLiveServices2025 as unknown as Service[])
 		.concat(real2025Q2Additions as unknown as Service[])
 		.concat(augmentedServicesBatch3 as unknown as Service[])
@@ -108,11 +101,7 @@ function getAllServices(): Service[] {
 		.concat(newServices2026 as unknown as Service[])
 		.concat(enterpriseITSolutions as unknown as Service[])
 		.concat(innovativeMicroSaasSolutions as unknown as Service[])
-		.concat(cuttingEdgeAIServices as unknown as Service[]);
-=======
-		.concat(newDiversifiedServices as unknown as Service[]);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1503
-}
+		.concat(cuttingEdgeAIServices as unknown as Service[]);}
 
 function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -316,7 +305,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	);
 }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

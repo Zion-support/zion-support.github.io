@@ -9,21 +9,6 @@ export interface ProjectBrief {
 		regions?: string[]}}
 
 export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]} }}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/team-builder.ts.backup
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]}}
+:backup-merge-conflicts/team-builder.ts.backup
 
 export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]}}
-<<<<<<< HEAD
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/types/team-builder.ts
-=======
-
-export interface ProjectBrief { projectName: string; goals: string; timeline: string; budget: string; techStack?: string[]; talentFilters?: { verifiedOnly?: boolean; regions?: string[]}}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

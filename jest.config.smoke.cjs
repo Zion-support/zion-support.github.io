@@ -15,15 +15,10 @@ const config = {
   verbose: true,
   testTimeout: 10000,
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-<<<<<<< HEAD
-  testPathIgnorePatterns: ['/node_modules/', '/dist/']
-}
-=======
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
 };
 
 module.exports = createJestConfig(config);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

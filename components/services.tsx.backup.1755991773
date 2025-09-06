@@ -280,7 +280,6 @@ export default function ServicesPage() {
       icon: <Truck className="w-6 h-6" />,
       count: allServices.filter(s => s.category === 'Supply Chain & Logistics').length
     }
-=======
   const heroStats = [
     { value: '200+', label: 'Revolutionary Services', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
@@ -1382,7 +1381,6 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
-=======
       </div>
     </AdvancedFuturisticBackground>
   );

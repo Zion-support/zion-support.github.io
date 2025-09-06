@@ -24,7 +24,7 @@ function fixAllRemainingIssues(content) {
   
   // Fix missing closing brackets for arrays
   const lines = content.split('\n');
-  let fixedLines = [];
+  const fixedLines = [];
   let inArray = false;
   let bracketCount = 0;
   let arrayStartLine = -1;

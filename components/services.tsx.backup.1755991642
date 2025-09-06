@@ -9,7 +9,6 @@ import { enhancedRealMicroSaasServices, serviceCategories } from '../data/enhanc
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeNewServices } from '../data/innovative-new-services';
-=======
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import AdvancedFuturisticCard from '../components/ui/AdvancedFuturisticCard';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -578,4 +577,3 @@ export default function Placeholder() {
     </main>
   );
 }
-=======

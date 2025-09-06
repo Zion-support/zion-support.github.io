@@ -5,7 +5,7 @@ import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-<<<<<<< HEAD:src_backup_temp/main.jsx.disabled
+:src_backup_temp/main.jsx.disabled
 import './utils/globalFetchInterceptor';
 import './utils/consoleErrorToast';
 // Import i18n configuration
@@ -20,7 +20,6 @@ import { NotificationProvider } from "./context/notifications/NotificationContex
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
-=======
 import ToastProvider from './components/ToastProvider';
 
 // Import i18n configuration
@@ -39,7 +38,6 @@ import { store } from './store';
 // import { AnalyticsProvider } from './context/AnalyticsContext';
 // import { ViewModeProvider } from './context/ViewModeContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
->>>>>>> origin/chore/build-fixes:src/main.tsx
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
@@ -60,7 +58,7 @@ const renderApp = (props) => {
         <QueryClientProvider client={queryClient}>
           <WhitelabelProvider>
             <Router>
-<<<<<<< HEAD:src_backup_temp/main.jsx.disabled
+:src_backup_temp/main.jsx.disabled
               <AuthProvider>
                 <NotificationProvider>
                   <AnalyticsProvider>
@@ -74,14 +72,12 @@ const renderApp = (props) => {
                         </AppLayout>
                       </ViewModeProvider>
                       <LanguageDetectionPopup />
-=======
               <Provider store={store}>
                 <AuthProvider>
                   {/* <NotificationProvider> */}
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                       <App />
                       {/* <LanguageDetectionPopup /> */}
->>>>>>> origin/chore/build-fixes:src/main.tsx
                     </LanguageProvider>
                   {/* </NotificationProvider> */}
                 </AuthProvider>
@@ -122,8 +118,6 @@ try {
 window.addEventListener('error', (e) => {
   console.error('Unhandled error: ', e.error || e.message);
   displayFatalError(e.message);
-<<<<<<< HEAD:src_backup_temp/main.jsx.disabled
+:src_backup_temp/main.jsx.disabled
 });
-=======
 });
->>>>>>> origin/chore/build-fixes:src/main.tsx

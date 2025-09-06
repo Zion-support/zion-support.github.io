@@ -75,7 +75,7 @@ class MasterOrchestrator {
 
       this.status.processes = {};
       let healthyProcesses = 0;
-      let totalProcesses = processes.length;
+      const totalProcesses = processes.length;
 
       processes.forEach(proc => {
         const isHealthy = proc.pm2_env.status === 'online';

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Skeleton } from '@/components/ui/skeleton';
 
 export function TalentSkeleton() {
@@ -21,18 +18,6 @@ export function TalentSkeleton() {
           </div>
           <Skeleton className="h-24 w-full bg-zion-blue-light/20" />
         </div>
-      ))}
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-export function TalentSkeleton() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    </div>
+      ))}    </div>
   );
 }

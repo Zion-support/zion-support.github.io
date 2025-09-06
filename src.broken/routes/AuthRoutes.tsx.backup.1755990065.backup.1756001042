@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -47,19 +44,5 @@ const AuthRoutes = () => {
           </ProtectedRoute>
         } 
       />
-    </Routes>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-import React from 'react';
-export function AuthRoutes() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  );
+    </Routes>  );
 }

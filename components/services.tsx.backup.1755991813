@@ -217,7 +217,6 @@ export default function ServicesPage() {
     { value: '30+', label: 'Day Free Trials', icon: <Clock className="w-6 h-6 text-blue-400" /> },
     { value: '1000%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6 text-green-400" /> }
   ];
-=======
   // Enhanced service highlights
   const serviceHighlights = [
     {
@@ -658,7 +657,6 @@ export default function ServicesPage() {
             </div>
       </div>
     </UltraFuturisticMatrixBackground>
-=======
           </motion.div>
         </div>
       </section>

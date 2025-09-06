@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // Read the header navigation
 const headerContent = fs.readFileSync('pages/components/Header.tsx', 'utf8');

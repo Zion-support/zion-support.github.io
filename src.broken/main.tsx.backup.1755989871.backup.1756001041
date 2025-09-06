@@ -26,21 +26,9 @@ import { NotificationProvider } from './context';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-<<<<<<< HEAD
 import { ViewModeProvider } from './context/ViewModeContext';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
-=======
-<<<<<<< HEAD
-import { initGA } from './lib/gtag';
-import { ErrorBoundary } from './components/ErrorBoundary';
-=======
-import { ViewModeProvider } from './context/ViewModeContext';
-import { Provider } from 'react-redux';
-import { store } from './store/store';
->>>>>>> origin/5yaxyc-codex/implement-wishlist-functionality
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -59,9 +47,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <WhitelabelProvider>
           <Router>
             <AuthProvider>
@@ -69,35 +54,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <AnalyticsProvider>
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                     <ErrorBoundary>
-                      <App />
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-        <Provider store={store}>
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-<<<<<<< HEAD
-=======
->>>>>>> origin/5yaxyc-codex/implement-wishlist-functionality
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-                      <LanguageDetectionPopup />
+                      <App />                      <LanguageDetectionPopup />
                     </LanguageProvider>
                   </AnalyticsProvider>
                 </NotificationProvider>
               </AuthProvider>
             </Router>
           </WhitelabelProvider>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         </QueryClientProvider>
       </HelmetProvider>
     </React.StrictMode>,
@@ -133,15 +96,4 @@ document.addEventListener(
       target.src = '/placeholder.svg';
     }
   },
-  true,
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-        </Provider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>,
-<<<<<<< HEAD
-=======
->>>>>>> origin/5yaxyc-codex/implement-wishlist-functionality
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-);
+  true,);

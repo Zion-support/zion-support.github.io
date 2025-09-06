@@ -6,16 +6,8 @@ import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
 
-
-
-
-
-
-
-
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
-<<<<<<< HEAD
 import { useCart } from '@/context/CartContext';
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
 import { equipmentListings } from '@/data/equipmentData';
@@ -23,11 +15,6 @@ import type { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-=======
-import { getStripe } from "@/utils/getStripe";
-import { apiClient } from "@/utils/apiClient";
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 
 interface EquipmentSpecification {
   name: string;
@@ -171,7 +158,6 @@ export default function EquipmentDetail() {
     }
 
     setIsAdding(true);
-<<<<<<< HEAD
     dispatch({
       type: 'ADD_ITEM',
       payload: {
@@ -186,26 +172,7 @@ export default function EquipmentDetail() {
       title: "Added to Cart",
       description: `${equipment.name} has been added to your cart.`,
     });
-    setIsAdding(false);
-=======
-    try {
-      const response = await apiClient('/api/checkout_sessions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: id }),
-      });
-      const { sessionId } = await response.json();
-      const stripe = await getStripe();
-      if (stripe && sessionId) {
-        await stripe.redirectToCheckout({ sessionId });
-      }
-    } catch (err) {
-      toast({ title: 'Payment error', description: 'Could not start checkout.' });
-    } finally {
-      setIsAdding(false);
-    }
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
-  };
+    setIsAdding(false);  };
 
   const inCart = items.some(item => item.id === equipment?.id);
 

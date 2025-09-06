@@ -208,8 +208,7 @@ resolve_js_conflicts() {
     
     # Simple strategy: keep the newer version (after )
     sed -i '//,//d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
-}
+    sed -i '/}
 
 # Function to resolve Markdown conflicts
 resolve_md_conflicts() {
@@ -219,8 +218,7 @@ resolve_md_conflicts() {
     # Keep both versions separated by horizontal rule
     sed -i 's//---/' "$file"
     sed -i 's//\n---\n/' "$file"
-    sed -i 's/>>>>>>> [^[:space:]]*/---/' "$file"
-}
+    sed -i 's/}
 
 # Function to resolve package.json conflicts
 resolve_package_conflicts() {
@@ -270,8 +268,7 @@ resolve_generic_conflicts() {
     log "Resolving generic conflicts in $file"
     
     # Simple strategy: keep the version after     sed -i '//,//d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
-}
+    sed -i '/}
 
 # Function to run comprehensive improvements
 run_improvements() {

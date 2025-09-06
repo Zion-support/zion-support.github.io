@@ -60,7 +60,7 @@ start_process() {
 # Main execution
 main() {
     echo -e "${BLUE}🚀 Starting PM2 Automation System${NC}"
-    echo "====================================="
+    echo "=="
     echo
     
     # Stop any existing processes

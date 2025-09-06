@@ -1,5 +1,4 @@
 export default function AuthCallback() {
-<<<<<<< HEAD
   return (
     <div className="space-y-2">
       <h1 className="text-3xl font-bold">Auth Callback</h1>
@@ -7,7 +6,3 @@ export default function AuthCallback() {
     </div>
   );
 }
-=======
-  return <div>Auth Callback</div>;
-}
->>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911

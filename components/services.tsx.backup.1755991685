@@ -146,7 +146,6 @@ export default function ServicesPage() {
       count: realMicroSaasServices.filter(s => s.category === 'Customer Service & Support').length,
       color: 'from-green-500 to-emerald-600'
     }
-=======
   const heroStats = [
     { value: '200+', label: 'Revolutionary Services', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
@@ -655,7 +654,6 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
-=======
       </div>
     </UltraFuturisticBackground>
   );

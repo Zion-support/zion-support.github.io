@@ -73,7 +73,6 @@ function getPriceValue(price: Service['price']): string {
 function getAllServices(): Service[] {
 		.concat(real2032ServiceExpansions as unknown as Service[])
 		.concat(real2025Q4FreshAdditions as unknown as Service[]);
-=======
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
@@ -322,7 +321,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</Layout>
 	);
 }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

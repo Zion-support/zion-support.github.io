@@ -432,7 +432,6 @@ export default function HomePage() {
         </div>
       </footer>
     </UltraFuturisticBackground>
-=======
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: '300+ Real Micro SaaS Services',
       description: 'Complete portfolio of fully functional micro SaaS tools with real implementations, not just mockups. Starting from $49/month with 21-day free trials.',

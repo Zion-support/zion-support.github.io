@@ -1,8 +1,5 @@
 export default function Page(){return null}
-=======
-=======
 import React from 'react';
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { 
@@ -275,7 +272,6 @@ export default function ContactPage() {
                   <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <div className="text-white">
                       {method.icon}
-=======
   const stats = [
     { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' },
     { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' },

@@ -42,39 +42,10 @@ const queryClient = new QueryClient({
   },
 });
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const rootElement = document.getElementById('root');
 
 function renderApp() {
-  const app = (
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
-  const { t } = useTranslation();
-  React.useEffect(() => {
-    captureException(error);
-  }, [error]);
-  return (
-    <div role="alert" className="p-4 text-center">
-      <p className="mb-2">{t('error_boundary.message', 'Something went wrong.')}</p>
-      <button className="rounded bg-blue-600 px-4 py-2 text-white" onClick={resetErrorBoundary}>
-        {t('error_boundary.retry', 'Retry')}
-      </button>
-    </div>
-  );
-}
-
-try {
-  console.log("main.tsx: Before ReactDOM.createRoot");
-  // Render the app with proper provider structure
-  ReactDOM.createRoot(document.getElementById('root')!).render(
-<<<<<<< HEAD
-=======
->>>>>>> origin/7yfp2f-codex/implement-global-error-boundary-with-toasts
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    <React.StrictMode>
+  const app = (    <React.StrictMode>
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
           <SnackbarProvider maxSnack={3}>
@@ -85,34 +56,12 @@ try {
                 <NotificationProvider>
                   <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                       <ViewModeProvider>
                         <AppLayout>
                           <App />
                         </AppLayout>
                       </ViewModeProvider>
-                      <LanguageDetectionPopup />
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-                      <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
-                        <ViewModeProvider>
-                          <CartProvider>
-                            <ReferralMiddleware>
-                              <AppLayout>
-                                <App />
-                              </AppLayout>
-                            </ReferralMiddleware>
-                          </CartProvider>
-                        </ViewModeProvider>
-                        <LanguageDetectionPopup />
-                      </ErrorBoundary>
-<<<<<<< HEAD
-=======
->>>>>>> origin/7yfp2f-codex/implement-global-error-boundary-with-toasts
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-                    </LanguageProvider>
+                      <LanguageDetectionPopup />                    </LanguageProvider>
                   </AnalyticsProvider>
                 </NotificationProvider>
               </AuthProvider>

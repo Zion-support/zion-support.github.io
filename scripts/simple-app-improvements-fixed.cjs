@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     this.log(`Total improvements: ${this.improvements.length}`);
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
@@ -23,12 +22,7 @@
 
 // Run the improvements
 const improvements = new SimpleAppImprovements();
-improvements.runAllImprovements().catch(console.error);
-=======
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-#!/usr/bin/env node;
+improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

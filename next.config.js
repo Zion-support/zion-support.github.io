@@ -8,6 +8,7 @@ const nextConfig = {
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
+<<<<<<< HEAD
   
   // Performance optimizations
   experimental: {
@@ -17,16 +18,19 @@ const nextConfig = {
   },
   
   // Image optimization
+=======
+>>>>>>> origin/main
   images: {
     domains: [
       'localhost',
       'ziontechgroup.com',
       'images.unsplash.com',
-      'via.placeholder.com'
+      'via.placeholder.com',
     ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
     minimumCacheTTL: 31536000, // 1 year
   },
   
@@ -47,6 +51,11 @@ const nextConfig = {
     }
     
     // Development watch options
+=======
+    minimumCacheTTL: 31536000,
+  },
+  webpack: (config, { dev, isServer }) => {
+>>>>>>> origin/main
     if (dev) {
       config.watchOptions = {
         ignored: [
@@ -89,6 +98,6 @@ const nextConfig = {
     }
     return config
   }
-}
+};
 
-export default nextConfig
+export default nextConfig;

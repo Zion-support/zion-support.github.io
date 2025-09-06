@@ -13,7 +13,6 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
->>>>>>> origin/automation/git-sync/2025-08-13T22-22-32-390Z
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -22,7 +21,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-<<<<<<< HEAD
 
       - name: Install
         run: npm ci
@@ -46,12 +44,3 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: node automation/advanced-git-sync.cjs || node automation/git-sync.cjs
 
->>>>>>> origin/automation/git-sync/2025-08-13T22-22-32-390Z
-
-=======
-          cache: npm
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Run workflow
-        run: echo "Workflow completed successfully"
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2
