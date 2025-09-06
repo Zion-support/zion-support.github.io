@@ -1,16 +1,10 @@
 
-
-// Listings utility
-export const Listings = () => {
-  // Implementation here
+;
+// Listings utility;
+export const Listings = () => {// Implementation here;
   return null;
-};
-
-export default Listings;
->>>>>>> origin/main
-ursor/automate-test-improve-and-merge-code-646c
-export interface Listing {;
-  "id": string;
+}export default Listings;ursor/automate-test-improve-and-merge-code-646c;
+export interface Listing  {"id": string;
   title: string;
   description: string;
   price: number;
@@ -19,35 +13,29 @@ export interface Listing {;
   subcategory?: string;
   tags: string[];
   images: string[];
-seller: {;
-    id: string;
+seller: {id: string;
     name: string;
     rating: number;
-    reviews: number};
-  "location": string;  createdAt: string;
+    reviews: number}"location": string;  createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';
   views: number;
   likes: number;
   shares: number}
-export interface ProductListing extends Listing {;
-  brand?: string;
+export interface ProductListing extends Listing  {brand?: string;
   model?: string;
   "condition": 'new' | 'used' | 'refurbished';
   warranty?: string;
-  shipping: {;
-    cost: number;
+  shipping: {cost: number;
     method: string;
     estimatedDays: number}}
-export interface ServiceListing extends Listing {;
-  "serviceType": 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
+export interface ServiceListing extends Listing  {"serviceType": 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];
   experience: number;
   certifications: string[];
   portfolio?: string[]}
-export interface TalentListing extends Listing {;
-  "skills": string[];
+export interface TalentListing extends Listing  {"skills": string[];
   experience: number;
   education: string[];
   certifications: string[];
@@ -56,36 +44,20 @@ export interface TalentListing extends Listing {;
   hourlyRate: number;
   portfolio?: string[];
   references?: string[]}
-export interface CartItem {;
-  "id": string;
+export interface CartItem  {"id": string;
   title: string;
   price: number;
   quantity: number;
   type: 'product' | 'service' | 'talent';
   image?: string}
-export interface WishlistItem {;
-  "id": string;
+export interface WishlistItem  {"id": string;
   userId: string;
   listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string}
-export interface Listing {; id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {; id: string; name: string; rating: number; reviews: number} }; location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing {; brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {; cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing {; serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing {; skills: 'string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]'} export interface CartItem {; id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'} image?: string} export interface WishlistItem {; id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'} addedAt: 'string'}
-
-
-export interface Listing {; id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {; id: string; name: string; rating: number; reviews: number}; location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing {; brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {; cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing {; serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing {; skills: string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]} export interface CartItem {; id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'; image?: string} export interface WishlistItem {; id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'; addedAt: string}
-
-
-export interface Listing {; id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {; id: string; name: string; rating: number; reviews: number}; location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing {; brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {; cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing {; serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing {; skills: string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]} export interface CartItem {; id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'; image?: string} export interface WishlistItem {; id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'; addedAt: string}
-
-
-// Listings utility
-export const Listings = () => {
-  // Implementation here
+export interface Listing  {id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {id: string; name: string; rating: number; reviews: number} }location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing  {brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing  {serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing  {skills: 'string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]'} export interface CartItem  {id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'} image?: string} export interface WishlistItem  {id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'} addedAt: 'string'}export interface Listing  {id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {id: string; name: string; rating: number; reviews: number}location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing  {brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing  {serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing  {skills: string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]} export interface CartItem  {id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'; image?: string} export interface WishlistItem  {id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'; addedAt: string}export interface Listing  {id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {id: string; name: string; rating: number; reviews: number}location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing  {brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing  {serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing  {skills: string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]} export interface CartItem  {id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'; image?: string} export interface WishlistItem  {id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'; addedAt: string}// Listings utility;
+export const Listings = () => {// Implementation here;
   return null;
-};
-
-export default Listings;
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-export interface Listing {; id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {; id: string; name: string; rating: number; reviews: number}; location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing {; brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {; cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing {; serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing {; skills: string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]} export interface CartItem {; id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'; image?: string} export interface WishlistItem {; id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'; addedAt: string}
-export interface Listing {; id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {; id: string; name: string; rating: number; reviews: number}; location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing {; brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {; cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing {; serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing {; skills: string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]} export interface CartItem {; id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'; image?: string} export interface WishlistItem {; id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'; addedAt: string}
+}export default Listings;ursor/automate-test-improve-and-merge-code-646c;
+export interface Listing  {id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {id: string; name: string; rating: number; reviews: number}location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing  {brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing  {serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing  {skills: string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]} export interface CartItem  {id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'; image?: string} export interface WishlistItem  {id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'; addedAt: string}
+export interface Listing  {id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: {id: string; name: string; rating: number; reviews: number}location: string; createdAt: string; updatedAt: string; status: 'active' | 'inactive' | 'sold' | 'pending'; views: number; likes: number; shares: number} export interface ProductListing extends Listing  {brand?: string; model?: string; condition: 'new' | 'used' | 'refurbished'; warranty?: string; shipping: {cost: number; method: string; estimatedDays: number}} export interface ServiceListing extends Listing  {serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'; duration?: string; availability: string[]; experience: number; certifications: string[]; portfolio?: string[]} export interface TalentListing extends Listing  {skills: string[]; experience: number; education: string[]; certifications: string[]; languages: string[]; availability: string[]; hourlyRate: number; portfolio?: string[]; references?: string[]} export interface CartItem  {id: string; title: string; price: number; quantity: number; type: 'product' | 'service' | 'talent'; image?: string} export interface WishlistItem  {id: string; userId: string; listingId: string; type: 'product' | 'service' | 'talent'; addedAt: string}

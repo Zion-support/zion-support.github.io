@@ -1,46 +1,15 @@
 
-
-
-// import { prisma } from "@/lib/prisma",;
-interface InstanceWithCounts {;
-  id: string,;
-  name: string,;
-  slug: string,;
-  domain: string | null,;
-  subdomain: string | null,;
-  vertical: string,;
-  defaultLanguage: string,;
-  tokenSystem: string,;
-  governanceType: string,;
-  isPublic: boolean,;
-  region: string | null,;
-  country: string | null,;
-  createdAt: Date,;
-  updatedAt: Date,;
-  daoConfig: any | null,;
-  _count: {;
-    deployments: number,;
-    features: number;
-  }
-}
 ;
-export default function InstancesPage() {;
-  const instances: any[] = [], // Temporary empty array;
-  const error: string | null = null,;
-
-
-  return (;
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
-
-        {/* Header */}
+// import { prisma } from "@/lib/prisma",interface InstanceWithCounts  {id: string,name: string,slug: string,domain: string | null,subdomain: string | null,vertical: string,defaultLanguage: string,tokenSystem: string,governanceType: string,isPublic: boolean,region: string | null,country: string | null,createdAt: Date,updatedAt: Date,daoConfig: any | null,_count: {deployments: number,features: number;
+  }
+}export default function InstancesPage() {const instances: any[] = [], // Temporary empty array;
+  const error: string | null  = null,return (<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;{/* Header */}
         <div className="text - center mb - 12">;
           <h1 className="text - 4xl font - bold mb - 4">📊 Manage Your Instances</h1>;
           <p className="text - xl text - white / 70 max - w-2xl mx - auto">;
-  return (;
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;  return (;
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
+  return (<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;  return (<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
         <div className="text - center mb-12">;
@@ -50,19 +19,12 @@ export default function InstancesPage() {;
           </p>;
         </div>;
         {/* Error State */}
-        {error && (
-          <div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text - center">;
+        {error && (<div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text - center">;
             <div className="text - red - 400 mb - 2">⚠️ Database Connection Error</div>;
             <p className="text - white / 70 mb - 4">{error}</p>;
             <p className="text - sm text - white / 50">;
               Please ensure your database is properly configured and the DATABASE_URL environment variable is set.;
-            </p>;
-
-
-          </div>)}
-
-
-        {/* Stats Overview */}
+            </p>;</div>)}{/* Stats Overview */}
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6 mb - 8">;
           <div className="glass - effect rounded - xl p - 6 text - center">;
             <div className="text - 3xl font - bold text - blue - 400 mb - 2">{instances.length}</div>;
@@ -87,20 +49,11 @@ export default function InstancesPage() {;
             <div className="text - white / 70">Active Features</div>;
           </div>;
         </div>;
-        {/* Instances Grid */}
-
-
-        {instances.length > 0 && (
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {instances.map ((inst) => (
-              <div key={inst.id} className="feature - card group hover - lift">;
+        {/* Instances Grid */}{instances.length > 0 && (<div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+            {instances.map ((inst) => (<div key={inst.id} className="feature - card group hover - lift">;
                 <div className="flex items - start justify - between mb - 4">;
                   <div className="flex items - center gap - 3">;
-                    <div className={`w - 3 h - 3 rounded - full ${
-                      inst.is_public ? 'bg - green - 500' : 'bg - yellow - 500';
-
-
-                    }`}></div>;
+                    <div className={`w - 3 h - 3 rounded - full ${inst.is_public ? 'bg - green - 500' : 'bg - yellow - 500';}`}></div>;
                     <div className="font - semibold text - lg text - white group - hover:text - blue - 400 transition - colors">;
                       {inst.name}
                     </div>;
@@ -112,35 +65,17 @@ export default function InstancesPage() {;
                 <div className="space - y-3 mb - 4">;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
                     <span className="w - 4 h - 4">🌐</span>;
-                    <span className="truncate">;
-
-
-
-                      {inst.domain || inst.subdomain || inst.slug}
-
-
-
-                    </span>;
+                    <span className="truncate">;{inst.domain || inst.subdomain || inst.slug}</span>;
                   </div>;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
                     <span className="w - 4 h - 4">🗳️</span>;
                     <span > Governance: {getGovernanceLabel (inst.governance_type)}</span>;
                   </div>;
-                  {inst.region && (
-                    <div className="flex items - center gap - 2 text - sm text - white / 70">;
+                  {inst.region && (<div className="flex items - center gap - 2 text - sm text - white / 70">;
                       <span className="w - 4 h - 4">📍</span>;
-                      <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
-
-
-
-;
-
-
-                  <div className="flex items-center gap-2 text-sm text-white/70">;
+                      <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;;<div className="flex items-center gap-2 text-sm text-white/70">;
                     <span className="w-4 h-4">🔧</span>;
-                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
-
-                  </div>;
+                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;</div>;
                 </div>;
                 <div className="flex items - center justify - between text - xs text - white / 60">;
                   <div className="flex items - center gap - 4">;
@@ -153,16 +88,7 @@ export default function InstancesPage() {;
                 </div>;
                 <div className="mt - 4 pt - 4 border - t border - white / 10">;
                   <div className="flex gap - 2">;
-                    <a;
-
-
-
-                      href={`/admin/instances/${inst.id}`} ;
-
-
-                      className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
-
-          <div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text-center">;
+                    <a;href={`/admin/instances/${inst.id}`}className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";<div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text-center">;
             <div className="text - red - 400 mb-2">⚠️ Database Connection Error</div>;
             <p className="text - white / 70 mb-4">{error}</p>;
             <p className="text - sm text-white / 50">;
@@ -213,8 +139,7 @@ export default function InstancesPage() {;
                     <span className="w - 4 h-4">🗳️</span>;
                     <span > Governance: {getGovernanceLabel (inst.governance_type)}</span>;
                   </div>;
-                  {inst.region && (
-                    <div className="flex items - center gap - 2 text - sm text-white / 70">;
+                  {inst.region && (<div className="flex items - center gap - 2 text - sm text-white / 70">;
                       <span className="w - 4 h-4">📍</span>;
                       <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                   <div className="flex items-center gap-2 text-sm text-white/70">;
@@ -240,30 +165,14 @@ export default function InstancesPage() {;
                     >;
                       Manage;
                     </a>;
-                    <a;
-
-
-
-                      href={`/admin/instances/${inst.id}/deployments`} ;
-
-
-                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
-
-                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
+                    <a;href={`/admin/instances/${inst.id}/deployments`}className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
                     >;
                       Deployments;
                     </a>;
                   </div>;
-                </div>;
-
-
-              </div>))}
-          </div>)}
-
-
-        {/* Empty State */}
-        {instances.length === 0 && !error && (
-          <div className="text - center py - 16">;
+                </div>;</div>))}
+          </div>)}{/* Empty State */}
+        {instances.length === 0 && !error && (<div className="text - center py - 16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify - center">;
               <span className="text - 4xl">🚀</span>;
             </div>;
@@ -273,8 +182,7 @@ export default function InstancesPage() {;
             </p>;
             <a href="/multiverse / launch" className="btn - primary">;
         {/* Empty State */}
-        {instances.length === 0 && !error && (
-          <div className="text - center py-16">;
+        {instances.length === 0 && !error && (<div className="text - center py-16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify-center">;
               <span className="text-4xl">🚀</span>;
             </div>;
@@ -335,8 +243,7 @@ export default function InstancesPage() {;
         </div>;
       </div>;
       {/* Instances Grid */}
-      {instances.length === 0 ? (
-        <div className="card text - center py - 12">;
+      {instances.length === 0 ? (<div className="card text - center py - 12">;
           <div className="text - 6xl mb - 4">🚀</div>;
           <h2 className="text - 2xl font - semibold mb - 2">No Instances Yet</h2>;
           <p className="text - white / 70 mb - 6">;
@@ -345,24 +252,12 @@ export default function InstancesPage() {;
           <a href="/multiverse / launch" className="btn - primary">;
             Launch First Instance;
           </a>;
-        </div>) : (
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-          {instances.map ((inst) => (
-            <div key={inst.id} className="card card - hover">;
-              {/* Instance Header */}
-
-
-
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
-                      inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-
-
-                      inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
+        </div>) : (<div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+          {instances.map ((inst) => (<div key={inst.id} className="card card - hover">;
+              {/* Instance Header */}<span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
-                      'bg-gray-500/20 text-gray-400';
-
-        <div className="card text - center py-12">;
+                      'bg-gray-500/20 text-gray-400';<div className="card text - center py-12">;
           <div className="text - 6xl mb-4">🚀</div>;
           <h2 className="text - 2xl font - semibold mb-2">No Instances Yet</h2>;
           <p className="text - white / 70 mb-6">;
@@ -371,10 +266,8 @@ export default function InstancesPage() {;
           <a href="/multiverse / launch" className="btn-primary">;
             Launch First Instance;
           </a>;
-        </div>) : (
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">;
-          {instances.map ((inst) => (
-            <div key={inst.id} className="card card-hover">;
+        </div>) : (<div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">;
+          {instances.map ((inst) => (<div key={inst.id} className="card card-hover">;
               {/* Instance Header */}
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
@@ -386,8 +279,7 @@ export default function InstancesPage() {;
                     }`}>;
                       {inst.vertical}
                     </span>;
-                    {inst.is_public && (
-                      <span className="px - 2 py - 1 rounded - full text - xs font - medium bg - green - 500 / 20 text - green - 400">;
+                    {inst.is_public && (<span className="px - 2 py - 1 rounded - full text - xs font - medium bg - green - 500 / 20 text - green - 400">;
                       <span className="px - 2 py - 1 rounded - full text - xs font - medium bg - green - 500 / 20 text - green-400">;
                         Public;
                       </span>)}
@@ -399,16 +291,7 @@ export default function InstancesPage() {;
               </div>;
               {/* Instance Details */}
               <div className="space - y-3 mb - 4">;
-                <div className="flex items - center space - x-2 text - sm text - white / 70">;
-
-                  <span>🌐</span>;
-
-
-                  <span>{inst.domain || inst.subdomain || inst.slug}</span>;
-
-
-
-                </div>;
+                <div className="flex items - center space - x-2 text - sm text - white / 70">;<span>🌐</span>;<span>{inst.domain || inst.subdomain || inst.slug}</span>;</div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                 <div className="w - 8 h - 8 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify-center">;
                   <span className="text - white font - bold text-xs">Z</span>;
@@ -422,19 +305,9 @@ export default function InstancesPage() {;
                   <span>🏛️</span>;
                   <span > Governance: {inst.governance_type}</span>;
                 </div>;
-                {inst.region && (
-                  <div className="flex items - center space - x-2 text - sm text - white / 70">;
+                {inst.region && (<div className="flex items - center space - x-2 text - sm text - white / 70">;
                     <span>📍</span>;
-                    <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
-
-
-
-;
-
-
-                <div className="flex items-center space-x-2 text-sm text-white/70">;
-
-                  <div className="flex items - center space - x-2 text - sm text-white / 70">;
+                    <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;;<div className="flex items-center space-x-2 text-sm text-white/70">;<div className="flex items - center space - x-2 text - sm text-white / 70">;
                     <span>📍</span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                 <div className="flex items-center space-x-2 text-sm text-white/70">;                <div className="flex items-center space-x-2 text-sm text-white/70">;
@@ -455,16 +328,7 @@ export default function InstancesPage() {;
               </div>;
               {/* Actions */}
               <div className="flex space - x-2">;
-                <a;
-
-
-
-                  href={`/admin/instances/${inst.id}`} ;
-
-
-                  className="flex-1 btn-secondary text-center text-sm py-2";
-
-              <div className="grid grid - cols - 2 gap - 4 mb-4">;
+                <a;href={`/admin/instances/${inst.id}`}className="flex-1 btn-secondary text-center text-sm py-2";<div className="grid grid - cols - 2 gap - 4 mb-4">;
                 <div className="text - center p - 3 rounded - lg bg-white / 5">;
                   <div className="text - lg font - semibold text - blue-400">{inst._count.deployments}</div>;
                   <div className="text - xs text-white / 60">Deployments</div>;
@@ -481,16 +345,7 @@ export default function InstancesPage() {;
                 >;
                   Manage;
                 </a>;
-                <a;
-
-
-
-                  href={`/admin/instances/${inst.id}/deployments`} ;
-
-
-                  className="flex-1 btn-secondary text-center text-sm py-2";
-
-                  className="flex-1 btn-secondary text-center text-sm py-2";                  className="flex-1 btn-secondary text-center text-sm py-2";
+                <a;href={`/admin/instances/${inst.id}/deployments`}className="flex-1 btn-secondary text-center text-sm py-2";className="flex-1 btn-secondary text-center text-sm py-2";                  className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
                   Deployments;
                 </a>;
@@ -498,14 +353,8 @@ export default function InstancesPage() {;
               {/* Created Date */}
               <div className="text - xs text - white / 40 mt - 3 pt - 3 border - t border - white / 10">;
                 Created: {new Date (inst.created_at).toLocaleDateString ()}
-              </div>;
-
-
-            </div>))}
-        </div>)}
-
-
-      {/* Quick Actions */}
+              </div>;</div>))}
+        </div>)}{/* Quick Actions */}
       <div className="card text - center py - 8">;
         <h2 className="text - 2xl font - semibold mb - 4">Quick Actions</h2>;
         <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
@@ -783,8 +632,7 @@ export default function InstancesPage() {;
         </div>;
       </div>;
       {/* Empty State */}
-      {instances.length === 0 && (
-        <div className="text - center py - 16">;
+      {instances.length === 0 && (<div className="text - center py - 16">;
           <div className="w - 16 h - 16 mx - auto mb - 4 p - 4 bg - white / 10 rounded - full">;
             <Globe className="w - 8 h - 8 text - white / 40" />;
           </div>;
@@ -809,29 +657,16 @@ export default function InstancesPage() {;
             Deploy First Instance;
           </a>;
         </div>)}
-    </div>);
-}
-
-
-/**
- * getGovernanceLabel - Function description
- */
-function getGovernanceLabel() {
-  switch (type) {
-    case "ADMIN": return "Admin Control",
-    case "DAO_LITE": return "DAO - lite",
-    case "DAO_FULL": return "Full DAO",
-    default: return type;
+    </div>)}/**;
+ * getGovernanceLabel - Function description;
+ */;
+function getGovernanceLabel() {switch (type) {case "ADMIN": return "Admin Control",case "DAO_LITE": return "DAO - lite",case "DAO_FULL": return "Full DAO",default: return type;
   }
 }
-/**
- * getTokenSystemLabel - Function description
- */
-function getTokenSystemLabel() {
-  switch (type) {
-
-
-    case "SHARED": return "ZION$ Shared";
+/**;
+ * getTokenSystemLabel - Function description;
+ */;
+function getTokenSystemLabel() {switch (type) {case "SHARED": return "ZION$ Shared";
     case "LOCAL": return "Local Token";
     default: return type;
   }

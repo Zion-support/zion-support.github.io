@@ -1,10 +1,3 @@
 
-
-
-
-
-
-
-
-
+;
 export { default } from '../dev/tree';

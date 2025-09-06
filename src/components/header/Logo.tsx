@@ -1,99 +1,45 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-return (
-      <Link href="/" className="flex items - center">;
+
+;
+return (<Link href="/" className="flex items - center">;
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
-      </Link>);
-  }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-
-=======
-  const logoToUse = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-  if (logoToUse) {
-    return (
-      <Link href="/" className="flex items-center">
-        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />
-      </Link>
-    )
-  }
-
-  
-
-  return (
-
-
-interface LogoProps {;
-  customLogo?: string;
-
-export function Logo(): any ({ customLogo }: LogoProps) {;
-  const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-
-
-  // Use the white-label logo if available and no specific customLogo is provided;
-  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
-  // Use the white-label color if available and no specific _customColor is provided;
-  // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
-  if (logoToUse) {;
-    return (
-      <Link href="/" className="flex items-center">;
+      </Link>)}const logoToUse  = null;if (logoToUse) {return (<Link href="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />;
       </Link>;
-    );
-  }
-
-  return (
-    <Link href="/" className="flex items-center">;
+    )}return (interface LogoProps  {customLogo?: string;export function Logo(): any ({ customLogo }: LogoProps) {const { isWhitelabel, logoUrl, brandName }  = useWhitelabel()// Use the white-label logo if available and no specific customLogo is provided;
+  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null)// Use the white-label color if available and no specific _customColor is provided;
+  // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined)if (logoToUse) {return (<Link href="/" className="flex items-center">;
+        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />;
+      </Link>;
+    )}return (<Link href="/" className="flex items-center">;
       <img src="/logos/zion-logo && logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
     </Link>;
-  );
-  if (logoToUse) {;
-    return (
-      <Link href='/' className='flex items-center'>;
-        <img
+  )if (logoToUse) {return (<Link href='/' className='flex items-center'>;
+        <img;
     <Link href="/" className="flex items - center">;
       <img src="/logos / zion - logo.png" alt="Zion Logo" className="h - 8" width={32} height={32} />;
-    </Link>);
-  // Check condition
-if ( {) {
-  $2
+    </Link>)// Check condition;
+if ( {) {$2;
 }
-    return (
-      <Link href='/' className='flex items - center'>;
+    return (<Link href='/' className='flex items - center'>;
         <img;
           src={logoToUse}
           alt={`${brand_name} Logo`}
           className='h - 8';
           width={32}
-          height={32}
-
-        />;
+          height={32}/>;
       </Link>;
-    );
-
-  }
-  return (
-    <Link href='/' className='flex items-center'>;
-      <img
-        src='/logos/zion-logo && logo.png'
-        alt='Zion Logo'
-        className='h-8'
+    )}
+  return (<Link href='/' className='flex items-center'>;
+      <img;
+        src='/logos/zion-logo && logo.png';
+        alt='Zion Logo';
+        className='h-8';
         width={32}
-        height={32}
-<<<<<<< HEAD
-
-      />;
+        height={32}/>;
     </Link>;
-  );
-}
-
-        />;
-      </Link>);
-  }
-  return (
-    <Link href='/' className='flex items - center'>;
+  )}/>;
+      </Link>)}
+  return (<Link href='/' className='flex items - center'>;
       <img;
         src='/logos / zion - logo.png';
         alt='Zion Logo';
@@ -101,15 +47,6 @@ if ( {) {
         width={32}
         height={32}
       />;
-    </Link>);
-}
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-      />
-    </Link>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    </Link>)}}/>;
+    </Link>;
+  )

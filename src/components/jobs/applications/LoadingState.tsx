@@ -1,73 +1,29 @@
 
-export function LoadingState() {;
-  return (
-    <div className="flex justify-center items-center p-8">
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
-    </div>
-    <div className="flex justify-center items-center p-8">
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
-    </div>
-export function LoadingState() {;
-  return (
-    <div className="flex justify-center items-center p-8">
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
-    </div>
-    <div className="flex justify-center items-center p-8">
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
-    </div>
+export function LoadingState() {return (<div className="flex justify-center items-center p-8">;
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+    </div>;
+    <div className="flex justify-center items-center p-8">;
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+    </div>;
+export function LoadingState() {return (<div className="flex justify-center items-center p-8">;
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+    </div>;
+    <div className="flex justify-center items-center p-8">;
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+    </div>;
     <div className='flex justify-center items-center p-8'>;
       <Loader2 className='h-8 w-8 animate-spin text-primary' />;
     </div>;
-  );
-
-
-}
-
-
-import { Loader2 } from 'lucide-react';
-export /**
- * LoadingState - Function description
- */
-function LoadingState() {
-  return (
-    <div className="flex justify-center items-center p-8">
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
-    </div>
-  )
-  )
-}
-
-    <div className='flex justify-center items-center p-8'>
-      <Loader2 className='h-8 w-8 animate-spin text-primary' />
+  )}import { Loader2  } from 'lucide-react';
+export /**;
+ * LoadingState - Function description;
+ */;
+function LoadingState() {return (<div className="flex justify-center items-center p-8">;
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />;
     </div>;
->>>>>>> main
-export function LoadingState() {;
-  return (
-  );
-};
-
->>>>>>> main
-  );
-};
-
-
-import { Loader2 } from 'lucide-react'
-
-export function LoadingState() {
-  return (
-    <div className="flex justify-center items-center p-8">
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
-    </div>
-  )
-
-  )
-}
-;
-  )
-}
-;
-
-export function LoadingState() {
-  return (
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  ))}<div className='flex justify-center items-center p-8'>;
+      <Loader2 className='h-8 w-8 animate-spin text-primary' />;
+    </div>;export function LoadingState() {return ()})}export function LoadingState() {return (<div className="flex justify-center items-center p-8">;
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+    </div>;
+  ))})}export function LoadingState() {return ()

@@ -1,361 +1,106 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-
-
-import {Button} from "@/components/ui/button";
-import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
-import {PricingSuggestionBox} from "./PricingSuggestionBox";
-import {useAuth} from "@/hooks/useAuth";
-import {Sparkles} from "lucide-react";
-
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-
-
-
-
-
-import { 
-  getTalentRateSuggestion;
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
+import { getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion } from '@/services/pricingSuggestionService';
+import { PricingSuggestionBox } from './PricingSuggestionBox';
+import { useAuth } from '@/hooks/useAuth';
+import { Sparkles } from 'lucide-react';
+import React, { useState } from "react",import { Button } from "@/components/ui/button",import {getTalentRateSuggestion;
   PricingSuggestion;
   TalentRateParams;
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
-
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion } from '@/services / pricingSuggestionService';
-import { PricingSuggestionBox } from './PricingSuggestionBox';
-import { use_auth } from '@/hooks / use_auth';
-import { Sparkles } from './lucide-react';
-
-interface TalentRateRecommenderProps {
-interface TalentRateRecommenderProps {;
-  skills: string[],;
-  yearsExperience: number,;
-  location?: string;
-  onSuggestionApplied: (value: number) => void,;
-  rateType: "hourly" | "fixed";
-}
-
-export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;interface TalentRateRecommenderProps {
-
-  skills;
+  trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",import { PricingSuggestionBox } from "./PricingSuggestionBox",import React, { useState } from './react';
+import { Button  } from '@/components / ui / button';
+import { getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion  } from '@/services / pricingSuggestionService';
+import { PricingSuggestionBox  } from './PricingSuggestionBox';
+import { use_auth  } from '@/hooks / use_auth';
+import { Sparkles  } from './lucide-react';
+interface TalentRateRecommenderProps  {interface TalentRateRecommenderProps  {skills: string[],yearsExperience: number,location?: string;
+  onSuggestionApplied: (value: number) => void,rateType: "hourly" | "fixed";
+}export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({interface TalentRateRecommenderProps  {skills;
   years_experience;
   location;
-  const [isLoading, setIsLoading] = useState(false);
-
-  const generateSuggestion = async () => {;
-    if (skills && skills.length === 0 || yearsExperience <= 0) {;
-      return;
-
-    }
-    setIsLoading(true);
-    try {;
-      const params: TalentRateParams = {;
-        skills;
-
-        yearsExperience,;
-        location};
-
-      const result = await getTalentRateSuggestion(params);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth();
-
-    }
-    setIsLoading(true);
-    try {;
-      const params: TalentRateParams = {;
-        skills;
-      const result = await getTalentRateSuggestion(params);
-interface TalentRateRecommenderProps {
-import { useAuth } from "@/hooks/useAuth",
-import { Sparkles } from "lucide-react",
-  skills: string[],
-  yearsExperience: number,
-  location?: string,
-  onSuggestionApplied: (value: number) => void,
-  rateType: "hourly" | "fixed"
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import {;
-  getTalentRateSuggestion,;
-  PricingSuggestion,;
-  TalentRateParams,;
-  trackPricingSuggestion;
-} from "@/services/pricingSuggestionService",;
-import { PricingSuggestionBox } from "./PricingSuggestionBox",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Sparkles } from "lucide-react",;
-interface TalentRateRecommenderProps {;
-  skills: string[],;
-  yearsExperience: number,;
-  location?: string,;
-  onSuggestionApplied: (value: number) => void,;
-  rateType: "hourly" | "fixed";
-
-}
-
-export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
-  skills;
+  const [isLoading, setIsLoading]  = useState(false)const generateSuggestion = async () => {if (skills && skills.length === 0 || yearsExperience <= 0) {return;}
+    setIsLoading(true)try {const params: TalentRateParams = {skills;yearsExperience,location}const result = await getTalentRateSuggestion(params)const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),const { user }  = useAuth()}
+    setIsLoading(true)try {const params: TalentRateParams = {skills;
+      const result = await getTalentRateSuggestion(params)interface TalentRateRecommenderProps  {import { useAuth } from "@/hooks/useAuth",import { Sparkles } from "lucide-react",skills: string[],yearsExperience: number,location?: string,onSuggestionApplied: (value: number) => void,rateType: "hourly" | "fixed";
+  getTalentRateSuggestion,PricingSuggestion,TalentRateParams,trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",interface TalentRateRecommenderProps  {skills: string[],yearsExperience: number,location?: string,onSuggestionApplied: (value: number) => void,rateType: "hourly" | "fixed";}export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({skills;
   yearsExperience;
   location;
-  onSuggestionApplied,
-  rateType}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
-  const { user } = useAuth();
-
-  const generateSuggestion = async () => {
-    if (skills.length === 0 || yearsExperience <= 0) {
-      return
-  skills,;
-  rateType: "hourly" | "fixed"  skills,;
-  yearsExperience,;
-  location,;
-  onSuggestionApplied,;
-  rateType}) => {;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
-  const { user } = useAuth(),;
-  const generateSuggestion = async () => {;
-    if (skills.length === 0 || yearsExperience <= 0) {;
-      return;
-
-
-
-    }
-      return;    }
-
-    setIsLoading(true),
-    try {
-      const params: TalentRateParams = {
-        skills,
-        yearsExperience,
-        location},
-
-      const result = await getTalentRateSuggestion(params),
-
-
-
-      setSuggestion(result)
-    } catch (error) {
-      console.error("Error generating rate suggestion:", error)
-    } finally {
-      setIsLoading(false)
-
-
-;
-      const result = await getTalentRateSuggestion(params);
-    setIsLoading(true),;
-    try {;
-      const params: TalentRateParams = {;
-        skills,;
-        yearsExperience,;
-        location},;
-      const result = await getTalentRateSuggestion(params);
-      const result = await getTalentRateSuggestion(params);
-      const result = await getTalentRateSuggestion(params),;
-      setSuggestion(result);
-    } catch (error) {;
-      console.error("Error generating rate suggestion:", error);
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-
-  };
-
-
-  };
-  const handleApplySuggestion = () => {;
-    if (suggestion) {;
-      // We'll use the middle of the range as the suggested rate;
-      const suggestedRate = Math && Math.round((suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2);
-      onSuggestionApplied(suggestedRate);
-
-  const handleApplySuggestion = () => {;
-    if (suggestion) {;
-      // We'll use the middle of the range as the suggested rate;
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),;
-      onSuggestionApplied(suggestedRate),;
-      // Track this suggestion application;
-      if (user) {;
-        trackPricingSuggestion({;
-          userId: user.id,;
-          suggestionType: 'talent',;
-          suggestedMin: suggestion.minRate,;
-          suggestedMax: suggestion.maxRate,;
-
-          actualValue: suggestedRate,;
-          accepted: true;
-        });
-
-      }
-    }
-
-
-      }
-    }
-
-
-          actualValue: suggestedRate,;
-          accepted: true;
-        });
-      }
-    }
-
-  },
-
-
-
-
-
-
-
-
-
-
-      setSuggestion(result);
-    } catch (error) {;
-      console && console.error("Error generating rate suggestion:", error);
-    } finally {;
-      setIsLoading(false);
-    }
+  onSuggestionApplied,rateType}) => {const [isLoading, setIsLoading] = useState(false)const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)const { user }  = useAuth()const generateSuggestion = async () => {if (skills.length === 0 || yearsExperience <= 0) {return;
+  skills,rateType: "hourly" | "fixed"  skills,yearsExperience,location,onSuggestionApplied,rateType}) => {const [isLoading, setIsLoading] = useState(false),const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),const { user } = useAuth(),const generateSuggestion = async () => {if (skills.length === 0 || yearsExperience <= 0) {return;}
+      return;    }setIsLoading(true),try {const params: TalentRateParams = {skills,yearsExperience,location},const result = await getTalentRateSuggestion(params),setSuggestion(result)} catch (error) {console.error("Error generating rate suggestion:", error)} finally {setIsLoading(false)const result = await getTalentRateSuggestion(params)setIsLoading(true),try {const params: TalentRateParams = {skills,yearsExperience,location},const result = await getTalentRateSuggestion(params)const result = await getTalentRateSuggestion(params)const result = await getTalentRateSuggestion(params),setSuggestion(result)} catch (error) {console.error("Error generating rate suggestion:", error)} finally {setIsLoading(false)}
+  },}}const handleApplySuggestion = () => {if (suggestion) {// We'll use the middle of the range as the suggested rate;
+      const suggestedRate = Math && Math.round((suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2)onSuggestionApplied(suggestedRate)const handleApplySuggestion = () => {if (suggestion) {// We'll use the middle of the range as the suggested rate;
+      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),onSuggestionApplied(suggestedRate),// Track this suggestion application;
+      if (user) {trackPricingSuggestion({userId: user.id,suggestionType: 'talent',suggestedMin: suggestion.minRate,suggestedMax: suggestion.maxRate,actualValue: suggestedRate,accepted: true;
+        })}
+    }}
+    }actualValue: suggestedRate,accepted: true;
+        })}
+    }},setSuggestion(result)} catch (error) {console && console.error("Error generating rate suggestion:", error)} finally {setIsLoading(false)}
       }
     }
   }
-  return (
-    <div className="space-y-4">;
+  return (<div className="space-y-4">;
       <div>;
-        {!suggestion && !isLoading ? (;
-
-  },
-
-  return (
-    <div className="space-y-4">
-      <div>
-        {!suggestion && !isLoading ? (
-
-
-          <Button
-            type="button"
-            variant="outline"
-            onClick={generateSuggestion}
-
-
-}
-
-      </div>;
+        {!suggestion && !isLoading ? (},return (<div className="space-y-4">;
+      <div>;
+        {!suggestion && !isLoading ? (<Button;
+            type="button";
+            variant="outline";
+            onClick={generateSuggestion}}</div>;
     </div>;
-  );
-
-            disabled={skills && skills.length === 0 || yearsExperience <= 0}
+  )disabled={skills && skills.length === 0 || yearsExperience <= 0}
             className="w-full">;
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
           </Button>;
-        ) : (;
-
-            disabled={skills.length === 0 |yearsExperience <= 0}
-            className="w-full"
-          >
-            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
-          </Button>
-        ) : (
-          <PricingSuggestionBox
+        ) : (disabled={skills.length === 0 |yearsExperience <= 0}
+            className="w-full";
+          >;
+            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
+          </Button>;
+        ) : (<PricingSuggestionBox;
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType={rateType}
-          />
-        )}
-
-          <PricingSuggestionBox
-
-          <PricingSuggestionBox
-
-          <PricingSuggestionBox
-  onSuggestionApplied,
-      // Track this suggestion application;
-      if (user) {;
-        trackPricingSuggestion({;
-          userId: user && user.id,;
-          suggestionType: 'talent',;
-          suggestedMin: suggestion && suggestion.minRate,;
-          suggestedMax: suggestion && suggestion.maxRate,;
-          accepted: true;
-        });
-      }
-    }  return (
-    <div className="space-y-4">;
+          />;
+        )}<PricingSuggestionBox;
+          <PricingSuggestionBox;
+          <PricingSuggestionBox;
+  onSuggestionApplied,// Track this suggestion application;
+      if (user) {trackPricingSuggestion({userId: user && user.id,suggestionType: 'talent',suggestedMin: suggestion && suggestion.minRate,suggestedMax: suggestion && suggestion.maxRate,accepted: true;
+        })}
+    }  return (<div className="space-y-4">;
       <div>;
-        {!suggestion && !isLoading ? (;
-          <Button
-            type="button"
-            variant="outline"
-            onClick={generateSuggestion}  onSuggestionApplied,
-  rate_type}) => {
-  const [is_loading, setIsLoading] = useState (false);
-  const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
-  const { user } = use_auth ();
-;
-  const generate_suggestion = async () => {
-    // Check condition
-if ( {) {
-  $2
+        {!suggestion && !isLoading ? (<Button;
+            type="button";
+            variant="outline";
+            onClick={generateSuggestion}  onSuggestionApplied,rate_type}) => {const [is_loading, setIsLoading] = useState (false)const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null)const { user }  = use_auth ()const generate_suggestion = async () => {// Check condition;
+if ( {) {$2;
 }
       return;
     }
-    setIsLoading (true);
-    try {
-      const params: TalentRateParams = {
-        skills;
-        years_experience,
-        location}
-;
-      const result = await getTalentRateSuggestion (params);
-      set_suggestion (result);
-    } catch (error) {
-      console.error ("Error generating rate suggestion:", error);
-    } finally {
-      setIsLoading (false);
-    }
-  }
-;
-  const handleApplySuggestion = () =>: any {
-    // Check condition
-if ( {) {
-  $2
+    setIsLoading (true)try {const params: TalentRateParams = {skills;
+        years_experience,location}const result = await getTalentRateSuggestion (params)set_suggestion (result)} catch (error) {console.error ("Error generating rate suggestion:", error)} finally {setIsLoading (false)}
+  }const handleApplySuggestion = () =>: any {// Check condition;
+if ( {) {$2;
 }
       // We'll use the middle of the range as the suggested rate;
-      const suggested_rate = Math.round ((suggestion.min_rate + suggestion.max_rate) / 2);
-      onSuggestionApplied (suggested_rate);
-;
-      // Track this suggestion application;
-      // Check condition
-if ( {) {
-  $2
+      const suggested_rate = Math.round ((suggestion.min_rate + suggestion.max_rate) / 2)onSuggestionApplied (suggested_rate)// Track this suggestion application;
+      // Check condition;
+if ( {) {$2;
 }
-        trackPricingSuggestion ({
-          user_id: user.id,
-          suggestion_type: 'talent',
-          suggested_min: suggestion.min_rate,
-          suggested_max: suggestion.max_rate,
-          actual_value: suggested_rate,
-          accepted: true;
-        });
-      }
+        trackPricingSuggestion ({user_id: user.id,suggestion_type: 'talent',suggested_min: suggestion.min_rate,suggested_max: suggestion.max_rate,actual_value: suggested_rate,accepted: true;
+        })}
     }
-  }
-;
-  return (
-    <div className="space - y-4">;
+  }return (<div className="space - y-4">;
     <div className="space-y-4">;
       <div>;
-        {!suggestion && !is_loading ? (
-          <Button;
+        {!suggestion && !is_loading ? (<Button;
             type="button";
             variant="outline";
             on_click={generate_suggestion}
@@ -366,106 +111,25 @@ if ( {) {
             className="w-full";
           >;
             <Sparkles className="h - 4 w - 4 mr-2" /> Optimize Rate with AI;
-          </Button>) : (
-          <PricingSuggestionBox;
+          </Button>) : (<PricingSuggestionBox;
             suggestion={suggestion}
             is_loading={is_loading}
-            onApplySuggestion={handleApplySuggestion}
-
-
-
-
-
-
-
-
-      </div>;
+            onApplySuggestion={handleApplySuggestion}</div>;
     </div>;
-  );
-
-
-
-
-};
-            rate_type={rate_type}
+  )}rate_type={rate_type}
           />)}
       </div>;
-    </div>);
-}
-;
-
-
-import { ;
-  getTalentRateSuggestion,;
-  PricingSuggestion,;
-  TalentRateParams,;
-  trackPricingSuggestion;
-} from "@/services/pricingSuggestionService",;
-;
-interface TalentRateRecommenderProps {;
-  skills:string[],;
-  yearsExperience:number,;
-  location?:string,;
-  onSuggestionApplied:(value:number) => void,;
-  rateType:"hourly" | "fixed";
-}
-;
-export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
-  skills,;
-  yearsExperience,;
-  location,;
-  onSuggestionApplied,;
-  rateType}) => {;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
-  const { user } = useAuth(),;
-;
-  const generateSuggestion = async () => {;
-    if (skills.length === 0 || yearsExperience <= 0) {;
-      return,;
+    </div>)}import {getTalentRateSuggestion,PricingSuggestion,TalentRateParams,trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",interface TalentRateRecommenderProps  {skills:string[],yearsExperience:number,location?:string,onSuggestionApplied:(value:number) => void,rateType:"hourly" | "fixed";
+}export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({skills,yearsExperience,location,onSuggestionApplied,rateType}) => {const [isLoading, setIsLoading] = useState(false),const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),const { user }  = useAuth(),const generateSuggestion = async () => {if (skills.length === 0 || yearsExperience <= 0) {return,}setIsLoading(true),try {const params:TalentRateParams = {skills,yearsExperience,location},const result = await getTalentRateSuggestion(params),setSuggestion(result),} catch (error) {console.error("Error generating rate suggestion:", error),} finally {setIsLoading(false),}
+  },const handleApplySuggestion = () => {if (suggestion) {// We'll use the middle of the range as the suggested rate;
+      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),onSuggestionApplied(suggestedRate),// Track this suggestion application;
+      if (user) {trackPricingSuggestion({userId:user.id,suggestionType:'talent',suggestedMin:suggestion.minRate,suggestedMax:suggestion.maxRate,actualValue:suggestedRate,accepted:true;
+        }),}
     }
-;
-    setIsLoading(true),;
-    try {;
-      const params:TalentRateParams = {;
-        skills,;
-        yearsExperience,;
-        location},;
-;
-      const result = await getTalentRateSuggestion(params),;
-      setSuggestion(result),;
-    } catch (error) {;
-      console.error("Error generating rate suggestion:", error),;
-    } finally {;
-      setIsLoading(false),;
-    }
-  },;
-;
-  const handleApplySuggestion = () => {;
-    if (suggestion) {;
-      // We'll use the middle of the range as the suggested rate;
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),;
-      onSuggestionApplied(suggestedRate),;
-      ;
-      // Track this suggestion application;
-      if (user) {;
-        trackPricingSuggestion({;
-          userId:user.id,;
-          suggestionType:'talent',;
-          suggestedMin:suggestion.minRate,;
-          suggestedMax:suggestion.maxRate,;
-          actualValue:suggestedRate,;
-          accepted:true;
-        }),;
-      }
-    }
-  },;
-;
-  return (;
-    <div className="space-y-4">;
+  },return (<div className="space-y-4">;
       <div>;
-        {!suggestion && !isLoading ? (;
-          <Button;
+        {!suggestion && !isLoading ? (<Button;
             type="button";
             variant="outline";
             onClick={generateSuggestion}
@@ -474,8 +138,7 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
           >;
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
           </Button>;
-        ) :(;
-          <PricingSuggestionBox;
+        ) :(<PricingSuggestionBox;
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -484,47 +147,23 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
         )}
       </div>;
     </div>;
-  ),;
-},; import {
-  getTalentRateSuggestion;
+  ),},import {getTalentRateSuggestion;
 PricingSuggestion;
 TalentRateParams;
-trackPricingSuggestion interface TalentRateRecommenderProps {
-  skills: string[];
+trackPricingSuggestion interface TalentRateRecommenderProps  {skills: string[];
 yearsExperience: number;
 location?: string;
-}finally {
-  setIsLoading (false) 
-}
-};
-if (suggestion) {
-  //We'll use the middle of the range as the suggested rate //Track this suggestion application if (user) {
-  trackPricingSuggestion ({}
+}finally {setIsLoading (false)}
+}if (suggestion) {//We'll use the middle of the range as the suggested rate //Track this suggestion application if (user) {trackPricingSuggestion ({}
   trackPricingSuggestion ({}
 }
-};
-return (<div className="space-y-4" > <div> {
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick= {
-  generateSuggestion 
-}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
-  suggestion 
-}isLoading= {
-  isLoading 
-}onApplySuggestion= {
-  handleApplySuggestion 
-}rateType= {
-  rateType 
-}/>) 
-}</div> </div>) 
-};
-      </div>
-    </div>
-  )
-}
-
-      </div>;
+}return (<div className="space-y-4" > <div> {!suggestion && !isLoading ? (<Button type="button" variant="outline" onClick= {generateSuggestion;
+}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {suggestion;
+}isLoading= {isLoading;
+}onApplySuggestion= {handleApplySuggestion;
+}rateType= {rateType;
+}/>)}</div> </div>)}</div>;
     </div>;
-  );
-};
-
-
+  )}</div>;
+    </div>;
+  )}

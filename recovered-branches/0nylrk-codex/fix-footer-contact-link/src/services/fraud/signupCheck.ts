@@ -1,182 +1,65 @@
 
-
-export const checkSignupPatterns = async (;
-export const checkSignupPatterns = async (
-  email: string;
-  ip_address?: string): Promise < SignupCheckResult> => {
-  const reasons: string[] = [];
+;
+export const checkSignupPatterns = async (export const checkSignupPatterns = async (email: string;
+  ip_address?: string): Promise < SignupCheckResult> => {const reasons: string[] = [];
   }
   const reasons: string[] = [];  }
-  // If IP address is provided, check for rapid signups from same IP
-  if (ipAddress) {
-    try {
-      const { data: recentSignups, error } = await supabase
-        .from('profiles')
-        .select('created_at')
-        .eq('ip_address', ipAddress)
-
-        .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
-        .order('created_at', { ascending: false });
-      if (!error && recentSignups && recentSignups.length >= 3) {
-
-
-        .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
-        .order('created_at', { ascending: false });
-      if (!error && recentSignups && recentSignups.length >= 3) {
-        .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
-        .order('created_at', { ascending: false });
-      if (!error && recentSignups && recentSignups.length >= 3) {
-        reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
-// Signup checking functionality;
-import { supabase } from '@/integrations/supabase/client',;
-import { analyzeEmail } from './analyzeEmail',;
-import { SignupCheckResult } from './types',;
-/**;
+  // If IP address is provided, check for rapid signups from same IP;
+  if (ipAddress) {try {const { data: recentSignups, error } = await supabase;
+        .from('profiles').select('created_at').eq('ip_address', ipAddress).gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours;
+        .order('created_at', { ascending: false })if (!error && recentSignups && recentSignups.length >= 3) {.gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours;
+        .order('created_at', { ascending: false })if (!error && recentSignups && recentSignups.length >= 3) {.gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours;
+        .order('created_at', { ascending: false })if (!error && recentSignups && recentSignups.length >= 3) {reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)// Signup checking functionality;
+import { supabase } from '@/integrations/supabase/client',import { analyzeEmail } from './analyzeEmail',import { SignupCheckResult } from './types',/**;
  * Check for suspicious signup patterns;
  */;
-export const checkSignupPatterns = async (;
-  email: string,;
-  ipAddress?: string;
-): Promise<SignupCheckResult> => {;
-  const reasons: string[] = [],;
-  // Check email against suspicious patterns;
-  const emailCheck = analyzeEmail(email);
-  const emailCheck = analyzeEmail(email);
-  const emailCheck = analyzeEmail(email);
-  if (emailCheck.isSuspicious) {;
-    reasons.push(...emailCheck.reasons);
+export const checkSignupPatterns = async (email: string,ipAddress?: string;
+): Promise<SignupCheckResult> => {const reasons: string[] = [],// Check email against suspicious patterns;
+  const emailCheck = analyzeEmail(email)const emailCheck = analyzeEmail(email)const emailCheck = analyzeEmail(email)if (emailCheck.isSuspicious) {reasons.push(...emailCheck.reasons)}// If IP address is provided, check for rapid signups from same IP;
+  if (ipAddress) {try {const { data: recentSignups, error } = await supabase;
+        .from('profiles').select('created_at').eq('ip_address', ipAddress).gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours;
+        .order('created_at', { ascending: false }),if (!error && recentSignups && recentSignups.length >= 3) {reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)reasons && reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)}
+    } catch (error) {console && console.error('Error checking signup patterns:', error)}
   }
-;
+  return {reasons;
+  }
+}isSuspicious: reasons && reasons.length > 0,reasons;
+  }// Check email against suspicious patterns;
+  const email_check = analyze_email (email),// Check condition;
+if ( {) {$2;
+}
+    reasons.push (...email_check.reasons)}
   // If IP address is provided, check for rapid signups from same IP;
-  if (ipAddress) {;
-    try {;
-      const { data: recentSignups, error } = await supabase;
-        .from('profiles');
-        .select('created_at');
-        .eq('ip_address', ipAddress);
-        .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours;
-        .order('created_at', { ascending: false }),;
-      if (!error && recentSignups && recentSignups.length >= 3) {;
-        reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
-        reasons && reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
-      }
-    } catch (error) {
-      console && console.error('Error checking signup patterns:', error)
-    }
-  }
-  return {
-
-    reasons
-  }
+  // Check condition;
+if ( {) {$2;
 }
-
-    isSuspicious: reasons && reasons.length > 0,
-
-    reasons
-  }
-;
-  // Check email against suspicious patterns;
-  const email_check = analyze_email (email),
-  // Check condition
-if ( {) {
-  $2
-
+    try {const { data: recent_signups, error } = await supabase;
+        .from ('profiles').select ('created_at').eq ('ip_address', ip_address).gte ('created_at', new Date (Date.now () - 24 * 60 * 60 * 1000).toISOString ()) // Last 24 hours;
+        .order ('created_at', { ascending: false })// Check condition;
+if ( {) {$2;
 }
-    reasons.push (...email_check.reasons);
+        reasons.push (`Multiple accounts (${recent_signups.length}) created from same IP in last 24 hours`)}
+    } catch (error) {console.error ('Error checking signup patterns:', error)}
   }
-  // If IP address is provided, check for rapid signups from same IP;
-  // Check condition
-if ( {) {
-  $2
-}
-    try {
-      const { data: recent_signups, error } = await supabase;
-        .from ('profiles');
-        .select ('created_at');
-        .eq ('ip_address', ip_address);
-        .gte ('created_at', new Date (Date.now () - 24 * 60 * 60 * 1000).toISOString ()) // Last 24 hours;
-        .order ('created_at', { ascending: false });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        reasons.push (`Multiple accounts (${recent_signups.length}) created from same IP in last 24 hours`);
-      }
-    } catch (error) {
-      console.error ('Error checking signup patterns:', error);
-    }
+  return {is_suspicious: reasons.length > 0,reasons;
   }
-  return {
-    is_suspicious: reasons.length > 0,
-    reasons;
-  }
-}
-;
-
-
-};
-
-
-
-
-};
-
-
-// Signup checking functionality;
-;
-/**;
+}}}// Signup checking functionality;/**;
  * Check for suspicious signup patterns;
  */;
-export const checkSignupPatterns = async (;
-  email:string,;
-  ipAddress?:string;
-):Promise<SignupCheckResult> => {;
-  const reasons:string[] = [],;
-  ;
-  // Check email against suspicious patterns;
-  const emailCheck = analyzeEmail(email),;
-  if (emailCheck.isSuspicious) {;
-    reasons.push(...emailCheck.reasons);
-  }
-  ;
-  // If IP address is provided, check for rapid signups from same IP;
-  if (ipAddress) {;
-    try {;
-      const { data:recentSignups, error } = await supabase;
-        .from('profiles');
-        .select('created_at');
-        .eq('ip_address', ipAddress);
-        .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours;
-        .order('created_at', { ascending:false }),;
-      ;
-      if (!error && recentSignups && recentSignups.length >= 3) {;
-        reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`),;
+export const checkSignupPatterns = async (email:string,ipAddress?:string;
+):Promise<SignupCheckResult> => {const reasons:string[]  = [],// Check email against suspicious patterns;
+  const emailCheck = analyzeEmail(email),if (emailCheck.isSuspicious) {reasons.push(...emailCheck.reasons)}// If IP address is provided, check for rapid signups from same IP;
+  if (ipAddress) {try {const { data:recentSignups, error } = await supabase;
+        .from('profiles').select('created_at').eq('ip_address', ipAddress).gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours;
+        .order('created_at', { ascending:false }),if (!error && recentSignups && recentSignups.length >= 3) {reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`),}
+    } catch (error) {console.error('Error checking signup patterns:', error),}
+  }return {isSuspicious:reasons.length > 0,reasons;
+  },},// Signup checking functionality // If IP address is provided, check for rapid signups from same IP if (ipAddress) {try {const {data: recentSignups, error;
+}= await supabase .from ('profiles') .select ('created at') .eq ('ip address', ipAddress) .gte ('created at', new Date (Date.now () - 24 * 60 * 60 * 1000) .toISOString () ) // Last 24 hours;
       }
-    } catch (error) {;
-      console.error('Error checking signup patterns:', error),;
-    }
+    } catch (error) {console.error('Error checking signup patterns:', error)}
   }
-  ;
-  return {;
-    isSuspicious:reasons.length > 0,;
+  return {isSuspicious: reasons.length > 0;
     reasons;
-  },;
-},; // Signup checking functionality // If IP address is provided, check for rapid signups from same IP if (ipAddress) {
-  try {
-  const {
-  data: recentSignups, error 
-}= await supabase .from ('profiles') .select ('created at') .eq ('ip address', ipAddress) .gte ('created at', new Date (Date.now () - 24 * 60 * 60 * 1000) .toISOString () ) // Last 24 hours 
-      }
-    } catch (error) {
-      console.error('Error checking signup patterns:', error)
-    }
   }
-  return {
-    isSuspicious: reasons.length > 0
-    reasons
-  }
-}
-
-};
-  $2
+}}$2;

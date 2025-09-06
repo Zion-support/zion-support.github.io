@@ -1,429 +1,107 @@
 
-
-
-import {supabase} from '@/integrations / supabase / client';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
-import {format} from 'date - fns';
-import {Skeleton} from '@/components / ui / skeleton';
-interface MilestoneActivitiesProps {
-  project_id: string;
+;
+import { supabase } from '@/integrations / supabase / client';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { format } from 'date - fns';
+import { Skeleton } from '@/components / ui / skeleton';
+interface MilestoneActivitiesProps  {project_id: string;
 }
-interface Activity {
-
-
-import React, { useState, useEffect } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { format  } from 'date-fns';
-import { Skeleton } from '@/components/ui/skeleton';
-interface MilestoneActivitiesProps {
-  projectId: string
+interface Activity  {import React, { useState, useEffect } from 'react';
+import { supabase   } from '@/integrations/supabase/client';
+import { Card, CardContent, CardHeader, CardTitle   } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage   } from '@/components/ui/avatar';
+import { format   } from 'date-fns';
+import { Skeleton  } from '@/components/ui/skeleton';
+interface MilestoneActivitiesProps  {projectId: string;
 }
-interface Activity {
-
-
-
-  id: string
-  milestone_id: string
-  user_id: string
-  action: string
-  previous_status: string | null
-  new_status: string
-  comment: string | null
-  created_at: string
-
-  milestone: {
-
-
-
-
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]);
-
-
-
-    title: string
+interface Activity  {id: string;
+  milestone_id: string;
+  user_id: string;
+  action: string;
+  previous_status: string | null;
+  new_status: string;
+  comment: string | null;
+  created_at: string;
+  milestone: {export function MilestoneActivities() {const [activities, setActivities]  = useState<Activity[]>([])title: string;
   }
-  created_by_profile: {
-
-    display_name: string
-
-    avatar_url: string | null
+  created_by_profile: {display_name: string;
+    avatar_url: string | null;
   }
 }
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]),
-
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]);
-
-
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    async function fetchActivities() {
-      try {
-        setIsLoading(true);
-        const { data, error } = await supabase
-          .from('milestone_activities')
-          .select(`
-
+export function MilestoneActivities() {const [activities, setActivities] = useState<Activity[]>([]),export function MilestoneActivities() {const [activities, setActivities]  = useState<Activity[]>([])const [isLoading, setIsLoading] = useState(true)useEffect(() => {async function fetchActivities() {try {setIsLoading(true)const { data, error } = await supabase;
+          .from('milestone_activities').select(`;
             *;
-            milestone: milestone_id(title)
-            created_by_profile:profiles!user_id(display_name, avatar_url)
-          `)
-          .eq('project_id', projectId)
-          .order('created_at', { ascending: false })
-        if (error) throw error;
-        setActivities(data |[])
-
-
-
-    title: string;
+            milestone: milestone_id(title)created_by_profile:profiles!user_id(display_name, avatar_url)`).eq('project_id', projectId).order('created_at', { ascending: false })if (error) throw error;
+        setActivities(data |[])title: string;
   }
   milestone: {}
-  created_by_profile: {
-    display_name: string,
-    avatar_url: string | null;
+  created_by_profile: {display_name: string,avatar_url: string | null;
   }
 }
-export /**
- * MilestoneActivities - Function description
- */
-function MilestoneActivities() {
-  const [activities, set_activities] = useState < Activity[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-;
-  useEffect (() => {
-    async /**
- * fetch_activities - Function description
- */
-function fetch_activities() {
-      try {
-        setIsLoading (true);
-;
-        const { data, error } = await supabase;
-          .from ('milestone_activities');
-          .select (`;
+export /**;
+ * MilestoneActivities - Function description;
+ */;
+function MilestoneActivities() {const [activities, set_activities] = useState < Activity[]>([])const [is_loading, setIsLoading]  = useState (true)useEffect (() => {async /**;
+ * fetch_activities - Function description;
+ */;
+function fetch_activities() {try {setIsLoading (true)const { data, error } = await supabase;
+          .from ('milestone_activities').select (`;
             *;
-            milestone: milestone_id (title),
-            created_by_profile:profiles ! user_id (display_name, avatar_url);
-          `);
-          .eq ('project_id', project_id);
-          .order ('created_at', { ascending: false }),
-        // Check condition
-if (throw error) {
-  $2
+            milestone: milestone_id (title),created_by_profile:profiles ! user_id (display_name, avatar_url)`).eq ('project_id', project_id).order ('created_at', { ascending: false }),// Check condition;
+if (throw error) {$2;
 }
-        set_activities (data || []);
-      } catch (err) {
-        console.error ('Error fetching milestone activities:', err);
-      } finally {
-        setIsLoading (false);
-      }
-    }
-
-
-import {supabase} from '@/integrations/supabase/client';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
-import {format} from 'date-fns';
-import {Skeleton} from '@/components/ui/skeleton';
-interface MilestoneActivitiesProps {;
-  projectId: string;
-}
-
-interface MilestoneActivitiesProps {;
-  projectId: string;
-}
-;
-
-interface Activity {;
-  id: string,;
-  milestone_id: string,;
-  user_id: string,;
-  action: string,;
-  previous_status: string | null,;
-  new_status: string,;
-  comment: string | null,;
-  created_at: string,;
-  milestone: {;
-    title: string;
-
-  },;
-
-  created_by_profile: {;
-    title: string
-};  created_by_profile: {;
-    display_name: string,;
-    avatar_url: string | null;
+        set_activities (data || [])} catch (err) {console.error ('Error fetching milestone activities:', err)} finally {setIsLoading (false)}
+    }import { supabase } from '@/integrations/supabase/client';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { format } from 'date-fns';
+import { Skeleton } from '@/components/ui/skeleton';
+interface MilestoneActivitiesProps  {projectId: string;
+}interface MilestoneActivitiesProps  {projectId: string;
+}interface Activity  {id: string,milestone_id: string,user_id: string,action: string,previous_status: string | null,new_status: string,comment: string | null,created_at: string,milestone: {title: string;},created_by_profile: {title: string;
+}created_by_profile: {display_name: string,avatar_url: string | null;
   }
-}
-
-;
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  useEffect(() => {;
-    async function fetchActivities() {;
-      try {;
-        setIsLoading(true),;
-
-export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {;
-    async function fetchActivities() {;
-      try {;
-        setIsLoading(true);
-        const { data, error } = await supabase;
-          .from('milestone_activities');
-          .select(`;
-            *,;
-            milestone:milestone_id(title),;
-            created_by_profile:profiles!user_id(display_name, avatar_url);
-          `);
-          .eq('project_id', projectId);
-          .order('created_at', { ascending: false }),;
-
-
-
-        if (error) throw error;
-
-        setActivities(data || []);
-      } catch (err) {;
-        console && console.error('Error fetching milestone activities:', err);
-      } finally {;
-        setIsLoading(false);
-
-      }
+}export function MilestoneActivities() {const [activities, setActivities] = useState<Activity[]>([]),const [isLoading, setIsLoading] = useState(true),useEffect(() => {async function fetchActivities() {try {setIsLoading(true),export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {const [activities, setActivities] = useState<Activity[]>([])const [isLoading, setIsLoading]  = useState(true)useEffect(() => {async function fetchActivities() {try {setIsLoading(true)const { data, error } = await supabase;
+          .from('milestone_activities').select(`;
+            *,milestone:milestone_id(title),created_by_profile:profiles!user_id(display_name, avatar_url)`).eq('project_id', projectId).order('created_at', { ascending: false }),if (error) throw error;setActivities(data || [])} catch (err) {console && console.error('Error fetching milestone activities:', err)} finally {setIsLoading(false)}
     }
-    if (projectId) {;
-      fetchActivities();
-    }
-
-
-
-  }, [projectId]),;
-  function getActivityDescription(activity: Activity): string {;
-    switch (activity.action) {;
-
-
-    if (projectId) {;
-      fetchActivities();
-    }
-  }, [projectId]);
-  function getActivityDescription(): any (activity: Activity): string {;
-    switch (activity && activity.action) {;
-
-  }, [projectId]),;
-  function getActivityDescription(activity: Activity): string {;
-    switch (activity.action) {;
-      case 'created':;
-        return 'created a new milestone',;
-      case 'status_changed':;
+    if (projectId) {fetchActivities()}}, [projectId]),function getActivityDescription(activity: Activity): string {switch (activity.action) {if (projectId) {fetchActivities()}
+  }, [projectId])function getActivityDescription(): any (activity: Activity): string {switch (activity && activity.action) {}, [projectId]),function getActivityDescription(activity: Activity): string {switch (activity.action) {case 'created':;
+        return 'created a new milestone',case 'status_changed':;
         return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
-        if (error) throw error,;
-        setActivities(data || []);
-      } catch (err) {;
-        console.error('Error fetching milestone activities:', err);
-      } finally {;
-        setIsLoading(false);
-
-      } catch (err) {
-        console.error('Error fetching milestone activities:', err)
-      } finally {}
-        setIsLoading(false);      }
+        if (error) throw error,setActivities(data || [])} catch (err) {console.error('Error fetching milestone activities:', err)} finally {setIsLoading(false)} catch (err) {console.error('Error fetching milestone activities:', err)} finally {}
+        setIsLoading(false)}
     }
-    if (projectId) {
-      fetchActivities()
-    }
-  }, [projectId]);
-  function getActivityDescription(activity: Activity): string {
-    switch (activity.action) {
-      case 'created':
-
-    if (projectId) {;
-      fetchActivities();
-    }
-
-
-
-  }, [projectId]),;
-  function getActivityDescription(activity: Activity): string {;
-    switch (activity.action) {;
-
-      case 'created':;
-        return 'created a new milestone',;
-      case 'status_changed':;
+    if (projectId) {fetchActivities()}
+  }, [projectId])function getActivityDescription(activity: Activity): string {switch (activity.action) {case 'created':;
+    if (projectId) {fetchActivities()}}, [projectId]),function getActivityDescription(activity: Activity): string {switch (activity.action) {case 'created':;
+        return 'created a new milestone',case 'status_changed':;
         return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
       case 'updated':;
-        setIsLoading (false);
-      }
+        setIsLoading (false)}
     }
         return 'updated milestone details';
       case 'deliverable_added':;
         return 'added a deliverable';
-      default:;
-
-        return activity.action.replace(/_/g, ' ');
-
-
-
-  if (isLoading) {;
-    }
-  }
-
-  if (isLoading) {
-    return (
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <div className="flex items-center space-x-4">
-                <Skeleton className="h-10 w-10 rounded-full" />
-                <div className="space-y-2">
-                  <Skeleton className="h-4 w-40" />
-                  <Skeleton className="h-4 w-60" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-  if (isLoading) {;
-
-        return activity.action.replace(/_/g, ' ');
-
-
-    }
-  }
-
-        return activity.action.replace(/_/g, ' ');
-    }
+      default:;return activity.action.replace(/_/g, ' ')if (isLoading) {}
+  }if (isLoading) {return (<div className="space-y-4">;
+        {[1, 2, 3].map((i) => (<Card key={i}>;
+            <CardContent className="p-6">;
+              <div className="flex items-center space-x-4">;
+                <Skeleton className="h-10 w-10 rounded-full" />;
+                <div className="space-y-2">;
+                  <Skeleton className="h-4 w-40" />;
+                  <Skeleton className="h-4 w-60" />;
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>;
+  if (isLoading) {return activity.action.replace(/_/g, ' ')}
+  }return activity.action.replace(/_/g, ' ')}
           </Card>    }
-  }
-
-  if (isLoading) {
-    return (
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <div className="flex items-center space-x-4">
-                <Skeleton className="h-10 w-10 rounded-full" />
-                <div className="space-y-2">
-                  <Skeleton className="h-4 w-40" />
-                  <Skeleton className="h-4 w-60" />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    )
-  }
-
-  if (activities.length === 0) {
-        return activity && activity.action.replace(/_/g, ' ');
-    }
-  }
-
-
-        ))}
-      </div>;
-  if (activities && activities.length === 0) {;
-    return (
-    ),;
-  }
-    return (
-  if (isLoading) {;
-    return (
-
-import React, { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
-import { format } from 'date-fns',;
-import { Skeleton } from '@/components/ui/skeleton',;
-;
-interface MilestoneActivitiesProps {;
-  projectId:string;
-}
-;
-interface Activity {;
-  id:string,;
-  milestone_id:string,;
-  user_id:string,;
-  action:string,;
-  previous_status:string | null,;
-  new_status:string,;
-  comment:string | null,;
-  created_at:string,;
-  milestone:{;
-    title:string;
-  },;
-  created_by_profile:{;
-    display_name:string,;
-    avatar_url:string | null;
-  },;
-}
-;
-export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-;
-  useEffect(() => {;
-    async function fetchActivities() {;
-      try {;
-        setIsLoading(true),;
-        ;
-        const { data, error } = await supabase;
-          .from('milestone_activities');
-          .select(`;
-            *,;
-            milestone:milestone_id(title),;
-            created_by_profile:profiles!user_id(display_name, avatar_url);
-          `);
-          .eq('project_id', projectId);
-          .order('created_at', { ascending:false }),;
-;
-        if (error) throw error,;
-        ;
-        setActivities(data || []),;
-      } catch (err) {;
-        console.error('Error fetching milestone activities:', err),;
-      } finally {;
-        setIsLoading(false),;
-      }
-    }
-;
-    if (projectId) {;
-      fetchActivities(),;
-    }
-  }, [projectId]),;
-;
-  function getActivityDescription(activity:Activity):string {;
-    switch (activity.action) {;
-      case 'created':;
-        return 'created a new milestone',;
-      case 'status_changed':;
-        return `changed status from ${activity.previous_status || 'none'} to ${activity.new_status}`,;
-      case 'updated':;
-        return 'updated milestone details',;
-      case 'deliverable_added':;
-        return 'added a deliverable',;
-      default:;
-        return activity.action.replace(/_/g, ' '),;
-    }
-  }
-;
-  if (isLoading) {;
-    return (;
-      <div className="space-y-4">;
-        {[1, 2, 3].map((i) => (;
-          <Card key={i}>;
+  }if (isLoading) {return (<div className="space-y-4">;
+        {[1, 2, 3].map((i) => (<Card key={i}>;
             <CardContent className="p-6">;
               <div className="flex items-center space-x-4">;
                 <Skeleton className="h-10 w-10 rounded-full" />;
@@ -436,51 +114,54 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
           </Card>;
         ))}
       </div>;
-
-;
-  if (activities.length === 0) {;
-    return (;
-
-
-  if (activities && activities.length === 0) {;
-    return (
-    ),;
-  }
-
-  if (activities.length === 0) {
-      <Card>;
+    )}if (activities.length === 0) {return activity && activity.action.replace(/_/g, ' ')}
+  }))}
+      </div>;
+  if (activities && activities.length === 0) {return (),}
+    return (if (isLoading) {return (import React, { useState, useEffect } from 'react',import { supabase } from '@/integrations/supabase/client',import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',import { format } from 'date-fns',import { Skeleton } from '@/components/ui/skeleton',interface MilestoneActivitiesProps  {projectId:string;
+}interface Activity  {id:string,milestone_id:string,user_id:string,action:string,previous_status:string | null,new_status:string,comment:string | null,created_at:string,milestone:{title:string;
+  },created_by_profile:{display_name:string,avatar_url:string | null;
+  },}export function MilestoneActivities() {const [activities, setActivities] = useState<Activity[]>([]),const [isLoading, setIsLoading]  = useState(true),useEffect(() => {async function fetchActivities() {try {setIsLoading(true),const { data, error } = await supabase;
+          .from('milestone_activities').select(`;
+            *,milestone:milestone_id(title),created_by_profile:profiles!user_id(display_name, avatar_url)`).eq('project_id', projectId).order('created_at', { ascending:false }),if (error) throw error,setActivities(data || []),} catch (err) {console.error('Error fetching milestone activities:', err),} finally {setIsLoading(false),}
+    }if (projectId) {fetchActivities(),}
+  }, [projectId]),function getActivityDescription(activity:Activity):string {switch (activity.action) {case 'created':;
+        return 'created a new milestone',case 'status_changed':;
+        return `changed status from ${activity.previous_status || 'none'} to ${activity.new_status}`,case 'updated':;
+        return 'updated milestone details',case 'deliverable_added':;
+        return 'added a deliverable',default:;
+        return activity.action.replace(/_/g, ' '),}
+  }if (isLoading) {return (<div className="space-y-4">;
+        {[1, 2, 3].map((i) => (<Card key={i}>;
+            <CardContent className="p-6">;
+              <div className="flex items-center space-x-4">;
+                <Skeleton className="h-10 w-10 rounded-full" />;
+                <div className="space-y-2">;
+                  <Skeleton className="h-4 w-40" />;
+                  <Skeleton className="h-4 w-60" />;
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        ))}
+      </div>;;
+  if (activities.length === 0) {return (if (activities && activities.length === 0) {return (),}if (activities.length === 0) {<Card>;
         <CardContent className="p-6 text-center">;
           <p className="text-muted-foreground py-8">No activity found for this project</p>;
         </CardContent>;
-      </Card>;
-
-    ),;
-  }
-;
-  return (;
-
-    <div className="space-y-4">;
+      </Card>;),}return (<div className="space-y-4">;
       <Card>;
         <CardHeader>;
           <CardTitle>Project Activity</CardTitle>;
         </CardHeader>;
         <CardContent className="p-6">;
-          <div className="space-y-6">;
-
-            {activities.map((activity) => (;
-              <div key={activity.id} className="flex items-start space-x-4">;
+          <div className="space-y-6">;{activities.map((activity) => (<div key={activity.id} className="flex items-start space-x-4">;
                 <Avatar className="h-10 w-10">;
                   <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />;
-                  <AvatarFallback>;
-                    {activity.created_by_profile?.display_name?.charAt(0) || '?'}
-
-                  </AvatarFallback>;
+                  <AvatarFallback>{activity.created_by_profile?.display_name?.charAt(0) || '?'}</AvatarFallback>;
                 </Avatar>;
                 <div className="space-y-1">;
-                  <div className="flex items-center space-x-2">;
-
-
-                      {getActivityDescription(activity)}
+                  <div className="flex items-center space-x-2">;{getActivityDescription(activity)}
                     </span>;
                     <span className="text-muted-foreground text-xs">;
                       {format(new Date(activity && activity.created_at), 'MMM d, yyyy h:mm a')}
@@ -488,9 +169,41 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
                   </div>;
                   <p className="text-sm">;
                     <span className="font-medium">{activity && activity.milestone?.title}</span>;
-                    {activity && activity.comment && (;
-                      <span className="ml-2 text-muted-foreground">"{activity && activity.comment}"</span>;
-
+                    {activity && activity.comment && (<span className="ml-2 text-muted-foreground">"{activity && activity.comment}"</span>;<span className="font-medium">{activity.created_by_profile?.display_name}</span>;
+                    <span className="text-muted-foreground text-sm">;
+                      {getActivityDescription(activity)}
+                    </span>;
+                    <span className="text-muted-foreground text-xs">;
+                      {format(new Date(activity.created_at), 'MMM d, yyyy h:mm a')}
+                    </span>;
+                  </div>;
+                  <p className="text-sm">;
+                    <span className="font-medium">{activity.milestone?.title}</span>;
+                    {activity.comment && (<span className="ml-2 text-muted-foreground">"{activity.comment}"</span>;)}
+                  </p>;
+                </div>;
+              </div>;
+            ))}if (activities.length === 0) {return (<Card>;
+        <CardContent className="p-6 text-center">;
+          <p className="text-muted-foreground py-8">No activity found for this project</p>;
+        </CardContent>;
+      </Card>;
+    )}
+  return (<div className="space-y-4">;
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Project Activity</CardTitle>;
+        </CardHeader>;
+        <CardContent className="p-6">;
+          <div className="space-y-6">;
+            {activities.map((activity) => (<div key={activity.id} className="flex items-start space-x-4">;
+                <Avatar className="h-10 w-10">;
+                  <AvatarImage src={activity.created_by_profile?.avatar_url |''} alt="User" />;
+                  <AvatarFallback>{activity.created_by_profile?.display_name?.charAt(0) |'?'}
+                  </AvatarFallback>;
+                </Avatar>;
+                <div className="space-y-1">;
+                  <div className="flex items-center space-x-2">;
                     <span className="font-medium">{activity.created_by_profile?.display_name}</span>;
                     <span className="text-muted-foreground text-sm">;
                       {getActivityDescription(activity)}
@@ -501,84 +214,25 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
                   </div>;
                   <p className="text-sm">;
                     <span className="font-medium">{activity.milestone?.title}</span>;
-                    {activity.comment && (;
-                      <span className="ml-2 text-muted-foreground">"{activity.comment}"</span>;
-
-
+                    {activity.comment && (<span className="ml-2 text-muted-foreground">"{activity.comment}"</span>;
                     )}
                   </p>;
                 </div>;
               </div>;
             ))}
-
-  if (activities.length === 0) {
-    return (
-      <Card>
-        <CardContent className="p-6 text-center">
-          <p className="text-muted-foreground py-8">No activity found for this project</p>
-        </CardContent>
-      </Card>
-    )
-  }
-  return (
-    <div className="space-y-4">
-      <Card>
-        <CardHeader>
-          <CardTitle>Project Activity</CardTitle>
-        </CardHeader>
-        <CardContent className="p-6">
-          <div className="space-y-6">
-            {activities.map((activity) => (
-              <div key={activity.id} className="flex items-start space-x-4">
-                <Avatar className="h-10 w-10">
-                  <AvatarImage src={activity.created_by_profile?.avatar_url |''} alt="User" />
-                  <AvatarFallback>
-                    {activity.created_by_profile?.display_name?.charAt(0) |'?'}
-                  </AvatarFallback>
-                </Avatar>
-                <div className="space-y-1">
-                  <div className="flex items-center space-x-2">
-                    <span className="font-medium">{activity.created_by_profile?.display_name}</span>
-                    <span className="text-muted-foreground text-sm">
-                      {getActivityDescription(activity)}
-                    </span>
-                    <span className="text-muted-foreground text-xs">
-                      {format(new Date(activity.created_at), 'MMM d, yyyy h:mm a')}
-                    </span>
-                  </div>
-                  <p className="text-sm">
-                    <span className="font-medium">{activity.milestone?.title}</span>
-                    {activity.comment && (
-                      <span className="ml-2 text-muted-foreground">"{activity.comment}"</span>
-                    )}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-
           </div>;
         </CardContent>;
       </Card>;
     </div>;
-
-
-      </Card>;        </CardContent>;
+  )}</div>;
+        </CardContent>;
+      </Card>;
+    </div>;</Card>;        </CardContent>;
       </Card>;
     </div>;
-  );
+  )}
+    // Check condition;
+if ( {) {$2;
 }
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_activities ();
-    }
+      fetch_activities ()}
   }, [project_id]);
-;
-;

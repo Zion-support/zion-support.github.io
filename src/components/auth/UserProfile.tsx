@@ -1,38 +1,27 @@
 
-    return (
-      <Card className='w-full max-w-sm'>;
+    return (<Card className='w-full max-w-sm'>;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <User className='h-5 w-5' />;
             Not Signed In;
           </CardTitle>;
         </CardHeader>;
-        <CardContent>;
-
-            Sign In;
+        <CardContent>;Sign In;
           </Button>;
         </CardContent>;
       </Card>;
-    );
-  }
-  return (
-
-          Sign Out
+    )}
+  return (Sign Out;
         </Button>;
       </CardContent>;
     </Card>;
-  );
-}
-}
-
-        <Button onClick={handleSignOut} variant="outline" className="w-full">
-          <LogOut className="h-4 w-4 mr-2" />
-
-          Sign Out
-        </Button>
-      </CardContent>
-    </Card>
-
+  )}
+}<Button onClick={handleSignOut} variant="outline" className="w-full">;
+          <LogOut className="h-4 w-4 mr-2" />;
+          Sign Out;
+        </Button>;
+      </CardContent>;
+    </Card>;
     <Card className='w-full max-w-sm'>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -58,25 +47,16 @@
               {new Date(user && user.created_at).toLocaleDateString()}
             </span>;
           </div>;
-        </div>;
-
-        <Button onClick={handleSignOut} variant='outline' className='w-full'>;
+        </div>;<Button onClick={handleSignOut} variant='outline' className='w-full'>;
           <LogOut className='h-4 w-4 mr-2' />;
           Sign Out;
         </Button>;
       </CardContent>;
     </Card>;
-  );
-
-  )
-} 
-
-  // Check condition
-if ( {) {
-  $2
+  ))}// Check condition;
+if ( {) {$2;
 }
-    return (
-      <Card className='w - full max - w-sm'>;
+    return (<Card className='w - full max - w-sm'>;
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <User className='h - 5 w - 5' />;
@@ -89,10 +69,8 @@ if ( {) {
             Sign In;
           </Button>;
         </CardContent>;
-      </Card>);
-  }
-  return (
-    <Card className='w - full max - w-sm'>;
+      </Card>)}
+  return (<Card className='w - full max - w-sm'>;
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
           <User className='h - 5 w - 5' />;
@@ -123,4 +101,3 @@ if ( {) {
           Sign Out;
         </Button>;
       </CardContent>;
-

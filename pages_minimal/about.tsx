@@ -1,31 +1,13 @@
 
-
-
-export default function About() {;
-
-  return (
-
-    <div>;
+;
+export default function About() {return (<div>;
       <main>;
         <h1>About Zion Tech Group</h1>;
-import React from './react';
-;
-export default /**
- * About - Function description
- */
-function About() {
-  return (
-    <div>;
+import React from './react';export default /**;
+ * About - Function description;
+ */;
+function About() {return (<div>;
       <main>;
-        <h1 > About Zion Tech Group</h1>;
-
-        <p>;
-          We are a leading provider of advanced IT solutions and AI services.;
+        <h1 > About Zion Tech Group</h1>;<p>We are a leading provider of advanced IT solutions and AI services.;
         </p>;
-      </main>;
-
-
-    </div>);
-
-
-}
+      </main>;</div>)}

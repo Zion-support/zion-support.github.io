@@ -1,26 +1,15 @@
 
 import React from 'react';
-
-interface SetupProps {
-  // Add props here as needed
-}
-
-export default function Setup({}: SetupProps) {
-  return (
-    <div>
-      <h1>Setup</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-// Mock ResizeObserver;
-global.ResizeObserver = class ResizeObserver {
-  observe () { /* do nothing */ }
+interface SetupProps  {// Add props here as needed;
+}export default function Setup() {return (<div>;
+      <h1>Setup</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {observe () { /* do nothing */ }
   unobserve () { /* do nothing */ }
   disconnect () { /* do nothing */ }
-},
-// Mock window.scroll_to;
+},// Mock window.scroll_to;
 global.window.scroll_to = vi.fn (), // vi should be globally available;
 // Ensure React Testing Library cleans up and mocks are restored between tests;
 // -----------------------------------------------------------------------------;
@@ -33,45 +22,18 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
 // deliberately attaching to global for test environment setup;
   SnapshotSerializer: () => {}}
 // eslint - disable - next - line @typescript - eslint / no - explicit - any;
-(global_this as any).jest = {
-  // Core mocking utilities;
-  fn: vi.fn.bind (vi),
-  mock: vi.mock.bind (vi),
-  spy_on: vi.spy_on.bind (vi),
-  // Timing helpers;
-  useFakeTimers: vi.useFakeTimers.bind (vi),
-  useRealTimers: vi.useRealTimers.bind (vi),
-  advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
-  runAllTimers: vi.runAllTimers.bind (vi),
-  // Reset / clear mocks;
-ursor/automate-test-improve-and-merge-code-646c
-
-interface SetupProps {
-  // Add props here as needed
-}
-
-export default function Setup({}: SetupProps) {
-export default function Setup({}: SetupProps) {
-export default function Setup({}: SetupProps) {
-  return (
-    <div>
-      <h1>Setup</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
->>>>>>> main
-import '@testing-library/jest-dom'
-import { cleanup } from '@testing-library/react'
-import { afterEach, vi } from 'vitest'
-
-// Ensure React Testing Library cleans up and mocks are restored between tests
-afterEach(() => {
-  cleanup()
-  vi.restoreAllMocks()
-})
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+(global_this as any).jest = {// Core mocking utilities;
+  fn: vi.fn.bind (vi),mock: vi.mock.bind (vi),spy_on: vi.spy_on.bind (vi),// Timing helpers;
+  useFakeTimers: vi.useFakeTimers.bind (vi),useRealTimers: vi.useRealTimers.bind (vi),advanceTimersByTime: vi.advanceTimersByTime.bind (vi),runAllTimers: vi.runAllTimers.bind (vi),// Reset / clear mocks;
+ursor/automate-test-improve-and-merge-code-646c;
+interface SetupProps  {// Add props here as needed;
+}export default function Setup() {export default function Setup() {export default function Setup() {return (<div>;
+      <h1>Setup</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}ursor/automate-test-improve-and-merge-code-646c;
+import '@testing-library/jest-dom';
+import { cleanup  } from '@testing-library/react';
+import { afterEach, vi  } from 'vitest';
+// Ensure React Testing Library cleans up and mocks are restored between tests;
+afterEach(() => {cleanup()vi.restoreAllMocks()})

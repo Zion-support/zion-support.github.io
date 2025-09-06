@@ -1,6 +1,5 @@
 
-  return (
-    <div className="space-y-4">;
+  return (<div className="space-y-4">;
       <h2 className="text-lg font-semibold">Translation Preview</h2>;
       <textarea;
         className="w - full border rounded p-2 h-32";

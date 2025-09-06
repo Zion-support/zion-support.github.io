@@ -1,26 +1,7 @@
 
-
-
-"use client",;
-import { useState, useEffect, useRef } from "react",;
-import Link from "next/link",;
-export function Navigation() {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
-  const [isSearchOpen, setIsSearchOpen] = useState(false),;
-
-
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  return (;
-
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  return (;  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  return (;
-    <nav;
-      className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
-        is_scrolled;
+;
+"use client",import { useState, useEffect, useRef } from "react",import Link from "next/link",export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),const [isSearchOpen, setIsSearchOpen]  = useState(false),const [isServicesOpen, setIsServicesOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)return (const [isServicesOpen, setIsServicesOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)return (const [isServicesOpen, setIsServicesOpen] = useState(false)const [isScrolled, setIsScrolled] = useState(false)return (<nav;
+      className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled;
           ? "bg - black / 90 backdrop - blur - md border - b border - white / 20 shadow - lg";
           : "bg - black / 80 backdrop - blur - md border - b border - white / 10";
       }`}
@@ -71,8 +52,7 @@ export function Navigation() {;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l - 7 7 - 7-7" />;
                 </svg>;
               </button>;
-              {isServicesOpen && (
-                <div;
+              {isServicesOpen && (<div;
                   className="absolute top - full left - 0 mt - 2 w - 80 bg - black / 90 backdrop - blur - md border border - white / 10 rounded - lg shadow - xl";
                   onMouseEnter={() => setIsServicesOpen (true)}
                   onMouseLeave={() => setIsServicesOpen (false)}
@@ -138,8 +118,7 @@ export function Navigation() {;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l - 7 7 - 7-7" />;
                 </svg>;
               </button>;
-              {isCompanyOpen && (
-                <div;
+              {isCompanyOpen && (<div;
                   className="absolute top - full left - 0 mt - 2 w - 64 bg - black / 90 backdrop - blur - md border border - white / 10 rounded - lg shadow - xl";
                   onMouseEnter={() => setIsCompanyOpen (true)}
                   onMouseLeave={() => setIsCompanyOpen (false)}
@@ -248,24 +227,19 @@ export function Navigation() {;
               aria - expanded={isMobileMenuOpen}
             >;
               <svg className="w - 6 h - 6" fill="none" stroke="current_color" view_box="0 0 24 24" aria - hidden="true">;
-                {isMobileMenuOpen ? (
-                  <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M6 18L18 6M6 6l12 12" />) : (
-                  <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 6h16M4 12h16M4 18h16" />)}
+                {isMobileMenuOpen ? (<path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M6 18L18 6M6 6l12 12" />) : (<path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 6h16M4 12h16M4 18h16" />)}
               className="text - gray - 300 hover:text - white p - 2 rounded - md transition-colors";
               aria - label="Toggle mobile menu";
               aria - expanded={isMobileMenuOpen}
             >;
               <svg className="w - 6 h-6" fill="none" stroke="current_color" viewBox="0 0 24 24" aria - hidden="true">;
-                {isMobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />)}
+                {isMobileMenuOpen ? (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />) : (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />)}
               </svg>;
             </button>;
           </div>;
         </div>;
         {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="py - 4 animate - fade - in">;
+        {isSearchOpen && (<div className="py - 4 animate - fade - in">;
           <div className="py - 4 animate - fade-in">;
             <div className="relative">;
               <input;
@@ -277,15 +251,8 @@ export function Navigation() {;
               <svg className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                 <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />;
               </svg>;
-            </div>;
-
-
-          </div>)}
-
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden animate - fade - in">;
+            </div>;</div>)}{/* Mobile Navigation */}
+        {isMobileMenuOpen && (<div className="lg:hidden animate - fade - in">;
             <div className="px - 2 pt - 2 pb - 3 space - y-1 bg - black / 90 rounded - lg mt - 2 mb - 4">;
               {/* Services Section */}
               <div className="border - b border - white / 10 pb - 2">;
@@ -301,8 +268,7 @@ export function Navigation() {;
               </svg>;
             </div>;
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden animate - fade-in">;
+        {isMobileMenuOpen && (<div className="lg:hidden animate - fade-in">;
             <div className="px - 2 pt - 2 pb - 3 space - y-1 bg - black / 90 rounded - lg mt - 2 mb-4">;
               {/* Services Section */}
               <div className="border - b border - white / 10 pb-2">;
@@ -387,13 +353,5 @@ export function Navigation() {;
             </div>;
           </div>;
         </div>;
-      </div>;
-
-
-    </nav>;
-  );
-
-
-}
-
-
+      </div>;</nav>;
+  )}

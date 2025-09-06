@@ -1,5 +1,4 @@
- export interface UltimateInnovativeService {
-  id: string;
+ export interface UltimateInnovativeService  {id: string;
    title: string;
    description: string;
    category: string;
@@ -18,5 +17,5 @@
    roi: string;
    innovationLevel: string;
    contactInfo: {  phone: string;
-   email: string
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string uniqueValue?: string}export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = ['';""
+   email: string;
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string uniqueValue?: string}export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = ['';"";

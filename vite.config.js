@@ -1,82 +1,14 @@
-
-import { defineConfig } from 'vite';
+import { defineConfig  } from 'vite';
 import react from '@vitejs/plugin-react';
-
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 3000,
-    open: true,
-    host: true
-  },
-  build: {
-    outDir: "dist",
-    sourcemap: true,
-    minify: "esbuild",
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom']
-          vendor: ["react", "react-dom"],
-          ui: ["framer-motion", "lucide-react"],
-          router: ["react-router-dom"]
-        },
-          vendor: ["react", "react-dom"],
-          ui: ["framer-motion", "lucide-react"],
-          router: ["react-router-dom"]
+import path from 'path';
+export default defineConfig({plugins: [react()],server: {port: 3000,open: true,host: true;
+  },build: {outDir: "dist",sourcemap: true,minify: "esbuild",rollupOptions: {output: {manualChunks: {vendor: ['react', 'react-dom'],router: ['react-router-dom'],ui: ['framer-motion', 'lucide-react'];
         }
       }
-
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-      }
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-
-ursor/automate-test-improve-and-merge-code-646c
-        drop_debugger: true
+    },terserOptions: {compress: {drop_console: true,drop_debugger: true;
       }
     }
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  },resolve: {alias: {'@': path.resolve(__dirname, './src')}
+  },optimizeDeps: {include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom'];
   }
-});
-
-        drop_debugger: true
-      }
-    }
-  },
-  optimizeDeps: {
-    include: ["react", "react-dom", "framer-motion", "lucide-react"]
-  }
-});
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom']
-        }
-      }
-    }
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src')
-    }
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']
-  }
-});
-    include: ['react', 'react-dom', 'react-router-dom']
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
-  },
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-});
+})

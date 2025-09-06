@@ -1,15 +1,9 @@
 
-"use client",;
-export default function BlockchainWeb3Page() {;
-  return (;
-
-    <div className="space-y-8">;
+"use client",export default function BlockchainWeb3Page() {return (<div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
-          Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
-
-        </p>;
+          Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;</p>;
       </div>;
       {/* Service Overview */}
       <div className="bg - gradient - to - r from - orange - 600 to - purple - 600 rounded - lg p - 6 text - white">;
@@ -29,18 +23,16 @@ export default function BlockchainWeb3Page() {;
             <div className="text - 3xl mb - 2">💰</div>;
             <div className="font - semibold">Cost Reduction</div>;
             <div className="text - sm opacity - 90">Eliminate intermediaries & fees</div>;
-export default /**
- * BlockchainWeb3Page - Function description
- */
-function BlockchainWeb3Page() {
-  return (
-    <div className="space-y-8">;
+export default /**;
+ * BlockchainWeb3Page - Function description;
+ */;
+function BlockchainWeb3Page() {return (<div className="space-y-8">;
       <div className="text - center space-y-4">;
         <h1 className="text - 4xl font-bold">Blockchain & Web3 Solutions</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx-auto">;
           Enterprise - grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
 "use client";
-export default function BlockchainWeb3Page() {return (;    <div className="space-y-8">;
+export default function BlockchainWeb3Page() {return (<div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
@@ -356,18 +348,13 @@ export default function BlockchainWeb3Page() {return (;    <div className="space
           </div>;
         </div>;
       </div>;
-      {/* Pricing Tiers */}
-
-
-<div className="space - y-6">;
+      {/* Pricing Tiers */}<div className="space - y-6">;
         <h2 className="text - 2xl font - semibold text - center">Service Packages</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
           <div className="bg - zinc - 900 border border - white / 10 rounded - lg p - 6 text - center">;
             <h3 className="text - xl font - semibold mb - 2">Starter</h3>;
             <div className="text - 3xl font - bold mb - 4">$5, 000</div>;
-            <ul className="text - sm space - y-2 mb - 6 opacity - 80">;
-
-<div className="space-y-6">;
+            <ul className="text - sm space - y-2 mb - 6 opacity - 80">;<div className="space-y-6">;
         <h2 className="text - 2xl font - semibold text-center">Service Packages</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">;
           <div className="bg - zinc - 900 border border - white / 10 rounded - lg p - 6 text-center">;
@@ -436,9 +423,7 @@ export default function BlockchainWeb3Page() {return (;    <div className="space
             </Link>;
           </div>;
         </div>;
-      </div>;
-
-      {/* Contact Section */}
+      </div>;{/* Contact Section */}
       <div className="bg - gradient - to - r from - purple - 600 to - orange - 600 rounded - lg p - 8 text - white text - center">;
         <h2 className="text - 2xl font - bold mb - 4">Ready to Build the Future?</h2>;
         <p className="opacity - 90 mb - 6 max - w-2xl mx - auto">;
@@ -468,9 +453,4 @@ export default function BlockchainWeb3Page() {return (;    <div className="space
             Call +1 302 464 0950;
           </Link>;
         </div>;
-      </div>;
-
-    </div>);
-
-    </div>);
-}
+      </div>;</div>)</div>)}

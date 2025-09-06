@@ -1,52 +1,11 @@
 
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
-
-import React from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Download, Settings} from "lucide-react";
-import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
-
-export function AdminHeader() {
-
-
-export function AdminHeader() {;
-  const { user } = useAuth();
-  const { company } = useCompanyWorkspace();
-import React from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Download, Settings } from "lucide-react",
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
-export function AdminHeader() {
-  const { user } = useAuth(),
-  const { company } = useCompanyWorkspace(),
-
-  return (
-
-
-export function AdminHeader() {;
-
-
-export function AdminHeader() {
-
-export function AdminHeader() {;
-
-  const { user } = useAuth();
-  const { company } = useCompanyWorkspace();
-  return (
-
-
-import React from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Button } from "@/components/ui/button",;
-import { Download, Settings } from "lucide-react",;
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
-export function AdminHeader() {;
-  const { user } = useAuth();
-  const { company } = useCompanyWorkspace();
-  return (;
-    <div className="space-y-4">;
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx;
+import React from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Download, Settings } from 'lucide-react';
+import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
+export function AdminHeader() {export function AdminHeader() {const { user } = useAuth()const { company } = useCompanyWorkspace()import React from "react",import { useAuth } from "@/hooks/useAuth",import { Button } from "@/components/ui/button",import { Download, Settings } from "lucide-react",import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",export function AdminHeader() {const { user } = useAuth(),const { company } = useCompanyWorkspace(),return (export function AdminHeader() {export function AdminHeader() {export function AdminHeader() {const { user } = useAuth()const { company } = useCompanyWorkspace()return (export function AdminHeader() {const { user } = useAuth()const { company } = useCompanyWorkspace()return (<div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
@@ -64,26 +23,12 @@ export function AdminHeader() {;
             Export Data;
           </Button>;
         </div>;
-      </div>;
-
-}
-;
-
-
-
-
-
-}
+      </div>;}}
             <Download className="h-4 w-4" />;            Export Data;
           </Button>;
         </div>;
       </div>;
-}}
-;
-
-}
-      ;
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+}}}<div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Subscription Plan</div>;
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>;
@@ -101,9 +46,7 @@ export function AdminHeader() {;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">;
             <img;
-              src={company?.logoUrl || "/placeholder.svg"} ;
-              alt={company?.name || "Company"} ;
-              className="max-h-10 max-w-10";
+              src={company?.logoUrl || "/placeholder.svg"}alt={company?.name || "Company"}className="max-h-10 max-w-10";
             />;
           </div>;
           <div>;
@@ -116,7 +59,4 @@ export function AdminHeader() {;
         <Button>Customize Workspace</Button>;
       </div>;
     </div>;
-  );
-}
-;
-}
+  )}}

@@ -1,16 +1,4 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Search, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-;
-export default function DataQualityMonitorPage() {;
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-quality-monitor')),;
-  if (!service) return null,;
-;
-  return (;
-    <Layout>;
+import React from 'react',import Head from 'next/head',import { Phone, Mail, MapPin, Check, ArrowRight, Search, Star } from 'lucide-react',import Layout from '../components/layout/Layout',import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',export default function DataQualityMonitorPage() {const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-quality-monitor')),if (!service) return null,return (<Layout>;
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name="description" content={service.description} />;
@@ -27,19 +15,14 @@ export default function DataQualityMonitorPage() {;
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>;
               <p className="text-slate-300 mb-6">{service.description}</p>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-                {service.features.slice(0, 12).map((feat, i) => (;
-                  <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>;
+                {service.features.slice(0, 12).map((feat, i) => (<li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>;
                 ))}
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit">;
               <div className="flex items-end justify-between mb-3">;
                 <div>;
-                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>;
-
-                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup:{service.setupTime}</div>;
-
-                </div>;
+                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>;<div className="text-slate-400">{service.trialDays}-day free trial  Setup:{service.setupTime}</div>;</div>;
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>;
               </div>;
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Start Now<ArrowRight /></a>;
@@ -53,10 +36,5 @@ export default function DataQualityMonitorPage() {;
         </div>;
       </div>;
     </Layout>;
-  ),;}
-;
- return (<Layout> <Head> <title> {
-  service.name 
-}- Zion Tech Group</title>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </Layout>) 
-}
+  ),}return (<Layout> <Head> <title> {service.name;
+}- Zion Tech Group</title>) )}</ul> </div> <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </Layout>)}

@@ -1,135 +1,57 @@
 
-
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage
+;
+import { FormField,FormItem,FormLabel,FormControl,FormMessage;
+ } from '@/components/ui/form';
+  FormMessage;
 } from "@/components/ui/form";
-  FormMessage
-} from "@/components/ui/form";
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
+  Select,SelectContent,SelectItem,SelectTrigger,SelectValue;
 } from "@/components/ui/select";
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
-
-interface TimelineFieldProps {
-  form: UseFormReturn<FormValues>;
-
-
-  SelectValue
+import { UseFormReturn  } from 'react-hook-form';
+import { FormValues  } from './useHireRequestForm';
+interface TimelineFieldProps  {form: UseFormReturn<FormValues>;SelectValue;
 } from "@/components/ui/select";
-interface TimelineFieldProps {
-  form: UseFormReturn<FormValues>;
-}
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {UseFormReturn} from "react-hook-form";
-import {FormValues} from "./useHireRequestForm";
-
-
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { UseFormReturn } from "react-hook-form",
-import { FormValues } from "./useHireRequestForm",
-
-    { value: "Less than 1 week", label: "Less than 1 week" },
-    { value: "1-2 weeks", label: "1-2 weeks" },
-    { value: "2-4 weeks", label: "2-4 weeks" },
-    { value: "1-2 months", label: "1-2 months" },
-    { value: "3-6 months", label: "3-6 months" },
-    { value: "6+ months", label: "6+ months" },
-
+interface TimelineFieldProps  {form: UseFormReturn<FormValues>;
+}import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { UseFormReturn } from 'react-hook-form';
+import { FormValues } from './useHireRequestForm';
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",import { UseFormReturn } from "react-hook-form",import { FormValues } from "./useHireRequestForm",{ value: "Less than 1 week", label: "Less than 1 week" },{ value: "1-2 weeks", label: "1-2 weeks" },{ value: "2-4 weeks", label: "2-4 weeks" },{ value: "1-2 months", label: "1-2 months" },{ value: "3-6 months", label: "3-6 months" },{ value: "6+ months", label: "6+ months" },{ value: "Ongoing", label: "Ongoing" }
+  ];{ value: "Ongoing", label: "Ongoing" }
+  ];];
     { value: "Ongoing", label: "Ongoing" }
-  ];
-
-
-    { value: "Ongoing", label: "Ongoing" }
-  ];
-
-  ];
-    { value: "Ongoing", label: "Ongoing" }
-  ],
-  return (
-    <FormField
+  ],return (<FormField;
       control={form.control}
-      name="timeline"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel className="text-white">Project Timeline</FormLabel>
-          <FormControl>
-            <Select
+      name="timeline";
+      render={({ field }) => (<FormItem>;
+          <FormLabel className="text-white">Project Timeline</FormLabel>;
+          <FormControl>;
+            <Select;
               onValueChange={field.onChange}
               value={field.value}
               defaultValue={field.value}
-            >
-              <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">
-                <SelectValue placeholder="Select estimated timeline" />
-              </SelectTrigger>
-              <SelectContent>
-                {timelineOptions.map((option) => (
-                  <SelectItem key={option.value} value={option.value}>
-
-
-
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { UseFormReturn } from "react-hook-form",;
-import { FormValues } from "./useHireRequestForm",;
-
-interface TimelineFieldProps {;
-  form: UseFormReturn<FormValues>;
+            >;
+              <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">;
+                <SelectValue placeholder="Select estimated timeline" />;
+              </SelectTrigger>;
+              <SelectContent>;
+                {timelineOptions.map((option) => (<SelectItem key={option.value} value={option.value}>;interface TimelineFieldProps  {form: UseFormReturn<FormValues>;
 }
-export function TimelineField(): any ({ form }: TimelineFieldProps) {;
-  const timelineOptions = [;
-    { value: "Less than 1 week", label: "Less than 1 week" },;
-    { value: "1-2 weeks", label: "1-2 weeks" },;
-    { value: "2-4 weeks", label: "2-4 weeks" },;
-    { value: "1-2 months", label: "1-2 months" },;
-    { value: "3-6 months", label: "3-6 months" },;
-    { value: "6+ months", label: "6+ months" },;
-    { value: "Ongoing", label: "Ongoing" }
-export /**
- * TimelineField - Function description
- */
-function TimelineField() {
-  const timeline_options = [;
-    { value: "Less than 1 week", label: "Less than 1 week" },
-    { value: "1 - 2 weeks", label: "1 - 2 weeks" },
-    { value: "2 - 4 weeks", label: "2 - 4 weeks" },
-    { value: "1 - 2 months", label: "1 - 2 months" },
-    { value: "3 - 6 months", label: "3 - 6 months" },
-    { value: "6+ months", label: "6+ months" },
-    { value: "Ongoing", label: "Ongoing" }
-  ];
-;
-  return (
-
-    <FormField;
+export function TimelineField(): any ({ form }: TimelineFieldProps) {const timelineOptions = [;
+    { value: "Less than 1 week", label: "Less than 1 week" },{ value: "1-2 weeks", label: "1-2 weeks" },{ value: "2-4 weeks", label: "2-4 weeks" },{ value: "1-2 months", label: "1-2 months" },{ value: "3-6 months", label: "3-6 months" },{ value: "6+ months", label: "6+ months" },{ value: "Ongoing", label: "Ongoing" }
+export /**;
+ * TimelineField - Function description;
+ */;
+function TimelineField() {const timeline_options = [;
+    { value: "Less than 1 week", label: "Less than 1 week" },{ value: "1 - 2 weeks", label: "1 - 2 weeks" },{ value: "2 - 4 weeks", label: "2 - 4 weeks" },{ value: "1 - 2 months", label: "1 - 2 months" },{ value: "3 - 6 months", label: "3 - 6 months" },{ value: "6+ months", label: "6+ months" },{ value: "Ongoing", label: "Ongoing" }
+  ];return (<FormField;
       control={form.control}
-      name="timeline";
-
-    { value: "Ongoing", label: "Ongoing" }
-  ];
-;
-  return (
-      render={({ field }) => (
-        <FormItem>;
+      name="timeline";{ value: "Ongoing", label: "Ongoing" }
+  ];return (render={({ field }) => (<FormItem>;
           <FormLabel className="text - white">Project Timeline</FormLabel>;
     { value: "Ongoing", label: "Ongoing" }
-  ];
-;
-  return (
-                    {option.label}
-                  </SelectItem>
-                ))}      render={({ field }) => (
-        <FormItem>;
+  ];return ({option.label}
+                  </SelectItem>;
+                ))}      render={({ field }) => (<FormItem>;
           <FormLabel className="text-white">Project Timeline</FormLabel>;
           <FormControl>;
             <Select;
@@ -142,36 +64,21 @@ function TimelineField() {
                 <SelectValue placeholder="Select estimated timeline" />;
               </SelectTrigger>;
               <SelectContent>;
-                {timeline_options.map ((option) => (
-                  <SelectItem key={option.value} value={option.value}>;
-                    {option.label}
-
-
-      render={({ field }) => (;
-        <FormItem>;
+                {timeline_options.map ((option) => (<SelectItem key={option.value} value={option.value}>;
+                    {option.label}render={({ field }) => (<FormItem>;
           <FormLabel className="text-white">Project Timeline</FormLabel>;
-          <FormControl>;
-
-
-                    {option.label}
-                  </SelectItem>
-
+          <FormControl>;{option.label}
+                  </SelectItem>;
                 ))}
-              </SelectContent>
-            </Select>
-          </FormControl>
-          <FormMessage />
-        </FormItem>
+              </SelectContent>;
+            </Select>;
+          </FormControl>;
+          <FormMessage />;
+        </FormItem>;
       )}
-    />
-  );
-}
-
-
-
-        </FormItem>)}
-    />);
-}
+    />;
+  )}</FormItem>)}
+    />)}
                     {option.label}
-                  </SelectItem>
+                  </SelectItem>;
                 ))}

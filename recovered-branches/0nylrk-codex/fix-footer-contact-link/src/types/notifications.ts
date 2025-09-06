@@ -1,6 +1,5 @@
 
-export interface Notification {
-  id: string;
+export interface Notification  {id: string;
   user_id: string;
   title: string;
   message: string;
@@ -9,13 +8,5 @@ export interface Notification {
   read: boolean;
   created_at: string;
   updated_at: string;
-}
-
-
-  created_at: string,
-  updated_at: string;
-}
-
-export interface Notification {;
-
-}
+}created_at: string,updated_at: string;
+}export interface Notification  {}

@@ -1,33 +1,13 @@
 
-
-export interface KycProfile {
-  user_id: string;
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+;
+export interface KycProfile  {user_id: string;kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
-export interface KycProfile {
-  user_id: string;
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export interface KycProfile {
-  user_id: string;
-
-
-export interface KycProfile {;
-
-  userId: string;
-export interface KycProfile {
-  user_id: string;
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export interface KycProfile  {user_id: string;export interface KycProfile  {user_id: string;export interface KycProfile  {userId: string;
+export interface KycProfile  {user_id: string;
+ursor/fix-website-loading-errors-and-merge-6662;
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -41,20 +21,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   risk_score?: number;
   created_at: string;
   lastUpdatedAt: string;
-  audit_trail: Array<{
-    at: string;
+  audit_trail: Array<{at: string;
     by: string;
-    action: string;
-
-
-    details?: any
-
-  }>;
-
-
-// KYC (Know Your Customer) utilities
-export interface KycProfile {
-  userId: string;
+    action: string;details?: any;
+  }>;// KYC (Know Your Customer) utilities;
+export interface KycProfile  {userId: string;
   role: 'client' | 'talent' | 'both';
   fullLegalName: string;
   businessName?: string;
@@ -66,134 +37,30 @@ export interface KycProfile {
   expiresAt?: string;
   reviewerId?: string;
   rejectionReason?: string;
-  notes?: string;
-
-}
-
-export function getRequiredDocuments (role: KycRole): string[] {
-  // Check condition
-if ( {) {
-  $2
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    return ['government_id', 'proof_of_address'];
-  } else {
-    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
+  notes?: string;}export function getRequiredDocuments (role: KycRole): string[] {// Check condition;
+if ( {) {$2;
+}return ['government_id', 'proof_of_address'];
+  } else {return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
+  }
+}return ['bank_statement', 'utility_bill'];
+  } else {return ['bank_statement', 'utility_bill', 'tax_certificate'];
   }
 }
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    return ['bank_statement', 'utility_bill'];
-  } else {
-    return ['bank_statement', 'utility_bill', 'tax_certificate'];
-  }
-}
-  const missing: string[] = [];
-  
-  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name')
-  }
-  if (!profile && profile.country) {
-    missing && missing.push('country');
-
-  }
-  
-    missing && missing.push('name')
-  }
-  if (!profile && profile.country) {
-    missing && missing.push('country');
-  const missing: string[] = [];
-  if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name');
-  }
-  
-  if (!profile && profile.country) {
-    missing && missing.push('country');
-  }
-  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
-    missing && missing.push('dateOfBirth');
-  }
-  return { ok: missing && missing.length === 0, missing };  
-  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
-    missing && missing.push('businessRegistrationNumber');
-
-  }
-
-
-  
-  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name'),
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  }
-  
-  if (!profile && profile.country) {
-    missing && missing.push('country');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-
-  if (profile.role === 'client' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth');
-  }
-
-
-    missing && missing.push('name')
-  }
-  if (!profile && profile.country) {
-    missing && missing.push('country');
-  }
-  
-  if (!profile && profile.country) {
-    missing && missing.push('country');
-  }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
-    missing.push('businessRegistrationNumber');
-  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
-    missing && missing.push('dateOfBirth');
-  }
-  return { ok: missing && missing.length === 0, missing };  
-  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
-    missing && missing.push('businessRegistrationNumber');
-  }
-  return {
-
-
-    ok: missing && missing.length === 0,
-
-    missing
-
-  }
-
-}
-
-export interface KycDocumentMeta {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-export interface KycDocumentMeta {;
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  const missing: string[]  = [];if (!profile && profile.fullLegalName && !profile && profile.businessName) {missing && missing.push('name')}
+  if (!profile && profile.country) {missing && missing.push('country')}missing && missing.push('name')}
+  if (!profile && profile.country) {missing && missing.push('country')const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {missing.push('name')}if (!profile && profile.country) {missing && missing.push('country')}
+  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {missing && missing.push('dateOfBirth')}
+  return { ok: missing && missing.length === 0, missing }if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {missing && missing.push('businessRegistrationNumber')}if (!profile && profile.fullLegalName && !profile && profile.businessName) {missing && missing.push('name'),}if (!profile && profile.country) {missing && missing.push('country')}if (profile.role === 'client' && !profile.dateOfBirth) {missing.push('dateOfBirth')}missing && missing.push('name')}
+  if (!profile && profile.country) {missing && missing.push('country')}if (!profile && profile.country) {missing && missing.push('country')}if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {missing.push('businessRegistrationNumber')if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {missing && missing.push('dateOfBirth')}
+  return { ok: missing && missing.length === 0, missing }if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {missing && missing.push('businessRegistrationNumber')}
+  return {ok: missing && missing.length === 0,missing;
+  }}export interface KycDocumentMeta  {export interface KycDocumentMeta  {kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploadedAt: string;
-  status: 'pending' | 'approved' | 'rejected';
-
-
+  status: 'pending' | 'approved' | 'rejected';}}
 }
-
-
-}
-}
-export interface KycProfile {
-
-export interface KycProfile {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  userId: string;
+export interface KycProfile  {export interface KycProfile  {userId: string;
   role: KycRole;
   fullLegalName?: string;
   businessName?: string;
@@ -209,85 +76,41 @@ export interface KycProfile {;
   riskScore?: number;
   createdAt: string;
   lastUpdatedAt: string;
-  auditTrail: Array<{
-    at: string;
+  auditTrail: Array<{at: string;
     by: string;
-    action: string;
-
-    details?: any
+    action: string;details?: any;
+  }>;
+}}details?: any;
   }>;
 }
-
-}
-
-
-
-
-
-
-    details?: any
-  }>;
-}
-    details?: any
+    details?: any;
   }>;
 }
 }
-export function generateKycDocumentId(): string {
-  return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+export function generateKycDocumentId(): string {return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
-export function isKycProfileComplete(profile: KycProfile): boolean {
-  return profile.status === 'approved' && 
-         profile.documents.length > 0 && 
+export function isKycProfileComplete(profile: KycProfile): boolean {return profile.status === 'approved' &&;
+         profile.documents.length > 0 &&;
          profile.fullLegalName.length > 0;
 }
-export function isKycProfileExpired(profile: KycProfile): boolean {
-  if (!profile.expiresAt) return false;
-  return new Date(profile.expiresAt) < new Date();
+export function isKycProfileExpired(profile: KycProfile): boolean {if (!profile.expiresAt) return false;
+  return new Date(profile.expiresAt) < new Date()}export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {const missing: string[]  = [];// Check condition;
+if ( {) {$2;
 }
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
-  const missing: string[] = [];
-;
-  // Check condition
-if ( {) {
-  $2
+    missing.push ('name')}
+  // Check condition;
+if ( {) {$2;
 }
-    missing.push ('name');
+    missing.push ('country')}
+  // Check condition;
+if ( {) {$2;
+}
+    missing.push ('dateOfBirth')}
+  // Check condition;
+if ( {) {$2;
+}
+    missing.push ('businessRegistrationNumber')}
+  return {ok: missing.length === 0,missing;
   }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('country');
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('dateOfBirth');
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('businessRegistrationNumber');
-  }
-  return {
-    ok: missing.length === 0,
-    missing;
-  }
-}
-
-
-
-
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-
-
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  return { ok: missing.length === 0, missing };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}ursor/fix-website-loading-errors-and-merge-6662;
+  return { ok: missing.length === 0, missing }

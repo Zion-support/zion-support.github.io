@@ -1,49 +1,27 @@
 
 }
-import Head from 'next / head',
-export default /**
- * TestingDocRedirect - Function description
- */
-function TestingDocRedirect() {
-  return (
-
-
-
-    <>;
+import Head from 'next / head',export default /**;
+ * TestingDocRedirect - Function description;
+ */;
+function TestingDocRedirect() {return (<>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/TESTING.md" />;
       </Head>;
-      <main style={{ padding: 24 }}>;
-
-    <>
-      <Head>
-        <meta httpEquiv="refresh" content="0, url=/TESTING.md" />
-
-      </Head>
-      <main style={{ padding: 24}}>
+      <main style={{ padding: 24 }}>;<>;
+      <Head>;
+        <meta httpEquiv="refresh" content="0, url=/TESTING.md" />;
+      </Head>;
+      <main style={{ padding: 24}}>;
 import Head from 'next/head';
-export default function TestingDocRedirect() {
-  return (
-    <>
-      <Head>
-        <meta httpEquiv="refresh" content="0, url=/TESTING.md" />
-;
-;
-
-
-
-
-      </Head>
-      <main style={{ padding: 24 }}>
-        <p>Redirecting to Testing documentation…</p>
-      </main>
-    </>
-  )
-}
-export default function TestingDocRedirect(req, res) {
-  try {
-  return (;
-    <>;
+export default function TestingDocRedirect() {return (<>;
+      <Head>;
+        <meta httpEquiv="refresh" content="0, url=/TESTING.md" />;;</Head>;
+      <main style={{ padding: 24 }}>;
+        <p>Redirecting to Testing documentation…</p>;
+      </main>;
+    </>;
+  )}
+export default function TestingDocRedirect() {try {return (<>;
       <Head>;
         <meta httpEquiv="refresh" content="0, url=/TESTING.md" />;
       </Head>;
@@ -51,18 +29,5 @@ export default function TestingDocRedirect(req, res) {
         <p>Redirecting to Testing documentation…</p>;
       </main>;
     </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-
-;
-;
-
-
-
-);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  )} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+};)

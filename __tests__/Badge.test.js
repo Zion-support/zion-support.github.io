@@ -1,62 +1,19 @@
-
-
-
-
-
-
-
-
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Badge from "./components/Badge" describe("Badge",() => {" test("renders without crashing",() => {" render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Badge / / />) }) test("handles user interactions",() => {" render(<Badge / / />) }) test("applies correct styling",() => {" render(<Badge / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import Badge from '../components/Badge" describe('Badge',() => {' test('renders without crashing',() => {' render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Badge / / />) }) test('handles user interactions',() => {' render(<Badge / / />) }) test('applies correct styling',() => {' render(<Badge / / />) }) })
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Badge from "./components/Badge" describe("Badge",() => {" test("renders without crashing",() => {" render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Badge / / />) }) test("handles user interactions",() => {" render(<Badge / / />) }) test("applies correct styling",() => {" render(<Badge / / />) }) })'"'"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-syntax-push-and-merge-to-main-40de;
+const React from "react" import { render, screen, fireEvent } from '@testing-library/react' import "@testing-library/jest-dom import Badge from "./components/Badge" describe('Badge', () => {" test('renders without crashing', () => {" render(<Badge />) expect(screen.getByTestId('badge')).toBeInTheDocument()}) test('displays correct content', () => {" render(<Badge />) }) test('handles user interactions', () => {" render(<Badge />) }) test('applies correct styling', () => {" render(<Badge />) }) })'"'";
+import _React from 'react"  import '@testing-library/jest-dom import Badge from '../components/Badge" describe('Badge',() => {' test('renders without crashing',() => {' render(<Badge />) expect(screen.getByTestId('badge')).toBeInTheDocument()' }) test('displays correct content',() => {' render(<Badge />) }) test('handles user interactions',() => {' render(<Badge />) }) test('applies correct styling',() => {' render(<Badge />) }) })const React from "react" import { render, screen, fireEvent } from '@testing-library/react' import "@testing-library/jest-dom import Badge from "./components/Badge" describe('Badge', () => {" test('renders without crashing', () => {" render(<Badge />) expect(screen.getByTestId('badge')).toBeInTheDocument()}) test('displays correct content', () => {" render(<Badge />) }) test('handles user interactions', () => {" render(<Badge />) }) test('applies correct styling', () => {" render(<Badge />) }) })'"'";
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen  } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Badge from '../components/Badge';
-
-
-
-
-
-
-
-
-
-
->>>>>>> main
-
-
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-  test('displays correct content', () => {
-    render(<Badge />);
-  });
-
-  test('handles user interactions', () => {
-    render(<Badge />);
-  });
-
-  test('applies correct styling', () => {
-    render(<Badge />);
-  });
-});
-});
-
-
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Badge from "./components/Badge" describe("Badge",() => {" test("renders without crashing",() => {" render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Badge / / />) }) test("handles user interactions",() => {" render(<Badge / / />) }) test("applies correct styling",() => {" render(<Badge / / />) }) })'"'"
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Badge from "./components/Badge" describe("Badge",() => {" test("renders without crashing",() => {" render(<Badge / / />) expect(screen.getByTestId("badge")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Badge / / />) }) test("handles user interactions",() => {" render(<Badge / / />) }) test("applies correct styling",() => {" render(<Badge / / />) }) })'"'"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-syntax-push-and-merge-to-main-40de;
+  test('displays correct content', () => {render(<Badge />)})test('handles user interactions', () => {render(<Badge />)})test('applies correct styling', () => {render(<Badge />)})})})ursor/fix-syntax-push-and-merge-to-main-40de;
+const React from "react" import { render, screen, fireEvent } from '@testing-library/react' import "@testing-library/jest-dom import Badge from "./components/Badge" describe('Badge', () => {" test('renders without crashing', () => {" render(<Badge />) expect(screen.getByTestId('badge')).toBeInTheDocument()}) test('displays correct content', () => {" render(<Badge />) }) test('handles user interactions', () => {" render(<Badge />) }) test('applies correct styling', () => {" render(<Badge />) }) })'"'";
+const React from "react" import { render, screen, fireEvent } from '@testing-library/react' import "@testing-library/jest-dom import Badge from "./components/Badge" describe('Badge', () => {" test('renders without crashing', () => {" render(<Badge />) expect(screen.getByTestId('badge')).toBeInTheDocument()}) test('displays correct content', () => {" render(<Badge />) }) test('handles user interactions', () => {" render(<Badge />) }) test('applies correct styling', () => {" render(<Badge />) }) })'"'";
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;

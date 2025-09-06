@@ -1,88 +1,28 @@
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
-
-
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Button} from "@/components/ui/button";
-import {Eye, ChevronDown, Loader2} from "lucide-react";
-import {JobApplication, ApplicationStatus} from "@/types/jobs";
-
-import { useState } from "react",
-import { Link } from "react-router-dom",
-
-
-
-
-
-import { 
-  DropdownMenu;
+import { useState  } from 'react';
+import { Link  } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
+import { Eye, ChevronDown, Loader2 } from 'lucide-react';
+import { JobApplication, ApplicationStatus } from '@/types/jobs';
+import { useState } from "react",import { Link } from "react-router-dom",import {DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button",
-
-import { Eye, ChevronDown, Loader2 } from "lucide-react";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { Eye, ChevronDown, Loader2 } from "lucide-react",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-
-
-
-
-interface ApplicationActionsProps {
-
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-}
-
-
-
-
-interface ApplicationActionsProps {;
-  application: JobApplication,;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string) => Promise<void>,;
+  DropdownMenuTrigger;
+} from "@/components/ui/dropdown-menu",import { Button } from "@/components/ui/button",import { Eye, ChevronDown, Loader2  } from 'lucide-react';
+import { JobApplication, ApplicationStatus  } from '@/types/jobs';
+import { Eye, ChevronDown, Loader2 } from "lucide-react",import { JobApplication, ApplicationStatus } from "@/types/jobs",interface ApplicationActionsProps  {application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-}
-
-export function ApplicationActions(): any ({;
-
-
-
-export function ApplicationActions({;
-  application;
-  processingId;
-  onViewApplication;
-export function ApplicationActions({
-  application,
-  processingId,
-  onViewApplication,
-  application;
-  processingId;
-  onViewApplication;
-  onStatusChange;
-}: ApplicationActionsProps) {;
-
-
-
-  onStatusChange
-}: ApplicationActionsProps) {
-  return (
-
-  return (
-
-  return (
-    <div className="flex items-center justify-end gap-2">;
-      <Button
-        variant="outline" 
-        size="sm" 
+}interface ApplicationActionsProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+}export function ApplicationActions(): any ({export function ApplicationActions() {onStatusChange;
+}: ApplicationActionsProps) {return (return (return (<div className="flex items-center justify-end gap-2">;
+      <Button;
+        variant="outline";
+        size="sm";
         onClick={() => onViewApplication(application && application.id)}
         disabled={!!application && application.viewed_at}
       >;
@@ -90,48 +30,17 @@ export function ApplicationActions({
       </Button>;
       <DropdownMenu>;
         <DropdownMenuTrigger asChild>;
-          <Button
-            variant="outline" 
+          <Button;
+            variant="outline";
   onStatusChange;
-}: ApplicationActionsProps) {;
-  onStatusChange
-}: ApplicationActionsProps) {
-  return (
-            size="sm"
-  onViewApplication,            size="sm"
+}: ApplicationActionsProps) {onStatusChange;
+}: ApplicationActionsProps) {return (size="sm";
+  onViewApplication,            size="sm";
             disabled={processingId === application && application.id}>;
-            {processingId === application && application.id ? (;
-              <Loader2 className="h-4 w-4 animate-spin" />;
-            ) : (;
-
-
-import { useState } from "react",;
-import { Link } from "react-router-dom",;
-import { ;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",;
-import { Button } from "@/components/ui/button",;
-import { Eye, ChevronDown, Loader2 } from "lucide-react",;
-import { JobApplication, ApplicationStatus } from "@/types/jobs",;
-;
-interface ApplicationActionsProps {;
-  application:JobApplication,;
-  processingId:string | null,;
-  onViewApplication:(applicationId:string) => Promise<void>,;
-  onStatusChange:(applicationId:string, newStatus:ApplicationStatus) => Promise<void>;
-}
-;
-export function ApplicationActions({;
-  application,;
-  processingId,;
-  onViewApplication,;
-  onStatusChange;
-} ApplicationActionsProps) {;
-  return (;
-    <div className="flex items-center justify-end gap-2">;
+            {processingId === application && application.id ? (<Loader2 className="h-4 w-4 animate-spin" />;
+            ) : (import {DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger;
+} from "@/components/ui/dropdown-menu",interface ApplicationActionsProps  {application:JobApplication,processingId:string | null,onViewApplication:(applicationId:string) => Promise<void>,onStatusChange:(applicationId:string, newStatus:ApplicationStatus) => Promise<void>;
+}export function ApplicationActions() {return (<div className="flex items-center justify-end gap-2">;
       <Button ;
         variant="outline" ;
         size="sm" ;
@@ -139,125 +48,87 @@ export function ApplicationActions({;
         disabled={!!application.viewed_at}
       >;
         <Eye className="h-4 w-4" />;
-      </Button>;
-      ;
-      <DropdownMenu>;
+      </Button>;<DropdownMenu>;
         <DropdownMenuTrigger asChild>;
           <Button ;
             variant="outline" ;
             size="sm";
             disabled={processingId === application.id}
           >;
-            {processingId === application.id ? (;
-              <Loader2 className="h-4 w-4 animate-spin" />;
-            ) :(;
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            {processingId === application.id ? (<Loader2 className="h-4 w-4 animate-spin" />;
+            ) :(<>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
-  onStatusChange
-}: ApplicationActionsProps) {
-  return (
-    <div className="flex items-center justify-end gap-2">
-      <Button
-        variant="outline"
-        size="sm"
+  onStatusChange;
+}: ApplicationActionsProps) {return (<div className="flex items-center justify-end gap-2">;
+      <Button;
+        variant="outline";
+        size="sm";
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}
-      >
-        <Eye className="h-4 w-4" />
-      </Button>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            variant="outline"
-            size="sm"
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
+      <DropdownMenu>;
+        <DropdownMenuTrigger asChild>;
+          <Button;
+            variant="outline";
+            size="sm";
             disabled={processingId === application.id}
-          >
-            {processingId === application.id ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
-            ) : (
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
+          >;
+            {processingId === application.id ? (<Loader2 className="h-4 w-4 animate-spin" />;
+            ) : (<>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuItem
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align="end">;
+          <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, "shortlisted")}
-          >
-            Shortlist
-          </DropdownMenuItem>
-          <DropdownMenuItem
+          >;
+            Shortlist;
+          </DropdownMenuItem>;
+          <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, "interview")}
-          >
-            Schedule Interview
-          </DropdownMenuItem>
-          <DropdownMenuItem
+          >;
+            Schedule Interview;
+          </DropdownMenuItem>;
+          <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, "hired")}
-          >
-            Hire
-          </DropdownMenuItem>
-          <DropdownMenuItem
+          >;
+            Hire;
+          </DropdownMenuItem>;
+          <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, "rejected")}
-            className="text-red-600"
-          >
-            Reject
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-
-
-
+            className="text-red-600";
+          >;
+            Reject;
+          </DropdownMenuItem>;
+        </DropdownMenuContent>;
+      </DropdownMenu>;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
-            )}
-
-      <Button 
-        variant="default" 
-
-
-
-      <Button
-        variant="default"
+            )}<Button;
+        variant="default";
+      <Button;
+        variant="default";
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
-            )}
-
-
-      <Button 
-        variant="default" 
-
-
-        size="sm"
-        asChild
-      >
-        <Link to={`/messages?talentId=${application.talent_id}`}>
-          Contact
-        </Link>
-      </Button>
-    </div>
-  )
-
-import { useState } from './react';
-import { Link } from './react-router-dom';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu';
-import { Button } from '@/components / ui / button';
-import { Eye, ChevronDown, Loader2 } from './lucide-react';
-import { JobApplication, ApplicationStatus } from '@/types / jobs';
-interface ApplicationActionsProps {
-  application: JobApplication,
-  processing_id: string | null,
-  onViewApplication: (application_id: string) => Promise < void>,
-  onStatusChange: (application_id: string, new_status: ApplicationStatus) => Promise < void>;
-
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",;
-interface ApplicationActionsProps {;
-  application: JobApplication,;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+            )}<Button;
+        variant="default";
+        size="sm";
+        asChild;
+      >;
+        <Link to={`/messages?talentId=${application.talent_id}`}>;
+          Contact;
+        </Link>;
+      </Button>;
+    </div>;
+  )import { useState  } from './react';
+import { Link  } from './react-router-dom';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger  } from '@/components / ui / dropdown - menu';
+import { Button  } from '@/components / ui / button';
+import { Eye, ChevronDown, Loader2  } from './lucide-react';
+import { JobApplication, ApplicationStatus  } from '@/types / jobs';
+interface ApplicationActionsProps  {application: JobApplication,processing_id: string | null,onViewApplication: (application_id: string) => Promise < void>,onStatusChange: (application_id: string, new_status: ApplicationStatus) => Promise < void>;DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger;
+} from "@/components/ui/dropdown-menu",interface ApplicationActionsProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
           </Button>;
         </DropdownMenuTrigger>;
         <DropdownMenuContent align="end">;
@@ -280,18 +151,8 @@ interface ApplicationActionsProps {;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
-      </DropdownMenu>;
-
-;
-
-
-
-
-
-;
+      </DropdownMenu>;;;
   );
-
-      ;
       <Button ;
         variant="default" ;
         size="sm";
@@ -305,6 +166,4 @@ interface ApplicationActionsProps {;
         </Link>;
       </Button>;
     </div>;
-  );
-}
-;
+  )}

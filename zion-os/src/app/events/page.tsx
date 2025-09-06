@@ -1,18 +1,6 @@
 
-
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",;
-  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",;
-  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},;
-export default function EventsPage() {;
-  return (;
-
-
-    <div className="min-h-screen">;
-
-      {/* Hero Section */}
+;
+import Link from "next/link",export const metadata = {title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},export default function EventsPage() {return (<div className="min-h-screen">;{/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
@@ -46,14 +34,8 @@ export default function EventsPage() {;
                 </div>;
                 <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
                   Zion Tech Summit 2025;
-                </h2>;
-
-
-                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-                  Our flagship annual conference bringing together technology leaders, innovators,
-
-
-                  and visionaries to explore the future of AI, quantum computing, and enterprise;
+                </h2>;<p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
+                  Our flagship annual conference bringing together technology leaders, innovators,and visionaries to explore the future of AI, quantum computing, and enterprise;
                   technology solutions.;
                 </p>;
                 <div className="flex flex - wrap gap - 3 mb - 6">;
@@ -166,15 +148,9 @@ export default function EventsPage() {;
                 <svg className="w - 10 h - 10 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
                 </svg>;
-              </div>;
-
-
-              <h3 className="text - xl font - semibold mb - 3">Conferences</h3>;
+              </div>;<h3 className="text - xl font - semibold mb - 3">Conferences</h3>;
               <p className="text - gray - 400 mb - 4">;
-                Large - scale industry events featuring keynote speakers, panel discussions,
-
-
-                and networking opportunities;
+                Large - scale industry events featuring keynote speakers, panel discussions,and networking opportunities;
               </p>;
               <Link href="/events / category / conferences" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
                 View Conferences →;
@@ -185,15 +161,9 @@ export default function EventsPage() {;
                 <svg className="w - 10 h - 10 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M15 10l4.553 - 2.276A1 1 0 0121 8.618v6.764a1 1 0 01 - 1.447.894L15 14M5 18h8a2 2 0 002 - 2V8a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v8a2 2 0 002 2z" />;
                 </svg>;
-              </div>;
-
-
-              <h3 className="text - xl font - semibold mb - 3">Webinars</h3>;
+              </div>;<h3 className="text - xl font - semibold mb - 3">Webinars</h3>;
               <p className="text - gray - 400 mb - 4">;
-                Online educational sessions covering specific topics, technologies,
-
-
-                and industry trends;
+                Online educational sessions covering specific topics, technologies,and industry trends;
               </p>;
               <Link href="/events / category / webinars" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
                 View Webinars →;
@@ -359,14 +329,8 @@ export default function EventsPage() {;
               </div>;
               <h3 className="text - xl font - bold mb - 3 group - hover:text - blue - 400 transition - colors">;
                 Quantum Computing Fundamentals;
-              </h3>;
-
-
-              <p className="text - gray - 400 mb - 4 leading - relaxed">;
-                Hands - on workshop covering the basics of quantum computing, qubits,
-
-
-                and quantum algorithms for beginners and intermediate developers.;
+              </h3>;<p className="text - gray - 400 mb - 4 leading - relaxed">;
+                Hands - on workshop covering the basics of quantum computing, qubits,and quantum algorithms for beginners and intermediate developers.;
               </p>;
               <div className="flex items - center text - sm text - gray - 400 mb - 4">;
                 <svg className="w - 4 h - 4 mr - 2" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -752,5 +716,4 @@ export default function EventsPage() {;
           </div>;
         </div>;
       </section>;
-    </div>);
-}
+    </div>)}

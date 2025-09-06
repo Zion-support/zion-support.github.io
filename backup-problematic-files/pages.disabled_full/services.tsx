@@ -1,45 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import {
-  ArrowRight,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Database,
-  Server,
-  Lock,
-  BarChart3,
-  Users,
-  Globe,
-  Code,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Clock,
-  Award,
-  Mail,
-  Calendar,
-  Settings,
-  Eye,
-  MessageSquare,
-  Palette,
-  Bot,
-  Cpu,
-  Link2,
-  Wifi,
-  HardDrive,
-  Monitor,
-  Activity,
-  Terminal,
-  CreditCard,
-  Smartphone
-} from 'lucide-react';
+import { ArrowRight,Brain,Cloud,Shield,Zap,Database,Server,Lock,BarChart3,Users,Globe,Code,CheckCircle,Star,TrendingUp,Clock,Award,Mail,Calendar,Settings,Eye,MessageSquare,Palette,Bot,Cpu,Link2,Wifi,HardDrive,Monitor,Activity,Terminal,CreditCard,Smartphone;
+ } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
-	return (
-		<Layout>;
+	return (<Layout>;
 			<PageTransition>;
 			{/* Hero Section */}
 			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32'>;
@@ -99,9 +65,9 @@ import PageTransition from '../src/components/PageTransition';
 									<Clock className='h-4 w-4' />;
 									<span>2-4 weeks delivery</span>;
 								</div>;
-								<Link
-									href='/contact'
-									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group'
+								<Link;
+									href='/contact';
+									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group';
 									aria-label='Get started with AI services'>;
 									Get started with AI;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />;
@@ -145,9 +111,9 @@ import PageTransition from '../src/components/PageTransition';
 									<Clock className='h-4 w-4' />;
 									<span>4-8 weeks delivery</span>;
 								</div>;
-								<Link
-									href='/contact'
-									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group'
+								<Link;
+									href='/contact';
+									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group';
 									aria-label='Get started with cloud services'>;
 									Get started with Cloud;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />;
@@ -191,9 +157,9 @@ import PageTransition from '../src/components/PageTransition';
 									<Clock className='h-4 w-4' />;
 									<span>3-6 weeks delivery</span>;
 								</div>;
-								<Link
-									href='/contact'
-									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group'
+								<Link;
+									href='/contact';
+									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group';
 									aria-label='Get started with cybersecurity services'>;
 									Get started with Security;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />;
@@ -237,9 +203,9 @@ import PageTransition from '../src/components/PageTransition';
 									<Clock className='h-4 w-4' />;
 									<span>6-12 weeks delivery</span>;
 								</div>;
-								<Link
-									href='/contact'
-									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
+								<Link;
+									href='/contact';
+									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group';
 									aria-label='Get started with custom software services'>;
 									Get started with SaaS;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />;
@@ -322,12 +288,12 @@ import PageTransition from '../src/components/PageTransition';
 					</div>;
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 						{/* AI Content Creation Tools */}
-							<Link
-								href='https://ziontechgroup && ziontechgroup.com'
-								target='_blank'
-								rel='noreferrer'
-							</Link>
-						</div>
-					</div>
-				</div>
-			</section>
+							<Link;
+								href='https://ziontechgroup && ziontechgroup.com';
+								target='_blank';
+								rel='noreferrer';
+							</Link>;
+						</div>;
+					</div>;
+				</div>;
+			</section>;

@@ -1,13 +1,6 @@
 
-
-
-export default function BlockchainServicesPage() {;
-  return (;
-
-
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
-
-      {/* Hero Section */}
+;
+export default function BlockchainServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;{/* Hero Section */}
       <div className="bg - gradient - to - r from - orange - 600 to - red - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
           <h1 className="text - 5xl font - bold mb - 6">⛓️ Blockchain & Web3 Services</h1>;
@@ -55,17 +48,11 @@ export default function BlockchainServicesPage() {;
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
-            {/* DeFi Platform Development */}
-
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+            {/* DeFi Platform Development */}<div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">💰</div>;
               <h2 className="text - 3xl font - bold mb - 4">DeFi Platform Development</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
-                Build next - generation decentralized finance platforms with lending, borrowing,
-
-
-                yield farming, and automated market making capabilities.;
+                Build next - generation decentralized finance platforms with lending, borrowing,yield farming, and automated market making capabilities.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
@@ -128,17 +115,11 @@ export default function BlockchainServicesPage() {;
                 Learn More About DeFi Development;
               </a>;
             </div>;
-            {/* NFT Marketplace */}
-
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+            {/* NFT Marketplace */}<div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🎨</div>;
               <h2 className="text - 3xl font - bold mb - 4">NFT Marketplace Development</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
-                Create cutting - edge NFT marketplaces with advanced features, multi - chain support,
-
-
-                and innovative monetization strategies for digital assets.;
+                Create cutting - edge NFT marketplaces with advanced features, multi - chain support,and innovative monetization strategies for digital assets.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
@@ -197,17 +178,11 @@ export default function BlockchainServicesPage() {;
                 Learn More About NFT Marketplace;
               </a>;
             </div>;
-            {/* Smart Contract Development */}
-
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+            {/* Smart Contract Development */}<div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">📜</div>;
               <h2 className="text - 3xl font - bold mb - 4">Smart Contract Development</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
-                Secure, audited smart contracts for any blockchain use case with comprehensive testing,
-
-
-                security analysis, and deployment support.;
+                Secure, audited smart contracts for any blockchain use case with comprehensive testing,security analysis, and deployment support.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
@@ -266,17 +241,11 @@ export default function BlockchainServicesPage() {;
                 Learn More About Smart Contracts;
               </a>;
             </div>;
-            {/* Web3 Infrastructure */}
-
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+            {/* Web3 Infrastructure */}<div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🌐</div>;
               <h2 className="text - 3xl font - bold mb - 4">Web3 Infrastructure</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
-                Build robust Web3 infrastructure with node management, API gateways,
-
-
-                indexing services, and decentralized storage solutions.;
+                Build robust Web3 infrastructure with node management, API gateways,indexing services, and decentralized storage solutions.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
@@ -335,17 +304,11 @@ export default function BlockchainServicesPage() {;
                 Learn More About Web3 Infrastructure;
               </a>;
             </div>;
-            {/* DAO Development */}
-
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+            {/* DAO Development */}<div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🏛️</div>;
               <h2 className="text - 3xl font - bold mb - 4">DAO Development</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
-                Create sophisticated decentralized autonomous organizations with advanced governance,
-
-
-                treasury management, and community engagement tools.;
+                Create sophisticated decentralized autonomous organizations with advanced governance,treasury management, and community engagement tools.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
@@ -618,5 +581,4 @@ export default function BlockchainServicesPage() {;
           </div>;
         </div>;
       </section>;
-    </div>);
-}
+    </div>)}

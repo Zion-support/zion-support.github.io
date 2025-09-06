@@ -1,38 +1,18 @@
 
-import Link from "next/link",;
-export const metadata = {;
-  title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",;
-  description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, business intelligence, content generation, and research automation.",;
-export const metadata = {
-  title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",,
-  description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, business intelligence, content generation, and research automation.",,
-  keywords: "AI services, artificial intelligence, machine learning, autonomous business, business intelligence, content generation, Zion Tech Group"},;
-export default function AIServicesPage() {;
-  return (;
-
-    <div className="min-h-screen">;
-
-      {/* Hero Section */}
+import Link from "next/link",export const metadata = {title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, business intelligence, content generation, and research automation.",export const metadata = {title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",,description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, business intelligence, content generation, and research automation.",,keywords: "AI services, artificial intelligence, machine learning, autonomous business, business intelligence, content generation, Zion Tech Group"},export default function AIServicesPage() {return (<div className="min-h-screen">;{/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
             AI & <span className="gradient - text">Machine Learning</span>;
-          </h1>;
-
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
+          </h1>;<p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
     <div className="min-h-screen">;    <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-7xl mx - auto text-center">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb-6">;
             AI & <span className="gradient-text">Machine Learning</span>;
-          </h1>;
-
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading-relaxed">;
-            Harness the power of artificial intelligence to automate operations,
-            enhance decision - making, and create intelligent business processes.;
-
-          </p>;
+          </h1>;<p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading-relaxed">;
+            Harness the power of artificial intelligence to automate operations,enhance decision - making, and create intelligent business processes.;</p>;
         </div>;
       </section>;
       {/* AI Services Overview */}
@@ -546,5 +526,4 @@ export default function AIServicesPage() {;
           </div>;
         </div>;
       </section>;
-    </div>);
-}
+    </div>)}

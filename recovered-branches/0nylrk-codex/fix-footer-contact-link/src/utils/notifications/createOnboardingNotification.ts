@@ -1,65 +1,32 @@
 
-
-
-import {createNotification} from './createNotification';
-import {OnboardingNotificationParams} from './types';
-
-
-/**
- * Creates an onboarding notification for a user
- */
-export async function createOnboardingNotification({
-
-import { createNotification  } from './createNotification';
+;
+import { createNotification } from './createNotification';
 import { OnboardingNotificationParams } from './types';
-/**
- * Creates an onboarding notification for a user
- */
-export async function createOnboardingNotification({;
-  userId;
-  missingMilestone;
-  userRole
-}: OnboardingNotificationParams) {
-
-
-/**
- * Creates an onboarding notification for a user
- */
-export async function createOnboardingNotification({  missingMilestone;
-  userRole
-}: OnboardingNotificationParams) {
-
-  try {
-  let title = '';
+/**;
+ * Creates an onboarding notification for a user;
+ */;
+export async function createOnboardingNotification() {/**;
+ * Creates an onboarding notification for a user;
+ */;
+export async function createOnboardingNotification() {try {let title = '';
   let message = '';
   let actionUrl = '';
   let actionText = '';
-  if (userRole === 'talent') {
-    switch (missingMilestone) {
-      case 'profile_completed':
-
-import {create_notification} from './create_notification';
+  if (userRole === 'talent') {switch (missingMilestone) {case 'profile_completed':;
+import { create_notification } from './create_notification';
 /**;
 * Creates an onboarding notification for a user;
 */;
-export async /**
- * createOnboardingNotification - Function description
- */
-function createOnboardingNotification() {
-  let title = '';
+export async /**;
+ * createOnboardingNotification - Function description;
+ */;
+function createOnboardingNotification() {let title = '';
   let message = '';
   let action_url = '';
-  let action_text = '';
-;
-  // Check condition
-if ( {) {
-  $2
+  let action_text  = '';// Check condition;
+if ( {) {$2;
 }
-    switch (missing_milestone) {
-      case 'profile_completed':;
-
-
-        title = 'Complete your profile';
+    switch (missing_milestone) {case 'profile_completed':;title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
         action_url = '/profile';
         action_text = 'Complete Profile';
@@ -77,9 +44,7 @@ if ( {) {
         action_text = 'Set Availability';
         break;
     }
-  } else {
-    switch (missing_milestone) {
-      case 'job_posted':;
+  } else {switch (missing_milestone) {case 'job_posted':;
         title = 'Post your first job';
         message = 'Post your first job to start finding talent';
         action_url = '/post - job';
@@ -98,123 +63,31 @@ if ( {) {
         action_text = 'Find Talent';
         break;
     }
-  }
-
-
-  return create_notification ({
-    user_id;
+  }return create_notification ({user_id;
     title;
     message;
     type: 'onboarding';
     send_email: false;
-    action_url,
-    action_text;
-  });
-
-
-
-
-import { createNotification } from './createNotification',;
-      case 'profile_completed':import { createNotification } from './createNotification',;
-import { OnboardingNotificationParams } from './types',;
-/**;
+    action_url,action_text;
+  })import { createNotification } from './createNotification',case 'profile_completed':import { createNotification } from './createNotification',import { OnboardingNotificationParams } from './types',/**;
  * Creates an onboarding notification for a user;
  */;
-export async function createOnboardingNotification({;
-  userId,;
-  missingMilestone,;
-  userRole;
-
-} OnboardingNotificationParams) {;
-
-
-} OnboardingNotificationParams) {;
-}: OnboardingNotificationParams) {;
-  let title = '',;
-  let message = '',;
-  let actionUrl = '',;
-  let actionText = '',;
-
-  ;
-
-
-  ;
-  if (userRole === 'talent') {;
-    switch (missingMilestone) {;
-      case 'profile_completed':;
-        title = 'Complete your profile',;
-        message = 'Complete your profile to get discovered by clients',;
-        actionUrl = '/profile',;
-        actionText = 'Complete Profile',;
-        break,;
-      case 'skills_added':;
-        title = 'Add your skills',;
-        message = 'Add your skills to get better job matches',;
-        actionUrl = '/profile/skills',;
-        actionText = 'Add Skills',;
-        break,;
-      case 'availability_set':;
-        title = 'Set your availability',;
-        message = 'Set your availability to help clients know when you can work',;
-        actionUrl = '/profile/settings',;
-        actionText = 'Set Availability',;
-
-        break,;
-
-
-        break,;
-        break;
+export async function createOnboardingNotification() {} OnboardingNotificationParams) {}: OnboardingNotificationParams) {let title = '',let message = '',let actionUrl = '',let actionText  = '',;if (userRole === 'talent') {switch (missingMilestone) {case 'profile_completed':;
+        title = 'Complete your profile',message = 'Complete your profile to get discovered by clients',actionUrl = '/profile',actionText = 'Complete Profile',break,case 'skills_added':;
+        title = 'Add your skills',message = 'Add your skills to get better job matches',actionUrl = '/profile/skills',actionText = 'Add Skills',break,case 'availability_set':;
+        title = 'Set your availability',message = 'Set your availability to help clients know when you can work',actionUrl = '/profile/settings',actionText = 'Set Availability',break,break,break;
     }
-  } else {;
-    switch (missingMilestone) {;
-      case 'job_posted':;
-        title = 'Post your first job',;
-        message = 'Post your first job to start finding talent',;
-        actionUrl = '/post-job',;
-        actionText = 'Post Job',;
-        break,;
-      case 'match_viewed':;
-        title = 'View your AI matches',;
-        message = 'Check out your AI-matched talent suggestions',;
-        actionUrl = '/client-dashboard',;
-        actionText = 'View Matches',;
-        break,;
-      case 'talent_invited':;
-        title = 'Invite talent',;
-        message = 'Invite talent to speed up your hiring process',;
-        actionUrl = '/talent',;
-        actionText = 'Find Talent',;
-        break;
+  } else {switch (missingMilestone) {case 'job_posted':;
+        title = 'Post your first job',message = 'Post your first job to start finding talent',actionUrl = '/post-job',actionText = 'Post Job',break,case 'match_viewed':;
+        title = 'View your AI matches',message = 'Check out your AI-matched talent suggestions',actionUrl = '/client-dashboard',actionText = 'View Matches',break,case 'talent_invited':;
+        title = 'Invite talent',message = 'Invite talent to speed up your hiring process',actionUrl = '/talent',actionText = 'Find Talent',break;
     }
-  }
-;
-
-
-        break,;
-    }
-  }
-  ;
-  return createNotification({;
-    userId,;
-    title,;
-    message,;
-    type: 'onboarding',;
-    sendEmail: false;
+  }break,}
+  }return createNotification({userId,title,message,type: 'onboarding',sendEmail: false;
     actionUrl;
     actionText;
-  });
-}
-;
-}
-;
-    type:'onboarding',;
-    sendEmail:false,;
-    actionUrl,;
-    actionText;
-  }),;
-} if (userRole === 'talent') {
-  switch (missingMilestone) {
-  case 'profile completed': title = 'Complete your profile';
+  })}}type:'onboarding',sendEmail:false,actionUrl,actionText;
+  }),} if (userRole === 'talent') {switch (missingMilestone) {case 'profile completed': title = 'Complete your profile';
 message = 'Complete your profile to get discovered by clients';
 actionUrl = '/profile';
 actionText = 'Complete Profile';
@@ -234,14 +107,8 @@ message = 'Check out your AI-matched talent suggestions';
 actionUrl = '/client-dashboard';
 actionText = 'View Matches';
 break;
-case 'talent invited': 
+case 'talent invited':;
 }
-}
-;
-}
+}}
     }
-  }
-  ;
-;
-;
-}
+  }}

@@ -1,57 +1,13 @@
 
-
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-
-  SelectValue
+;
+import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue;
+ } from '@/components/ui/select';
+import { SortFilterProps  } from '@/types/filters';
+  SelectValue;
 } from "@/components/ui/select";
-import { SortFilterProps } from "@/types/filters";
-
-  SelectValue
+  SelectValue;
 } from "@/components/ui/select";
-  SelectValue
-} from "@/components/ui/select";
-export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
-  return (
-    <div className="mb-6">
-      <label className="text-sm font-medium text-zion-slate-light mb-2 block">
-        Sort by
-      </label>
-      <Select value={sortOption} onValueChange={setSortOption}>
-        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-          <SelectValue placeholder="Sort by" />
-        </SelectTrigger>
-        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">
-          <SelectItem value="relevance">Relevance</SelectItem>
-          <SelectItem value="rating">Highest Rating</SelectItem>
-          <SelectItem value="experience">Most Experienced</SelectItem>
-          <SelectItem value="price-low">Price: Low to High</SelectItem>
-          <SelectItem value="price-high">Price: High to Low</SelectItem>
-        </SelectContent>
-      </Select>
-    </div>
-
-  );
-
-
-
-}
-
-
-  );
-  );
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
-  return (;
-    <div className="mb-6">;
+export function SortFilter() {return (<div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
       </label>;
@@ -62,26 +18,32 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
         <SelectContent className="bg-zion-blue border-zion-blue-light text-white">;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
-          <SelectItem value="experience">Most Experienced</SelectItem>;  );
-}
-
-}
-
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
-  SelectValue
-  SelectValue
+          <SelectItem value="experience">Most Experienced</SelectItem>;
+          <SelectItem value="price-low">Price: Low to High</SelectItem>;
+          <SelectItem value="price-high">Price: High to Low</SelectItem>;
+        </SelectContent>;
+      </Select>;
+    </div>;
+  )}))import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from "@/components/ui/select",export function SortFilter() {return (<div className="mb-6">;
+      <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
+        Sort by;
+      </label>;
+      <Select value={sortOption} onValueChange={setSortOption}>;
+        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
+          <SelectValue placeholder="Sort by" />;
+        </SelectTrigger>;
+        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">;
+          <SelectItem value="relevance">Relevance</SelectItem>;
+          <SelectItem value="rating">Highest Rating</SelectItem>;
+          <SelectItem value="experience">Most Experienced</SelectItem>;  )}}Select,SelectContent,SelectItem,SelectTrigger,SelectValue;
+  SelectValue;
+  SelectValue;
 } from '@/components / ui / select';
-import { SortFilterProps  } from '@/types / filters';
-export /**
- * SortFilter - Function description
- */
-function SortFilter() {
-  return (
-    <div className="mb - 6">;
+import { SortFilterProps   } from '@/types / filters';
+export /**;
+ * SortFilter - Function description;
+ */;
+function SortFilter() {return (<div className="mb - 6">;
       <label className="text - sm font - medium text - zion - slate - light mb - 2 block">;
         Sort by;
       </label>;
@@ -106,42 +68,14 @@ function SortFilter() {
           <SelectItem value="price - high">Price: High to Low</SelectItem>;
         </SelectContent>;
       </Select>;
-    </div>);
-}
-
-
-  )
-
-
-
-
-  )
-
-
-  )
-
-          <SelectItem value="price-low">Price:Low to High</SelectItem>;
+    </div>)})))<SelectItem value="price-low">Price:Low to High</SelectItem>;
           <SelectItem value="price-high">Price:High to Low</SelectItem>;
         </SelectContent>;
       </Select>;
     </div>;
-  );}
- export function SortFilter ({
-  sortOption, setSortOption 
-}: SortFilterProps) {
-  return (<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light mb-2 block" > Sort by </label> <Select value= {
-  sortOption 
-}onValueChange= {
-  setSortOption 
-}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance</SelectItem> <SelectItem value=" rating">Highest Rating</SelectItem> <SelectItem value=" experience">Most Experienced</SelectItem> <SelectItem value=" price-low">Price: Low to High</SelectItem> <SelectItem value=" price-high" >Price: High to Low</SelectItem> </SelectContent> </Select> </div>) 
-}
-);
-}
-}
-;
-
-}
-;
-
-  )
-
+  )}
+ export function SortFilter () {return (<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light mb-2 block" > Sort by </label> <Select value= {sortOption;
+}onValueChange= {setSortOption;
+}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance</SelectItem> <SelectItem value=" rating">Highest Rating</SelectItem> <SelectItem value=" experience">Most Experienced</SelectItem> <SelectItem value=" price-low">Price: Low to High</SelectItem> <SelectItem value=" price-high" >Price: High to Low</SelectItem> </SelectContent> </Select> </div>)}
+)}
+}})

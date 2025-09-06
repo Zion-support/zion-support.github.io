@@ -1,117 +1,39 @@
 
-import React from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
-return <OnboardingTracker steps={steps} />
-
+import React from "react",import { useAuth } from "@/hooks/useAuth",import { useOnboardingStatus  } from '@/hooks/useOnboardingStatus';
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon  } from 'lucide-react';
+return <OnboardingTracker steps={steps} />;
 import React from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
-import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
-export /**
- * TalentOnboardingSteps - Function description
- */
-function TalentOnboardingSteps() {
-  const { user } = use_auth ();
-  const onboarding_status = useOnboardingStatus ();
-  const steps: OnboardingStep[] = [;
-
-
-
-  const steps: OnboardingStep[] = [
-    {
-      id: "profile",
-      label: "Complete your profile",
-      completed: onboardingStatus.profileCompleted,
-      link: "/profile",
-
-      action: "Update"
-    },
-
-      action: "Update"
-    },
-      action: "Update"
-    },
-      action: "Update"},
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-      action: "Update"
-    },
-      action: "Update"
-    },
-      action: "Update"},
->>>>>>> main
-    {
-      id: "skills",
-      label: "Add your top skills",
-      completed: onboardingStatus.skillsAdded,
-      link: "/profile/skills",
-
-      action: "Add Skills"
-    },
-
-      action: "Add Skills"
-    },
-      action: "Add Skills"
-    },
-      action: "Add Skills"},
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-      action: "Add Skills"
-    },
-      action: "Add Skills"
-    },
-      action: "Add Skills"},
->>>>>>> main
-    {
-      id: "availability",
-      label: "Set your availability",
-      completed: onboardingStatus.availabilitySet,
-      link: "/profile/availability",
-
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-      action: "Set"
-    },
-
-      action: "Set"
-    },
-    {
->>>>>>> main
-      action: "Set"
-    },
-    {
-      id: "match",
-      label: "Receive your first job match",
-      completed: onboardingStatus.matchReceived,
-      link: "/talent-dashboard",
-      action: "View Matches"
+import { use_auth  } from '@/hooks / use_auth';
+import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
+import { OnboardingTracker, OnboardingStep  } from './OnboardingTracker';
+export /**;
+ * TalentOnboardingSteps - Function description;
+ */;
+function TalentOnboardingSteps() {const { user } = use_auth ()const onboarding_status = useOnboardingStatus ()const steps: OnboardingStep[]  = [;const steps: OnboardingStep[] = [;
+    {id: "profile",label: "Complete your profile",completed: onboardingStatus.profileCompleted,link: "/profile",action: "Update";
+    },action: "Update";
+    },action: "Update";
+    },action: "Update"},ursor/automate-test-improve-and-merge-code-646c;
+      action: "Update";
+    },action: "Update";
+    },action: "Update"},{id: "skills",label: "Add your top skills",completed: onboardingStatus.skillsAdded,link: "/profile/skills",action: "Add Skills";
+    },action: "Add Skills";
+    },action: "Add Skills";
+    },action: "Add Skills"},ursor/automate-test-improve-and-merge-code-646c;
+      action: "Add Skills";
+    },action: "Add Skills";
+    },action: "Add Skills"},{id: "availability",label: "Set your availability",completed: onboardingStatus.availabilitySet,link: "/profile/availability",ursor/automate-test-improve-and-merge-code-646c;
+      action: "Set";
+    },action: "Set";
+    },{action: "Set";
+    },{id: "match",label: "Receive your first job match",completed: onboardingStatus.matchReceived,link: "/talent-dashboard",action: "View Matches";
     }
   ];
-      action: "Set"},
-    {
-      action: "View Matches"
+      action: "Set"},{action: "View Matches";
     }
   ];
-      action: "Set"},
-    {
->>>>>>> main
-
-      id: "match",
-      label: "Receive your first job match",
-      completed: onboardingStatus.matchReceived,
-
-      action: "View Matches"
+      action: "Set"},{id: "match",label: "Receive your first job match",completed: onboardingStatus.matchReceived,action: "View Matches";
     }
-  ];
-
-      id: "match",
-      label: "Receive your first job match",
-      completed: onboardingStatus.matchReceived,
-  const { user } = useAuth();
-  const onboardingStatus = null;
-  return <OnboardingTracker steps={steps} />
+  ];id: "match",label: "Receive your first job match",completed: onboardingStatus.matchReceived,const { user } = useAuth()const onboardingStatus = null;
+  return <OnboardingTracker steps={steps} />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,34 +1,13 @@
-import { Edit, Trash2 } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import { EducationItemProps } from './types'
+import { Edit, Trash2  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
+import { EducationItemProps  } from './types';
+import { Button   } from '@/components/ui/button';
+import { Card, CardContent   } from '@/components/ui/card';
+import { Education   } from '@/types/resume';
+export function EducationItem() {export function EducationItem() {import { format  } from 'date-fns';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Education  } from '@/types/resume';
-import { EducationItemProps } from './types';
-export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-export function EducationItem({
-  education
-  onEdit
-  onDelete
-}: EducationItemProps) {
-
-
-import { format } from 'date-fns';
-import { Edit, Trash2 } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Education } from '@/types/resume';
-
-
-  return (
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-    <Card className='bg-muted/40'>;
+  return (return (<Card className='bg-muted/40'>;
       <CardContent className='pt-6'>;
         <div className='flex justify-between'>;
           <div>;
@@ -36,8 +15,7 @@ import { Education } from '@/types/resume';
             <p className='text-sm text-muted-foreground'>;
               {education && education.institution}
             </p>;
-            {education && education.field_of_study && (;
-              <p className='text-sm text-muted-foreground'>;
+            {education && education.field_of_study && (<p className='text-sm text-muted-foreground'>;
                 {education && education.field_of_study}
               </p>;
             )}
@@ -51,88 +29,64 @@ import { Education } from '@/types/resume';
                 : education && education.end_date;
                   ? typeof education && education.end_date === 'string';
                     ? education && education.end_date;
-                    : format(education && education.end_date, 'MMM yyyy');
-                  : ''}
+                    : format(education && education.end_date, 'MMM yyyy'): ''}
             </p>;
-            {education && education.location && (;
-              <p className='text-xs text-muted-foreground'>;
+            {education && education.location && (<p className='text-xs text-muted-foreground'>;
                 {education && education.location}
               </p>;
             )}
           </div>;
           <div className='flex gap-2'>;
-            <Button
-              variant='ghost'
-              size='icon'
+            <Button;
+              variant='ghost';
+              size='icon';
               onClick={() => onEdit(education)}
               aria-label='Edit education'            >;
               <Edit className='h-4 w-4' />;
             </Button>;
-            <Button
-              variant='ghost'
-              size='icon'
-
-
+            <Button;
+              variant='ghost';
+              size='icon';
               onClick={() => onDelete(education.id!)}
-              aria-label='Delete education'
-            >
-              <Trash2 className='h-4 w-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-            </Button>
-          </div>
-        </div>
-        {education.description && (
-
-
-              onClick={() => onDelete(education && education.id!)}
+              aria-label='Delete education';
+            >;
+              <Trash2 className='h-4 w-4' />;
+            </Button>;
+          </div>;
+        </div>;
+        {education.description && (onClick={() => onDelete(education && education.id!)}
               aria-label='Delete education'            >;
               <Trash2 className='h-4 w-4' />            </Button>;
           </div>;
         </div>;
-        {education && education.description && (;
-          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>        )}
+        {education && education.description && (<p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>        )}
       </CardContent>;
     </Card>;
-  );
-}              <Trash2 className="h-4 w-4" />;
+  )}              <Trash2 className="h-4 w-4" />;
             </Button>;
           </div>;
         </div>;
-        {education && education.description && (;
-          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
-
-    </Card>;
-  );
-};
-
-          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+        {education && education.description && (<p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;</Card>;
+  )}<p className="text-sm mt-3 line-clamp-2">{education.description}</p>;
         )}
       </CardContent>;
     </Card>;
-  );
-
-}
-
-          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
-<p className='text-sm mt-3 line-clamp-2'>{education.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  )}<p className="text-sm mt-3 line-clamp-2">{education.description}</p>;
+<p className='text-sm mt-3 line-clamp-2'>{education.description}</p>;
         )}
-      </CardContent>
-    </Card>
-  );
-}
-import { format } from 'date - fns';
-import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { Education } from '@/types / resume';
-import { EducationItemProps } from './types'; import { Edit, Trash2 } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-export /**
- * EducationItem - Function description
- */
-function EducationItem() {
-  return (
-    <Card className='bg - muted / 40'>;
+      </CardContent>;
+    </Card>;
+  )}
+import { format  } from 'date - fns';
+import { Edit, Trash2 } from 'lucide-react'; import { Button  } from '@/components / ui / button';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Education  } from '@/types / resume';
+import { EducationItemProps } from './types'; import { Edit, Trash2  } from 'lucide-react';
+import { Button  } from '@/components / ui / button';
+export /**;
+ * EducationItem - Function description;
+ */;
+function EducationItem() {return (<Card className='bg - muted / 40'>;
       <CardContent className='pt - 6'>;
         <div className='flex justify - between'>;
           <div>;
@@ -140,8 +94,7 @@ function EducationItem() {
             <p className='text - sm text - muted - foreground'>;
               {education.institution}
             </p>;
-            {education.field_of_study && (
-              <p className='text - sm text - muted - foreground'>;
+            {education.field_of_study && (<p className='text - sm text - muted - foreground'>;
                 {education.field_of_study}
               </p>)}
             <p className='text - xs text - muted - foreground mt - 1'>;
@@ -154,11 +107,9 @@ function EducationItem() {
                 : education.end_date;
                   ? typeof education.end_date === 'string';
                     ? education.end_date;
-                    : format (education.end_date, 'MMM yyyy');
-                  : ''}
+                    : format (education.end_date, 'MMM yyyy'): ''}
             </p>;
-            {education.location && (
-              <p className='text - xs text - muted - foreground'>;
+            {education.location && (<p className='text - xs text - muted - foreground'>;
                 {education.location}
               </p>)}
           </div>;
@@ -178,19 +129,13 @@ function EducationItem() {
               <Trash2 className='h - 4 w - 4' />            </Button>;
           </div>;
         </div>;
-        {education.description && (
-          <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>        )}
+        {education.description && (<p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>        )}
       </CardContent>;
-    </Card>);
-}              <Trash2 className="h - 4 w - 4" />;
+    </Card>)}              <Trash2 className="h - 4 w - 4" />;
             </Button>;
           </div>;
         </div>;
-        {education.description && (
-          <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>          <p className="text - sm mt - 3 line - clamp - 2">{education.description}</p>)}
+        {education.description && (<p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>          <p className="text - sm mt - 3 line - clamp - 2">{education.description}</p>)}
       </CardContent>;
-    </Card>);
+    </Card>)}
 }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,24 +1,16 @@
-=
+=;
 import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
->
-
+>;
 import React,{ useState,useRef,useEffect } from\';react\' import { Button } from \'../ui/Button\''\';\' import { Send } from \'lucide-react\' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(\'';\';) const inputRef = useRef(null) useEffect(() => {\'';
-const React,{ useState,useRef,useEffect } from";react" import { Button } from "./ui/Button""";" import { Send } from "lucide-react" export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState("";";) const inputRef = useRef(null) useEffect(() => {"";''"
-<:src.disabled/components/ChatAssistant/ChatInput.js.jsx
-
-<
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-
-:src.disabled/components/ChatAssistant/ChatInput.js.jsx
-const React,{ useState,useRef,useEffect } from";react" import { Button } from "./ui/Button""";" import { Send } from "lucide-react" export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState("";";) const inputRef = useRef(null) useEffect(() => {"";''"
-
+const React,{ useState,useRef,useEffect } from";react" import { Button } from "./ui/Button""";" import { Send } from "lucide-react" export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState("";";) const inputRef = useRef(null) useEffect(() => {"";''";
+<:src.disabled/components/ChatAssistant/ChatInput.js.jsx;
+<;
+:src.disabled/components/ChatAssistant/ChatInput.js.jsx;
+const React,{ useState,useRef,useEffect } from";react" import { Button } from "./ui/Button""";" import { Send } from "lucide-react" export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState("";";) const inputRef = useRef(null) useEffect(() => {"";''";
 import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('', ') const inputRef = useRef(null) useEffect(() => {'';
 =import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
->>>>>>>> main:corrupted_backup/ChatInput.js.jsx
-const React,{ useState,useRef,useEffect } from";react" import { Button } from "./ui/Button""";" import { Send } from "lucide-react" export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState("";";) const inputRef = useRef(null) useEffect(() => {"";''"
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-=
->import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+>>>>>>>> main:corrupted_backup/ChatInput.js.jsx;
+const React,{ useState,useRef,useEffect } from";react" import { Button } from "./ui/Button""";" import { Send } from "lucide-react" export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState("";";) const inputRef = useRef(null) useEffect(() => {"";''";
+ursor/automate-test-improve-and-merge-code-646c;
+=;
+>import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef  = useRef(null) useEffect(() => {'';

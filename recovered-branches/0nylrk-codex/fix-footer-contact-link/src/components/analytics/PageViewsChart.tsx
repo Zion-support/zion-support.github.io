@@ -1,85 +1,25 @@
-import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-
-} from "@/components/ui/card";
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-
-
-
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-
-} from "@/components/ui/card";
-
+import React from 'react';
+import { Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';
+import { AnalyticsChart  } from '@/components/analytics/AnalyticsChart';
+import {Card,CardContent,CardDescription,CardHeader,CardTitle,} from '@/components/ui/card';
   timeRange: string;
-  onTimeRangeChange: (range: string) => void
-}
-
-
-
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
+  onTimeRangeChange: (range: string) => void;
+}Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from "@/components/ui/card";
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from "@/components/ui/card";
-
-interface PageViewsChartProps {
-  data: Array<{ date: string, views: number }>;
+  Card,CardContent,CardDescription,CardHeader,CardTitle,} from "@/components/ui/card";interface PageViewsChartProps  {data: Array<{ date: string, views: number }>;
   timeRange: string;
-  onTimeRangeChange: (range: string) => void
+  onTimeRangeChange: (range: string) => void;
 }
-export function PageViewsChart({
-  data
-  timeRange
-  onTimeRangeChange
-}: PageViewsChartProps) {
-
-
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
-
-
-interface PageViewsChartProps {
-  data: Array<{ date: string, views: number }>,
-  timeRange: string,
-  onTimeRangeChange: (range: string) => void
-}
-
-
-} from "@/components/ui/card";
-interface PageViewsChartProps {;
-  data: Array<{ date: string; views: number }>;
+export function PageViewsChart() {import React from "react",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",interface PageViewsChartProps  {data: Array<{ date: string, views: number }>,timeRange: string,onTimeRangeChange: (range: string) => void;
+}} from "@/components/ui/card";
+interface PageViewsChartProps  {data: Array<{ date: string; views: number }>;
   timeRange: string;
-  onTimeRangeChange: (range: string) => void
-}
-
-export function PageViewsChart(): any ({;
-  data,;
-  timeRange,;
-  onTimeRangeChange,;
-}: PageViewsChartProps) {;
-
-
-  return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
+  onTimeRangeChange: (range: string) => void;
+}export function PageViewsChart(): any ({data,timeRange,onTimeRangeChange,}: PageViewsChartProps) {return (<Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
         <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>;
         <CardDescription className="text-zion-slate-light">;
@@ -87,39 +27,25 @@ export function PageViewsChart(): any ({;
         </CardDescription>;
       </CardHeader>;
       <CardContent className="p-0 pb-4">;
-        <AnalyticsChart
-          title=""
-
-
+        <AnalyticsChart;
+          title="";
           data={data |[]}
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
-        />
-      </CardContent>
-    </Card>
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
-interface PageViewsChartProps {;
-  data: Array<{ date: string, views: number }>,;
-  timeRange: string;
+        />;
+      </CardContent>;
+    </Card>;
+interface PageViewsChartProps  {data: Array<{ date: string, views: number }>,timeRange: string;
   onTimeRangeChange: (range: string) => void;
-}
-;
-export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {;
-  return (;
-    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
+}export function PageViewsChart() {return (<Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
         <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>;
         <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>;
       </CardHeader>;
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart;
-          title="";
-
-
-          data={data || []}
+          title="";data={data || []}
           dataKeys={["views"]}
           data={data || []}
           dataKeys={["views"]}
@@ -130,32 +56,19 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         />;
       </CardContent>;
     </Card>;
-  );
-    </Card>;
-
-
-  );
-import React from './react';
-  );
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle
-  CardTitle
+  )</Card>;)import React from './react';
+  )Card,CardContent,CardDescription,CardHeader,CardTitle;
+  CardTitle;
 } from '@/components / ui / card';
-import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
-interface PageViewsChartProps {
-  data: Array<{ date: string; views: number }>;
+import { AnalyticsChart   } from '@/components / analytics / AnalyticsChart';
+interface PageViewsChartProps  {data: Array<{ date: string; views: number }>;
   time_range: string;
   onTimeRangeChange: (range: string) => void;
 }
-export /**
- * PageViewsChart - Function description
- */
-function PageViewsChart() {
-  return (
-    <Card className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;
+export /**;
+ * PageViewsChart - Function description;
+ */;
+function PageViewsChart() {return (<Card className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;
       <CardHeader className="pb - 2">;
         <CardTitle className="text - white text - lg">Page Views Trend</CardTitle>;
         <CardDescription className="text - zion - slate - light">;
@@ -171,40 +84,24 @@ function PageViewsChart() {
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
-    </Card>);
-}
-
-}
-  ),;}
- interface PageViewsChartProps {
-  data: Array< {
-  date: string, views: number 
+    </Card>)}}
+  ),}
+ interface PageViewsChartProps  {data: Array< {date: string, views: number;
 }>;
 timeRange: string;
-onTimeRangeChange: (range: string) => void 
-}export function PageViewsChart ({
-  data, timeRange, onTimeRangeChange 
-}: PageViewsChartProps) {
-  return (<Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden" > <CardHeader className="pb-2" > <CardTitle className="text-white text-lg" >Page Views Trend</CardTitle> <CardDescription className="text-zion-slate-light" >Daily page view statistics</CardDescription> p-0 pb-4"> <AnalyticsChart title="" data= {
-  data || [] 
-}dataKeys= {
-  ['views'] 
-}timeRange= {
-  timeRange 
-}onTimeRangeChange= {
-  onTimeRangeChange 
-}/> </CardContent> </Card>) 
-}
+onTimeRangeChange: (range: string) => void;
+}export function PageViewsChart () {return (<Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden" > <CardHeader className="pb-2" > <CardTitle className="text-white text-lg" >Page Views Trend</CardTitle> <CardDescription className="text-zion-slate-light" >Daily page view statistics</CardDescription> p-0 pb-4"> <AnalyticsChart title="" data= {data || [];
+}dataKeys= {['views'];
+}timeRange= {timeRange;
+}onTimeRangeChange= {onTimeRangeChange;
+}/> </CardContent> </Card>)}
           data={data || []}
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
-        />
-      </CardContent>
+        />;
+      </CardContent>;
         />;
       </CardContent>;
     </Card>;
-  );
-}
-
-
+  )}

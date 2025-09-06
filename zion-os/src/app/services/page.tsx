@@ -1,13 +1,6 @@
 
 import Link from 'next/link';
-export default function ServicesPage() {return (;
-export default function ServicesPage() {;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
-
-
-
-      {/* Hero Section */}
+export default function ServicesPage() {return (export default function ServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;{/* Hero Section */}
       <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
           <h1 className="text - 5xl font - bold mb - 6">Zion Tech Group Services</h1>;
@@ -19,12 +12,10 @@ export default function ServicesPage() {;
               Call Now: +1 302 464 0950;
             </a>;
             <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
-export default /**
- * ServicesPage - Function description
- */
-function ServicesPage() {
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text-white">;
+export default /**;
+ * ServicesPage - Function description;
+ */;
+function ServicesPage() {return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text-white">;
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py-20">;
         <div className="container mx - auto px - 6 text-center">;
@@ -1028,5 +1019,4 @@ function ServicesPage() {
           </div>;
         </div>;
       </section>;
-    </div>);
-}
+    </div>)}

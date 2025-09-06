@@ -1,48 +1,17 @@
 
-
+;
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft, Play, CheckCircle, ArrowRight, Book } from 'lucide-react';
-export default function FirstSteps() {
-  const contact = {
-    "phone": '+1 302 464 0950',
-    "email": 'kleber@ziontechgroup.com',
-    "address": '364 E Main St STE 1008 Middletown DE 19709',
-    "site": 'https://ziontechgroup.com'
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+import { ArrowLeft, Play, CheckCircle, ArrowRight, Book  } from 'lucide-react';
+export default function FirstSteps() {const contact = {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"site": 'https://ziontechgroup.com';
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
 import React from 'react';
-import {ArrowLeft,, Play,, CheckCircle,, ArrowRight,, Book} from 'lucide-react';
-export default function FirstSteps() {;
-  const contact = {;
-    "phone": '+1 302 464 0950',;
-    "email": 'kleber@ziontechgroup && ziontechgroup.com',;
-    "address": '364 E Main St STE 1008 Middletown DE 19709',;
-    "site": 'https://ziontechgroup && ziontechgroup.com'
-};
-  return (
-    <>;
+import { ArrowLeft,, Play,, CheckCircle,, ArrowRight,, Book } from 'lucide-react';
+export default function FirstSteps() {const contact = {"phone": '+1 302 464 0950',"email": 'kleber@ziontechgroup && ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"site": 'https://ziontechgroup && ziontechgroup.com';
+}return (<>;
       <Head>;
         <title>First Steps - Zion Tech Group Documentation</title>;
         <meta name="description" content="Your first steps to getting started with Zion Tech Group's services and solutions." />;
@@ -65,8 +34,7 @@ export default function FirstSteps() {;
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white mb-8">;
             <h2 className="text-2xl font-semibold mb-4">Welcome to Zion Tech Group!</h2>;
             <p className="text-blue-100 mb-6">;
-              You're about to discover how our 350+ services can transform your business operations, ;
-              from micro SaaS applications to AI-powered automation and comprehensive IT solutions.;
+              You're about to discover how our 350+ services can transform your business operations,from micro SaaS applications to AI-powered automation and comprehensive IT solutions.;
             </p>;
             <div className="flex items-center">;
               <Play className="w-5 h-5 mr-2" />;

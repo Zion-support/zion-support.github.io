@@ -1,89 +1,43 @@
 
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
-import React, { useState } from "react";
-import {useNavigate} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {TalentGrid} from "@/components/talent/TalentGrid";
-import {FilterSidebar} from "@/components/talent/FilterSidebar";
-import {TalentResults} from "@/components/talent/TalentResults";
-import {useTalentDirectory} from "@/hooks/useTalentDirectory";
-import {SORT_OPTIONS} from "@/data/sortOptions";
-import {X} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {TalentProfile} from "@/types/talent";
-export default function TalentDirectory() {;
-  const navigate = useNavigate();
-
-import React, { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { TalentGrid } from "@/components/talent/TalentGrid",
-import { FilterSidebar } from "@/components/talent/FilterSidebar",
-import { TalentResults } from "@/components/talent/TalentResults",
-import { useTalentDirectory } from "@/hooks/useTalentDirectory",
-import { SORT_OPTIONS } from "@/data/sortOptions",
-import { X } from "lucide-react",
-
-
-  // Use our custom hook to manage state;
-  const {;
-
-
-
-
-  // Use our custom hook to manage state;
-  const {;
-
-  const navigate = useNavigate();
-  // Use our custom hook to manage state
-  const {
-    filteredTalents;
-  const navigate = useNavigate();    filteredTalents;
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AppLayout } from '@/layout/AppLayout';
+import { TalentGrid } from '@/components/talent/TalentGrid';
+import { FilterSidebar } from '@/components/talent/FilterSidebar';
+import { TalentResults } from '@/components/talent/TalentResults';
+import { useTalentDirectory } from '@/hooks/useTalentDirectory';
+import { SORT_OPTIONS } from '@/data/sortOptions';
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { TalentProfile } from '@/types/talent';
+export default function TalentDirectory() {const navigate  = useNavigate()import React, { useState } from "react",import { useNavigate } from "react-router-dom",import { AppLayout } from "@/layout/AppLayout",import { TalentGrid } from "@/components/talent/TalentGrid",import { FilterSidebar } from "@/components/talent/FilterSidebar",import { TalentResults } from "@/components/talent/TalentResults",import { useTalentDirectory } from "@/hooks/useTalentDirectory",import { SORT_OPTIONS } from "@/data/sortOptions",import { X } from "lucide-react",// Use our custom hook to manage state;
+  const {// Use our custom hook to manage state;
+  const {const navigate = useNavigate()// Use our custom hook to manage state;
+  const {filteredTalents;
+  const navigate = useNavigate()filteredTalents;
     isLoading;
     searchTerm;
 import React, { useState } from './react';
-import { use_navigate } from './react-router-dom';
-import { AppLayout } from '@/layout / AppLayout';
-import { TalentGrid } from '@/components / talent / TalentGrid';
-import { FilterSidebar } from '@/components / talent / FilterSidebar';
-import { TalentResults } from '@/components / talent / TalentResults';
-import { useTalentDirectory } from '@/hooks / useTalentDirectory';
-import { SORT_OPTIONS } from '@/data / sort_options';
-import { X } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { TalentProfile } from '@/types / talent';
-export default /**
- * TalentDirectory - Function description
- */
-function TalentDirectory() {
-  const navigate = use_navigate ();
-;
-  // Use our custom hook to manage state;
-  const {
-    filtered_talents;
+import { use_navigate  } from './react-router-dom';
+import { AppLayout  } from '@/layout / AppLayout';
+import { TalentGrid  } from '@/components / talent / TalentGrid';
+import { FilterSidebar  } from '@/components / talent / FilterSidebar';
+import { TalentResults  } from '@/components / talent / TalentResults';
+import { useTalentDirectory  } from '@/hooks / useTalentDirectory';
+import { SORT_OPTIONS  } from '@/data / sort_options';
+import { X  } from './lucide-react';
+import { Button  } from '@/components / ui / button';
+import { TalentProfile  } from '@/types / talent';
+export default /**;
+ * TalentDirectory - Function description;
+ */;
+function TalentDirectory() {const navigate  = use_navigate ()// Use our custom hook to manage state;
+  const {filtered_talents;
     is_loading;
     search_term;
     setSearchTerm;
@@ -94,20 +48,10 @@ function TalentDirectory() {
     setPriceRange;
     experience_range;
     setExperienceRange;
-    sort_option;
-
-import { Button } from "@/components/ui/button";
-import { TalentProfile } from "@/types/talent";
-export default function TalentDirectory() {
-import { Button } from "@/components/ui/button",
-import { TalentProfile } from "@/types/talent",
-export default function TalentDirectory() {
-  const navigate = useNavigate(),
-
-  const navigate = useNavigate();
-  // Use our custom hook to manage state
-  const {
-    filteredTalents;
+    sort_option;import { Button  } from '@/components/ui/button';
+import { TalentProfile  } from '@/types/talent';
+export default function TalentDirectory() {import { Button } from "@/components/ui/button",import { TalentProfile } from "@/types/talent",export default function TalentDirectory() {const navigate = useNavigate(),const navigate = useNavigate()// Use our custom hook to manage state;
+  const {filteredTalents;
     isLoading;
     searchTerm;
     setSearchTerm;
@@ -118,16 +62,11 @@ export default function TalentDirectory() {
     setPriceRange;
     experienceRange;
     setExperienceRange;
-    sortOption;
-
-
-    setSortOption;
+    sortOption;setSortOption;
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
-    setIsHireModalOpen;
-
-    selectedTalent;
+    setIsHireModalOpen;selectedTalent;
     setSelectedTalent;
     expandedSections;
     isAuthenticated;
@@ -137,79 +76,27 @@ export default function TalentDirectory() {
     toggleRegion;
     clearFilters;
     toggleSection;
-    handleToggleSave} = useTalentDirectory();
-
-    filteredTalents,
-    selected_talent;
+    handleToggleSave}  = useTalentDirectory()filteredTalents,selected_talent;
     setSelectedTalent;
-    isLoading,
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    isAuthenticated,
-    savedTalents,
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters,
-    toggleSection,
-    handleToggleSave} = useTalentDirectory(),
-  
-
-  const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent)
-    setIsHireModalOpen(true)
-  }
-  const viewProfile = (id: string) => {
-    // Navigate to the talent profile page
-    navigate(`/talent/${id}`)
-  }
-
-  },
-  
-  const viewProfile = (id: string) => {
-    // Navigate to the talent profile page
-    navigate(`/talent/${id}`)
-  },
-  
-
-
-
-    selected_talent;
+    isLoading,searchTerm,setSearchTerm,selectedSkills,selectedAvailability,selectedRegions,priceRange,setPriceRange,experienceRange,setExperienceRange,sortOption,setSortOption,isMobileFilterOpen,setIsMobileFilterOpen,isHireModalOpen,setIsHireModalOpen,selectedTalent,setSelectedTalent,expandedSections,isAuthenticated,savedTalents,toggleSkill,toggleAvailability,toggleRegion,clearFilters,toggleSection,handleToggleSave} = useTalentDirectory(),const handleRequestHire = (talent: TalentProfile) => {setSelectedTalent(talent)setIsHireModalOpen(true)}
+  const viewProfile = (id: string) => {// Navigate to the talent profile page;
+    navigate(`/talent/${id}`)}},const viewProfile = (id: string) => {// Navigate to the talent profile page;
+    navigate(`/talent/${id}`)},selected_talent;
     setSelectedTalent;
-  return (
-    <AppLayout>
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col space-y-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>
-            <p className="text-zion-slate-light">
-              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
-            </p>
-          </div>
-
-
+  return (<AppLayout>;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="flex flex-col space-y-8">;
+          <div>;
+            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>;
+            <p className="text-zion-slate-light">;
+              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
+            </p>;
+          </div>;
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
-              <FilterSidebar
-
+              <FilterSidebar;
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
                 selectedSkills={selectedSkills}
@@ -227,127 +114,14 @@ export default function TalentDirectory() {
                 sortOption={sortOption}
                 setSortOption={setSortOption}
                 clearFilters={clearFilters}
-              />
-            </div>
-
-
-import React, { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { TalentGrid } from "@/components/talent/TalentGrid",;
-import { FilterSidebar } from "@/components/talent/FilterSidebar",;
-import { TalentResults } from "@/components/talent/TalentResults",;
-import { useTalentDirectory } from "@/hooks/useTalentDirectory",;
-import { SORT_OPTIONS } from "@/data/sortOptions",;
-import { X } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { TalentProfile } from "@/types/talent",;
-export default function TalentDirectory() {;
-  const navigate = useNavigate();
-  const navigate = useNavigate();
-  // Use our custom hook to manage state;
-  const {;
-    filteredTalents,;
-    isLoading,;
-    searchTerm,;
-    setSearchTerm,;
-    selectedSkills,;
-    selectedAvailability,;
-    selectedRegions,;
-    priceRange,;
-    setPriceRange,;
-    experienceRange,;
-    setExperienceRange,;
-    sortOption,;
-    setSortOption,;
-    isMobileFilterOpen,;
-    setIsMobileFilterOpen,;
-    isHireModalOpen,;
-    setIsHireModalOpen,;
-    selectedTalent,;
-    setSelectedTalent,;
-    expandedSections,;
-    isAuthenticated,;
-    savedTalents,;
-    toggleSkill,;
-    toggleAvailability,;
-    toggleRegion,;
-    clearFilters,;
-    toggleSection,;
-    handleToggleSave} = useTalentDirectory(),;
-
-
-
-  const handleRequestHire = (talent: TalentProfile) => {;
-    setSelectedTalent(talent),;
-    setIsHireModalOpen(true);
-  };
-  const viewProfile = (id: string) => {;
-    // Navigate to the talent profile page;
-    navigate(`/talent/${id}`);
-  };
-
-  return (
-
-
-;
-export default function TalentDirectory() {;
-  const navigate = useNavigate();
-;
-  // Use our custom hook to manage state;
-  const {;
-    filteredTalents,;
-    isLoading,;
-    searchTerm,;
-    setSearchTerm,;
-    selectedSkills,;
-    selectedAvailability,;
-    selectedRegions,;
-    priceRange,;
-    setPriceRange,;
-    experienceRange,;
-    setExperienceRange,;
-    sortOption,;
-    setSortOption,;
-    isMobileFilterOpen,;
-    setIsMobileFilterOpen,;
-    isHireModalOpen,;
-    setIsHireModalOpen,;
-    selectedTalent,;
-    setSelectedTalent,;
-    expandedSections,;
-    isAuthenticated,;
-    savedTalents,;
-    toggleSkill,;
-    toggleAvailability,;
-    toggleRegion,;
-    clearFilters,;
-    toggleSection,;
-    handleToggleSave} = useTalentDirectory(),;
-  ;
-  const handleRequestHire = (talent:TalentProfile) => {;
-    setSelectedTalent(talent),;
-    setIsHireModalOpen(true);
-  },;
-  ;
-  const viewProfile = (id:string) => {;
-    // Navigate to the talent profile page;
-    navigate(`/talent/${id}`),;
-  },;
-  ;
-  return (;
-  const handleRequestHire = (talent: TalentProfile) => {;
-    setSelectedTalent(talent),;
-    setIsHireModalOpen(true);
-  },;
-  const viewProfile = (id: string) => {;
-    // Navigate to the talent profile page;
-    navigate(`/talent/${id}`);
-  },;
-  return (;
-
-
-    <AppLayout>;
+              />;
+            </div>;
+export default function TalentDirectory() {const navigate = useNavigate()const navigate = useNavigate()// Use our custom hook to manage state;
+  const {filteredTalents,isLoading,searchTerm,setSearchTerm,selectedSkills,selectedAvailability,selectedRegions,priceRange,setPriceRange,experienceRange,setExperienceRange,sortOption,setSortOption,isMobileFilterOpen,setIsMobileFilterOpen,isHireModalOpen,setIsHireModalOpen,selectedTalent,setSelectedTalent,expandedSections,isAuthenticated,savedTalents,toggleSkill,toggleAvailability,toggleRegion,clearFilters,toggleSection,handleToggleSave}  = useTalentDirectory(),const handleRequestHire = (talent: TalentProfile) => {setSelectedTalent(talent),setIsHireModalOpen(true)}const viewProfile = (id: string) => {// Navigate to the talent profile page;
+    navigate(`/talent/${id}`)}return (export default function TalentDirectory() {const navigate  = useNavigate()// Use our custom hook to manage state;
+  const {filteredTalents,isLoading,searchTerm,setSearchTerm,selectedSkills,selectedAvailability,selectedRegions,priceRange,setPriceRange,experienceRange,setExperienceRange,sortOption,setSortOption,isMobileFilterOpen,setIsMobileFilterOpen,isHireModalOpen,setIsHireModalOpen,selectedTalent,setSelectedTalent,expandedSections,isAuthenticated,savedTalents,toggleSkill,toggleAvailability,toggleRegion,clearFilters,toggleSection,handleToggleSave}  = useTalentDirectory(),const handleRequestHire = (talent:TalentProfile) => {setSelectedTalent(talent),setIsHireModalOpen(true)},const viewProfile = (id:string) => {// Navigate to the talent profile page;
+    navigate(`/talent/${id}`),},return (const handleRequestHire = (talent: TalentProfile) => {setSelectedTalent(talent),setIsHireModalOpen(true)},const viewProfile = (id: string) => {// Navigate to the talent profile page;
+    navigate(`/talent/${id}`)},return (<AppLayout>;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col space-y-8">;
           <div>;
@@ -355,18 +129,13 @@ export default function TalentDirectory() {;
             <p className="text-zion-slate-light">;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
             </p>;
-          </div>;
-
-          ;
+          </div>;;
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar;
-                searchTerm={searchTerm}
-
-
-    expanded_sections;
+                searchTerm={searchTerm}expanded_sections;
     is_authenticated;
     saved_talents;
     toggle_skill;
@@ -374,20 +143,8 @@ export default function TalentDirectory() {;
     toggle_region;
     clear_filters;
     toggle_section;
-    handleToggleSave} = useTalentDirectory ();
-;
-  const handleRequestHire = (talent: TalentProfile) =>: any {
-    setSelectedTalent (talent),
-    setIsHireModalOpen (true);
-  }
-;
-  const view_profile = (id: string) =>: any {
-    // Navigate to the talent profile page;
-    navigate (`/talent/${id}`);
-  }
-;
-  return (
-    <AppLayout>;
+    handleToggleSave} = useTalentDirectory ()const handleRequestHire = (talent: TalentProfile) =>: any {setSelectedTalent (talent),setIsHireModalOpen (true)}const view_profile = (id: string) =>: any {// Navigate to the talent profile page;
+    navigate (`/talent/${id}`)}return (<AppLayout>;
       <div className="container mx - auto px - 4 py - 8">;
         <div className="flex flex - col space - y-8">;
           <div>;
@@ -401,11 +158,7 @@ export default function TalentDirectory() {;
             {/* Sidebar - Desktop */}
             <div className="w - full lg:w - 64 shrink - 0 hidden lg:block">;
               <FilterSidebar;
-                search_term={search_term}
-
-
-
-                setSearchTerm={setSearchTerm}
+                search_term={search_term}setSearchTerm={setSearchTerm}
                 selected_skills={selected_skills}
                 toggle_skill={toggle_skill}
                 selected_availability={selected_availability}
@@ -419,29 +172,17 @@ export default function TalentDirectory() {;
                 expanded_sections={expanded_sections}
                 toggle_section={toggle_section}
                 sort_option={sort_option}
-                setSortOption={setSortOption}
-
-
-
-
-            {/* Mobile filter button */}
-            <div className="lg:hidden mb-4">
-              <Button
-                onClick={() => setIsMobileFilterOpen(true)}
-
-                variant="outline"
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
-              >
-                Filter & Sort
-              </Button>
-            </div>
-
-
-                variant="outline";
+                setSortOption={setSortOption}{/* Mobile filter button */}
+            <div className="lg:hidden mb-4">;
+              <Button;
+                onClick={() => setIsMobileFilterOpen(true)}variant="outline";
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
-
-
+              >;
+                Filter & Sort;
+              </Button>;
+            </div>;
                 variant="outline";
+                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";variant="outline";
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
                 clear_filters={clear_filters}
               />;
@@ -454,7 +195,7 @@ export default function TalentDirectory() {;
                 className="w - full border - zion - blue - light text - zion - purple hover:bg - zion - blue - light";
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
-              <Button
+              <Button;
                 onClick={() => setIsMobileFilterOpen(true)}
               >;
                 Filter & Sort;
@@ -469,27 +210,14 @@ export default function TalentDirectory() {;
             <TalentResults;
               filtered_talents={filtered_talents}
               is_loading={is_loading}
-              view_profile={view_profile}
-
-
-            
-
-            ;
-            {/* Results */}
+              view_profile={view_profile}{/* Results */}
             <TalentResults;
               filteredTalents={filteredTalents}
               isLoading={isLoading}
-              viewProfile={viewProfile}
-
-              handleRequestHire={handleRequestHire}
+              viewProfile={viewProfile}handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
-              handleToggleSave={handleToggleSave}
-
-
-              is_authenticated={is_authenticated}
-              activeFiltersProps={{
-
-                selected_skills;
+              handleToggleSave={handleToggleSave}is_authenticated={is_authenticated}
+              activeFiltersProps={{selected_skills;
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
@@ -498,75 +226,57 @@ export default function TalentDirectory() {;
                 toggle_availability;
                 selected_regions;
                 toggle_region;
-                price_range;
-
-              isAuthenticated={isAuthenticated}
-
-
-              activeFiltersProps={{;
+                price_range;isAuthenticated={isAuthenticated}activeFiltersProps={{setPriceRange;
+                experience_range;              activeFiltersProps={{selectedSkills,toggleSkill,selectedAvailability,toggleAvailability,selectedRegions,toggleRegion,priceRange,setPriceRange,experienceRange;
+                setExperienceRange;setPriceRange;
+                experience_range;experienceRange;
+                setExperienceRange;
+                selectedSkills;
+                toggleSkill;
+                selectedAvailability;
+                toggleAvailability;
+                selectedRegions;
+                toggleRegion;
+                priceRange;
                 setPriceRange;
-                experience_range;              activeFiltersProps={{;
-                selectedSkills,;
-                toggleSkill,;
-                selectedAvailability,;
-                toggleAvailability,;
-                selectedRegions,;
-                toggleRegion,;
-                priceRange,;
-                setPriceRange,;
                 experienceRange;
                 setExperienceRange;
-
-                setPriceRange;
-                experience_range;
-
-                experienceRange;
-                setExperienceRange;
-                selectedSkills
-                toggleSkill
-                selectedAvailability
-                toggleAvailability
-                selectedRegions
-                toggleRegion
-                priceRange
-                setPriceRange
-                experienceRange
-                setExperienceRange
                 clearFilters}}
             />;
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
-              activeFiltersProps={{;
-                selectedSkills,;
-                toggleSkill,;
-                selectedAvailability,;
-                toggleAvailability,;
-                selectedRegions,;
-                toggleRegion,;
-                priceRange,;
-                setPriceRange,;
-                experienceRange;
+              activeFiltersProps={{selectedSkills,toggleSkill,selectedAvailability,toggleAvailability,selectedRegions,toggleRegion,priceRange,setPriceRange,experienceRange;
               is_authenticated={is_authenticated}
-              activeFiltersProps={{
-                setPriceRange;
+              activeFiltersProps={{setPriceRange;
                 experience_range;
                 setExperienceRange;
             {/* Mobile filter sidebar */}
-            {isMobileFilterOpen && (;
-              <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
+            {isMobileFilterOpen && (<div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
+                <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">;
+                  <div className="flex justify-between items-center mb-4">;
+                    <h3 className="font-bold text-white">Filter & Sort</h3>;<Button;
+                      variant="ghost";
+                      size="sm";<Button;
+                      variant="ghost";
+                      size="sm";
+                      onClick={() => setIsMobileFilterOpen(false)}
+                      className="text-zion-slate-light h-8 w-8 p-0";
+                    >;
+                      <X className="h-4 w-4" />;
+                      <span className="sr-only">Close</span>;
+                    </Button>;
+                  </div>;experienceRange;
+                setExperienceRange;clearFilters}}
+            />;
+            {/* Mobile filter sidebar */}
+            {isMobileFilterOpen && (<div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
                 <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">;
                   <div className="flex justify-between items-center mb-4">;
                     <h3 className="font-bold text-white">Filter & Sort</h3>;
-
                     <Button;
                       variant="ghost";
                       size="sm";
-
-
-                    <Button
-                      variant="ghost"
-                      size="sm"
                       onClick={() => setIsMobileFilterOpen(false)}
                       className="text-zion-slate-light h-8 w-8 p-0";
                     >;
@@ -574,29 +284,7 @@ export default function TalentDirectory() {;
                       <span className="sr-only">Close</span>;
                     </Button>;
                   </div>;
-
-                experienceRange;
-                setExperienceRange;
-
-                clearFilters}}
-            />
-            {/* Mobile filter sidebar */}
-            {isMobileFilterOpen && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
-                <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="font-bold text-white">Filter & Sort</h3>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setIsMobileFilterOpen(false)}
-                      className="text-zion-slate-light h-8 w-8 p-0"
-                    >
-                      <X className="h-4 w-4" />
-                      <span className="sr-only">Close</span>
-                    </Button>
-                  </div>
-                  <FilterSidebar
+                  <FilterSidebar;
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
                     selectedSkills={selectedSkills}
@@ -615,22 +303,15 @@ export default function TalentDirectory() {;
                     setSortOption={setSortOption}
                     clearFilters={clearFilters}
                     isMobileFilterOpen={isMobileFilterOpen}
-                  />
-                </div>
-              </div>
+                  />;
+                </div>;
+              </div>;
             )}
-                  <FilterSidebar;
-
-                    searchTerm={searchTerm}
-
-                    setSearchTerm={setSearchTerm}
-
-                    searchTerm={searchTerm}
+                  <FilterSidebar;searchTerm={searchTerm}setSearchTerm={setSearchTerm}searchTerm={searchTerm}
                 clear_filters}}
             />;
             {/* Mobile filter sidebar */}
-            {isMobileFilterOpen && (
-              <div className="fixed inset - 0 bg - black bg - opacity - 50 z - 50 lg:hidden flex">;
+            {isMobileFilterOpen && (<div className="fixed inset - 0 bg - black bg - opacity - 50 z - 50 lg:hidden flex">;
                 <div className="w - 80 h - full bg - zion - blue - dark overflow - y-auto p - 4 ml - auto">;
                   <div className="flex justify - between items - center mb - 4">;
                     <h3 className="font - bold text - white">Filter & Sort</h3>;
@@ -647,7 +328,7 @@ export default function TalentDirectory() {;
                   <FilterSidebar;
                     search_term={search_term}
                     setSearchTerm={setSearchTerm}
-                  <FilterSidebar
+                  <FilterSidebar;
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
                     selected_skills={selected_skills}
@@ -665,37 +346,23 @@ export default function TalentDirectory() {;
                     sort_option={sort_option}
                     setSortOption={setSortOption}
                     clear_filters={clear_filters}
-                    isMobileFilterOpen={isMobileFilterOpen}
-
-
-          </div>;
+                    isMobileFilterOpen={isMobileFilterOpen}</div>;
         </div>;
       </div>;
-    </AppLayout>);
-}
-
-;
-
-              </div>;
+    </AppLayout>)}</div>;
                   />;
-                </div>;
-
-              </div>)}              </div>;
+                </div>;</div>)}              </div>;
             )}
-          </div>
-        </div>
-      </div>
-    </AppLayout>
-  )
-}
           </div>;
         </div>;
       </div>;
     </AppLayout>;
-  ),; export default function TalentDirectory () {
-  const navigate = useNavigate ();
-//Use our custom hook to manage state const {
-  filteredTalents;
+  )}
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>;
+  ),export default function TalentDirectory () {const navigate = useNavigate ()//Use our custom hook to manage state const {filteredTalents;
 isLoading;
 searchTerm;
 setSearchTerm;
@@ -722,119 +389,53 @@ toggleAvailability;
 toggleRegion;
 clearFilters;
 toggleSection;
-handleToggleSave 
-}= useTalentDirectory ();
-const handleRequestHire = (talent: TalentProfile) => {
-  setSelectedTalent (talent);
-setIsHireModalOpen (true) 
-};
-const viewProfile = (id: string) => {
-  //Navigate to the talent profile page navigate (`/talent/$ {
-  id 
-}`) 
-};
-return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div className="flex flex-col space-y-8" > <div> <h1 className="text-3xl font-bold text-white mb-2" >AI & Tech Talent Directory</h1> <p className="text-zion-slate-light" > Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects. </p> </div> {
-  /* Main content */ 
-}<div className="flex flex-col lg:flex-row gap-6" > {
-  /* Sidebar - Desktop */ 
-}<div className="w-full lg:w-64 shrink-0 hidden lg:block" > searchTerm 
-}setSearchTerm= {
-  setSearchTerm 
-}selectedSkills= {
-  selectedSkills 
-}toggleSkill= {
-  toggleSkill 
-}selectedAvailability= {
-  selectedAvailability 
-}toggleAvailability= {
-  toggleAvailability 
-}selectedRegions= {
-  selectedRegions 
-}toggleRegion= {
-  toggleRegion 
-}priceRange= {
-  priceRange 
-}setPriceRange= {
-  setPriceRange 
-}experienceRange= {
-  experienceRange 
-}setExperienceRange= {
-  setExperienceRange 
-}expandedSections= {
-  expandedSections 
-}toggleSection= {
-  toggleSection 
-}sortOption= {
-  sortOption 
-}setSortOption= {
-  setSortOption 
-}clearFilters= {
-  clearFilters 
-}/> </div> > Filter & Sort </Button> </div> {
-  /* Results */ 
-}<TalentResults filteredTalents= {
-  filteredTalents 
-}isLoading= {
-  isLoading 
-}viewProfile= {
-  viewProfile 
-}handleRequestHire= {
-  handleRequestHire 
-}savedTalents= {
-  savedTalents 
-}handleToggleSave= {
-  handleToggleSave 
-}isAuthenticated= {
-  isAuthenticated 
-}activeFiltersProps= {
-  {
-  selectedSkills, toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange, setExperienceRange, clearFilters 
-}
-;
-
-}/> <Button variant="ghost" size="sm" onClick= {
-  () => setIsMobileFilterOpen (false) 
-}className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {
-  searchTerm 
-}setSearchTerm= {
-  setSearchTerm 
-}selectedSkills= {
-  selectedSkills 
-}toggleSkill= {
-  toggleSkill 
-}selectedAvailability= {
-  selectedAvailability 
-}toggleAvailability= {
-  toggleAvailability 
-}selectedRegions= {
-  selectedRegions 
-}toggleRegion= {
-  toggleRegion 
-}priceRange= {
-  priceRange 
-}setPriceRange= {
-  setPriceRange 
-}experienceRange= {
-  experienceRange 
-}setExperienceRange= {
-  setExperienceRange 
-}expandedSections= {
-  expandedSections 
-}toggleSection= {
-  toggleSection 
-}sortOption= {
-  sortOption 
-}setSortOption= {
-  setSortOption 
-}clearFilters= {
-  clearFilters 
-}isMobileFilterOpen= {
-  isMobileFilterOpen 
-}/> </div> </div>) 
-}</div> </div> </div> </AppLayout>) 
-}
-  );
-}
-;
-
-
+handleToggleSave;
+}= useTalentDirectory ()const handleRequestHire = (talent: TalentProfile) => {setSelectedTalent (talent)setIsHireModalOpen (true)}const viewProfile = (id: string) => {//Navigate to the talent profile page navigate (`/talent/$ {id;
+}`)}return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div className="flex flex-col space-y-8" > <div> <h1 className="text-3xl font-bold text-white mb-2" >AI & Tech Talent Directory</h1> <p className="text-zion-slate-light" > Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects. </p> </div> {/* Main content */;
+}<div className="flex flex-col lg:flex-row gap-6" > {/* Sidebar - Desktop */;
+}<div className="w-full lg:w-64 shrink-0 hidden lg:block" > searchTerm;
+}setSearchTerm= {setSearchTerm;
+}selectedSkills= {selectedSkills;
+}toggleSkill= {toggleSkill;
+}selectedAvailability= {selectedAvailability;
+}toggleAvailability= {toggleAvailability;
+}selectedRegions= {selectedRegions;
+}toggleRegion= {toggleRegion;
+}priceRange= {priceRange;
+}setPriceRange= {setPriceRange;
+}experienceRange= {experienceRange;
+}setExperienceRange= {setExperienceRange;
+}expandedSections= {expandedSections;
+}toggleSection= {toggleSection;
+}sortOption= {sortOption;
+}setSortOption= {setSortOption;
+}clearFilters= {clearFilters;
+}/> </div> > Filter & Sort </Button> </div> {/* Results */;
+}<TalentResults filteredTalents= {filteredTalents;
+}isLoading= {isLoading;
+}viewProfile= {viewProfile;
+}handleRequestHire= {handleRequestHire;
+}savedTalents= {savedTalents;
+}handleToggleSave= {handleToggleSave;
+}isAuthenticated= {isAuthenticated;
+}activeFiltersProps= {{selectedSkills, toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange, setExperienceRange, clearFilters;
+}}/> <Button variant="ghost" size="sm" onClick= {() => setIsMobileFilterOpen (false)}className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {searchTerm;
+}setSearchTerm= {setSearchTerm;
+}selectedSkills= {selectedSkills;
+}toggleSkill= {toggleSkill;
+}selectedAvailability= {selectedAvailability;
+}toggleAvailability= {toggleAvailability;
+}selectedRegions= {selectedRegions;
+}toggleRegion= {toggleRegion;
+}priceRange= {priceRange;
+}setPriceRange= {setPriceRange;
+}experienceRange= {experienceRange;
+}setExperienceRange= {setExperienceRange;
+}expandedSections= {expandedSections;
+}toggleSection= {toggleSection;
+}sortOption= {sortOption;
+}setSortOption= {setSortOption;
+}clearFilters= {clearFilters;
+}isMobileFilterOpen= {isMobileFilterOpen;
+}/> </div> </div>)}</div> </div> </div> </AppLayout>)}
+  )}

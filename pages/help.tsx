@@ -1,318 +1,121 @@
 
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true }}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-}
-
-
-import React from 'react';
+}import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-
-export default function HelpPage() {
-  return (
-    <MainLayout title="Help & Support">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Help & Support</h1>
-        <p className="text-lg text-gray-700">
-          This is a placeholder for the help page.
-        </p>
-      </div>
-    </MainLayout>
-  );
-ursor/automate-test-improve-and-merge-code-646c
-import React, { useState } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-
-
-
-ursor/automate-test-improve-and-merge-code-646c
+export default function HelpPage() {return (<MainLayout title="Help & Support">;
+      <div className="container mx-auto px-4 py-16">;
+        <h1 className="text-4xl font-bold mb-8">Help & Support</h1>;
+        <p className="text-lg text-gray-700">;
+          This is a placeholder for the help page.;
+        </p>;
+      </div>;
+    </MainLayout>;
+  )ursor/automate-test-improve-and-merge-code-646c;
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-  Search
-  HelpCircle
-  BookOpen
-  MessageCircle
-  Phone
-  Mail
-  FileText
-  Video
-  Download
-  ExternalLink
-  ChevronDown
-  Cloud
-ursor/automate-test-improve-and-merge-code-646c
-
-
-import {
-
-  Search,
-  HelpCircle,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  FileText,
-  Video,
-  Download,
-  ExternalLink,
-  ChevronDown,
-  Cloud,;
-ursor/automate-test-improve-and-merge-code-646c
-} from "lucide-react";
-
-const helpArticles = [
-  {
-    id: "overview"
-    title: "Understanding Our Services"
-    description: "Overview of all available services and solutions"
-    readTime: "7 min read"
-    type: "Overview"
+import { motion, AnimatePresence  } from 'framer-motion';
+ursor/automate-test-improve-and-merge-code-646c;
+  Search;
+  HelpCircle;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  FileText;
+  Video;
+  Download;
+  ExternalLink;
+  ChevronDown;
+  Cloud;
+ursor/automate-test-improve-and-merge-code-646c;
+import { Search,HelpCircle,BookOpen,MessageCircle,Phone,Mail,FileText,Video,Download,ExternalLink,ChevronDown,Cloud,ursor/automate-test-improve-and-merge-code-646c;
+ } from 'lucide-react';
+const helpArticles = [;
+  {id: "overview";
+    title: "Understanding Our Services";
+    description: "Overview of all available services and solutions";
+    readTime: "7 min read";
+    type: "Overview";
   }
-  {
-    id: "ai-services"
-    title: "AI Services"
-    description: "Everything about our AI and machine learning solutions."
-    icon: HelpCircle
-    color: "green"
-    articles: [
-      {
-
-        title: "AI Implementation Guide"
-        description: "How to implement AI solutions in your business"
-        readTime: "10 min read"
-        type: "Guide"
+  {id: "ai-services";
+    title: "AI Services";
+    description: "Everything about our AI and machine learning solutions.";
+    icon: HelpCircle;
+    color: "green";
+    articles: [;
+      {title: "AI Implementation Guide";
+        description: "How to implement AI solutions in your business";
+        readTime: "10 min read";
+        type: "Guide";
       }
-      {
-        title: "Machine Learning Models"
-        description: "Understanding different ML models and their applications"
-        readTime: "8 min read"
-        type: "Technical"
-      }
-
-import React, { useState } from './react';
+      {title: "Machine Learning Models";
+        description: "Understanding different ML models and their applications";
+        readTime: "8 min read";
+        type: "Technical";
+      }import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
-import { motion, AnimatePresence  } from './framer-motion';
-  Search,
-  HelpCircle,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  FileText,
-  Video,
-  Download,
-  ExternalLink,
-  ChevronDown,
-  Cloud
-} from './lucide-react';
-;
-const help_articles = [;
-  {
-    id: "overview",
-    title: "Understanding Our Services",
-    description: "Overview of all available services and solutions",
-    read_time: "7 min read",
-    type: "Overview",
-
-        title: 'AI Best Practices',
-        description: 'Tips and best practices for AI development',
-        readTime: '6 min read',
-        type: 'Best Practice'
+import { motion, AnimatePresence   } from './framer-motion';
+  Search,HelpCircle,BookOpen,MessageCircle,Phone,Mail,FileText,Video,Download,ExternalLink,ChevronDown,Cloud;
+} from './lucide-react';const help_articles = [;
+  {id: "overview",title: "Understanding Our Services",description: "Overview of all available services and solutions",read_time: "7 min read",type: "Overview",title: 'AI Best Practices',description: 'Tips and best practices for AI development',readTime: '6 min read',type: 'Best Practice';
       }
-    ]
-  },
-  {
-ursor/automate-test-improve-and-merge-code-646c
-    articles: [
-      {
-        title: "Cloud Migration Guide"
-        description: "Step-by-step guide to migrating to the cloud"
-        readTime: "12 min read"
-        type: "Guide"
-      }
-
-
+    ];
+  },{ursor/automate-test-improve-and-merge-code-646c;
     articles: [;
-      {
-
-ursor/automate-test-improve-and-merge-code-646c
-        title: "Cloud Security"
-        description: "Best practices for securing your cloud infrastructure"
-        readTime: "9 min read"
-        type: "Security"
+      {title: "Cloud Migration Guide";
+        description: "Step-by-step guide to migrating to the cloud";
+        readTime: "12 min read";
+        type: "Guide";
+      }articles: [;
+      {ursor/automate-test-improve-and-merge-code-646c;
+        title: "Cloud Security";
+        description: "Best practices for securing your cloud infrastructure";
+        readTime: "9 min read";
+        type: "Security";
       }
-    ]
+    ];
   }
-];
-
-
-;
-const help_categories = [;
-
-  {
-
-
-
-
-];
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState("");
-
-];
-
-
-
-    color: 'blue',
-    articles: helpArticles
+];;
+const help_categories  = [;{];
+export default function HelpPage() {const [searchTerm, setSearchTerm]  = useState("")];color: 'blue',articles: helpArticles;
   }
-];
-
-export default function HelpPage() {;
-
-
-import {;
-  Search,;
-  HelpCircle,;
-  BookOpen,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  FileText,;
-  Video,;
-  Download,;
-  ExternalLink,;
-  ChevronDown,;
-  Cloud,;
-} from "lucide-react";
-
+];export default function HelpPage() {import {Search,HelpCircle,BookOpen,MessageCircle,Phone,Mail,FileText,Video,Download,ExternalLink,ChevronDown,Cloud,} from 'lucide-react';
 const helpArticles = [;
-  {;
-    id: "overview",;
-    title: "Understanding Our Services",;
-    description: "Overview of all available services and solutions",;
-    readTime: "7 min read",;
-    type: "Overview",;
-  },;
-  {;
-    id: "ai-services",;
-    title: "AI Services",;
-    description: "Everything about our AI and machine learning solutions.",;
-    icon: HelpCircle,;
-    color: "green",;
-    articles: [;
-      {;
-        title: "AI Implementation Guide",;
-        description: "How to implement AI solutions in your business",;
-        readTime: "10 min read",;
-        type: "Guide",;
-      },;
-      {;
-        title: "Machine Learning Models",;
-        description: "Understanding different ML models and their applications",;
-        readTime: "8 min read",;
-        type: "Technical",;
-      },;
-      {;
-        title: "AI Best Practices",;
-        description: "Tips and best practices for AI development",;
-        readTime: "6 min read",;
-        type: "Best Practice",;
-      },;
-    ],;
-  },;
-  {;
-    id: "cloud-services",;
-    title: "Cloud Services",;
-    description: "Cloud infrastructure and deployment solutions.",;
-    icon: Cloud,;
-    color: "blue",;
-    articles: [;
-      {;
-        title: "Cloud Migration Guide",;
-        description: "Step-by-step guide to migrating to the cloud",;
-        readTime: "12 min read",;
-        type: "Guide",;
-      },;
-      {;
-        title: "Cloud Security",;
-        description: "Best practices for securing your cloud infrastructure",;
-        readTime: "9 min read",;
-        type: "Security",;
-      },;
-    ],;
-  },;
-];
-
-const helpCategories = [;
-  {;
-    title: "Getting Started",;
-    description: "New to our platform? Start here.",;
-    icon: BookOpen,;
-    color: "blue",;
-    articles: helpArticles,;
-  },;
-];
-
-export default function HelpPage() {;
-  const [searchTerm, setSearchTerm] = useState("");
-
-  }
-  const filteredCategories = helpCategories
-    .map((category) => ({
-      ...category
-      articles: category.articles.filter(
-        (article) =>
-          article.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-          article.description.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    }))
-    .filter((category) => category.articles.length > 0);
-
-ursor/automate-test-improve-and-merge-code-646c
-  return (
-    <>;
+  {id: "overview",title: "Understanding Our Services",description: "Overview of all available services and solutions",readTime: "7 min read",type: "Overview",},{id: "ai-services",title: "AI Services",description: "Everything about our AI and machine learning solutions.",icon: HelpCircle,color: "green",articles: [;
+      {title: "AI Implementation Guide",description: "How to implement AI solutions in your business",readTime: "10 min read",type: "Guide",},{title: "Machine Learning Models",description: "Understanding different ML models and their applications",readTime: "8 min read",type: "Technical",},{title: "AI Best Practices",description: "Tips and best practices for AI development",readTime: "6 min read",type: "Best Practice",},],},{id: "cloud-services",title: "Cloud Services",description: "Cloud infrastructure and deployment solutions.",icon: Cloud,color: "blue",articles: [;
+      {title: "Cloud Migration Guide",description: "Step-by-step guide to migrating to the cloud",readTime: "12 min read",type: "Guide",},{title: "Cloud Security",description: "Best practices for securing your cloud infrastructure",readTime: "9 min read",type: "Security",},],},];const helpCategories = [;
+  {title: "Getting Started",description: "New to our platform? Start here.",icon: BookOpen,color: "blue",articles: helpArticles,},];export default function HelpPage() {const [searchTerm, setSearchTerm]  = useState("")}
+  const filteredCategories = helpCategories;
+    .map((category) => ({...category;
+      articles: category.articles.filter((article) =>;
+          article.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
+          article.description.toLowerCase().includes(searchTerm.toLowerCase()))})).filter((category) => category.articles.length > 0)ursor/automate-test-improve-and-merge-code-646c;
+  return (<>;
       <Head>;
         <title>Help Center - Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources."
+        <meta;
+          name="description";
+          content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources.";
         />;
-        <meta
-          name="keywords"
-          content="help, support, documentation, FAQ, tutorials, guides"
-
-
+        <meta;
+          name="keywords";
+          content="help, support, documentation, FAQ, tutorials, guides";
         />;
       </Head>;
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
-
-
-ursor/automate-test-improve-and-merge-code-646c
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;ursor/automate-test-improve-and-merge-code-646c;
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div
+            <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
@@ -326,9 +129,9 @@ ursor/automate-test-improve-and-merge-code-646c
               </p>;
               <div className="relative max-w-md mx-auto">;
                 <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />;
-                <input
-                  type="text"
-                  placeholder="Search help articles..."
+                <input;
+                  type="text";
+                  placeholder="Search help articles...";
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e && e.target.value)}
                   className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500";
@@ -339,32 +142,13 @@ ursor/automate-test-improve-and-merge-code-646c
         </section>;
       </div>;
     </>;
-  );
-;
-export default /**
- * HelpPage - Function description
- */
-function HelpPage() {
-  const [search_term, setSearchTerm] = useState ("");
-  const [expanded_category, setExpandedCategory] = useState < number | null>(null);
-;
-  const toggle_category = (index: number) =>: any {
-    setExpandedCategory (expanded_category === index ? null : index);
-  }
-;
-  const filtered_categories = help_categories;
-    .map ((category) => ({
-      ...category,
-      articles: category.articles.filter (
-        (article) =>;
+  )export default /**;
+ * HelpPage - Function description;
+ */;
+function HelpPage() {const [search_term, setSearchTerm] = useState ("")const [expanded_category, setExpandedCategory]  = useState < number | null>(null)const toggle_category = (index: number) =>: any {setExpandedCategory (expanded_category === index ? null : index)}const filtered_categories = help_categories;
+    .map ((category) => ({...category,articles: category.articles.filter ((article) =>;
           article.title.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-          article.description.toLowerCase ().includes (search_term.toLowerCase ()),
-      )
-    }));
-    .filter ((category) => category.articles.length > 0);
-;
-  return (
-    <>;
+          article.description.toLowerCase ().includes (search_term.toLowerCase ()),)})).filter ((category) => category.articles.length > 0)return (<>;
       <Head>;
         <title > Help Center - Zion Tech Group</title>;
         <meta;
@@ -407,7 +191,5 @@ function HelpPage() {
           </div>;
         </section>;
       </div>;
-    </>);
-
-ursor/automate-test-improve-and-merge-code-646c
+    </>)ursor/automate-test-improve-and-merge-code-646c;
 }

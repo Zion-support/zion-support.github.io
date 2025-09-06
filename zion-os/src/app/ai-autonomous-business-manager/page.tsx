@@ -1,19 +1,7 @@
 
-
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "AI Autonomous Business Manager - Zion Tech Group",;
-  description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",;
-  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},;
-export default function AIBusinessManagerPage() {;
-  return (;
-
-
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
-
-        {/* Hero Section */}
+;
+import Link from "next/link",export const metadata = {title: "AI Autonomous Business Manager - Zion Tech Group",description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},export default function AIBusinessManagerPage() {return (<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;{/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
             AI Autonomous <span className="gradient - text">Business Manager</span>;
@@ -47,14 +35,8 @@ export default function AIBusinessManagerPage() {;
                 management technology. It combines advanced artificial intelligence, machine;
                 learning, and autonomous decision - making to manage your business operations;
                 with unprecedented efficiency and intelligence.;
-              </p>;
-
-
-              <p className="text - lg text - gray - 300 leading - relaxed">;
-                From strategic planning to daily operations, the system continuously learns,
-
-
-                adapts, and optimizes every aspect of your business, ensuring maximum;
+              </p>;<p className="text - lg text - gray - 300 leading - relaxed">;
+                From strategic planning to daily operations, the system continuously learns,adapts, and optimizes every aspect of your business, ensuring maximum;
                 performance and growth potential.;
               </p>;
             </div>;
@@ -114,15 +96,9 @@ export default function AIBusinessManagerPage() {;
                 <svg className="w - 6 h - 6 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;
                 </svg>;
-              </div>;
-
-
-              <h3 className="text - xl font - semibold mb - 2">Strategic Planning</h3>;
+              </div>;<h3 className="text - xl font - semibold mb - 2">Strategic Planning</h3>;
               <p className="text - gray - 400">;
-                AI - powered strategic planning that analyzes market conditions,
-
-
-        <section className="mb-20">;
+                AI - powered strategic planning that analyzes market conditions,<section className="mb-20">;
           <div className="text - center mb-12">;
             <h2 className="text - 3xl font - bold mb-4">Core Features</h2>;
             <p className="text - xl text - gray - 400 max - w-3xl mx-auto">;
@@ -220,15 +196,9 @@ export default function AIBusinessManagerPage() {;
                 <svg className="w - 6 h - 6 text - red - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M13 7h8m0 0v8m0 - 8l - 8 8 - 4-4 - 6 6" />;
                 </svg>;
-              </div>;
-
-
-              <h3 className="text - xl font - semibold mb - 2">Growth Optimization</h3>;
+              </div>;<h3 className="text - xl font - semibold mb - 2">Growth Optimization</h3>;
               <p className="text - gray - 400">;
-                Data - driven growth strategies with market expansion analysis,
-
-
-              <div className="w - 12 h - 12 bg - red - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - red - 500 / 30 transition-colors">;
+                Data - driven growth strategies with market expansion analysis,<div className="w - 12 h - 12 bg - red - 500 / 20 rounded - lg flex items - center justify - center mb - 4 group - hover:bg - red - 500 / 30 transition-colors">;
                 <svg className="w - 6 h - 6 text - red-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0 - 8l - 8 8 - 4-4 - 6 6" />;
                 </svg>;
@@ -250,43 +220,25 @@ export default function AIBusinessManagerPage() {;
             <div className="text - center">;
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
-              </div>;
-
-
-              <h3 className="text - lg font - semibold mb - 2">Data Collection</h3>;
+              </div>;<h3 className="text - lg font - semibold mb - 2">Data Collection</h3>;
               <p className="text - gray - 400 text - sm">;
-                Continuously gathers data from all business systems,
-
-
-                market sources, and external factors.;
+                Continuously gathers data from all business systems,market sources, and external factors.;
               </p>;
             </div>;
             <div className="text - center">;
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - purple - 400">2</span>;
-              </div>;
-
-
-              <h3 className="text - lg font - semibold mb - 2">Analysis & Learning</h3>;
+              </div>;<h3 className="text - lg font - semibold mb - 2">Analysis & Learning</h3>;
               <p className="text - gray - 400 text - sm">;
-                AI algorithms analyze patterns, learn from outcomes,
-
-
-                and identify optimization opportunities.;
+                AI algorithms analyze patterns, learn from outcomes,and identify optimization opportunities.;
               </p>;
             </div>;
             <div className="text - center">;
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - green - 400">3</span>;
-              </div>;
-
-
-              <h3 className="text - lg font - semibold mb - 2">Decision Making</h3>;
+              </div>;<h3 className="text - lg font - semibold mb - 2">Decision Making</h3>;
               <p className="text - gray - 400 text - sm">;
-                Autonomous decisions are made based on data analysis,
-
-
-                business rules, and predictive models.;
+                Autonomous decisions are made based on data analysis,business rules, and predictive models.;
               </p>;
             </div>;
             <div className="text - center">;
@@ -345,15 +297,9 @@ export default function AIBusinessManagerPage() {;
             </p>;
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            <div className="card">;
-
-
-              <h3 className="text - lg font - semibold mb - 2">E - commerce & Retail</h3>;
+            <div className="card">;<h3 className="text - lg font - semibold mb - 2">E - commerce & Retail</h3>;
               <p className="text - gray - 400 text - sm">;
-                Inventory management, pricing optimization, customer service automation,
-
-
-        <section className="mb-20">;
+                Inventory management, pricing optimization, customer service automation,<section className="mb-20">;
           <div className="text - center mb-12">;
             <h2 className="text - 3xl font - bold mb-4">Use Cases</h2>;
             <p className="text - xl text - gray - 400 max - w-3xl mx-auto">;
@@ -365,37 +311,19 @@ export default function AIBusinessManagerPage() {;
                 and supply chain optimization.;
               </p>;
             </div>;
-            <div className="card">;
-
-
-              <h3 className="text - lg font - semibold mb - 2">Financial Services</h3>;
+            <div className="card">;<h3 className="text - lg font - semibold mb - 2">Financial Services</h3>;
               <p className="text - gray - 400 text - sm">;
-                Risk assessment, portfolio management, fraud detection,
-
-
-                and regulatory compliance automation.;
+                Risk assessment, portfolio management, fraud detection,and regulatory compliance automation.;
               </p>;
             </div>;
-            <div className="card">;
-
-
-              <h3 className="text - lg font - semibold mb - 2">Manufacturing</h3>;
+            <div className="card">;<h3 className="text - lg font - semibold mb - 2">Manufacturing</h3>;
               <p className="text - gray - 400 text - sm">;
-                Production optimization, quality control, predictive maintenance,
-
-
-                and supply chain management.;
+                Production optimization, quality control, predictive maintenance,and supply chain management.;
               </p>;
             </div>;
-            <div className="card">;
-
-
-              <h3 className="text - lg font - semibold mb - 2">Healthcare</h3>;
+            <div className="card">;<h3 className="text - lg font - semibold mb - 2">Healthcare</h3>;
               <p className="text - gray - 400 text - sm">;
-                Patient scheduling, resource allocation, treatment optimization,
-
-
-                and administrative efficiency.;
+                Patient scheduling, resource allocation, treatment optimization,and administrative efficiency.;
               </p>;
             </div>;
             <div className="card">;
@@ -453,5 +381,4 @@ export default function AIBusinessManagerPage() {;
           </div>;
         </section>;
       </div>;
-    </div>);
-}
+    </div>)}

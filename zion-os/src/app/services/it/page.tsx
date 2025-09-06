@@ -1,13 +1,6 @@
 
-
-
-export default function ITServicesPage() {;
-  return (;
-
-
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
-
-      {/* Hero Section */}
+;
+export default function ITServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;{/* Hero Section */}
       <div className="bg - gradient - to - r from - green - 600 to - blue - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
           <h1 className="text - 5xl font - bold mb - 6">💻 IT Services & Solutions</h1>;
@@ -127,18 +120,12 @@ export default function ITServicesPage() {;
               <a href="https://ziontechgroup.com / cloud - services" className="block w - full text - center bg - green - 600 hover:bg - green - 700 text - white py - 3 rounded - lg font - semibold transition - colors">;
                 Learn More About Cloud Infrastructure;
               </a>;
-            </div>;
-
-
-            {/* DevOps & CI / CD */}
+            </div>;{/* DevOps & CI / CD */}
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🚀</div>;
               <h2 className="text - 3xl font - bold mb - 4">DevOps & CI / CD</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
-                Accelerate your software delivery with automated deployment pipelines,
-
-
-                infrastructure as code, and DevOps culture implementation that drives innovation.;
+                Accelerate your software delivery with automated deployment pipelines,infrastructure as code, and DevOps culture implementation that drives innovation.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
@@ -201,17 +188,11 @@ export default function ITServicesPage() {;
                 Learn More About DevOps & CI / CD;
               </a>;
             </div>;
-            {/* Cybersecurity */}
-
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+            {/* Cybersecurity */}<div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🛡️</div>;
               <h2 className="text - 3xl font - bold mb - 4">Cybersecurity</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
-                Protect your business with comprehensive cybersecurity solutions including security audits,
-
-
-                penetration testing, compliance frameworks, and incident response planning.;
+                Protect your business with comprehensive cybersecurity solutions including security audits,penetration testing, compliance frameworks, and incident response planning.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
@@ -410,17 +391,11 @@ export default function ITServicesPage() {;
                 Learn More About API Development;
               </a>;
             </div>;
-            {/* Digital Transformation */}
-
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+            {/* Digital Transformation */}<div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🔄</div>;
               <h2 className="text - 3xl font - bold mb - 4">Digital Transformation</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
-                Guide your organization through end - to - end digital transformation with strategic consulting,
-
-
-                legacy system modernization, and change management expertise.;
+                Guide your organization through end - to - end digital transformation with strategic consulting,legacy system modernization, and change management expertise.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
@@ -641,5 +616,4 @@ export default function ITServicesPage() {;
           </div>;
         </div>;
       </section>;
-    </div>);
-}
+    </div>)}

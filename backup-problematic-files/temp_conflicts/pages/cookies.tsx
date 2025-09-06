@@ -1,97 +1,30 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import { ;
-  Cookie, Settings, Shield, Eye, Database, ;
-  CheckCircle, AlertTriangle, Info, Globe;
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-;
-export default function CookiesPage() {;
-  const lastUpdated = 'January 15, 2025',;
-;
-  const cookieTypes = [;
-    {;
-      name:'Essential Cookies',,
-  description:'These cookies are necessary for the website to function properly and cannot be disabled.',;
-      examples:[;
-        'Authentication and security cookiesSession management cookies',;
-        'Load balancing cookiesUser preference cookies';
-      ],;
-      icon:<Shield className="w-6 h-6" />,;
-      color:'from-green-500 to-emerald-600';
-    },;
-    {;
-      name:'Analytics Cookies',,
-  description:'These cookies help us understand how visitors interact with our website.',;
-      examples:[;
-        'Google Analytics cookiesPage view tracking',;
-        'User behavior analysisPerformance monitoring';
-      ],;
-      icon:<Database className="w-6 h-6" />,;
-      color:'from-blue-500 to-cyan-600';
-    },;
-    {;
-      name:'Marketing Cookies',,
-  description:'These cookies are used to deliver relevant advertisements and track marketing campaign window.window.window.performance.',;
-      examples:[;
-        'Social media cookiesAdvertising cookies',;
-        'Retargeting cookiesCampaign tracking cookies';
-      ],;
-      icon:<Globe className="w-6 h-6" />,;
-      color:'from-purple-500 to-pink-600';
-    },;
-    {;
-      name:'Functional Cookies',,
-  description:'These cookies enable enhanced functionality and personalization.',;
-      examples:[;
-        'Language preference cookiesTheme selection cookies',;
-        'Form auto-fill cookiesUser experience cookies';
-      ],;
-      icon:<Settings className="w-6 h-6" />,;
-      color:'from-orange-500 to-red-600';
+import React from 'react',import Head from 'next/head',import { motion } from 'framer-motion',import {Cookie, Settings, Shield, Eye, Database,CheckCircle, AlertTriangle, Info, Globe;
+} from 'lucide-react',import EnhancedNavigation from '../components/EnhancedNavigation',import EnhancedFooter from '../components/EnhancedFooter',export default function CookiesPage() {const lastUpdated  = 'January 15, 2025',const cookieTypes = [;
+    {name:'Essential Cookies',,description:'These cookies are necessary for the website to function properly and cannot be disabled.',examples:[;
+        'Authentication and security cookiesSession management cookies','Load balancing cookiesUser preference cookies';
+      ],icon:<Shield className="w-6 h-6" />,color:'from-green-500 to-emerald-600';
+    },{name:'Analytics Cookies',,description:'These cookies help us understand how visitors interact with our website.',examples:[;
+        'Google Analytics cookiesPage view tracking','User behavior analysisPerformance monitoring';
+      ],icon:<Database className="w-6 h-6" />,color:'from-blue-500 to-cyan-600';
+    },{name:'Marketing Cookies',,description:'These cookies are used to deliver relevant advertisements and track marketing campaign window.window.window.performance.',examples:[;
+        'Social media cookiesAdvertising cookies','Retargeting cookiesCampaign tracking cookies';
+      ],icon:<Globe className="w-6 h-6" />,color:'from-purple-500 to-pink-600';
+    },{name:'Functional Cookies',,description:'These cookies enable enhanced functionality and personalization.',examples:[;
+        'Language preference cookiesTheme selection cookies','Form auto-fill cookiesUser experience cookies';
+      ],icon:<Settings className="w-6 h-6" />,color:'from-orange-500 to-red-600';
     }
-  ],;
-;
-  const thirdPartyCookies = [;
-    {;
-      name:'Google Analytics',;
-      purpose:'Website analytics and performance monitoring',;
-      duration:'2 years',;
-      privacy:'https://policies.google.com/privacy';
-    },;
-    {;
-      name:'Facebook Pixel',;
-      purpose:'Social media advertising and conversion tracking',;
-      duration:'3 months',;
-      privacy:'https://www.facebook.com/policy.php';
-    },;
-    {;
-      name:'LinkedIn Insight',;
-      purpose:'Professional networking and business insights',;
-      duration:'2 years',;
-      privacy:'https://www.linkedin.com/legal/privacy-policy';
-    },;
-    {;
-      name:'Twitter Ads',;
-      purpose:'Social media advertising and engagement tracking',;
-      duration:'2 years',;
-      privacy:'https://twitter.com/en/privacy';
+  ],const thirdPartyCookies = [;
+    {name:'Google Analytics',purpose:'Website analytics and performance monitoring',duration:'2 years',privacy:'https://policies.google.com/privacy';
+    },{name:'Facebook Pixel',purpose:'Social media advertising and conversion tracking',duration:'3 months',privacy:'https://www.facebook.com/policy.php';
+    },{name:'LinkedIn Insight',purpose:'Professional networking and business insights',duration:'2 years',privacy:'https://www.linkedin.com/legal/privacy-policy';
+    },{name:'Twitter Ads',purpose:'Social media advertising and engagement tracking',duration:'2 years',privacy:'https://twitter.com/en/privacy';
     }
-  ],;
-;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
+  ],return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <Head>;
         <meta property="og:description" content="Comprehensive cookie policy explaining how we use cookies to enhance your experience on our website." />;
         <meta name="twitter:card" content="summary_large_image" />;
         <link rel="canonical" href="https://ziontechgroup.com/cookies" />;
-      </Head>;
-;
-      <EnhancedNavigation />;
-;
-      {/* Hero Section */}
+      </Head>;<EnhancedNavigation />;{/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-6xl mx-auto text-center">;
           <motion.div;
@@ -113,9 +46,7 @@ export default function CookiesPage() {;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-;
-      {/* Introduction */}
+      </section>;{/* Introduction */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto">;
           <motion.div;
@@ -128,8 +59,7 @@ export default function CookiesPage() {;
             <h2 className="text-3xl font-bold text-white mb-6">What Are Cookies?</h2>;
             <p className="text-gray-300 leading-relaxed mb-6">;
               Cookies are small text files that are stored on your device when you visit our website. They help us ;
-              provide you with a better experience by remembering your preferences, analyzing how you use our site, ;
-              and personalizing content.;
+              provide you with a better experience by remembering your preferences, analyzing how you use our site,and personalizing content.;
             </p>;
             <p className="text-gray-300 leading-relaxed">;
               This policy explains what cookies we use, why we use them, and how you can control them. By continuing ;
@@ -137,9 +67,7 @@ export default function CookiesPage() {;
             </p>;
           </motion.div>;
         </div>;
-      </section>;
-;
-      {/* Cookie Types */}
+      </section>;{/* Cookie Types */}
       <section className="py-20 px-6">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
@@ -151,11 +79,8 @@ export default function CookiesPage() {;
           >;
             <h2 className="text-4xl font-bold text-white mb-4">Types of Cookies We Use</h2>;
             <p className="text-xl text-gray-300">Understanding the different categories of cookies on our website</p>;
-          </motion.div>;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {cookieTypes.map((type, index) => (;
-              <motion.div;
+          </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+            {cookieTypes.map((type, index) => (<motion.div;
                 key={type.name}
                 initial={{ opacity:0, y:20 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -172,8 +97,7 @@ export default function CookiesPage() {;
                 <p className="text-gray-300 leading-relaxed mb-4">{type.description}</p>;
                 <div className="space-y-2">;
                   <h4 className="text-white font-semibold mb-2">Examples:</h4>;
-                  {type.examples.map((example, exampleIndex) => (;
-                    <div key={exampleIndex} className="flex items-center space-x-3">;
+                  {type.examples.map((example, exampleIndex) => (<div key={exampleIndex} className="flex items-center space-x-3">;
                       <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />;
                       <span className="text-gray-300 text-sm">{example}</span>;
                     </div>;
@@ -183,9 +107,7 @@ export default function CookiesPage() {;
             ))}
           </div>;
         </div>;
-      </section>;
-;
-      {/* Third Party Cookies */}
+      </section>;{/* Third Party Cookies */}
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
@@ -197,11 +119,8 @@ export default function CookiesPage() {;
           >;
             <h2 className="text-4xl font-bold text-white mb-4">Third-Party Cookies</h2>;
             <p className="text-xl text-gray-300">Cookies from trusted third-party services we use</p>;
-          </motion.div>;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-            {thirdPartyCookies.map((cookie, index) => (;
-              <motion.div;
+          </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+            {thirdPartyCookies.map((cookie, index) => (<motion.div;
                 key={cookie.name}
                 initial={{ opacity:0, y:20 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -226,9 +145,7 @@ export default function CookiesPage() {;
             ))}
           </div>;
         </div>;
-      </section>;
-;
-      {/* Cookie Management */}
+      </section>;{/* Cookie Management */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto">;
           <motion.div;
@@ -240,9 +157,7 @@ export default function CookiesPage() {;
           >;
             <h2 className="text-4xl font-bold text-white mb-4">Managing Your Cookie Preferences</h2>;
             <p className="text-xl text-gray-300">How you can control and manage cookies on our website</p>;
-          </motion.div>;
-;
-          <div className="space-y-8">;
+          </motion.div>;<div className="space-y-8">;
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
                 <Settings className="w-6 h-6 text-cyan-400 mr-3" />;
@@ -253,9 +168,7 @@ export default function CookiesPage() {;
               </p>;
               <ul className="space-y-2 text-gray-300">;
               </ul>;
-            </div>;
-;
-            <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
+            </div>;<div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
                 <Eye className="w-6 h-6 text-green-400 mr-3" />;
                 Cookie Consent;
@@ -265,9 +178,7 @@ export default function CookiesPage() {;
               </p>;
               <ul className="space-y-2 text-gray-300">;
               </ul>;
-            </div>;
-;
-            <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
+            </div>;<div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
                 <AlertTriangle className="w-6 h-6 text-yellow-400 mr-3" />;
                 Important Notes;
@@ -289,9 +200,7 @@ export default function CookiesPage() {;
             </div>;
           </div>;
         </div>;
-      </section>;
-;
-      {/* Updates and Contact */}
+      </section>;{/* Updates and Contact */}
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
@@ -323,9 +232,6 @@ export default function CookiesPage() {;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-;
-      <EnhancedFooter />;
+      </section>;<EnhancedFooter />;
     </div>;
-  ),;
-}
+  ),}

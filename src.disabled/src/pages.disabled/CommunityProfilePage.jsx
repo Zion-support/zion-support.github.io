@@ -1,78 +1,31 @@
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
 import React from 'react';
-interface CommunityProfilePageProps {
-  // Add props here as needed
-
-
+interface CommunityProfilePageProps  {// Add props here as needed;
+}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+interface CommunityProfilePageProps  {// Add props here as needed;
+}ursor/automate-test-improve-and-merge-code-646c;
+export default function CommunityProfilePage() {export default function CommunityProfilePage() {export default function CommunityProfilePage() {return (<div>;
+      <h1>CommunityProfilePage</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )ursor/automate-test-improve-and-merge-code-646c;
 }
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-interface CommunityProfilePageProps {
-  // Add props here as needed
+:src.disabled/src/pages.disabled/CommunityProfilePage.jsx;
+}}
+ursor/add-new-services-and-deploy-updates-0462;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-export default function CommunityProfilePage({}: CommunityProfilePageProps) {
-export default function CommunityProfilePage({}: CommunityProfilePageProps) {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-export default function CommunityProfilePage({}: CommunityProfilePageProps) {
-  return (
-    <div>
-      <h1>CommunityProfilePage</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-ursor/automate-test-improve-and-merge-code-646c
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+:temp_exclude/src.disabled/src/pages.disabled/CommunityProfilePage.jsx;
 }
-:src.disabled/src/pages.disabled/CommunityProfilePage.jsx
+}ursor/automate-test-improve-and-merge-code-646c;
 }
-
+ursor/add-new-services-and-deploy-updates-0462;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
-ursor/add-new-services-and-deploy-updates-0462
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:temp_exclude/src.disabled/src/pages.disabled/CommunityProfilePage.jsx;
 }
-:temp_exclude/src.disabled/src/pages.disabled/CommunityProfilePage.jsx
-
-
-
-}
-}
->>>>>>> main
-ursor/automate-test-improve-and-merge-code-646c
-}
-ursor/add-new-services-and-deploy-updates-0462
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-}
-:temp_exclude/src.disabled/src/pages.disabled/CommunityProfilePage.jsx
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

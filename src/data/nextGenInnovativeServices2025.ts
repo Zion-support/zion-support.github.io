@@ -1,5 +1,4 @@
- export interface NextGenInnovativeService {
-  id: string;
+ export interface NextGenInnovativeService  {id: string;
    title: string;
    description: string;
    category: string;
@@ -18,5 +17,5 @@
    roi: string;
    innovationLevel: string;
    contactInfo: {  phone: string;
-   email: string
-   website: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';""
+   email: string;
+   website: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';"";
