@@ -370,6 +370,62 @@ function ServiceCard({
           icon="📊"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         />
+        <ServiceCard
+          href="/services/ai-code-reviewer"
+          title="AI Code Reviewer"
+          description="Automated code review and quality analysis powered by AI with 99% accuracy"
+          bullets={["Intelligent analysis", "Real-time feedback", "Security scanning", "Quality metrics"]}
+          icon="🔍"
+        />
+        <ServiceCard
+          href="/services/ai-meeting-assistant"
+          title="AI Meeting Assistant"
+          description="Transform meetings with AI transcription, action items, and intelligent insights"
+          bullets={["Real-time transcription", "Smart action items", "AI summaries", "Meeting analytics"]}
+          icon="🎤"
+        />
+        <ServiceCard
+          href="/services/ai-document-processor"
+          title="AI Document Processor"
+          description="Intelligent document processing with OCR, data extraction, and automated workflows"
+          bullets={["Multi-format OCR", "Data extraction", "Automated workflows", "Smart classification"]}
+          icon="📄"
+        />
+        <ServiceCard
+          href="/services/invoice-automation"
+          title="Invoice Automation"
+          description="Automate invoice processing, approval workflows, and payment tracking"
+          bullets={["Smart capture", "Automated approval", "Payment processing", "Duplicate detection"]}
+          icon="🧾"
+        />
+        <ServiceCard
+          href="/services/expense-tracker"
+          title="AI Expense Tracker"
+          description="Smart expense tracking with receipt scanning, categorization, and automated reporting"
+          bullets={["Receipt scanning", "Smart categorization", "Real-time analytics", "Team management"]}
+          icon="💰"
+        />
+        <ServiceCard
+          href="/services/api-testing-suite"
+          title="API Testing Suite"
+          description="Comprehensive API testing platform with automated testing, monitoring, and documentation"
+          bullets={["Automated testing", "Performance testing", "Security testing", "Real-time monitoring"]}
+          icon="🧪"
+        />
+        <ServiceCard
+          href="/services/email-campaign-manager"
+          title="AI Email Campaign Manager"
+          description="Intelligent email marketing with AI personalization, automation, and analytics"
+          bullets={["AI personalization", "Advanced analytics", "Automated workflows", "A/B testing"]}
+          icon="📧"
+        />
+        <ServiceCard
+          href="/services/ai-customer-insights"
+          title="AI Customer Insights"
+          description="Unlock customer behavior insights with AI-powered analytics and predictive modeling"
+          bullets={["Predictive analytics", "Sentiment analysis", "Customer segmentation", "Churn prediction"]}
+          icon="🧠"
+        />
       </div>
       <CTA />
     </div>
