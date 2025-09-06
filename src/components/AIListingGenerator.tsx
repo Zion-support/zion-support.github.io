@@ -15,7 +15,6 @@ import { Sparkles, ArrowRight } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { Badge } from '@/components/ui/badge';
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 interface GeneratedContent {
   description: string;
 tags: string[];
@@ -296,7 +295,7 @@ export function AIListingGenerator({
         </Card>
       )}
     </div>
-  );
+);
 
   target: {;
   value: string ;

@@ -57,7 +57,7 @@ import {
   Eye,
   Infinity,
   Hexagon,
-  Network,;} from 'lucide-react';import { 
+  Network,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, 
@@ -725,3 +725,4 @@ export default function UltraFuturisticNavigation2030() {
     </>
   );
 }
+;

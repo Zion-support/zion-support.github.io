@@ -181,7 +181,7 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
   );
 
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
+/>
   );
 } 
-} 
+}

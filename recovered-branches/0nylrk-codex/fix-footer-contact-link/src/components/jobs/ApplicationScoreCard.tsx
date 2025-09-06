@@ -210,3 +210,4 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     </Card>
   )
 }
+;

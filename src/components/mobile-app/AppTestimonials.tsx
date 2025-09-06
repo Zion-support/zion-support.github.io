@@ -9,7 +9,6 @@ const testimonials = [
     rating: 5,
     avatar: '/placeholder.svg',
   },
-
 const testimonials = [
   {
     name: 'Sarah Williams',

@@ -1,7 +1,5 @@
-          if (index < currentStep) status = "complete";
+if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
-          
-
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
@@ -92,7 +90,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         </div>
       </div>
     </div>
-  );
+);
 
 }/> </div> </div> </div>) ;
 }"}

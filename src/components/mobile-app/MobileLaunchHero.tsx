@@ -91,7 +91,7 @@ export const MobileLaunchHero: React.FC = () => {
         </div>
       </div>
     </section>
-  );
+);
 };
 "  )
 };

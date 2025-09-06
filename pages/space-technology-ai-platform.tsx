@@ -403,4 +403,4 @@ export default function SpaceTechnologyAIPlatform() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);

@@ -81,5 +81,5 @@ function extractSection(body: string, title: string): string {
     const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
     return snippet.trim();
   }
-  return "";
+return "";
 }

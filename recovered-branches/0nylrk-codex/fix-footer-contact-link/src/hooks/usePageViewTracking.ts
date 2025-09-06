@@ -30,3 +30,4 @@ export function usePageViewTracking() {
     console.log('Page view:', location.pathname)
   }, [location.pathname])
 }
+;

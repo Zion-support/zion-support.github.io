@@ -224,7 +224,7 @@ export default function SavedTalentsPage() {
         )}
       </div>
     </>
-  );
+);
 
 }, [user, router]);
 }const {;

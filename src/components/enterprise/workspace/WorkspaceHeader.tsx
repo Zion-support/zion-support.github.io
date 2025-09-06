@@ -27,7 +27,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
-
 interface WorkspaceHeaderProps {
   company: Company
 }

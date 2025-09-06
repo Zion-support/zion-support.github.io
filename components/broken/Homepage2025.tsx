@@ -1,4 +1,3 @@
- 
 };
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
@@ -17,7 +16,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   service.id 
 }initial= {
   {
-  opacity: 0, y: 30 
+  opacity: 0, y: 30
 
 }whileInView= {
   {

@@ -15,7 +15,6 @@ import {
   Briefcase,
   Users,;
 } from 'lucide-react';
-
 interface IntegrationCardProps {
   title: string;
   description: string;

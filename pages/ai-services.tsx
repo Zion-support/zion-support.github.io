@@ -1,9 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
-
 export default function AIServices() {
   return (
-    <Layout
+<Layout
       title="AI Services - Zion Tech Group"
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
     >

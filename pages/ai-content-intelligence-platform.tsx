@@ -502,4 +502,4 @@ export default function AIContentIntelligencePlatform() {
         </div>
       </section>
     </Layout>
-  );
+);

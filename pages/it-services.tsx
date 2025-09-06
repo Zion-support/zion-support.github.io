@@ -726,7 +726,6 @@ const industries = [
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' },
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
 ];
-
 export default function ITServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');

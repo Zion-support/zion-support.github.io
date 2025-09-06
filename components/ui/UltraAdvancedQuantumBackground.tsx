@@ -1,4 +1,4 @@
- canvas.width = window.innerWidth;
+canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
 let particles: Particle[] = [];
@@ -35,7 +35,7 @@ this.intensity = Math.random () * 0.5 + 0.5;
 this.phase = Math.random () * Math.PI * 2;
 this.color = `hsl ($ {
   200 + Math.random () * 60 
-}, 80%, 60%) ` 
+}, 80%, 60%) `
 
 const UltraAdvancedQuantumBackground: React.FC<
   UltraAdvancedQuantumBackgroundProps

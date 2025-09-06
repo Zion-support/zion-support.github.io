@@ -24,7 +24,7 @@ import {
   Sparkles,
   Shield,
   Cpu,
-  Database,;} from 'lucide-react';import { 
+  Database,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, 
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;

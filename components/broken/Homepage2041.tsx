@@ -520,7 +520,7 @@ const Homepage2041: React.FC = () => {
   );
 };
 
-  Math.random () * 100 
+Math.random () * 100 
 }%`;
 top: `$ {
   Math.random () * 100 

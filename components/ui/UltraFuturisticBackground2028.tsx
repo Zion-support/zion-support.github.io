@@ -1,4 +1,4 @@
- canvas.width = window.innerWidth;
+canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 // Particle system const particles: Array< {
   // Wrap around edges if (particle.x < 0) particle.x = canvas.width;

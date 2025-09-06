@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
   return (
     <main className='mx-auto max-w-5xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>

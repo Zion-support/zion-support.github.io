@@ -83,3 +83,4 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
     </div>
   )
 }
+;

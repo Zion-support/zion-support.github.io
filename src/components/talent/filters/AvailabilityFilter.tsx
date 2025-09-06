@@ -83,7 +83,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         </div>
       )}
     </div>
-  );
+);
 
   toggleSection ;
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;

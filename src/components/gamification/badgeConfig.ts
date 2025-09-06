@@ -7,7 +7,6 @@ import {
   BadgePlus,
   BadgeDollarSign,;
 } from 'lucide-react';
-
 export type BadgeKey =
   | 'first_listing'
   | 'top_contributor'
@@ -80,3 +79,4 @@ export const getBadgeMeta = (key: BadgeKey) =>
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key);
 
+;

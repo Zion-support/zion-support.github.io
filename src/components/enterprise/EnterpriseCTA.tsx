@@ -64,7 +64,6 @@ export function EnterpriseCTA() {
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
-
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">

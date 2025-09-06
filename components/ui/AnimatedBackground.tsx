@@ -83,7 +83,7 @@ export default function AnimatedBackground() {
           backgroundSize: '50px 50px',
         }}
       />
-    </div>
+    </div>;
   );
 };
 

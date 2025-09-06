@@ -1,8 +1,7 @@
- canvas.width = window.innerWidth;
+canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
 let particles: Array< {
-  
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC<
   UltraAdvancedFuturisticBackgroundV2Props

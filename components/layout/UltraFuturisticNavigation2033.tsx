@@ -24,7 +24,7 @@ import {
   DollarSign,
   BookOpen,
   Users,
-  MessageCircle,;} from 'lucide-react';import { 
+  MessageCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
   Cpu, Target, Microscope, Shield, Zap, Sparkles;
   Menu, X, Search, ChevronDown, Home, Briefcase, 
@@ -641,7 +641,7 @@ export default function UltraFuturisticNavigation2033() {
         </AnimatePresence>
       </nav>
     </>
-  );
+);
 
 }whileTap= {
   {

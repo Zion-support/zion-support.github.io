@@ -24,7 +24,6 @@ export function ContractTypeCards({
             <FileText className='h-5 w-5' />            Standard Contracts
           <CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
-
 interface ContractTypeCardsProps {
   onStandardClick: () => void,
   onSmartClick: () => void

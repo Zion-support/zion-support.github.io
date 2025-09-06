@@ -1,4 +1,4 @@
-  import { useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
 
@@ -126,7 +126,7 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
-  );
+);
 
 };";
 <Button type="button" variant="ghost" size="sm" onClick={;

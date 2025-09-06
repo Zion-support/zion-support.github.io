@@ -4,7 +4,6 @@ import {
   BarChart,
   DonutChart,;
 } from '../components/salary/InsightCharts';
-
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
@@ -492,5 +491,5 @@ export default function SalaryInsightsPage() {
         </div>
       </div>
     </div>
-  );
+);
 }

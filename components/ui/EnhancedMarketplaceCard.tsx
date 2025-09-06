@@ -151,10 +151,10 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           Add to Cart
         </button>
       </div>
-    </div>
-
+</div>
   );
 };
 
 export default EnhancedMarketplaceCard;
+
 

@@ -10,7 +10,6 @@ import {
   Linkedin,
   Twitter,;
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
-
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear(),
 

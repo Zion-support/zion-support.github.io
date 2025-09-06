@@ -164,4 +164,4 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   )
-}
+};

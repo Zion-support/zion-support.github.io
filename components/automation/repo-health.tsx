@@ -1,4 +1,4 @@
- 
+
 
 };
 type Props = { report: Report | null },
@@ -44,5 +44,5 @@ export default function RepoHealth({ report }: Props) {
         </ul>
       </section>
     </div>
-  );
+);
 }

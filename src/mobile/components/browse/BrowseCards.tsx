@@ -11,7 +11,6 @@ import {
   DollarSign,;
 } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-
 interface BrowseItem {
   id: string;
   title: string;
@@ -198,3 +197,4 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     </div>
   );
 }
+;

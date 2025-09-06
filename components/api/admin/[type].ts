@@ -202,7 +202,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
-  return res.status(405).json({ error: 'Method not allowed' });
+return res.status(405).json({ error: 'Method not allowed' });
 
 }return res.status (200) .send (toCsv (data || []) );
 }return res.status (200) .send (toCsv (pageItems) );

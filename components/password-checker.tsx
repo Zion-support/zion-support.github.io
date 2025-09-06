@@ -14,7 +14,6 @@ import {
   AlertTriangle,
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-
 export default function PasswordCheckerPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -776,5 +775,5 @@ export default function PasswordCheckerPage() {
         </div>
       </section>
     </>
-  );
+);
 }

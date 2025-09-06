@@ -52,5 +52,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   episodes[idx] = episode;
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
-  return res.status(200).json({ episode });  return res.status(200).json({ episode })
+return res.status(200).json({ episode });  return res.status(200).json({ episode })
 }

@@ -713,3 +713,4 @@ function PartnerTable({
     </Table>
   )
 }
+;

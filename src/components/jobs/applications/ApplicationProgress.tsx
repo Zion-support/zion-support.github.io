@@ -81,3 +81,4 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   };
 }
+;

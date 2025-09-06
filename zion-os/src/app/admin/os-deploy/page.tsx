@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 export default function OSDeployPage() {
-  const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,14 +27,14 @@ export default function OSDeployPage() {
       ai: 'AI Integration',
       blockchain: 'Blockchain Technology',
       governance: 'Governance System',
-      treasury: 'Treasury Management'
+      treasury: 'Treasury Management';
     };
     return labels[key] || key;
   };
 
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
-      ai: 'Advanced AI capabilities and automation',
+ai: 'Advanced AI capabilities and automation',
       blockchain: 'Secure blockchain infrastructure',
       governance: 'Decentralized governance mechanisms',
       treasury: 'Automated treasury management'

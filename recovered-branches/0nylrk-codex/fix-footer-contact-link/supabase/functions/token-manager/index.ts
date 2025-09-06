@@ -72,3 +72,4 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
 }
+;

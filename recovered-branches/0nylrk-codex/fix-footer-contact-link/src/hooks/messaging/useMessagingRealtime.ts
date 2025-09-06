@@ -51,3 +51,4 @@ export function useMessagingRealtime(
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])
 }
+;

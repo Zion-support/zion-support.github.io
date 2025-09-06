@@ -163,5 +163,5 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         </Form>
       </CardContent>
     </Card>
-  );
+);
 };

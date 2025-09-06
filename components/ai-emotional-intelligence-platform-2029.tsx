@@ -28,7 +28,7 @@ import {
   ShieldCheck,;
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import { 
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
   Brain, Heart, Eye, MessageCircle, Users, Shield, 
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;

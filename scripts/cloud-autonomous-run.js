@@ -81,4 +81,4 @@ async function main() {
   console.log('Cloud autonomous run complete:', status.updatedAt)
 }
 
-main().catch((e) => { console.error(e), process.exit(1) }),
+main().catch((e) => { console.error(e), process.exit(1) }),;

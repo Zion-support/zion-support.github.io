@@ -757,5 +757,5 @@ export default function CuttingEdgePricing2025() {
         </section>
       </Layout>
     </>
-  );
+);
 }

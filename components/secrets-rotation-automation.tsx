@@ -1,7 +1,6 @@
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-
 export default function SecretsRotationAutomationPage() {
   const features = [
     "Automated key and secret rotation",
@@ -11,7 +10,7 @@ export default function SecretsRotationAutomationPage() {
     "Cloud KMS and Vault support",
   ];
 
-  return (
+return (
     <>
       <SEO
         title="Secrets Rotation Automation"

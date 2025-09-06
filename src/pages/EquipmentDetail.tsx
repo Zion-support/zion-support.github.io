@@ -590,3 +590,4 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }</div> </motion.div> </div> </div> </div> </>) ;
 }'"}
 
+;

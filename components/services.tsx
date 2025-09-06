@@ -1,4 +1,4 @@
- ...realMicroSaasServices2025;
+...realMicroSaasServices2025;
 ...innovativeAIServices2025;
 ...innovativeITServices2025;
 ...emergingTechServices2025;
@@ -56,7 +56,7 @@ and micro SAAS services designed to transform your business and drive innovation
   opacity: 0, y: 20 
 }animate= {
   {
-  opacity: 1, y: 0 
+  opacity: 1, y: 0
 
 }transition= {
   {
@@ -657,3 +657,4 @@ and micro SAAS services designed to transform your business and drive innovation
     </UltraFuturisticBackground2029>
   ),
 }
+;

@@ -70,3 +70,4 @@ export function applyThemeColors(colors: ThemeColors) {
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor
 }
+;

@@ -10,7 +10,6 @@ import {
   Database,
   Network,;
 } from 'lucide-react';
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -545,7 +544,7 @@ addResourceHint(image, 'image');
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
 
-      {/* Preload critical resources */}
+{/* Preload critical resources */}
       {preloadImages.map((image, index) => (;
         <link;
 key={`preload-image-${index}}          rel="preload""          as="image""          href={image}"        />))}

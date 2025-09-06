@@ -10,7 +10,7 @@ interface SafeImageProps {
   src: string,
   alt: string,
 import { ImageIcon } from 'lucide-react'
-
+;
 interface SafeImageProps {
   src: string,
   alt: string,
@@ -71,7 +71,7 @@ export function SafeImage({
 
   
     />
-  );  return (
+);  return (
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -84,4 +84,4 @@ export function SafeImage({
       unoptimized = {hasError,}
     />
   );
-} 
+}

@@ -59,5 +59,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   db[userId] = profile;
   save(db);
 
-  res.status(200).json({ ok: true, profile });
+res.status(200).json({ ok: true, profile });
 }

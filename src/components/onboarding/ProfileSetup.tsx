@@ -1,4 +1,5 @@
 
+
 import {
   Form;
   FormControl;
@@ -126,7 +127,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </form>
       </Form>
     </div>
-  );
+);
 case "talent": return "Talent";";
 case "client": return "Client";
 default: ;

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2025Service {
   id: string;
   name: string;

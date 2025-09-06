@@ -56,7 +56,7 @@ export default async function handler(
 
     return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error('Request-to-hire failed', err);
+console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }    return res.status(500).json({ error: 'Internal error' })
   };

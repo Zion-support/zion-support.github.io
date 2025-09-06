@@ -132,7 +132,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
         </p>
       </CardContent>
     </Card>
-  );
+);
 };
 "  )
 };

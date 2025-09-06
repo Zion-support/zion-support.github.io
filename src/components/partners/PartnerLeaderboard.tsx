@@ -1,7 +1,6 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -76,3 +75,4 @@ export function PartnerLeaderboard() {
 }
   );
 }
+;

@@ -4,7 +4,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,;
+DialogTitle,;
 } from '@/components/ui/dialog';import { Button } from '@/components/ui/button';import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
@@ -21,7 +21,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,;
+FormMessage,;
 } from '@/components/ui/form';
 import { useForm, type Resolver } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -281,3 +281,4 @@ export function ContactPublisherModal({  isOpen,  isOpen,
   );    </>
   );
 }
+;

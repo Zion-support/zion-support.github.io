@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-
 export default function SitemapPage() {
   const links = [
     { name: "Home", href: "/" },
@@ -89,3 +88,4 @@ export default function SitemapPage() {
     </div>
   );
 }
+;

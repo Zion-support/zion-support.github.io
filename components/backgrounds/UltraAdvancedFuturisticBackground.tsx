@@ -1,11 +1,10 @@
- canvas.width = window.innerWidth;
+canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particles: Array< {
   //Initialize particles with enhanced properties const initParticles = () => {
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
 for (let i = 0, i < count, i++) {
   particles.push ({
-  
 
 export default function UltraAdvancedFuturisticBackground({
   children,
@@ -510,5 +509,5 @@ export default function UltraAdvancedFuturisticBackground({
       
       {children}
     </div>
-  );
+);
 }

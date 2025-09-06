@@ -164,5 +164,5 @@ export default function GrantsPage() {
         )}
       </div>
     </EnhancedLayout>
-  );
+);
 }

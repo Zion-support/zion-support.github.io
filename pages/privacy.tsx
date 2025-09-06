@@ -158,7 +158,7 @@ export default function PrivacyPage() {
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-600 mt-8">
+<p className="text-sm text-gray-600 mt-8">
                   Last updated: January 2024
                 </p>
               </div>

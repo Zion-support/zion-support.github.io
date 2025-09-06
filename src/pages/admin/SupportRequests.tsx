@@ -406,7 +406,7 @@ export default function SupportRequests() {
         </Tabs>
       </div>
     </>
-  );
+);
 
   return true;
 });

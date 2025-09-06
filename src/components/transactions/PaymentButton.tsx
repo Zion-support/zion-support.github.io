@@ -1,4 +1,4 @@
-        description: "Please sign in to make a purchase."}),
+description: "Please sign in to make a purchase."}),
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
@@ -113,3 +113,4 @@ toast ({;
 }</Button>) ;
 }'"  )
 }
+;

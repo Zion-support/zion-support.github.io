@@ -66,6 +66,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(role),
-    optionalDocuments: getOptionalDocuments(role),
+optionalDocuments: getOptionalDocuments(role),
   });
 }

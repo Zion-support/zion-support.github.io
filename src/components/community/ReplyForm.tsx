@@ -7,10 +7,9 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormMessage,;
+FormMessage,;
 } from '@/components/ui/form';
 import { Card, CardContent } from '@/components/ui/card';
-
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string;
@@ -63,6 +62,6 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
         </Form>
       </CardContent>
     </Card>
-  );
+);
 };
 export default ReplyForm;

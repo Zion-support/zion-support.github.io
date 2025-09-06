@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
@@ -54,5 +53,5 @@ export default function CloudAutomationsPage() {
         ))}
       </div>
     </div>
-  );
+);
 }

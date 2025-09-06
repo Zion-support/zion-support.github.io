@@ -5,7 +5,6 @@ import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
-
 interface GeneratedDescriptionDisplayProps {
   description: string,
   onSave: (editedDescription: string) => void
@@ -79,3 +78,4 @@ export function GeneratedDescriptionDisplay({
     </Card>
   )
 }
+;

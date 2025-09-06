@@ -25,5 +25,5 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
         </Button>
       )}
     </div>
-  );
+);
 };

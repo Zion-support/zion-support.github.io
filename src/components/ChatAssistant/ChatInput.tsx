@@ -26,7 +26,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   useEffect(() => {    // Focus input when component mounts
     inputRef.current?.focus();  }, []);
     inputRef.current?.focus()
-
 interface ChatInputProps {
   onSend: (message: string) => void,
   disabled?: boolean
@@ -91,5 +90,5 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         <Send className="h-5 w-5" />
       </Button>
     </form>
-  );
+);
 }

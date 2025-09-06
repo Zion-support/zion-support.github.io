@@ -161,3 +161,4 @@ function EventTypeCard({ title, description, count, icon, isLoading }: EventType
     </Card>
   )
 }
+;

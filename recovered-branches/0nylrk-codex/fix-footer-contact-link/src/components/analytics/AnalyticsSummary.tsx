@@ -128,3 +128,4 @@ function StatCard({ title, value, icon }: StatCardProps) {
     </Card>
   )
 }
+;

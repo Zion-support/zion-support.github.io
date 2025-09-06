@@ -16,7 +16,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
+FormMessage,;
 } from '@/components/ui/form';
 import {
   Card,
@@ -40,7 +40,6 @@ import { toast } from '@/components/ui/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
-
 // Define form schema
 const talentProfileSchema = z.object({
   name: z.string().min(2, 'Full Name must be at least 2 characters long'),
@@ -874,7 +873,7 @@ export function TalentRegistrationForm() {
         </Form>
       </Card>
     </div>
-  );
+);
 
 };
 //Generate enhanced profile with AI return;

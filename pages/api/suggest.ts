@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-
 const SAMPLE_QUERIES = [
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",
@@ -19,7 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { q = "" } = req.query;
+const { q = "" } = req.query;
   const query = String(q).toLowerCase();
 
   if (!query) {

@@ -36,3 +36,4 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireR
     </Dialog>
   )
 }
+;

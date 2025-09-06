@@ -175,7 +175,6 @@ import {
   Home;
 } from 'lucide-react';
 import Layout from '../components/Layout';
-
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -1,4 +1,4 @@
- const partners: Partner[] = [ {
+const partners: Partner[] = [ {
   name: 'Gov Partner' 
 };
 {
@@ -34,7 +34,7 @@ setForm ({
   error: err?.message || 'Unexpected error' 
 }) 
 }finally {
-  setSubmitting (false) 
+  setSubmitting (false)
 
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
@@ -386,4 +386,4 @@ export default function SummitPage() {
         </p>
       </section>
     </>
-  );
+);

@@ -1,3 +1,4 @@
+
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",

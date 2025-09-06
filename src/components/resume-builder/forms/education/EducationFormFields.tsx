@@ -14,7 +14,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
+FormMessage,;
 } from '@/components/ui/form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
@@ -216,3 +216,4 @@ export function EducationFormFields({
     </Form>
   );
 }
+;

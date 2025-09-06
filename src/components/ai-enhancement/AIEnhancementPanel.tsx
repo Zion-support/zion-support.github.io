@@ -15,7 +15,6 @@ import {
   useAIContentEnhancer,
   AIEnhancementOptions,;
 } from '@/hooks/useAIContentEnhancer';
-
 interface AIEnhancementPanelProps {
   title: string;
   defaultOptions: AIEnhancementOptions;
@@ -170,3 +169,4 @@ export function AIEnhancementPanel({
     </Card>
   );
 }
+;

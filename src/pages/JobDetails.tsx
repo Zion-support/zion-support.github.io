@@ -263,3 +263,4 @@ const isOwnJob = user?.id === job.client id;
 }'"
 }
 }
+;

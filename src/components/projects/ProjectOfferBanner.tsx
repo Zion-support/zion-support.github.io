@@ -1,3 +1,4 @@
+
   
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
@@ -73,7 +74,7 @@ export function ProjectOfferBanner() {
           </Card>
         ))}
     </div>
-  );
+);
 
 }, [projects, isLoading]);
 const handleDismiss = (projectId: string, e: React.MouseEvent) => {;

@@ -104,7 +104,7 @@ import {
   Facebook,
   Instagram,
   Youtube,
-  Github,;} from 'lucide-react';import { 
+  Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, 
@@ -791,7 +791,7 @@ export default function UltraFuturisticNavigation2034() {
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
-  );      <div className="h-20"></div>
+);      <div className="h-20"></div>
     </>
   );
 }

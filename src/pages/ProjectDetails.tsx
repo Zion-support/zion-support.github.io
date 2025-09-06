@@ -36,7 +36,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,;
+AlertDialogTrigger,;
 } from '@/components/ui/alert-dialog';
 import { Avatar } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
@@ -884,3 +884,4 @@ const ProjectDetails = () => {;
     </>;
   );
 }
+;

@@ -12,7 +12,6 @@ import {
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage } from '@/utils/safeStorage';
-
 // Example listing type
 interface Listing {
   id: string;
@@ -263,7 +262,7 @@ export function CategoryListingPage({
         </div>
       </div>
     </>
-  );
+);
 
   //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) );
 //Apply category filters if (selectedFilter === 'all') return matchesSearch;';

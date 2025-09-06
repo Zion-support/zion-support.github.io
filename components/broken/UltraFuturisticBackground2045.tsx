@@ -1,4 +1,4 @@
- canvas.width = window.innerWidth;
+canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 // Particle system const particles: Array< {
   alpha: Math.random () * 0.8 + 0.2;

@@ -16,7 +16,7 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink,;} from 'lucide-react';import { 
+  ExternalLink,;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
@@ -692,5 +692,5 @@ export default function InnovativeServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);
 }

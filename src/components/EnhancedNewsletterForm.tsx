@@ -4,7 +4,6 @@ import { useState, useRef } from 'react';
 import { Mail } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -121,5 +120,5 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-  );
+);
 }

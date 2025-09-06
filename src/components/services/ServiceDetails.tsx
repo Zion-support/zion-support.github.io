@@ -160,7 +160,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
         </p>
       </CardFooter>
     </Card>
-  );
+);
 
 };
 }operate during business hours (8AM-6PM $ {;

@@ -363,3 +363,4 @@ setIsEnhancementDialogOpen (false);
 }"
 }
 }
+;

@@ -48,3 +48,4 @@ export function addSkillsSection(
   
   return yPos + 5
 }
+;

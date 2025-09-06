@@ -5,7 +5,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
-
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {

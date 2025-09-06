@@ -28,7 +28,7 @@ import {
   Phone,;
 } from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import { 
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users, 
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
@@ -631,5 +631,5 @@ export default function UltraFuturisticServiceShowcase2034() {
         </motion.div>
       </div>
     </section>
-  );
+);
 }

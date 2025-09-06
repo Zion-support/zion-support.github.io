@@ -1,4 +1,4 @@
-  quotes;
+quotes;
   isArchived = false;
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import { 

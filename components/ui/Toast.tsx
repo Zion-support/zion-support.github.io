@@ -1,4 +1,4 @@
- export type ToastType = 'success' | 'error' | 'info' | 'warning';
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
 
 }, [toast.id, toast.duration, onRemove]);
 const getIcon = () => {

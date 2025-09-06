@@ -40,7 +40,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
         <EnhancedFooter />
       </footer>
     </div>
-  );
+);
 }
 }
   );

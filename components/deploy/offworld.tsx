@@ -75,5 +75,5 @@ export default function OffworldDeploy() {
         </div>
       )}
     </div>
-  );
+);
 }

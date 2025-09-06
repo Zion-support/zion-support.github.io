@@ -144,3 +144,4 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     </Card>
   );
 }
+;

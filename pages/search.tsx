@@ -106,7 +106,6 @@ const filters = [
   { name: 'Recent', count: 4 },
   { name: 'Popular', count: 2 }
 ];
-
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');

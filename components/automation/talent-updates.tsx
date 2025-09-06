@@ -1,4 +1,4 @@
- </div>) ) 
+</div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
@@ -31,5 +31,5 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
         ))}
       </div>
     </div>
-  );
+);
 }

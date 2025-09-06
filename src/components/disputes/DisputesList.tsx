@@ -7,7 +7,7 @@ import {  Table,  Table,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
+TableRow,;
 } from '@/components/ui/table';
 import Skeleton from '@/components/ui/skeleton';
 import { formatDistanceToNow } from 'date-fns';
@@ -310,7 +310,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         </Table>
       </div>
     </div>
-  );
+);
 
 };
 if (isLoading) {";

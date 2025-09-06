@@ -24,7 +24,6 @@ import { usePortfolio } from '@/hooks/usePortfolio';
   useEffect(() => {
     fetchProjects();
   }, [fetchProjects]);
-
 export function PortfolioBuilder() {
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),
   const [showAddProject, setShowAddProject] = useState(false),
@@ -163,3 +162,4 @@ export function PortfolioBuilder() {
     </div>
   );
 }
+;

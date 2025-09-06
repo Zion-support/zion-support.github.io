@@ -148,7 +148,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         </Card>
       ))}
     </div>
-  );
+);
 
 };";
 return (<div className="grid gap-6 md:grid-cols-2" > {;

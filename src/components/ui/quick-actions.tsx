@@ -281,6 +281,6 @@ export function QuickActions() {
         </CardContent>
       </Card>
     </div>
-  );
+);
 } 
-} 
+}

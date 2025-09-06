@@ -161,7 +161,7 @@ export function ModeToggle() {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  );
+);
 
 };
 if (!isClient) {";

@@ -1,4 +1,4 @@
-    import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react'
 
 import React, { useEffect, useState } from 'react';
@@ -105,7 +105,7 @@ export default function MessagingInbox() {
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
-  );
+);
 
 };
 loadData () ;

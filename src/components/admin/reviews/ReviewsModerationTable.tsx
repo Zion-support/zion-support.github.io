@@ -5,14 +5,13 @@ import { format } from 'date-fns';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { Review, ReviewStatus } from '@/types/reviews';
-
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
+TableRow,;
 } from '@/components/ui/table';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {
   Dialog,
@@ -26,7 +25,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,;
+DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -420,7 +419,7 @@ export function ReviewsModerationTable({
         </Dialog>
       )}
     </>
-  );
+);
 
 };
 

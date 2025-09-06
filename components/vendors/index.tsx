@@ -83,7 +83,7 @@ export default function VendorsPage({ vendors }: Props) {
     </div>
   );
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../../utils/vendor-store');
+const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
   return { props: { vendors } };
 };      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>

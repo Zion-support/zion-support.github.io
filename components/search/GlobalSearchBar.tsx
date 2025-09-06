@@ -147,5 +147,5 @@ export default function GlobalSearchBar() {
         </div>
       )}
     </form>
-  );  )
+);  )
 }

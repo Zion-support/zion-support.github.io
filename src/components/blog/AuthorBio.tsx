@@ -50,7 +50,7 @@ export function AuthorBio({ author }: AuthorBioProps) {
         <p>{author.bio}</p>
       </div>
     </div>
-  );
+);
 
 }/> <div> <p className="font-medium text-lg" > {;
   author.name ;

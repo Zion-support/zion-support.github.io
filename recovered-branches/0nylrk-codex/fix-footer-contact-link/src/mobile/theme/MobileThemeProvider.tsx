@@ -14,3 +14,4 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
     </div>
   )
 }
+;

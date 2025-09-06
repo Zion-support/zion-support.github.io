@@ -11,7 +11,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
+FormMessage,;
 } from '@/components/ui/form';import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
@@ -228,3 +228,4 @@ export function ProjectForm({
   );
 }
 }
+;

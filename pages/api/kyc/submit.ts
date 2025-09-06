@@ -104,5 +104,5 @@ export default async function handler(
   db[userId] = profile;
   save(db);
 
-  res.status(200).json({ ok: true, profile, aml: amlResult });
+res.status(200).json({ ok: true, profile, aml: amlResult });
 }

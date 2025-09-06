@@ -1,3 +1,4 @@
+
 interface ContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -110,7 +111,7 @@ export function ContractBuilder({
         />
       </DialogContent>
     </Dialog>
-  );
+);
 
 };
 

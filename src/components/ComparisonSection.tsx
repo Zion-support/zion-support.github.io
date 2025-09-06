@@ -9,7 +9,6 @@ import {
   TableHeader,
   TableRow,;
 } from './ui/table';
-
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>

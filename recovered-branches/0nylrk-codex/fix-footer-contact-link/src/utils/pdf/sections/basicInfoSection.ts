@@ -40,3 +40,4 @@ export function addBasicInfoSection(
   
   return yPos
 }
+;

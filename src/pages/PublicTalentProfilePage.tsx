@@ -227,7 +227,7 @@ export default function ProfilePage() {
         </div>
       </div>
     </>
-  );
+);
 
 };
 if (profileId) {;

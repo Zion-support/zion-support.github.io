@@ -135,7 +135,7 @@ export function TemplateSaveForm({
         </div>
       </form>
     </Form>
-  );
+);
 
 setSaving (true);
 try {;

@@ -21,6 +21,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (e) {
     // ignore
   }
-  res.status(200).json({ ok: true, data });
+res.status(200).json({ ok: true, data });
   res.status(200).json({ ok: true, data });
 }

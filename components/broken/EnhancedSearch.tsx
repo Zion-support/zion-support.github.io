@@ -1,4 +1,4 @@
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
   
 }];
 setIsSearching (true);
@@ -41,7 +41,7 @@ setIsSearching (false)
 
 }animate= {
   {
-  opacity: 1, y: 0, scale: 1 
+  opacity: 1, y: 0, scale: 1
 
 }exit= {
   {

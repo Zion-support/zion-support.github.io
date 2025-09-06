@@ -27,7 +27,6 @@ import {
   BarChart3,
   Smartphone,;
 } from 'lucide-react';
-
 export default function LandingPage() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
@@ -160,3 +159,4 @@ export default function LandingPage() {
     </div>
   );
 }
+;

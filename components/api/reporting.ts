@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {authenticateRequest} from '@/utils/auth';
 import {readJsonFile, updateJsonFile} from '@/utils/fileDb';
-
 interface ReportingData {
   byTenant: Record<
     string,
@@ -79,5 +78,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(updated.byTenant[tenantId])
   }
 
-  return res.status(405).json({ error: 'Method not allowed' });
+return res.status(405).json({ error: 'Method not allowed' });
 }

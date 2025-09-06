@@ -4,7 +4,6 @@ import {format} from 'date-fns';
 import {cn} from '@/lib/utils';
 import {Conversation} from '@/types/messaging';
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
-
 interface ConversationItemProps {
   conversation: Conversation,
   isActive: boolean,

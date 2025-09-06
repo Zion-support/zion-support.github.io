@@ -65,3 +65,4 @@ export async function trackReferral(userId: string, email: string) {
     console.error('Error tracking referral:', error)
   }
 }
+;

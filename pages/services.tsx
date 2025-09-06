@@ -1640,7 +1640,6 @@ export default function Services(): React.JSX.Element {
 }    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
     icon: Brain,
-
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
 

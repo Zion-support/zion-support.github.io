@@ -40,4 +40,4 @@ export function useIntersectionObserver({
     prevNode.current = node
   }, [node]);
   return [setNode, entry] as const
-}
+};

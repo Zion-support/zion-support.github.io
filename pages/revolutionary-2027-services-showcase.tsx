@@ -511,4 +511,4 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
         </div>
       </section>
     </UltraQuantumHolographicBackground>
-  );
+);

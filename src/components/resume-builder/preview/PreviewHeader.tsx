@@ -13,7 +13,6 @@ import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
-
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void;

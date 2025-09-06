@@ -53,3 +53,4 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
 }</span> ;
 }'"  )
 }
+;

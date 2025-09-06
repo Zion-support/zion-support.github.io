@@ -18,7 +18,6 @@ export function ZapierIntegration() {
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap } from 'lucide-react';
-
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
@@ -170,3 +169,4 @@ export function ZapierIntegration() {
     </div>
   );
 }
+;

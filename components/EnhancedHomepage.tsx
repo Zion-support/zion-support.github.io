@@ -1,4 +1,4 @@
- //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';

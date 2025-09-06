@@ -3,7 +3,6 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
 import {BadgeDollarSign, Badge} from "lucide-react";
-
 interface RewardsCardProps {
   rewards: ReferralReward[],
   isLoading: boolean

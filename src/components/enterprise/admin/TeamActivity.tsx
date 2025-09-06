@@ -156,7 +156,7 @@ export function TeamActivity() {
         </Button>
       </div>
     </div>
-  );
+);
 
 };
 const getCategoryBadge = (category: string) => {;

@@ -29,7 +29,6 @@ import {
   SelectTrigger,
   SelectValue,;
 } from '@/components/ui/select';
-
 export function PartnerReferralLinks() {
   const {
     referralCode,
@@ -248,7 +247,7 @@ export function PartnerReferralLinks() {
         )}
       </div>
     </div>
-  );
+);
 
 }//Add custom parameter if provided if (customParam) {;
   ;

@@ -1,5 +1,4 @@
 import { Job } from '@/types/jobs';
-
   {
     id: 'job-1',
     client_id: 'client-1',
@@ -15,7 +14,7 @@ import { Job } from '@/types/jobs';
     updated_at: '2024-05-10',
   },
   {
-    id: 'job-2',
+id: 'job-2',
     client_id: 'client-2',
     title: 'Part-time DevOps Engineer',
     description: 'Looking for a DevOps expert to maintain CI/CD pipelines.',

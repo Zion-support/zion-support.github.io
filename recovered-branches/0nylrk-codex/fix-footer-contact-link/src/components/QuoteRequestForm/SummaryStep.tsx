@@ -219,4 +219,4 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       </div>
     </div>
   )
-}
+};

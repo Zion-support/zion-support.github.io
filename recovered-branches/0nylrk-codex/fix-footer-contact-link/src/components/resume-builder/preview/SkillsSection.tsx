@@ -33,3 +33,4 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
     </div>
   )
 }
+;

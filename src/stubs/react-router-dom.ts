@@ -25,7 +25,7 @@ export const useSearchParams = () => [new URLSearchParams(), () => {}] as any;ex
   useNavigate,
   useLocation,
   useParams,
-  useSearchParams,
+useSearchParams,
 };
   BrowserRouter;
   Routes;

@@ -60,3 +60,4 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     </div>
   )
 }
+;

@@ -1,5 +1,4 @@
 import {useEffect, useMemo, useState} from 'react';
-
 export default function Dashboard() {
   const params =
     typeof window !== 'undefined'
@@ -124,7 +123,7 @@ export default function Dashboard() {
         </section>
       </main>
     </div>
-  );
+);
 
 }fetchBranding () 
 }, [tenantId]);

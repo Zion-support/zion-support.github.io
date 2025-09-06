@@ -39,3 +39,4 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
     </div>
   )
 }
+;

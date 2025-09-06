@@ -528,5 +528,5 @@ export default function Revolutionary2030ServicesPage() {
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
-  );  )
+);  )
 }

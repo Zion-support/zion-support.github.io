@@ -28,7 +28,7 @@ export default async function handler(
   } catch (e: any) {
     return res.status(e.statusCode || 403).json({ error: "Forbidden" });
   }
-  const att = dispute.attachments.find((a) => a.fileName === fileName);
+const att = dispute.attachments.find((a) => a.fileName === fileName);
   if (!att) return res.status($1).json({ $2 });
   const stat = fs.statSync(att.path);
   res.setHeader("Content-Type", att.mimeType);

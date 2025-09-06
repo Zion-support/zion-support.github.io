@@ -1,4 +1,4 @@
-  const currentPath = router.pathname;
+const currentPath = router.pathname;
 export default ApiDocsLayout;
 import Link from 'next/link';
 import { useRouter } from 'next/router';

@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
 
@@ -116,5 +115,5 @@ export function MarketplaceErrorBoundary({
     >
       {children}
     </ErrorBoundary>
-  );
-} 
+);
+}

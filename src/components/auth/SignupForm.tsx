@@ -1,3 +1,4 @@
+
   path: ["confirmPassword"]}),
 
 type SignupFormData = z.infer<typeof signupSchema>;
@@ -38,3 +39,4 @@ type SignupFormData = z.infer<typeof signupSchema>;
       setError('root', { message: errorMessage }),
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
+;

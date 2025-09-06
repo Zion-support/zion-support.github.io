@@ -375,7 +375,7 @@ function PreviewStep() {
       
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
-  );
+);
 
 };";
 min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {;

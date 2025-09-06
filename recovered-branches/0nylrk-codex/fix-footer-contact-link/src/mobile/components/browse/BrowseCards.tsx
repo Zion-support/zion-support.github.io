@@ -5,7 +5,6 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-
 interface BrowseItem {
   id: string,
   title: string,
@@ -131,3 +130,4 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     </div>
   )
 }
+;
