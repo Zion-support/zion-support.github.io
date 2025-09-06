@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { JSX, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -59,6 +60,9 @@ interface Testimonial {
   avatar?: string;
 }
 
+=======
+import React, { JSX } from 'react';
+>>>>>>> pr-11992
 export default function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -156,6 +160,7 @@ export default function App(): JSX.Element {
   }
 
   return (
+<<<<<<< HEAD
     <AccessibilityProvider>
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <SEOHead 
@@ -389,3 +394,10 @@ export default function App(): JSX.Element {
     </AccessibilityProvider>
   );
 }
+=======
+    <main>
+      <h1>Hello App</h1>
+    </main>
+  )
+}
+>>>>>>> pr-11992

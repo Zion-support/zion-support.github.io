@@ -214,18 +214,25 @@ export default function APIPage() {
               <div className="bg-gray-900/50 rounded-lg p-4">
                 <div className="text-sm text-gray-400 mb-2">Node.js</div>
                 <pre className="text-sm text-gray-300 overflow-x-auto">
-{`const { ZionOS } = require('@zion-os/sdk');
+{`const { ZionOS } = require('@zion-os/sdk'),
 
-const client = new ZionOS('YOUR_API_KEY');
+const client = new ZionOS('YOUR_API_KEY'),
 
 // Create a new economy
 const economy = await client.economies.create({
   name: 'My Digital Economy',
+<<<<<<< HEAD
   vertical: 'GENERAL',
   governanceType: 'DAO_LITE'
 });
+=======
+  description: 'A sovereign digital economy',
+  features: ['marketplacegovernancetokens'],
+  blockchain: 'ethereum'
+}),
+>>>>>>> pr-11992
 
-console.log('Economy created:', economy.id);`}
+console.log('Economy created:', economy.id),`}
                 </pre>
               </div>
             </div>
@@ -283,13 +290,23 @@ print(f"Economy deployed at: {deployment.url}")`}
             <p className="text-xl text-gray-300 mb-8">
               Our team is here to help you integrate Zion OS into your applications
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="btn-primary text-lg px-8 py-4">Contact Support</a>
               <a href="/community" className="btn-secondary text-lg px-8 py-4">Join Community</a>
+=======
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a href="/contact" className="btn-primary text-lg px-8 py-4">
+                Contact Support
+              </a>
+              <a href="/community" className="btn-secondary text-lg px-8 py-4">
+                Join Community
+              </a>
+>>>>>>> pr-11992
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

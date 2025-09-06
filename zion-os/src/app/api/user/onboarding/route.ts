@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
@@ -26,9 +27,44 @@ export async function POST(request: NextRequest) {
       }
     });
   } catch (error) {
+=======
+import { NextRequest, NextResponse } from "next/server",
+import { getServerSession } from "next-auth",
+import { prisma } from "@/lib/prisma",
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getServerSession(),
+    
+    if (!session?.user?.email) {
+      return NextResponse.json(
+        { error: "Unauthorized" },
+        { status: 401 }
+      )
+    }
+
+    // Update user's onboarding status
+    const updatedUser = await prisma.user.update({
+      where: { email: session.user.email },
+      data: { onboardingCompleted: true }}),
+
+    return NextResponse.json(
+      { 
+        message: "Onboarding completed successfully",
+        user: {
+          id: updatedUser.id,
+          name: updatedUser.name,
+          email: updatedUser.email,
+          role: updatedUser.role,
+          onboardingCompleted: updatedUser.onboardingCompleted}
+      },
+      { status: 200 }
+    )
+  } catch (error) {
+    console.error("Onboarding completion error:", error),
+>>>>>>> pr-11992
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
       { status: 500 }
-    );
+    )
   }
 }

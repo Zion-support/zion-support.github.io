@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const supabase = {
   auth: {
     signIn: () => Promise.resolve({ data: null, error: null }),
@@ -11,3 +12,12 @@ export const supabase = {
     delete: () => Promise.resolve({ data: null, error: null })
   })
 };
+=======
+import { createClient } from "@supabase/supabase-js",
+const supabaseUrl =
+  process.env.NEXT_PUBLIC_SUPABASE_URL || "https: //placeholder.supabase.co",
+const supabaseAnonKey =
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key",
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey),
+>>>>>>> pr-11992
