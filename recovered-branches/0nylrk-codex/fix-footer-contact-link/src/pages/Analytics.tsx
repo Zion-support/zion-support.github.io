@@ -1,11 +1,29 @@
+      const result = [];
+      for (let i = 0, i < days, i++) {;
+        const date = new Date();
+    queryKey: ['conversion-data', timeRange];
+    queryFn: async () => {;
+      const days = parseInt(timeRange && timeRange.replace('d', ''));
+      const startDate = new Date();
+      const dates = [];
+      for (let i = 0, i < days, i++) {;
+        const date = new Date();
+        date && date.setDate(date && date.getDate() - i);
+        dates && dates.push(date && date.toISOString().split('T')[0]);
+      }
+    }
+  });
 
-import React, { useState } from "react"
-import { useQuery } from "@tanstack/
-import { supabase } from "@/integrations/supabase/
-import { AnalyticsContainer } from "@/components/analytics/
-import { AnalyticsSummary } from "@/components/analytics/
-import { PageViewsTable } from "@/components/analytics/
-import { UserBehaviorStats } from "@/components/analytics/
-import { PageViewsChart } from "@/components/analytics/
-import { ConversionAnalysisChart } from "@/components/analytics/
-import { ExportPanel } from "@/components/analytics/
+  return (
+        <PageViewsChart
+          data={pageViewTrends |[]}
+          timeRange={timeRange}
+          onTimeRangeChange={setTimeRange}
+          onTimeRangeChange={setTimeRange}
+        />;
+        <ExportPanel />;
+      </div>;
+=======
+    </AnalyticsContainer>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

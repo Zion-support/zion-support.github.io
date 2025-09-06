@@ -15,20 +15,11 @@ const files = [
   'pages/contact.tsx',
   'pages/index.tsx'
 ];
-
-
 files.forEach(file => {
   try {
     if (fs.existsSync(file)) {
       let content = fs.readFileSync(file, 'utf8');
       let modified = false;
-      
-      
-      
-      
-      
-      
-      
       
       
       // Fix hover syntax
@@ -38,25 +29,11 @@ files.forEach(file => {
       }
       
       
-      
-      
-      
-      
-      
-      
-      
       // Fix focus syntax
       if (content.includes('"focus":')) {
         content = content.replace(/"focus":\s*/g, 'focus:');
         modified = true;
       }
-      
-      
-      
-      
-      
-      
-      
       
       
       // Fix group-hover syntax
@@ -66,25 +43,11 @@ files.forEach(file => {
       }
       
       
-      
-      
-      
-      
-      
-      
-      
       // Fix responsive breakpoints
       if (content.includes('"sm":')) {
         content = content.replace(/"sm":\s*/g, 'sm:');
         modified = true;
       }
-      
-      
-      
-      
-      
-      
-      
       
       
       if (content.includes('"md":')) {
@@ -93,37 +56,16 @@ files.forEach(file => {
       }
       
       
-      
-      
-      
-      
-      
-      
-      
       if (content.includes('"lg":')) {
         content = content.replace(/"lg":\s*/g, 'lg:');
         modified = true;
       }
       
       
-      
-      
-      
-      
-      
-      
-      
       if (content.includes('"xl":')) {
         content = content.replace(/"xl":\s*/g, 'xl:');
         modified = true;
       }
-      
-      
-      
-      
-      
-      
-      
       
       
       // Fix animation properties
@@ -133,24 +75,10 @@ files.forEach(file => {
       }
       
       
-      
-      
-      
-      
-      
-      
-      
       if (content.includes('"opacity":')) {
         content = content.replace(/"opacity":\s*/g, 'opacity:');
         modified = true;
       }
-      
-      
-      
-      
-      
-      
-      
       
       
       if (content.includes('"duration":')) {
@@ -159,37 +87,16 @@ files.forEach(file => {
       }
       
       
-      
-      
-      
-      
-      
-      
-      
       if (content.includes('"delay":')) {
         content = content.replace(/"delay":\s*/g, 'delay:');
         modified = true;
       }
       
       
-      
-      
-      
-      
-      
-      
-      
       if (content.includes('"once":')) {
         content = content.replace(/"once":\s*/g, 'once:');
         modified = true;
       }
-      
-      
-      
-      
-      
-      
-      
       
       
       if (modified) {
@@ -200,11 +107,6 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
-}
-});
-}
-});
-
 }
 });
 }
@@ -269,10 +171,5 @@ const util = require('util')
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
-    console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;

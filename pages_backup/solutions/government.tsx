@@ -1,5 +1,35 @@
-
-
+import Layout from '../../components/Layout';
+import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { Shield, Users, FileText, Globe, Database, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+    icon: Shield,
+    title: 'Cybersecurity & Compliance,',
+    description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',
+  },
+  {}
+    icon: Users,
+    title: 'Citizen Services,',
+    description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',
+  },
+  {}
+    icon: FileText,
+    title: 'Document Management,',
+    description: 'Secure document management and workflow systems for government operations.'';
+  },
+  {}
+    icon: Globe,
+    title: 'Open Data Platforms,',
+    description: 'Public data portals and open government initiatives for transparency and accountability.'';
+  },
+  {}
+    icon: Database,
+    title: 'Data Analytics,',
+    description: 'Government data analytics and business intelligence for informed decision making.'';
+import Layout from '../../components/Layout';
+import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
   {
     icon: Building2,
@@ -22,11 +52,7 @@ const features = [
     description: 'Secure document storage and management systems'
   },
   {
-
-
 export default function GovernmentSolutions() {;
-
-
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -34,12 +60,6 @@ export default function GovernmentSolutions() {;
       keywords="government solutions, digital government, public sector, citizen services, government technology, e-government">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-
-  
-    >
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -72,46 +92,21 @@ export default function GovernmentSolutions() {;
                 Comprehensive solutions designed to modernize government operations
                 and improve citizen services.
               </p>
-
-
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-gray-600" />
                   </div>
-
-
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>,
-          </div>;
-        </section>;
-        {/* Solutions List */}
-        <section className="py-20 bg-gray-800/30">"
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Government Solutions;
               </h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions.map((solution, index) => (,
-                  <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
-                    <span className="text-gray-300 text-lg">{solution}</span>"
-                  </div>;
-                ))}
-              </div>,
             </div>;
           </div>;
         </section>;
         {/* Compliance Section */}
-        <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="bg-gray-800/50 rounded-2xl p-12">";
               <div className="text-center mb-12">";
@@ -119,7 +114,6 @@ export default function GovernmentSolutions() {;
                   Government Compliant & Secure;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                  All our government solutions are built with security and compliance in mind, 
                   ensuring your systems meet the highest government standards and regulations.;
                 </p>;
               </div>;
@@ -150,7 +144,6 @@ export default function GovernmentSolutions() {;
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
               <h2 className="text-4xl font-bold text-white mb-6">";
@@ -174,26 +167,6 @@ export default function GovernmentSolutions() {;
       </div>;
     </Layout>;
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Modernizing Government
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our government solutions help public sector organizations improve
-                  citizen services, enhance transparency, and streamline operations.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-
-
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -284,10 +257,6 @@ export default function GovernmentSolutions() {;
             </div>;
           </div>;
         </section>;
-
-
-
-
             </div>
           </div>
         </section>
@@ -312,14 +281,35 @@ export default function GovernmentSolutions() {;
           </div>
         </section>
       </div>
-
-
   );
-import Layout from '../../components/
-import Layout from '../../components/
-import Layout from '../../components/
-import Head from 'next/
-import Link from 'next/
-import Layout from '../../components/
-import Layout from '../../components/
-import Layout from '../../components/
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-900 text-white">;
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+              Ready to Transform Government?;
+            </h2>;
+            <p className="text-xl mb-8 max-w-3xl mx-auto">;
+              Contact our government solutions team to discuss your specific requirements;
+              and discover how we can help modernize your government operations.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <button className="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">;
+                Contact Government Team;
+              </button>;
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">;
+                Download Government Brochure;
+              </button>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+    </Layout>;
+    </>;
+    </Layout>;
+    </>;
+    </Layout>;
+  );
+    </>;
+  ),;
+}

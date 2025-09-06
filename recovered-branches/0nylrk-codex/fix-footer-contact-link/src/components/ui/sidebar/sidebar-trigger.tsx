@@ -1,8 +1,12 @@
-
-import * as React from &quot;react&quot;
-import { PanelLeft } from &quot;lucide-react&quot;
-import { Button } from &quot;@/components/ui/
-import { cn } from &quot;@/lib/
-import { useSidebar } from &quot;./
-      
-      <span className=&quot;sr-only&quot;>Toggle Sidebar
+  return (
+    <Button;
+      ref={ref}
+      data - sidebar=&quot;trigger & quot;
+      variant=&quot;ghost & quot;
+      size=&quot;icon & quot;
+      className={cn (&quot;h - 7 w - 7&quot;, props.class_name)}
+      on_click={(event) => {
+        props.on_click?.(event);
+        toggle_sidebar ();
+      }}
+      {...props}

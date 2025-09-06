@@ -1,25 +1,35 @@
-import { useEffect, useState  } from 'react'
-import { Header  } from '@/components/
-import { Footer  } from '@/components/
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/
-import { Button  } from '@/components/ui/
-import { Input  } from '@/components/ui/
-import { useAuth  } from '@/hooks/
-import { supabase  } from '@/integrations/supabase/
-import { TokenTransaction  } from '@/types/
-import { ProtectedRoute  } from '@/components/
-import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/
-import { useToast } from '@/hooks/
-import {Header} from '@/components/
-import {Footer} from '@/components/
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/
-import {Button} from '@/components/ui/
-import {Input} from '@/components/ui/
-import {useAuth} from '@/hooks/
-import {supabase} from '@/integrations/supabase/
-import {TokenTransaction} from '@/types/
-import {ProtectedRoute} from '@/components/
-import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/
-import {useToast} from '@/hooks/
-    const res = await fetch(`/functions/v1/token-manager/
-      headers: { 'Content-Type': any
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
+  const [userId, setUserId] = useState('');
+  const [amount, setAmount] = useState(0);
+
+  const isAdmin = user?.userType === 'admin';
+      });
+      fetch_transactions ();
+    } else {
+    }
+  }
+
+  return (
+              <TabsList>;
+                <TabsTrigger value="history">Transaction History</TabsTrigger>;
+              </TabsList>;
+              <TabsContent value="history">;
+                  ))}
+=======
+                <ul className="space - y-2">;
+                  {transactions.map (tx => (
+                    <li key={tx.id} className="flex justify - between border - b py - 2 text - white">;
+                      <span>{tx.user_id}</span>;
+                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
+                    </li>))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                </ul>;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+        <Footer />;
+      </div>;
+}

@@ -1,5 +1,66 @@
-
-import { Button } from "@/components/ui/
-import type { QuoteRequest } from "@/types/
-            ? `"${cell.replace(/"/
-            ? `"${cell.replace (/"/
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
+      'StatusCreated Date';
+    ];
+      quote.id;
+      quote.talent_name |'Unknown';
+      quote.requester_name;
+      quote.requester_email;
+      quote.project_name;
+      quote.project_summary;
+            : 'Not specified');
+      quote && quote.timeline;
+      quote && quote.status;
+      new Date(quote && quote.created_at).toLocaleDateString();
+    ]);
+=======
+      quote.budget_display ||;
+        (quote.budget_min && quote.budget_max;
+          ? `$${quote.budget_min} - $${quote.budget_max}`;
+          : quote.budget_min;
+            ? `$${quote.budget_min}`;
+            : 'Not specified');
+      quote.timeline;
+      quote.status;
+      new Date (quote.created_at).toLocaleDateString ();
+    ]);
+;
+    // Create CSV content;
+    const csv_content = [;
+      headers.join ();
+      ...rows.map (row =>;
+        row.map (cell =>;
+          // Escape commas and quotes in cell values;
+          typeof cell === 'string' && (cell.includes () || cell.includes ('"'));
+            ? `"${cell.replace (/"/g, '""')}"`;
+            : cell).join ());
+    ].join ('\n');
+;
+    // Create download link;
+    const blob = new Blob ([csv_content], { type: 'text / csv, charset = utf - 8, ' });
+    const url = URL.createObjectURL (blob);
+    const link = document.create_element ('a');
+    link.set_attribute ('href', url);
+    link.set_attribute ('download', `${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`);
+    document.body.append_child (link);
+;
+    // Download file and clean up;
+    link.click ();
+    set_timeout (() => {
+      document.body.remove_child (link);
+      URL.revokeObjectURL (url);
+    }, 100);
+  }
+;
+  return (
+    <Button;
+      variant="outline";
+      on_click={handle_export}
+      className="flex items - center gap - 2";
+      disabled={quotes.length === 0}
+    >;
+      <Download size={16} />;
+      Export CSV;
+    </Button>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

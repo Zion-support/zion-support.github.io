@@ -16,18 +16,7 @@ export interface TalentProfile {
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-
-    title: any
-  }[]
-
-export interface TalentProfileFilters {
-  search?: string;
-  skills?: string[],
-  availabilities?: string[],
-  regions?: string[],
-  priceRange?: [number, number],
-  experienceRange?: [number, number]
-
+}
 export interface HireRequest {
   id: string;
   client_id: string;
@@ -36,12 +25,4 @@ export interface HireRequest {
   project_description: string;
   budget: {
     min: number;
-
-    max: any
-  }
-  timeline: {
-    startDate: string;
-
-    endDate?: any
-  }
-  status: any
+}

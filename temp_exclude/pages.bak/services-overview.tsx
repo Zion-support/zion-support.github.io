@@ -1,17 +1,15 @@
+import React from 'react';
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+interface ServicesoverviewProps {
+  // Add props here as needed
+}
 
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import Link from \'next/link\'; import Head from \'next/head\'; export default function ServicesOverview() { const contact = { \"phone\": \'+1 302 464 0950,\',\"email\": \'kleber@ziontechgroup && ziontechgroup.com\',\"address\": \'364 E Main St STE 1008 Middletown D,E 19709,\',\"site\": \'https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name=\"description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries.\" />\"<meta name=\"keywords\" content=\"services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions\" />\"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\"<meta name=\"robots\" content=\"index,follow\" />\"<link rel=\"canonical\" href={`${contact && contact.site}/services-overview`} />\"
-import Link from \'next/link\'; import Head from \'next/head\'; export default function ServicesOverview() { const contact = { \"phone\": \'+1 302 464 0950,\',\"email\": \'kleber@ziontechgroup && ziontechgroup.com\',\"address\": \'364 E Main St STE 1008 Middletown D,E 19709,\',\"site\": \'https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name=\"description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries.\" />\"<meta name=\"keywords\" content=\"services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions\" />\"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\"<meta name=\"robots\" content=\"index,follow\" />\"<link rel=\"canonical\" href={`${contact && contact.site}/services-overview`} />\"
-import Link from \'next/link\'; import Head from \'next/head\'; export default function ServicesOverview() { const contact = { \"phone\": \'+1 302 464 0950,\',\"email\": \'kleber@ziontechgroup && ziontechgroup.com\',\"address\": \'364 E Main St STE 1008 Middletown D,E 19709,\',\"site\": \'https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name=\"description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries.\" />\"<meta name=\"keywords\" content=\"services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions\" />\"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\"<meta name=\"robots\" content=\"index,follow\" />\"<link rel=\"canonical\" href={`${contact && contact.site}/services-overview`} />\"
-import Link from \'next/link\'; import Head from \'next/head\'; export default function ServicesOverview() { const contact = { \"phone\": \'+1 302 464 0950,\',\"email\": \'kleber@ziontechgroup && ziontechgroup.com\',\"address\": \'364 E Main St STE 1008 Middletown D,E 19709,\',\"site\": \'https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name=\"description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries.\" />\"<meta name=\"keywords\" content=\"services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions\" />\"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\"<meta name=\"robots\" content=\"index,follow\" />\"<link rel=\"canonical\" href={`${contact && contact.site}/services-overview`} />\"
+export default function Servicesoverview({ }: ServicesoverviewProps) {
+  return (
+    <div>
+      <h1>Servicesoverview</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+}

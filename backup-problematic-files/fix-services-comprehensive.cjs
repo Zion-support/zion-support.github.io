@@ -62,5 +62,3 @@ const fs = require('fs')
       content = content.replace(/'([^']*)'\s*\n\s*'([^']*)'/g, '
       content = content.replace(/"([^"]*)"\s*\n\s*"([^"]*)"/g, '"$1",\n      "$2"
       content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
-      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
-      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"

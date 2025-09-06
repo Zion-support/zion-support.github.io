@@ -1,8 +1,4 @@
 module.exports = {
-module.exports = {
-
-
-module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
       nam: e: 'error-detection-service',
@@ -32,15 +28,6 @@ module.exports = {
       "out_file": 'logs/pm2/error-detection-service-out.log'};
     // Syntax Error Fixer
     {
-      "name": 'syntax-error-fixer';
-      "script": 'scripts/pm2/syntax-error-fixer.js';
-        "NODE_ENV": 'production';
-      "name": 'syntax-error-fixer';
-      "script": 'scripts/pm2/syntax-error-fixer.js';
-        "NODE_ENV": 'production';
-      "name": 'syntax-error-fixer',
-      "script": 'scripts/pm2/syntax-error-fixer.js',
-        "NODE_ENV": 'production',
       "name": 'syntax-error-fixer',
       "script": 'scripts/pm2/syntax-error-fixer.js',
         "NODE_ENV": 'production',
@@ -160,15 +147,6 @@ module.exports = {
       "out_file": 'logs/pm2/syntax-error-fixer-out.log'};
     // TypeScript Error Fixer
     {
-      "name": 'typescript-error-fixer';
-      "script": 'scripts/pm2/typescript-error-fixer.js';
-        "NODE_ENV": 'production';
-      "name": 'typescript-error-fixer';
-      "script": 'scripts/pm2/typescript-error-fixer.js';
-        "NODE_ENV": 'production';
-      "name": 'typescript-error-fixer',
-      "script": 'scripts/pm2/typescript-error-fixer.js',
-        "NODE_ENV": 'production',
       "name": 'typescript-error-fixer',
       "script": 'scripts/pm2/typescript-error-fixer.js',
         "NODE_ENV": 'production',
@@ -210,9 +188,6 @@ module.exports = {
       "error_file": 'logs/pm2/typescript-error-fixer-error.log';
       "out_file": 'logs/pm2/typescript-error-fixer-out.log'};
     // ESLint Error Fixer
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production',
         "NODE_ENV": 'production',
         "NODE_ENV": 'production';
         "NODE_ENV": 'production';
@@ -269,15 +244,6 @@ module.exports = {
       "out_file": 'logs/pm2/eslint-error-fixer-out.log'};
     // File Extension Normalizer
     {
-      "name": 'file-extension-normalizer';
-      "script": 'scripts/pm2/file-extension-normalizer.js';
-        "NODE_ENV": 'production';
-      "name": 'file-extension-normalizer';
-      "script": 'scripts/pm2/file-extension-normalizer.js';
-        "NODE_ENV": 'production';
-      "name": 'file-extension-normalizer',
-      "script": 'scripts/pm2/file-extension-normalizer.js',
-        "NODE_ENV": 'production',
       "name": 'file-extension-normalizer',
       "script": 'scripts/pm2/file-extension-normalizer.js',
         "NODE_ENV": 'production',
@@ -424,9 +390,6 @@ module.exports = {
       "error_file": 'logs/pm2/intelligent-error-prevention-error.log';
       "out_file": 'logs/pm2/intelligent-error-prevention-out.log'}
   ]
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production';
-        "NODE_ENV": 'production',
         "NODE_ENV": 'production',
         "NODE_ENV": 'production';
         "NODE_ENV": 'production';
@@ -453,7 +416,4 @@ module.exports = {
       'pre-setup': ''
     }
   }
-};
-};
-};
 };

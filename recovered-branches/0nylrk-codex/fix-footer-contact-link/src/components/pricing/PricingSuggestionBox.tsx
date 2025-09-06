@@ -1,8 +1,53 @@
-
-import React from "react"
-import { Button } from "@/components/ui/
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/
-import { Card, CardContent } from "@/components/ui/
-import { Badge } from "@/components/ui/
-import { PricingSuggestion } from "@/services/
-    
+    return (
+      <Card className="border border-dashed border-muted">;
+        <CardContent className="flex items-center justify-center p-6">;
+          <div className="text-center">;
+            <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />;
+            <p className="text-sm text-muted-foreground">;
+=======
+import React from './react';
+import { Button } from '@/components / ui / button';
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from '@/components / ui / tooltip';
+import { Card, CardContent } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Loader2, Info, ThumbsUp } from './lucide-react';
+import { PricingSuggestion } from '@/services / pricingSuggestionService';
+interface PricingSuggestionBoxProps {
+  suggestion: PricingSuggestion | null,
+  is_loading: boolean,
+  onApplySuggestion: () => void,
+  rate_type: "hourly" | "fixed";
+}
+export const PricingSuggestionBox: React.FC < PricingSuggestionBoxProps> = ({
+  suggestion;
+  is_loading;
+  onApplySuggestion,
+  rate_type}) => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Card className="border border - dashed border - muted">;
+        <CardContent className="flex items - center justify - center p - 6">;
+          <div className="text - center">;
+            <Loader2 className="h - 10 w - 10 animate - spin text - muted - foreground mx - auto mb - 4" />;
+            <p className="text - sm text - muted - foreground">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              Generating optimal pricing suggestion...;
+            </p>;
+          </div>;
+        </CardContent>;
+              </TooltipContent>;
+            </Tooltip>;
+          </TooltipProvider>;
+        </div>;
+=======
+        <p className="text - xs text - center text - muted - foreground pt - 2">;
+          Based on market data & trends. You can adjust as needed.;
+        </p>;
+      </CardContent>;
+    </Card>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

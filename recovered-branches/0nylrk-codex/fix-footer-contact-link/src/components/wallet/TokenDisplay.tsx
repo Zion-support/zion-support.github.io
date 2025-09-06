@@ -1,5 +1,16 @@
-recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/
-import {useWallet} from "@/hooks/
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/
-import {Button} from "@/components/ui/
-import {Skeleton} from "@/components/ui/
+  const { wallet, loading } = useWallet();
+  return (
+              <Button variant="outline" size="sm">;
+                View Wallet;
+              </Button>;
+            </div>;
+        )}
+      </CardContent>;
+    </Card>;
+  );
+=======
+          </div>)}
+      </CardContent>;
+    </Card>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}

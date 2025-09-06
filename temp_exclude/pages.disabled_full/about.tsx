@@ -1,14 +1,11 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import Head from \'next/head\'; import Link from \'next/
+import React from 'react';
+interface AboutProps {
+  // Add props here as needed
+}
+export default function About({ }: AboutProps) {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );

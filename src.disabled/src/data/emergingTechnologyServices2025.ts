@@ -1,3 +1,1 @@
-const { ProductListing } from "@/types/listings"; export const EMERGING_TECHNOLOGY_SERVICES_2025: "ProductListing[] = [","});"})"@/types/
-import { ProductListing } from "@/types/
-;"})'@/types/
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

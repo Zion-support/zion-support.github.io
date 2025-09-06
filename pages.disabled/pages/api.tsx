@@ -1,2 +1,3 @@
-import React from \'react\'; import Head from \'next/head\'; import Link from \'next/
-import _React from 'react'; import Head from 'next/head'; import Link from 'next/
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156:temp_exclude/pages.broken/api.tsx

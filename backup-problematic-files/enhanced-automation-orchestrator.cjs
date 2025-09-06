@@ -146,5 +146,3 @@ const { execSync } = require('child_process')
       this.results.dependencies = { "status"}
         "passed"
         "failed"
-        "failed"
-        "failed"

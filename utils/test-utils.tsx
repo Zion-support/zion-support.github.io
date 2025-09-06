@@ -1,2 +1,5 @@
-import React from 'react'
-import { render, RenderOptions } from '@testing-library/
+import React from 'react';
+  return (
+    <ThemeProvider attribute="class" default_theme="light">;
+      {children}
+});

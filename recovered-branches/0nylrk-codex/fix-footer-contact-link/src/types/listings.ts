@@ -1,16 +1,22 @@
 export interface ListingCategory {
   id: string;
   name: string;
-
-  description: any
+}
 export interface ProductListing {
   id: string;
   title: string;
   description: string;
-
-  category: any
-  subcategory?: string, //
-    email?: string, //
-  aiScore?: number, //
-  location?: string, //
-  availability?: string, //
+  price: number | null;
+  currency: string;
+  tags: string[];
+  author: {
+    name: string;
+    id: string;
+  images: string[];
+  created_at: string;
+  rating?: number;
+}
+export interface ListingItem {
+  id: string;
+  title: string;
+  category: string;

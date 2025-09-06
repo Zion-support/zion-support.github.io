@@ -1,6 +1,35 @@
-
 import React from 'react'
-import { render, screen } from '@testing-library/
-import '@testing-library/
-import indexp from '../pages/
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import indexp from '../pages/index.p'
+describe('index.p Integration Tests'
+  test('page renders correctly'
+    expect(screen.getByRole('main'
+  test('navigation works'
+  test('page content is accessible'
+  test('page loads with correct data'
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import indexp from '../pages/index.p';
+describe('index.p Integration Tests', () => {
+  test('page renders correctly', () => {
+    render(<indexp />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+  test('navigation works', () => {
+    render(<indexp />);
+  });
+  test('page content is accessible', () => {
+    render(<indexp />);
+  });
+  test('page loads with correct data', () => {
+    render(<indexp />);
+  });
+});
+const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe("index.p Integration Tests",() => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data",() => { render(<indexp />)})});''"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data"
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

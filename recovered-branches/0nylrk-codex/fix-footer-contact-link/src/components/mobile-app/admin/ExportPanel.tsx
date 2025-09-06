@@ -1,6 +1,27 @@
-
-import React from "react"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/
-import { Button } from "@/components/ui/
-import { AppPlatform, AppMetadataValues } from "./
-        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
+        const values = [;
+          metadata && metadata.appTitle;
+          metadata && metadata.shortDescription;
+          metadata && metadata.longDescription;
+          metadata && metadata.version;
+          metadata && metadata.platform;
+        ];
+    } catch (error) {
+      console.error ("Export failed:", error);
+      toast.error (`Failed to export ${format.toUpperCase ()} file`);
+    }
+  }
+                CSV;
+              </Button>;
+            </div>;
+          </div>;
+              Enable Analytics;
+            </Button>;
+          </div>;
+        </div>;
+      </CardContent>;
+=======
+    </Card>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

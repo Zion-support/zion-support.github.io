@@ -1,12 +1,18 @@
-
-import AuthRoutes from "./
-import DashboardRoutes from "./
-import MarketplaceRoutes from "./
-import TalentRoutes from "./
-import AdminRoutes from "./
-import MobileAppRoutes from "./
-import ContentRoutes from "./
-import ErrorRoutes from "./
-import EnterpriseRoutes from "./
-import CommunityRoutes from "./
-import DeveloperRoutes from "./
+import CommunityRoutes from "./CommunityRoutes";
+import DeveloperRoutes from "./DeveloperRoutes";
+export {;
+  AuthRoutes;
+  DashboardRoutes;
+  MarketplaceRoutes;
+  TalentRoutes;
+  AdminRoutes;
+  MobileAppRoutes;
+  ContentRoutes;
+  ErrorRoutes;
+  EnterpriseRoutes;
+  CommunityRoutes;
+=======
+  DeveloperRoutes;
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

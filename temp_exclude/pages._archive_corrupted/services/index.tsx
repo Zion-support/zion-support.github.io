@@ -1,15 +1,110 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-  import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Database,Brain,Check,ExternalLink,Phone,Mail,ArrowRight,Target,Zap,Shield,FileText,BarChart3,Cpu,Headphones,Calendar,Send,Layers } from 'lucide-react'; const categories = ['AI Services','IT Services','Development','Security']; export default function ServicesIndex() { const services = [ { name: 'AI & Machine Learning',description: 'Advanced AI solutions for business automation and intelligence',icon: Brai n,href: '/services/ai-machine-learning',features: ['Machine Learning Models','Natural Language Processing','Computer Vision','Predictive Analytics'] },{ name: 'Micro SaaS Solutions',description: 'Specialized software solutions for specific business needs',icon: Cp u,href: '/services/micro-saas',features: ['Custom Applications','API Integration','Scalable Infrastructure','Multi-tenant Support'] },{ name: 'AI Content Creation',description: 'Generate high-quality content at scale with AI-powered tools',icon: FileTex t,href: '/services/ai-content-creation',features: ['Blog Posts','Social Media','Email Campaigns','SEO Optimization'] },{ name: 'Email Automation',description: 'Automate email marketing campaigns with intelligent sequences',icon: Sen d,href: '/services/email-automation',features: ['Lead Nurturing','Behavioral Triggers','A/B Testing','Analytics'] },{ name: 'Customer Support Platform',description: 'AI-powered customer support with chatbots and ticketing',icon: Headphone s,href: '/services/customer-support',features: ['Live Chat','Ticket Management','Knowledge Base','Analytics'] },{ name: 'Event Management',description: 'Complete event planning and management solution',icon: Calenda r,href: '/services/event-management',features: ['Registration','Ticketing','Analytics','Mobile App'] },{ name: 'Cloud & DevOps',description: 'Scalable cloud infrastructure and deployment automation',icon: Databas e,href: '/services/cloud-devops',features: ['Cloud Migration','CI/CD Pipelines','Infrastructure as Code','Monitoring'] },{ name: 'Cybersecurity',description: 'Comprehensive security solutions for digital protection',icon: Shiel d,href: '/services/cybersecurity',features: ['Threat Detection','Vulnerability Assessment','Compliance','Incident Response'] } ]; const benefits = [ 'Reduce operational costs by 50%','Increase productivity by 70%','Improve business efficiency by 60%','Scale operations without proportional cost increase','Enhance customer experience and satisfaction','Accelerate time-to-market for new features' ]; const useCases = [ 'E-commerce & Retail','SaaS & Technology','Financial Services','Healthcare & Medical','Real Estate','Professional Services','Education & Training','Non-profit Organizations' ]; return ( <> <Head> <title>Our Services - Zion Tech Group</title> <meta name="description" content="Comprehensive technology solutions including AI,micro SaaS,cloud services,and cybersecurity. Transform your business with our innovative services." /> </Head>  import type { NextPage } from 'next'; import Link from 'next/link'; import EnhancedLayout from '../../components/layout/
-  import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Database,Brain,Check,ExternalLink,Phone,Mail,ArrowRight,Target,Zap,Shield,FileText,BarChart3,Cpu,Headphones,Calendar,Send,Layers } from 'lucide-react'; const categories = ['AI Services','IT Services','Development','Security']; export default function ServicesIndex() { const services = [ { name: 'AI & Machine Learning',description: 'Advanced AI solutions for business automation and intelligence',icon: Brai n,href: '/services/ai-machine-learning',features: ['Machine Learning Models','Natural Language Processing','Computer Vision','Predictive Analytics'] },{ name: 'Micro SaaS Solutions',description: 'Specialized software solutions for specific business needs',icon: Cp u,href: '/services/micro-saas',features: ['Custom Applications','API Integration','Scalable Infrastructure','Multi-tenant Support'] },{ name: 'AI Content Creation',description: 'Generate high-quality content at scale with AI-powered tools',icon: FileTex t,href: '/services/ai-content-creation',features: ['Blog Posts','Social Media','Email Campaigns','SEO Optimization'] },{ name: 'Email Automation',description: 'Automate email marketing campaigns with intelligent sequences',icon: Sen d,href: '/services/email-automation',features: ['Lead Nurturing','Behavioral Triggers','A/B Testing','Analytics'] },{ name: 'Customer Support Platform',description: 'AI-powered customer support with chatbots and ticketing',icon: Headphone s,href: '/services/customer-support',features: ['Live Chat','Ticket Management','Knowledge Base','Analytics'] },{ name: 'Event Management',description: 'Complete event planning and management solution',icon: Calenda r,href: '/services/event-management',features: ['Registration','Ticketing','Analytics','Mobile App'] },{ name: 'Cloud & DevOps',description: 'Scalable cloud infrastructure and deployment automation',icon: Databas e,href: '/services/cloud-devops',features: ['Cloud Migration','CI/CD Pipelines','Infrastructure as Code','Monitoring'] },{ name: 'Cybersecurity',description: 'Comprehensive security solutions for digital protection',icon: Shiel d,href: '/services/cybersecurity',features: ['Threat Detection','Vulnerability Assessment','Compliance','Incident Response'] } ]; const benefits = [ 'Reduce operational costs by 50%','Increase productivity by 70%','Improve business efficiency by 60%','Scale operations without proportional cost increase','Enhance customer experience and satisfaction','Accelerate time-to-market for new features' ]; const useCases = [ 'E-commerce & Retail','SaaS & Technology','Financial Services','Healthcare & Medical','Real Estate','Professional Services','Education & Training','Non-profit Organizations' ]; return ( <> <Head> <title>Our Services - Zion Tech Group</title> <meta name="description" content="Comprehensive technology solutions including AI,micro SaaS,cloud services,and cybersecurity. Transform your business with our innovative services." /> </Head>  import type { NextPage } from 'next'; import Link from 'next/link'; import EnhancedLayout from '../../components/layout/
+    }
+  ];
+  const process = [{
+      \"step\": \'01\',
+      \"title\": \'Discovery & Planning\',
+      \"description\": \'We start by understanding your business needs, goals, and technical requirements.\'
+    },
+    {
+      \"step\": \'02\',
+      \"title\": \'Design & Architecture\',
+      \"description\": \'Our team creates detailed technical specifications and system architecture.\'
+    },
+    {
+      \"step\": \'03\',
+      \"title\": \'Development & Testing\',
+      \"description\": \'We build your solution using agile methodologies with continuous testing.\'
+    },
+    {
+      \"step\": \'04\',
+      \"title\": \'Deployment & Support\',
+      \"description\": \'We deploy your solution and provide ongoing support and maintenance.\'
+    }
+  ];
+  return (
+    <MainLayout
+      title=\"Our Services - Zion Tech Group\"
+      description=\"Explore our comprehensive range of technology services including AI development, cloud solutions, web development, mobile apps, and more.\"
+    >
+      {/* Hero Section */}
+      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"text-center\">
+            <h1 className=\"text-5xl font-bold mb-6\">Our Services</h1>
+            <p className=\"text-xl max-w-3xl mx-auto\">
+              Comprehensive technology solutions designed to transform your business 
+              and drive digital innovation across all industries.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Services Grid */}
+                        {feature}
+                      </li>
+                    ))}
+                  <Link
+                    href={service.href}
+                    className=\"text-blue-600 \"hover\": text-blue-700 font-medium flex items-center\"
+                  >
+                    Learn More
+                    <ArrowRight className=\"ml-1 h-4 w-4\" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Process Section */}
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Why Choose Us */}
+                <Link
+                  href=\"/contact\"
+                  className=\"block w-full bg-blue-600 \"hover\": bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold text-center transition-colors\"
+                >
+                  Get Free Consultation
+                </Link>
+                <Link
+                  href=\"/about\"
+                  className=\"block w-full bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-3 px-6 rounded-lg font-semibold text-center transition-colors\"
+                >
+                  Learn More About Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className=\"py-20 bg-blue-600 text-white\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8 text-center\">
+          <h2 className=\"text-4xl font-bold mb-6\">
+            Ready to Transform Your Business?
+          </h2>
+          <p className=\"text-xl mb-8 max-w-3xl mx-auto\">
+            Join hundreds of businesses that have already transformed their operations 
+            with our innovative technology solutions.
+          </p>
+          <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">
+            <Link
+              href=\"/contact\"
+              className=\"bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors\"
+            >
+              Start Your Project
+            </Link>
+            <Link
+              href=\"/case-studies\"
+              className=\"bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors\"
+            >
+              View Case Studies
+            </Link>
+          </div>
+        </div>
+      </section>
+    </MainLayout>
+  );
+};
+export default Services;

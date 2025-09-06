@@ -113,8 +113,6 @@ const path = require('path')
     "replacement"
     "pattern"
     "replacement"
-    "replacement"
-    "replacement"
 const fs = require('fs');
 const path = require('path');
 

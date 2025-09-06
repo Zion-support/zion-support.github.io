@@ -1,8 +1,63 @@
-import React from 'react'
-import * as React from 'react'
-import * as ToggleGroupPrimitive from '@radix-ui/
-import {cn} from '@/lib/
-import {toggleVariants} from '@/components/ui/
-import * as ToggleGroupPrimitive from '@radix - ui /
-import {cn} from '@/lib /
-import {toggle_variants} from '@/components / ui /
+import React from 'react';
+import * as React from 'react';
+    ref={ref}
+    className={cn('flex items-center justify-center gap-1', className)}
+    {...props}>;
+    <ToggleGroupContext && ToggleGroupContext.Provider value={{ variant, size }}>;
+      {children}
+    </ToggleGroupContext && ToggleGroupContext.Provider>;
+  </ToggleGroupPrimitive && ToggleGroupPrimitive.Root>;
+));
+      {children}
+    </ToggleGroupPrimitive && ToggleGroupPrimitive.Item>;
+  );
+});
+=======
+import * as ToggleGroupPrimitive from '@radix - ui / react - toggle - group';
+import {type, VariantProps} from 'class - variance - authority';
+;
+import {cn} from '@/lib / utils';
+import {toggle_variants} from '@/components / ui / toggle';
+;
+type ToggleGroupContextProps = VariantProps < typeof toggle_variants>;
+;
+const ToggleGroupContext = React.create_context < ToggleGroupContextProps>({
+  size: 'default',
+  variant: 'default',
+});
+;
+const ToggleGroup = React.forward_ref<;
+  React.ElementRef < typeof ToggleGroupPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof ToggleGroupPrimitive.Root> &;
+    VariantProps < typeof toggle_variants>;
+></typeof>(({ class_name, variant, size, children, ...props }, ref) => (
+  <ToggleGroupPrimitive.Root;
+    ref={ref}
+    className={cn ('flex items - center justify - center gap - 1', class_name)}
+    {...props}
+  >;
+    <ToggleGroupContext.Provider value={{ variant, size }}>;
+      {children}
+    </ToggleGroupContext.Provider>;
+  </ToggleGroupPrimitive.Root>));
+;
+ToggleGroup.display_name = ToggleGroupPrimitive.Root.display_name;
+;
+const ToggleGroupItem = React.forward_ref<;
+  React.ElementRef < typeof ToggleGroupPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof ToggleGroupPrimitive.Item> &;
+    VariantProps < typeof toggle_va</typeof > riants>;
+>(({ class_name, children, variant, size, ...props }, ref) => {
+  const context = React.useContext (
+    ToggleGroupContext) as ToggleGroupContextProps;
+;
+    >;
+      {children}
+    </ToggleGroupPrimitive.Item>);
+});
+;
+ToggleGroupItem.display_name = ToggleGroupPrimitive.Item.display_name;
+;
+export { ToggleGroup, ToggleGroupItem }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

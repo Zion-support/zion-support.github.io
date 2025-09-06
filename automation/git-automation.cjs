@@ -154,12 +154,6 @@ class GitAutomation {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    );
-    const logMessage = `[${timestamp}] ${message}\n`;
-    );
-    const logMessage = `[${timestamp}] ${message}\n`;
-    );
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -365,7 +359,4 @@ if (require.main === module) {}
   }
 });
 };
-module.exports = GitAutomation;
-module.exports = GitAutomation;
-module.exports = GitAutomation;
 module.exports = GitAutomation;

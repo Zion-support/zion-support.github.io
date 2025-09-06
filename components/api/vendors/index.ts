@@ -1,3 +1,22 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { listVendors } from '../../../utils/
-import { list_vendors } from '../../../utils /
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+  const vendors = listVendors();
+  res.status(200).json({ vendors })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { list_vendors } from '../../../utils / vendor - store';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const vendors = list_vendors ();
+  res.status (200).json ({ vendors });export default /**
+ * handler - Function description
+ */
+function handler() {
+  const vendors = list_vendors ();
+  res.status (200).json ({ vendors });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

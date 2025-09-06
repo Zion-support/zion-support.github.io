@@ -1,7 +1,10 @@
-import { render, screen } from '@testing-library/
-import Page from './
-import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main').toBeInTheDocument();,}); it('displays correct content',() => {; render(
-import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main').toBeInTheDocument(),}); it('displays correct content',() => {; render(
-import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main').toBeInTheDocument(),}); it('displays correct content',() => {; render(
-import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; describe('Page', () => {; it('renders without crashing', () => {; render(<Page />); expect(screen.getByRole('main').toBeInTheDocument();,}); it('displays correct content', () => {; render(
-    expect(screen ; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant ; describe('Page', () => {; it('renders without crashing', () => {; render(<Page />); expect(screen && screen.getByRole('main').toBeInTheDocument();,}); it('displays correct content', () => {; render(
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+import { render, screen } from '@testing-library/react'
+import { describe, it, expect } from 'vitest'
+import Page from './AIChatAssistant && AIChatAssistant.js'
+describe('Page'
+  it('renders without crashing'
+=======
+    expect(screen ; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant ; ; describe('Page', () => {; it('renders without crashing', () => {; render(<Page />); expect(screen && screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content', () => {; render(<Page />)}); ; it('handles user interactions'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

@@ -1,6 +1,114 @@
-import { defineConfig, devices } from '@playwright/
-import { defineConfig, devices } from '@playwright/
-export default defineConfig({testDir: any
-import { defineConfig, devices } from '@playwright/
-  testDir: any
-    ['html', { outputFolder: any
+import { defineConfig, devices } from '@playwright/test',;
+
+export default defineConfig({;
+  testDir:'tests/e2e',;
+  use:{;
+    baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
+    trace:'on-first-retry'},;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  projects:[;
+    {name:'Desktop Chrome';
+      use:{;
+        browserName:'chromium';
+        channel:'chrome'}
+    }
+    {name:'Desktop Firefox';
+      use:{;
+        browserName:'firefox'}
+    }
+    {name:'Desktop Safari';
+      use:{;
+        browserName:'webkit'}
+    }
+    trace: 'on-first-retry'
+  }
+  projects: [
+=======
+import { define_config, devices } from '@playwright / test';
+import { define_config, devices } from '@playwright / test',
+;
+export default define_config ({
+  test_dir:'tests / e2e',
+  use:{
+    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+    trace:'on - first - retry'},
+  projects:[;
+    {
+      name:'Desktop Chrome',
+      use:{
+        browser_name:'chromium',
+        channel:'chrome'}
+    },
+    {
+      name:'Desktop Firefox',
+      use:{
+        browser_name:'firefox'}
+    },
+    {
+      name:'Desktop Safari',
+      use:{
+        browser_name:'webkit'}
+    },
+    {
+      name:'Mobile Chrome',
+      use:{
+        browser_name:'chromium',
+        ...devices['Pixel 5']}
+    },
+    {
+      name:'Mobile Safari',
+      use:{
+        browser_name:'webkit',
+        ...devices['i_phone 12']}
+    }
+  ],
+  reporter:[;
+    ['list'],
+    ['html', { output_folder:'playwright - logs / html - report', open:'never' }]];
+}),import { define_config, devices  } from '@playwright / test';
+import { define_config, devices } from '@playwright / test';
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+    trace: 'on - first - retry';
+  },
+  projects: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    {
+      name: "Desktop Chrome"
+      use: {
+}
+    }
+    {
+      name: "Desktop Firefox"
+
+      use: {
+        browser_name: 'firefox';
+}
+    }
+    {
+
+      name: "Desktop Safari"
+
+      use: {
+        browser_name: 'webkit';
+}
+    }
+    {
+
+      name: "Mobile Chrome"
+      use: {
+}
+    }
+    {
+      name: "Mobile Safari"
+      use: {
+      }
+
+    }
+=======
+  ],
+  reporter: [;
+    ['list'],
+    ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

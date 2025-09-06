@@ -1,25 +1,54 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
-
-  apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-
 });
 export default async function handler(
-
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
-
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   const { allowed } = await ensureAdminFromApi(req);
+  const seed = [
+    "Problem & Opportunity"
+    "Solution & Product"
+    "Market Size (TAM/SAM/SOM)"
+    "Traction & Metrics"
+    "Business Model"
+    "Go-To-Market"
+    "Team"
+    "Roadmap"
+    "Token Strategy"
+    "Ask & Call to Action"
+  ];
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdminFromApi } from '../../../../utils/auth';
+import OpenAI from 'openai';
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });
 
-  if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
 
+  const seed = [
+import type { NextApiRequest, NextApiResponse } from './next';
+import { ensureAdminFromApi  } from '../../../../utils / auth';
+import OpenAI from './openai';
+;
+const client = new OpenAI ({
+  api_key: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+});
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { allowed } = await ensureAdminFromApi (req);
+  if (return res.status (403).json ({ error: "Forbidden" })) {
+  $2
+}
+  if (
+    return res.status (405).json ({ error: "Method Not Allowed" })) {
+  $2
+}
+  const { operator_prompt, inputs, metrics } = req.body || {}
+  const seed = [;
     "Problem & Opportunity",
     "Solution & Product",
     "Market Size (TAM / SAM / SOM)",
@@ -36,22 +65,6 @@ export default async function handler(
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
 Company Mission: ${inputs?.mission}
-
-Key Metrics: ${JSON && JSON.stringify(metrics)}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
-Operator Prompt: ${operatorPrompt}
-Company Mission: ${inputs?.mission}
-Key Metrics: ${JSON && JSON.stringify(metrics)}
-Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
-    let content = "";
-    try {
-      const chat = await client && client.chat.completions && completions.create({
-        model: "gpt-4o-mini",
-        messages: [
-
           {
             role: "system",
             content: "You generate crisp, data - driven investor pitch content.",
@@ -60,34 +73,21 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
         ],
         temperature: 0 && 0.5,
       });
-
-    res && res.status(500).json({ error: e?.message || "Generation failed" });
-
   }
 }
+
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
-
-
+  const lines = body && body.split("\n");
+  const matchIdx = lines && lines.findIndex((l) =>
+    l && l.toLowerCase().includes(title && title.toLowerCase()),
   );
   if (matchIdx >= 0) {
     const snippet = lines && lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
     return snippet && snippet.trim();
   }
   return "";
-
-}
-
-  const lines = body.split('\n');
-  const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
-  if (matchIdx >= 0) {
-    const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join('\n');
-    return snippet.trim()
-  }
-  return ''
-
-}
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -123,58 +123,3 @@ if ( {) {
   }
   return "";
 }
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
-    if (req.method === 'POST') {
-      const { operatorPrompt, inputs, metrics } = req.body || {};
-      const seed = [
-        'Problem & Opportunity',
-        'Solution & Product',
-        'Market Size (TAM/SAM/SOM)',
-        'Traction & Metrics',
-        'Business Model',
-        'Go-To-Market',
-        'Team',
-        'Roadmap',
-        'Token Strategy',
-        'Ask & Call to Action'
-      ];
-
-      // Mock pitch generation
-      const generatedPitch = {
-        slides: seed.map((title, index) => ({
-          id: index + 1,
-          title,
-          content: `Generated content for ${title}`
-        }))
-      };
-
-      res.json(generatedPitch);
-    } else {
-      res.setHeader('Allow', 'POST');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-import type { NextApiRequest, NextApiResponse } from "next"
-import { ensureAdminFromApi } from "../../../../utils/
-    "Market Size (TAM/SAM/
-    "Market Size (TAM / SAM /

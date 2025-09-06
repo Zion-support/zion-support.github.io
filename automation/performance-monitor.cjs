@@ -346,8 +346,6 @@ class PerformanceMonitor {
       this.log(`Build size optimization failed: ${error.message}`);
     }
   }
-  async savePerformanceReport() {
-  async savePerformanceReport() {
 
   async saveMetrics() {
     const metricsFile = path.join(
@@ -372,10 +370,6 @@ class PerformanceMonitor {
       );
     } catch (_) {}
   }
-  getPerformanceRecommendations() {
-  getPerformanceRecommendations() {
-
-  generateRecommendations() {
 
   generateRecommendations() {
     const recommendations = [];
@@ -545,8 +539,6 @@ monitor.start().catch(error => {})
   process.exit(1);
 });
 }
-});
-});
 }
 
 // Run if called directly

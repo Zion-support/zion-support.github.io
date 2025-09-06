@@ -1,3 +1,8 @@
-
- Types used across fraud detection modules
-import { FraudSeverity } from '@/types/
+}
+export interface MessageAnalysisResult extends AnalysisResult {
+  severity: FraudSeverity;
+}
+export interface EmailAnalysisResult extends AnalysisResult {}
+export interface FlagResult {
+}
+export interface SignupCheckResult extends AnalysisResult {}

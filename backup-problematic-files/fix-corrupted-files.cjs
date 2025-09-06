@@ -109,16 +109,6 @@ interface OptimizedImageProps {;
   className?:string;
   priority?:boolean;
   quality?:number;
-    .replace(/['"]lucide-react;['"]/g, ")import Image from 'next/image';
-;
-interface OptimizedImageProps {;
-  sr:c:string;
-  al:t:string;
-  widt:h:number;
-  heigh:t:number;
-  className?:string;
-  priority?:boolean;
-  quality?:number;
     .replace(/['"]lucide-react;['"]/g, ")
     .replace(/['"]lucide-react;['"]/g, ")
 const fs = require('fs');
@@ -416,7 +406,6 @@ Object.entries(corruptedFiles).forEach(([filePath, content]) => {;
 });
 ;
 console.log('Fixed corrupted files');
-    .replace(/['"]lucide-react;['"]/g, ")
   console.log(`Fixed ${fixedCount} corrupted files`);,
 }
 

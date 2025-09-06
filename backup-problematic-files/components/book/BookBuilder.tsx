@@ -1,5 +1,53 @@
-import React, { useMemo, useState } from 'react'
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react'
-import { buildPrintableHtml } from '../../utils/export/
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/
-import { defaultChapters } from '../../utils/book/
+    return (
+      <div className="w - full max - w-2xl border rounded - lg overflow - hidden shadow bg - white text - gray - 900">;
+        <div className="p - 8 space - y-2">;
+          <div className="text - xs uppercase tracking - widest opacity - 60">Zion OS</div>;
+          <h1 className="text - 3xl font - extrabold leading - tight">{project.meta.title}</h1>;
+          <div className="text - lg opacity - 80">{project.meta.subtitle}</div>;
+          <div className="pt - 6 text - sm opacity - 70">By {project.meta.author}</div>;
+          {project.meta.isbn ? (
+      }
+    } finally {
+      set_busy (false);
+    }
+  }
+    } finally {
+      set_busy (false);
+    }
+  }
+    } finally {
+      set_busy (false);
+    }
+  }
+                value={project.meta.title}
+                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, title: e.target.value } })}
+              />;
+            </label>;
+            <label className="space - y-1">;
+              <div className="text - xs uppercase opacity - 60">Subtitle</div>;
+              <input;
+                className="w - full border rounded px - 3 py - 2";
+                value={project.meta.subtitle}
+                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}
+              />;
+            </label>;
+            <label className="space - y-1">;
+              <div className="text - xs uppercase opacity - 60">Author</div>;
+              <input;
+                className="w - full border rounded px - 3 py - 2";
+                value={project.meta.author}
+                on_change={(e) => set_project ({ ...project, meta: { ...project.meta, author: e.target.value } })}
+              />;
+            </label>;
+            <label className="space - y-1">;
+              <div className="text - xs uppercase opacity - 60">ISBN (optional)</div>;
+              <input;
+                className="w - full border rounded px - 3 py - 2";
+                placeholder="9781234567897";
+                value={project.meta.isbn}
+                }}
+              />;
+              <input;
+                className="border rounded px - 2 py - 1";
+                value={q.attribution ?? ''}
+}

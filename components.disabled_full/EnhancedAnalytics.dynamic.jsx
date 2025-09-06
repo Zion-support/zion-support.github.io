@@ -1,2 +1,3 @@
-const EnhancedAnalytics = dynamic() => import(\"./
-const EnhancedAnalytics = dynamic() => import("./
+const EnhancedAnalytics = dynamic(() => import(\"./EnhancedAnalytics\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedAnalytics\' ,
+const EnhancedAnalytics = dynamic(() => import("./EnhancedAnalytics"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedAnalytics" ,"""
+const EnhancedAnalytics = dynamic(() => import("./EnhancedAnalytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedAnalytics' ,'

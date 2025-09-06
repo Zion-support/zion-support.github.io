@@ -1,5 +1,1 @@
-/usr/bin/
-/usr/bin/env node/usr/bin/env node/usr/bin/env node console && console.log("scripts/
-/usr/bin/
-/usr/bin/env node/usr/bin/env node/usr/bin/env node console && console.log("scripts/
-/usr/bin/
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

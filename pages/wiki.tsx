@@ -1,5 +1,3 @@
-
-
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false)
   return (
@@ -8,53 +6,12 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         await navigator.clipboard.writeText(text)
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
-
-
-
-}
-
-export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), []);
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]);
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]);
-
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
-      <aside className="sticky top-20 self-start hidden lg:block">
-        <div className="text-sm font-semibold mb-2">Table of contents</div>
-        <ul className="space-y-1 text-sm">
-          {wiki.sections.map((s) => (
-            <li key={s.id}>
-              <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
-
-import React, { useMemo, useState } from 'react',
-import {
-  generateZionWiki,
-  buildMarkdownFromWiki,
-  buildWikitextFromWiki,
-operator_prompt,
-  slugify} from '../utils / data / zion_content',
-/**
- * CopyButton - Function description
- */
-function CopyButton() {
-  const [copied, set_copied] = useState (false),
-  return (
-    <button;
-      on_click={async () => {
-        await navigator.clipboard.write_text (text),
-        set_copied (true),
-        set_timeout (() => set_copied (false), 1500);
-
       }}
       className="px - 3 py - 1 rounded border text - xs hover:bg - gray - 50 dark:hover:bg - gray - 900";
     >;
       {copied ? 'Copied' : label}
     </button>);
 }
-
-
-
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
@@ -75,29 +32,6 @@ function WikiPage() {
             <li key={s.id}>;
               <a href={`#${slugify (s.title)}`} className="opacity - 80 hover:opacity - 100">;
                 {s.title}
-
-
-                {s.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </Link>
-
-
-            </li>
-          ))}
-          <li>
-
-
-            <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
-
-
-          </li>
-        </ul>
-      </aside>
-
-
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
@@ -109,43 +43,15 @@ function WikiPage() {
           </div>
         </div>
         <p>{wiki.intro}</p>
-
-
         {wiki.sections.map((s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
-
-
-
-
-
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </section>;
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </ol>
-
-
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -155,15 +61,6 @@ function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
-
-
-{md  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
@@ -171,9 +68,6 @@ function WikiPage() {
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
         </div>
       </article>
-
-}
-
               </a>;
             </li>))}
           <li>;
@@ -222,14 +116,3 @@ function WikiPage() {
       </article>;
     </div>);
 }
-
-    </div>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-import React, { useMemo, useState } from 'react'
-  slugify} from '../utils/data/
-  slugify} from '../utils/data/

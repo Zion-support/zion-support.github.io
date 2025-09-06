@@ -196,13 +196,5 @@ const fs = require(,"}),"
         "encoding"
         "stdio"
       const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}``)
-      const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}``)
-        "stdio"        "stdio"
-        "stdio"        "stdio"
-        "stdio"
-        "stdio"        "stdio"
-        "stdio"
-        "stdio"        "stdio"
-        "stdio"
         "stdio"        "stdio"
         "stdio"        "stdio"

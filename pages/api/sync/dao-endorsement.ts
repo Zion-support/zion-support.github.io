@@ -1,6 +1,54 @@
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readState, writeState, upsertEvent } from "../../../utils/sync/
-import { signPayload } from "../../../utils/sync/
-import { nextVersionFor } from "../../../utils/sync/
-        const url = new URL("/api/sync/
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  const state = readState()
+  if (!state.config.optIn |state.config.paused) {
+    return res.status(403).json({ error: "Sync disabled for this instance" })
+  }
+  const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {
+    fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+  if (!fromDAO |!toDAO |!resolutionId |!decision) {
+    return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
+  }
+  const version = nextVersionFor(state, resolutionId)
+  const event = {
+    eventId: uuidv4(), type: "dao_endorsement" as const,
+    payload: {
+       id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() 
+    },
+    originInstanceId: state.config.instanceId, version,
+    timestamp: Date.now()};
+
+  upsertEvent(state, event);
+  writeState(state);
+
+  const body = { ...event, propagate: false };
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  await Promise.all(
+    state.config.peers
+      .filter((p) => !p.paused)
+      .map(async (peer) => {
+        try {
+          await axios.post (url, body, { headers, timeout: 5000 });
+        } catch {}
+=======
+      })),
+  return res.status (200).json ({ status: "created", version, event_id: event.event_id });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

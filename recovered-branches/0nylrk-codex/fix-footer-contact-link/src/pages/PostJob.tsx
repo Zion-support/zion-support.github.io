@@ -1,8 +1,26 @@
+  const { isAuthenticated, isLoading } = useAuth();
 
-import { Header } from "@/components/
-import { Footer } from "@/components/
-import { JobPostingForm } from "@/components/
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/
-import { SEO } from "@/components/
-import { useAuth } from "@/hooks/
-import { useIsMobile } from "@/hooks/
+  const isMobile = useIsMobile();
+
+    return (
+      <div className="flex items-center justify-center min-h-screen">;
+        <div className="animate-pulse">Loading...</div>;
+      </div>;
+    );
+  }
+            <CardDescription>;
+              Fill out the form below to post your job and find the perfect talent.;
+            </CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <JobPostingForm />;
+          </CardContent>;
+        </Card>;
+      </main>;
+      <Footer />;
+      {/* Add extra bottom padding on mobile to account for the bottom nav */}
+=======
+      {is_mobile && <div className="h - 16"></div>}
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

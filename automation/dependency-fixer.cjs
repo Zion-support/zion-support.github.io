@@ -137,8 +137,6 @@ class DependencyFixer {
 }
 const fixer = new DependencyFixer();
 fixer.run().catch(console.error)
-#!/usr/bin/env node;
-
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -207,7 +205,4 @@ const { execSync } = require("child_process")
         this.log("\\n Fixes Applied:")
         this.log("\\n Errors:")
       this.log("\\n� Dependency fixing completed!")
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)

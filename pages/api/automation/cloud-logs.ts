@@ -1,14 +1,3 @@
-
-
-      } catch {
-        // ignore;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-async function fetchFromGitHub(): Promise<any[]> {;
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
   try {
 
@@ -32,7 +21,7 @@ async function fetchFromGitHub(): Promise<any[]> {
         const j = await r.json()
         results.push({ id: j.id |f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
       } catch {
-        // ignore
+        // ignore;
       }
     }
 return results;
@@ -40,52 +29,12 @@ return results;
     return [];
   }
 }
-
-export default async /**
- * handler - Function description
- */
-function handler() {
-const dir = path.join (process.cwd (), 'automation_logs'),
-  try {
-    if () {) {
-  $2
-}
-      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
-      // Check condition
-if ( {) {
-  $2
-}
-        const logs = files.slice (0, 50).map ((f) => {
-          try {
-            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
-            const json = JSON.parse (raw),
-            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
-          } catch {
-            return { id: f, file: f }
-          }
-        }),
-        return res.status (200).json ({ logs });
-
       }
     }
   } catch {
     // fall through to GitHub;
   }
-
-}
-
 const remote = await fetchFromGitHub (),
   return res.status (200).json ({ logs: remote });
 }
 ;
-
-
-  return res.status(200).json({ logs: remote });
-
-};
-
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-    const repoUrl = require('../../../
-    const repo_url = require ('../../../

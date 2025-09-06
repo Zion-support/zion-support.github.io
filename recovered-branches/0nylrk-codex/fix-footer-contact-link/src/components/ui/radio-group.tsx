@@ -1,5 +1,8 @@
-import * as React from &quot;react&quot;
-import * as RadioGroupPrimitive from &quot;@radix-ui/
-import { cn } from &quot;@/lib/
-    /
-        
+  return (
+    <RadioGroupPrimitive.Root;
+      className={cn (&quot;grid gap - 2&quot;, class_name)}
+      {...props}
+      ref={ref}
+    />);
+});
+export { RadioGroup, RadioGroupItem }

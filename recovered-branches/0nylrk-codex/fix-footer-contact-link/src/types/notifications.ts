@@ -6,5 +6,3 @@ export interface Notification {
   type: string;
   related_id?: string;
   read: boolean;
-
-  created_at: any

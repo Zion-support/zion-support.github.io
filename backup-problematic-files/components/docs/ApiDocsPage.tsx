@@ -1,6 +1,7 @@
-
-import React, { useMemo, useState } from 'react'
-import Sidebar from './
-import EndpointDetail from './
-import v1 from '../../data/api-docs/
-import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/
+  return (
+    <div className="min - h-screen bg - high - contrast - primary text - high - contrast grid grid - cols - 1" style={{ gridTemplateColumns: '18rem 1fr' }}>;
+      <Sidebar;
+        spec={spec}
+        activeEndpointId={active_endpoint?.id}
+        onSelectEndpoint={setActiveEndpointId}
+}

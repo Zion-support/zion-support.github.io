@@ -1,5 +1,27 @@
-
-import React from "react"
-import { MobileHeader } from "../components/common/
-import { BottomNavigation } from "../components/common/
-import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/
+  return (
+    <div className="min-h-screen">;
+      <MobileHeader
+        title="Resume Builder"
+        showBack
+=======
+import React from './react';
+import { MobileHeader } from '../components / common / MobileHeader';
+import { BottomNavigation } from '../components / common / BottomNavigation';
+import { MobileResumeBuilder, as, ResumeBuilderComponent } from '../components / resume / MobileResumeBuilder';
+export /**
+ * MobileResumeBuilder - Function description
+ */
+function MobileResumeBuilder() {
+  return (
+    <div className="min - h-screen">;
+      <MobileHeader;
+        title="Resume Builder";
+        show_back;
+      />;
+      <main className="py - 4">;
+        <ResumeBuilderComponent />;
+      </main>;
+      <BottomNavigation />;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

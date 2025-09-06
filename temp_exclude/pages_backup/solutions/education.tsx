@@ -1,13 +1,50 @@
+  {}
+    icon: Users,
+    title: 'Student Information Systems,',
+    description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
+  },
+  {}
+    icon: BookOpen,
+    title: 'Digital Content Management,',
+    description: 'Platforms for creating, managing, and delivering educational content and resources.',
+  },
+  {}
+  return (
+    <Layout
+      title="Education Solutions - Zion Tech Group"
+      description="Comprehensive education technology solutions for schools, universities, and educational institutions. LMS, SIS, and digital learning platforms."
+      keywords="education solutions, learning management system, student information system, educational technology, digital learning"
+    >
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Education Solutions
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Transform education with innovative technology solutions designed
+                for schools, universities, and educational institutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                  View Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
+        {/* Features Section */}
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+  );
+}

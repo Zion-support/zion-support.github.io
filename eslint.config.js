@@ -31,6 +31,41 @@ import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 
 import js from '@eslint/js';
+    ignores: [
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'backup-merge-conflicts/**',
+      '**/*.backup.*',
+      '**/*.old.*',
+      '**/*.disabled.*',
+      '**/*.broken.*',
+      '**/*.corrupted.*',
+      '**/*.temp.*',
+      '**/*.test.*',
+      '**/*.spec.*',
+    ],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        // Browser globals
+        // React
+        React: 'readonly',
+        // Jest/Testing globals
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -41,118 +76,12 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default [
   {
-    ignores: [
-      "node_modules/",
-      ".next/",
-      "out/",
-      "dist/",
-      "build/",
-      "coverage/",
-      "*.config.js",
-      "*.config.cjs",
-      "*.config.mjs",
-      "scripts/",
-      "automation/",
-      "pm2-automation/",
-      "pages.disabled/",
-      "pages.disabled_auto/",
-      "pages.disabled_full/",
-      "pages.corrupted.*/",
-      "pages.broken/",
-      "pages.bak/",
-      "pages.blog.disabled/",
-      "pages._archive_corrupted/",
-      "pages._quarantine/",
-      "pages-disabled/",
-      "pages-quarantine/",
-      "pages.__backup/",
-      "pages-backup/",
-      "tests.disabled/",
-      "components.disabled/",
-      "os.disabled/",
-      "zion_academy/",
-      "temp_backup/",
-      "temp_broken_files/",
-      "temp_exclude/",
-      "temp_components/",
-      "temp_scripts/",
-      "src_backup_temp/",
-      "src.pages.disabled/",
-      "src.broken/",
-      "src.disabled/",
-      "test_build/",
-      "temp_exclude/",
-      "zion-os/",
-      "zion-website/",
-      "zion-ai-assistant/",
-      "types/",
-      "utils/",
-      "ultimate-*.cjs",
-      "ultimate-*.cjs",
-      "comprehensive-cleanup.cjs",
-      "cleanup-merge-conflicts.cjs",
-      "*.test.js",
-      "*.test.ts",
-      "*.test.tsx",
-      "*.spec.js",
-      "*.spec.ts",
-      "*.spec.tsx"
-    ]
-  },
-  js.configs.recommended,
-  {
-    files: ["src/**/*.{js,jsx,ts,tsx}"],
-    languageOptions: {
-      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
-      },
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      parser: typescriptParser,
-    files: ["**/*.{js,jsx}"],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "module",
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: "readonly",
-        jest: "readonly",
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly"
-      },
-      parserOptions: {
-        ecmaFeatures: {
           jsx: true
         }
-      }
-    },
-    plugins: {
       react,
       "react-hooks": reactHooks
     },
@@ -175,43 +104,15 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
-        React: "readonly",
-        jest: "readonly",
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-
-        React: 'readonly',
-        afterAll: "readonly",
-        React: 'readonly',
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-
-
-
-export default [
-  {
-
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      parser: typescriptParser,
-
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-
-
-
-
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
         afterAll: "readonly"
       },
       parser: tsparser,
@@ -222,31 +123,23 @@ export default [
       }
     },
     plugins: {
-    },
-    plugins: {
       "@typescript-eslint": tseslint,
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       "jsx-a11y": jsxA11y
+
     },
     rules: {
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
+
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true }
       ],
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "react-hooks/exhaustive-deps": "warn",
-      "no-undef": "off",
-      "no-unused-vars": "off",
-      "no-console": "warn",
-      "react/prop-types": "off",
-
         describe: 'readonly',
         it: 'readonly',
         beforeEach: 'readonly',
@@ -254,22 +147,21 @@ export default [
       }
     },
     plugins: {
-
-
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks
     },
     rules: {
-
-
-
-
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
       "react/react-in-jsx-scope": "off"
 
-      "react/react-in-jsx-scope": "off"
-      "react/react-in-jsx-scope": "off",
-      "react/no-unescaped-entities": "off"
     },
     settings: {
       react: {
@@ -305,15 +197,15 @@ export default [
       'no-console': 'warn',
       'no-undef': 'error'
     }
-
-  }
-];
-
-
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
       'no-unused-vars': 'warn'
     }
   },
-{
+  {
     ignores: [
       'node_modules/',
       '.next/',
@@ -341,23 +233,7 @@ export default [
       'supabase/',
       'working-automation-suite.cjs'
     ]
-
-
-
-
-
   }
 ];
-
-
-
-  }
-];
-  }
-];
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "no-undef": "error"
-    }
   }
 ];

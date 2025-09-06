@@ -1,15 +1,28 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 
-
-
-}: {;
-export default function UseTokensButton({
-serviceId
-  defaultType
-}: {
-
-  serviceId?: string;
-  defaultType?: RedemptionType;
-}) {;
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -24,11 +37,8 @@ serviceId
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-      />
-    </>
-
-);
-  );
+      />;
+    </>;
   );
   const [open, setOpen] = useState(false);
   return (
@@ -47,11 +57,6 @@ serviceId
       />;
     </>;
   );
-
-}
-
-}
-
 import React, { useState } from './react';
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 ;
@@ -91,12 +96,3 @@ function UseTokensButton() {
         default_type={default_type}
       />;
     </>);
-    </>
-  )
-
-}
-
-import React, { useState } from "react"
-import UseTokensModal, { RedemptionType } from "./
-import UseTokensModal, { RedemptionType } from "./
-import UseTokensModal, { RedemptionType } from "./

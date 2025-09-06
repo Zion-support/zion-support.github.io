@@ -1,2 +1,3 @@
-import { Html,Head,Main,NextScript } from \'next/
-const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> 
+import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

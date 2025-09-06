@@ -1,5 +1,3 @@
-
-
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
   });
@@ -19,4 +17,3 @@ function handler() {
 }
 
 
-import type { NextApiRequest, NextApiResponse } from 'next'

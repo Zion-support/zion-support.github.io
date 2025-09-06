@@ -1,15 +1,15 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; const API: NextPage = () => { const apiEndpoints = [ { name: 'Services API',endpoint: '/api/services',method: 'GET',description: 'Retrieve all available services',response: 'Array of services' },{ name: 'Contact API',endpoint: '/api/contact',method: 'POST',description: 'Submit contact form',response: 'Success message' },{ name: 'Quote API',endpoint: any
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; const API: NextPage = () => { const apiEndpoints = [ { name: 'Services API',endpoint: '/api/services',method: 'GET',description: 'Retrieve all available services',response: 'Array of services' },{ name: 'Contact API',endpoint: '/api/contact',method: 'POST',description: 'Submit contact form',response: 'Success message' },{ name: 'Quote API',endpoint: any
+                      ? \'bg-green-100 text-green-800\' 
+                      : \'bg-blue-100 text-blue-800\'
+                  }`}>
+                    {endpoint.method}
+                  </span>
+                </div>
+                <div className=\"space-y-2\">
+                  <p><strong>\"Endpoint\": </strong> <code className=\"bg-gray-100 px-2 py-1 rounded\">{endpoint.endpoint}</code></p>
+                  <p><strong>\"Description\": </strong> {endpoint.description}</p>
+                  <p><strong>\"Response\": </strong> {endpoint.response}</p>
+                </div>
+                <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">{feature.title}</h3>
+                <p className=\"text-gray-600\">{feature.description}</p>
+              </div>
+            ))}

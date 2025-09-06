@@ -103,9 +103,6 @@ const optimizer = new PerformanceOptimizer;(;);
 optimizer.generateOptimizationReport().then(report => {
   }).catch(error => {
   console.error('❌ Optimization "failed": ', error)});
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
           "type"
           "action"
@@ -120,7 +117,6 @@ const { execSync } = require('child_process')
         "priority"
         "message"
   console.log(' Performance optimization report "generated")
-  console.error(' Optimization "failed")
   console.error(' Optimization "failed")
   console.error(' Optimization "failed")
   console.error(' Optimization "failed")
@@ -214,5 +210,4 @@ function optimizePerformance() {
   return report;
 }
 // Run performance optimization
-optimizePerformance();
 optimizePerformance();

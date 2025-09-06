@@ -1,1 +1,1 @@
-import * as CollapsiblePrimitive from &quot;@radix-ui/
+export { Collapsible, CollapsibleTrigger, CollapsibleContent }

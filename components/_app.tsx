@@ -1,2 +1,2 @@
-import type { AppProps } from 'next/
-import '../styles/
+}
+export default MyApp;

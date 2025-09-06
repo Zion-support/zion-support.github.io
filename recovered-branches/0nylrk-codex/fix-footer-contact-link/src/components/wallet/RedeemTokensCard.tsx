@@ -1,6 +1,16 @@
-
-import React, { useState } from "react"
-import {useWallet} from "@/hooks/
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/
-import {Button} from "@/components/ui/
-import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/
+                      onClick={() => handleRedeem(option)}
+                    >;
+                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
+                    </Button>;
+                  </div>;
+                </div>;
+              ))}
+              </Button>;
+            </div>;
+          </DialogContent>;
+        </Dialog>;
+      </CardContent>;
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

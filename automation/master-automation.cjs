@@ -39,41 +39,6 @@ class MasterAutomation {}
     const logFile = path.join(this.logsDir, 'master-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
-  async runCommand(command, options = {}) {
-
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
-  }
-
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-
-    // Write to log file
-    const logFile = path.join(this.logsDir, 'master-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-  async runCommand(command, options = {}) {
-
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
-  }
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-    // Write to log file
-    const logFile = path.join(this.logsDir, 'master-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-  async runCommand(command, description) {
-
-  async runCommand(command, description) {
 
   async runCommand(command, description) {
     try {
@@ -171,20 +136,6 @@ class MasterAutomation {}
       } catch (error) {
         this.log(`Error parsing PM2 process list: ${error.message}`);
         return [];
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
-  }
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
-  }
 
   async runBuildProcess() {
     this.log('🚀 Starting build process...');
@@ -514,105 +465,6 @@ class MasterAutomation {}
     return status;
   }
 }
-// Handle command line arguments
-    this.log('🎯 Starting Master Automation System...');
-    const report = await this.generateReport();
-    this.log('🏁 Master Automation completed');
-    return report;
-  }
-
-  async status() {
-    this.log('📊 Checking automation status...');
-
-    const status = {
-      timestamp: new Date().toISOString(),
-      buildStatus: 'unknown',
-      gitStatus: 'unknown',
-      dependenciesStatus: 'unknown',
-    };
-
-    // Check build status
-    try {
-      const buildResult = await this.runCommand('npm run build', 'Build check');
-      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
-    } catch (_error) {
-      status.buildStatus = 'error';
-    }
-
-    // Check git status
-    try {
-      const gitResult = await this.runCommand(
-        'git status --porcelain',
-        'Git status check'
-      );
-      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
-    } catch (_error) {
-      status.gitStatus = 'error';
-    }
-
-    // Check dependencies
-    try {
-      const depsResult = await this.runCommand(
-        'npm list --depth=0',
-        'Dependencies check'
-      );
-      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
-    } catch (_error) {
-      status.dependenciesStatus = 'error';
-    }
-
-    this.log('📊 Status check completed');
-    return status;
-  }
-}
-// Handle command line arguments
-    this.log('🎯 Starting Master Automation System...');
-    const report = await this.generateReport();
-    this.log('🏁 Master Automation completed');
-    return report;
-  }
-  async status() {
-    this.log('📊 Checking automation status...');
-    const status = {
-      timestamp: new Date().toISOString(),
-      buildStatus: 'unknown',
-      gitStatus: 'unknown',
-      dependenciesStatus: 'unknown',
-    };
-    // Check build status
-    try {
-      const buildResult = await this.runCommand('npm run build', 'Build check');
-      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
-    } catch (_error) {
-      status.buildStatus = 'error';
-    }
-    // Check git status
-    try {
-      const gitResult = await this.runCommand(
-        'git status --porcelain',
-        'Git status check'
-      );
-      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
-    } catch (_error) {
-      status.gitStatus = 'error';
-    }
-    // Check dependencies
-    try {
-      const depsResult = await this.runCommand(
-        'npm list --depth=0',
-        'Dependencies check'
-      );
-      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
-    } catch (_error) {
-      status.dependenciesStatus = 'error';
-    }
-    this.log('📊 Status check completed');
-    return status;
-  }
-}
-// CLI interface
-
-// CLI interface
 
 // CLI interface
 if (require.main === module) {
@@ -663,16 +515,6 @@ if (require.main === module) {}
         });
       break;
     case 'status':
-      automation.monitorProcesses().catch(error => {})
-        console.error('Failed to get "status": ', error);
-        process.exit(1);
-      }
-});
-      break;
-    default: 
-      console.log('Usage: node master-automation.cjs [start|status]');
-      process.exit(1);
-      break;
       break;
       automation
         .status()
@@ -690,39 +532,9 @@ if (require.main === module) {}
 }
 
 module.exports = MasterAutomation;
-    case 'start':
-      automation
-        .start()
-        .then(report => {
-          console.log('Automation completed:', report.summary);
-          process.exit(0);
-        })
-        .catch(error => {
-          console.error('Automation failed:', error);
-          process.exit(1);
-        });
-      break;
-    case 'status':
-      automation
-        .status()
-        .then(status => {
-          console.log('Status:', status);
-          process.exit(0);
-        })
-        .catch(error => {
-          console.error('Status check failed:', error);
-          process.exit(1);
-        });
-      break;
-    default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
-  }
-}
-module.exports = MasterAutomation;
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
       process.exit(1);
   };
 };
-module.exports = MasterAutomation;
-module.exports = MasterAutomation;

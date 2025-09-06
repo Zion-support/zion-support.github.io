@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
-
 // Function to fix common syntax errors in test files
 function fixTestFile(filePath) {
   try {
@@ -49,7 +47,6 @@ files.forEach(file => {
 });
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
 
-
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
@@ -86,113 +83,6 @@ describe('${componentName}', () => {}
     // Add styling tests here;
   }
 });
-}
-});
-`;`
-      fs.writeFileSync(filePath, fixedContent);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error fixing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Function to remove unused fireEvent imports;
-function removeUnusedFireEvent(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Check if fireEvent is imported but not used;
-    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
-      console.log(`Removing unused fireEvent from: ${filePath}`);
-      // Remove fireEvent from import statement;
-      content = content.replace(/, fireEvent/g, '');
-      content = content.replace(/fireEvent, /g, '');
-      content = content.replace(/fireEvent/g, '');
-      fs.writeFileSync(filePath, content);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error processing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Get all test files;
-const testDir = path.join(__dirname, '__tests__');
-const files = fs.readdirSync(testDir);
-let fixedCount = 0;
-let fireEventCount = 0;
-files.forEach(file => {})
-  if (file.endsWith('.test.js')) {}
-    const filePath = path.join(testDir, file);
-    // Fix malformed files;
-    if (fixTestFile(filePath)) {}
-      fixedCount++;
-    };
-    // Remove unused fireEvent;
-    if (removeUnusedFireEvent(filePath)) {}
-      fireEventCount++;
-    };
-  };
-}
-});
-console.log(`Fixed ${fixedCount} malformed test files`);
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-}
-});
-`;`
-      fs.writeFileSync(filePath, fixedContent);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error fixing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Function to remove unused fireEvent imports;
-function removeUnusedFireEvent(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Check if fireEvent is imported but not used;
-    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
-      console.log(`Removing unused fireEvent from: ${filePath}`);
-      // Remove fireEvent from import statement;
-      content = content.replace(/, fireEvent/g, '');
-      content = content.replace(/fireEvent, /g, '');
-      content = content.replace(/fireEvent/g, '');
-      fs.writeFileSync(filePath, content);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error processing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Get all test files;
-const testDir = path.join(__dirname, '__tests__');
-const files = fs.readdirSync(testDir);
-let fixedCount = 0;
-let fireEventCount = 0;
-files.forEach(file => {})
-  if (file.endsWith('.test.js')) {}
-    const filePath = path.join(testDir, file);
-    // Fix malformed files;
-    if (fixTestFile(filePath)) {}
-      fixedCount++;
-    };
-    // Remove unused fireEvent;
-    if (removeUnusedFireEvent(filePath)) {}
-      fireEventCount++;
-    };
-  };
-}
-});
-console.log(`Fixed ${fixedCount} malformed test files`);
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 const { execSync } = require('child_process');
 class TestFileFixer {
   constructor() {

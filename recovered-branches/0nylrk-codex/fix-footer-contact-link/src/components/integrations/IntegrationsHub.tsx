@@ -1,10 +1,63 @@
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { IntegrationCards } from "./IntegrationCards";
+import { ZapierIntegration } from "./ZapierIntegration";
+import { Badge } from "@/components/ui/badge";
 
-import React, { useState } from "react"
-import { Button } from "@/components/ui/
- from "@/components/ui/
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/
-import { IntegrationCards } from "./
-import { ZapierIntegration } from "./
-import { Badge } from "@/components/ui/
-import { WebhookManager } from "./
-import { IntegrationsSyncLog } from "./
+import { WebhookManager } from "./WebhookManager";
+import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
+export function IntegrationsHub() {;
+  const [activeTab, setActiveTab] = useState("marketplace");
+  return (
+                Healthy;
+              </Badge>;
+            </div>;
+          </CardHeader>;
+          <CardContent>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+                    New job application received;
+                  </p>;
+                </div>;
+                <Badge variant="outline">5m ago</Badge>;
+              </li>;
+                </div>;
+                <Badge variant="outline">2h ago</Badge>;
+              </li>;
+            </ul>;
+          </CardContent>;
+              View All Activity;
+            </Button>;
+          </CardFooter>;
+        </Card>;
+      </div>;
+          <TabsTrigger value="marketplace">Marketplace</TabsTrigger>;
+          <TabsTrigger value="zapier">Zapier</TabsTrigger>;
+          <TabsTrigger value="webhooks">Webhooks</TabsTrigger>;
+        </TabsList>;
+                  your Zion platform.;
+                </CardDescription>;
+              </CardHeader>;
+              <CardContent>;
+                <WebhookManager />;
+              </CardContent>;
+            </Card>;
+                <CardDescription>;
+                  View the history of synchronization events between;
+                  integrations.;
+                </CardDescription>;
+              </CardHeader>;
+              <CardContent>;
+                <IntegrationsSyncLog />;
+              </CardContent>;
+            </Card>;
+          </TabsContent>;
+        </div>;
+      </Tabs>;
+  );
+=======
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}

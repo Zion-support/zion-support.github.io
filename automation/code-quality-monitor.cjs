@@ -149,8 +149,6 @@ class CodeQualityMonitor {
   }
 }
 
-async function checkCodeDuplication() {
-  
   const duplications = [{
 async function checkCodeComplexity() {}
   console.log('[INFO] Checking code complexity...');
@@ -186,7 +184,6 @@ async function checkCodeDuplication() {}
         console.warn(`  - ${d.file}:${d.line} (duplicate of ${d.duplicateOf})`)
       );
     return { passed: false, count: duplications.length, details: duplications };
-    
     
     duplications
       .slice(0, 5)
@@ -249,7 +246,6 @@ async function checkTestCoverage() {
     ignore: 'node_modules/**',
   });
   
-  
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {
     "cwd": process.cwd(),
     "ignore": 'node_modules/**'});
@@ -298,13 +294,6 @@ async function runCodeQualityMonitor() {}
   const tsQualityResult = await checkTypeScriptQuality();
   const testCoverageResult = await checkTestCoverage();
   const docCoverageResult = await checkDocumentationCoverage();
-  const results = [
-    complexityResult,
-  const results = [
-    complexityResult,
-  const results = [
-    complexityResult,
-
 
   const results = [complexityResult,]
     duplicationResult,
@@ -336,10 +325,6 @@ async function runCodeQualityMonitor() {}
     if (docCoverageResult && !docCoverageResult.passed)
     process.exit(1);
   } else {
-
-    process.exit(1);
-  } else {
-    
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -362,8 +347,6 @@ async function runCodeQualityMonitor() {}
 runCodeQualityMonitor();
   };
 };
-runCodeQualityMonitor();
-runCodeQualityMonitor();
   };
 };
 runCodeQualityMonitor();
@@ -380,5 +363,4 @@ monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
     console.log("Metrics:", metrics);
   }
-});
 });

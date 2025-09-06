@@ -1,8 +1,8 @@
-
-import { AppLayout } from "@/layout/
-import { SEO } from "@/components/
-import { ApplicationsTracker } from "@/components/jobs/
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/
-import { ProtectedRoute } from "@/components/
-import { useIsMobile } from "@/hooks/
-            
+    <ProtectedRoute>;
+      <AppLayout>;
+        <ApplicationStatusTrackerContent />;
+      </AppLayout>;
+=======
+    </ProtectedRoute>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -132,5 +132,3 @@ const { execSync } = require("child_process")
       this.log(`Results saved "to"`)
       this.log(`Failed to save "results": ${error.message}`, "ERROR"`)
       this.log(`Automation suite "failed": ${error.message}`, "ERROR"`)
-      this.results.status = "failed"
-      this.results.status = "failed"

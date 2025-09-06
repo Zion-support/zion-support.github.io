@@ -1,14 +1,15 @@
+import React from 'react';
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+interface AiqaProps {
+  // Add props here as needed
+}
 
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-export default function AIQACopilot() { return ( 
+export default function Aiqa({ }: AiqaProps) {
+  return (
+    <div>
+      <h1>Aiqa</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+}

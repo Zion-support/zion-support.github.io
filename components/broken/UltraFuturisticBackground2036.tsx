@@ -1,31 +1,40 @@
-import React, { useEffect, useRef } from 'react'
-interface UltraFuturisticBackground2036Props {variant?: any
-export default function UltraFuturisticBackground2036({variant = 'default'
-  intensity = 'medium'
-    if (typeof window = = 'undefined'
-    const ctx = canvas.getContext('2d'
-      type: any
-    const colors = {quantum: ['#00ffff#0080ff#8000ff#ff0080'
-      neon: ['#00ff00#ff00ff#ffff00#00ffff'
-      energy: ['#ff6600#ff0066#6600ff#00ff66'
-      data: ['#00ccff#cc00ff#ffcc00#00ffcc'
-        type: variant = = 'default' ? ['quantumneonenergydata'
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'
-      gradient.addColorStop(0.3, 'rgba(20, 20, 40, 0.6)'
-      gradient.addColorStop(0.7, 'rgba(40, 20, 60, 0.4)'
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.8)'
-        glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0'
-        glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 100).toString(16).padStart(2, '0'
-        glowGradient.addColorStop(1, 'transparent'
-      if (variant = = 'quantum' |variant = = 'ai'
-      if (variant = = 'ai'
-      if (variant = = 'space'
-      nebulaGradient.addColorStop(0, 'rgba(255, 0, 255, 0.1)'
-      nebulaGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.05)'
-      nebulaGradient.addColorStop(1, 'transparent'
-      window.removeEventListener ('resize'
-        style={ display: any
-        {variant = = 'cyber'
-variant = = 'quantum'
-                  transform: 'translateX(-50%)'
-variant = = 'ai'
+      // Update and draw particles;
+      particles.for_each ((particle, index) => {
+        // Update position;
+      }
+      window.removeEventListener ('resize', resize_canvas);
+    }
+  return (
+    <div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot;>;
+      <canvas;
+        ref={canvas_ref}
+        className=&quot;w - full h - full & quot;
+        style={{ display: 'block' }}
+      />;
+      {/* Additional overlay effects */}
+<div className=&quot;absolute inset - 0 pointer - events - none & quot;>;
+        {/* Grid overlay for cyber variant */}
+        {variant === 'cyber' && (
+        {/* Quantum field lines */}
+{variant === 'quantum' && (
+          <div className=&quot;absolute inset - 0&quot;>;
+            {[...Array (8)].map ((_, i) => (
+              <motion.div;
+                key={i}
+                className=&quot;absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 30 to - transparent & quot;
+                style={{
+        {/* AI neural network overlay */}
+{variant === 'ai' && (
+          <div className=&quot;absolute inset - 0&quot;>;
+            {[...Array (6)].map ((_, i) => (
+              <motion.div;
+                key={i}
+                className=&quot;absolute w - full h - px bg - gradient - to - r from - transparent via - green - 400 / 20 to - transparent & quot;
+                style={{
+                  top: `${(i + 1) * 16.67}%`}}
+                  delay: i * 0.8}}
+              />))}
+          </div>)}
+      </div>;
+}
+export default UltraFuturisticBackground2036;

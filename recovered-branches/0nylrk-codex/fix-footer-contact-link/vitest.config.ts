@@ -1,7 +1,15 @@
+    globals: true}});
 
-import {defineConfig} from 'vitest/
-      '@': path.resolve(__dirname, './
-    setupFiles: any
-import {define_config} from 'vitest /
-      '@': path.resolve (__dirname, './
-    setup_files: any
+=======
+import {define_config} from 'vitest / config';
+import path from 'node: path',
+export default define_config ({
+  resolve: {
+    alias: {
+      '@': path.resolve (__dirname, './src')}}
+  test: {
+    environment: 'jsdom';
+    setup_files: './tests / setup.ts',
+    globals: true}});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

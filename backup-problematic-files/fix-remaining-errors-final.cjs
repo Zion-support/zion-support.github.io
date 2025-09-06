@@ -97,5 +97,3 @@ const filesToFix = ['src/components/SEO.tsx']
     content = content.replace(/"")
     content = content.replace(/")
     content = content.replace(/^\s*")
-    content = content.replace(/^\s*")
-    content = content.replace(/^\s*")

@@ -1,8 +1,82 @@
+  const { user } = useAuth();
 
-import {useState} from "react"
-import {useAuth} from "@/hooks/
-import {ProtectedRoute} from "@/components/
-import {ApiKeysManager} from "@/components/developers/
-import {WebhooksManager} from "@/components/developers/
-import {ApiDocumentation} from "@/components/developers/
-import {ApiLogs} from "@/components/developers/
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+
+      {/* Tabs */}
+      <div className="border - b border - zinc - 800 mb - 8">;
+        <div className="flex flex - wrap -mb - px">;
+          {tabs.map ((tab) => {
+            const Icon = tab.icon;
+
+=======
+  // Define the tabs;
+  const tabs: TabDefinition[] = [;
+    { id: "documentation", label: "Documentation", icon: BookOpen },;
+    { id: "api-keys", label: "API Keys", icon: Key },;
+    { id: "webhooks", label: "Webhooks", icon: Webhook },;
+    { id: "logs", label: "Logs", icon: List }],;
+
+  return (
+    <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
+      <div className="mb-8">;
+        <h1 className="text-3xl font-bold text-white flex items-center">;
+          <Terminal className="mr-3" size={32} />;
+          Developer Portal;
+        </h1>;
+        <p className="text-zinc-400 mt-2">;
+          Access the Zion API, manage your API keys, and set up webhooks.;
+        </p>;
+      </div>;
+
+      {/* Tabs */}
+      <div className="border-b border-zinc-800 mb-8">;
+        <div className="flex flex-wrap -mb-px">;
+          {tabs && tabs.map((tab) => {;
+            const Icon = tab && tab.icon;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            return (
+      {/* Tab content */}
+      <div>;
+        {activeTab === "documentation" && <ApiDocumentation />}
+        {activeTab === "api-keys" && <ApiKeysManager />}
+        {activeTab === "webhooks" && <WebhooksManager />}
+        {activeTab === "logs" && <ApiLogs />}
+      </div>;
+    </div>;
+  );
+}
+=======
+              <button;
+                key={tab.id}
+                className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
+                  active_tab === tab.id;
+                    ? "text - white border - zion - purple";
+                    : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700";
+                }`}
+                on_click={() => setActiveTab (tab.id)}
+              >;
+                <Icon size={16} className="mr - 2" />;
+                {tab.label}
+              </button>);
+          })}
+        </div>;
+      </div>;
+      {/* Tab content */}
+      <div>;
+        {active_tab === "documentation" && <ApiDocumentation />}
+        {active_tab === "api - keys" && <ApiKeysManager />}
+        {active_tab === "webhooks" && <WebhooksManager />}
+        {active_tab === "logs" && <ApiLogs />}
+      </div>;
+    </div>);
+}
+export default /**
+ * ProtectedDeveloperPortal - Function description
+ */
+function ProtectedDeveloperPortal() {
+  return (
+    <ProtectedRoute>;
+      <DeveloperPortal />;
+    </ProtectedRoute>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

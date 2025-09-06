@@ -1,18 +1,32 @@
+}
+export default ContractBuilderPage;
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import { SEO  } from '@/components/
-import { AppHeader  } from '@/layout/
-import { Footer  } from '@/components/
-import { ProtectedRoute  } from '@/components/
-import { ContractBuilderContent } from '@/components/contracts/page/
+=======
+import React from 'react';
+import {SEO} from '@/components / SEO';
+import {AppHeader} from '@/layout / AppHeader';
+import {Footer} from '@/components / Footer';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+import {ContractBuilderContent} from '@/components / contracts / page / ContractBuilderContent';
+/**
+ * ContractBuilderPage - Function description
+ */
+function ContractBuilderPage() {
+  return (
+    <ProtectedRoute>;
+      <>;
+        <SEO;
+          title="Smart Contract Builder | Zion AI Marketplace";
+          description="Create and deploy blockchain - backed smart contracts for your projects";
+        />;
+        <AppHeader />;
+        <main className="container mx - auto py - 10 px - 4">;
+          <ContractBuilderContent />;
+        </main>;
+        <Footer />;
+      </>;
+    </ProtectedRoute>);
+}
+export default ContractBuilderPage;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

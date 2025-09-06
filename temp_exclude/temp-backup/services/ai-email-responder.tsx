@@ -1,17 +1,15 @@
+import React from 'react';
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+interface AiemailresponderProps {
+  // Add props here as needed
+}
 
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import Head from \'next/head\'; import Link from \'next/
-import Head from \'next/head\'; import Link from \'next/
-import Head from \'next/head\'; import Link from \'next/
-import Head from \'next/head\'; import Link from \'next/
+export default function Aiemailresponder({ }: AiemailresponderProps) {
+  return (
+    <div>
+      <h1>Aiemailresponder</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+}

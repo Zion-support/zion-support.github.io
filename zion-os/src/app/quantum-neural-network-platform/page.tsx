@@ -1,14 +1,3 @@
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "Quantum Neural Network Platform - Zion Tech Group",;
-  description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.";
-  keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"};
-export default function QuantumNeuralNetworkPlatformPage() {;
-  return (;
-
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
 import Link from './next / link';,
 export const metadata = {
   title: "Quantum Neural Network Platform - Zion Tech Group",
@@ -21,20 +10,6 @@ function QuantumNeuralNetworkPlatformPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
-import Link from "next/link";
-export const metadata = {title: "Quantum Neural Network Platform - Zion Tech Group";
-  description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.";
-  keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"}
-export default function QuantumNeuralNetworkPlatformPage() {return (;
-import Link from "next/link",;
-export const metadata = {;
-  title: "Quantum Neural Network Platform - Zion Tech Group",;
-  description: "Revolutionary quantum neural network platform that combines quantum computing with artificial intelligence to solve previously intractable problems.";
-  keywords: "quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group"};
-export default function QuantumNeuralNetworkPlatformPage() {;
-  return (;
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
@@ -342,5 +317,3 @@ export default function QuantumNeuralNetworkPlatformPage() {;
       </div>;
     </div>);
 }
-import Link from "next/
-                

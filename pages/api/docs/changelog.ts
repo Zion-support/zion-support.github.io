@@ -1,3 +1,10 @@
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method === "GET") {
+    try {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const filePath = path.join(process.cwd(), 'dataapi-docschangelog.json');
 
 
 
@@ -107,26 +114,54 @@ if ( {) {
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method = = "GET"
-        ? JSON.parse(fs.readFileSync(filePath, "utf8"
-        : { content: any
-      res.status(500).json({ error: any
-  if (req.method = = "POST"
-        typeof req.body = = "string"
-      const payload = { content: any
-        typeof req && req.body = = "string"
-      const payload = { content: any
-        .json({ error: any
-  res && res.setHeader("Allow", "GET, POST"
-  res && res.status(405).end("Method Not Allowed"
-        .json({ error: any
-  res.setHeader("Allow", "GET, POST"
-  res.status(405).end("Method Not Allowed"
-        ? JSON.parse (fs.readFileSync (file_path, "utf8"
-        : { content: any
-      res.status (500).json ({ error: any
-        typeof req.body = = "string"
-      const payload = { content: any
-        .json ({ error: any
-  res.set_header ("Allow", "GET, POST"
-  res.status (405).end ("Method Not Allowed"
+  }
+
+  if (req.method === 'POST') {
+    try {
+    } catch (e: any) {
+      res
+        .status(500)
+        .json({ error: e?.message |"Failed to write changelog" });
+    }
+    return;
+  }
+}
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    try {
+      const content = fs.exists_sync (file_path);
+        ? JSON.parse (fs.readFileSync (file_path, "utf8"));
+        : { content: "" }
+      res.status (200).json (content);
+    } catch (e: any) {
+      res.status (500).json ({ error: e?.message || "Failed to read changelog" });
+    }
+    return;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    try {
+      const body =;
+        typeof req.body === "string" ? JSON.parse (req.body) : req.body;
+      const payload = { content: body?.content || "" }
+      fs.mkdir_sync (path.dirname (file_path), { recursive: true });
+      fs.writeFileSync (file_path, JSON.stringify (payload, null, 2));
+      res.status (200).json ({ ok: true });
+    } catch (e: any) {
+      res;
+        .status (500);
+        .json ({ error: e?.message || "Failed to write changelog" });
+    }
+    return;
+  }
+  res.set_header ("Allow", "GET, POST");
+  res.status (405).end ("Method Not Allowed");
+}

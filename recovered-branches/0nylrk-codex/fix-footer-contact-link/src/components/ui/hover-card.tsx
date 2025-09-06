@@ -1,4 +1,1 @@
-import * as React from &quot;react&quot;
-import * as HoverCardPrimitive from &quot;@radix-ui/
-import { cn } from &quot;@/lib/
-  /
+export { HoverCard, HoverCardTrigger, HoverCardContent }

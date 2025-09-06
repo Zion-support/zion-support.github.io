@@ -1,10 +1,3 @@
-
-
-  return {
-    props: {
-      docs: content as DocsContent,
-    },
-  }}import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data / docs / content.json';
 export type Section = {
@@ -25,7 +18,6 @@ type PageProps = {
 }
 ;
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
-
   return {
     props: {
       docs: content as DocsContent
@@ -51,24 +43,10 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
     props: {
       docs: content as DocsContent}}
 
-
-
-
-
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
-    const id = setTimeout(() => window.print(), 500);
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -95,20 +73,10 @@ type DocsContent = {;
   title: string,;
   sections: Section[];
 };
-type PageProps = {;
-  docs: DocsContent;
-};
 export const getStaticProps: GetStaticProps<PageProps> = async () => {;
   return {;
     props: {;
       docs: content as DocsContent}}
-export default function PrintDocs(): any ({ docs }: PageProps) {;
-  useEffect(() => {;
-    const id = setTimeout(() => window && window.print(), 500);
-
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {;
-    const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id);
   }, []);
   return (
@@ -128,14 +96,6 @@ export default function PrintDocs({ docs }: PageProps) {
                 </pre>;
               ))}          </section>  }, []);
 
-};
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
-    const id = setTimeout(() => window.print(), 500);
-    return () => clearTimeout(id)
-  }, []);
-
-
   return (
     <div className="p-8 max-w-4xl mx-auto">;
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
@@ -147,15 +107,7 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-
-
         ))}
-
-      </div>;
-    </div>;
-  );
-}
-
   );
 }
 export default /**
@@ -197,43 +149,3 @@ function PrintDocs() {
           </section>))}
       </div>;
     </div>);
-
-export const getStaticProps: GetStaticProps<PageProps> = async () => {_return {
-    props: {
-      docs: content as DocsContent}}
-},
-
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
-    const id = setTimeout(() => window.print(), 500),
-    return () => clearTimeout(id)
-  }, []),
-
-  return (
-    <div className=&quot;p-8 max-w-4xl mx-auto&quot;>
-      <h1 className=&quot;text-3xl font-bold mb-6&quot;>{docs.title}</h1>
-      <div className=&quot;space-y-8&quot;>
-        {docs.sections.map((s) => (
-          <section key={s.id}>
-            <h2 className=&quot;text-2xl font-semibold mb-2&quot;>{s.title}</h2>
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
-            {s.code && s.code.map((c, i) => (
-              <pre key={i} className=&quot;mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap&quot;>{c.content}</pre>
-              <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
-            ))}
-          </section>
-        ))}
-      </div>
-    </div>
-  )
-
-}
-
-  );
-}
-
-
-
-import type { GetStaticProps } from 'next'
-import content from '../../../data / docs /
-import content from '../../../data/docs/

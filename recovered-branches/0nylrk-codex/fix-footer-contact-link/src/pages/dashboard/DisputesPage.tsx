@@ -1,18 +1,24 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import { SEO  } from '@/components/
-import { AppHeader  } from '@/layout/
-import { Footer  } from '@/components/
-import { DisputeDashboard  } from '@/components/
-import { ProtectedRoute } from '@/components/
+          description="View and manage disputes between clients and talents"
+=======
+import React from 'react';
+import {SEO} from '@/components / SEO';
+import {AppHeader} from '@/layout / AppHeader';
+import {Footer} from '@/components / Footer';
+import {DisputeDashboard} from '@/components / disputes';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+/**
+ * DisputesPage - Function description
+ */
+function DisputesPage() {
+  return (
+    <ProtectedRoute>;
+      <>;
+        <SEO;
+          title="Dispute Resolution Center | Zion AI Marketplace";
+          description="View and manage disputes between clients and talents";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        />;
+        <AppHeader />;
+        <DisputeDashboard />;
+        <Footer />;
+      </>;

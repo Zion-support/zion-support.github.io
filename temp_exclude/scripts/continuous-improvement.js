@@ -1,6 +1,0 @@
-/usr/bin/
-/usr/bin/
-/usr/bin/
-/usr/bin/
-/usr/bin/
-/usr/bin/

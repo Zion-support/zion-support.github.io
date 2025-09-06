@@ -1,2 +1,2 @@
-import React from \'react\'
-const React from "react"; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} >
+import React from \'react\'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+const React from "react"; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`

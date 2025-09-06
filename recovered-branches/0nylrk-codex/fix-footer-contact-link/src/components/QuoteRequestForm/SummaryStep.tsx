@@ -1,8 +1,19 @@
-import { useEffect, useState } from "react"
-import { QuoteFormData } from "@/types/
-import { Card, CardContent } from "@/components/ui/
-import { Label } from "@/components/ui/
-import { Textarea } from "@/components/ui/
-import { AIMatchingResults } from "@/components/
-import { findMatches, MatchResult } from "@/lib/
-import { toast } from "@/hooks/
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+          queryString;
+          formData && formData.serviceType;
+          3;
+        );
+      } finally {
+        setIsMatching (false);
+      }
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+=======
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}

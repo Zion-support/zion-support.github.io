@@ -37,5 +37,3 @@ const { execSync } = require('child_process')
         "encoding"
       ' Automation Script Fixer and Runner "failed"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;

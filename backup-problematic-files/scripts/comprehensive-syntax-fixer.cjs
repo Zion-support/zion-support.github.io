@@ -1,19 +1,3 @@
-const logMessage = `[${timestamp}] ${message}\n`;
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fixer.log');
-    this.fixedFiles = [];
-    this.corruptedFiles = [];
-    this.mergeConflictFiles = [];
-    this.syntaxErrorFiles = [];
-  }
-  log(message) {
-    const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -57,12 +41,6 @@ class ComprehensiveSyntaxFixer {
   // Fix common syntax errors
   fixSyntaxErrors(content) {
     let fixed = content;
-    // Fix merge conflicts by keeping the HEAD version
-    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
-    // Fix merge conflicts by keeping the HEAD version
-    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
-    fixed = fixed.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1\n');
-    
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
     fixed = fixed.replace(/;\s*"/g, ';\n  "');
@@ -464,8 +442,6 @@ if (require.main === module) {
       process.exit(1);
   }
 }
-
-
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

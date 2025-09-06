@@ -8,10 +8,4 @@ export interface TenantInfo {
   theme_preset: string;
   landing_page_copy: {
     headline: string;
-
-    subtitle: any
-  }
-  is_active: any
-export interface TenantResponse {
-
-  tenant: any
+}

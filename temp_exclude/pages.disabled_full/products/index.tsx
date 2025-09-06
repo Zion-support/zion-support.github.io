@@ -1,14 +1,11 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import type { NextPage } from \'next\'; import Head from \'next/head\'; import Link from \'next/link\'; import { Brain,Cloud,Shield,BarChart3,Globe,Smartphone,Cpu,Zap } from \'lucide-react\'; const \"Products\": NextPage = () => {},{},{},{},{},{},{},{} ]; const categories = [\'All Products\',\'AI Solutions\',\'Cloud Platforms\',\'Analytics Tools\',\'Security Suite\',\'Web Development\',\'Mobile Development\',\'IoT Platforms\',\'Process Automation\' ]; return ( <> <Head> <title>Our Products - Zion Tech Group
+import React from 'react';
+interface IndexProps {
+  // Add props here as needed
+}
+export default function Index({ }: IndexProps) {
+  return (
+    <div>
+      <h1>Index</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );

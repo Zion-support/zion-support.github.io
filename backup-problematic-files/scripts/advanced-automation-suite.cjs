@@ -1,4 +1,3 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Advanced Automation Suite");"console.log("");''"
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -531,12 +530,6 @@ console.log('⚡ Performance optimization completed!');
     this.log('\\n🎉 Advanced automation suite completed!');
   }
 }
-// Run the automation suite
-const automation = new AdvancedAutomationSuite();
-automation.runAllAutomations().catch(console.error);
-    this.log('\\n🎉 Advanced automation suite completed!');
-  }
-}
 // Main execution
 async function main() {
   const startTime = Date.now(;);
@@ -578,7 +571,3 @@ async function main() {
 main().catch(console.error);
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
-automation.runAllAutomations().catch(console.error);
-automation.runAllAutomations().catch(console.error);
-automation.runAllAutomations().catch(console.error);
-automation.runAllAutomations().catch(console.error);

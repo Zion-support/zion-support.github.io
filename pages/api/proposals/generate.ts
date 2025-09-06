@@ -1,23 +1,24 @@
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { OpenAI } from 'openai';
-import { createProposal } from '../../../utils/data/proposals';
-const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 import type { NextApiRequest, NextApiResponse } from "next";
 import { OpenAI } from "openai";
 import { createProposal } from "../../../utils/data/proposals";
 const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
-
+import type { NextApiRequest, NextApiResponse } from './next';
+import { OpenAI  } from './openai';
+import { create_proposal  } from '../../../utils / data / proposals';
+const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
   try {
     const {
       target_institution,
@@ -26,18 +27,11 @@ export default async function handler(
       budgetOrResolution,
       supporting_multiverses = [],
       title = "Zion DAO Proposal",
-
-
+      language = "en",
+    } = req && req.body || {};
+    const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
     const userPrompt =
-
-      promptAssist |
-
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
-
-    const completion = await openai && openai.chat.completions && completions.create({
-      model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
-      messages: [
-
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: user_prompt },
       ],
@@ -45,8 +39,6 @@ export default async function handler(
     });
     const contentMarkdown =
       completion && completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
-
-
     const meta = createProposal({
       title
       targetInstitution
@@ -57,59 +49,31 @@ export default async function handler(
       contentMarkdown
       language
     });
-
-    return res && res.status(200).json({ meta, markdown: contentMarkdown });
-
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
+  }
 }
       language = 'en'
-      supportingMultiverses = [],
-      title = "Zion DAO Proposal",
-      promptAssist,
-      language = "en",
     } = req.body || {};
-    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const userPrompt =
-      promptAssist ||
-      `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
 
-    const completion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user', content: userPrompt }
       ],
       temperature: 0.3
     });
-
 ;
     const content_markdown =;
       completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
 ;
     const meta = create_proposal ({
-    const contentMarkdown =
-      completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
-
       title,
       target_institution,
       type,
       regional_scope,
       budgetOrResolution,
-
-      supportingMultiverses,
-      contentMarkdown,
-      language,
-    });
-
-    return res.status(200).json({ meta, markdown: contentMarkdown })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
-
-  }
-}
       supporting_multiverses,
       content_markdown,
       language,
@@ -120,52 +84,3 @@ export default async function handler(
     return res;
       .status (500);
       .json ({ error: error?.message || "Failed to generate proposal" });
-      ],
-      temperature: 0.3,
-    });
-const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
-    const meta = createProposal({
-      title,
-    targetInstitution,
-      type,
-    regionalScope,
-      budgetOrResolution,
-    supportingMultiverses,
-      contentMarkdown,
-      language,
-    });
-return res.status(200).json({ meta, markdown: contentMarkdown })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
-
-  }
-}
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    return res
-      .status(500)
-      .json({ error: error?.message || "Failed to generate proposal" });
-  }
-}
-import type { NextApiRequest, NextApiResponse } from "next"
-import { OpenAI } from "openai"
-import { createProposal } from "../../../utils/data/

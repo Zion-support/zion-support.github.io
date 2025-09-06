@@ -1,8 +1,13 @@
-
-import React from "react"
-import { WorkspaceHeader } from "./
-import { SharedInbox } from "./
-import { TeamStats } from "./
-import { QuickActions } from "./
-import { RecentActivity } from "./
-import { TalentPool } from "./
+          <QuickActions />;
+          <RecentActivity />;
+          <TalentPool />;
+        </div>;
+          <TeamStats />;
+          <SharedInbox />;
+        </div>;
+      </div>;
+  );
+=======
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}

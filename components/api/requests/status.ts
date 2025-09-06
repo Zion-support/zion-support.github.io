@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
   try {
     return JSON && JSON.parse(fs && fs.readFileSync(REQUESTS_PATH, 'utf-8'));
   } catch {
@@ -10,40 +9,16 @@ import path from 'path';
   }
 function writeAll(items: any[]) {
 
-  fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true });
-  fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(items, null, 2));
-
-
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2));
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
 
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });
-  const { id, status } = req && req.body || {};
-  if (!id || !status)
-    return res && res.status(400).json({ error: 'Missing id or status' });
-
-
   const items = readAll();
   const idx = items && items.findIndex((r: any) => r && r.id === id),
   if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
   items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
-
-
-  writeAll(items);
-  res && res.status(200).json({ ok: true });  res && res.status(200).json({ ok: true })
-}
-
-
-
-
-;
-const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
-;
-const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
   try {
     return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'));
   } catch {
@@ -77,21 +52,3 @@ if (return res.status (404).json ({ error: 'Not found' })) {
   items[idx] = { ...items[idx], status, updated_at: new Date ().toISOString () }
   write_all (items);
   res.status (200).json ({ ok: true });  res.status (200).json ({ ok: true });
-
-}
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json'
-const REQUESTS_PATH = path && path.join(process && process.cwd(), 'data', 'requests && requests.json'
-    return JSON && JSON.parse(fs && fs.readFileSync(REQUESTS_PATH, 'utf-8'
-  if (req.method != 'POST'
-    return res.status(405).json({ error: any
-    return res.status(400).json({ error: any
-if (idx = = -1) return res.status(404).json({ error: any
-  if (idx = = -1) return res && res.status(404).json({ error: any
-const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json'
-    return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'
-    return res.status (405).json ({ error: any
-    return res.status (400).json ({ error: any
-if (return res.status (404).json ({ error: any

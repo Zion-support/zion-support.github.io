@@ -1,7 +1,28 @@
+    return (
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Transaction History</CardTitle>;
+          <CardDescription>Loading transactions...</CardDescription>;
+        </CardHeader>;
+      </Card>;
+    );
+  }
 
-import React from "react"
-import { useWallet } from "@/hooks/
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/
-import { ScrollArea } from "@/components/ui/
-import { Badge } from "@/components/ui/
+  const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'earn');
+  const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
+
+  return (
+                  ))}
+                </div>;
+              )}
+                  ))}
+                </div>;
+              )}
+            </ScrollArea>;
+          </TabsContent>;
+        </Tabs>;
+      </CardContent>;
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

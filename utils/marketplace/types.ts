@@ -1,5 +1,9 @@
 
+
+
+
 export interface Offer {;
+
 
   id: string;
   createdAtIso: string;
@@ -10,9 +14,17 @@ export interface Offer {;
   scopeSummary: string;
   paymentTerms: PaymentTerms;
 
+
+
+
   id: string;
   title: string;
   summary: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
+
+
+
+
+

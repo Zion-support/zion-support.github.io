@@ -1,39 +1,10 @@
-
-
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import fs from 'fs';
 import path from 'path';
-
-
-    routes = json.routes || [];
-    generatedAt = json.generatedAt || ''
-  } catch {}
-  return { props: { routes, generatedAt } }
-}
-
-
-
-export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datasite-map && map.json');
-
-<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import path from 'path';
-type RouteInfo = { path: string, lastModified: string }
-export async function getServerSideProps() {
-<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import path from 'path';
-type RouteInfo = { path: string, lastModified: string },
-export async function getServerSideProps() {;
-  const file = path.join(process.cwd(), 'datasite-map.json');
   let routes: RouteInfo[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -52,29 +23,28 @@ function getServerSideProps() {
     const json = JSON.parse (raw);
     routes = json.routes || [];
     generated_at = json.generated_at || '';
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-    routes = json.routes |[];
-    generatedAt = json.generatedAt |''
-
   } catch {}
   return { props: { routes, generated_at } }
 }
-
-
-    </div>;
-
-
-);
-}
-          </tbody>;
-        </table>;
-      </div>;
-    </div>;
-  );
-}
-
-
+  return (
+    <div className="space-y-6">;
+      <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>;
+      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>;
+      <div className="overflow-auto border rounded">;
+        <table className="min-w-full text-sm">;
+          <thead className="bg-gray-50">;
+            <tr>;
+              <th className="text-left p-2">Route</th>;
+              <th className="text-left p-2">Last Modified</th>;
+            </tr>;
+          </thead>;
+          <tbody>;
+            {routes && routes.map(r => (;
+              <tr key={r && r.path} className="border-t">;
+                <td className="p-2">{r && r.path}</td>;
+                <td className="p-2">{new Date(r && r.lastModified).toLocaleString()}</td>;
+              </tr>;
+            ))}
 export default /**
  * SiteMapIntelPage - Function description
  */
@@ -101,13 +71,3 @@ function SiteMapIntelPage() {
         </table>;
       </div>;
     </div>);
-            <tr>
-              <th className=&quot;text-left p-2&quot;>Route</th>
-              <th className=&quot;text-left p-2&quot;>Last Modified</th>
-    routes = json.routes || [];
-    generatedAt = json.generatedAt || ''
-  } catch {}
-  return { props: { routes, generatedAt } }
-}
-<tr> <th className="text-left p-2" >Route
- <tr> <th className="text-left p-2" >Route

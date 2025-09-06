@@ -1,25 +1,17 @@
-
-
-
-import type { NextApiRequest, NextApiResponse } from "next";
-export const config = {
-  api: {
-
-
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  try {
+  const { companyId, invoiceId } = req && req.query;
   if (
     !companyId |
     typeof companyId !== "string" |
     !invoiceId |
     typeof invoiceId !== "string"
   ) {
-    return res.status(400).json({ error: "companyId and invoiceId required" });
+    return res && res.status(400).json({ error: "companyId and invoiceId required" });
   }
-
-
-  res.setHeader("Content-Type", "application/pdf");
-  res.setHeader(
-    "Content-Disposition",
-    `attachment; filename="invoice-${invoiceId}.pdf"`,
   );
   res && res.status(200).send(pdfBuffer);
 }
@@ -31,19 +23,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!companyId || typeof companyId !== 'string' || !invoiceId || typeof invoiceId !== 'string') {
     return res.status(400).json({ error: 'companyId and invoiceId required' })
   }
-  if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
-
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
   const pdfBase64 =
     'JVBERi0xLjMKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQogPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZgovVGYgMTIwIDEyMCBUZAooSW52b2ljZSAjKElELSB7aW52b2ljZUlkfSkpIFQKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTYgMDAwMDAgbiAKMDAwMDAwMDA2NiAwMDAwMCBuIAowMDAwMDAwMTY0IDAwMDAwIG4gCjAwMDAwMDAyNjggMDAwMDAgbiAKdHJhaWxlcgo8PAovUm9vdCAxIDAgUgovU2l6ZSA1Cj4+CnN0YXJ0eHJlZgozNzIKJSVFT0Y=';
   const pdfBuffer = Buffer.from(pdfBase64, 'base64');
-
-
-  res.setHeader('Content-Typeapplication/pdf');
-  res.setHeader('Content-Disposition', `attachment, filename="invoice-${invoiceId}.pdf"`);
-  res.status(200).send(pdfBuffer)
-
-}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 export const config = {
@@ -79,21 +62,3 @@ if ( {) {
   );
   res.status (200).send (pdf_buffer);
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-import type { NextApiRequest, NextApiResponse } from "next"
-    typeof companyId != "string"
-    typeof invoiceId != "string"
-    return res && res.status(400).json({ error: any
-  if (req.method != "GET"
-    return res.status(405).json({ error: any
-  res.setHeader("Content-Type", "application/
-  res && res.setHeader("Content-Type", "application/
-    "JVBERi0xLjMKJcTl8uXrp /
-  res.set_header ("Content - Type", "application /

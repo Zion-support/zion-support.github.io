@@ -1,8 +1,14 @@
-import * as SheetPrimitive from &quot;@radix-ui/
-import { cn } from &quot;@/lib/
-      &quot;fixed inset-0 z-50 bg-black/
-  /
-        left: &quot;inset-y-0 left-0 h-full w-3/
-          &quot;inset-y-0 right-0 h-full w-3/
-    
-        <span className=&quot;sr-only&quot;>Close
+      ref={ref}
+      className={cn (sheet_variants ({ side }), class_name)}
+      {...props}
+    >;
+      {children}
+    ref={ref}
+    className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
+    {...props}
+  <SheetPrimitive.Description;
+    ref={ref}
+    className={cn (&quot;text - sm text - muted - foreground & quot;, class_name)}
+    {...props}
+  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
+}

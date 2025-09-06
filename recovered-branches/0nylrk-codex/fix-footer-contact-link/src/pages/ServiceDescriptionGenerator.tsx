@@ -1,9 +1,16 @@
+  const { isAuthenticated, isLoading } = useAuth();
 
-import React, { useState } from "react"
-import { Header } from "@/components/
-import { Footer } from "@/components/
-import { ServiceDescriptionForm } from "@/components/services/
-import { GeneratedDescriptionDisplay } from "@/components/services/
-import { SEO } from "@/components/
-import { useAuth } from "@/hooks/
-    return 
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+              <GeneratedDescriptionDisplay
+                description={generatedDescription}
+                onSave={handleDescriptionSave}
+              />;
+            )}
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

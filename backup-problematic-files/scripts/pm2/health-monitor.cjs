@@ -355,11 +355,6 @@ const log = (message) => {}
   
 };
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const log = (message) => {}
-  const timestamp = new Date().toISOString();
-};
 const runCommand = (command, description) => {}
   try {}
     log(`Starting: ${description}`);
@@ -397,14 +392,6 @@ const checkSystemHealth = () => {}
   // Check memory usage;
   const memoryCheck = runCommand('free -m', 'Checking memory usage');
   
-const checkSystemHealth = () => {}
-  log('Checking system health');
-  // Check if the application is running;
-  const appCheck = runCommand('curl -f http://localhost:3000 || echo "App not responding"', 'Checking application health');
-  // Check disk space;
-  const diskCheck = runCommand('df -h .', 'Checking disk space');
-  // Check memory usage;
-  const memoryCheck = runCommand('free -m', 'Checking memory usage');
   return {}
     app: appCheck.success,
     disk: diskCheck.success,
@@ -412,13 +399,6 @@ const checkSystemHealth = () => {}
     overall: appCheck.success && diskCheck.success && memoryCheck.success;
   };
 };
-
-
-
-
-
-
-
 
 
 const generateHealthReport = (results) => {}
@@ -429,13 +409,6 @@ const generateHealthReport = (results) => {}
       status: results.system.overall ? 'HEALTHY' : 'UNHEALTHY'
     };
   };
-  
-  
-  
-  
-  
-  
-  
   
   
   // Save report;
@@ -458,22 +431,10 @@ const main = async () => {}
   // Check system health;
   const systemResults = checkSystemHealth();
   
-  return report;
-};
-const main = async () => {}
-  log('Starting Health Monitor Process');
-  // Check system health;
-  const systemResults = checkSystemHealth();
   // Generate comprehensive report;
   const results = {}
     system: systemResults;
   };
-  
-  const report = generateHealthReport(results);
-  
-  
-  const report = generateHealthReport(results);
-  
   
   const report = generateHealthReport(results);
   
@@ -493,26 +454,12 @@ const main = async () => {}
 };
 
 
-
-
-
-
-
-
-
 // Handle process termination;
 process.on('SIGINT', () => {}
   log('Health Monitor Process interrupted');
   process.exit(0);
 }
 });
-
-
-
-
-
-
-
 
 
 process.on('SIGTERM', () => {}
@@ -522,25 +469,10 @@ process.on('SIGTERM', () => {}
 });
 
 
-
-
-
-
-
-
-
 // Run the main function;
 main().catch(error => {})
   log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
 }
-}
-});});
-});});
-});
-});});
-});
-});});
-});
 });});
 });});

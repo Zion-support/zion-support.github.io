@@ -1,1 +1,1 @@
-import * as AspectRatioPrimitive from &quot;@radix-ui/
+export { AspectRatio }

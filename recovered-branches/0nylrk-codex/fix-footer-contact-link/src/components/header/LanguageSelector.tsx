@@ -1,18 +1,3 @@
-
-
-
-
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
-
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
-
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
@@ -70,17 +55,6 @@ function LanguageSelector() {
   const { t } = use_translation ();
   const { current_language, change_language, supported_languages } = use_language ();
 ;
-import {
-
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-DropdownMenuTrigger,;
-DropdownMenuTrigger,;
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger as_child>;
@@ -100,37 +74,4 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
         {supported_languages.map ((lang) => (
           <DropdownMenuItem;
             key={lang.code}
-
-
-            className={`cursor-pointer ${;
-              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
-
-
-            }`}
-            onClick={() => changeLanguage(lang.code)}
-          >
-            <div className="flex items-center gap-2">
-              <span className="text-lg">{lang.flag}</span>
-              <span>{t(`language.${lang.code}`)}</span>
-            </div>
-          </DropdownMenuItem>
-        ))}
-
-      </DropdownMenuContent>;
-    </DropdownMenu>;
-
-  );
 }
-import React from "react"
-import { useTranslation } from "react-i18next"
-import { Button } from "@/components/ui/
- from "@/components/ui/
-import { useLanguage, SupportedLanguage } from "@/context/
-          className="text-white hover: any
-        className="bg-zion-blue-dark border border-zion-purple/
-                ? "bg-zion-purple/
-                : any
-          className="text - white hover: any
-        className="bg - zion - blue - dark border border - zion - purple /
-                ? "bg - zion - purple /
-                : any

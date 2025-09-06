@@ -1,41 +1,321 @@
-
 import React from 'react'
-import dynamic from 'next/
-import { useAuth } from '@/hooks/
-import { useRequireAuth } from '@/hooks/
-import { Button } from '@/components/ui/
-import { Header } from '@/components/
-import { Badge } from '@/components/ui/
-import { useGetOrdersQuery } from '@/hooks/
-import { useFavorites } from '@/hooks/
-import { useToast } from '@/hooks/
-import { EmptyState } from '@/components/ui/
-import Link from 'next/
-    import('@/components/
-    import('@/components/loyalty/
-    import('@/components/developers/
-    import('@/components/
-    import('@/components/onboarding/
-const loadNotificationFunctions = () => import('@/utils/
-import dynamic from 'next/
-import { useAuth } from '@/hooks/
-import { useRequireAuth } from '@/hooks/
-import { Button } from '@/components/ui/
-import { Header } from '@/components/
-import { Badge } from '@/components/ui/
-import { useGetOrdersQuery } from '@/hooks/
-import { useFavorites } from '@/hooks/
-import { useToast } from '@/hooks/
-import { EmptyState } from '@/components/ui/
-import Link from 'next/
-    import('@/components/
-    import('@/components/loyalty/
-    import('@/components/developers/
-    import('@/components/
-    import('@/components/onboarding/
-const loadNotificationFunctions = () => import('@/utils/
-                    onClick={() => (window.location.href = '/
-                      
-DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search, Calendar, FileText, MessageSquare, Star, ArrowRight } from 'lucide-react'; export default function Dashboard(...args[]): { const stats = [icon: <TrendingUp className="h-6 w-6 text-orange-500" /> }; ]; const recentProjects = [{ id: 1, name: "AI Chatbot Development", status: "In Progress", progress: 75, dueDate: "2024-02-15", priority: "High" }, { id: 2, name: "Cybersecurity Audit", status: "Completed", progress: 100, dueDate: "2024-01-30", priority: "Medium" }, { id: 3, name: "Cloud Migration", status: "Planning", progress: 25, dueDate: "2024-03-01", priority: "High" }, { id: 4, name: "Mobile App Development", status: "In Progress", progress: 60, dueDate: "2024-02-28", priority: "Medium" }; ]; const notifications = [{ id: 1, title: "New project assigned", message: "You have been assigned to the AI Chatbot project", time: "2 hours ago", read: false }, { id: 2, title: "Meeting reminder", message: "Team standup meeting in 30 minutes", time: "4 hours ago", read: false }, { id: 3, title: "System update", message: "Scheduled maintenance completed successfully", time: "1 day ago", read: true }; ]; const quickActions = [{ title: "Create Project", description: "Start a new project", icon: <FileText className="h-8 w-8 text-zion-cyan" />, color: "bg-zion-cyan/10 border-zion-cyan/20" }, { title: "Schedule Meeting", description: "Book a team meeting", icon: <Calendar className="h-8 w-8 text-zion-purple" />, color: "bg-zion-purple/10 border-zion-purple/20" }, { title: "Generate Report", description: "Create analytics report", icon: <BarChart3 className="h-8 w-8 text-zion-cyan" />, color: "bg-zion-cyan/10 border-zion-cyan/20" }, { title: "Support Ticket", description: "Submit support request", icon: <MessageSquare className="h-8 w-8 text-zion-purple" />, color: "bg-zion-purple/10 border-zion-purple/20" } { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' }, { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' }, { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' }, { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' }, { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' }, { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' }; ]; const recentServices = [ { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' }, { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' }, { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' }, { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' }, { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' }; ]; const upcomingEvents = [ { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain }, { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield }, { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud }, { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom }; ]; const quickActions = [ { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' }, { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' }, { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' }, { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' }, { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' }, { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }; ]; const getStatusColor: React.FC = ($2) => { switch(status) {case "Completed":; return "bg-green-100 text-green-800"; case "In Progress":; return "bg-blue-100 text-blue-800"; case "Planning":; return "bg-yellow-100 text-yellow-800"; default:; return "bg-gray-100 text-gray-800"}; const getPriorityColor: React.FC = ($2) => { switch(priority) {case "High":; return "bg-red-100 text-red-800"; case "Medium":; return "bg-yellow-100 text-yellow-800"; case "Low":; return "bg-green-100 text-green-800"; default:; return "bg-gray-100 text-gray-800"}; return(<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"> {} <div className="bg-zion-blue-dark border-b border-zion-purple/20 px-6 py-4"> <div className="flex items-center justify-between"> <div> <h1 className="text-2xl font-bold text-white">Dashboard</h1> <p className="text-zion-slate-light">Welcome back! Here's what's happening today.</p> </div> <div className="flex items-center gap-4"> <button className="relative p-2 text-zion-slate-light hover:text-white transition-colors"> <Bell className="h-6 w-6" /> <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span> </button> <button className="p-2 text-zion-slate-light hover:text-white transition-colors"> <Settings className="h-6 w-6" /> </button> import { BarChart3, Users, TrendingUp, Shield, Cloud, Brain, Zap, Star, Activity, DollarSign, Clock, CheckCircle, AlertCircle, Settings, Bell, Search, Filter, Download, Eye, Edit, Trash2, Plus, ArrowRight, Calendar, Target, Award, Rocket, Globe, Server, Database, Network, Lock, Heart, ShoppingCart, MessageCircle, HelpCircle, FileText, Video, TestTube, Leaf, Atom, Satellite, Cpu, Building, Truck, Mail, Phone, MapPin  } from 'lucide-react'; export default function Dashboard() { const stats = [{ name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' }, { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' }, { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' }, { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' }, { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' }, { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' } ]; const recentServices = [{ name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' }, { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' }, { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' }, { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' }, { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' } ]; const upcomingEvents = [{ title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain }, { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield }, { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud }, { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom } ]; const quickActions = [{ name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' }, { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' }, { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' }, { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' }, { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' }, { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' } ]; return(<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"> {} <div className="bg-white border-b border-gray-200"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"> <div className="flex items-center justify-between"> <div> <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1> <p className="text-gray-600 mt-1">Welcome back! Here's what's happening with your services.</p> </div> <div className="flex items-center space-x-4"> <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors"> <Bell className="h-6 w-6" /> </button> <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors"> <Settings className="h-6 w-6" /> </button> <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold"> ZT </div> </div> </div> </div> </div> initial = { opacity: 0, y: 20 } animate = { opacity: 1, y: 0 } transition = { duration: 0.5, delay: index * 0.1 } key={stat.name} initial = { opacity: 0, y: 20 } animate = { opacity: 1, y: 0 } transition={ delay: index * 0.1   } className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"> <div className="flex items-center justify-between mb-4"> <div className="p-2 bg-zion-purple/20 rounded-lg"> {stat.icon} </div> <span className={`text-sm font-medium ${stat.changeType = = "positive" ? "text-green-400" : "text-red-400" }`}> {stat.change} </span> </div> <h3 className="text-2xl font-bold text-white mb-1">{stat.value}</h3> <p className="text-zion-slate-light text-sm">{stat.title}</p> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> {} <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"> {stats.map(stat, index) => ( <motion.div key={stat.name} initial={ opacity: 0, y: 20 } animate={ opacity: 1, y: 0 } transition={ delay: index * 0.1   } className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"> <div className="flex items-center justify-between"> <div> <p className="text-sm font-medium text-gray-600">{stat.name}</p> <p className="text-2xl font-bold text-gray-900 mt-1">{stat.value}
-DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search, Calendar, FileText, MessageSquare, Star, ArrowRight } from 'lucide-react'; export default function Dashboard (...args[]): { const stats = [icon: <TrendingUp className="h - 6 w - 6 text - orange - 500" /> } ]; const recent_projects = [{ id: 1, name: "AI Chatbot Development", status: "In Progress", progress: 75, due_date: "2024 - 02 - 15", priority: "High" }, { id: 2, name: "Cybersecurity Audit", status: "Completed", progress: 100, due_date: "2024 - 01 - 30", priority: "Medium" }, { id: 3, name: "Cloud Migration", status: "Planning", progress: 25, due_date: "2024 - 03 - 01", priority: "High" }, { id: 4, name: "Mobile App Development", status: "In Progress", progress: 60, due_date: "2024 - 02 - 28", priority: "Medium" } ]; const notifications = [{ id: 1, title: "New project assigned", message: "You have been assigned to the AI Chatbot project", time: "2 hours ago", read: false }, { id: 2, title: "Meeting reminder", message: "Team standup meeting in 30 minutes", time: "4 hours ago", read: false }, { id: 3, title: "System update", message: "Scheduled maintenance completed successfully", time: "1 day ago", read: true } ]; const quick_actions = [{ title: "Create Project", description: "Start a new project", icon: <FileText className="h - 8 w - 8 text - zion - cyan" />, color: "bg - zion - cyan / 10 border - zion - cyan / 20" }, { title: "Schedule Meeting", description: "Book a team meeting", icon: <Calendar className="h - 8 w - 8 text - zion - purple" />, color: "bg - zion - purple / 10 border - zion - purple / 20" }, { title: "Generate Report", description: "Create analytics report", icon: <BarChart3 className="h - 8 w - 8 text - zion - cyan" />, color: "bg - zion - cyan / 10 border - zion - cyan / 20" }, { title: "Support Ticket", description: "Submit support request", icon: <MessageSquare className="h - 8 w - 8 text - zion - purple" />, color: "bg - zion - purple / 10 border - zion - purple / 20" } { name: 'Active Services', value: '12', icon: Zap, change: '+2', change_type: 'positive', color: 'from - blue - 500 to - cyan - 500' }, { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', change_type: 'positive', color: 'from - purple - 500 to - pink - 500' }, { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', change_type: 'positive', color: 'from - indigo - 500 to - blue - 500' }, { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', change_type: 'positive', color: 'from - green - 500 to - emerald - 500' }, { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', change_type: 'positive', color: 'from - orange - 500 to - red - 500' }, { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', change_type: 'negative', color: 'from - teal - 500 to - green - 500' } ]; const recent_services = [ { name: 'AI Business Intelligence', status: 'Active', last_used: '2 hours ago', usage: '85%', icon: Brain, color: 'from - blue - 500 to - indigo - 500' }, { name: 'Cloud DevOps Platform', status: 'Active', last_used: '1 day ago', usage: '92%', icon: Cloud, color: 'from - indigo - 500 to - blue - 500' }, { name: 'AI Cybersecurity Suite', status: 'Active', last_used: '3 days ago', usage: '78%', icon: Shield, color: 'from - red - 500 to - orange - 500' }, { name: 'Quantum Computing Lab', status: 'Active', last_used: '1 week ago', usage: '45%', icon: Atom, color: 'from - purple - 500 to - indigo - 500' }, { name: 'IoT Edge Platform', status: 'Active', last_used: '2 weeks ago', usage: '67%', icon: Network, color: 'from - cyan - 500 to - blue - 500' } ]; const upcoming_events = [ { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain }, { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield }, { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud }, { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom } ]; const quick_actions = [ { name: 'Add New Service', icon: Plus, href: '/services', color: 'from - green - 500 to - emerald - 500' }, { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from - blue - 500 to - indigo - 500' }, { name: 'Security Settings', icon: Shield, href: '/security', color: 'from - red - 500 to - orange - 500' }, { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from - purple - 500 to - pink - 500' }, { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from - yellow - 500 to - orange - 500' }, { name: 'API Documentation', icon: Code, href: '/api - docs', color: 'from - gray - 500 to - slate - 500' } ]; const getStatusColor: React.FC = ($2) => { switch (status) {case "Completed":; return "bg - green - 100 text - green - 800"; case "In Progress":; return "bg - blue - 100 text - blue - 800"; case "Planning":; return "bg - yellow - 100 text - yellow - 800"; default:; return "bg - gray - 100 text - gray - 800"} const getPriorityColor: React.FC = ($2) => { switch (priority) {case "High":; return "bg - red - 100 text - red - 800"; case "Medium":; return "bg - yellow - 100 text - yellow - 800"; case "Low":; return "bg - green - 100 text - green - 800"; default:; return "bg - gray - 100 text - gray - 800"} return (<div className="min - h-screen bg - gradient - to - br from - slate - 50 via - blue - 50 to - indigo - 50"> {} <div className="bg - zion - blue - dark border - b border - zion - purple / 20 px - 6 py - 4"> <div className="flex items - center justify - between"> <div> <h1 className="text - 2xl font - bold text - white">Dashboard
-function Dashboard() { const stats = [{ name: 'Active Services', value: '12', icon: Zap, change: '+2', change_type: 'positive', color: 'from - blue - 500 to - cyan - 500' }, { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', change_type: 'positive', color: 'from - purple - 500 to - pink - 500' }, { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', change_type: 'positive', color: 'from - indigo - 500 to - blue - 500' }, { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', change_type: 'positive', color: 'from - green - 500 to - emerald - 500' }, { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', change_type: 'positive', color: 'from - orange - 500 to - red - 500' }, { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', change_type: 'negative', color: 'from - teal - 500 to - green - 500' } ]; const recent_services = [{ name: 'AI Business Intelligence', status: 'Active', last_used: '2 hours ago', usage: '85%', icon: Brain, color: 'from - blue - 500 to - indigo - 500' }, { name: 'Cloud DevOps Platform', status: 'Active', last_used: '1 day ago', usage: '92%', icon: Cloud, color: 'from - indigo - 500 to - blue - 500' }, { name: 'AI Cybersecurity Suite', status: 'Active', last_used: '3 days ago', usage: '78%', icon: Shield, color: 'from - red - 500 to - orange - 500' }, { name: 'Quantum Computing Lab', status: 'Active', last_used: '1 week ago', usage: '45%', icon: Atom, color: 'from - purple - 500 to - indigo - 500' }, { name: 'IoT Edge Platform', status: 'Active', last_used: '2 weeks ago', usage: '67%', icon: Network, color: 'from - cyan - 500 to - blue - 500' } ]; const upcoming_events = [{ title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain }, { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield }, { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud }, { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom } ]; const quick_actions = [{ name: 'Add New Service', icon: Plus, href: '/services', color: 'from - green - 500 to - emerald - 500' }, { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from - blue - 500 to - indigo - 500' }, { name: 'Security Settings', icon: Shield, href: '/security', color: 'from - red - 500 to - orange - 500' }, { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from - purple - 500 to - pink - 500' }, { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from - yellow - 500 to - orange - 500' }, { name: 'API Documentation', icon: Code, href: '/api - docs', color: 'from - gray - 500 to - slate - 500' } ]; return (<div className="min - h-screen bg - gradient - to - br from - slate - 50 via - blue - 50 to - indigo - 50"> {} <div className="bg - white border - b border - gray - 200"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 6"> <div className="flex items - center justify - between"> <div> <h1 className="text - 3xl font - bold text - gray - 900">Dashboard</h1> <p className="text - gray - 600 mt - 1">Welcome back! Here's what's happening with your services.</p> </div> <div className="flex items - center space - x-4"> <button className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors"> <Bell className="h - 6 w - 6" /> </button> <button className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors"> <Settings className="h - 6 w - 6" /> </button> <div className="w - 10 h - 10 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - full flex items - center justify - center text - white font - semibold"> ZT </div> </div> </div> </div> </div> initial = { opacity: 0, coordinate_y: 20 } animate = { opacity: 1, coordinate_y: 0 } transition = { duration: 0.5, delay: index * 0.1 } key={stat.name} initial = { opacity: 0, coordinate_y: 20 } animate = { opacity: 1, coordinate_y: 0 } transition={ delay: index * 0.1   } className="bg - white rounded - xl shadow - sm border border - gray - 200 p - 6 hover:shadow - md transition - shadow"> <div className="flex items - center justify - between mb - 4"> <div className="p - 2 bg - zion - purple / 20 rounded - lg"> {stat.icon} </div> <span className={`text - sm font - medium ${stat.change_type = = "positive" ? "text - green - 400" : "text - red - 400" }`}> {stat.change} </span> </div> <h3 className="text - 2xl font - bold text - white mb - 1">{stat.value}</h3> <p className="text - zion - slate - light text - sm">{stat.title}</p> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 8"> {} <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mb - 8"> {stats.map (stat, index) => ( <motion.div key={stat.name} initial={ opacity: 0, coordinate_y: 20 } animate={ opacity: 1, coordinate_y: 0 } transition={ delay: index * 0.1   } className="bg - white rounded - xl shadow - sm border border - gray - 200 p - 6 hover:shadow - md transition - shadow"> <div className="flex items - center justify - between"> <div> <p className="text - sm font - medium text - gray - 600">{stat.name}</p> <p className="text - 2xl font - bold text - gray - 900 mt - 1">{stat.value}
+import dynamic from 'next/dynamic'
+import { useAuth } from '@/hooks/useAuth'
+import { useRequireAuth } from '@/hooks/useAuthGuard'
+import { Button } from '@/components/ui/button'
+import { Header } from '@/components/Header'
+import { Badge } from '@/components/ui/badge'
+import {
+  UserCheck
+  Bell
+  MessageSquare
+  LogOut
+  Send
+  Settings
+  FileText
+  Heart
+  Key
+  ShoppingBag
+} from 'lucide-react'
+import { useGetOrdersQuery } from '@/hooks/useOrders'
+import { useFavorites } from '@/hooks/useFavorites'
+import { useToast } from '@/hooks/use-toast'
+import { EmptyState } from '@/components/ui/empty-state'
+import Link from 'next/link'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Lazy load heavy components to prevent router abort
+const CommunityDiscussion = dynamic(
+  () =>
+    import('@/components/CommunityDiscussion').then(mod => ({
+      default: mod.CommunityDiscussion
+    }))
+  {
+    loading: () => (
+      <div className='h-32 bg-zion-blue-light rounded animate-pulse' />
+    )
+    ssr: false
+  }
+)
+const PointsBadge = dynamic(
+  () =>
+    import('@/components/loyalty/PointsBadge').then(mod => ({
+      default: mod.PointsBadge
+    }))
+  {
+    loading: () => (
+      <span className='text-zion-cyan font-medium'>Loading...</span>
+    )
+    ssr: false
+  }
+)
+const ApiKeysManager = dynamic(
+  () =>
+    import('@/components/developers/ApiKeysManager').then(mod => ({
+      default: mod.ApiKeysManager
+    }))
+  {
+    loading: () => (
+      <div className='h-24 bg-zion-blue-light rounded animate-pulse' />
+    )
+    ssr: false
+  }
+)
+const NotificationBell = dynamic(
+  () =>
+    import('@/components/NotificationBell').then(mod => ({
+      default: mod.NotificationBell
+    }))
+  {
+    loading: () => <Bell size={16} className='text-zion-cyan' />
+    ssr: false
+  }
+)
+const GuidedTour = dynamic(
+  () =>
+    import('@/components/onboarding/GuidedTour').then(mod => ({
+      default: mod.GuidedTour
+    }))
+  {
+    ssr: false
+  }
+)
+// Lazy load notification functions
+  const { user, loading } = useRequireAuth(); // This will handle authentication and redirects
+  const { toast } = useToast()
+  // Add safe checks for user ID to prevent premature API calls
+  const userId = user?.id
+  const { data: orders = [], isLoading: ordersLoading } =
+    useGetOrdersQuery(userId)
+  const { favorites } = useFavorites()
+  // Type assertion to work around Supabase User type limitations
+  const userWithExtendedProps = user as any
+const loadNotificationFunctions = () => import("@/utils/notifications"),
+
+export default function Dashboard() {
+  const { logout } = useAuth(),
+  const { user, loading } = useRequireAuth(), // This will handle authentication and redirects
+  const { toast } = useToast(),
+  
+  // Add safe checks for user ID to prevent premature API calls
+  const userId = user?.id,
+  const { data: orders = [], isLoading: ordersLoading } = useGetOrdersQuery(userId),
+  const { favorites } = useFavorites(),
+
+  // Type assertion to work around Supabase User type limitations
+  const userWithExtendedProps = user as any,
+  const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
+  const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading dashboard...</p>
+        </div>
+      </div>
+    )
+  }
+  // useRequireAuth will handle redirect if user is not authenticated
+  if (!user) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Redirecting to login...</p>
+        </div>
+      </div>
+    )
+  }
+  const handleTestNotification = async () => {
+    try {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    <UserCheck size={16} />
+                    Edit Profile
+                  </Button>
+                </div>
+              </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {/* Stats & Metrics */}
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Profile Completion</span>
+                    <span className="text-zion-cyan font-medium">65%</span>
+                  </div>
+                  <div className="w-full bg-zion-blue rounded-full h-2">
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
+                  </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    <PointsBadge />
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">ZION$ Balance</span>
+                    <span className="text-zion-cyan font-medium">
+                      <Link href="/wallet" className="hover:underline">View Wallet</Link>
+                    </span>
+                  </div>
+=======
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Badges Earned</span>
+                    <span className="text-zion-cyan font-medium">3/12</span>
+                  </div>
+                  
+                  {/* Test notification buttons */}
+                  <div className="flex flex-col gap-2 mt-4">
+                    <Button 
+                      className="w-full flex items-center justify-center gap-2"
+                      variant="outline"
+                      onClick={handleTestNotification}
+                    >
+                      <Send size={16} className="text-zion-cyan" />
+                      Send Test Notification
+                    </Button>
+
+                    <Button 
+                      className="w-full flex items-center justify-center gap-2"
+                      variant="outline"
+                      onClick={async () => {
+                        try {
+                          const { createOnboardingNotification } = await loadNotificationFunctions(),
+                          await createOnboardingNotification({
+                            userId: user?.id ?? "",
+                            missingMilestone: 'profile_completed',
+                            userRole: roleForTour
+                          }),
+                          toast({
+                            title: "Onboarding notification sent",
+                            description: "Check your notification center"
+                          })
+                        } catch (error) {
+                          toast({
+                            title: "Error sending notification",
+                            description: "Please try again",
+                            variant: "destructive"})
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        }
+                      }}
+                    >
+                      <Settings size={16} className="text-zion-purple" />
+                      Send Onboarding Nudge
+                    </Button>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  Recent Notifications
+                </h3>
+                <div className="space-y-4">
+                  <Link href="/notifications" className="block" id="notifications-link">
+                    <Button variant="outline" className="w-full">
+                      <Bell className="mr-2 h-4 w-4" />
+                      View All Notifications
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Main Content - Dashboard */}
+            <div className="lg:col-span-2">
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-bold text-white" data-testid="dashboard-header">Dashboard</h2>
+                  <div className="flex items-center gap-2">
+                    <NotificationBell />
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-light flex items-center justify-center mb-2">
+                        <MessageSquare size={24} className="text-white" />
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">First Post</span>
+                    </div>
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
+                        <Bell size={24} className="text-zion-slate-light" />
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">Locked</span>
+                    </div>
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
+                        <span className="text-zion-slate-light text-xl">?</span>
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">Locked</span>
+                    </div>
+                  </div>
+                </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {/* Community Section */}
+                <div id="community-section">
+                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>
+                  <CommunityDiscussion />
+                </div>
+                {/* User Overview */}
+                <div className="mt-8 space-y-8">
+                  <div className="bg-zion-blue-dark rounded-xl p-6">
+                    <h3 className="text-lg font-bold text-white mb-4 flex items-center">
+                      <FileText className="mr-2" size={18} /> Recent Orders
+                    </h3>
+                    {ordersLoading ? (
+                      <p className="text-zion-slate-light">Loading...</p>
+                    ) : orders.length === 0 ? (
+                      <EmptyState
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        ))}
+                      </ul>
+                    )}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        ))}
+                      </ul>
+                    )}
+=======
+                    <div className="mt-2 text-right">;
+                      <Link href="/wishlist" className="text-zion-purple underline">View all</Link>;
+                    </div>;
+                  </div>;
+                  <div className="bg-zion-blue-dark rounded-xl p-6">;
+                    <h3 className="text-lg font-bold text-white mb-4 flex items-center">;
+                      <Key className="mr-2" size={18} /> API Keys;
+                    </h3>;
+                    <ApiKeysManager />;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <GuidedTour role={roleForTour} />;
+    </>;
+  );
+}
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

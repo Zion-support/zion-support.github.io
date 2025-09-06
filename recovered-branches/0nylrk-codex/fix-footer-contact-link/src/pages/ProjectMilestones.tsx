@@ -1,18 +1,24 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import { SEO  } from '@/components/
-import { AppHeader  } from '@/layout/
-import { Footer  } from '@/components/
-import { ProtectedRoute  } from '@/components/
-import { ProjectMilestonesContent } from '@/components/projects/milestones/
+          description="Manage project payment milestones and deliverables"
+=======
+import React from 'react';
+import {SEO} from '@/components / SEO';
+import {AppHeader} from '@/layout / AppHeader';
+import {Footer} from '@/components / Footer';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+import {ProjectMilestonesContent} from '@/components / projects / milestones / ProjectMilestonesContent';
+/**
+ * ProjectMilestones - Function description
+ */
+function ProjectMilestones() {
+  return (
+    <ProtectedRoute>;
+      <>;
+        <SEO;
+          title="Payment Milestones | Zion AI Marketplace";
+          description="Manage project payment milestones and deliverables";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        />;
+        <AppHeader />;
+        <ProjectMilestonesContent />;
+        <Footer />;
+      </>;

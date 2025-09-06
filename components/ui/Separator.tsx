@@ -1,8 +1,18 @@
-import React from "react"
-  orientation?: any
-  className = ""
-  orientation = "horizontal"
-  orientation?: any
-  className = ""
-  orientation = "horizontal"
-      className={`bg-gray-200 ${orientation = = "horizontal" ? "h-px w-full" : any
+interface SeparatorProps {
+  class_name?: string;
+  orientation?: "horizontal" | "vertical";
+}
+}) => {
+=======
+
+interface SeparatorProps {;
+  className?: string;
+  orientation?: "horizontal" | "vertical";
+}
+
+const Separator: React.FC<SeparatorProps> = ({;
+  className = "",;
+  orientation = "horizontal",;
+}) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (

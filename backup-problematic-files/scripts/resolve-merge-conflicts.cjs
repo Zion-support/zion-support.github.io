@@ -1,9 +1,27 @@
-conflictType = 'incoming';
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+console.log('🔧 Starting merge conflict resolution...');
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+      return false;
+    }
+    console.log(`📝 Resolving conflicts in: ${filePath}`);
+    // Split by merge conflict markers
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictType = '';
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      if (line.includes('')) {
+        inConflict = true;
+        conflictType = 'head';
         continue;
       }
-      if (line.includes('')) {
-      
-      if (line.includes('=======')) {
         conflictType = 'incoming';
         continue;
       }
@@ -115,10 +133,6 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
-          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -165,6 +179,3 @@ try {
 } catch (error) {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
-}
-}
-}

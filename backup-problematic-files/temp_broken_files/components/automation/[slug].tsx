@@ -1,6 +1,9 @@
-import type { NextPage } from 'next'
-import Head from 'next/
-import { useRouter } from 'next/
-import EnhancedLayout from '@/components/layout/
-      data = require('@/data/reports/
-    } else if (slug = = 'content-health') {data = require('@/data/reports/
+  }
+return (
+    <EnhancedLayout>;
+      <Head>;
+        <title>{title} - Zion Tech Solutions</title>;
+      </Head>;
+      <h1 className=&quot;text - xl font - semibold mb - 4&quot;>{title}</h1>;
+      {!data ? (
+export default AutomationDetail;

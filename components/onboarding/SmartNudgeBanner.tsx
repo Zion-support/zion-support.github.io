@@ -4,25 +4,131 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-
+  
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import { X } from 'lucide-react'
-  role: any
-  const storageKey = React.useMemo() => `zion-nudge-${role}-${userId ?? 'anon'
-        typeof window != 'undefined'
-      setHidden(v = = 'dismissed'
-  role: any
-  const storageKey = React.useMemo() => `zion-nudge-${role}-${userId ?? 'anon'
-        typeof window != 'undefined'
-      setHidden(v = = 'dismissed');      const v = typeof window != 'undefined'
-      setHidden(v = = 'dismissed'
-      if (typeof window != 'undefined'
-        localStorage && localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window != 'undefined') localStorage && localStorage.setItem(storageKey, 'dismissed'
-      if (typeof window != 'undefined'
-        localStorage && localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window != 'undefined') localStorage && localStorage.setItem(storageKey, 'dismissed'
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
     
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { X } from 'lucide-react';
+
+export type SmartNudgeBannerProps = {;
+=======
+;
+export type SmartNudgeBannerProps = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  role: 'talent' | 'client';
+  user_id?: string | null;
+  message: string;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    } catch {}
+  }, [storageKey]);
+
+  const dismiss = React && React.useCallback(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setHidden(true);
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    } catch {}
+  }, [storageKey]);
+  if (hidden) return null;
+
+  return (
+    <div className='relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'>;
+      <button
+        onClick={dismiss}
+        aria-label='Dismiss'
+        className='absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10'>;
+        <X size={16} />;
+      </button>;
+      <div className='text-sm'>{message}</div>;
+    </div>;
+  );        <X size={16} />;
+      </button>;
+      <div className="text-sm">;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        {message}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+;
+export default /**
+ * SmartNudgeBanner - Function description
+ */
+function SmartNudgeBanner() {
+  const storage_key = React.useMemo (
+    () => `zion - nudge-${role}-${user_id ?? 'anon'}`,
+    [role, user_id]);  const [hidden, set_hidden] = React.useState < boolean>(false);
+;
+  React.useEffect (() => {
+    try {
+      const v =;
+        typeof window !== 'undefined' ? local_storage.get_item (storage_key) : null;
+      set_hidden (v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
+  role: 'talent' | 'client',
+  user_id?: string | null;
+  message: string;
+}
+;
+export default /**
+ * SmartNudgeBanner - Function description
+ */
+function SmartNudgeBanner() {
+  const storage_key = React.useMemo (() => `zion - nudge-${role}-${user_id ?? 'anon'}`, [role, user_id]);
+  const [hidden, set_hidden] = React.useState < boolean>(false);
+;
+  React.useEffect (() => {
+    try {
+      const v =;
+        typeof window !== 'undefined' ? local_storage.get_item (storage_key) : null;
+      set_hidden (v === 'dismissed');      const v = typeof window !== 'undefined' ? local_storage.get_item (storage_key) : null;
+      set_hidden (v === 'dismissed');
+    } catch {}
+  }, [storage_key]);
+;
+  const dismiss = React.useCallback (() => {
+    set_hidden (true);
+    try {
+      if (
+        local_storage.set_item (storage_key, 'dismissed')) {
+  $2
+}    } catch {}      if (local_storage.set_item (storage_key, 'dismissed')) {
+  $2
+}
+    } catch {}
+  }, [storage_key]);
+;
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div className='relative rounded - xl border border - cyan - 300 / 40 dark:border - cyan - 400 / 30 bg - cyan - 50 / 60 dark:bg - cyan - 900 / 20 p - 4'>;
+      <button;
+        on_click={dismiss}
+        aria - label='Dismiss';
+        className='absolute top - 2 right - 2 p - 1 rounded hover:bg - black / 5 dark:hover:bg - white / 10';
+      >;
+        <X size={16} />;
+      </button>;
+      <div className='text - sm'>{message}</div>;
+    </div>);        <X size={16} />;
+      </button>;
+      <div className="text - sm">;
+        {message}
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

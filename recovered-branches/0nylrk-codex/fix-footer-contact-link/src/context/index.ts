@@ -1,3 +1,2 @@
-export { AuthProvider } from './
-export { MessagingProvider } from './
-export { NotificationProvider } from './notifications/
+export { AuthProvider } from './auth';
+export { MessagingProvider } from './MessagingContext';

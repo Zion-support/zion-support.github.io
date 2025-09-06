@@ -1,2 +1,6 @@
-import type { AppProps } from \'next/
-import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return 
+import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
+</Component>';
+import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

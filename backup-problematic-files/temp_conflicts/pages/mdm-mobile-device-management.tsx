@@ -1,7 +1,13 @@
-
-
-
-
+import React from "react";
+import Head from "next/head";
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Shield
+  Star
 import React from "react";
 import Head from "next/head";
 import {
@@ -18,9 +24,6 @@ import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
-
-    s.link.endsWith("/quantum-internet-security-platform"),;
-
   );
   if (!service) return null;
 
@@ -111,14 +114,5 @@ export default function QuantumInternetSecurityPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-
-
 }
 ;
-
-import React from 'react'
-import Head from 'next/
-import UltraAdvancedFuturisticBackground from '../components/ui/
-import Button from '../components/ui/
-import { extraServices } from '../data/
-  const service = extraServices.find(s => s.link.endsWith('/

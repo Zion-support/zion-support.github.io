@@ -100,7 +100,6 @@ export const sanitizeHtml = ("html": string): string => {;
 const fixer = new FinalTypeScriptFixer();
 fixer.run().catch(console.error)
 #!/usr/bin/env node;
-#!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
   log(message, type = "INFO")
@@ -135,7 +134,4 @@ export const sanitizeHtml = ("html")
       this.log(`Fixes "Applied"`)
   this.log("\\n Fixes "Applied": ")
       this.log("\\n� Final TypeScript fixing completed!")
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
-  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)

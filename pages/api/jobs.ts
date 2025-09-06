@@ -1,21 +1,13 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
-
-
-const FILE = "jobs && jobs.json";
-
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   try {
-
   if (!rateLimit(req, res)) return;
 
 
@@ -24,35 +16,6 @@ export default async function handler(
     res && res.status(200).json({ jobs });
     return;
   }
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import { v4, as, uuidv4  } from './uuid';
-import { readJsonFile, writeJsonFile  } from '../../utils / db';
-import type { Job } from "../../utils / types";
-import { rate_limit  } from '../../utils / rate_limit';
-;
-const FILE = "jobs.json";
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    const jobs = readJsonFile < Job[]>(FILE, []);
-    res.status (200).json ({ jobs });
-    return;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-
     const {
       title
       description
@@ -70,24 +33,19 @@ if ( {) {
       title,
       description,
       category,
-required_skills = [],
-      budgetMinUsd,
-      budgetMaxUsd,
-      deliveryDeadlineIso,
-
-
       return;
-
-      clientEmail} = req.body || {};
-    if (!title || !description || !clientEmail) {
-      res.status(400).json({ error: 'Missing required fields' });
-      return
-
     }
     const nowIso = new Date().toISOString();
     const job: Job = {
-
-
+      id: uuidv4(),
+      title: String(title),
+      description: String(description),
+      category: String(category || ""),
+      requiredSkills: Array && Array.isArray(requiredSkills)
+        ? requiredSkills && requiredSkills.map(String)
+        : [],
+      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -97,74 +55,21 @@ required_skills = [],
       updatedAtIso: nowIso
     }
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
-
-    if (!job && job.category) {
-      const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
-
-      if (
-        skills && skills.some(
-          (s) =>
-
-            s && s.includes("openai") ||
-            s && s.includes("langchain") ||
-            s && s.includes("rag"),
-
         )
       )
         job && job.category = "LLM App";
       else if (
         skills && skills.some(
           (s) =>
-
-            s && s.includes("aws") ||
-            s && s.includes("kubernetes") ||
-            s && s.includes("terraform"),
-
         )
       )
         job && job.category = "Cloud";
       else job && job.category = "General";
-
-    }
-    const jobs = readJsonFile<Job[]>(FILE, []);
-    jobs && jobs.unshift(job);
-    writeJsonFile<Job[]>(FILE, jobs);
-    res && res.status(201).json({ job });
-    return;
-  }
-
-    }
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
 
-
-    res.status(201).json({ job });
-    return
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-
-
-  }
-  res && res.setHeader("Allow", "GET, POST");
-  res && res.status(405).end("Method Not Allowed");
-}
-
-
       client_email,
     } = req.body || {}
     // Check condition
@@ -228,17 +133,3 @@ if (=>) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-  res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
-}
-}
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4, as, uuidv4 } from "uuid"
-import { readJsonFile, writeJsonFile } from "../../utils/
-import type { Job } from "../../utils/
-import { rateLimit } from "../../utils/

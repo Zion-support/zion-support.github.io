@@ -1,3 +1,2 @@
-export { AppHeader } from './
-export { AppLayout } from './
-export { MainNavigation } from './
+export { AppHeader } from './AppHeader';
+export { AppLayout } from './AppLayout';

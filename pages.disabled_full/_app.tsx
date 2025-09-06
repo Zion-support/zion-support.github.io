@@ -1,3 +1,6 @@
-import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/
-const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> 
-const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
+const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''"
+import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

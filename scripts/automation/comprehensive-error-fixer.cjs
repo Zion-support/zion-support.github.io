@@ -1,4 +1,3 @@
-#!/usr/bin/env node/usr/bin/env node;
 #!/usr/bin/env node;
 /**;
  * Comprehensive Error Fixer Automation;
@@ -1130,8 +1129,6 @@ module.exports = ComprehensiveErrorFixer;
       return}
     // Build errors are usually resolved by fixing TypeScript and ESLint errors
     // This method will be called after those fixes are applied
-    }
-  async generateFixReport() {
     console.log('✅ Build errors should be resolved by previous fixes')}
   async generateFixReport() {
     console.log('📊 Generating fix report...');
@@ -1144,11 +1141,6 @@ module.exports = ComprehensiveErrorFixer;
   async saveFixReport() {
     const reportPath = path.join(process.cwd(), 'error-fix-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.fixReport, null, 2));
-    }
-  printSummary() {
-    );
-    this.fixesApplied.forEach((fix, index) => {
-      }] ${fix.action || fix.file}`)});
     console.log(`📄 Fix report saved "to": ${reportPath}`)}
   printSummary() {
     console.log('\n🔧 ERROR FIXING SUMMARY');
@@ -1179,5 +1171,3 @@ async function main() {
 module.exports = { ComprehensiveErrorFixer };
 // Run if called directly
 if (require.main === module) {
-  main()}
-  main()}

@@ -1,5 +1,393 @@
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+=======
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';,
+import { Resend } from 'npm: resend@2.0.0';
+// Initialize Resend with API key;
+const resend = new Resend (Deno.env.get ("RESEND_API_KEY"));
+;
+// Initialize Supabase client;
+const supabase_url = Deno.env.get ("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabase = create_client (supabase_url, supabaseServiceKey);
+;
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*";
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface EmailData {
+  user_id: string;
+  email_type: string;
+  display_name: string;
+  user_type: string;
+  days_inactive?: number;
+  onboarding_status?: any;
+    if (!userEmail) {
+      throw new Error("User email not found")
+    }
+    // Generate email content based on email type
+    const { subject, html } = await generateEmail(emailData, userData);
+    // Send email via Resend
+    const emailResponse = await resend && resend.emails.send({
+      from: "Zion AI Marketplace <notifications@zion && zion.ai>";
+      to: userEmail;
+      subject: subject
+      html: html});
+    }
+    // Update job status
+    await supabase
+      .from("scheduled_jobs")
+      .update({
+        status: "completed"
+        completed_at: new Date().toISOString()})
+      .eq("id", jobId);
+    // Update email campaign record
+    await supabase
+      .from("email_campaigns")
+      .update({
+        status: "sent"
+        sent_at: new Date().toISOString()})
+    return new Response(
+      JSON && JSON.stringify({
+        success: true;
+        message: "Email sent successfully"
+        email: emailResponse});
+      {
+        headers: {
+          ...corsHeaders
+          "Content-Type": "application/json"}
+=======
+  job_id?: string,
+  job_title?: string;
+}
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    // Extract job data from request;
+    const job_data = await req.json ();
+    const { id: job_id, payload } = job_data;
+    const email_data = payload as EmailData;
+;
+    // Fetch user's email;
+    const { data: user_data, error: user_error } = await supabase;
+      .from ("profiles");
+      .select ("id, display_name, avatar_url, user_type");
+      .eq ("id", email_data.user_id);
+      .single ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (`Error fetching user data: ${user_error.message}`);
+    }
+    const { data: auth_user, error: auth_error } = await supabase;
+      .from ("auth.users");
+      .select ("email");
+      .eq ("id", email_data.user_id);
+      .single ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (`Error fetching user email: ${auth_error.message}`);
+    }
+    const user_email = auth_user.email;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ("User email not found");
+    }
+    // Generate email content based on email type;
+    const { subject, html } = await generate_email (email_data, user_data);
+;
+    // Send email via Resend;
+    const email_response = await resend.emails.send ({
+      from: "Zion AI Marketplace <notifications@zion.ai>";
+      to: user_email;
+      subject: subject,
+      html: html});
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (`Failed to send email: ${email_response.error.message}`);
+    }
+    // Update job status;
+    await supabase;
+      .from ("scheduled_jobs");
+      .update ({
+        status: "completed",
+        completed_at: new Date ().toISOString ()});
+      .eq ("id", job_id);
+;
+    // Update email campaign record;
+    await supabase;
+      .from ("email_campaigns");
+      .update ({
+        status: "sent",
+        sent_at: new Date ().toISOString ()});
+      .eq ("user_id", email_data.user_id);
+      .eq ("campaign_type", email_data.email_type);
+;
+    return new Response (
+      JSON.stringify ({
+        success: true;
+        message: "Email sent successfully",
+        email: email_response});
+      {
+        headers: {
+          ...cors_headers,
+          "Content - Type": "application / json"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        status: 200}
+    );
+  } catch (error) {
+        error: error.message});
+=======
+    console && console.error("Error in send-retention-email function:", error);
 
-import {serve} from "https: any
-import {createClient} from "https: any
-  let ctaLink = "/
-              
+    return new Response(
+      JSON && JSON.stringify({
+        success: false,
+        error: error && error.message});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+        headers: {
+        status: 500}
+    );
+  }
+});
+      return {
+        subject: `Welcome to Zion AI Marketplace, ${first_name}!`;
+        html: `;
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+            <h2 > Welcome to Zion AI Marketplace!</h2>;
+            <p > Hi ${first_name}, </p>;
+            <p > We're excited to have you join our community of talented AI professionals.</p>;
+            <p > Here's what to do next to get started: </p>;
+            <ol>;
+              <li > Complete your profile to help clients find you</li>;
+              <li > Add your skills and expertise</li>;
+              <li > Set your availability preferences</li>;
+              <li > Browse available jobs and start applying</li>;
+            </ol>;
+            <div style="margin: 25px 0, ">;
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Complete Your Profile</a>;
+            </div>;
+            <p > If you have any questions, just reply to this email.</p>;
+            <p > The Zion AI Marketplace Team</p>;
+          </div>;
+        `}
+    } else {
+      // For clients / employers;
+      return {
+        subject: `Welcome to Zion AI Marketplace, ${first_name}!`;
+        html: `;
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+            <h2 > Welcome to Zion AI Marketplace!</h2>;
+            <p > Hi ${first_name}, </p>;
+            <p > We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
+            <p > Here's what to do next to get started: </p>;
+            <ol>;
+              <li > Complete your company profile</li>;
+              <li > Post your first job or project</li>;
+              <li > Browse talent profiles in our directory</li>;
+              <li > Connect with AI professionals that match your needs</li>;
+            </ol>;
+            <div style="margin: 25px 0, ">;
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Post Your First Job</a>;
+            </div>;
+            <p > If you have any questions, just reply to this email.</p>;
+            <p > The Zion AI Marketplace Team</p>;
+          </div>;
+        `}
+    }
+          nextAction = "complete your profile";
+          ctaLink = "/profile";
+          ctaText = "Complete Your Profile"
+        } else if (!onboarding && onboarding.skills_added) {
+          nextAction = "add your skills to get matched with the right opportunities";
+          ctaLink = "/profile/skills";
+          ctaText = "Add Your Skills"
+        } else if (!onboarding && onboarding.availability_set) {
+          nextAction = "set your availability to help clients find you";
+          ctaLink = "/profile/settings";
+          ctaText = "Set Your Availability"
+        }
+      } else {
+        // For clients
+        if (!onboarding && onboarding.job_posted) {
+          nextAction = "post your first job to start finding talent";
+          ctaLink = "/post-job";
+          ctaText = "Post a Job"
+        } else if (!onboarding && onboarding.talent_invited) {
+          nextAction = "invite talent to speed up your hiring process";
+          ctaLink = "/talent";
+          ctaText = "Find Talent"
+=======
+  } else // Check condition
+if ( {) {
+  $2
+}
+    // Day 3 incomplete action reminder;
+    // Check condition
+if ( {) {
+  $2
+}
+      const onboarding = email_data.onboarding_status;
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          next_action = "complete your profile";
+          cta_link = "/profile";
+          cta_text = "Complete Your Profile";
+        } else // Check condition
+if ( {) {
+  $2
+}
+          next_action = "add your skills to get matched with the right opportunities";
+          cta_link = "/profile / skills";
+          cta_text = "Add Your Skills";
+        } else // Check condition
+if ( {) {
+  $2
+}
+          next_action = "set your availability to help clients find you";
+          cta_link = "/profile / settings";
+          cta_text = "Set Your Availability";
+        }
+      } else {
+        // For clients;
+        // Check condition
+if ( {) {
+  $2
+}
+          next_action = "post your first job to start finding talent";
+          cta_link = "/post - job";
+          cta_text = "Post a Job";
+        } else // Check condition
+if ( {) {
+  $2
+}
+          next_action = "invite talent to speed up your hiring process";
+          cta_link = "/talent";
+          cta_text = "Find Talent";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        }
+      }
+    }
+    return {
+      return {
+        subject: `New projects waiting for your expertise, ${first_name}`;
+        html: `;
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+            <h2 > New opportunities waiting for you!</h2>;
+            <p > Hi ${first_name}, </p>;
+            <p > We've seen new AI projects posted in your area of expertise this week.</p>;
+            <p > Complete your profile this week and unlock premium visibility to stand out to clients looking for talent like you.</p>;
+            <div style="margin: 25px 0, ">;
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">See New Projects</a>;
+            </div>;
+            <p > The Zion AI Marketplace Team</p>;
+          </div>;
+        `}
+    } else {
+      // For clients;
+      return {
+        subject: `Zion's top AI talent this week — don't miss out, ${first_name}`;
+        html: `;
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+            <h2 > This week's top AI talent</h2>;
+            <p > Hi ${first_name}, </p>;
+            <p > We've added new exceptional AI professionals to our talent pool this week who might be perfect for your projects.</p>;
+            <p > Post a job this week and get featured in our newsletter sent to all our talent.</p>;
+            <div style="margin: 25px 0, ">;
+              <a href="${supabase_url}/talent" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Browse Top Talent</a>;
+            </div>;
+            <p > The Zion AI Marketplace Team</p>;
+          </div>;
+        `}
+    }
+      return {
+        subject: `${first_name}, we miss you! Special offer inside`;
+        html: `;
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+            <h2 > We miss you! Special offer inside</h2>;
+            <p > Hi ${first_name}, </p>;
+            <p > It's been a while since we've seen you on Zion AI Marketplace. We've noticed many new jobs that match your skills have been posted.</p>;
+            <p><strong > Special Offer: </strong> Return this week and complete your profile to unlock 2 weeks of premium visibility absolutely free.</p>;
+            <div style="margin: 25px 0, ">;
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Claim Your Offer</a>;
+            </div>;
+            <p > The Zion AI Marketplace Team</p>;
+          </div>;
+        `}
+    } else {
+      // For clients;
+      return {
+        subject: `${first_name}, exclusive hiring discount inside`;
+        html: `;
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+            <h2 > Exclusive hiring discount inside</h2>;
+            <p > Hi ${first_name}, </p>;
+            <p > We haven't seen you for a while on Zion AI Marketplace. Our talent pool has grown significantly since your last visit.</p>;
+            <p><strong > Special Offer: </strong> Post a job this week and receive 20% off our platform fees for your next hire.</p>;
+            <div style="margin: 25px 0, ">;
+              <a href="${supabase_url}/post - job" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Post a Job</a>;
+            </div>;
+            <p > The Zion AI Marketplace Team</p>;
+          </div>;
+        `}
+    }
+  } else // Check condition
+if ( {) {
+  $2
+}
+    // Email for talent not receiving applications;
+    return {
+      subject: `Boost your profile visibility, ${first_name}`;
+      html: `;
+        <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+          <h2 > Boost your profile visibility</h2>;
+          <p > Hi ${first_name}, </p>;
+          <p > We noticed you haven't received applications recently. Here are some tips to make your profile stand out: </p>;
+          <ul>;
+            <li > Add more details to your skills and experience</li>;
+            <li > Upload samples of your work to your portfolio</li>;
+            <li > Make sure your availability is up to date</li>;
+            <li > Adjust your rate if needed to be more competitive</li>;
+          </ul>;
+          <div style="margin: 25px 0, ">;
+            <a href="${supabase_url}/profile" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Update Your Profile</a>;
+          </div>;
+          <p > The Zion AI Marketplace Team</p>;
+        </div>;
+      `}
+  } else // Check condition
+if ( {) {
+  $2
+}
+    // Email for clients with unfilled jobs;
+    return {
+    `}
+}

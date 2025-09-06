@@ -2,10 +2,6 @@
 const fs = require('fs')
 const path = require('path')      return size}}
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')      return size}}
-
 #!/usr/bin/env node
 /**
  * Simple Automation Runner
@@ -142,12 +138,6 @@ async function runSimpleAutomation() {
         "timestamp": new Date().toISOString()
       });
       throw error}
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
   }
   log(message) {
     const timestamp = new Date().toISOString();
@@ -242,7 +232,6 @@ const path = require('path')
       this.results.status = 'failed';
     }
   }
-      
       return size}}
     totalSize = getDirectorySize(buildDir);
     const recommendations = [];
@@ -269,10 +258,11 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-
-
 module.exports = SimpleAutomationRunner;
-module.exports = SimpleAutomationRunner;
+
+module.exports = { runSimpleAutomation }) {
+     {
+  runSimpleAutomation().catch(console.error)}
 
 module.exports = { runSimpleAutomation }) {
      {
@@ -306,8 +296,6 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
-        "status"
-        "status"
         "status"
         "status"
         "status"

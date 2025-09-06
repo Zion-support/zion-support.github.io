@@ -1,6 +1,148 @@
-import React from 'react'
-import * as React from 'react'
-import {Drawer, as, DrawerPrimitive} from 'vaul'
-import {cn} from '@/lib/
-import {cn} from '@/lib /
-    className={cn ('fixed inset - 0 z - 50 bg - black /
+import React from 'react';
+import * as React from 'react';
+import {Drawer, as, DrawerPrimitive} from 'vaul';
+    shouldScaleBackground={shouldScaleBackground}
+    {...props}
+  />;
+);
+=======
+;
+import {cn} from '@/lib / utils';
+;
+const Drawer = ({
+  shouldScaleBackground = true,
+  ...props;
+}: React.ComponentProps < typeof DrawerPrimitive.Root>) =>: any</typeof> (
+  <DrawerPrimitive.Root;
+    shouldScaleBackground={shouldScaleBackground}
+    {...props}
+  />);
+Drawer.display_name = 'Drawer';
+;
+const DrawerTrigger = DrawerPrimitive.Trigger;
+;
+const DrawerPortal = DrawerPrimitive.Portal;
+;
+const DrawerClose = DrawerPrimitive.Close;
+;
+const DrawerOverlay = React.forward_ref<;
+  React.ElementRef < typeof DrawerPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef < typeof DrawerPrimitive.O</typeof > verlay>;
+>(({ class_name, ...props }, ref) => (
+  <DrawerPrimitive.Overlay;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ref={ref}
+    className={cn ('fixed inset - 0 z - 50 bg - black / 80', class_name)}
+    {...props}
+      ref={ref}
+      className={cn(
+        'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background'
+        className
+      )}
+      {...props}>;
+      <div className='mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted' />;
+      {children}
+    </DrawerPrimitive && DrawerPrimitive.Content>;
+  </DrawerPortal>;
+));
+  <div
+    className={cn('grid gap-1 && 1.5 p-4 text-center sm:text-left', className)}
+    {...props}
+  />;
+);
+  <div
+    className={cn('mt-auto flex flex-col gap-2 p-4', className)}
+    {...props}
+  />;
+);
+    ref={ref}
+    className={cn(
+      'text-lg font-semibold leading-none tracking-tight'
+      className
+    )}
+    {...props}
+  />;
+));
+=======
+  />));
+DrawerOverlay.display_name = DrawerPrimitive.Overlay.display_name;
+;
+const DrawerContent = React.forward_ref<;
+  React.ElementRef < typeof DrawerPrimitive.Content>,
+  React.ComponentPropsWithoutRef < typeof DrawerPr</typeof > imitive.Content>;
+>(({ class_name, children, ...props }, ref) => (
+  <DrawerPortal>;
+    <DrawerOverlay />;
+    <DrawerPrimitive.Content;
+      ref={ref}
+      className={cn (
+        'fixed inset - x-0 bottom - 0 z - 50 mt - 24 flex h - auto flex - col rounded - t-[10px] border bg - background',
+        class_name)}
+      {...props}
+    >;
+      <div className='mx - auto mt - 4 h - 2 w-[100px] rounded - full bg - muted' />;
+      {children}
+    </DrawerPrimitive.Content>;
+  </DrawerPortal>));
+DrawerContent.display_name = 'DrawerContent';
+;
+const DrawerHeader = ({
+  class_name,
+  ...props;
+}: React.HTMLAtt</HTMLDivElement > ributes < HTMLDivElement>) =>: any (
+  <div;
+    className={cn ('grid gap - 1.5 p - 4 text - center sm:text - left', class_name)}
+    {...props}
+  />);
+DrawerHeader.display_name = 'DrawerHeader';
+;
+const DrawerFooter = ({
+  class_name,
+  ...props</HTMLDivElement>;
+}: React.HTMLAttributes < HTMLDivElement>) =>: any (
+  <div;
+    className={cn ('mt - auto flex flex - col gap - 2 p - 4', class_name)}
+    {...props}
+  />);
+DrawerFooter.display_name = 'DrawerFooter';
+;
+const DrawerTitle = React.forward_ref<;
+  React.ElementRef < typeof DrawerPrimitive.Title>,
+  R</typeof > eact.ComponentPropsWithoutRef < typeof DrawerPrimitive.Title>;
+>(({ class_name, ...props }, ref) => (
+  <DrawerPrimitive.Title;
+    ref={ref}
+    className={cn (
+      'text - lg font - semibold leading - none tracking - tight',
+      class_name)}
+    {...props}
+  />));
+DrawerTitle.display_name = DrawerPrimitive.Title.display_name;
+;
+const DrawerDescription = React.forward_ref<;
+  React.ElementRef < typeof DrawerPrimitive.Description>,
+</typeof>  React.ComponentPropsWithoutRef < typeof DrawerPrimitive.Description>;
+>(({ class_name, ...props }, ref) => (
+  <DrawerPrimitive.Description;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ref={ref}
+    className={cn ('text - sm text - muted - foreground', class_name)}
+    {...props}
+=======
+  />));
+DrawerDescription.display_name = DrawerPrimitive.Description.display_name;
+;
+export {
+  Drawer,
+  DrawerPortal,
+  DrawerOverlay,
+  DrawerTrigger,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerFooter,
+  DrawerTitle,
+  DrawerDescription,
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

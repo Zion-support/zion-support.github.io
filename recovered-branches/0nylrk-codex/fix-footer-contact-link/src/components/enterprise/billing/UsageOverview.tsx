@@ -1,5 +1,13 @@
+    }
+  }
 
-import React from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/
-import { Progress } from "@/components/ui/
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/
+  return (
+              Historical usage data will be available after your first full billing cycle.;
+            </div>;
+          </TabsContent>;
+        </Tabs>;
+      </CardContent>;
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

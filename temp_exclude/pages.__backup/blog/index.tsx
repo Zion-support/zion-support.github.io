@@ -1,8 +1,1 @@
-import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/
-import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/
-import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/
-import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/
-import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/
-import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/
-import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/
-import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

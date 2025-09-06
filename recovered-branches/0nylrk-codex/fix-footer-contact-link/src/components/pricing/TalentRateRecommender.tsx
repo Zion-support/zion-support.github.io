@@ -1,6 +1,113 @@
+  skills;
+  years_experience;
+  location;
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
+  const { user } = useAuth();
 
-import React, { useState } from "react"
-import { Button } from "@/components/ui/
- from "@/services/
-import { PricingSuggestionBox } from "./
-import { useAuth } from "@/hooks/
+    }
+    setIsLoading(true);
+    try {;
+      const params: TalentRateParams = {;
+        skills;
+      const result = await getTalentRateSuggestion(params);
+      setSuggestion(result);
+    } catch (error) {;
+      console && console.error("Error generating rate suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+      }
+    }
+  }
+  return (
+    <div className="space-y-4">;
+      <div>;
+        {!suggestion && !isLoading ? (;
+          <Button
+            type="button"
+            variant="outline"
+            onClick={generateSuggestion}
+          <PricingSuggestionBox
+=======
+  onSuggestionApplied,
+  rate_type}) => {
+  const [is_loading, setIsLoading] = useState (false);
+  const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
+  const { user } = use_auth ();
+;
+  const generate_suggestion = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      return;
+    }
+    setIsLoading (true);
+    try {
+      const params: TalentRateParams = {
+        skills;
+        years_experience,
+        location}
+;
+      const result = await getTalentRateSuggestion (params);
+      set_suggestion (result);
+    } catch (error) {
+      console.error ("Error generating rate suggestion:", error);
+    } finally {
+      setIsLoading (false);
+    }
+  }
+;
+  const handleApplySuggestion = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      // We'll use the middle of the range as the suggested rate;
+      const suggested_rate = Math.round ((suggestion.min_rate + suggestion.max_rate) / 2);
+      onSuggestionApplied (suggested_rate);
+;
+      // Track this suggestion application;
+      // Check condition
+if ( {) {
+  $2
+}
+        trackPricingSuggestion ({
+          user_id: user.id,
+          suggestion_type: 'talent',
+          suggested_min: suggestion.min_rate,
+          suggested_max: suggestion.max_rate,
+          actual_value: suggested_rate,
+          accepted: true;
+        });
+      }
+    }
+  }
+;
+  return (
+    <div className="space - y-4">;
+      <div>;
+        {!suggestion && !is_loading ? (
+          <Button;
+            type="button";
+            variant="outline";
+            on_click={generate_suggestion}
+            disabled={skills.length === 0 || years_experience <= 0}
+            className="w - full";
+          >;
+            <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
+          </Button>) : (
+          <PricingSuggestionBox;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            suggestion={suggestion}
+            is_loading={is_loading}
+            onApplySuggestion={handleApplySuggestion}
+=======
+            rate_type={rate_type}
+          />)}
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

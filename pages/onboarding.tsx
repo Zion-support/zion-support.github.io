@@ -1,1 +1,4 @@
-import OnboardingWizard from '../components/onboarding/
+    <div>;
+      <OnboardingWizard />;
+    </div>);
+}

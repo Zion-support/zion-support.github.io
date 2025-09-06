@@ -1,4 +1,4 @@
- Define the shape of a message;
+// Define the shape of a message;
 export interface Message {
   id: string;
   sender_id: string;
@@ -8,22 +8,23 @@ export interface Message {
   read: boolean;
   sender_name?: string;
   sender_avatar?: string;
-
-  attachment_url?: any
 export interface Conversation {
   id: string;
   user_id: string;
   other_user: {
     id: string;
     name: string;
-
-    avatar_url?: any
   }
   name: string;
   avatar_url?: string;
   last_message?: {
-    content: any
   }
   updated_at: string;
   unread_count: number;
-  context_type?: any
+  context_type?: 'job' | 'talent' | 'general';
+export interface ConversationContextData {
+  title?: string;
+  description?: string;
+  image_url?: string;
+}
+}

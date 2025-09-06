@@ -1,6 +1,6 @@
-/usr/bin/
-/usr/bin/env node/usr/bin/env node/usr/bin/
-/usr/bin/
-/usr/bin/
-/usr/bin/env node/usr/bin/env node/usr/bin/
-/usr/bin/
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+#!/usr/bin/"env": node {
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env: node console.log(" Fixing:"; async function main() {""
+#!/usr/bin/"env": node _console.log("🔧 Fixing:"; async function main() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

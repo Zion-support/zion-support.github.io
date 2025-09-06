@@ -1,11 +1,1 @@
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
-export const getWallet = () => axios.get(/api/v1/
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

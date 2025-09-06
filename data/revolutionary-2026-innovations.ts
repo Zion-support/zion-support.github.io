@@ -11,8 +11,14 @@ export interface Revolutionary2026Innovation {
   contact_info: {
     mobile: string;
     email: string;
-
-    address: string;
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
   }
 ];
   id: string, name: string,
@@ -30,12 +36,6 @@ export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
     id: "2026-revolutionary-innovation", name: "2026 Revolutionary Innovation Platform",
     tagline: "Breakthrough innovations for 2026", price: "$399/month",
     description: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
-    id: '2026-revolutionary-innovation'
-    name: '2026 Revolutionary Innovation Platform'
-    tagline: 'Breakthrough innovations for 2026'
-    price: '$399/month'
-    description:
-      'Platform showcasing revolutionary innovations and breakthrough technologies for 2026.'
     features: [
       "Revolutionary innovations";
       "Breakthrough technologies";
@@ -57,37 +57,3 @@ export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
   }
 ];
 ;
-    id: "2026-revolutionary-innovation",
-    name: "2026 Revolutionary Innovation Platform",
-    tagline: "Breakthrough innovations for 2026",
-    price: "$399/month",
-    description: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
-    features: [
-      "Revolutionary innovations",
-      "Breakthrough technologies",
-      "Future capabilities",
-      "Innovation platform",
-      "Expert insights"
-    ],
-    link: "/services/2026-revolutionary-innovation",
-    category: "Revolutionary 2026 Innovations",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
-  {
-    id: any

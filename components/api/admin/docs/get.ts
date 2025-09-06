@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-
 const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json');
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = req && req.headers['x-admin-token'] as string | undefined,
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
@@ -15,9 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' });
   }
-
-
-
 ;
 const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
 ;
@@ -42,29 +38,3 @@ if ( {) {
     res.status (500).json ({ error: 'Failed to read content' });
   }  } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
-
-    res.status(500).json({ error: 'Failed to read content' })
-  }
-}
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-const CONTENT_PATH = path.join(process.cwd(), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json'
-  const token = req.headers['x-admin-token'
-    return res.status(403).json({ error: any
-const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json'
-  const token = req && req.headers['x-admin-token'
-    return res && res.status(403).json({ error: any
-    const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8'
-    res && res.status(500).json({ error: any
-    res && res.status(500).json({ error: any
-    res && res.status(500).json({ error: any
-    const data = fs.readFileSync(CONTENT_PATH, 'utf8'
-    res.status(500).json({ error: any
-const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json'
-  const token = req.headers['x - admin - token'
-    return res.status (403).json ({ error: any
-    const data = fs.readFileSync (CONTENT_PATH, 'utf8'
-    res.status (500).json ({ error: any
-    res.status (500).json ({ error: any
-    res.status (500).json ({ error: any

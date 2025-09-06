@@ -1,15 +1,298 @@
-import {;
-  AlertTriangle,;
-  ExternalLink,;
-  RefreshCw,;
-  Settings,;
-  CheckCircle,;
- from 'lucide-react';import { Button } from '@/components/ui/
-import { Button } from '@/components/ui/
-import { Alert, AlertDescription } from '@/components/ui/
-import Link from 'next/
- from 'lucide-react'; import { Button } from '@/components/ui/
-import { Button } from '@/components/ui/
-import { Alert, AlertDescription } from '@/components/ui/
-import { Button  } from '@/components/ui/
-import { Alert, AlertDescription } from '@/components/ui/
+} from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+interface AuthConfigurationErrorProps {
+  onRetry?: () => void;
+  showSetupButton?: boolean
+
+export function AuthConfigurationError({
+  onRetry
+  showSetupButton = true
+}: AuthConfigurationErrorProps) {
+  const handleRefresh = () => {
+    if (onRetry) {
+      onRetry()
+    } else {
+      window.location.reload() }
+  }
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
+      <div className='max-w-2xl w-full'>
+export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {
+  const handleRefresh = () => {
+    if (onRetry) {
+      onRetry()
+    } else {
+      window.location.reload()
+    }
+  }
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
+      <div className='max-w-2xl w-full'>
+        {/* Main Error Card */}
+        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>
+          <div className='text-center mb-6'>
+            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>
+              <AlertTriangle className='h-8 w-8 text-red-600' />
+            </div>
+            <h1 className='text-3xl font-bold text-gray-900 mb-2'>
+              Authentication Service Unavailable
+            </h1>
+            <p className='text-gray-600'>
+              The sign-up system needs to be configured before users can create
+              accounts
+            </p>
+          </div>
+          <Alert variant='destructive' className='mb-6'>
+            <AlertTriangle className='h-4 w-4' />
+            <AlertDescription>
+              <strong>Critical Issue #1:</strong> Auth0 environment variables
+              are not configured. New users cannot sign up until this is
+              resolved.            </AlertDescription>
+          </Alert>
+          {/* Technical Details */}        {/* Main Error Card */}
+=======
+import React from 'react',;
+import Link from 'next/link',;
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+interface AuthConfigurationErrorProps {;
+  onRetry?: () => void,;
+  showSetupButton?: boolean;
+}
+;
+export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {;
+  const handleRefresh = () => {;
+    if (onRetry) {;
+      onRetry();
+    } else {;
+      window.location.reload();
+    }
+  },
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
+      <div className="max-w-2xl w-full">
+        {/* Main Error Card */}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
+          <div className="text-center mb-6">
+            <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
+              <AlertTriangle className="h-8 w-8 text-red-600" />
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              Authentication Service Unavailable
+            </h1>
+            <p className="text-gray-600">
+              The sign-up system needs to be configured before users can create accounts
+            </p>
+          </div>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <Alert variant="destructive" className="mb-6">
+            <AlertTriangle className="h-4 w-4" />
+            <AlertDescription>
+              <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              New users cannot sign up until this is resolved.
+            </AlertDescription>
+          </Alert>
+          {/* Technical Details */}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
+            <ul className="text-sm text-gray-700 space-y-1">
+              <li>• AUTH0_SECRET</li>
+              <li>• AUTH0_BASE_URL</li>
+              <li>• AUTH0_ISSUER_BASE_URL</li>
+              <li>• AUTH0_CLIENT_ID</li>
+              <li>• AUTH0_CLIENT_SECRET</li>
+            </ul>
+          </div>
+          {/* Action Buttons */}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
+              >
+                <Settings className="w-4 h-4 mr-2" />
+                Setup Guide
+              </Button>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              Check Again
+            </Button>
+          </div>
+          {/* Quick Setup Steps */}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <div>
+                  <strong>Create Auth0 Account:</strong>
+                  <br />
+                  <a 
+                    href="https://manage.auth0.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline inline-flex items-center gap-1"
+                  >
+                    Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />
+                  </Link>
+                </div>
+              </li>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <li className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
+                <div>
+                  <strong>Create Application:</strong>
+                  <br />
+                  Create a "Regular Web Application" named "Zion AI Marketplace"
+                </div>
+              </li>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <div>
+                  <strong>Configure Environment:</strong>
+                  <br />
+                  Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
+                </div>
+              </li>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+        {/* Alternative Actions Card */}
+        <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
+          <h3 className="font-semibold text-blue-900 mb-3">Alternative Actions:</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link 
+              href="/marketplace" 
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+            >
+              <span>Browse Marketplace</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+=======
+            
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            <Link 
+              href="/talent" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+            >
+              <span>View Talent Pool</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+=======
+            
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            <Link 
+              href="/help" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+            >
+              <span>Contact Support</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+            <Link 
+              href="/status" 
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+            >
+              <span>System Status</span>
+              <ExternalLink className='w-4 h-4' />
+            </Link>
+            <Link
+              href='/talent'
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
+            >
+              <span>View Talent Pool</span>
+              <ExternalLink className='w-4 h-4' />
+            </Link>
+            <Link
+              href='/help'
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
+            >
+              <span>Contact Support</span>
+              <ExternalLink className='w-4 h-4' />
+            </Link>
+            <Link
+              href='/status'
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
+            >
+              <span>System Status</span>
+              <ExternalLink className='w-4 h-4' />            </Link>              <ExternalLink className="w-4 h-4" />
+            </Link>
+=======
+=======
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </div>
+        </div>
+        {/* Setup Script Info */}
+        {showSetupButton && (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </div>
+              <p className="text-sm text-green-600 mb-3">
+                Run the setup script to configure Auth0 interactively:
+              </p>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
+                npm run setup:auth0
+              </code>
+            </div>
+          </div>
+        )}
+        {/* Footer */}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              AUTH0_SETUP_GUIDE_ISSUE_1.md
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+=======
+        <div className="mt-6 text-center text-sm text-gray-500">;
+          <p>;
+            For detailed instructions, see{' '}
+            <button;
+              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+              className="text-blue-600 hover: underline";
+            >;
+              AUTH0_SETUP_GUIDE_ISSUE_1.md;
+            </button>;
+          </p>;
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+;
+export default AuthConfigurationError;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -640,5 +640,3 @@ const { execSync } = require('child_process')
         "riskLevel"
     console.error(' Security audit "failed")
       ' Enhanced automation script creation "failed"
-      ' Enhanced automation script creation "failed"
-      ' Enhanced automation script creation "failed"

@@ -1,6 +1,66 @@
+  user: UserWithProfile;
+  active_conversation: Conversation | null;
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+        (payload) => {
+          // Update messages if the conversation is selected
+          if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {
+            setActiveMessages(prev => [...prev, payload && payload.new as Message])
+          }
+          // Update conversations
+          fetchConversations();
+          // Show toast notification for new message
+          toast({
+          })
+        }
+      )
+      .subscribe();
 
-import { useEffect  } from 'react'
-import { supabase  } from '@/integrations/supabase/
-import { UserProfile, UserDetails  } from '@/types/
-import { Message, Conversation  } from '@/types/
-import { toast } from '@/hooks/
+    return () => {
+      supabase && supabase.removeChannel(subscription)
+    }
+  }, [user, activeConversation, fetchConversations, setActiveMessages])
+=======
+  fetch_conversations: () => Promise < void>) {
+  // Setup real - time subscription when user is logged in;
+  useEffect (() => {
+    // Check condition
+if (return, ) {
+  $2
+}
+    // Subscribe to new messages;
+    const subscription = supabase;
+      .channel ('messages');
+      .on (
+        'postgres_changes',
+        {
+          event: 'INSERT',
+          schema: 'public',
+          table: 'messages',
+          filter: `recipient_id = eq.${user.id}`;
+        },
+        (payload) => {
+          // Update messages if the conversation is selected;
+          // Check condition
+if ( {) {
+  $2
+}
+            setActiveMessages (prev => [...prev, payload.new as Message]);
+          }
+          // Update conversations;
+          fetch_conversations ();
+;
+          // Show toast notification for new message;
+          toast ({
+            title: `New message from ${payload.new.sender_name || 'Someone'}`;
+            description: payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');
+          });
+        }
+      );
+      .subscribe ();
+;
+    return () => {
+      supabase.remove_channel (subscription);
+    }
+  }, [user, active_conversation, fetch_conversations, setActiveMessages]);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}

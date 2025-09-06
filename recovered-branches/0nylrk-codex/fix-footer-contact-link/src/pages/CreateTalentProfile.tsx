@@ -1,13 +1,10 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
+            Showcase your skills to top clients and employers. Create a professional profile;
+            to get discovered for AI and tech projects on the Zion Marketplace.;
+          </p>;
+        </div>;
+=======
+        <TalentRegistrationForm />;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

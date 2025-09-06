@@ -1,34 +1,13 @@
- Polyfill fetch and enable fetch mocks;
-import 'whatwg-fetch'
-import fetchMock from 'jest-fetch-mock'
-import '@testing-library/
-process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: any
-jest.mock('@/integrations/supabase/
-jest.mock('firebase/
-jest.mock('firebase/
-    const fullPath = [basePath, pathOrId, ...pathSegments].filter(Boolean).join('/
-      //
-      // For v8 style: db.doc('path/
-    //
-    //
-jest.mock('firebase/
-  //
-jest.mock('firebase/
-    name: path ? path.substring(path.lastIndexOf('/
-    fullPath: any
-jest.mock('@/context/auth/
-jest.mock('@/context/
-jest.mock('@/context/
-jest.mock('@/context/
-    //
-jest.mock('@/context/
-jest.mock('@/hooks/
-jest.mock('@supabase/
-jest.mock('@supabase/ssr/dist/main/
- When a module imports '@/
-jest.mock('@/
- Mock @supabase/
-jest.mock('@supabase/
-jest.mock('@/hooks/
-jest.mock('msw/
-jest.mock('@/components/search/
+// Polyfill fetch and enable fetch mocks;
+// Set up a mock for Vite environment variables accessed via import.meta.env;
+// This assumes that Babel (via babel - plugin - transform - import - meta or similar);
+// will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
+// or that import.meta itself is transformed into an object where 'env' can be populated.;
+  return {
+    // Named export expected in `import { vi } from 'vitest'` statements;
+    vi: {
+  global.IntersectionObserver = MockIntersectionObserver;
+}
+// Ensure all code paths use the mock implementation;
+// Some services import the global fetch reference before jest - fetch - mock is enabled.;
+// Override it explicitly so those modules receive the mocked version.;

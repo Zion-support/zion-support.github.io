@@ -1,5 +1,35 @@
-
-
+import Layout from '../../components/Layout';
+import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { Heart, Shield, Database, Users, Activity, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+    icon: Heart,
+    title: 'Patient Data Management,',
+    description: 'Secure, HIPAA-compliant systems for managing patient records and medical data.',
+  },
+  {}
+    icon: Shield,
+    title: 'Healthcare Security,',
+    description: 'Advanced cybersecurity solutions designed specifically for healthcare environments.'';
+  },
+  {}
+    icon: Database,
+    title: 'Electronic Health Records,',
+    description: 'Custom EHR solutions that integrate seamlessly with existing healthcare workflows.'';
+  },
+  {}
+    icon: Users,
+    title: 'Telemedicine Platforms,',
+    description: 'Remote consultation and patient monitoring systems for modern healthcare delivery.'';
+  },
+  {}
+    icon: Activity,
+    title: 'Health Analytics,',
+    description: 'AI-powered analytics for population health management and predictive insights.'';
+import Layout from '../../components/Layout';
+import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
   {
     icon: Heart,
@@ -18,11 +48,7 @@ const features = [
   },
   {
     icon: Users,
-
-
 export default function HealthcareSolutions() {;
-
-
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -30,12 +56,6 @@ export default function HealthcareSolutions() {;
       keywords="healthcare solutions, HIPAA compliance, electronic health records, patient management, healthcare technology">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-
-  
-    >
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-
         <section className="bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -67,46 +87,21 @@ export default function HealthcareSolutions() {;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Built specifically for healthcare organizations with compliance, security, and patient care in mind.
               </p>
-
-
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
-
-
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>,
-          </div>;
-        </section>;
-        {/* Solutions List */}
-        <section className="py-20 bg-gray-800/30">"
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Healthcare Solutions;
               </h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions.map((solution, index) => (,
-                  <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
-                    <span className="text-gray-300 text-lg">{solution}</span>"
-                  </div>;
-                ))}
-              </div>,
             </div>;
           </div>;
         </section>;
         {/* Compliance Section */}
-        <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="bg-gray-800/50 rounded-2xl p-12">";
               <div className="text-center mb-12">";
@@ -114,7 +109,6 @@ export default function HealthcareSolutions() {;
                   HIPAA Compliant & Secure;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                  All our healthcare solutions are built with security and compliance in mind, 
                   ensuring your patient data is protected and your organization meets regulatory requirements.;
                 </p>;
               </div>;
@@ -145,7 +139,6 @@ export default function HealthcareSolutions() {;
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
               <h2 className="text-4xl font-bold text-white mb-6">";
@@ -169,26 +162,6 @@ export default function HealthcareSolutions() {;
       </div>;
     </Layout>;
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Improving Healthcare Delivery
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our healthcare solutions are designed to improve patient outcomes, streamline operations,
-                  and ensure compliance with healthcare regulations.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-
-
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -279,10 +252,6 @@ export default function HealthcareSolutions() {;
             </div>;
           </div>;
         </section>;
-
-
-
-
             </div>
           </div>
         </section>
@@ -307,14 +276,35 @@ export default function HealthcareSolutions() {;
           </div>
         </section>
       </div>
-
-
   );
-import Layout from '../../components/
-import Layout from '../../components/
-import Layout from '../../components/
-import Head from 'next/
-import Link from 'next/
-import Layout from '../../components/
-import Layout from '../../components/
-import Layout from '../../components/
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-900 text-white">;
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+              Ready to Improve Healthcare Delivery?;
+            </h2>;
+            <p className="text-xl mb-8 max-w-3xl mx-auto">;
+              Contact our healthcare solutions team to discuss your specific requirements;
+              and discover how we can help transform your healthcare organization.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">;
+                Contact Healthcare Team;
+              </button>;
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">;
+                Download Healthcare Brochure;
+              </button>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+    </Layout>;
+    </>;
+    </Layout>;
+    </>;
+    </Layout>;
+  );
+    </>;
+  ),;
+}

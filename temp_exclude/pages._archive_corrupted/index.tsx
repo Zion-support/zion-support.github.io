@@ -1,19 +1,70 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-  const stats = [{ "number": any
-    { "number": any
-    { "number": any
-    { "number": any
-import React,{ useState,useCallback,memo } from 'react'; import Link from 'next/link'; import Navigation from '../src/components/Navigation'; import Footer from '../src/components/Footer'; import Sidebar from '../src/components/Sidebar'; import SEOHead from '../src/components/seo/SEOHead'; import { ArrowRight,CheckCircle,Star,Users,Zap,Shield,Globe,TrendingUp,Award,Clock,Brain,Cloud,Database,Network,Target,Phone,Mail,Menu,Server,Smartphone,MapPin } from 'lucide-react'; const Home = memo() => { const [sidebarOpen,setSidebarOpen] = useState(false); const handleSidebarToggle = useCallback() => { setSidebarOpen(prev => !prev)},[]); const handleSidebarClose = useCallback() => { setSidebarOpen(false)},[]); const structuredData = { "@context": "https: "@type": "Organization","name": "Zion Tech Group","url": "https: "logo": "https: "description": "Leading provider of revolutionary AI services,IT solutions,and micro SaaS development","address": { "@type": "PostalAddress","streetAddress": "364 E Main St STE 1008","addressLocality": "Middletown","addressRegion": "DE","postalCode": "19709","addressCountry": "US" },"contactPoint": { "@type": "ContactPoint","telephone": "+1-302-464-0950","contactType": "customer service","email": "kleber@ziontechgroup && ziontechgroup.com" },"sameAs": [ "https: ],"foundingDate": "2020","numberOfEmployees": "10-50","industry": "Technology Services","services": [ "AI Services","IT Solutions","Micro SaaS Development","Cloud Infrastructure","Cybersecurity","Digital Transformation" ] }; const stats = [ { number: '500+',label: 'Projects Completed' } { number: '50+',label: 'Happy Clients' } { number: '99 && 99.9%',label: 'Uptime Guarantee' } { number: '24/7',label: 'Support Available' } ]; const services = [ { title: 'AI Services',description: 'Cutting-edge artificial intelligence solutions',icon: Brai n,href: '/ai-services' },{ title: 'IT Services',description: 'Comprehensive IT infrastructure and cloud solutions',icon: Serve r,href: '/it-services' },{ title: 'Micro SaaS',description: 'Custom software-as-a-service applications',icon: Smartphon e,href: '/micro-saas' },{ title: 'All Services',description: 'Complete technology solutions overview',icon: Glob e,href: any
-import React,{ useState,useCallback,memo } from 'react'; import Link from 'next/link'; import Navigation from '../src/components/Navigation'; import Footer from '../src/components/Footer'; import Sidebar from '../src/components/Sidebar'; import SEOHead from '../src/components/seo/SEOHead'; import { ArrowRight,CheckCircle,Star,Users,Zap,Shield,Globe,TrendingUp,Award,Clock,Brain,Cloud,Database,Network,Target,Phone,Mail,Menu,Server,Smartphone,MapPin } from 'lucide-react'; const Home = memo() => { const [sidebarOpen,setSidebarOpen] = useState(false); const handleSidebarToggle = useCallback() => { setSidebarOpen(prev => !prev)},[]); const handleSidebarClose = useCallback() => { setSidebarOpen(false)},[]); const structuredData = { "@context": "https: "@type": "Organization","name": "Zion Tech Group","url": "https: "logo": "https: "description": "Leading provider of revolutionary AI services,IT solutions,and micro SaaS development","address": { "@type": "PostalAddress","streetAddress": "364 E Main St STE 1008","addressLocality": "Middletown","addressRegion": "DE","postalCode": "19709","addressCountry": "US" },"contactPoint": { "@type": "ContactPoint","telephone": "+1-302-464-0950","contactType": "customer service","email": "kleber@ziontechgroup && ziontechgroup.com" },"sameAs": [ "https: ],"foundingDate": "2020","numberOfEmployees": "10-50","industry": "Technology Services","services": [ "AI Services","IT Solutions","Micro SaaS Development","Cloud Infrastructure","Cybersecurity","Digital Transformation" ] }; const stats = [ { number: '500+',label: 'Projects Completed' } { number: '50+',label: 'Happy Clients' } { number: '99 && 99.9%',label: 'Uptime Guarantee' } { number: '24/7',label: 'Support Available' } ]; const services = [ { title: 'AI Services',description: 'Cutting-edge artificial intelligence solutions',icon: Brai n,href: '/ai-services' },{ title: 'IT Services',description: 'Comprehensive IT infrastructure and cloud solutions',icon: Serve r,href: '/it-services' },{ title: 'Micro SaaS',description: 'Custom software-as-a-service applications',icon: Smartphon e,href: '/micro-saas' },{ title: 'All Services',description: 'Complete technology solutions overview',icon: Glob e,href: any
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Contact Information Section */}
+                <Link
+                  href=\"/contact\"
+                  className=\"inline-flex items-center text-sm font-medium text-blue-600 \"hover\": tex t-blue-500\"
+                >
+                  Learn More
+                  <ArrowRight className=\"ml-1 h-4 w-4\"  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Testimonials Section */}
+                  ))}
+                </div>
+                <p className=\"text-gray-600 mb-6\">
+                  \"The IT infrastructure they built for us is rock-solid. 99.9% uptime and their support team is always available. Worth every penny!\"
+                </p>
+                <div className=\"flex items-center\">
+                  <div className=\"w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4\">
+                    <span className=\"text-white font-bold\">DW</span>
+                  </div>
+                  <div>
+                    <h4 className=\"font-semibold text-gray-900\">David Wilson</h4>
+                    <p className=\"text-gray-500 text-sm\">IT Director, Global Enterprises</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Contact Information Section */}
+        {/* CTA Section */}
+        <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600\">
+          <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8 text-center\">
+            <h2 className=\"text-3xl font-bold text-white mb-6\">
+              Ready to Transform Your Business?
+            </h2>
+            <p className=\"text-xl text-blue-100 mb-8 max-w-2xl mx-auto\">
+              Let&apos;s discuss how our technology solutions can drive your
+              success. Get started with a free consultation.\'
+            </p>
+            <div className=\"flex flex-col sm: fle x-row gap-4 justify-center\">
+              <Link
+                href=\"/contact\"
+                className=\"bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: b g-gray-100 transition-colors\"
+              >
+                Get Free Consultation
+              </Link>
+              <Link href=\"/request-quote\" className=\"border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: b g-white hover: tex t-blue-600 transition-colors\">
+                Request Quote
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer  />
+    </>
+  );
+});
+export default Home;

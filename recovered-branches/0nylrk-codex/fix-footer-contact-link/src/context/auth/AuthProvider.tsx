@@ -1,9 +1,171 @@
-
-import React, { useEffect } from "react"
-import {supabase, getFromProfiles} from "../../integrations/supabase/
-import {useAuthOperations} from "../../hooks/
-import {AuthContext} from "./
-import {cleanupAuthState} from "../../utils/
-import {useAuthState} from "./
-import {useAuthEventHandlers} from "./
-import {mapProfileToUser} from "./
+    logout;
+    resetPassword;
+    updateProfile;
+    loginWithGoogle;
+    loginWithFacebook;
+    loginWithTwitter;
+    loginWithWeb3;
+  } = useAuthOperations(setUser, setIsLoading);
+              }
+            } else if (error) {;
+              console && console.error("Error fetching user profile:", error);
+              setUser(null);
+            }
+          } catch (error) {;
+            console && console.error("Error fetching user profile:", error);
+            setUser(null);
+          }
+        } else {;
+          setUser(null);
+          }
+        }
+        setIsLoading(false);
+      }
+    );
+    login;
+    signup;
+    logout;
+    resetPassword;
+    updateProfile;
+=======
+import React, { useEffect } from './react';
+import { supabase, getFromProfiles } from '../../integrations / supabase / client';
+import { useAuthOperations } from '../../hooks / useAuthOperations';
+import { AuthContext } from './AuthContext';
+import { cleanupAuthState } from '../../utils / auth_utils';
+import {use_navigate, use_location} from 'react-router-dom';
+import { useAuthState } from './useAuthState';
+import { useAuthEventHandlers } from './useAuthEventHandlers';
+import { mapProfileToUser } from './profile_mapper';
+export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: any {
+  const {
+    user, set_user,
+    is_loading, setIsLoading,
+    onboarding_step, setOnboardingStep;
+  } = useAuthState ();
+;
+  const navigate = use_navigate ();
+  const location = use_location ();
+  const { handleSignedIn, handleSignedOut } = useAuthEventHandlers (set_user, setOnboardingStep);
+;
+  const {
+    login: login_impl,
+    signup: signup_impl,
+    logout;
+    reset_password;
+    update_profile;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    loginWithGoogle;
+    loginWithFacebook;
+    loginWithTwitter;
+    loginWithWeb3;
+  return (
+    <AuthContext && AuthContext.Provider value={authContextValue}>;
+      {children}
+=======
+  } = useAuthOperations (set_user, setIsLoading);
+;
+  // Wrapper for login to match the AuthContextType interface;
+  const login = async (email: string, password: string) => {
+    return login_impl ({ email, password });
+  }
+;
+  // Wrapper for signup to match the AuthContextType interface;
+  const signup = async (email: string, password: string, user_data?: any) => {
+    return signup_impl ({ email, password, display_name: user_data });
+  }
+;
+  useEffect (() => {
+    // Clean up any potential stale auth state before setting up listeners;
+    cleanupAuthState ();
+;
+    const { data: { subscription } } = supabase.auth.onAuthStateChange (
+      async (event, session) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          try {
+            const { data: profile, error } = await getFromProfiles ();
+              .select ('*');
+              .eq ('id', session.user.id);
+              .single ();
+;
+            // Check condition
+if ( {) {
+  $2
+}
+              const mapped_user = mapProfileToUser (session.user, profile);
+              set_user (mapped_user);
+;
+              // Show welcome toast when user logs in;
+              // Check condition
+if ( {) {
+  $2
+}
+                handleSignedIn (mapped_user);
+              }
+            } else // Check condition
+if ( {) {
+  $2
+}
+              console.error ("Error fetching user profile:", error);
+              set_user (null);
+            }
+          } catch (error) {
+            console.error ("Error fetching user profile:", error);
+            set_user (null);
+          }
+        } else {
+          set_user (null);
+;
+          // Show logout toast when user logs out;
+          // Check condition
+if ( {) {
+  $2
+}
+            handleSignedOut ();
+          }
+        }
+        setIsLoading (false);
+      }
+    );
+;
+    // Initial session check;
+    supabase.auth.get_session ().then (({ data: { session } }) => {
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsLoading (false);
+      }
+    });
+;
+    return () => {
+      subscription.unsubscribe ();
+    }
+  }, [navigate]);
+;
+  const authContextValue = {
+    user;
+    is_loading;
+    is_authenticated: !!user,
+    login;
+    signup;
+    logout;
+    reset_password;
+    update_profile;
+    loginWithGoogle;
+    loginWithFacebook;
+    loginWithTwitter;
+    loginWithWeb3;
+    onboarding_step;
+  }
+;
+  return (
+    <AuthContext.Provider value={authContextValue}>;
+      {children}
+    </AuthContext.Provider>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

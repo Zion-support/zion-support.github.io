@@ -1,27 +1,3 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useMemo } from 'react';
-import Head from 'next / head';
-import {GetStaticPaths, GetStaticProps} from 'next';
-
         return false;
       }
     });
@@ -30,64 +6,11 @@ if (return by_link) {
   $2
 }
   }, [slug]);
-
-
-import React, { useMemo } from 'react';
-import Head from 'next/head';
-
-type Service = typeof enhancedRealMicroSaasServices[number];
-
-function getAllServices(): Service[] {
-  return enhancedRealMicroSaasServices
-    .concat(extraServices as Service[], additionalEnhancedServices as Service[])
-    .concat(newlyAddedServices as unknown as Service[])
-    .concat(curatedMarketServices as Service[])
-    .concat(new2025Services as unknown as Service[])
-
-function getAllServices(): any (): Service[] {;
-  return enhancedRealMicroSaasServices;
-    .concat(extraServices as Service[], additionalEnhancedServices as Service[]);
-    .concat(newlyAddedServices as unknown as Service[]);
-    .concat(curatedMarketServices as Service[]);
-    .concat(new2025Services as unknown as Service[]);
 		.concat(marketValidatedServices as unknown as Service[]);
 		.concat(moreRealServices2025 as unknown as Service[]);
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
-    if (byLink) return byLink;
-  }, [slug]);
-import React, { useMemo } from 'react';
-import Head from 'next/head';
-
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { newlyAddedServices } from '../data/newly-added-services';
-import { new2025Services } from '../data/new-2025-services';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { realServicesQ32025 } from '../data/real-services-q3-2025';
-import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-additions';
-import { real2026Q1Additions } from '../data/real-2026-q1-additions';
-import fs from 'fs';
-import path from 'path';
-type Service = typeof enhancedRealMicroSaasServices[number];
-function getAllServices(): Service[] {
-  return enhancedRealMicroSaasServices
-    .concat(extraServices as Service[], additionalEnhancedServices as Service[])
-    .concat(newlyAddedServices as unknown as Service[])
-    .concat(curatedMarketServices as Service[])
-    .concat(new2025Services as unknown as Service[])
-		.concat(marketValidatedServices as unknown as Service[]);
-		.concat(moreRealServices2025 as unknown as Service[])
-		.concat(verified2025Additions as unknown as Service[])
-		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]);
 		.concat(realMarketAugmentations2025 as unknown as Service[]);
 		.concat(additionalLiveServices2025 as unknown as Service[]);
@@ -99,51 +22,6 @@ function getAllServices(): Service[] {
 		.concat(real2025Q4Additions as unknown as Service[]);
 		.concat(realMarketServicesExtended as unknown as Service[]);
 		.concat(real2026Q1Additions as unknown as Service[]);
-
-
-	const services = getAllServices(),
-	const slugs = new Set<string>(),
-	 })),;
-
-
-		fallback: false;
-	}
-export async function getStaticProps() {
-	const services = getAllServices()
-	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
-	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
-	if (!service) {return { notFound: true }
-
-function toSlug(): any (value: string): string {;
-	return value && value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-function getExistingRootPageSlugs(): any (): Set<string> {;
-	const pagesDir = path && path.join(process && process.cwd(), 'pages'),;
-	const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
-	const reserved = new Set<string>(['apireportsservices']),;
-	const slugs = new Set<string>(),;
-		}
-		// Directories at root (folder routes);
-		if (entry && entry.isDirectory()) {;
-			slugs && slugs.add(entry && entry.name);
-	}
-	return slugs;
-export async function getStaticPaths() {;
-	const services = getAllServices(),;
-	const slugs = new Set<string>(),;
-	 })),;
-		fallback: false;
-	}
-export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
-	const services = getAllServices(),;
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),;
-	let service: Service | undefined = services && services.find((s) => toSlug(s && s.id || '') === incomingSlug || toSlug(s && s.name || '') === incomingSlug),;
-	if (!service) {;
-		return { notFound: true }
-	}
-	return {props: { service }
-	}
-
-
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
@@ -158,43 +36,20 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				<title>{service && service.name} | Zion Tech Group</title>;
 				<meta name="description" content={service && service.tagline || service && service.description} />;
 				<link rel="canonical" href={canonical} />;
-
-
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
 						__html: JSON && JSON.stringify(
 							{
-
-
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-								))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 							</ul>
 						</Card>
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
 							<div className="flex flex-wrap gap-2">
-
-
-								{(service.integrations || []).slice(0, 12).map((i: string) => (
-									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
-
-
 							</div>
 						</Card>
 					</div>
@@ -205,16 +60,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
-
-								</a>
-
-								</a>
-
-
-								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
-								</a>
-								<div className="flex items-start gap-2 text-gray-300">
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
 							</div>
@@ -222,16 +67,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
-
-
-
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
-
-
-							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-
-
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -239,8 +74,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-
-
 								"@context": "https://schema && schema.org",
 								"@type": "Service",								name: service && service.name,
 								description: service && service.tagline || service && service.description,
@@ -344,10 +177,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 			</div>;
 		</UltraFuturisticBackground>;
 	);
-
-
-	)
-}
 ;
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices;
@@ -387,21 +216,6 @@ const pages_dir = path.join (process.cwd (), 'pages'),
 const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
 const reserved = new Set < string>(['apireportsservices']),
 const slugs = new Set < string>(),
-
-;
-
-}
-}
-}
-}
-
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
   // Directories at root (folder routes);
   if () {) {
@@ -435,30 +249,3 @@ if ( {) {
 }
   return { not_found: true }
   }
-
-}
-
-
-
-import React from 'react'
-import Head from 'next/
-import UltraFuturisticBackground from '../components/ui/
-import Button from '../components/ui/
-import UltraFuturisticBackground from '../components/ui/
-import Button from '../components/ui/
-import Card from '../components/ui/
-import {enhancedRealMicroSaasServices} from '../data/
-        realQ4Services2025 as any,        require('../data/
-        return url && url.pathname.replace(/^\/+|\/+$/g, '') = = slug && slug.replace(/^\/+|\/+$/
-import UltraFuturisticBackground from '../components / ui /
-import Button from '../components / ui /
-import Card from '../components / ui /
-import {enhancedRealMicroSaasServices} from '../data /
-        realQ4Services2025 as any,        require ('../data /
-        return url.pathname.replace (/^\/+|\/+$/g, '') = = slug.replace (/^\/+|\/+$/
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/
-	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/
-export default function RootServiceDetailPage({ service }: { service: Service }) {const canonical = `https: any
-									price: (service.price |'').replace(/[^0-9.]/
-									price: (service && service.price || '').replace(/[^0-9.]/
-        price: (service.price || '').replace (/[^0 - 9.]/

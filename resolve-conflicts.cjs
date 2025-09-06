@@ -31,8 +31,7 @@ function resolveConflicts(filePath) {
       }
       
       if (line.trim().startsWith('=======')) {
-        // Skip the older version (before =======)
-        continue;
+        continue; // Skip the separator line
       }
       
       if (line.trim().startsWith('>>>>>>>')) {
@@ -41,57 +40,71 @@ function resolveConflicts(filePath) {
         continue;
       }
       
-      if (!inConflict) {
-        resolvedLines.push(line);
-      } else if (inConflict && i > conflictStart) {
-        // We're in the newer version (after =======)
-        resolvedLines.push(line);
+      if (inConflict) {
+        // Skip lines before ======= (old version)
+        if (conflictStart !== -1 && i > conflictStart) {
+          continue;
+        }
       }
+      
+      resolvedLines.push(line);
     }
     
-    const resolvedContent = resolvedLines.join('\n');
-    fs.writeFileSync(filePath, resolvedContent, 'utf8');
-    console.log(`✅ Resolved conflicts in: ${filePath}`);
+    // Write the resolved content back to the file
+    fs.writeFileSync(filePath, resolvedLines.join('\n'), 'utf8');
     return true;
   } catch (error) {
-    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and resolve conflicts in all files
-function resolveAllConflicts(dir) {
-  const files = fs.readdirSync(dir);
-  let resolvedCount = 0;
+// Function to find all files with merge conflicts
+function findConflictedFiles(dir) {
+  const conflictedFiles = [];
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  function scanDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-    if (stat.isDirectory()) {
-      // Skip certain directories that might cause issues
-      if (['node_modules', '.git', 'dist', 'build'].includes(file)) {
-        continue;
-      }
-      resolvedCount += resolveAllConflicts(filePath);
-    } else if (stat.isFile()) {
-      // Only process text files
-      if (file.endsWith('.js') || file.endsWith('.ts') || file.endsWith('.tsx') || 
-          file.endsWith('.jsx') || file.endsWith('.css') || file.endsWith('.html') ||
-          file.endsWith('.json') || file.endsWith('.md') || file.endsWith('.txt') ||
-          file.endsWith('.cjs') || file.endsWith('.mjs')) {
-        if (resolveConflicts(filePath)) {
-          resolvedCount++;
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other common directories
+        if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
+          scanDirectory(fullPath);
+        }
+      } else if (stat.isFile()) {
+        // Check if file has merge conflicts
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('<<<<<<<') && content.includes('=======') && content.includes('>>>>>>>')) {
+            conflictedFiles.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
         }
       }
     }
   }
   
-  return resolvedCount;
+  scanDirectory(dir);
+  return conflictedFiles;
 }
 
 // Main execution
-console.log('🔧 Starting automated conflict resolution...');
-const resolvedCount = resolveAllConflicts('/workspace');
-console.log(`\n✅ Resolved conflicts in ${resolvedCount} files`);
-console.log('🎉 Conflict resolution complete!');
+console.log('Starting merge conflict resolution...');
+
+const conflictedFiles = findConflictedFiles('.');
+console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+
+let resolvedCount = 0;
+for (const file of conflictedFiles) {
+  if (resolveConflicts(file)) {
+    resolvedCount++;
+  }
+}
+
+console.log(`Resolved conflicts in ${resolvedCount} files`);
+console.log('Merge conflict resolution completed!');

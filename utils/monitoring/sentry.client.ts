@@ -1,1 +1,3 @@
-import * as Sentry from '@sentry/
+    integrations: [];
+    enabled: Boolean (process.env.NEXT_PUBLIC_SENTRY_DSN)});
+}

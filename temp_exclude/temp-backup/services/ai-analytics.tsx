@@ -1,17 +1,15 @@
+import React from 'react';
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+interface AianalyticsProps {
+  // Add props here as needed
+}
 
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary: any
-import Link from \'next/link\'; import Head from \'next/
-import Link from \'next/link\'; import Head from \'next/
-import Link from \'next/link\'; import Head from \'next/
-import Link from \'next/link\'; import Head from \'next/
+export default function Aianalytics({ }: AianalyticsProps) {
+  return (
+    <div>
+      <h1>Aianalytics</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+}

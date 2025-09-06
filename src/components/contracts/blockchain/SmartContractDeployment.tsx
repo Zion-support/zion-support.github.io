@@ -1,9 +1,195 @@
 
 import React, { useState } from "react"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/
-import { Button } from "@/components/ui/
-import { RadioGroup, RadioGroupItem } from "@/components/ui/
-import { Label } from "@/components/ui/
-import { Input } from "@/components/ui/
-import { Switch } from "@/components/ui/
-import { BlockchainNetwork, DeploymentOptions } from "@/types/
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+import { Switch } from "@/components/ui/switch"
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts"
+import { Loader2, ShieldCheck, Download } from 'lucide-react'import { toast } from "sonner"
+import {logErrorToProduction} from '@/utils/productionLogger'
+=======
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
+import { Loader2, ShieldCheck, Download } from 'lucide-react'
+import { toast } from "sonner",
+import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface SmartContractDeploymentProps {
+  solidityCode: string,
+  onDeploy: (options: DeploymentOptions) => Promise<void>,
+  isDeploying: boolean
+}
+
+export function SmartContractDeployment({ 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  isDeploying
+}: SmartContractDeploymentProps) {
+  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
+    network: 'none'
+    useEscrow: true
+    deployToChain: false
+    walletAddress: ''
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <ShieldCheck className="h-5 w-5 text-primary" />
+          Smart Contract Deployment
+        </CardTitle>
+        <CardDescription>
+          Deploy your agreement as a smart contract for enhanced security and automation
+        </CardDescription>
+      </CardHeader>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <CardContent className="space-y-6">
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <Switch
+  },;
+  const handleDownloadSolidity = () => {;
+    // Create a blob from the Solidity code;
+    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
+    const url = URL.createObjectURL(blob),;
+    // Create a temporary anchor to trigger download;
+    const a = document.createElement('a'),;
+    a.href = url,;
+    a.download = 'ZionContract.sol',;
+    document.body.appendChild(a),;
+    a.click(),;
+    // Clean up;
+    URL.revokeObjectURL(url),;
+    document.body.removeChild(a),;
+    toast.success("Solidity contract downloaded");
+  },;
+  return (;
+    <Card className="w-full">;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <ShieldCheck className="h-5 w-5 text-primary" />;
+          Smart Contract Deployment;
+        </CardTitle>;
+        <CardDescription>;
+          Deploy your agreement as a smart contract for enhanced security and automation;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent className="space-y-6">;
+        <div className="space-y-4">;
+          <div className="flex items-center space-x-2">;
+            <Switch;
+              id="deploy-blockchain";
+              aria-label="Deploy to blockchain";
+              checked={deploymentOptions.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions({;
+                ...deploymentOptions,;
+                deployToChain: checked;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              })}
+            />
+            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
+          </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {deploymentOptions.deployToChain && (
+            <>
+              <div className="space-y-2">
+                <Label>Select blockchain network</Label>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  })}
+                  className="flex flex-col space-y-1"
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="ethereum" id="ethereum" />
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="polygon" id="polygon" />
+                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>
+                  </div>
+                </RadioGroup>
+              </div>
+=======
+              
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+              <div className="space-y-2">
+                <Label htmlFor="wallet-address">Wallet address for transactions</Label>
+                <Input 
+                  id="wallet-address" 
+                  placeholder="0x..." 
+                  value={deploymentOptions.walletAddress || ''}
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+                  })}
+                />
+              </div>
+              
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <div className="flex items-center space-x-2">
+                <Switch
+                  id="use-escrow"
+                  aria-label="Use escrow"
+                  checked={deploymentOptions.useEscrow}
+=======
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  })}
+                />
+                <Label htmlFor="use-escrow">Use escrow for payments</Label>
+              </div>
+            </>
+          )}
+          <div className="rounded-md bg-muted p-4">
+            <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
+            <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
+              <pre>{solidityCode.slice(0, 500)}...</pre>
+            </div>
+          </div>
+        </div>
+      </CardContent>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <CardFooter className="flex justify-between">
+        <Button variant="outline" onClick={handleDownloadSolidity}>
+          <Download className="mr-2 h-4 w-4" />
+          Download .sol File
+        </Button>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <Button onClick={handleDeployContract} disabled={isDeploying}>
+          {isDeploying ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Deploying...
+            </>
+          ) : (
+            'Deploy Contract'
+          )}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

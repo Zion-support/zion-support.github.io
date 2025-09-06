@@ -1,4 +1,73 @@
-import useSWR from 'swr'
-      (d.status = = 'Open' |d.status = = 'Under Review'
-    
-  const hasActiveDispute = !!data?.disputes?.some(d: any) => d.projectId = = projectId && (d.status = = 'Open' |d.status = = 'Under Review'
+import useSWR from 'swr';
+
+  hasActiveDispute: boolean;
+  isLoading: boolean;
+} {;
+  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+  projectId: string;
+}) {;
+  const { hasActiveDispute } = useProjectDisputeStatus(projectId);
+  if (!hasActiveDispute) return null;
+  return (
+    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
+      Under Dispute;
+    </span>;
+  );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  return { hasActiveDispute, isLoading: !data && !error }
+}
+
+export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const { hasActiveDispute } = useProjectDisputeStatus(projectId);
+  if (!hasActiveDispute) return null;
+
+  return (
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
+;
+export function useProjectDisputeStatus (project_id: string): {
+  hasActiveDispute: boolean;
+  is_loading: boolean;
+} {
+  const { data, error } = useSWR (project_id ? `/api / disputes` : null, fetcher);
+  const hasActiveDispute = !!data?.disputes?.some (
+    (d: any) =>;
+      d.project_id === project_id &&;
+      (d.status === 'Open' || d.status === 'Under Review'));
+  return { hasActiveDispute, is_loading: !data && !error }
+;
+export default /**
+ * UnderDisputeBadge - Function description
+ */
+function UnderDisputeBadge() {
+  const { hasActiveDispute } = useProjectDisputeStatus (project_id);
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <span className='inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs'>;
+      Under Dispute;
+    </span>);  const { data, error } = useSWR (project_id ? `/api / disputes` : null, fetcher);
+  const hasActiveDispute = !!data?.disputes?.some ((d: any) => d.project_id === project_id && (d.status === 'Open' || d.status === 'Under Review')),
+  return { hasActiveDispute, is_loading: !data && !error }
+}
+export default /**
+ * UnderDisputeBadge - Function description
+ */
+function UnderDisputeBadge() {
+  const { hasActiveDispute } = useProjectDisputeStatus (project_id);
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs">;
+      Under Dispute;
+    </span>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

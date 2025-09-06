@@ -519,17 +519,11 @@ monitor.run().catch(error => {
  * PM2 SEO & Accessibility Service;
  * Checks SEO and accessibility compliance;
  */
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 class SEOAccessibility {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility';
@@ -549,10 +543,6 @@ class SEOAccessibility {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    );
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    );
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -564,14 +554,10 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Checking SEO compliance...');
-      const seoIssues = [];
-      const htmlFiles = this.findHTMLFiles();
       
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
-      const seoIssues = [];
-      const htmlFiles = this.findHTMLFiles();
       for (const file of htmlFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
@@ -582,13 +568,6 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${seoIssues.length} SEO issues`);
-      
-      
-      
-      
-      
-      
-      
       
       
       return {}
@@ -606,26 +585,12 @@ class SEOAccessibility {}
     const htmlFiles = [];
     
     
-    
-    
-    
-    
-    
-    
-    
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-          
-          
-          
-          
-          
-          
-          
           
           
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
@@ -640,13 +605,6 @@ class SEOAccessibility {}
     };
 
 
-
-
-
-
-
-
-
     // Scan common directories;
     const scanDirs = ['public', 'dist', 'out', 'build', 'pages'];
     for (const dir of scanDirs) {}
@@ -658,13 +616,6 @@ class SEOAccessibility {}
   };
   analyzeSEO(content, filePath) {}
     const issues = [];
-    
-    
-    
-    
-    
-    
-    
     
     
     // Check for title tag;
@@ -739,14 +690,10 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Checking accessibility compliance...');
-      const a11yIssues = [];
-      const htmlFiles = this.findHTMLFiles();
       
       const a11yIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
-      const a11yIssues = [];
-      const htmlFiles = this.findHTMLFiles();
       for (const file of htmlFiles) {}
         try {}
           const content = fs.readFileSync(file, 'utf8');
@@ -757,13 +704,6 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${a11yIssues.length} accessibility issues`);
-      
-      
-      
-      
-      
-      
-      
       
       
       return {}
@@ -779,13 +719,6 @@ class SEOAccessibility {}
   };
   analyzeAccessibility(content, filePath) {}
     const issues = [];
-    
-    
-    
-    
-    
-    
-    
     
     
     // Check for proper heading hierarchy;
@@ -861,12 +794,6 @@ class SEOAccessibility {}
       
       const performanceIssues = [];
       
-      
-      const performanceIssues = [];
-      
-      
-      const performanceIssues = [];
-      
       const performanceIssues = [];
       
       const performanceIssues = [];
@@ -904,13 +831,6 @@ class SEOAccessibility {}
       this.log(`Found ${performanceIssues.length} performance issues`);
       
       
-      
-      
-      
-      
-      
-      
-      
       return {}
         checked: true,
         issues: performanceIssues,
@@ -925,26 +845,12 @@ class SEOAccessibility {}
     let totalSize = 0;
     
     
-    
-    
-    
-    
-    
-    
-    
     const scanDir = (currentDir) => {}
       try {}
         const files = fs.readdirSync(currentDir);
         for (const file of files) {}
           const filePath = path.join(currentDir, file);
           const stat = fs.statSync(filePath);
-          
-          
-          
-          
-          
-          
-          
           
           
           if (stat.isDirectory()) {}
@@ -959,13 +865,6 @@ class SEOAccessibility {}
     };
 
 
-
-
-
-
-
-
-
     scanDir(dir);
     return totalSize;
   };
@@ -974,26 +873,12 @@ class SEOAccessibility {}
     const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
     
     
-    
-    
-    
-    
-    
-    
-    
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-          
-          
-          
-          
-          
-          
-          
           
           
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
@@ -1006,13 +891,6 @@ class SEOAccessibility {}
         // Skip directories that can't be read;
       };
     };
-
-
-
-
-
-
-
 
 
     const scanDirs = ['public', 'dist', 'out', 'build', 'assets', 'images'];
@@ -1032,13 +910,6 @@ class SEOAccessibility {}
       this.log('Running Lighthouse audit...');
       
       
-      
-      
-      
-      
-      
-      
-      
       // Check if Lighthouse is available;
       try {}
         execSync('npx lighthouse --version', { stdio: 'pipe' }
@@ -1050,13 +921,6 @@ class SEOAccessibility {}
       };
       // Run Lighthouse audit (simplified - would need a running server);
       this.log('Lighthouse audit requires a running server - skipping for now');
-      
-      
-      
-      
-      
-      
-      
       
       
       return {}
@@ -1084,14 +948,10 @@ class SEOAccessibility {}
         lighthouseAudit: this.lighthouseAudit;
       };
     };
-    const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`SEO & Accessibility report generated: ${reportFile}`);
     return report;
   };
@@ -1110,11 +970,6 @@ class SEOAccessibility {}
                          (report.accessibility.totalIssues || 0) + 
                          (report.performance.totalIssues || 0);
       
-    try {}
-      const report = await this.generateReport();
-      const totalIssues = (report.seo.totalIssues || 0) + 
-                         (report.accessibility.totalIssues || 0) + 
-                         (report.performance.totalIssues || 0);
       if (totalIssues === 0) {}
         this.log('SEO & Accessibility check completed - no issues found');
       } else {}
@@ -1130,13 +985,5 @@ if (require.main === module) {}
   const seoAccessibility = new SEOAccessibility();
   seoAccessibility.start().catch(console.error);
 };
-};
-module.exports = SEOAccessibility;module.exports = SEOAccessibility;
-module.exports = SEOAccessibility;module.exports = SEOAccessibility;
-module.exports = SEOAccessibility;
-module.exports = SEOAccessibility;module.exports = SEOAccessibility;
-module.exports = SEOAccessibility;
-module.exports = SEOAccessibility;module.exports = SEOAccessibility;
-module.exports = SEOAccessibility;
 module.exports = SEOAccessibility;module.exports = SEOAccessibility;
 module.exports = SEOAccessibility;module.exports = SEOAccessibility;

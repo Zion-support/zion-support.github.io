@@ -1,1 +1,1 @@
-import React, { Suspense, lazy } from 'react'
+export default LazyComponent;

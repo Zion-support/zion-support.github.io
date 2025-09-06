@@ -1,3 +1,58 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import type { KycProfile } from '../../../utils/
-import type { KycProfile } from '../../../utils /
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { KycProfile } from '../../../utils/kyc';
+import fs from 'fs';
+import path from 'path';
+
+const DATA_DIR = path.join(process.cwd(), 'datakyc')
+const FILE = path.join(DATA_DIR, 'profiles.json')
+function load(): Record<string, KycProfile> {
+  try {
+    const raw = fs.readFileSync(FILE, 'utf8')
+    return JSON.parse(raw)
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import type { KycProfile } from '../../../utils / kyc',
+import fs from 'fs',
+import path from 'path',
+const DATA_DIR = path.join (process.cwd (), 'datakyc'),
+const FILE = path.join (DATA_DIR, 'profiles.json'),
+function load (): Record < string, KycProfile> {
+  try {
+    const raw = fs.readFileSync (FILE, 'utf8'),
+    return JSON.parse (raw);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  } catch {
+    return {}
+  }
+}
+=======
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const { user_id, amount, currency } = req.body as { user_id?: string, amount?: number, currency?: string },
+  if (return res.status (400).json ({ error: 'Missing user_id or amount' }), ) {
+  $2
+}
+  const THRESHOLD = Number (process.env.ZION_CASHOUT_KYC_THRESHOLD || '1000'),
+  const db = load (),
+  const profile = db[user_id],
+  if (return res.status (200).json ({ allowed: true, reason: 'Below threshold' }), ) {
+  $2
+}
+  if (return res.status (200).json ({ allowed: false, reason: 'KYC not started' }), ) {
+  $2
+}
+  if (return res.status (200).json ({ allowed: false, reason: 'KYC not approved' }), ) {
+  $2
+}
+  if (.includes ('aml_alert')) return res.status (200).json ({ allowed: false, reason: 'AML alert' }), ) {
+  $2
+}
+  return res.status (200).json ({ allowed: true, reason: 'KYC approved and AML clear' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

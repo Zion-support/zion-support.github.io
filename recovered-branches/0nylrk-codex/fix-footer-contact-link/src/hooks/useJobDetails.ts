@@ -1,3 +1,11 @@
-
-import { useState, useEffect  } from 'react'
-import { supabase } from '@/integrations/supabase/
+    } finally {
+      setIsLoading (false);
+    }
+  }
+  return {
+    job;
+    is_loading;
+    error;
+    loadJobDetails;
+  }
+}

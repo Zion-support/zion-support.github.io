@@ -1,6 +1,56 @@
-
-import React from "react"
-import { Card, CardContent } from "@/components/ui/
-import { Button } from "@/components/ui/
-import { Badge } from "@/components/ui/
-          
+                  </div>;
+                </div>;
+                <Button size="sm" variant="outline">View Details</Button>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+      </section>;
+                <Button size="sm">View Profile</Button>;
+                <Button size="sm" variant="outline">Message</Button>;
+              </div>;
+            </CardContent>;
+          </Card>;
+                <Button size="sm">View Profile</Button>;
+                <Button size="sm" variant="outline">Message</Button>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        </div>;
+      </section>;
+=======
+      <section>;
+        <div className="flex items - center justify - between mb - 4">;
+          <h2 className="text - lg font - medium">Recent Updates</h2>;
+        </div>;
+        <Card>;
+          <CardContent className="p - 4 space - y-4">;
+            <div className="flex gap - 3 items - start">;
+              <div className="bg - primary / 10 p - 2 rounded - full">;
+                <Bell className="h - 5 w - 5 text - primary" />;
+              </div>;
+              <div>;
+                <p className="text - sm">;
+                  <strong > Website Redesign: </strong> Sarah submitted Milestone 2 for review;
+                </p>;
+                <p className="text - xs text - muted - foreground">2 hours ago</p>;
+              </div>;
+            </div>;
+            <div className="flex gap - 3 items - start">;
+              <div className="bg - primary / 10 p - 2 rounded - full">;
+                <FileText className="h - 5 w - 5 text - primary" />;
+              </div>;
+              <div>;
+                <p className="text - sm">;
+                  <strong > Mobile App Development:</strong> 3 new applicants for your job post;
+                </p>;
+                <p className="text - xs text - muted - foreground">1 day ago</p>;
+              </div>;
+            </div>;
+            <Button variant="outline" className="w - full">View All Notifications</Button>;
+          </CardContent>;
+        </Card>;
+      </section>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

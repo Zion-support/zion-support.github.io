@@ -1,9 +1,16 @@
-
-import React, { useState } from "react"
-import {useForm} from "react-hook-form"
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/
-import {MetadataForm} from "./
-import {ScreenshotManager} from "./
-import {ChangelogManager} from "./
-import {ExportPanel} from "./
-import {Button} from "@/components/ui/
+    } catch (error) {
+      toast.error ("Failed to save metadata");
+      console.error (error);
+    } finally {
+      setIsSaving (false);
+    }
+  }
+            </div>;
+          </div>;
+        </TabsContent>;
+      </Tabs>;
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

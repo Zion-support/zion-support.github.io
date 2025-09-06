@@ -1,9 +1,133 @@
-
 import React from 'react'
-import { useRouter } from 'next/
-import Link from 'next/
-import { cn } from '@/lib/
-import { useAuth } from '@/hooks/
-import { useWishlist } from '@/hooks/
-import { useCart } from '@/context/
-import { logWarn } from '@/utils/
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useWishlist } from '@/hooks/useWishlist'
+import { useCart } from '@/context/CartContext'
+import { logWarn } from '@/utils/productionLogger'
+import {
+  Home
+  Search
+  MessageCircle
+  Heart
+  MessageSquare
+  ShoppingCart
+  User
+} from 'lucide-react'
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
+interface MobileBottomNavProps {
+  unreadCount?: number
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
+  const router = useRouter();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const { items: wishlistItems } = useWishlist(); // Renamed to avoid conflict
+  const favoritesCount = wishlistItems.length
+  const cartContextValue = useCart(); // Call hook at top level
+  let cartCount = 0
+  if (cartContextValue && cartContextValue.items) {
+    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0) } else {
+=======
+import React from "react",
+import { useRouter } from "next/router",
+import Link from "next/link",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useWishlist } from "@/hooks/useWishlist",
+import { useCart } from '@/context/CartContext',
+import { logWarn } from '@/utils/productionLogger',
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
+
+interface MobileBottomNavProps {
+  unreadCount?: number
+}
+
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+  const router = useRouter(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
+  const favoritesCount = wishlistItems.length,
+
+  const cartContextValue = useCart(), // Call hook at top level
+  let cartCount = 0,
+  if (cartContextValue && cartContextValue.items) {
+    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
+  } else {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
+  }
+  const navItems = [
+    {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    {
+      name: "Browse",
+      href: "/talent",
+      icon: Search,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    {
+      name: "Community",
+      href: "/community",
+      icon: MessageCircle,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    {
+      name: "Wishlist",
+      href: "/wishlist",
+      icon: Heart,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    },
+    {
+      name: "Messages",
+      href: "/messages",
+      icon: MessageSquare,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    },
+    {
+      name: "Cart",
+      href: "/cart",
+      icon: ShoppingCart,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    {
+      name: "Dashboard",
+      href: "/dashboard",
+      icon: User,
+      matches: (path: string) => path.startsWith("/dashboard"),
+      authRequired: true
+    }
+  ],
+
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(item => 
+    !item.authRequired || (item.authRequired && isAuthenticated)
+  ),
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
+      <div className="flex justify-around items-center h-16">
+        {visibleItems.map(item => (
+          <Link
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+              )}
+            </div>
+            <span className="hidden sm:block text-xs font-medium">{item.name}</span>
+          </Link>
+        ))}
+=======
+      </div>;
+    </nav>;
+  );
+}
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

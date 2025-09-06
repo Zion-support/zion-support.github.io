@@ -1,4 +1,15 @@
+    skills: true;
+    availability: true;
+    region: true;
 
-import { useState  } from 'react'
-import { TalentProfile } from '@/types/
-  //
+    experience: true
+    price: true});
+  return {
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
+    selected_talent;
+    setSelectedTalent;
+    closeMobileFilter}
+}
