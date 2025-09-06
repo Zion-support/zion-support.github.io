@@ -1,18 +1,6 @@
 // Performance optimization utilities
-export const optimizeImages = () => {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (!img.loading) {
-      img.loading = 'lazy';
-    }
-    if (!img.decoding) {
-      img.decoding = 'async';
-    }
-  });
-};
-
 export const preloadCriticalResources = () => {
-  const criticalResources = ['/fonts/main.woff2/css/critical.css'];
+  const criticalResources = ['/fonts/main.woff2', '/css/critical.css'];
 
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
@@ -25,9 +13,38 @@ export const preloadCriticalResources = () => {
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-  const loadComponent = componentName => {
-    return import(`./components/${componentName}`);
-  };
+  return Promise.resolve();
+};
 
-  return { loadComponent };
+export const optimizeImages = () => {
+  const images = document.querySelectorAll('img');
+  
+  images.forEach(img => {
+    if (!img.loading) {
+      img.loading = 'lazy';
+    }
+  });
+};
+
+export const debounce = (func: Function, wait: number) => {
+  let timeout: NodeJS.Timeout;
+  return function executedFunction(...args: any[]) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
+
+export const throttle = (func: Function, limit: number) => {
+  let inThrottle: boolean;
+  return function executedFunction(...args: any[]) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
 };

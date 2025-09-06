@@ -1,12 +1,34 @@
+
 <<<<<<< HEAD
+main ();
+}
+main ();
+;
+
+
+<<<<<<< HEAD
+=======
+}}
+main();
+}
+main();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }};
 main();
-=======
-};
-<<<<<<< HEAD
 };
 main();
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-main(),
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+},;
+main(),;
+
+},;
+main(),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+},;
+main(),;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

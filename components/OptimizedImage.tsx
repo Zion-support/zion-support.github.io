@@ -1,36 +1,19 @@
-import React from 'react';
-import Image from 'next/image';
-
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  className?: string;
+  width?: number;
+  height?: number;
+  class_name?: string;
   priority?: boolean;
   quality?: number;
 }
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+  src;
+  alt;
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  quality = 75
-}) => {
+  width = 800;
+  height = 600;
   return (
-    <Image
+    <Image;
       src={src}
       alt={alt}
       width={width}
       height={height}
-      className={className}
-      priority={priority}
-      quality={quality}
-    />
-  );
-};
-
 export default OptimizedImage;

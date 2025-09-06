@@ -1,9 +1,55 @@
-<<<<<<< HEAD:pages/white-papers.tsx
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import { FileText, Download, Clock, User, Eye, Star } from 'lucide-react';
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+
+<:pages/white-papers.tsx.backup
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+<<<<<<< HEAD
+<:pages/white-papers.tsx.backup
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+
+import React from 'react';
+
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -82,17 +128,136 @@ const whitePapers = [;
 import { FileText, Download, Calendar, Eye } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 =======
-import React from 'react';
-<<<<<<< HEAD:pages/white-papers.tsx.disabled
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+=======
+<<<<<<< HEAD:pages/white-papers.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
 =======
->>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8:pages/white-papers.tsx.disabled
+<<<<<<< HEAD:pages/white-papers.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+import React from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<< HEAD
+=======
+
+
+import React from 'react';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+========
+import React, { useState } from 'react';
+import Head from 'next/head';
+>>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import Link from 'next/link';
+=======
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
 import {
   FileText,
   Download,
@@ -105,11 +270,105 @@ import {
   BookOpen,
   Star,
   Clock,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<:pages/white-papers.tsx.backup
   Tag
 } from 'lucide-react';
-<<<<<<< HEAD:pages/white-papers.tsx
+
+import Layout from '../components/Layout';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  Tag
+} from 'lucide-react';
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<<< HEAD:pages/white-papers.tsx.backup
+  Tag
+} from 'lucide-react';
 <<<<<<< HEAD
 import Layout from '../components/Layout';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+  Tag
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+>>>>>>> main
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
 
 const whitePaperCategories = [
   { name: 'AI & Machine Learning', count: 8, color: 'bg-blue-100 text-blue-800' },
@@ -221,9 +480,20 @@ const stats = [
   { number: '10K+', label: 'Downloads' },
   { number: '15+', label: 'Industry Experts' },
   { number: '95%', label: 'Reader Satisfaction' }
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<<<<<<< HEAD
 =======
 =======
->>>>>>> pr-11914:pages/white-papers.tsx
+>>>>>>> origin/main
+=======
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -234,50 +504,128 @@ import {
   User, 
   ArrowRight, 
   Tag, 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+
+  ExternalLink 
+} from 'lucide-react';
+
+<:pages/white-papers.tsx.backup
+
+  ExternalLink 
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+  ExternalLink 
+} from 'lucide-react';
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+========
+  Tag,
+>>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+========
+  Tag,
+>>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+  ExternalLink 
+} from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   ExternalLink 
 } from 'lucide-react';
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<:pages/white-papers.tsx.backup
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
 
 const whitePapers = [
   {
     id: 1,
     title: "The Future of AI in Enterprise: A Comprehensive Guide",
 <<<<<<< HEAD
-    description: "Explore how artificial intelligence is transforming enterprise operations and what businesses need to know to stay competitive.",
-    author: "Dr. Sarah Chen",
-    date: "2024-01-15",
-    category: "Artificial Intelligence",
-    readTime: "45 min read",
-    downloadCount: "2,341",
-    featured: true,
-    pdfUrl: "/whitepapers/ai-enterprise-guide.pdf"
-  },
-  {
-    id: 2,
-    title: "Cloud Security Best Practices for Modern Businesses",
-    description: "A detailed analysis of cloud security challenges and proven strategies to protect your organization's data and infrastructure.",
-    author: "Michael Rodriguez",
-    date: "2024-01-10",
-    category: "Cybersecurity",
-    readTime: "30 min read",
-    downloadCount: "1,856",
-    featured: true,
-    pdfUrl: "/whitepapers/cloud-security-guide.pdf"
-  },
-  {
-    id: 3,
-    title: "Micro SaaS: The Future of Software Distribution",
-    description: "An in-depth look at the micro SaaS model and how it's revolutionizing the software industry.",
-    author: "David Thompson",
-    date: "2024-01-05",
-    category: "Software Development",
-    readTime: "35 min read",
-    downloadCount: "1,234",
-    featured: false,
-    pdfUrl: "/whitepapers/micro-saas-guide.pdf"
-  }
+
 =======
+<<<<<<< HEAD
+>>>>>>> main
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     author: "Dr. Sarah Chen",
     date: "2024-01-15",
     category: "Artificial Intelligence",
@@ -295,7 +643,28 @@ const whitePapers = [
   },
   {
 <<<<<<< HEAD
+title: 'Cybersecurity Best Practices 2024',
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+title: 'Cybersecurity Best Practices 2024',
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+
+=======
+<<<<<<< HEAD
     title: 'Cybersecurity Best Practices 2024',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
     category: 'Cybersecurity',
     downloadCount: 1500,
@@ -303,8 +672,18 @@ const whitePapers = [
     downloadLink: '/downloads/cybersecurity-best-practices.pdf'
   }
 ;];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+];
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
 
 =======
+>>>>>>> main
     id: 3,
     title: "Cybersecurity in the Digital Age: Protecting Your Assets",
     author: "Emily Johnson",
@@ -322,66 +701,84 @@ const whitePapers = [
     description: "Discover how to leverage data analytics to drive business decisions and growth.",
     downloadCount: 750
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+
+];
+
+export default function WhitePapersPage() {
+
+    <Layout
+
+    <MainLayout
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> main
+];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+<<<<<<< HEAD
+=======
+];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<< HEAD
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
 ];
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
-=======
->>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8:pages/white-papers.tsx.disabled
-
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
-export default function WhitePapers() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Head>
-        <title>White Papers - Zion Tech Group</title>
-        <meta name="description" content="Download our comprehensive white papers on technology trends and best practices" />
-      </Head>
-
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            White Papers
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Download our comprehensive white papers on technology trends and best practices.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {whitePapers.map((paper, index) => (
-            <motion.div
-              key={paper.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded">
-                  {paper.category}
-                </span>
-                {paper.featured && (
-                  <Star className="h-5 w-5 text-yellow-500" />
-                )}
-              </div>
-              
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {paper.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-4">
-                {paper.description}
 =======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+
 export default function WhitePapersPage() {
-<<<<<<< HEAD:pages/white-papers.tsx.disabled
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -396,7 +793,9 @@ export default function WhitePapersPage() {
 
   const whitePapers = [
     {
-      id: 1,,
+      id: 1,
+      title: 'The Future of Artificial Intelligence in Business',
+      description: 'A comprehensive analysis of how AI is transforming business operations, including case studies, implementation strategies, and ROI calculations.',
       category: 'ai',
       author: 'Dr. Sarah Johnson',
       authorTitle: 'AI Research Director',
@@ -411,7 +810,9 @@ export default function WhitePapersPage() {
       isFeatured: true
     },
     {
-      id: 2,,
+      id: 2,
+      title: 'Cloud Migration Strategies for Enterprise',
+      description: 'Best practices and proven methodologies for migrating enterprise applications to the cloud while ensuring security and performance.',
       category: 'cloud',
       author: 'Mike Chen',
       authorTitle: 'Cloud Solutions Architect',
@@ -426,7 +827,9 @@ export default function WhitePapersPage() {
       isFeatured: true
     },
     {
-      id: 3,,
+      id: 3,
+      title: 'Cybersecurity in the Age of Remote Work',
+      description: 'An in-depth look at the security challenges and solutions for organizations transitioning to remote and hybrid work models.',
       category: 'security',
       author: 'Alex Rodriguez',
       authorTitle: 'Chief Security Officer',
@@ -441,7 +844,9 @@ export default function WhitePapersPage() {
       isFeatured: false
     },
     {
-      id: 4,,
+      id: 4,
+      title: 'Building Scalable Web Applications',
+      description: 'Technical guide covering architecture patterns, performance optimization, and scalability best practices for modern web applications.',
       category: 'development',
       author: 'Emily Watson',
       authorTitle: 'Senior Full-Stack Developer',
@@ -456,7 +861,9 @@ export default function WhitePapersPage() {
       isFeatured: false
     },
     {
-      id: 5,,
+      id: 5,
+      title: 'Digital Transformation Roadmap',
+      description: 'A strategic framework for organizations looking to embark on digital transformation initiatives, with practical implementation guidelines.',
       category: 'business',
       author: 'David Kim',
       authorTitle: 'Digital Transformation Consultant',
@@ -471,7 +878,9 @@ export default function WhitePapersPage() {
       isFeatured: true
     },
     {
-      id: 6,,
+      id: 6,
+      title: 'Machine Learning Model Deployment Best Practices',
+      description: 'Comprehensive guide to deploying ML models in production environments, covering MLOps, monitoring, and maintenance strategies.',
       category: 'ai',
       author: 'Dr. Sarah Johnson',
       authorTitle: 'AI Research Director',
@@ -499,6 +908,43 @@ export default function WhitePapersPage() {
 
   return (
 <<<<<<< HEAD
+title="White Papers - Zion Tech Group"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    id: 3,
+    title: "Cybersecurity in the Digital Age: Protecting Your Assets",
+    author: "Emily Johnson",
+    date: "2024-01-05",
+    category: "Cybersecurity",
+    description: "Comprehensive guide to modern cybersecurity threats and how to protect your organization.",
+    downloadCount: 1500
+  },
+  {
+    id: 4,
+    title: "Data Analytics: Turning Information into Insights",
+    author: "David Kim",
+    date: "2023-12-20",
+    category: "Data Analytics",
+    description: "Discover how to leverage data analytics to drive business decisions and growth.",
+    downloadCount: 750
+  }
+
+];
+
+export default function WhitePapersPage() {
+
+    <Layout
+
+    <MainLayout
+
+      title="White Papers - Zion Tech Group"
+
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -506,7 +952,17 @@ export default function WhitePapersPage() {
 =======
     <MainLayout
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> main
       title="White Papers - Zion Tech Group"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
     >
@@ -531,14 +987,137 @@ export default function WhitePapersPage() {
                   Papers
                 </span>
               </h1>
-<<<<<<< HEAD:pages/white-papers.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+<<<<<<< HEAD
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In-depth research and insights on the latest technology trends and industry developments
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                In-depth research and insights on the latest technology trends and industry developments
+
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+  return (
+
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
 <<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+=======
+=======
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+
   return (
->>>>>>> pr-11914:pages/white-papers.tsx
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+  return (
+
+=======
+<<<<<<< HEAD
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In-depth research and insights on the latest technology trends and industry developments
+=======
+>>>>>>> main
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> main
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -558,19 +1137,37 @@ export default function WhitePapersPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
-<<<<<<< HEAD:pages/white-papers.tsx.disabled
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
->>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8:pages/white-papers.tsx.disabled
+<:pages/white-papers.tsx.backup
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
->>>>>>> main
-=======
->>>>>>> pr-11914:pages/white-papers.tsx
+
               </p>
               
               <div className="mb-4">
@@ -596,20 +1193,145 @@ export default function WhitePapersPage() {
                 Download PDF
               </button>
             </motion.div>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </div>
-=======
+
           </div>
         </section>
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<<< HEAD:pages/white-papers.tsx.backup
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> main
+=======
+========
+              </p>
+>>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+=======
+=======
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
 <<<<<<< HEAD:pages/white-papers.tsx
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In-depth research and insights on the latest technology trends and industry developments
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Access our comprehensive collection of technical white papers and research documents. 
+                Free downloads covering AI, cloud solutions, cybersecurity, and more.
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Access our comprehensive collection of technical white papers and research documents. 
+                Free downloads covering AI, cloud solutions, cybersecurity, and more.
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                </motion.div>
+
+                </motion.div>
+
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+</motion.div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages/white-papers.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<< HEAD
+>>>>>>> main
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -624,7 +1346,11 @@ export default function WhitePapersPage() {
                 >
                   <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
+<<<<<<< HEAD
+
 =======
+=======
+>>>>>>> main
         {/* White Papers List */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -674,8 +1400,27 @@ export default function WhitePapersPage() {
                     <Download className="w-4 h-4 mr-2" />
                     Download PDF
                   </button>
+<<<<<<< HEAD
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+>>>>>>> main
                 </motion.div>
+<<<<<<< HEAD
+=======
+</motion.div>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
               ))}
             </div>
           </div>
@@ -683,7 +1428,28 @@ export default function WhitePapersPage() {
 
         {/* Categories */}
 <<<<<<< HEAD
+<section className="py-16 bg-gray-50">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<section className="py-16 bg-gray-50">
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+
+=======
+<<<<<<< HEAD
         <section className="py-16 bg-gray-50">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Categories</h2>
@@ -704,7 +1470,16 @@ export default function WhitePapersPage() {
                   </div>
                   <div className="text-2xl font-bold text-gray-900">{category.count}</div>
                   <div className="text-sm text-gray-500">papers</div>
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+=======
+>>>>>>> main
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -729,23 +1504,124 @@ export default function WhitePapersPage() {
                 >
                   <Tag className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                   <span className="text-sm font-medium">{category}</span>
+<<<<<<< HEAD
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> main
+>>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+</Link>
+
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<< HEAD
+=======
+</Link>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Link>
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8:pages/white-papers.tsx.disabled
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+</Link>
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+</Link>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -991,12 +1867,91 @@ export default function WhitePapersPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD:pages/white-papers.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+
+    </Layout>
+
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+<<<<<<< HEAD
+</Layout>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Layout>
 =======
+<<<<<<< HEAD
 =======
->>>>>>> pr-11914:pages/white-papers.tsx
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </Layout>
+=======
+<<<<<<< HEAD:pages/white-papers.tsx
+    </>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+
+=======
+<<<<<<< HEAD
+    </Layout>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> main
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -1026,25 +1981,170 @@ export default function WhitePapersPage() {
                   View All Research
                 </Link>
               </div>
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> main
+>>>>>>> main
+<<<<<<< HEAD
+=======
+</Layout>
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD:pages/white-papers.tsx.disabled
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+
+<:pages/white-papers.tsx.backup
+
+<:pages/white-papers.tsx.backup
+
+    </MainLayout>
+
+    </>
+
+    </MainLayout>
+
+    </>
+
+=======
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+<<<<<<< HEAD
+<:pages/white-papers.tsx.backup
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+    </>
+
+    </MainLayout>
+
+    </>
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+<<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 =======
     </>
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
 =======
+========
+>>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> c1f19efa26544fbb335493082b33a55c1d58d4f8:pages/white-papers.tsx.disabled
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+=======
+=======
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+
+    </>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+<:pages/white-papers.tsx.backup
+
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+<:pages/white-papers.tsx.backup
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </MainLayout>
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+=======
+    </MainLayout>
+
     </>
->>>>>>> pr-11914:pages/white-papers.tsx
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+=======
+    </MainLayout>
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
   );
 }

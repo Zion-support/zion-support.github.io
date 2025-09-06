@@ -1,2 +1,2 @@
-// Empty TypeScript file
-export {};
+// Empty types file
+export type Empty = unknown;
