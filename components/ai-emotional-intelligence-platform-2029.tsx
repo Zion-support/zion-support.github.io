@@ -39,6 +39,101 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   Brain, Heart, Eye, MessageCircle, Users, Shield, ;
 
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  Brain,
+  Heart,
+  Eye,
+  MessageCircle,
+  Users,
+  Shield,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Lock,
+  BarChart3,
+  Smartphone,
+  Database,
+  Cloud,
+<<<<<<< HEAD
+  Server,
+  ShieldCheck,
+} from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components / layout / UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2028 from '../components / layout / UltraFuturisticFooter2028';import {
+  Brain, Heart, Eye, MessageCircle, Users, Shield,
+  Zap, TrendingUp, CheckCircle, ArrowRight, Star;
+  Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
+  Smartphone, Database, Cloud, Server, ShieldCheck;
+} from 'lucide-react';
+const AIEmotionalIntelligencePlatform2029 = () => {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+};
+  const features = [
+    {
+      icon: Brain,
+      title: 'Real-time Emotion Detection',
+      description: 'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
+color: 'from-violet-500 to-purple-600'
+    };
+    {;
+      title: 'Mental Health Applications',;
+      description: 'Emotional support and monitoring for mental health care',;
+      icon: Heart,;
+      color: 'from-pink-500 to-rose-600',;
+    },      color: 'from-pink-500 to-rose-600';
+    };
+    {;
+      title: 'Educational Platforms',;
+      description: 'Personalized learning experiences based on emotional state',;
+      icon: Brain,;
+      color: 'from-green-500 to-emerald-600',;
+    },      color: 'from-green-500 to-emerald-600';
+    };
+    {;
+      title: 'Marketing Optimization',;
+      description: 'Campaign optimization based on emotional response analysis',;
+      icon: TrendingUp,;
+      color: 'from-orange-500 to-red-600',;
+    },      color: 'from-orange-500 to-red-600';
+    };
+    {;
+      title: 'HR and Recruitment',;
+      description: 'Emotional intelligence assessment and team building',;
+      icon: Users,;
+      color: 'from-purple-500 to-indigo-600',;
+    },      color: 'from-purple-500 to-indigo-600';
+    };
+    {;
+      title: 'Healthcare Diagnostics',;
+      description: 'Emotional state monitoring for healthcare professionals',;
+      icon: Shield,;
+      color: 'from-teal-500 to-cyan-600',;
+    },      color: 'from-teal-500 to-cyan-600';
+    }
+  ];
+        />;
+        <meta name='author' content='Zion Tech Group' />;
+        <meta name='robots' content='index, follow' />;
+=======
+  Server,;
+  ShieldCheck,;
+} from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
+  Brain, Heart, Eye, MessageCircle, Users, Shield, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
@@ -291,7 +386,7 @@ class ErrorBoundary extends React.Component {
 
 
       ];
-      popular: false;
+      popular: false
     }
 =======
 
@@ -299,13 +394,13 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-    <>;
-      <Head>;
-        <title>AI Emotional Intelligence Platform 2029 | Zion Tech Group</title>;
+    <>
+      <Head>
+        <title>AI Emotional Intelligence Platform 2029 | Zion Tech Group</title>
         <meta
           name='description'
           content='Revolutionary AI platform that reads, understands, and responds to human emotions in real-time. Improve customer satisfaction by 85% with emotional intelligence.'
-        />;
+        />
         <meta
           name='keywords'
           content='AI emotional intelligence, emotion detection, sentiment analysis, customer experience, mental health AI, emotional AI'
@@ -319,6 +414,7 @@ class ErrorBoundary extends React.Component {
         <meta
           property='og:title'
           content='AI Emotional Intelligence Platform 2029'
+<<<<<<< HEAD
         />;
         <meta
           property='og:description'
@@ -373,7 +469,6 @@ class ErrorBoundary extends React.Component {
             {/* Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
   return (
     <>;
       <Head>;
@@ -461,7 +556,6 @@ class ErrorBoundary extends React.Component {
             {/* Badge */}
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
 
 
@@ -483,11 +577,7 @@ class ErrorBoundary extends React.Component {
               </span>
               <br />
               <span className='text-white'>Platform</span>            </motion.h1>            >
-=======
-              transition={{ duration: 1, delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Emotional Intelligence
               </span>
@@ -626,11 +716,7 @@ class ErrorBoundary extends React.Component {
                   $8.2B
                 </div>
                 <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >
-=======
-              transition={{ duration: 1, delay: 0.9 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-center">
                 <div className="text-3xl font-bold text-violet-400 mb-2">85%</div>
                 <div className="text-sm text-gray-400">Customer Satisfaction Increase</div>
@@ -704,8 +790,6 @@ class ErrorBoundary extends React.Component {
           </motion && motion.div>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
@@ -713,7 +797,7 @@ class ErrorBoundary extends React.Component {
           <motion&& motion.div
 
 =======
-
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -756,7 +840,6 @@ class ErrorBoundary extends React.Component {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-=======
               <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'>;
                 Features;
               </span>;
@@ -767,7 +850,6 @@ class ErrorBoundary extends React.Component {
               systems.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Revolutionary <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Features</span>;
@@ -776,7 +858,6 @@ class ErrorBoundary extends React.Component {
               Our AI Emotional Intelligence Platform combines cutting-edge technology with human understanding to create truly empathetic AI systems.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
@@ -817,6 +898,32 @@ class ErrorBoundary extends React.Component {
                 className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className={`flex justify-center mb-6`}>
+=======
+                className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <div className={`flex justify-center mb-6`}>
+                  <div
+                    className={`p-4 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20`}
+                  >
+                    <feature.icon className='w-8 h-8 text-white' />
+                  </div>
+                </div>
+                <h3 className='text-xl font-bold text-white mb-4 text-center'>
+                  {feature.title}
+                </h3>
+                <p className='text-gray-300 text-center leading-relaxed'>
+                  {feature.description}
+                </p>              </motion.div>              >
+                <div className={`flex justify-center mb-6`}>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -851,7 +958,18 @@ class ErrorBoundary extends React.Component {
           <motion&& motion.div
 
 =======
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Benefits Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -887,7 +1005,6 @@ class ErrorBoundary extends React.Component {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
-=======
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Business;
               </span>;
@@ -897,7 +1014,6 @@ class ErrorBoundary extends React.Component {
               team collaboration, and business outcomes.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {benefits && benefits.map((benefit, index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Transform Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Business</span>;
@@ -906,7 +1022,6 @@ class ErrorBoundary extends React.Component {
               Experience unprecedented improvements in customer satisfaction, team collaboration, and business outcomes.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
@@ -952,7 +1067,37 @@ class ErrorBoundary extends React.Component {
           <motion&& motion.div
 
 =======
+                className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20'
+              >
+                <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0' />
+<<<<<<< HEAD
+                <span className='text-white text-lg'>{benefit}</span>              </motion.div>                className="flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20"
+              >
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <span className="text-white text-lg">{benefit}</span>
+=======
+                <span className='text-white text-lg'>{benefit}</span>              </motion.div>
 
+              </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -989,7 +1134,6 @@ class ErrorBoundary extends React.Component {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.title}
-=======
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
                 Use Cases;
               </span>;
@@ -999,7 +1143,6 @@ class ErrorBoundary extends React.Component {
               industries with emotional intelligence.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases && useCases.map((useCase, index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Powerful <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Use Cases</span>;
@@ -1008,7 +1151,6 @@ class ErrorBoundary extends React.Component {
               From customer service to healthcare, our platform transforms industries with emotional intelligence.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
@@ -1049,6 +1191,32 @@ class ErrorBoundary extends React.Component {
                 className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className={`flex justify-center mb-6`}>
+=======
+                className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <div className={`flex justify-center mb-6`}>
+                  <div
+                    className={`p-4 rounded-xl bg-gradient-to-r ${useCase.color} bg-opacity-20`}
+                  >
+                    <useCase.icon className='w-8 h-8 text-white' />
+                  </div>
+                </div>
+                <h3 className='text-xl font-bold text-white mb-4 text-center'>
+                  {useCase.title}
+                </h3>
+                <p className='text-gray-300 text-center leading-relaxed'>
+                  {useCase.description}
+                </p>              </motion.div>              >
+                <div className={`flex justify-center mb-6`}>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${useCase.color} bg-opacity-20`}>
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -1083,7 +1251,18 @@ class ErrorBoundary extends React.Component {
           <motion&& motion.div
 
 =======
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1119,7 +1298,6 @@ class ErrorBoundary extends React.Component {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([key, plan], index) => (
               <motion.div
-=======
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
                 Plan;
               </span>;
@@ -1129,7 +1307,6 @@ class ErrorBoundary extends React.Component {
               needs.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {Object && Object.entries(pricing).map(([key, plan], index) => (          >;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>;
@@ -1138,7 +1315,6 @@ class ErrorBoundary extends React.Component {
               Flexible pricing options designed to scale with your business needs.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {Object && Object.entries(pricing).map(([key, plan], index) => (;
               <motion&& motion.div
@@ -1184,7 +1360,24 @@ class ErrorBoundary extends React.Component {
           <motion&& motion.div
 
 =======
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1206,8 +1399,8 @@ class ErrorBoundary extends React.Component {
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to{' '}
-              <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                Transform;
+              <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                Transform
               </span>{' '}
 
             className="text-center mb-16"
@@ -1226,7 +1419,6 @@ class ErrorBoundary extends React.Component {
               Your Business?;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-=======
                     <span className='text - lg text - gray - 400'>{plan.period}</span>;
                   </div>;
                   <p className='text - gray - 300'>{plan.description}</p>;
@@ -1299,7 +1491,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
 
 
@@ -1311,9 +1503,7 @@ class ErrorBoundary extends React.Component {
               <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />;
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.mobile}</p>;
-
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -1328,9 +1518,7 @@ class ErrorBoundary extends React.Component {
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />;
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.email}</p>;
-
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
@@ -1346,9 +1534,7 @@ class ErrorBoundary extends React.Component {
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.address}</p>;
           </div>;
-
           <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
@@ -1366,7 +1552,6 @@ class ErrorBoundary extends React.Component {
 =======
             className="text-center"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <Link
               href="/contact"
 
@@ -1379,17 +1564,13 @@ class ErrorBoundary extends React.Component {
           </motion && motion.div>;
         </div>;
       </section>;
-
       <UltraFuturisticFooter2028 />;
     </>;
   );
 };
-
 export default AIEmotionalIntelligencePlatform2029;  );
 
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default AIEmotionalIntelligencePlatform2029;
 
 
@@ -1452,6 +1633,7 @@ export default AIEmotionalIntelligencePlatform2029;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text - center';
           >;
             <Link;
@@ -1478,9 +1660,52 @@ export default AIEmotionalIntelligencePlatform2029;
 }
 ;
 export default AIEmotionalIntelligencePlatform2029);
+=======
+            className='text-center'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <Link
+              href='/contact'
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'
+            >
+              <span className='flex items-center'>
+                Get Started Today
+                <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+            >
+              <span className="flex items-center">
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+      <UltraFuturisticFooter2028 />
+    </>
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default AIEmotionalIntelligencePlatform2029;  )
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 export default AIEmotionalIntelligencePlatform2029;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

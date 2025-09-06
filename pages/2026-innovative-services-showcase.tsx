@@ -30,12 +30,17 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         switch (selectedCategory) {
           case 'ai':
+<<<<<<< HEAD
+return service.category?.includes('AI');
+=======
             return service.category?.includes('AI');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           case 'quantum':
             return service.category?.includes('Quantum');
           case 'enterprise':
@@ -52,6 +57,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 
 
     // Price range filter
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -77,23 +83,19 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       icon: '🔬',;
       count: emergingTechCount,;
     },  ];
-
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'low', name: 'Under $500', range: 'Under $500' },;
     { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' },;
     { id: 'high', name: 'Over $1,000', range: 'Over $1,000' },  ];
-
   const sortOptions = [;
     { id: 'name', name: 'Name' },;
     { id: 'price', name: 'Price' },;
     { id: 'rating', name: 'Rating' },;
     { id: 'popularity', name: 'Popularity' },  ];
-
   // Filter and sort services;
   const filteredServices = useMemo(() => {;
     let filtered = allServices;
-
     // Category filter;
     if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(service => {;
@@ -115,14 +117,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           default: return true,;
         }
       });    }
-
     // Price range filter;
     if (selectedPriceRange !== 'all') {;
       filtered = filtered && filtered.filter(service => {;
         const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
         switch (selectedPriceRange) {;
           case 'low':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             return price < 500;
           case 'medium':;
             return price >= 500 && price <= 1000;
@@ -392,6 +392,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
       <UltraAdvancedFuturisticBackground2026
+<<<<<<< HEAD
         intensity='extreme'
         colorScheme='neural-network'        particleCount={800}
         animationSpeed={3 && 3.0}
@@ -417,7 +418,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
       />;
 
       <UltraAdvancedNavigation2026 />;
-
       <div className='min-h-screen relative z-10'>;
 
         {/* Hero Section */}
@@ -432,18 +432,23 @@ export default function Innovative2026ServicesShowcase(req, res) {
                 2026 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
                 Discover the future of technology with our cutting-edge 2026 services. 
+=======
+                Discover the future of technology with our cutting-edge 2026 services.
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 From AI-powered solutions to quantum computing and emerging technologies,
                 transform your business with next-generation innovation.
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </motion.div>
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
               className="flex flex-wrap justify-center gap-4 mb-12"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
                 <span className="text-blue-400 font-semibold">{allServices.length}+ Services</span>
@@ -498,12 +503,12 @@ export default function Innovative2026ServicesShowcase(req, res) {
                 <input
                   type="text"
                   placeholder="Search innovative services..."
+<<<<<<< HEAD
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
                 />
               </div>
-
               <div className="flex flex-wrap gap-4 justify-center mb-8">
                 {categories.map((category) => (
                   <button
@@ -513,7 +518,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   className='w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent';
                 />;
               </div>;
-
               <div className='flex flex-wrap gap-4 justify-center mb-8'>;
                 {categories && categories.map(category => (                  <button
                     key={category && category.id}
@@ -557,7 +561,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   <button
 
               </div>;
-
               <div className='flex flex-wrap gap-4 justify-center'>;
                 {priceRanges && priceRanges.map(range => (                  <button
                     key={range && range.id}
@@ -631,7 +634,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                       <p className='text-gray-300 text-sm mb-4 line-clamp-3'>;
                         {service && service.description}
                       </p>;
-
                       <div className='flex items-center justify-between mb-4'>;
                         <div className='flex items-center space-x-2'>;
                           <Star className='w-4 h-4 text-yellow-500 fill-current' />;
@@ -680,13 +682,13 @@ export default function Innovative2026ServicesShowcase(req, res) {
                               <CheckCircle className="w-3 h-3 text-green-400" />
                               <span className="text-gray-300 text-xs">{feature}</span>
                             </div>
+<<<<<<< HEAD
                           ))}
                           {service.features.length > 3 && (
                             <span className="text-gray-500 text-xs">+{service.features.length - 3} more features</span>
                           )}
                         </div>
                       </div>
-
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
@@ -694,7 +696,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         </span>
                       </div>
-                      {/* CTA Button */}
+{/* CTA Button */}
                       <Link href={service.link}>
 
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service && service.textColor} bg-opacity-20`}>                          {service && service.category}
@@ -721,6 +723,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
                     setSelectedPriceRange('all')
                   }}
+<<<<<<< HEAD
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Clear Filters
@@ -734,8 +737,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -798,7 +799,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                 Contact our team to learn more about our innovative 2026;
                 services and how they can revolutionize your operations.;
               </p>;
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6'>;
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />;
@@ -816,12 +816,47 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   <p className='text-green-300'>ziontechgroup && ziontechgroup.com</p>;
                 </div>;
               </div>;
-
               <Link href='/contact'>;
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started Today;
                 </button>;
               </Link>;
             </motion && motion.div>;
+=======
+<<<<<<< HEAD
+);
+=======
+  )
+            >;
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8">;
+                Contact our team to learn more about our innovative 2026 services and how they can revolutionize your operations.;
+              </p>;
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
+                <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6">;
+                  <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
+                  <h3 className="text-white font-semibold mb-2">Call Us</h3>;
+                  <p className="text-blue-300">+1 302 464 0950</p>;
+                </div>;
+                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">;
+                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />;
+                  <h3 className="text-white font-semibold mb-2">Email Us</h3>;
+                  <p className="text-purple-300">kleber@ziontechgroup.com</p>;
+                </div>;
+                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-xl p-6">;
+                  <Globe className="w-8 h-8 text-green-400 mx-auto mb-4" />;
+                  <h3 className="text-white font-semibold mb-2">Visit Us</h3>;
+                  <p className="text-green-300">ziontechgroup.com</p>;
+                </div>;
+              </div>;
+              <Link href="/contact">;
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">;
+                  Get Started Today;
+                </button>;
+              </Link>;
+            </motion.div>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </section>;
       </div>;
@@ -832,8 +867,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                         </div>;
                       </div>;
                       <div className='flex items - center justify - between mb - 4'>;

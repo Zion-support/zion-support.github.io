@@ -1,11 +1,7 @@
-
-
-
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
 
-=======
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 
@@ -16,7 +12,6 @@ import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function PaymentMethods() {
   // Mock payment methods
 
@@ -30,7 +25,6 @@ export function PaymentMethods() {
       last4: '4242',
 
 
-=======
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -40,7 +34,6 @@ export function PaymentMethods() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       expYear: 2025,
       isDefault: true},
     {
@@ -57,7 +50,6 @@ export function PaymentMethods() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card>
       <CardHeader>
@@ -70,8 +62,6 @@ export function PaymentMethods() {
         {paymentMethods.map((method,) => (
           <div
             key = {method.id,}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import {;
   Card,;
@@ -125,8 +115,6 @@ export function PaymentMethods() {;
         {paymentMethods && paymentMethods.map((method,) => (;
           <div
             key = {method && method.id,}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
       </CardHeader>
@@ -135,11 +123,8 @@ export function PaymentMethods() {;
           <div 
             key={method.id}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className={`flex items-center justify-between p-4 rounded-lg border ${
 
-=======
               method.isDefault ? "bg-muted border-primary" : "border-border";
             }`}
           >
@@ -161,7 +146,6 @@ export function PaymentMethods() {;
                 <p className="text-sm text-muted-foreground">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
@@ -172,7 +156,6 @@ export function PaymentMethods() {;
               {!method.isDefault && (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Button size="sm" variant="ghost">Set Default</Button>
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
@@ -180,16 +163,13 @@ export function PaymentMethods() {;
               </Button>
             </div>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ))}
 
         <Button className="gap-1">
 
-=======
 
         <Button className="gap-1">
 
-=======
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -197,10 +177,7 @@ export function PaymentMethods() {;
     </Card>;
   );
 };
-=======
         <Button className="gap-1">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -208,9 +185,7 @@ export function PaymentMethods() {;
     </Card>
 
 
-=======
 
-=======
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -283,7 +258,6 @@ export function PaymentMethods() {;
             </div>
           </div>
         ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </CardContent>;
       <CardFooter>;
         <Button className='gap-1'>;
@@ -299,7 +273,6 @@ export function PaymentMethods() {;
   );
 }
 
-=======
 import React from 'react';
 import {
   Card,
@@ -405,10 +378,4 @@ function PaymentMethods() {
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

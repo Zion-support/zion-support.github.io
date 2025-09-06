@@ -19,7 +19,6 @@ export default async function handler(
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -119,7 +118,6 @@ export default async function handler(req, res) {
 
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
-
     for (const ev of events) {
       const { count, error } = await supabase
         .from('referral_events')
@@ -129,21 +127,17 @@ export default async function handler(req, res) {
       if (error) return res.status(500).json({ error: error.message });
       counts[ev] = count || 0
     }
-
     const total_signups = counts['signup'] || 0;
     const total_visits = counts['visit'] || 0;
     const total_profile_completions = counts['profile_completed'] || 0;
     const total_job_creations = counts['job_created'] || 0;
-
     const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return res.status(200).json({
       total_signups
       total_visits
       total_profile_completions
       total_job_creations
-=======
+<<<<<<< HEAD
     return res && res.status(200).json({
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -200,9 +194,23 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     return res.status (500).json ({ error: e?.message });
+
+=======
+<<<<<<< HEAD
+    return res.status(500).json({ error: e?.message });
+=======
+    return res.status(500).json({ error: e?.message })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+<<<<<<< HEAD
+}
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 

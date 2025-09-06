@@ -1,6 +1,4 @@
-
-
-    const options: RequestInit = {
+const options: RequestInit = {
       method
       headers: {
 
@@ -8,7 +6,6 @@
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
@@ -78,7 +75,6 @@ export function ApiPlayground(): any ({;
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-=======
         options.body = body
 
 ;
@@ -88,7 +84,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   const [body, setBody] = useState("{}"),;
   const [response, setResponse] = useState<string | null>(null),;
   const [loading, setLoading] = useState(false),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleParamChange = (name: string, value: string) => {;
     setParamValues(prev => ({ ...prev, [name]: value }));
   };
@@ -165,14 +160,12 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       );
     } finally {;
       setLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-4'>;
       <Input
@@ -185,7 +178,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
       />
       {params.map(p => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Input
 
 
@@ -193,11 +185,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
 
           onChange={e => handleParamChange(p.name, e.target.value)}        />
-=======
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
           onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ))}
       {method !== 'GET' && method !== 'DELETE' && (;
         <Textarea
@@ -305,21 +295,16 @@ if (contentType?.includes ('application/json') ) {;
 }</div>) ;
 }export default ApiPlayground;
 
-=======
   p.name;
 }</div>);
 }export default ApiPlayground;
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   p.name 
 }</div>) ;
 }export default ApiPlayground;
 '";
 }
 
-=======
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
@@ -340,7 +325,3 @@ if (contentType?.includes ('application/json') ) {;
 }
 ;
 export default ApiPlayground;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

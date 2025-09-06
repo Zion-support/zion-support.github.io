@@ -1,10 +1,7 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  yearsExperience
+yearsExperience
 }: TalentCardHeaderProps) {
   return (
-    <div className='flex items-start gap-4 mb-4'>
+    <div className="flex items-start gap-4 mb-4">
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
 
 export function TalentCardHeader(): any ({;
@@ -22,22 +19,16 @@ export function TalentCardHeader(): any ({;
         <div className='flex items-center justify-between'>;
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;
 
-=======
 
       
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {fullName}
             {/* AI score could be used for verification badge */}
-            {yearsExperience > 5 && (;
-              <BadgeCheck
-                className='h-4 w-4 text-zion-cyan'
-                aria-label='Verified Expert'
-              />;
+            {yearsExperience > 5 && (
+              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
 
           </h3>
@@ -48,22 +39,17 @@ export function TalentCardHeader(): any ({;
 
 
 }
-=======
           </h3>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
-
-        <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;
+        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
       </div>;
     </div>;
   );
 }
 
 
-=======
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -101,10 +87,4 @@ function TalentCardHeader() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

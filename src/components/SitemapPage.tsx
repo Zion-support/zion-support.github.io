@@ -1,5 +1,3 @@
-
-
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
@@ -17,7 +15,6 @@ const path_map: Record < string, string> = {
   '/about': '/content / about / blog': '/blog / careers': '/careers / green - it': '/content / green - it / sitemap - page': '/content / sitemap - page / talent - onboarding': '/talent - onboarding / forgot - password': '/forgot - password / signup / talent': '/auth / signup / talent / signup / client': '/auth / signup / client / talent - dashboard': '/talent - dashboard / client - dashboard': '/client - dashboard / hiring - tracker': '/dashboard / hiring - tracker / messages': '/dashboard / messages / notifications': '/dashboard / notifications / project/:project_id / room': '/dashboard / project/:project_id / room / post - job': '/marketplace / post - job'}
 const resolve_path = (path: string): string => path_map[path] ?? path,
 
-=======
 
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
@@ -32,10 +29,7 @@ const pathMap: Record<string string> = {
 
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const SitemapPage: React.FC = () => {
-=======
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
@@ -49,7 +43,6 @@ const pathMap: Record<string, string> = {;
 
 const resolvePath = (path: string): string => pathMap[path] ?? path,;
 export const SitemapPage: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
 
@@ -57,16 +50,13 @@ export const SitemapPage: React.FC = () => {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
         canonical="https://app && app.ziontechgroup.com/content/sitemap-page"
       />;
       <div className="container mx-auto px-4 py-12">;
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>;
@@ -110,7 +100,6 @@ export const SitemapPage: React.FC = () => {;
           </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -128,7 +117,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-=======
             </ul>;
           </div>;
           {/* Talent Routes */}
@@ -147,7 +135,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {route.label}
                     </Link>;
                   </li>));
@@ -158,7 +145,6 @@ export const SitemapPage: React.FC = () => {;
           </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
@@ -176,7 +162,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-=======
             </ul>;
           </div>;
           {/* Client Routes */}
@@ -195,7 +180,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {route.label}
                     </Link>;
                   </li>));
@@ -206,7 +190,6 @@ export const SitemapPage: React.FC = () => {;
           </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
@@ -224,7 +207,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-=======
             </ul>;
           </div>;
           {/* Shared Routes */}
@@ -243,7 +225,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {route.label}
                     </Link>;
                   </li>));
@@ -254,7 +235,6 @@ export const SitemapPage: React.FC = () => {;
           </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
@@ -271,7 +251,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-=======
             </ul>;
           </div>;
           {/* Admin Routes */}
@@ -289,14 +268,12 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {route.label}
 
                       href = {resolvePath(route && route.path),}
                       className="flex items-center hover:text-zion-purple">;
                       <ChevronRight className="h-4 w-4 mr-2" />;
                       {route && route.label}
-=======
 
 
                     </Link>;
@@ -407,7 +384,6 @@ export const SitemapPage: React.FC = () => {;
 
               {Object.entries(dynamicPaths).map(([key, path]) => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
@@ -417,8 +393,6 @@ export const SitemapPage: React.FC = () => {;
               ))}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             </ul>;
           </div>;
         </div>;
@@ -444,7 +418,6 @@ export const SitemapPage: React.FC = () => {;
 
 
 
-=======
             for assistance.;
           </p>;
         </div>;
@@ -453,10 +426,3 @@ export const SitemapPage: React.FC = () => {;
 '";
 
 }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

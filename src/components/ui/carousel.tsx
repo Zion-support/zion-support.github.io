@@ -1,5 +1,3 @@
-
-
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from 'lucide-react'
@@ -14,7 +12,7 @@ type CarouselPlugin = any
 type CarouselProps = {
   opts?: CarouselOptions
   plugins?: CarouselPlugin
-  orientation?: &quot;horizontal&quot; | &quot;vertical&quot;
+  orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
 }
 type CarouselContextProps = {
@@ -28,7 +26,6 @@ type CarouselContextProps = {
 
 
 
-=======
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -76,8 +73,6 @@ function useCarousel(): CarouselContextProps {;
 
   }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return context as CarouselContextProps;
 }
 const Carousel = React.forwardRef<
@@ -89,7 +84,6 @@ const Carousel = React.forwardRef<
 
 
 
-=======
       orientation = "horizontal",
 
       opts,
@@ -97,8 +91,6 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ...props
     }
     ref
@@ -117,7 +109,7 @@ const Carousel = React.forwardRef<
     const [canScrollNext, setCanScrollNext] = React.useState(false)
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return
+        return;
       }
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
@@ -130,10 +122,10 @@ const Carousel = React.forwardRef<
     }, [api])
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
-        if (event.key === &quot;ArrowLeft&quot;) {
+        if (event.key === "ArrowLeft") {
           event.preventDefault()
           scrollPrev()
-        } else if (event.key === &quot;ArrowRight&quot;) {
+        } else if (event.key === "ArrowRight") {
           event.preventDefault()
           scrollNext()
         }
@@ -143,11 +135,9 @@ import useEmblaCarousel from &quot;embla - carousel - react & quot;
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from &quot;@/lib / utils & quot;
 import { Button } from &quot;@/components / ui / button & quot;
-=======
 
       };
 
-=======
       },;
 
       [scrollPrev, scrollNext];
@@ -156,7 +146,6 @@ import { Button } from &quot;@/components / ui / button & quot;
       if (!api || !setApi) {;
         return;
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 type CarouselApi = ReturnType < typeof useEmblaCarousel>[1];
 type CarouselOptions = {
@@ -215,7 +204,6 @@ if ( {) {
       return () => {
         api?.off("select", onSelect)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       set_api (api);
     }, [api, set_api]);
@@ -229,7 +217,6 @@ if ( {) {
 on_select (api);
       api.on (&quot;re_init & quot;, on_select);
       api.on (&quot;select & quot;, on_select);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return () => {
         api?.off (&quot;select & quot;, on_select);
       }
@@ -249,14 +236,12 @@ on_select (api);
           scroll_next,
           canScrollPrev,
 
-=======
 
             orientation || (opts && opts.axis === "y" ? "vertical" : "horizontal"),
           scrollPrev,
           scrollNext,
           canScrollPrev,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           canScrollNext}}
       >;
         <div;
@@ -268,19 +253,18 @@ className={cn(&quot;relative&quot; className)}
 
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
-=======
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {...props}
         >;
           {children}
         </div>;
-      </CarouselContext.Provider>);
+      </CarouselContext.Provider>;
+    );
   }
 
 )
@@ -294,7 +278,6 @@ const CarouselContent = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
-=======
 );
 Carousel.display_name = &quot;Carousel & quot;
 ;
@@ -303,10 +286,9 @@ const CarouselContent = React.forward_ref<;
   React.HTMLAttributes < HTMLDivElement>;
 >(({ class_name, ...props }, ref) => {
   const { carousel_ref, orientation } = use_carousel ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <div ref={carousel_ref} className=&quot;overflow - hidden & quot;>;
-      <div;
+    <div ref={carouselRef} className="overflow-hidden">
+      <div
         ref={ref}
 
         className={cn(
@@ -317,7 +299,6 @@ const CarouselContent = React.forward_ref<;
             : "-mt-4 flex-col snap-y snap-mandatory",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className
         )}
         {...props}
@@ -336,7 +317,6 @@ const CarouselItem = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { orientation } = useCarousel()
-=======
         className={cn (
           &quot;flex & quot;,
           orientation === &quot;horizontal & quot;
@@ -354,9 +334,8 @@ const CarouselItem = React.forward_ref<;
   React.HTMLAttributes < HTMLDivElement>;
 >(({ class_name, ...props }, ref) => {
   const { orientation } = use_carousel ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <div;
+    <div
       ref={ref}
 
       role="group"
@@ -367,7 +346,6 @@ const CarouselItem = React.forward_ref<;
         orientation === "horizontal" ? "pl-4" : "pt-4",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className
       )}
       {...props}
@@ -387,7 +365,6 @@ const CarouselPrevious = React.forwardRef<
 
 
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
-=======
       role=&quot;group & quot;
       aria - roledescription=&quot;slide & quot;
       className={cn (
@@ -404,9 +381,8 @@ const CarouselPrevious = React.forward_ref<;
   React.ComponentProps < typeof Button>;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_prev, canScrollPrev } = use_carousel ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <Button;
+    <Button
       ref={ref}
       variant={variant}
       size={size}
@@ -419,24 +395,20 @@ const CarouselPrevious = React.forward_ref<;
           : "top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className
       )}
-=======
       className={cn (
         &quot;absolute h - 8 w - 8 rounded - full & quot;,
         orientation === &quot;horizontal & quot;
           ? &quot;left - 1 sm:left - 2 md:-left - 12 top - 1/2 -translate - y-1 / 2&quot;
           : &quot;top - 1 sm:top - 2 md:-top - 12 left - 1/2 -translate - x-1 / 2 rotate - 90 & quot;,
         class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       disabled={!canScrollPrev}
-      on_click={scroll_prev}
+      onClick={scrollPrev}
       {...props}
 
 
 
-=======
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
@@ -448,16 +420,13 @@ const CarouselPrevious = React.forward_ref<;
 })
 CarouselPrevious.displayName = "CarouselPrevious"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const CarouselNext = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<typeof Button>
 
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { orientation, scrollNext, canScrollNext } = useCarousel()
-=======
 >;
       <ArrowLeft className=&quot;h - 4 w - 4&quot; />;
       <span className=&quot;sr - only & quot;>Previous slide</span>;
@@ -470,9 +439,8 @@ const CarouselNext = React.forward_ref<;
   React.ComponentProps < typeof Button>;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_next, canScrollNext } = use_carousel ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <Button;
+    <Button
       ref={ref}
       variant={variant}
       size={size}
@@ -485,19 +453,16 @@ const CarouselNext = React.forward_ref<;
           : "bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className
       )}
-=======
       className={cn (
         &quot;absolute h - 8 w - 8 rounded - full & quot;,
         orientation === &quot;horizontal & quot;
           ? &quot;right - 1 sm:right - 2 md:-right - 12 top - 1/2 -translate - y-1 / 2&quot;
           : &quot;bottom - 1 sm:bottom - 2 md:-bottom - 12 left - 1/2 -translate - x-1 / 2 rotate - 90 & quot;,
         class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       disabled={!canScrollNext}
-      on_click={scroll_next}
+      onClick={scrollNext}
       {...props}
 
 >;
@@ -507,10 +472,8 @@ const CarouselNext = React.forward_ref<;
 });
 CarouselNext.display_name = &quot;CarouselNext & quot;
 ;
-=======
 
 
-=======
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
@@ -522,7 +485,6 @@ CarouselNext.display_name = &quot;CarouselNext & quot;
 })
 CarouselNext.displayName = "CarouselNext"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export {
   type CarouselApi,
   Carousel,
@@ -533,6 +495,3 @@ export {
   CarouselPrevious,
   CarouselNext}
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

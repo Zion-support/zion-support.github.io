@@ -1,5 +1,3 @@
-
-
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -30,15 +28,12 @@ export type ContractFormValues = z && z.infer<typeof formSchema>;
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
   )
 }
-=======
 
-=======
 import { useState, useEffect  } from './react';
 import { use_form  } from './react - hook - form';
 import { zod_resolver  } from '@hookform / resolvers / zod';
@@ -72,7 +67,3 @@ export type ContractFormValues = z.infer < typeof form_schema>;
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

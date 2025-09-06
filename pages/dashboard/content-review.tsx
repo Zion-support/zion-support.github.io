@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -38,7 +34,6 @@ import React, { useMemo, useState } from 'react';
 
             }
             className='border rounded px-2 py-1';
-=======
       <div className='max - w-7xl mx - auto'>;
         <div className='flex items - center justify - between mb - 4'>;
           <h1 className='text - 2xl font - semibold'>Admin Content Review</h1>;
@@ -50,7 +45,6 @@ import React, { useMemo, useState } from 'react';
               set_filters (function => ({ ...f, status: e.target.value || undefined }));
             }
             className='border rounded px - 2 py - 1';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             <option value=''>All Statuses</option>;
             <option value='pending'>Pending</option>;
@@ -69,7 +63,6 @@ import React, { useMemo, useState } from 'react';
 
             }
             className='border rounded px-2 py-1';
-=======
           <select;
             value={filters.content_type || ''}
             on_change={e =>;
@@ -79,7 +72,6 @@ import React, { useMemo, useState } from 'react';
               }));
             }
             className='border rounded px - 2 py - 1';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             <option value=''>All Types</option>;
             <option value='listing'>Listing</option>;
@@ -111,7 +103,6 @@ import React, { useMemo, useState } from 'react';
           <button
             onClick={() => setFilters({ status: 'pending' })}
             className='border rounded px-2 py-1';
-=======
           <input;
             placeholder='Reason contains...';
             value={filters.reason || ''}
@@ -134,7 +125,6 @@ import React, { useMemo, useState } from 'react';
           <button;
             on_click={() => set_filters ({ status: 'pending' })}
             className='border rounded px - 2 py - 1';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             Reset;
           </button>;
@@ -184,11 +174,69 @@ import React, { useMemo, useState } from 'react';
                 <th className="text-left px-3 py-2">Created</th>
                 <th className="text-left px-3 py-2">Status</th>
                 <th className="text-left px-3 py-2">Actions</th>
+<<<<<<< HEAD
+
+  const [selected, setSelected] = useState<any | null>(null),
+
+  async function handleAction(action: 'approve'|'remove'|'warn'|'ban', adminNotes?: string) {
+    if (!selected) return,
+    await fetch(`/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, adminNotes })
+    }),
+    setSelected(null),
+    mutate()
+  }
+
+  return (
+    <EnhancedLayout>
+      <div className=&quot;max-w-7xl mx-auto&quot;>
+        <div className=&quot;flex items-center justify-between mb-4&quot;>
+          <h1 className=&quot;text-2xl font-semibold&quot;>Admin Content Review</h1>
+        </div>
+        <div className=&quot;mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm&quot;>
+          <select value={filters.status || ''} onChange={e => setFilters(f => ({ ...f, status: e.target.value || undefined }))} className=&quot;border rounded px-2 py-1&quot;>
+            <option value="&quot;>All Statuses</option>
+            <option value=&quot;pending&quot;>Pending</option>
+            <option value=&quot;approved&quot;>Approved</option>
+            <option value=&quot;removed&quot;>Removed</option>
+            <option value=&quot;warned&quot;>Warned</option>
+            <option value=&quot;banned">Banned</option>
+          </select>
+          <select value={filters.contentType || ''} onChange={e => setFilters(f => ({ ...f, contentType: e.target.value || undefined }))} className="border rounded px-2 py-1&quot;>
+            <option value="&quot;>All Types</option>
+            <option value=&quot;listing&quot;>Listing</option>
+            <option value=&quot;message&quot;>Message</option>
+            <option value=&quot;cv&quot;>CV</option>
+            <option value=&quot;job&quot;>Job Post</option>
+          </select>
+          <input placeholder=&quot;Reason contains...&quot; value={filters.reason || ''} onChange={e => setFilters(f => ({ ...f, reason: e.target.value || undefined }))} className=&quot;border rounded px-2 py-1&quot; />
+          <input placeholder=&quot;User email&quot; value={filters.userEmail || ''} onChange={e => setFilters(f => ({ ...f, userEmail: e.target.value || undefined }))} className=&quot;border rounded px-2 py-1&quot; />
+          <button onClick={() => setFilters({ status: 'pending' })} className=&quot;border rounded px-2 py-1&quot;>Reset</button>
+        </div>
+        <div className=&quot;overflow-auto border rounded&quot;>
+          <table className=&quot;min-w-full text-sm&quot;>
+            <thead className=&quot;bg-gray-50 dark:bg-gray-900&quot;>
+              <tr>
+                <th className=&quot;text-left px-3 py-2&quot;>ID</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Type</th>
+                <th className=&quot;text-left px-3 py-2&quot;>User</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Reason</th>
+                <th className=&quot;text-left px-3 py-2&quot;>AI Scores</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Created</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Status</th>
+                <th className=&quot;text-left px-3 py-2&quot;>Actions</th>
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </tr>
             </thead>
             <tbody>
               {flags.map((f: any) => (
+<<<<<<< HEAD
+<tr key={f.id} className="border-t hover:bg-gray-50/50">
+=======
                 <tr key={f.id} className="border-t hover:bg-gray-50/50">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <td className="px-3 py-2 font-mono text-xs">{f.id}</td>
                   <td className="px-3 py-2">{f.contentType}</td>
                   <td className="px-3 py-2">{f.userEmail}</td>
@@ -200,6 +248,7 @@ import React, { useMemo, useState } from 'react';
                     <button onClick={() => setSelected(f)} className="px-2 py-1 rounded border">Review</button>
                   </td>
                 </tr>
+<<<<<<< HEAD
               ))}
               {flags.length === 0 && (
 
@@ -221,9 +270,10 @@ import React, { useMemo, useState } from 'react';
           </table>;
         </div>;
       </div>;
-
       {selected && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      {selected && (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <ModerationModal
           flag={selected}
           onClose={() => setSelected(null)}
@@ -281,10 +331,26 @@ import React, { useMemo, useState } from 'react';
                     No results;
                   </td>;
                 </tr>              )}
+=======
+);
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </tbody>;
           </table>;
         </div>;
       </div>;
+<<<<<<< HEAD
       {selected && (
         <ModerationModal;
           flag={selected}

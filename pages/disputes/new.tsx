@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -71,8 +67,6 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
 export default function NewDisputePage() {;
   const router = useRouter();
 
@@ -83,7 +77,6 @@ export default function NewDisputePage() {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const [projectId, setProjectId] = useState(qProjectId || '');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
@@ -94,10 +87,8 @@ export default function NewDisputePage() {;
     clientId || (user && user.role === 'client' ? user && user.id : '');
   );
   const [submitting, setSubmitting] = useState(false);
-
   useEffect(() => {;
     if (qProjectId) setProjectId(qProjectId);  }, [qProjectId]);
-
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     if (!projectId || !description || !clientUserId || !talentUserId);
@@ -118,7 +109,6 @@ export default function NewDisputePage() {;
         }),;
       });      if (!res && res.ok) throw new Error('Failed to create');
       const { dispute } = await res && res.json();
-
       if (files && files.length > 0) {;
         const filePayload = await Promise && Promise.all(;
           files && files.map(async f => ({;
@@ -132,7 +122,6 @@ export default function NewDisputePage() {;
           body: JSON && JSON.stringify({ files: filePayload }),;
         });
       }
-
       router && router.push(`/disputes/${encodeURIComponent(dispute && dispute.id)}`);
     } catch (e: any) {;
       alert(e && e.message || 'Error');
@@ -146,22 +135,23 @@ export default function NewDisputePage() {;
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
-
   useEffect(() => {
     if (qProjectId) setProjectId(qProjectId)
   }, [qProjectId]);
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
     setSubmitting(true);
-=======
 import {use_router} from 'next / router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {useCurrentUser} from '../../utils / auth';
 ;
 const REASONS = [;
+=======
+
+const REASONS = [
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   'Scope Disagreement',
   'Quality Issues',
   'Delivery Delay',
@@ -169,6 +159,7 @@ const REASONS = [;
   'Communication Breakdown',
   'Other',
 ] as const;
+<<<<<<< HEAD
 ;
 type ReasonType = (typeof REASONS)[number];
 ;
@@ -305,7 +296,6 @@ if ( {) {
             <button
               disabled={submitting}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>;
-=======
             <label className='block text - sm font - medium'>Reason</label>;
             <select;
               value={reason}
@@ -352,7 +342,6 @@ if ( {) {
               disabled={submitting}
               className='px - 4 py - 2 rounded bg - blue - 600 text - white hover:bg - blue - 700 disabled:opacity - 50';
             >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {submitting ? 'Submitting...' : 'Submit Dispute'}
             </button>          </div>;
         </form>;

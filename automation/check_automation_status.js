@@ -124,14 +124,16 @@ module.exports = { checkAutomationStatus };,
 
 =======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run if called directly;
 if (require.main === module) {}
   checkAutomationStatus();
-
 module.exports = { checkAutomationStatus };,
 ;
 ;
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
@@ -157,9 +159,6 @@ async function checkAutomationStatus() {
 
       } catch(error) { 
       statusReport.pm2Processes = [] }
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       const pm2List = execSync('pm2 list --json', { "encoding": 'ut,f8'};);
       const pm2Data = JSON.parse(pm2List;);
       statusReport.pm2Processes = pm2Data;
@@ -167,7 +166,6 @@ async function checkAutomationStatus() {
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
       } catch(error) { 
       statusReport.pm2Processes = [] }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;

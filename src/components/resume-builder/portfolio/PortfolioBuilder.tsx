@@ -1,6 +1,4 @@
-
-
-  }
+}
 
 
   
@@ -24,7 +22,6 @@
       </div>
       
 
-=======
           Add Project
         </Button>
       </div>
@@ -34,7 +31,6 @@
         <Card>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -55,7 +51,6 @@
                 setEditingProject(null);                setEditingProject(null)
 
                 setEditingProject(null)
-=======
           className='gap-2';
           disabled={showAddProject || !!editingProject}        >;
           <FilePlus className='h-4 w-4' />;
@@ -86,9 +81,9 @@
                 setEditingProject(null);
 
               }}
-            />;
-          </CardContent>;
-        </Card>;
+            />
+          </CardContent>
+        </Card>
       )}
       {/* Projects List */}
 
@@ -144,11 +139,9 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
-=======
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-=======
 
 
         <Button 
@@ -170,21 +163,19 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>
-            
-            <ProjectForm 
+            </h2>;
+            <ProjectForm;
               project={editingProject || undefined}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
+              onCancel={() => {;
                 setShowAddProject(false);
 
                 setEditingProject(null)
 
               }}
-            />
-          </CardContent>
-        </Card>
+            />;
+          </CardContent>;
+        </Card>;
       )}
 
       
@@ -194,15 +185,11 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           {projects.map((project) => (
             <ProjectCard
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               key={project.id}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               project={project}
 
 
             <CardContent>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
                   <FilePlus className="h-12 w-12 text-muted-foreground" />
@@ -213,14 +200,10 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 </p>
 
 
-=======
-=======
 
 
                 <Button 
                   onClick={() => setShowAddProject(true)} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="mt-2"
                 >
                   Add Your First Project
@@ -243,7 +226,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 <Button
                   onClick={() => setShowAddProject(true)} ;
                   className="mt-2";
-=======
               on_edit={() => setEditingProject (project)}
               on_delete={handleDeleteProject}
           {projects.map ((project, ) => (
@@ -292,24 +274,16 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   );
 }
 
-=======
           </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
 }
 }
 }
 
-=======
     </div>;
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

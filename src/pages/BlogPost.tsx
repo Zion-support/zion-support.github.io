@@ -1,6 +1,3 @@
-
-
-
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
@@ -13,11 +10,9 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {;
-=======
 
 import { BLOG_POSTS } from "@/data/blog-posts"
 
-=======
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -36,9 +31,7 @@ import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function BlogPost() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 import { useState, useEffect } from 'react';
@@ -137,7 +130,6 @@ function BlogPost() {
         ).slice(0, 3)
         setRelatedPosts(related) } else {
         router.replace('/blog')
-=======
       const current_post = BLOG_POSTS.find (p => p.slug === slug);      // Check condition
 if ( {) {
   $2
@@ -150,15 +142,13 @@ if ( {) {
               p.tags.some (tag => current_post.tags.includes (tag)))).slice (0, 3);
         setRelatedPosts (related) } else {
         router.replace ('/blog');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
-      setIsLoading (false);
+      setIsLoading(false)
     }
 
     fetchPost()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router])
-=======
       setIsLoading(true),
       setError(null),
       try {
@@ -252,13 +242,10 @@ export default function BlogPost() {;
       </div>
     )
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!post && (error |timedOut)) {
-=======
   if () {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
         <p > Failed to load article.</p>;
@@ -273,10 +260,11 @@ if ( {) {
 }
 
     return (
-      <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
-        <p > Article not found.</p>;
-        <Button on_click={(, ) => router.push ('/blog')}>Back to Blog</Button>;
-      </div>);
+      <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
+        <p>Article not found.</p>
+        <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
+      </div>
+    )
   }
 
 
@@ -288,7 +276,6 @@ if ( {) {
     if (!post) return ''
     const url = encodeURIComponent(window.location.href)
     const title = encodeURIComponent(post.title)
-=======
   // Helper function to get share URL;
   const getShareUrl = (platform: string) =>: any {
     // Check condition
@@ -297,9 +284,8 @@ if (return '') {
 }
     const url = encodeURIComponent (window.location.href);
     const title = encodeURIComponent (post.title);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (platform) {
-      case 'facebook':        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
+      case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
     switch (platform) {
 
       case 'facebook':;
@@ -324,7 +310,6 @@ if (return '') {
       name: post.author.name
     }
   }
-=======
   const router = useRouter(),;
   const { slug } = router && router.query as { slug: string },;
   const [post, setPost] = useState<BlogPostType | null>(null),;
@@ -399,12 +384,9 @@ if (return '') {
     );
   }
 
-=======
 
 
-=======
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
     if (!post) return '';
@@ -435,7 +417,6 @@ if (return '') {
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Back to blog button */}
           <div className='mb-8'>;
             <Button
@@ -465,18 +446,15 @@ if (return '') {
             </Button>;
           </div>;
 
-=======
 
           
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Article header */}
-          <div className='mb - 8 max - w-4xl mx - auto'>;
-            <span className='text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 4'>;
+          <div className="mb-8 max-w-4xl mx-auto">
+            <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
               {post.category}
-            </span>;
-            <h1 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
 
               asChild>;
@@ -545,34 +523,33 @@ if (return '') {
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on Facebook'
-                        title='Share on Facebook'>;
-                        <Facebook className='h-4 w-4 mr-2' />;
-                        <span>Facebook</span>;
-                      </a>;
+                        title='Share on Facebook'                      >
+                        <Facebook className='h-4 w-4 mr-2' />
+                        <span>Facebook</span>
+                      </a>
                       <a
                         href={getShareUrl('twitter')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on Twitter'
-                        title='Share on Twitter'>;
-                        <Twitter className='h-4 w-4 mr-2' />;
-                        <span>Twitter</span>;
-                      </a>;
+                        title='Share on Twitter'                      >
+                        <Twitter className='h-4 w-4 mr-2' />
+                        <span>Twitter</span>
+                      </a>
                       <a
                         href={getShareUrl('linkedin')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on LinkedIn'
-                        title='Share on LinkedIn'>;
-                        <Linkedin className='h-4 w-4 mr-2' />;
-                        <span>LinkedIn</span>;
-                      </a>;
-                    </div>;
+                        title='Share on LinkedIn'                      >
+                        <Linkedin className='h-4 w-4 mr-2' />
+                        <span>LinkedIn</span>
+                      </a>
+                    </div>
                   )}
 
-=======
             </h1>;
             <p className='text - xl text - zion - slate - light mb - 8'>{post.excerpt}</p>;
             {/* Author and metadata */}
@@ -651,7 +628,6 @@ if (return '') {
                 alt={post && post.featuredImageAlt || post && post.title}
                 className='object-cover w-full h-full'
                 fallbackSrc='/images/blog-placeholder && placeholder.svg'              />;
-=======
             </h1>
 
             <p className="text-xl text-zion-slate-light mb-8">
@@ -741,7 +717,6 @@ if (return '') {
               <ReactMarkdown>{post && post.content}</ReactMarkdown>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Tags */}
 
             <div className="flex flex-wrap gap-2 mt-12">
@@ -752,7 +727,6 @@ if (return '') {
                 >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   #{tag}
                 </span>;
               ))}
@@ -793,14 +767,12 @@ if (return '') {
                         </h4>;
                       </div>;
                     </Link>;
-=======
             </div>
 
             
             <Separator className="my-12 bg-zion-blue-light" />
             
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
@@ -825,13 +797,73 @@ if (return '') {
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>;
               </div>;
+            </div>;
+          </div>;
+          {/* Featured image */}
+          <div className="mb-12 max-w-5xl mx-auto">
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">
+              <ImageWithRetry
+                src={post.featuredImage}
+                alt={post.featuredImageAlt || post.title}
+                className="object-cover w-full h-full"
+                fallbackSrc="/images/blog-placeholder.svg"
+              />
+            </div>
+          </div>
+          
+          {/* Article content */}
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg prose-invert max-w-none">
+              <ReactMarkdown>
+                {post.content}
+              </ReactMarkdown>;
+            </div>;
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mt-12">
+              {post.tags.map(tag => (
+                <span 
+                  key={tag} 
+                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+            
+            <Separator className="my-12 bg-zion-blue-light" />
+            
+            {/* Related articles */}
+            {relatedPosts.length > 0 && (
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {relatedPosts.map(relatedPost => (
+                    <Link 
+                      key={relatedPost.id}
+                      href={`/blog/${relatedPost.slug}`}
+                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
+                    >
+                      <div className="aspect-[16/9] relative">
+                        <ImageWithRetry
+                          src={relatedPost.featuredImage}
+                          alt={relatedPost.featuredImageAlt || relatedPost.title}
+                          className="object-cover w-full h-full"
+                          fallbackSrc="/images/blog-placeholder.svg"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
+                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             )}
 
 
@@ -859,18 +891,14 @@ if (return '') {
 
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </div>
-=======
                 to accelerate your projects.;
               </p>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Navigation */}
-            <div className='flex justify-between items-center mt-12'>;
+            <div className="flex justify-between items-center mt-12">
               <Button
                 variant='outline'
                 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -954,14 +982,12 @@ if (return '') {
               >;
                 <Link href='/blog'>;
                   <ChevronLeft className='mr - 2 h - 4 w - 4' />;
-=======
 
   );
 };
 };
 };
 
-=======
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
             </div>;
@@ -1080,7 +1106,6 @@ export default function Page() {;
               {blogPost && blogPost.featured && (<span className="px-4 py-2 bg-yellow-500 / 20 text-yellow-400 text-sm rounded-full font -medium">;
                   Featured Article;
 
-=======
             <div className="flex items - center space - x - 3 mb - 6">;
               <span className="px - 4 py - 2 bg - cyan - 500 / 20 text - cyan - 400 text - sm rounded - full font - medium flex items - center space - x - 2">;
                 {React.create_element (getCategoryIcon (blog_post.category) , {
@@ -1090,9 +1115,8 @@ export default function Page() {;
               </span>;
               {blog_post.featured && (<span className="px - 4 py - 2 bg - yellow - 500 / 20 text - yellow - 400 text - sm rounded - full font -medium">;
                   Featured Article;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </span>) }
-            </div>;
+            </div>
             {/* Title */}
 
             <h1 className="text - 4xl md:text - 5xl font - bold text - white mb - 6 leading -tight">;
@@ -1100,50 +1124,50 @@ export default function Page() {;
             </h1>;
 
             {/* Excerpt */}
-            <p className="text - xl text - gray - 300 mb - 8 leading -relaxed">;
-              {blog_post.excerpt}
-            </p>;
+            <p className="text-xl text-gray - 300 mb-8 leading -relaxed">
+              {blogPost.excerpt}
+            </p>
             {/* Article Meta */}
-            <div className="flex flex - wrap items - center justify - between gap - 4 py - 6 border - t border - b border - slate -700 / 50">;
-              <div className="flex items - center space - x - 6">;
-                <div className="flex items - center space - x - 2">;
-                  <User className="w - 5 h - 5 text - cyan -400" />;
-                  <div>;
-                    <span className="text - white font -medium">;
-                      {blog_post.author}
-                    </span>;
-                    <span className="text - gray - 400 text - sm block">;
-                      {blog_post.author_role}
-                    </span>;
-                  </div>;
-                </div>;
-                <div className="flex items - center space - x - 2">;
-                  <Calendar className="w - 5 h - 5 text - cyan -400" />;
-                  <span className="text - gray -300">;
-                    {format_date (blog_post.date) }
-                  </span>;
-                </div>;
-                <div className="flex items - center space - x - 2">;
-                  <Clock className="w - 5 h - 5 text - cyan -400" />;
-                  <span className="text - gray -300">{blog_post.read_time}</span>;
-                </div>;
-              </div>;
-              <div className="flex items - center space - x - 4">;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Heart className="w - 5 h - 5" />;
-                  <span>{blog_post.likes}</span>;
-                </button>;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Bookmark className="w - 5 h - 5" />;
-                </button>;
-                <button     className="flex items - center space - x - 2 text - gray - 400 hover:text - cyan - 400 transition - colors duration -200">;
-                  <Share2 className="w - 5 h - 5" />;
-                </button>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+            <div className="flex flex - wrap items - center justify - between gap-4 py-6 border-t border-b border-slate -700 / 50">
+              <div className="flex items - center space - x-6">
+                <div className="flex items - center space - x-2">
+                  <User className="w-5 h-5 text-cyan -400" />
+                  <div>
+                    <span className="text-white font -medium">
+                      {blogPost.author}
+                    </span>
+                    <span className="text-gray - 400 text-sm block">
+                      {blogPost.authorRole}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items - center space - x-2">
+                  <Calendar className="w-5 h-5 text-cyan -400" />
+                  <span className="text-gray -300">
+                    {formatDate(blogPost.date) }
+                  </span>
+                </div>
+                <div className="flex items - center space - x-2">
+                  <Clock className="w-5 h-5 text-cyan -400" />
+                  <span className="text-gray -300">{blogPost.readTime}</span>
+                </div>
+              </div>
+              <div className="flex items - center space - x-4">
+                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
+                  <Heart className="w-5 h-5" />
+                  <span>{blogPost.likes}</span>
+                </button>
+                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
+                  <Bookmark className="w-5 h-5" />
+                </button>
+                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
+                  <Share2 className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       {/* Article Content */}
       <section className="py - 12">;
         <div className="container mx - auto px - 4">;
@@ -1156,7 +1180,6 @@ export default function Page() {;
             <h1 className="text-4xl md:text-5xl font - bold text-white mb-6 leading -tight">;
               {blogPost && blogPost.title}
             </h1>;
-=======
 
 
             {/* Excerpt */}
@@ -1168,12 +1191,12 @@ export default function Page() {;
               className="prose prose - invert prose - lg max - w - none">;
 
               {/* Featured Image */}
-              <div className="w - full h - 64 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - 2xl border border - cyan - 400 / 30 flex items - center justify - center mb - 12">;
-                <div className="text - center">;
-                  <BookOpen className="w - 20 h - 20 text - cyan - 400 mx - auto mb - 4" />;
-                  <p className="text - gray -300">Featured Article Image</p>;
-                </div>;
-              </div>;
+              <div className="w-full h-64 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded-2xl border border-cyan - 400 / 30 flex items - center justify - center mb-12">
+                <div className="text-center">
+                  <BookOpen className="w-20 h-20 text-cyan - 400 mx - auto mb-4" />
+                  <p className="text-gray -300">Featured Article Image</p>
+                </div>
+              </div>
               {/* Article Content */}
 
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost && blogPost.content }}
@@ -1193,7 +1216,6 @@ export default function Page() {;
               <div className="flex flex - wrap gap-2">;
                 {blogPost && blogPost.tags.map(tag => (<span
 
-=======
               <div;
                 className="text - gray - 300 leading -relaxed";
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blog_post.content }}
@@ -1211,16 +1233,15 @@ export default function Page() {;
               <span className="text - white font -medium">Tags:</span>;
               <div className="flex flex - wrap gap - 2">;
                 {blog_post.tags.map (tag => (<span;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     key={tag}
-                    className="px - 3 py - 1 bg - slate - 700 / 50 text - cyan - 400 text - sm rounded - full border border - slate - 600 / 50 hover:border - cyan - 400 / 50 transition - all duration -200">;
+                    className="px-3 py-1 bg-slate - 700 / 50 text-cyan - 400 text-sm rounded-full border border-slate - 600 / 50 hover:border-cyan - 400 / 50 transition - all duration -200">
                     {tag}
                   </span>) ) }
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Author Bio */}
 
       <section className="py - 12">;
@@ -1231,84 +1252,84 @@ export default function Page() {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
 
               transition={{ duration: 0.8 }}
-              className="bg - slate - 800 / 50 p - 8 rounded - 2xl border border - slate -700 / 50">;
-              <h3 className="text - 2xl font - bold text - white mb - 4">;
-                About the Author;
-              </h3>;
-              <div className="flex items - start space - x - 4">;
-                <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - full flex items - center justify - center flex - shrink -0">;
-                  <User className="w - 8 h - 8 text - white" />;
-                </div>;
-                <div>;
-                  <h4 className="text - xl font - semibold text - white mb - 2">;
-                    {blog_post.author}
-                  </h4>;
-                  <p className="text - cyan - 400 mb - 2">{blog_post.author_role}</p>;
-                  <p className="text - gray -300">{blog_post.author_bio}</p>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
+              className="bg-slate - 800 / 50 p - 8 rounded-2xl border border-slate -700 / 50">
+              <h3 className="text-2xl font - bold text-white mb-4">
+                About the Author
+              </h3>
+              <div className="flex items - start space - x-4">
+                <div className="w-16 h-16 bg-gradient - to - r from - cyan - 500 to - blue - 500 rounded-full flex items - center justify - center flex - shrink -0">
+                  <User className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h4 className="text-xl font - semibold text-white mb-2">
+                    {blogPost.author}
+                  </h4>
+                  <p className="text-cyan - 400 mb-2">{blogPost.authorRole}</p>
+                  <p className="text-gray -300">{blogPost.authorBio}</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       {/* Related Posts */}
-      <section className="py - 20 bg - slate -800 / 50">;
-        <div className="container mx - auto px - 4">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+      <section className="py-20 bg-slate -800 / 50">
+        <div className="container mx - auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16">;
-            <h2 className="text - 4xl font - bold text - white mb - 4">;
-              Related Articles;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w - 3xl mx -auto">;
-              Continue exploring insights and analysis on related topics;
-            </p>;
-          </motion.div>;
-          <div className="grid md:grid - cols - 3 gap - 8 max - w - 6xl mx -auto">;
-            {blog_post.related_posts.map ((post, index) => (<motion.article;
+            className="text-center mb-16">
+            <h2 className="text-4xl font - bold text-white mb-4">
+              Related Articles
+            </h2>
+            <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
+              Continue exploring insights and analysis on related topics
+            </p>
+          </motion.div>
+          <div className="grid md:grid - cols - 3 gap-8 max - w-6xl mx -auto">
+            {blogPost.relatedPosts.map((post, index) => (<motion.article
                 key={post.id}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg - slate - 700 / 50 rounded - xl border border - slate - 600 / 50 overflow - hidden hover:border - cyan - 400 / 50 transition - all duration -300 group">;
-                <div className="h - 48 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">;
-                  <BookOpen className="w - 16 h - 16 text - cyan -400" />;
-                </div>;
-                <div className="p -6">;
-                  <div className="flex items - center space - x - 2 mb - 3">;
-                    <span className="px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs rounded - full font -medium">;
-                      {getCategoryName (post.category) }
-                    </span>;
-                  </div>;
-                  <h3 className="text - lg font - bold text - white mb - 3 group - hover:text - cyan - 400 transition - colors duration -200">;
+                className="bg-slate - 700 / 50 rounded-xl border border-slate - 600 / 50 overflow-hidden hover:border-cyan - 400 / 50 transition - all duration -300 group">
+                <div className="h-48 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">
+                  <BookOpen className="w-16 h-16 text-cyan -400" />
+                </div>
+                <div className="p -6">
+                  <div className="flex items - center space - x-2 mb-3">
+                    <span className="px-3 py-1 bg-cyan - 500 / 20 text-cyan - 400 text-xs rounded-full font -medium">
+                      {getCategoryName(post.category) }
+                    </span>
+                  </div>
+                  <h3 className="text-lg font - bold text-white mb-3 group - hover:text-cyan - 400 transition - colors duration -200">
                     {post.title}
-                  </h3>;
-                  <p className="text - gray - 300 mb - 4 line - clamp -3">;
+                  </h3>
+                  <p className="text-gray - 300 mb-4 line - clamp -3">
                     {post.excerpt}
-                  </p>;
-                  <div className="flex items - center justify - between text - sm text - gray -400">;
-                    <div className="flex items - center space - x - 2">;
-                      <Calendar className="w - 4 h - 4" />;
-                      <span>{format_date (post.date) }</span>;
-                    </div>;
-                    <div className="flex items - center space - x - 2">;
-                      <Clock className="w - 4 h - 4" />;
-                      <span>{post.read_time}</span>;
-                    </div>;
-                  </div>;
-                </div>;
+                  </p>
+                  <div className="flex items - center justify - between text-sm text-gray -400">
+                    <div className="flex items - center space - x-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{formatDate(post.date) }</span>
+                    </div>
+                    <div className="flex items - center space - x-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </div>
               </motion.article>) ) }
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <section className="py - 20">;
-        <div className="container mx - auto px - 4">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+      <section className="py-20">
+        <div className="container mx - auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 
       <section className="py-12">;
@@ -1335,7 +1356,6 @@ export default function Page() {;
                 </div>;
               </div>;
             </motion && motion.div>;
-=======
 
           </div>;
         </div>;
@@ -1471,16 +1491,7 @@ function BlogPost() {return (";
 }
 }
 
-=======
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

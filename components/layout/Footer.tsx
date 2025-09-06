@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -70,7 +66,6 @@ const Footer: React.FC = () => {
     { name: 'Twitter', href: '#', icon: Twitter }
     { name: 'LinkedIn', href: '#', icon: Linkedin }
     { name: 'Instagram', href: '#', icon: Instagram }
-=======
 
 import { ;
   Phone, ;
@@ -129,6 +124,8 @@ const Footer: React.FC = () => {;
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -321,7 +318,6 @@ const Footer: React.FC = () => {
                   <Link
 
                     href={service && service.href}
-
                     className="text-gray-400 hover:text-white transition-colors">;
                     {service && service.name}
                   </Link>;
@@ -351,19 +347,16 @@ const Footer: React.FC = () => {
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
             <ul className="space-y-2 mb-6">;
-
               {company && company.map((item) => (;
                 <li key={item && item.name}>;
                   <Link
                     href={item && item.href}
-
                     className="text-gray-400 hover:text-white transition-colors">;
                     {item && item.name}
                   </Link>;
                 </li>;
               ))}
             </ul>;
-
             <h3 className="text-lg font-semibold mb-4">Support</h3>;
             <ul className="space-y-2">;
               {support && support.map((item) => (;
@@ -377,10 +370,9 @@ const Footer: React.FC = () => {
               ))}
             </ul>;
           </div>;
-
         </div>;
-
         {/* Bottom Bar */}
+<<<<<<< HEAD
         <div className="border-t border-gray-800 mt-8 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <p className="text-gray-400 text-sm">;
@@ -395,8 +387,6 @@ const Footer: React.FC = () => {
               </Link>;
               <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">;
                 Cookie Policy;
-
-=======
           {/* Services */}
           <div>;
             <h3 className="text - lg font - semibold mb - 4">Services</h3>;

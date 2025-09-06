@@ -1,5 +1,3 @@
-
-
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -176,8 +174,6 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
@@ -188,7 +184,6 @@ if ( {) {
             field: ControllerRenderProps<FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Template Name</FormLabel>;
-=======
             field: ControllerRenderProps < FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel > Template Name</FormLabel>;
@@ -220,7 +215,6 @@ if ( {) {
                   aria-label='Default template'
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
-=======
 
   };
   return (;
@@ -258,7 +252,6 @@ if ( {) {
                   checked={field.value}
                   onCheckedChange={field.onChange}
                 />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </FormControl>;
               <FormMessage />;
             </FormItem>;
@@ -270,11 +263,9 @@ if ( {) {
           <Button type="button" variant="outline" onClick={onCancel}>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Cancel
           </Button>
           <Button type='submit' disabled={saving}>
-=======
             field: ControllerRenderProps < FormValues, 'is_default'>;
           }) => (
             <FormItem className='flex items - center justify - between'>;
@@ -295,7 +286,6 @@ if ( {) {
             Cancel;
           </Button>;
           <Button type='submit' disabled={saving}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {saving ? (
 
         />;
@@ -312,7 +302,6 @@ if ( {) {
               </>;
             ) : (;
               `${editTemplate ? 'Update' : 'Save'} Template`;
-=======
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
@@ -324,7 +313,6 @@ if ( {) {
 }</Button> </div> </form> </Form>) ;
 }"};
 
-=======
               `${editTemplate ? "Update" : "Save"} Template`
 
             )}
@@ -335,10 +323,7 @@ if ( {) {
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -353,12 +338,5 @@ if ( {) {
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

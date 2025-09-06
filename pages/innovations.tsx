@@ -37,9 +37,12 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function InnovationsPage() {
   return (
     <UltraFuturisticBackground2029>
@@ -187,6 +190,7 @@ function InnovationsPage() {
               
 
               <motion.h1
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -212,6 +216,7 @@ function InnovationsPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="text-5xl md:text-7xl font-bold mb-8"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   2029 Innovations
@@ -225,6 +230,7 @@ function InnovationsPage() {
               
 
               <motion.p
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -284,6 +290,7 @@ function InnovationsPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <a
                   href="#innovations"
@@ -442,8 +449,6 @@ function InnovationsPage() {
                   title: 'AI Consciousness'
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms'
                   color: 'from-violet-600 via-purple-600 to-indigo-600'
-=======
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -457,21 +462,22 @@ function InnovationsPage() {
                 {
                   icon: Globe,
                   title: 'Quantum Technology',
-                  description: 'Quantum - AI fusion and breakthrough quantum computing solutions',
+description: 'Quantum - AI fusion and breakthrough quantum computing solutions',
                   color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
                   features: ['Quantum - AI FusionQuantum Internet SecurityDNA ComputingQuantum Financial Trading'];
                 },
                 {
+<<<<<<< HEAD
                   icon: Rocket,
                   title: 'Space Technology',
-                  description: 'Next - generation space exploration and metaverse digital reality',
+description: 'Next - generation space exploration and metaverse digital reality',
                   color: 'from - teal - 600 via - emerald - 600 to - green - 600',
                   features: ['Space Mining AutomationMetaverse Digital RealityAI Health AnalyticsHolographic Events'];
                 },
                 {
                   icon: Cpu,
                   title: 'Enterprise IT',
-                  description: 'AI - powered enterprise solutions and intelligent business optimization',
+description: 'AI - powered enterprise solutions and intelligent business optimization',
                   color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
                   features: ['Business IntelligenceSupply Chain OptimizationHR AnalyticsCybersecurity'];
 
@@ -661,7 +667,6 @@ function InnovationsPage() {
             </motion.div>;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
               {[;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {
 
                   icon: TrendingUp,

@@ -69,6 +69,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 
 
     {
+<<<<<<< HEAD
       name: 'ArrowRight - Generation AI 2026',
       description: 'Revolutionary AI platforms with quantum integration',
       services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
@@ -257,6 +258,8 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       color: 'from-blue-500 to-cyan-600'
     }
   ]
+<<<<<<< HEAD
+=======
 
 =======
         'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance'
@@ -361,7 +364,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       name: 'Enterprise IT Solutions 2026',
       description: 'Advanced enterprise infrastructure and security',
       services: ['Zero Trust Network ArchitectureEdge Computing Orchestration5G Private NetworksBlockchain InfrastructureAI DevOps Automation'],
-      avg_price: '$5, 199 / month',
+avg_price: '$5, 199 / month',
       savings: 'Save 50 - 75% vs. competitors',
       icon: Shield,
       color: 'from - red - 500 to - pink - 600';
@@ -370,7 +373,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       name: 'Innovative Micro SaaS 2026',
       description: 'Creative and practical SaaS tools',
       services: ['AI Content Creation StudioAI Business Intelligence SuiteAI Customer Success PlatformAI Meeting Transcriber'],
-      avg_price: '$299 / month',
+avg_price: '$299 / month',
       savings: 'Save 40 - 60% vs. competitors',
       icon: Rocket,
       color: 'from - green - 500 to - emerald - 600';
@@ -388,7 +391,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       name: 'Financial Technology 2026',
       description: 'Advanced financial and trading solutions',
       services: ['AI Quantum Financial TradingBlockchain InfrastructureQuantum Internet SecurityPhotonic Computing'],
-      avg_price: '$4, 499 / month',
+avg_price: '$4, 499 / month',
       savings: 'Save 55 - 75% vs. competitors',
       icon: DollarSign,
       color: 'from - green - 500 to - emerald - 600';
@@ -415,7 +418,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billing_cycle === 'monthly' ? 299 : 239,
+price: billing_cycle === 'monthly' ? 299 : 239,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -431,7 +434,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billing_cycle === 'monthly' ? 999 : 799,
+price: billing_cycle === 'monthly' ? 999 : 799,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -555,7 +558,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
-=======
             className="max - w-7xl mx - auto text - center";
           >;
             <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">;
@@ -565,7 +567,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.;
               Achieve remarkable ROI with transparent, competitive pricing.;
             </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Billing Cycle Toggle */}
 
 
@@ -737,10 +738,15 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
-                          {tier.icon}
+                          {tier.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </div>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <p className="text-gray-400 mb-6">{tier.description}</p>
                       <div className="mb-6">
                         <span className="text-4xl font-bold text-cyan-400">${tier.price}</span>
@@ -764,7 +770,11 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                             <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-300">{feature}</span>
                           </li>
-                        ))}
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </ul>
                                              <Button
                                                    variant="primary"
@@ -890,7 +900,6 @@ if ( {) {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
               {service_categories.map ((category, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={category.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1035,7 +1044,6 @@ if ( {) {
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
               {featured_services.map ((service, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={service.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}

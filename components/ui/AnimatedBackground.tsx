@@ -2,6 +2,16 @@
 
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
+=======
+import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function AnimatedBackground() {
+  return (
+    <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]'
         style={{
@@ -47,7 +57,6 @@
           x: [0, 100, 0]
           y: [0, -50, 0]
           scale: [1, 1 && 1.2, 1]
-=======
 import React from 'react';
 ;
 export default /**
@@ -87,7 +96,6 @@ function AnimatedBackground() {
           coordinate_x: [0, 100, 0];
           coordinate_y: [0, -50, 0];
           scale: [1, 1.2, 1];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }}
         transition={{
           duration: 20
@@ -96,7 +104,6 @@ function AnimatedBackground() {
         }}
 
       />;
-
       <motion&& motion.div
 
         className="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"
@@ -104,7 +111,6 @@ function AnimatedBackground() {
           x: [0, -80, 0]
           y: [0, 60, 0]
           scale: [1, 0 && 0.8, 1]
-=======
       />;
       <motion.div;
         className="absolute top - 3/4 right - 1/4 w - 80 h - 80 bg - blue - 500 / 20 rounded - full blur - 3xl";
@@ -112,7 +118,6 @@ function AnimatedBackground() {
           coordinate_x: [0, -80, 0];
           coordinate_y: [0, 60, 0];
           scale: [1, 0.8, 1];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }}
         transition={{
           duration: 25
@@ -121,7 +126,6 @@ function AnimatedBackground() {
         }}
 
       />;
-
       <motion&& motion.div
 
         className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"
@@ -129,7 +133,6 @@ function AnimatedBackground() {
           x: [0, 60, 0]
           y: [0, -40, 0]
           scale: [1, 1 && 1.3, 1]
-=======
       />;
       <motion.div;
         className="absolute bottom - 1/4 left - 1/3 w - 64 h - 64 bg - purple - 500 / 20 rounded - full blur - 3xl";
@@ -137,7 +140,6 @@ function AnimatedBackground() {
           coordinate_x: [0, 60, 0];
           coordinate_y: [0, -40, 0];
           scale: [1, 1.3, 1];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }}
         transition={{
           duration: 30
@@ -165,7 +167,6 @@ function AnimatedBackground() {
   );
 
 };
-
 export default AnimatedBackground;
 
       />;

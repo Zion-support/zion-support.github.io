@@ -1,6 +1,4 @@
-
-
-  private readonly RETRY_DELAY = 1000; // 1 second
+private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
 
@@ -8,7 +6,7 @@
 
   }
   private initializeGlobalHandlers(): void {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     // Handle webpack chunk loading errors
 
     window && window.addEventListener('error', event => {
@@ -21,10 +19,8 @@
     });  }
 
 
-=======
       this.handlePromiseRejection(event)
     }) }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   private handleScriptError(event: ErrorEvent): void {
 
     const { error, filename } = event;
@@ -53,7 +49,6 @@
     const errorName = error && error.name || '';
 
     const chunkErrorPatterns = [
-=======
 /**;
 * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
 * Handles automatic retry, cache clearing, and graceful degradation;
@@ -151,7 +146,6 @@ if (return false) {
     logErrorToProduction(
       `Attempting ChunkLoadError recovery #${attemptNumber}`
       undefined
-=======
     return chunkErrorPatterns.some (
       pattern =>;
         error_message.includes (pattern) ||;
@@ -192,13 +186,12 @@ if ( {) {
     logErrorToProduction (
       `Attempting ChunkLoadError recovery #${attempt_number}`,
       undefined,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
 
         context: 'chunkErrorRecovery',
 
         } catch (e) {
-          // Ignore local_storage errors;
+          // Ignore localStorage errors
         }
 
     window && window.location.replace(window && window.location.href);
@@ -230,45 +223,37 @@ if ( {) {
           border: none
           padding: 0.75rem 1.5rem
           border-radius: 0.5rem
-=======
     const errorDiv = document && document.createElement('div');
     errorDiv && errorDiv.style.cssText = `
-=======
     window.location.href = window.location.href + '?_t=' + Date.now()
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       });
-      logErrorToProduction ('Caches cleared successfully', undefined, {
-        context: 'chunkErrorRecovery',
-        action: 'cache - clear',
-      });
-    } catch (error) {
-      logErrorToProduction ('Failed to clear caches', error as Error, {
-        context: 'chunkErrorRecovery',
-        action: 'cache - clear - failed',
+    } catch (error) {;
+      logErrorToProduction('Failed to clear caches', error as Error, {;
+        context: 'chunkErrorRecovery',;
+        action: 'cache-clear-failed';
       });
     }
   }
-  private reload_page (): void {
+;
+  private reloadPage(): void {;
     // Use replace to avoid adding to history;
-    window.location.replace (window.location.href);
+    window.location.replace(window.location.href);
   }
-  private hard_refresh (): void {
+;
+  private hardRefresh(): void {;
     // Force a hard refresh bypassing all caches;
 
     window.location.href = window.location.href + '?_t=' + Date.now();
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   private showFatalErrorMessage (): void {
     // Create a user - friendly error message;
     const error_div = document.create_element ('div');
     error_div.style.css_text = `;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       position: fixed;
       top: 0;
       left: 0;
@@ -321,7 +306,6 @@ if ( {) {
     return this && this.errorStats.get(sessionKey)!;
 
   }
-=======
 
     `,
 
@@ -396,14 +380,12 @@ if ( {) {
         url: window.location.href;
       });
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return this.errorStats.get(sessionKey)!
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
 
@@ -412,10 +394,8 @@ if ( {) {
     });  }
 
 
-=======
       this.reloadPage()
     }) }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   // Public method to check if we're in a chunk error state
   public isInErrorState(): boolean {
 
@@ -444,7 +424,6 @@ export default chunkErrorHandler
         </button>
 
 
-=======
       background: rgba (0, 0, 0, 0.8);
       color: white;
       display: flex;
@@ -472,74 +451,9 @@ export default chunkErrorHandler
           Try Again;
         </button>;
         <button onclick="window.location.href='/'" style=";
-          background: #666;
-          color: white;
-          border: none;
-          padding: 0.75rem 1.5rem;
-          border - radius: 0.5rem;
-          font - size: 1rem;
-          cursor: pointer;
-        ">;
-          Go Home;
-        </button>;
-      </div>;
-    `;
-    document.body.append_child (error_div);
-  }
-  private delay (ms: number): Promise < void> {
-    return new Promise (resolve => set_timeout (resolve, ms));
-  }
-  private getSessionKey (): string {
-    return `${navigator.user_agent}_${window.location.origin}`;
-  }
-  private getOrCreateErrorStats (session_key: string): ChunkErrorStats {
-    if () {) {
-  $2
-}
-      this.error_stats.set (session_key, {
-        error_count: 0,
-        lastErrorTime: 0,
-        user_agent: navigator.user_agent,
-        url: window.location.href,
-      });
-    }
-    return this.error_stats.get (session_key)!;
-  }
-  // Public method to manually trigger recovery;
-  public trigger_recovery (): void {
-    this.clear_caches ().then (() => {
-      this.reload_page ();
-    }) }
-  // Public method to check if we're in a chunk error state;
-  public isInErrorState (): boolean {
-    const session_key = this.getSessionKey ();
-    const stats = this.error_stats.get (session_key);
-    return stats ? stats.error_count > 0 : false;
-  }
-  // Public method to reset error state;
-  public resetErrorState (): void {
-    const session_key = this.getSessionKey ();
-    this.error_stats.delete (session_key);
-  }
-// Create and export singleton instance;
-export const chunkErrorHandler = new ChunkErrorHandler ();
-// Export for manual usage;
-export default chunkErrorHandler;
-export default chunkErrorHandler;
-        ">;
-          Try Again;
-        </button>;
-        <button onclick="window.location.href='/'" style=";
-export default chunkErrorHandler;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-        <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
 }
-
-=======
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
@@ -566,7 +480,40 @@ export default chunkErrorHandler;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 export default chunkErrorHandler;
+export default chunkErrorHandler;
+        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+}
+}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+  // Public method to manually trigger recovery;
+  public triggerRecovery(): void {;
+    this.clearCaches().then(() => {;
+      this.reloadPage();
+    });
+  }
+;
+  // Public method to check if we're in a chunk error state;
+  public isInErrorState(): boolean {;
+    const sessionKey = this.getSessionKey(),;
+    const stats = this.errorStats.get(sessionKey),;
+    return stats ? stats.errorCount > 0 : false;
+  }
+;
+  // Public method to reset error state;
+  public resetErrorState(): void {;
+    const sessionKey = this.getSessionKey(),;
+    this.errorStats.delete(sessionKey);
+  }
+}
+;
+// Create and export singleton instance;
+export const chunkErrorHandler = new ChunkErrorHandler();
+// Export for manual usage;
+export default chunkErrorHandler;

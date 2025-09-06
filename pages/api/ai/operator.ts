@@ -47,10 +47,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 const ip = (req.headers['x-forwarded-for'] as string)?.split()[0]?.trim() |req.socket.remoteAddress |'unknown'
   if (isRateLimited(ip)) {
     return res.status(429).json({ error: 'Too Many Requests' })
-
   }
   try {
-
 const { prompt, system, temperature } = (typeof req.body === 'string') ? JSON.parse(req.body) : req.body
     if (!prompt |typeof prompt !== 'string') {
       return res.status(400).json({ error: 'Missing prompt' })

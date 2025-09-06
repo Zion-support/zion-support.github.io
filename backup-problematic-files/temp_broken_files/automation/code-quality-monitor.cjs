@@ -2,7 +2,6 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
 class CodeQualityMonitor {
   constructor() {
     this.metrics = {
@@ -14,24 +13,20 @@ class CodeQualityMonitor {
     };
     this.logFile = path.join(__dirname, "logs", "code-quality.log");
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async analyzeCodeQuality() {
     try {
       this.log("Starting code quality analysis...");
-      
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       this.metrics.testCoverage = this.calculateTestCoverage();
       this.metrics.performance = this.calculatePerformance();
       this.metrics.lastUpdated = new Date().toISOString();
-      
       this.saveMetrics();
       this.log("Code quality analysis completed successfully");
       return this.metrics;
@@ -40,7 +35,6 @@ class CodeQualityMonitor {
       return null;
     }
   }
-
   calculateComplexity() {
     try {
       const files = this.getTypeScriptFiles();
@@ -55,7 +49,6 @@ class CodeQualityMonitor {
       return Math.floor(Math.random() * 10) + 1;
     }
   }
-
   calculateMaintainability() {
     try {
       const files = this.getTypeScriptFiles();
@@ -64,34 +57,28 @@ class CodeQualityMonitor {
         const stats = fs.statSync(file);
         return acc + stats.size;
       }, 0) / totalFiles;
-      
       // Lower file size = higher maintainability
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000));
     } catch (error) {
       return Math.floor(Math.random() * 100) + 50;
     }
   }
-
   calculateTestCoverage() {
     // Placeholder for test coverage calculation
     return Math.floor(Math.random() * 100);
   }
-
   calculatePerformance() {
     // Placeholder for performance calculation
     return Math.floor(Math.random() * 100) + 70;
   }
-
   getTypeScriptFiles() {
     const projectRoot = path.resolve(__dirname, "..");
     const files = [];
-    
     const walkDir = (dir) => {
       const items = fs.readdirSync(dir);
       items.forEach(item => {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
           walkDir(fullPath);
         } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
@@ -99,20 +86,15 @@ class CodeQualityMonitor {
         }
       });
     };
-    
     walkDir(projectRoot);
     return files;
   }
-
   saveMetrics() {
     const metricsFile = path.join(__dirname, "logs", "code-quality-metrics.json");
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 }
-
-async function checkCodeDuplication() {
-  
-  const duplications = [{  if (duplications.length > 0) {}
+  if (duplications.length > 0) {}
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
       .slice(0, 5);
@@ -146,26 +128,65 @@ async function checkTypeScriptQuality() {}
   } catch (error) {}
     console.error(`[ERROR] TypeScript quality issues "found": ${error.message}`);
     return { "passed": false, "error": 'TypeScript quality issues detected' };
-  
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {
     "cwd": process.cwd(),
     "ignore": 'node_modules/**'});
   if (!testFiles || testFiles.length === 0) {
-    
     return { passed: false, "error": 'No test files found' };
   }
   ');
   return { "passed": true };
 }
-
 async function checkDocumentationCoverage() {
-  
   const docCoverage = 40; // Example low coverage
   if (docCoverage < 50) {
-    
     return { "passed": false, "error": 'Low documentation coverage' };
   }
-  
+  };
+};
+async function checkTestCoverage() {}
+  console.log('[INFO] Checking test coverage...');
+  const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {})
+    "cwd": process.cwd(),
+    "ignore": 'node_modules/**'}
+});
+  if (!testFiles || testFiles.length === 0) {}
+    console.warn('[WARN] "WARNING": No test files found');
+    return { passed: false, "error": 'No test files found' };
+  };
+  console.log('[INFO] Test files found. (Coverage check placeholder)');
+  return { "passed": true };
+};
+async function checkDocumentationCoverage() {}
+  console.log('[INFO] Checking documentation...');
+  const docCoverage = 40; // Example low coverage;
+  if (docCoverage < 50) {}
+    console.warn(`[WARN] "WARNING": Low documentation coverage: ${docCoverage}%`);
+    return { "passed": false, "error": 'Low documentation coverage' };
+  };
+  console.log('[INFO] Documentation coverage is sufficient');
+  return { "passed": true };
+};
+async function runCodeQualityMonitor() {}
+  const startTime = Date.now();
+  const complexityResult = await checkCodeComplexity();
+  const duplicationResult = await checkCodeDuplication();
+  const styleResult = await checkCodeStyle();
+  const tsQualityResult = await checkTypeScriptQuality();
+  const testCoverageResult = await checkTestCoverage();
+  const docCoverageResult = await checkDocumentationCoverage();
+  const results = [complexityResult,]
+    duplicationResult,
+    styleResult,
+    tsQualityResult,
+    testCoverageResult,
+    docCoverageResult,
+  ];
+  const issuesFound = results.filter(r => !r.passed);
+  const endTime = Date.now();
+  const duration = endTime - startTime;
+    process.exit(1);
+  } else {
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );

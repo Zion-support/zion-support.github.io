@@ -545,108 +545,10 @@ h3 {
 <<<<<<< HEAD
 >>>>>>> main
 .quantum-matrix {
-=======
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-/* Futuristic Animations and Effects */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.4);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-@keyframes rotate-3d {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  100% {
-    transform: rotateY(360deg) rotateX(360deg);
-  }
-}
-
-@keyframes particle-float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-  }
-}
-
-@keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes neon-pulse {
-  0%, 100% {
-    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
-  }
-  50% {
-    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
-  }
-}
-
-/* Futuristic Background Effects */
-.futuristic-bg {
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
-  background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
-}
-
-.particle-bg {
-  position: relative;
-  overflow: hidden;
-}
-
-.particle-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: 
-    radial-gradient(2px 2px at 20px 30px, #3b82f6, transparent),
-    radial-gradient(2px 2px at 40px 70px, #8b5cf6, transparent),
-    radial-gradient(1px 1px at 90px 40px, #06b6d4, transparent),
-    radial-gradient(1px 1px at 130px 80px, #10b981, transparent),
-    radial-gradient(2px 2px at 160px 30px, #f59e0b, transparent);
-  background-repeat: repeat;
-  background-size: 200px 100px;
-  animation: particle-float 20s linear infinite;
-  opacity: 0.3;
-}
 
+<<<<<<< HEAD
+=======
 /* Futuristic Card Effects */
 .futuristic-card {
   background: rgba(255, 255, 255, 0.05);
@@ -779,24 +681,37 @@ h3 {
   background-image: 
 .quantum-matrix {  background-image: 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
-<<<<<<< HEAD
-  animation: matrixMove 30s linear infinite;
+animation: matrixMove 30s linear infinite;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 @keyframes matrixMove {
-=======
+
+  0% {
+.quantum-matrix {  background-image: 
+
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+animation: matrixMove 30s linear infinite;
+}
+
+@keyframes matrixMove {  0% {
+
+@keyframes matrixMove {
+
   animation: grid-move 20s linear infinite;
 }
 
 @keyframes grid-move {
+<<<<<<< HEAD
+
+  0% {
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -1513,9 +1428,9 @@ h3 {
 <<<<<<< HEAD
 >>>>>>> main
   *::after {
-=======
-}
 
+<<<<<<< HEAD
+=======
 /* Holographic Effect */
 .holographic {
   background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ee82ee, #ff0080);
@@ -1580,6 +1495,7 @@ h3 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -1918,17 +1834,16 @@ h3 {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+}
+
+}
+
 }
 <<<<<<< HEAD
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
+
 =======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======

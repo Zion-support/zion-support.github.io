@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
@@ -88,7 +85,6 @@ if ( {) {
           ) {
             error_message =;
               'Your email is not confirmed. Please check your inbox for a confirmation link.';
-=======
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -108,7 +104,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-=======
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any,
     defaultValues: {
@@ -131,7 +126,6 @@ import {
           ) {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
-=======
 
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
@@ -154,7 +148,6 @@ export function LoginForm() {
   const [verificationMessage, setVerificationMessage] = useState(''),
   const router = useRouter(),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
@@ -173,8 +166,6 @@ export function LoginForm() {
 
       const result = await login(data.email, data.password, data.rememberMe),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           } else {
             error_message = result.error.message;
           }
@@ -214,8 +205,6 @@ if ( {) {
     }
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
-=======
-=======
 
         form.setError("root", { message: errorMessage })
       } else {
@@ -230,7 +219,6 @@ import { fireEvent } from '@/lib/analytics',;
 import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
   Form,;
   FormControl,;
@@ -350,7 +338,6 @@ export function LoginForm() {;
         <FormField
           control={form && form.control}
           name='email'
-=======
       {form.form_state.errors.root && (
         <Alert variant='destructive' className='mb - 4'>;
           <AlertDescription>;
@@ -371,7 +358,6 @@ if ( {) {
         <FormField;
           control={form.control}
           name='email';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           render={({
             field
           }: {
@@ -402,19 +388,14 @@ if ( {) {
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <FormControl>
                 <div className='relative'>
-=======
             field: ControllerRenderProps<LoginFormValues, 'email'>;
           }) => (            <FormItem>;
               <FormLabel className='text-zion-slate-light'>;
-=======
             field: ControllerRenderProps < LoginFormValues, 'email'>;
           }) => (            <FormItem>;
               <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Email address;
               </FormLabel>;
               <FormControl>;
@@ -460,7 +441,6 @@ if ( {) {
                     size='sm'
                     className='absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan'
                     onClick={() => setShowPassword(!showPassword)}                  >;
-=======
 
                     placeholder="you@example.com"
                     aria-label="Email address"
@@ -468,7 +448,6 @@ if ( {) {
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
@@ -495,7 +474,6 @@ if ( {) {
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
@@ -562,7 +540,6 @@ if ( {) {
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
                     onClick={() => setShowPassword(!showPassword)}
                   >;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {showPassword ? (;
                       <EyeOff className='h-4 w-4' />;
                     ) : (;
@@ -570,7 +547,6 @@ if ( {) {
                     )}
                     <span className='sr-only'>;
                       {showPassword ? 'Hide password' : 'Show password'}
-=======
             field: ControllerRenderProps < LoginFormValues, 'password'>;
           }) => (            <FormItem>;
               <FormLabel className='text - zion - slate - light'>Password</FormLabel>;
@@ -595,7 +571,6 @@ if ( {) {
                       <Eye className='h - 4 w - 4' />)}
                     <span className='sr - only'>;
                       {show_password ? 'Hide password' : 'Show password'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </span>;
                   </Button>;
                 </div>;
@@ -608,12 +583,10 @@ if ( {) {
           control={form.control}
 
               <FormControl>
-=======
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Checkbox
 
                   checked={field.value}
@@ -629,7 +602,6 @@ if ( {) {
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         />;
         <div className='flex items-center justify-between'>;
@@ -780,7 +752,6 @@ if ( {) {
         </div>
         <p className="text-sm text-center mt-4">
           <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Create account
           </Link>
         </p>
@@ -845,7 +816,6 @@ return;
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }'"}
-=======
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
             Create account;
           </Link>;
@@ -855,9 +825,6 @@ return;
   );
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <Button;
           type='submit';
           className='w - full inline - flex items - center justify - center px - 4 py - 2 border border - transparent rounded - md shadow - sm text - base font - medium text - white bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - zion - purple - light visible';
@@ -967,12 +934,5 @@ return;
   is_resending ? 'Sending...': 'Resend / Verify e - mail';
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -71,6 +71,12 @@ class CompleteAutomation {
 
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    for (const step of automationSteps) {
+      const result = await this.runScript(step.script, step.description);
+      results.push({ ...step, ...result })}
+=======
     )}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -114,6 +120,10 @@ class CompleteAutomation {
     return summary}
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

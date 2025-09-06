@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter()
   const { id: rawId } = router.query
@@ -80,7 +77,7 @@ if (.whitepaper_data) {) {
         set_error (e.message || 'An unexpected error occurred.');
 
       } finally {
-        set_loading (false);
+        setLoading(false)
       }
 
 
@@ -175,13 +172,11 @@ const WhitepaperViewPage: React.FC = () => {;
     },;
     fetchWhitepaper();
   }, [id]),;
-
   if (loading) {;
     return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>;
   }
-
+;
   if (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex flex-col justify-center items-center h-screen text-red-600">;
         <p>Error: {error}</p>;
@@ -232,7 +227,7 @@ const WhitepaperViewPage: React.FC = () => {;
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back;
                  </Link>;
             </Button>;
-            {!sharedData && sharedData.is_public && isAdmin && (;
+            {!sharedData.is_public && isAdmin && (;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;
                     Private (Admin View);
                 </span>;
@@ -251,7 +246,6 @@ const WhitepaperViewPage: React.FC = () => {;
 
 export default WhitepaperViewPage,;
 
-=======
     },
     fetch_whitepaper ();
   }, [id]),
@@ -323,11 +317,6 @@ if ( {) {
 },
 export default WhitepaperViewPage,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         setError("No whitepaper ID provided."),
         setLoading(false),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

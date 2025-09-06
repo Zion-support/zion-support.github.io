@@ -86,6 +86,7 @@ class MasterAutomation {}
   }
 
   log(message, type = 'info') {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
@@ -94,6 +95,36 @@ class MasterAutomation {}
     const logFile = path.join(this.logsDir, 'master-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
+<<<<<<< HEAD
+  async runCommand(command, options = {}) {
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logMessage);
+    // Write to log file
+    const logFile = path.join(this.logsDir, 'master-automation.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+  async runCommand(command, description) {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 
   async runCommand(command, description) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -213,6 +244,7 @@ class MasterAutomation {}
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
     } catch (error) {
@@ -230,20 +262,18 @@ class MasterAutomation {}
   }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async runBuildProcess() {
     this.log('🚀 Starting build process...');
-
     const steps = [
       { command: 'npm install', description: 'Installing dependencies' },
       { command: 'npm run build', description: 'Building application' },
       { command: 'npm run test:smoke', description: 'Running smoke tests' },
     ];
-
     const results = [];
     for (const step of steps) {
       const result = await this.runCommand(step.command, step.description);
       results.push({ ...step, result });
-
       if (!result.success) {
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
@@ -387,14 +417,13 @@ class MasterAutomation {}
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
-
     const checks = [
       { command: 'npm run lint', description: 'Linting check' },
       { command: 'npm run type-check', description: 'TypeScript type check' },
     ];
-
     const results = [];
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
@@ -503,16 +532,14 @@ class MasterAutomation {}
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
-
     if (report.quality.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
-
     if (report.automation.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
-
     // Save report
     const reportFile = path.join(
       this.logsDir,
@@ -633,6 +660,7 @@ class MasterAutomation {}
     const report = await this.generateReport();
     this.log('🏁 Master Automation completed');
     return report;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 
   async status() {
@@ -679,6 +707,66 @@ class MasterAutomation {}
     return status;
   }
 }
+<<<<<<< HEAD
+// Handle command line arguments
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    this.log('🎯 Starting Master Automation System...');
+    const report = await this.generateReport();
+    this.log('🏁 Master Automation completed');
+    return report;
+  }
+  async status() {
+    this.log('📊 Checking automation status...');
+    const status = {
+      timestamp: new Date().toISOString(),
+      buildStatus: 'unknown',
+      gitStatus: 'unknown',
+      dependenciesStatus: 'unknown',
+    };
+    // Check build status
+    try {
+      const buildResult = await this.runCommand('npm run build', 'Build check');
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+    } catch (_error) {
+      status.buildStatus = 'error';
+    }
+    // Check git status
+    try {
+      const gitResult = await this.runCommand(
+        'git status --porcelain',
+        'Git status check'
+      );
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+    } catch (_error) {
+      status.gitStatus = 'error';
+    }
+    // Check dependencies
+    try {
+      const depsResult = await this.runCommand(
+        'npm list --depth=0',
+        'Dependencies check'
+      );
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+    } catch (_error) {
+      status.dependenciesStatus = 'error';
+    }
+    this.log('📊 Status check completed');
+    return status;
+  }
+}
+// CLI interface
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 
 // CLI interface
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -790,6 +878,7 @@ module.exports = MasterAutomation;
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     case 'start':
       automation
         .start()
@@ -815,7 +904,6 @@ module.exports = MasterAutomation;
         });
       break;
     default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
 }
 module.exports = MasterAutomation;

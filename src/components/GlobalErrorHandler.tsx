@@ -1,6 +1,4 @@
-
-
-  reportError: (error: Error, context?: any) => void;
+reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
@@ -121,7 +119,6 @@ if ( {) {
     clearAllErrors,
 
   }
-=======
 export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
 
@@ -213,7 +210,6 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     clearAllErrors,;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     <ErrorContext.Provider value={context_value}>;
@@ -448,7 +444,6 @@ export function useErrorHandler() {;
     handleAsyncOperation}
 } ;
 
-=======
           handleApiError (error, options?.retry_action);
         }
         return null;
@@ -463,9 +458,6 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         : undefined,;
     });
@@ -474,7 +466,6 @@ export function useErrorHandler() {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
 
-=======
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -569,7 +560,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const contextValue: ErrorContextType = {
     reportError,
     showRetryableError,
@@ -580,7 +570,3 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 interface CertificationsListProps {
   certifications: Certification[]
   onEdit: (cert: Certification) => void
@@ -9,7 +7,6 @@ interface CertificationsListProps {
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
   if (certifications.length === 0) {
     return null
-=======
 interface CertificationsListProps {;
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
@@ -34,7 +31,6 @@ interface CertificationsListProps {;
 export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
   if (certifications && certifications.length === 0) {;
 
-=======
 import { Certification } from '@/types/resume';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -47,7 +43,6 @@ interface CertificationsListProps {
 }
 
     return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
 
@@ -61,7 +56,6 @@ interface CertificationsListProps {
                 <a
                   href = {cert && cert.credential_url,}
 
-=======
                   variant="ghost"
                   size="icon"
                   onClick={() => onDelete(cert.id!)}
@@ -75,18 +69,15 @@ interface CertificationsListProps {
               <p className="text-xs mt-2">
                 <a 
                   href={cert.credential_url} 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   target="_blank" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
 
                 >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   View credential
-                </a>;
-              </p>;
+                </Link>
+              </p>
             )}
           </CardContent>;
         </Card>;
@@ -96,7 +87,6 @@ interface CertificationsListProps {
   );
 }
 
-=======
 export /**
  * CertificationsList - Function description
  */
@@ -195,10 +185,4 @@ if ( {) {
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

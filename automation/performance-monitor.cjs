@@ -43,12 +43,14 @@ class PerformanceMonitor {}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -61,7 +63,6 @@ class PerformanceMonitor {
     this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
     this.ensureLogDirectory();
   }
-
   ensureLogDirectory() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -76,6 +77,8 @@ class PerformanceMonitor {
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -175,38 +178,36 @@ class PerformanceMonitor {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async monitorPerformance() {
     this.log('⚡ Starting performance monitoring...');
-
     try {
       // Monitor build time
       const buildTime = await this.measureBuildTime();
       this.metrics.buildTime = buildTime;
-
       // Monitor bundle size
       const bundleSize = await this.measureBundleSize();
       this.metrics.bundleSize = bundleSize;
-
       // Monitor memory usage
       const memoryUsage = process.memoryUsage();
       this.metrics.memoryUsage = memoryUsage.heapUsed / 1024 / 1024; // MB
-
       // Monitor CPU usage
       const cpuUsage = process.cpuUsage();
       this.metrics.cpuUsage = cpuUsage.user / 1000000; // seconds
-
       this.metrics.lastUpdated = new Date().toISOString();
-
       await this.saveMetrics();
       await this.generatePerformanceReport();
-
       this.log('Performance monitoring completed');
       return this.metrics;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -257,11 +258,14 @@ class PerformanceMonitor {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async measureBuildTime() {
     const startTime = Date.now();
     try {
       execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
       return Date.now() - startTime;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -385,21 +389,19 @@ class PerformanceMonitor {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async measureBundleSize() {
     try {
       const buildDir = path.join(process.cwd(), '.next');
       if (!fs.existsSync(buildDir)) {
         return 0;
       }
-
       const getDirSize = dir => {
         let size = 0;
         const files = fs.readdirSync(dir);
-
         files.forEach(file => {
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-
           if (stat.isDirectory()) {
             size += getDirSize(filePath);
           } else {
@@ -419,6 +421,8 @@ class PerformanceMonitor {
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   async savePerformanceReport() {
 =======
 <<<<<<< HEAD
@@ -428,6 +432,7 @@ class PerformanceMonitor {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async saveMetrics() {
     const metricsFile = path.join(
       __dirname,
@@ -437,8 +442,9 @@ class PerformanceMonitor {
     fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
-
   async generatePerformanceReport() {
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -656,11 +662,15 @@ monitor.start().catch(error => {})
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run if called directly
 if (require.main === module) {
     const monitor = new PerformanceMonitor(),
     monitor.monitorPerformance().catch(console.error)
   }
+<<<<<<< HEAD
+module.exports = PerformanceMonitor;
+=======
 
 module.exports = PerformanceMonitor;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

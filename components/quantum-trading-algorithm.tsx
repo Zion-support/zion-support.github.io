@@ -30,6 +30,27 @@ import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
 
 
+=======
+  TrendingUp,
+  Brain,
+  Shield,
+  Zap,
+  Target,
+  BarChart3,
+  Cpu,
+  Globe,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,;
+  MapPin,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  TrendingUp, Brain, Shield, Zap, Target, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
  } from 'lucide-react';
@@ -102,12 +123,6 @@ const pricingPlans = [
     popular: false
   },];    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated supportCustom integrations']
     popular: false
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -212,6 +227,44 @@ import Layout from '../components/layout/Layout';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <a
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <a
+              href='#pricing'
+              className='inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105'
+            >
+              <Target className='w-5 h-5 mr-2' />
+              Get Started
+            </a>
+            <a
+              href='#contact'
+              className='inline-flex items-center px-8 py-4 rounded-full border-2 border-green-500/30 text-green-400 font-semibold text-lg hover:bg-green-500/10 transition-all duration-300'
+            >
+              <Phone className='w-5 h-5 mr-2' />              Contact Sales          >
+            <a
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               href="#pricing"
               className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">;
               <Target className="w-5 h-5 mr-2" />;
@@ -228,7 +281,15 @@ import Layout from '../components/layout/Layout';
           <motion&& motion.div
 
 =======
-
+              className="inline-flex items-center px-8 py-4 rounded-full border-2 border-green-500/30 text-green-400 font-semibold text-lg hover:bg-green-500/10 transition-all duration-300"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Contact Sales
+            </a>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -256,10 +317,7 @@ import Layout from '../components/layout/Layout';
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features.map((feature, index) => (          >
-=======
-            className="text-center mb-16"
-          >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Trading Technology
             </h2>
@@ -281,7 +339,6 @@ import Layout from '../components/layout/Layout';
               computing integration and AI-powered market analysis.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features && features.map((feature, index) => (          >;
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Revolutionary Trading Technology;
@@ -290,7 +347,6 @@ import Layout from '../components/layout/Layout';
               Experience the future of algorithmic trading with quantum computing integration and AI-powered market analysis.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
@@ -353,7 +409,18 @@ import Layout from '../components/layout/Layout';
           <motion&& motion.div
 
 =======
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -381,10 +448,7 @@ import Layout from '../components/layout/Layout';
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (          >
-=======
-            className="text-center mb-16"
-          >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Choose Your Plan
             </h2>
@@ -406,7 +470,6 @@ import Layout from '../components/layout/Layout';
               individual investors to institutional clients.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (          >;
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Choose Your Plan;
@@ -415,7 +478,6 @@ import Layout from '../components/layout/Layout';
               Flexible pricing options designed for traders of all levels, from individual investors to institutional clients.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricingPlans && pricingPlans.map((plan, index) => (;
               <motion&& motion.div
@@ -481,7 +543,6 @@ import Layout from '../components/layout/Layout';
                     </span>;
                   </div>;
                 )}
-
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -493,7 +554,6 @@ import Layout from '../components/layout/Layout';
                     </span>;
                   </div>;
                 </div>;
-
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
@@ -503,7 +563,6 @@ import Layout from '../components/layout/Layout';
                     <span className="text-lg text-gray-400 font-normal">/{plan && plan.period}</span>;
                   </div>;
                 </div>;
-
                 <ul className="space-y-4 mb-8">;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-300">;
@@ -579,10 +638,7 @@ import Layout from '../components/layout/Layout';
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
-=======
-            className="text-center mb-16"
-          >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Trading?
             </h2>
@@ -603,7 +659,6 @@ import Layout from '../components/layout/Layout';
               Pro can revolutionize your trading strategy.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion && motion.div          >;
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform Your Trading?;
@@ -612,7 +667,6 @@ import Layout from '../components/layout/Layout';
               Contact our team to learn more about how Quantum Trading Algorithm Pro can revolutionize your trading strategy.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion&& motion.div
 
@@ -636,10 +690,7 @@ import Layout from '../components/layout/Layout';
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
               <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>            >
-=======
-              className="text-center"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
@@ -661,9 +712,7 @@ import Layout from '../components/layout/Layout';
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.mobile}</p>;
             </motion && motion.div>;
-
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -676,10 +725,7 @@ import Layout from '../components/layout/Layout';
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
               <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>            >
-=======
-              className="text-center"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-white" />
               </div>
@@ -701,9 +747,7 @@ import Layout from '../components/layout/Layout';
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.email}</p>;
             </motion && motion.div>;
-
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
@@ -716,10 +760,7 @@ import Layout from '../components/layout/Layout';
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>
               <p className='text-gray-300'>{contactInfo.address}</p>            </motion.div>            >
-=======
-              className="text-center"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
@@ -749,12 +790,8 @@ import Layout from '../components/layout/Layout';
     </Layout>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                     </span>;
                   </div>;
                 </div>;

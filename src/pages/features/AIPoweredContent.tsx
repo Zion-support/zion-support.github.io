@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <>;
       <SEO
         title='AI Content Generation'
@@ -38,12 +36,10 @@
     </>
 
 
-=======
 
 ;
 }
 
-=======
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -90,13 +86,11 @@ export default function AIPoweredContent() {;
               src="https: //placehold.co/800x400";
               alt="Screenshot of ZionGPT content tool";
               className="object-cover";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>;
 
-=======
 import React, { useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -136,40 +130,36 @@ function AIPoweredContent() {
   useEffect (() => {
     markAiExplored ();
   }, [markAiExplored]);
-  return (
+  return (;
     <>;
       <SEO;
-        title='AI Content Generation';
-        description='Generate SEO - optimized blog posts, service descriptions and FAQs with ZionGPT.';
-        keywords='AI content generation, ZionGPT, SEO tools';
-        canonical='https://app.ziontechgroup.com / features / ai - content - generation';
+        title="AI Content Generation";
+        description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT.";
+        keywords="AI content generation, ZionGPT, SEO tools";
+        canonical="https://app.ziontechgroup.com/features/ai-content-generation";
       />;
-      {/* Use a normal script tag so JSON - LD is correctly parsed */}
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
-        type='application / ld + json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        type="application/ld+json";
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
       <Header />;
-      <main className='bg - background text - white py - 12'>;
-        <div className='container mx - auto px - 4 md:px - 6'>;
-          <GradientHeading className='mb - 4 text - center'>;
-            AI Content Generation;
-          </GradientHeading>;
-          <p className='text - center text - zion - slate - light max - w-3xl mx - auto mb - 8'>;
-            ZionGPT helps you craft high quality articles, service descriptions;
-            and FAQs in minutes.;
+      <main className="bg-background text-white py-12">;
+        <div className="container mx-auto px-4 md:px-6">;
+          <GradientHeading className="mb-4 text-center">AI Content Generation</GradientHeading>;
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">;
+            ZionGPT helps you craft high quality articles, service descriptions and FAQs in minutes.;
           </p>;
-          <div className='relative w - full h - auto aspect - video mb - 12 mx - auto rounded - lg shadow - xl overflow - hidden'>;
+          <div className="relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden">;
             <img;
-              src='https://placehold.co / 800x400';
-              alt='Screenshot of ZionGPT content tool';
-              className='object - cover';
+              src="https: //placehold.co/800x400";
+              alt="Screenshot of ZionGPT content tool";
+              className="object-cover";
             />;
           </div>;
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <li>;
               Save time drafting marketing content for your products or;
               services.;
@@ -189,9 +179,4 @@ function AIPoweredContent() {
       </main>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -20,6 +20,30 @@ import {
   Globe,
 
 } from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+export default function DigitalTransformationPage() {
+  const services = [
+    {
+
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  Rocket,
+  Zap,
+  Shield,
+  Cpu,
+  Database,
+  Users,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+<<<<<<< HEAD
+  TrendingUp,
+  Globe,
+} from 'lucide-react';
 import EnhancedNavigation from '../../components / EnhancedNavigation';
 import EnhancedFooter from '../../components / EnhancedFooter';
 export default /**
@@ -28,27 +52,21 @@ export default /**
 function DigitalTransformationPage() {
   const services = [;
     {
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -117,14 +135,12 @@ import { motion } from 'framer-motion';
     { number: '40%', label: 'Average Cost Reduction', icon: TrendingUp },
     { number: '300%', label: 'ROI Improvement', icon: Star },
     { number: '24 / 7', label: 'Support Available', icon: Clock },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
 
           href='https://ziontechgroup && ziontechgroup.com/services/transformation'
         />      </Head>;
-
       <EnhancedNavigation />;
 
 
@@ -164,14 +180,12 @@ import { motion } from 'framer-motion';
               End-to-end digital transformation solutions that modernize your;
               business            </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className='mb-12'>;
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
-=======
     <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
       <Head>;
         <title > Digital Transformation Services - Zion Tech Group</title>;
@@ -214,7 +228,6 @@ import { motion } from 'framer-motion';
             className='mb - 12';
           >;
             <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               From strategy development to implementation, we guide businesses;
               through complete digital transformation journeys that drive;
               innovation, efficiency, and growth.;
@@ -225,6 +238,44 @@ import { motion } from 'framer-motion';
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From strategy development to implementation, we guide businesses through complete 
+=======
+            className='mb-12'
+          >
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+              From strategy development to implementation, we guide businesses
+              through complete digital transformation journeys that drive
+              innovation, efficiency, and growth.
+=======
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              End-to-end digital transformation solutions that modernize your business
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              From strategy development to implementation, we guide businesses through complete
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               digital transformation journeys that drive innovation, efficiency, and growth.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -278,7 +329,7 @@ import { motion } from 'framer-motion';
               Comprehensive transformation solutions designed to modernize your business operations
             </p>
           </motion.div>
-
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -294,7 +345,6 @@ import { motion } from 'framer-motion';
               business operations;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
@@ -337,6 +387,7 @@ import { motion } from 'framer-motion';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </ul>
                 <div className="flex items-center justify-between">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started
@@ -355,13 +406,9 @@ import { motion } from 'framer-motion';
           </div>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-=======
-
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -400,9 +447,19 @@ import { motion } from 'framer-motion';
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+<<<<<<< HEAD
+Transformation Assessment
+              </button>
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+                Transformation Assessment
+              </button>
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
+
+=======
                 Transformation Assessment
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 View Success Stories
 
               </button>
@@ -440,14 +497,25 @@ import { motion } from 'framer-motion';
           </motion && motion.div>;
         </div>;
       </section>;
-
       <EnhancedFooter />;
     </div>;
   ),;
-
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      <EnhancedFooter />
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+)
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) )
+=======
+),
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}</div> </div> </section> <motion.div initial= {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -457,9 +525,9 @@ import { motion } from 'framer-motion';
   {
 
   duration: 0 && 0.8 
-
 }viewport= {
   {
+<<<<<<< HEAD
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
@@ -467,8 +535,6 @@ import { motion } from 'framer-motion';
 =======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <button className='px - 8 py - 4 bg - gradient - to - r from - yellow - 600 to - orange - 600 hover:from - yellow - 700 hover:to - orange - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
               Start Transformation;
               <ArrowRight className='w - 5 h - 5' />            </button>;
@@ -572,6 +638,32 @@ import { motion } from 'framer-motion';
                 Transformation Assessment;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Success Stories;
+=======
+  once: true
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+<<<<<<< HEAD
+=======
+
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  )
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Ready to Transform Your Business?;
+            </h2>;
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+              Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
+                Transformation Assessment;
+              </button>;
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
+                View Success Stories;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </button>;
             </div>;
           </motion.div>;

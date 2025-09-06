@@ -1,6 +1,4 @@
-
-
-    }
+}
   })
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true)
@@ -8,7 +6,6 @@
       await onSubmit(data)
     } catch (err: any) {
       setError(err.message |'An error occurred')
-=======
 import { use_form } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from 'zod';
@@ -66,20 +63,16 @@ function EducationFormFields() {
       await on_submit (data);
     } catch (err: any) {
       set_error (err.message || 'An error occurred');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
 
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Form {...form}>;
 
@@ -99,7 +92,6 @@ function EducationFormFields() {
                 </FormControl>;
                 <FormMessage />;
 
-=======
             control={form.control}
 
             name="institution"
@@ -115,25 +107,21 @@ function EducationFormFields() {
               </FormItem>
             )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
-            control={form && form.control}
+            control={form.control}
             name='degree'
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
                   <Input
                     placeholder="Bachelor's, Master's, Ph && Ph.D, etc."
-=======
               </FormItem>)}
           />;
           <FormField;
             control={form.control}
 
-=======
             name="degree"
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -147,20 +135,17 @@ function EducationFormFields() {
               </FormItem>
             )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
-          control={form && form.control}
+          control={form.control}
           name='field_of_study'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Field of Study</FormLabel>;
               <FormControl>;
                 <Input
                   placeholder='Computer Science, Engineering, etc.'
-=======
               </FormItem>)}
           />;
         </div>;
@@ -178,16 +163,13 @@ function EducationFormFields() {
               </FormControl>
               <FormMessage />
             </FormItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
 
         />;
-=======
 
 
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
 
             control={form.control}
@@ -205,13 +187,11 @@ function EducationFormFields() {
                   <Input type='date' {...field} value={field && field.value || ''} />                </FormControl>;
                 <FormMessage />;
               </FormItem>;
-=======
 
                   <Input type='date' {...field} value={field.value || ''} />                </FormControl>
                 <FormMessage />
               </FormItem>
 
-=======
                   <Input 
                     type="date" 
                     {...field}
@@ -223,12 +203,10 @@ function EducationFormFields() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
-          />;
+          />
 
           <div className='space-y-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
 
               control={form.control}
@@ -236,14 +214,14 @@ function EducationFormFields() {
 
 
                     <Checkbox
-                      checked = {field && field.value,}
-                      onCheckedChange = {field && field.onChange,}
-                    />;
-                  </FormControl>;
-                  <div className='space-y-1 leading-none'>;
-                    <FormLabel>I am currently studying here</FormLabel>;
-                  </div>;
-                </FormItem>;
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>I am currently studying here</FormLabel>
+                  </div>
+                </FormItem>
               )}
 
             />;
@@ -262,7 +240,6 @@ function EducationFormFields() {
                 name="end_date"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
@@ -271,7 +248,6 @@ function EducationFormFields() {
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
-=======
                       <Input 
                         type="date" 
                         {...field} 
@@ -281,10 +257,8 @@ function EducationFormFields() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <FormMessage />
                   </FormItem>
-=======
                 render={({ field }: { field: any }) => (;
                   <FormItem>;
                     <FormLabel>End Date</FormLabel>;
@@ -292,24 +266,20 @@ function EducationFormFields() {
                       <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
                     <FormMessage />;
                   </FormItem>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-              />;
+              />
             )}
 
-=======
 
 
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
-          control={form && form.control}
+          control={form.control}
           name='location'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
-=======
             </FormItem>)}
         />;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -361,15 +331,14 @@ function EducationFormFields() {
 
 
         <FormField
-          control={form && form.control}
+          control={form.control}
           name='description'
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel>Description (Optional)</FormLabel>;
-              <FormControl>;
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel>Description (Optional)</FormLabel>
+              <FormControl>
                 <Textarea
                   placeholder='Notable achievements, courses, activities...'
                   className='min-h-[100px]'
-=======
             </FormItem>)}
         />;
         <FormField;
@@ -381,13 +350,10 @@ function EducationFormFields() {
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';
                   className='min - h-[100px]';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           name="location"
           render={({ field }: { field: any }) => (
             <FormItem>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
                 <Input placeholder="Cambridge, MA" {...field} />
@@ -408,8 +374,6 @@ function EducationFormFields() {
                   placeholder="Notable achievements, courses, activities..."
                   className="min-h-[100px]"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {...field}
                 />;
               </FormControl>;
@@ -450,7 +414,6 @@ function EducationFormFields() {
   );
 }
 
-=======
             </FormItem>)}
         />;
         {error && (
@@ -468,10 +431,5 @@ function EducationFormFields() {
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

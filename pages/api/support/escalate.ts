@@ -28,6 +28,24 @@ function handler() {
 }
   const { session_id, reason, tag } = req.body as {
     session_id: string;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJson, writeJson } from "../../../utils/fsDb";
+import { tagOperatorSession } from "../../../utils/operator";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  const { sessionId, reason, tag } = req.body as {
+    sessionId: string;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reason?: string;
     tag?: string;
   }
@@ -73,6 +91,7 @@ function handler() {
   write_json ("support / requests.json", requests);
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
+
 }
 
 

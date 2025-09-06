@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <Card>;
       <CardHeader>;
 
@@ -21,23 +19,24 @@
               {REWARD_OPTIONS && REWARD_OPTIONS.map(option => (;
 
                 <div
-                  key={option && option.id}
-                  className='flex justify-between items-center border-b pb-4'>                  <div>;
-                    <h3 className='font-medium'>{option && option.title}</h3>;
-                    <p className='text-sm text-muted-foreground'>;
-                      {option && option.description}
-                    </p>;
-                  </div>;
-                  <div className='flex flex-col items-end gap-1'>;
-                    <span className='text-sm font-bold'>;
-                      {option && option.cost} ZION$;
-                    </span>;
+                  key={option.id}
+                  className='flex justify-between items-center border-b pb-4'
+                >                  <div>
+                    <h3 className='font-medium'>{option.title}</h3>
+                    <p className='text-sm text-muted-foreground'>
+                      {option.description}
+                    </p>
+                  </div>
+                  <div className='flex flex-col items-end gap-1'>
+                    <span className='text-sm font-bold'>
+                      {option.cost} ZION$
+                    </span>
                     <Button
                       size='sm'
                       variant={
-                        wallet && wallet.balance>= option && option.cost;
-                          ? 'default';
-                          : 'outline';
+                        wallet && wallet.balance >= option.cost
+                          ? 'default'
+                          : 'outline'
                       }
 
                       disabled={!wallet || wallet.balance < option && option.cost}
@@ -89,7 +88,6 @@
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
               <Button variant="ghost" size="sm">
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </div>
           </DialogContent>
@@ -97,47 +95,37 @@
       </CardContent>
     </Card>
 
-=======
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
             <Button className='w - full'>View Available Rewards</Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-              <DialogTitle > Available Rewards</DialogTitle>;
+              <DialogTitle>Available Rewards</DialogTitle>;
               <DialogDescription>;
-                Exchange your tokens for these rewards. You currently have{' '}
-                {wallet?.balance || 0} ZION$.;
+                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.;
               </DialogDescription>;
             </DialogHeader>;
-            <div className='space - y-4 py - 4'>;
-              {REWARD_OPTIONS.map (option => (
-                <div;
-                  key={option.id}
-                  className='flex justify - between items - center border - b pb - 4';
-                >                  <div>;
-                    <h3 className='font - medium'>{option.title}</h3>;
-                    <p className='text - sm text - muted - foreground'>;
-                      {option.description}
-                    </p>;
+            <div className="space-y-4 py-4">;
+              {REWARD_OPTIONS.map((option) => (;
+                <div key={option.id} className="flex justify-between items-center border-b pb-4">;
+                  <div>;
+                    <h3 className="font-medium">{option.title}</h3>;
+                    <p className="text-sm text-muted-foreground">{option.description}</p>;
                   </div>;
-                  <div className='flex flex - col items - end gap - 1'>;
-                    <span className='text - sm font - bold'>;
-                      {option.cost} ZION$;
-                    </span>;
+                  <div className="flex flex-col items-end gap-1">;
+                    <span className="text-sm font-bold">{option.cost} ZION$</span>;
                     <Button;
-                      size='sm';
-                      variant={
-                        wallet && wallet.balance >= option.cost;
-                          ? 'default';
-                          : 'outline';
-                      }
+                      size="sm";
+                      variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
                       disabled={!wallet || wallet.balance < option.cost}
-                      on_click={() => handle_redeem (option)}                    >;
-                      Redeem <ArrowRight className='ml - 1 h - 3 w - 3' />;
+                      onClick={() => handleRedeem(option)}
+                    >;
+                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
                     </Button>;
                   </div>;
-                </div>))}
+                </div>;
+              ))}
             </div>;
             <div className='flex justify - between'>;
               <Button;
@@ -159,16 +147,8 @@
       </CardContent>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

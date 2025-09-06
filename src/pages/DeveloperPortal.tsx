@@ -1,6 +1,4 @@
-
-
-  const [activeTab, setActiveTab] = useState<string>("documentation"),
+const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
   const tabs: TabDefinition[] = [
@@ -18,10 +16,9 @@
         <h1 className="text-3xl font-bold text-white flex items-center">
           <Terminal className="mr-3" size={32} />
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Developer Portal
         </h1>
-        <p className='text-zinc-400 mt-2'>
+        <p className="text-zinc-400 mt-2">
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
@@ -64,7 +61,6 @@ export function DeveloperPortal() { const { user  } = useAuth(),
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
-=======
 
 
       
@@ -77,11 +73,9 @@ export function DeveloperPortal() { const { user  } = useAuth(),
               <button
                 key={tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
-=======
 import { useState } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import {
@@ -135,7 +129,6 @@ function DeveloperPortal() {
                   active_tab === tab.id;
                     ? "text - white border - zion - purple";
                     : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 }`}
                 on_click = {(, ) => setActiveTab (tab.id), }
               >;
@@ -211,7 +204,6 @@ export function DeveloperPortal() {;
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Tab content */}
 
         </div>;
@@ -238,7 +230,7 @@ export function DeveloperPortal() {;
                 onClick={() => setActiveTab(tab && tab.id)}
               >;
                 <Icon size={16} className="mr-2" />;
-                {tab && tab.label}
+                {tab.label}
               </button>;
             );
           })}
@@ -248,11 +240,8 @@ export function DeveloperPortal() {;
 
       {/* Tab content */}
       <div>;
-=======
       <div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
@@ -260,11 +249,9 @@ export function DeveloperPortal() {;
 
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
@@ -276,7 +263,6 @@ export default function ProtectedDeveloperPortal() {
   );
 }
 
-=======
   )
 
 };
@@ -284,16 +270,14 @@ export default function ProtectedDeveloperPortal() {
   );
 };
 
-=======
 ;
 
 export default function ProtectedDeveloperPortal() {;
-  return (
+  return (;
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
   )
@@ -302,7 +286,6 @@ export default function ProtectedDeveloperPortal() {;
   );
 }
 
-=======
         </div>;
       </div>;
       {/* Tab content */}
@@ -326,10 +309,4 @@ function ProtectedDeveloperPortal() {
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

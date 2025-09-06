@@ -9,7 +9,9 @@ export default async function handler(
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
 
-=======
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+  // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
 import type { NextApiRequest, NextApiResponse } from './next';
 import { ensureAdminFromApi  } from '../../../../utils / auth';
 export default async /**
@@ -21,7 +23,6 @@ function handler() {
   $2
 }
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const data = {
     activeUsers30d: 12840
     gmv: 1450000

@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -185,13 +181,25 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
         beforeAll: "readonly",
         afterAll: "readonly"
       },
+=======
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
+<<<<<<< HEAD
       }
     },
     plugins: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       react,
       "react-hooks": reactHooks
     },
@@ -228,6 +236,15 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 
         React: 'readonly',
 =======
+<<<<<<< HEAD
+        afterAll: "readonly",
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+        React: 'readonly',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
@@ -244,6 +261,7 @@ export default [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     files: ['**/*.{js,jsx,ts,tsx}'],
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     languageOptions: {
       parser: typescriptParser,
 
@@ -260,6 +278,8 @@ export default [
 =======
         afterAll: "readonly"
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       },
       parser: tsparser,
       parserOptions: {
@@ -269,13 +289,11 @@ export default [
       }
     },
     plugins: {
-
       "@typescript-eslint": tseslint,
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       "jsx-a11y": jsxA11y
-
     },
     rules: {
 
@@ -300,6 +318,7 @@ export default [
       "react/prop-types": "off",
 
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         describe: 'readonly',
         it: 'readonly',
         beforeEach: 'readonly',
@@ -323,6 +342,8 @@ export default [
       "react/react-in-jsx-scope": "off"
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     settings: {
       react: {
@@ -359,6 +380,7 @@ export default [
       'no-console': 'warn',
       'no-undef': 'error'
     }
+<<<<<<< HEAD
 =======
 
 =======
@@ -370,7 +392,7 @@ export default [
       'no-unused-vars': 'warn'
     }
   },
-  {
+{
     ignores: [
       'node_modules/',
       '.next/',

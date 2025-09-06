@@ -82,20 +82,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -112,15 +108,70 @@ import {;
   XCircle,;
   AlertTriangle;
 } from 'lucide-react';
-
 export default function CookiePolicyPage() {;
   const [cookiePreferences, setCookiePreferences] = useState({;
     necessary: true,;
     analytics: false,;
     marketing: false,;
     functional: false;
-  });
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import {
+<<<<<<< HEAD
+  Shield
+  Settings
+  Info
+  ExternalLink
+  ArrowRight
+  CheckCircle
+  XCircle
+  AlertTriangle
+=======
+  Shield,
+  Settings,
+  Info,
+  ExternalLink,
+  ArrowRight,
+  CheckCircle,
+  XCircle,
+  AlertTriangle;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'lucide-react';
+export default function CookiePolicyPage() {
+  const [cookiePreferences, setCookiePreferences] = useState({
+<<<<<<< HEAD
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
+=======
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  });
   const cookieTypes = [;
     {;
       id: 'necessary',;
@@ -151,19 +202,15 @@ export default function CookiePolicyPage() {;
       examples: ['Language preferences', 'User settings', 'Chat widgets'];
     }
   ];
-
   const handleCookieToggle = (cookieId: string) => {;
     if (cookieId === 'necessary') return; // Can't disable necessary cookies;
-
     setCookiePreferences(prev => ({;
       ...prev,;
       [cookieId]: !prev[cookieId];
     }));
   };
-
   const savePreferences = () => {;
     // In a real implementation, this would save to localStorage and update cookie settings;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     alert('Cookie preferences saved!');
   }
   return (
@@ -179,7 +226,6 @@ export default function CookiePolicyPage() {;
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
@@ -221,7 +267,6 @@ export default function CookiePolicyPage() {;
                 Some cookies are necessary for the website to function properly.;
               </p>;
             </motion && motion.div>;
-
             <div className="max-w-4xl mx-auto">;
               <div className="bg-white rounded-lg shadow-lg p-8">;
                 <div className="space-y-6">;
@@ -272,7 +317,6 @@ export default function CookiePolicyPage() {;
 
                         </div>;
                       </div>;
-
                       <div className="ml-9">;
                         <h4 className="text-sm font-medium text-gray-900 mb-2">Examples:</h4>;
                         <ul className="text-sm text-gray-600 space-y-1">;
@@ -287,7 +331,6 @@ export default function CookiePolicyPage() {;
                     </motion && motion.div>;
                   ))}
                 </div>;
-
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">;
                   <button
                     onClick={() => setCookiePreferences({;
@@ -318,7 +361,6 @@ export default function CookiePolicyPage() {;
                     onClick={savePreferences}
 
                     className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
-=======
   Shield,
   Settings,
   Info,
@@ -543,7 +585,6 @@ if (return) {
                 They help us provide you with a better experience and understand how you use our site.;
               </p>;
             </motion && motion.div>;
-
             <div className="max-w-4xl mx-auto">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 <motion&& motion.div
@@ -575,7 +616,6 @@ if (return) {
                     </li>;
                   </ul>;
                 </motion && motion.div>;
-
                 <motion&& motion.div
                   className="bg-gray-50 p-6 rounded-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -605,7 +645,6 @@ if (return) {
                     </li>;
                   </ul>;
                 </motion && motion.div>;
-=======
         {/* Cookie Information */}
         <section className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -775,13 +814,17 @@ if (return) {
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+=======
+=======
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
@@ -797,9 +840,7 @@ export default function CookiesPage() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <li>Purpose: performance and security</li>
-=======
 <li>Purpose: performance and security</li>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
@@ -841,7 +882,6 @@ export default function CookiesPage() {
             Questions?{' '}
             <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
               kleber@ziontechgroup && ziontechgroup.com;
-=======
     </MainLayout>);
 }
 import { motion } from 'framer-motion';

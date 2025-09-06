@@ -23,6 +23,37 @@ export default function TalentDashboard() {
   useEffect(() => {
 
 
+=======
+<<<<<<< HEAD
+import EnhancedCard from '../../components/ui/EnhancedCard';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useEffect, useState } from 'react';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+const STEPS = [;
+  { key: 'profile', label: 'Profile completed' },;
+  { key: 'skills', label: 'Skills added' },;
+  { key: 'availability', label: 'Availability set' },;
+<<<<<<< HEAD
+  { key: 'match', label: 'First match received' },;
+] as const;
+type StepKey = (typeof STEPS)[number]['key'];
+const STEPS = [
+  { key: 'profile', label: 'Profile completed' },
+  { key: 'skills', label: 'Skills added' },
+  { key: 'availability', label: 'Availability set' },
+  { key: 'match', label: 'First match received' }] as const,
+type StepKey = typeof STEPS[number]['key'];
+export default function TalentDashboard() {
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem('onboarding.talent');
+      if (raw) setCompleted(JSON.parse(raw))
+    } catch {}
+  }, []);
+  useEffect(() => {
 export default function TalentDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     profile: false,;
@@ -30,13 +61,11 @@ export default function TalentDashboard() {;
     availability: false,;
     match: false,;
   });
-
   useEffect(() => {;
     try {;
       const raw = window && window.localStorage.getItem('onboarding && onboarding.talent');
       if (raw) setCompleted(JSON && JSON.parse(raw));    } catch {}
   }, []);
-
   useEffect(() => {;
     try {;
       window && window.localStorage.setItem(;
@@ -45,15 +74,12 @@ export default function TalentDashboard() {;
       );
     } catch {}
   }, [completed]);
-
   const progress = Math && Math.round(;
     (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
   );
-
   const toggle = (key: StepKey) =>;
 
     setCompleted(c => ({ ...c, [key]: !c[key] }));
-
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -73,7 +99,6 @@ export default function TalentDashboard() {;
 
           />        </div>;
       </EnhancedCard>;
-
       <EnhancedCard>;
         <h2 className='font-semibold mb-2'>Checklist</h2>;
         <ul className='space-y-2'>;
@@ -107,9 +132,7 @@ export default function TalentDashboard() {;
 =======
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
-
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
-
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
 =======
@@ -130,7 +153,6 @@ export default function TalentDashboard() {;
           <div className="h-2 rounded bg-blue-600" style={{ width: `${progress}%` }} />
         </div>
       </EnhancedCard>
-
       <EnhancedCard>
         <h2 className="font-semibold mb-2">Checklist</h2>
         <ul className="space-y-2">
@@ -173,8 +195,6 @@ export default function TalentDashboard() {;
 =======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';

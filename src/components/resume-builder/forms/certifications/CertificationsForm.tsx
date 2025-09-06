@@ -1,6 +1,4 @@
-
-
-  return (
+return (
 
     <div className='space-y-6'>;
       <div>;
@@ -23,7 +21,6 @@
 
 
 
-=======
         <CertificationsList 
           certifications={certifications} 
           onEdit={handleEdit} 
@@ -36,37 +33,27 @@
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(handleAddOrUpdate)}
-            className='space-y-4'
-          >
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
 
 
 
-=======
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
 
             <div className="flex justify-between pt-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
-                type='button'
-                variant='outline'
+                type="button"
+                variant="outline"
                 onClick={() => {
                   if (editingId) {
 
 
                     setEditingId(null),
-=======
-=======
                     setEditingId(null),
 
 
@@ -78,10 +65,17 @@
                       credential_id: '',
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    setEditingId(null),
+                    setEditingId(null),
+                    form.reset({
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
+                      credential_url: ''})
                   } else {
                     onBack()
-=======
 
       <div className='bg-muted/40 p-6 rounded-lg'>;
         <h3 className='text-md font-medium mb-4'>;
@@ -117,10 +111,9 @@
                     });
                   } else {;
                     onBack();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                 }}
-              >;
+              >
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>
@@ -135,7 +128,6 @@
                 <Button type="button" onClick={onComplete}>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Next
                 </Button>
               </div>
@@ -172,7 +164,6 @@
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
 }'"}
 
-=======
       // Check condition
 if ( {) {
   $2
@@ -283,12 +274,6 @@ if ( {) {
   editing_id ? 'Cancel' : 'Back';
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

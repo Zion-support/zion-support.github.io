@@ -1,10 +1,7 @@
-
 // TypeScript file;
 export const placeholder = 'placeholder';
+<<<<<<< HEAD
 ;
 
-=======
 
 export const placeholder = 'placeholder';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

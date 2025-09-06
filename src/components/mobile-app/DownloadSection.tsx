@@ -1,13 +1,10 @@
-
-
-                appStoreUrl = {appStoreUrl,}
+appStoreUrl = {appStoreUrl,}
                 googlePlayUrl = {googlePlayUrl,}
                 onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
                 onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
 
 
 
-=======
               
 
               <AppStoreButtons 
@@ -18,8 +15,6 @@
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
@@ -40,11 +35,11 @@
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
-                className="mb - 8";
-                appStoreUrl = {appStoreUrl, }
-                googlePlayUrl = {googlePlayUrl, }
-                onAppStoreClick = {(, ) => log_info ("App Store button clicked"), }
-                onGooglePlayClick = {() => log_info ("Google Play button clicked"), }
+                className="mb-8";
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+                onAppStoreClick={() => logInfo("App Store button clicked")}
+                onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
               <div className="text - sm text - gray - 400">;
                 <p > Compatible with iOS 14+ and Android 8.0+</p>;
@@ -68,12 +63,11 @@
               />;
 
               <div className="text-sm text-gray-400">;
-                <p>Compatible with iOS 14+ and Android 8 && 8.0+</p>;
+                <p>Compatible with iOS 14+ and Android 8.0+</p>;
                 <p>Free download, in-app purchases available</p>;
               </div>;
             </div>;
-
-            <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">;
+            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">;
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;
                 {/* This would be replaced with an actual QR code in production */}
@@ -87,16 +81,11 @@
   );
 };
 
-=======
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
                 {/* This would be replaced with an actual QR code in production */}
@@ -109,5 +98,3 @@
     </section>
 
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -135,6 +135,10 @@ function fixNextLinks(filePath) {
 
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (content.includes("href="/") && !content.includes("import Link")) {
+=======
     if (content.includes("href="/") && !content.includes("import Link")) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -156,6 +160,10 @@ import Link from "next/link";";
   console.error(`Error fixing links in ${filePath}:`, error.message)}
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

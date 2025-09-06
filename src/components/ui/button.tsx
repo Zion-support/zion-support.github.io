@@ -1,4 +1,3 @@
-
 import React from './react';
 import Link from './next / link';
 interface ButtonProps {
@@ -93,13 +92,12 @@ const Button: React.FC<ButtonProps> = ({;
   if (href) {;
 
     return (
-      <Link href={href} className={classes} style={style}>;
+      <Link href={href} className={classes} style={style}>
         {content}
 
       </Link>;
     );
 
-=======
   const base_classes = "px - 4 py - 2 rounded - md font - medium transition - colors duration - 200";
   const size_classes = {
     sm: "px - 3 py - 1.5 text - sm",
@@ -121,23 +119,20 @@ if ( {) {
       <Link href={href} className={classes} style={style}>;
         {content}
       </Link>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return (
-    <button;
+    <button
       type={type}
       className={classes}
-      on_click={on_click}
+      onClick={onClick}
       disabled={disabled}
 
     </button>;
   );
 };
-
 export { Button };
 export default Button;
 
-=======
       style={style}
     >;
       {content}
@@ -145,4 +140,3 @@ export default Button;
 }
 export { Button }
 export default Button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

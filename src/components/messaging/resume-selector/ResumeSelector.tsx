@@ -1,6 +1,4 @@
-
-
-  // Fetch resume data when component mounts
+// Fetch resume data when component mounts
   useEffect((,) => {
     const loadResumes = async () => {
 
@@ -31,16 +29,13 @@ function ResumeSelector() {
     const load_resumes = async () => {
       setIsLoading (true);
 
-=======
 
       setIsLoading(true),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       try {
-        await fetch_resume ();
+        await fetchResume()
       } catch (error) {
-        logErrorToProduction ('Error loading resumes:', { data: error });
+        logErrorToProduction('Error loading resumes:', { data: error })
       } finally {
 
 import { ResumePreviewCard } from './ResumePreviewCard';
@@ -58,7 +53,6 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 
   const { resume, fetchResume } = useResume();
 
-=======
         setIsLoading(false)
 
   ;
@@ -66,7 +60,6 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
   );
 };
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
@@ -89,9 +82,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const { resume, fetchResume } = useResume(),;
 
   // Fetch resume data when component mounts;
-  useEffect((,) => {;
+  useEffect(() => {;
     const loadResumes = async () => {;
-      setIsLoading(true);
+      setIsLoading(true),;
       try {;
         await fetchResume();
       } catch (error) {;
@@ -99,24 +92,31 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       } finally {;
         setIsLoading(false);
       }
-    };
-
-            return;
+    },;
+    loadResumes();
+  }, [fetchResume]),;
+  // Update resume options when resume data changes;
+  useEffect(() => {;
+    if (resume) {;
+      const options: ResumeOption[] = [{;
+        id: resume.id || 'current',;
+        title: resume.basic_info.title,;
+        type: 'ai_resume',;
+        resume: resume;
+      }],;
+      setResumeOptions(options),;
+      // Pre-select the most recent resume;
+      if (options.length > 0 && selectedOption === 'recent' && options[0]) {;
+        setSelectedResume(options[0]),;
+        onResumeSelected(options[0]);
       }
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
   )
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

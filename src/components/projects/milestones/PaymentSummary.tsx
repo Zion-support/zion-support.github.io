@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,10 +8,18 @@ interface PaymentSummaryProps {;
   paymentTerms: string | null;
 }
 
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {;
-  const totalPayment = milestones && milestones.reduce(;
-    (sum, m) => sum + parseFloat(m && m.amount.toString());    0;
-  ).toFixed(2);
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
+  const totalPayment = milestones.reduce(
+    (sum, m) => sum + parseFloat(m.amount.toString()), 
+    0
+  ).toFixed(2),
+  
+  const paidAmount = milestones
+    .filter(m => m.status === 'paid')
+    .reduce(
+      (sum, m) => sum + parseFloat(m.amount.toString()), 
+      0
+    ).toFixed(2),
 
   const paidAmount = milestones;
     .filter(m => m && m.status === 'paid');
@@ -23,10 +28,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     ).toFixed(2);
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="mb-8 bg-muted/30">;
       <CardHeader className="pb-3">;
@@ -45,7 +48,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
@@ -57,7 +59,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
@@ -77,10 +78,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;
             <p className="font-medium">;
               ${paidAmount}
-=======
 
 
-=======
 
             </p>;
           </div>;
@@ -92,10 +91,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 '"
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 } import React from 'react';
 import { Milestone } from '@/hooks / use_milestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -145,10 +141,3 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({ milestones, pa
     </Card>);
 }
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

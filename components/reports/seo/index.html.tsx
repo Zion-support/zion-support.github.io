@@ -2,7 +2,6 @@
 
 =======
 export default function Placeholder() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <main className='min-h-screen p-8'>;
       <Head>;

@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -245,7 +240,6 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
-=======
 const jobOpenings = [;
   {;
     id: 1,;
@@ -424,7 +418,6 @@ const benefits = [{;
     "title": "Professional Growth";
     "description": "Learning opportunities and career development support";
     "icon": ArrowRight;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
   }
 ];
 const values = ["Innovation and creativity";
@@ -482,7 +475,6 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
-=======
 const benefits = [{;
     "title": "Competitive Compensation";
     "description": "We offer competitive salaries and performance-based bonuses";
@@ -502,7 +494,6 @@ const benefits = [{;
     "title": "Professional Growth";
     "description": "Learning opportunities and career development support";
     "icon": ArrowRight;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
   }
 ];
 const values = ["Innovation and creativity";
@@ -548,7 +539,6 @@ const values = [;
   "Continuous learning",;
   "Work-life balance",;
   "Diversity and inclusion",;
-
   "Client success focus";
 ];
 export default function TalentPage() {;
@@ -561,13 +551,11 @@ export default function TalentPage() {;
         <title>Join Our Team - Zion Tech Group</title>
         <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />
       </Head>
-=======
     <div className="min-h-screen bg-gray-50">;
       <Head>;
         <title>Join Our Team - Zion Tech Group</title>;
         <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />;
       </Head>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -642,7 +630,6 @@ export default function TalentPage() {;
 
 
             <motion.div,
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -666,7 +653,6 @@ export default function TalentPage() {;
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -689,7 +675,6 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
-                
                   >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
@@ -701,7 +686,6 @@ export default function TalentPage() {;
                       {benefit.description}
                     </p>
                   </motion.div>
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -732,7 +716,6 @@ export default function TalentPage() {;
                       {benefit && benefit.description}
                     </p>;
                   </motion && motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
                 );
               })}
             </div>;
@@ -766,7 +749,6 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value, index) => (
                 <motion.div,
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -779,7 +761,6 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
               {values && values.map((value, index) => (;
                 <motion&& motion.div,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
     key={index}
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -866,7 +847,6 @@ export default function TalentPage() {;
               {jobOpenings.map((job, index) => (
                 <motion.div,
     key={job.id}
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -880,7 +860,6 @@ export default function TalentPage() {;
               {jobOpenings && jobOpenings.map((job, index) => (;
                 <motion&& motion.div,
     key={job && job.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1007,7 +986,6 @@ export default function TalentPage() {;
       </div>
     </MainLayout>
   );
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md: text-4xl font-bold mb-6">;
@@ -1026,4 +1004,3 @@ export default function TalentPage() {;
     </MainLayout>;
   ),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx

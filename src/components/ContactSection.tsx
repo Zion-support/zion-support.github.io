@@ -1,16 +1,10 @@
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    fetch("/api/contact", {
+fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
 
           const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
-=======
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
@@ -29,8 +23,6 @@
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
-=======
-=======
 
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
@@ -41,7 +33,6 @@
         toast({
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
@@ -51,7 +42,6 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -148,7 +138,6 @@ import { Textarea } from "@/components/ui/textarea",;
 import { toast } from "@/components/ui/use-toast",;
 import z from "zod",;
 import { Mail } from 'lucide-react';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function ContactSection() {;
   const [formData, setFormData] = useState({;
     name: "",;
@@ -158,7 +147,6 @@ export function ContactSection() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<{;
-=======
 ;
 export /**
  * ContactSection - Function description
@@ -172,7 +160,6 @@ function ContactSection() {
   const [is_submitting, setIsSubmitting] = useState (false);
   const [submitted, set_submitted] = useState (false);
   const [errors, set_errors] = useState<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name?: string;
     email?: string;
     subject?: string;
@@ -415,14 +402,12 @@ if ( {) {
                     disabled={isSubmitting}
                   >;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </form>;
             </div>;
@@ -431,11 +416,8 @@ if ( {) {
       </div>;
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </section>);
 }set_errors (field_errors);
 toast ({
@@ -458,11 +440,5 @@ description: err.message;
 }</Button>);
 }</div> </form> </div> </div> </div> </div> </section>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -8,6 +8,11 @@
 };
 
 const notesStore: Note[] = [];
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { randomUUID } from 'crypto';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -35,10 +40,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     notesStore.push(note);
     return res.status(200).json({ ok: true, note });
   }
-
   return res.status(405).json({ error: 'Method not allowed' });
 }
-
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 

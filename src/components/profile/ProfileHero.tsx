@@ -1,6 +1,4 @@
-
-
-  avatarUrl?: string;
+avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
   rating?: number;
@@ -61,7 +59,6 @@ export function ProfileHero(): any ({
           ) : (;
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
 
-=======
   profileType: 'service' | 'talent'
 }
 
@@ -74,7 +71,6 @@ export function ProfileHero({
   rating;
   reviewCount;
   aiScore;
-=======
 
 
 export function ProfileHero({
@@ -107,14 +103,12 @@ export function ProfileHero({
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
 
         </AspectRatio>
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
@@ -143,9 +137,8 @@ export function ProfileHero({
                 <h1 className='text-2xl md:text-3xl font-bold text-white'>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   {name}
-                </h1>;
+                </h1>
                 <Badge
                   variant='outline'
                   className={cn(
@@ -156,9 +149,10 @@ export function ProfileHero({
 
                   variant="outline" 
                   className={cn(
-                    "ml-2 border-zion-purple/50 text-zion-cyan"
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
+                >;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
 
                 </Badge>
@@ -175,7 +169,6 @@ export function ProfileHero({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {rating && (
                   <div className='flex items-center gap-1'>
                     <Star className='w-4 h-4 fill-zion-cyan text-zion-cyan' />
@@ -186,7 +179,6 @@ export function ProfileHero({
                       <span className='text-zion-slate-light text-sm'>
                         ({reviewCount})
                       </span>
-=======
 
                 {rating && (;
                   <div className='flex items-center gap-1'>;
@@ -198,9 +190,8 @@ export function ProfileHero({
                       <span className='text-zion-slate-light text-sm'>;
                         ({reviewCount});
                       </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
-                  </div>;
+                  </div>
                 )}
 
 
@@ -216,15 +207,9 @@ export function ProfileHero({
                     <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
                     {reviewCount && (;
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
-                  </div>;
+                  </div>
                 )}
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

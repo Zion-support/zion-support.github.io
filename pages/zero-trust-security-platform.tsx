@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -73,12 +69,12 @@ export default function ZeroTrustSecurityPlatformPage() {
 		<>
 			<Head>
 				<title>Zero Trust Security Platform | Zion Tech Group</title>
-				<meta name="description" content="Design and enforce zero trust architecture: identity-first access, microsegmentation, continuous verification, and least privilege." />
+<meta name="description" content="Design and enforce zero trust architecture: identity-first access, microsegmentation, continuous verification, and least privilege." />
 				<link rel="canonical" href="https://ziontechgroup.com/zero-trust-security-platform" />
 			</Head>
 			<ServiceLanding
 				title="Zero Trust Security Platform"
-				description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services."
+description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services."
 				subtitle="Trust nothing, verify everything"
 				pricePerMonthUSD={3499}
 				implementationWeeks="4-8 weeks"

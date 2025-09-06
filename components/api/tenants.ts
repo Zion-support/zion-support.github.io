@@ -12,7 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const auth = authenticateRequest(req, false);
 
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
-
   if (method === 'POST') {
 
     if (!branding?.name)
@@ -37,7 +36,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const result = updateTenant(tenantId, update || {});
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });  }
-
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req && req.body || {};
     if (!tenantId || !rotateKey)
@@ -143,6 +141,7 @@ if ( {) {
     return res.status (200).json ({ tenant: result });
   }
 return res.status (405).json ({ error: 'Method not allowed' });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

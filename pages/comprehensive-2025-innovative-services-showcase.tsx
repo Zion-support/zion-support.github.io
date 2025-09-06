@@ -88,7 +88,7 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
   const containerVariants = {
 
     hidden: { opacity: 0 }
-=======
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -176,21 +176,27 @@ if (return 'mid', ) {
 
 
   };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
-=======
+<<<<<<< HEAD
   },
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
       opacity: 1,
       coordinate_y: 0,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       transition: {
 
         duration: 0.5;
@@ -204,6 +210,33 @@ if (return 'mid', ) {
 
 
   };
+        case 'popularity':
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        case 'price':
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        default: return 0
+      }
+    }),
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 0.5}
+    }
+  },
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -213,6 +246,12 @@ if (return 'mid', ) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     website: 'https://ziontechgroup.com'
+}
+=======
+      transition: {
+        duration: 0.5
+      }
+    }
   }
 =======
     website: 'https://ziontechgroup.com'
@@ -817,7 +856,6 @@ if (return 'mid', ) {
               }>;
                 {filtered_services.map ((service, index) => (
                   <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     key={service.id}
                     variants={item_variants}
                     className={`group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${

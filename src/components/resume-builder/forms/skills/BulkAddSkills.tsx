@@ -1,10 +1,7 @@
-
-
-        }
+}
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
 
@@ -12,7 +9,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="bg-muted/40 p-6 rounded-lg">;
@@ -95,18 +91,11 @@
         </p>;
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>;
+      </div>
+    </div>
   );
 };
 
-=======
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

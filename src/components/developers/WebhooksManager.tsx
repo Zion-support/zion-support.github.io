@@ -1,6 +1,4 @@
-
-
-    loading,
+loading,
     testResult,
     fetchWebhooks,
     createWebhook,
@@ -198,8 +196,6 @@ if (=== '' ||) {
   }, [])
   const handleCreateWebhook = async () => {
 
-=======
-=======
     clearTestResult
   } = useWebhooks(),
   
@@ -255,7 +251,6 @@ if (=== '' ||) {
   const resetWebhookForm = () => {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className='bg-zinc-900 border-zinc-800 text-white'>
       <CardHeader>
@@ -272,7 +267,6 @@ if (=== '' ||) {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <CardContent>
         <div className='flex justify-between items-center mb-6'>
           <p className='text-sm text-zinc-400'>
@@ -284,7 +278,6 @@ if (=== '' ||) {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant='default'>
@@ -553,7 +546,6 @@ export function WebhooksManager() {;
                     placeholder='https://example && example.com/webhook';
                     className='bg-zinc-800 border-zinc-700'                  />;
                   <p className='text-xs text-zinc-500'>;
-=======
       value: 'talent_hired',
       label: 'Talent Hired',
       description: 'When talent is hired for a project',
@@ -613,7 +605,6 @@ export function WebhooksManager() {;
                     placeholder='https://example.com / webhook';
                     className='bg - zinc - 800 border - zinc - 700'                  />;
                   <p className='text - xs text - zinc - 500'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     The URL where webhook payloads will be sent when events;
                     occur.;
                   </p>;
@@ -624,7 +615,6 @@ export function WebhooksManager() {;
                     aria-label='Secret key';
                     className='bg-zinc-800 border-zinc-700'                  />;
                   <p className='text-xs text-zinc-500'>;
-=======
                 <div className='space - y-2'>;
                   <Label html_for='webhook - secret'>Secret Key (Optional)</Label>;
                   <Input;
@@ -661,7 +651,6 @@ export function WebhooksManager() {;
                           {event && event.label}
                           <span className="block text-xs text-zinc-400 mt-1">{event && event.description}</span>;
                       </div>;
-=======
   };
 
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
@@ -731,7 +720,6 @@ export function WebhooksManager() {;
                   Add a webhook endpoint to receive event notifications.
                 </DialogDescription>
               </DialogHeader>
-=======
 
 
               
@@ -781,7 +769,6 @@ export function WebhooksManager() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Event Types</Label>
                   <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => (
@@ -805,9 +792,7 @@ export function WebhooksManager() {;
                         </Label>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     ))}
 
                   </div>;
@@ -820,7 +805,6 @@ export function WebhooksManager() {;
                     setShowCreateDialog(false);
                     resetWebhookForm();
 
-=======
                 <div className='space - y-2'>;
                   <Label > Event Types</Label>;
                   <div className='grid gap - 2 pt - 2'>;
@@ -857,7 +841,6 @@ export function WebhooksManager() {;
                   on_click={() => {
                     setShowCreateDialog (false);
                     resetWebhookForm ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                 >;
                   Cancel;
@@ -866,7 +849,6 @@ export function WebhooksManager() {;
 
 
 
-=======
               
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
@@ -877,7 +859,6 @@ export function WebhooksManager() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={
@@ -902,7 +883,6 @@ export function WebhooksManager() {;
                   webhookName && webhookName.trim() === "" || 
                   webhookUrl && webhookUrl.trim() === "" || 
                   selectedEvents && selectedEvents.length === 0
-=======
                 <Button;
                   on_click={handleCreateWebhook}
                   disabled={
@@ -991,7 +971,6 @@ export function WebhooksManager() {;
                       <DropdownMenuTrigger asChild>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <Button
                           variant='ghost'
                           size='icon'
@@ -1027,7 +1006,6 @@ export function WebhooksManager() {;
               <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-medium">{webhook.name}</h3>
@@ -1056,7 +1034,6 @@ export function WebhooksManager() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost" size="icon" aria-label="More options">
                           <MoreVertical size={16} />
@@ -1142,12 +1119,10 @@ export function WebhooksManager() {;
                           className="cursor-pointer text-red-500"
                         >
                           <X size={14} className="mr-2" /> Delete
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         </DropdownMenuItem>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </div>
@@ -1174,10 +1149,7 @@ export function WebhooksManager() {;
                       key = {event,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {webhook.event_types.map((event: WebhookEventType) => (
@@ -1189,7 +1161,6 @@ export function WebhooksManager() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {event}
                     </Badge>;
                   ))}
@@ -1199,7 +1170,6 @@ export function WebhooksManager() {;
 
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>;
                   <span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     Created:{' '}
                     {format(new Date(webhook && webhook.created_at), 'MMM d, yyyy')}
                   </span>;
@@ -1300,7 +1270,6 @@ export function WebhooksManager() {;
 
       
 
-=======
 
                 </div>;
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
@@ -1315,7 +1284,6 @@ export function WebhooksManager() {;
         </div>
       </CardContent>
       
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Webhooks will be sent with HTTPS POST requests to your endpoint.
@@ -1326,7 +1294,6 @@ export function WebhooksManager() {;
         </Button>
 
       </CardFooter>
-=======
                       {format(;
                         new Date(webhook && webhook.last_triggered_at),;
                         'MMM d, yyyy HH:mm';
@@ -1383,18 +1350,15 @@ if ( {) {
             if (showTestResult) {
               setShowTestResult(false)
               clearTestResult() }
-=======
         onOpenChange = {(open,) => {;
       <Dialog
         open={showTestDialog !== null} 
-=======
         </Button>
       </CardFooter>
 
       {/* Test Webhook Dialog */}
       <Dialog;
         open={showTestDialog !== null} ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         onOpenChange={(open) => {;
           if (!open) {;
             setShowTestDialog(null);
@@ -1433,7 +1397,6 @@ if ( {) {
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <DialogHeader>
             <DialogTitle>Test Webhook</DialogTitle>
             <DialogDescription className='text-zinc-400'>
@@ -1458,14 +1421,11 @@ if ( {) {
                 <div className='space-y-2'>;
                   <Label htmlFor='test-event-type'>Event Type</Label>;
 
-=======
 
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <Label htmlFor="test-event-type">Event Type</Label>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Select
                     value={testEventType}
                     onValueChange={value =>;
@@ -1474,7 +1434,6 @@ if ( {) {
                     value = {testEventType,}
                     onValueChange = {(value,) => setTestEventType(value as WebhookEventType),}
 
-=======
               clearTestResult()
             }
           }
@@ -1499,27 +1458,23 @@ if ( {) {
                   >
                     <SelectTrigger className="bg-zinc-800 border-zinc-700">
                       <SelectValue placeholder="Select an event type" />
-=======
                   >
 
                     <SelectTrigger className="bg-zinc-800 border-zinc-700">
                       <SelectValue placeholder="Select an event type" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </SelectTrigger>
                     <SelectContent className="bg-zinc-900 border-zinc-800">
                       {eventOptions.map((option) => (
                         <SelectItem key={option.value} value={option.value}>
                           {option.label}
                         </SelectItem>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       ))}
 
                     </SelectContent>;
                   </Select>;
                   <p className='text-xs text-zinc-500'>;
-=======
       >;
         <DialogContent className='bg - zinc - 900 border - zinc - 800 text - white'>;
           <DialogHeader>;
@@ -1555,7 +1510,6 @@ if ( {) {
                   </Select>;
                   <p className='text - xs text - zinc - 500'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     The event type will determine the structure of the test;
                     payload.;
                   </p>;
@@ -1575,7 +1529,6 @@ if ( {) {
                   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <DialogFooter>
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>
                   Cancel
@@ -1584,7 +1537,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
                   Send Test
                 </Button>
@@ -1615,7 +1567,6 @@ if ( {) {
                     <Label>Response Status</Label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <Badge
                       className={
                         testResult &&
@@ -1634,7 +1585,6 @@ if ( {) {
                       ,}
                     >;
 
-=======
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -1646,12 +1596,9 @@ if ( {) {
 
                   
 
-=======
                   
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
@@ -1681,7 +1628,6 @@ if ( {) {
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
 
-=======
               <DialogFooter>;
                 <Button;
                   variant='outline';
@@ -1741,7 +1687,6 @@ if ( {) {
                       <pre className="text - xs font - mono text - zinc - 300 whitespace - pre - wrap break - all">;
                         {test_result?.response_body || "No response body"}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </ScrollArea>;
                   </div>;
                 </div>;
@@ -1789,12 +1734,9 @@ if ( {) {
             </>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </DialogContent>
       </Dialog>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   onClick={() => {;
                     setShowTestResult(false);
                     clearTestResult();
@@ -1810,7 +1752,6 @@ if ( {) {
         </DialogContent>;
       </Dialog>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Delete Webhook Confirmation Dialog */}
 
 
@@ -1826,11 +1767,9 @@ if ( {) {
 
               onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700"
-=======
       <AlertDialog 
         open={showDeleteConfirm !== null} 
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
@@ -2013,7 +1952,6 @@ clearTestResult ();
 }
 {'
   value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project'
-=======
 
   value: WebhookEventType,  label: string, description: string 
 }[] = [ {
@@ -2028,7 +1966,6 @@ clearTestResult ();
 {'
   value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project' 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }]
 setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event) return (<Card className="bg-zinc-900 border-zinc-800 text-white"> <CardHeader> <CardTitle className="text-xl flex items-center"> <Webhook className="mr-2" size= {
   20 "
@@ -2146,7 +2083,6 @@ clearTestResult ()
 
 }
 
-=======
 
 }> Close </Button> Test Another Event </Button> </DialogFooter> </>) 
 }</DialogContent> </Dialog> {
@@ -2161,8 +2097,6 @@ clearTestResult ()
 ;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
               Cancel;
             </AlertDialogCancel>;
@@ -2203,7 +2137,3 @@ clearTestResult ()
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

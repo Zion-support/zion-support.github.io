@@ -34,20 +34,17 @@ describe('PerformanceOptimizerdynamic'
 
 describe('PerformanceOptimizer', () => {
   test('renders without crashing', () => {
-    render(<PerformanceOptimizer />);
+    render(<PerformanceOptimizer />);'
     expect(screen.getByTestId('performanceoptimizer.dynamic')).toBeInTheDocument();
-  });
-
+  });'
   test('displays correct content', () => {
     render(<PerformanceOptimizer />);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
-
+  });'
   test('handles user interactions', () => {
     render(<PerformanceOptimizer />);
     // Add interaction tests here
-  });
-
+  });'
   test('applies correct styling', () => {
     render(<PerformanceOptimizer />);
     // Add styling tests here

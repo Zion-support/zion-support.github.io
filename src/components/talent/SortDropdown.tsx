@@ -1,7 +1,4 @@
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  DropdownMenu;
+DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
@@ -19,14 +16,12 @@
 
 
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
-=======
 interface SortDropdownProps {;
   sortOption: string,;
   setSortOption: (option: string) => void;
 }
 
 export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
@@ -41,14 +36,12 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
 
         {SORT_OPTIONS.map((option) => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
 
 
-=======
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -76,23 +69,18 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
             <SortDesc className="h-4 w-4 text-zion-purple" />;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />;
         </Button>;
       </DropdownMenuTrigger>;
 
 
-=======
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }`}
-          >;
-            {option && option.label}
-          </DropdownMenuItem>;
+          >
+            {option.label}
+          </DropdownMenuItem>
         ))}
 
       </DropdownMenuContent>;
@@ -100,11 +88,8 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
   );
 }
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
@@ -174,8 +159,6 @@ function SortDropdown() {
       </DropdownMenuContent>;
     </DropdownMenu>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       <DropdownMenuContent;
         align="start";
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light";
@@ -184,6 +167,3 @@ function SortDropdown() {
           <DropdownMenuItem;
             key={option.value}
             onClick={() => setSortOption(option.value)}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

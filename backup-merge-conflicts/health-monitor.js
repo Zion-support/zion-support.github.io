@@ -40,13 +40,10 @@
 ; async start() {; this && this.log('Health monitor service started');
 ; // Run health checks immediately; await this && this.checkSystemHealth(); await this && this.checkApplicationHealth(); await this && this.generateHealthReport();
 ; // Set up interval for periodic health checks; setInterval(async () = > {; await this && this.checkSystemHealth(); await this && this.checkApplicationHealth()}, 60 * 1000), // Every minute; // Generate health report every hour; setInterval(async () = > {; await this && this.generateHealthReport()}, 60 * 60 * 1000), // Every hour}};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Start the service;
 const healthMonitor = new HealthMonitor();
 
 healthMonitor && healthMonitor.start().catch(console && console.error);
-=======
       };
 ,
       if (this.monitorProcesses) {,

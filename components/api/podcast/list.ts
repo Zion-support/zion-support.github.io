@@ -29,15 +29,22 @@ import path from 'path';
 
 =======
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   ensureStorage();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ensureStorage()
+=======
+  ensureStorage(),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map((e) => ({
     id: e.id, title: e.title,
@@ -54,5 +61,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e.best_quote || '',
     audio: e.audio || {}}));
   return res.status (200).json ({ episodes: simplified });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

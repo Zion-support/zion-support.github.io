@@ -108,6 +108,7 @@ const features = [
 
     icon: Users
   }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     title: 'Sales Enhancement'
     description: 'Identify customer emotions during sales calls to optimize conversion rates'
@@ -348,17 +349,17 @@ const use_cases = [;
   {
     title: 'Sales Enhancement',
     description: 'Identify customer emotions during sales calls to optimize conversion rates',
-    icon: TrendingUp;
+icon: TrendingUp;
   },
   {
     title: 'Product Feedback Analysis',
     description: 'Analyze user emotions when interacting with products to improve user experience',
-    icon: MessageCircle;
+icon: MessageCircle;
   },
   {
     title: 'Employee Wellbeing',
     description: 'Monitor employee emotional states to support mental health and productivity',
-    icon: Heart;
+icon: Heart;
   }
 ],
 const pricing = [;
@@ -367,7 +368,7 @@ const pricing = [;
     price: '$299',
     period: '/month',
     description: 'Perfect for small teams getting started with emotion AI',
-    features: [;
+features: [;
       'Up to 1, 000 emotion analyses per month_basic emotion detection (7 core emotions)Email support_standard API access_basic analytics dashboard';
     ],
     popular: false,
@@ -389,7 +390,7 @@ const pricing = [;
     price: 'Custom',
     period: '',
     description: 'Custom solutions for large organizations',
-    features: [;
+features: [;
       'Unlimited emotion analyses_custom emotion models_dedicated support team_white - label solutions_advanced integrations_custom reportingSLA guarantees_on - premise deployment';
     ],
     popular: false,
@@ -860,7 +861,6 @@ function AIEmotionIntelligencePlatform() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <motion.div
-=======
               viewport={{ once: true }} className="text - center mb - 16">;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Choose Your Plan;
@@ -872,7 +872,6 @@ function AIEmotionIntelligencePlatform() {
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
               {pricing.map ((plan, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1071,6 +1070,10 @@ function AIEmotionIntelligencePlatform() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+async runCommand(command, options = {}) {
+=======
   async runCommand(command, options = {}) {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     try {
       const { stdout, stderr } = await execAsync(command, { 
         cwd: process.cwd(), 
@@ -213,4 +217,8 @@ const path = require('path')
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
+<<<<<<< HEAD
       this.log(" Git automation workflow "failed": ${error.message}")
+=======
+      this.log(" Git automation workflow "failed": ${error.message}")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

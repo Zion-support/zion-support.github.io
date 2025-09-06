@@ -359,7 +359,7 @@ import {
   Package, Bot, Car, Building2, Monitor, Cpu,
   Zap, Atom, Database, Cloud, Lock, Code,
   Phone, Mail, MapPin, ExternalLink, ChevronDown,
-  Award, Target, Zap as ZapIcon, Globe as GlobeIcon;
+Award, Target, Zap as ZapIcon, Globe as GlobeIcon;
 } from 'lucide-react',
 // Import the new revolutionary services;
 import { revolutionary2025Services } from '../data / revolutionary - 2025 - innovative - services',
@@ -420,7 +420,7 @@ const service_categories = [;
   {
     id: 'fintech',
     title: '🏦 Financial Technology Revolution',
-    description: 'AI - powered trading and quantum risk management',
+description: 'AI - powered trading and quantum risk management',
     icon: DollarSign,
     color: 'from - green - 500 to - emerald - 500',
     services: all_services.filter (string => s.category.includes ('Financial Technology')),
@@ -438,7 +438,7 @@ const service_categories = [;
   {
     id: 'edtech',
     title: '🎓 Education Technology Revolution',
-    description: 'AI - powered personalized learning and 10x faster knowledge acquisition',
+description: 'AI - powered personalized learning and 10x faster knowledge acquisition',
     icon: Users,
     color: 'from - blue - 500 to - cyan - 500',
     services: all_services.filter (string => s.category.includes ('Education Technology')),
@@ -447,7 +447,7 @@ const service_categories = [;
   {
     id: 'sustainability',
     title: '🌱 Sustainability & Green Technology',
-    description: 'AI - powered environmental solutions for carbon neutrality',
+description: 'AI - powered environmental solutions for carbon neutrality',
     icon: Globe,
     color: 'from - green - 500 to - emerald - 500',
     services: all_services.filter (string => s.category.includes ('Sustainability')),
@@ -458,7 +458,7 @@ const service_categories = [;
     title: '🚛 Logistics & Supply Chain',
     description: '99.9% delivery accuracy and zero waste supply chain',
     icon: Package,
-    color: 'from - orange - 500 to - red - 500',
+color: 'from - orange - 500 to - red - 500',
     services: all_services.filter (string => s.category.includes ('Logistics')),
     gradient: 'from - orange - 500 / 20 to - red - 500 / 20';
   }
@@ -923,7 +923,6 @@ function Revolutionary2025ServicesShowcase() {
 }
 
                         </h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         {/* Tagline */}
                         <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
                           {service.tagline}
@@ -1661,6 +1660,11 @@ function Revolutionary2025ServicesShowcase() {
         </section>;
       </div>;
     </>);
+=======
+                        {/* Right Column */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

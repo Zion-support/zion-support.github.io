@@ -19,27 +19,40 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       description: 'Distributes traffic across multiple instances',
       status: 'active',
       instances: 3,
+<<<<<<< HEAD
       health: 'excellent';
+=======
+      health: 'excellent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Application Layer',
       description: 'Multiple application instances with health checks',
       status: 'active',
       instances: 6,
+<<<<<<< HEAD
       health: 'excellent';
+=======
+      health: 'excellent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Database Layer',
       description: 'Primary and replica databases with failover',
       status: 'active',
       instances: 4,
+<<<<<<< HEAD
       health: 'excellent';
+=======
+      health: 'excellent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Cache Layer',
       description: 'Distributed caching with redundancy',
       status: 'active',
       instances: 4,
+<<<<<<< HEAD
       health: 'excellent';
     },
     {
@@ -56,6 +69,7 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       feature: 'Geographic Distribution',
       description: 'Instances distributed across multiple regions',
       benefit: 'Disaster recovery and low latency',
+<<<<<<< HEAD
       status: 'implemented';
     },
     {
@@ -63,18 +77,35 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       description: 'Automatic scaling based on load',
       benefit: 'Cost optimization and performance',
       status: 'implemented';
+=======
+      status: 'implemented'
+    },
+    {
+      feature: 'Auto-scaling',
+      description: 'Automatic scaling based on load',
+      benefit: 'Cost optimization and performance',
+      status: 'implemented'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Health Monitoring',
       description: 'Continuous health checks and alerting',
       benefit: 'Proactive issue detection',
+<<<<<<< HEAD
       status: 'implemented';
+=======
+      status: 'implemented'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Automated Failover',
       description: 'Automatic failover on component failure',
       benefit: 'Zero downtime during failures',
+<<<<<<< HEAD
       status: 'implemented';
+=======
+      status: 'implemented'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Backup & Recovery',
@@ -123,7 +154,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 =======
 ;
   const getHealthColor = (health: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (health) {
 
       case 'excellent': return 'bg-green-500/20 text-green-400';

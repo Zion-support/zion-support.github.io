@@ -1,6 +1,3 @@
-
-
-
 import React from "react"
 import {format} from "date-fns"
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card"
@@ -19,20 +16,15 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
   quote,
   onViewDetails,
-=======
-=======
   quote,
   onViewDetails,
 
 
   onMarkAsResponded,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onToggleArchive
 },) => {
   // Format date for display
   const formatDate = (dateString: string,) => {
-=======
 import React from './react';
 import { format } from './date - fns';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
@@ -54,9 +46,8 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
 }, ) => {
   // Format date for display;
   const format_date = (date_string: string, ) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
-      return format (new Date (date_string), 'PP');
+      return format(new Date(dateString), 'PP')
     } catch (e) {
 
 import React from "react";
@@ -92,7 +83,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -101,14 +91,12 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
 
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-=======
 
         
 
@@ -126,7 +114,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 
           
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
               <Button
@@ -158,7 +145,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 "};
 };
 
-=======
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -194,7 +180,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   };
   return (;
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
@@ -220,7 +205,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
         </div>;
 
         <div className="flex justify-between items-center mt-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             variant="outline"
             size="sm"
@@ -238,12 +222,12 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               <Button
                 variant="ghost"
                 size="sm"
-                onClick = {(,) => onMarkAsResponded(quote && quote.id),}
-                className="flex items-center gap-1";
-              >;
-                <MessageSquare className="h-4 w-4" />;
-                Mark Responded;
-              </Button>;
+                onClick={() => onMarkAsResponded(quote.id)}
+                className="flex items-center gap-1"
+              >
+                <MessageSquare className="h-4 w-4" />
+                Mark Responded
+              </Button>
             )}
 
 
@@ -268,7 +252,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   );
 };
 
-=======
       return date_string;
     }
   }
@@ -333,10 +316,3 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 }
 "},
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

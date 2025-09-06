@@ -665,6 +665,8 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       ' Enhanced automation script creation "failed"
 =======
 <<<<<<< HEAD

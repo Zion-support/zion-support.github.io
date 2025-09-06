@@ -129,7 +129,6 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
       \"title\": \'Business Hours\',
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
-=======
 const "Contact": NextPage = () => {;
   const contactInfo = [{;
       icon: Mail,;
@@ -154,7 +153,6 @@ const "Contact": NextPage = () => {;
       \"title\": \'Business Hours\',;
       \"details\": \'Mon-Fri: 9AM-6PM PST\',;
       \"link\": null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/pages/contact.tsx
     }
   ];
   const offices = [{;
@@ -638,7 +636,6 @@ const "Contact": NextPage = () => {;
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
-=======
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
@@ -648,7 +645,6 @@ const "Contact": NextPage = () => {;
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />;
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>;
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/pages/contact.tsx
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\";
@@ -823,13 +819,11 @@ const "Contact": NextPage = () => {;
         </section>
       </div>
     </>
-=======
 export default ContactPage;
           </div>;
         </section>;
       </div>;
     </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/pages/contact.tsx
   );
 
 

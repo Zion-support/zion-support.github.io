@@ -19,8 +19,8 @@ const COMPANY_ID = 'cmp_acme';
 
 
 
-export default function CompanyAdmin() {;
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(;
+export default function CompanyAdmin() {
+  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
     'members';
 
 
@@ -49,14 +49,13 @@ export default function CompanyAdmin() {;
 
 
   const seatsUsed = members.length;
-
   return (
 
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
-          <Link href="/workspace/acme">Go to Workspace</Link>
+<Link href="/workspace/acme">Go to Workspace</Link>
         </div>
 
       </header>
@@ -110,7 +109,6 @@ function CompanyAdmin() {
       <nav style={{ display: 'flex', gap: 8, margin_bottom: 16 }}>;
         {(['members', 'usage', 'activity', 'billing'] as const).map (t => (
           <button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={t}
             on_click={() => set_tab (t)}
             style={{
@@ -124,7 +122,6 @@ function CompanyAdmin() {
         <div style={{ marginLeft: 'auto' }}>;
           <Link href='/workspace/acme'>Go to Workspace</Link>        </div>;
       </header>;
-=======
         {(['membersusageactivitybilling'] as const).map(t => (
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
         ))}
@@ -142,14 +139,11 @@ function CompanyAdmin() {
               border: '1px solid #e5e7eb',;
               background: tab === t ? '#111827' : 'white',;
               color: tab === t ? 'white' : '#111827',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               padding: '0.5rem 0.75rem',
               border_radius: 8,
               border: '1px solid #e5e7eb',
               background: tab === t ? '#111827' : 'white',
               color: tab === t ? 'white' : '#111827',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }}
           >;
             {t}
@@ -178,6 +172,23 @@ function CompanyAdmin() {
       )}
 
       {tab === 'billing' && (
+        ))}
+      </nav>
+
+      {_tab === 'members' && (
+        <MembersTab members={members} setMembers={_setMembers} />
+      )}
+
+      {_tab === 'usage' && usage && (
+        <UsageTab usage={usage} setUsage={_setUsage} seatsUsed={_seatsUsed} />
+      )}
+
+      {_tab === 'activity' && (
+        <ActivityTab events={activity} />
+      )}
+
+      {_tab === 'billing' && (
+
         <BillingTab invoices={invoices} />
       )}
     </main>
@@ -234,7 +245,6 @@ function CompanyAdmin() {
   }
 
 }
-
 function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
 
   const [name, setName] = useState(''),
@@ -249,9 +259,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
     const created = await r.json();
     setMembers([created, ...members]);
     setName(''), setEmail(''), setRole('viewer')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
-
   const remove = async (id: string) => {;
     await fetch(;
       `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;
@@ -281,6 +289,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ name, email, role }),
     });
+<<<<<<< HEAD
     const created = await r.json ();
     set_members ([created, ...members]);
     set_name ('');
@@ -413,7 +422,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
         <button onClick={add} style={{ padding: '0 && 0.5rem 0 && 0.75rem' }}>;
           Add;
         </button>      </div>;
-
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>;
         <thead>;
           <tr>;
@@ -465,14 +473,12 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                   value={m && m.role}
                   onChange={e =>;
                     changeRole(m && m.id, e && e.target.value as Member['role']);
-=======
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 <select;
                   value={m.role}
                   on_change={e =>;
                     change_role (m.id, e.target.value as Member['role']);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }
                 >;
                   <option value='recruiter'>Recruiter</option>;
@@ -504,18 +510,14 @@ function UsageTab ({
   seats_used,
 
 }: {
-=======
-
 function UsageTab(): any ({;
   usage,;
   setUsage,;
   seatsUsed,;
 }: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   usage: Usage;
 
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
-
   const save = async () => {;
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {;
       method: 'PATCH',;
@@ -524,7 +526,6 @@ function UsageTab(): any ({;
 
     });
     setUsage({ monthlyJobPosts, budgetCapUsd });  }
-
   return (
     <section>;
       <h2>Usage limits</h2>;
@@ -857,6 +858,17 @@ function BillingTab() {
                 {inv.number}
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
+=======
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
+                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</Link>
+              </td>
+<<<<<<< HEAD
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
@@ -888,7 +900,7 @@ function BillingTab() {
                   textAlign: 'right'
                 }}
               >
-=======
+<<<<<<< HEAD
                 textAlign: 'left',
                 padding: 8,
                 borderBottom: '1px solid #e5e7eb',
@@ -957,7 +969,7 @@ function BillingTab() {
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
+<a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
               </td>
 
 =======

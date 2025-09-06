@@ -1,5 +1,3 @@
-
-
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -12,7 +10,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { useAuth } from "@/hooks/useAuth",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // useRouter replaces the old useLocation hook from react-router
 
   AlertDialog
@@ -185,15 +182,11 @@ export function TemplateList(): any ({;
     }
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (isLoading) {;
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="flex justify-center items-center py-8">;
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
@@ -228,9 +221,7 @@ export function TemplateList(): any ({;
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-center gap-2">
-=======
                 </div>;
                 <p className="text-xs text-muted-foreground">;
                   Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
@@ -238,7 +229,6 @@ export function TemplateList(): any ({;
               </div>;
 
               <div className="flex items-center gap-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   variant="ghost"
                   size="icon"
@@ -278,7 +268,6 @@ export function TemplateList(): any ({;
 
 
 
-=======
             
             <Separator className="my-3" />
             
@@ -286,8 +275,6 @@ export function TemplateList(): any ({;
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="w-full"
             >
               Use This Template
@@ -375,13 +362,11 @@ return;
         </Card>;
       ))}
 
-=======
 
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"};
 
-=======
 ;
 
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
@@ -406,10 +391,7 @@ return;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -550,12 +532,5 @@ return;
   handleDeleteConfirm;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

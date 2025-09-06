@@ -14,27 +14,21 @@ interface TermsProps {
 
 
 export default function Terms({ }: TermsProps) {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -47,7 +41,6 @@ interface TermsProps {;
   // Add props here as needed;
 }
 export default function Terms(): any ({ }: TermsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.__backup/terms.tsx
   return (
     <div>;
       <h1>Terms</h1>;

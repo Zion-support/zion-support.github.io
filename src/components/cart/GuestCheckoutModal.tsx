@@ -1,6 +1,4 @@
-
-
-    try {
+try {
       on_submit ({ email, address });
     } finally {
 
@@ -72,15 +70,11 @@ export default function GuestCheckoutModal(): any ({;
     }
   }
 
-=======
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Dialog open={open} onOpenChange={onOpenChange}>;
@@ -142,7 +136,6 @@ export default function GuestCheckoutModal(): any ({;
 
           <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
             <p className='text-yellow-400 text-sm'>;
-=======
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className='bg - zion - blue border - zion - cyan / 20 max - w-md'>;
         <DialogHeader>;
@@ -231,13 +224,11 @@ export default function GuestCheckoutModal(): any ({;
                   Continue to Payment;
                 </>;
               )}
-=======
 
 };
 };
 
 
-=======
           <DialogFooter className='space - x-2'>;
             <Button;
               type='button';
@@ -256,25 +247,15 @@ export default function GuestCheckoutModal(): any ({;
                   <CreditCard className='h - 4 w - 4 mr - 2' />;
                   Continue to Payment;
                 </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
 
 }
-=======
 
 
-=======
     </Dialog>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

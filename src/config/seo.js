@@ -1,4 +1,4 @@
-// SEO Meta Tags Configuration;
+// SEO Meta Tags Configuration
 export const defaultSEO = {
 
     type: 'website',
@@ -10,7 +10,6 @@ export const defaultSEO = {
     images: [
       {
         url: 'https://ziontechgroup && ziontechgroup.com/og-image && image.jpg',
-=======
   title: 'Zion Tech Group - AI - Powered Business Solutions',
   description: 'Transform your business with our comprehensive suite of AI - powered solutions, cloud platforms, cybersecurity, and micro SaaS services.',
   keywords: 'AI, artificial intelligence, cloud computing, cybersecurity, micro SaaS, business automation, Zion Tech Group',
@@ -31,7 +30,6 @@ export const defaultSEO = {
       },
     ],
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   twitter: {
 
     handle: '@ziontechgroup',
@@ -54,10 +52,7 @@ export const defaultSEO = {
 }
 export default defaultSEO;
 
-=======
 
 export default defaultSEO;
 ;
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

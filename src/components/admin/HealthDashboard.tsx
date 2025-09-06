@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -36,8 +34,6 @@ import {;
   Activity,;
 } from 'lucide-react';
 interface HealthData {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -52,7 +48,6 @@ import {
   Activity,
 } from 'lucide-react';
 interface HealthData {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
   uptime: number;
@@ -82,12 +77,10 @@ interface HealthData {
   errors: {;
     summary: {;
 
-=======
     recommendations: string[];
   }
   errors: {
     summary: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       total: number;
       critical: number;
       high: number;
@@ -104,7 +97,6 @@ interface HealthData {
       solution?: string
     }>
     byCategory: { [category: string]: number }
-=======
       low: number;
     }
     top_errors: Array<{
@@ -115,11 +107,9 @@ interface HealthData {
       solution?: string;
     }>;
     by_category: { [category: string]: number }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -229,7 +219,6 @@ const HealthDashboard: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (loading) {
     return (
       <div className='flex items-center justify-center p-8'>
@@ -257,7 +246,6 @@ const HealthDashboard: React.FC = () => {;
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
-=======
   }
 
 
@@ -282,7 +270,6 @@ const HealthDashboard: React.FC = () => {;
 
 
 
-=======
 
 
   if (!healthData) return null,
@@ -305,7 +292,6 @@ const HealthDashboard: React.FC = () => {;
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size="sm">
@@ -373,7 +359,6 @@ const HealthDashboard: React.FC = () => {;
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
@@ -414,7 +399,6 @@ const HealthDashboard: React.FC = () => {;
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return undefined;
   }, [autoRefresh]);
 
@@ -475,7 +459,6 @@ const HealthDashboard: React.FC = () => {;
         </CardContent>;
       </Card>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   if (!healthData) return null
   return (
@@ -616,7 +599,6 @@ const HealthDashboard: React.FC = () => {;
               <CardContent>;
 
                       </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </ul>;
                 ) : (;
@@ -629,7 +611,6 @@ const HealthDashboard: React.FC = () => {;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
@@ -735,7 +716,6 @@ const HealthDashboard: React.FC = () => {;
                       ))}                  </div>;
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
-=======
 
                   <div className="space-y-2">
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
@@ -748,10 +728,8 @@ const HealthDashboard: React.FC = () => {;
                     ))}
                   </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
 
@@ -760,7 +738,6 @@ const HealthDashboard: React.FC = () => {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Error Rate</CardTitle>
@@ -813,7 +790,6 @@ const HealthDashboard: React.FC = () => {;
         <TabsContent value="recommendations" className="space-y-4">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Card>
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
@@ -899,14 +875,12 @@ const HealthDashboard: React.FC = () => {;
                 </p>;
               )}
 
-=======
 
 export default HealthDashboard, ;
 export default HealthDashboard;
 }
 
 
-=======
       const response = await fetch ('/api / admin / health');
       // Check condition
 if ( {) {
@@ -1264,25 +1238,14 @@ if (return null) {
                 <p className='text - gray - 600'>;
                   No specific recommendations at this time;
                 </p>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </CardContent>;
           </Card>;
         </TabsContent>;
       </Tabs>;
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }
 export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -730,6 +732,9 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
       "description"
       "features"
         <meta name="description" content="
+<<<<<<< HEAD
+        <meta property="og:description" content="
+=======
 <<<<<<< HEAD
         <meta property="og:description" content="
 =======

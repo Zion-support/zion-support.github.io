@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export default function AddToCart.test({ }: AddToCart.testProps) {
+=======
 import React from 'react';
 
 interface AddToCart.testProps {
@@ -12,5 +15,10 @@ const AddToCart.test: React.FC<AddToCart.testProps> = ({ className }) => {
     </div>
   );
 }
+<<<<<<< HEAD
+'
+import React from 'react'
+=======
 }
 }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

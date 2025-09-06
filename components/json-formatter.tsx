@@ -65,8 +65,8 @@ export default function JSONFormatterPage() {
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
 
-  const formatJSON = () => {;
-    if (!inputJson && inputJson.trim()) {;
+  const formatJSON = () => {
+    if (!inputJson.trim()) {
       setFormattedJson('');
       setIsValid(true);
       setErrorMessage('');
@@ -81,8 +81,8 @@ export default function JSONFormatterPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       setFormattedJson(formatted);
       setIsValid(true);
-      setErrorMessage('');
-    } catch (error) {;
+      setErrorMessage('')
+    } catch (error) {
       setIsValid(false);
 
 
@@ -93,16 +93,6 @@ export default function JSONFormatterPage() {
     try {
       const parsed = JSON.parse(inputJson);
       const minified = JSON.stringify(parsed);
-=======
-  };
-
-  const minifyJSON = () => {;
-    if (!inputJson && inputJson.trim()) return;
-
-    try {;
-      const parsed = JSON && JSON.parse(inputJson);
-      const minified = JSON && JSON.stringify(parsed);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setFormattedJson(minified);
       setIsValid(true);
 
@@ -184,7 +174,6 @@ export default function JSONFormatterPage() {
 
         />;
       </Head>;
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -201,7 +190,6 @@ export default function JSONFormatterPage() {
             Format, validate, and beautify JSON with our professional tools.;
             Minify, prettify, and analyze JSON data with advanced features and;
             real-time validation.          </p>      </Head>;
-
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -220,7 +208,6 @@ export default function JSONFormatterPage() {
           </p>;
         </div>;
       </section>;
-
       {/* JSON Formatter Tool */}
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -232,7 +219,6 @@ export default function JSONFormatterPage() {
               Our advanced JSON formatter provides multiple formatting options;
               and real-time validation.            </p>;
           </div>;
-
           {/* Settings Bar */}      <section className="py-20 bg-gray-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="text-center mb-16">;
@@ -250,17 +236,14 @@ export default function JSONFormatterPage() {
               <div className='flex items-center space-x-6'>;
                 <div className='flex items-center space-x-2'>;
                   <label className='text-sm text-gray-300'>Indent:</label>;
-=======
             </p>
           </div>
-
           {/* Settings Bar */}
           <Card className="p-6 bg-gray-800 border border-gray-700 mb-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center space-x-6">
                 <div className="flex items-center space-x-2">
                   <label className="text-sm text-gray-300" htmlFor="input-Indent:">Indent:</label>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <select
                     value={indentSize}
                     onChange={e => setIndentSize(Number(e && e.target.value))}
@@ -282,7 +265,6 @@ export default function JSONFormatterPage() {
 
                     onChange={(e) => setIndentSize(Number(e && e.target.value))}
                     className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500";
-=======
       JSON.parse (input_json);
       setIsValid (true);
       setErrorMessage ('');
@@ -464,7 +446,6 @@ export default function JSONFormatterPage() {
                     Compact mode;
                   </label>;
                 </div>;
-
                 <div className='flex items-center space-x-2'>;
 
                   <input
@@ -478,7 +459,6 @@ export default function JSONFormatterPage() {
                     htmlFor='showLineNumbers'
 
                     className='text-sm text-gray-300'>;
-=======
                 <div className='flex items - center space - x-2'>;
                   <input;
                     type='checkbox';
@@ -527,7 +507,6 @@ export default function JSONFormatterPage() {
                   />;
                   <label htmlFor="compactMode" className="text-sm text-gray-300" htmlFor="input-Compact mode">Compact mode</label>;
                 </div>;
-
                 <div className="flex items-center space-x-2">;
 
                   <input
@@ -541,7 +520,6 @@ export default function JSONFormatterPage() {
                   <label htmlFor="showLineNumbers" className="text-sm text-gray-300" htmlFor="input-Line numbers">Line numbers</label>;
                 </div>;
               </div>;
-
               <div className="flex items-center space-x-3">;
 
                 <Button
@@ -553,11 +531,21 @@ export default function JSONFormatterPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
 =======
+                    <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
+
+                      {getLineNumbers(inputJson)}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                    </div>
                   }`}>;
                   </span>;
                 </div>;
               </div>;
-
               <div className='space-y-4'>;
                 <div className='relative'>;
                   {showLineNumbers && (;
@@ -566,7 +554,6 @@ export default function JSONFormatterPage() {
                   {showLineNumbers && (;
                     <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   )}
                   <textarea
                     value={inputJson}
@@ -636,7 +623,6 @@ export default function JSONFormatterPage() {
 
                     className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>                    variant="outline";
                     className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50";
-=======
                     <div className="absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden">;
                     </div>)}
                   <textarea;
@@ -816,61 +802,7 @@ export default function JSONFormatterPage() {
               <p className='text-gray-400'>
                 Adjust indentation size, toggle compact mode, and customize
                 display options.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-=======
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Professional JSON Formatting Features
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Everything you need to work with JSON data efficiently and professionally.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">✨</div>
-              <h3 className="text-xl font-bold text-white mb-4">Smart Formatting</h3>
-              <p className="text-gray-400">
-                Intelligent JSON formatting with customizable indentation and spacing options.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">✅</div>
-              <h3 className="text-xl font-bold text-white mb-4">Real-time Validation</h3>
-              <p className="text-gray-400">
-                Instant JSON validation with detailed error messages and syntax highlighting.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📦</div>
-              <h3 className="text-xl font-bold text-white mb-4">Minification</h3>
-              <p className="text-gray-400">
-                Compress JSON data by removing unnecessary whitespace and formatting.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔢</div>
-              <h3 className="text-xl font-bold text-white mb-4">Line Numbers</h3>
-              <p className="text-gray-400">
-                Optional line numbering for easier navigation and debugging of large JSON files.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">💾</div>
-              <h3 className="text-xl font-bold text-white mb-4">Export Options</h3>
-              <p className="text-gray-400">
-                Download formatted JSON files or copy to clipboard with a single click.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-4xl mb-4">⚙️</div>
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>
               <p className="text-gray-400">
@@ -891,6 +823,7 @@ export default function JSONFormatterPage() {
               Perfect For Every JSON Need
 
             </h2>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
             </p>
@@ -982,7 +915,6 @@ export default function JSONFormatterPage() {
           </div>;
         </div>;
       </section>;
-
       {/* Features */}
       <section className='py-20 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -994,7 +926,6 @@ export default function JSONFormatterPage() {
               professionally.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>✨</div>;
@@ -1006,7 +937,6 @@ export default function JSONFormatterPage() {
                 spacing options.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>✅</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1017,7 +947,6 @@ export default function JSONFormatterPage() {
                 highlighting.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>📦</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1028,7 +957,6 @@ export default function JSONFormatterPage() {
                 formatting.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>🔢</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1039,7 +967,6 @@ export default function JSONFormatterPage() {
                 large JSON files.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>💾</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1050,7 +977,6 @@ export default function JSONFormatterPage() {
                 click.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>⚙️</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1067,7 +993,6 @@ export default function JSONFormatterPage() {
           </div>;
         </div>;
       </section>;
-
       {/* Use Cases */}
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1076,7 +1001,6 @@ export default function JSONFormatterPage() {
               Perfect For Every JSON Need;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-=======
             {/* Output Section */}
             <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
               <div className='flex items - center justify - between mb - 6'>;
@@ -1252,7 +1176,6 @@ export default function JSONFormatterPage() {
               Perfect For Every JSON Need;
             </h2>;
             <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               From development to data analysis, our JSON formatter serves all;
               your formatting needs.;
             </p>;

@@ -1,6 +1,4 @@
-
-
-      jobs: { variant: "default" },
+jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
@@ -103,9 +101,7 @@ export function TeamActivity() {;
     const style = categoryStyles[category] || { variant: "default" as const },;
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
@@ -114,15 +110,12 @@ export function TeamActivity() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="space - y-6">;
       <div className="flex items - center justify - between">;
         <h3 className="text - xl font - medium">Recent Team Activity</h3>;
         <div className="flex items - center gap - 2">;
-=======
 
 import React from "react",;
 import {;
@@ -265,7 +258,6 @@ export function TeamActivity() {;
         </Button>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 const getCategoryBadge = (category: string) =>: any {
 }";
@@ -301,16 +293,11 @@ const getCategoryBadge = (category: string) =>: any {
                 <TableCell>{getCategoryBadge(activity && activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
 
-=======
   activity.id;
 }> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items - center justify - between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text - sm text - muted - foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -321,7 +308,6 @@ const getCategoryBadge = (category: string) =>: any {
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -333,6 +319,3 @@ const getCategoryBadge = (category: string) =>: any {
           Next
         </Button>
       </div>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
