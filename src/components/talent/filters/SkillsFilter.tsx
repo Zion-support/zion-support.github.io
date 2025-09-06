@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
+<<<<<<< HEAD
 
 const POPULAR_SKILLS = [
+
 
 import React from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -64,8 +66,10 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
       <button
         onClick={toggleSection}
 
+
         className="flex w-full items-center justify-between text-white font-medium"
       >
+
 
         <span>Skills</span>
         {expanded ? (
@@ -74,7 +78,9 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
 
+
       
+
 
       {expanded && (
         <div className='mt-4 space-y-2'>
@@ -139,7 +145,7 @@ function SkillsFilter() {
                 id={`skill-${skill}`}
                 checked={selected_skills.includes (skill)}
                 onCheckedChange={() => toggle_skill (skill)}
-            <div key={skill} className="flex items-center">;
+            <div key={skill} className="flex items - center">;
 import { Button  } from '@/components / ui / button';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { SkillsFilterProps  } from '@/types / filters';
@@ -166,10 +172,12 @@ const POPULAR_SKILLS = [;
   "Security";
 ];
 
+
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
+
 
                 {skill}
               ">
@@ -181,6 +189,7 @@ const POPULAR_SKILLS = [;
     </div>;
   );
 }
+<<<<<<< HEAD
 }
 }
 
@@ -192,20 +201,20 @@ export /**
  */
 function SkillsFilter() {
   return (
-    <div className="mb - 6 border - b border - zion - blue - light pb-6">;
+    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
       <button;
         on_click={toggle_section}
-        className="flex w - full items - center justify - between text - white font-medium";
+        className="flex w - full items - center justify - between text - white font - medium";
       >;
         <span > Skills</span>;
         {expanded ? (
-          <ChevronUp className="h - 4 w - 4 text - zion - slate-light" />) : (
-          <ChevronDown className="h - 4 w - 4 text - zion - slate-light" />)}
+          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : (
+          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}
       </button>;
       {expanded && (
-        <div className="mt - 4 space-y-2">;
+        <div className="mt - 4 space - y-2">;
           {POPULAR_SKILLS.map (skill => (
-            <div key={skill} className="flex items-center">;
+            <div key={skill} className="flex items - center">;
               <Checkbox;
                 id={`skill-${skill}`}
                 checked={selected_skills.includes (skill)}
@@ -214,7 +223,7 @@ function SkillsFilter() {
               <label;
                 html_for={`skill-${skill}`}
                 className='ml - 2 text - sm text - zion - slate - light cursor - pointer';
-              >                {skill}                className="ml - 2 text - sm text - zion - slate - light cursor-pointer";
+              >                {skill}                className="ml - 2 text - sm text - zion - slate - light cursor - pointer";
               html_for="input-;
                 {skill}
               ">;
@@ -236,8 +245,10 @@ function SkillsFilter() {
       )};
 
     </div>;
-  )
+  );
 };
 }
 
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

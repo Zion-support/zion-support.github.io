@@ -16,8 +16,8 @@ return (
           </div>;
           <Slider;
             aria - label='Hourly rate range'            value={[price_range[0], price_range[1]]}
-        <div className="mt-6">;
-          <div className="flex justify - between text - sm text - zion - slate - light mb-2">;
+        <div className="mt - 6">;
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
 import { Slider  } from '@/components / ui / slider';
 import { PriceFilterProps  } from '@/types / filters';
 export /**
@@ -40,6 +40,8 @@ function PriceFilter() {
         <div className="mt-6">;
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
 
+
+
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Slider } from "@/components/ui/slider",
 import { PriceFilterProps } from "@/types/filters",
@@ -47,6 +49,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   const handleChange = (values: number[]) => {
     setPriceRange([values[0] || 0, values[1] || 500])
   },
+
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -76,22 +79,38 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 
             aria-label="Hourly rate range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
+<<<<<<< HEAD
 import { Slider } from "@/components/ui/slider";
 import { PriceFilterProps } from "@/types/filters";
-export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;  const handleChange = (values: number[]) => {;
-    setPriceRange([values[0] || 0, values[1] || 500])
-};
+export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
+=======
+import { Slider } from "@/components/ui/slider",;
+import { PriceFilterProps } from "@/types/filters",;
+export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  const handleChange = (values: number[]) => {;
+    setPriceRange([values[0] || 0, values[1] || 500]);
+  };
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
+<<<<<<< HEAD
       <button
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium">;        <span>Hourly Rate</span>;
+        className="flex w-full items-center justify-between text-white font-medium">;
+=======
+      <button;
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium";
+      >;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        <span>Hourly Rate</span>;
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+
 
           <Slider;
             aria-label="Hourly rate range";
@@ -102,9 +121,12 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
             step={5}
             onValueChange={handleChange}
 
+
     </div>;
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 }
 
             className="mt-6"
@@ -115,8 +137,8 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
   );
 }
 
-        <div className="mt-6">;
-          <div className="flex justify - between text - sm text - zion - slate - light mb-2">;
+        <div className="mt - 6">;
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
             <span>${price_range[0]}/hr</span>;
             <span>${price_range[1]}/hr</span>;
           </div>;
@@ -127,11 +149,15 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
             max={200}
             step={5}
             onValueChange={handle_change}
-            className='mt - 6'          />            className="mt-6";
-            className="mt-6";
+            className='mt - 6'          />            className="mt - 6";
+            className="mt - 6";
           />;
         </div>)}
     </div>);
 }
 
 ;
+=======
+};
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

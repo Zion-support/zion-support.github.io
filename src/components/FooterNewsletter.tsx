@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+{/* Honeypot field */}
+      <input
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -116,6 +138,7 @@ export function FooterNewsletter(): React.ReactElement {
 
     setIsSubmitting(true),
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     try {
       const res = await fetch('/api/newsletter', {
@@ -214,32 +237,116 @@ export function FooterNewsletter(): React.ReactElement {;
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
+<<<<<<< HEAD
+<<<<<<< HEAD
 {/* Honeypot field */}
       <input
 
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+      {/* Honeypot field */}
+{/* Honeypot field */}
+      <input
+        type="text"
+        name="honeypot"
+        value={honeypot}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+{/* Honeypot field */}
+      <input
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
         onChange={e => setHoneypot(e && e.target.value)}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
       />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       <Button
         type="submit"
         disabled={isSubmitting}
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+<<<<<<< HEAD
       <Button
         type="submit"
         disabled={isSubmitting}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 
       <Button
         type="submit"
         disabled={isSubmitting}
+
+<<<<<<< HEAD
+=======
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
 
+
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
+<<<<<<< HEAD
+=======
 
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
         type='text'
         type="text"
         value={honeypot}
@@ -270,6 +377,20 @@ export function FooterNewsletter(): React.ReactElement {;
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -281,7 +402,28 @@ export function FooterNewsletter(): React.ReactElement {;
       >;
         {isSubmitting ? (;
           <>;
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;            Subscribing...;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+=======
+<<<<<<< HEAD
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+            Subscribing...;
           </>;
         ) : (;
 import React, { useState, useRef } from 'react',;
@@ -392,6 +534,20 @@ export function FooterNewsletter():React.ReactElement {;
           <>;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
             Subscribing...;
           </>;
         ) : (;
@@ -399,9 +555,37 @@ export function FooterNewsletter():React.ReactElement {;
         )}
       </Button>;
     </form>;
+<<<<<<< HEAD
   );
-} ;  );
 } ;
+=======
+<<<<<<< HEAD
+  );
+} ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  );
+} ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 } ;
 
 import React, { useState, useRef } from 'react';
@@ -526,7 +710,28 @@ if ( {) {
     </form>);
 }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
+=======
+<<<<<<< HEAD
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
 
 };
 return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubmit= {;
@@ -539,3 +744,22 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 } ;
 }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

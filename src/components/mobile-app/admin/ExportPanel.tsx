@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+<<<<<<< HEAD
 interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues;
@@ -27,7 +28,7 @@ export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }
         ];
         content = headers.join () + '\n' + values.map (value => `"${String (value).replace (/"/g, '""')}"`).join ();
         // Add keywords as additional rows;
-        content += '\n\nKeywords:\n' + metadata.keywords.join()
+        content += '\n\nKeywords:\n' + metadata.keywords.join();
 };        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       let content: string,
       let file_name: string,
@@ -81,7 +82,8 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
 
         // Add keywords as additional rows;
-        content += '\n\nKeywords:\n' + metadata && metadata.keywords.join()
+        content += '\n\nKeywords:\n' + metadata && metadata.keywords.join();
+
 };        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.csv`;
       }
 
@@ -154,6 +156,12 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
       </CardContent>
     </Card>
 
+
+
+
+
     </Card>);
 },
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

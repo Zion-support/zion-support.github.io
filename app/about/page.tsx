@@ -1,13 +1,12 @@
 export const metadata = {
 <<<<<<< HEAD
-  title: 'About | Zion Tech Group',
-  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
-  keywords: 'about, company, mission, AI services, micro SaaS, IT solutions'
-=======
   title: "About | Zion Tech Group",
   description:
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
+=======
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 };
 
 export default function AboutPage() {
@@ -18,29 +17,6 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             About Zion Tech Group
           </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We are a technology company dedicated to democratizing access to enterprise-grade AI, 
-            micro SaaS, and IT solutions that drive real business results.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
-            <p className="text-gray-300">
-              To democratize access to enterprise-grade technology solutions, making AI, 
-              cloud infrastructure, and software development accessible to businesses of all sizes.
-            </p>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Our Vision</h2>
-            <p className="text-gray-300">
-              To be the leading provider of AI-powered solutions that transform how businesses 
-              operate and compete in the digital economy.
-            </p>
-=======
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a leading technology solutions provider specializing in AI,
             cybersecurity, cloud infrastructure, and digital transformation
@@ -109,7 +85,6 @@ export default function AboutPage() {
                 meet the highest standards of quality and performance.
               </p>
             </div>
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
           </div>
         </div>
       </div>

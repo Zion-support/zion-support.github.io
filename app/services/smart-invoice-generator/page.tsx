@@ -1,9 +1,4 @@
 <<<<<<< HEAD
-export const metadata = {
-  title: 'Smart Invoice Generator | Zion Tech Group',
-  description: 'Professional smart invoice generator services for your business needs.',
-  keywords: 'smart-invoice-generator, services, business, technology'
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -11,56 +6,16 @@ export const metadata = {
   title: 'Smart Invoice Generator | Zion Tech Group',
   description: 'AI-powered invoice automation with smart templates, payment tracking, and financial analytics. Reduce billing time by 80% and get paid 30% faster.',
   keywords: 'invoice automation, smart invoicing, AI billing, payment tracking, financial analytics, invoice generator'
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
+=======
+export const metadata = {
+  title: 'Smart Invoice Generator | Zion Tech Group',
+  description: 'Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.',
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 };
 
-export default function ServicePage() {
+export default function SmartInvoiceGeneratorPage() {
   return (
 <<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Smart Invoice Generator
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional smart invoice generator services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-=======
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
@@ -71,6 +26,81 @@ export default function ServicePage() {
           Transform your billing process with AI-powered invoice automation. Create professional invoices in seconds, 
           track payments intelligently, and get paid 30% faster with our smart financial platform.
         </p>
+=======
+    <section className="max-w-6xl mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Smart Invoice Generator</h1>
+      <p className="text-xl text-gray-600 mb-12">Automate your invoicing process with AI-powered generation, intelligent payment tracking, and comprehensive financial analytics.</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard
+          title="AI-Powered Generation"
+          features={[
+            'Auto-populate from contracts',
+            'Smart line item suggestions',
+            'Tax calculation automation',
+            'Multi-currency support',
+          ]}
+        />
+        <FeatureCard
+          title="Payment Management"
+          features={[
+            'Automated payment reminders',
+            'Online payment processing',
+            'Late fee calculations',
+            'Payment status tracking',
+          ]}
+        />
+        <FeatureCard
+          title="Financial Analytics"
+          features={[
+            'Revenue forecasting',
+            'Cash flow analysis',
+            'Client payment patterns',
+            'Tax reporting',
+          ]}
+        />
+      </div>
+
+      <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Transform Your Invoicing Process</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex items-start">
+            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">Reduce Processing Time by 80%</h3>
+              <p className="text-gray-600">Automate invoice creation, sending, and follow-ups</p>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">Get Paid 30% Faster</h3>
+              <p className="text-gray-600">Automated reminders and easy payment options increase collection rates</p>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">Professional Branding</h3>
+              <p className="text-gray-600">Customizable templates that reflect your brand identity</p>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <span className="text-green-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">Compliance & Security</h3>
+              <p className="text-gray-600">GDPR compliant with bank-level security and audit trails</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Pricing />
+
+      <div className="mt-16 text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Streamline Your Invoicing?</h2>
+        <p className="text-gray-600 mb-6">Start with a free trial and see how much time and money you can save.</p>
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="mailto:kleber@ziontechgroup.com?subject=Smart Invoice Generator Demo"
@@ -396,7 +426,54 @@ function PricingCard({ name, price, period, description, features, cta, popular 
   popular: boolean;
 }) {
   return (
+<<<<<<< HEAD
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-green-500 bg-green-50' : 'border-gray-200 bg-white'} shadow-lg`}>
+=======
+    <div className="mt-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan
+          name="Solo"
+          price="$29/mo"
+          features={[
+            'Up to 50 invoices/month',
+            'Basic templates',
+            'Payment tracking',
+            'Email support',
+          ]}
+        />
+        <Plan
+          name="Business"
+          price="$79/mo"
+          features={[
+            'Unlimited invoices',
+            'Custom branding',
+            'Advanced analytics',
+            'Priority support',
+            'API access',
+          ]}
+          popular={true}
+        />
+        <Plan
+          name="Enterprise"
+          price="$199/mo"
+          features={[
+            'Multi-user access',
+            'Custom integrations',
+            'Dedicated support',
+            'Advanced reporting',
+            'White-label solution',
+          ]}
+        />
+      </div>
+    </div>
+  );
+}
+
+function Plan({ name, price, features, popular = false }: { name: string; price: string; features: string[]; popular?: boolean }) {
+  return (
+    <div className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? 'border-green-500 ring-2 ring-green-200' : 'border-gray-200'}`}>
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -423,19 +500,27 @@ function PricingCard({ name, price, period, description, features, cta, popular 
         ))}
       </ul>
       <a
+<<<<<<< HEAD
         href="mailto:kleber@ziontechgroup.com?subject=Smart Invoice Generator - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-green-600 text-white hover:bg-green-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
+=======
+        href="tel:+13024640950"
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
+          popular
+            ? 'bg-green-600 text-white hover:bg-green-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         }`}
       >
         {cta}
       </a>
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
     </div>
   );
 }
+<<<<<<< HEAD
 
 function MetricCard({ number, label, description }: {
   number: string;
@@ -491,3 +576,5 @@ function TestimonialCard({ quote, author, role, company }: {
     </div>
   );
 }
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

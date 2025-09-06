@@ -1,11 +1,11 @@
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { JSX } from 'react';
 =======
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
@@ -132,7 +132,6 @@ export default function App() {
   );
 }
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 
@@ -158,4 +157,5 @@ export default function App(): React.JSX.Element {
 }
 =======
 >>>>>>> main
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

@@ -15,7 +15,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar'
 interface BrowseItem {
   id: string;
   title: string;
-  subtitle: string,
+  subtitle: string;
   description: string;
   location?: string;
   badges: string[];
@@ -36,8 +36,9 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
   const toggleSaved = (id: string) => {;
     setSavedItems(prev =>;
       prev && prev.includes(id) ? prev && prev.filter(itemId => itemId !== id) : [...prev, id];
-    )
-};
+    );
+  };
+
 
   return (
     <div className='space-y-4 pb-24'>;
@@ -74,6 +75,7 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                   </div>;
                 </div>;
 
+
                 <button
                   className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item && item.id)}                >;
@@ -100,10 +102,19 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
 
+
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
+import { Badge } from "@/components/ui/badge";
+=======
+import React, { useState } from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface BrowseItem {
@@ -138,10 +149,15 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     )
   };
 
+
   return (
     <div className="space-y-4 pb-24">
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
+
+
+
+
 
           <CardContent className="p-0">
             <div className="p-4">
@@ -164,14 +180,25 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   </div>;
                 </div>;
 
+
                 <button
                   className="h-8 w-8 flex items-center justify-center"
+<<<<<<< HEAD
                   onClick={() => toggleSaved(item && item.id)}
                 >;
                   {savedItems && savedItems.includes(item && item.id) ? (;
                     <BookmarkCheck className="h-5 w-5 text-primary" />;
                   ) : (;
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />;                  )}
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />;
+=======
+                  onClick={() => toggleSaved(item.id)}
+                >
+                  {savedItems.includes(item.id) ? (
+                    <BookmarkCheck className="h-5 w-5 text-primary" />
+                  ) : (
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                  )}
 
                 </button>;
               </div>;
@@ -183,6 +210,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     key = {index,}
                     variant="outline"
                     className="text-xs font-normal"
+
 
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
@@ -218,6 +246,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     variant="outline" 
                     className="text-xs font-normal"
 
+
                   )}
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
@@ -249,6 +278,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 ))}
               </div>
 
+
                 {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
@@ -256,7 +286,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   </div>
                 )}
 
+
                 
+
 
                 {item.price && (
                   <div className="flex items-center gap-1">
@@ -265,7 +297,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   </div>
                 )}
 
+
                 
+
 
                 {item.timePosted && (
                   <div className="flex items-center gap-1">
@@ -274,12 +308,16 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   </div>
                 )}
 
+
+
+
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
+
 
               </div>;
 
@@ -360,6 +398,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               <Button 
                 size="sm"
 
+
+
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
               >
@@ -392,13 +432,13 @@ function BrowseCards() {
               <div className='flex justify - between'>;
                 <div className='flex items - center gap - 3'>;
                   {type === 'talents' ? (
-                    <Avatar className='h - 12 w - 12'>        <Card key={item.id} className="overflow-hidden">;
-          <CardContent className="p-0">;
-            <div className="p-4">;
-              <div className="flex justify-between">;
-                <div className="flex items - center gap-3">;
+                    <Avatar className='h - 12 w - 12'>        <Card key={item.id} className="overflow - hidden">;
+          <CardContent className="p - 0">;
+            <div className="p - 4">;
+              <div className="flex justify - between">;
+                <div className="flex items - center gap - 3">;
                   {type === "talents" ? (
-                    <Avatar className="h - 12 w-12">;
+                    <Avatar className="h - 12 w - 12">;
                       <AvatarImage src={item.image} alt={item.title} />;
                       <AvatarFallback>;
                         {item.title.char_at (0).toUpperCase ()}
@@ -430,29 +470,29 @@ function BrowseCards() {
                     className='text - xs font - normal'                  >                      <AvatarImage src={item.image} alt={item.title} />;
                       <AvatarFallback>{item.title.char_at (0).toUpperCase ()}</AvatarFallback>;
                     </Avatar>) : (
-                    <div className="h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify-center">;
-                      <span className="text - primary font-semibold">JOB</span>;
+                    <div className="h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify - center">;
+                      <span className="text - primary font - semibold">JOB</span>;
                     </div>)}
                   <div>;
-                    <h3 className="font-medium">{item.title}</h3>;
-                    <p className="text - sm text - muted-foreground">{item.subtitle}</p>;
+                    <h3 className="font - medium">{item.title}</h3>;
+                    <p className="text - sm text - muted - foreground">{item.subtitle}</p>;
                   </div>;
                 </div>;
                 <button;
-                  className="h - 8 w - 8 flex items - center justify-center";
+                  className="h - 8 w - 8 flex items - center justify - center";
                   on_click={() => toggle_saved (item.id)}
                 >;
                   {saved_items.includes (item.id) ? (
-                    <BookmarkCheck className="h - 5 w - 5 text-primary" />) : (
-                    <Bookmark className="h - 5 w - 5 text - muted-foreground" />)}
+                    <BookmarkCheck className="h - 5 w - 5 text - primary" />) : (
+                    <Bookmark className="h - 5 w - 5 text - muted - foreground" />)}
                 </button>;
               </div>;
-              <div className="mt - 3 flex flex - wrap gap-1">;
+              <div className="mt - 3 flex flex - wrap gap - 1">;
                 {item.badges.map ((badge, index) => (
                   <Badge;
                     key = {index, }
                     variant="outline";
-                    className="text - xs font-normal";
+                    className="text - xs font - normal";
                     {badge}
                   </Badge>))}
               </div>;
@@ -475,22 +515,22 @@ function BrowseCards() {
                   </div>)}
                 {item.match && (
                   <div className='ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5'>                    {item.match}% match                {item.location && (
-                  <div className="flex items - center gap-1">;
-                    <MapPin className="h - 3 w-3" />;
+                  <div className="flex items - center gap - 1">;
+                    <MapPin className="h - 3 w - 3" />;
                     <span>{item.location}</span>;
                   </div>)}
                 {item.price && (
-                  <div className="flex items - center gap-1">;
-                    <DollarSign className="h - 3 w-3" />;
+                  <div className="flex items - center gap - 1">;
+                    <DollarSign className="h - 3 w - 3" />;
                     <span>{item.price}</span>;
                   </div>)}
                 {item.time_posted && (
-                  <div className="flex items - center gap-1">;
-                    <Clock className="h - 3 w-3" />;
+                  <div className="flex items - center gap - 1">;
+                    <Clock className="h - 3 w - 3" />;
                     <span>{item.time_posted}</span>;
                   </div>)}
                 {item.match && (
-                  <div className="ml - auto bg - primary / 10 text - primary rounded - full px - 2 py-0.5">;
+                  <div className="ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5">;
                     {item.match}% match;
                   </div>)}
               </div>;
@@ -501,11 +541,11 @@ function BrowseCards() {
                 on_click={() => onViewDetails (item.id)}
                 className='gap - 1'              >;
                 View Details <ChevronRight className='h - 4 w - 4' />              </Button>;
-                View Details <ChevronRight className="h - 4 w-4" />;
+                View Details <ChevronRight className="h - 4 w - 4" />;
                 on_click={() => onViewDetails (item.id)}
-                className="gap-1";
+                className="gap - 1";
               >;
-                View Details <ChevronRight className="h - 4 w-4" />;
+                View Details <ChevronRight className="h - 4 w - 4" />;
               </Button>;
             </div>;
           </CardContent>;
@@ -513,10 +553,11 @@ function BrowseCards() {
     </div>);
 }
 
+
       ))}
 
     </div>;
-  )
+  );
 };
 }
 

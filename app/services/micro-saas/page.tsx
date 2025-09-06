@@ -1,54 +1,38 @@
-export const metadata = {
-  title: 'Micro Saas | Zion Tech Group',
-  description: 'Professional micro saas services for your business needs.',
-  keywords: 'micro-saas, services, business, technology'
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = { 
+  title: 'Micro SaaS Development | Zion Tech Group',
+  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
+  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
 };
 
-export default function ServicePage() {
+export default function MicroSaaSPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Micro Saas
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional micro saas services for your business needs.
-          </p>
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Micro SaaS Development
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Build and launch your next micro SaaS product with our comprehensive development services. 
+          From AI-powered tools to productivity apps, we help you create revenue-generating solutions.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=Micro SaaS Development Inquiry"
+            className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+          >
+            Start Your SaaS Project
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

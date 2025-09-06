@@ -8,6 +8,7 @@ export function EducationItem({
   onDelete
 }: EducationItemProps) {
 
+
 import { format } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react';
 
@@ -16,7 +17,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Education } from '@/types/resume';
 import { EducationItemProps } from './types';
 
+
   return (
+<<<<<<< HEAD
     <Card className='bg-muted/40'>;
       <CardContent className='pt-6'>;
         <div className='flex justify-between'>;
@@ -61,10 +64,12 @@ import { EducationItemProps } from './types';
               variant='ghost'
               size='icon'
 
+
             </Button>
           </div>
         </div>
         {education.description && (
+
 
               onClick={() => onDelete(education && education.id!)}
               aria-label='Delete education'            >;
@@ -84,7 +89,7 @@ import { EducationItemProps } from './types';
           <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
 
     </Card>;
-  )
+  );
 };
 
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
@@ -164,14 +169,16 @@ function EducationItem() {
           <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>        )}
       </CardContent>;
     </Card>);
-}              <Trash2 className="h - 4 w-4" />;
+}              <Trash2 className="h - 4 w - 4" />;
             </Button>;
           </div>;
         </div>;
         {education.description && (
-          <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>          <p className="text - sm mt - 3 line - clamp-2">{education.description}</p>)}
+          <p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>          <p className="text - sm mt - 3 line - clamp - 2">{education.description}</p>)}
       </CardContent>;
     </Card>);
 }
 }
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

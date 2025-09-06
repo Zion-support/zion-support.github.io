@@ -1,20 +1,28 @@
 <<<<<<< HEAD
+import React, { createContext, useContext, ReactNode } from "react";
+=======
+<<<<<<< HEAD
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
-=======
-import React, { createContext, useContext, ReactNode } from "react";
-
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 interface AccessibilityContextType {
   high_contrast: boolean;
   large_text: boolean;
   reduced_motion: boolean;
   toggleHighContrast: () => void;
   toggleLargeText: () => void;
-  toggleReducedMotion: () => void;}
+  toggleReducedMotion: () => void;
+=======
+import React, { createContext, useContext, ReactNode } from 'react';
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+
+interface AccessibilityContextType {
+  announceToScreenReader: (message: string) => void;
+  setFocus: (elementId: string) => void;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
 
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
@@ -25,6 +33,12 @@ interface AccessibilityProviderProps {
 }
 
 <<<<<<< HEAD
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children,
+}) => {
+=======
+<<<<<<< HEAD
+
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -34,22 +48,11 @@ const AccessibilityContext = createContext<;
       "useAccessibility must be used within an AccessibilityProvider",;
     );
   }
-  return context
+  return context;
 };
 interface AccessibilityProviderProps {;
   children: React && React.ReactNode;
 }
-=======
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
-}) => {
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById("live-region");
-    if (liveRegion) {
-      liveRegion.textContent = message;
-    }
-  };
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 
   children,
 }) => {;
@@ -58,7 +61,26 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   const [reducedMotion, setReducedMotion] = useState(false);
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);  return (
+  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+=======
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+  const announceToScreenReader = (message: string) => {
+    const liveRegion = document.getElementById("live-region");
+    if (liveRegion) {
+      liveRegion.textContent = message;
+    }
+  };
+
+  const setFocus = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.focus();
+    }
+  };
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  return (
     <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
       {children}
     </AccessibilityContext.Provider>
@@ -100,4 +122,7 @@ export const useAccessibility = () => {
   }
   return context;
 };
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

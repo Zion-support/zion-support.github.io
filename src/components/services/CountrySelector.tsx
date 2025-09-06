@@ -5,6 +5,12 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
 }
   // Set top/popular countries
   useEffect(() => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
 
     const popular = [
       'United States'
@@ -24,10 +30,13 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
 
+
+
     setTopCountries(top)
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
+
 
 import { useState, useEffect } from 'react';
 import { Globe } from 'lucide-react';
@@ -77,11 +86,12 @@ export function CountrySelector(): any ({;
   const handleCountryChange = (countryName: string) => {;
     const country =;
       onsiteServicePricing && onsiteServicePricing.find(item => item && item.country === countryName) || null;
-    onCountryChange(country)
-};
+    onCountryChange(country);
+  };
   return (
 
       </h3>;
+
 
       <Select
         onValueChange={handleCountryChange}
@@ -139,6 +149,8 @@ export function CountrySelector(): any ({;
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
 
+
+
       
       <Select 
         onValueChange={handleCountryChange} 
@@ -161,6 +173,8 @@ export function CountrySelector(): any ({;
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
+
+
 
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
@@ -238,11 +252,11 @@ function CountrySelector() {
                 className='text - white';
               >                {item.country} - ${item.pricePerIncident.to_fixed (2)}
               </SelectItem>))}
-          </div>        <SelectContent className="bg - zion - blue - dark border - zion - blue - light max-h-80">;
-          <div className="p - 2 border - b border - zion - blue-light">;
-            <p className="text - sm text - zion - slate - light pb-1">Popular Countries</p>;
+          </div>        <SelectContent className="bg - zion - blue - dark border - zion - blue - light max - h-80">;
+          <div className="p - 2 border - b border - zion - blue - light">;
+            <p className="text - sm text - zion - slate - light pb - 1">Popular Countries</p>;
             {top_countries.map ((item, ) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">;
+              <SelectItem key={item.country} value={item.country} className="text - white">;
               </SelectItem>))}
           </div>;
           <div className='p - 2'>;
@@ -259,13 +273,14 @@ function CountrySelector() {
                 </SelectItem>))}          </div>              .map ((item) => (
               .sort ((a, b, ) => a.country.locale_compare (b.country));
               .map ((item, ) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">;
+              <SelectItem key={item.country} value={item.country} className="text - white">;
                 {item.country} - ${item.pricePerIncident.to_fixed (2)}
               </SelectItem>))}
         </SelectContent>;
       </Select>;
     </div>);
 }
+
 
 ;
 
@@ -276,3 +291,5 @@ function CountrySelector() {
   );
 }
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

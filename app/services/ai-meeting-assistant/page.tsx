@@ -1,68 +1,22 @@
 <<<<<<< HEAD
-export const metadata = {
-  title: 'Ai Meeting Assistant | Zion Tech Group',
-  description: 'Professional ai meeting assistant services for your business needs.',
-  keywords: 'ai-meeting-assistant, services, business, technology'
-=======
 import React from 'react';
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
+<<<<<<< HEAD
   description: 'Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.',
   keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
+=======
+  description:
+    'Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.',
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 };
 
-export default function ServicePage() {
+export default function AIMeetingAssistantPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Meeting Assistant
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai meeting assistant services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-=======
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
@@ -89,6 +43,7 @@ export default function ServicePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
@@ -96,6 +51,56 @@ export default function ServicePage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our AI assistant handles every aspect of your meetings, from real-time transcription to intelligent follow-ups.
           </p>
+=======
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing</h2>
+          <div className="space-y-6">
+            <PricingCard
+              title="Basic"
+              price="$19"
+              period="per month"
+              description="Perfect for individuals and small teams"
+              features={[
+                'Up to 10 hours/month',
+                'Basic transcription',
+                'Action item extraction',
+                'Meeting summaries',
+                'Email support',
+              ]}
+              popular={false}
+            />
+            <PricingCard
+              title="Professional"
+              price="$49"
+              period="per month"
+              description="Ideal for growing teams and departments"
+              features={[
+                'Up to 50 hours/month',
+                'Advanced AI features',
+                'Meeting analytics',
+                'Custom integrations',
+                'Priority support',
+                'Team collaboration',
+              ]}
+              popular={true}
+            />
+            <PricingCard
+              title="Enterprise"
+              price="$149"
+              period="per month"
+              description="For large organizations with advanced needs"
+              features={[
+                'Unlimited hours',
+                'Custom AI models',
+                'Advanced analytics',
+                '24/7 support',
+                'Custom integrations',
+                'Compliance features',
+              ]}
+              popular={false}
+            />
+          </div>
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
@@ -430,7 +435,13 @@ function PricingCard({ name, price, period, description, features, cta, popular 
   popular: boolean;
 }) {
   return (
+<<<<<<< HEAD
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'} shadow-lg`}>
+=======
+    <div
+      className={`border rounded-xl p-6 ${popular ? 'border-green-500 bg-green-50' : 'border-gray-200 bg-white'}`}
+    >
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -460,8 +471,13 @@ function PricingCard({ name, price, period, description, features, cta, popular 
         href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Assistant - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
+<<<<<<< HEAD
             ? 'bg-purple-600 text-white hover:bg-purple-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
+=======
+            ? 'bg-green-600 text-white hover:bg-green-700'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         }`}
       >
         {cta}
@@ -523,5 +539,4 @@ function TestimonialCard({ quote, author, role, company }: {
       </div>
     </div>
   );
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 }

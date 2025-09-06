@@ -1,5 +1,10 @@
 import { useTheme } from "@/hooks/useTheme";
-interface ChatMessageProps {;  message: string;
+<<<<<<< HEAD
+interface ChatMessageProps {;
+=======
+interface ChatMessageProps {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  message: string;
   isUser: boolean;
 
   timestamp: Date;
@@ -16,6 +21,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
   const sanitizedHtml = useMemo<{ __html: string }>(;
     () => ({ __html: formatMessageWithLinks(message) }),    [message];
   );
+
+
+
 
   return (
     <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
@@ -42,8 +50,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
       </Avatar>;
 
+
       <div
         className={cn(
+<<<<<<< HEAD
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
       </Avatar>
 
@@ -57,6 +67,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
         )}
       >
+
 
       
       <div className={cn(
@@ -83,11 +94,14 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
     </div>
   )
 
+
 },
+
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 },
+
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
@@ -95,6 +109,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
+
+
 
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
@@ -187,7 +203,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
         </div>;
       </div>;
     </div>;
-  )
+  );
 };
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
@@ -244,6 +260,8 @@ function formatMessageWithLinks(message: string): string {;
 
   return formattedMessage;  return formattedMessage;
 }
+
+
 
 import React, { useMemo } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -342,3 +360,5 @@ function formatMessageWithLinks (message: string): string {
   return formatted_message; return formatted_message;
 }
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

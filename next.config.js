@@ -12,12 +12,16 @@ const nextConfig = {
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
     domains: ['images.unsplash.com', 'via.placeholder.com']
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   },
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['@radix-ui/react-icons'],
   },
+<<<<<<< HEAD
   eslint: {
     ignoreDuringBuilds: true
   },
@@ -29,6 +33,10 @@ const nextConfig = {
       { source: '/api-documentation', destination: '/api-docs', permanent: true },
       { source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
     ];
+=======
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   },
   async headers() {
     return [
@@ -51,6 +59,7 @@ const nextConfig = {
       },
     ];
   },
+<<<<<<< HEAD
   webpack: (config, { isServer }) => {
     // Handle problematic files
     config.module.rules.push({
@@ -79,3 +88,8 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+=======
+};
+
+export default nextConfig;
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

@@ -68,8 +68,8 @@ export function ReferralLink(): any ({;
   const handleCopy = () => {;
     onCopy();
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000)
-};
+    setTimeout(() => setCopied(false), 2000);
+  };
   return (
 
     <Card className='mt - 6'>;
@@ -85,6 +85,7 @@ export function ReferralLink(): any ({;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
+
 
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
@@ -130,7 +131,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           </div>;
           {copied && (
             <p className='text - sm text - green - 600 dark:text - green - 500'>              Copied to clipboard!;
-            <p className="text - sm text - green - 600 dark:text - green-500">;
+            <p className="text - sm text - green - 600 dark:text - green - 500">;
   const handle_copy = () =>: any {
     on_copy ();
     set_copied (true);
@@ -140,12 +141,15 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
             <p className="text-sm text-green-600 dark:text-green-500">;
 
+
+
+
   return (
 
-    <Card className="mt-6">;
+    <Card className="mt - 6">;
       <CardHeader>;
-        <CardTitle className="flex items - center gap-2">;
-          <Link className="h - 5 w-5" />;
+        <CardTitle className="flex items - center gap - 2">;
+          <Link className="h - 5 w - 5" />;
 
           Your Referral Link;
         </CardTitle>;
@@ -155,11 +159,14 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       </CardHeader>;
       <CardContent>;
 
+
             <Input
               value={referralLink}
               readOnly
               className="font-mono text-sm"
 
+
+<<<<<<< HEAD
           )}
         </div>;
       </CardContent>;
@@ -178,6 +185,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           )}
         </div>
       </CardContent>
+
 
           {copied && (
           
@@ -201,15 +209,19 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size="sm"
               className="flex items-center gap-2"
 
+
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
 
+
             >
               <Facebook className="h-4 w-4" />
               Facebook
             </Button>
+
+
 
             <Button 
               variant="outline" 
@@ -219,6 +231,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             >
               <Share className="h-4 w-4" />
 
+
+
               LinkedIn
             </Button>
           </div>
@@ -226,20 +240,20 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
               onClick={() => onShare('linkedin')}            >;
               <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />;
-        <div className="flex flex - col space-y-3">;
-          <div className="flex space-x-2">;
+        <div className="flex flex - col space - y-3">;
+          <div className="flex space - x-2">;
             <Input;
               value={referral_link}
               read_only;
-              className="font - mono text-sm";
+              className="font - mono text - sm";
             />;
             <Button variant="outline" size="icon" on_click={handle_copy} aria - label="Copy referral link">;
-              <Copy className="h - 4 w-4" />;
-              <span className="sr-only">Copy</span>;
+              <Copy className="h - 4 w - 4" />;
+              <span className="sr - only">Copy</span>;
             </Button>;
           </div>;
           {copied && (
-            <p className="text - sm text - green - 600 dark:text - green-500">;
+            <p className="text - sm text - green - 600 dark:text - green - 500">;
               Copied to clipboard!;
             </p>)}
         </div>;
@@ -257,7 +271,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               on_click={() => on_share ('twitter')}            <Button;
               variant="outline";
               size="sm";
-              className="flex items - center gap-2";
+              className="flex items - center gap - 2";
               on_click = {() => on_share ('twitter'), }
             >;
               <Twitter className='h - 4 w - 4' />;
@@ -270,7 +284,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             <Button;
               variant="outline";
               size="sm";
-              className="flex items - center gap-2";
+              className="flex items - center gap - 2";
               on_click = {() => on_share ('facebook'), }
             >;
               <Facebook className='h - 4 w - 4' />;
@@ -281,13 +295,14 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size='sm';
               className='flex items - center gap - 2';
               on_click={() => on_share ('linkedin')}            >;
-              <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w-4" />;
+              <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;
 
               LinkedIn;
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
+
 
   );
 }
@@ -297,3 +312,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       </CardFooter>
     </Card>
   )
+=======
+          )}
+        </div>
+      </CardContent>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

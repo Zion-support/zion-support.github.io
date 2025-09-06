@@ -25,6 +25,8 @@ interface SearchFilters {;
   minRating: number,;
   sort: string;
 
+
+
 }
 ;
 interface ActiveFiltersBarProps {;
@@ -189,6 +191,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   }
   return (
 
+
         <Badge 
           key = {filter.key,}
 
@@ -196,6 +199,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
+
+
 
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
@@ -219,7 +224,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
 
+
             onClick={() => removeFilter(filter.key)}
+
 
             aria-label={`Remove ${filter.label} filter`}
           >
@@ -231,7 +238,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         variant="ghost"
         size="sm"
 
+
         onClick={onClearAll}
+
 
         className="text-xs h-6 px-2"
       >
@@ -367,35 +376,36 @@ if ( {) {
   }
   return (
     <div className={`flex items - center gap - 2 flex - wrap ${class_name}`}>;
-      <span className="text - sm font - medium text - muted-foreground">Active filters:</span>;
+      <span className="text - sm font - medium text - muted - foreground">Active filters:</span>;
       {active_filters.map (filter => (
         <Badge;
           key = {filter.key, }
           variant="secondary";
-          className="flex items - center gap - 1 pl - 2 pr-1";
+          className="flex items - center gap - 1 pl - 2 pr - 1";
         >;
-          <span className="text-xs">;
+          <span className="text - xs">;
             {filter.label}: {filter.value}
           </span>;
           <Button;
             variant="ghost";
             size="sm";
-            className="h - 4 w - 4 p - 0 hover:bg-transparent";
+            className="h - 4 w - 4 p - 0 hover:bg - transparent";
             on_click = {(, ) => remove_filter (filter.key), }
             aria - label={`Remove ${filter.label} filter`}
           >;
-            <X className="h - 3 w-3" />;
+            <X className="h - 3 w - 3" />;
           </Button>;
         </Badge>))}
       <Button;
         variant="ghost";
         size="sm";
         on_click = {onClearAll, }
-        className="text - xs h - 6 px-2";
+        className="text - xs h - 6 px - 2";
       >;
         Clear all;
       </Button>;
     </div>);
+
 
 },
 export default ActiveFiltersBar,
@@ -423,6 +433,7 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
+<<<<<<< HEAD
       </button>
     </div>
   )}
@@ -431,9 +442,11 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
   filters: Filter[];
   onRemoveFilter: key: string void;
   onClearAll: : unknown void}
-        className="text - sm text - zion - slate - light hover: text - zion - cyan transition-colors underline";
+        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
       >;
         Clear all;
       </button>;
     </div>)}
 '";
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

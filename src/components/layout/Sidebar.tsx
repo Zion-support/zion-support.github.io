@@ -1,4 +1,35 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export default function Sidebar() {
+  return (
+    <aside className="hidden lg:block fixed left-0 top-16 bottom-0 w-80 bg-gray-100 border-r">
+      <div className="p-6">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Navigation</h2>
+        <nav className="space-y-2">
+          <a href="/" className="block text-gray-600 hover:text-gray-900">Home</a>
+          <a href="/about" className="block text-gray-600 hover:text-gray-900">About</a>
+          <a href="/services" className="block text-gray-600 hover:text-gray-900">Services</a>
+          <a href="/pricing" className="block text-gray-600 hover:text-gray-900">Pricing</a>
+          <a href="/contact" className="block text-gray-600 hover:text-gray-900">Contact</a>
+        </nav>
+      </div>
+    </aside>
+  );
+}
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+import { Link } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {;
   return (
@@ -34,11 +65,13 @@ const Sidebar: React.FC = () => {;
         </nav>;
       </div>;
     </div>;
-  )
+  );
 };
 
-export default Sidebar
-};
+
+export default Sidebar;
+
+  };
 ,
   const navigationSections = [,
     {,
@@ -242,6 +275,16 @@ export default Sidebar
     </motion.aside>,
   ),
 };
-  )
+  );
 };
 export default Sidebar;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
