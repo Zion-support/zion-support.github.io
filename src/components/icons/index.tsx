@@ -1,5 +1,5 @@
-import React, { SVGProps } from 'react'
-import { logWarn } from '@/utils/productionLogger'
+import React, { SVGProps } from 'react';
+import { log_warn } from '@/utils / production_logger';
 import {
   Home as LucideHome,
   Bot as LucideBot,
@@ -294,318 +294,318 @@ import {
   Zap as LucideZap,
   ZoomIn as LucideZoomIn,
   ZoomOut as LucideZoomOut,
-} from 'lucide-react'
-export const Home = LucideHome
-export const Bot = LucideBot
-export const Sparkles = LucideSparkles
-export const User = LucideUser
-export const ArrowRight = LucideArrowRight
-export const BarChart3 = LucideBarChart3
-export const Briefcase = LucideBriefcase
-export const BriefcaseIcon = LucideBriefcase
-export const Monitor = LucideMonitor
-export const Server = LucideServer
-export const Bell = LucideBell
-export const Calendar = LucideCalendar
-export const CalendarIcon = LucideCalendar
-export const Check = LucideCheck
-export const CheckIcon = LucideCheck
-export const ChevronDown = LucideChevronDown
-export const ChevronUp = LucideChevronUp
-export const ChevronLeft = LucideChevronLeft
-export const ChevronRight = LucideChevronRight
-export const ChevronRightIcon = LucideChevronRight
-export const Plus = LucidePlus
-export const Minus = LucideMinus
-export const X = LucideX
-export const Edit = LucideEdit
-export const Trash = LucideTrash
-export const Settings = LucideSettings
-export const Search = LucideSearch
-export const Filter = LucideFilter
-export const UploadCloud = LucideUploadCloud
-export const DownloadCloud = LucideDownloadCloud
-export const Copy = LucideCopy
-export const ExternalLink = LucideExternalLink
-export const ExternalLinkIcon = LucideExternalLink
-export const Link = LucideLink
-export const MessageSquare = LucideMessageSquare
-export const MessageSquareIcon = LucideMessageSquare
-export const Users = LucideUsers
-export const FileText = LucideFileText
-export const Image = LucideImage
-export const AlertTriangle = LucideAlertTriangle
-export const Info = LucideInfo
-export const Mail = LucideMail
-export const Lock = LucideLock
-export const LogOut = LucideLogOut
-export const LogIn = LucideLogIn
-export const ShoppingCart = LucideShoppingCart
-export const CreditCard = LucideCreditCard
-export const DollarSign = LucideDollarSign
-export const Percent = LucidePercent
-export const Award = LucideAward
-export const Activity = LucideActivity
-export const Airplay = LucideAirplay
-export const AlignCenter = LucideAlignCenter
-export const AlignJustify = LucideAlignJustify
-export const AlignLeft = LucideAlignLeft
-export const AlignRight = LucideAlignRight
-export const Anchor = LucideAnchor
-export const Aperture = LucideAperture
-export const Archive = LucideArchive
-export const ArrowDownCircle = LucideArrowDownCircle
-export const ArrowDownLeft = LucideArrowDownLeft
-export const ArrowDownRight = LucideArrowDownRight
-export const ArrowLeftCircle = LucideArrowLeftCircle
-export const ArrowRightCircle = LucideArrowRightCircle
-export const ArrowUpCircle = LucideArrowUpCircle
-export const ArrowUpLeft = LucideArrowUpLeft
-export const ArrowUpRight = LucideArrowUpRight
-export const AtSign = LucideAtSign
-export const BarChart = LucideBarChart
-export const BarChart2 = LucideBarChart2
-export const BatteryCharging = LucideBatteryCharging
-export const Battery = LucideBattery
-export const BellOff = LucideBellOff
-export const Bluetooth = LucideBluetooth
-export const Bold = LucideBold
-export const BookOpen = LucideBookOpen
-export const Book = LucideBook
-export const Bookmark = LucideBookmark
-export const Box = LucideBox
-export const CameraOff = LucideCameraOff
-export const Camera = LucideCamera
-export const Cast = LucideCast
-export const CheckCircle = LucideCheckCircle
-export const CheckSquare = LucideCheckSquare
-export const ChevronDownSquare = LucideChevronDownSquare
-export const ChevronLeftSquare = LucideChevronLeftSquare
-export const ChevronRightSquare = LucideChevronRightSquare
-export const ChevronUpSquare = LucideChevronUpSquare
-export const ChevronsDown = LucideChevronsDown
-export const ChevronsLeft = LucideChevronsLeft
-export const ChevronsRight = LucideChevronsRight
-export const ChevronsUp = LucideChevronsUp
-export const Chrome = LucideChrome
-export const Circle = LucideCircle
-export const Clipboard = LucideClipboard
-export const Clock = LucideClock
-export const CloudDrizzle = LucideCloudDrizzle
-export const CloudLightning = LucideCloudLightning
-export const CloudOff = LucideCloudOff
-export const CloudRain = LucideCloudRain
-export const CloudSnow = LucideCloudSnow
-export const Cloud = LucideCloud
-export const Code = LucideCode
-export const Codepen = LucideCodepen
-export const Codesandbox = LucideCodesandbox
-export const Coffee = LucideCoffee
-export const Columns = LucideColumns
-export const Command = LucideCommand
-export const Compass = LucideCompass
-export const Copyleft = LucideCopyleft
-export const Copyright = LucideCopyright
-export const CornerDownLeft = LucideCornerDownLeft
-export const CornerDownRight = LucideCornerDownRight
-export const CornerLeftDown = LucideCornerLeftDown
-export const CornerLeftUp = LucideCornerLeftUp
-export const CornerRightDown = LucideCornerRightDown
-export const CornerRightUp = LucideCornerRightUp
-export const CornerUpLeft = LucideCornerUpLeft
-export const CornerUpRight = LucideCornerUpRight
-export const Cpu = LucideCpu
-export const Crop = LucideCrop
-export const Crosshair = LucideCrosshair
-export const Database = LucideDatabase
-export const Delete = LucideDelete
-export const Disc = LucideDisc
-export const DivideCircle = LucideDivideCircle
-export const DivideSquare = LucideDivideSquare
-export const Divide = LucideDivide
-export const Download = LucideDownload
-export const Dribbble = LucideDribbble
-export const Droplet = LucideDroplet
-export const Edit2 = LucideEdit2
-export const Edit3 = LucideEdit3
-export const EyeOff = LucideEyeOff
-export const Eye = LucideEye
-export const Facebook = LucideFacebook
-export const FastForward = LucideFastForward
-export const Feather = LucideFeather
-export const Figma = LucideFigma
-export const FileMinus = LucideFileMinus
-export const FilePlus = LucideFilePlus
-export const File = LucideFile
-export const Film = LucideFilm
-export const Flag = LucideFlag
-export const FolderMinus = LucideFolderMinus
-export const FolderPlus = LucideFolderPlus
-export const Folder = LucideFolder
-export const Framer = LucideFramer
-export const Frown = LucideFrown
-export const Gift = LucideGift
-export const GitBranch = LucideGitBranch
-export const GitCommit = LucideGitCommit
-export const GitMerge = LucideGitMerge
-export const GitPullRequest = LucideGitPullRequest
-export const Github = LucideGithub
-export const Gitlab = LucideGitlab
-export const Globe = LucideGlobe
-export const Grid = LucideGrid
-export const HardDrive = LucideHardDrive
-export const Hash = LucideHash
-export const Headphones = LucideHeadphones
-export const Heart = LucideHeart
-export const HelpCircle = LucideHelpCircle
-export const Hexagon = LucideHexagon
-export const Inbox = LucideInbox
-export const Instagram = LucideInstagram
-export const Italic = LucideItalic
-export const Key = LucideKey
-export const Layers = LucideLayers
-export const Layout = LucideLayout
-export const LifeBuoy = LucideLifeBuoy
-export const Link2 = LucideLink2
-export const Linkedin = LucideLinkedin
-export const List = LucideList
-export const Loader = LucideLoader
-export const Loader2 = LucideLoader2
-export const MapPin = LucideMapPin
-export const Map = LucideMap
-export const Maximize2 = LucideMaximize2
-export const Maximize = LucideMaximize
-export const Meh = LucideMeh
-export const Menu = LucideMenu
-export const MessageCircle = LucideMessageCircle
-export const MicOff = LucideMicOff
-export const Mic = LucideMic
-export const Minimize2 = LucideMinimize2
-export const Minimize = LucideMinimize
-export const Moon = LucideMoon
-export const MoreHorizontal = LucideMoreHorizontal
-export const MoreHorizontalIcon = LucideMoreHorizontal
-export const MoreVertical = LucideMoreVertical
-export const MousePointer = LucideMousePointer
-export const Move = LucideMove
-export const Music = LucideMusic
-export const Megaphone = LucideMegaphone
-export const Navigation2 = LucideNavigation2
-export const Navigation = LucideNavigation
-export const Network = LucideNetwork
-export const Octagon = LucideOctagon
-export const Package = LucidePackage
-export const Paperclip = LucidePaperclip
-export const PauseCircle = LucidePauseCircle
-export const Pause = LucidePause
-export const PenTool = LucidePenTool
-export const PhoneCall = LucidePhoneCall
-export const PhoneForwarded = LucidePhoneForwarded
-export const PhoneIncoming = LucidePhoneIncoming
-export const PhoneMissed = LucidePhoneMissed
-export const PhoneOff = LucidePhoneOff
-export const PhoneOutgoing = LucidePhoneOutgoing
-export const Phone = LucidePhone
-export const PieChart = LucidePieChart
-export const PlayCircle = LucidePlayCircle
-export const Play = LucidePlay
-export const Pocket = LucidePocket
-export const Power = LucidePower
-export const PowerOff = LucidePowerOff
-export const Printer = LucidePrinter
-export const Radio = LucideRadio
-export const RefreshCcw = LucideRefreshCcw
-export const RefreshCw = LucideRefreshCw
-export const Repeat = LucideRepeat
-export const Rewind = LucideRewind
-export const RotateCcw = LucideRotateCcw
-export const RotateCw = LucideRotateCw
-export const Recycle = LucideRecycle
-export const Rss = LucideRss
-export const Save = LucideSave
-export const Scissors = LucideScissors
-export const ScreenShare = LucideScreenShare
-export const ScreenShareOff = LucideScreenShareOff
-export const ScreenShareOffIcon = LucideScreenShareOff
-export const Send = LucideSend
-export const Share2 = LucideShare2
-export const Share = LucideShare
-export const ShieldOff = LucideShieldOff
-export const Shield = LucideShield
-export const ShoppingBag = LucideShoppingBag
-export const Shuffle = LucideShuffle
-export const Sidebar = LucideSidebar
-export const SkipBack = LucideSkipBack
-export const SkipForward = LucideSkipForward
-export const Slack = LucideSlack
-export const Slash = LucideSlash
-export const Sliders = LucideSliders
-export const Smartphone = LucideSmartphone
-export const Smile = LucideSmile
-export const Speaker = LucideSpeaker
-export const Square = LucideSquare
-export const Star = LucideStar
-export const StopCircle = LucideStopCircle
-export const Sun = LucideSun
-export const Sunrise = LucideSunrise
-export const Sunset = LucideSunset
-export const Table = LucideTable
-export const Tablet = LucideTablet
-export const Tag = LucideTag
-export const Target = LucideTarget
-export const Terminal = LucideTerminal
-export const ThumbsDown = LucideThumbsDown
-export const ThumbsUp = LucideThumbsUp
-export const ToggleLeft = LucideToggleLeft
-export const ToggleRight = LucideToggleRight
-export const Trash2 = LucideTrash2
-export const Trello = LucideTrello
-export const TrendingDown = LucideTrendingDown
-export const TrendingUp = LucideTrendingUp
-export const Triangle = LucideTriangle
-export const Truck = LucideTruck
-export const Tv = LucideTv
-export const Twitch = LucideTwitch
-export const Twitter = LucideTwitter
-export const Type = LucideType
-export const Umbrella = LucideUmbrella
-export const Underline = LucideUnderline
-export const Unlock = LucideUnlock
-export const Upload = LucideUpload
-export const UserCheck = LucideUserCheck
-export const UserMinus = LucideUserMinus
-export const UserPlus = LucideUserPlus
-export const UserX = LucideUserX
-export const VideoOff = LucideVideoOff
-export const Video = LucideVideo
-export const Voicemail = LucideVoicemail
-export const Wallet = LucideWallet
-export const Volume1 = LucideVolume1
-export const Volume2 = LucideVolume2
-export const VolumeX = LucideVolumeX
-export const Volume = LucideVolume
-export const Watch = LucideWatch
-export const WifiOff = LucideWifiOff
-export const Wifi = LucideWifi
-export const Wind = LucideWind
-export const XCircle = LucideXCircle
-export const XOctagon = LucideXOctagon
-export const XSquare = LucideXSquare
-export const Youtube = LucideYoutube
-export const ZapOff = LucideZapOff
-export const Zap = LucideZap
-export const ZoomIn = LucideZoomIn
-export const ZoomOut = LucideZoomOut
-// Define the props for your Icon component
-export type IconProps = SVGProps<SVGSVGElement> & {
-  name: keyof typeof iconMap
-  size?: number | string
-  className?: string
+} from 'lucide-react';
+export const Home = LucideHome;
+export const Bot = LucideBot;
+export const Sparkles = LucideSparkles;
+export const User = LucideUser;
+export const ArrowRight = LucideArrowRight;
+export const BarChart3 = LucideBarChart3;
+export const Briefcase = LucideBriefcase;
+export const BriefcaseIcon = LucideBriefcase;
+export const Monitor = LucideMonitor;
+export const Server = LucideServer;
+export const Bell = LucideBell;
+export const Calendar = LucideCalendar;
+export const CalendarIcon = LucideCalendar;
+export const Check = LucideCheck;
+export const CheckIcon = LucideCheck;
+export const ChevronDown = LucideChevronDown;
+export const ChevronUp = LucideChevronUp;
+export const ChevronLeft = LucideChevronLeft;
+export const ChevronRight = LucideChevronRight;
+export const ChevronRightIcon = LucideChevronRight;
+export const Plus = LucidePlus;
+export const Minus = LucideMinus;
+export const X = LucideX;
+export const Edit = LucideEdit;
+export const Trash = LucideTrash;
+export const Settings = LucideSettings;
+export const Search = LucideSearch;
+export const Filter = LucideFilter;
+export const UploadCloud = LucideUploadCloud;
+export const DownloadCloud = LucideDownloadCloud;
+export const Copy = LucideCopy;
+export const ExternalLink = LucideExternalLink;
+export const ExternalLinkIcon = LucideExternalLink;
+export const Link = LucideLink;
+export const MessageSquare = LucideMessageSquare;
+export const MessageSquareIcon = LucideMessageSquare;
+export const Users = LucideUsers;
+export const FileText = LucideFileText;
+export const Image = LucideImage;
+export const AlertTriangle = LucideAlertTriangle;
+export const Info = LucideInfo;
+export const Mail = LucideMail;
+export const Lock = LucideLock;
+export const LogOut = LucideLogOut;
+export const LogIn = LucideLogIn;
+export const ShoppingCart = LucideShoppingCart;
+export const CreditCard = LucideCreditCard;
+export const DollarSign = LucideDollarSign;
+export const Percent = LucidePercent;
+export const Award = LucideAward;
+export const Activity = LucideActivity;
+export const Airplay = LucideAirplay;
+export const AlignCenter = LucideAlignCenter;
+export const AlignJustify = LucideAlignJustify;
+export const AlignLeft = LucideAlignLeft;
+export const AlignRight = LucideAlignRight;
+export const Anchor = LucideAnchor;
+export const Aperture = LucideAperture;
+export const Archive = LucideArchive;
+export const ArrowDownCircle = LucideArrowDownCircle;
+export const ArrowDownLeft = LucideArrowDownLeft;
+export const ArrowDownRight = LucideArrowDownRight;
+export const ArrowLeftCircle = LucideArrowLeftCircle;
+export const ArrowRightCircle = LucideArrowRightCircle;
+export const ArrowUpCircle = LucideArrowUpCircle;
+export const ArrowUpLeft = LucideArrowUpLeft;
+export const ArrowUpRight = LucideArrowUpRight;
+export const AtSign = LucideAtSign;
+export const BarChart = LucideBarChart;
+export const BarChart2 = LucideBarChart2;
+export const BatteryCharging = LucideBatteryCharging;
+export const Battery = LucideBattery;
+export const BellOff = LucideBellOff;
+export const Bluetooth = LucideBluetooth;
+export const Bold = LucideBold;
+export const BookOpen = LucideBookOpen;
+export const Book = LucideBook;
+export const Bookmark = LucideBookmark;
+export const Box = LucideBox;
+export const CameraOff = LucideCameraOff;
+export const Camera = LucideCamera;
+export const Cast = LucideCast;
+export const CheckCircle = LucideCheckCircle;
+export const CheckSquare = LucideCheckSquare;
+export const ChevronDownSquare = LucideChevronDownSquare;
+export const ChevronLeftSquare = LucideChevronLeftSquare;
+export const ChevronRightSquare = LucideChevronRightSquare;
+export const ChevronUpSquare = LucideChevronUpSquare;
+export const ChevronsDown = LucideChevronsDown;
+export const ChevronsLeft = LucideChevronsLeft;
+export const ChevronsRight = LucideChevronsRight;
+export const ChevronsUp = LucideChevronsUp;
+export const Chrome = LucideChrome;
+export const Circle = LucideCircle;
+export const Clipboard = LucideClipboard;
+export const Clock = LucideClock;
+export const CloudDrizzle = LucideCloudDrizzle;
+export const CloudLightning = LucideCloudLightning;
+export const CloudOff = LucideCloudOff;
+export const CloudRain = LucideCloudRain;
+export const CloudSnow = LucideCloudSnow;
+export const Cloud = LucideCloud;
+export const Code = LucideCode;
+export const Codepen = LucideCodepen;
+export const Codesandbox = LucideCodesandbox;
+export const Coffee = LucideCoffee;
+export const Columns = LucideColumns;
+export const Command = LucideCommand;
+export const Compass = LucideCompass;
+export const Copyleft = LucideCopyleft;
+export const Copyright = LucideCopyright;
+export const CornerDownLeft = LucideCornerDownLeft;
+export const CornerDownRight = LucideCornerDownRight;
+export const CornerLeftDown = LucideCornerLeftDown;
+export const CornerLeftUp = LucideCornerLeftUp;
+export const CornerRightDown = LucideCornerRightDown;
+export const CornerRightUp = LucideCornerRightUp;
+export const CornerUpLeft = LucideCornerUpLeft;
+export const CornerUpRight = LucideCornerUpRight;
+export const Cpu = LucideCpu;
+export const Crop = LucideCrop;
+export const Crosshair = LucideCrosshair;
+export const Database = LucideDatabase;
+export const Delete = LucideDelete;
+export const Disc = LucideDisc;
+export const DivideCircle = LucideDivideCircle;
+export const DivideSquare = LucideDivideSquare;
+export const Divide = LucideDivide;
+export const Download = LucideDownload;
+export const Dribbble = LucideDribbble;
+export const Droplet = LucideDroplet;
+export const Edit2 = LucideEdit2;
+export const Edit3 = LucideEdit3;
+export const EyeOff = LucideEyeOff;
+export const Eye = LucideEye;
+export const Facebook = LucideFacebook;
+export const FastForward = LucideFastForward;
+export const Feather = LucideFeather;
+export const Figma = LucideFigma;
+export const FileMinus = LucideFileMinus;
+export const FilePlus = LucideFilePlus;
+export const File = LucideFile;
+export const Film = LucideFilm;
+export const Flag = LucideFlag;
+export const FolderMinus = LucideFolderMinus;
+export const FolderPlus = LucideFolderPlus;
+export const Folder = LucideFolder;
+export const Framer = LucideFramer;
+export const Frown = LucideFrown;
+export const Gift = LucideGift;
+export const GitBranch = LucideGitBranch;
+export const GitCommit = LucideGitCommit;
+export const GitMerge = LucideGitMerge;
+export const GitPullRequest = LucideGitPullRequest;
+export const Github = LucideGithub;
+export const Gitlab = LucideGitlab;
+export const Globe = LucideGlobe;
+export const Grid = LucideGrid;
+export const HardDrive = LucideHardDrive;
+export const Hash = LucideHash;
+export const Headphones = LucideHeadphones;
+export const Heart = LucideHeart;
+export const HelpCircle = LucideHelpCircle;
+export const Hexagon = LucideHexagon;
+export const Inbox = LucideInbox;
+export const Instagram = LucideInstagram;
+export const Italic = LucideItalic;
+export const Key = LucideKey;
+export const Layers = LucideLayers;
+export const Layout = LucideLayout;
+export const LifeBuoy = LucideLifeBuoy;
+export const Link2 = LucideLink2;
+export const Linkedin = LucideLinkedin;
+export const List = LucideList;
+export const Loader = LucideLoader;
+export const Loader2 = LucideLoader2;
+export const MapPin = LucideMapPin;
+export const Map = LucideMap;
+export const Maximize2 = LucideMaximize2;
+export const Maximize = LucideMaximize;
+export const Meh = LucideMeh;
+export const Menu = LucideMenu;
+export const MessageCircle = LucideMessageCircle;
+export const MicOff = LucideMicOff;
+export const Mic = LucideMic;
+export const Minimize2 = LucideMinimize2;
+export const Minimize = LucideMinimize;
+export const Moon = LucideMoon;
+export const MoreHorizontal = LucideMoreHorizontal;
+export const MoreHorizontalIcon = LucideMoreHorizontal;
+export const MoreVertical = LucideMoreVertical;
+export const MousePointer = LucideMousePointer;
+export const Move = LucideMove;
+export const Music = LucideMusic;
+export const Megaphone = LucideMegaphone;
+export const Navigation2 = LucideNavigation2;
+export const Navigation = LucideNavigation;
+export const Network = LucideNetwork;
+export const Octagon = LucideOctagon;
+export const Package = LucidePackage;
+export const Paperclip = LucidePaperclip;
+export const PauseCircle = LucidePauseCircle;
+export const Pause = LucidePause;
+export const PenTool = LucidePenTool;
+export const PhoneCall = LucidePhoneCall;
+export const PhoneForwarded = LucidePhoneForwarded;
+export const PhoneIncoming = LucidePhoneIncoming;
+export const PhoneMissed = LucidePhoneMissed;
+export const PhoneOff = LucidePhoneOff;
+export const PhoneOutgoing = LucidePhoneOutgoing;
+export const Phone = LucidePhone;
+export const PieChart = LucidePieChart;
+export const PlayCircle = LucidePlayCircle;
+export const Play = LucidePlay;
+export const Pocket = LucidePocket;
+export const Power = LucidePower;
+export const PowerOff = LucidePowerOff;
+export const Printer = LucidePrinter;
+export const Radio = LucideRadio;
+export const RefreshCcw = LucideRefreshCcw;
+export const RefreshCw = LucideRefreshCw;
+export const Repeat = LucideRepeat;
+export const Rewind = LucideRewind;
+export const RotateCcw = LucideRotateCcw;
+export const RotateCw = LucideRotateCw;
+export const Recycle = LucideRecycle;
+export const Rss = LucideRss;
+export const Save = LucideSave;
+export const Scissors = LucideScissors;
+export const ScreenShare = LucideScreenShare;
+export const ScreenShareOff = LucideScreenShareOff;
+export const ScreenShareOffIcon = LucideScreenShareOff;
+export const Send = LucideSend;
+export const Share2 = LucideShare2;
+export const Share = LucideShare;
+export const ShieldOff = LucideShieldOff;
+export const Shield = LucideShield;
+export const ShoppingBag = LucideShoppingBag;
+export const Shuffle = LucideShuffle;
+export const Sidebar = LucideSidebar;
+export const SkipBack = LucideSkipBack;
+export const SkipForward = LucideSkipForward;
+export const Slack = LucideSlack;
+export const Slash = LucideSlash;
+export const Sliders = LucideSliders;
+export const Smartphone = LucideSmartphone;
+export const Smile = LucideSmile;
+export const Speaker = LucideSpeaker;
+export const Square = LucideSquare;
+export const Star = LucideStar;
+export const StopCircle = LucideStopCircle;
+export const Sun = LucideSun;
+export const Sunrise = LucideSunrise;
+export const Sunset = LucideSunset;
+export const Table = LucideTable;
+export const Tablet = LucideTablet;
+export const Tag = LucideTag;
+export const Target = LucideTarget;
+export const Terminal = LucideTerminal;
+export const ThumbsDown = LucideThumbsDown;
+export const ThumbsUp = LucideThumbsUp;
+export const ToggleLeft = LucideToggleLeft;
+export const ToggleRight = LucideToggleRight;
+export const Trash2 = LucideTrash2;
+export const Trello = LucideTrello;
+export const TrendingDown = LucideTrendingDown;
+export const TrendingUp = LucideTrendingUp;
+export const Triangle = LucideTriangle;
+export const Truck = LucideTruck;
+export const Tv = LucideTv;
+export const Twitch = LucideTwitch;
+export const Twitter = LucideTwitter;
+export const Type = LucideType;
+export const Umbrella = LucideUmbrella;
+export const Underline = LucideUnderline;
+export const Unlock = LucideUnlock;
+export const Upload = LucideUpload;
+export const UserCheck = LucideUserCheck;
+export const UserMinus = LucideUserMinus;
+export const UserPlus = LucideUserPlus;
+export const UserX = LucideUserX;
+export const VideoOff = LucideVideoOff;
+export const Video = LucideVideo;
+export const Voicemail = LucideVoicemail;
+export const Wallet = LucideWallet;
+export const Volume1 = LucideVolume1;
+export const Volume2 = LucideVolume2;
+export const VolumeX = LucideVolumeX;
+export const Volume = LucideVolume;
+export const Watch = LucideWatch;
+export const WifiOff = LucideWifiOff;
+export const Wifi = LucideWifi;
+export const Wind = LucideWind;
+export const XCircle = LucideXCircle;
+export const XOctagon = LucideXOctagon;
+export const XSquare = LucideXSquare;
+export const Youtube = LucideYoutube;
+export const ZapOff = LucideZapOff;
+export const Zap = LucideZap;
+export const ZoomIn = LucideZoomIn;
+export const ZoomOut = LucideZoomOut;
+// Define the props for your Icon component;
+export type IconProps = SVGProps < SVGSVGElement> & {
+  name: keyof typeof icon_map;
+  size?: number | string;
+  class_name?: string;
 }
-// Create a map of icon names to component references
-const iconMap = {
+// Create a map of icon names to component references;
+const icon_map = {
   home: LucideHome,
-  'bot-message-square': LucideBot, // Assuming Bot is used for bot-message-square
+  'bot - message - square': LucideBot, // Assuming Bot is used for bot - message - square;
   sparkles: LucideSparkles,
   user: LucideUser,
   briefcase: LucideBriefcase,
@@ -613,91 +613,91 @@ const iconMap = {
   bell: LucideBell,
   calendar: LucideCalendar,
   check: LucideCheck,
-  'chevron-down': LucideChevronDown,
-  'chevron-up': LucideChevronUp,
-  'chevron-left': LucideChevronLeft,
-  'chevron-right': LucideChevronRight,
+  'chevron - down': LucideChevronDown,
+  'chevron - up': LucideChevronUp,
+  'chevron - left': LucideChevronLeft,
+  'chevron - right': LucideChevronRight,
   plus: LucidePlus,
   minus: LucideMinus,
-  x: LucideX,
+  coordinate_x: LucideX,
   edit: LucideEdit,
   trash: LucideTrash,
   settings: LucideSettings,
   search: LucideSearch,
   filter: LucideFilter,
-  'upload-cloud': LucideUploadCloud,
-  'download-cloud': LucideDownloadCloud,
+  'upload - cloud': LucideUploadCloud,
+  'download - cloud': LucideDownloadCloud,
   copy: LucideCopy,
-  'external-link': LucideExternalLink,
+  'external - link': LucideExternalLink,
   link: LucideLink,
-  'message-square': LucideMessageSquare,
+  'message - square': LucideMessageSquare,
   users: LucideUsers,
-  'file-text': LucideFileText,
+  'file - text': LucideFileText,
   image: LucideImage,
-  'alert-triangle': LucideAlertTriangle,
+  'alert - triangle': LucideAlertTriangle,
   info: LucideInfo,
   mail: LucideMail,
   lock: LucideLock,
-  'log-out': LucideLogOut,
-  'log-in': LucideLogIn,
-  'shopping-cart': LucideShoppingCart,
-  'credit-card': LucideCreditCard,
-  'dollar-sign': LucideDollarSign,
+  'log - out': LucideLogOut,
+  'log - in': LucideLogIn,
+  'shopping - cart': LucideShoppingCart,
+  'credit - card': LucideCreditCard,
+  'dollar - sign': LucideDollarSign,
   percent: LucidePercent,
   award: LucideAward,
   activity: LucideActivity,
   airplay: LucideAirplay,
-  'align-center': LucideAlignCenter,
-  'align-justify': LucideAlignJustify,
-  'align-left': LucideAlignLeft,
-  'align-right': LucideAlignRight,
+  'align - center': LucideAlignCenter,
+  'align - justify': LucideAlignJustify,
+  'align - left': LucideAlignLeft,
+  'align - right': LucideAlignRight,
   anchor: LucideAnchor,
   aperture: LucideAperture,
   archive: LucideArchive,
-  'arrow-down-circle': LucideArrowDownCircle,
-  'arrow-down-left': LucideArrowDownLeft,
-  'arrow-down-right': LucideArrowDownRight,
-  'arrow-left-circle': LucideArrowLeftCircle,
-  'arrow-right': LucideArrowRight,
-  'arrow-right-circle': LucideArrowRightCircle,
-  'arrow-up-circle': LucideArrowUpCircle,
-  'arrow-up-left': LucideArrowUpLeft,
-  'arrow-up-right': LucideArrowUpRight,
-  'at-sign': LucideAtSign,
-  'bar-chart': LucideBarChart,
-  'bar-chart-2': LucideBarChart2,
-  'bar-chart-3': LucideBarChart3,
-  'battery-charging': LucideBatteryCharging,
+  'arrow - down - circle': LucideArrowDownCircle,
+  'arrow - down - left': LucideArrowDownLeft,
+  'arrow - down - right': LucideArrowDownRight,
+  'arrow - left - circle': LucideArrowLeftCircle,
+  'arrow - right': LucideArrowRight,
+  'arrow - right - circle': LucideArrowRightCircle,
+  'arrow - up - circle': LucideArrowUpCircle,
+  'arrow - up - left': LucideArrowUpLeft,
+  'arrow - up - right': LucideArrowUpRight,
+  'at - sign': LucideAtSign,
+  'bar - chart': LucideBarChart,
+  'bar - chart - 2': LucideBarChart2,
+  'bar - chart - 3': LucideBarChart3,
+  'battery - charging': LucideBatteryCharging,
   battery: LucideBattery,
-  'bell-off': LucideBellOff,
+  'bell - off': LucideBellOff,
   bluetooth: LucideBluetooth,
   bold: LucideBold,
-  'book-open': LucideBookOpen,
+  'book - open': LucideBookOpen,
   book: LucideBook,
   bookmark: LucideBookmark,
   box: LucideBox,
-  'camera-off': LucideCameraOff,
+  'camera - off': LucideCameraOff,
   camera: LucideCamera,
   cast: LucideCast,
-  'check-circle': LucideCheckCircle,
-  'check-square': LucideCheckSquare,
-  'chevron-down-square': LucideChevronDownSquare,
-  'chevron-left-square': LucideChevronLeftSquare,
-  'chevron-right-square': LucideChevronRightSquare,
-  'chevron-up-square': LucideChevronUpSquare,
-  'chevrons-down': LucideChevronsDown,
-  'chevrons-left': LucideChevronsLeft,
-  'chevrons-right': LucideChevronsRight,
-  'chevrons-up': LucideChevronsUp,
+  'check - circle': LucideCheckCircle,
+  'check - square': LucideCheckSquare,
+  'chevron - down - square': LucideChevronDownSquare,
+  'chevron - left - square': LucideChevronLeftSquare,
+  'chevron - right - square': LucideChevronRightSquare,
+  'chevron - up - square': LucideChevronUpSquare,
+  'chevrons - down': LucideChevronsDown,
+  'chevrons - left': LucideChevronsLeft,
+  'chevrons - right': LucideChevronsRight,
+  'chevrons - up': LucideChevronsUp,
   chrome: LucideChrome,
   circle: LucideCircle,
   clipboard: LucideClipboard,
   clock: LucideClock,
-  'cloud-drizzle': LucideCloudDrizzle,
-  'cloud-lightning': LucideCloudLightning,
-  'cloud-off': LucideCloudOff,
-  'cloud-rain': LucideCloudRain,
-  'cloud-snow': LucideCloudSnow,
+  'cloud - drizzle': LucideCloudDrizzle,
+  'cloud - lightning': LucideCloudLightning,
+  'cloud - off': LucideCloudOff,
+  'cloud - rain': LucideCloudRain,
+  'cloud - snow': LucideCloudSnow,
   cloud: LucideCloud,
   code: LucideCode,
   codepen: LucideCodepen,
@@ -708,58 +708,58 @@ const iconMap = {
   compass: LucideCompass,
   copyleft: LucideCopyleft,
   copyright: LucideCopyright,
-  'corner-down-left': LucideCornerDownLeft,
-  'corner-down-right': LucideCornerDownRight,
-  'corner-left-down': LucideCornerLeftDown,
-  'corner-left-up': LucideCornerLeftUp,
-  'corner-right-down': LucideCornerRightDown,
-  'corner-right-up': LucideCornerRightUp,
-  'corner-up-left': LucideCornerUpLeft,
-  'corner-up-right': LucideCornerUpRight,
+  'corner - down - left': LucideCornerDownLeft,
+  'corner - down - right': LucideCornerDownRight,
+  'corner - left - down': LucideCornerLeftDown,
+  'corner - left - up': LucideCornerLeftUp,
+  'corner - right - down': LucideCornerRightDown,
+  'corner - right - up': LucideCornerRightUp,
+  'corner - up - left': LucideCornerUpLeft,
+  'corner - up - right': LucideCornerUpRight,
   cpu: LucideCpu,
   crop: LucideCrop,
   crosshair: LucideCrosshair,
   database: LucideDatabase,
   delete: LucideDelete,
   disc: LucideDisc,
-  'divide-circle': LucideDivideCircle,
-  'divide-square': LucideDivideSquare,
+  'divide - circle': LucideDivideCircle,
+  'divide - square': LucideDivideSquare,
   divide: LucideDivide,
   download: LucideDownload,
   dribbble: LucideDribbble,
   droplet: LucideDroplet,
-  'edit-2': LucideEdit2,
-  'edit-3': LucideEdit3,
-  'eye-off': LucideEyeOff,
+  'edit - 2': LucideEdit2,
+  'edit - 3': LucideEdit3,
+  'eye - off': LucideEyeOff,
   eye: LucideEye,
   facebook: LucideFacebook,
-  'fast-forward': LucideFastForward,
+  'fast - forward': LucideFastForward,
   feather: LucideFeather,
   figma: LucideFigma,
-  'file-minus': LucideFileMinus,
-  'file-plus': LucideFilePlus,
+  'file - minus': LucideFileMinus,
+  'file - plus': LucideFilePlus,
   file: LucideFile,
   film: LucideFilm,
   flag: LucideFlag,
-  'folder-minus': LucideFolderMinus,
-  'folder-plus': LucideFolderPlus,
+  'folder - minus': LucideFolderMinus,
+  'folder - plus': LucideFolderPlus,
   folder: LucideFolder,
   framer: LucideFramer,
   frown: LucideFrown,
   gift: LucideGift,
-  'git-branch': LucideGitBranch,
-  'git-commit': LucideGitCommit,
-  'git-merge': LucideGitMerge,
-  'git-pull-request': LucideGitPullRequest,
+  'git - branch': LucideGitBranch,
+  'git - commit': LucideGitCommit,
+  'git - merge': LucideGitMerge,
+  'git - pull - request': LucideGitPullRequest,
   github: LucideGithub,
   gitlab: LucideGitlab,
   globe: LucideGlobe,
   grid: LucideGrid,
-  'hard-drive': LucideHardDrive,
+  'hard - drive': LucideHardDrive,
   hash: LucideHash,
   headphones: LucideHeadphones,
   heart: LucideHeart,
-  'help-circle': LucideHelpCircle,
+  'help - circle': LucideHelpCircle,
   hexagon: LucideHexagon,
   inbox: LucideInbox,
   instagram: LucideInstagram,
@@ -767,77 +767,77 @@ const iconMap = {
   key: LucideKey,
   layers: LucideLayers,
   layout: LucideLayout,
-  'life-buoy': LucideLifeBuoy,
-  'link-2': LucideLink2,
+  'life - buoy': LucideLifeBuoy,
+  'link - 2': LucideLink2,
   linkedin: LucideLinkedin,
   list: LucideList,
   loader: LucideLoader,
-  'loader-2': LucideLoader2,
-  'map-pin': LucideMapPin,
+  'loader - 2': LucideLoader2,
+  'map - pin': LucideMapPin,
   map: LucideMap,
-  'maximize-2': LucideMaximize2,
+  'maximize - 2': LucideMaximize2,
   maximize: LucideMaximize,
   meh: LucideMeh,
   menu: LucideMenu,
-  'message-circle': LucideMessageCircle,
-  'mic-off': LucideMicOff,
+  'message - circle': LucideMessageCircle,
+  'mic - off': LucideMicOff,
   mic: LucideMic,
-  'minimize-2': LucideMinimize2,
+  'minimize - 2': LucideMinimize2,
   minimize: LucideMinimize,
   monitor: LucideMonitor,
   moon: LucideMoon,
-  'more-horizontal': LucideMoreHorizontal,
-  'more-vertical': LucideMoreVertical,
-  'mouse-pointer': LucideMousePointer,
+  'more - horizontal': LucideMoreHorizontal,
+  'more - vertical': LucideMoreVertical,
+  'mouse - pointer': LucideMousePointer,
   move: LucideMove,
   music: LucideMusic,
   megaphone: LucideMegaphone,
-  'navigation-2': LucideNavigation2,
+  'navigation - 2': LucideNavigation2,
   navigation: LucideNavigation,
   network: LucideNetwork,
   octagon: LucideOctagon,
   package: LucidePackage,
   paperclip: LucidePaperclip,
-  'pause-circle': LucidePauseCircle,
+  'pause - circle': LucidePauseCircle,
   pause: LucidePause,
-  'pen-tool': LucidePenTool,
-  'phone-call': LucidePhoneCall,
-  'phone-forwarded': LucidePhoneForwarded,
-  'phone-incoming': LucidePhoneIncoming,
-  'phone-missed': LucidePhoneMissed,
-  'phone-off': LucidePhoneOff,
-  'phone-outgoing': LucidePhoneOutgoing,
+  'pen - tool': LucidePenTool,
+  'phone - call': LucidePhoneCall,
+  'phone - forwarded': LucidePhoneForwarded,
+  'phone - incoming': LucidePhoneIncoming,
+  'phone - missed': LucidePhoneMissed,
+  'phone - off': LucidePhoneOff,
+  'phone - outgoing': LucidePhoneOutgoing,
   phone: LucidePhone,
-  'pie-chart': LucidePieChart,
-  'play-circle': LucidePlayCircle,
+  'pie - chart': LucidePieChart,
+  'play - circle': LucidePlayCircle,
   play: LucidePlay,
   pocket: LucidePocket,
   power: LucidePower,
-  'power-off': LucidePowerOff,
+  'power - off': LucidePowerOff,
   printer: LucidePrinter,
   radio: LucideRadio,
-  'refresh-ccw': LucideRefreshCcw,
-  'refresh-cw': LucideRefreshCw,
+  'refresh - ccw': LucideRefreshCcw,
+  'refresh - cw': LucideRefreshCw,
   repeat: LucideRepeat,
   rewind: LucideRewind,
-  'rotate-ccw': LucideRotateCcw,
-  'rotate-cw': LucideRotateCw,
+  'rotate - ccw': LucideRotateCcw,
+  'rotate - cw': LucideRotateCw,
   recycle: LucideRecycle,
   rss: LucideRss,
   save: LucideSave,
   scissors: LucideScissors,
-  'screen-share': LucideScreenShare,
-  'screen-share-off': LucideScreenShareOff,
+  'screen - share': LucideScreenShare,
+  'screen - share - off': LucideScreenShareOff,
   send: LucideSend,
   share2: LucideShare2,
   share: LucideShare,
-  'shield-off': LucideShieldOff,
+  'shield - off': LucideShieldOff,
   shield: LucideShield,
-  'shopping-bag': LucideShoppingBag,
+  'shopping - bag': LucideShoppingBag,
   shuffle: LucideShuffle,
   sidebar: LucideSidebar,
-  'skip-back': LucideSkipBack,
-  'skip-forward': LucideSkipForward,
+  'skip - back': LucideSkipBack,
+  'skip - forward': LucideSkipForward,
   slack: LucideSlack,
   slash: LucideSlash,
   sliders: LucideSliders,
@@ -846,7 +846,7 @@ const iconMap = {
   speaker: LucideSpeaker,
   square: LucideSquare,
   star: LucideStar,
-  'stop-circle': LucideStopCircle,
+  'stop - circle': LucideStopCircle,
   sun: LucideSun,
   sunrise: LucideSunrise,
   sunset: LucideSunset,
@@ -855,14 +855,14 @@ const iconMap = {
   tag: LucideTag,
   target: LucideTarget,
   terminal: LucideTerminal,
-  'thumbs-down': LucideThumbsDown,
-  'thumbs-up': LucideThumbsUp,
-  'toggle-left': LucideToggleLeft,
-  'toggle-right': LucideToggleRight,
-  'trash-2': LucideTrash2,
+  'thumbs - down': LucideThumbsDown,
+  'thumbs - up': LucideThumbsUp,
+  'toggle - left': LucideToggleLeft,
+  'toggle - right': LucideToggleRight,
+  'trash - 2': LucideTrash2,
   trello: LucideTrello,
-  'trending-down': LucideTrendingDown,
-  'trending-up': LucideTrendingUp,
+  'trending - down': LucideTrendingDown,
+  'trending - up': LucideTrendingUp,
   triangle: LucideTriangle,
   truck: LucideTruck,
   tv: LucideTv,
@@ -873,49 +873,51 @@ const iconMap = {
   underline: LucideUnderline,
   unlock: LucideUnlock,
   upload: LucideUpload,
-  'user-check': LucideUserCheck,
-  'user-minus': LucideUserMinus,
-  'user-plus': LucideUserPlus,
-  'user-x': LucideUserX,
-  'video-off': LucideVideoOff,
+  'user - check': LucideUserCheck,
+  'user - minus': LucideUserMinus,
+  'user - plus': LucideUserPlus,
+  'user - x': LucideUserX,
+  'video - off': LucideVideoOff,
   video: LucideVideo,
   voicemail: LucideVoicemail,
   wallet: LucideWallet,
-  'volume-1': LucideVolume1,
-  'volume-2': LucideVolume2,
-  'volume-x': LucideVolumeX,
+  'volume - 1': LucideVolume1,
+  'volume - 2': LucideVolume2,
+  'volume - x': LucideVolumeX,
   volume: LucideVolume,
   watch: LucideWatch,
-  'wifi-off': LucideWifiOff,
+  'wifi - off': LucideWifiOff,
   wifi: LucideWifi,
   wind: LucideWind,
-  'x-circle': LucideXCircle,
-  'x-octagon': LucideXOctagon,
-  'x-square': LucideXSquare,
+  'x - circle': LucideXCircle,
+  'x - octagon': LucideXOctagon,
+  'x - square': LucideXSquare,
   youtube: LucideYoutube,
-  'zap-off': LucideZapOff,
+  'zap - off': LucideZapOff,
   zap: LucideZap,
-  'zoom-in': LucideZoomIn,
-  'zoom-out': LucideZoomOut,
+  'zoom - in': LucideZoomIn,
+  'zoom - out': LucideZoomOut,
 }
-export const Icon: React.FC<IconProps> = ({
+export const Icon: React.FC < IconProps> = ({
   name,
-  size = 24, // Default size
-  className,
-  ...props
+  size = 24, // Default size;
+  class_name,
+  ...props;
 }) => {
-  const LucideIconComponent = iconMap[name]
-  if (!LucideIconComponent) {
-    logWarn(`Icon "${name}" not found.`)
-    return null
-  }
-
-  // Render the dynamically selected Lucide icon component
-  return <LucideIconComponent size={size} className={className} {...props} />
+  const LucideIconComponent = icon_map[name];
+  // Check condition
+if ( {) {
+  $2
 }
-export default Icon; // Default export the Icon component
-export const Icons = iconMap; // Export the map if you need to refer to available icons
-export default Icon, // Default export the Icon component
-export const Icons = iconMap, // Export the map if you need to refer to available icons
-export default Icon, // Default export the Icon component
-export const Icons = iconMap, // Export the map if you need to refer to available icons
+    log_warn (`Icon "${name}" not found.`);
+    return null;
+  }
+  // Render the dynamically selected Lucide icon component;
+  return <LucideIconComponent size={size} className={class_name} {...props} />;
+}
+export default Icon; // Default export the Icon component;
+export const Icons = icon_map; // Export the map if you need to refer to available icons;
+export default Icon, // Default export the Icon component;
+export const Icons = icon_map, // Export the map if you need to refer to available icons;
+export default Icon, // Default export the Icon component;
+export const Icons = icon_map, // Export the map if you need to refer to available icons;

@@ -7,49 +7,50 @@ export interface MetaverseDigitalRealityService2026 {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
     address: string;
-  };
-
-export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =
-  [
+  }
+;
+export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =;
+  [;
     {
-      id: '2026-metaverse-digital-reality',
+      id: '2026 - metaverse - digital - reality',
       name: '2026 Metaverse Digital Reality Platform',
       tagline: 'Immersive digital reality experiences',
-      price: '$399/month',
-      description:
+      price: '$399 / month',
+      description:;
         'Advanced metaverse platform creating immersive digital reality experiences for 2026 and beyond.',
-      features: [
+      features: [;
         'Immersive experiences',
         'Digital reality',
         'Metaverse platform',
         'Advanced graphics',
         'Social interactions',
       ],
-      link: '/services/2026-metaverse-digital-reality',
+      link: '/services / 2026 - metaverse - digital - reality',
       category: 'Metaverse Digital Reality 2026',
-      realImplementation: true,
-      contactInfo: {
+      real_implementation: true,
+      contact_info: {
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
     },
-  ];    features: [
+  ];    features: [;
       "Immersive experiences";
       "Digital reality";
       "Metaverse platform";
       "Advanced graphics";
-      "Social interactions"
+      "Social interactions";
     ];
-    link: "/services/2026-metaverse-digital-reality", category: "Metaverse Digital Reality 2026",
-    realImplementation: true,
-    contactInfo: {
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
+    link: "/services / 2026 - metaverse - digital - reality", category: "Metaverse Digital Reality 2026",
+    real_implementation: true,
+    contact_info: {
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
+;

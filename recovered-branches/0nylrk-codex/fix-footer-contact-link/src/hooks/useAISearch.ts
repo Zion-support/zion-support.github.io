@@ -1,78 +1,91 @@
-
-import {useState} from "react";
-import {TALENT_PROFILES} from "@/data/talentData";
-import {JOB_POSTS} from "@/data/jobsData";
-import {PROJECTS} from "@/data/projectsData";
+import { useState } from './react';
+import { TALENT_PROFILES } from '@/data / talent_data';
+import { JOB_POSTS } from '@/data / jobs_data';
+import { PROJECTS } from '@/data / projects_data';
 export interface SearchResult {
   id: string;
   type: "talent" | "job" | "project";
   title: string,
-  description: string
+  description: string;
 }
-
 interface SearchFilters {
   type?: string | null;
   skills?: string[] | null;
   location?: string | null;
   budget?: { min: number, max: number } | null;
-  availability?: string | null
+  availability?: string | null;
 }
-
-export function useAISearch() {
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-
+export /**
+ * useAISearch - Function description
+ */
+function useAISearch() {
+  const [results, set_results] = useState < SearchResult[]>([]);
+  const [loading, set_loading] = useState (false);
+;
   const search = async (query: string) => {
-    setLoading(true);
+    set_loading (true);
     try {
-      const response = await fetch(
-        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search";
+      const response = await fetch (
+        "https://ziontechgroup.functions.supabase.co / functions / v1 / ai - search";
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" };
-          body: JSON.stringify({ query })}
+          headers: { "Content - Type": "application / json" }
+          body: JSON.stringify ({ query })}
       );
-      const data = await response.json();
-      const filters: SearchFilters = data.filters || {};
-
+      const data = await response.json ();
+      const filters: SearchFilters = data.filters || {}
+;
       const items: SearchResult[] = [];
-      const matchSkill = (skills: string[] | undefined) => {
-        if (!filters.skills || filters.skills.length === 0) return true,
-        return skills?.some((s) =>
-          filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
-        )
-      };
-
-      if (!filters.type || filters.type === "talent" || filters.type === "all") {
-        TALENT_PROFILES.forEach((t) => {
-          if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
-          if (!matchSkill(t.skills)) return;
-          items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title })
-        })
+      const match_skill = (skills: string[] | undefined) =>: any {
+        // Check condition
+if (return true, ) {
+  $2
+}
+        return skills?.some ((s) =>;
+          filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
       }
-
-      if (!filters.type || filters.type === "job" || filters.type === "all") {
-        JOB_POSTS.forEach((j) => {
-          if (!matchSkill(j.skills)) return;
-          items.push({ id: j.id, type: "job", title: j.title, description: j.description })
-        })
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        TALENT_PROFILES.for_each ((t) => {
+          if (.includes (filters.location.toLowerCase ())) return) {
+  $2
+}
+          if () return) {
+  $2
+}
+          items.push ({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
+        });
       }
-
-      if (!filters.type || filters.type === "project" || filters.type === "all") {
-        PROJECTS.forEach((p) => {
-          items.push({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary })
-        })
+      // Check condition
+if ( {) {
+  $2
+}
+        JOB_POSTS.for_each ((j) => {
+          if () return) {
+  $2
+}
+          items.push ({ id: j.id, type: "job", title: j.title, description: j.description });
+        });
       }
-
-      setResults(items)
+      // Check condition
+if ( {) {
+  $2
+}
+        PROJECTS.for_each ((p) => {
+          items.push ({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary });
+        });
+      }
+      set_results (items);
     } catch (err) {
-      console.error("search error", err);
-      setResults([])
+      console.error ("search error", err);
+      set_results ([]);
     } finally {
-      setLoading(false)
+      set_loading (false);
     }
-  };
-
+  }
+;
   return { results, loading, search }
 }
-;

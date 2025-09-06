@@ -1,20 +1,31 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
-const memoryStore: { q: string, ts: number }[] = [],
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
+const memory_store: { q: string, ts: number }[] = [],
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
     const { q } = req.body || {},
-    if (typeof q === 'string' && q.trim()) {
-      memoryStore.push({ q: q.trim(), ts: Date.now() })
+    if () {) {
+  $2
+}
+      memory_store.push ({ q: q.trim (), ts: Date.now () });
     }
-    return res.status(204).end()
+    return res.status (204).end ();
   }
-  if (req.method === 'GET') {
-    const counts = new Map<string, number>(),
-    for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1),
-    const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n })),
-    return res.status(200).json({ ok: true, top, total: memoryStore.length })
+  // Check condition
+if ( {) {
+  $2
+}
+    const counts = new Map < string, number>(),
+    for (const { q } of memory_store) counts.set (q, (counts.get (q) || 0) + 1),
+    const top = Array.from (counts.entries ()).sort ((a, b) => b[1] - a[1]).slice (0, 10).map (([q, n]) => ({ q, n })),
+    return res.status (200).json ({ ok: true, top, total: memory_store.length });
   }
-  return res.status(405).end()
-};
+  return res.status (405).end ();
+}
+;

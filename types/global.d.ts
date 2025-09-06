@@ -1,43 +1,37 @@
-// Global type declarations for DOM types
+// Global type declarations for DOM types;
 declare global {
   interface Window {
     performance: Performance;
   }
-  
-  // Define Performance interface if not available
+  // Define Performance interface if not available;
   interface Performance {
-    getEntriesByType(type: string): PerformanceEntry[];
-    now(): number;
+    getEntriesByType (type: string): PerformanceEntry[];
+    now (): number;
   }
-  
-  // Define PerformanceEntry interface if not available
+  // Define PerformanceEntry interface if not available;
   interface PerformanceEntry {
     name: string;
-    entryType: string;
-    startTime: number;
+    entry_type: string;
+    start_time: number;
     duration: number;
   }
-  
-  // Define HTML element types if not available
+  // Define HTML element types if not available;
   interface Element {
-    tagName: string;
+    tag_name: string;
     attributes: NamedNodeMap;
     children: HTMLCollection;
-    parentElement: HTMLElement | null;
+    parent_element: HTMLElement | null;
   }
-  
   interface CSSStyleDeclaration {
     [key: string]: string;
   }
-  
   interface HTMLElement extends Element {
-    className: string;
+    class_name: string;
     id: string;
     innerHTML: string;
-    textContent: string | null;
+    text_content: string | null;
     style: CSSStyleDeclaration;
   }
-  
   interface HTMLDivElement extends HTMLElement {}
   interface HTMLParagraphElement extends HTMLElement {}
   interface HTMLHeadingElement extends HTMLElement {}
@@ -45,17 +39,15 @@ declare global {
     href: string;
     target: string;
   }
-  
-  // Define MessageEvent if not available
-  interface MessageEvent<T = any> extends Event {
+  // Define MessageEvent if not available;
+  interface MessageEvent < T = any> extends Event {
     data: T;
     origin: string;
     lastEventId: string;
     source: MessageEventSource | null;
-    ports: ReadonlyArray<MessagePort>;
+    ports: ReadonlyArray < MessagePort>;
   }
-  
-  // Define RequestInit if not available
+  // Define RequestInit if not available;
   interface RequestInit {
     body?: BodyInit | null;
     cache?: RequestCache;
@@ -67,24 +59,21 @@ declare global {
     mode?: RequestMode;
     redirect?: RequestRedirect;
     referrer?: string;
-    referrerPolicy?: ReferrerPolicy;
+    referrer_policy?: ReferrerPolicy;
     signal?: AbortSignal | null;
     window?: any;
     timeout?: number;
   }
-  
-  // Define AbortController if not available
+  // Define AbortController if not available;
   interface AbortController {
     signal: AbortSignal;
-    abort(): void;
+    abort (): void;
   }
-  
-  // Define AbortSignal if not available
+  // Define AbortSignal if not available;
   interface AbortSignal extends EventTarget {
     aborted: boolean;
     onabort: ((this: AbortSignal, ev: Event) => any) | null;
   }
 }
-
-// Re-export DOM types that might not be available
-export {};
+// Re - export DOM types that might not be available;
+export {}

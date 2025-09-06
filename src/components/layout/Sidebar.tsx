@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  Home, 
-  Users, 
-  Settings, 
-  DollarSign, 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Home,
+  Users,
+  Settings,
+  DollarSign,
   Phone,
   Menu
-} from 'lucide-react'
+} from 'lucide-react';
 
 const Sidebar = () => {
   const navigation = [
@@ -16,7 +16,7 @@ const Sidebar = () => {
     { name: 'Services', href: '/services', icon: Settings },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone }
-  ]
+  ];
 
   return (
     <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
@@ -27,7 +27,6 @@ const Sidebar = () => {
           </div>
           <span className="text-lg font-semibold text-gray-900">Zion Tech</span>
         </div>
-        
         <nav className="space-y-2">
           {navigation.map((item) => (
             <Link
@@ -42,7 +41,6 @@ const Sidebar = () => {
         </nav>
       </div>
     </aside>
-  )
-}
-
-export default Sidebar
+  );
+};
+export default Sidebar;

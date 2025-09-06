@@ -26,18 +26,19 @@ jest.mock("next/router", () => ({
 
 // Mock Next.js Image component
 jest.mock("next/image", () => {
+  const React = require("react");
   return function MockImage({ src, alt, ...props }) {
-    return <img src={src} alt={alt} {...props} />;
+    return React.createElement("img", { src, alt, ...props });
   };
 });
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {
+  const React = require("react");
   return function MockLink({ children, href, ...props }) {
-    return <a href={href} {...props}>{children}</a>;
+    return React.createElement("a", { href, ...props }, children);
   };
 });
-
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -48,7 +49,6 @@ Object.defineProperty(window, 'matchMedia', {
     onchange: null,
     addListener: jest.fn(),
     removeListener: jest.fn(),
-
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
@@ -75,4 +75,3 @@ global.ResizeObserver = class ResizeObserver {
 beforeEach(() => {
   jest.clearAllMocks();
 });
-

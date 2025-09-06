@@ -1,23 +1,24 @@
-
-import React, { forwardRef } from "react"
-import { ChevronDown } from 'lucide-react'import { cn } from "@/lib/utils"
-import { SafeRef } from "@/types/ref-types"
-interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-  icon?: React.ReactNode
-  active?: boolean
-  href?: string
-  target?: string
-  badge?: React.ReactNode
+import React, { forward_ref } from './react';
+import { ChevronDown } from 'lucide-react'import { cn  } from '@/lib / utils';
+import { SafeRef  } from '@/types / ref - types';
+interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement> {
+  icon?: React.ReactNode;
+  active?: boolean;
+  href?: string;
+  target?: string;
+  badge?: React.ReactNode;
 }
-
-const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
-  ({ icon, active, children, href, target, badge, className, ...props }, ref,) => {
-    if (href) {
-      return(<a
+const SidebarMenuItem = forward_ref < HTMLButtonElement, SidebarMenuItemProps>(
+  ({ icon, active, children, href, target, badge, class_name, ...props }, ref, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      return (<a;
           href={href}
-    return(<button
+    return (<button;
         ref={ref}
-SidebarMenuItem.displayName = "SidebarMenuItem"
+SidebarMenuItem.display_name = "SidebarMenuItem";
 export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
 }

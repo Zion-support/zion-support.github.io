@@ -1,59 +1,58 @@
-import React from "react"
-import Link from "next/link"
+import React from './react';
+import Link from './next / link';
 interface ButtonProps {
   children: React.ReactNode, href?: string,
-  onClick?: () => void
-  type?: "button" | "submit" | "reset"
-  variant?: "primary" | "secondary" | "outline"
-  size?: "sm" | "md" | "lg"
-  className?: string
-  disabled?: boolean
-  style?: React.CSSProperties
+  on_click?: () => void;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg";
+  class_name?: string;
+  disabled?: boolean;
+  style?: React.CSSProperties;
 }
-
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC < ButtonProps> = ({
   children,
   href,
-  onClick,
+  on_click,
   type = "button",
   variant = "primary",
   size = "md",
-  className = "",
+  class_name = "",
   disabled = false,
   style,
 }) => {
-  const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200"
-  const sizeClasses = {
-    sm: "px-3 py-1.5 text-sm",
-    md: "px-4 py-2 text-base",
-    lg: "px-6 py-3 text-lg",
+  const base_classes = "px - 4 py - 2 rounded - md font - medium transition - colors duration - 200";
+  const size_classes = {
+    sm: "px - 3 py - 1.5 text - sm",
+    md: "px - 4 py - 2 text - base",
+    lg: "px - 6 py - 3 text - lg",
   }
-  const variantClasses = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
-    secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
-    outline: "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100",
+  const variant_classes = {
+    primary: "bg - blue - 600 text - white hover:bg - blue - 700 disabled:bg - gray - 400",
+    secondary: "bg - gray - 600 text - white hover:bg - gray - 700 disabled:bg - gray - 400",
+    outline: "border border - gray - 300 text - gray - 700 hover:bg - gray - 50 disabled:bg - gray - 100",
   }
-  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`
-  const content = <>{children}</>
-  if (href) {
+  const classes = `${base_classes} ${size_classes[size]} ${variant_classes[variant]} ${class_name}`;
+  const content = <>{children}</>;
+  // Check condition
+if ( {) {
+  $2
+}
     return (
-      <Link href={href} className={classes} style={style}>
+      <Link href={href} className={classes} style={style}>;
         {content}
-      </Link>
-    )
+      </Link>);
   }
-
   return (
-    <button
+    <button;
       type={type}
       className={classes}
-      onClick={onClick}
+      on_click={on_click}
       disabled={disabled}
       style={style}
-    >
+    >;
       {content}
-    </button>
-  )
+    </button>);
 }
 export { Button }
-export default Button
+export default Button;

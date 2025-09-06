@@ -1,61 +1,63 @@
-// Jest setup file for testing environment
-import '@testing-library/jest-dom';
-
-// Mock global objects that might not be available in test environment
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),}));}));
-
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+// Jest setup file for testing environment;
+import '@testing - library / jest - dom';
+;
+// Mock global objects that might not be available in test environment;
+global.ResizeObserver = jest.fn ().mock_implementation (() => ({
+  observe: jest.fn (),
+  unobserve: jest.fn (),
+  disconnect: jest.fn (), }));}));
+;
+// Mock window.match_media;
+Object.define_property (window, 'match_media', {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn ().mock_implementation (query => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
+    add_listener: jest.fn (), // deprecated;
+    remove_listener: jest.fn (), // deprecated;
+    addEventListener: jest.fn (),
+    removeEventListener: jest.fn (),
+    dispatch_event: jest.fn (),
   })),
 });
-
-// Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
+;
+// Mock IntersectionObserver;
+global.IntersectionObserver = jest.fn ().mock_implementation (() => ({
+  observe: jest.fn (),
+  unobserve: jest.fn (),
+  disconnect: jest.fn (),
 }));
-
-// Mock console methods to reduce noise in tests
+;
+// Mock console methods to reduce noise in tests;
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
-
-beforeAll(() => {
+;
+before_all (() => {
   console.error = (...args: any[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
-    ) {
+    // Check condition
+if (
+    ) {) {
+  $2
+}
       return;
     }
-    originalConsoleError.call(console, ...args);
-  };
-  
+    originalConsoleError.call (console, ...args);
+  }
+;
   console.warn = (...args: any[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
-    ) {
+    // Check condition
+if (
+    ) {) {
+  $2
+}
       return;
     }
-    originalConsoleWarn.call(console, ...args);
-  };
+    originalConsoleWarn.call (console, ...args);
+  }
 });
-
-afterAll(() => {
+;
+after_all (() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });

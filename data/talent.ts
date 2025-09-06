@@ -1,8 +1,8 @@
-// Stub talent data - placeholder for missing functionality
-export const TALENT_PROFILES = [
+// Stub talent data - placeholder for missing functionality;
+export const TALENT_PROFILES = [;
   {
     id: '1',
-    slug: 'sample-talent',
+    slug: 'sample - talent',
     name: 'Sample Talent',
     title: 'Full Stack Developer',
     category: 'Development',
@@ -13,16 +13,17 @@ export const TALENT_PROFILES = [
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
     hourlyRateUsd: 75,
-    requestQuote: true,
+    request_quote: true,
     availability: 'Open',
     profileImageUrl: null,
-    videoUrl: null,
+    video_url: null,
     portfolio: null,
     verified: false,
     rating: 0,
-    reviewsCount: 0,
-    createdAt: new Date().toISOString(),
-    originalLanguage: 'en',
+    reviews_count: 0,
+    created_at: new Date ().toISOString (),
+    original_language: 'en',
 translations: {},
   },
 ];
+;

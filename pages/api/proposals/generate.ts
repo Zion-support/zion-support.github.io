@@ -1,59 +1,60 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { OpenAI } from "openai";
-import { createProposal } from "../../../utils/data/proposals";
+import type { NextApiRequest, NextApiResponse } from './next';
+import { OpenAI  } from './openai';
+import { create_proposal  } from '../../../utils / data / proposals';
 const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
-
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
   try {
     const {
-      targetInstitution,
+      target_institution,
       type,
-      regionalScope,
+      regional_scope,
       budgetOrResolution,
-      supportingMultiverses = [],
+      supporting_multiverses = [],
       title = "Zion DAO Proposal",
-      promptAssist,
+      prompt_assist,
       language = "en",
-    } = req.body || {};
-
-    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const userPrompt =
-      promptAssist ||
-      `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
-
-    const completion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL || "gpt-4o-mini",
-      messages: [
+    } = req.body || {}
+;
+    const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
+    const user_prompt =;
+      prompt_assist ||;
+      `Write a proposal for ${target_institution} on ${type} in ${regional_scope}. Budget / Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO - based governance logic.`;
+;
+    const completion = await openai.chat.completions.create ({
+      model: process.env.OPENAI_MODEL || "gpt - 4o - mini",
+      messages: [;
         { role: "system", content: SYSTEM_PROMPT },
-        { role: "user", content: userPrompt },
+        { role: "user", content: user_prompt },
       ],
       temperature: 0.3,
     });
-
-    const contentMarkdown =
+;
+    const content_markdown =;
       completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
-
-    const meta = createProposal({
+;
+    const meta = create_proposal ({
       title,
-      targetInstitution,
+      target_institution,
       type,
-      regionalScope,
+      regional_scope,
       budgetOrResolution,
-      supportingMultiverses,
-      contentMarkdown,
+      supporting_multiverses,
+      content_markdown,
       language,
     });
-
-    return res.status(200).json({ meta, markdown: contentMarkdown });
+;
+    return res.status (200).json ({ meta, markdown: content_markdown });
   } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: error?.message || "Failed to generate proposal" });
+    return res;
+      .status (500);
+      .json ({ error: error?.message || "Failed to generate proposal" });
   }
 }

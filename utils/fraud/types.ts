@@ -1,56 +1,54 @@
-// Fraud detection types
-export type AdminActionType = 
-  | 'ban_user'
-  | 'suspend_user'
-  | 'flag_content'
-  | 'remove_content'
-  | 'investigate'
-  | 'dismiss'
+// Fraud detection types;
+export type AdminActionType =;
+  | 'ban_user';
+  | 'suspend_user';
+  | 'flag_content';
+  | 'remove_content';
+  | 'investigate';
+  | 'dismiss';
   | 'escalate';
-
+;
 export interface AdminAction {
   id: string;
-  caseId: string;
+  case_id: string;
   type: AdminActionType;
-  adminId: string;
+  admin_id: string;
   reason: string,
-  details: Record<string, any>;
-  createdAt: string;
-  executedAt?: string;
+  details: Record < string, any>;
+  created_at: string;
+  executed_at?: string;
   status: 'pending' | 'executed' | 'failed',
 }
-
 export interface FraudDetectionResult {
-  isFraud: boolean;
+  is_fraud: boolean;
   confidence: number;
   reasons: string[];
-  suggestedActions: AdminActionType[],
-  metadata: Record<string, any>;
+  suggested_actions: AdminActionType[],
+  metadata: Record < string, any>;
 }
-
 export interface FraudDetectionConfig {
   enabled: boolean;
   rules: {
-    suspiciousActivity: {
+    suspicious_activity: {
       enabled: boolean;
       threshold: number,
-    };
-    fakeProfile: {
+    }
+    fake_profile: {
       enabled: boolean;
       threshold: number,
-    };
-    paymentFraud: {
+    }
+    payment_fraud: {
       enabled: boolean;
       threshold: number,
-    };
+    }
     spam: {
       enabled: boolean;
       threshold: number,
-    };
-  };
-  autoActions: {
+    }
+  }
+  auto_actions: {
     enabled: boolean;
     actions: AdminActionType[];
-    confidenceThreshold: number,
-  };
+    confidence_threshold: number,
+  }
 }

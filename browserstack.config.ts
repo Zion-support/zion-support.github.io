@@ -1,85 +1,85 @@
-import { defineConfig, devices } from '@playwright/test';
-import { defineConfig, devices } from '@playwright/test',;
+import { define_config, devices } from '@playwright / test';
+import { define_config, devices } from '@playwright / test',
 ;
-export default defineConfig({;
-  testDir:'tests/e2e',;
-  use:{;
-    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
-    trace:'on-first-retry'},;
+export default define_config ({
+  test_dir:'tests / e2e',
+  use:{
+    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+    trace:'on - first - retry'},
   projects:[;
-    {;
-      name:'Desktop Chrome',;
-      use:{;
-        browserName:'chromium',;
+    {
+      name:'Desktop Chrome',
+      use:{
+        browser_name:'chromium',
         channel:'chrome'}
-    },;
-    {;
-      name:'Desktop Firefox',;
-      use:{;
-        browserName:'firefox'}
-    },;
-    {;
-      name:'Desktop Safari',;
-      use:{;
-        browserName:'webkit'}
-    },;
-    {;
-      name:'Mobile Chrome',;
-      use:{;
-        browserName:'chromium',;
+    },
+    {
+      name:'Desktop Firefox',
+      use:{
+        browser_name:'firefox'}
+    },
+    {
+      name:'Desktop Safari',
+      use:{
+        browser_name:'webkit'}
+    },
+    {
+      name:'Mobile Chrome',
+      use:{
+        browser_name:'chromium',
         ...devices['Pixel 5']}
-    },;
-    {;
-      name:'Mobile Safari',;
-      use:{;
-        browserName:'webkit',;
-        ...devices['iPhone 12']}
+    },
+    {
+      name:'Mobile Safari',
+      use:{
+        browser_name:'webkit',
+        ...devices['i_phone 12']}
     }
-  ],;
+  ],
   reporter:[;
-    ['list'],;
-    ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
-}),;import { defineConfig, devices } from "@playwright/test";
-import { defineConfig, devices } from '@playwright/test';
+    ['list'],
+    ['html', { output_folder:'playwright - logs / html - report', open:'never' }]];
+}),import { define_config, devices  } from '@playwright / test';
+import { define_config, devices } from '@playwright / test';
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace: 'on-first-retry'
+    trace: 'on - first - retry';
   },
-  projects: [
+  projects: [;
     {
       name: "Desktop Chrome",
       use: {
-        browserName: 'chromium',
-        channel: 'chrome'
+        browser_name: 'chromium',
+        channel: 'chrome';
 }
     },
     {
       name: "Desktop Firefox",
       use: {
-        browserName: 'firefox'
+        browser_name: 'firefox';
 }
     },
     {
       name: "Desktop Safari",
       use: {
-        browserName: 'webkit'
+        browser_name: 'webkit';
 }
     },
     {
       name: "Mobile Chrome",
       use: {
-        browserName: 'chromium',
-        ...devices['Pixel 5']
+        browser_name: 'chromium',
+        ...devices['Pixel 5'];
 }
     },
     {
       name: "Mobile Safari",
       use: {
-        browserName: 'webkit',
-        ...devices['iPhone 12']
+        browser_name: 'webkit',
+        ...devices['i_phone 12'];
       }
     }
   ],
-  reporter: [
+  reporter: [;
     ['list'],
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
-]
+    ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
+];

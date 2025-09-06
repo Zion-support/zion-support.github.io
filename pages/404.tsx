@@ -1,16 +1,16 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-export default function Custom404() {
+import Head from 'next / head';
+import Link from 'next / link';
+;
+export default /**
+ * Custom404 - Function description
+ */
+function Custom404() {
   return (
-    <>
-      <Head>
-
-          </Link>
-        </div>
-      </div>
-    </>
-  );
+    <>;
+      <Head>;
+          </Link>;
+        </div>;
+      </div>;
+    </>);
 }
-

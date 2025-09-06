@@ -1,15 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default /**
+ * handler - Function description
+ */
+function handler() {
   const { id } = req.query,
-  if (!id || typeof id !== 'string') {
-    return res.status(400).json({ error: 'Missing id' })
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: 'Missing id' });
   }
-  // In a real system, look up persisted deployment by id
+  // In a real system, look up persisted deployment by id;
   const fake = {
     id,
-    exportedAt: new Date().toISOString(),
+    exported_at: new Date ().toISOString (),
     note: 'This is a stub export. Connect to persistence to return real deployment state.'},
-  res.setHeader('Content-Typeapplication/json'),
-  return res.status(200).json(fake)
-};
+  res.set_header ('Content - Typeapplication / json'),
+  return res.status (200).json (fake);
+}

@@ -1,8 +1,5 @@
-
-
-    let sourceText = ''
-    for (const lang of supportedLanguages.map(l => l.code)) {
-
-}
-}
 ;
+    let source_text = '';
+    for (const lang of supported_languages.map (l => l.code)) {
+}
+}

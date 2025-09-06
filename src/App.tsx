@@ -1,15 +1,15 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Sidebar from './components/layout/Sidebar'
-import ErrorBoundary from './components/ErrorBoundary'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/layout/Sidebar';
+import ErrorBoundary from './components/ErrorBoundary';
 // Import pages
-import HomePage from './pages/Home'
-import AboutPage from './pages/About'
-import ContactPage from './pages/Contact'
-import ServicesPage from './pages/Services'
-import PricingPage from './pages/Pricing'
+import HomePage from './pages/Home';
+import AboutPage from './pages/About';
+import ContactPage from './pages/Contact';
+import ServicesPage from './pages/Services';
+import PricingPage from './pages/Pricing';
 export default function App() {
   return (
     <ErrorBoundary>
@@ -30,5 +30,5 @@ export default function App() {
         </div>
       </Router>
     </ErrorBoundary>
-  )
+  );
 }

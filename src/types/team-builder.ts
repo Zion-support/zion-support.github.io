@@ -1,6 +1,6 @@
 export interface ProjectBrief {
-  projectName: string, goals: string,
+  project_name: string, goals: string,
   timeline: string, budget: string,
-  techStack?: string[]
-  talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
+  tech_stack?: string[];
+  talent_filters?: { verified_only?: boolean; regions?: string[] }
 }

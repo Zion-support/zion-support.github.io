@@ -1,36 +1,44 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../utils/supabase/server";
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  const { code, event, url, referrer } = req.body || {};
-  if (!code || !event) return res.status($1).json({ $2 });
-  const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
-      "placeholder-key";
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getServerSupabase  } from '../../../utils / supabase / server';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status ($1).json ({ $2 })) {
+  $2
+}
+  const { code, event, url, referrer } = req.body || {}
+  if (return res.status ($1).json ({ $2 })) {
+  $2
+}
+  const using_placeholder =;
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
+      "placeholder - key";
   try {
-    if (usingPlaceholder) {
-      return res.status(200).json({ saved: false, mock: true });
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (200).json ({ saved: false, mock: true });
     }
-
-    const supabase = getServerSupabase();
-    const { error } = await supabase.from("referral_events").insert({
-      partner_code: String(code).toLowerCase(),
-      event: String(event),
+    const supabase = getServerSupabase ();
+    const { error } = await supabase.from ("referral_events").insert ({
+      partner_code: String (code).toLowerCase (),
+      event: String (event),
       url: url || null,
       referrer: referrer || null,
-      user_agent: req.headers["user-agent"] || null,
-      ip_address:
-        (req.headers["x-forwarded-for"] as string) ||
-        req.socket.remoteAddress ||
+      user_agent: req.headers["user - agent"] || null,
+      ip_address:;
+        (req.headers["x - forwarded - for"] as string) ||;
+        req.socket.remote_address ||;
         null,
     });
-    if (error) return res.status(500).json({ error: "Database error" });
-    return res.status(200).json({ saved: true });
+    if (return res.status (500).json ({ error: "Database error" })) {
+  $2
+}
+    return res.status (200).json ({ saved: true });
   } catch (e: any) {
-    return res.status(200).json({ saved: false, error: e?.message });
+    return res.status (200).json ({ saved: false, error: e?.message });
   }
 }

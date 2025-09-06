@@ -60,7 +60,6 @@ const Pricing: React.FC = () => {
       popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -70,7 +69,6 @@ const Pricing: React.FC = () => {
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
             Choose the perfect plan for your business. All plans include our core features with no hidden fees.
           </p>
-          
           {/* Billing Toggle */}
           <div className="flex items-center justify-center space-x-4 mb-8">
             <span className={`text-lg ${!isAnnual ? 'text-white font-semibold' : 'text-blue-200'}`}>Monthly</span>
@@ -92,7 +90,6 @@ const Pricing: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Pricing Cards */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,7 +108,6 @@ const Pricing: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="p-8">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
@@ -128,7 +124,6 @@ const Pricing: React.FC = () => {
                       </p>
                     )}
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
@@ -139,7 +134,6 @@ const Pricing: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-
                   <Link
                     to="/contact"
                     className={`w-full py-4 px-6 rounded-lg font-semibold text-lg text-center transition-all duration-300 transform hover:scale-105 ${
@@ -156,7 +150,6 @@ const Pricing: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* FAQ Section */}
       <div className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,28 +157,23 @@ const Pricing: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600">Everything you need to know about our pricing and plans</p>
           </div>
-
           <div className="space-y-8">
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I change plans anytime?</h3>
               <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
             </div>
-
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">What payment methods do you accept?</h3>
               <p className="text-gray-600">We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can also pay via invoice.</p>
             </div>
-
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Is there a free trial?</h3>
               <p className="text-gray-600">Yes! We offer a 14-day free trial for all plans. No credit card required to get started.</p>
             </div>
-
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">What happens if I exceed my plan limits?</h3>
               <p className="text-gray-600">We'll notify you before you reach your limits and provide options to upgrade. We never cut off service without warning.</p>
             </div>
-
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you offer custom enterprise solutions?</h3>
               <p className="text-gray-600">Absolutely! Our Enterprise plan includes custom features, dedicated support, and tailored solutions for large organizations.</p>
@@ -193,21 +181,20 @@ const Pricing: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using Zion Tech to accelerate their growth.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
             >
               Start Free Trial
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
             >
               Talk to Sales
@@ -218,5 +205,5 @@ const Pricing: React.FC = () => {
     </div>
   );
 };
-
+;
 export default Pricing;

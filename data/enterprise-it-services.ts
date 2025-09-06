@@ -7,32 +7,32 @@ export interface EnterpriseItService {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
     address: string;
-  };
-
-export const enterpriseITServices: EnterpriseItService[] = [
+  }
+;
+export const enterpriseITServices: EnterpriseItService[] = [;
   {
-    id: 'enterprise-architecture',
+    id: 'enterprise - architecture',
     name: 'Enterprise Architecture Consulting',
     tagline: 'Strategic IT architecture for large organizations',
-    price: '$150/hour',
-    description:
+    price: '$150 / hour',
+    description:;
       'Comprehensive enterprise architecture consulting services for digital transformation.',
-    features: [
+    features: [;
       'Architecture assessment',
       'Technology roadmap',
       'Integration strategy',
       'Governance framework',
       'Implementation support',
     ],
-    link: '/services/enterprise-architecture',
+    link: '/services / enterprise - architecture',
     category: 'Enterprise IT',
-    realImplementation: true,
-    contactInfo: {
+    real_implementation: true,
+    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -40,7 +40,8 @@ export const enterpriseITServices: EnterpriseItService[] = [
   },
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
+;

@@ -1,7 +1,6 @@
-export default function ServicesLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default /**
+ * ServicesLayout - Function description
+ */
+function ServicesLayout() {
   return <div>{children}</div>;
 }

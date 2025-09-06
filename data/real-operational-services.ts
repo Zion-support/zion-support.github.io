@@ -7,32 +7,32 @@ export interface RealOperationalService {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
     address: string;
-  };
-
-export const realOperationalServices: RealOperationalService[] = [
+  }
+;
+export const realOperationalServices: RealOperationalService[] = [;
   {
-    id: 'operational-intelligence',
+    id: 'operational - intelligence',
     name: 'Operational Intelligence Platform',
-    tagline: 'Real-time operational insights and optimization',
-    price: '$99/month',
-    description:
+    tagline: 'Real - time operational insights and optimization',
+    price: '$99 / month',
+    description:;
       'Comprehensive operational intelligence platform for monitoring and optimizing business operations.',
-    features: [
-      'Real-time monitoring',
+    features: [;
+      'Real - time monitoring',
       'Performance analytics',
       'Operational insights',
       'Optimization recommendations',
       'Alert system',
     ],
-    link: '/services/operational-intelligence',
+    link: '/services / operational - intelligence',
     category: 'Operational Services',
-    realImplementation: true,
-    contactInfo: {
+    real_implementation: true,
+    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -40,7 +40,8 @@ export const realOperationalServices: RealOperationalService[] = [
   },
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
+;

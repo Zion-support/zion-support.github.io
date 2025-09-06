@@ -1,10 +1,10 @@
-// Search filter utilities
-export const filterResults = (results: any[], filters: any) => {
-  // Add search filtering functionality here
+// Search filter utilities;
+export const filter_results = (results: any[], filters: any) =>: any {
+  // Add search filtering functionality here;
   return results;
-};
-
-export const sortResults = (results: any[], sortBy: string) => {
-  // Add search sorting functionality here
+}
+;
+export const sort_results = (results: any[], sort_by: string) =>: any {
+  // Add search sorting functionality here;
   return results;
-};
+}

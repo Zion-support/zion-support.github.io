@@ -1,51 +1,51 @@
-import React from 'react'
-import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
-import { cn } from '@/lib/utils'
-type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated'
+import React from 'react';
+import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
+import { cn } from '@/lib / utils';
+type BadgeType = 'verified' | 'featured' | 'new' | 'top - rated';
 interface ProfileBadgeProps {
-  type: BadgeType
-  className?: string;  type: BadgeType,
-  className?: string
+  type: BadgeType;
+  class_name?: string;  type: BadgeType,
+  class_name?: string;
 }
-
-export function ProfileBadge({ type, className }: ProfileBadgeProps) {
-  const badgeConfig = {
+export /**
+ * ProfileBadge - Function description
+ */
+function ProfileBadge() {
+  const badge_config = {
     verified: {
       icon: BadgeCheck,
       text: 'Verified',
-      colors: 'bg-blue-500/20 text-blue-400',
+      colors: 'bg - blue - 500 / 20 text - blue - 400',
     },
       icon: Star,
       text: 'Featured',
-      colors: 'bg-yellow-500/20 text-yellow-400',
+      colors: 'bg - yellow - 500 / 20 text - yellow - 400',
     },
     new: {
       icon: Clock,
       text: 'New',
-      colors: 'bg-green-500/20 text-green-400',
+      colors: 'bg - green - 500 / 20 text - green - 400',
     },
-    'top-rated': {
+    'top - rated': {
       icon: Award,
       text: 'Top Rated',
-      colors: 'bg-purple-500/20 text-purple-400',
+      colors: 'bg - purple - 500 / 20 text - purple - 400',
     },
   }
-  const { icon: Icon, text, colors } = badgeConfig[type]
-    >
-      <Icon className='w-3 h-3' />
-      <span>{text}</span>
-    </div>
-  )
-  type, className 
+  const { icon: Icon, text, colors } = badge_config[type];
+    >;
+      <Icon className='w - 3 h - 3' />;
+      <span>{text}</span>;
+    </div>);
+  type, class_name;
 }: ProfileBadgeProps) {
-  const badgeConfig = {
+  const badge_config = {
   verified: {
   const {
-  icon: Icon,  text, colors 
-}= badgeConfig[type]
-}> <Icon className="w-3 h-3" /> <span> {
-  text 
-}</span> 
-}'"  )
+  icon: Icon,  text, colors;
+}= badge_config[type];
+}> <Icon className="w - 3 h - 3" /> <span> {
+  text;
+}</span>;
+}'"  );
 }
-;

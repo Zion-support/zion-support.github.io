@@ -1,10 +1,10 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import ('tailwindcss').Config} */;
 module.exports = {
-  darkMode: "class",
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
+  dark_mode: "class",
+  content: [;
+    './pages/**/*.{js, ts, jsx, tsx}',
+    './components/**/*.{js, ts, jsx, tsx}',
+    './src/**/*.{js, ts, jsx, tsx}',
   ],
   theme: {
     extend: {
@@ -29,35 +29,35 @@ module.exports = {
           950: '#030712',
         },
       },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+      font_family: {
+        sans: ['Inter', 'system - ui', 'sans - serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'scale-in': 'scaleIn 0.3s ease-out',
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'bounce-slow': 'bounce 3s infinite',
-        'spin-slow': 'spin 8s linear infinite',
+        'fade - in': 'fade_in 0.5s ease - in - out',
+        'slide - up': 'slide_up 0.5s ease - out',
+        'scale - in': 'scale_in 0.3s ease - out',
+        'float': 'float 6s ease - in - out infinite',
+        'pulse - slow': 'pulse 4s cubic - bezier (0.4, 0, 0.6, 1) infinite',
+        'bounce - slow': 'bounce 3s infinite',
+        'spin - slow': 'spin 8s linear infinite',
       },
       keyframes: {
-        fadeIn: {
+        fade_in: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        slide_up: {
+          '0%': { transform: 'translate_y (20px)', opacity: '0' },
+          '100%': { transform: 'translate_y (0px)', opacity: '1' },
         },
-        scaleIn: {
-          '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
+        scale_in: {
+          '0%': { transform: 'scale (0)' },
+          '100%': { transform: 'scale (1)' },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '0%, 100%': { transform: 'translate_y (0px)' },
+          '50%': { transform: 'translate_y (-20px)' },
         },
       },
       spacing: {
@@ -65,20 +65,20 @@ module.exports = {
         '88': '22rem',
         '128': '32rem',
       },
-      borderRadius: {
+      border_radius: {
         '4xl': '2rem',
         '5xl': '2.5rem',
       },
-      boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
-        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
-        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+      box_shadow: {
+        'glow': '0 0 20px rgba (59, 130, 246, 0.3)',
+        'glow - lg': '0 0 40px rgba (59, 130, 246, 0.4)',
+        'glow - xl': '0 0 60px rgba (59, 130, 246, 0.5)',
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
+  plugins: [;
+    require ('@tailwindcss / forms'),
+    require ('@tailwindcss / typography'),
+    require ('@tailwindcss / aspect - ratio'),
   ],
-};
+}

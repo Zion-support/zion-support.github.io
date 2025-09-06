@@ -1,28 +1,25 @@
-
 export interface SearchSuggestion {
   text: string;
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
-  iconUrl?: string
+  icon_url?: string;
 }
-
 export interface SearchHighlight {
   before: string;
   match: string,
-  after: string
+  after: string;
 }
-
 export interface FilterOptions {
-  productTypes: {
+  product_types: {
     label: string,
-    value: string
+    value: string;
   }[];
   locations: {
     label: string,
-    value: string
+    value: string;
   }[];
-  availabilityOptions: {
+  availability_options: {
     label: string,
-    value: string
+    value: string;
   }[];
-  ratingOptions: number[]
+  rating_options: number[];
 }

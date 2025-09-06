@@ -1,11 +1,11 @@
 import React, { JSX } from 'react';
-
-
-export default function App() {
+;
+export default /**
+ * App - Function description
+ */
+function App() {
   return (
-    <main>
-      <h1>Hello App</h1>
-    </main>
-
-  );
+    <main>;
+      <h1 > Hello App</h1>;
+    </main>);
 }

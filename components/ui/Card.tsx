@@ -1,146 +1,126 @@
 import React from 'react';
-import { cn } from '../../lib/utils';
-
-// Define HTML element types
+import { cn } from '../../lib / utils';
+;
+// Define HTML element types;
 interface HTMLElement {
-  className: string;
+  class_name: string;
   id: string;
   innerHTML: string;
-  textContent: string | null;
-  style: { [key: string]: string };
+  text_content: string | null;
+  style: { [key: string]: string }
 }
-
 interface HTMLDivElement extends HTMLElement {
-  tagName: 'DIV';
+  tag_name: 'DIV';
 }
-
 interface HTMLParagraphElement extends HTMLElement {
-  tagName: 'P';
+  tag_name: 'P';
 }
-
 interface HTMLHeadingElement extends HTMLElement {
-  tagName: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
+  tag_name: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
 }
-
-const Card = React.forwardRef<
+const Card = React.forward_ref<;
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => (
+  <div;
     ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
-      className
-    )}
+    className={cn (
+      "rounded - lg border bg - card text - card - foreground shadow - sm",
+      class_name)}
     {...props}
-  />;
-));
-Card.displayName = "Card";
-
-const CardHeader = React.forwardRef<
+  />));
+Card.display_name = "Card";
+;
+const CardHeader = React.forward_ref<;
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => (
+  <div;
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn ("flex flex - col space - y-1.5 p - 6", class_name)}
     {...props}
-  />;
-));
-CardHeader.displayName = "CardHeader";
-
-const CardTitle = React.forwardRef<
+  />));
+CardHeader.display_name = "CardHeader";
+;
+const CardTitle = React.forward_ref<;
   HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
-  <h3
+  React.HTMLAttributes < HTMLHeadingElement>;
+>(({ class_name, ...props }, ref) => (
+  <h3;
     ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
-      className
-    )}
+    className={cn (
+      "text - 2xl font - semibold leading - none tracking - tight",
+      class_name)}
     {...props}
-  />;
-));
-CardTitle.displayName = "CardTitle";
-
-const CardDescription = React.forwardRef<
+  />));
+CardTitle.display_name = "CardTitle";
+;
+const CardDescription = React.forward_ref<;
   HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-  <p
+  React.HTMLAttributes < HTMLParagraphElement>;
+>(({ class_name, ...props }, ref) => (
+  <p;
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn ("text - sm text - muted - foreground", class_name)}
     {...props}
-  />;
-));
-CardDescription.displayName = "CardDescription";
-
-const CardContent = React.forwardRef<
+  />));
+CardDescription.display_name = "CardDescription";
+;
+const CardContent = React.forward_ref<;
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
-));
-CardContent.displayName = "CardContent";
-
-const CardFooter = React.forwardRef<
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => (
+  <div ref={ref} className={cn ("p - 6 pt - 0", class_name)} {...props} />));
+CardContent.display_name = "CardContent";
+;
+const CardFooter = React.forward_ref<;
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => (
+  <div;
     ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
+    className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
-  />;
-));
-CardFooter.displayName = "CardFooter";
-
-import React from 'react',;
+  />));
+CardFooter.display_name = "CardFooter";
+;
+import React from 'react',
 interface CardProps {
   children: React.ReactNode,
-  className?: string,
+  class_name?: string,
   style?: React.CSSProperties,
-  onClick?: () => void,
-  hover?: boolean
+  on_click?: () => void,
+  hover?: boolean;
 }
-
-const Card: React.FC<CardProps> = ({
+const Card: React.FC < CardProps> = ({
   children,
-  className = '',
+  class_name = '',
   style,
-  onClick,
+  on_click,
   hover = true}) => {
-  const baseClasses = 'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden',
-  const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : '',
-  const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : '',
-  
-  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`,
-
+  const base_classes = 'bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 800 rounded - xl p - 6 transition - all duration - 300 relative overflow - hidden',
+  const hover_classes = hover ? 'hover: border - blue - 500 / 30 hover:shadow - 2xl hover:shadow - blue - 500 / 10 hover:-translate - y-1 hover:bg - gray - 900 / 80 focus - within:border - blue - 500 / 50 focus - within:shadow - lg focus - within:shadow - blue - 500 / 20' : '',
+  const clickable_classes = on_click ? 'cursor - pointer focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:ring - offset - 2 focus:ring - offset - black' : '',
+  const classes = `${base_classes} ${hover_classes} ${clickable_classes} ${class_name}`,
   return (
-    <div
+    <div;
       className={classes}
       style={style}
-      onClick={onClick}
-    >
+      on_click={on_click}
+    >;
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
-      
+      <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
       {/* Content wrapper */}
-      <div className="relative z-10">
+      <div className="relative z - 10">;
         {children}
-      </div>
-      
+      </div>;
       {/* Hover glow effect */}
       {hover && (
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-      )}
-    </div>
-  )
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
+    </div>);
 },
-
 export default Card,
 ;
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
+;
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+;

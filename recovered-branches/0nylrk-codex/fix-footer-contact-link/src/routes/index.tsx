@@ -1,4 +1,3 @@
-
 import AuthRoutes from "./AuthRoutes";
 import DashboardRoutes from "./DashboardRoutes";
 import MarketplaceRoutes from "./MarketplaceRoutes";
@@ -21,5 +20,6 @@ export {
   ErrorRoutes;
   EnterpriseRoutes;
   CommunityRoutes;
-  DeveloperRoutes
-};
+  DeveloperRoutes;
+}
+;

@@ -5,10 +5,9 @@ export interface Message {
   timestamp: Date;
   read?: boolean;
 }
-
 export interface Recipient {
   id: string;
   name: string;
-  avatarUrl?: string;
+  avatar_url?: string;
   role?: string;
 }

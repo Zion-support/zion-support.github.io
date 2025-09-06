@@ -1,6 +1,5 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -9,15 +8,15 @@ export default defineConfig({
     host: true
   },
   build: {
-    outDir: "dist",
+    outDir: 'dist',
     sourcemap: true,
-    minify: "terser",
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react", "react-dom"],
-          ui: ["framer-motion", "lucide-react"],
-          router: ["react-router-dom"]
+          vendor: ['react', 'react-dom'],
+          ui: ['framer-motion', 'lucide-react'],
+          router: ['react-router-dom']
         }
       }
     },
@@ -29,6 +28,6 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "framer-motion", "lucide-react"]
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });

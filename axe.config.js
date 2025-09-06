@@ -1,19 +1,19 @@
 module.exports = {
-  rules: [
+  rules: [;
     {
-      id: 'color-contrast',
+      id: 'color - contrast',
       enabled: true,
     },
     {
-      id: 'keyboard-navigation',
+      id: 'keyboard - navigation',
       enabled: true,
     },
     {
-      id: 'focus-management',
+      id: 'focus - management',
       enabled: true,
     },
     {
-      id: 'aria-labels',
+      id: 'aria - labels',
       enabled: true,
     },
   ],
@@ -21,4 +21,4 @@ module.exports = {
   locale: {
     lang: 'en',
   },
-};
+}

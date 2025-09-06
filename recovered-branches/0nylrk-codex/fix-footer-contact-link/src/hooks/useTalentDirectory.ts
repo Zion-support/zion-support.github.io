@@ -1,95 +1,96 @@
-
-import {useAuthStatus} from "./talent/useAuthStatus";
-import {useTalentData} from "./talent/useTalentData";
-import {useFilterTalents} from "./talent/useFilterTalents";
-import {useUIState} from "./talent/useUIState";
-export function useTalentDirectory() {
-  // Fetch auth status and saved talents
-  const { 
-    isAuthenticated;
-    userDetails, 
-    savedTalents, 
-    handleToggleSave 
-  } = useAuthStatus();
-
-  // Fetch talent data
-  const { 
-    talents, 
-    isLoading 
-  } = useTalentData();
-
-  // Apply filters and sorting
+import { useAuthStatus } from './talent / useAuthStatus';
+import { useTalentData } from './talent / useTalentData';
+import { useFilterTalents } from './talent / useFilterTalents';
+import { useUIState } from './talent / useUIState';
+export /**
+ * useTalentDirectory - Function description
+ */
+function useTalentDirectory() {
+  // Fetch auth status and saved talents;
   const {
-    filteredTalents;
-    searchTerm;
+    is_authenticated;
+    user_details,
+    saved_talents,
+    handleToggleSave;
+  } = useAuthStatus ();
+;
+  // Fetch talent data;
+  const {
+    talents,
+    is_loading;
+  } = useTalentData ();
+;
+  // Apply filters and sorting;
+  const {
+    filtered_talents;
+    search_term;
     setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
+    selected_skills;
+    selected_availability;
+    selected_regions;
+    price_range;
     setPriceRange;
-    experienceRange;
+    experience_range;
     setExperienceRange;
-    sortOption;
+    sort_option;
     setSortOption;
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters
-  } = useFilterTalents(talents);
-
-  // Manage UI state
+    toggle_skill;
+    toggle_availability;
+    toggle_region;
+    clear_filters;
+  } = useFilterTalents (talents);
+;
+  // Manage UI state;
   const {
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
-    selectedTalent;
+    selected_talent;
     setSelectedTalent;
-    expandedSections;
-    toggleSection
-  } = useUIState();
-
+    expanded_sections;
+    toggle_section;
+  } = useUIState ();
+;
   return {
-    // Talents and loading state
+    // Talents and loading state;
     talents;
-    filteredTalents;
-    isLoading;
-    
-    // Search and filter state
-    searchTerm;
+    filtered_talents;
+    is_loading;
+;
+    // Search and filter state;
+    search_term;
     setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
+    selected_skills;
+    selected_availability;
+    selected_regions;
+    price_range;
     setPriceRange;
-    experienceRange;
+    experience_range;
     setExperienceRange;
-    sortOption;
+    sort_option;
     setSortOption;
-    
-    // UI state
+;
+    // UI state;
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
-    selectedTalent;
+    selected_talent;
     setSelectedTalent;
-    expandedSections;
-    
-    // Auth and user state
-    isAuthenticated;
-    userDetails;
-    savedTalents;
-    
-    // Actions
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters;
-    toggleSection;
-    handleToggleSave
+    expanded_sections;
+;
+    // Auth and user state;
+    is_authenticated;
+    user_details;
+    saved_talents;
+;
+    // Actions;
+    toggle_skill;
+    toggle_availability;
+    toggle_region;
+    clear_filters;
+    toggle_section;
+    handleToggleSave;
   }
 }
-;

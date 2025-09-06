@@ -7,32 +7,32 @@ export interface ProfessionalService {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
     address: string;
-  };
-
-export const professionalServices: ProfessionalService[] = [
+  }
+;
+export const professional_services: ProfessionalService[] = [;
   {
-    id: 'it-consulting',
+    id: 'it - consulting',
     name: 'IT Consulting Services',
     tagline: 'Expert IT consulting for business growth',
-    price: '$120/hour',
-    description:
+    price: '$120 / hour',
+    description:;
       'Professional IT consulting services to help businesses optimize their technology investments.',
-    features: [
+    features: [;
       'Technology assessment',
       'Strategic planning',
       'Implementation guidance',
       'Performance optimization',
       'Ongoing support',
     ],
-    link: '/services/it-consulting',
+    link: '/services / it - consulting',
     category: 'Professional Services',
-    realImplementation: true,
-    contactInfo: {
+    real_implementation: true,
+    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -40,7 +40,8 @@ export const professionalServices: ProfessionalService[] = [
   },
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
+;
