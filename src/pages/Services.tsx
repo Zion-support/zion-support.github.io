@@ -1,78 +1,147 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Services: React.FC = () => {
+export function Services() {
+  const services = [
+    {
+      title: "AI & Machine Learning",
+      description: "Custom AI solutions including machine learning models, natural language processing, and computer vision applications.",
+      features: ["Custom ML Models", "NLP Solutions", "Computer Vision", "Predictive Analytics"],
+      icon: "🤖"
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions with AWS, Azure, and Google Cloud Platform integration.",
+      features: ["Cloud Migration", "DevOps & CI/CD", "Container Orchestration", "Auto-scaling"],
+      icon: "☁️"
+    },
+    {
+      title: "Web Development",
+      description: "Modern web applications built with React, Next.js, and cutting-edge technologies.",
+      features: ["Frontend Development", "Backend APIs", "Database Design", "Performance Optimization"],
+      icon: "💻"
+    },
+    {
+      title: "Mobile Development",
+      description: "Cross-platform mobile applications for iOS and Android using React Native and Flutter.",
+      features: ["iOS Apps", "Android Apps", "Cross-platform", "App Store Optimization"],
+      icon: "📱"
+    },
+    {
+      title: "Data Analytics",
+      description: "Business intelligence and data visualization solutions to drive informed decision making.",
+      features: ["Data Visualization", "Business Intelligence", "Real-time Analytics", "Custom Dashboards"],
+      icon: "📊"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
+      features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"],
+      icon: "🔒"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to transform your business and drive innovation across all sectors.
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to accelerate your business growth 
+            and digital transformation journey.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">AI Services</h3>
-            <p className="text-gray-600 mb-4">Cutting-edge AI solutions for your business including machine learning, natural language processing, and computer vision.</p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Machine Learning Models</li>
-              <li>• Natural Language Processing</li>
-              <li>• Computer Vision</li>
-              <li>• Predictive Analytics</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">⚙️</div>
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">IT Services</h3>
-            <p className="text-gray-600 mb-4">Comprehensive IT solutions and support including cloud migration, DevOps, and security solutions.</p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Cloud Migration</li>
-              <li>• DevOps + SRE</li>
-              <li>• Security Solutions</li>
-              <li>• Infrastructure Automation</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">☁️</div>
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">Cloud Solutions</h3>
-            <p className="text-gray-600 mb-4">Scalable cloud infrastructure and services to help your business grow and scale efficiently.</p>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Cloud Infrastructure</li>
-              <li>• Auto-scaling</li>
-              <li>• Cost Optimization</li>
-              <li>• Multi-cloud Solutions</li>
-            </ul>
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="bg-card p-8 rounded-xl border hover:shadow-lg transition-all duration-300 hover:scale-105 group">
+              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <span className="text-3xl">{service.icon}</span>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+              <p className="text-foreground/70 mb-6 leading-relaxed">{service.description}</p>
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-sm text-foreground/80">
+                    <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <button className="mt-6 w-full bg-primary text-primary-foreground py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                Learn More
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Process Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Our Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary-foreground">1</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Discovery</h3>
+              <p className="text-foreground/70">
+                We understand your business needs and technical requirements.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary-foreground">2</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Planning</h3>
+              <p className="text-foreground/70">
+                We create a detailed project plan and timeline.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary-foreground">3</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Development</h3>
+              <p className="text-foreground/70">
+                We build your solution using agile methodologies.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary-foreground">4</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Deployment</h3>
+              <p className="text-foreground/70">
+                We deploy and provide ongoing support and maintenance.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Talk to our experts about your project. We'll help you choose the right service and create a custom solution for your business needs.
+        {/* CTA Section */}
+        <div className="bg-primary/5 rounded-xl p-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto">
+            Let's discuss your project requirements and how we can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Email Us
-            </a>
+            <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105">
+              Get a Quote
+            </button>
+            <button className="border border-primary text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105">
+              Schedule a Call
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Services;
+}

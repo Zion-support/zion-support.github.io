@@ -1,66 +1,139 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const About: React.FC = () => {
+export function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are a leading technology company dedicated to delivering innovative solutions that drive digital transformation and business growth.
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+            We are a leading technology company dedicated to delivering innovative solutions 
+            that drive digital transformation and business growth.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-            <p className="text-lg text-gray-600 mb-4">
-              To empower businesses with cutting-edge technology solutions that enhance efficiency, drive innovation, and create sustainable competitive advantages.
-            </p>
-            <p className="text-lg text-gray-600">
-              We believe in the power of technology to transform industries and create meaningful impact in the digital world.
+        {/* Mission & Vision */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="bg-card p-8 rounded-xl border">
+            <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission</h2>
+            <p className="text-foreground/80 leading-relaxed text-lg">
+              To empower businesses with cutting-edge technology solutions that drive innovation, 
+              efficiency, and growth. We believe in the transformative power of technology and 
+              its ability to solve complex business challenges.
             </p>
           </div>
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-            <p className="text-lg">
-              To be the global leader in technology solutions, recognized for our innovation, reliability, and commitment to client success.
+          
+          <div className="bg-card p-8 rounded-xl border">
+            <h2 className="text-3xl font-bold text-foreground mb-6">Our Vision</h2>
+            <p className="text-foreground/80 leading-relaxed text-lg">
+              To be the global leader in technology solutions, recognized for our innovation, 
+              reliability, and commitment to client success. We envision a future where technology 
+              seamlessly integrates with business operations.
             </p>
           </div>
         </div>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Us?</h2>
+        {/* Values */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-semibold mb-2">Innovation</h3>
-              <p className="text-gray-600">Cutting-edge solutions using the latest technologies and methodologies.</p>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-4xl">💡</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Innovation</h3>
+              <p className="text-foreground/70">
+                We constantly push the boundaries of what's possible with technology.
+              </p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-xl font-semibold mb-2">Security</h3>
-              <p className="text-gray-600">Bank-level security with end-to-end encryption and compliance.</p>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-4xl">🤝</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Collaboration</h3>
+              <p className="text-foreground/70">
+                We work closely with our clients to understand their unique needs.
+              </p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold mb-2">Performance</h3>
-              <p className="text-gray-600">Optimized solutions that deliver exceptional performance and reliability.</p>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-4xl">⭐</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Excellence</h3>
+              <p className="text-foreground/70">
+                We deliver high-quality solutions that exceed expectations.
+              </p>
             </div>
           </div>
-          <div className="mt-8">
-            <Link
-              to="/contact"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Get in Touch
-            </Link>
+        </div>
+
+        {/* Team Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Meet Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-card p-6 rounded-xl border text-center">
+              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">👨‍💼</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">John Smith</h3>
+              <p className="text-primary mb-2">CEO & Founder</p>
+              <p className="text-foreground/70 text-sm">
+                Technology visionary with 15+ years of experience in enterprise solutions.
+              </p>
+            </div>
+            
+            <div className="bg-card p-6 rounded-xl border text-center">
+              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">👩‍💻</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Sarah Johnson</h3>
+              <p className="text-primary mb-2">CTO</p>
+              <p className="text-foreground/70 text-sm">
+                AI and machine learning expert leading our technical innovation.
+              </p>
+            </div>
+            
+            <div className="bg-card p-6 rounded-xl border text-center">
+              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">👨‍🔬</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Mike Chen</h3>
+              <p className="text-primary mb-2">Lead Developer</p>
+              <p className="text-foreground/70 text-sm">
+                Full-stack developer specializing in scalable cloud architectures.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Company Stats */}
+        <div className="bg-primary/5 rounded-xl p-12">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Company at a Glance</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-primary mb-2">2018</div>
+              <div className="text-foreground/70">Founded</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-primary mb-2">50+</div>
+              <div className="text-foreground/70">Team Members</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-primary mb-2">25+</div>
+              <div className="text-foreground/70">Countries Served</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-foreground/70">Projects Delivered</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default About;
+}

@@ -1,87 +1,98 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Home: React.FC = () => {
+export function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading technology solutions for modern businesses. Transform your digital presence with our cutting-edge services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Services
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-gray-300 hover:border-gray-400 text-gray-300 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-background to-background/50">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto animate-fade-in-delay">
+            Advanced Technology Solutions for the Future
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
+            <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-primary text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105">
+              Learn More
+            </button>
           </div>
         </div>
-      </div>
 
-      {/* Services Preview */}
-      <div className="py-20 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive technology solutions for your business needs</p>
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="bg-card p-8 rounded-xl border hover:shadow-lg transition-all duration-300 hover:scale-105 group">
+            <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+              <span className="text-3xl">🤖</span>
+            </div>
+            <h3 className="text-2xl font-semibold mb-4">AI Solutions</h3>
+            <p className="text-foreground/70 leading-relaxed">
+              Cutting-edge artificial intelligence solutions for modern businesses. 
+              From machine learning models to intelligent automation systems.
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold text-white mb-2">AI & ML</h3>
-              <p className="text-blue-100">Advanced artificial intelligence solutions</p>
+          <div className="bg-card p-8 rounded-xl border hover:shadow-lg transition-all duration-300 hover:scale-105 group">
+            <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+              <span className="text-3xl">☁️</span>
             </div>
-            <div className="bg-gradient-to-br from-green-600 to-blue-600 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Cloud</h3>
-              <p className="text-green-100">Scalable cloud infrastructure</p>
+            <h3 className="text-2xl font-semibold mb-4">Cloud Services</h3>
+            <p className="text-foreground/70 leading-relaxed">
+              Scalable cloud infrastructure and deployment solutions. 
+              Secure, reliable, and optimized for performance.
+            </p>
+          </div>
+          
+          <div className="bg-card p-8 rounded-xl border hover:shadow-lg transition-all duration-300 hover:scale-105 group">
+            <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+              <span className="text-3xl">🚀</span>
             </div>
-            <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">💻</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Web Dev</h3>
-              <p className="text-purple-100">Modern web applications</p>
+            <h3 className="text-2xl font-semibold mb-4">Digital Transformation</h3>
+            <p className="text-foreground/70 leading-relaxed">
+              Complete digital transformation strategies and implementation. 
+              Modernize your business with cutting-edge technology.
+            </p>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="bg-card rounded-xl border p-8 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-foreground/70">Projects Completed</div>
             </div>
-            <div className="bg-gradient-to-br from-red-600 to-orange-600 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Security</h3>
-              <p className="text-red-100">Comprehensive cybersecurity</p>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
+              <div className="text-foreground/70">Happy Clients</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">99.9%</div>
+              <div className="text-foreground/70">Uptime</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-foreground/70">Support</div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our technology solutions can help you achieve your goals.
+        {/* CTA Section */}
+        <div className="text-center bg-primary/5 rounded-xl p-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our technology solutions can help your business grow and succeed.
           </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-          >
+          <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105">
             Start Your Project
-          </Link>
+          </button>
         </div>
       </div>
     </div>
   );
-};
-
-export default Home;
+}
