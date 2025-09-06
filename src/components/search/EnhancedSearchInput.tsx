@@ -1,24 +1,22 @@
-import React, { useState, useEffect, useRef, useMemo } from "react",
-import { useTranslation } from "react-i18next",
-import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useRouter } from "next/router",
-import { slugify } from "@/lib/slugify",
-import { debounce } from "lodash",
-import { logInfo, logWarn } from '@/utils/productionLogger',
-
-
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { Search, X } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useRouter } from "next/router";
+import { slugify } from "@/lib/slugify";
+import { debounce } from "lodash";
+import { logInfo, logWarn } from '@/utils/productionLogger';
 interface EnhancedSearchInputProps {
   value: string,
-  onChange: (value: string) => void,
+  onChange: (value: string,) => void,
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  onSelectSuggestion?: (suggestion: SearchSuggestion,) => void,
   placeholder?: string,
   /**
    * Optional list of fallback suggestions (e.g. recent searches).
@@ -48,8 +46,8 @@ export function EnhancedSearchInput({
   const debounced = useDebounce(value, 200),
 
   const debouncedFetchSuggestions = useMemo(
-    () =>
-      debounce(async (query: string) => {
+    (,) =>
+      debounce(async (query: string,) => {
         if (!query.trim()) {
           setApiSuggestions([]),
           return
@@ -83,7 +81,7 @@ export function EnhancedSearchInput({
   ),
 
   // Fetch suggestions from API when input value changes
-  useEffect(() => {
+  useEffect((,) => {
     if (!debounced) {
       // Show recent suggestions provided via props when no query entered
       setFilteredSuggestions(
@@ -109,13 +107,13 @@ export function EnhancedSearchInput({
         }
         setHighlightedIndex(-1)
       })
-      .catch(() => setFilteredSuggestions([])),
+      .catch((,) => setFilteredSuggestions([])),
 
     return () => controller.abort()
   }, [debounced, searchSuggestions]),
 
   // Handle clicks outside the component to close suggestions
-  useEffect(() => {
+  useEffect((,) => {
     function handleClickOutside(event: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsFocused(false),
@@ -129,7 +127,7 @@ export function EnhancedSearchInput({
 
   const router = useRouter(),
 
-  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
+  const handleSelectSuggestion = (suggestionObj: SearchSuggestion,) => {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
     if (onSelectSuggestion) {
@@ -153,7 +151,7 @@ export function EnhancedSearchInput({
     setHighlightedIndex(-1)
   },
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>,) => {
     switch (e.key) {
       case 'ArrowDown':
         if (isFocused && filteredSuggestions.length > 0) {
@@ -201,28 +199,28 @@ export function EnhancedSearchInput({
   return (
     <div
       className="relative w-full"
-      ref={containerRef}
+      ref = {containerRef,}
       role="combobox"
-      aria-expanded={isFocused && filteredSuggestions.length > 0}
+      aria-expanded = {isFocused && filteredSuggestions.length > 0,}
       aria-haspopup="listbox"
       aria-controls="autocomplete-suggestions-list" // Added aria-controls
-      onClick={() => inputRef.current?.focus()}
+      onClick = {(,) => inputRef.current?.focus(),}
     >
       <div className="relative flex items-center w-full">
         <Search 
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />
         <Input
-          ref={inputRef}
+          ref = {inputRef,}
           type="text"
           id="enhanced-search-input"
           name="search"
-          value={value}
-          onChange={(e) => {
+          value = {value,}
+          onChange={(e,) => {
             onChange(e.target.value),
             setEnterHandledPostFocus(false)
           }}
-          onFocus={(e) => {
+          onFocus={(e,) => {
             setIsFocused(true),
             setHighlightedIndex(-1), // Explicitly reset on focus
             const currentVal = e.target.value,
@@ -230,16 +228,16 @@ export function EnhancedSearchInput({
             setEnterHandledPostFocus(false),
             e.target.setSelectionRange(currentVal.length, currentVal.length)
           }}
-          onBlur={(e) => {
+          onBlur = {(e,) => {
             const relatedTarget = e.relatedTarget as HTMLElement,
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
               setIsFocused(false),
               setHighlightedIndex(-1)
-            }
+            ,}
             setValueOnFocus(null)
           }}
-          onKeyDown={handleKeyDown}
-          aria-label={t('general.search')}
+          onKeyDown = {handleKeyDown,}
+          aria-label = {t('general.search'),}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
@@ -248,7 +246,7 @@ export function EnhancedSearchInput({
         {value && (
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
+            onClick = {(,) => onChange(''),}
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
@@ -257,10 +255,10 @@ export function EnhancedSearchInput({
       </div>
       
       <AutocompleteSuggestions
-        suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
+        suggestions = {filteredSuggestions,}
+        searchTerm = {value,}
+        onSelectSuggestion = {handleSelectSuggestion,}
+        visible = {isFocused,}
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />

@@ -1,13 +1,13 @@
 'use client'
 
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { AlertTriangle, RefreshCw, Home, Bug, Send, Clipboard } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import * as Sentry from '@sentry/nextjs'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { AlertTriangle, RefreshCw, Home, Bug, Send, Clipboard } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorBoundaryState {
   hasError: boolean
   error: Error | null
@@ -21,7 +21,7 @@ interface ErrorBoundaryState {
 interface ErrorBoundaryProps {
   children: ReactNode
   fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  onError?: (error: Error, errorInfo: ErrorInfo,) => void
   enableRetry?: boolean
   maxRetries?: number
   showReportButton?: boolean
@@ -42,7 +42,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       retryCount: 0,
       userFeedback: '',
       showDetails: false
-    }
+    ,}
   }
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
@@ -65,8 +65,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       url: typeof window !== 'undefined' ? window.location.href : 'SSR',
       userId: this.getUserId(),
       buildInfo: this.getBuildInfo()
-    }
-
+    ,}
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error')
@@ -77,7 +76,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
 
     // Report to Sentry
-    Sentry.withScope((scope) => {
+    Sentry.withScope((scope,) => {
       scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary')
       scope.setLevel('error')
       scope.setContext('errorInfo', {
@@ -180,7 +179,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
     const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff
 
-    const timeout = setTimeout(() => {
+    const timeout = setTimeout((,) => {
       this.setState({
         hasError: false,
         error: null,
@@ -203,8 +202,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       timestamp: new Date().toISOString(),
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown'
-    }
-
+    ,}
     try {
       await navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       // Could show a toast notification here
@@ -280,7 +278,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 </CardTitle>
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
-                    variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
+                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary',}
                   >
                     {severity.toUpperCase()}
                   </Badge>
@@ -388,13 +386,13 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 export const useErrorBoundary = () => {
   const [error, setError] = React.useState<Error | null>(null)
 
-  React.useEffect(() => {
+  React.useEffect((,) => {
     if (error) {
       throw error
     }
   }, [error])
 
-  const captureError = React.useCallback((error: Error) => {
+  const captureError = React.useCallback((error: Error,) => {
     setError(error)
   }, [])
 
@@ -405,8 +403,8 @@ export const useErrorBoundary = () => {
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
-) => {
-  const WrappedComponent = (props: P) => (
+,) => {
+  const WrappedComponent = (props: P,) => (
     <GlobalErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </GlobalErrorBoundary>

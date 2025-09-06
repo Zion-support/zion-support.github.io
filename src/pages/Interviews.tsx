@@ -1,20 +1,19 @@
 
-import React, { useEffect, useState } from "react",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { InterviewCard } from "@/components/interviews/InterviewCard",
-import { Button } from "@/components/ui/button",
-import { Calendar, Clock, Video } from 'lucide-react'
-import { format, isAfter, parseISO, startOfDay } from "date-fns",
-
+import React, { useEffect, useState } from "react";
+import { useInterviews } from "@/hooks/useInterviews";
+import { Interview } from "@/types/interview";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { InterviewCard } from "@/components/interviews/InterviewCard";
+import { Button } from "@/components/ui/button";
+import { Calendar, Clock, Video } from 'lucide-react';
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
   
-  useEffect(() => {
+  useEffect((,) => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
       await fetchInterviews()
@@ -28,12 +27,12 @@ function InterviewsContent() {
   const today = startOfDay(now),
   
   const upcomingInterviews = interviews
-    .filter((interview) => {
+    .filter((interview,) => {
       const interviewDate = parseISO(interview.scheduled_date),
       return isAfter(interviewDate, now) && 
         ['confirmedrequested'].includes(interview.status)
     })
-    .sort((a, b) => 
+    .sort((a, b,) => 
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
     ),
   
@@ -48,10 +47,10 @@ function InterviewsContent() {
   }),
 
   // Group interviews by date
-  const groupInterviewsByDate = (interviews: Interview[]) => {
+  const groupInterviewsByDate = (interviews: Interview[],) => {
     const grouped: Record<string, Interview[]> = {},
     
-    interviews.forEach((interview) => {
+    interviews.forEach((interview,) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
@@ -66,23 +65,23 @@ function InterviewsContent() {
   const pendingGrouped = groupInterviewsByDate(pendingInterviews),
   const pastGrouped = groupInterviewsByDate(pastInterviews),
 
-  const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
+  const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>,) => {
     return Object.entries(groupedInterviews)
-      .sort(([dateA], [dateB]) => 
+      .sort(([dateA], [dateB],) => 
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
-      .map(([date, interviews]) => (
+      .map(([date, interviews],) => (
         <div key={date} className="mb-8">
           <h3 className="text-lg font-medium text-white mb-4 flex items-center">
             <Calendar className="h-5 w-5 mr-2" />
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {interviews.map((interview) => (
+            {interviews.map((interview,) => (
               <InterviewCard 
-                key={interview.id} 
-                interview={interview}
-                onRefresh={async () => {
+                key = {interview.id,}
+                interview = {interview,}
+                onRefresh={async (,) => {
                   await fetchInterviews()
                 }}
               />

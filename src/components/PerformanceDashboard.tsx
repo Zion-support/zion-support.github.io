@@ -1,9 +1,8 @@
-import React, { useState } from 'react',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
-
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react';
 interface PerformanceMetrics {
   buildSize: string,
   pageCount: number,
@@ -79,7 +78,7 @@ const PerformanceDashboard: React.FC = () => {
     }
   ],
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: string,) => {
     switch (status) {
       case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
       case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,
@@ -88,7 +87,7 @@ const PerformanceDashboard: React.FC = () => {
     }
   },
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (impact: string,) => {
     switch (impact) {
       case 'high': return 'bg-red-100 text-red-800',
       case 'medium': return 'bg-yellow-100 text-yellow-800',
@@ -97,7 +96,7 @@ const PerformanceDashboard: React.FC = () => {
     }
   },
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string,) => {
     switch (category) {
       case 'performance': return <Zap className="h-4 w-4" />,
       case 'security': return <Shield className="h-4 w-4" />,
@@ -176,7 +175,7 @@ const PerformanceDashboard: React.FC = () => {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {completedImprovements.map((improvement) => (
+            {completedImprovements.map((improvement,) => (
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}

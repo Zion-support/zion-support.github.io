@@ -1,12 +1,12 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
-import { useTranslation } from "react-i18next",
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import React from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react';
+import { cn } from "@/lib/utils";
 interface FeatureCTAsProps {
   className?: string,
   style?: React.CSSProperties
@@ -100,11 +100,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
 
   return (
     <section
-      className={cn(
+      className = {cn(
         "py-16 bg-gradient-to-b from-background to-background/90",
         className
-      )}
-      style={style}
+      ),}
+      style = {style,}
     >
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
@@ -117,7 +117,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+          {features.map((feature, index,) => (
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
               <CardHeader className="pb-2">
                 <div className="flex justify-between items-start">
@@ -145,7 +145,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
               <CardFooter>
                 <Button asChild className="w-full gap-1">
                   <Link
-                    href={feature.link}
+                    href = {feature.link,}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
                     className="cursor-pointer"
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}

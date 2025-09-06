@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
-import { cn } from '@/lib/utils',
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -41,11 +41,11 @@ export function OptimizedImage({
   const imgRef = useRef<HTMLDivElement>(null),
 
   // Intersection Observer for lazy loading
-  useEffect(() => {
+  useEffect((,) => {
     if (!lazy || priority || isInView) return,
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([entry],) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true),
           observer.disconnect()
@@ -64,7 +64,7 @@ export function OptimizedImage({
   }, [lazy, priority, isInView]),
 
   // Generate WebP-compatible src
-  const getOptimizedSrc = (originalSrc: string) => {
+  const getOptimizedSrc = (originalSrc: string,) => {
     // If it's already optimized or external, return as-is
     if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {
       return originalSrc
@@ -105,24 +105,24 @@ export function OptimizedImage({
 
   return (
     <div
-      ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
+      ref = {imgRef,}
+      className = {cn('relative overflow-hidden', className),}
       style={{ width, height }}
     >
       {isInView && !hasError && (
         <Image
-          src={getOptimizedSrc(src)}
-          alt={alt}
-          width={width}
-          height={height}
-          priority={priority}
-          blurDataURL={placeholder === 'blur' ? generateBlurDataURL() : undefined}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={cn(
+          src = {getOptimizedSrc(src),}
+          alt = {alt,}
+          width = {width,}
+          height = {height,}
+          priority = {priority,}
+          blurDataURL = {placeholder === 'blur' ? generateBlurDataURL() : undefined,}
+          onLoad = {handleLoad,}
+          onError = {handleError,}
+          className = {cn(
             'transition-opacity duration-300',
             isLoading ? 'opacity-0' : 'opacity-100'
-          )}
+          ),}
           {...props}
         />
       )}
@@ -137,10 +137,10 @@ export function OptimizedImage({
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
           {fallbackSrc ? (
             <img
-              src={fallbackSrc}
-              alt={alt}
+              src = {fallbackSrc,}
+              alt = {alt,}
               className="max-w-full max-h-full object-contain"
-              onLoad={handleLoad}
+              onLoad = {handleLoad,}
             />
           ) : (
             <div className="text-gray-400 text-center">
@@ -178,8 +178,8 @@ export function withImageOptimization<P extends { src: string, alt: string }>(
     
     return (
       <OptimizedImage
-        src={src}
-        alt={alt}
+        src = {src,}
+        alt = {alt,}
         {...(otherProps as any)}
       />
     )
@@ -188,7 +188,7 @@ export function withImageOptimization<P extends { src: string, alt: string }>(
 
 // Utility to preload critical images
 export function preloadImage(src: string): Promise<void> {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject,) => {
     const img = new window.Image(),
     img.onload = () => resolve(),
     img.onerror = reject,
@@ -198,7 +198,7 @@ export function preloadImage(src: string): Promise<void> {
 
 // Utility to get image dimensions
 export function getImageDimensions(src: string): Promise<{ width: number, height: number }> {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject,) => {
     const img = new window.Image(),
     img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight }),
     img.onerror = reject,

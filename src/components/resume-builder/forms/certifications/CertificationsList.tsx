@@ -1,13 +1,13 @@
 
-import { Certification } from '@/types/resume',
-import { Card, CardContent } from '@/components/ui/card',
-import { Button } from '@/components/ui/button',
-import { Edit, Trash2 } from 'lucide-react'
-import { format } from 'date-fns',
+import { Certification } from '@/types/resume';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Edit, Trash2 } from 'lucide-react';
+import { format } from 'date-fns';
 interface CertificationsListProps {
   certifications: Certification[],
-  onEdit: (cert: Certification) => void,
-  onDelete: (id: string) => void
+  onEdit: (cert: Certification,) => void,
+  onDelete: (id: string,) => void
 }
 
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
@@ -18,7 +18,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
-      {certifications.map((cert) => (
+      {certifications.map((cert,) => (
         <Card key={cert.id} className="bg-muted/40">
           <CardContent className="pt-6">
             <div className="flex justify-between">
@@ -41,7 +41,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => onEdit(cert)}
+                  onClick = {() => onEdit(cert),}
                   aria-label="Edit certification"
                 >
                   <Edit className="h-4 w-4" />
@@ -49,7 +49,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => onDelete(cert.id!)}
+                  onClick = {() => onDelete(cert.id!),}
                   aria-label="Delete certification"
                 >
                   <Trash2 className="h-4 w-4" />
@@ -59,7 +59,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
             {cert.credential_url && (
               <p className="text-xs mt-2">
                 <a 
-                  href={cert.credential_url} 
+                  href = {cert.credential_url,}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"

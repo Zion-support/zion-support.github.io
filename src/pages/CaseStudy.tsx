@@ -1,21 +1,21 @@
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { CASE_STUDIES } from '@/data/case-studies',
-import { SEO } from '@/components/SEO',
-import { Button } from '@/components/ui/button',
-import { ArrowLeft } from 'lucide-react'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { CASE_STUDIES } from '@/data/case-studies';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 import {
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
-import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd',
-import { getBreadcrumbsForPath } from '@/utils/routeUtils',
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {
   const router = useRouter(),
   const slug = router.query.slug as string,
-  const study = CASE_STUDIES.find((s) => s.slug === slug),
+  const study = CASE_STUDIES.find((s,) => s.slug === slug),
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),
 
   if (!study) {
@@ -63,7 +63,7 @@ export default function CaseStudy() {
             </Link>
           </Button>
           <img
-            src={study.companyLogo}
+            src = {study.companyLogo,}
             alt={`${study.company} logo`}
             className="h-12 mb-4"
             loading="lazy"
@@ -89,3 +89,4 @@ export default function CaseStudy() {
     </>
   )
 }
+;

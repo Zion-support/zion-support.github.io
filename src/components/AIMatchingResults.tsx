@@ -1,15 +1,15 @@
-import { useState } from "react",
-import { MatchResultItem } from "@/lib/ai-matchmaking",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-import Skeleton from "@/components/ui/skeleton",
-import { cn } from "@/lib/utils",
+import { useState } from "react";
+import { MatchResultItem } from "@/lib/ai-matchmaking";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem) => void,
+  onSelectMatch?: (match: MatchResultItem,) => void,
   isLoading?: boolean,
   projectDescription?: string,
   serviceType?: string
@@ -33,7 +33,7 @@ export function AIMatchingResults({
   },
   
   // Get the icon for a category
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string,) => {
     const lowerCategory = category.toLowerCase(),
     if (lowerCategory.includes("talent")) return User,
     if (lowerCategory.includes("equipment")) return Monitor,
@@ -91,16 +91,16 @@ export function AIMatchingResults({
           </TabsTrigger>
         </TabsList>
         
-        {Object.entries(categories).map(([tab, items]) => (
+        {Object.entries(categories).map(([tab, items],) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
             {items.length > 0 ? (
-              items.map((match) => {
+              items.map((match,) => {
                 const CategoryIcon = getCategoryIcon(match.category),
                 return (
                   <Card 
-                    key={match.id}
+                    key = {match.id,}
                     className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
-                    onClick={() => onSelectMatch && onSelectMatch(match)}
+                    onClick = {(,) => onSelectMatch && onSelectMatch(match),}
                   >
                     <div className="flex">
                       <div className={cn(
@@ -141,7 +141,7 @@ export function AIMatchingResults({
                               <Badge variant="outline">
                                 {match.category}
                               </Badge>
-                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number,) => (
                                 <Badge key={i} variant="outline">
                                   {skill}
                                 </Badge>

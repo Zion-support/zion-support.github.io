@@ -1,15 +1,15 @@
 
-import React, { useEffect, useState } from 'react',
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',
-import { ProtectedRoute } from '@/components/ProtectedRoute',
-import { ConversationsList, ConversationDetailView } from '@/components/messaging',
-import { useIsMobile } from '@/hooks/use-mobile',
-import { toast } from 'sonner',
-import { Button } from '@/components/ui/button',
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react';
+import { useMessaging } from '@/context/MessagingContext';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView } from '@/components/messaging';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router', // Changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {
 
   const { 
@@ -24,7 +24,7 @@ export default function MessagingInbox() {
   const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
-  useEffect(() => {
+  useEffect((,) => {
     // Fetch conversations when component mounts
     const loadData = async () => {
       try {
@@ -68,7 +68,7 @@ export default function MessagingInbox() {
             
             {activeConversation && (
               <Button 
-                onClick={startVideoCall}
+                onClick = {startVideoCall,}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
                 <Video className="h-4 w-4" />
@@ -86,10 +86,10 @@ export default function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
-                  conversations={conversations}
-                  activeConversation={activeConversation}
-                  setActiveConversation={setActiveConversation}
-                  markAsRead={markAsRead}
+                  conversations = {conversations,}
+                  activeConversation = {activeConversation,}
+                  setActiveConversation = {setActiveConversation,}
+                  markAsRead = {markAsRead,}
                 />
               )}
               

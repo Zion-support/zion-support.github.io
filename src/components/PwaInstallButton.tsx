@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Loader2 } from 'lucide-react'
-import { toast } from 'sonner',
-import { safeStorage } from '@/utils/safeStorage',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { toast } from 'sonner';
+import { safeStorage } from '@/utils/safeStorage';
+import {logErrorToProduction} from '@/utils/productionLogger';
 const DISMISS_KEY = 'pwaDismissed',
 const DISMISS_MS = 7 * 24 * 60 * 60 * 1000, // 7 days
 
@@ -12,7 +12,7 @@ export const PwaInstallButton: React.FC = () => {
   const [isInstalling, setIsInstalling] = useState(false),
 
   // Check dismissal flag and register event listener
-  useEffect(() => {
+  useEffect((,) => {
     if (typeof window === 'undefined') return,
 
     const dismissedAt = safeStorage.getItem(DISMISS_KEY),
@@ -21,7 +21,7 @@ export const PwaInstallButton: React.FC = () => {
 
     if (recentlyDismissed || inStandalone) return,
 
-    const handler = (e: BeforeInstallPromptEvent) => {
+    const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault(),
       setPromptEvent(e)
     },

@@ -1,18 +1,18 @@
 
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { Job, JobStatus } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, Edit, X, Eye } from 'lucide-react'
-import { format } from "date-fns",
-import Link from "next/link",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState, useEffect } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { Job, JobStatus } from "@/types/jobs";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Loader2, Edit, X, Eye } from 'lucide-react';
+import { format } from "date-fns";
+import Link from "next/link";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
   filter?: JobStatus,
-  onSelectJob?: (jobId: string, jobTitle: string) => void
+  onSelectJob?: (jobId: string, jobTitle: string,) => void
 }
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
@@ -20,7 +20,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchJobs = async () => {
       if (!user) return,
 
@@ -73,7 +73,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     )
   }
 
-  const getStatusColor = (status: JobStatus) => {
+  const getStatusColor = (status: JobStatus,) => {
     switch (status) {
       case "new": return "bg-blue-100 text-blue-800",
       case "in_progress":
@@ -89,13 +89,13 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      {jobs.map((job) => (
+      {jobs.map((job,) => (
         <Card 
-          key={job.id} 
+          key = {job.id,}
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
-          onClick={() => onSelectJob?.(job.id, job.title)}
+          onClick = {(,) => onSelectJob?.(job.id, job.title),}
         >
           <CardHeader className="p-4">
             <div className="flex justify-between items-start">
@@ -115,7 +115,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
-              {job.skills.slice(0, 3).map((skill, index) => (
+              {job.skills.slice(0, 3).map((skill, index,) => (
                 <Badge key={index} variant="outline" className="text-xs">
                   {skill}
                 </Badge>

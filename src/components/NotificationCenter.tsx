@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
-import { Bell } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',
-import { useNotifications } from '@/context/notifications/NotificationContext',
-import { useEnqueueSnackbar } from '@/context',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { Bell } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { useNotifications } from '@/context/notifications/NotificationContext';
+import { useEnqueueSnackbar } from '@/context';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   NotificationFilter,
   NotificationHeader, 
   NotificationList, 
   NotificationFooter 
 } from '@/components/notifications',
-import { FilterType } from '@/components/notifications/NotificationFilter',
+import { FilterType } from '@/components/notifications/NotificationFilter';
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
@@ -32,7 +32,7 @@ export const NotificationCenter: React.FC = () => {
   const enqueueSnackbar = useEnqueueSnackbar(),
 
   // Refresh notifications when popover opens, but avoid duplicate
-  useEffect(() => {
+  useEffect((,) => {
     if (open && !loadedOnce) {
       const loadNotifications = async () => {
         try {
@@ -61,12 +61,12 @@ export const NotificationCenter: React.FC = () => {
     }
   },
 
-  const handleFilterChange = (newFilter: FilterType) => {
+  const handleFilterChange = (newFilter: FilterType,) => {
     setFilter(newFilter as any)
   },
 
   return (
-    <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
+    <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
@@ -79,22 +79,22 @@ export const NotificationCenter: React.FC = () => {
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
         <NotificationHeader 
-          unreadCount={unreadCount} 
-          onMarkAllAsRead={handleMarkAllAsRead} 
+          unreadCount = {unreadCount,}
+          onMarkAllAsRead = {handleMarkAllAsRead,}
         />
         
         <NotificationFilter 
-          filter={filter as FilterType} 
-          onFilterChange={handleFilterChange} 
+          filter = {filter as FilterType,}
+          onFilterChange = {handleFilterChange,}
         />
         
         <NotificationList 
-          loading={loading}
-          error={error}
-          notifications={filteredNotifications}
-          onMarkAsRead={markAsRead}
-          onDismiss={dismissNotification}
-          onRetry={fetchNotifications}
+          loading = {loading,}
+          error = {error,}
+          notifications = {filteredNotifications,}
+          onMarkAsRead = {markAsRead,}
+          onDismiss = {dismissNotification,}
+          onRetry = {fetchNotifications,}
         />
         
         <NotificationFooter onClose={() => setOpen(false)} />

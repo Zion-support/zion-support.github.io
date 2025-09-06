@@ -1,21 +1,19 @@
-import { useState, useEffect } from 'react',
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from react-router-dom
-import { useFormik } from 'formik',
-import * as Yup from 'yup',
-import axios from 'axios',
-import Link from 'next/link',
-import { Input } from '@/components/ui/input',
-import { Button } from '@/components/ui/button',
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter',
-import { AuthButtons } from '@/components/AuthButtons',
-import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-import { toast } from '@/hooks/use-toast',
-import { AuthLayout } from '@/layout',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
+import Link from 'next/link';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
+import { AuthButtons } from '@/components/AuthButtons';
+import { AlertCircle, CheckCircle, Mail } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+import { AuthLayout } from '@/layout';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 const SignupSchema = Yup.object({
   name: Yup.string().required('Name is required'),
   email: Yup.string().email('Invalid email').required('Email is required'),
@@ -70,7 +68,7 @@ export default function Signup() {
     }
   },
 
-  useEffect(() => {
+  useEffect((,) => {
     performHealthCheck()
   }, []),
 
@@ -83,7 +81,7 @@ export default function Signup() {
       terms: false
     },
     validationSchema: SignupSchema,
-    onSubmit: async (values, { setErrors }) => {
+    onSubmit: async (values, { setErrors },) => {
       logInfo('Form submission started with:', { 
         name: values.name, 
         email: values.email,
@@ -107,7 +105,7 @@ export default function Signup() {
             metadata: {
               partnerProgram: true,
               signupType: 'partner'
-            }
+            ,}
           })
         },
         
@@ -153,7 +151,7 @@ export default function Signup() {
                 : 'Welcome to the platform. You can now log in.'}),
             
             // Redirect to appropriate page after a short delay
-            setTimeout(() => {
+            setTimeout((,) => {
               router.push(isPartnerSignup ? '/partners' : '/login')
             }, 2000)
           }
@@ -222,7 +220,7 @@ export default function Signup() {
     }
   }),
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>,) => {
     e.preventDefault(),
     formik.setTouched({
       name: true,
@@ -235,9 +233,9 @@ export default function Signup() {
   },
 
   // After successful registration, guide the user to the verification screen
-  useEffect(() => {
+  useEffect((,) => {
     if (emailVerificationRequired && formik.values.email) {
-      const timer = setTimeout(() => {
+      const timer = setTimeout((,) => {
         router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
       }, 3000),
       return () => clearTimeout(timer)
@@ -281,8 +279,8 @@ export default function Signup() {
                 <Button 
                   variant="outline" 
                   size="sm" 
-                  onClick={performHealthCheck}
-                  disabled={healthCheckLoading}
+                  onClick = {performHealthCheck,}
+                  disabled = {healthCheckLoading,}
                   className="ml-2 text-xs"
                 >
                   {healthCheckLoading ? 'Checking...' : 'Retry'}
@@ -324,9 +322,9 @@ export default function Signup() {
               id="name"
               name="name"
               data-testid="name-input"
-              value={formik.values.name}
-              onChange={formik.handleChange}
-              disabled={loading || emailVerificationRequired}
+              value = {formik.values.name,}
+              onChange = {formik.handleChange,}
+              disabled = {loading || emailVerificationRequired,}
             />
             {formik.touched.name && formik.errors.name && (
               <div className="text-red-500 text-sm">{formik.errors.name}</div>
@@ -342,9 +340,9 @@ export default function Signup() {
               type="email"
               name="email"
               data-testid="email-input"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              disabled={loading || emailVerificationRequired}
+              value = {formik.values.email,}
+              onChange = {formik.handleChange,}
+              disabled = {loading || emailVerificationRequired,}
             />
             {formik.touched.email && formik.errors.email && (
               <div className="text-red-500 text-sm">{formik.errors.email}</div>
@@ -360,9 +358,9 @@ export default function Signup() {
             type="password"
             name="password"
             data-testid="password-input"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            disabled={loading || emailVerificationRequired}
+            value = {formik.values.password,}
+            onChange = {formik.handleChange,}
+            disabled = {loading || emailVerificationRequired,}
           />
           <PasswordStrengthMeter password={formik.values.password} />
           {formik.touched.password && formik.errors.password && (
@@ -379,9 +377,9 @@ export default function Signup() {
               type="password"
               name="confirm"
               data-testid="confirm-password-input"
-              value={formik.values.confirm}
-              onChange={formik.handleChange}
-              disabled={loading || emailVerificationRequired}
+              value = {formik.values.confirm,}
+              onChange = {formik.handleChange,}
+              disabled = {loading || emailVerificationRequired,}
             />
             {formik.touched.confirm && formik.errors.confirm && (
               <div className="text-red-500 text-sm">{formik.errors.confirm}</div>
@@ -394,9 +392,9 @@ export default function Signup() {
               name="terms"
               type="checkbox"
               data-testid="terms-checkbox"
-              checked={formik.values.terms}
-              onChange={formik.handleChange}
-              disabled={loading || emailVerificationRequired}
+              checked = {formik.values.terms,}
+              onChange = {formik.handleChange,}
+              disabled = {loading || emailVerificationRequired,}
             />
             <label htmlFor="terms" className="text-sm">
               I agree to the{' '}
@@ -412,9 +410,9 @@ export default function Signup() {
           {!emailVerificationRequired ? (
             <Button 
               type="submit" 
-              disabled={loading} 
+              disabled = {loading,}
               data-testid="signup-submit"
-              className={healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : ''}
+              className = {healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : '',}
             >
               {loading ? (
                 <>
@@ -431,7 +429,7 @@ export default function Signup() {
                 type="button"
                 variant="outline"
                 className="w-full"
-                onClick={() => router.push('/login')}
+                onClick = {(,) => router.push('/login'),}
               >
                 Go to Login
               </Button>

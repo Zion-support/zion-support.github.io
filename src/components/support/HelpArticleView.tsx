@@ -1,10 +1,10 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { ThumbsUp, ThumbsDown } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { HELP_CATEGORIES } from "./help-content",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ThumbsUp, ThumbsDown } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast";
+import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -26,7 +26,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     return <div>Article not found</div>
   }
   
-  const handleFeedback = (type: "helpful" | "not-helpful") => {
+  const handleFeedback = (type: "helpful" | "not-helpful",) => {
     setFeedbackGiven(type),
     
     // In a real implementation, this would send feedback to the server
@@ -47,7 +47,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         </div>
         
         <div className="prose dark:prose-invert max-w-none mb-8">
-          {article.content.split("\n").map((paragraph, idx) => (
+          {article.content.split("\n").map((paragraph, idx,) => (
             <p key={idx}>{paragraph}</p>
           ))}
         </div>
@@ -62,9 +62,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
               <Button
                 variant="outline"
                 size="sm"
-                className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
-                onClick={() => handleFeedback("helpful")}
-                disabled={feedbackGiven !== null}
+                className = {feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : "",}
+                onClick = {() => handleFeedback("helpful"),}
+                disabled = {feedbackGiven !== null,}
               >
                 <ThumbsUp className="h-4 w-4 mr-2" />
                 Yes
@@ -73,9 +73,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
               <Button
                 variant="outline"
                 size="sm"
-                className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
-                onClick={() => handleFeedback("not-helpful")}
-                disabled={feedbackGiven !== null}
+                className = {feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : "",}
+                onClick = {() => handleFeedback("not-helpful"),}
+                disabled = {feedbackGiven !== null,}
               >
                 <ThumbsDown className="h-4 w-4 mr-2" />
                 No

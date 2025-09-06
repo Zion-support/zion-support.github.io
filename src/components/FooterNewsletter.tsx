@@ -1,9 +1,9 @@
-import React, { useState, useRef } from 'react',
-import { Input } from '@/components/ui/input',
-import { Button } from '@/components/ui/button',
-import { useToast } from '@/hooks/use-toast',
-import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useRef } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+import { Loader2 } from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
   const [email, setEmail] = useState(''),
   const [honeypot, setHoneypot] = useState(''),
@@ -15,7 +15,7 @@ export function FooterNewsletter(): React.ReactElement {
 
   const lastSubmit = useRef(0),
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent,) => {
     e.preventDefault(),
     if (honeypot) return, // ignore bots
     const now = Date.now(),
@@ -40,7 +40,7 @@ export function FooterNewsletter(): React.ReactElement {
         body: JSON.stringify({ email: trimmedEmail })
       }),
 
-      const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error
+      const data = await res.json().catch((,) => ({})), // Ensure data is an object even on parse error
 
       if (res.ok) {
         if (data.status === 'already_subscribed') {
@@ -68,7 +68,7 @@ export function FooterNewsletter(): React.ReactElement {
     <form
       id="footer-newsletter-form"
       aria-label="Newsletter sign-up"
-      onSubmit={handleSubmit}
+      onSubmit = {handleSubmit,}
       className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
     >
       <label htmlFor="newsletter-email" className="sr-only">
@@ -80,8 +80,8 @@ export function FooterNewsletter(): React.ReactElement {
         name="newsletterEmail"
         placeholder="Enter your email"
         className="flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        value = {email,}
+        onChange = {(e,) => setEmail(e.target.value),}
         autoComplete="email"
         required
       />
@@ -89,16 +89,16 @@ export function FooterNewsletter(): React.ReactElement {
       {/* Honeypot field */}
       <input
         type="text"
-        value={honeypot}
-        onChange={(e) => setHoneypot(e.target.value)}
-        tabIndex={-1}
+        value = {honeypot,}
+        onChange = {(e,) => setHoneypot(e.target.value),}
+        tabIndex = {-1,}
         autoComplete="off"
         style={{ display: 'none' }}
       />
       <Button
         type="submit"
         aria-label="Subscribe to newsletter"
-        disabled={isSubmitting}
+        disabled = {isSubmitting,}
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
       >
         {isSubmitting ? (

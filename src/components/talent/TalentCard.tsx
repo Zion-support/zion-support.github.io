@@ -1,18 +1,18 @@
-import React from 'react',
-import { useRouter } from 'next/router',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { FavoriteButton } from "@/components/FavoriteButton",
-import { TalentProfile } from "@/types/talent",
-import { RatingStars } from '@/components/RatingStars',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useCart } from '@/context/CartContext',
+import React from 'react';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { TalentProfile } from "@/types/talent";
+import { RatingStars } from '@/components/RatingStars';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useCart } from '@/context/CartContext';
 export interface TalentCardProps {
   talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
+  onViewProfile: (id: string,) => void,
+  onRequestHire: (talent: TalentProfile,) => void,
   isAuthenticated: boolean
 }
 
@@ -21,7 +21,7 @@ const TalentCardComponent = ({
   onViewProfile,
   onRequestHire,
   isAuthenticated
-}: TalentCardProps) => {
+}: TalentCardProps,) => {
   const router = useRouter(),
   
   const handleViewProfile = () => {
@@ -34,7 +34,7 @@ const TalentCardComponent = ({
     }
   },
 
-  const handleRequestHire = (e: React.MouseEvent) => {
+  const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault(),
     e.stopPropagation(),
     if (onRequestHire) {
@@ -49,8 +49,8 @@ const TalentCardComponent = ({
   return (
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
-      onClick={handleViewProfile}
-      tabIndex={0}
+      onClick = {handleViewProfile,}
+      tabIndex = {0,}
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -59,8 +59,8 @@ const TalentCardComponent = ({
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
                 <img
-                  src={talent.profile_picture_url}
-                  alt={talent.full_name}
+                  src = {talent.profile_picture_url,}
+                  alt = {talent.full_name,}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -107,9 +107,9 @@ const TalentCardComponent = ({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
+              {skills.map((skill, index,) => (
                 <span 
-                  key={index}
+                  key = {index,}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
@@ -142,7 +142,7 @@ const TalentCardComponent = ({
               <Button
                 size="sm"
                 variant="secondary"
-                onClick={handleRequestHire}
+                onClick = {handleRequestHire,}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -151,7 +151,7 @@ const TalentCardComponent = ({
             <Button
               size="sm"
               variant="ghost"
-              onClick={(e) => {
+              onClick={(e,) => {
                 e.stopPropagation(),
                 handleViewProfile()
               }}

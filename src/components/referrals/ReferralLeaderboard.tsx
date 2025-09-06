@@ -1,7 +1,6 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from 'lucide-react'
-
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Award } from 'lucide-react';
 interface LeaderboardEntry {
   rank: number,
   name: string,
@@ -29,9 +28,9 @@ export function ReferralLeaderboard() {
       </CardHeader>
       <CardContent>
         <div className="space-y-2">
-          {leaderboardData.map((entry) => (
+          {leaderboardData.map((entry,) => (
             <div 
-              key={entry.rank}
+              key = {entry.rank,}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
             >
               <div className="flex items-center gap-3">

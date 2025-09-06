@@ -1,13 +1,13 @@
 
-import { SEO } from "@/components/SEO",
-import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useState, useEffect } from "react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Star, AlertTriangle } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { SEO } from "@/components/SEO";
+import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useState, useEffect } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Star, AlertTriangle } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast";
+import { logErrorToProduction } from '@/utils/productionLogger';
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
@@ -31,7 +31,7 @@ function ReviewsModerationContent() {
     }
   },
 
-  useEffect(() => {
+  useEffect((,) => {
     fetchReviews()
   }, [activeTab]),
 
@@ -72,9 +72,9 @@ function ReviewsModerationContent() {
               
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
-                  reviews={reviews}
-                  isLoading={isLoading}
-                  onRefresh={handleRefresh}
+                  reviews = {reviews,}
+                  isLoading = {isLoading,}
+                  onRefresh = {handleRefresh,}
                 />
               </TabsContent>
               

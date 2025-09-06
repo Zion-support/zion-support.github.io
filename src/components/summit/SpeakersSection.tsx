@@ -1,6 +1,5 @@
-import Image from "next/image",
-import { Twitter, Linkedin } from 'lucide-react'
-
+import Image from "next/image";
+import { Twitter, Linkedin } from 'lucide-react';
 interface Speaker {
   name: string,
   title: string,
@@ -23,13 +22,13 @@ export function SpeakersSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-          {speakers.map((sp) => (
+          {speakers.map((sp,) => (
             <div key={sp.name} className="text-center space-y-2">
               <Image
-                src={sp.avatar}
-                alt={sp.name}
-                width={96}
-                height={96}
+                src = {sp.avatar,}
+                alt = {sp.name,}
+                width = {96,}
+                height = {96,}
                 className="rounded-full mx-auto"
                 loading="lazy"
               />
@@ -38,7 +37,7 @@ export function SpeakersSection() {
               <div className="flex justify-center gap-3 text-zion-cyan">
                 {sp.twitter && (
                   <a
-                    href={sp.twitter}
+                    href = {sp.twitter,}
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -50,7 +49,7 @@ export function SpeakersSection() {
                 )}
                 {sp.linkedin && (
                   <a
-                    href={sp.linkedin}
+                    href = {sp.linkedin,}
                     aria-label="LinkedIn"
                     target="_blank"
                     rel="noopener noreferrer"

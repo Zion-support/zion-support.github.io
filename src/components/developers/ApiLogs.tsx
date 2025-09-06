@@ -1,20 +1,20 @@
 
-import { useState, useEffect } from "react",
-import { format } from "date-fns",
-import { List, RefreshCw } from 'lucide-react'
-import { useApiKeys } from "@/hooks/useApiKeys",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Badge } from "@/components/ui/badge",
-import { ApiLogsChart } from "./ApiLogsChart",
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
+import { List, RefreshCw } from 'lucide-react';
+import { useApiKeys } from "@/hooks/useApiKeys";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+import { ApiLogsChart } from "./ApiLogsChart";
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
   
   // Load logs on mount and when pagination changes
-  useEffect(() => {
+  useEffect((,) => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
   
@@ -23,12 +23,12 @@ export function ApiLogs() {
   },
   
   // Helper to format the timestamp
-  const formatTimestamp = (timestamp: string) => {
+  const formatTimestamp = (timestamp: string,) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   },
   
   // Helper to get badge color based on status code
-  const getStatusBadge = (statusCode: number) => {
+  const getStatusBadge = (statusCode: number,) => {
     if (statusCode >= 200 && statusCode < 300) {
       return <Badge className="bg-green-700">Success</Badge>
     } else if (statusCode >= 400 && statusCode < 500) {
@@ -61,8 +61,8 @@ export function ApiLogs() {
           <div className="flex items-center space-x-2">
             <span className="text-sm text-zinc-400">Show</span>
             <Select
-              value={pageSize.toString()}
-              onValueChange={(value) => {
+              value = {pageSize.toString(),}
+              onValueChange={(value,) => {
                 setPageSize(Number(value)),
                 setCurrentPage(0), // Reset to first page when changing page size
               }}
@@ -127,13 +127,13 @@ export function ApiLogs() {
                   </td>
                 </tr>
               ) : (
-                logs.map((log) => (
+                logs.map((log,) => (
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
                       <Badge 
                         variant="outline"
-                        className={
+                        className = {
                           log.method === 'GET' 
                             ? "border-green-500 text-green-400" 
                             : log.method === 'POST' 
@@ -141,7 +141,7 @@ export function ApiLogs() {
                             : log.method === 'PUT'
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
-                        }
+                        ,}
                       >
                         {log.method}
                       </Badge>
@@ -173,16 +173,16 @@ export function ApiLogs() {
               <Button
                 variant="outline"
                 size="sm"
-                disabled={!hasPrevPage}
-                onClick={() => setCurrentPage(currentPage - 1)}
+                disabled = {!hasPrevPage,}
+                onClick = {() => setCurrentPage(currentPage - 1),}
               >
                 Previous
               </Button>
               <Button
                 variant="outline"
                 size="sm"
-                disabled={!hasNextPage}
-                onClick={() => setCurrentPage(currentPage + 1)}
+                disabled = {!hasNextPage,}
+                onClick = {() => setCurrentPage(currentPage + 1),}
               >
                 Next
               </Button>

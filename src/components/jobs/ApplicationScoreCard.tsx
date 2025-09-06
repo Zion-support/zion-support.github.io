@@ -1,15 +1,15 @@
 
-import { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { supabase } from "@/integrations/supabase/client",
-import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
-import { toast } from "sonner",
-import { JobApplication } from "@/types/jobs",
+import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { supabase } from "@/integrations/supabase/client";
+import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react';
+import { toast } from "sonner";
+import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
   application: JobApplication,
-  onScoreUpdated?: (updatedApplication: JobApplication) => void
+  onScoreUpdated?: (updatedApplication: JobApplication,) => void
 }
 
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
@@ -24,7 +24,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     : null,
 
   // Get suggestion color
-  const getSuggestionColor = (suggestion: string | undefined) => {
+  const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
       case "Strongly Recommended": return "bg-green-100 text-green-800",
       case "Recommended for Review":
@@ -204,8 +204,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
               Analyze how well this resume matches your job requirements.
             </p>
             <Button 
-              onClick={handleScore} 
-              disabled={isScoring}
+              onClick = {handleScore,}
+              disabled = {isScoring,}
               className="w-full"
             >
               {isScoring ? (
@@ -223,3 +223,4 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     </Card>
   )
 }
+;

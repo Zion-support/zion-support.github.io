@@ -1,8 +1,8 @@
-import React from "react",
-import { useRouter } from 'next/router',
-import { ChevronLeft, Bell, Settings } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { useRouter } from 'next/router';
+import { ChevronLeft, Bell, Settings } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -35,7 +35,7 @@ export function MobileHeader({
               variant="ghost" 
               size="icon" 
               className="mr-2" 
-              onClick={() => router.back()}
+              onClick = {(,) => router.back(),}
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
@@ -50,7 +50,7 @@ export function MobileHeader({
             <Button 
               variant="ghost" 
               size="icon"
-              onClick={onNotificationsClick}
+              onClick = {onNotificationsClick,}
             >
               <Bell className="h-5 w-5" />
               <span className="sr-only">Notifications</span>
@@ -60,7 +60,7 @@ export function MobileHeader({
             <Button 
               variant="ghost" 
               size="icon"
-              onClick={onSettingsClick}
+              onClick = {onSettingsClick,}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>

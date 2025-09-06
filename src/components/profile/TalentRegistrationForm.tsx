@@ -1,14 +1,14 @@
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Switch } from "@/components/ui/switch";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
   FormControl,
@@ -17,12 +17,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { useAuth } from "@/hooks/useAuth",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
 // Define form schema
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long"),
@@ -30,7 +30,7 @@ const talentProfileSchema = z.object({
   bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
   location: z.string().min(2, "Location is required"),
   skills: z.string().min(2, "Enter at least one skill"),
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+  hourlyRate: z.string().refine((val,) => !isNaN(Number(val)), {
     message: "Hourly rate must be a number"}),
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true)}),
@@ -84,12 +84,12 @@ export function TalentRegistrationForm() {
   },
 
   // Handle removing skill tags
-  const handleRemoveSkill = (skill: string) => {
-    setSkillTags(skillTags.filter((s) => s !== skill))
+  const handleRemoveSkill = (skill: string,) => {
+    setSkillTags(skillTags.filter((s,) => s !== skill))
   },
 
   // Handle key press in skills input (add on enter)
-  const handleSkillKeyPress = (e: React.KeyboardEvent) => {
+  const handleSkillKeyPress = (e: React.KeyboardEvent,) => {
     if (e.key === "Enter") {
       e.preventDefault(),
       handleAddSkill()
@@ -97,7 +97,7 @@ export function TalentRegistrationForm() {
   },
 
   // Handle avatar upload
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>,) => {
     const file = e.target.files?.[0],
     if (file) {
       const reader = new FileReader(),
@@ -202,7 +202,7 @@ export function TalentRegistrationForm() {
   },
 
   // Get category color
-  const getCategoryColor = (category: CategoryType) => {
+  const getCategoryColor = (category: CategoryType,) => {
     switch (category) {
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500',
@@ -214,7 +214,7 @@ export function TalentRegistrationForm() {
   },
 
   // Send notification email
-  const sendEnhancementNotification = async (userId: string, email: string) => {
+  const sendEnhancementNotification = async (userId: string, email: string,) => {
     try {
       await supabase.functions.invoke('send-email', {
         body: {
@@ -239,7 +239,7 @@ export function TalentRegistrationForm() {
   },
 
   // Handle form submission
-  const onSubmit = async (values: TalentFormValues) => {
+  const onSubmit = async (values: TalentFormValues,) => {
     if (skillTags.length === 0) {
       toast({
         title: "Skills required",
@@ -309,7 +309,7 @@ export function TalentRegistrationForm() {
 
       // Create the talent profile
       // In a real implementation, this would save to Supabase
-      setTimeout(() => {
+      setTimeout((,) => {
         toast({
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
@@ -371,9 +371,9 @@ export function TalentRegistrationForm() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="col-span-1">
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="name"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                           <FormControl>
@@ -394,9 +394,9 @@ export function TalentRegistrationForm() {
 
                   <div className="col-span-1">
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="title"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Professional Title</FormLabel>
                           <FormControl>
@@ -417,9 +417,9 @@ export function TalentRegistrationForm() {
 
                   <div className="col-span-1">
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="location"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
                           <FormControl>
@@ -440,9 +440,9 @@ export function TalentRegistrationForm() {
 
                   <div className="col-span-1">
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="hourlyRate"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Hourly Rate (USD)</FormLabel>
                           <FormControl>
@@ -470,7 +470,7 @@ export function TalentRegistrationForm() {
                       {uploadedAvatar ? (
                         <AspectRatio ratio={1/1}>
                           <img
-                            src={uploadedAvatar}
+                            src = {uploadedAvatar,}
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
                             loading="lazy"
@@ -490,7 +490,7 @@ export function TalentRegistrationForm() {
                         type="file"
                         accept="image/*"
                         className="hidden"
-                        onChange={handleAvatarUpload}
+                        onChange = {handleAvatarUpload,}
                       />
                     </label>
                   </div>
@@ -506,9 +506,9 @@ export function TalentRegistrationForm() {
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Professional Bio</h3>
                 <FormField
-                  control={form.control}
+                  control = {form.control,}
                   name="bio"
-                  render={({ field }: { field: any }) => (
+                  render={({ field }: { field: any },) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
                       <FormControl>
@@ -528,9 +528,9 @@ export function TalentRegistrationForm() {
                 
                 {/* AI Enhancement Option */}
                 <FormField
-                  control={form.control}
+                  control = {form.control,}
                   name="enhancedProfile"
-                  render={({ field }: { field: any }) => (
+                  render={({ field }: { field: any },) => (
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
                         <FormLabel className="text-white flex items-center">
@@ -544,8 +544,8 @@ export function TalentRegistrationForm() {
                       <FormControl>
                         <Switch
                           aria-label="AI profile enhancement"
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
+                          checked = {field.value,}
+                          onCheckedChange = {field.onChange,}
                           className="data-[state=checked]:bg-zion-purple"
                         />
                       </FormControl>
@@ -559,8 +559,8 @@ export function TalentRegistrationForm() {
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}
+                      onClick = {generateEnhancedProfile,}
+                      disabled = {isGenerating,}
                     >
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
@@ -580,7 +580,7 @@ export function TalentRegistrationForm() {
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-                        onClick={applyGeneratedContent}
+                        onClick = {applyGeneratedContent,}
                       >
                         <Check className="mr-1 h-3 w-3" /> Apply
                       </Button>
@@ -596,7 +596,7 @@ export function TalentRegistrationForm() {
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>
                           <div className="flex flex-wrap gap-2 mt-1">
-                            {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (
+                            {Object.entries(generatedContent.categorizedSkills).map(([category, skills],) => (
                               <div key={category} className="flex items-center gap-2">
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
@@ -604,9 +604,9 @@ export function TalentRegistrationForm() {
                                   {category}
                                 </Badge>
                                 <div className="flex flex-wrap gap-1">
-                                  {skills.map((skill: string) => (
+                                  {skills.map((skill: string,) => (
                                     <Badge
-                                      key={skill}
+                                      key = {skill,}
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
                                     >
                                       {skill}
@@ -631,9 +631,9 @@ export function TalentRegistrationForm() {
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>
                   <FormField
-                    control={form.control}
+                    control = {form.control,}
                     name="skills"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: any },) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>
                         <div className="flex gap-2">
@@ -642,14 +642,14 @@ export function TalentRegistrationForm() {
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a skill..."
                               {...field}
-                              onKeyDown={handleSkillKeyPress}
+                              onKeyDown = {handleSkillKeyPress,}
                             />
                           </FormControl>
                           <Button
                             type="button"
                             variant="outline"
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-                            onClick={handleAddSkill}
+                            onClick = {handleAddSkill,}
                           >
                             Add
                           </Button>
@@ -665,13 +665,13 @@ export function TalentRegistrationForm() {
                   <div className="flex flex-wrap gap-2 mt-2">
                     {skillTags.map(skill => (
                       <Badge
-                        key={skill}
+                        key = {skill,}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
                       >
                         {skill}
                         <button
                           type="button"
-                          onClick={() => handleRemoveSkill(skill)}
+                          onClick = {(,) => handleRemoveSkill(skill),}
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
                         >
                           <X className="h-3 w-3" />
@@ -688,9 +688,9 @@ export function TalentRegistrationForm() {
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
                   <FormField
-                    control={form.control}
+                    control = {form.control,}
                     name="availability"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: any },) => (
                       <FormItem className="space-y-4">
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
                         <FormControl>
@@ -700,8 +700,8 @@ export function TalentRegistrationForm() {
                                 type="radio"
                                 id="available"
                                 value="available"
-                                checked={field.value === "available"}
-                                onChange={() => field.onChange("available")}
+                                checked = {field.value === "available",}
+                                onChange = {(,) => field.onChange("available"),}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
                               <label htmlFor="available" className="text-white flex items-center gap-2">
@@ -715,8 +715,8 @@ export function TalentRegistrationForm() {
                                 type="radio"
                                 id="limited"
                                 value="limited"
-                                checked={field.value === "limited"}
-                                onChange={() => field.onChange("limited")}
+                                checked = {field.value === "limited",}
+                                onChange = {() => field.onChange("limited"),}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
                               <label htmlFor="limited" className="text-white flex items-center gap-2">
@@ -730,8 +730,8 @@ export function TalentRegistrationForm() {
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
-                                checked={field.value === "unavailable"}
-                                onChange={() => field.onChange("unavailable")}
+                                checked = {field.value === "unavailable",}
+                                onChange = {() => field.onChange("unavailable"),}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
@@ -761,7 +761,7 @@ export function TalentRegistrationForm() {
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                  disabled={isSubmitting}
+                  disabled = {isSubmitting,}
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
                 </Button>

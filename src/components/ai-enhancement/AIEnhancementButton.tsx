@@ -1,12 +1,12 @@
 
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
-import { toast } from '@/hooks/use-toast',
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
-  onEnhanced: (enhancedContent: string) => void,
+  onEnhanced: (enhancedContent: string,) => void,
   buttonText?: string,
   className?: string,
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
@@ -73,7 +73,7 @@ export function AIEnhancementButton({
           type="button"
           variant="ghost"
           size="sm"
-          onClick={handleAccept}
+          onClick = {handleAccept,}
           className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
         >
           <Check className="h-4 w-4 mr-1" />
@@ -83,9 +83,9 @@ export function AIEnhancementButton({
           type="button"
           variant="ghost"
           size="sm"
-          onClick={handleRegenerate}
+          onClick = {handleRegenerate,}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
-          disabled={isEnhancing}
+          disabled = {isEnhancing,}
         >
           {isEnhancing ? (
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />
@@ -98,7 +98,7 @@ export function AIEnhancementButton({
           type="button"
           variant="ghost"
           size="sm"
-          onClick={handleCancel}
+          onClick = {handleCancel,}
           className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20"
         >
           <X className="h-4 w-4 mr-1" />
@@ -111,11 +111,11 @@ export function AIEnhancementButton({
   return (
     <Button
       type="button"
-      variant={variant}
-      size={size}
+      variant = {variant,}
+      size = {size,}
       className={`gap-1 ${className}`}
-      onClick={handleEnhance}
-      disabled={isEnhancing}
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />

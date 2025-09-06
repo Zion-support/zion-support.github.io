@@ -1,23 +1,23 @@
-import { useState } from 'react',
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Label } from "@/components/ui/label",
-import { Slider } from "@/components/ui/slider",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { format } from "date-fns",
-import { CalendarIcon } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { ProductListing } from "@/types/listings",
-import { toast } from '@/hooks/use-toast',
-import { supabase } from "@/integrations/supabase/client",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { format } from "date-fns";
+import { CalendarIcon } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { ProductListing } from "@/types/listings";
+import { toast } from '@/hooks/use-toast';
+import { supabase } from "@/integrations/supabase/client";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ServiceQuoteModalProps {
   open: boolean,
-  onOpenChange: (open: boolean) => void,
+  onOpenChange: (open: boolean,) => void,
   service: ProductListing | null
 }
 
@@ -45,12 +45,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>,) => {
     e.preventDefault(),
     setIsSubmitting(true),
 
@@ -131,8 +131,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Textarea
                   id="description"
                   name="description"
-                  value={formData.description}
-                  onChange={handleInputChange}
+                  value = {formData.description,}
+                  onChange = {handleInputChange,}
                   placeholder="Describe your project needs in detail..."
                   className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
                   required
@@ -142,14 +142,14 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               <div className="space-y-2">
                 <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
                 <Select 
-                  value={formData.budget} 
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+                  value = {formData.budget,}
+                  onValueChange={(value,) => setFormData(prev => ({ ...prev, budget: value }))}
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your budget range" />
                   </SelectTrigger>
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
-                    {BUDGET_RANGES.map((range) => (
+                    {BUDGET_RANGES.map((range,) => (
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
                         {range.label}
                       </SelectItem>
@@ -166,14 +166,14 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               <div className="space-y-2">
                 <Label className="text-white">Project Timeline</Label>
                 <Select 
-                  value={formData.timeframe}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
+                  value = {formData.timeframe,}
+                  onValueChange={(value,) => setFormData(prev => ({ ...prev, timeframe: value }))}
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your timeline" />
                   </SelectTrigger>
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
-                    {TIMELINE_OPTIONS.map((option) => (
+                    {TIMELINE_OPTIONS.map((option,) => (
                       <SelectItem key={option.value} value={option.value} className="text-white hover:bg-zion-blue-light">
                         {option.label}
                       </SelectItem>
@@ -188,11 +188,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button
-                        variant={"outline"}
-                        className={cn(
+                        variant = {"outline",}
+                        className = {cn(
                           "justify-start text-left font-normal w-full",
                           "bg-zion-blue-dark border-zion-blue-light text-white"
-                        )}
+                        ),}
                       >
                         <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
                         {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
@@ -201,8 +201,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
                       <Calendar
                         mode="single"
-                        selected={startDate}
-                        onSelect={setStartDate}
+                        selected = {startDate,}
+                        onSelect = {setStartDate,}
                         initialFocus
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
                       />
@@ -215,11 +215,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button
-                        variant={"outline"}
-                        className={cn(
+                        variant = {"outline",}
+                        className = {cn(
                           "justify-start text-left font-normal w-full",
                           "bg-zion-blue-dark border-zion-blue-light text-white"
-                        )}
+                        ),}
                       >
                         <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
                         {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
@@ -228,9 +228,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
                       <Calendar
                         mode="single"
-                        selected={endDate}
-                        onSelect={setEndDate}
-                        disabled={(date) => !startDate || date < startDate}
+                        selected = {endDate,}
+                        onSelect = {setEndDate,}
+                        disabled = {(date,) => !startDate || date < startDate,}
                         initialFocus
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
                       />
@@ -250,8 +250,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   id="email"
                   name="email"
                   type="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
+                  value = {formData.email,}
+                  onChange = {handleInputChange,}
                   placeholder="your@email.com"
                   className="bg-zion-blue-dark border-zion-blue-light text-white"
                   required
@@ -295,7 +295,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               <Button
                 type="button"
                 variant="outline"
-                onClick={prevStep}
+                onClick = {prevStep,}
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light"
               >
                 Previous
@@ -306,7 +306,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               <Button
                 type="button"
                 variant="outline"
-                onClick={() => onOpenChange(false)}
+                onClick = {() => onOpenChange(false),}
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light"
               >
                 Cancel
@@ -315,7 +315,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               {currentStep !== 'contact' ? (
                 <Button 
                   type="button" 
-                  onClick={nextStep}
+                  onClick = {nextStep,}
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                 >
                   Next
@@ -323,7 +323,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               ) : (
                 <Button 
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled = {isSubmitting,}
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Request"}

@@ -1,25 +1,25 @@
 
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
-import { Bell, Calendar, X } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { useProjects } from "@/hooks/useProjects",
-import { Project } from "@/types/projects",
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+import { Bell, Calendar, X } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
 export function ProjectOfferBanner() {
   const router = useRouter(),
   const { projects, isLoading } = useProjects(),
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
   
-  useEffect(() => {
+  useEffect((,) => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
       setPendingOffers(offers)
     }
   }, [projects, isLoading]),
   
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
+  const handleDismiss = (projectId: string, e: React.MouseEvent,) => {
     e.stopPropagation(),
     setDismissed(prev => {
       const updated = new Set(prev),
@@ -28,7 +28,7 @@ export function ProjectOfferBanner() {
     })
   },
   
-  const handleViewOffer = (projectId: string) => {
+  const handleViewOffer = (projectId: string,) => {
     router.push(`/project/${projectId}`)
   },
   
@@ -42,9 +42,9 @@ export function ProjectOfferBanner() {
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
           <Card 
-            key={offer.id} 
+            key = {offer.id,}
             className="border-2 border-primary bg-primary/5"
-            onClick={() => handleViewOffer(offer.id)}
+            onClick = {(,) => handleViewOffer(offer.id),}
           >
             <CardContent className="p-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -66,7 +66,7 @@ export function ProjectOfferBanner() {
                 <Button 
                   size="sm" 
                   variant="ghost"
-                  onClick={(e) => handleDismiss(offer.id, e)}
+                  onClick = {(e,) => handleDismiss(offer.id, e),}
                 >
                   <X className="h-4 w-4" />
                 </Button>

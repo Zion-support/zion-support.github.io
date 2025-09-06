@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react',
-import { supabase } from '@/integrations/supabase/client',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   Table,
   TableBody, 
@@ -9,22 +9,22 @@ import {
   TableHeader, 
   TableRow 
 } from '@/components/ui/table',
-import { Button } from '@/components/ui/button',
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
-import { Badge } from '@/components/ui/badge',
-import { toast } from '@/hooks/use-toast',
-import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant',
-import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from 'lucide-react'
-import { format } from 'date-fns',
+import { Badge } from '@/components/ui/badge';
+import { toast } from '@/hooks/use-toast';
+import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
+import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from 'lucide-react';
+import { format } from 'date-fns';
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
-  useEffect(() => {
+  useEffect((,) => {
     loadTenants()
   }, []),
 
@@ -49,7 +49,7 @@ export function TenantsList() {
     }
   },
 
-  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
+  const toggleTenantStatus = async (tenant: WhitelabelTenant,) => {
     try {
       const { error } = await supabase
         .from('whitelabel_tenants')
@@ -75,7 +75,7 @@ export function TenantsList() {
     }
   },
 
-  const verifyDns = async (tenant: WhitelabelTenant) => {
+  const verifyDns = async (tenant: WhitelabelTenant,) => {
     try {
       // In a real implementation, this would verify DNS records
       // For now, we'll just mark it as verified
@@ -138,7 +138,7 @@ export function TenantsList() {
                   </TableCell>
                 </TableRow>
               ) : (
-                tenants.map((tenant) => (
+                tenants.map((tenant,) => (
                   <TableRow key={tenant.id}>
                     <TableCell className="font-medium">{tenant.brand_name}</TableCell>
                     <TableCell>
@@ -165,7 +165,7 @@ export function TenantsList() {
                             <ExternalLink className="ml-1 h-3 w-3" />
                           </a>
                           <Badge 
-                            variant={tenant.dns_verified ? "default" : "outline"} 
+                            variant = {tenant.dns_verified ? "default" : "outline",}
                           >
                             {tenant.dns_verified ? "Verified" : "Pending"}
                           </Badge>
@@ -173,7 +173,7 @@ export function TenantsList() {
                             <Button 
                               variant="ghost" 
                               size="sm" 
-                              onClick={() => verifyDns(tenant)}
+                              onClick = {(,) => verifyDns(tenant),}
                               className="ml-1 h-6 w-6 p-0"
                             >
                               <RefreshCcw className="h-3 w-3" />

@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import {
   Table,
   TableBody,
@@ -7,11 +7,11 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Download, FileText, Search } from 'lucide-react'
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Download, FileText, Search } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
 export function InvoiceHistory() {
   // Mock invoice data
   const invoices = [
@@ -52,14 +52,14 @@ export function InvoiceHistory() {
       status: "paid",
       period: "Dec 2024"}],
 
-  const handleDownloadInvoice = (invoiceId: string) => {
+  const handleDownloadInvoice = (invoiceId: string,) => {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice",
       description: `Downloading invoice ${invoiceId} as PDF.`})
   },
 
-  const getBadgeForStatus = (status: string) => {
+  const getBadgeForStatus = (status: string,) => {
     switch (status) {
       case "paid": return <Badge className="bg-green-500">Paid</Badge>,
       case "pending":
@@ -98,7 +98,7 @@ export function InvoiceHistory() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {invoices.map((invoice) => (
+            {invoices.map((invoice,) => (
               <TableRow key={invoice.id}>
                 <TableCell className="font-medium">{invoice.id}</TableCell>
                 <TableCell>{invoice.date}</TableCell>
@@ -111,7 +111,7 @@ export function InvoiceHistory() {
                       variant="outline"
                       size="sm"
                       className="h-8 gap-1"
-                      onClick={() => handleDownloadInvoice(invoice.id)}
+                      onClick = {() => handleDownloadInvoice(invoice.id),}
                     >
                       <Download className="h-3.5 w-3.5" />
                       PDF

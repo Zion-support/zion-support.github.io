@@ -1,12 +1,11 @@
 
-import { GradientHeading } from "./GradientHeading",
+import { GradientHeading } from "./GradientHeading";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
-import { FileText } from 'lucide-react'
-
+import { FileText } from 'lucide-react';
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
@@ -59,7 +58,7 @@ export function FaqSection() {
           </div>
           
           <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
+            {faqs.map((faq, index,) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
                 <AccordionTrigger className="text-white hover:text-zion-cyan">
                   {faq.question}

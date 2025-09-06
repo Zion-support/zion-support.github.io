@@ -1,26 +1,25 @@
-import { Moon, Sun } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { toast } from "@/hooks/use-toast"
-import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import { Moon, Sun } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { toast } from "@/hooks/use-toast";
+import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Use the ThemeProvider hook directly to ensure no conflicts
-import { useTheme } from "@/components/ThemeProvider"
-import { logIssue } from "@/utils/logIssue"
-import { useEffect, useState } from "react"
-
+import { useTheme } from "@/components/ThemeProvider";
+import { logIssue } from "@/utils/logIssue";
+import { useEffect, useState } from "react";
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme(),
   const [isClient, setIsClient] = useState(false),
 
   // Ensure we're on the client side to avoid hydration mismatches
-  useEffect(() => {
+  useEffect((,) => {
     setIsClient(true)
   }, []),
 
   // Determine the actual resolved theme for display purposes
-  const resolvedTheme = (() => {
+  const resolvedTheme = ((,) => {
     if (!isClient) return 'light', // Default for SSR
     
     if (theme === "system") {
@@ -60,7 +59,7 @@ export function ModeToggle() {
       document.body.appendChild(liveRegion),
       
       // Clean up the announcement after it's been read
-      setTimeout(() => {
+      setTimeout((,) => {
         document.body.removeChild(liveRegion)
       }, 1000)
       
@@ -97,13 +96,13 @@ export function ModeToggle() {
           <Button
             variant="ghost"
             size="icon"
-            onClick={handleToggle}
-            aria-pressed={isDarkMode}
+            onClick = {handleToggle,}
+            aria-pressed = {isDarkMode,}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
             data-testid="theme-toggle"
-            data-theme={resolvedTheme}
+            data-theme = {resolvedTheme,}
           >
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />

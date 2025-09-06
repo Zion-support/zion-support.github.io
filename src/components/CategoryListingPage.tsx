@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
-import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
-import { safeStorage } from "@/utils/safeStorage",
+import { useState, useEffect } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
+import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
+import { safeStorage } from "@/utils/safeStorage";
 // Example listing type
 interface Listing {
   id: string,
@@ -51,25 +51,25 @@ export function CategoryListingPage({
 }: CategoryListingPageProps) {
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedSort, setSelectedSort] = useState(
-    () => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest'
+    (,) => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest'
   ),
   const [selectedFilter, setSelectedFilter] = useState(
-    () => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all'
+    (,) => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all'
   ),
   const [isLoading, setIsLoading] = useState(false),
 
-  useEffect(() => {
+  useEffect((,) => {
     safeStorage.setItem('category_selected_sort', selectedSort)
   }, [selectedSort]),
 
-  useEffect(() => {
+  useEffect((,) => {
     safeStorage.setItem('category_selected_filter', selectedFilter)
   }, [selectedFilter]),
 
-  useEffect(() => {
+  useEffect((,) => {
     let mounted = true,
     setIsLoading(true),
-    const timeout = setTimeout(() => {
+    const timeout = setTimeout((,) => {
       if (mounted) setIsLoading(false)
     }, 300),
     return () => {
@@ -96,7 +96,7 @@ export function CategoryListingPage({
       
       return matchesSearch
     })
-    .sort((a, b) => {
+    .sort((a, b,) => {
       // Apply sorting
       switch (selectedSort) {
         case 'newest':
@@ -134,8 +134,8 @@ export function CategoryListingPage({
                 <Input
                   type="text"
                   placeholder="Search listings..."
-                  value={searchQuery}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
+                  value = {searchQuery,}
+                  onChange = {(e: React.ChangeEvent<HTMLInputElement>,) => setSearchQuery(e.target.value),}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                 />
               </div>
@@ -154,7 +154,7 @@ export function CategoryListingPage({
                   </div>
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {sortOptions.map((option) => (
+                  {sortOptions.map((option,) => (
                     <SelectItem key={option.value} value={option.value} className="text-white">
                       {option.label}
                     </SelectItem>
@@ -172,7 +172,7 @@ export function CategoryListingPage({
                   </div>
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {filterOptions.map((option) => (
+                  {filterOptions.map((option,) => (
                     <SelectItem key={option.value} value={option.value} className="text-white">
                       {option.label}
                     </SelectItem>
@@ -196,19 +196,19 @@ export function CategoryListingPage({
               <ListingGridSkeleton />
             ) : processedListings.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {processedListings.map((listing) => (
+                {processedListings.map((listing,) => (
                   <ListingScoreCard
-                    key={listing.id}
-                    title={listing.title}
-                    description={listing.description}
-                    category={listing.subcategory || listing.category}
-                    image={listing.image}
-                    tags={listing.tags}
-                    author={listing.author}
-                    authorImage={listing.authorImage}
-                    aiScore={listing.aiScore}
-                    rating={listing.rating}
-                    reviewCount={listing.reviewCount}
+                    key = {listing.id,}
+                    title = {listing.title,}
+                    description = {listing.description,}
+                    category = {listing.subcategory || listing.category,}
+                    image = {listing.image,}
+                    tags = {listing.tags,}
+                    author = {listing.author,}
+                    authorImage = {listing.authorImage,}
+                    aiScore = {listing.aiScore,}
+                    rating = {listing.rating,}
+                    reviewCount = {listing.reviewCount,}
                   />
                 ))}
               </div>
@@ -218,7 +218,7 @@ export function CategoryListingPage({
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
                 <Button
                   variant="outline"
-                  onClick={() => {
+                  onClick={(,) => {
                     setSearchQuery(""),
                     setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}

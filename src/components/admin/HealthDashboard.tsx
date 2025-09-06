@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
-import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
-
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react';
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical',
   timestamp: string,
@@ -64,7 +63,7 @@ const HealthDashboard: React.FC = () => {
     }
   },
 
-  useEffect(() => {
+  useEffect((,) => {
     fetchHealthData(),
 
     if (autoRefresh) {
@@ -75,7 +74,7 @@ const HealthDashboard: React.FC = () => {
     return undefined
   }, [autoRefresh]),
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: string,) => {
     switch (status) {
       case 'healthy':
         return <CheckCircle className="w-5 h-5 text-green-500" />,
@@ -88,7 +87,7 @@ const HealthDashboard: React.FC = () => {
     }
   },
 
-  const getStatusBadge = (status: string) => {
+  const getStatusBadge = (status: string,) => {
     const variant = status === 'healthy' ? 'default' : 
                    status === 'warning' ? 'secondary' : 'destructive',
     return (
@@ -98,13 +97,13 @@ const HealthDashboard: React.FC = () => {
     )
   },
 
-  const formatUptime = (seconds: number) => {
+  const formatUptime = (seconds: number,) => {
     const hours = Math.floor(seconds / 3600),
     const minutes = Math.floor((seconds % 3600) / 60),
     return `${hours}h ${minutes}m`
   },
 
-  const formatBytes = (bytes: number) => {
+  const formatBytes = (bytes: number,) => {
     return `${bytes.toFixed(1)} MB`
   },
 
@@ -146,7 +145,7 @@ const HealthDashboard: React.FC = () => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => setAutoRefresh(!autoRefresh)}
+            onClick = {() => setAutoRefresh(!autoRefresh),}
           >
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
@@ -254,7 +253,7 @@ const HealthDashboard: React.FC = () => {
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
                   <ul className="space-y-2">
-                    {healthData.health.issues.map((issue, index) => (
+                    {healthData.health.issues.map((issue, index,) => (
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
                         {issue}
@@ -304,7 +303,7 @@ const HealthDashboard: React.FC = () => {
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
                   <div className="space-y-2">
-                    {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
+                    {healthData.errors.topErrors.slice(0, 5).map((error, index,) => (
                       <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
                         <p className="text-sm font-medium">{error.description}</p>
                         <p className="text-xs text-gray-600">
@@ -373,7 +372,7 @@ const HealthDashboard: React.FC = () => {
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
                 <ul className="space-y-3">
-                  {healthData.health.recommendations.map((rec, index) => (
+                  {healthData.health.recommendations.map((rec, index,) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
                       <span className="text-sm">{rec}</span>

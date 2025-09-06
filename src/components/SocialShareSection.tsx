@@ -1,8 +1,8 @@
 
-import { Button } from "./ui/button",
-import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
-import { toast } from "./ui/use-toast",
-import { useTranslation } from 'react-i18next',
+import { Button } from "./ui/button";
+import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
+import { toast } from "./ui/use-toast";
+import { useTranslation } from 'react-i18next';
 export function SocialShareSection() {
   const { t } = useTranslation(),
   
@@ -27,12 +27,12 @@ export function SocialShareSection() {
   
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
-      .then(() => {
+      .then((,) => {
         toast({
           title: "Link Copied!",
           description: "The link has been copied to your clipboard"})
       })
-      .catch(() => {
+      .catch((,) => {
         toast({
           title: t('errors.failed_to_copy'),
           description: "Please try again or copy the URL manually",
@@ -76,14 +76,14 @@ export function SocialShareSection() {
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            {shareLinks.map((link, index) => (
+            {shareLinks.map((link, index,) => (
               <Button
-                key={index}
+                key = {index,}
                 className={`${link.color} text-white`}
                 size="sm"
-                onClick={link.onClick}
-                aria-label={link.name}
-                title={link.name}
+                onClick = {link.onClick,}
+                aria-label = {link.name,}
+                title = {link.name,}
               >
                 {link.icon}
                 <span className="sr-only">{link.name}</span>
@@ -96,3 +96,4 @@ export function SocialShareSection() {
     </section>
   )
 }
+;

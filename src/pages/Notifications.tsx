@@ -1,19 +1,19 @@
-import React, { useState } from 'react',
-import { useNotifications } from '@/context/notifications/NotificationContext',
+import React, { useState } from 'react';
+import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
   NotificationType,
   NotificationContextType} from '@/context/notifications',
-import { formatDistanceToNow } from 'date-fns',
-import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
-import { Badge } from '@/components/ui/badge',
-import Skeleton from '@/components/ui/skeleton',
-import { SEO } from '@/components/SEO',
-import { useRouter } from 'next/router',
-import { cn } from '@/lib/utils',
+import { formatDistanceToNow } from 'date-fns';
+import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Badge } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { SEO } from '@/components/SEO';
+import { useRouter } from 'next/router';
+import { cn } from '@/lib/utils';
 const getNotificationIcon = (type: NotificationType,
-  className: string = 'h-5 w-5') => {
+  className: string = 'h-5 w-5',) => {
   switch (type) {
     case 'message':
       return <MessageCircle className={cn(className, 'text-blue-500')} />,
@@ -38,7 +38,7 @@ const getNotificationIcon = (type: NotificationType,
   }
 },
 
-const getNotificationTypeBadge = (type: NotificationType) => {
+const getNotificationTypeBadge = (type: NotificationType,) => {
   switch (type) {
     case 'message':
       return <Badge className="bg-blue-500">Message</Badge>,
@@ -74,9 +74,9 @@ const NotificationCard: React.FC<{
     action_url?: string,
     action_text?: string
   },
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>
-}> = ({ notification, onMarkAsRead, onDismiss }) => {
+  onMarkAsRead: (id: string,) => Promise<void>,
+  onDismiss: (id: string,) => Promise<void>
+}> = ({ notification, onMarkAsRead, onDismiss },) => {
   const router = useRouter(),
 
   const handleAction = () => {
@@ -90,11 +90,11 @@ const NotificationCard: React.FC<{
   },
 
   return (<div
-      className={cn(
+      className = {cn(
         'border rounded-lg shadow-sm p-4 mb-3 group transition-colors',
         notification.read
           ? 'border-zion-blue-light bg-zion-blue-dark/10'
-          : 'border-zion-cyan bg-zion-blue-dark/30')}
+          : 'border-zion-cyan bg-zion-blue-dark/30'),}
     >
       <div className="flex items-start gap-4">
         <div className="mt-1">
@@ -127,7 +127,7 @@ const NotificationCard: React.FC<{
                   variant="ghost"
                   size="sm"
                   className="h-8 w-8 p-0"
-                  onClick={() => onMarkAsRead(notification.id)}
+                  onClick = {(,) => onMarkAsRead(notification.id),}
                 >
                   <Check className="h-4 w-4 text-green-400" />
                   <span className="sr-only">Mark as read</span>
@@ -137,7 +137,7 @@ const NotificationCard: React.FC<{
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
-                onClick={() => onDismiss(notification.id)}
+                onClick = {() => onDismiss(notification.id),}
               >
                 <Trash2 className="h-4 w-4 text-red-400" />
                 <span className="sr-only">Dismiss</span>
@@ -152,7 +152,7 @@ const NotificationCard: React.FC<{
               variant="outline"
               size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
-              onClick={handleAction}
+              onClick = {handleAction,}
             >
               {notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4" />
@@ -198,7 +198,7 @@ export default function NotificationsPage() {
           </div>
 
           {unreadCount > 0 && (
-            <Button variant="outline" onClick={() => markAllAsRead()}>
+            <Button variant="outline" onClick={(,) => markAllAsRead()}>
               <Check className="mr-2 h-4 w-4" />
               Mark all as read
             </Button>
@@ -207,8 +207,8 @@ export default function NotificationsPage() {
 
         <div className="mb-8">
           <Tabs
-            defaultValue={filter}
-            onValueChange={(value) => setFilter(value as any)}
+            defaultValue = {filter,}
+            onValueChange = {(value,) => setFilter(value as any),}
           >
             <TabsList className="grid w-full max-w-md grid-cols-6">
               <TabsTrigger value="all">All</TabsTrigger>
@@ -239,12 +239,12 @@ export default function NotificationsPage() {
                 </div>
               ) : (
                 <div>
-                  {filteredNotifications.map((notification) => (
+                  {filteredNotifications.map((notification,) => (
                     <NotificationCard
-                      key={notification.id}
-                      notification={notification}
-                      onMarkAsRead={markAsRead}
-                      onDismiss={dismissNotification}
+                      key = {notification.id,}
+                      notification = {notification,}
+                      onMarkAsRead = {markAsRead,}
+                      onDismiss = {dismissNotification,}
                     />
                   ))}
                 </div>

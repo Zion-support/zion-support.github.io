@@ -1,18 +1,18 @@
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm',
-import { TALENT_PROFILES } from '@/data/talentData',
-import { TalentProfile } from '@/types/talent',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { TalentProfile } from '@/types/talent';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
-const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
+const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats },) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -48,14 +48,14 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 // Filter and sort controls for talents
 const TalentFilterControls: React.FC<{
   sortBy: string,
-  setSortBy: (sort: string) => void,
+  setSortBy: (sort: string,) => void,
   filterSpecialization: string,
-  setFilterSpecialization: (spec: string) => void,
+  setFilterSpecialization: (spec: string,) => void,
   filterAvailability: string,
-  setFilterAvailability: (avail: string) => void,
+  setFilterAvailability: (avail: string,) => void,
   specializations: string[],
   showRecommended: boolean,
-  setShowRecommended: (show: boolean) => void,
+  setShowRecommended: (show: boolean,) => void,
   loading: boolean
 }> = ({
   sortBy,
@@ -68,14 +68,14 @@ const TalentFilterControls: React.FC<{
   showRecommended,
   setShowRecommended,
   loading
-}) => (
+},) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
       <select
-        value={filterSpecialization}
-        onChange={(e) => setFilterSpecialization(e.target.value)}
+        value = {filterSpecialization,}
+        onChange = {(e,) => setFilterSpecialization(e.target.value),}
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Specializations</option>
@@ -88,8 +88,8 @@ const TalentFilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <Users className="h-4 w-4 text-muted-foreground" />
       <select
-        value={filterAvailability}
-        onChange={(e) => setFilterAvailability(e.target.value)}
+        value = {filterAvailability,}
+        onChange = {(e,) => setFilterAvailability(e.target.value),}
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Availability</option>
@@ -103,8 +103,8 @@ const TalentFilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
       <select
-        value={sortBy}
-        onChange={(e) => setSortBy(e.target.value)}
+        value = {sortBy,}
+        onChange = {(e,) => setSortBy(e.target.value),}
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="newest">Newest First</option>
@@ -117,9 +117,9 @@ const TalentFilterControls: React.FC<{
     </div>
 
     <Button
-      variant={showRecommended ? "default" : "outline"}
+      variant = {showRecommended ? "default" : "outline",}
       size="sm"
-      onClick={() => setShowRecommended(!showRecommended)}
+      onClick = {() => setShowRecommended(!showRecommended),}
       className="flex items-center gap-2"
     >
       <Star className="h-4 w-4" />
@@ -129,14 +129,14 @@ const TalentFilterControls: React.FC<{
 ),
 
 // Talent card component
-const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ talent, onHire }) => (
+const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ talent, onHire },) => (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
         <div className="flex items-start gap-3">
           <img
             src={talent.profile_picture_url || `https://api.dicebear.com/6.x/initials/svg?seed=${talent.full_name}`}
-            alt={talent.full_name}
+            alt = {talent.full_name,}
             className="w-12 h-12 rounded-full object-cover"
             loading="lazy"
           />
@@ -180,7 +180,7 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
       </p>
 
       <div className="flex flex-wrap gap-1 mb-4">
-        {talent.skills?.slice(0, 4).map((skill, index) => (
+        {talent.skills?.slice(0, 4).map((skill, index,) => (
           <Badge key={index} variant="secondary" className="text-xs">
             {skill}
           </Badge>
@@ -205,9 +205,9 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
 ),
 
 // Loading skeleton for talent grid
-const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
+const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 },) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count }).map((_, i) => (
+    {Array.from({ length: count }).map((_, i,) => (
       <SkeletonCard key={i} />
     ))}
   </div>
@@ -223,7 +223,7 @@ export default function TalentsPage() {
   const [totalGenerated, setTotalGenerated] = useState(0),
 
   // Fetch function for infinite scroll with AI talent generation
-  const fetchTalents = useCallback(async (page: number, limit: number) => {
+  const fetchTalents = useCallback(async (page: number, limit: number,) => {
     // Add realistic loading delay
     await new Promise(resolve => setTimeout(resolve, 300)),
 
@@ -259,7 +259,7 @@ export default function TalentsPage() {
     }
     
     // Apply sorting
-    filteredTalents.sort((a, b) => {
+    filteredTalents.sort((a, b,) => {
       switch (sortBy) {
         case 'hourly-rate-low':
           return (a.hourly_rate || 0) - (b.hourly_rate || 0),
@@ -303,25 +303,25 @@ export default function TalentsPage() {
   } = useInfiniteScrollPagination(fetchTalents, 16),
 
   // Refresh when filters change
-  useEffect(() => {
+  useEffect((,) => {
     refresh(),
     setTotalGenerated(0)
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended]),
 
   // Calculate market stats
-  const marketStats = useMemo(() => {
+  const marketStats = useMemo((,) => {
     if (talents.length === 0) return null,
     return getTalentMarketStats(talents)
   }, [talents]),
 
   // Get unique specializations
-  const specializations = useMemo(() => {
+  const specializations = useMemo((,) => {
     return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)))
   }, [talents]),
 
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false),
-  useEffect(() => {
+  useEffect((,) => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800)
     },
@@ -398,16 +398,16 @@ export default function TalentsPage() {
         transition={{ delay: 0.3 }}
       >
         <TalentFilterControls
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterSpecialization={filterSpecialization}
-          setFilterSpecialization={setFilterSpecialization}
-          filterAvailability={filterAvailability}
-          setFilterAvailability={setFilterAvailability}
-          specializations={specializations}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
+          sortBy = {sortBy,}
+          setSortBy = {setSortBy,}
+          filterSpecialization = {filterSpecialization,}
+          setFilterSpecialization = {setFilterSpecialization,}
+          filterAvailability = {filterAvailability,}
+          setFilterAvailability = {setFilterAvailability,}
+          specializations = {specializations,}
+          showRecommended = {showRecommended,}
+          setShowRecommended = {setShowRecommended,}
+          loading = {isFetching,}
         />
       </motion.div>
 
@@ -419,10 +419,10 @@ export default function TalentsPage() {
         transition={{ delay: 0.4 }}
       >
         <AnimatePresence mode="popLayout">
-          {talents.map((talent, index) => (
+          {talents.map((talent, index,) => (
             <motion.div
-              key={talent.id}
-              ref={index === talents.length - 1 ? lastElementRef : null}
+              key = {talent.id,}
+              ref = {index === talents.length - 1 ? lastElementRef : null,}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -430,7 +430,7 @@ export default function TalentsPage() {
               whileHover={{ scale: 1.02 }}
             >
               <TalentCard
-                talent={talent}
+                talent = {talent,}
                 onHire={() => router.push(`/hire/${talent.id}`)}
               />
             </motion.div>
@@ -484,7 +484,7 @@ export default function TalentsPage() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
-            onClick={scrollToTop}
+            onClick = {scrollToTop,}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}

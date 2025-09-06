@@ -1,10 +1,10 @@
 
-import { format } from 'date-fns',
-import { Edit, Trash2 } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Card, CardContent } from '@/components/ui/card',
-import { Education } from '@/types/resume',
-import { EducationItemProps } from './types',
+import { format } from 'date-fns';
+import { Edit, Trash2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Education } from '@/types/resume';
+import { EducationItemProps } from './types';
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
   return (
     <Card className="bg-muted/40">
@@ -33,7 +33,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => onEdit(education)}
+              onClick = {() => onEdit(education),}
               aria-label="Edit education"
             >
               <Edit className="h-4 w-4" />
@@ -41,7 +41,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => onDelete(education.id!)}
+              onClick = {() => onDelete(education.id!),}
               aria-label="Delete education"
             >
               <Trash2 className="h-4 w-4" />
@@ -55,3 +55,4 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
     </Card>
   )
 }
+;

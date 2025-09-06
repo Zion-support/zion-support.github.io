@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react',
-import { useAuth } from '@/hooks/useAuth',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Progress } from '@/components/ui/progress',
-import { AlertTriangle, Package, Zap } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { AlertTriangle, Package, Zap } from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface BundleInfo {
   totalSize: number,
   gzippedSize: number,
@@ -36,7 +36,7 @@ export function BundleAnalyzer() {
   const [isCollecting, setIsCollecting] = useState(false),
   const [shouldShow, setShouldShow] = useState(false),
 
-  useEffect(() => {
+  useEffect((,) => {
     // Only show in development or when explicitly enabled
     const show =
       process.env.NODE_ENV === 'development' ||
@@ -94,7 +94,7 @@ export function BundleAnalyzer() {
         loadTime: totalLoadTime / chunkData.length,
         cacheHitRate: cacheHitRate * 100}),
 
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)), // Top 5 largest chunks
+      setChunks(chunkData.sort((a, b,) => b.size - a.size).slice(0, 5)), // Top 5 largest chunks
     } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
@@ -110,7 +110,7 @@ export function BundleAnalyzer() {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
   },
 
-  const getSizeColor = (size: number) => {
+  const getSizeColor = (size: number,) => {
     if (size < 100000) return 'bg-green-500', // < 100KB
     if (size < 500000) return 'bg-yellow-500', // < 500KB
     return 'bg-red-500', // > 500KB
@@ -135,7 +135,7 @@ export function BundleAnalyzer() {
         <Button
           variant="outline"
           size="sm"
-          onClick={toggleAnalyzer}
+          onClick = {toggleAnalyzer,}
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
@@ -158,8 +158,8 @@ export function BundleAnalyzer() {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={collectBundleInfo}
-                disabled={isCollecting}
+                onClick = {collectBundleInfo,}
+                disabled = {isCollecting,}
                 className="h-6 w-6 p-0"
               >
                 <Zap className="w-3 h-3" />
@@ -167,7 +167,7 @@ export function BundleAnalyzer() {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={toggleAnalyzer}
+                onClick = {toggleAnalyzer,}
                 className="h-6 w-6 p-0"
               >
                 ✕
@@ -214,7 +214,7 @@ export function BundleAnalyzer() {
               <div>
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
                 <div className="space-y-1">
-                  {chunks.map((chunk, index) => (
+                  {chunks.map((chunk, index,) => (
                     <div key={chunk.name} className="flex justify-between items-center text-xs">
                       <div className="flex items-center gap-2 flex-1 min-w-0">
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>

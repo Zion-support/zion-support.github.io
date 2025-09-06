@@ -1,9 +1,8 @@
 
-import React from 'react',
-import { Button } from '@/components/ui/button',
+import React from 'react';
+import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate
-import { XCircle } from 'lucide-react'
-
+import { XCircle } from 'lucide-react';
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
   
@@ -22,7 +21,7 @@ export default function PaymentCanceled() {
         
         <div className="flex flex-col space-y-3">
           <Button
-            onClick={() => router.push('/payments')} // Changed to router.push
+            onClick={(,) => router.push('/payments')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Try Again
@@ -40,3 +39,4 @@ export default function PaymentCanceled() {
       </div>
   )
 }
+;

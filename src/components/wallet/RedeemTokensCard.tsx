@@ -1,9 +1,9 @@
 
-import React, { useState } from "react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+import React, { useState } from "react";
+import { useWallet } from "@/hooks/useWallet";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -48,7 +48,7 @@ export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet(),
   const [open, setOpen] = useState(false),
 
-  const handleRedeem = async (option: RewardOption) => {
+  const handleRedeem = async (option: RewardOption,) => {
     if (!wallet || wallet.balance < option.cost) return,
     
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
@@ -76,7 +76,7 @@ export function RedeemTokensCard() {
               </DialogDescription>
             </DialogHeader>
             <div className="space-y-4 py-4">
-              {REWARD_OPTIONS.map((option) => (
+              {REWARD_OPTIONS.map((option,) => (
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">
                   <div>
                     <h3 className="font-medium">{option.title}</h3>
@@ -86,9 +86,9 @@ export function RedeemTokensCard() {
                     <span className="text-sm font-bold">{option.cost} ZION$</span>
                     <Button 
                       size="sm" 
-                      variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
-                      disabled={!wallet || wallet.balance < option.cost}
-                      onClick={() => handleRedeem(option)}
+                      variant = {wallet && wallet.balance >= option.cost ? "default" : "outline",}
+                      disabled = {!wallet || wallet.balance < option.cost,}
+                      onClick = {(,) => handleRedeem(option),}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
                     </Button>

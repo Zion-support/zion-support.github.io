@@ -1,14 +1,13 @@
-import { useRef, useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Copy, Download, Link, Plus } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useReferrals } from "@/hooks/useReferrals",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
+import { useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Copy, Download, Link, Plus } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
+import { useReferrals } from "@/hooks/useReferrals";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -19,7 +18,7 @@ export function PartnerReferralLinks() {
   // Get the base referral link
   const baseLink = getReferralLink(),
   
-  const handleCopyLink = (link: string) => {
+  const handleCopyLink = (link: string,) => {
     navigator.clipboard.writeText(link),
     toast({
       title: "Link copied!",
@@ -84,7 +83,7 @@ export function PartnerReferralLinks() {
             <Button 
               variant="outline" 
               size="sm" 
-              onClick={handleDownloadLinks}
+              onClick = {handleDownloadLinks,}
               className="flex items-center gap-2"
             >
               <Download className="h-4 w-4" />
@@ -96,11 +95,11 @@ export function PartnerReferralLinks() {
         <CardContent>
           <div className="flex space-x-2">
             <Input
-              value={baseLink}
+              value = {baseLink,}
               readOnly
               className="font-mono text-sm"
             />
-            <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>
+            <Button variant="outline" onClick={(,) => handleCopyLink(baseLink)}>
               <Copy className="h-4 w-4" />
               <span className="sr-only">Copy</span>
             </Button>
@@ -128,8 +127,8 @@ export function PartnerReferralLinks() {
               <div className="grid gap-2">
                 <Label htmlFor="campaign">Campaign Type</Label>
                 <Select 
-                  value={selectedCampaign}
-                  onValueChange={setSelectedCampaign}
+                  value = {selectedCampaign,}
+                  onValueChange = {setSelectedCampaign,}
                 >
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
@@ -149,8 +148,8 @@ export function PartnerReferralLinks() {
                 <Input 
                   id="custom" 
                   placeholder="spring_campaign, video_123, etc." 
-                  value={customParam}
-                  onChange={(e) => setCustomParam(e.target.value)}
+                  value = {customParam,}
+                  onChange = {(e,) => setCustomParam(e.target.value),}
                 />
               </div>
             </div>
@@ -158,13 +157,13 @@ export function PartnerReferralLinks() {
               <Button 
                 type="button" 
                 variant="secondary" 
-                onClick={() => setIsDialogOpen(false)}
+                onClick = {() => setIsDialogOpen(false),}
               >
                 Cancel
               </Button>
               <Button 
                 type="button" 
-                onClick={handleGenerateLink}
+                onClick = {handleGenerateLink,}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
               >
                 Generate Link
@@ -176,7 +175,7 @@ export function PartnerReferralLinks() {
 
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
-          generatedLinks.map((item, index) => (
+          generatedLinks.map((item, index,) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="pb-2">
                 <CardTitle className="text-base flex items-center justify-between">
@@ -189,14 +188,14 @@ export function PartnerReferralLinks() {
               <CardContent className="pb-4">
                 <div className="flex space-x-2">
                   <Input
-                    value={item.link}
+                    value = {item.link,}
                     readOnly
                     className="font-mono text-xs"
                   />
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    onClick={() => handleCopyLink(item.link)}
+                    onClick = {(,) => handleCopyLink(item.link),}
                   >
                     <Copy className="h-4 w-4" />
                     <span className="sr-only">Copy</span>
@@ -213,7 +212,7 @@ export function PartnerReferralLinks() {
               </p>
               <Button 
                 variant="outline"
-                onClick={() => setIsDialogOpen(true)}
+                onClick = {(,) => setIsDialogOpen(true),}
                 className="flex items-center gap-2"
               >
                 <Plus className="h-4 w-4" />

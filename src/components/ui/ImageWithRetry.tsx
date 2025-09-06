@@ -1,6 +1,6 @@
-import React, { useState } from 'react',
-import Image, { type ImageProps } from 'next/image',
-import { cn } from '@/lib/utils',
+import React, { useState } from 'react';
+import Image, { type ImageProps } from 'next/image';
+import { cn } from '@/lib/utils';
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string,
   alt?: string,
@@ -40,17 +40,17 @@ export function ImageWithRetry({
     <div className="relative inline-block">
       <Image
         {...props}
-        src={currentSrc}
-        alt={alt}
-        onError={handleError}
-        className={cn(className)}
-        fill={fill}
+        src = {currentSrc,}
+        alt = {alt,}
+        onError = {handleError,}
+        className = {cn(className),}
+        fill = {fill,}
       />
       {failed && (
         <button
           type="button"
-          onClick={handleRetry}
-          className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
+          onClick = {handleRetry,}
+          className = {cn('absolute bottom-1 right-1 text-xs underline', retryClassName),}
         >
           Retry
         </button>

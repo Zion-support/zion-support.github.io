@@ -1,14 +1,13 @@
 
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { z } from "zod",
-import { LockKeyhole } from 'lucide-react'
-
-import { supabase } from "@/integrations/supabase/client",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { z } from "zod";
+import { LockKeyhole } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -16,9 +15,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { toast } from "@/hooks/use-toast",
-import { cleanupAuthState } from "@/utils/authUtils",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { toast } from "@/hooks/use-toast";
+import { cleanupAuthState } from "@/utils/authUtils";
+import { logErrorToProduction } from '@/utils/productionLogger';
 // Form validation schema
 const updatePasswordSchema = z
   .object({
@@ -27,7 +26,7 @@ const updatePasswordSchema = z
       .min(8, "Password must be at least 8 characters")
       .max(64, "Password must be less than 64 characters"),
     confirmPassword: z.string()})
-  .refine((data) => data.password === data.confirmPassword, {
+  .refine((data,) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
@@ -47,7 +46,7 @@ export default function UpdatePassword() {
       password: "",
       confirmPassword: ""}}),
 
-  useEffect(() => {
+  useEffect((,) => {
     // Extract access token from URL hash on the client
     const hash = typeof window !== 'undefined' ? window.location.hash : "",
     const hashParams = new URLSearchParams(hash.substring(1)),
@@ -64,7 +63,7 @@ export default function UpdatePassword() {
   }, []),
 
   // Form submission handler
-  const onSubmit = async (data: UpdatePasswordFormValues) => {
+  const onSubmit = async (data: UpdatePasswordFormValues,) => {
     if (!accessToken) {
       setError("No access token found. Please request a new password reset link."),
       return
@@ -98,7 +97,7 @@ export default function UpdatePassword() {
 
       // Clean auth state and redirect after a delay
       cleanupAuthState(),
-      setTimeout(() => {
+      setTimeout((,) => {
         router.push("/login")
       }, 3000)
     } catch (error: any) {
@@ -113,7 +112,7 @@ export default function UpdatePassword() {
     }
   },
 
-  const onInvalid = (errors: any) => {
+  const onInvalid = (errors: any,) => {
     const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues,
     if (firstError) {
       form.setFocus(firstError)
@@ -141,7 +140,7 @@ export default function UpdatePassword() {
                   <Button 
                     className="mt-3 text-xs"
                     variant="outline"
-                    onClick={() => router.push('/forgot-password')}
+                    onClick = {(,) => router.push('/forgot-password'),}
                   >
                     Request new reset link
                   </Button>
@@ -165,9 +164,9 @@ export default function UpdatePassword() {
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6">
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="password"
-                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> }) => (
+                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>
                           <FormControl>
@@ -175,9 +174,9 @@ export default function UpdatePassword() {
                               type="password"
                               placeholder="Enter password"
                               aria-label="New password"
-                              aria-invalid={!!form.formState.errors.password}
+                              aria-invalid = {!!form.formState.errors.password,}
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              disabled={isLoading}
+                              disabled = {isLoading,}
                               {...field}
                             />
                           </FormControl>
@@ -187,9 +186,9 @@ export default function UpdatePassword() {
                     />
 
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="confirmPassword"
-                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> }) => (
+                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
                           <FormControl>
@@ -197,9 +196,9 @@ export default function UpdatePassword() {
                               type="password"
                               placeholder="Enter password"
                               aria-label="Confirm password"
-                              aria-invalid={!!form.formState.errors.confirmPassword}
+                              aria-invalid = {!!form.formState.errors.confirmPassword,}
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              disabled={isLoading}
+                              disabled = {isLoading,}
                               {...field}
                             />
                           </FormControl>
@@ -211,7 +210,7 @@ export default function UpdatePassword() {
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading || !accessToken}
+                      disabled = {isLoading || !accessToken,}
                     >
                       {isLoading ? "Updating..." : "Update Password"}
                     </Button>
@@ -220,7 +219,7 @@ export default function UpdatePassword() {
                       <Button
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
-                        onClick={() => router.push("/login")}
+                        onClick = {() => router.push("/login"),}
                         type="button"
                       >
                         Back to login

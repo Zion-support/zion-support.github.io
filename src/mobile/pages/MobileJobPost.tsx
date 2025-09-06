@@ -1,11 +1,11 @@
 
-import React, { useState } from "react",
-import { MobileHeader } from "@/mobile/components/common/MobileHeader",
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
+import React, { useState } from "react";
+import { MobileHeader } from "@/mobile/components/common/MobileHeader";
+import { BottomNavigation } from "@/mobile/components/common/BottomNavigation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { 
   Select,
   SelectContent,
@@ -13,10 +13,9 @@ import {
   SelectTrigger,
   SelectValue 
 } from "@/components/ui/select",
-import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
-
+import { Zap, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
 export function MobileJobPost() {
@@ -84,7 +83,7 @@ export function MobileJobPost() {
             <Button 
               variant="outline" 
               className="flex-1 gap-1" 
-              onClick={goToPrevStep}
+              onClick = {goToPrevStep,}
             >
               <ChevronLeft className="h-4 w-4" /> Back
             </Button>
@@ -92,7 +91,7 @@ export function MobileJobPost() {
           
           <Button 
             className="flex-1 gap-1"
-            onClick={goToNextStep}
+            onClick = {goToNextStep,}
           >
             {currentStep === "preview" ? "Publish Job" : "Continue"}
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
@@ -154,7 +153,7 @@ function DetailsStep() {
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
-          rows={5}
+          rows = {5,}
         />
       </div>
     </div>
@@ -174,7 +173,7 @@ function RequirementsStep() {
     }
   },
   
-  const removeSkill = (skill: string) => {
+  const removeSkill = (skill: string,) => {
     setSkills(skills.filter(s => s !== skill))
   },
   
@@ -217,16 +216,16 @@ function RequirementsStep() {
       <div className="space-y-2">
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">
-          {skills.map((skill) => (
+          {skills.map((skill,) => (
             <Badge 
-              key={skill} 
+              key = {skill,}
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
-                onClick={() => removeSkill(skill)}
+                onClick = {(,) => removeSkill(skill),}
               >
                 ×
               </button>
@@ -235,10 +234,10 @@ function RequirementsStep() {
         </div>
         <div className="flex gap-2">
           <Input 
-            value={newSkill}
-            onChange={(e) => setNewSkill(e.target.value)}
+            value = {newSkill,}
+            onChange = {(e,) => setNewSkill(e.target.value),}
             placeholder="Add a skill"
-            onKeyDown={(e) => e.key === 'Enter' && addSkill()}
+            onKeyDown = {(e,) => e.key === 'Enter' && addSkill(),}
           />
           <Button onClick={addSkill}>Add</Button>
         </div>
@@ -249,7 +248,7 @@ function RequirementsStep() {
         <Textarea 
           id="requirements" 
           placeholder="List any specific requirements or qualifications" 
-          rows={4}
+          rows = {4,}
         />
       </div>
       
@@ -258,7 +257,7 @@ function RequirementsStep() {
         <Textarea 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
-          rows={4}
+          rows = {4,}
         />
       </div>
     </div>
@@ -335,7 +334,7 @@ function BudgetStep() {
         <Textarea 
           id="additionalInfo" 
           placeholder="Any additional information about budget or payment" 
-          rows={3}
+          rows = {3,}
         />
       </div>
     </div>

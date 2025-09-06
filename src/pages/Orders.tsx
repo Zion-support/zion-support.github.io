@@ -1,7 +1,7 @@
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link', // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth',
-import { useGetOrdersQuery } from '@/hooks/useOrders',
+import { useAuth } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
   Table,
   TableBody,
@@ -9,16 +9,16 @@ import {
   TableHead,
   TableHeader,
   TableRow} from '@/components/ui/table',
-import { Badge } from '@/components/ui/badge',
-import Skeleton from '@/components/ui/skeleton',
-import { EmptyState } from '@/components/ui/empty-state',
+import { Badge } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { EmptyState } from '@/components/ui/empty-state';
 export default function OrdersPage() {
   const { user } = useAuth(),
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
-  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
+  const formatDate = (date: string,) => new Date(date).toLocaleDateString(),
 
-  const getStatusBadge = (status: string) => {
+  const getStatusBadge = (status: string,) => {
     switch (status) {
       case 'in_escrow':
         return (
@@ -59,7 +59,7 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {Array.from({ length: 3 }).map((_, i) => (
+            {Array.from({ length: 3 }).map((_, i,) => (
               <TableRow key={i}>
                 <TableCell><Skeleton className="h-4 w-20" /></TableCell>
                 <TableCell><Skeleton className="h-4 w-24" /></TableCell>
@@ -72,7 +72,7 @@ export default function OrdersPage() {
         </Table>
       ) : orders.length === 0 ? (
         <EmptyState
-          icon={<FileText className="h-10 w-10" />}
+          icon = {<FileText className="h-10 w-10" />,}
           title="No Orders"
           description="You haven't purchased anything yet."
         />
@@ -88,7 +88,7 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {orders.map((order) => (
+            {orders.map((order,) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
                 <TableCell>{formatDate(order.date)}</TableCell>

@@ -1,15 +1,15 @@
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { useRouter } from "next/router",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useRouter } from "next/router";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Switch } from "@/components/ui/switch";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
   FormControl,
@@ -18,12 +18,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 // Define form schema
 const serviceProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long"),
@@ -31,7 +31,7 @@ const serviceProfileSchema = z.object({
   bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
   location: z.string().min(2, "Location is required"),
   services: z.string().min(2, "Enter at least one service"),
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+  hourlyRate: z.string().refine((val,) => !isNaN(Number(val)), {
     message: "Rate must be a number"}),
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().transform(val => !!val),
@@ -72,12 +72,12 @@ export function ServiceProviderRegistrationForm() {
   },
 
   // Handle removing service tags
-  const handleRemoveService = (service: string) => {
-    setServiceTags(serviceTags.filter((s) => s !== service))
+  const handleRemoveService = (service: string,) => {
+    setServiceTags(serviceTags.filter((s,) => s !== service))
   },
 
   // Handle key press in services input (add on enter)
-  const handleServiceKeyPress = (e: React.KeyboardEvent) => {
+  const handleServiceKeyPress = (e: React.KeyboardEvent,) => {
     if (e.key === "Enter") {
       e.preventDefault(),
       handleAddService()
@@ -85,7 +85,7 @@ export function ServiceProviderRegistrationForm() {
   },
 
   // Handle avatar upload
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>,) => {
     const file = e.target.files?.[0],
     if (file) {
       const reader = new FileReader(),
@@ -175,7 +175,7 @@ export function ServiceProviderRegistrationForm() {
   },
 
   // Handle form submission
-  const onSubmit = async (values: ServiceFormValues) => {
+  const onSubmit = async (values: ServiceFormValues,) => {
     if (serviceTags.length === 0) {
       toast({
         title: "Services required",
@@ -294,7 +294,7 @@ export function ServiceProviderRegistrationForm() {
         description: "Your service provider profile has been published and is now visible in the directory."}),
 
       // Redirect to service provider dashboard or profile page
-      setTimeout(() => {
+      setTimeout((,) => {
         router.push('/service-dashboard')
       }, 1500)
       
@@ -328,9 +328,9 @@ export function ServiceProviderRegistrationForm() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="col-span-1">
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="name"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                           <FormControl>
@@ -351,9 +351,9 @@ export function ServiceProviderRegistrationForm() {
 
                   <div className="col-span-1">
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="title"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
                           <FormControl>
@@ -374,9 +374,9 @@ export function ServiceProviderRegistrationForm() {
 
                   <div className="col-span-1">
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="location"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
                           <FormControl>
@@ -397,9 +397,9 @@ export function ServiceProviderRegistrationForm() {
 
                   <div className="col-span-1">
                     <FormField
-                      control={form.control}
+                      control = {form.control,}
                       name="website"
-                      render={({ field }: { field: any }) => (
+                      render={({ field }: { field: any },) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>
                           <FormControl>
@@ -427,7 +427,7 @@ export function ServiceProviderRegistrationForm() {
                       {uploadedAvatar ? (
                         <AspectRatio ratio={1/1}>
                           <img
-                            src={uploadedAvatar}
+                            src = {uploadedAvatar,}
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
                             loading="lazy"
@@ -447,7 +447,7 @@ export function ServiceProviderRegistrationForm() {
                         type="file"
                         accept="image/*"
                         className="hidden"
-                        onChange={handleAvatarUpload}
+                        onChange = {handleAvatarUpload,}
                       />
                     </label>
                   </div>
@@ -463,9 +463,9 @@ export function ServiceProviderRegistrationForm() {
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Service Description</h3>
                 <FormField
-                  control={form.control}
+                  control = {form.control,}
                   name="bio"
-                  render={({ field }: { field: any }) => (
+                  render={({ field }: { field: any },) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Your Services</FormLabel>
                       <FormControl>
@@ -485,9 +485,9 @@ export function ServiceProviderRegistrationForm() {
                 
                 {/* AI Enhancement Option */}
                 <FormField
-                  control={form.control}
+                  control = {form.control,}
                   name="enhancedProfile"
-                  render={({ field }: { field: any }) => (
+                  render={({ field }: { field: any },) => (
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
                         <FormLabel className="text-white flex items-center">
@@ -501,8 +501,8 @@ export function ServiceProviderRegistrationForm() {
                       <FormControl>
                         <Switch
                           aria-label="AI profile enhancement"
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
+                          checked = {field.value,}
+                          onCheckedChange = {field.onChange,}
                           className="data-[state=checked]:bg-zion-purple"
                         />
                       </FormControl>
@@ -516,8 +516,8 @@ export function ServiceProviderRegistrationForm() {
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}
+                      onClick = {generateEnhancedProfile,}
+                      disabled = {isGenerating,}
                     >
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
@@ -537,7 +537,7 @@ export function ServiceProviderRegistrationForm() {
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-                        onClick={applyGeneratedContent}
+                        onClick = {applyGeneratedContent,}
                       >
                         <Check className="mr-1 h-3 w-3" /> Apply
                       </Button>
@@ -553,9 +553,9 @@ export function ServiceProviderRegistrationForm() {
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
                           <div className="flex flex-wrap gap-2 mt-1">
-                            {generatedContent.services.map((service, index) => (
+                            {generatedContent.services.map((service, index,) => (
                               <Badge
-                                key={index}
+                                key = {index,}
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
                               >
                                 {service}
@@ -577,9 +577,9 @@ export function ServiceProviderRegistrationForm() {
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Services Offered</h3>
                   <FormField
-                    control={form.control}
+                    control = {form.control,}
                     name="services"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: any },) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Services</FormLabel>
                         <div className="flex gap-2">
@@ -588,14 +588,14 @@ export function ServiceProviderRegistrationForm() {
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a service..."
                               {...field}
-                              onKeyDown={handleServiceKeyPress}
+                              onKeyDown = {handleServiceKeyPress,}
                             />
                           </FormControl>
                           <Button
                             type="button"
                             variant="outline"
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-                            onClick={handleAddService}
+                            onClick = {handleAddService,}
                           >
                             Add
                           </Button>
@@ -611,13 +611,13 @@ export function ServiceProviderRegistrationForm() {
                   <div className="flex flex-wrap gap-2 mt-2">
                     {serviceTags.map(service => (
                       <Badge
-                        key={service}
+                        key = {service,}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
                       >
                         {service}
                         <button
                           type="button"
-                          onClick={() => handleRemoveService(service)}
+                          onClick = {(,) => handleRemoveService(service),}
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
                         >
                           <X className="h-3 w-3" />
@@ -634,9 +634,9 @@ export function ServiceProviderRegistrationForm() {
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>
                   <FormField
-                    control={form.control}
+                    control = {form.control,}
                     name="hourlyRate"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: any },) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Starting Rate (USD)</FormLabel>
                         <FormControl>
@@ -658,9 +658,9 @@ export function ServiceProviderRegistrationForm() {
                   />
 
                   <FormField
-                    control={form.control}
+                    control = {form.control,}
                     name="availability"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: any },) => (
                       <FormItem className="space-y-4">
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
                         <FormControl>
@@ -670,8 +670,8 @@ export function ServiceProviderRegistrationForm() {
                                 type="radio"
                                 id="available"
                                 value="available"
-                                checked={field.value === "available"}
-                                onChange={() => field.onChange("available")}
+                                checked = {field.value === "available",}
+                                onChange = {(,) => field.onChange("available"),}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
                               <label htmlFor="available" className="text-white flex items-center gap-2">
@@ -685,8 +685,8 @@ export function ServiceProviderRegistrationForm() {
                                 type="radio"
                                 id="limited"
                                 value="limited"
-                                checked={field.value === "limited"}
-                                onChange={() => field.onChange("limited")}
+                                checked = {field.value === "limited",}
+                                onChange = {() => field.onChange("limited"),}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
                               <label htmlFor="limited" className="text-white flex items-center gap-2">
@@ -700,8 +700,8 @@ export function ServiceProviderRegistrationForm() {
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
-                                checked={field.value === "unavailable"}
-                                onChange={() => field.onChange("unavailable")}
+                                checked = {field.value === "unavailable",}
+                                onChange = {() => field.onChange("unavailable"),}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
@@ -731,7 +731,7 @@ export function ServiceProviderRegistrationForm() {
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                  disabled={isSubmitting}
+                  disabled = {isSubmitting,}
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
                 </Button>

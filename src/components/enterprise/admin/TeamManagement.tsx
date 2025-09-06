@@ -1,5 +1,5 @@
 
-import React, { useState } from "react",
+import React, { useState } from "react";
 import {
   Table,
   TableBody,
@@ -15,12 +15,12 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Trash, Mail, UserPlus } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Trash, Mail, UserPlus } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
@@ -74,14 +74,14 @@ export function TeamManagement() {
     setIsAddingMember(false)
   },
 
-  const handleRemoveMember = (_memberId: number) => {
+  const handleRemoveMember = (_memberId: number,) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
       description: "The team member has been removed from your workspace."})
   },
 
-  const handleResendInvite = (memberEmail: string) => {
+  const handleResendInvite = (memberEmail: string,) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
@@ -116,8 +116,8 @@ export function TeamManagement() {
                   type="email"
                   placeholder="colleague@company.com"
                   className="col-span-3"
-                  value={newMemberEmail}
-                  onChange={(e) => setNewMemberEmail(e.target.value)}
+                  value = {newMemberEmail,}
+                  onChange = {(e,) => setNewMemberEmail(e.target.value),}
                 />
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
@@ -157,7 +157,7 @@ export function TeamManagement() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {teamMembers.map((member) => (
+            {teamMembers.map((member,) => (
               <TableRow key={member.id}>
                 <TableCell>
                   <div className="flex items-center gap-2">
@@ -165,7 +165,7 @@ export function TeamManagement() {
                       <span className="text-sm font-medium">
                         {member.name
                           .split(" ")
-                          .map((n) => n[0])
+                          .map((n,) => n[0])
                           .join("")}
                       </span>
                     </div>
@@ -180,7 +180,7 @@ export function TeamManagement() {
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
-                    variant={member.status === "active" ? "default" : "outline"}
+                    variant = {member.status === "active" ? "default" : "outline",}
                   >
                     {member.status}
                   </Badge>
@@ -192,7 +192,7 @@ export function TeamManagement() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        onClick={() => handleResendInvite(member.email)}
+                        onClick = {(,) => handleResendInvite(member.email),}
                       >
                         <Mail className="h-4 w-4 mr-1" />
                         Resend
@@ -202,7 +202,7 @@ export function TeamManagement() {
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
-                        onClick={() => handleRemoveMember(member.id)}
+                        onClick = {(,) => handleRemoveMember(member.id),}
                       >
                         <Trash className="h-4 w-4" />
                       </Button>

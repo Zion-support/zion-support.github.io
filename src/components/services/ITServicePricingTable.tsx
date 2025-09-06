@@ -1,10 +1,10 @@
 
-import { useState, useMemo } from "react",
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Globe, Search, ArrowUpDown } from 'lucide-react'
-import { Button } from "@/components/ui/button",
+import { useState, useMemo } from "react";
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
+import { Input } from "@/components/ui/input";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Globe, Search, ArrowUpDown } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
@@ -14,7 +14,7 @@ export function ITServicePricingTable() {
     key: "country",
     direction: "ascending"}),
 
-  const sortedData = useMemo(() => {
+  const sortedData = useMemo((,) => {
     let filteredData = [...onsiteServicePricing],
     
     // Filter by search query
@@ -25,7 +25,7 @@ export function ITServicePricingTable() {
     }
     
     // Sort data
-    filteredData.sort((a, b) => {
+    filteredData.sort((a, b,) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1
       }
@@ -38,7 +38,7 @@ export function ITServicePricingTable() {
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
 
-  const handleSort = (key: keyof CountryPricing) => {
+  const handleSort = (key: keyof CountryPricing,) => {
     setSortConfig({
       key,
       direction: 
@@ -54,8 +54,8 @@ export function ITServicePricingTable() {
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
             placeholder="Search by country..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            value = {searchQuery,}
+            onChange = {(e,) => setSearchQuery(e.target.value),}
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
           />
         </div>
@@ -68,7 +68,7 @@ export function ITServicePricingTable() {
               <TableHead className="text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
-                  onClick={() => handleSort("country")}
+                  onClick = {() => handleSort("country"),}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Country</span>
@@ -78,7 +78,7 @@ export function ITServicePricingTable() {
               <TableHead className="text-right text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
-                  onClick={() => handleSort("pricePerIncident")}
+                  onClick = {() => handleSort("pricePerIncident"),}
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Price Per Incident</span>
@@ -89,7 +89,7 @@ export function ITServicePricingTable() {
           </TableHeader>
           <TableBody className="bg-zion-blue-dark">
             {sortedData.length > 0 ? (
-              sortedData.map((item) => (
+              sortedData.map((item,) => (
                 <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
                   <TableCell className="flex items-center space-x-2">
                     <Globe className="h-4 w-4 text-zion-purple" />

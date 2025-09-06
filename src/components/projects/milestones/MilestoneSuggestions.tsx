@@ -1,19 +1,18 @@
 
-import React, { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Loader2, Sparkles, Check } from 'lucide-react'
-import { Badge } from '@/components/ui/badge',
-import { format, parseISO } from 'date-fns',
-
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Loader2, Sparkles, Check } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
   projectName: string,
   scopeSummary: string,
   startDate: Date,
   endDate?: Date,
   projectType: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
 }
 
 export function MilestoneSuggestions({
@@ -45,7 +44,7 @@ export function MilestoneSuggestions({
     }
   },
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string,) => {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
@@ -58,8 +57,8 @@ export function MilestoneSuggestions({
       {!showSuggestions && (
         <Button
           variant="outline"
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
+          onClick = {handleGenerateMilestones,}
+          disabled = {isGenerating || !scopeSummary || !startDate,}
           className="w-full"
         >
           {isGenerating ? (
@@ -86,7 +85,7 @@ export function MilestoneSuggestions({
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
-              {generatedMilestones.map((milestone, index) => (
+              {generatedMilestones.map((milestone, index,) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
                   <div className="flex items-center justify-between mb-1">
                     <div className="font-medium flex items-center">

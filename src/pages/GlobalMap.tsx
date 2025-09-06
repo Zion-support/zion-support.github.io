@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react',
-import { Header } from '@/components/Header',
-import { NextSeo } from '@/components/NextSeo',
-import { Globe, MapPin } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',
-
+import React, { useEffect, useState } from 'react';
+import { Header } from '@/components/Header';
+import { NextSeo } from '@/components/NextSeo';
+import { Globe, MapPin } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 interface Instance {
   id: number,
   name: string,
@@ -56,13 +55,13 @@ interface FeedItem {
 export default function GlobalMapPage() {
   const [feed, setFeed] = useState<FeedItem[]>([]),
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  useEffect((,) => {
+    const interval = setInterval((,) => {
       const messages = [
         'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia'],
       const id = Date.now(),
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',
-      setFeed((f) => [{ id, text }, ...f].slice(0, 5))
+      setFeed((f,) => [{ id, text }, ...f].slice(0, 5))
     }, 5000),
     return () => clearInterval(interval)
   }, []),
@@ -75,7 +74,7 @@ export default function GlobalMapPage() {
     return { x, y }
   }
 
-  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
+  const topRegions = INSTANCES.sort((a, b,) => b.talent - a.talent).slice(0, 5),
 
   return (
     <div className="min-h-screen bg-background">
@@ -86,7 +85,7 @@ export default function GlobalMapPage() {
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="relative" style={{ width, height }}>
             <Globe className="w-full h-full text-secondary" />
-            {INSTANCES.map((i) => {
+            {INSTANCES.map((i,) => {
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
@@ -118,7 +117,7 @@ export default function GlobalMapPage() {
             <section>
               <h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>
               <ul className="space-y-1">
-                {topRegions.map((r) => (
+                {topRegions.map((r,) => (
                   <li key={r.id} className="flex justify-between border-b pb-1">
                     <span>{r.region}</span>
                     <span>{r.talent}</span>
@@ -129,7 +128,7 @@ export default function GlobalMapPage() {
             <section>
               <h2 className="text-xl font-semibold mb-2">Live Feed</h2>
               <ul className="space-y-1">
-                {feed.map((f) => (
+                {feed.map((f,) => (
                   <li key={f.id} className="text-sm">{f.text}</li>
                 ))}
               </ul>

@@ -1,9 +1,8 @@
-import React from 'react',
-import Link from 'next/link',
-import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-
+import React from 'react';
+import Link from 'next/link';
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {
   onRetry?: () => void,
   showSetupButton?: boolean
@@ -59,7 +58,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             {showSetupButton && (
               <Button 
-                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+                onClick = {(,) => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
@@ -68,7 +67,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             )}
             
             <Button 
-              onClick={handleRefresh}
+              onClick = {handleRefresh,}
               variant="outline" 
               className="flex-1"
             >
@@ -188,7 +187,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           <p>
             For detailed instructions, see{' '}
             <button 
-              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+              onClick = {() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
               className="text-blue-600 hover: underline"
             >
               AUTH0_SETUP_GUIDE_ISSUE_1.md

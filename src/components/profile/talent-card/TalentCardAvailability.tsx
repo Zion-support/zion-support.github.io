@@ -1,14 +1,13 @@
 
-import React from "react",
-import { Clock } from 'lucide-react'
-
+import React from "react";
+import { Clock } from 'lucide-react';
 interface TalentCardAvailabilityProps {
   availabilityType: string
 }
 
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
   // Format availability status
-  const getAvailabilityColor = (status: string) => {
+  const getAvailabilityColor = (status: string,) => {
     switch (status) {
       case 'full-time':
         return 'bg-green-500/20 text-green-400',
@@ -22,7 +21,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   },
   
   // Format availability label
-  const getAvailabilityLabel = (status: string) => {
+  const getAvailabilityLabel = (status: string,) => {
     switch (status) {
       case 'full-time':
         return 'Full-time',

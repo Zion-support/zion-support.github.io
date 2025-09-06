@@ -1,23 +1,23 @@
-import React, { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useRouter } from 'next/router',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings",
-import { DollarSign } from 'lucide-react'
-import { RatingStars } from "@/components/RatingStars",
-import { FavoriteButton } from "@/components/FavoriteButton",
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import { toast } from '@/hooks/use-toast',
-import { useCurrency } from '@/hooks/useCurrency',
+import React, { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ProductListing } from "@/types/listings";
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from "@/components/RatingStars";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image', // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
-  onRequestQuote?: (id: string) => void,
+  onRequestQuote?: (id: string,) => void,
   detailBasePath?: string
 }
 
@@ -26,7 +26,7 @@ const ProductListingCardComponent = ({
   view = 'grid',
   onRequestQuote,
   detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
+}: ProductListingCardProps,) => {
   const isGrid = view === 'grid',
   const router = useRouter(),
   const [loading, setLoading] = useState(false),
@@ -100,11 +100,11 @@ const ProductListingCardComponent = ({
     toast.success(`1× ${listing.title} added`, {
       action: {
         label: 'View Cart',
-        onClick: () => router.push('/cart')}}),
+        onClick: (,) => router.push('/cart')}}),
     setLoading(false)
   },
   
-  const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleRequestQuote = (e: React.MouseEvent,) => {
     e.preventDefault(),
     e.stopPropagation(),
     
@@ -121,36 +121,36 @@ const ProductListingCardComponent = ({
     <div
       data-testid="equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
-      onClick={handleViewListing}
-      tabIndex={0}
+      onClick = {handleViewListing,}
+      tabIndex = {0,}
       role="button"
-      onKeyDown={(e) => {
+      onKeyDown = {(e,) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault(),
           handleViewListing()
-        }
+        ,}
       }}
     >
       {/* Image */}
       <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {
+        onKeyDown = {(e,) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault(),
             handleViewListing()
-          }
+          ,}
         }}
       >
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <Image
-            src={imageSrc}
-            alt={listing.title}
-            fill={true}
+            src = {imageSrc,}
+            alt = {listing.title,}
+            fill = {true,}
             style={{ objectFit: 'cover' }}
-            onError={handleImageError}
+            onError = {handleImageError,}
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
@@ -161,7 +161,7 @@ const ProductListingCardComponent = ({
           )}
           {stockStatus && (
             <Badge
-              variant={stockVariant as any}
+              variant = {stockVariant as any,}
               className="absolute top-2 left-2"
             >
               {stockStatus}
@@ -202,9 +202,9 @@ const ProductListingCardComponent = ({
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
-              {listing.tags.map((tag, idx) => (
+              {listing.tags.map((tag, idx,) => (
                 <span 
-                  key={idx} 
+                  key = {idx,}
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
                   {tag}
@@ -233,11 +233,11 @@ const ProductListingCardComponent = ({
             <Button
               size="sm"
               className="bg-primary hover: bg-primary/80 text-primary-foreground"
-              onClick={(e) => {
+              onClick={(e,) => {
                 e.stopPropagation(), // Prevent card click event
                 addToCart()
               }}
-              disabled={loading}
+              disabled = {loading,}
             >
               {loading ? (
                 <>
@@ -256,7 +256,7 @@ const ProductListingCardComponent = ({
               size="sm"
               variant="default"
               className="bg-green-600 hover: bg-green-700 text-white"
-              onClick={(e) => {
+              onClick={(e,) => {
                 e.stopPropagation(), // Prevent card click event
                 // Add to cart first, then redirect to checkout
                 dispatch(
@@ -264,7 +264,7 @@ const ProductListingCardComponent = ({
                 ),
                 router.push('/checkout')
               }}
-              disabled={loading}
+              disabled = {loading,}
             >
               Buy Now
             </Button>
@@ -273,7 +273,7 @@ const ProductListingCardComponent = ({
               <Button 
                 size="sm"
                 variant="outline" 
-                onClick={handleRequestQuote}
+                onClick = {handleRequestQuote,}
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote

@@ -1,13 +1,13 @@
 
-import React from 'react',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { format } from 'date-fns',
-import { Check, ArrowDown, X } from 'lucide-react'
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+import React from 'react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { format } from 'date-fns';
+import { Check, ArrowDown, X } from 'lucide-react';
+import { useDisputeCheck } from '@/hooks/useDisputeCheck';
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface MilestoneCardProps {
   id: string,
   projectId: string,
@@ -16,8 +16,8 @@ interface MilestoneCardProps {
   amount: number,
   status: string,
   dueDate?: string,
-  onApprove?: (id: string) => Promise<void>,
-  onReject?: (id: string) => Promise<void>
+  onApprove?: (id: string,) => Promise<void>,
+  onReject?: (id: string,) => Promise<void>
 }
 
 export function MilestoneCard({ 
@@ -84,8 +84,8 @@ export function MilestoneCard({
         <div>
           {status !== 'completed' && status !== 'rejected' && (
             <RaiseDisputeButton 
-              projectId={projectId} 
-              milestoneId={id} 
+              projectId = {projectId,}
+              milestoneId = {id,}
               variant="ghost"
               size="sm"
             />
@@ -94,13 +94,13 @@ export function MilestoneCard({
         
         <div className="flex gap-2">
           {status === 'pending' && onReject && !isUnderDispute && (
-            <Button variant="outline" size="sm" onClick={() => onReject(id)}>
+            <Button variant="outline" size="sm" onClick={(,) => onReject(id)}>
               <X className="h-4 w-4 mr-1" /> Reject
             </Button>
           )}
           
           {status === 'pending' && onApprove && !isUnderDispute && (
-            <Button variant="default" size="sm" onClick={() => onApprove(id)}>
+            <Button variant="default" size="sm" onClick={(,) => onApprove(id)}>
               <Check className="h-4 w-4 mr-1" /> Approve
             </Button>
           )}
@@ -115,3 +115,4 @@ export function MilestoneCard({
     </Card>
   )
 }
+;

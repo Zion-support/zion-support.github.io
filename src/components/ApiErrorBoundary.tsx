@@ -1,10 +1,10 @@
-import React, { Component, ReactNode } from 'react',
-import { QueryClient } from '@tanstack/react-query',
-import * as Sentry from '@sentry/nextjs',
-import { Button } from '@/components/ui/button',
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
-import { RefreshCw, WifiOff } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { Component, ReactNode } from 'react';
+import { QueryClient } from '@tanstack/react-query';
+import * as Sentry from '@sentry/nextjs';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { RefreshCw, WifiOff } from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApiErrorBoundaryProps {
   children: ReactNode,
   queryClient?: QueryClient,
@@ -29,7 +29,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
       error: null,
       errorInfo: null,
       isRetrying: false,
-      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true}
+      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,}
   }
 
   static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {
@@ -40,7 +40,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
   componentDidCatch(error: Error, errorInfo: any) {
     // Log to Sentry
-    Sentry.withScope((scope) => {
+    Sentry.withScope((scope,) => {
       scope.setTag('errorBoundaryApiErrorBoundary'),
       scope.setContext('errorInfo', errorInfo),
       scope.setLevel('error'),
@@ -95,7 +95,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
       }
 
       // Reset error state after a brief delay
-      this.retryTimeoutId = setTimeout(() => {
+      this.retryTimeoutId = setTimeout((,) => {
         this.setState({
           hasError: false,
           error: null,
@@ -151,8 +151,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
             <div className="flex flex-col gap-2">
               <Button
-                onClick={this.handleRetry}
-                disabled={this.state.isRetrying}
+                onClick = {this.handleRetry,}
+                disabled = {this.state.isRetrying,}
                 className="w-full"
               >
                 {this.state.isRetrying ? (
@@ -170,7 +170,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
               <Button
                 variant="outline"
-                onClick={() => window.location.reload()}
+                onClick = {() => window.location.reload(),}
                 className="w-full"
               >
                 Reload Page
@@ -206,8 +206,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
 // Hook for accessing query client in function components
 export const useApiErrorHandler = () => {
-  const handleApiError = (error: Error) => {
-    Sentry.withScope((scope) => {
+  const handleApiError = (error: Error,) => {
+    Sentry.withScope((scope,) => {
       scope.setTag('sourceuseApiErrorHandler'),
       scope.setLevel('error'),
       Sentry.captureException(error)

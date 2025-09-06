@@ -1,10 +1,10 @@
 
-import { GradientHeading } from "./GradientHeading",
-import Link from "next/link",
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+import { GradientHeading } from "./GradientHeading";
+import Link from "next/link";
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
 import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
@@ -18,7 +18,7 @@ interface CategoryType {
 }
 
 // Default static categories with translation keys
-const getDefaultCategories = (t: any) => [
+const getDefaultCategories = (t: any,) => [
   {
     id: "services",
     name: t('categories.services'),
@@ -50,7 +50,7 @@ const getDefaultCategories = (t: any) => [
     color: "from-emerald-500 to-green-600"}],
 
 // Helper to get icon component from name
-const getIcon = (iconName?: string) => {
+const getIcon = (iconName?: string,) => {
   switch (iconName) {
     case "Briefcase": return <Briefcase className="w-10 h-10" />,
     case "Users": return <Users className="w-10 h-10" />,
@@ -60,7 +60,7 @@ const getIcon = (iconName?: string) => {
   }
 },
 
-const getSpecialServices = (t: any) => [
+const getSpecialServices = (t: any,) => [
   {
     title: t('categories.it_onsite_services'),
     link: "/it-onsite-services"
@@ -128,10 +128,10 @@ export function CategoriesSection({
         )}
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayCategories.map((category) => (
+          {displayCategories.map((category,) => (
             <Link
-              key={category.id}
-              href={category.link || '#'}
+              key = {category.id,}
+              href = {category.link || '#',}
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
@@ -151,10 +151,10 @@ export function CategoriesSection({
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {getSpecialServices(t).map((service) => (
+            {getSpecialServices(t).map((service,) => (
               <Link 
-                key={service.title}
-                href={service.link}
+                key = {service.title,}
+                href = {service.link,}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}

@@ -1,16 +1,16 @@
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { useState, useEffect, useRef, Suspense } from "react",
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from "@/data/listingData",
-import { ProductListing } from "@/types/listings",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { toast } from "@/hooks/use-toast",
-import { NextSeo } from '@/components/NextSeo',
-import { Header } from "@/components/Header",
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { GradientHeading } from "@/components/GradientHeading";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { useState, useEffect, useRef, Suspense } from "react";
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react';
+import { MARKETPLACE_LISTINGS } from "@/data/listingData";
+import { ProductListing } from "@/types/listings";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { toast } from "@/hooks/use-toast";
+import { NextSeo } from '@/components/NextSeo';
+import { Header } from "@/components/Header";
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils/productionLogger';
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support",
   "Cloud Infrastructure Management",
@@ -138,7 +138,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     }
   },
 
-  useEffect(() => {
+  useEffect((,) => {
     async function load() {
       setIsLoading(true),
       try {
@@ -146,7 +146,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         const currentCategory = categoryData[slug as keyof typeof categoryData] || {
           title: slug
             ?.split('-')
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .map((word,) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ') || 'Category',
           description: 'Explore our collection in this category',
           icon: <Bot className="w-6 h-6" />},
@@ -157,7 +157,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         // Filter listings by category
         const categoryTitle = currentCategory.title,
         const filteredListings = MARKETPLACE_LISTINGS.filter(
-          (listing) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
+          (listing,) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
         ),
 
         // If we don't have real listings for this category, generate placeholder listings
@@ -166,7 +166,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
             ? filteredListings
             : Array(4)
                 .fill(null)
-                .map((_, index) => ({
+                .map((_, index,) => ({
                   id: `${slug}-${index}`,
                   title: `${currentCategory.title} Product ${index + 1}`,
                   description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
@@ -195,12 +195,12 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     load()
   }, [slug]),
 
-  useEffect(() => {
+  useEffect((,) => {
     if (slug !== 'innovation') return,
 
-    const interval = setInterval(() => {
+    const interval = setInterval((,) => {
       innovationCounterRef.current += 1,
-      setListings((prev) => [
+      setListings((prev,) => [
         generateInnovationListing(innovationCounterRef.current),
         ...prev])
     }, 120000), // every 2 minutes
@@ -209,7 +209,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   }, [slug]),
 
   // Handle requesting a quote
-  const handleRequestQuote = (listingId: string) => {
+  const handleRequestQuote = (listingId: string,) => {
     const listing = listings.find(item => item.id === listingId),
     
     if (listing) {
@@ -268,11 +268,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
             <ListingGridSkeleton />
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {listings.map((listing) => (
+              {listings.map((listing,) => (
                 <ProductListingCard
-                  key={listing.id}
-                  listing={listing}
-                  onRequestQuote={handleRequestQuote}
+                  key = {listing.id,}
+                  listing = {listing,}
+                  onRequestQuote = {handleRequestQuote,}
                   detailBasePath="/marketplace/listing"
                 />
               ))}
@@ -284,3 +284,4 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     </>
   )
 }
+;

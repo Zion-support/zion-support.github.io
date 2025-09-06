@@ -1,24 +1,24 @@
-import Link from 'next/link',
-import { Heart } from 'lucide-react'
-import { useWishlist } from '@/hooks/useWishlist',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
+import Link from 'next/link';
+import { Heart } from 'lucide-react';
+import { useWishlist } from '@/hooks/useWishlist';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from '@/components/ui/tooltip',
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import Image from 'next/image',
-import React, { useState, useEffect } from 'react',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useRouter } from 'next/router',
-import { Product } from '@/services/marketplace',
-import { useMediaQuery } from 'usehooks-ts',
-import { toast } from '@/hooks/use-toast',
-import { captureException } from '@/utils/sentry',
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useRouter } from 'next/router';
+import { Product } from '@/services/marketplace';
+import { useMediaQuery } from 'usehooks-ts';
+import { toast } from '@/hooks/use-toast';
+import { captureException } from '@/utils/sentry';
 interface ProductCardProps {
   product: Product,
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure
@@ -52,7 +52,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       ? 'warning'
       : 'success',
   // Reset redirecting state if component unmounts (e.g., navigation cancelled by user)
-  useEffect(() => {
+  useEffect((,) => {
     return () => {
       setIsRedirecting(false)
     }
@@ -91,13 +91,13 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       description: `${productTitle} has been added to your cart`,
       action: {
         label: 'View Cart',
-        onClick: () => router.push('/cart')}})
+        onClick: (,) => router.push('/cart')}})
   },
 
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null,
   const imageAltText = productTitle,
 
-  const handleImageError = (error: any) => {
+  const handleImageError = (error: any,) => {
     if (!imageError) {
       setImageError(true),
       captureException(error, {
@@ -115,8 +115,8 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button
         className="absolute top-2 right-2 p-1 rounded-full bg-background/70"
-        onClick={() => toggle(product.id)}
-        aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
+        onClick = {(,) => toggle(product.id),}
+        aria-label = {active ? 'Remove from favorites' : 'Add to favorites',}
       >
         <Heart className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'} />
       </button>
@@ -124,11 +124,11 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     <div className="w-full h-40 relative mb-2">
       {imageUrl && !imageError ? (
         <Image
-          src={imageUrl}
-          alt={imageAltText}
+          src = {imageUrl,}
+          alt = {imageAltText,}
           style={{ objectFit: 'cover' }}
-          onError={(e) => handleImageError(e)}
-          priority={false}
+          onError = {(e,) => handleImageError(e),}
+          priority = {false,}
         />
       ) : (
         <div className="w-full h-full bg-gray-200 flex items-center justify-center">
@@ -150,11 +150,11 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         <div className="w-full h-40 relative mb-2 cursor-pointer">
           {imageUrl && !imageError ? (
             <Image
-              src={imageUrl}
-              alt={imageAltText}
+              src = {imageUrl,}
+              alt = {imageAltText,}
               style={{ objectFit: 'cover' }}
-              onError={(e) => handleImageError(e)}
-              priority={false}
+              onError = {(e,) => handleImageError(e),}
+              priority = {false,}
             />
           ) : (
             <div className="w-full h-full bg-gray-200 flex items-center justify-center">
@@ -184,15 +184,15 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  onClick={(e) => {
+                  onClick={(e,) => {
                     e.stopPropagation(),
                     if (onBuy) {
                       setIsRedirecting(true),
                       onBuy()
-                        .catch(() => {
+                        .catch((,) => {
                           // Error is handled by parent, but we still need to reset loading locally
                         })
-                        .finally(() => {
+                        .finally((,) => {
                           setIsRedirecting(false), // Always reset loading state
                           if (onBuyAttemptComplete) {
                             onBuyAttemptComplete(), // Notify parent if it provided this callback
@@ -204,7 +204,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
                   variant="outline"
                   className="flex-1"
                   data-testid="buy-now-button"
-                  disabled={!isAuthenticated || buyDisabled || isRedirecting}
+                  disabled = {!isAuthenticated || buyDisabled || isRedirecting,}
                 >
                   {isRedirecting ? (
                     <>

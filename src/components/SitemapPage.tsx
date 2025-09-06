@@ -1,9 +1,9 @@
 
-import React from 'react',
-import { completeSitemap, dynamicPaths } from '@/config/sitemap',
-import Link from 'next/link',
-import { ChevronRight } from 'lucide-react'
-import { SEO } from './SEO',
+import React from 'react';
+import { completeSitemap, dynamicPaths } from '@/config/sitemap';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
+import { SEO } from './SEO';
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
@@ -33,7 +33,7 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -58,7 +58,7 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -83,7 +83,7 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -108,7 +108,7 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -132,7 +132,7 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -149,7 +149,7 @@ export const SitemapPage: React.FC = () => {
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
-              {Object.entries(dynamicPaths).map(([key, path]) => (
+              {Object.entries(dynamicPaths).map(([key, path],) => (
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
@@ -164,3 +164,4 @@ export const SitemapPage: React.FC = () => {
     </>
   )
 },
+;

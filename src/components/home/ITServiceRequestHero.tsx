@@ -1,14 +1,14 @@
-import React, { useState } from "react",
-import Image from "next/image",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { useToast } from "@/hooks/use-toast",
-import axios from "axios",
-import { Loader2 } from 'lucide-react'
-import { useTranslation } from "react-i18next",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState } from "react";
+import Image from "next/image";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import axios from "axios";
+import { Loader2 } from 'lucide-react';
+import { useTranslation } from "react-i18next";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function ITServiceRequestHero() {
 
   const [name, setName] = useState(""),
@@ -21,7 +21,7 @@ export function ITServiceRequestHero() {
   const { toast } = useToast(),
   const { t } = useTranslation(),
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent,) => {
     e.preventDefault(),
 
     if (!name || !email || !location) {
@@ -82,54 +82,54 @@ export function ITServiceRequestHero() {
             <Image
               src="/logos/zion-logo.png"
               alt="Zion logo"
-              width={200}
-              height={200}
+              width = {200,}
+              height = {200,}
               className="w-full h-auto md:w-40"
             />
             <form onSubmit={handleSubmit} className="space-y-4 flex-1">
               <Input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value = {name,}
+                onChange = {(e,) => setName(e.target.value),}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.name_helperEnter the main contact for this request.')}</p>
               <Input
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value = {email,}
+                onChange = {(e,) => setEmail(e.target.value),}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.email_helper', "We'll confirm your request here.")}</p>
               <Input
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                value = {phone,}
+                onChange = {(e,) => setPhone(e.target.value),}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.phone_helperInclude a direct line for urgent updates.')}</p>
               <Input
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
+                value = {company,}
+                onChange = {(e,) => setCompany(e.target.value),}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.company_helperWho do you represent?')}</p>
               <Input
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
+                value = {location,}
+                onChange = {(e,) => setLocation(e.target.value),}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
-                value={details}
-                onChange={(e) => setDetails(e.target.value)}
+                value = {details,}
+                onChange = {(e,) => setDetails(e.target.value),}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]"
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.details_helperShare any important context for our technicians.')}</p>
               <Button
                 type="submit"
-                disabled={isSubmitting}
+                disabled = {isSubmitting,}
                 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"
               >
                 {isSubmitting && (

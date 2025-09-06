@@ -1,6 +1,6 @@
 
-import React from "react",
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
+import React from "react";
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import { 
   Table,
   TableBody, 
@@ -9,24 +9,24 @@ import {
   TableHeader, 
   TableRow 
 } from "@/components/ui/table",
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button";
 import { 
   DropdownMenu,
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
-import { formatDate } from "@/utils/dateUtils",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
   isLoading: boolean,
-  updateStatus: (id: string, status: QuoteStatus) => void,
-  toggleArchive: (id: string, isArchived: boolean) => void,
-  deleteQuote: (id: string) => void,
-  onViewDetails: (quote: QuoteRequest) => void
+  updateStatus: (id: string, status: QuoteStatus,) => void,
+  toggleArchive: (id: string, isArchived: boolean,) => void,
+  deleteQuote: (id: string,) => void,
+  onViewDetails: (quote: QuoteRequest,) => void
 }
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
@@ -37,7 +37,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   toggleArchive,
   deleteQuote,
   onViewDetails
-}) => {
+},) => {
   return (
     <div className="overflow-x-auto">
       <Table>
@@ -70,7 +70,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
           ) : (
             quotes.map(quote => (
               <TableRow 
-                key={quote.id}
+                key = {quote.id,}
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
@@ -104,7 +104,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                     <Button 
                       variant="ghost" 
                       size="icon" 
-                      onClick={() => onViewDetails(quote)}
+                      onClick = {() => onViewDetails(quote),}
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
@@ -115,7 +115,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                         <Button 
                           variant="ghost" 
                           size="icon"
-                          onClick={() => toggleArchive(quote.id, false)}
+                          onClick = {(,) => toggleArchive(quote.id, false),}
                         >
                           <Archive className="h-4 w-4" />
                           <span className="sr-only">Unarchive</span>
@@ -124,10 +124,10 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           variant="ghost" 
                           size="icon"
                           className="text-red-500"
-                          onClick={() => {
+                          onClick = {() => {
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                               deleteQuote(quote.id)
-                            }
+                            ,}
                           }}
                         >
                           <Trash2 className="h-4 w-4" />
@@ -143,7 +143,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
-                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>
+                          <DropdownMenuItem onClick={(,) => updateStatus(quote.id, 'new')}>
                             Mark as New
                           </DropdownMenuItem>
                           <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>
@@ -163,10 +163,10 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             Archive
                           </DropdownMenuItem>
                           <DropdownMenuItem 
-                            onClick={() => {
+                            onClick = {() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-                              }
+                              ,}
                             }}
                             className="text-red-500"
                           >

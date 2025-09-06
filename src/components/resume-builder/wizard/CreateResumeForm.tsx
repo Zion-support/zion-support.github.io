@@ -1,14 +1,14 @@
 
-import { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Loader2 } from 'lucide-react'
-import { CreateResumeFormProps } from "./types",
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Loader2 } from 'lucide-react';
+import { CreateResumeFormProps } from "./types";
 export const CreateResumeForm = ({ 
   onCreateResume,
   onCancel,
   isLoading 
-}: CreateResumeFormProps) => {
+}: CreateResumeFormProps,) => {
   const [newResumeTitle, setNewResumeTitle] = useState(''),
 
   const handleSubmit = async () => {
@@ -28,12 +28,12 @@ export const CreateResumeForm = ({
               type="text"
               placeholder="Resume Title (e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-              value={newResumeTitle}
-              onChange={(e) => setNewResumeTitle(e.target.value)}
+              value = {newResumeTitle,}
+              onChange = {(e,) => setNewResumeTitle(e.target.value),}
             />
             <Button 
-              onClick={handleSubmit}
-              disabled={!newResumeTitle.trim() || isLoading}
+              onClick = {handleSubmit,}
+              disabled = {!newResumeTitle.trim() || isLoading,}
             >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Create
@@ -42,7 +42,7 @@ export const CreateResumeForm = ({
           
           <Button
             variant="ghost"
-            onClick={onCancel}
+            onClick = {onCancel,}
             className="mt-4"
           >
             Cancel
@@ -52,3 +52,4 @@ export const CreateResumeForm = ({
     </Card>
   )
 },
+;

@@ -1,11 +1,11 @@
 
-import React from "react",
-import { Card } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Search } from 'lucide-react'
-import { Input } from "@/components/ui/input",
-import { cn } from "@/lib/utils",
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Search } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 interface Conversation {
   id: string,
   name: string,
@@ -19,7 +19,7 @@ interface Conversation {
 interface MobileConversationListProps {
   conversations: Conversation[],
   activeConversation?: string,
-  onSelectConversation: (id: string) => void
+  onSelectConversation: (id: string,) => void
 }
 
 export function MobileConversationList({
@@ -49,14 +49,14 @@ export function MobileConversationList({
       </div>
       
       <div className="space-y-2 pb-24">
-        {conversations.map((conversation) => (
+        {conversations.map((conversation,) => (
           <div
-            key={conversation.id}
-            className={cn(
+            key = {conversation.id,}
+            className = {cn(
               "px-4",
               activeConversation === conversation.id && "bg-primary/5"
-            )}
-            onClick={() => onSelectConversation(conversation.id)}
+            ),}
+            onClick = {() => onSelectConversation(conversation.id),}
           >
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>

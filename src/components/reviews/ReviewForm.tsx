@@ -1,9 +1,9 @@
 
-import { useState } from "react",
-import { Star } from 'lucide-react'
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
+import { useState } from "react";
+import { Star } from 'lucide-react';
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
   FormControl,
@@ -14,8 +14,8 @@ import {
 import {
   RadioGroup,
   RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
+import { Switch } from "@/components/ui/switch";
+import { Review } from "@/types/reviews";
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -30,7 +30,7 @@ interface ReviewFormProps {
   projectId: string,
   revieweeId: string,
   revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>, 
+  onSubmit: (data: any,) => Promise<boolean>, 
   defaultValues?: Review,
   isSubmitting: boolean
 }
@@ -62,7 +62,7 @@ export function ReviewForm({
       is_anonymous: false}
   }),
   
-  const handleSubmit = async (values: ReviewFormValues) => {
+  const handleSubmit = async (values: ReviewFormValues,) => {
     const formattedData = {
       ...values,
       project_id: projectId,
@@ -81,23 +81,23 @@ export function ReviewForm({
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
         {/* Main Rating */}
         <FormField
-          control={form.control}
+          control = {form.control,}
           name="rating"
           rules={{ required: "Rating is required" }}
-          render={({ field }: { field: any }) => (
+          render={({ field }: { field: any },) => (
             <FormItem>
               <FormLabel className="block text-center mb-2">
                 How was your experience with {revieweeName}?
               </FormLabel>
               <FormControl>
                 <div className="flex justify-center gap-1">
-                  {[1, 2, 3, 4, 5].map((star) => (
+                  {[1, 2, 3, 4, 5].map((star,) => (
                     <button
-                      key={star}
+                      key = {star,}
                       type="button"
-                      onClick={() => field.onChange(star)}
-                      onMouseEnter={() => setHoveredStar(star)}
-                      onMouseLeave={() => setHoveredStar(0)}
+                      onClick = {(,) => field.onChange(star),}
+                      onMouseEnter = {() => setHoveredStar(star),}
+                      onMouseLeave = {() => setHoveredStar(0),}
                       className="focus:outline-none transition-transform hover:scale-110"
                       aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}
                     >
@@ -121,14 +121,14 @@ export function ReviewForm({
         
         {/* Review Text */}
         <FormField
-          control={form.control}
+          control = {form.control,}
           name="review_text"
           rules={{
             required: "Please provide feedback",
             minLength: {
               value: 20,
               message: "Review must be at least 20 characters"}}}
-          render={({ field }: { field: any }) => (
+          render={({ field }: { field: any },) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>
               <FormControl>
@@ -150,20 +150,20 @@ export function ReviewForm({
             
             {/* Communication */}
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="communication_rating"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Communication</FormLabel>
                   <FormControl>
                     <RadioGroup
-                      onValueChange={(value) => field.onChange(parseInt(value))}
-                      defaultValue={field.value?.toString()}
+                      onValueChange = {(value,) => field.onChange(parseInt(value)),}
+                      defaultValue = {field.value?.toString(),}
                       className="flex flex-wrap gap-4"
                     >
-                      {[1, 2, 3, 4, 5].map((value) => (
+                      {[1, 2, 3, 4, 5].map((value,) => (
                         <FormItem
-                          key={value}
+                          key = {value,}
                           className="flex items-center space-x-2"
                         >
                           <FormControl>
@@ -183,20 +183,20 @@ export function ReviewForm({
             
             {/* Quality */}
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="quality_rating"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Quality of Work</FormLabel>
                   <FormControl>
                     <RadioGroup
-                      onValueChange={(value) => field.onChange(parseInt(value))}
-                      defaultValue={field.value?.toString()}
+                      onValueChange = {(value,) => field.onChange(parseInt(value)),}
+                      defaultValue = {field.value?.toString(),}
                       className="flex flex-wrap gap-4"
                     >
-                      {[1, 2, 3, 4, 5].map((value) => (
+                      {[1, 2, 3, 4, 5].map((value,) => (
                         <FormItem
-                          key={value}
+                          key = {value,}
                           className="flex items-center space-x-2"
                         >
                           <FormControl>
@@ -216,20 +216,20 @@ export function ReviewForm({
             
             {/* Timeliness */}
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="timeliness_rating"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Timeliness</FormLabel>
                   <FormControl>
                     <RadioGroup
-                      onValueChange={(value) => field.onChange(parseInt(value))}
-                      defaultValue={field.value?.toString()}
+                      onValueChange = {(value,) => field.onChange(parseInt(value)),}
+                      defaultValue = {field.value?.toString(),}
                       className="flex flex-wrap gap-4"
                     >
-                      {[1, 2, 3, 4, 5].map((value) => (
+                      {[1, 2, 3, 4, 5].map((value,) => (
                         <FormItem
-                          key={value}
+                          key = {value,}
                           className="flex items-center space-x-2"
                         >
                           <FormControl>
@@ -249,9 +249,9 @@ export function ReviewForm({
             
             {/* Would Work Again */}
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="would_work_again"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <div className="flex items-center gap-2">
                     <FormLabel>Would you work with {revieweeName} again?</FormLabel>
@@ -259,8 +259,8 @@ export function ReviewForm({
                       <div className="flex items-center space-x-2">
                         <Switch
                           aria-label="Would work again"
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
+                          checked = {field.value,}
+                          onCheckedChange = {field.onChange,}
                         />
                         <span className="text-sm text-muted-foreground">
                           {field.value ? "Yes" : "No"}
@@ -277,16 +277,16 @@ export function ReviewForm({
         
         {/* Anonymous Review */}
         <FormField
-          control={form.control}
+          control = {form.control,}
           name="is_anonymous"
-          render={({ field }: { field: any }) => (
+          render={({ field }: { field: any },) => (
             <FormItem>
               <div className="flex items-center gap-2">
                 <FormControl>
                   <Switch
                     aria-label="Submit anonymously"
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
+                    checked = {field.value,}
+                    onCheckedChange = {field.onChange,}
                   />
                 </FormControl>
                 <FormLabel className="cursor-pointer font-normal">
@@ -304,7 +304,7 @@ export function ReviewForm({
         <Button
           type="submit"
           className="w-full"
-          disabled={isSubmitting || !form.formState.isValid}
+          disabled = {isSubmitting || !form.formState.isValid,}
         >
           {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
         </Button>

@@ -1,19 +1,19 @@
 
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from "next/router",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-import { supabase } from "@/integrations/supabase/client",
-import { Switch } from "@/components/ui/switch",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "next/router";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import { Switch } from "@/components/ui/switch";
+import { logErrorToProduction } from '@/utils/productionLogger';
 export default function TenantOnboarding() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("company"),
@@ -37,20 +37,20 @@ export default function TenantOnboarding() {
     return // Use router.push('/unauthorized') or redirect in getServerSideProps
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
   
-  const handleSelectChange = (name: string, value: string) => {
+  const handleSelectChange = (name: string, value: string,) => {
     setFormData(prev => ({ ...prev, [name]: value }))
   },
   
-  const handleSwitchChange = (name: string, checked: boolean) => {
+  const handleSwitchChange = (name: string, checked: boolean,) => {
     setFormData(prev => ({ ...prev, [name]: checked }))
   },
   
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent,) => {
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -151,8 +151,8 @@ export default function TenantOnboarding() {
                       <Input
                         id="brand_name"
                         name="brand_name"
-                        value={formData.brand_name}
-                        onChange={handleInputChange}
+                        value = {formData.brand_name,}
+                        onChange = {handleInputChange,}
                         placeholder="Acme Corporation"
                         required
                       />
@@ -162,8 +162,8 @@ export default function TenantOnboarding() {
                       <Label htmlFor="industry">Industry</Label>
                       <Select 
                         name="industry" 
-                        value={formData.industry} 
-                        onValueChange={(value) => handleSelectChange("industry", value)}
+                        value = {formData.industry,}
+                        onValueChange = {(value,) => handleSelectChange("industry", value),}
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select industry" />
@@ -185,8 +185,8 @@ export default function TenantOnboarding() {
                       <Label htmlFor="company_size">Company Size</Label>
                       <Select 
                         name="company_size" 
-                        value={formData.company_size} 
-                        onValueChange={(value) => handleSelectChange("company_size", value)}
+                        value = {formData.company_size,}
+                        onValueChange = {(value,) => handleSelectChange("company_size", value),}
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select company size" />
@@ -209,8 +209,8 @@ export default function TenantOnboarding() {
                       <Input
                         id="logo_url"
                         name="logo_url"
-                        value={formData.logo_url}
-                        onChange={handleInputChange}
+                        value = {formData.logo_url,}
+                        onChange = {handleInputChange,}
                         placeholder="https://example.com/logo.png"
                       />
                       <p className="text-xs text-muted-foreground">
@@ -225,14 +225,14 @@ export default function TenantOnboarding() {
                           id="primary_color"
                           name="primary_color"
                           type="color"
-                          value={formData.primary_color}
-                          onChange={handleInputChange}
+                          value = {formData.primary_color,}
+                          onChange = {handleInputChange,}
                           className="w-12 p-1 h-10"
                         />
                         <Input
                           name="primary_color"
-                          value={formData.primary_color}
-                          onChange={handleInputChange}
+                          value = {formData.primary_color,}
+                          onChange = {handleInputChange,}
                           placeholder="#9b87f5"
                         />
                       </div>
@@ -242,8 +242,8 @@ export default function TenantOnboarding() {
                       <Label htmlFor="theme_preset">Theme Preset</Label>
                       <Select 
                         name="theme_preset" 
-                        value={formData.theme_preset} 
-                        onValueChange={(value) => handleSelectChange("theme_preset", value)}
+                        value = {formData.theme_preset,}
+                        onValueChange = {(value,) => handleSelectChange("theme_preset", value),}
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select theme" />
@@ -267,8 +267,8 @@ export default function TenantOnboarding() {
                       </div>
                       <Switch
                         id="is_co_branded"
-                        checked={formData.is_co_branded}
-                        onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}
+                        checked = {formData.is_co_branded,}
+                        onCheckedChange = {(checked,) => handleSwitchChange("is_co_branded", checked),}
                       />
                     </div>
                   </TabsContent>
@@ -280,8 +280,8 @@ export default function TenantOnboarding() {
                         <Input
                           id="subdomain"
                           name="subdomain"
-                          value={formData.subdomain}
-                          onChange={handleInputChange}
+                          value = {formData.subdomain,}
+                          onChange = {handleInputChange,}
                           className="rounded-r-none"
                         />
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
@@ -298,8 +298,8 @@ export default function TenantOnboarding() {
                       <Input
                         id="custom_domain"
                         name="custom_domain"
-                        value={formData.custom_domain}
-                        onChange={handleInputChange}
+                        value = {formData.custom_domain,}
+                        onChange = {handleInputChange,}
                         placeholder="hire.yourcompany.com"
                       />
                       <p className="text-xs text-muted-foreground">

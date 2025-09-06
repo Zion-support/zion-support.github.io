@@ -1,11 +1,9 @@
-import React from 'react',
-import Link from 'next/link',
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary',
-import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
-import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger',
-
-
+import React from 'react';
+import Link from 'next/link';
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger';
 interface PageErrorFallbackProps extends FallbackProps {
   pageName?: string
 }
@@ -73,7 +71,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <button 
-              onClick={handleRefresh}
+              onClick = {handleRefresh,}
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
@@ -140,7 +138,7 @@ export default function PageErrorBoundary({
   pageName, 
   fallback 
 }: PageErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo,) => {
     prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error),
     
     logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {
@@ -151,15 +149,15 @@ export default function PageErrorBoundary({
     })
   },
 
-  const FallbackComponent = fallback || ((props: FallbackProps) => (
+  const FallbackComponent = fallback || ((props: FallbackProps,) => (
     <PageErrorFallback {...props} pageName={pageName} />
   )),
 
   return (
     <ErrorBoundary
-      FallbackComponent={FallbackComponent}
-      onError={handleError}
-      onReset={() => {
+      FallbackComponent = {FallbackComponent,}
+      onError = {handleError,}
+      onReset={(,) => {
         // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
       }}

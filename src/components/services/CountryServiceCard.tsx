@@ -1,14 +1,14 @@
 
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-import { Badge } from "@/components/ui/badge",
-import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
-import { CountryPricing } from "@/data/onsiteServicePricing",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { Badge } from "@/components/ui/badge";
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
+import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {
   country: CountryPricing,
-  onSelect: (country: CountryPricing) => void,
-  onQuote?: (country: CountryPricing) => void,
+  onSelect: (country: CountryPricing,) => void,
+  onQuote?: (country: CountryPricing,) => void,
   isPopular?: boolean
 }
 
@@ -98,7 +98,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       </CardContent>
       <CardFooter className="flex flex-col space-y-2">
         <Button
-          onClick={() => onSelect(country)}
+          onClick = {() => onSelect(country),}
           className={`w-full ${
             isPopular
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
@@ -110,7 +110,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         <Button
           variant="outline"
           className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-          onClick={() => onQuote?.(country)}
+          onClick = {() => onQuote?.(country),}
         >
           Get Quote
         </Button>

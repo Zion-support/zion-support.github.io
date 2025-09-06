@@ -1,14 +1,13 @@
 
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { useState, useEffect } from "react",
-import { X } from 'lucide-react'
-
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { X } from 'lucide-react';
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
-  useEffect(() => {
+  useEffect((,) => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
@@ -50,7 +49,7 @@ export function FloatingCTA() {
             <Link href="/signup">Register Now</Link>
           </Button>
           <button 
-            onClick={handleClose}
+            onClick = {handleClose,}
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
@@ -61,3 +60,4 @@ export function FloatingCTA() {
     </div>
   )
 }
+;

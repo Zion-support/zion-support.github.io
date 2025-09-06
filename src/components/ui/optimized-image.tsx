@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
-import { motion, AnimatePresence } from 'framer-motion',
-import { ImageIcon, AlertTriangle } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { imageOptimization } from '@/utils/performance',
-import { logWarn } from '@/utils/productionLogger',
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ImageIcon, AlertTriangle } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { imageOptimization } from '@/utils/performance';
+import { logWarn } from '@/utils/productionLogger';
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -63,7 +63,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   style,
   objectPosition = 'center',
   ...props
-}) => {
+},) => {
   const [isLoading, setIsLoading] = useState(true),
   const [hasError, setHasError] = useState(false),
   const [isInView, setIsInView] = useState(!lazy || priority),
@@ -76,11 +76,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const loadStartTime = useRef<number>(0),
 
   // Intersection Observer for lazy loading
-  useEffect(() => {
+  useEffect((,) => {
     if (!lazy || priority || isInView) return,
 
     observerRef.current = new IntersectionObserver(
-      (entries) => {
+      (entries,) => {
         const [entry] = entries,
         if (entry && entry.isIntersecting) {
           setIsInView(true),
@@ -103,16 +103,16 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, [lazy, priority, isInView]),
 
   // Start load time tracking
-  useEffect(() => {
+  useEffect((,) => {
     loadStartTime.current = performance.now()
   }, [src]),
 
   // Monitor image performance
-  useEffect(() => {
+  useEffect((,) => {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list,) => {
         const entries = list.getEntries(),
-        entries.forEach((entry) => {
+        entries.forEach((entry,) => {
           if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming,
             const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0,
@@ -170,7 +170,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     if (retries < retryCount) {
       setRetries(prev => prev + 1),
       // Retry with a slight delay
-      setTimeout(() => {
+      setTimeout((,) => {
         setCurrentSrc(src + `?retry=${retries + 1}`)
       }, 1000 * (retries + 1))
     } else if (fallbackSrc && currentSrc !== fallbackSrc) {
@@ -184,10 +184,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   },
 
   // Simulate loading progress for demo purposes
-  useEffect(() => {
+  useEffect((,) => {
     if (!isLoading || !showLoadingProgress) return,
 
-    const interval = setInterval(() => {
+    const interval = setInterval((,) => {
       setLoadProgress(prev => {
         if (prev >= 90) {
           clearInterval(interval),
@@ -214,7 +214,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     if (placeholder === 'color') {
       return (
         <div 
-          className={placeholderClassName}
+          className = {placeholderClassName,}
           style={{ backgroundColor: placeholderColor }}
         />
       )
@@ -235,9 +235,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   return (
     <div 
-      ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
-      style={containerStyle}
+      ref = {imgRef,}
+      className = {cn('relative overflow-hidden', className),}
+      style = {containerStyle,}
     >
       <AnimatePresence>
         {/* Placeholder */}
@@ -282,12 +282,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         {/* Actual image */}
         {isInView && !hasError && (
           <motion.img
-            src={optimizedSrc}
-            srcSet={srcSet}
-            alt={alt}
-            loading={priority ? 'eager' : 'lazy'}
-            onLoad={handleLoad}
-            onError={handleError}
+            src = {optimizedSrc,}
+            srcSet = {srcSet,}
+            alt = {alt,}
+            loading = {priority ? 'eager' : 'lazy',}
+            onLoad = {handleLoad,}
+            onError = {handleError,}
             className={cn(
               'w-full h-full transition-opacity duration-300',
               `object-${objectFit}`,
@@ -313,7 +313,7 @@ interface ImageGalleryProps {
   columns?: number,
   aspectRatio?: string,
   className?: string,
-  onImageClick?: (index: number) => void
+  onImageClick?: (index: number,) => void
 }
 
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
@@ -322,7 +322,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   aspectRatio = '16/9',
   className,
   onImageClick
-}) => {
+},) => {
   const [loadedCount, setLoadedCount] = useState(0),
 
   const handleImageLoad = () => {
@@ -339,27 +339,27 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       </div>
       
       <div 
-        className={`grid gap-4`}
+        className = {`grid gap-4`,}
         style={{ 
           gridTemplateColumns: `repeat(${columns}, 1fr)` 
         }}
       >
-        {images.map((image, index) => (
+        {images.map((image, index,) => (
           <motion.div
-            key={index}
+            key = {index,}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="group cursor-pointer"
-            onClick={() => onImageClick?.(index)}
+            onClick = {(,) => onImageClick?.(index),}
           >
             <div className="relative">
               <OptimizedImage
-                src={image.src}
-                alt={image.alt}
-                aspectRatio={aspectRatio}
+                src = {image.src,}
+                alt = {image.alt,}
+                aspectRatio = {aspectRatio,}
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
-                onLoad={handleImageLoad}
+                onLoad = {handleImageLoad,}
                 priority={index < 3} // Prioritize first 3 images
               />
               
@@ -391,7 +391,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
   size = 'md',
   fallback,
   className
-}) => {
+},) => {
   const sizeClasses = {
     sm: 'h-8 w-8',
     md: 'h-10 w-10',
@@ -405,14 +405,14 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     <div className={cn('relative rounded-full overflow-hidden', sizeClasses[size], className)}>
       {src ? (
         <OptimizedImage
-          src={src}
-          alt={alt}
+          src = {src,}
+          alt = {alt,}
           aspectRatio="1/1"
           objectFit="cover"
           fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
           placeholder="color"
           placeholderColor="#f3f4f6"
-          priority={true}
+          priority = {true,}
           className="rounded-full"
         />
       ) : (

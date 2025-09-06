@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from 'next/router',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { toast } from "@/hooks/use-toast",
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { logErrorToProduction } from '@/utils/productionLogger',
-import { EmptyState } from "@/components/ui/empty-state",
+import { useState, useEffect } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from 'next/router';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { toast } from "@/hooks/use-toast";
+import { Check, Flag, Search, Settings, X, Users } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { EmptyState } from "@/components/ui/empty-state";
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -43,7 +43,7 @@ export default function PartnerManager() {
   const { user, isAuthenticated } = useAuth(),
   const router = useRouter(),
 
-  useEffect(() => {
+  useEffect((,) => {
     if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),
       return
@@ -161,7 +161,7 @@ export default function PartnerManager() {
     }
   },
 
-  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
+  const filterPartners = (partners: PartnerProfile[], status: string, query: string,) => {
     let filtered = partners,
     
     // Filter by status
@@ -183,28 +183,28 @@ export default function PartnerManager() {
     setFilteredPartners(filtered)
   },
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>,) => {
     setSearchQuery(e.target.value),
     filterPartners(partners, activeTab, e.target.value)
   },
 
-  const handleTabChange = (value: string) => {
+  const handleTabChange = (value: string,) => {
     setActiveTab(value),
     filterPartners(partners, value, searchQuery)
   },
 
-  const handleViewDetails = (partner: PartnerProfile) => {
+  const handleViewDetails = (partner: PartnerProfile,) => {
     setSelectedPartner(partner),
     setIsDetailsOpen(true)
   },
 
-  const handleOpenSettings = (partner: PartnerProfile) => {
+  const handleOpenSettings = (partner: PartnerProfile,) => {
     setSelectedPartner(partner),
     setCommissionRate(partner.commission_rate || 25),
     setIsSettingsOpen(true)
   },
 
-  const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
+  const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected',) => {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p => 
@@ -265,7 +265,7 @@ export default function PartnerManager() {
     }
   },
 
-  const getAudienceSizeLabel = (size: string) => {
+  const getAudienceSizeLabel = (size: string,) => {
     switch (size) {
       case 'under1k': return 'Under 1,000',
       case '1k-10k': return '1,000 - 10,000',
@@ -276,7 +276,7 @@ export default function PartnerManager() {
     }
   },
 
-  const getStatusBadge = (status: string) => {
+  const getStatusBadge = (status: string,) => {
     switch (status) {
       case 'pending':
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
@@ -289,7 +289,7 @@ export default function PartnerManager() {
     }
   },
 
-  const getFraudFlagBadge = (flags: number = 0) => {
+  const getFraudFlagBadge = (flags: number = 0,) => {
     if (flags === 0) return null,
     
     return (
@@ -353,7 +353,7 @@ export default function PartnerManager() {
                   Fraud Flags
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
-                  {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
+                  {partners.reduce((total, p,) => total + (p.fraud_flags || 0), 0)}
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -378,8 +378,8 @@ export default function PartnerManager() {
               <Input
                 placeholder="Search partners..."
                 className="pl-8"
-                value={searchQuery}
-                onChange={handleSearch}
+                value = {searchQuery,}
+                onChange = {handleSearch,}
               />
             </div>
           </div>
@@ -395,49 +395,49 @@ export default function PartnerManager() {
             
             <TabsContent value="pending" className="space-y-4">
               <PartnerTable 
-                partners={filteredPartners} 
-                isLoading={isLoading}
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus}
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
+                partners = {filteredPartners,}
+                isLoading = {isLoading,}
+                onViewDetails = {handleViewDetails,}
+                onUpdateStatus = {handleUpdateStatus,}
+                onOpenSettings = {handleOpenSettings,}
+                getStatusBadge = {getStatusBadge,}
+                getFraudFlagBadge = {getFraudFlagBadge,}
               />
             </TabsContent>
             
             <TabsContent value="approved" className="space-y-4">
               <PartnerTable 
-                partners={filteredPartners} 
-                isLoading={isLoading}
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus}
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
+                partners = {filteredPartners,}
+                isLoading = {isLoading,}
+                onViewDetails = {handleViewDetails,}
+                onUpdateStatus = {handleUpdateStatus,}
+                onOpenSettings = {handleOpenSettings,}
+                getStatusBadge = {getStatusBadge,}
+                getFraudFlagBadge = {getFraudFlagBadge,}
               />
             </TabsContent>
             
             <TabsContent value="rejected" className="space-y-4">
               <PartnerTable 
-                partners={filteredPartners} 
-                isLoading={isLoading}
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus} 
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
+                partners = {filteredPartners,}
+                isLoading = {isLoading,}
+                onViewDetails = {handleViewDetails,}
+                onUpdateStatus = {handleUpdateStatus,}
+                onOpenSettings = {handleOpenSettings,}
+                getStatusBadge = {getStatusBadge,}
+                getFraudFlagBadge = {getFraudFlagBadge,}
               />
             </TabsContent>
             
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
-                partners={filteredPartners} 
-                isLoading={isLoading}
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus}
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
+                partners = {filteredPartners,}
+                isLoading = {isLoading,}
+                onViewDetails = {handleViewDetails,}
+                onUpdateStatus = {handleUpdateStatus,}
+                onOpenSettings = {handleOpenSettings,}
+                getStatusBadge = {getStatusBadge,}
+                getFraudFlagBadge = {getFraudFlagBadge,}
               />
             </TabsContent>
           </Tabs>
@@ -494,7 +494,7 @@ export default function PartnerManager() {
                 <div>
                   <p className="text-xs text-zion-slate-light">Social Media</p>
                   <div className="grid grid-cols-2 gap-2">
-                    {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (
+                    {Object.entries(selectedPartner.social_media).map(([platform, handle],) => (
                       <p key={platform} className="text-white">
                         <span className="font-medium">{platform}: </span>
                         {handle}
@@ -531,14 +531,14 @@ export default function PartnerManager() {
                 <div className="flex justify-end gap-2 mt-4">
                   <Button 
                     variant="destructive" 
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+                    onClick = {(,) => handleUpdateStatus(selectedPartner.id, 'rejected'),}
                   >
                     <X className="h-4 w-4 mr-1" />
                     Reject
                   </Button>
                   <Button 
                     className="bg-green-600 hover:bg-green-700"
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
+                    onClick = {() => handleUpdateStatus(selectedPartner.id, 'approved'),}
                   >
                     <Check className="h-4 w-4 mr-1" />
                     Approve
@@ -576,8 +576,8 @@ export default function PartnerManager() {
                   type="number"
                   min="1"
                   max="50"
-                  value={commissionRate}
-                  onChange={(e) => setCommissionRate(parseInt(e.target.value))}
+                  value = {commissionRate,}
+                  onChange = {(e,) => setCommissionRate(parseInt(e.target.value)),}
                 />
                 <p className="text-xs text-zion-slate-light mt-1">
                   Percentage of reward granted to this partner for successful referrals
@@ -603,11 +603,11 @@ export default function PartnerManager() {
 interface PartnerTableProps {
   partners: PartnerProfile[],
   isLoading: boolean,
-  onViewDetails: (partner: PartnerProfile) => void,
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,
-  onOpenSettings: (partner: PartnerProfile) => void,
-  getStatusBadge: (status: string) => JSX.Element,
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null
+  onViewDetails: (partner: PartnerProfile,) => void,
+  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected',) => void,
+  onOpenSettings: (partner: PartnerProfile,) => void,
+  getStatusBadge: (status: string,) => JSX.Element,
+  getFraudFlagBadge: (flags?: number,) => JSX.Element | null
 }
 
 function PartnerTable({ 
@@ -631,7 +631,7 @@ function PartnerTable({
     return (
       <div className="py-8">
         <EmptyState
-          icon={<Users className="h-8 w-8" />}
+          icon = {<Users className="h-8 w-8" />,}
           title="No Partners Found"
           description="There are no partner applications to display."
           className="border-none bg-transparent text-center"
@@ -653,7 +653,7 @@ function PartnerTable({
         </TableRow>
       </TableHeader>
       <TableBody>
-        {partners.map((partner) => (
+        {partners.map((partner,) => (
           <TableRow key={partner.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">
             <TableCell className="font-medium text-white">
               <div className="flex items-center gap-2">
@@ -676,7 +676,7 @@ function PartnerTable({
                     <Button 
                       variant="ghost"
                       size="sm"
-                      onClick={() => onUpdateStatus(partner.id, 'rejected')}
+                      onClick = {(,) => onUpdateStatus(partner.id, 'rejected'),}
                       className="text-red-500 hover:text-red-600 hover:bg-red-900/20"
                     >
                       <X className="h-4 w-4" />
@@ -685,7 +685,7 @@ function PartnerTable({
                     <Button 
                       variant="ghost"
                       size="sm"
-                      onClick={() => onUpdateStatus(partner.id, 'approved')}
+                      onClick = {() => onUpdateStatus(partner.id, 'approved'),}
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20"
                     >
                       <Check className="h-4 w-4" />
@@ -697,7 +697,7 @@ function PartnerTable({
                 <Button 
                   variant="ghost" 
                   size="sm"
-                  onClick={() => onOpenSettings(partner)}
+                  onClick = {() => onOpenSettings(partner),}
                   className="text-zion-slate-light hover:text-white"
                 >
                   <Settings className="h-4 w-4" />
@@ -707,7 +707,7 @@ function PartnerTable({
                 <Button 
                   variant="outline" 
                   size="sm"
-                  onClick={() => onViewDetails(partner)}
+                  onClick = {() => onViewDetails(partner),}
                 >
                   View
                 </Button>

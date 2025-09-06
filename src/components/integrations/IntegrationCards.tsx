@@ -1,11 +1,10 @@
 
-import React from "react",
-import { logDebug } from '@/utils/productionLogger',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
-
+import React from "react";
+import { logDebug } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react';
 interface IntegrationCardProps {
   title: string,
   description: string,
@@ -74,20 +73,20 @@ export function IntegrationCards() {
       <IntegrationCard
         title="Slack"
         description="Send notifications and interact with Zion from Slack."
-        icon={<Slack className="h-5 w-5" />}
-        onConnect={() => logDebug('Connect Slack clicked')}
+        icon = {<Slack className="h-5 w-5" />,}
+        onConnect = {(,) => logDebug('Connect Slack clicked'),}
       />
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
-        icon={<Briefcase className="h-5 w-5" />}
-        onConnect={() => logDebug('Connect Salesforce clicked')}
+        icon = {<Briefcase className="h-5 w-5" />,}
+        onConnect = {() => logDebug('Connect Salesforce clicked'),}
       />
       <IntegrationCard
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
-        icon={<Users className="h-5 w-5" />}
-        onConnect={() => logDebug('Connect Teams clicked')}
+        icon = {<Users className="h-5 w-5" />,}
+        onConnect = {() => logDebug('Connect Teams clicked'),}
       />
     </div>
   )

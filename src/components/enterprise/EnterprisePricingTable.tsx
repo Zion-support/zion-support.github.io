@@ -1,7 +1,7 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Check, X } from 'lucide-react'
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Check, X } from 'lucide-react';
 import {
   Table,
   TableBody,
@@ -9,7 +9,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -79,7 +79,7 @@ export function EnterprisePricingTable() {
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[200px]">Plan Features</TableHead>
-                {plans.map((plan) => (
+                {plans.map((plan,) => (
                   <TableHead key={plan.name} className="text-center">
                     <div className="flex flex-col items-center">
                       {plan.popular && (
@@ -98,7 +98,7 @@ export function EnterprisePricingTable() {
                       <p className="text-sm font-medium mt-2">{plan.users}</p>
                       <Button
                         className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
-                        variant={plan.popular ? 'default' : 'outline'}
+                        variant = {plan.popular ? 'default' : 'outline',}
                       >
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
                       </Button>
@@ -108,10 +108,10 @@ export function EnterprisePricingTable() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {(plans[0]?.features || []).map((feature, index) => (
+              {(plans[0]?.features || []).map((feature, index,) => (
                 <TableRow key={feature.name}>
                   <TableCell className="font-medium">{feature.name}</TableCell>
-                  {plans.map((plan) => (
+                  {plans.map((plan,) => (
                     <TableCell key={`${plan.name}-${feature.name}`} className="text-center">
                       {plan.features[index]?.included ? (
                         <Check className="h-5 w-5 text-green-500 mx-auto" />

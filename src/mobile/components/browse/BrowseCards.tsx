@@ -1,11 +1,10 @@
 
-import React, { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 interface BrowseItem {
   id: string,
   title: string,
@@ -22,13 +21,13 @@ interface BrowseItem {
 interface BrowseCardsProps {
   items: BrowseItem[],
   type: "jobs" | "talents",
-  onViewDetails: (id: string) => void
+  onViewDetails: (id: string,) => void
 }
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]),
   
-  const toggleSaved = (id: string) => {
+  const toggleSaved = (id: string,) => {
     setSavedItems(prev => 
       prev.includes(id) 
         ? prev.filter(itemId => itemId !== id)
@@ -38,7 +37,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   
   return (
     <div className="space-y-4 pb-24">
-      {items.map((item) => (
+      {items.map((item,) => (
         <Card key={item.id} className="overflow-hidden">
           <CardContent className="p-0">
             <div className="p-4">
@@ -62,7 +61,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 
                 <button 
                   className="h-8 w-8 flex items-center justify-center"
-                  onClick={() => toggleSaved(item.id)}
+                  onClick = {() => toggleSaved(item.id),}
                 >
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
@@ -73,9 +72,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               </div>
               
               <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index) => (
+                {item.badges.map((badge, index,) => (
                   <Badge 
-                    key={index} 
+                    key = {index,}
                     variant="outline" 
                     className="text-xs font-normal"
                   >
@@ -119,7 +118,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
-                onClick={() => onViewDetails(item.id)}
+                onClick = {() => onViewDetails(item.id),}
                 className="gap-1"
               >
                 View Details <ChevronRight className="h-4 w-4" />

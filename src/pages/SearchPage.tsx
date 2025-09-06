@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { SearchSuggestion } from "@/types/search";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
-import { Loader2 } from 'lucide-react'
-
+import { Loader2 } from 'lucide-react';
 interface SearchResult {
   id: string,
   type: "product" | "service" | "talent" | "blog" | "doc",
@@ -26,7 +25,7 @@ function highlight(text: string, term: string) {
   const parts = text.split(regex),
   return (
     <>
-      {parts.map((part, i) =>
+      {parts.map((part, i,) =>
         regex.test(part) ? (
           <mark key={i} className="bg-yellow-200 text-black">
             {part}
@@ -47,7 +46,7 @@ export default function SearchPage() {
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
   // Force re-render and reset state when route changes
-  const routeKey = useRouteChange(() => {
+  const routeKey = useRouteChange((,) => {
     setResults([]),
     setLoading(false)
   }),
@@ -61,7 +60,7 @@ export default function SearchPage() {
   const marketplaceResults = [...productResults, ...talentResults],
 
   // Sync query with URL parameter changes
-  useEffect(() => {
+  useEffect((,) => {
     if (!router.isReady) return,
     
     const urlQuery = (router.query.q as string) || "",
@@ -71,7 +70,7 @@ export default function SearchPage() {
   }, [router.isReady, router.query.q]), // Fixed dependency array
 
   // Fetch results when query changes
-  useEffect(() => {
+  useEffect((,) => {
     if (!router.isReady) return,
     
     if (query.trim()) {
@@ -81,7 +80,7 @@ export default function SearchPage() {
     }
   }, [router.isReady, query]), // Fixed dependency array
 
-  const fetchResults = async (term: string) => {
+  const fetchResults = async (term: string,) => {
     if (!term.trim()) {
       setResults([]),
       return
@@ -105,7 +104,7 @@ export default function SearchPage() {
     }
   },
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent,) => {
     e.preventDefault(),
     if (query.trim()) {
       router.push(`/search?q=${encodeURIComponent(query.trim())}`)
@@ -120,14 +119,14 @@ export default function SearchPage() {
       <main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
           <EnhancedSearchInput
-            value={query}
-            onChange={setQuery}
-            onSelectSuggestion={(suggestion) => {
+            value = {query,}
+            onChange = {setQuery,}
+            onSelectSuggestion={(suggestion,) => {
               const searchTerm = suggestion.text.trim(),
               setQuery(searchTerm),
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
-            searchSuggestions={suggestions}
+            searchSuggestions = {suggestions,}
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
@@ -171,8 +170,8 @@ export default function SearchPage() {
             </TabsList>
             <TabsContent value="products" className="space-y-4">
               {results
-                .filter((r) => r.type === "product" || r.type === "service")
-                .map((r) => (
+                .filter((r,) => r.type === "product" || r.type === "service")
+                .map((r,) => (
                   <div
                     key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -188,8 +187,8 @@ export default function SearchPage() {
             </TabsContent>
             <TabsContent value="talent" className="space-y-4">
               {results
-                .filter((r) => r.type === "talent")
-                .map((r) => (
+                .filter((r,) => r.type === "talent")
+                .map((r,) => (
                   <div
                     key={`talent-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -205,8 +204,8 @@ export default function SearchPage() {
             </TabsContent>
             <TabsContent value="docs" className="space-y-4">
               {results
-                .filter((r) => r.type === "doc")
-                .map((r) => (
+                .filter((r,) => r.type === "doc")
+                .map((r,) => (
                   <div
                     key={`doc-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -222,8 +221,8 @@ export default function SearchPage() {
             </TabsContent>
             <TabsContent value="blog" className="space-y-4">
               {results
-                .filter((r) => r.type === "blog")
-                .map((r) => (
+                .filter((r,) => r.type === "blog")
+                .map((r,) => (
                   <div
                     key={`blog-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"

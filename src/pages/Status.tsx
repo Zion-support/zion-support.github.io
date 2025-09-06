@@ -1,10 +1,10 @@
-import { SEO } from "@/components/SEO",
-import { useState, useEffect } from "react",
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { logWarn } from '@/utils/productionLogger',
+import { SEO } from "@/components/SEO";
+import { useState, useEffect } from "react";
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { logWarn } from '@/utils/productionLogger';
 interface ServiceStatus {
   name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
@@ -45,9 +45,9 @@ export default function Status() {
   const [uptime, setUptime] = useState<number | null>(null),
   const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",
 
-  useEffect(() => {
+  useEffect((,) => {
     // Try to load external status page, fallback after timeout
-    const timeout = setTimeout(() => {
+    const timeout = setTimeout((,) => {
       if (!externalStatusLoaded) {
         setShowFallback(true)
       }
@@ -56,7 +56,7 @@ export default function Status() {
     return () => clearTimeout(timeout)
   }, [externalStatusLoaded]),
 
-  useEffect(() => {
+  useEffect((,) => {
     async function fetchUptime() {
       try {
         const res = await fetch('/api/health'),
@@ -72,7 +72,7 @@ export default function Status() {
     fetchUptime()
   }, []),
 
-  const getStatusIcon = (status: ServiceStatus['status']) => {
+  const getStatusIcon = (status: ServiceStatus['status'],) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="h-5 w-5 text-green-500" />,
@@ -87,7 +87,7 @@ export default function Status() {
     }
   },
 
-  const getStatusText = (status: ServiceStatus['status']) => {
+  const getStatusText = (status: ServiceStatus['status'],) => {
     switch (status) {
       case 'operational':
         return 'Operational',
@@ -102,7 +102,7 @@ export default function Status() {
     }
   },
 
-  const getStatusColor = (status: ServiceStatus['status']) => {
+  const getStatusColor = (status: ServiceStatus['status'],) => {
     switch (status) {
       case 'operational':
         return 'text-green-500',
@@ -117,7 +117,7 @@ export default function Status() {
     }
   },
 
-  const formatUptime = (seconds: number) => {
+  const formatUptime = (seconds: number,) => {
     const days = Math.floor(seconds / 86400),
     const hours = Math.floor((seconds % 86400) / 3600),
     const minutes = Math.floor((seconds % 3600) / 60),
@@ -161,17 +161,17 @@ export default function Status() {
                 </CardHeader>
                 <CardContent>
                   <iframe
-                    src={statusUrl}
+                    src = {statusUrl,}
                     title="Zion Status Page"
                     className="w-full border-0 rounded"
                     height="600"
-                    onLoad={() => setExternalStatusLoaded(true)}
-                    onError={() => setShowFallback(true)}
+                    onLoad = {(,) => setExternalStatusLoaded(true),}
+                    onError = {() => setShowFallback(true),}
                   />
                   <div className="mt-4 text-center">
                     <Button
                       variant="outline"
-                      onClick={() => setShowFallback(true)}
+                      onClick = {() => setShowFallback(true),}
                       className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                     >
                       View Simplified Status
@@ -193,7 +193,7 @@ export default function Status() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    {FALLBACK_SERVICES.map((service) => (
+                    {FALLBACK_SERVICES.map((service,) => (
                       <div key={service.name} className="flex items-center justify-between p-4 bg-zion-blue rounded-lg">
                         <div className="flex items-center gap-3">
                           {getStatusIcon(service.status)}
@@ -226,7 +226,7 @@ export default function Status() {
                   className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                 >
                   <a 
-                    href={statusUrl} 
+                    href = {statusUrl,}
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

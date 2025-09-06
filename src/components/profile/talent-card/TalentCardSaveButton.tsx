@@ -1,14 +1,14 @@
 
-import React from "react",
-import { Heart } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useToast } from "@/hooks/use-toast",
-import { useRouter } from 'next/router',
+import React from "react";
+import { Heart } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
+import { useRouter } from 'next/router';
 interface TalentCardSaveButtonProps {
   profileId: string,
   profileName: string,
   isSaved: boolean,
-  onToggleSave?: (id: string, isSaved: boolean) => void,
+  onToggleSave?: (id: string, isSaved: boolean,) => void,
   isAuthenticated: boolean
 }
 
@@ -25,7 +25,7 @@ export function TalentCardSaveButton({
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved),
   
   // Handle save toggle
-  const handleSaveToggle = (e: React.MouseEvent) => {
+  const handleSaveToggle = (e: React.MouseEvent,) => {
     e.stopPropagation(),
 
     if (!isAuthenticated) {
@@ -56,15 +56,16 @@ export function TalentCardSaveButton({
   return (
     <button 
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
-      onClick={handleSaveToggle}
-      aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}
+      onClick = {handleSaveToggle,}
+      aria-label = {localIsSaved ? "Remove from favorites" : "Save to favorites",}
     >
       <Heart 
-        className={cn(
+        className = {cn(
           "h-4 w-4 transition-colors", 
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
-        )} 
+        ),}
       />
     </button>
   )
 }
+;

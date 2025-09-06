@@ -1,24 +1,23 @@
 
-import React from "react",
-import { UseFormReturn } from "react-hook-form",
-import { AppMetadataValues } from "./MetadataManager",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Badge } from "@/components/ui/badge",
-import { X } from 'lucide-react'
-
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import { AppMetadataValues } from "./MetadataManager";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Badge } from "@/components/ui/badge";
+import { X } from 'lucide-react';
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form },) => {
   const { control, register, watch, setValue } = form,
   const keywords = watch("keywords"),
   const platform = watch("platform"),
   
-  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>,) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
       const value = e.currentTarget.value.trim(),
@@ -30,10 +29,10 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     }
   },
   
-  const removeKeyword = (keyword: string) => {
+  const removeKeyword = (keyword: string,) => {
     setValue(
       "keywords",
-      keywords.filter((k) => k !== keyword)
+      keywords.filter((k,) => k !== keyword)
     )
   },
   
@@ -49,15 +48,15 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         <Form {...form}>
           <div className="space-y-4">
             <FormField
-              control={control}
+              control = {control,}
               name="appTitle"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>App Title</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="Enter app title"
-                      maxLength={platform === "ios" ? 30 : 50}
+                      maxLength = {platform === "ios" ? 30 : 50,}
                       {...field}
                     />
                   </FormControl>
@@ -69,15 +68,15 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
             />
             
             <FormField
-              control={control}
+              control = {control,}
               name="shortDescription"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>Short Description</FormLabel>
                   <FormControl>
                     <Input 
                       placeholder="Brief description of your app"
-                      maxLength={platform === "ios" ? 170 : 80}
+                      maxLength = {platform === "ios" ? 170 : 80,}
                       {...field}
                     />
                   </FormControl>
@@ -89,16 +88,16 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
             />
             
             <FormField
-              control={control}
+              control = {control,}
               name="longDescription"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
                   <FormControl>
                     <Textarea 
                       placeholder="Detailed description of your app"
                       className="min-h-32"
-                      maxLength={maxDescriptionLength}
+                      maxLength = {maxDescriptionLength,}
                       {...field}
                     />
                   </FormControl>
@@ -114,17 +113,17 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
               <Input 
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
-                onKeyDown={addKeyword}
+                onKeyDown = {addKeyword,}
                 className="mb-2"
               />
               
               <div className="flex flex-wrap gap-2 mt-2">
-                {keywords.map((keyword, index) => (
+                {keywords.map((keyword, index,) => (
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
                     {keyword}
                     <button
                       type="button"
-                      onClick={() => removeKeyword(keyword)}
+                      onClick = {(,) => removeKeyword(keyword),}
                       className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
                       aria-label="Remove keyword"
                     >
@@ -139,9 +138,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
             </div>
             
             <FormField
-              control={control}
+              control = {control,}
               name="version"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>

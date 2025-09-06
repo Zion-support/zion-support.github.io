@@ -1,9 +1,9 @@
-import React, { useState } from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
   FormControl,
@@ -11,19 +11,18 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
+import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue} from "@/components/ui/select",
-import { Input } from "@/components/ui/input",
-import { disputeReasonLabels } from "@/types/disputes",
-import { useDisputes } from "@/hooks/useDisputes",
-import { toast } from "sonner",
-import { FileText } from 'lucide-react'
-
+import { Input } from "@/components/ui/input";
+import { disputeReasonLabels } from "@/types/disputes";
+import { useDisputes } from "@/hooks/useDisputes";
+import { toast } from "sonner";
+import { FileText } from 'lucide-react';
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" }),
@@ -34,7 +33,7 @@ const formSchema = z.object({
 type DisputeFormProps = {
   projectId: string,
   milestoneId?: string,
-  onDisputeCreated?: (disputeId: string) => void,
+  onDisputeCreated?: (disputeId: string,) => void,
   onCancel?: () => void
 },
 
@@ -55,7 +54,7 @@ export function DisputeForm({
       description: "",
       attachments: []}}),
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev, ...newFiles]),
@@ -63,7 +62,7 @@ export function DisputeForm({
     }
   },
 
-  const removeFile = (index: number) => {
+  const removeFile = (index: number,) => {
     const newFiles = [...files],
     newFiles.splice(index, 1),
     setFiles(newFiles),
@@ -111,9 +110,9 @@ export function DisputeForm({
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="reason_code"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> },) => (
               <FormItem>
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -123,7 +122,7 @@ export function DisputeForm({
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    {Object.entries(disputeReasonLabels).map(([value, label]) => (
+                    {Object.entries(disputeReasonLabels).map(([value, label],) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>
                     ))}
                   </SelectContent>
@@ -134,9 +133,9 @@ export function DisputeForm({
           />
           
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="description"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "description"> }) => (
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "description"> },) => (
               <FormItem>
                 <FormLabel>Describe the issue in detail</FormLabel>
                 <FormControl>
@@ -158,7 +157,7 @@ export function DisputeForm({
                 <Input 
                   type="file" 
                   multiple 
-                  onChange={handleFileChange}
+                  onChange = {handleFileChange,}
                   className="cursor-pointer"
                 />
                 
@@ -166,14 +165,14 @@ export function DisputeForm({
                   <div className="space-y-2">
                     <p className="text-sm font-medium">Selected files:</p>
                     <ul className="space-y-1">
-                      {files.map((file, index) => (
+                      {files.map((file, index,) => (
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
                           <Button 
                             type="button" 
                             variant="ghost" 
                             size="sm" 
-                            onClick={() => removeFile(index)}
+                            onClick = {() => removeFile(index),}
                           >
                             Remove
                           </Button>

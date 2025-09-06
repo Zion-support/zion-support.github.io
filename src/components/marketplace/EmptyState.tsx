@@ -1,8 +1,8 @@
-import * as React from 'react',
-import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import Link from 'next/link',
-import { useTranslation } from 'react-i18next',
+import * as React from 'react';
+import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',
   title?: string,
@@ -77,7 +77,7 @@ export function EmptyState({
       
       {action && (
         <Button
-          onClick={action.onClick}
+          onClick = {action.onClick,}
           variant="outline"
           className="flex items-center gap-2"
         >
@@ -114,7 +114,7 @@ export function ProductsEmptyState({
   onAddProduct,
   isAuthenticated = false
 }: {
-  onRetry?: () => void,
+  onRetry?: (,) => void,
   onAddProduct?: () => void,
   isAuthenticated?: boolean
 }) {
@@ -134,13 +134,13 @@ export function ProductsEmptyState({
   return (
     <EmptyState 
       type="products" 
-      action={action}
-      description={customDescription}
+      action = {action,}
+      description = {customDescription,}
     />
   )
 }
 
-export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
+export function CategoriesEmptyState({ onRetry }: { onRetry?: (,) => void }) {
   return (
     <EmptyState
       type="categories"
@@ -149,7 +149,7 @@ export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 
-export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
+export function TalentEmptyState({ onRetry }: { onRetry?: (,) => void }) {
   return (
     <EmptyState
       type="talent"
@@ -158,7 +158,7 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 
-export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
+export function EquipmentEmptyState({ onRetry }: { onRetry?: (,) => void }) {
   return (
     <EmptyState
       type="equipment"
@@ -167,7 +167,7 @@ export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 
-export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
+export function SearchEmptyState({ onRetry }: { onRetry?: (,) => void }) {
   return (
     <EmptyState
       type="search"
@@ -176,7 +176,7 @@ export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 
-export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
+export function NetworkErrorState({ onRetry }: { onRetry?: (,) => void }) {
   return (
     <EmptyState
       type="network"
@@ -185,7 +185,7 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 
-export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
+export function ServerErrorState({ onRetry }: { onRetry?: (,) => void }) {
   return (
     <EmptyState
       type="error"

@@ -1,25 +1,25 @@
-import { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { Logo } from '@/components/header/Logo',
-import { PointsBadge } from '@/components/loyalty/PointsBadge',
-import { UserMenu } from '@/components/header/UserMenu',
-import { LanguageSelector } from '@/components/header/LanguageSelector',
-import { ModeToggle } from '@/components/ModeToggle',
-import { useAuth } from '@/hooks/useAuth',
-import { useIsMobile } from '@/hooks/use-mobile',
-import { useMessaging } from '@/context/MessagingContext',
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',
-import { generateSearchSuggestions } from '@/data/marketplaceData',
-import { slugify } from '@/lib/slugify',
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',
-import { MobileMenu } from '@/components/header/MobileMenu',
-import { MobileBottomNav } from '@/components/header/MobileBottomNav',
-import { Menu, X } from 'lucide-react'
-import { useTranslation } from 'react-i18next',
-import { CartDrawer } from '@/components/cart/CartDrawer',
-import { LoginModal } from '@/components/auth/LoginModal',
+import { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Logo } from '@/components/header/Logo';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import { UserMenu } from '@/components/header/UserMenu';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { ModeToggle } from '@/components/ModeToggle';
+import { useAuth } from '@/hooks/useAuth';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { useMessaging } from '@/context/MessagingContext';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { slugify } from '@/lib/slugify';
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { CartDrawer } from '@/components/cart/CartDrawer';
+import { LoginModal } from '@/components/auth/LoginModal';
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
@@ -39,15 +39,15 @@ export function PrimaryNav() {
     // context not available
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent,) => {
     e.preventDefault(),
     const trimmed = query.trim(),
     if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed }),
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
-        .then(() => setQuery(''))
-        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
+        .then((,) => setQuery(''))
+        .catch((err,) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
     }
   },
 
@@ -64,7 +64,7 @@ export function PrimaryNav() {
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
-            <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
+            <ResponsiveNavigation openLoginModal={(returnToPath,) => setLoginOpen(true)} />
           </div>
           
           {/* Actions container with responsive layout */}
@@ -72,9 +72,9 @@ export function PrimaryNav() {
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
-                onSelectSuggestion={(sugg) => {
+                value = {query,}
+                onChange = {setQuery,}
+                onSelectSuggestion={(sugg,) => {
                   logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
@@ -101,7 +101,7 @@ export function PrimaryNav() {
                     })
                   }
                 }}
-                searchSuggestions={suggestions}
+                searchSuggestions = {suggestions,}
               />
             </form>
             
@@ -125,7 +125,7 @@ export function PrimaryNav() {
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
-                    onClick={(e) => {
+                    onClick={(e,) => {
                       e.preventDefault(),
                       setLoginOpen(true)
                     }}
@@ -153,7 +153,7 @@ export function PrimaryNav() {
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
-                onClick={(e) => {
+                onClick={(e,) => {
                   e.preventDefault(),
                   setLoginOpen(true)
                 }}
@@ -167,9 +167,9 @@ export function PrimaryNav() {
           {/* Mobile menu button */}
           <button
             className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}
+            onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
+            aria-expanded = {mobileMenuOpen,}
+            aria-label = {t('general.toggle_mobile_menu'),}
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -183,14 +183,14 @@ export function PrimaryNav() {
         <div className="lg:hidden fixed inset-0 z-60 pt-16">
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true"
           />
           <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu
-              unreadCount={unreadCount}
-              onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={(returnToPath) => setLoginOpen(true)}
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {(returnToPath,) => setLoginOpen(true),}
             />
           </div>
         </div>

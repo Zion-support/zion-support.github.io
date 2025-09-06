@@ -1,15 +1,15 @@
 
-import { useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
-import { format } from "date-fns",
-import { JobMatch } from "@/types/jobs",
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
+import { format } from "date-fns";
+import { JobMatch } from "@/types/jobs";
 interface JobMatchCardProps {
   match: JobMatch,
-  onApply: (matchId: string, jobId: string) => void,
-  onDecline: (matchId: string) => void,
+  onApply: (matchId: string, jobId: string,) => void,
+  onDecline: (matchId: string,) => void,
   showApplied?: boolean
 }
 
@@ -47,7 +47,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>
             <div className="flex flex-wrap gap-1">
-              {match.matched_skills.slice(0, 5).map((skill, i) => (
+              {match.matched_skills.slice(0, 5).map((skill, i,) => (
                 <Badge key={i} variant="secondary" className="text-xs">
                   {skill}
                 </Badge>
@@ -87,14 +87,14 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex gap-2 w-full">
             <Button 
               className="flex-1" 
-              onClick={() => onApply(match.id, job.id)}
+              onClick = {(,) => onApply(match.id, job.id),}
             >
               Apply Now
             </Button>
             <Button 
               variant="outline" 
               className="flex-1"
-              onClick={() => onDecline(match.id)}
+              onClick = {() => onDecline(match.id),}
             >
               Decline
             </Button>
@@ -104,3 +104,4 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
     </Card>
   )
 }
+;

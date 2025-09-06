@@ -1,11 +1,11 @@
 
-import { SearchSuggestion } from "@/types/search",
-import React, { useState } from "react",
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { Search } from 'lucide-react'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { cn } from "@/lib/utils",
+import { SearchSuggestion } from "@/types/search";
+import React, { useState } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Search } from 'lucide-react';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { cn } from "@/lib/utils";
 import {
  getDocsSearchPath,
  docsSearchSuggestions
@@ -27,7 +27,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     { title: "Sample Code", path: "/docs/sample-code" },
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
 
-  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
+  const handleSelectSuggestion = (suggestion: SearchSuggestion,) => {
     const path = getDocsSearchPath(suggestion.text),
     if (path) {
       router.push(path),
@@ -35,7 +35,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     }
   },
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent,) => {
     e.preventDefault(),
     const path = getDocsSearchPath(searchValue),
     if (path) {
@@ -59,26 +59,26 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
         <EnhancedSearchInput
-         value={searchValue}
-         onChange={setSearchValue}
-         onSelectSuggestion={handleSelectSuggestion}
-         searchSuggestions={docsSearchSuggestions}
+         value = {searchValue,}
+         onChange = {setSearchValue,}
+         onSelectSuggestion = {handleSelectSuggestion,}
+         searchSuggestions = {docsSearchSuggestions,}
          placeholder="Search documentation"
         />
        </form>
       </div>
 
       <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">
-       {navigationItems.map((item) => (
+       {navigationItems.map((item,) => (
         <Link
-         key={item.path}
-         href={item.path}
-         className={cn(
+         key = {item.path,}
+         href = {item.path,}
+         className = {cn(
           "block px-3 py-2 rounded-md text-sm",
           currentPath === item.path
            ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover:text-white hover:bg-zinc-900"
-         )}
+         ),}
         >
          {item.title}
         </Link>

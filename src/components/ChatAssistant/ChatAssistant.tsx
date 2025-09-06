@@ -4,15 +4,14 @@ import React, {
   useRef,
   ReactNode,
   useContext} from 'react',
-import { AuthContext } from '../../context/auth/AuthContext',
-import { useDebounce } from '../../hooks/useDebounce',
-import { useLocalStorage } from '../../hooks/useLocalStorage',
-import { ChatMessage } from './ChatMessage',
-import { ChatInput } from './ChatInput',
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
-import { Button } from '@/components/ui/button',
-import { X } from 'lucide-react'
-
+import { AuthContext } from '../../context/auth/AuthContext';
+import { useDebounce } from '../../hooks/useDebounce';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
@@ -32,7 +31,7 @@ export interface ChatAssistantProps {
   },
   conversationId?: string,
   initialMessages?: Message[],
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>,
+  onSendMessage: (message: string, conversationId?: string,) => Promise<void>,
   contextHeader?: ReactNode,
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[]
@@ -69,7 +68,7 @@ export function ChatAssistant({
   const [guestMessage, setGuestMessage] = useState<string | null>(null),
 
   // Effect for guest user messages
-  useEffect(() => {
+  useEffect((,) => {
     if (isGuest) {
       // Priority: initialMessages prop > localStorage > empty array
       if (initialMessages && initialMessages.length > 0) {
@@ -87,7 +86,7 @@ export function ChatAssistant({
     recipient.id]),
 
   // Effect for logged-in user messages
-  useEffect(() => {
+  useEffect((,) => {
     if (!isGuest) {
       // Update state if initialMessages prop changes (e.g. new conversation loaded)
       setLoggedInMessages(initialMessages)
@@ -97,7 +96,7 @@ export function ChatAssistant({
   // Determine currentMessages and setCurrentMessages based on isGuest
   const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,
   const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[]) => Message[]),
+    valueOrFn: Message[] | ((val: Message[],) => Message[]),
   ) => {
     if (isGuest) {
       const newMessages =
@@ -115,14 +114,14 @@ export function ChatAssistant({
 
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),
 
-  useEffect(() => {
+  useEffect((,) => {
     if (debouncedApiCallParams) {
       onSendMessage(debouncedApiCallParams.message,
         debouncedApiCallParams.conversationId)
     }
   }, [debouncedApiCallParams, onSendMessage]),
 
-  useEffect(() => {
+  useEffect((,) => {
     scrollToBottom()
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state
 
@@ -130,7 +129,7 @@ export function ChatAssistant({
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
 
-  const handleSendMessage = async (messageContent: string) => {
+  const handleSendMessage = async (messageContent: string,) => {
     if (!messageContent.trim()) return,
 
     if (!isGuest) {
@@ -140,7 +139,7 @@ export function ChatAssistant({
         role: 'user',
         message: messageContent,
         timestamp: new Date()},
-      setCurrentMessages((prev: Message[]) => [...prev, newMessage]),
+      setCurrentMessages((prev: Message[],) => [...prev, newMessage]),
       setPendingApiCallParams({ message: messageContent, conversationId })
     } else {
       // Guest user
@@ -157,7 +156,7 @@ export function ChatAssistant({
       role: 'user',
       message: guestMessage,
       timestamp: new Date()},
-    setCurrentMessages((prev: Message[]) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages
+    setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages
     setPendingApiCallParams({ message: guestMessage, conversationId }),
 
     setShowGuestModal(false),
@@ -169,9 +168,9 @@ export function ChatAssistant({
     setGuestMessage(null)
   },
 
-  useEffect(() => {
+  useEffect((,) => {
     if (!isOpen) return,
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent,) => {
       if (e.key === 'Escape') {
         e.preventDefault(),
         onClose()
@@ -213,7 +212,7 @@ export function ChatAssistant({
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick={onClose}
+            onClick = {onClose,}
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -237,12 +236,12 @@ export function ChatAssistant({
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
-                  {starterQuestions.map((q, idx) => (
+                  {starterQuestions.map((q, idx,) => (
                     <Button
-                      key={idx}
+                      key = {idx,}
                       variant="outline"
                       className="text-xs"
-                      onClick={() => handleSendMessage(q)}
+                      onClick = {(,) => handleSendMessage(q),}
                     >
                       {q}
                     </Button>
@@ -251,7 +250,7 @@ export function ChatAssistant({
               )}
             </div>
           ) : (
-            currentMessages.map((msg) => (
+            currentMessages.map((msg,) => (
               <ChatMessage key={msg.id} role={msg.role} message={msg.message} />
             ))
           )}
@@ -284,13 +283,13 @@ export function ChatAssistant({
             <div className="flex justify-end space-x-3">
               <Button
                 variant="outline"
-                onClick={handleModalCancel}
+                onClick = {handleModalCancel,}
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
-                onClick={handleModalSendConfirm}
+                onClick = {handleModalSendConfirm,}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send

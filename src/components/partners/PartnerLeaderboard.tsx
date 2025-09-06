@@ -1,9 +1,8 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Crown, Medal, Trophy } from 'lucide-react'
-
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Crown, Medal, Trophy } from 'lucide-react';
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -65,7 +64,7 @@ export function PartnerLeaderboard() {
   ],
   
   // Function to render rank badge
-  const renderRankBadge = (rank: number) => {
+  const renderRankBadge = (rank: number,) => {
     switch(rank) {
       case 1:
         return <Trophy className="h-5 w-5 text-yellow-500" />,
@@ -93,7 +92,7 @@ export function PartnerLeaderboard() {
             {leaderboard.length > 0 ? (
               leaderboard.map(entry => (
                 <div 
-                  key={entry.id} 
+                  key = {entry.id,}
                   className={`flex items-center justify-between p-3 rounded-md ${
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' : 
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'

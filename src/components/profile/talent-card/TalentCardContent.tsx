@@ -1,7 +1,7 @@
 
-import React, { useState } from "react",
-import { MapPin } from 'lucide-react'
-import { TalentCardSkills } from "./TalentCardSkills",
+import React, { useState } from "react";
+import { MapPin } from 'lucide-react';
+import { TalentCardSkills } from "./TalentCardSkills";
 interface TalentCardContentProps {
   summary: string | undefined,
   bio: string,
@@ -26,8 +26,8 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
       <div 
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
+        onMouseEnter = {() => setIsHovering(true),}
+        onMouseLeave = {() => setIsHovering(false),}
       >
         <p className="text-zion-slate mb-4">
           {summary || bio}
@@ -39,3 +39,4 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
     </div>
   )
 }
+;

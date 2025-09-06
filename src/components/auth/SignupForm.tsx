@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Label } from '@/components/ui/label',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
-import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { fireEvent } from '@/lib/analytics',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { fireEvent } from '@/lib/analytics';
+import {logErrorToProduction} from '@/utils/productionLogger';
 const signupSchema = z.object({
   name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters'),
   email: z.string().email('Please enter a valid email address').min(1, 'Email is required'),
@@ -21,7 +21,7 @@ const signupSchema = z.object({
     .regex(/[0-9]/, 'Password must include at least one number')
     .regex(/[^A-Za-z0-9]/, 'Password must include at least one special character'),
   confirmPassword: z.string()
-}).refine((data) => data.password === data.confirmPassword, {
+}).refine((data,) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
   path: ["confirmPassword"]}),
 
@@ -31,8 +31,8 @@ interface SignupFormProps {
   onSuccess?: (result: {
     email: string,
     emailVerificationRequired: boolean
-  }) => void,
-  onError?: (error: string) => void
+  },) => void,
+  onError?: (error: string,) => void
 }
 
 interface FieldValidationState {
@@ -63,10 +63,10 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
   const watchedFields = watch(),
 
   // Real-time field validation with debounce
-  useEffect(() => {
+  useEffect((,) => {
     const timeouts: Record<string, NodeJS.Timeout> = {},
 
-    Object.keys(watchedFields).forEach((fieldName) => {
+    Object.keys(watchedFields).forEach((fieldName,) => {
       const typedFieldName = fieldName as keyof SignupFormData,
       if (touchedFields[typedFieldName]) {
         setFieldStates(prev => ({
@@ -78,7 +78,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           }
         })),
 
-        timeouts[fieldName] = setTimeout(async () => {
+        timeouts[fieldName] = setTimeout(async (,) => {
           const result = await trigger(typedFieldName),
           const error = errors[typedFieldName],
           
@@ -99,7 +99,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
   }, [watchedFields, touchedFields, trigger, errors]),
 
-  const getFieldValidationIcon = (fieldName: string) => {
+  const getFieldValidationIcon = (fieldName: string,) => {
     const state = fieldStates[fieldName],
     const isTouched = touchedFields[fieldName as keyof SignupFormData],
     
@@ -120,7 +120,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     return null
   },
 
-  const getFieldClasses = (fieldName: string) => {
+  const getFieldClasses = (fieldName: string,) => {
     const state = fieldStates[fieldName],
     const isTouched = touchedFields[fieldName as keyof SignupFormData],
     
@@ -141,7 +141,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     return ''
   },
 
-  const getPasswordStrength = (password: string) => {
+  const getPasswordStrength = (password: string,) => {
     if (!password) return { strength: 0, label: '' },
     
     let strength = 0,
@@ -167,7 +167,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
 
   const passwordStrength = getPasswordStrength(watchedFields.password || ''),
 
-  const onSubmit = async (data: SignupFormData) => {
+  const onSubmit = async (data: SignupFormData,) => {
     fireEvent('signup_submit'),
     setIsSubmitting(true),
 
@@ -248,8 +248,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
             type="text"
             placeholder="Enter your full name"
             {...register('name')}
-            disabled={isSubmitting}
-            className={cn('pr-10', getFieldClasses('name'))}
+            disabled = {isSubmitting,}
+            className = {cn('pr-10', getFieldClasses('name')),}
           />
           <div className="absolute inset-y-0 right-0 flex items-center pr-3">
             {getFieldValidationIcon('name')}
@@ -274,8 +274,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
             type="email"
             placeholder="Enter your email address"
             {...register('email')}
-            disabled={isSubmitting}
-            className={cn('pr-10', getFieldClasses('email'))}
+            disabled = {isSubmitting,}
+            className = {cn('pr-10', getFieldClasses('email')),}
             autoComplete="email"
           />
           <div className="absolute inset-y-0 right-0 flex items-center pr-3">
@@ -298,11 +298,11 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         <div className="relative">
           <Input
             id="password"
-            type={showPassword ? 'text' : 'password'}
+            type = {showPassword ? 'text' : 'password',}
             placeholder="Create a strong password"
             {...register('password')}
-            disabled={isSubmitting}
-            className={cn('pr-20', getFieldClasses('password'))}
+            disabled = {isSubmitting,}
+            className = {cn('pr-20', getFieldClasses('password')),}
             autoComplete="new-password"
           />
           <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
@@ -312,8 +312,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
               variant="ghost"
               size="sm"
               className="h-7 w-7 p-0"
-              onClick={() => setShowPassword(!showPassword)}
-              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              onClick = {() => setShowPassword(!showPassword),}
+              aria-label = {showPassword ? 'Hide password' : 'Show password',}
             >
               {showPassword ? (
                 <EyeOff className="h-4 w-4" />
@@ -339,7 +339,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
-                className={cn('h-2 rounded-full transition-all duration-300', passwordStrength.color)}
+                className = {cn('h-2 rounded-full transition-all duration-300', passwordStrength.color),}
                 style={{ width: `${passwordStrength.percentage}%` }}
               />
             </div>
@@ -381,11 +381,11 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         <div className="relative">
           <Input
             id="confirmPassword"
-            type={showConfirmPassword ? 'text' : 'password'}
+            type = {showConfirmPassword ? 'text' : 'password',}
             placeholder="Confirm your password"
             {...register('confirmPassword')}
-            disabled={isSubmitting}
-            className={cn('pr-20', getFieldClasses('confirmPassword'))}
+            disabled = {isSubmitting,}
+            className = {cn('pr-20', getFieldClasses('confirmPassword')),}
             autoComplete="new-password"
           />
           <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
@@ -395,8 +395,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
               variant="ghost"
               size="sm"
               className="h-7 w-7 p-0"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              aria-label={showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'}
+              onClick = {() => setShowConfirmPassword(!showConfirmPassword),}
+              aria-label = {showConfirmPassword ? 'Hide confirm password' : 'Show confirm password',}
             >
               {showConfirmPassword ? (
                 <EyeOff className="h-4 w-4" />
@@ -426,7 +426,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       <Button 
         type="submit" 
         className="w-full py-3" 
-        disabled={isSubmitting || !isValid}
+        disabled = {isSubmitting || !isValid,}
       >
         {isSubmitting ? (
           <>

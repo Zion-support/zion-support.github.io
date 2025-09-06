@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react';
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -19,7 +19,7 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchProfile = async () => {
       setIsLoading(true),
       setError(null),
@@ -87,7 +87,7 @@ export default function ProfileDetail() {
     <>
       <SEO
         title={`${profileData.full_name} | Zion AI Marketplace`}
-        description={profileData.bio || "Check out this talent's profile on Zion!"}
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
@@ -157,7 +157,7 @@ export default function ProfileDetail() {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {profileData.skills?.map((skill: string, index: number) => (
+                  {profileData.skills?.map((skill: string, index: number,) => (
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>
@@ -171,7 +171,7 @@ export default function ProfileDetail() {
               </CardHeader>
               <CardContent>
                 {profileData.experience ? (
-                  profileData.experience.map((exp: any, index: number) => (
+                  profileData.experience.map((exp: any, index: number,) => (
                     <div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
                       <p className="text-zion-cyan">{exp.company}</p>
@@ -193,10 +193,10 @@ export default function ProfileDetail() {
               <CardContent>
                 {profileData.portfolio_links ? (
                   <div className="flex flex-col gap-3">
-                    {profileData.portfolio_links.map((link: any, index: number) => (
+                    {profileData.portfolio_links.map((link: any, index: number,) => (
                       <a
-                        key={index}
-                        href={link.url}
+                        key = {index,}
+                        href = {link.url,}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
@@ -256,7 +256,7 @@ export default function ProfileDetail() {
               <div className="flex flex-col space-y-3">
                 {profileData.github_url && (
                   <a
-                    href={profileData.github_url}
+                    href = {profileData.github_url,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -269,7 +269,7 @@ export default function ProfileDetail() {
                 )}
                 {profileData.twitter_url && (
                   <a
-                    href={profileData.twitter_url}
+                    href = {profileData.twitter_url,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -282,7 +282,7 @@ export default function ProfileDetail() {
                 )}
                 {profileData.linkedin_url && (
                   <a
-                    href={profileData.linkedin_url}
+                    href = {profileData.linkedin_url,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"

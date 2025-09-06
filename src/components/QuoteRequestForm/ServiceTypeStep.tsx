@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Card } from "@/components/ui/card",
-import { Search } from 'lucide-react'
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { captureException } from "@/utils/sentry",
-import Skeleton from "@/components/ui/skeleton",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useIsMounted } from "@/hooks/useIsMounted",
-import { z } from "zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useEffect, useState } from "react";
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
+import { Search } from 'lucide-react';
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { captureException } from "@/utils/sentry";
+import Skeleton from "@/components/ui/skeleton";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useIsMounted } from "@/hooks/useIsMounted";
+import { z } from "zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -20,7 +20,7 @@ const listingsSchema = z.array(listingSchema),
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void
+  updateFormData: (data: Partial<QuoteFormData>,) => void
 }
 
 
@@ -33,7 +33,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const isMounted = useIsMounted(),
 
   // Fetch services when the service type or query changes
-  useEffect(() => {
+  useEffect((,) => {
     if (!formData.serviceType) {
       setListings([]),
       return
@@ -71,7 +71,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               setError('Failed to load services')
             }
           } else {
-            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))
+            await new Promise((res,) => setTimeout(res, Math.pow(2, attempt) * 500))
           }
         } finally {
           if (isMounted.current) setLoading(false)
@@ -82,11 +82,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     fetchServices()
   }, [formData.serviceType, debouncedQuery, isMounted]),
   
-  const handleTypeSelect = (type: ServiceType) => {
+  const handleTypeSelect = (type: ServiceType,) => {
     updateFormData({ serviceType: type })
   },
   
-  const handleItemSelect = (item: ListingItem) => {
+  const handleItemSelect = (item: ListingItem,) => {
     updateFormData({ 
       specificItem: item,
       serviceCategory: item.category,
@@ -119,7 +119,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
-            onClick={() => handleTypeSelect("service")}
+            onClick = {(,) => handleTypeSelect("service"),}
           >
             <h4 className="font-medium text-white">Services</h4>
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>
@@ -131,7 +131,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
-            onClick={() => handleTypeSelect("talent")}
+            onClick = {() => handleTypeSelect("talent"),}
           >
             <h4 className="font-medium text-white">Talent</h4>
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>
@@ -143,7 +143,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
-            onClick={() => handleTypeSelect("equipment")}
+            onClick = {() => handleTypeSelect("equipment"),}
           >
             <h4 className="font-medium text-white">Equipment</h4>
             <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>
@@ -159,8 +159,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
               placeholder={`Search ${formData.serviceType}...`}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              value = {searchQuery,}
+              onChange = {(e,) => setSearchQuery(e.target.value),}
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
             />
           </div>
@@ -177,21 +177,21 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 <Skeleton className="h-[120px] w-full" />
               </>
             ) : filteredListings.length > 0 ? (
-              filteredListings.map((item) => (
+              filteredListings.map((item,) => (
                 <div
-                  key={item.id}
-                  onClick={() => handleItemSelect(item)}
+                  key = {item.id,}
+                  onClick = {(,) => handleItemSelect(item),}
                   className={`cursor-pointer transition-all ${
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
                   }`}
                 >
                   <ListingScoreCard
-                    title={item.title}
-                    category={item.category}
-                    aiScore={Math.floor(Math.random() * 30) + 70}
-                    rating={Math.floor(Math.random() * 2) + 3}
-                    reviewCount={Math.floor(Math.random() * 50) + 10}
-                    image={item.image}
+                    title = {item.title,}
+                    category = {item.category,}
+                    aiScore = {Math.floor(Math.random() * 30) + 70,}
+                    rating = {Math.floor(Math.random() * 2) + 3,}
+                    reviewCount = {Math.floor(Math.random() * 50) + 10,}
+                    image = {item.image,}
                     description="Sample listing description"
                   />
                 </div>

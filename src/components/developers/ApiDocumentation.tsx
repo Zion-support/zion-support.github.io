@@ -1,12 +1,12 @@
 
-import { useState } from "react",
-import { BookOpen, Terminal } from 'lucide-react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { Badge } from "@/components/ui/badge",
-import CodeBlock from "./CodeBlock",
-import { logInfo } from '@/utils/productionLogger',
+import { useState } from "react";
+import { BookOpen, Terminal } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
+import CodeBlock from "./CodeBlock";
+import { logInfo } from '@/utils/productionLogger';
 interface EndpointParam {
   name: string,
   type: string,
@@ -66,7 +66,7 @@ export function ApiDocumentation() {
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -74,7 +74,7 @@ export function ApiDocumentation() {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
+  ,}
 }),
 
 const data = await response.json(),
@@ -83,8 +83,7 @@ logInfo(data),`,
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-
+,}
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/jobs',
     params={'limit': 10, 'category': 'development'},
@@ -128,8 +127,8 @@ print(data)`
               endpoint="/api/jobs/:id"
               description="Get detailed information about a specific job."
               note=""
-              params={[
-                { name: "id", type: "string", description: "The job ID", required: true }
+              params = {[
+                { name: "id", type: "string", description: "The job ID", required: true ,}
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
@@ -149,8 +148,7 @@ logInfo(data),`,
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-
+,}
 job_id = 'job_abc123'
 response = requests.get(
     f'https://api.ziontechgroup.com/v1/jobs/{job_id}',
@@ -240,8 +238,7 @@ import json
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-
+,}
 payload = {
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],
     'budget': {
@@ -296,7 +293,7 @@ print(data)`
                 { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
                 { name: "availability", type: "string", description: "Filter by availability status" }
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -304,7 +301,7 @@ print(data)`
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
+  ,}
 }),
 
 const data = await response.json(),
@@ -313,8 +310,7 @@ logInfo(data),`,
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-
+,}
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/talent',
     params={'skills': 'react,typescript'},
@@ -352,8 +348,8 @@ print(data)`
               endpoint="/api/talent/:id"
               description="Get detailed information about a specific talent profile."
               note=""
-              params={[
-                { name: "id", type: "string", description: "The talent ID", required: true }
+              params = {[
+                { name: "id", type: "string", description: "The talent ID", required: true ,}
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
@@ -373,8 +369,7 @@ logInfo(data),`,
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-
+,}
 talent_id = 'talent_abc123'
 response = requests.get(
     f'https://api.ziontechgroup.com/v1/talent/{talent_id}',
@@ -384,7 +379,7 @@ response = requests.get(
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": {
     "id": "talent_abc123",
@@ -402,7 +397,7 @@ print(data)`
         "description": "Built a modern e-commerce platform using React...",
         "technologies": ["react", "redux", "node.js"],
         "image_url": "https://example.com/portfolio/123.jpg"
-      }
+      ,}
     ],
     "certifications": [
       {
@@ -474,14 +469,12 @@ import json
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-
+,}
 payload = {
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000,
     'budget_max': 12000,
     'requester_name': 'John Doerequester_email': 'john@example.com'
-}
-
+,}
 response = requests.post(
     'https://api.ziontechgroup.com/v1/quotes',
     headers=headers,
@@ -491,7 +484,7 @@ response = requests.post(
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": {
     "id": "quote_def456",
@@ -508,7 +501,7 @@ print(data)`
     "requester_email": "john@example.com",
     "status": "new",
     "created_at": "2025-05-16T14:30:15Z"
-  }
+  ,}
 }`
               }}
             />
@@ -523,7 +516,7 @@ print(data)`
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -531,7 +524,7 @@ print(data)`
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
+  ,}
 }),
 
 const data = await response.json(),
@@ -540,8 +533,7 @@ logInfo(data),`,
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-
+,}
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/quotes',
     headers=headers
@@ -593,7 +585,7 @@ print(data)`
               </p>
               
               <CodeBlock
-                code={`import crypto from 'crypto',
+                code = {`import crypto from 'crypto',
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret),
@@ -602,10 +594,9 @@ function verifyWebhookSignature(payload, signature, secret) {
     Buffer.from(signature),
     Buffer.from(expectedSignature)
   )
-}
-
+,}
 // Example usage in Express.js
-app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
+app.post('/webhook', express.raw({type: 'application/json'}), (req, res,) => {
   const signature = req.headers['x-zion-signature'],
   const payload = req.body.toString(),
   const webhookSecret = process.env.WEBHOOK_SECRET,
@@ -622,7 +613,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   res.status(200).send('Webhook received')
 }),`}
                 language="javascript"
-                showLineNumbers={true}
+                showLineNumbers = {true,}
               />
               
               <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>
@@ -659,7 +650,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </p>
               
               <CodeBlock
-                code={`{
+                code = {`{
   "event_type": "new_application",
   "event_id": "evt_abc123def456",
   "timestamp": "2025-05-16T15:30:00Z",
@@ -670,10 +661,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     "applied_at": "2025-05-16T15:28:30Z",
     "status": "new",
     "match_score": 85
-  }
+  ,}
 }`}
                 language="json"
-                showLineNumbers={true}
+                showLineNumbers = {true,}
               />
             </div>
           </TabsContent>
@@ -740,7 +731,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </p>
               
               <CodeBlock
-                code={`{
+                code = {`{
   "error": {
     "code": "invalid_request",
     "message": "The request was invalid",
@@ -748,7 +739,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
       {
         "field": "project_name",
         "message": "Project name is required"
-      }
+      ,}
     ]
   }
 }`}
@@ -796,7 +787,7 @@ function EndpointSection({
         <div className="flex items-center">
           <Badge 
             variant="outline" 
-            className={
+            className = {
               method === 'GET' 
                 ? "border-green-500 text-green-400 font-mono" 
                 : method === 'POST' 
@@ -804,7 +795,7 @@ function EndpointSection({
                 : method === 'PUT'
                 ? "border-yellow-500 text-yellow-400 font-mono"
                 : "border-red-500 text-red-400 font-mono"
-            }
+            ,}
           >
             {method}
           </Badge>
@@ -831,7 +822,7 @@ function EndpointSection({
               </tr>
             </thead>
             <tbody>
-              {params.map((param, index) => (
+              {params.map((param, index,) => (
                 <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 font-mono text-sm">
                     {param.name}
@@ -851,15 +842,15 @@ function EndpointSection({
           <div className="flex items-center mb-2">
             <h4 className="font-medium">Request Example</h4>
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">
-              {Object.keys(codeExamples).map((lang) => (
+              {Object.keys(codeExamples).map((lang,) => (
                 <button
-                  key={lang}
+                  key = {lang,}
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang 
                       ? "bg-zinc-700 text-white" 
                       : "text-zinc-400 hover:bg-zinc-800"
                   }`}
-                  onClick={() => setActiveTab(lang)}
+                  onClick = {(,) => setActiveTab(lang),}
                 >
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
                 </button>
@@ -867,8 +858,8 @@ function EndpointSection({
             </div>
           </div>
           <CodeBlock 
-            code={codeExamples[activeTab] || "// Code example not available"}
-            language={activeTab === "curl" ? "bash" : activeTab}
+            code = {codeExamples[activeTab] || "// Code example not available",}
+            language = {activeTab === "curl" ? "bash" : activeTab,}
           />
         </div>
       )}
@@ -877,7 +868,7 @@ function EndpointSection({
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Response</h4>
           <CodeBlock
-            code={responseExamples.success}
+            code = {responseExamples.success,}
             language="json"
           />
         </div>

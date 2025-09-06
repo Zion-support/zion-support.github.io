@@ -1,8 +1,8 @@
-import { useState, useRef, useEffect } from 'react',
-import { MessageSquare, X } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { ChatMessage, ChatInput } from '@/components/ChatAssistant',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState, useRef, useEffect } from 'react';
+import { MessageSquare, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
@@ -21,9 +21,9 @@ export function SupportChatbot() {
   const [typing, setTyping] = useState(false),
   const endRef = useRef<HTMLDivElement | null>(null),
 
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
+  useEffect((,) => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
 
-  const sendMessage = async (text: string) => {
+  const sendMessage = async (text: string,) => {
     const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
     setMessages(prev => [...prev, userMsg]),
     setLoading(true),
@@ -53,7 +53,7 @@ export function SupportChatbot() {
           })
         }),
         if (!res.ok) throw new Error(`API error: ${res.status}`),
-        const data = await res.json().catch(() => ({})),
+        const data = await res.json().catch((,) => ({})),
         const message = data.message || data.choices?.[0]?.message?.content || data.choices?.[0]?.text || data.completion || '',
         const finalMsg = message.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
@@ -118,7 +118,7 @@ export function SupportChatbot() {
   if (!open) {
     return (
       <Button 
-        onClick={() => setOpen(true)} 
+        onClick = {(,) => setOpen(true),}
         size="icon" 
         variant="outline" 
         className="fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover: bg-zion-purple-light z-40" 
@@ -137,7 +137,7 @@ export function SupportChatbot() {
           variant="ghost"
           size="icon"
           className="text-white"
-          onClick={() => setOpen(false)}
+          onClick = {(,) => setOpen(false),}
           aria-label="Close help bot"
         >
           <X className="h-5 w-5" />

@@ -1,12 +1,11 @@
-import React from "react",
-import { useProjects } from "@/hooks/useProjects",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
-import { Clock, Briefcase } from 'lucide-react'
-
+import React from "react";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { Clock, Briefcase } from 'lucide-react';
 function ProjectsContent() {
   const { projects, isLoading } = useProjects(),
 
@@ -24,7 +23,7 @@ function ProjectsContent() {
           <p>You don't have any projects yet.</p>
         ) : (
           <div className="grid gap-6">
-            {projects.map((project) => (
+            {projects.map((project,) => (
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">

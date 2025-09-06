@@ -1,12 +1,12 @@
-import { useState } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { Button } from '@/components/ui/button',
-import { Textarea } from '@/components/ui/textarea',
-import { Input } from '@/components/ui/input',
-import { Checkbox } from '@/components/ui/checkbox',
-import { format } from 'date-fns',
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { format } from 'date-fns';
 import {
   Form,
   FormControl,
@@ -14,12 +14,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from '@/components/ui/form',
-import { WorkExperience } from '@/types/resume',
-import { Loader2, Edit, Trash2 } from 'lucide-react'
-import { useResume } from '@/hooks/useResume',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { Card, CardContent } from '@/components/ui/card',
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',
+import { WorkExperience } from '@/types/resume';
+import { Loader2, Edit, Trash2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Card, CardContent } from '@/components/ui/card';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 // Define schema for form validation
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),
@@ -61,7 +61,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       description: '',
       location: ''}}),
 
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
+  const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {
     try {
       setError(null),
       let success,
@@ -96,7 +96,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     }
   },
 
-  const handleEdit = (work: WorkExperience) => {
+  const handleEdit = (work: WorkExperience,) => {
     setEditingId(work.id!),
     form.reset({
       ...work,
@@ -104,13 +104,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
   },
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
   },
 
-  const handleEnhanceDescription = (enhancedContent: string) => {
+  const handleEnhanceDescription = (enhancedContent: string,) => {
     form.setValue('description', enhancedContent)
   },
 
@@ -126,7 +126,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       {workExperiences.length > 0 && (
         <div className="space-y-4">
           <h3 className="text-md font-medium">Added Experience</h3>
-          {workExperiences.map((work) => (
+          {workExperiences.map((work,) => (
             <Card key={work.id} className="bg-muted/40">
               <CardContent className="pt-6">
                 <div className="flex justify-between">
@@ -150,7 +150,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <Button
                       variant="ghost"
                       size="icon"
-                      onClick={() => handleEdit(work)}
+                      onClick = {() => handleEdit(work),}
                       aria-label="Edit experience"
                     >
                       <Edit className="h-4 w-4" />
@@ -158,7 +158,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <Button
                       variant="ghost"
                       size="icon"
-                      onClick={() => handleDelete(work.id!)}
+                      onClick = {() => handleDelete(work.id!),}
                       aria-label="Delete experience"
                     >
                       <Trash2 className="h-4 w-4" />
@@ -183,9 +183,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
-                control={form.control}
+                control = {form.control,}
                 name="company_name"
-                render={({ field }: { field: any }) => (
+                render={({ field }: { field: any },) => (
                   <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
@@ -197,9 +197,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               />
 
               <FormField
-                control={form.control}
+                control = {form.control,}
                 name="role_title"
-                render={({ field }: { field: any }) => (
+                render={({ field }: { field: any },) => (
                   <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
@@ -213,16 +213,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
-                control={form.control}
+                control = {form.control,}
                 name="start_date"
-                render={({ field }: { field: any }) => (
+                render={({ field }: { field: any },) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
                       <Input 
                         type="date" 
                         {...field} 
-                        value={field.value || ''}
+                        value = {field.value || '',}
                       />
                     </FormControl>
                     <FormMessage />
@@ -232,14 +232,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
               <div className="space-y-4">
                 <FormField
-                  control={form.control}
+                  control = {form.control,}
                   name="is_current"
-                  render={({ field }: { field: any }) => (
+                  render={({ field }: { field: any },) => (
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                       <FormControl>
                         <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
+                          checked = {field.value,}
+                          onCheckedChange = {field.onChange,}
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
@@ -251,16 +251,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
                 {!form.watch('is_current') && (
                   <FormField
-                    control={form.control}
+                    control = {form.control,}
                     name="end_date"
-                    render={({ field }: { field: any }) => (
+                    render={({ field }: { field: any },) => (
                       <FormItem>
                         <FormLabel>End Date</FormLabel>
                         <FormControl>
                           <Input 
                             type="date" 
                             {...field} 
-                            value={field.value || ''} 
+                            value = {field.value || '',}
                           />
                         </FormControl>
                         <FormMessage />
@@ -272,9 +272,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             </div>
 
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="location"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
@@ -286,17 +286,17 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             />
 
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="description"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel className="flex justify-between">
                     <span>Job Description</span>
                     <AIEnhancementButton
-                      currentContent={field.value || ''}
+                      currentContent = {field.value || '',}
                       enhancementType="work-description"
                       context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
-                      onEnhanced={handleEnhanceDescription}
+                      onEnhanced = {handleEnhanceDescription,}
                     />
                   </FormLabel>
                   <FormControl>

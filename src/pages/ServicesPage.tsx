@@ -1,22 +1,22 @@
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import { useRouter } from 'next/router',
-import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { SERVICES } from '@/data/servicesData',
-import { useCurrency } from '@/hooks/useCurrency',
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { SERVICES } from '@/data/servicesData';
+import { useCurrency } from '@/hooks/useCurrency';
 // Initial services from existing data
 const INITIAL_SERVICES: ProductListing[] = SERVICES,
 
 // Market insights component
-const ServicesMarketInsights = ({ stats }: { stats: any }) => (
+const ServicesMarketInsights = ({ stats }: { stats: any },) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -54,19 +54,19 @@ const ServiceFilterControls = ({
   showRecommended,
   setShowRecommended,
   loading
-}: any) => (
+}: any,) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
-      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="">All Categories</option>
-        {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
+        {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
-      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
         <option value="price-high">Price: High to Low</option>
@@ -82,7 +82,7 @@ const ServiceFilterControls = ({
 ),
 
 // Service card
-const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => {
+const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: (,) => void }) => {
   const { formatPrice } = useCurrency(),
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
@@ -127,9 +127,9 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onVi
 },
 
 // Loading grid
-const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
+const ServicesLoadingGrid = ({ count = 8 }: { count?: number },) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
+    {Array.from({ length: count }).map((_, i,) => <SkeletonCard key={i} />)}
   </div>
 ),
 
@@ -141,7 +141,7 @@ export default function ServicesPage() {
   const [showRecommended, setShowRecommended] = useState(false),
   const [totalGenerated, setTotalGenerated] = useState(0),
 
-  const fetchServices = useCallback(async (page: number, limit: number) => {
+  const fetchServices = useCallback(async (page: number, limit: number,) => {
     await new Promise(resolve => setTimeout(resolve, 400)),
 
     let allServices: ProductListing[] = [],
@@ -165,7 +165,7 @@ export default function ServicesPage() {
       filteredServices = getRecommendedServices(filteredServices)
     }
     
-    filteredServices.sort((a, b) => {
+    filteredServices.sort((a, b,) => {
       switch (sortBy) {
         case 'price-low':
           return (a.price || 0) - (b.price || 0),
@@ -202,22 +202,22 @@ export default function ServicesPage() {
     total
   } = useInfiniteScrollPagination(fetchServices, 12),
 
-  useEffect(() => {
+  useEffect((,) => {
     refresh(),
     setTotalGenerated(0)
   }, [sortBy, filterCategory, showRecommended]),
 
-  const marketStats = useMemo(() => {
+  const marketStats = useMemo((,) => {
     if (services.length === 0) return null,
     return getServicesMarketStats(services)
   }, [services]),
 
-  const categories = useMemo(() => {
+  const categories = useMemo((,) => {
     return Array.from(new Set(services.map(s => s.category).filter(Boolean)))
   }, [services]),
 
   const [showScrollTop, setShowScrollTop] = useState(false),
-  useEffect(() => {
+  useEffect((,) => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
@@ -264,22 +264,22 @@ export default function ServicesPage() {
 
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         <ServiceFilterControls
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          categories={categories}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
+          sortBy = {sortBy,}
+          setSortBy = {setSortBy,}
+          filterCategory = {filterCategory,}
+          setFilterCategory = {setFilterCategory,}
+          categories = {categories,}
+          showRecommended = {showRecommended,}
+          setShowRecommended = {setShowRecommended,}
+          loading = {isFetching,}
         />
       </motion.div>
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
-          {services.map((item, index) => (
+          {services.map((item, index,) => (
             <motion.div
-              key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
+              key={item.id} ref = {index === services.length - 1 ? lastElementRef : null,}
               initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}
             >

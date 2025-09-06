@@ -1,23 +1,23 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
-import { TalentProfile } from "@/types/talent",
-import type { UserProfile } from "@/types/auth",
-import { cn } from "@/lib/utils",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { z } from "zod",
-import { format, addDays } from "date-fns",
-import { CalendarIcon } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { useInterviews } from "@/hooks/useInterviews",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
+import { TalentProfile } from "@/types/talent";
+import type { UserProfile } from "@/types/auth";
+import { cn } from "@/lib/utils";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { z } from "zod";
+import { format, addDays } from "date-fns";
+import { CalendarIcon } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast";
+import { useInterviews } from "@/hooks/useInterviews";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface InterviewRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -108,8 +108,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
-              src={talent.profile_picture_url || "/placeholder.svg"}
-              alt={talent.full_name}
+              src = {talent.profile_picture_url || "/placeholder.svg",}
+              alt = {talent.full_name,}
               className="h-full w-full object-cover"
               loading="lazy"
             />
@@ -121,9 +121,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>
 
         <FormField
-          control={form.control}
+          control = {form.control,}
           name="title"
-          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
+          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> },) => (
             <FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
@@ -136,9 +136,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="date"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> },) => (
               <FormItem className="flex flex-col">
                 <FormLabel>Date</FormLabel>
                 <Popover>
@@ -146,10 +146,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     <FormControl>
                       <Button
                         variant="outline"
-                        className={cn(
+                        className = {cn(
                           "w-full pl-3 text-left font-normal",
                           !field.value && "text-muted-foreground"
-                        )}
+                        ),}
                       >
                         {field.value ? (
                           format(field.value, "PPP")
@@ -163,9 +163,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
                       mode="single"
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      selected = {field.value,}
+                      onSelect = {field.onChange,}
+                      disabled = {(date,) => date < new Date() || date > addDays(new Date(), 90),}
                       initialFocus
                       className="p-3 pointer-events-auto"
                     />
@@ -177,9 +177,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />
 
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="time"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> },) => (
               <FormItem>
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -189,7 +189,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-[300px]">
-                    {timeSlots.map((time) => (
+                    {timeSlots.map((time,) => (
                       <SelectItem key={time} value={time}>
                         {time}
                       </SelectItem>
@@ -204,9 +204,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="duration"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> },) => (
               <FormItem>
                 <FormLabel>Duration</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -228,9 +228,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />
 
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="platform"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> },) => (
               <FormItem>
                 <FormLabel>Platform</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -254,9 +254,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
         {form.watch('platform') !== 'in-app' && (
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="meetingLink"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> },) => (
               <FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
@@ -272,9 +272,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         )}
 
         <FormField
-          control={form.control}
+          control = {form.control,}
           name="notes"
-          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "notes"> }) => (
+          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "notes"> },) => (
             <FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>

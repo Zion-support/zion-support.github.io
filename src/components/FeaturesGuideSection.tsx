@@ -1,10 +1,9 @@
-import Link from "next/link",
-import { GradientHeading } from "./GradientHeading",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Button } from "./ui/button",
-import { fireEvent } from '@/lib/analytics',
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
-
+import Link from "next/link";
+import { GradientHeading } from "./GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "./ui/button";
+import { fireEvent } from '@/lib/analytics';
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
 export function FeaturesGuideSection() {
   const features = [
     {
@@ -137,8 +136,8 @@ export function FeaturesGuideSection() {
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
             {features.slice(0, 4).map(feature => (
               <TabsTrigger 
-                key={feature.id} 
-                value={feature.id}
+                key = {feature.id,}
+                value = {feature.id,}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
                 {feature.title}
@@ -148,8 +147,8 @@ export function FeaturesGuideSection() {
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
               <TabsTrigger 
-                key={feature.id} 
-                value={feature.id}
+                key = {feature.id,}
+                value = {feature.id,}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
                 {feature.title}
@@ -180,7 +179,7 @@ export function FeaturesGuideSection() {
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
-                    {feature.instructions.map((instruction, idx) => (
+                    {feature.instructions.map((instruction, idx,) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                         {instruction}
@@ -201,7 +200,7 @@ export function FeaturesGuideSection() {
           >
             <Link
               href="/marketplace"
-              onClick={() => fireEvent('explore_marketplace_click')}
+              onClick = {() => fireEvent('explore_marketplace_click'),}
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -211,4 +210,4 @@ export function FeaturesGuideSection() {
       </div>
     </section>
   )
-}
+};

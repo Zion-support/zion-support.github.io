@@ -1,8 +1,8 @@
 
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import React, { useState } from "react";
+import { Dispute, DisputeStatus } from "@/types/disputes";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Table,
   TableBody,
@@ -10,10 +10,10 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import Skeleton from "@/components/ui/skeleton",
-import { formatDistanceToNow } from "date-fns",
-import { ShieldAlert } from 'lucide-react'
-import Link from "next/link",
+import Skeleton from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
+import { ShieldAlert } from 'lucide-react';
+import Link from "next/link";
 type DisputesListProps = {
   disputes: Dispute[],
   isLoading: boolean
@@ -26,7 +26,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter),
 
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
+  const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case "open": return "default",
       case "under_review":
@@ -44,7 +44,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     return (
       <div className="space-y-4">
         <div className="flex gap-2 mb-4">
-          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status,) => (
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
@@ -61,7 +61,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {[...Array(5)].map((_, i) => (
+              {[...Array(5)].map((_, i,) => (
                 <TableRow key={i}>
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-40" /></TableCell>
@@ -94,36 +94,36 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     <div className="space-y-4">
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
-          variant={statusFilter === "all" ? "default" : "outline"}
-          onClick={() => setStatusFilter("all")}
+          variant = {statusFilter === "all" ? "default" : "outline",}
+          onClick = {(,) => setStatusFilter("all"),}
           size="sm"
         >
           All
         </Button>
         <Button
-          variant={statusFilter === "open" ? "default" : "outline"}
-          onClick={() => setStatusFilter("open")}
+          variant = {statusFilter === "open" ? "default" : "outline",}
+          onClick = {() => setStatusFilter("open"),}
           size="sm"
         >
           Open
         </Button>
         <Button
-          variant={statusFilter === "under_review" ? "default" : "outline"}
-          onClick={() => setStatusFilter("under_review")}
+          variant = {statusFilter === "under_review" ? "default" : "outline",}
+          onClick = {() => setStatusFilter("under_review"),}
           size="sm"
         >
           Under Review
         </Button>
         <Button
-          variant={statusFilter === "resolved" ? "default" : "outline"}
-          onClick={() => setStatusFilter("resolved")}
+          variant = {statusFilter === "resolved" ? "default" : "outline",}
+          onClick = {() => setStatusFilter("resolved"),}
           size="sm"
         >
           Resolved
         </Button>
         <Button
-          variant={statusFilter === "closed" ? "default" : "outline"}
-          onClick={() => setStatusFilter("closed")}
+          variant = {statusFilter === "closed" ? "default" : "outline",}
+          onClick = {() => setStatusFilter("closed"),}
           size="sm"
         >
           Closed
@@ -143,7 +143,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {filteredDisputes.map((dispute) => (
+            {filteredDisputes.map((dispute,) => (
               <TableRow key={dispute.id}>
                 <TableCell className="font-mono text-xs">
                   {dispute.id.split('-')[0]}

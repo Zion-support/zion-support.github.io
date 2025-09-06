@@ -1,8 +1,8 @@
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox",
-import { SkillsFilterProps } from "@/types/filters",
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
 const POPULAR_SKILLS = [
   "Machine Learning",
@@ -27,7 +27,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
-        onClick={toggleSection}
+        onClick = {toggleSection,}
         className="flex w-full items-center justify-between text-white font-medium"
       >
         <span>Skills</span>
@@ -44,8 +44,8 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
             <div key={skill} className="flex items-center">
               <Checkbox
                 id={`skill-${skill}`}
-                checked={selectedSkills.includes(skill)}
-                onCheckedChange={() => toggleSkill(skill)}
+                checked = {selectedSkills.includes(skill),}
+                onCheckedChange = {() => toggleSkill(skill),}
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label

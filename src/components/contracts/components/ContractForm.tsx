@@ -1,20 +1,20 @@
 
-import { useState, useEffect } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Loader2 } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Form } from "@/components/ui/form",
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { useToast } from "@/hooks/use-toast",
-import { TalentProfile } from "@/types/talent",
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
-import { generateContract } from "../utils/contractUtils",
-import { ProjectDetailsFields } from "./ProjectDetailsFields",
-import { PaymentTermsFields } from "./PaymentTermsFields",
-import { AdditionalClausesFields } from "./AdditionalClausesFields",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Loader2 } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
+import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useToast } from "@/hooks/use-toast";
+import { TalentProfile } from "@/types/talent";
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
+import { generateContract } from "../utils/contractUtils";
+import { ProjectDetailsFields } from "./ProjectDetailsFields";
+import { PaymentTermsFields } from "./PaymentTermsFields";
+import { AdditionalClausesFields } from "./AdditionalClausesFields";
+import {logErrorToProduction} from '@/utils/productionLogger';
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required"),
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
@@ -31,8 +31,8 @@ interface ContractFormProps {
   talent: TalentProfile,
   clientName: string,
   initialValues?: ContractFormValues,
-  onFormValuesChange?: (values: ContractFormValues) => void,
-  onContractGenerated: (contractContent: string) => void
+  onFormValuesChange?: (values: ContractFormValues,) => void,
+  onContractGenerated: (contractContent: string,) => void
 }
 
 export function ContractForm({
@@ -56,9 +56,9 @@ export function ContractForm({
       additionalClauses: ["nda", "ip"]}}),
   
   // Update form when initialValues change
-  useEffect(() => {
+  useEffect((,) => {
     if (initialValues) {
-      Object.keys(initialValues).forEach((key) => {
+      Object.keys(initialValues).forEach((key,) => {
         const typedKey = key as keyof ContractFormValues,
         form.setValue(typedKey, initialValues[typedKey])
       })
@@ -66,9 +66,9 @@ export function ContractForm({
   }, [initialValues, form]),
   
   // Track form values for template saving
-  useEffect(() => {
+  useEffect((,) => {
     if (onFormValuesChange) {
-      const subscription = form.watch((value) => {
+      const subscription = form.watch((value,) => {
         onFormValuesChange(value as ContractFormValues)
       }),
       
@@ -77,7 +77,7 @@ export function ContractForm({
     return undefined
   }, [form, onFormValuesChange]),
   
-  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
+  const handleMilestonesGenerated = (milestones: GeneratedMilestone[],) => {
     setGeneratedMilestones(milestones),
     
     // If payment terms isn't already set to milestone, update it
@@ -90,7 +90,7 @@ export function ContractForm({
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
   },
   
-  const onSubmit = async (values: ContractFormValues) => {
+  const onSubmit = async (values: ContractFormValues,) => {
     setIsGenerating(true),
     try {
       const contract = await generateContract(
@@ -124,22 +124,22 @@ export function ContractForm({
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <ProjectDetailsFields 
-            form={form} 
+            form = {form,}
           />
           
           <PaymentTermsFields 
-            form={form}
-            handleMilestonesGenerated={handleMilestonesGenerated}
+            form = {form,}
+            handleMilestonesGenerated = {handleMilestonesGenerated,}
           />
           
           <AdditionalClausesFields 
-            form={form}
+            form = {form,}
           />
           
           <Button 
             type="submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
-            disabled={isGenerating}
+            disabled = {isGenerating,}
           >
             {isGenerating ? (
               <>
@@ -156,8 +156,8 @@ export function ContractForm({
       <DialogFooter className="gap-2 flex-wrap mt-4">
         <Button 
           variant="outline" 
-          onClick={() => form.reset()}
-          disabled={isGenerating}
+          onClick = {() => form.reset(),}
+          disabled = {isGenerating,}
         >
           Reset Form
         </Button>

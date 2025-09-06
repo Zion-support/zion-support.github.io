@@ -1,21 +1,19 @@
 
-import { useState } from "react",
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
-import { format } from "date-fns",
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
-
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
-
-import CodeBlock from "./CodeBlock",
+import { useState } from "react";
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
+import { format } from "date-fns";
+import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import CodeBlock from "./CodeBlock";
 export function ApiKeysManager() {
   const { 
     keys,
@@ -37,7 +35,7 @@ export function ApiKeysManager() {
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
 
   // Load keys on mount
-  useState(() => {
+  useState((,) => {
     fetchApiKeys()
   }),
   
@@ -50,12 +48,12 @@ export function ApiKeysManager() {
     setSelectedScopes([])
   },
 
-  const handleRegenerateKey = async (keyId: string) => {
+  const handleRegenerateKey = async (keyId: string,) => {
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
   },
   
-  const handleRevokeKey = async (keyId: string) => {
+  const handleRevokeKey = async (keyId: string,) => {
     await revokeApiKey(keyId),
     setShowDeleteConfirm(null)
   },
@@ -69,7 +67,7 @@ export function ApiKeysManager() {
     { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],
 
   // Toggle a scope selection
-  const toggleScope = (scope: ApiKeyScope) => {
+  const toggleScope = (scope: ApiKeyScope,) => {
     setSelectedScopes(prev => 
       prev.includes(scope) 
         ? prev.filter(s => s !== scope) 
@@ -77,7 +75,7 @@ export function ApiKeysManager() {
     )
   },
   
-  const getExampleCode = (key: string) => {
+  const getExampleCode = (key: string,) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
@@ -124,8 +122,8 @@ export function ApiKeysManager() {
                   <Label htmlFor="key-name">Key Name</Label>
                   <Input
                     id="key-name"
-                    value={keyName}
-                    onChange={(e) => setKeyName(e.target.value)}
+                    value = {keyName,}
+                    onChange = {(e,) => setKeyName(e.target.value),}
                     placeholder="e.g. Production API Key"
                     className="bg-zinc-800 border-zinc-700"
                   />
@@ -134,15 +132,15 @@ export function ApiKeysManager() {
                 <div className="space-y-2">
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
-                    {scopeOptions.map((scope) => (
+                    {scopeOptions.map((scope,) => (
                       <div key={scope.value} className="flex items-center space-x-2">
                         <Checkbox 
-                          id={scope.value} 
-                          checked={selectedScopes.includes(scope.value)}
-                          onCheckedChange={() => toggleScope(scope.value)}
+                          id = {scope.value,}
+                          checked = {selectedScopes.includes(scope.value),}
+                          onCheckedChange = {() => toggleScope(scope.value),}
                         />
                         <Label
-                          htmlFor={scope.value}
+                          htmlFor = {scope.value,}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {scope.label}
@@ -175,7 +173,7 @@ export function ApiKeysManager() {
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-                onClick={clearNewApiKey}
+                onClick = {clearNewApiKey,}
               >
                 <X size={14} />
               </Button>
@@ -202,7 +200,7 @@ export function ApiKeysManager() {
               <p className="text-sm mt-1">Create one to access the Zion APIs.</p>
             </div>
           ) : (
-            keys.map((key) => (
+            keys.map((key,) => (
               <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
@@ -227,16 +225,16 @@ export function ApiKeysManager() {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
                       <DropdownMenuItem
-                        onClick={() => setShowRegenerateConfirm(key.id)}
+                        onClick = {() => setShowRegenerateConfirm(key.id),}
                         className="cursor-pointer"
-                        disabled={!key.is_active}
+                        disabled = {!key.is_active,}
                       >
                         <RefreshCw size={14} className="mr-2" /> Regenerate
                       </DropdownMenuItem>
                       <DropdownMenuItem
-                        onClick={() => setShowDeleteConfirm(key.id)}
+                        onClick = {() => setShowDeleteConfirm(key.id),}
                         className="cursor-pointer text-red-500"
-                        disabled={!key.is_active}
+                        disabled = {!key.is_active,}
                       >
                         <X size={14} className="mr-2" /> Revoke
                       </DropdownMenuItem>
@@ -245,9 +243,9 @@ export function ApiKeysManager() {
                 </div>
                 
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {key.scopes.map((scope) => (
+                  {key.scopes.map((scope,) => (
                     <Badge 
-                      key={scope} 
+                      key = {scope,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                     >
@@ -295,8 +293,8 @@ export function ApiKeysManager() {
 
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog 
-        open={showRegenerateConfirm !== null} 
-        onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
+        open = {showRegenerateConfirm !== null,}
+        onOpenChange = {(open,) => !open && setShowRegenerateConfirm(null),}
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
@@ -311,7 +309,7 @@ export function ApiKeysManager() {
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction 
-              onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
+              onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
               className="bg-blue-600 hover:bg-blue-700"
             >
               Regenerate
@@ -322,8 +320,8 @@ export function ApiKeysManager() {
 
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog 
-        open={showDeleteConfirm !== null} 
-        onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
+        open = {showDeleteConfirm !== null,}
+        onOpenChange = {(open,) => !open && setShowDeleteConfirm(null),}
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
@@ -338,7 +336,7 @@ export function ApiKeysManager() {
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction 
-              onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
+              onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700"
             >
               Revoke

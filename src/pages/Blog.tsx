@@ -1,21 +1,19 @@
-import { useState, useEffect } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { useDebounce } from "@/hooks/useDebounce",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { BlogPost } from "@/types/blog",
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
-import { BLOG_POSTS } from "@/data/blog-posts",
-import { Search } from 'lucide-react'
-import { fetchWithRetry } from '@/utils/fetchWithRetry',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useDebounce } from "@/hooks/useDebounce";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { BlogPost } from "@/types/blog";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { Search } from 'lucide-react';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Categories for filtering
 const CATEGORIES = [
   "All Categories",
@@ -41,7 +39,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const router = useRouter(),
 
   // Reset state when navigating away to avoid cross-page leakage
-  useEffect(() => {
+  useEffect((,) => {
     return () => {
       setSearchQuery(""),
       setSelectedCategory("All Categories"),
@@ -49,14 +47,14 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     }
   }, [router.asPath, initialPosts]),
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
+  // useEffect((,) => {
+  //   const interval = setInterval((,) => {
   //     setPosts(prev => [...prev, generateRandomBlogPost()]),
   //   }, 120000), // every 2 minutes
   //   return () => clearInterval(interval),
   // }, []),
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchPosts = async () => {
       setIsLoading(true),
       try {
@@ -107,7 +105,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           </div>
           
           {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 && (() => {
+          {featuredPosts.length > 0 && ((,) => {
             const featuredPost = featuredPosts[0],
             if (!featuredPost) return null,
             
@@ -117,10 +115,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img
-                    src={featuredPost.featuredImage}
-                    alt={featuredPost.featuredImageAlt || featuredPost.title}
+                    src = {featuredPost.featuredImage,}
+                    alt = {featuredPost.featuredImageAlt || featuredPost.title,}
                     className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
-                    onError={(e) => {
+                    onError={(e,) => {
                       const target = e.currentTarget as HTMLImageElement,
                       target.src = "/images/blog-placeholder.svg"
                     }}
@@ -138,10 +136,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   </p>
                   <div className="flex items-center mb-6">
                     <img
-                      src={featuredPost.author.avatarUrl}
-                      alt={featuredPost.author.name}
+                      src = {featuredPost.author.avatarUrl,}
+                      alt = {featuredPost.author.name,}
                       className="w-10 h-10 rounded-full mr-3"
-                      onError={(e) => {
+                      onError={(e,) => {
                         const target = e.currentTarget as HTMLImageElement,
                         target.src = "/images/blog-placeholder.svg"
                       }}
@@ -175,8 +173,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 <Input
                   type="text"
                   placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  value = {searchQuery,}
+                  onChange = {(e,) => setSearchQuery(e.target.value),}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                 />
               </div>
@@ -186,7 +184,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   <SelectValue placeholder="Select Category" />
                 </SelectTrigger>
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {CATEGORIES.map((category) => (
+                  {CATEGORIES.map((category,) => (
                     <SelectItem key={category} value={category} className="text-white">
                       {category}
                     </SelectItem>
@@ -204,19 +202,19 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           {/* Blog Posts Grid */}
           {!isLoading && filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
+              {filteredPosts.map((post,) => (
                 <Card
-                  key={post.id}
+                  key = {post.id,}
                   asChild
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
                   <Link href={`/blog/${post.slug}`} className="block group">
                   <div className="aspect-[16/9] relative overflow-hidden">
                     <img
-                      src={post.featuredImage}
-                      alt={post.featuredImageAlt || post.title}
+                      src = {post.featuredImage,}
+                      alt = {post.featuredImageAlt || post.title,}
                       className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
-                      onError={(e) => {
+                      onError={(e,) => {
                         const target = e.currentTarget as HTMLImageElement,
                         target.src = "/images/blog-placeholder.svg"
                       }}
@@ -239,10 +237,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     </p>
                     <div className="flex items-center">
                       <img
-                        src={post.author.avatarUrl}
-                        alt={post.author.name}
+                        src = {post.author.avatarUrl,}
+                        alt = {post.author.name,}
                         className="w-8 h-8 rounded-full mr-2"
-                        onError={(e) => {
+                        onError={(e,) => {
                           const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
@@ -266,7 +264,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
               <Button
                 variant="outline"
-                onClick={() => {
+                onClick={(,) => {
                   setSearchQuery(""),
                   setSelectedCategory("All Categories")
                 }}

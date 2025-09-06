@@ -1,7 +1,7 @@
-import { useState } from 'react',
-import { Copy, Send } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import type { Prompt } from '@/types/prompts',
+import { useState } from 'react';
+import { Copy, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import type { Prompt } from '@/types/prompts';
 interface PromptCardProps {
   prompt: Prompt
 }
@@ -12,7 +12,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
   const handleCopy = () => {
     navigator.clipboard.writeText(prompt.text),
     setCopied(true),
-    setTimeout(() => setCopied(false), 2000)
+    setTimeout((,) => setCopied(false), 2000)
   },
 
   const handleSend = () => {

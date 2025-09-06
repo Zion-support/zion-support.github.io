@@ -1,15 +1,15 @@
 
-import React from "react",
-import { useHireRequestForm, FormValues } from "./useHireRequestForm",
-import { Button } from "@/components/ui/button",
-import { DialogFooter } from "@/components/ui/dialog",
-import { Form } from "@/components/ui/form",
-import { Loader2 } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { PersonalInfoFields } from "./PersonalInfoFields",
-import { ProjectDetailsField } from "./ProjectDetailsField",
-import { TimelineField } from "./TimelineField",
-import { BudgetFields } from "./BudgetFields",
+import React from "react";
+import { useHireRequestForm, FormValues } from "./useHireRequestForm";
+import { Button } from "@/components/ui/button";
+import { DialogFooter } from "@/components/ui/dialog";
+import { Form } from "@/components/ui/form";
+import { Loader2 } from 'lucide-react';
+import { TalentProfile } from "@/types/talent";
+import { PersonalInfoFields } from "./PersonalInfoFields";
+import { ProjectDetailsField } from "./ProjectDetailsField";
+import { TimelineField } from "./TimelineField";
+import { BudgetFields } from "./BudgetFields";
 export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -48,16 +48,16 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           <Button 
             type="button" 
             variant="outline" 
-            onClick={onClose}
+            onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled={isSubmitting}
+            disabled = {isSubmitting,}
           >
             Cancel
           </Button>
           <Button 
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-            disabled={isSubmitting}
+            disabled = {isSubmitting,}
           >
             {isSubmitting ? (
               <>

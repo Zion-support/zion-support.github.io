@@ -1,11 +1,10 @@
-import React, { useState } from 'react',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import {logErrorToProduction} from '@/utils/productionLogger',
-import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react'
-
+import React, { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react';
 interface QuickAction {
   id: string,
   label: string,
@@ -28,7 +27,7 @@ export function QuickActions() {
   const [isVisible, setIsVisible] = useState(false),
   const [isProcessing, setIsProcessing] = useState<string | null>(null),
 
-  const executeAction = async (actionId: string, action: () => void) => {
+  const executeAction = async (actionId: string, action: (,) => void) => {
     setIsProcessing(actionId),
     try {
       await action()
@@ -182,7 +181,7 @@ export function QuickActions() {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => setIsVisible(true)}
+          onClick = {(,) => setIsVisible(true),}
           className="bg-background/80 backdrop-blur-sm"
         >
           <Settings className="w-4 h-4 mr-2" />
@@ -204,7 +203,7 @@ export function QuickActions() {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setIsVisible(false)}
+              onClick = {(,) => setIsVisible(false),}
               className="h-6 w-6 p-0"
             >
               ✕
@@ -212,7 +211,7 @@ export function QuickActions() {
           </div>
         </CardHeader>
         <CardContent className="pt-0 space-y-4">
-          {Object.entries(categorizedActions).map(([category, categoryActions]) => (
+          {Object.entries(categorizedActions).map(([category, categoryActions],) => (
             <div key={category}>
               <div className="flex items-center gap-2 mb-2">
                 <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">
@@ -220,13 +219,13 @@ export function QuickActions() {
                 </Badge>
               </div>
               <div className="space-y-2">
-                {categoryActions.map((action) => (
+                {categoryActions.map((action,) => (
                   <div key={action.id} className="space-y-1">
                     <Button
-                      variant={action.dangerous ? "destructive" : "outline"}
+                      variant = {action.dangerous ? "destructive" : "outline",}
                       size="sm"
-                      onClick={() => executeAction(action.id, action.action)}
-                      disabled={isProcessing === action.id}
+                      onClick = {(,) => executeAction(action.id, action.action),}
+                      disabled = {isProcessing === action.id,}
                       className="w-full justify-start h-auto p-3"
                     >
                       <div className="flex items-start gap-3 w-full">

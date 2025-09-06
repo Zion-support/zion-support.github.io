@@ -1,8 +1,8 @@
 
-import React from "react",
-import Link from "next/link",
-import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react'
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import React from "react";
+import Link from "next/link";
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 export function ApiDocsHub() {
   const sections = [
     {
@@ -45,10 +45,10 @@ export function ApiDocsHub() {
         </p>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
+          {sections.map((section,) => (
             <Link
-              key={section.path}
-              href={section.path}
+              key = {section.path,}
+              href = {section.path,}
               className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all"
             >
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>

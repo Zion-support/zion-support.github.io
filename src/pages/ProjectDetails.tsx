@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react",
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { format } from "date-fns",
-import { useAuth } from "@/hooks/useAuth",
-import { useProjects } from "@/hooks/useProjects",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { Project, ProjectStatus } from "@/types/projects",
-import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { format } from "date-fns";
+import { useAuth } from "@/hooks/useAuth";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Project, ProjectStatus } from "@/types/projects";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Card,
   CardContent,
@@ -31,14 +31,13 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
-
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react';
 function ProjectDetailsContent() {
   const router = useRouter(),
   // Get projectId from Next.js router query params
@@ -54,7 +53,7 @@ function ProjectDetailsContent() {
   const [activeTab, setActiveTab] = useState("details"),
   
   // Load project data
-  useEffect(() => {
+  useEffect((,) => {
     async function loadProject() {
       if (!projectId) return,
       
@@ -80,7 +79,7 @@ function ProjectDetailsContent() {
     loadProject()
   }, [projectId]),
   
-  const fetchProjectNotes = async (projectId: string) => {
+  const fetchProjectNotes = async (projectId: string,) => {
     try {
       const { data, error } = await supabase
         .from("project_notes")
@@ -137,7 +136,7 @@ function ProjectDetailsContent() {
     }
   },
   
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
+  const handleStatusChange = async (newStatus: ProjectStatus,) => {
     if (!project) return,
     
     const success = await updateProjectStatus(project.id, newStatus),
@@ -156,7 +155,7 @@ function ProjectDetailsContent() {
     }
   },
   
-  const getStatusBadge = (status: ProjectStatus) => {
+  const getStatusBadge = (status: ProjectStatus,) => {
     switch (status) {
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
       case "offer_accepted":
@@ -197,7 +196,7 @@ function ProjectDetailsContent() {
             <p className="text-muted-foreground mb-4">
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
-            <Button onClick={() => router.push("/dashboard")}>
+            <Button onClick={(,) => router.push("/dashboard")}>
               Return to Dashboard
             </Button>
           </CardContent>
@@ -258,7 +257,7 @@ function ProjectDetailsContent() {
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
-                        <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
+                        <AlertDialogAction onClick={(,) => handleStatusChange("offer_accepted")}>
                           Accept Offer
                         </AlertDialogAction>
                       </AlertDialogFooter>
@@ -288,7 +287,7 @@ function ProjectDetailsContent() {
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
-                      <AlertDialogAction onClick={() => handleStatusChange("completed")}>
+                      <AlertDialogAction onClick={(,) => handleStatusChange("completed")}>
                         Mark as Completed
                       </AlertDialogAction>
                     </AlertDialogFooter>
@@ -315,7 +314,7 @@ function ProjectDetailsContent() {
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
                 <Button 
                   variant="outline" 
-                  onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
+                  onClick={(,) => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
                 >
                   <MessageSquare className="mr-2 h-4 w-4" /> Message
                 </Button>
@@ -455,14 +454,14 @@ function ProjectDetailsContent() {
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
                         {notes.length > 0 ? (
-                          notes.map((note) => (
+                          notes.map((note,) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
                                 <Avatar className="h-6 w-6">
                                   {note.created_by_profile?.avatar_url ? (
                                     <img
-                                      src={note.created_by_profile.avatar_url}
-                                      alt={note.created_by_profile.display_name}
+                                      src = {note.created_by_profile.avatar_url,}
+                                      alt = {note.created_by_profile.display_name,}
                                       loading="lazy"
                                     />
                                   ) : (
@@ -493,13 +492,13 @@ function ProjectDetailsContent() {
                         <div>
                           <Textarea
                             placeholder="Add a note or update to the project..."
-                            value={newNote}
-                            onChange={(e) => setNewNote(e.target.value)}
+                            value = {newNote,}
+                            onChange = {(e,) => setNewNote(e.target.value),}
                             className="min-h-[100px] mb-2"
                           />
                           <Button
-                            onClick={handleSubmitNote}
-                            disabled={!newNote.trim() || isSubmittingNote}
+                            onClick = {handleSubmitNote,}
+                            disabled = {!newNote.trim() || isSubmittingNote,}
                           >
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
@@ -527,8 +526,8 @@ function ProjectDetailsContent() {
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
                         <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
+                          src = {project.talent_profile.profile_picture_url,}
+                          alt = {project.talent_profile.full_name,}
                           loading="lazy"
                         />
                       ) : (
@@ -547,7 +546,7 @@ function ProjectDetailsContent() {
                           variant="outline"
                           size="sm"
                           className="mt-2"
-                          onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
+                          onClick={(,) => router.push(`/messages?talentId=${project.talent_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
                         </Button>
@@ -559,8 +558,8 @@ function ProjectDetailsContent() {
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
                         <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
+                          src = {project.talent_profile.profile_picture_url,}
+                          alt = {project.talent_profile.full_name,}
                           loading="lazy"
                         />
                       ) : (
@@ -577,7 +576,7 @@ function ProjectDetailsContent() {
                           variant="outline"
                           size="sm"
                           className="mt-2"
-                          onClick={() => router.push(`/messages?clientId=${project.client_id}`)}
+                          onClick={(,) => router.push(`/messages?clientId=${project.client_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
                         </Button>
@@ -624,7 +623,7 @@ function ProjectDetailsContent() {
                   </p>
                   <Button 
                     variant="outline"
-                    onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
+                    onClick={(,) => router.push(`/messages?talentId=${project.talent_id}`)}
                     className="w-full"
                   >
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes

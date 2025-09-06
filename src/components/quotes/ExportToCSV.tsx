@@ -1,13 +1,13 @@
 
-import { Button } from "@/components/ui/button",
-import { Download } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes",
+import { Button } from "@/components/ui/button";
+import { Download } from 'lucide-react';
+import type { QuoteRequest } from "@/types/quotes";
 interface ExportToCSVProps {
   quotes: QuoteRequest[],
   filename?: string
 }
 
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
+export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps,) => {
   const handleExport = () => {
     // Define CSV Headers
     const headers = [
@@ -57,7 +57,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     
     // Download file and clean up
     link.click(),
-    setTimeout(() => {
+    setTimeout((,) => {
       document.body.removeChild(link),
       URL.revokeObjectURL(url)
     }, 100)
@@ -66,12 +66,13 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (
     <Button 
       variant="outline" 
-      onClick={handleExport}
+      onClick = {handleExport,}
       className="flex items-center gap-2"
-      disabled={quotes.length === 0}
+      disabled = {quotes.length === 0,}
     >
       <Download size={16} />
       Export CSV
     </Button>
   )
 },
+;

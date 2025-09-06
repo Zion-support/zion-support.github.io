@@ -1,24 +1,24 @@
 
-import React, { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { useDisputes } from "@/hooks/useDisputes",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { useDisputes } from "@/hooks/useDisputes";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
  Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
 } from "@/types/disputes",
 
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { format, formatDistanceToNow } from "date-fns",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth",
-import { toast } from "sonner",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { format, formatDistanceToNow } from "date-fns";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "sonner";
 export function DisputeDetail() {
   const router = useRouter(),
   const { disputeId } = router.query as { disputeId?: string },
@@ -40,7 +40,7 @@ export function DisputeDetail() {
   // Check if user is admin (placeholder - implement proper admin check)
   const isAdmin = user?.userType === "admin",
   
-  useEffect(() => {
+  useEffect((,) => {
     if (!disputeId) return,
 
     const loadDisputeData = async () => {
@@ -67,7 +67,7 @@ export function DisputeDetail() {
     loadDisputeData()
   }, [disputeId, getDisputeById, getDisputeMessages, router]),
 
-  const handleStatusChange = async (status: DisputeStatus) => {
+  const handleStatusChange = async (status: DisputeStatus,) => {
     if (!disputeId) return,
 
     const success = await updateDisputeStatus(disputeId, status),
@@ -133,14 +133,14 @@ export function DisputeDetail() {
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
-        <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
+        <Button onClick={(,) => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
         </Button>
       </div>
     )
   }
 
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
+  const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case "open": return "default",
       case "under_review": return "secondary",
@@ -170,7 +170,7 @@ export function DisputeDetail() {
             Back to List
           </Button>
           {isAdmin && dispute?.status === "open" && (
-            <Button onClick={() => handleStatusChange("under_review")}>
+            <Button onClick={(,) => handleStatusChange("under_review")}>
               Start Review
             </Button>
           )}
@@ -295,11 +295,11 @@ export function DisputeDetail() {
                     ) : (
                       messages
                         .filter(msg => !msg.is_admin_note)
-                        .map((msg) => {
+                        .map((msg,) => {
                           const isCurrentUser = user?.id === msg.user_id,
                           return (
                             <div
-                              key={msg.id}
+                              key = {msg.id,}
                               className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
                             >
                               <div
@@ -335,10 +335,10 @@ export function DisputeDetail() {
                   <div className="w-full space-y-4">
                     <Textarea
                       placeholder="Type your message here..."
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
+                      value = {message,}
+                      onChange = {(e,) => setMessage(e.target.value),}
                       className="min-h-[100px]"
-                      disabled={isSending}
+                      disabled = {isSending,}
                     />
                     <div className="flex justify-end">
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
@@ -378,22 +378,22 @@ export function DisputeDetail() {
                       <div className="flex gap-2">
                         <Button 
                           variant="outline" 
-                          onClick={() => handleStatusChange("open")}
-                          disabled={dispute.status === "open"}
+                          onClick = {(,) => handleStatusChange("open"),}
+                          disabled = {dispute.status === "open",}
                         >
                           Mark as Open
                         </Button>
                         <Button 
                           variant="outline" 
-                          onClick={() => handleStatusChange("under_review")}
-                          disabled={dispute.status === "under_review"}
+                          onClick = {() => handleStatusChange("under_review"),}
+                          disabled = {dispute.status === "under_review",}
                         >
                           Mark as Under Review
                         </Button>
                         <Button 
                           variant="outline" 
-                          onClick={() => handleStatusChange("closed")}
-                          disabled={dispute.status === "closed"}
+                          onClick = {() => handleStatusChange("closed"),}
+                          disabled = {dispute.status === "closed",}
                         >
                           Close Dispute
                         </Button>
@@ -406,8 +406,8 @@ export function DisputeDetail() {
                         <div className="space-y-4">
                           <Textarea
                             placeholder="Enter resolution summary..."
-                            value={resolution.summary}
-                            onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
+                            value = {resolution.summary,}
+                            onChange={(e,) => setResolution({ ...resolution, summary: e.target.value })}
                             className="min-h-[100px]"
                           />
                           
@@ -416,8 +416,8 @@ export function DisputeDetail() {
                               <label className="text-sm font-medium mb-1 block">Resolution Type</label>
                               <select
                                 className="w-full p-2 border rounded"
-                                value={resolution.resolution_type || ""}
-                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
+                                value = {resolution.resolution_type || "",}
+                                onChange={(e,) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
                               >
                                 <option value="client_favor">In Client's Favor</option>
                                 <option value="talent_favor">In Talent's Favor</option>
@@ -437,7 +437,7 @@ export function DisputeDetail() {
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
                         {messages
                           .filter(msg => msg.is_admin_note)
-                          .map((msg) => (
+                          .map((msg,) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center gap-2">
@@ -469,14 +469,14 @@ export function DisputeDetail() {
                       <div className="space-y-4">
                         <Textarea
                           placeholder="Add an admin note (only visible to administrators)..."
-                          value={adminNote}
-                          onChange={(e) => setAdminNote(e.target.value)}
+                          value = {adminNote,}
+                          onChange = {(e,) => setAdminNote(e.target.value),}
                         />
                         <Button
                           variant="outline"
                           onClick={() => {
                             if (adminNote.trim()) {
-                              addDisputeMessage(disputeId!, adminNote, true).then(() => {
+                              addDisputeMessage(disputeId!, adminNote, true).then((,) => {
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setAdminNote("")
                               })

@@ -1,14 +1,14 @@
 
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { PlusCircle, Save, Trash } from 'lucide-react'
-import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
+import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { PlusCircle, Save, Trash } from 'lucide-react';
+import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { toast } from "sonner";
 export function WebhookManager() {
   const { 
     webhooks,
@@ -37,7 +37,7 @@ export function WebhookManager() {
     { value: "talent_hired", label: "Talent Hired" }
   ],
   
-  useEffect(() => {
+  useEffect((,) => {
     fetchWebhooks()
   }, []),
   
@@ -56,7 +56,7 @@ export function WebhookManager() {
     })
   },
   
-  const handleRemoveEvent = (event: WebhookEventType) => {
+  const handleRemoveEvent = (event: WebhookEventType,) => {
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
@@ -86,7 +86,7 @@ export function WebhookManager() {
     })
   },
   
-  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType,) => {
     await testWebhook(webhookId, eventType)
   },
   
@@ -106,8 +106,8 @@ export function WebhookManager() {
               <Input 
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
-                value={newWebhook.name}
-                onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
+                value = {newWebhook.name,}
+                onChange={(e,) => setNewWebhook({...newWebhook, name: e.target.value})}
               />
             </div>
             
@@ -116,8 +116,8 @@ export function WebhookManager() {
               <Input 
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
-                value={newWebhook.url}
-                onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
+                value = {newWebhook.url,}
+                onChange={(e,) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
             </div>
           </div>
@@ -127,8 +127,8 @@ export function WebhookManager() {
             <div className="flex flex-wrap gap-2 mb-2">
               {newWebhook.eventTypes.map(event => (
                 <ClickableBadge 
-                  key={event} 
-                  onRemove={() => handleRemoveEvent(event)}
+                  key = {event,}
+                  onRemove = {(,) => handleRemoveEvent(event),}
                 >
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>
@@ -136,8 +136,8 @@ export function WebhookManager() {
             </div>
             <div className="flex space-x-2">
               <Select
-                value={newWebhook.selectedEvent}
-                onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
+                value = {newWebhook.selectedEvent,}
+                onValueChange={(value,) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select event" />
@@ -161,8 +161,8 @@ export function WebhookManager() {
             <Input 
               id="webhook-secret" 
               placeholder="A secret key to verify the webhook source"
-              value={newWebhook.secret}
-              onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
+              value = {newWebhook.secret,}
+              onChange={(e,) => setNewWebhook({...newWebhook, secret: e.target.value})}
             />
             <p className="text-xs text-muted-foreground">
               If provided, this secret will be used to sign the webhook payload.
@@ -206,7 +206,7 @@ export function WebhookManager() {
                         <Button 
                           variant="outline" 
                           size="sm"
-                          onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
+                          onClick = {(,) => toggleWebhook(webhook.id, !webhook.is_active),}
                         >
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
@@ -219,7 +219,7 @@ export function WebhookManager() {
                     <div>
                       <Label className="text-sm">Events</Label>
                       <div className="flex flex-wrap gap-2 mt-1">
-                        {webhook.event_types.map((event: WebhookEventType) => (
+                        {webhook.event_types.map((event: WebhookEventType,) => (
                           <ClickableBadge key={event} variant="secondary">
                             {eventOptions.find(e => e.value === event)?.label || event}
                           </ClickableBadge>
@@ -237,20 +237,20 @@ export function WebhookManager() {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => deleteWebhook(webhook.id)}
+                    onClick = {() => deleteWebhook(webhook.id),}
                   >
                     <Trash className="h-4 w-4 mr-2" /> Delete
                   </Button>
                   
                   <Select
-                    onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
+                    onValueChange = {(value,) => handleTestWebhook(webhook.id, value as WebhookEventType),}
                   >
                     <SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="Test webhook" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="test_event">Test (generic)</SelectItem>
-                      {webhook.event_types.map((event: WebhookEventType) => (
+                      {webhook.event_types.map((event: WebhookEventType,) => (
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>

@@ -1,6 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Trophy } from 'lucide-react'
-
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {
   name: string,
   points: number
@@ -21,9 +20,9 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-2">
-          {entries.map((e, idx) => (
+          {entries.map((e, idx,) => (
             <div
-              key={e.name}
+              key = {e.name,}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
               <span className="font-medium">

@@ -1,9 +1,8 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { FileText, Plus, Search, Calendar } from 'lucide-react'
-
+import React from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FileText, Plus, Search, Calendar } from 'lucide-react';
 export function QuickActions() {
   const actions = [
     {
@@ -46,7 +45,7 @@ export function QuickActions() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {actions.map(action => (
             <Button 
-              key={action.id}
+              key = {action.id,}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
             >

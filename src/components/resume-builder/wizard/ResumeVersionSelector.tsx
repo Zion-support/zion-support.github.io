@@ -1,5 +1,5 @@
 
-import { useState } from 'react',
+import { useState } from 'react';
 import { 
   DropdownMenu,
   DropdownMenuContent, 
@@ -7,15 +7,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
-import { Resume } from '@/types/resume',
-import { useResume } from '@/hooks/useResume',
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
+import { Resume } from '@/types/resume';
+import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
   currentResume: Resume,
-  onResumeChange: (resumeId: string) => void
+  onResumeChange: (resumeId: string,) => void
 }
 
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
@@ -50,10 +50,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          {existingResumes.map((resume) => (
+          {existingResumes.map((resume,) => (
             <DropdownMenuItem 
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
+              key = {resume.id,}
+              onClick = {(,) => onResumeChange(resume.id!),}
               className="cursor-pointer"
             >
               {resume.basic_info.title}
@@ -61,7 +61,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           ))}
           <DropdownMenuSeparator />
           <DropdownMenuItem 
-            onClick={() => setSaveDialogOpen(true)}
+            onClick = {() => setSaveDialogOpen(true),}
             className="cursor-pointer"
           >
             <Plus className="h-4 w-4 mr-2" />
@@ -77,21 +77,21 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           </DialogHeader>
           <div className="py-4">
             <Input
-              value={newResumeTitle}
-              onChange={(e) => setNewResumeTitle(e.target.value)}
+              value = {newResumeTitle,}
+              onChange = {(e,) => setNewResumeTitle(e.target.value),}
               placeholder="Enter resume title (e.g. DevOps Resume)"
             />
           </div>
           <DialogFooter>
             <Button 
               variant="outline" 
-              onClick={() => setSaveDialogOpen(false)}
+              onClick = {() => setSaveDialogOpen(false),}
             >
               Cancel
             </Button>
             <Button 
-              onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() || isLoading}
+              onClick = {handleCreateNewVersion,}
+              disabled = {!newResumeTitle.trim() || isLoading,}
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -104,3 +104,4 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     </div>
   )
 }
+;

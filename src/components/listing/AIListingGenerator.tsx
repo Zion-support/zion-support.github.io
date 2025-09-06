@@ -1,12 +1,12 @@
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { AIListingForm } from "./AIListingForm",
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Sparkles } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
+import { AIListingForm } from "./AIListingForm";
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -18,7 +18,7 @@ interface GeneratedContent {
 }
 
 interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void,
+  onApplyGenerated?: (content: GeneratedContent,) => void,
   initialValues?: {
     title?: string,
     category?: string,
@@ -42,7 +42,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     category: string,
     keyFeatures: string,
     targetAudience: string
-  }) => {
+  },) => {
     setIsLoading(true),
     
     try {
@@ -99,9 +99,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         </CardHeader>
         <CardContent>
           <AIListingForm 
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-            initialValues={initialValues}
+            onSubmit = {handleGenerate,}
+            isLoading = {isLoading,}
+            initialValues = {initialValues,}
           />
         </CardContent>
       </Card>
@@ -114,3 +114,4 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     </div>
   )
 }
+;

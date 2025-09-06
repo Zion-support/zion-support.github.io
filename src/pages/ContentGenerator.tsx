@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Button } from "@/components/ui/button",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Textarea } from "@/components/ui/textarea",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { Label } from "@/components/ui/label",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { toast } from "sonner",
-import { Loader2 } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { useRouter } from 'next/router',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from 'react';
+import { Header } from "@/components/Header";
+import { Button } from "@/components/ui/button";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { toast } from "sonner";
+import { Loader2 } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useRouter } from 'next/router';
+import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ContentGenerator() {
 
   const { user, isLoading } = useAuth(),
@@ -29,7 +29,7 @@ export default function ContentGenerator() {
   const [previewContent, setPreviewContent] = useState<any>(null),
   const [testEmail, setTestEmail] = useState(''),
 
-  useEffect(() => {
+  useEffect((,) => {
     if (!isLoading && !user) {
       router.push("/login?redirect=/content-generator")
     }
@@ -127,7 +127,7 @@ export default function ContentGenerator() {
                 <CardContent className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="contentType" className="text-white">Content Type</Label>
-                    <Select value={contentType} onValueChange={(value) => setContentType(value as 'blog' | 'newsletter' | 'serviceDescription' | 'faq')}>
+                    <Select value={contentType} onValueChange={(value,) => setContentType(value as 'blog' | 'newsletter' | 'serviceDescription' | 'faq')}>
                       <SelectTrigger id="contentType" className="bg-zion-blue border border-zion-blue-light text-white">
                         <SelectValue placeholder="Select content type" />
                       </SelectTrigger>
@@ -144,15 +144,15 @@ export default function ContentGenerator() {
                     <Label htmlFor="topic" className="text-white">Main Topic / User Prompt</Label>
                     <Input
                       id="topic"
-                      placeholder={
+                      placeholder = {
                         contentType === 'blog' ? "e.g., Benefits of AI in Marketing" :
                         contentType === 'serviceDescription' ? "e.g., AI-Powered Chatbot Solutions" :
                         contentType === 'faq' ? "e.g., How does AI improve customer service?" :
                         "e.g., May Platform Updates" // Newsletter or default
-                      }
+                      ,}
                       className="bg-zion-blue border border-zion-blue-light text-white"
-                      value={topic}
-                      onChange={(e) => setTopic(e.target.value)}
+                      value = {topic,}
+                      onChange = {(e,) => setTopic(e.target.value),}
                     />
                   </div>
 
@@ -162,8 +162,8 @@ export default function ContentGenerator() {
                       id="keywords"
                       placeholder="e.g., AI, machine learning, SEO"
                       className="bg-zion-blue border border-zion-blue-light text-white"
-                      value={keywords}
-                      onChange={(e) => setKeywords(e.target.value)}
+                      value = {keywords,}
+                      onChange = {(e,) => setKeywords(e.target.value),}
                     />
                   </div>
                   
@@ -173,8 +173,8 @@ export default function ContentGenerator() {
                       id="customPrompt"
                       placeholder="Optionally provide more detailed instructions or a full custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
-                      value={customPrompt}
-                      onChange={(e) => setCustomPrompt(e.target.value)}
+                      value = {customPrompt,}
+                      onChange = {(e,) => setCustomPrompt(e.target.value),}
                     />
                   </div>
                   
@@ -184,8 +184,8 @@ export default function ContentGenerator() {
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>
                         <Switch
                           id="autoPublish"
-                          checked={autoPublish}
-                          onCheckedChange={setAutoPublish}
+                          checked = {autoPublish,}
+                          onCheckedChange = {setAutoPublish,}
                         />
                       </div>
                       
@@ -193,8 +193,8 @@ export default function ContentGenerator() {
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
-                          checked={includeImage}
-                          onCheckedChange={setIncludeImage}
+                          checked = {includeImage,}
+                          onCheckedChange = {setIncludeImage,}
                         />
                       </div>
                     </>
@@ -208,16 +208,16 @@ export default function ContentGenerator() {
                         type="email"
                         placeholder="your@email.com"
                         className="bg-zion-blue border border-zion-blue-light text-white"
-                        value={testEmail}
-                        onChange={(e) => setTestEmail(e.target.value)}
+                        value = {testEmail,}
+                        onChange = {(e,) => setTestEmail(e.target.value),}
                       />
                     </div>
                   )}
                 </CardContent>
                 <CardFooter>
                   <Button
-                    onClick={generateContent}
-                    disabled={isGenerating}
+                    onClick = {generateContent,}
+                    disabled = {isGenerating,}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   >
                     {isGenerating ? (
@@ -259,7 +259,7 @@ export default function ContentGenerator() {
                         <div className="mt-4 flex justify-end">
                           <Button
                             onClick={sendTestNewsletter} // sendTestNewsletter would need to be adapted if previewContent structure changed significantly
-                            disabled={!testEmail}
+                            disabled = {!testEmail,}
                             className="bg-zion-blue-light hover:bg-zion-blue text-white"
                           >
                             Send Test to {testEmail || "your email"}

@@ -1,10 +1,9 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useTheme } from "@/hooks/useTheme",
-import { Moon, Sun, Check } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card",
-
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "@/hooks/useTheme";
+import { Moon, Sun, Check } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
 interface Language {
   code: string,
   name: string,
@@ -29,15 +28,15 @@ export function LanguageThemeSelector() {
         <p className="text-muted-foreground">Choose your preferred language</p>
         
         <div className="grid grid-cols-2 gap-3 mt-4">
-          {languages.map((language) => (
+          {languages.map((language,) => (
             <Card 
-              key={language.code}
+              key = {language.code,}
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code 
                   ? "border-primary bg-primary/5" 
                   : "border-border hover:border-primary/40"
               }`}
-              onClick={() => setSelectedLanguage(language.code)}
+              onClick = {(,) => setSelectedLanguage(language.code),}
             >
               <CardContent className="p-3 flex items-center justify-between">
                 <div className="flex items-center">
@@ -64,7 +63,7 @@ export function LanguageThemeSelector() {
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
             }`}
-            onClick={() => setTheme('light')}
+            onClick = {() => setTheme('light'),}
           >
             <CardContent className="p-3 flex flex-col items-center justify-center">
               <Sun className="h-8 w-8 mb-2" />
@@ -81,7 +80,7 @@ export function LanguageThemeSelector() {
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
             }`}
-            onClick={() => setTheme('dark')}
+            onClick = {() => setTheme('dark'),}
           >
             <CardContent className="p-3 flex flex-col items-center justify-center">
               <Moon className="h-8 w-8 mb-2" />

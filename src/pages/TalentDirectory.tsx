@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useNavigate
-import Link from 'next/link',
-import { useAuth } from '@/hooks/useAuth',
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
-import { FilterSidebar } from '@/components/talent/FilterSidebar',
-import { TalentResults } from '@/components/talent/TalentResults',
-import { TalentSkeleton } from '@/components/talent/TalentSkeleton',
-import { ErrorBanner } from '@/components/talent/ErrorBanner',
+import Link from 'next/link';
+import { useAuth } from '@/hooks/useAuth';
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
+import { FilterSidebar } from '@/components/talent/FilterSidebar';
+import { TalentResults } from '@/components/talent/TalentResults';
+import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
+import { ErrorBanner } from '@/components/talent/ErrorBanner';
 import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary
-import { useTalentDirectory } from '@/hooks/useTalentDirectory',
-import { SORT_OPTIONS } from '@/data/sortOptions',
-import { X } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import Image from 'next/image',
-import { TalentProfile } from '@/types/talent',
+import { useTalentDirectory } from '@/hooks/useTalentDirectory';
+import { SORT_OPTIONS } from '@/data/sortOptions';
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import { TalentProfile } from '@/types/talent';
 import {
   Pagination,
   PaginationContent,
@@ -29,7 +29,7 @@ export default function TalentDirectory() {
   const [initialized, setInitialized] = useState(false),
 
   // Force re-render and reset state when route changes
-  const routeKey = useRouteChange(() => {
+  const routeKey = useRouteChange((,) => {
     setInitialized(false),
     setCurrentPage(1)
   }),
@@ -68,7 +68,7 @@ export default function TalentDirectory() {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin',
 
-  useEffect(() => {
+  useEffect((,) => {
     setCurrentPage(1)
   }, [filteredTalents, total]),
 
@@ -76,7 +76,7 @@ export default function TalentDirectory() {
   const paginatedTalents = filteredTalents,
 
   // Load filters from query parameters on first load
-  useEffect(() => {
+  useEffect((,) => {
     if (!router.isReady || initialized) return,
     
     const {
@@ -93,21 +93,21 @@ export default function TalentDirectory() {
 
     if (page) setCurrentPage(parseInt(page, 10) || 1),
     if (search) setSearchTerm(search),
-    if (skills) skills.split().forEach((s) => toggleSkill(s)),
+    if (skills) skills.split().forEach((s,) => toggleSkill(s)),
     if (availability)
-      availability.split().forEach((a) => toggleAvailability(a)),
-    if (regions) regions.split().forEach((r) => toggleRegion(r)),
+      availability.split().forEach((a,) => toggleAvailability(a)),
+    if (regions) regions.split().forEach((r,) => toggleRegion(r)),
     if (priceMin && priceMax)
       setPriceRange([Number(priceMin), Number(priceMax)]),
     if (expMin && expMax)
       setExperienceRange([Number(expMin), Number(expMax)]),
-    if (sort && SORT_OPTIONS.some((o) => o.value === sort))
+    if (sort && SORT_OPTIONS.some((o,) => o.value === sort))
       setSortOption(sort),
     setInitialized(true)
   }, [router.isReady, router.query, initialized]), // Fixed dependencies
 
   // Persist filters to query parameters
-  useEffect(() => {
+  useEffect((,) => {
     if (!initialized || !router.isReady) return,
     
     const query: Record<string, string> = {},
@@ -141,12 +141,12 @@ export default function TalentDirectory() {
     currentPage,
     initialized]), // Fixed dependencies
 
-  const handleRequestHire = (talent: TalentProfile) => {
+  const handleRequestHire = (talent: TalentProfile,) => {
     setSelectedTalent(talent),
     setIsHireModalOpen(true)
   },
 
-  const viewProfile = (id: string) => {
+  const viewProfile = (id: string,) => {
     // Navigate to the talent profile page
     router.push(`/talent/${id}`), // Changed to router.push
   },
@@ -181,8 +181,8 @@ export default function TalentDirectory() {
           <Image
             src="/images/talent-placeholder.svg"
             alt="No talent"
-            width={200}
-            height={200}
+            width = {200,}
+            height = {200,}
             className="mx-auto mb-6"
           />
           <h2 className="text-2xl font-bold text-white mb-4">
@@ -237,30 +237,30 @@ export default function TalentDirectory() {
           {/* Sidebar - Desktop */}
           <div className="w-full lg:w-64 shrink-0 hidden lg:block">
             <FilterSidebar
-              searchTerm={searchTerm}
-              setSearchTerm={setSearchTerm}
-              selectedSkills={selectedSkills}
-              toggleSkill={toggleSkill}
-              selectedAvailability={selectedAvailability}
-              toggleAvailability={toggleAvailability}
-              selectedRegions={selectedRegions}
-              toggleRegion={toggleRegion}
-              priceRange={priceRange}
-              setPriceRange={setPriceRange}
-              experienceRange={experienceRange}
-              setExperienceRange={setExperienceRange}
-              expandedSections={expandedSections}
-              toggleSection={toggleSection}
-              sortOption={sortOption}
-              setSortOption={setSortOption}
-              clearFilters={clearFilters}
+              searchTerm = {searchTerm,}
+              setSearchTerm = {setSearchTerm,}
+              selectedSkills = {selectedSkills,}
+              toggleSkill = {toggleSkill,}
+              selectedAvailability = {selectedAvailability,}
+              toggleAvailability = {toggleAvailability,}
+              selectedRegions = {selectedRegions,}
+              toggleRegion = {toggleRegion,}
+              priceRange = {priceRange,}
+              setPriceRange = {setPriceRange,}
+              experienceRange = {experienceRange,}
+              setExperienceRange = {setExperienceRange,}
+              expandedSections = {expandedSections,}
+              toggleSection = {toggleSection,}
+              sortOption = {sortOption,}
+              setSortOption = {setSortOption,}
+              clearFilters = {clearFilters,}
             />
           </div>
 
           {/* Mobile filter button */}
           <div className="lg:hidden mb-4">
             <Button
-              onClick={() => setIsMobileFilterOpen(true)}
+              onClick = {() => setIsMobileFilterOpen(true),}
               variant="outline"
               className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
             >
@@ -274,12 +274,12 @@ export default function TalentDirectory() {
             {/* Added a wrapper div to contain Results and Pagination */}
             <ErrorBoundary>
               <TalentResults
-                talents={paginatedTalents}
-                totalCount={total}
-                isLoading={isLoading}
-                viewProfile={viewProfile}
-                handleRequestHire={handleRequestHire}
-                isAuthenticated={isAuthenticated}
+                talents = {paginatedTalents,}
+                totalCount = {total,}
+                isLoading = {isLoading,}
+                viewProfile = {viewProfile,}
+                handleRequestHire = {handleRequestHire,}
+                isAuthenticated = {isAuthenticated,}
                 activeFiltersProps={{
                   selectedSkills,
                   toggleSkill,
@@ -301,19 +301,19 @@ export default function TalentDirectory() {
                       <PaginationItem>
                         <PaginationPrevious
                           href={`?page=${currentPage - 1}`}
-                          onClick={(e) => {
+                          onClick={(e,) => {
                             e.preventDefault(),
                             setCurrentPage(Math.max(1, currentPage - 1))
                           }}
                         />
                       </PaginationItem>
-                      {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                        (page) => (
+                      {Array.from({ length: totalPages }, (_, i,) => i + 1).map(
+                        (page,) => (
                           <PaginationItem key={page}>
                             <PaginationButton
-                              page={page}
-                              isActive={page === currentPage}
-                              onClick={(e) => {
+                              page = {page,}
+                              isActive = {page === currentPage,}
+                              onClick={(e,) => {
                                 e.preventDefault(),
                                 setCurrentPage(page)
                               }}
@@ -324,7 +324,7 @@ export default function TalentDirectory() {
                       <PaginationItem>
                         <PaginationNext
                           href={`?page=${currentPage + 1}`}
-                          onClick={(e) => {
+                          onClick={(e,) => {
                             e.preventDefault(),
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
@@ -348,7 +348,7 @@ export default function TalentDirectory() {
                   <Button
                     variant="ghost"
                     size="sm"
-                    onClick={() => setIsMobileFilterOpen(false)}
+                    onClick = {(,) => setIsMobileFilterOpen(false),}
                     className="text-zion-slate-light h-8 w-8 p-0"
                   >
                     <X className="h-4 w-4" />
@@ -356,24 +356,24 @@ export default function TalentDirectory() {
                   </Button>
                 </div>
                 <FilterSidebar
-                  searchTerm={searchTerm}
-                  setSearchTerm={setSearchTerm}
-                  selectedSkills={selectedSkills}
-                  toggleSkill={toggleSkill}
-                  selectedAvailability={selectedAvailability}
-                  toggleAvailability={toggleAvailability}
-                  selectedRegions={selectedRegions}
-                  toggleRegion={toggleRegion}
-                  priceRange={priceRange}
-                  setPriceRange={setPriceRange}
-                  experienceRange={experienceRange}
-                  setExperienceRange={setExperienceRange}
-                  expandedSections={expandedSections}
-                  toggleSection={toggleSection}
-                  sortOption={sortOption}
-                  setSortOption={setSortOption}
-                  clearFilters={clearFilters}
-                  isMobileFilterOpen={isMobileFilterOpen}
+                  searchTerm = {searchTerm,}
+                  setSearchTerm = {setSearchTerm,}
+                  selectedSkills = {selectedSkills,}
+                  toggleSkill = {toggleSkill,}
+                  selectedAvailability = {selectedAvailability,}
+                  toggleAvailability = {toggleAvailability,}
+                  selectedRegions = {selectedRegions,}
+                  toggleRegion = {toggleRegion,}
+                  priceRange = {priceRange,}
+                  setPriceRange = {setPriceRange,}
+                  experienceRange = {experienceRange,}
+                  setExperienceRange = {setExperienceRange,}
+                  expandedSections = {expandedSections,}
+                  toggleSection = {toggleSection,}
+                  sortOption = {sortOption,}
+                  setSortOption = {setSortOption,}
+                  clearFilters = {clearFilters,}
+                  isMobileFilterOpen = {isMobileFilterOpen,}
                 />
               </div>
             </div>

@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Progress } from '@/components/ui/progress',
-import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react'
-import { bundleMonitor } from '@/utils/bundleMonitor',
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger',
-
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react';
+import { bundleMonitor } from '@/utils/bundleMonitor';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface PerformanceMetrics {
   bundleSize: number,
   loadTime: number,
@@ -91,9 +90,9 @@ export function PerformanceDashboard() {
     
     // Use PerformanceObserver for more accurate metrics
     if ('PerformanceObserver' in window) {
-      return new Promise((resolve) => {
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
+      return new Promise((resolve,) => {
+        const observer = new PerformanceObserver((list,) => {
+          list.getEntries().forEach((entry,) => {
             if (entry.entryType === 'paint') {
               if (entry.name === 'first-contentful-paint') {
                 vitals.fcp = entry.startTime
@@ -114,7 +113,7 @@ export function PerformanceDashboard() {
         observer.observe({ entryTypes: ['paintlargest-contentful-paintlayout-shiftfirst-input'] }),
         
         // Resolve after a short delay
-        setTimeout(() => {
+        setTimeout((,) => {
           observer.disconnect(),
           resolve(vitals)
         }, 2000)
@@ -138,7 +137,7 @@ export function PerformanceDashboard() {
       loadTime: entry.responseEnd - entry.requestStart,
       cached: entry.transferSize === 0,
       type: categorizeChunk(entry.name)
-    })).sort((a, b) => b.size - a.size)
+    })).sort((a, b,) => b.size - a.size)
   },
 
   const categorizeChunk = (filename: string): string => {
@@ -163,13 +162,13 @@ export function PerformanceDashboard() {
     return 'text-red-600'
   },
 
-  const getScoreIcon = (score: number) => {
+  const getScoreIcon = (score: number,) => {
     if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />,
     if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />,
     return <AlertTriangle className="w-4 h-4 text-red-600" />
   },
 
-  useEffect(() => {
+  useEffect((,) => {
     collectMetrics(),
     const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds
 
@@ -306,7 +305,7 @@ export function PerformanceDashboard() {
         <CardContent>
           {chunks.length > 0 ? (
             <div className="space-y-2">
-              {chunks.slice(0, 10).map((chunk, index) => (
+              {chunks.slice(0, 10).map((chunk, index,) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-mono text-muted-foreground">

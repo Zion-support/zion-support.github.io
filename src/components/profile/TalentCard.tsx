@@ -1,17 +1,17 @@
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Link from "next/link",
-import { TalentProfile } from "@/types/talent",
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import Link from "next/link";
+import { TalentProfile } from "@/types/talent";
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 
 export interface TalentCardProps {
   talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
+  onViewProfile: (id: string,) => void,
+  onRequestHire: (talent: TalentProfile,) => void,
   isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean) => void,
+  onToggleSave: (id: string, isSaved: boolean,) => void,
   isAuthenticated: boolean
 }
 
@@ -31,7 +31,7 @@ export function TalentCard({
     }
   },
 
-  const handleRequestHire = (e: React.MouseEvent) => {
+  const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault(),
     e.stopPropagation(),
     if (onRequestHire) {
@@ -39,7 +39,7 @@ export function TalentCard({
     }
   },
 
-  const handleToggleSave = (e: React.MouseEvent) => {
+  const handleToggleSave = (e: React.MouseEvent,) => {
     e.preventDefault(),
     e.stopPropagation(),
     if (onToggleSave) {
@@ -58,13 +58,13 @@ export function TalentCard({
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
               {talent.profile_picture_url && !avatarError ? (
                 <Image
-                  src={talent.profile_picture_url} 
-                  alt={talent.full_name || 'Talent Avatar'}
-                  fill={true}
+                  src = {talent.profile_picture_url,}
+                  alt = {talent.full_name || 'Talent Avatar',}
+                  fill = {true,}
                   style={{ objectFit: 'cover' }}
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
-                  onError={() => setAvatarError(true)}
-                  priority={false}
+                  onError = {(,) => setAvatarError(true),}
+                  priority = {false,}
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
@@ -86,7 +86,7 @@ export function TalentCard({
                 variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
-                onClick={handleToggleSave}
+                onClick = {handleToggleSave,}
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
@@ -114,9 +114,9 @@ export function TalentCard({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
+              {skills.map((skill, index,) => (
                 <span 
-                  key={index}
+                  key = {index,}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
@@ -148,7 +148,7 @@ export function TalentCard({
               <Button
                 size="sm"
                 variant="secondary"
-                onClick={handleRequestHire}
+                onClick = {handleRequestHire,}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -157,7 +157,7 @@ export function TalentCard({
             <Button
               size="sm"
               variant="ghost"
-              onClick={handleViewProfile}
+              onClick = {handleViewProfile,}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />

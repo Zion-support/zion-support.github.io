@@ -1,16 +1,15 @@
-import { useState, useEffect } from "react",
-import { SEO } from "@/components/SEO",
-import { TalentCard } from "@/components/talent/TalentCard",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { toast } from "@/components/ui/use-toast",
-import { useRouter } from 'next/router',
-import { logErrorToProduction } from '@/utils/productionLogger',
-import { EmptyState } from "@/components/ui/empty-state",
-import { Heart } from 'lucide-react'
-import { logInfo, logWarn } from '@/utils/productionLogger',
-
+import { useState, useEffect } from "react";
+import { SEO } from "@/components/SEO";
+import { TalentCard } from "@/components/talent/TalentCard";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { TalentProfile } from "@/types/talent";
+import { toast } from "@/components/ui/use-toast";
+import { useRouter } from 'next/router';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { EmptyState } from "@/components/ui/empty-state";
+import { Heart } from 'lucide-react';
+import { logInfo, logWarn } from '@/utils/productionLogger';
 export default function SavedTalentsPage() {
 
   const { user } = useAuth(),
@@ -19,13 +18,13 @@ export default function SavedTalentsPage() {
   const router = useRouter(),
   // Using router.asPath instead of useLocation
 
-  useEffect(() => {
+  useEffect((,) => {
     if (!user) {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
     }
   }, [user, router]),
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchSavedTalents = async () => {
       setIsLoading(true),
       try {
@@ -64,7 +63,7 @@ export default function SavedTalentsPage() {
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
-            (item: any) => item.talent_profile as unknown as TalentProfile
+            (item: any,) => item.talent_profile as unknown as TalentProfile
           ),
           setSavedTalents(talentProfiles)
         }
@@ -82,18 +81,18 @@ export default function SavedTalentsPage() {
     fetchSavedTalents()
   }, [user]),
 
-  const handleViewProfile = (talentId: string) => {
+  const handleViewProfile = (talentId: string,) => {
     router.push(`/talent/${talentId}`)
   },
 
-  const handleRequestHire = (talent: TalentProfile) => {
+  const handleRequestHire = (talent: TalentProfile,) => {
     logInfo('Request to hire:', { data: talent }),
     toast({
       title: "Hire Request Sent",
       description: `A hire request has been sent to ${talent.full_name}.`})
   },
 
-  const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
+  const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean,) => {
     try {
       if (!user) {
         logWarn("User not authenticated."),
@@ -177,7 +176,7 @@ export default function SavedTalentsPage() {
         ) : savedTalents.length === 0 ? (
           <div className="py-8">
             <EmptyState
-              icon={<Heart className="h-8 w-8" />}
+              icon = {<Heart className="h-8 w-8" />,}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
               action={{ text: 'Browse Talent', href: '/talent' }}
@@ -186,13 +185,13 @@ export default function SavedTalentsPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {savedTalents.map((talent) => (
+            {savedTalents.map((talent,) => (
               <TalentCard
-                key={talent.id}
-                talent={talent}
-                onViewProfile={handleViewProfile}
-                onRequestHire={handleRequestHire}
-                isAuthenticated={!!user}
+                key = {talent.id,}
+                talent = {talent,}
+                onViewProfile = {handleViewProfile,}
+                onRequestHire = {handleRequestHire,}
+                isAuthenticated = {!!user,}
               />
             ))}
           </div>

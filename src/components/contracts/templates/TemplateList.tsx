@@ -1,14 +1,14 @@
 
-import { ContractTemplate } from "@/types/contracts",
-import { Button } from "@/components/ui/button",
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
-import { useAuth } from "@/hooks/useAuth",
+import { ContractTemplate } from "@/types/contracts";
+import { Button } from "@/components/ui/button";
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
+import { useContractTemplates } from "@/hooks/useContractTemplates";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { useAuth } from "@/hooks/useAuth";
 // useRouter replaces the old useLocation hook from react-router
-import { useRouter } from 'next/router',
+import { useRouter } from 'next/router';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -18,12 +18,12 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react",
+import { useState } from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
-  onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void
+  onSelect: (template: ContractTemplate,) => void,
+  onEdit: (template: ContractTemplate,) => void
 }
 
 export function TemplateList({
@@ -37,7 +37,7 @@ export function TemplateList({
   const { user } = useAuth(),
   const router = useRouter(),
 
-  const handleDeleteClick = (templateId: string) => {
+  const handleDeleteClick = (templateId: string,) => {
     setTemplateToDelete(templateId)
   },
 
@@ -48,7 +48,7 @@ export function TemplateList({
     }
   },
 
-  const handleSetDefault = async (templateId: string) => {
+  const handleSetDefault = async (templateId: string,) => {
     if (!user) {
       const currentPath = router.asPath,
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`),
@@ -76,7 +76,7 @@ export function TemplateList({
 
   return (
     <div className="space-y-3">
-      {templates.map((template) => (
+      {templates.map((template,) => (
         <Card key={template.id} className={template.is_default ? "border-zion-purple" : ""}>
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
@@ -96,7 +96,7 @@ export function TemplateList({
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => onEdit(template)}
+                  onClick = {() => onEdit(template),}
                   aria-label="Edit template"
                 >
                   <Edit className="h-4 w-4" />
@@ -108,7 +108,7 @@ export function TemplateList({
                         <Button
                           variant="ghost"
                           size="icon"
-                          onClick={() => handleSetDefault(template.id)}
+                          onClick = {(,) => handleSetDefault(template.id),}
                           aria-label="Set as default"
                         >
                           <Star className="h-4 w-4" />
@@ -129,7 +129,7 @@ export function TemplateList({
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => handleDeleteClick(template.id)}
+                  onClick = {() => handleDeleteClick(template.id),}
                   aria-label="Delete template"
                 >
                   <Trash className="h-4 w-4 text-destructive" />
@@ -140,7 +140,7 @@ export function TemplateList({
             <Separator className="my-3" />
             
             <Button 
-              onClick={() => onSelect(template)} 
+              onClick = {() => onSelect(template),}
               variant="outline" 
               className="w-full"
             >
@@ -162,7 +162,7 @@ export function TemplateList({
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction 
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-              onClick={handleDeleteConfirm}
+              onClick = {handleDeleteConfirm,}
             >
               Delete
             </AlertDialogAction>

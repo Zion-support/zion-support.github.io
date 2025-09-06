@@ -1,21 +1,21 @@
 
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { format, isPast, parseISO } from "date-fns",
-import Link from "next/link",
-import { Calendar, Clock, Video } from 'lucide-react'
-import { Avatar } from "@/components/ui/avatar",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useInterviews } from "@/hooks/useInterviews";
+import { Interview } from "@/types/interview";
+import { format, isPast, parseISO } from "date-fns";
+import Link from "next/link";
+import { Calendar, Clock, Video } from 'lucide-react';
+import { Avatar } from "@/components/ui/avatar";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function UpcomingInterviewsCard() {
 
   const { fetchInterviews } = useInterviews(),
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
-  useEffect(() => {
+  useEffect((,) => {
     const loadInterviews = async () => {
       setIsLoading(true),
       try {
@@ -27,7 +27,7 @@ export function UpcomingInterviewsCard() {
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
           )
-          .sort((a, b) => 
+          .sort((a, b,) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
           .slice(0, 3), // Take only the next 3 interviews
@@ -117,8 +117,8 @@ export function UpcomingInterviewsCard() {
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img
-                      src={interview.client_avatar || interview.talent_avatar}
-                      alt={interview.client_name || interview.talent_name}
+                      src = {interview.client_avatar || interview.talent_avatar,}
+                      alt = {interview.client_name || interview.talent_name,}
                       loading="lazy"
                     />
                   ) : (

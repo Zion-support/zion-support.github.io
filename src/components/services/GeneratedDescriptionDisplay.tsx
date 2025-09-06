@@ -1,14 +1,13 @@
 
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
-import { Textarea } from "@/components/ui/textarea",
-import { Check, Pencil } from 'lucide-react'
-
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Check, Pencil } from 'lucide-react';
 interface GeneratedDescriptionDisplayProps {
   description: string,
-  onSave: (editedDescription: string) => void
+  onSave: (editedDescription: string,) => void
 }
 
 export function GeneratedDescriptionDisplay({ 
@@ -36,7 +35,7 @@ export function GeneratedDescriptionDisplay({
           <Button 
             variant="outline" 
             size="sm" 
-            onClick={() => setIsEditing(!isEditing)}
+            onClick = {(,) => setIsEditing(!isEditing),}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
             {isEditing ? (
@@ -56,8 +55,8 @@ export function GeneratedDescriptionDisplay({
       <CardContent>
         {isEditing ? (
           <Textarea
-            value={editedDescription}
-            onChange={(e) => setEditedDescription(e.target.value)}
+            value = {editedDescription,}
+            onChange = {(e,) => setEditedDescription(e.target.value),}
             className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
           />
         ) : (
@@ -69,7 +68,7 @@ export function GeneratedDescriptionDisplay({
       {isEditing && (
         <CardFooter>
           <Button 
-            onClick={handleSave}
+            onClick = {handleSave,}
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
           >
             Save Changes
@@ -79,3 +78,4 @@ export function GeneratedDescriptionDisplay({
     </Card>
   )
 }
+;

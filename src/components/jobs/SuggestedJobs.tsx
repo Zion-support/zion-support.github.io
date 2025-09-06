@@ -1,10 +1,10 @@
 
-import { useAuth } from "@/hooks/useAuth",
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-import { JobMatchesCard } from "./JobMatchesCard",
-import { NoJobsCard } from "./NoJobsCard",
+import { useAuth } from "@/hooks/useAuth";
+import { Loader2 } from 'lucide-react';
+import { Badge } from "@/components/ui/badge";
+import { useJobSuggestions } from "@/hooks/useJobSuggestions";
+import { JobMatchesCard } from "./JobMatchesCard";
+import { NoJobsCard } from "./NoJobsCard";
 interface SuggestedJobsProps {
   talentId?: string
 }
@@ -22,12 +22,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     } 
   } = useJobSuggestions(currentTalentId),
 
-  const handleApply = (matchId: string, jobId: string) => {
+  const handleApply = (matchId: string, jobId: string,) => {
     updateJobMatchStatus(matchId, 'applied'),
     // In a real app, this might redirect to application form or open a modal
   },
 
-  const handleDecline = (matchId: string) => {
+  const handleDecline = (matchId: string,) => {
     updateJobMatchStatus(matchId, 'declined')
   },
 
@@ -58,10 +58,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
               />
             ))}
           </div>
@@ -78,10 +78,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
               />
             ))}
           </div>
@@ -98,11 +98,11 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline}
-                showApplied={true}
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+                showApplied = {true,}
               />
             ))}
           </div>

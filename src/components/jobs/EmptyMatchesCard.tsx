@@ -1,8 +1,7 @@
 
-import { Card } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Sparkles, RefreshCcw } from 'lucide-react'
-
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Sparkles, RefreshCcw } from 'lucide-react';
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
   isProcessing: boolean
@@ -19,8 +18,8 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         Run AI matching to find talents that match this job&apos,s requirements.
       </p>
       <Button 
-        onClick={onRefresh} 
-        disabled={isProcessing}
+        onClick = {onRefresh,}
+        disabled = {isProcessing,}
         className="mx-auto"
       >
         {isProcessing ? (
@@ -38,3 +37,4 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
     </Card>
   )
 }
+;

@@ -1,16 +1,15 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { 
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription} from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm",
-import { useRouter } from 'next/router',
-import { ShieldAlert } from 'lucide-react'
-
+import { DisputeForm } from "./DisputeForm";
+import { useRouter } from 'next/router';
+import { ShieldAlert } from 'lucide-react';
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -29,7 +28,7 @@ export function RaiseDisputeButton({
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
-  const handleDisputeCreated = (disputeId: string) => {
+  const handleDisputeCreated = (disputeId: string,) => {
     setIsDialogOpen(false),
     router.push(`/dashboard/disputes/${disputeId}`)
   },
@@ -37,10 +36,10 @@ export function RaiseDisputeButton({
   return (
     <>
       <Button 
-        variant={variant} 
-        size={size} 
-        className={className} 
-        onClick={() => setIsDialogOpen(true)}
+        variant = {variant,}
+        size = {size,}
+        className = {className,}
+        onClick = {(,) => setIsDialogOpen(true),}
       >
         <ShieldAlert className="h-4 w-4 mr-2" />
         Raise Dispute
@@ -56,10 +55,10 @@ export function RaiseDisputeButton({
           </DialogHeader>
           
           <DisputeForm 
-            projectId={projectId}
-            milestoneId={milestoneId}
-            onDisputeCreated={handleDisputeCreated}
-            onCancel={() => setIsDialogOpen(false)}
+            projectId = {projectId,}
+            milestoneId = {milestoneId,}
+            onDisputeCreated = {handleDisputeCreated,}
+            onCancel = {() => setIsDialogOpen(false),}
           />
         </DialogContent>
       </Dialog>

@@ -1,11 +1,11 @@
-import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react'
-import { formatDistanceToNow } from "date-fns",
-import { JobMatch } from "@/types/jobs",
+import React from 'react';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react';
+import { formatDistanceToNow } from "date-fns";
+import { JobMatch } from "@/types/jobs";
 interface JobMatchProps {
   matchId: string,
   talentId: string,
@@ -17,9 +17,9 @@ interface JobMatchProps {
   category: string,
   matchPercent: number,
   skills: string[],
-  onApply?: (matchId: string) => void,
-  onViewDetails?: (matchId: string) => void,
-  onInvite?: (matchId: string) => void
+  onApply?: (matchId: string,) => void,
+  onViewDetails?: (matchId: string,) => void,
+  onInvite?: (matchId: string,) => void
 }
 
 export function JobMatchCard({ 
@@ -109,7 +109,7 @@ export function JobMatchCard({
           </div>
           
           <div className="flex flex-wrap gap-1 mb-4">
-            {skills?.slice(0, 5).map((skill) => (
+            {skills?.slice(0, 5).map((skill,) => (
               <Badge key={skill} variant="secondary" className="text-xs">
                 {skill}
               </Badge>

@@ -1,17 +1,16 @@
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue} from "@/components/ui/select",
-import { Label } from "@/components/ui/label",
-import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
-
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
 export function MobileResumeBuilder() {
@@ -35,30 +34,30 @@ export function MobileResumeBuilder() {
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
-          variant={currentStep === "basics" ? "default" : "outline"}
+          variant = {currentStep === "basics" ? "default" : "outline",}
           className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("basics")}
+          onClick = {(,) => setCurrentStep("basics"),}
         >
           Basics
         </Button>
         <Button
-          variant={currentStep === "experience" ? "default" : "outline"}
+          variant = {currentStep === "experience" ? "default" : "outline",}
           className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("experience")}
+          onClick = {() => setCurrentStep("experience"),}
         >
           Experience
         </Button>
         <Button
-          variant={currentStep === "education" ? "default" : "outline"}
+          variant = {currentStep === "education" ? "default" : "outline",}
           className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("education")}
+          onClick = {() => setCurrentStep("education"),}
         >
           Education
         </Button>
         <Button
-          variant={currentStep === "skills" ? "default" : "outline"}
+          variant = {currentStep === "skills" ? "default" : "outline",}
           className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("skills")}
+          onClick = {() => setCurrentStep("skills"),}
         >
           Skills
         </Button>
@@ -106,7 +105,7 @@ function BasicsStep() {
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-            rows={4}
+            rows = {4,}
           />
         </div>
       </CardContent>
@@ -122,13 +121,13 @@ function ExperienceStep() {
     setExperiences([...experiences, { id: newId }])
   },
   
-  const removeExperience = (id: string) => {
+  const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
   },
   
   return (
     <div className="space-y-4">
-      {experiences.map((exp, index) => (
+      {experiences.map((exp, index,) => (
         <Card key={exp.id}>
           <CardContent className="p-4 space-y-4">
             <div className="flex justify-between items-center">
@@ -137,7 +136,7 @@ function ExperienceStep() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => removeExperience(exp.id)}
+                  onClick = {(,) => removeExperience(exp.id),}
                   aria-label="Remove experience"
                 >
                   <Trash2 className="h-5 w-5 text-destructive" />
@@ -168,7 +167,7 @@ function ExperienceStep() {
               <Textarea 
                 id={`description-${exp.id}`} 
                 placeholder="Describe your responsibilities and achievements" 
-                rows={3}
+                rows = {3,}
               />
             </div>
           </CardContent>
@@ -178,7 +177,7 @@ function ExperienceStep() {
       <Button 
         variant="outline" 
         className="w-full gap-2" 
-        onClick={addExperience}
+        onClick = {addExperience,}
       >
         <Plus className="h-4 w-4" /> Add Another Experience
       </Button>
@@ -194,13 +193,13 @@ function EducationStep() {
     setEducations([...educations, { id: newId }])
   },
   
-  const removeEducation = (id: string) => {
+  const removeEducation = (id: string,) => {
     setEducations(educations.filter(edu => edu.id !== id))
   },
   
   return (
     <div className="space-y-4">
-      {educations.map((edu, index) => (
+      {educations.map((edu, index,) => (
         <Card key={edu.id}>
           <CardContent className="p-4 space-y-4">
             <div className="flex justify-between items-center">
@@ -209,7 +208,7 @@ function EducationStep() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => removeEducation(edu.id)}
+                  onClick = {(,) => removeEducation(edu.id),}
                   aria-label="Remove education"
                 >
                   <Trash2 className="h-5 w-5 text-destructive" />
@@ -246,7 +245,7 @@ function EducationStep() {
       <Button 
         variant="outline" 
         className="w-full gap-2" 
-        onClick={addEducation}
+        onClick = {addEducation,}
       >
         <Plus className="h-4 w-4" /> Add Another Education
       </Button>
@@ -264,11 +263,11 @@ function SkillsStep() {
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
   },
   
-  const removeSkill = (id: string) => {
+  const removeSkill = (id: string,) => {
     setSkills(skills.filter(skill => skill.id !== id))
   },
   
-  const updateSkill = (id: string, field: string, value: string) => {
+  const updateSkill = (id: string, field: string, value: string,) => {
     setSkills(skills.map(skill => 
       skill.id === id ? { ...skill, [field]: value } : skill
     ))
@@ -279,17 +278,17 @@ function SkillsStep() {
       <Card>
         <CardContent className="p-4">
           <div className="space-y-4">
-            {skills.map((skill) => (
+            {skills.map((skill,) => (
               <div key={skill.id} className="flex items-center gap-2">
                 <Input
                   placeholder="Skill (e.g. JavaScript, Figma)"
-                  value={skill.name}
-                  onChange={(e) => updateSkill(skill.id, "name", e.target.value)}
+                  value = {skill.name,}
+                  onChange = {(e,) => updateSkill(skill.id, "name", e.target.value),}
                   className="flex-1"
                 />
                 <Select
-                  value={skill.proficiency}
-                  onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
+                  value = {skill.proficiency,}
+                  onValueChange = {(value,) => updateSkill(skill.id, "proficiency", value),}
                 >
                   <SelectTrigger className="w-[130px]">
                     <SelectValue placeholder="Level" />
@@ -305,7 +304,7 @@ function SkillsStep() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    onClick={() => removeSkill(skill.id)}
+                    onClick = {(,) => removeSkill(skill.id),}
                     aria-label="Remove skill"
                   >
                     <Trash2 className="h-4 w-4 text-destructive" />
@@ -317,7 +316,7 @@ function SkillsStep() {
             <Button 
               variant="outline" 
               className="w-full gap-2" 
-              onClick={addSkill}
+              onClick = {addSkill,}
             >
               <Plus className="h-4 w-4" /> Add Another Skill
             </Button>

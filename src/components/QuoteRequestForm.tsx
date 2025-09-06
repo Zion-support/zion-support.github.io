@@ -1,21 +1,21 @@
 
-import { useState } from "react",
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useToast } from "@/hooks/use-toast",
-import { useRouter } from 'next/router',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { GradientHeading } from "@/components/GradientHeading",
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress",
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep",
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep",
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep",
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",
-import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal",
-import { QuoteFormData } from "@/types/quotes",
-import { Sparkles, Loader2 } from 'lucide-react'
-import { z } from "zod",
+import { useState } from "react";
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useToast } from "@/hooks/use-toast";
+import { useRouter } from 'next/router';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { GradientHeading } from "@/components/GradientHeading";
+import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";
+import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep";
+import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep";
+import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep";
+import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";
+import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";
+import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";
+import { QuoteFormData } from "@/types/quotes";
+import { Sparkles, Loader2 } from 'lucide-react';
+import { z } from "zod";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
 
 const serviceStepSchema = z.object({
@@ -51,7 +51,7 @@ export function QuoteRequestForm() {
     }
   }),
   
-  const updateFormData = (data: Partial<QuoteFormData>) => {
+  const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
       ...prev,
       ...data
@@ -131,7 +131,7 @@ export function QuoteRequestForm() {
     }
   },
 
-  const handleAutoFill = async (description: string) => {
+  const handleAutoFill = async (description: string,) => {
     setAutoFillLoading(true),
     try {
       const res = await fetch("/api/openai/match", {
@@ -192,8 +192,8 @@ export function QuoteRequestForm() {
           </div>
           <Button
             size="sm"
-            onClick={() => setAutoFillOpen(true)}
-            disabled={autoFillLoading}
+            onClick = {(,) => setAutoFillOpen(true),}
+            disabled = {autoFillLoading,}
             className="mt-2"
           >
             {autoFillLoading && (
@@ -215,7 +215,7 @@ export function QuoteRequestForm() {
               {currentStep !== "service" && (
                 <Button
                   variant="outline"
-                  onClick={handleBack}
+                  onClick = {handleBack,}
                   className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                 >
                   Back
@@ -224,15 +224,15 @@ export function QuoteRequestForm() {
               
               {currentStep !== "summary" ? (
                 <Button 
-                  onClick={handleNext}
+                  onClick = {handleNext,}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                 >
                   Continue
                 </Button>
               ) : (
                 <Button 
-                  onClick={handleSubmit}
-                  disabled={isSubmitting}
+                  onClick = {handleSubmit,}
+                  disabled = {isSubmitting,}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Request"}
@@ -243,10 +243,10 @@ export function QuoteRequestForm() {
         </Card>
       </div>
       <AutoFillModal
-        open={autoFillOpen}
-        onOpenChange={setAutoFillOpen}
-        onSubmit={handleAutoFill}
-        loading={autoFillLoading}
+        open = {autoFillOpen,}
+        onOpenChange = {setAutoFillOpen,}
+        onSubmit = {handleAutoFill,}
+        loading = {autoFillLoading,}
       />
     </div>
   )

@@ -1,21 +1,21 @@
 
-import { useState } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'
-import { formatDistanceToNow, format } from "date-fns",
-import { ForumPost, ForumReply } from "@/types/community",
-import { useAuth } from "@/hooks/useAuth",
-import ReplyCard from "@/components/community/ReplyCard",
-import ReplyForm from "@/components/community/ReplyForm",
-import { useToast } from "@/hooks/use-toast",
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react';
+import { formatDistanceToNow, format } from "date-fns";
+import { ForumPost, ForumReply } from "@/types/community";
+import { useAuth } from "@/hooks/useAuth";
+import ReplyCard from "@/components/community/ReplyCard";
+import ReplyForm from "@/components/community/ReplyForm";
+import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -149,7 +149,7 @@ export default function ForumPostPage() {
       description: "You downvoted this post"})
   },
 
-  const handleSubmitReply = async (content: string) => {
+  const handleSubmitReply = async (content: string,) => {
     if (!user) {
       toast({
         title: "Authentication required",
@@ -181,7 +181,7 @@ export default function ForumPostPage() {
       description: "Your reply has been added to the discussion"})
   },
 
-  const handleMarkAsAnswer = (replyId: string) => {
+  const handleMarkAsAnswer = (replyId: string,) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
       toast({
@@ -248,7 +248,7 @@ export default function ForumPostPage() {
     <>
       <SEO
         title={`${post.title} | Community Forum | Zion AI Marketplace`}
-        description={post.content.substring(0, 160)}
+        description = {post.content.substring(0, 160),}
         keywords={`community, forum, discussion, ${post.tags.join()}`}
         canonical={`https://app.ziontechgroup.com/community/post/${post.id}`}
       />
@@ -303,7 +303,7 @@ export default function ForumPostPage() {
             </div>
             
             <div className="prose dark:prose-invert max-w-none mb-6">
-              {post.content.split('\n\n').map((paragraph, i) => (
+              {post.content.split('\n\n').map((paragraph, i,) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
@@ -313,7 +313,7 @@ export default function ForumPostPage() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleUpvote}
+                  onClick = {handleUpvote,}
                   className="flex items-center gap-2"
                 >
                   <ThumbsUp className="h-4 w-4" />
@@ -322,7 +322,7 @@ export default function ForumPostPage() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleDownvote}
+                  onClick = {handleDownvote,}
                   className="flex items-center gap-2"
                 >
                   <ThumbsDown className="h-4 w-4" />
@@ -345,7 +345,7 @@ export default function ForumPostPage() {
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={handlePinPost}
+                      onClick = {handlePinPost,}
                     >
                       <Pin className="h-4 w-4 mr-1" />
                       {post.isPinned ? "Unpin" : "Pin"}
@@ -353,7 +353,7 @@ export default function ForumPostPage() {
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={handleLockPost}
+                      onClick = {handleLockPost,}
                     >
                       <Lock className="h-4 w-4 mr-1" />
                       {post.isLocked ? "Unlock" : "Lock"}
@@ -364,7 +364,7 @@ export default function ForumPostPage() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={handleReportPost}
+                  onClick = {handleReportPost,}
                 >
                   <Flag className="h-4 w-4 mr-1" />
                   Report
@@ -418,10 +418,10 @@ export default function ForumPostPage() {
               .filter(reply => !reply.isAnswer)
               .map(reply => (
                 <ReplyCard
-                  key={reply.id}
-                  reply={reply}
-                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
-                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+                  key = {reply.id,}
+                  reply = {reply,}
+                  onMarkAnswer = {(,) => handleMarkAsAnswer(reply.id),}
+                  canMarkAnswer = {!post.isAnswered && (isAuthor || isAdminOrMod),}
                 />
               ))}
           </div>

@@ -1,7 +1,7 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
 interface ResourceItem {
   id: string,
   title: string,
@@ -63,7 +63,7 @@ export function PartnerResources() {
     }
   ],
 
-  const handleDownload = (resource: ResourceItem) => {
+  const handleDownload = (resource: ResourceItem,) => {
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
@@ -82,7 +82,7 @@ export function PartnerResources() {
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {resources.map((resource) => (
+            {resources.map((resource,) => (
               <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="mb-4">
@@ -91,7 +91,7 @@ export function PartnerResources() {
                   <h3 className="font-semibold text-white mb-1">{resource.title}</h3>
                   <p className="text-xs text-zion-slate-light mb-4">{resource.description}</p>
                   <Button 
-                    onClick={() => handleDownload(resource)}
+                    onClick = {(,) => handleDownload(resource),}
                     size="sm"
                     variant="outline"
                     className="w-full flex items-center gap-2"

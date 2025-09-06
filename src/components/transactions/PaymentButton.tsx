@@ -1,12 +1,12 @@
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { Loader2 } from 'lucide-react'
-import { useRouter } from 'next/router',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { Loader2 } from 'lucide-react';
+import { useRouter } from 'next/router';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -77,7 +77,7 @@ export function PaymentButton({
         variant: "destructive"})
     } finally {
       // Reset button state after a short delay
-      setTimeout(() => {
+      setTimeout((,) => {
         setIsProcessing(false)
       }, 1500)
     }
@@ -85,12 +85,12 @@ export function PaymentButton({
   
   return (
     <Button
-      onClick={handlePaymentClick}
-      disabled={isProcessing}
-      className={cn(
+      onClick = {handlePaymentClick,}
+      disabled = {isProcessing,}
+      className = {cn(
         "relative min-w-[120px]",
         className
-      )}
+      ),}
     >
       {isProcessing ? (
         <>

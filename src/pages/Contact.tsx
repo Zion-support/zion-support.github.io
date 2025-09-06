@@ -1,24 +1,23 @@
-import { useState } from 'react',
-import { Header } from '@/components/Header',
-import { SEO } from '@/components/SEO',
-import { GradientHeading } from '@/components/GradientHeading',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
-import { Card } from '@/components/ui/card',
-import { toast } from '@/components/ui/use-toast',
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card } from '@/components/ui/card';
+import { toast } from '@/components/ui/use-toast';
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from '@/components/ui/tooltip',
-import z from 'zod',
-import { ChatAssistant } from '@/components/ChatAssistant',
-import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-
+import z from 'zod';
+import { ChatAssistant } from '@/components/ChatAssistant';
+import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -33,13 +32,13 @@ export default function Contact() {
   const [isChatOpen, setIsChatOpen] = useState(false),
   const [submitted, setSubmitted] = useState(false),
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,) => {
     const { name, value } = e.target,
-    setFormData((prev) => ({ ...prev, [name]: value })),
-    setErrors((prev) => ({ ...prev, [name]: undefined }))
+    setFormData((prev,) => ({ ...prev, [name]: value })),
+    setErrors((prev,) => ({ ...prev, [name]: undefined }))
   },
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent,) => {
     e.preventDefault(),
     logInfo('[ContactForm] handleSubmit triggered.'),
     logInfo('[ContactForm] formData:', { data: formData }),
@@ -78,7 +77,7 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)})
-        .then(async (res) => {
+        .then(async (res,) => {
           logInfo('[ContactForm] API response status:', { data: res.status }),
           const responseBody = await res.text(), // Read as text first to avoid JSON parse error if not JSON
           logInfo('[ContactForm] API response body:', { data: responseBody }),
@@ -106,10 +105,10 @@ export default function Contact() {
             description:
               "We've received your message and will get back to you soon."}),
           setSubmitted(true),
-          setTimeout(() => setSubmitted(false), 2000),
+          setTimeout((,) => setSubmitted(false), 2000),
           setFormData({ name: '', email: '', message: '' })
         })
-        .catch((err) => {
+        .catch((err,) => {
           // This catches errors from the fetch promise (network, res.ok is false, or manual throw)
           logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err }),
           setIsSubmitting(false),
@@ -207,8 +206,8 @@ export default function Contact() {
                     <Input
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
+                      value = {formData.name,}
+                      onChange = {handleChange,}
                       className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       placeholder="John Doe"
                       required
@@ -225,8 +224,8 @@ export default function Contact() {
                       id="email"
                       name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={handleChange}
+                      value = {formData.email,}
+                      onChange = {handleChange,}
                       className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       placeholder="john@example.com"
                       required
@@ -246,8 +245,8 @@ export default function Contact() {
                   <Textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
+                    value = {formData.message,}
+                    onChange = {handleChange,}
                     className={`bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px] ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     placeholder="Tell us what you'd like to know..."
                     required
@@ -262,7 +261,7 @@ export default function Contact() {
                 <Button
                   type="submit"
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                  disabled={isSubmitting}
+                  disabled = {isSubmitting,}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
@@ -303,9 +302,9 @@ export default function Contact() {
                 </Tooltip>
               </TooltipProvider>
               <div className="grid grid-cols-1 gap-6">
-                {offices.map((office, index) => (
+                {offices.map((office, index,) => (
                   <Card
-                    key={index}
+                    key = {index,}
                     className="bg-zion-blue-dark border border-zion-blue-light p-6"
                   >
                     <h3 className="text-xl font-bold text-white mb-3">
@@ -344,7 +343,7 @@ export default function Contact() {
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
-                  allowFullScreen={true}
+                  allowFullScreen = {true,}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Zion Office Locations"
@@ -367,7 +366,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <Button
-                    onClick={() => setIsChatOpen(true)}
+                    onClick = {() => setIsChatOpen(true),}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   >
                     Chat With Our AI Assistant
@@ -387,7 +386,7 @@ export default function Contact() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
-                onClick={() => setIsChatOpen(true)}
+                onClick = {() => setIsChatOpen(true),}
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
@@ -425,16 +424,16 @@ export default function Contact() {
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant
-          isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
+          isOpen = {isChatOpen,}
+          onClose = {(,) => setIsChatOpen(false),}
           recipient={{
             id: 'ai-assistant',
             name: 'AI Assistant',
             avatarUrl: 'https://placehold.co/64x64?text=AI',
             role: 'Support Bot'}}
-          onSendMessage={handleSendMessage}
-          starterQuestions={[
-            'How do I list a product?What services does Zion offer?Where can I view pricing plans?How do I create an account?Can I talk to a human representative?']}
+          onSendMessage = {handleSendMessage,}
+          starterQuestions = {[
+            'How do I list a product?What services does Zion offer?Where can I view pricing plans?How do I create an account?Can I talk to a human representative?'],}
         />
       )}
     </>

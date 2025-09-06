@@ -1,8 +1,8 @@
-import Link from "next/link",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth",
-import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
-import { ForumCategoryInfo } from "@/types/community",
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react';
+import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -59,7 +59,7 @@ export const ForumCategories = () => {
 
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-      {visibleCategories.map((category) => {
+      {visibleCategories.map((category,) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
           <Link key={category.id} href={`/community/category/${category.id}`}>

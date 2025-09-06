@@ -1,7 +1,7 @@
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Facebook } from 'lucide-react'
-import { signIn } from 'next-auth/react',
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Facebook } from 'lucide-react';
+import { signIn } from 'next-auth/react';
 type Provider = 'google' | 'github' | 'facebook' | 'credentials',
 
 interface AuthButtonsProps {
@@ -11,7 +11,7 @@ interface AuthButtonsProps {
 export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }: AuthButtonsProps) {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null),
 
-  const handleSignIn = async (provider: Provider) => {
+  const handleSignIn = async (provider: Provider,) => {
     setLoadingProvider(provider),
     await signIn(provider)
   },
@@ -25,8 +25,8 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => handleSignIn('google')}
-          disabled={loadingProvider !== null}
+          onClick = {(,) => handleSignIn('google'),}
+          disabled = {loadingProvider !== null,}
         >
           <span className="sr-only">Sign in with Google</span>
           {loadingProvider === 'google' ? (
@@ -46,8 +46,8 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => handleSignIn('github')}
-          disabled={loadingProvider !== null}
+          onClick = {(,) => handleSignIn('github'),}
+          disabled = {loadingProvider !== null,}
         >
           <span className="sr-only">Sign in with GitHub</span>
           {loadingProvider === 'github' ? (
@@ -64,8 +64,8 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => handleSignIn('facebook')}
-          disabled={loadingProvider !== null}
+          onClick = {(,) => handleSignIn('facebook'),}
+          disabled = {loadingProvider !== null,}
         >
           <span className="sr-only">Sign in with Facebook</span>
           {loadingProvider === 'facebook' ? (
@@ -80,8 +80,8 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           type="button"
           variant="outline"
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => handleSignIn('credentials')}
-          disabled={loadingProvider !== null}
+          onClick = {(,) => handleSignIn('credentials'),}
+          disabled = {loadingProvider !== null,}
         >
           {loadingProvider === 'credentials' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
@@ -93,3 +93,4 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
     </div>
   )
 }
+;

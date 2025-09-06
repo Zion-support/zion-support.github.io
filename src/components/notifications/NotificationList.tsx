@@ -1,19 +1,18 @@
 
-import React from 'react',
-import { ScrollArea } from '@/components/ui/scroll-area',
-import Skeleton from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { NotificationItem } from './NotificationItem',
-import { Notification } from '@/context/notifications',
-import { EmptyState } from '@/components/ui/empty-state',
-import { Bell } from 'lucide-react'
-
+import React from 'react';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import Skeleton from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { NotificationItem } from './NotificationItem';
+import { Notification } from '@/context/notifications';
+import { EmptyState } from '@/components/ui/empty-state';
+import { Bell } from 'lucide-react';
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
   notifications: Notification[],
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
+  onMarkAsRead: (id: string,) => Promise<void>,
+  onDismiss: (id: string,) => Promise<void>,
   onRetry: () => void
 }
 
@@ -24,7 +23,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   onMarkAsRead,
   onDismiss,
   onRetry
-}) => {
+},) => {
   return (
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
       {error ? (
@@ -34,7 +33,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             variant="outline" 
             size="sm" 
             className="mt-2"
-            onClick={onRetry}
+            onClick = {onRetry,}
           >
             Try Again
           </Button>
@@ -48,7 +47,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       ) : notifications.length === 0 ? (
         <div className="p-8">
           <EmptyState
-            icon={<Bell className="h-8 w-8" />}
+            icon = {<Bell className="h-8 w-8" />,}
             title="No Notifications"
             description="You're all caught up."
             action={{ text: 'Refresh', onClick: onRetry }}
@@ -56,12 +55,12 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           />
         </div>
       ) : (
-        notifications.map((notification) => (
+        notifications.map((notification,) => (
           <NotificationItem
-            key={notification.id}
-            notification={notification}
-            onMarkAsRead={onMarkAsRead}
-            onDismiss={onDismiss}
+            key = {notification.id,}
+            notification = {notification,}
+            onMarkAsRead = {onMarkAsRead,}
+            onDismiss = {onDismiss,}
           />
         ))
       )}

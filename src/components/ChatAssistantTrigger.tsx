@@ -1,9 +1,9 @@
 
-import { useState } from "react",
-import { MessageSquare } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { ChatAssistant } from "@/components/ChatAssistant",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState } from "react";
+import { MessageSquare } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { ChatAssistant } from "@/components/ChatAssistant";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function ChatAssistantTrigger() {
 
   const [isOpen, setIsOpen] = useState(false),
@@ -33,7 +33,7 @@ export function ChatAssistantTrigger() {
   return (
     <>
       <Button
-        onClick={() => setIsOpen(true)}
+        onClick = {(,) => setIsOpen(true),}
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -44,17 +44,18 @@ export function ChatAssistantTrigger() {
       
       {isOpen && (
         <ChatAssistant
-          isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
+          isOpen = {isOpen,}
+          onClose = {(,) => setIsOpen(false),}
           recipient={{
             id: 'ai-assistant',
             name: 'AI Assistant',
             avatarUrl: 'https://placehold.co/64x64?text=AI',
             role: 'Virtual Assistant'
           }}
-          onSendMessage={handleSendMessage}
+          onSendMessage = {handleSendMessage,}
         />
       )}
     </>
   )
 }
+;

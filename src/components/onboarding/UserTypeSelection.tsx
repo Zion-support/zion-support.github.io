@@ -1,7 +1,7 @@
 
-import { useState } from "react",
-import { Briefcase, Star, User } from 'lucide-react'
-import { Button } from "@/components/ui/button",
+import { useState } from "react";
+import { Briefcase, Star, User } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 interface UserTypeOption {
   id: "serviceProvider" | "talent" | "client",
   name: string,
@@ -10,7 +10,7 @@ interface UserTypeOption {
 }
 
 interface UserTypeSelectionProps {
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,
+  onSelect: (userType: "serviceProvider" | "talent" | "client",) => void,
   selectedType: string | null
 }
 
@@ -46,14 +46,14 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>
       
       <div className="grid gap-4 md: grid-cols-3">
-        {userTypes.map((type) => {
+        {userTypes.map((type,) => {
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
           
           return (
             <Button
-              key={type.id}
-              onClick={() => onSelect(type.id)}
+              key = {type.id,}
+              onClick = {(,) => onSelect(type.id),}
               variant="outline"
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected 

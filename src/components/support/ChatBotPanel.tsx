@@ -1,16 +1,16 @@
 
-import React, { useState, useRef, useEffect } from "react",
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { Separator } from "@/components/ui/separator",
-import { toast } from "@/components/ui/use-toast",
-import { cn } from "@/lib/utils",
-import { ChatMessage } from "./ChatMessage",
-import { QuickReplyButton } from "./QuickReplyButton",
-import { Send, Loader2 } from 'lucide-react'
-import { useTheme } from "@/hooks/useTheme",
+import React, { useState, useRef, useEffect } from "react";
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
+import { cn } from "@/lib/utils";
+import { ChatMessage } from "./ChatMessage";
+import { QuickReplyButton } from "./QuickReplyButton";
+import { Send, Loader2 } from 'lucide-react';
+import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
@@ -39,20 +39,20 @@ export function ChatBotPanel() {
   const { theme } = useTheme(),
 
   // Auto-scroll to bottom when messages change
-  useEffect(() => {
+  useEffect((,) => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
     }
   }, [messages]),
 
   // Focus input when component mounts
-  useEffect(() => {
+  useEffect((,) => {
     if (inputRef.current) {
       inputRef.current.focus()
     }
   }, []),
 
-  const handleSendMessage = async (text: string = inputValue) => {
+  const handleSendMessage = async (text: string = inputValue,) => {
     if (!text.trim()) return,
     
     const userMessage: Message = {
@@ -61,7 +61,7 @@ export function ChatBotPanel() {
       sender: "user",
       timestamp: new Date()},
     
-    setMessages((prev) => [...prev, userMessage]),
+    setMessages((prev,) => [...prev, userMessage]),
     setInputValue(""),
     setIsLoading(true),
     
@@ -75,11 +75,11 @@ export function ChatBotPanel() {
         sender: "bot",
         timestamp: new Date()},
       
-      setMessages((prev) => [...prev, botMessage]),
+      setMessages((prev,) => [...prev, botMessage]),
       
       // Check if the request was successful
       if (!response.success) {
-        setFailedAttempts((prev) => prev + 1),
+        setFailedAttempts((prev,) => prev + 1),
         
         // After 3 failed attempts, suggest escalation
         if (failedAttempts >= 2) {
@@ -96,7 +96,7 @@ export function ChatBotPanel() {
         title: "Communication Error",
         description: "We're having trouble connecting to our support service."}),
       
-      setFailedAttempts((prev) => prev + 1),
+      setFailedAttempts((prev,) => prev + 1),
       if (failedAttempts >= 2) {
         suggestEscalation()
       }
@@ -105,7 +105,7 @@ export function ChatBotPanel() {
     }
   },
 
-  const sendToAIAssistant = async (message: string) => {
+  const sendToAIAssistant = async (message: string,) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
@@ -144,7 +144,7 @@ export function ChatBotPanel() {
       sender: "bot",
       timestamp: new Date()},
     
-    setMessages((prev) => [...prev, escalationMessage]),
+    setMessages((prev,) => [...prev, escalationMessage]),
     
     // Log this interaction for the support team
     logSupportEscalation()
@@ -167,12 +167,12 @@ export function ChatBotPanel() {
     }
   },
 
-  const handleQuickReply = (text: string) => {
+  const handleQuickReply = (text: string,) => {
     handleSendMessage(text)
   },
 
   const handleEscalateToLiveAgent = () => {
-    setMessages((prev) => [
+    setMessages((prev,) => [
       ...prev, 
       {
         id: `user-${Date.now()}`,
@@ -195,7 +195,7 @@ export function ChatBotPanel() {
   },
 
   const handleEmailSupport = () => {
-    setMessages((prev) => [
+    setMessages((prev,) => [
       ...prev, 
       {
         id: `user-${Date.now()}`,
@@ -216,12 +216,12 @@ export function ChatBotPanel() {
     <div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
-          {messages.map((message) => (
+          {messages.map((message,) => (
             <ChatMessage
-              key={message.id}
-              message={message.content}
-              isUser={message.sender === "user"}
-              timestamp={message.timestamp}
+              key = {message.id,}
+              message = {message.content,}
+              isUser = {message.sender === "user",}
+              timestamp = {message.timestamp,}
             />
           ))}
           
@@ -239,11 +239,11 @@ export function ChatBotPanel() {
             Suggested questions:
           </p>
           <div className="flex flex-wrap gap-2">
-            {QUICK_REPLIES.map((reply) => (
+            {QUICK_REPLIES.map((reply,) => (
               <QuickReplyButton
-                key={reply.id}
-                text={reply.text}
-                onClick={() => handleQuickReply(reply.text)}
+                key = {reply.id,}
+                text = {reply.text,}
+                onClick = {(,) => handleQuickReply(reply.text),}
               />
             ))}
           </div>
@@ -257,14 +257,14 @@ export function ChatBotPanel() {
           </p>
           <div className="flex gap-2">
             <Button 
-              onClick={handleEscalateToLiveAgent}
+              onClick = {handleEscalateToLiveAgent,}
               size="sm"
               className="bg-zion-purple hover:bg-zion-purple-light text-white"
             >
               Chat with Live Agent
             </Button>
             <Button 
-              onClick={handleEmailSupport}
+              onClick = {handleEmailSupport,}
               size="sm"
               variant="outline"
             >
@@ -279,28 +279,28 @@ export function ChatBotPanel() {
         theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
       )}>
         <form 
-          onSubmit={(e) => {
+          onSubmit={(e,) => {
             e.preventDefault(),
             handleSendMessage()
           }}
           className="flex items-center gap-2"
         >
           <Input
-            ref={inputRef}
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+            ref = {inputRef,}
+            value = {inputValue,}
+            onChange = {(e,) => setInputValue(e.target.value),}
             placeholder="Type your question..."
-            className={cn(
+            className = {cn(
               "flex-1",
               theme === "dark" 
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
                 : "bg-white border-gray-200"
-            )}
+            ),}
           />
           <Button
             type="submit"
             size="icon"
-            disabled={isLoading || !inputValue.trim()}
+            disabled = {isLoading || !inputValue.trim(),}
             className="bg-zion-cyan hover: bg-zion-cyan/80 text-white"
             aria-label="Send message"
           >

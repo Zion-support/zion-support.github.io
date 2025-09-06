@@ -1,14 +1,14 @@
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { Button } from '@/components/ui/button',
-import { Clipboard } from 'lucide-react'
-import Skeleton from '@/components/ui/skeleton',
-import { useGetOrderQuery } from '@/hooks/useOrder',
-import { generateInvoicePdf } from '@/utils/generateInvoicePdf',
-import { useAuth } from '@/hooks/useAuth',
-import { supabase } from '@/integrations/supabase/client',
-import { toast } from '@/hooks/use-toast',
-import { OrderTimeline } from '@/components/orders/OrderTimeline',
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Button } from '@/components/ui/button';
+import { Clipboard } from 'lucide-react';
+import Skeleton from '@/components/ui/skeleton';
+import { useGetOrderQuery } from '@/hooks/useOrder';
+import { generateInvoicePdf } from '@/utils/generateInvoicePdf';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import { OrderTimeline } from '@/components/orders/OrderTimeline';
 export default function OrderDetailPage() {
   const router = useRouter(),
   const { orderId } = router.query as { orderId?: string },
@@ -51,7 +51,7 @@ export default function OrderDetailPage() {
       `Date: ${new Date(order.date).toLocaleDateString()}`,
       '',
       'Items:',
-      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
+      ...order.items.map((i,) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
       '',
       `Total: $${order.total.toFixed(2)}`,
       '',
@@ -79,7 +79,7 @@ export default function OrderDetailPage() {
       <div>
         <h2 className="font-semibold mb-2">Items</h2>
         <ul className="space-y-1">
-          {order.items.map((item, idx) => (
+          {order.items.map((item, idx,) => (
             <li key={idx} className="flex justify-between">
               <span>{item.name} x {item.quantity}</span>
               <span>${item.price.toFixed(2)}</span>

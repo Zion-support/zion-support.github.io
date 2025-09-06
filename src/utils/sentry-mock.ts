@@ -14,7 +14,7 @@ const mockSentry = {
   captureEvent: noop,
   addBreadcrumb: noop,
   configureScope: noop,
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
+  withScope: (callback: (...args: any[],) => any) => callback(mockScope),
   setUser: noop,
   setTag: noop,
   setTags: noop,
@@ -29,22 +29,22 @@ const mockSentry = {
   finishTransaction: noop,
   
   // Error boundary and React integration
-  ErrorBoundary: ({ children }: any) => children,
-  withErrorBoundary: (component: any) => component,
+  ErrorBoundary: ({ children }: any,) => children,
+  withErrorBoundary: (component: any,) => component,
   showReportDialog: noop,
   
   // Browser-specific methods
   onLoad: noop,
-  wrap: (fn: (...args: any[]) => any) => fn,
+  wrap: (fn: (...args: any[],) => any) => fn,
   
   // Server-specific methods (Node.js)
   Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next(),
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next(),
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next()},
+    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
+    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
+    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
   
   // Next.js specific
-  withSentryConfig: (config: any) => config,
+  withSentryConfig: (config: any,) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -127,7 +127,7 @@ const mockHub = {
   setExtras: noop,
   setContext: noop,
   configureScope: noop,
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
+  withScope: (callback: (...args: any[],) => any) => callback(mockScope),
   startTransaction: () => mockTransaction},
 
 // Export default mock that covers all Sentry packages

@@ -65,7 +65,7 @@ const tsHelpers = {
     if (typeof b !== "function" && b !== null)
       throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),
     
-    function __extends_helper(this: any) { this.constructor = d }
+    function __extends_helper(this: any) { this.constructor = d ,}
     d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)())
   },
   
@@ -216,7 +216,7 @@ export const verifyPolyfills = () => {
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
-  setTimeout(() => verifyPolyfills(), 100)
+  setTimeout((,) => verifyPolyfills(), 100)
 }
 
 export default {}, // Ensure this can be imported as a module

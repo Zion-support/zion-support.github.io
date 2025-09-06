@@ -1,8 +1,8 @@
-import { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button",
-import CodeBlock from "./CodeBlock",
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import CodeBlock from "./CodeBlock";
 interface Param {
   name: string,
   type: string,
@@ -22,8 +22,8 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   const [response, setResponse] = useState<string | null>(null),
   const [loading, setLoading] = useState(false),
 
-  const handleParamChange = (name: string, value: string) => {
-    setParamValues((prev) => ({ ...prev, [name]: value }))
+  const handleParamChange = (name: string, value: string,) => {
+    setParamValues((prev,) => ({ ...prev, [name]: value }))
   },
 
   const sendRequest = async () => {
@@ -33,7 +33,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
     const searchParams = new URLSearchParams(),
     if (method === "GET" || method === "DELETE") {
-      params.forEach((p) => {
+      params.forEach((p,) => {
         const val = paramValues[p.name],
         if (val) searchParams.append(p.name, val)
       }),
@@ -99,21 +99,21 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   return (
     <div className="space-y-4">
       <Input
-        value={apiKey}
-        onChange={(e) => setApiKey(e.target.value)}
+        value = {apiKey,}
+        onChange = {(e,) => setApiKey(e.target.value),}
         placeholder="API Key"
       />
-      {params.map((p) => (
+      {params.map((p,) => (
         <Input
-          key={p.name}
-          value={paramValues[p.name] || ""}
-          onChange={(e) => handleParamChange(p.name, e.target.value)}
+          key = {p.name,}
+          value = {paramValues[p.name] || "",}
+          onChange = {(e,) => handleParamChange(p.name, e.target.value),}
         />
       ))}
       {method !== "GET" && method !== "DELETE" && (
         <Textarea
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
+          value = {body,}
+          onChange = {(e,) => setBody(e.target.value),}
           className="font-mono"
         />
       )}

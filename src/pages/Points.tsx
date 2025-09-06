@@ -1,14 +1,14 @@
-import React, { useState } from 'react',
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth',
-import { usePoints } from '@/hooks/usePoints',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { ScrollArea } from '@/components/ui/scroll-area',
-import { formatDistanceToNow } from 'date-fns',
-import Link from 'next/link',
-import { LoginModal } from '@/components/auth/LoginModal',
+import React, { useState } from 'react';
+import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { usePoints } from '@/hooks/usePoints';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { formatDistanceToNow } from 'date-fns';
+import Link from 'next/link';
+import { LoginModal } from '@/components/auth/LoginModal';
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth(),
   const { ledger, balance, loading, fetchLedger } = usePoints(),
@@ -79,7 +79,7 @@ export default function PointsPage() {
             <p className="text-xl text-muted-foreground mb-6">
               Earn points for every action you take and redeem them for exclusive rewards!
             </p>
-            <Button onClick={() => setLoginOpen(true)} size="lg">
+            <Button onClick={(,) => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
             </Button>
           </div>
@@ -96,7 +96,7 @@ export default function PointsPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                {earningOpportunities.map((opportunity, index) => (
+                {earningOpportunities.map((opportunity, index,) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                     <div className="text-primary mt-1">{opportunity.icon}</div>
                     <div className="flex-1">
@@ -120,7 +120,7 @@ export default function PointsPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                {upcomingRewards.map((reward, index) => (
+                {upcomingRewards.map((reward, index,) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
                     <div>
                       <h4 className="font-medium">{reward.title}</h4>
@@ -180,7 +180,7 @@ export default function PointsPage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            {earningOpportunities.map((opportunity, index) => (
+            {earningOpportunities.map((opportunity, index,) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <div className="text-primary mt-1">{opportunity.icon}</div>
                 <div className="flex-1">
@@ -207,7 +207,7 @@ export default function PointsPage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            {upcomingRewards.map((reward) => (
+            {upcomingRewards.map((reward,) => (
               <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
                 <div>
                   <h4 className="font-medium">{reward.title}</h4>
@@ -216,7 +216,7 @@ export default function PointsPage() {
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+                    <Button size="sm" onClick={(,) => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
@@ -253,7 +253,7 @@ export default function PointsPage() {
                     </div>
                     <Badge
                       variant="outline"
-                      className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
                     >
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts

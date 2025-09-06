@@ -1,7 +1,7 @@
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Checkbox } from "@/components/ui/checkbox",
-import { RegionFilterProps } from "@/types/filters",
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Checkbox } from "@/components/ui/checkbox";
+import { RegionFilterProps } from "@/types/filters";
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" },
   { id: "Europe", label: "Europe" },
@@ -15,7 +15,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
-        onClick={toggleSection}
+        onClick = {toggleSection,}
         className="flex w-full items-center justify-between text-white font-medium"
       >
         <span>Region</span>
@@ -32,8 +32,8 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
             <div key={region.id} className="flex items-center">
               <Checkbox
                 id={`region-${region.id}`}
-                checked={selectedRegions.includes(region.id)}
-                onCheckedChange={() => toggleRegion(region.id)}
+                checked = {selectedRegions.includes(region.id),}
+                onCheckedChange = {() => toggleRegion(region.id),}
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label

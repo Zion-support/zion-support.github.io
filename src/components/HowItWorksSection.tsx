@@ -1,15 +1,15 @@
 
-import React from 'react',
-import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
+import React from 'react';
+import { GradientHeading } from "./GradientHeading";
+import { Check, Handshake, Search, Send } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string,
   style?: React.CSSProperties
 }
 
-const getSteps = (t: any) => [
+const getSteps = (t: any,) => [
   {
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
@@ -46,9 +46,9 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
           
           <div className="space-y-12 md:space-y-0">
-            {steps.map((step, index) => (
+            {steps.map((step, index,) => (
               <div 
-                key={step.title}
+                key = {step.title,}
                 className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
                 } relative`}

@@ -1,6 +1,6 @@
-import { useState } from "react",
-import { Menu } from 'lucide-react'
-import Link from "next/link",
+import { useState } from "react";
+import { Menu } from 'lucide-react';
+import Link from "next/link";
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
   return (
@@ -9,9 +9,9 @@ export function EnterpriseStickyNav() {
         <div className="flex items-center justify-between h-12">
           <button
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            onClick={() => setOpen(!open)}
+            onClick = {(,) => setOpen(!open),}
             aria-label="Toggle navigation"
-            aria-expanded={open}
+            aria-expanded = {open,}
           >
             <Menu className="h-6 w-6" />
           </button>
@@ -34,3 +34,4 @@ export function EnterpriseStickyNav() {
     </nav>
   )
 }
+;

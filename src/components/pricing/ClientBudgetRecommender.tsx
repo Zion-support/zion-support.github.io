@@ -1,24 +1,23 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
-import { useAuth } from "@/hooks/useAuth",
-import { Sparkles } from 'lucide-react'
-
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from 'lucide-react';
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
-  onSuggestionApplied: (minValue: number, maxValue: number) => void
+  onSuggestionApplied: (minValue: number, maxValue: number,) => void
 }
 
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
@@ -27,7 +26,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   timeline,
   scope,
   experienceLevel,
-  onSuggestionApplied}) => {
+  onSuggestionApplied},) => {
   const [isLoading, setIsLoading] = useState(false),
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth(),
@@ -80,17 +79,17 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           <Button
             type="button"
             variant="outline"
-            onClick={generateSuggestion}
-            disabled={!jobTitle || !category}
+            onClick = {generateSuggestion,}
+            disabled = {!jobTitle || !category,}
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
+            suggestion = {suggestion,}
+            isLoading = {isLoading,}
+            onApplySuggestion = {handleApplySuggestion,}
             rateType="hourly"
           />
         )}
@@ -98,3 +97,4 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     </div>
   )
 },
+;

@@ -1,9 +1,9 @@
 
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { Badge } from "@/components/ui/badge",
-import { Star } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Badge } from "@/components/ui/badge";
+import { Star } from 'lucide-react';
+import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -33,7 +33,7 @@ export function ProfileHero({
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">
           {coverImageUrl ? (
             <img
-              src={coverImageUrl}
+              src = {coverImageUrl,}
               alt={`${name} cover`}
               className="w-full h-full object-cover"
               loading="lazy"
@@ -60,10 +60,10 @@ export function ProfileHero({
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badge 
                   variant="outline" 
-                  className={cn(
+                  className = {cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan",
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
-                  )}
+                  ),}
                 >
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
@@ -97,5 +97,6 @@ export function ProfileHero({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+;

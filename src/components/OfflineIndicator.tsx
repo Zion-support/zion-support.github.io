@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react',
-import { WifiOff, Wifi } from 'lucide-react'
-import { Alert, AlertDescription } from '@/components/ui/alert',
-
+import { useState, useEffect } from 'react';
+import { WifiOff, Wifi } from 'lucide-react';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 export const OfflineIndicator = () => {
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
 
-  useEffect(() => {
+  useEffect((,) => {
     const updateOnlineStatus = () => {
       const online = navigator.onLine,
       setIsOnline(online),
@@ -15,7 +14,7 @@ export const OfflineIndicator = () => {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
-        setTimeout(() => setShowOfflineAlert(false), 3000)
+        setTimeout((,) => setShowOfflineAlert(false), 3000)
       }
     },
 

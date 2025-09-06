@@ -1,18 +1,17 @@
 
-import { useState } from 'react',
-import { useForm } from 'react-hook-form',
-import { Button } from '@/components/ui/button',
-import { Form } from '@/components/ui/form',
-import { Certification } from '@/types/resume',
-import { Loader2 } from 'lucide-react'
-import { useResume } from '@/hooks/useResume',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { format } from 'date-fns',
-import { CertificationsList } from './CertificationsList',
-import { CertificationFormFields } from './CertificationFormFields',
-import { CertificationFormValues, certificationSchema } from './types',
-
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { Certification } from '@/types/resume';
+import { Loader2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+import { CertificationsList } from './CertificationsList';
+import { CertificationFormFields } from './CertificationFormFields';
+import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
   resumeId: string,
   certifications: Certification[],
@@ -42,7 +41,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       credential_id: '',
       credential_url: ''}}),
 
-  const handleAddOrUpdate = async (data: CertificationFormValues) => {
+  const handleAddOrUpdate = async (data: CertificationFormValues,) => {
     try {
       setError(null),
       let success,
@@ -76,7 +75,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     }
   },
 
-  const handleEdit = (cert: Certification) => {
+  const handleEdit = (cert: Certification,) => {
     setEditingId(cert.id!),
     form.reset({
       ...cert,
@@ -84,7 +83,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       expiration_date: formatDateValue(cert.expiration_date)})
   },
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
     }
@@ -101,9 +100,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
       {certifications.length > 0 && (
         <CertificationsList 
-          certifications={certifications} 
-          onEdit={handleEdit} 
-          onDelete={handleDelete} 
+          certifications = {certifications,}
+          onEdit = {handleEdit,}
+          onDelete = {handleDelete,}
         />
       )}
 

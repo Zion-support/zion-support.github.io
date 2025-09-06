@@ -1,18 +1,18 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
-import { Loader2, ShieldCheck, Download } from 'lucide-react'
-import { toast } from "sonner",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts";
+import { Loader2, ShieldCheck, Download } from 'lucide-react';
+import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface SmartContractDeploymentProps {
   solidityCode: string,
-  onDeploy: (options: DeploymentOptions) => Promise<void>,
+  onDeploy: (options: DeploymentOptions,) => Promise<void>,
   isDeploying: boolean
 }
 
@@ -78,8 +78,8 @@ export function SmartContractDeployment({
             <Switch
               id="deploy-blockchain"
               aria-label="Deploy to blockchain"
-              checked={deploymentOptions.deployToChain}
-              onCheckedChange={(checked) => setDeploymentOptions({
+              checked = {deploymentOptions.deployToChain,}
+              onCheckedChange={(checked,) => setDeploymentOptions({
                 ...deploymentOptions,
                 deployToChain: checked
               })}
@@ -92,8 +92,8 @@ export function SmartContractDeployment({
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
                 <RadioGroup 
-                  defaultValue={deploymentOptions.network}
-                  onValueChange={(value) => setDeploymentOptions({
+                  defaultValue = {deploymentOptions.network,}
+                  onValueChange={(value,) => setDeploymentOptions({
                     ...deploymentOptions,
                     network: value as BlockchainNetwork
                   })}
@@ -115,8 +115,8 @@ export function SmartContractDeployment({
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
-                  value={deploymentOptions.walletAddress || ''}
-                  onChange={(e) => setDeploymentOptions({
+                  value = {deploymentOptions.walletAddress || '',}
+                  onChange={(e,) => setDeploymentOptions({
                     ...deploymentOptions,
                     walletAddress: e.target.value
                   })}
@@ -127,8 +127,8 @@ export function SmartContractDeployment({
                 <Switch
                   id="use-escrow"
                   aria-label="Use escrow"
-                  checked={deploymentOptions.useEscrow}
-                  onCheckedChange={(checked) => setDeploymentOptions({
+                  checked = {deploymentOptions.useEscrow,}
+                  onCheckedChange={(checked,) => setDeploymentOptions({
                     ...deploymentOptions,
                     useEscrow: checked
                   })}

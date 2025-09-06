@@ -1,42 +1,42 @@
-import { Button } from '@/components/ui/button',
-import Link from 'next/link',
-import { useSelector, useDispatch } from 'react-redux',
-import { useState, useEffect } from 'react',
-import axios from 'axios',
-import { useAuth } from '@/hooks/useAuth',
-import type { RootState, AppDispatch } from '@/store',
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useAuth } from '@/hooks/useAuth';
+import type { RootState, AppDispatch } from '@/store';
 import {
   removeItem as removeItemAction,
   updateQuantity as updateQuantityAction} from '@/store/cartSlice',
-import {logErrorToProduction} from '@/utils/productionLogger',
-import { CartItem as CartItemComponent } from '@/components/cart/CartItem',
-import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal',
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
+import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
 // CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
 // import { CartItem as CartItemType } from '@/types/cart',
 // safeStorage is no longer needed here for reading
 // import { safeStorage } from '@/utils/safeStorage',
-import { getStripe } from '@/utils/getStripe',
-import { useTranslation } from 'react-i18next',
-import { motion } from 'framer-motion',
-import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react'
-import { useWishlist } from '@/hooks/useWishlist',
-import { toast } from '@/hooks/use-toast',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
+import { getStripe } from '@/utils/getStripe';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react';
+import { useWishlist } from '@/hooks/useWishlist';
+import { toast } from '@/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 export default function CartPage() {
   const { t } = useTranslation(),
-  const items = useSelector((s: RootState) => s.cart.items),
+  const items = useSelector((s: RootState,) => s.cart.items),
   const dispatch = useDispatch<AppDispatch>(),
   const { user, isAuthenticated } = useAuth(),
   const [loading, setLoading] = useState(false),
   const [guestOpen, setGuestOpen] = useState(false),
   const { toggle: toggleWishlist, isWishlisted } = useWishlist(),
 
-  const updateQuantity = (id: string, qty: number) => {
+  const updateQuantity = (id: string, qty: number,) => {
     dispatch(updateQuantityAction({ id, quantity: qty }))
   },
 
-  const removeItem = (id: string) => {
+  const removeItem = (id: string,) => {
     const item = items.find(i => i.id === id),
     dispatch(removeItemAction(id)),
     
@@ -47,7 +47,7 @@ export default function CartPage() {
     }
   },
 
-  const saveForLater = (id: string, name: string) => {
+  const saveForLater = (id: string, name: string,) => {
     const wasWishlisted = isWishlisted(id),
     toggleWishlist(id),
     toast({
@@ -57,7 +57,7 @@ export default function CartPage() {
         : `${name} has been added to your wishlist`})
   },
 
-  const handleCheckout = async (details?: { email?: string, address?: string }) => {
+  const handleCheckout = async (details?: { email?: string, address?: string },) => {
     setLoading(true),
     try {
       const stripe = await getStripe(),
@@ -89,7 +89,7 @@ export default function CartPage() {
     }
   },
 
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),
+  const subtotal = items.reduce((sum, i,) => sum + i.price * i.quantity, 0),
   const tax = subtotal * 0.08, // 8% tax estimate
   
   // Only add shipping for physical items
@@ -172,9 +172,9 @@ export default function CartPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
           >
-            {items.map((item, index) => (
+            {items.map((item, index,) => (
               <motion.div
-                key={item.id}
+                key = {item.id,}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -192,7 +192,7 @@ export default function CartPage() {
                           <Button
                             variant="outline"
                             size="sm"
-                            onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}
+                            onClick = {() => updateQuantity(item.id, Math.max(1, item.quantity - 1)),}
                             className="h-8 w-8 p-0"
                           >
                             -
@@ -201,7 +201,7 @@ export default function CartPage() {
                           <Button
                             variant="outline"
                             size="sm"
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                            onClick = {() => updateQuantity(item.id, item.quantity + 1),}
                             className="h-8 w-8 p-0"
                           >
                             +
@@ -216,7 +216,7 @@ export default function CartPage() {
                             <Button
                               variant="outline"
                               size="sm"
-                              onClick={() => removeItem(item.id)}
+                              onClick = {() => removeItem(item.id),}
                               className="text-red-400 border-red-400 hover:bg-red-400/10"
                             >
                               Remove
@@ -224,7 +224,7 @@ export default function CartPage() {
                             <Button
                               variant="ghost"
                               size="sm"
-                              onClick={() => saveForLater(item.id, item.name)}
+                              onClick = {() => saveForLater(item.id, item.name),}
                               className="text-zion-cyan hover:bg-zion-cyan/10"
                             >
                               Add to Wishlist
@@ -299,8 +299,8 @@ export default function CartPage() {
                   
                   <Button 
                     className="w-full bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue" 
-                    onClick={startCheckout} 
-                    disabled={loading}
+                    onClick = {startCheckout,}
+                    disabled = {loading,}
                     size="lg"
                   >
                     {loading ? (
@@ -334,9 +334,9 @@ export default function CartPage() {
 
         {/* Guest Checkout Modal */}
         <GuestCheckoutModal
-          open={guestOpen}
-          onOpenChange={setGuestOpen}
-          onSubmit={(details) => handleCheckout(details)}
+          open = {guestOpen,}
+          onOpenChange = {setGuestOpen,}
+          onSubmit = {(details,) => handleCheckout(details),}
         />
       </div>
     </div>

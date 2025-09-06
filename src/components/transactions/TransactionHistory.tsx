@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import Skeleton from "@/components/ui/skeleton",
-import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react'
-import { formatDistanceToNow } from "date-fns",
-import { safeStorage } from "@/utils/safeStorage",
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Skeleton from "@/components/ui/skeleton";
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react';
+import { formatDistanceToNow } from "date-fns";
+import { safeStorage } from "@/utils/safeStorage";
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface Transaction {
   id: string,
   user_id: string,
@@ -37,16 +37,16 @@ export function TransactionHistory() {
   const { user } = useAuth(),
   const { toast } = useToast(),
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
-    () => (safeStorage.getItem('transaction_filter') as any) || 'all'
+    (,) => (safeStorage.getItem('transaction_filter') as any) || 'all'
   ),
 
-  useEffect(() => {
+  useEffect((,) => {
     safeStorage.setItem('transaction_filter', filter)
   }, [filter]),
   
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter],
-    queryFn: async () => {
+    queryFn: async (,) => {
       if (!user) return [],
       
       // Build the query based on filters
@@ -76,7 +76,7 @@ export function TransactionHistory() {
     },
     enabled: !!user}),
 
-  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel',) => {
     try {
       const { data, error } = await supabase.functions.invoke('manage-transaction', {
         body: { transactionId, action }
@@ -98,7 +98,7 @@ export function TransactionHistory() {
     }
   },
   
-  const getStatusBadge = (status: string, inEscrow: boolean) => {
+  const getStatusBadge = (status: string, inEscrow: boolean,) => {
     switch(status) {
       case 'in_escrow':
         return (
@@ -157,7 +157,7 @@ export function TransactionHistory() {
 
   const { formatPrice } = useCurrency(),
 
-  const formatCurrency = (amount: number) => {
+  const formatCurrency = (amount: number,) => {
     return formatPrice(amount)
   },
 
@@ -168,7 +168,7 @@ export function TransactionHistory() {
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
           <h3 className="font-bold text-xl text-white mb-2">Failed to load transactions</h3>
           <p className="mb-4">{error.message}</p>
-          <Button onClick={() => refetch()} variant="outline">
+          <Button onClick={(,) => refetch()} variant="outline">
             <RefreshCcw className="mr-2 h-4 w-4" />
             Try Again
           </Button>
@@ -186,33 +186,33 @@ export function TransactionHistory() {
           <div className="flex space-x-2">
             <Button 
               size="sm" 
-              variant={filter === 'all' ? 'default' : 'outline'} 
-              onClick={() => setFilter('all')}
-              className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+              variant = {filter === 'all' ? 'default' : 'outline',}
+              onClick = {(,) => setFilter('all'),}
+              className = {filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light',}
             >
               All
             </Button>
             <Button 
               size="sm" 
-              variant={filter === 'pending' ? 'default' : 'outline'} 
-              onClick={() => setFilter('pending')}
-              className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+              variant = {filter === 'pending' ? 'default' : 'outline',}
+              onClick = {() => setFilter('pending'),}
+              className = {filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light',}
             >
               Pending
             </Button>
             <Button 
               size="sm" 
-              variant={filter === 'completed' ? 'default' : 'outline'} 
-              onClick={() => setFilter('completed')}
-              className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+              variant = {filter === 'completed' ? 'default' : 'outline',}
+              onClick = {() => setFilter('completed'),}
+              className = {filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light',}
             >
               Completed
             </Button>
             <Button 
               size="sm" 
-              variant={filter === 'escrow' ? 'default' : 'outline'} 
-              onClick={() => setFilter('escrow')}
-              className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+              variant = {filter === 'escrow' ? 'default' : 'outline',}
+              onClick = {() => setFilter('escrow'),}
+              className = {filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light',}
             >
               Escrow
             </Button>
@@ -220,7 +220,7 @@ export function TransactionHistory() {
         </div>
         
         {isLoading ? (
-          Array(3).fill(0).map((_, i) => (
+          Array(3).fill(0).map((_, i,) => (
             <div key={i} className="mb-4">
               <Card className="bg-zion-blue-dark border-zion-blue-light">
                 <CardHeader className="pb-2">
@@ -242,7 +242,7 @@ export function TransactionHistory() {
           ))
         ) : transactions && transactions.length > 0 ? (
           <div className="space-y-4">
-            {transactions.map((transaction) => {
+            {transactions.map((transaction,) => {
               const isClient = user?.id === transaction.user_id,
               const isPending =
                 transaction.status === 'pending' || transaction.status === 'in_escrow',
@@ -310,7 +310,7 @@ export function TransactionHistory() {
                   <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">
                     {canRelease && (
                       <Button 
-                        onClick={() => handleManageTransaction(transaction.id, 'release')}
+                        onClick = {(,) => handleManageTransaction(transaction.id, 'release'),}
                         size="sm"
                         className="bg-green-600 hover:bg-green-700 text-white"
                       >
@@ -320,7 +320,7 @@ export function TransactionHistory() {
                     
                     {canRefund && (
                       <Button 
-                        onClick={() => handleManageTransaction(transaction.id, 'refund')}
+                        onClick = {(,) => handleManageTransaction(transaction.id, 'refund'),}
                         size="sm"
                         variant="outline"
                         className="text-zion-slate-light border-zion-blue-light"
@@ -331,7 +331,7 @@ export function TransactionHistory() {
                     
                     {canCancel && (
                       <Button 
-                        onClick={() => handleManageTransaction(transaction.id, 'cancel')}
+                        onClick = {(,) => handleManageTransaction(transaction.id, 'cancel'),}
                         size="sm"
                         variant="outline"
                         className="text-red-400 border-red-400/30 hover:bg-red-400/10"

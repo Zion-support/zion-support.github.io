@@ -1,16 +1,15 @@
 
-import React, { useState } from 'react',
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',
-import { Textarea } from '@/components/ui/textarea',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
-
+import React, { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementPanelProps {
   title: string,
   defaultOptions: AIEnhancementOptions,
-  onApply: (content: string) => void,
+  onApply: (content: string,) => void,
   onClose?: () => void,
   showInstructions?: boolean,
   initialContent?: string
@@ -41,7 +40,7 @@ export function AIEnhancementPanel({
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions
-  ) => {
+  ,) => {
     setOptions({
       ...options,
       [field]: e.target.value})
@@ -55,7 +54,7 @@ export function AIEnhancementPanel({
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
-    setTimeout(() => setCopied(false), 2000)
+    setTimeout((,) => setCopied(false), 2000)
   },
 
   return (
@@ -73,8 +72,8 @@ export function AIEnhancementPanel({
           <Textarea
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
-            value={options.content}
-            onChange={(e) => handleInputChange(e, 'content')}
+            value = {options.content,}
+            onChange = {(e,) => handleInputChange(e, 'content'),}
           />
         </div>
 
@@ -84,8 +83,8 @@ export function AIEnhancementPanel({
           <Textarea
             placeholder="Add any relevant context to guide the AI..."
             className="min-h-[60px]"
-            value={options.context}
-            onChange={(e) => handleInputChange(e, 'context')}
+            value = {options.context,}
+            onChange = {(e,) => handleInputChange(e, 'context'),}
           />
         </div>
 
@@ -95,17 +94,17 @@ export function AIEnhancementPanel({
             <label className="text-sm font-medium">Special instructions (optional)</label>
             <Input
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
-              value={options.instructions}
-              onChange={(e) => handleInputChange(e, 'instructions')}
+              value = {options.instructions,}
+              onChange = {(e,) => handleInputChange(e, 'instructions'),}
             />
           </div>
         )}
 
         {/* Generate button */}
         <Button 
-          onClick={handleGenerate} 
+          onClick = {handleGenerate,}
           className="w-full" 
-          disabled={isEnhancing || !options.content && !options.context}
+          disabled = {isEnhancing || !options.content && !options.context,}
         >
           {isEnhancing ? (
             <>
@@ -128,7 +127,7 @@ export function AIEnhancementPanel({
               <Button 
                 variant="ghost" 
                 size="sm" 
-                onClick={handleCopy}
+                onClick = {handleCopy,}
                 className="h-8"
               >
                 {copied ? (
@@ -140,8 +139,8 @@ export function AIEnhancementPanel({
             </div>
             <div className="relative">
               <Textarea
-                value={generatedContent}
-                onChange={(e) => setGeneratedContent(e.target.value)}
+                value = {generatedContent,}
+                onChange = {(e,) => setGeneratedContent(e.target.value),}
                 className="min-h-[200px]"
               />
             </div>

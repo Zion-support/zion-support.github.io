@@ -1,17 +1,17 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Interview } from "@/types/interview",
-import { useAuth } from "@/hooks/useAuth",
-import { useInterviews } from "@/hooks/useInterviews",
-import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { InterviewResponseForm } from "./InterviewResponseForm",
+import React, { useState } from "react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Interview } from "@/types/interview";
+import { useAuth } from "@/hooks/useAuth";
+import { useInterviews } from "@/hooks/useInterviews";
+import { format, formatDistanceToNow, isPast, parseISO } from "date-fns";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast";
+import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
@@ -49,7 +49,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     }
   },
 
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
+  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled',) => {
     setIsLoading(true),
     const success = await respondToInterview(interview.id, { 
       interview_id: interview.id, 
@@ -187,8 +187,8 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                 <AlertDialogFooter>
                   <AlertDialogCancel>Go Back</AlertDialogCancel>
                   <AlertDialogAction 
-                    onClick={handleCancelInterview} 
-                    disabled={isLoading}
+                    onClick = {handleCancelInterview,}
+                    disabled = {isLoading,}
                     className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                   >
                     Cancel Interview
@@ -201,7 +201,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (
             <div className="grid grid-cols-2 gap-2">
-              <Button onClick={() => setIsResponseDialogOpen(true)} disabled={isLoading}>
+              <Button onClick={(,) => setIsResponseDialogOpen(true)} disabled={isLoading}>
                 Respond
               </Button>
               <Button variant="outline" onClick={() => handleRespondToInterview('declined')} disabled={isLoading}>
@@ -244,8 +244,8 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   <AlertDialogFooter>
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
                     <AlertDialogAction 
-                      onClick={handleCancelInterview} 
-                      disabled={isLoading}
+                      onClick = {handleCancelInterview,}
+                      disabled = {isLoading,}
                       className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                     >
                       Cancel Interview
@@ -265,10 +265,10 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
             <DialogTitle>Respond to Interview Request</DialogTitle>
           </DialogHeader>
           <InterviewResponseForm 
-            interview={interview}
-            onConfirm={() => handleRespondToInterview('confirmed')}
-            onClose={() => setIsResponseDialogOpen(false)}
-            isLoading={isLoading}
+            interview = {interview,}
+            onConfirm = {() => handleRespondToInterview('confirmed'),}
+            onClose = {() => setIsResponseDialogOpen(false),}
+            isLoading = {isLoading,}
           />
         </DialogContent>
       </Dialog>

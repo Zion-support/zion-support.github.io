@@ -1,10 +1,10 @@
 
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Mail, Send } from 'lucide-react'
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Send } from 'lucide-react';
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
   email?: string,
   profileName: string,
@@ -16,12 +16,12 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
   
-  const handleSendMessage = (e: React.FormEvent) => {
+  const handleSendMessage = (e: React.FormEvent,) => {
     e.preventDefault(),
     setIsSending(true),
     
     // Here would be the actual API call to send the message
-    setTimeout(() => {
+    setTimeout((,) => {
       setIsSending(false),
       setMessage(""),
       setSubject(""),
@@ -55,8 +55,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           <div>
             <Input
               placeholder="Subject"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
+              value = {subject,}
+              onChange = {(e,) => setSubject(e.target.value),}
               className="bg-zion-blue border-zion-blue-light text-white"
               required
             />
@@ -64,8 +64,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           <div>
             <Textarea
               placeholder={`Message to ${profileName}...`}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              value = {message,}
+              onChange = {(e,) => setMessage(e.target.value),}
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
               required
             />
@@ -73,7 +73,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           <Button 
             type="submit" 
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
-            disabled={isSending}
+            disabled = {isSending,}
           >
             <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}

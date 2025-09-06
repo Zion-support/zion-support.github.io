@@ -1,8 +1,7 @@
 
-import React from "react",
-import { cn } from "@/lib/utils",
-import { CheckIcon } from 'lucide-react'
-
+import React from "react";
+import { cn } from "@/lib/utils";
+import { CheckIcon } from 'lucide-react';
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
@@ -25,7 +24,7 @@ export function Step({
       )}
     >
       <div
-        className={cn(
+        className = {cn(
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
           {
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
@@ -33,7 +32,7 @@ export function Step({
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
-              status === "complete"}
+              status === "complete",}
         )}
       >
         {status === "complete" ? (
@@ -73,7 +72,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
-        {React.Children.map(childrenArray, (child, index) => {
+        {React.Children.map(childrenArray, (child, index,) => {
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",

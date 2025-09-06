@@ -1,16 +1,16 @@
 
-import { useState } from 'react',
-import { Card, CardContent, CardFooter } from '@/components/ui/card',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
-import Image from 'next/image',
-import { PortfolioProject } from '@/types/resume',
+import { useState } from 'react';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
+import Image from 'next/image';
+import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
   project: PortfolioProject,
-  onEdit: (project: PortfolioProject) => void,
-  onDelete: (projectId: string) => void
+  onEdit: (project: PortfolioProject,) => void,
+  onDelete: (projectId: string,) => void
 }
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
@@ -28,8 +28,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (
           <Image
-            src={project.image_url}
-            alt={project.title}
+            src = {project.image_url,}
+            alt = {project.title,}
             className="object-cover"
             loading="lazy"
           />
@@ -50,7 +50,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
-              {project.technologies.map((tech, index) => (
+              {project.technologies.map((tech, index,) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
                 </Badge>
@@ -64,7 +64,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         <div className="flex gap-2">
           {project.github_url && (
             <a
-              href={project.github_url}
+              href = {project.github_url,}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -78,7 +78,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           
           {project.demo_url && (
             <a
-              href={project.demo_url}
+              href = {project.demo_url,}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Live demo"

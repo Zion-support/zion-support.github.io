@@ -1,17 +1,17 @@
 
-import React, { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Plus, Loader2 } from 'lucide-react'
-import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",
-import { toast } from "@/components/ui/use-toast",
-import { ResumePreviewCard } from './ResumePreviewCard',
-import { UploadSection } from './UploadSection',
-import { SelectResumeSection } from './SelectResumeSection',
-import { ResumeOption, ResumeSelectorProps } from './types',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Plus, Loader2 } from 'lucide-react';
+import { useResume } from "@/hooks/useResume";
+import { exportResumeToPDF } from "@/utils/pdfExport";
+import { toast } from "@/components/ui/use-toast";
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { UploadSection } from './UploadSection';
+import { SelectResumeSection } from './SelectResumeSection';
+import { ResumeOption, ResumeSelectorProps } from './types';
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
@@ -23,7 +23,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const { resume, fetchResume } = useResume(),
   
   // Fetch resume data when component mounts
-  useEffect(() => {
+  useEffect((,) => {
     const loadResumes = async () => {
       setIsLoading(true),
       try {
@@ -39,7 +39,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   }, [fetchResume]),
   
   // Update resume options when resume data changes
-  useEffect(() => {
+  useEffect((,) => {
     if (resume) {
       const options: ResumeOption[] = [{
         id: resume.id || 'current',
@@ -59,7 +59,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   }, [resume, selectedOption, onResumeSelected]),
   
   // Handle radio option change
-  const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
+  const handleOptionChange = (value: 'recent' | 'select' | 'upload',) => {
     setSelectedOption(value),
     
     if (value === 'recent' && resumeOptions.length > 0 && resumeOptions[0]) {
@@ -74,7 +74,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   },
   
   // Handle resume selection change
-  const handleResumeSelect = (resumeId: string) => {
+  const handleResumeSelect = (resumeId: string,) => {
     const selected = resumeOptions.find(opt => opt.id === resumeId),
     if (selected) {
       setSelectedResume(selected),
@@ -83,7 +83,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   },
   
   // Handle custom file upload
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>,) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
       
@@ -158,8 +158,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>
       
       <RadioGroup 
-        value={selectedOption} 
-        onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
+        value = {selectedOption,}
+        onValueChange = {(value,) => handleOptionChange(value as 'recent' | 'select' | 'upload'),}
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
@@ -181,26 +181,26 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       {/* Resume selection options based on radio selection */}
       {selectedOption === 'recent' && resume && (
         <ResumePreviewCard
-          resume={resume}
-          onDownload={handleDownloadResume}
-          isLoading={isLoading}
+          resume = {resume,}
+          onDownload = {handleDownloadResume,}
+          isLoading = {isLoading,}
         />
       )}
       
       {selectedOption === 'select' && (
         <SelectResumeSection
-          resumeOptions={resumeOptions}
-          selectedResume={selectedResume}
-          handleResumeSelect={handleResumeSelect}
-          handleDownloadResume={handleDownloadResume}
-          isLoading={isLoading}
+          resumeOptions = {resumeOptions,}
+          selectedResume = {selectedResume,}
+          handleResumeSelect = {handleResumeSelect,}
+          handleDownloadResume = {handleDownloadResume,}
+          isLoading = {isLoading,}
         />
       )}
       
       {selectedOption === 'upload' && (
         <UploadSection
-          customFile={customFile}
-          onFileUpload={handleFileUpload}
+          customFile = {customFile,}
+          onFileUpload = {handleFileUpload,}
         />
       )}
       
@@ -208,7 +208,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       <div className="flex justify-between items-center pt-2">
         <Button 
           variant="outline"
-          onClick={handleGenerateResume}
+          onClick = {handleGenerateResume,}
           className="text-zion-purple border-zion-purple/20"
         >
           <Plus className="h-4 w-4 mr-2" />

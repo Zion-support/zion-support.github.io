@@ -1,22 +1,22 @@
 
-import { useState, useEffect } from 'react',
-import { useAuth } from '@/hooks/useAuth',
-import { useResume } from '@/hooks/useResume',
-import { Tabs } from '@/components/ui/tabs',
-import { Card, CardContent } from '@/components/ui/card',
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Resume } from '@/types/resume',
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useResume } from '@/hooks/useResume';
+import { Tabs } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Resume } from '@/types/resume';
 // Import components
-import { ResumeProgress } from './ResumeProgress',
-import { EmptyResumeState } from './EmptyResumeState',
-import { CreateResumeForm } from './CreateResumeForm',
-import { ResumeSteps } from './ResumeSteps',
-import { ResumeStepContent } from './ResumeStepContent',
-import { useResumeProgress } from './useResumeProgress',
-import { ResumeVersionSelector } from './ResumeVersionSelector',
-import { RESUME_STEPS } from './constants',
+import { ResumeProgress } from './ResumeProgress';
+import { EmptyResumeState } from './EmptyResumeState';
+import { CreateResumeForm } from './CreateResumeForm';
+import { ResumeSteps } from './ResumeSteps';
+import { ResumeStepContent } from './ResumeStepContent';
+import { useResumeProgress } from './useResumeProgress';
+import { ResumeVersionSelector } from './ResumeVersionSelector';
+import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
   const { user } = useAuth(),
   const { 
@@ -33,13 +33,13 @@ export function ResumeWizard() {
   // Use the extracted hook for progress calculation
   const progress = useResumeProgress(resume),
   
-  useEffect(() => {
+  useEffect((,) => {
     if (user) {
       fetchResume()
     }
   }, [user, fetchResume]),
   
-  const handleCreateNewResume = async (title: string) => {
+  const handleCreateNewResume = async (title: string,) => {
     const resumeId = await createResume({ title: title.trim() }),
     if (resumeId) {
       await fetchResume(resumeId),
@@ -67,7 +67,7 @@ export function ResumeWizard() {
     }
   },
 
-  const handleResumeChange = (resumeId: string) => {
+  const handleResumeChange = (resumeId: string,) => {
     fetchResume(resumeId)
   },
   
@@ -96,9 +96,9 @@ export function ResumeWizard() {
   if (showNewResumeForm) {
     return (
       <CreateResumeForm 
-        onCreateResume={handleCreateNewResume}
-        onCancel={() => setShowNewResumeForm(false)}
-        isLoading={isLoading}
+        onCreateResume = {handleCreateNewResume,}
+        onCancel = {(,) => setShowNewResumeForm(false),}
+        isLoading = {isLoading,}
       />
     )
   }
@@ -110,7 +110,7 @@ export function ResumeWizard() {
         <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button 
-            onClick={() => setShowNewResumeForm(true)}
+            onClick = {(,) => setShowNewResumeForm(true),}
             variant="outline"
             size="sm"
             className="gap-2"
@@ -130,17 +130,17 @@ export function ResumeWizard() {
           
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <ResumeSteps 
-              steps={RESUME_STEPS} 
-              activeTab={activeTab} 
-              onChange={setActiveTab} 
+              steps = {RESUME_STEPS,}
+              activeTab = {activeTab,}
+              onChange = {setActiveTab,}
             />
             
             {resume && (
               <ResumeStepContent 
-                activeTab={activeTab}
-                resume={resume as Resume}
-                onNextStep={nextStep}
-                onPrevStep={prevStep}
+                activeTab = {activeTab,}
+                resume = {resume as Resume,}
+                onNextStep = {nextStep,}
+                onPrevStep = {prevStep,}
               />
             )}
           </Tabs>

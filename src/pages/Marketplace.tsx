@@ -1,27 +1,25 @@
-import { useRouter } from 'next/router',
-import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',
-import ProductCard from '@/components/ProductCard',
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react',
-import { useTranslation } from 'react-i18next',
-import { motion, AnimatePresence } from 'framer-motion',
-import { AuthModal } from '@/components/auth/AuthModal',
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react'
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { ErrorState } from '@/components/jobs/applications/ErrorState',
-import { ProductsEmptyState } from '@/components/marketplace/EmptyState',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { ProductListing } from '@/types/listings',
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { useToast } from '@/hooks/use-toast',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { MARKETPLACE_LISTINGS } from '@/data/listingData',
-import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-
+import { useRouter } from 'next/router';
+import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
+import ProductCard from '@/components/ProductCard';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
+import { AuthModal } from '@/components/auth/AuthModal';
+import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { ErrorState } from '@/components/jobs/applications/ErrorState';
+import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { ProductListing } from '@/types/listings';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 /**
  * Marketplace component props
  */
@@ -30,7 +28,7 @@ export interface MarketplaceProps {
 }
 
 // Market insights component
-const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
+const MarketInsights: React.FC<{ stats: any }> = ({ stats },) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -62,24 +60,24 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 // Filter and sort controls
 const FilterControls: React.FC<{
   sortBy: string,
-  setSortBy: (sort: string) => void,
+  setSortBy: (sort: string,) => void,
   filterCategory: string,
-  setFilterCategory: (category: string) => void,
+  setFilterCategory: (category: string,) => void,
   categories: string[],
   priceRange: [number, number],
-  setPriceRange: (range: [number, number]) => void,
+  setPriceRange: (range: [number, number],) => void,
   minAiScore: number,
-  setMinAiScore: (score: number) => void,
+  setMinAiScore: (score: number,) => void,
   minRating: number,
-  setMinRating: (rating: number) => void,
+  setMinRating: (rating: number,) => void,
   filterAvailability: string,
-  setFilterAvailability: (value: string) => void,
+  setFilterAvailability: (value: string,) => void,
   availabilityOptions: string[],
   filterLocation: string,
-  setFilterLocation: (value: string) => void,
+  setFilterLocation: (value: string,) => void,
   locations: string[],
   showRecommended: boolean,
-  setShowRecommended: (show: boolean) => void,
+  setShowRecommended: (show: boolean,) => void,
   loading: boolean
 }> = ({
   sortBy,
@@ -102,14 +100,14 @@ const FilterControls: React.FC<{
   showRecommended,
   setShowRecommended,
   loading
-}) => (
+},) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
       <select
-        value={filterCategory}
-        onChange={(e) => setFilterCategory(e.target.value)}
+        value = {filterCategory,}
+        onChange = {(e,) => setFilterCategory(e.target.value),}
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Categories</option>
@@ -122,8 +120,8 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
       <select
-        value={sortBy}
-        onChange={(e) => setSortBy(e.target.value)}
+        value = {sortBy,}
+        onChange = {(e,) => setSortBy(e.target.value),}
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="newest">Newest First</option>
@@ -139,19 +137,19 @@ const FilterControls: React.FC<{
       <span className="text-sm">$</span>
       <input
         type="number"
-        value={priceRange[0]}
-        min={MIN_PRICE}
-        max={priceRange[1]}
-        onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
+        value = {priceRange[0],}
+        min = {MIN_PRICE,}
+        max = {priceRange[1],}
+        onChange = {(e,) => setPriceRange([Number(e.target.value), priceRange[1]]),}
         className="w-20 bg-background border border-border px-2 py-1 rounded"
       />
       <span>-</span>
       <input
         type="number"
-        value={priceRange[1]}
-        min={priceRange[0]}
-        max={MAX_PRICE}
-        onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
+        value = {priceRange[1],}
+        min = {priceRange[0],}
+        max = {MAX_PRICE,}
+        onChange = {(e,) => setPriceRange([priceRange[0], Number(e.target.value)]),}
         className="w-20 bg-background border border-border px-2 py-1 rounded"
       />
     </div>
@@ -160,10 +158,10 @@ const FilterControls: React.FC<{
       <span className="text-sm">AI ≥</span>
       <input
         type="number"
-        value={minAiScore}
-        min={0}
-        max={100}
-        onChange={(e) => setMinAiScore(Number(e.target.value))}
+        value = {minAiScore,}
+        min = {0,}
+        max = {100,}
+        onChange = {(e,) => setMinAiScore(Number(e.target.value)),}
         className="w-16 bg-background border border-border px-2 py-1 rounded"
       />
     </div>
@@ -171,8 +169,8 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <span className="text-sm">Rating ≥</span>
       <select
-        value={minRating}
-        onChange={(e) => setMinRating(Number(e.target.value))}
+        value = {minRating,}
+        onChange = {(e,) => setMinRating(Number(e.target.value)),}
         className="bg-background border border-border px-2 py-1 rounded"
       >
         <option value={0}>Any</option>
@@ -186,8 +184,8 @@ const FilterControls: React.FC<{
 
     <div className="flex items-center gap-2">
       <select
-        value={filterAvailability}
-        onChange={(e) => setFilterAvailability(e.target.value)}
+        value = {filterAvailability,}
+        onChange = {(e,) => setFilterAvailability(e.target.value),}
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">Any Availability</option>
@@ -199,8 +197,8 @@ const FilterControls: React.FC<{
 
     <div className="flex items-center gap-2">
       <select
-        value={filterLocation}
-        onChange={(e) => setFilterLocation(e.target.value)}
+        value = {filterLocation,}
+        onChange = {(e,) => setFilterLocation(e.target.value),}
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Locations</option>
@@ -211,9 +209,9 @@ const FilterControls: React.FC<{
     </div>
 
     <Button
-      variant={showRecommended ? "default" : "outline"}
+      variant = {showRecommended ? "default" : "outline",}
       size="sm"
-      onClick={() => setShowRecommended(!showRecommended)}
+      onClick = {() => setShowRecommended(!showRecommended),}
       className="flex items-center gap-2"
     >
       <Sparkles className="h-4 w-4" />
@@ -247,7 +245,7 @@ export default function Marketplace() {
   const { handleApiError, retryQuery } = useApiErrorHandling(),
 
   // Handle Add Product button with authentication check
-  const handleAddProduct = useCallback(() => {
+  const handleAddProduct = useCallback((,) => {
     if (!isAuthenticated) {
       setIsAuthModalOpen(true), // Use the new auth modal
       return
@@ -267,8 +265,8 @@ export default function Marketplace() {
   }, [isAuthenticated, user, router, toast]),
 
   // Fetch function for infinite scroll with AI product generation
-  const fetchProducts = useCallback(async (page: number, limit: number) => {
-    await new Promise((resolve) => setTimeout(resolve, 200)),
+  const fetchProducts = useCallback(async (page: number, limit: number,) => {
+    await new Promise((resolve,) => setTimeout(resolve, 200)),
 
     try {
       // Use static marketplace listings data for now (compatible with ProductListing type)
@@ -286,16 +284,16 @@ export default function Marketplace() {
       
       // Apply category filter from params
       if (filterCategory) {
-        items = items.filter((p) => p.category.toLowerCase() === filterCategory.toLowerCase())
+        items = items.filter((p,) => p.category.toLowerCase() === filterCategory.toLowerCase())
       }
       
       logInfo('Marketplace.tsx: Raw items from static data before filtering/sorting:', { data: JSON.stringify(items.slice(0, 5), null, 2) }),
 
       if (showRecommended) {
-        items = items.filter((p) => p.rating != null && p.rating >= 4.3)
+        items = items.filter((p,) => p.rating != null && p.rating >= 4.3)
       }
 
-      items = items.filter((p) => {
+      items = items.filter((p,) => {
         const price = p.price || 0,
         const ai = p.aiScore || 0,
         const rating = p.rating || 0,
@@ -311,7 +309,7 @@ export default function Marketplace() {
         )
       }),
 
-      items.sort((a, b) => {
+      items.sort((a, b,) => {
         switch (sortBy) {
           case 'price-low':
             return (a.price || 0) - (b.price || 0),
@@ -382,7 +380,7 @@ export default function Marketplace() {
   } = useInfiniteScrollPagination(fetchProducts, 16), // 16 items per page
 
   // Effect to refresh data when filters change
-  useEffect(() => {
+  useEffect((,) => {
     if (firstRenderRef.current) {
       firstRenderRef.current = false,
       // On initial mount, useInfiniteScrollPagination handles the first load.
@@ -397,7 +395,7 @@ export default function Marketplace() {
   }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, refresh, toast]), // Added all filter dependencies
 
   // Effect to explicitly refresh data when the component mounts or re-mounts
-  useEffect(() => {
+  useEffect((,) => {
     logInfo('Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.'),
     // We call refresh directly to ensure data is re-fetched.
     // The useInfiniteScrollPagination hook's internal logic will manage its state.
@@ -407,7 +405,7 @@ export default function Marketplace() {
   }, [refresh]), // `refresh` is a dependency. Ensure it's stable.
 
   // New effect to scroll to top AFTER products have been updated and refresh flag is set
-  useEffect(() => {
+  useEffect((,) => {
     if (isRefreshingAfterFilterChange.current && !loading) { // Check flag and ensure loading is false
       logInfo('Refresh complete and products updated, scrolling to top.'),
       scrollToTop(),
@@ -418,30 +416,30 @@ export default function Marketplace() {
   }, [products, loading, scrollToTop, toast]), // Depends on products and loading state
 
   // Calculate market stats
-  const marketStats = useMemo(() => {
+  const marketStats = useMemo((,) => {
     if (products.length === 0) return null,
     return {
-      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
-      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
+      averagePrice: products.reduce((sum, p,) => sum + (p.price || 0), 0) / products.length,
+      averageRating: products.reduce((sum, p,) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
       categoriesCount: Array.from(new Set(products.map(p => p.category))).length
     }
   }, [products]),
 
   // Get unique categories and other filter values
-  const categories = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category)))
+  const categories = useMemo((,) => {
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p,) => p.category)))
   }, []),
-  const locations = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean)))
+  const locations = useMemo((,) => {
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p,) => p.location).filter(Boolean)))
   }, []).filter(Boolean) as string[],
-  const availabilityOptions = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean)))
+  const availabilityOptions = useMemo((,) => {
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p,) => p.availability).filter(Boolean)))
   }, []).filter(Boolean) as string[],
 
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false),
-  useEffect(() => {
+  useEffect((,) => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800)
     },
@@ -466,7 +464,7 @@ export default function Marketplace() {
           </p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {Array.from({ length: 12 }).map((_, i) => (
+          {Array.from({ length: 12 }).map((_, i,) => (
             <SkeletonCard key={i} />
           ))}
         </div>
@@ -514,8 +512,8 @@ export default function Marketplace() {
   return (
     <div className="container py-8">
       <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
+        isOpen = {isAuthModalOpen,}
+        onClose = {(,) => setIsAuthModalOpen(false),}
         returnUrl={router.asPath} // Pass current path for better UX on return
       />
       {/* Header */}
@@ -550,26 +548,26 @@ export default function Marketplace() {
         transition={{ delay: 0.3 }}
       >
         <FilterControls
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          categories={categories}
-          priceRange={priceRange}
-          setPriceRange={setPriceRange}
-          minAiScore={minAiScore}
-          setMinAiScore={setMinAiScore}
-          minRating={minRating}
-          setMinRating={setMinRating}
-          filterAvailability={filterAvailability}
-          setFilterAvailability={setFilterAvailability}
-          availabilityOptions={availabilityOptions.filter(Boolean) as string[]}
-          filterLocation={filterLocation}
-          setFilterLocation={setFilterLocation}
-          locations={locations}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
+          sortBy = {sortBy,}
+          setSortBy = {setSortBy,}
+          filterCategory = {filterCategory,}
+          setFilterCategory = {setFilterCategory,}
+          categories = {categories,}
+          priceRange = {priceRange,}
+          setPriceRange = {setPriceRange,}
+          minAiScore = {minAiScore,}
+          setMinAiScore = {setMinAiScore,}
+          minRating = {minRating,}
+          setMinRating = {setMinRating,}
+          filterAvailability = {filterAvailability,}
+          setFilterAvailability = {setFilterAvailability,}
+          availabilityOptions = {availabilityOptions.filter(Boolean) as string[],}
+          filterLocation = {filterLocation,}
+          setFilterLocation = {setFilterLocation,}
+          locations = {locations,}
+          showRecommended = {showRecommended,}
+          setShowRecommended = {setShowRecommended,}
+          loading = {isFetching,}
         />
       </motion.div>
 
@@ -581,10 +579,10 @@ export default function Marketplace() {
         transition={{ delay: 0.4 }}
       >
         <AnimatePresence mode="popLayout">
-          {products.map((product, index) => (
+          {products.map((product, index,) => (
             <motion.div
-              key={product.id}
-              ref={index === products.length - 1 ? lastElementRef : null}
+              key = {product.id,}
+              ref = {index === products.length - 1 ? lastElementRef : null,}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -610,11 +608,11 @@ export default function Marketplace() {
                   stock: product.stock,
                   in_stock: (product.stock || 0) > 0
                 }}
-                onBuy={async () => {
+                onBuy = {async () => {
                   if (!isAuthenticated) {
                     setIsAuthModalOpen(true),
                     return, // Stop further execution
-                  }
+                  ,}
                   try {
                     await router.push(`/checkout/${product.id}`)
                   } catch (error) {
@@ -659,7 +657,7 @@ export default function Marketplace() {
           animate={{ opacity: 1 }}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }).map((_, i) => (
+            {Array.from({ length: 4 }).map((_, i,) => (
               <SkeletonCard key={`loading-${i}`} />
             ))}
           </div>
@@ -686,7 +684,7 @@ export default function Marketplace() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
-            onClick={scrollToTop}
+            onClick = {scrollToTop,}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}

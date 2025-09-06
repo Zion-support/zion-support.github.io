@@ -1,21 +1,21 @@
 
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { ChatWidget } from "@/components/ChatWidget",
-import { useRouter } from "next/router",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import Skeleton from "@/components/ui/skeleton",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import Link from 'next/link',
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { ProfileContact } from "@/components/profile/ProfileContact",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { useCurrency } from '@/hooks/useCurrency',
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { ChatWidget } from "@/components/ChatWidget";
+import { useRouter } from "next/router";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import Link from 'next/link';
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
+import { toast } from "@/hooks/use-toast";
+import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { ProfileContact } from "@/components/profile/ProfileContact";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -66,8 +66,8 @@ export default function ListingDetail() {
                 <div className="aspect-[16/9] w-full relative">
                   {listing.images && listing.images.length > 0 ? (
                     <ImageWithRetry
-                      src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
-                      alt={listing.title}
+                      src = {listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg",}
+                      alt = {listing.title,}
                       className="object-cover"
                       fallbackSrc="/placeholder.svg"
                     />
@@ -80,17 +80,17 @@ export default function ListingDetail() {
                 
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, index) => (
+                    {listing.images.map((image, index,) => (
                       <div 
-                        key={index}
-                        onClick={() => setSelectedImageIndex(index)}
-                        className={cn(
+                        key = {index,}
+                        onClick = {(,) => setSelectedImageIndex(index),}
+                        className = {cn(
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
-                        )}
+                        ),}
                       >
                         <ImageWithRetry
-                          src={image}
+                          src = {image,}
                           alt={`${listing.title} - image ${index + 1}`}
                           className="object-cover"
                           fallbackSrc="/placeholder.svg"
@@ -135,7 +135,7 @@ export default function ListingDetail() {
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
                   <div className="flex flex-wrap gap-2">
-                    {listing.tags.map((tag, i) => (
+                    {listing.tags.map((tag, i,) => (
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
                         {tag}
                       </Badge>
@@ -164,13 +164,13 @@ export default function ListingDetail() {
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map((_, i,) => (
                         <Star
-                          key={i}
-                          className={cn(
+                          key = {i,}
+                          className = {cn(
                             "h-5 w-5",
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
-                          )}
+                          ),}
                         />
                       ))}
                     </div>
@@ -197,12 +197,12 @@ export default function ListingDetail() {
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
                     <PaymentButton
-                      amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
+                      amount = {listing.price,}
+                      serviceId = {listing.id,}
+                      providerId = {listing.author.id,}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                      onPaymentInitiated={() => {
+                      onPaymentInitiated={(,) => {
                         toast({
                           title: "Payment Processing",
                           description: "Redirecting to secure checkout..."
@@ -211,8 +211,8 @@ export default function ListingDetail() {
                     />
                   ) : (
                     <Button 
-                      onClick={handleContact}
-                      disabled={isLoading}
+                      onClick = {handleContact,}
+                      disabled = {isLoading,}
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                     >
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -221,8 +221,8 @@ export default function ListingDetail() {
                   
                   <Button 
                     variant="outline" 
-                    onClick={handleContact}
-                    disabled={isLoading}
+                    onClick = {handleContact,}
+                    disabled = {isLoading,}
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />
@@ -237,10 +237,10 @@ export default function ListingDetail() {
                     {listing.author.avatarUrl ? (
                       <div className="relative h-12 w-12 rounded-full overflow-hidden">
                         <ImageWithRetry
-                          src={listing.author.avatarUrl}
-                          alt={listing.author.name}
+                          src = {listing.author.avatarUrl,}
+                          alt = {listing.author.name,}
                           className="object-cover"
-                          onError={(e) => {
+                          onError={(e,) => {
                             const target = e.target as HTMLImageElement,
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
@@ -276,10 +276,10 @@ export default function ListingDetail() {
       </div>
 
       <ChatWidget
-        roomId={listing.id}
-        recipientId={listing.author.id}
-        isOpen={isChatOpen}
-        onClose={() => setIsChatOpen(false)}
+        roomId = {listing.id,}
+        recipientId = {listing.author.id,}
+        isOpen = {isChatOpen,}
+        onClose = {() => setIsChatOpen(false),}
       />
 
       {/* Contact Dialog */}
@@ -290,7 +290,7 @@ export default function ListingDetail() {
           </DialogHeader>
           <ProfileContact 
             email={listing.author.email} // TypeScript now knows this might be undefined
-            profileName={listing.author.name}
+            profileName = {listing.author.name,}
             profileType="service"
           />
         </DialogContent>

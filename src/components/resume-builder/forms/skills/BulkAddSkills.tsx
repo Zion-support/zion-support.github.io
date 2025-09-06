@@ -1,13 +1,13 @@
 
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Loader2, Sparkles } from 'lucide-react'
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',
-import { useResume } from '@/hooks/useResume',
-import { BulkAddSkillsProps } from './types',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { Textarea } from '@/components/ui/textarea',
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Loader2, Sparkles } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+import { useResume } from '@/hooks/useResume';
+import { BulkAddSkillsProps } from './types';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Textarea } from '@/components/ui/textarea';
+export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps,) => {
   const [bulkSkills, setBulkSkills] = useState(''),
   const [error, setError] = useState<string | null>(null),
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
@@ -66,14 +66,14 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           <Textarea 
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
-            value={bulkSkills}
-            onChange={(e) => setBulkSkills(e.target.value)}
+            value = {bulkSkills,}
+            onChange = {(e,) => setBulkSkills(e.target.value),}
           />
         </div>
 
         <Button 
-          onClick={handleCategorizeSkills}
-          disabled={isEnhancing || !bulkSkills.trim()}
+          onClick = {handleCategorizeSkills,}
+          disabled = {isEnhancing || !bulkSkills.trim(),}
           className="gap-2"
         >
           {isEnhancing ? (

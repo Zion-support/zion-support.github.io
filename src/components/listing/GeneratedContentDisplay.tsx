@@ -1,10 +1,9 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -35,7 +34,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
-            {content.tags.map((tag, index) => (
+            {content.tags.map((tag, index,) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
               </Badge>
@@ -53,7 +52,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
-            {content.keyPoints.map((point, index) => (
+            {content.keyPoints.map((point, index,) => (
               <li key={index}>{point}</li>
             ))}
           </ul>
@@ -61,7 +60,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       </CardContent>
       <CardFooter>
         <Button
-          onClick={onApply}
+          onClick = {onApply,}
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -69,5 +68,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </Button>
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
+;

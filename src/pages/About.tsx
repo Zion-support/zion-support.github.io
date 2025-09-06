@@ -1,8 +1,8 @@
 
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { ContactSection } from "@/components/ContactSection",
-import Link from "next/link",
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { ContactSection } from "@/components/ContactSection";
+import Link from "next/link";
 export default function About() {
   const team = [
     {
@@ -176,7 +176,7 @@ export default function About() {
           <div className="content-section">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Company Timeline</h2>
             <ol className="relative border-l border-zion-blue-light pl-6 max-w-3xl mx-auto">
-              {timeline.map((event) => (
+              {timeline.map((event,) => (
                 <li key={event.year} className="mb-10 ml-4">
                   <span className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-zion-cyan" />
                   <time className="font-semibold text-white">{event.year}</time>
@@ -189,12 +189,12 @@ export default function About() {
           <div className="content-section text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Meet the Team</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              {team.map((member) => (
+              {team.map((member,) => (
                 <div key={member.name} className="text-center space-y-3">
                   <div className="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden">
                     <img
-                      src={member.image}
-                      alt={member.name}
+                      src = {member.image,}
+                      alt = {member.name,}
                       className="object-cover rounded-full"
                     />
                   </div>

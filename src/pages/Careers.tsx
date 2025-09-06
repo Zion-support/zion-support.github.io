@@ -1,10 +1,10 @@
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import Link from "next/link",
-import { CAREER_JOBS } from "@/data/careersJobs",
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
+import { CAREER_JOBS } from "@/data/careersJobs";
 export default function Careers() {
   const applyEmail = "careers@ziontechgroup.com",
   const jobs = CAREER_JOBS,
@@ -97,7 +97,7 @@ export default function Careers() {
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index,) => (
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
@@ -120,9 +120,9 @@ export default function Careers() {
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
               </TabsList>
               
-              {Object.entries(jobs).map(([department, jobList]) => (
+              {Object.entries(jobs).map(([department, jobList],) => (
                 <TabsContent key={department} value={department} className="space-y-6">
-                  {jobList.map((job, index) => (
+                  {jobList.map((job, index,) => (
                     <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors">
                       <CardContent className="p-6">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between">

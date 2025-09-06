@@ -1,15 +1,14 @@
 
-import React, { useMemo } from 'react',
-import { User } from 'lucide-react'
-import { Conversation } from '@/types/messaging',
-import { ConversationItem } from './ConversationItem',
-import { FixedSizeList as List, ListChildComponentProps } from 'react-window',
-
+import React, { useMemo } from 'react';
+import { User } from 'lucide-react';
+import { Conversation } from '@/types/messaging';
+import { ConversationItem } from './ConversationItem';
+import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
 interface ConversationsListProps {
   conversations: Conversation[],
   activeConversation: Conversation | null,
-  setActiveConversation: (conversation: Conversation) => void,
-  markAsRead: (conversationId: string) => Promise<void>
+  setActiveConversation: (conversation: Conversation,) => void,
+  markAsRead: (conversationId: string,) => Promise<void>
 }
 
 export function ConversationsList({
@@ -20,11 +19,11 @@ export function ConversationsList({
 }: ConversationsListProps) {
   const itemSize = 80,
 
-  const listHeight = useMemo(() => {
+  const listHeight = useMemo((,) => {
     return Math.min(conversations.length * itemSize, 600)
   }, [conversations.length]),
 
-  const Row = ({ index, style }: ListChildComponentProps) => {
+  const Row = ({ index, style }: ListChildComponentProps,) => {
     const conversation = conversations[index],
     
     if (!conversation) {
@@ -34,9 +33,9 @@ export function ConversationsList({
     return (
       <div style={style}>
         <ConversationItem
-          conversation={conversation}
-          isActive={activeConversation?.id === conversation.id}
-          onClick={() => {
+          conversation = {conversation,}
+          isActive = {activeConversation?.id === conversation.id,}
+          onClick={(,) => {
             setActiveConversation(conversation),
             markAsRead(conversation.id)
           }}
@@ -61,9 +60,9 @@ export function ConversationsList({
         </div>
       ) : (
         <List
-          height={listHeight}
-          itemCount={conversations.length}
-          itemSize={itemSize}
+          height = {listHeight,}
+          itemCount = {conversations.length,}
+          itemSize = {itemSize,}
           width="100%"
         >
           {Row}

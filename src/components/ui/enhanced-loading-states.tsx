@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Card, CardContent } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { cn } from '@/lib/utils',
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
@@ -20,7 +20,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   className,
   showText = false,
   text = 'Loading...'
-}) => {
+},) => {
   const sizeClasses = {
     sm: 'h-4 w-4',
     md: 'h-6 w-6',
@@ -57,17 +57,17 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   currentStep = 0,
   showProgress = true,
   onComplete
-}) => {
+},) => {
   const [activeStep, setActiveStep] = useState(0),
   const progress = ((activeStep + 1) / steps.length) * 100,
 
-  useEffect(() => {
+  useEffect((,) => {
     if (currentStep !== undefined) {
       setActiveStep(currentStep)
     }
   }, [currentStep]),
 
-  useEffect(() => {
+  useEffect((,) => {
     if (activeStep === steps.length - 1 && onComplete) {
       setTimeout(onComplete, 500)
     }
@@ -87,13 +87,13 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
       )}
       
       <div className="space-y-2">
-        {steps.map((step, index) => (
+        {steps.map((step, index,) => (
           <motion.div
-            key={step.id}
-            className={cn(
+            key = {step.id,}
+            className = {cn(
               'flex items-center gap-3 p-2 rounded-md',
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
-            )}
+            ),}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -128,7 +128,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   variant = 'rectangular',
   animation = 'pulse',
   lines = 1
-}) => {
+},) => {
   const baseClasses = 'bg-muted rounded',
   
   const variantClasses = {
@@ -147,16 +147,16 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   if (variant === 'text' && lines > 1) {
     return (
       <div className="space-y-2">
-        {Array.from({ length: lines }).map((_, i) => (
+        {Array.from({ length: lines }).map((_, i,) => (
           <div
-            key={i}
-            className={cn(
+            key = {i,}
+            className = {cn(
               baseClasses,
               variantClasses.text,
               animationClasses[animation],
               i === lines - 1 ? 'w-3/4' : 'w-full',
               className
-            )}
+            ),}
           />
         ))}
       </div>
@@ -165,12 +165,12 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
   return (
     <div
-      className={cn(
+      className = {cn(
         baseClasses,
         variantClasses[variant],
         animationClasses[animation],
         className
-      )}
+      ),}
     />
   )
 },
@@ -208,10 +208,10 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
   maxRetries = 3,
   onRetry,
   className
-}) => {
+},) => {
   const [isOnline, setIsOnline] = useState(true),
 
-  useEffect(() => {
+  useEffect((,) => {
     const handleOnline = () => setIsOnline(true),
     const handleOffline = () => setIsOnline(false),
 
@@ -340,7 +340,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   columns = 4,
   variant = 'card',
   className
-}) => {
+},) => {
   const gridClasses = {
     card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
     list: 'space-y-4',
@@ -355,7 +355,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 
   return (
     <div className={cn(gridClasses[variant], className)}>
-      {Array.from({ length: count }).map((_, i) => (
+      {Array.from({ length: count }).map((_, i,) => (
         <Card key={i} className="animate-pulse">
           <CardContent className={itemClasses[variant]}>
             {variant === 'card' && (
@@ -410,8 +410,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   loadTime,
   itemCount,
   className
-}) => {
-  const getPerformanceColor = (time: number) => {
+},) => {
+  const getPerformanceColor = (time: number,) => {
     if (time < 100) return 'text-green-500',
     if (time < 300) return 'text-yellow-500',
     return 'text-red-500'

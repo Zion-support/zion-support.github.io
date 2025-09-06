@@ -3,7 +3,7 @@
  * Handles automatic retry, cache clearing, and graceful degradation
  */
 
-import { logErrorToProduction } from './productionLogger',
+import { logErrorToProduction } from './productionLogger';
 interface ChunkErrorStats {
   errorCount: number,
   lastErrorTime: number,
@@ -25,12 +25,12 @@ class ChunkErrorHandler {
     if (typeof window === 'undefined') return,
 
     // Handle webpack chunk loading errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', (event,) => {
       this.handleScriptError(event)
     }),
 
     // Handle unhandled promise rejections (async chunk loading)
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', (event,) => {
       this.handlePromiseRejection(event)
     })
   }
@@ -252,7 +252,7 @@ class ChunkErrorHandler {
 
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
-    this.clearCaches().then(() => {
+    this.clearCaches().then((,) => {
       this.reloadPage()
     })
   }

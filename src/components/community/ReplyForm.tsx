@@ -1,8 +1,8 @@
 
-import { useState } from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
+import { useState } from "react";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
   FormControl,
@@ -10,10 +10,9 @@ import {
   FormItem,
   FormMessage
 } from "@/components/ui/form",
-import { Card, CardContent } from "@/components/ui/card",
-
+import { Card, CardContent } from "@/components/ui/card";
 interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>,
+  onSubmit: (content: string,) => Promise<void>,
   parentId?: string
 }
 
@@ -21,7 +20,7 @@ interface ReplyFormValues {
   content: string
 }
 
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps,) => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   
   const form = useForm<ReplyFormValues>({
@@ -30,7 +29,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
     }
   }),
 
-  const handleSubmit = async (values: ReplyFormValues) => {
+  const handleSubmit = async (values: ReplyFormValues,) => {
     setIsSubmitting(true),
     try {
       await onSubmit(values.content),
@@ -46,9 +45,9 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="content"
-              render={({ field }: { field: ControllerRenderProps<ReplyFormValues, "content"> }) => (
+              render={({ field }: { field: ControllerRenderProps<ReplyFormValues, "content"> },) => (
                 <FormItem>
                   <FormControl>
                     <Textarea

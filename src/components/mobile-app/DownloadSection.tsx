@@ -1,8 +1,8 @@
 
-import React from "react",
-import { QrCodeIcon } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons",
-import { logInfo } from '@/utils/productionLogger',
+import React from "react";
+import { QrCodeIcon } from 'lucide-react';
+import { AppStoreButtons } from "./AppStoreButtons";
+import { logInfo } from '@/utils/productionLogger';
 export const DownloadSection: React.FC = () => {
 
   // These would typically come from environment variables or a config
@@ -22,10 +22,10 @@ export const DownloadSection: React.FC = () => {
               
               <AppStoreButtons 
                 className="mb-8" 
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => logInfo("App Store button clicked")}
-                onGooglePlayClick={() => logInfo("Google Play button clicked")}
+                appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
+                onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
+                onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
               />
               
               <div className="text-sm text-gray-400">

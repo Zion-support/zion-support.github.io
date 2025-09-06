@@ -1,10 +1,10 @@
 
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Upload, Trash2, Plus } from 'lucide-react'
-import { AppPlatform } from "./MetadataManager",
-import { toast } from "sonner",
+import React, { useState, useRef } from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Upload, Trash2, Plus } from 'lucide-react';
+import { AppPlatform } from "./MetadataManager";
+import { toast } from "sonner";
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
@@ -15,18 +15,18 @@ type Screenshot = {
   file: File
 },
 
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform },) => {
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]),
   const [isDragging, setIsDragging] = useState(false),
   const fileInputRef = useRef<HTMLInputElement>(null),
   
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>,) => {
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))
     }
   },
   
-  const addScreenshots = (files: File[]) => {
+  const addScreenshots = (files: File[],) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
@@ -59,7 +59,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   },
   
-  const removeScreenshot = (id: string) => {
+  const removeScreenshot = (id: string,) => {
     setScreenshots(prev => {
       const filtered = prev.filter(screenshot => screenshot.id !== id),
       
@@ -73,7 +73,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     })
   },
   
-  const handleDragOver = (e: React.DragEvent) => {
+  const handleDragOver = (e: React.DragEvent,) => {
     e.preventDefault(),
     setIsDragging(true)
   },
@@ -82,7 +82,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     setIsDragging(false)
   },
   
-  const handleDrop = (e: React.DragEvent) => {
+  const handleDrop = (e: React.DragEvent,) => {
     e.preventDefault(),
     setIsDragging(false),
     
@@ -103,23 +103,23 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10" 
               : "border-zion-purple/30"
           }`}
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-          onDrop={handleDrop}
+          onDragOver = {handleDragOver,}
+          onDragLeave = {handleDragLeave,}
+          onDrop = {handleDrop,}
         >
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
-            ref={fileInputRef}
+            ref = {fileInputRef,}
             type="file"
             multiple
             accept="image/*"
-            onChange={handleFileSelect}
+            onChange = {handleFileSelect,}
             className="hidden"
           />
           <Button 
             variant="outline" 
-            onClick={() => fileInputRef.current?.click()}
+            onClick = {(,) => fileInputRef.current?.click(),}
             className="mt-2"
           >
             <Plus className="mr-2 h-4 w-4" />
@@ -135,16 +135,16 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         </div>
         
         <div className="grid grid-cols-2 gap-3">
-          {screenshots.map((screenshot) => (
+          {screenshots.map((screenshot,) => (
             <div key={screenshot.id} className="relative group">
               <img
-                src={screenshot.url}
+                src = {screenshot.url,}
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
                 loading="lazy"
               />
               <button
-                onClick={() => removeScreenshot(screenshot.id)}
+                onClick = {(,) => removeScreenshot(screenshot.id),}
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 aria-label="Remove screenshot"
               >

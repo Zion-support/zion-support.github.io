@@ -1,19 +1,18 @@
 
-import { useState } from 'react',
-import { useLocalStorage } from '@/hooks',
-import { Header } from '@/components/Header',
-import { SEO } from '@/components/SEO',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Wallet, Database, Save } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Separator } from '@/components/ui/separator',
-import { Switch } from '@/components/ui/switch',
-import { Label } from '@/components/ui/label',
-import { toast } from 'sonner',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
+import { useState } from 'react';
+import { useLocalStorage } from '@/hooks';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Wallet, Database, Save } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import { toast } from 'sonner';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 export default function AccountSettings() {
 
   const { user } = useAuth(),
@@ -26,7 +25,7 @@ export default function AccountSettings() {
     setIsSubmitting(true),
 
     // Simulate API call
-    setTimeout(() => {
+    setTimeout((,) => {
       try {
         setDisplayWeb3(displayWeb3),
         setDidHandle(didHandle),
@@ -97,7 +96,7 @@ export default function AccountSettings() {
                 <Label htmlFor="email">Email Address</Label>
                 <Input
                   id="email"
-                  value={user?.email || ''}
+                  value = {user?.email || '',}
                   disabled
                   className="bg-gray-100"
                 />
@@ -108,13 +107,13 @@ export default function AccountSettings() {
                 <div className="flex gap-2">
                   <Input
                     id="didHandle"
-                    value={didHandle}
-                    onChange={(e) => setDidHandle(e.target.value)}
+                    value = {didHandle,}
+                    onChange = {(e,) => setDidHandle(e.target.value),}
                     placeholder="ENS / Lens / Ceramic / Farcaster"
                   />
                   <Button 
                     variant="outline" 
-                    onClick={handleConnectWallet}
+                    onClick = {handleConnectWallet,}
                     type="button"
                     className="flex items-center gap-1"
                   >
@@ -134,8 +133,8 @@ export default function AccountSettings() {
                 </div>
                 <Switch
                   id="displayWeb3"
-                  checked={displayWeb3}
-                  onCheckedChange={setDisplayWeb3}
+                  checked = {displayWeb3,}
+                  onCheckedChange = {setDisplayWeb3,}
                 />
               </div>
               
@@ -153,8 +152,8 @@ export default function AccountSettings() {
                 </div>
                 <Switch
                   id="backup"
-                  checked={enableBackup}
-                  onCheckedChange={setEnableBackup}
+                  checked = {enableBackup,}
+                  onCheckedChange = {setEnableBackup,}
                 />
               </div>
               
@@ -165,8 +164,8 @@ export default function AccountSettings() {
               )}
               
               <Button 
-                onClick={handleSave}
-                disabled={isSubmitting}
+                onClick = {handleSave,}
+                disabled = {isSubmitting,}
                 className="w-full"
               >
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
@@ -259,7 +258,7 @@ export default function AccountSettings() {
                 <Button 
                   variant="outline" 
                   className="w-full"
-                  disabled={!enableBackup}
+                  disabled = {!enableBackup,}
                 >
                   Restore Profile from Backup
                 </Button>

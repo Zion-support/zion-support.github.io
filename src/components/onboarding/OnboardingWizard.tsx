@@ -1,11 +1,11 @@
 
-import { useState, useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
-import { cn } from '@/lib/utils',
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
+import { cn } from '@/lib/utils';
 interface WizardStep {
   title: string,
   description: string,
@@ -144,17 +144,17 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <div className="flex items-center mb-6">
           {/* Step dots */}
           <div className="flex items-center justify-center flex-1">
-            {steps.map((_, index) => (
+            {steps.map((_, index,) => (
               <div
-                key={index}
-                className={cn(
+                key = {index,}
+                className = {cn(
                   "h-2 w-2 rounded-full mx-1",
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
                     ? "bg-zion-cyan"
                     : "bg-zion-blue-light"
-                )}
+                ),}
               />
             ))}
           </div>
@@ -171,7 +171,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardFooter className="flex flex-col space-y-2">
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
-          onClick={handleAction}
+          onClick = {handleAction,}
         >
           {steps[currentStep]?.action.text}
         </Button>
@@ -180,7 +180,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
           <Button
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
-            onClick={handleSkip}
+            onClick = {handleSkip,}
           >
             {steps[currentStep]?.skipText}
           </Button>
@@ -189,3 +189,4 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     </Card>
   )
 }
+;

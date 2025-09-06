@@ -1,7 +1,7 @@
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from 'lucide-react'
-import Image from "next/image",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Server, Clock, MapPin } from 'lucide-react';
+import Image from "next/image";
 interface ServiceDetailsProps {
   country: string
 }
@@ -79,7 +79,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       <CardContent className="space-y-4">
         <div className="overflow-hidden rounded-lg mb-4 relative h-48">
           <Image
-            src={getRegionalImage(country)}
+            src = {getRegionalImage(country),}
             alt={`Datacenter in ${country}`}
             className="object-cover transform transition-transform duration-500 hover:scale-110"
             loading="lazy"
@@ -93,9 +93,9 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
               Service Locations
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-              {datacenters.map((dc, idx) => (
+              {datacenters.map((dc, idx,) => (
                 <div 
-                  key={idx} 
+                  key = {idx,}
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
                 >
                   {dc}

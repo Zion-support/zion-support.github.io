@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
-import { Loader2, Shield } from 'lucide-react'
-
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { Loader2, Shield } from 'lucide-react';
 interface AuthGuardProps {
   children: React.ReactNode,
   requireAuth?: boolean,
@@ -25,7 +24,7 @@ export function AuthGuard({
   const { user, isAuthenticated, isLoading } = useAuth(),
   const router = useRouter(),
 
-  useEffect(() => {
+  useEffect((,) => {
     // Don't redirect while auth is still loading
     if (isLoading) return,
 
@@ -135,7 +134,7 @@ export function useAuthGuard() {
     redirectTo?: string,
     showToast?: boolean,
     returnUrl?: string
-  }) => {
+  },) => {
     if (isLoading) return false,
 
     if (!isAuthenticated) {
@@ -159,7 +158,7 @@ export function useAuthGuard() {
   const requireRole = (roles: string[], options?: {
     showToast?: boolean,
     redirectTo?: string
-  }) => {
+  },) => {
     if (!requireAuth({ showToast: false })) return false,
 
     const userRoles = user?.role ? [user.role] : [],

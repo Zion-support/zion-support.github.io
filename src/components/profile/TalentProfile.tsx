@@ -1,18 +1,18 @@
 
-import React from "react",
-import { Handshake, MessageSquare, Star } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { HireNowCTA } from "./HireNowCTA",
-import { ProfileHero } from "./ProfileHero",
-import { ProfileSkills } from "./ProfileSkills",
-import { ProfileExperience } from "./ProfileExperience",
-import { ProfileProjects } from "./ProfileProjects",
-import { ProfileAvailability } from "./ProfileAvailability",
-import { ProfileContact } from "./ProfileContact",
-import { ProfileRatings } from "./ProfileRatings",
-import { TalentProfile as TalentProfileType } from "@/types/talent",
-import { useAuth } from "@/hooks/useAuth",
-import { Availability } from "@/types/profile",
+import React from "react";
+import { Handshake, MessageSquare, Star } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { HireNowCTA } from "./HireNowCTA";
+import { ProfileHero } from "./ProfileHero";
+import { ProfileSkills } from "./ProfileSkills";
+import { ProfileExperience } from "./ProfileExperience";
+import { ProfileProjects } from "./ProfileProjects";
+import { ProfileAvailability } from "./ProfileAvailability";
+import { ProfileContact } from "./ProfileContact";
+import { ProfileRatings } from "./ProfileRatings";
+import { TalentProfile as TalentProfileType } from "@/types/talent";
+import { useAuth } from "@/hooks/useAuth";
+import { Availability } from "@/types/profile";
 interface TalentProfileProps {
   profile: TalentProfileType,
   onRequestHire: () => void,
@@ -40,7 +40,7 @@ export function TalentProfile({
   })) || [],
   
   // Create proper projects array for ProfileProjects component
-  const projectsArray = profile.key_projects?.map((proj, i) => ({
+  const projectsArray = profile.key_projects?.map((proj, i,) => ({
     id: `project-${i}`,
     title: proj.title,
     description: proj.description,
@@ -51,12 +51,12 @@ export function TalentProfile({
     <div className="container mx-auto px-4 py-8">
       {/* Profile Header */}
       <ProfileHero
-        name={profile.full_name}
-        title={profile.professional_title}
-        avatarUrl={profile.profile_picture_url}
+        name = {profile.full_name,}
+        title = {profile.professional_title,}
+        avatarUrl = {profile.profile_picture_url,}
         profileType="talent"
-        rating={profile.average_rating}
-        reviewCount={profile.rating_count}
+        rating = {profile.average_rating,}
+        reviewCount = {profile.rating_count,}
       />
       
       {/* Main content area */}
@@ -66,8 +66,8 @@ export function TalentProfile({
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
           <ProfileContact 
-            email={profile.user_id}
-            profileName={profile.full_name}
+            email = {profile.user_id,}
+            profileName = {profile.full_name,}
             profileType="talent"
           />
         </div>
@@ -92,9 +92,9 @@ export function TalentProfile({
               Reviews & Ratings
             </h2>
             <ProfileRatings 
-              userId={profile.id}
-              averageRating={profile.average_rating}
-              ratingCount={profile.rating_count}
+              userId = {profile.id,}
+              averageRating = {profile.average_rating,}
+              ratingCount = {profile.rating_count,}
             />
           </div>
           
@@ -112,7 +112,7 @@ export function TalentProfile({
                   <Button 
                     size="lg" 
                     className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-                    onClick={onRequestHire}
+                    onClick = {onRequestHire,}
                   >
                     <Handshake className="mr-2 h-5 w-5" />
                     Hire Now
@@ -123,7 +123,7 @@ export function TalentProfile({
                       size="lg" 
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick={onMessageTalent}
+                      onClick = {onMessageTalent,}
                     >
                       <MessageSquare className="mr-2 h-5 w-5" />
                       Message

@@ -1,18 +1,18 @@
-import React, { useState } from 'react',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Switch } from '@/components/ui/switch',
-import { Button } from '@/components/ui/button',
-import { Label } from '@/components/ui/label',
-import { ShieldAlert, Info } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Switch } from '@/components/ui/switch';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { ShieldAlert, Info } from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
-import { toast } from '@/hooks/use-toast',
-import { supabase } from '@/integrations/supabase/client',
-import { useAuth } from '@/hooks/useAuth',
+import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
 export function FraudDetectionSettings() {
   const { user } = useAuth(),
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
@@ -69,8 +69,8 @@ export function FraudDetectionSettings() {
               <Switch
                 id="message-scanning"
                 aria-label="Message scanning"
-                checked={messageScanningEnabled}
-                onCheckedChange={setMessageScanningEnabled}
+                checked = {messageScanningEnabled,}
+                onCheckedChange = {setMessageScanningEnabled,}
               />
             </div>
             
@@ -86,8 +86,8 @@ export function FraudDetectionSettings() {
               <Switch
                 id="activity-monitoring"
                 aria-label="Activity monitoring"
-                checked={activityMonitoringEnabled}
-                onCheckedChange={setActivityMonitoringEnabled}
+                checked = {activityMonitoringEnabled,}
+                onCheckedChange = {setActivityMonitoringEnabled,}
               />
             </div>
             
@@ -103,8 +103,8 @@ export function FraudDetectionSettings() {
               <Switch
                 id="ai-analysis"
                 aria-label="AI analysis"
-                checked={aiAnalysisEnabled}
-                onCheckedChange={setAiAnalysisEnabled}
+                checked = {aiAnalysisEnabled,}
+                onCheckedChange = {setAiAnalysisEnabled,}
               />
             </div>
           </div>
@@ -136,8 +136,8 @@ export function FraudDetectionSettings() {
           
           <div className="pt-2">
             <Button 
-              onClick={handleSavePreferences}
-              disabled={isSaving}
+              onClick = {handleSavePreferences,}
+              disabled = {isSaving,}
               className="bg-zion-purple hover:bg-zion-purple-light"
             >
               {isSaving ? "Saving..." : "Save Preferences"}

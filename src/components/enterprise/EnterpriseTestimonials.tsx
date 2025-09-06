@@ -1,6 +1,6 @@
 
-import React from "react",
-import { Quote } from 'lucide-react'
+import React from "react";
+import { Quote } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -43,7 +43,7 @@ export function EnterpriseTestimonials() {
 
         <Carousel className="w-full">
           <CarouselContent>
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index,) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
@@ -53,8 +53,8 @@ export function EnterpriseTestimonials() {
                   <div className="flex items-center gap-4">
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
                       <img
-                        src={testimonial.image}
-                        alt={testimonial.author}
+                        src = {testimonial.image,}
+                        alt = {testimonial.author,}
                         className="h-full w-full object-cover"
                         loading="lazy"
                       />

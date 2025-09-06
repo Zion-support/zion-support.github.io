@@ -1,13 +1,13 @@
-import React from 'react',
-import FocusLock from 'react-focus-lock',
+import React from 'react';
+import FocusLock from 'react-focus-lock';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle} from '@/components/ui/dialog',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Form,
   FormField,
@@ -15,14 +15,14 @@ import {
   FormLabel,
   FormControl,
   FormMessage} from '@/components/ui/form',
-import { useForm, type Resolver } from 'react-hook-form',
-import { yupResolver } from '@hookform/resolvers/yup',
-import * as yup from 'yup',
-import { SendIcon, Mail } from 'lucide-react'
-import api from '@/services/apiClient',
-import { toast } from '@/hooks/use-toast',
-import { useAuth } from '@/hooks/useAuth',
-import { LoginModal } from '@/components/auth/LoginModal',
+import { useForm, type Resolver } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import { SendIcon, Mail } from 'lucide-react';
+import api from '@/services/apiClient';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { LoginModal } from '@/components/auth/LoginModal';
 interface ContactPublisherModalProps {
   isOpen: boolean,
   onClose: () => void,
@@ -86,7 +86,7 @@ export function ContactPublisherModal({
     }
   },
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent,) => {
     if (e.key === 'Escape') {
       e.stopPropagation(),
       onClose()
@@ -99,7 +99,7 @@ export function ContactPublisherModal({
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-          onKeyDown={handleKeyDown}
+          onKeyDown = {handleKeyDown,}
           aria-modal="true"
           aria-labelledby="contact-publisher-title"
         >
@@ -119,11 +119,11 @@ export function ContactPublisherModal({
           </div>
         )}
         <Form {...form}>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="subject"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
@@ -138,9 +138,9 @@ export function ContactPublisherModal({
               )}
             />
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="message"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
@@ -155,9 +155,9 @@ export function ContactPublisherModal({
               )}
             />
             <Button
-              onClick={handleSend}
+              onClick = {handleSend,}
               className="w-full"
-              disabled={!form.formState.isValid || isSubmitting}
+              disabled = {!form.formState.isValid || isSubmitting,}
             >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}

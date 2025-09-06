@@ -1,6 +1,6 @@
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   DropdownMenu,
   DropdownMenuContent,
@@ -12,11 +12,11 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',
 // Use the centralized icon wrapper to avoid missing icon issues
-import { FileText, ChevronDown, Loader2, Download } from 'lucide-react'
-import { Resume } from '@/types/resume',
-import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport',
-import { toast } from '@/hooks/use-toast',
-import { FontFamily } from '@/utils/pdf/fontConfig',
+import { FileText, ChevronDown, Loader2, Download } from 'lucide-react';
+import { Resume } from '@/types/resume';
+import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport';
+import { toast } from '@/hooks/use-toast';
+import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
@@ -75,7 +75,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         <Button 
           variant="outline" 
           className="gap-2"
-          disabled={isExporting}
+          disabled = {isExporting,}
         >
           {isExporting ? (
             <Loader2 className="h-4 w-4 animate-spin" />
@@ -91,14 +91,14 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         <DropdownMenuSeparator />
         
         <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
+        <DropdownMenuRadioGroup value={theme} onValueChange={(value,) => setTheme(value as 'light' | 'dark')}>
           <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
         
         <DropdownMenuSeparator />
         <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>
+        <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value,) => setFontFamily(value as FontFamily)}>
           <DropdownMenuRadioItem value="default">Default</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="montserrat">Montserrat</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="open-sans">Open Sans</DropdownMenuRadioItem>
@@ -107,8 +107,8 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         
         <DropdownMenuSeparator />
         <DropdownMenuCheckboxItem 
-          checked={includePortfolio}
-          onCheckedChange={setIncludePortfolio}
+          checked = {includePortfolio,}
+          onCheckedChange = {setIncludePortfolio,}
         >
           Include Portfolio Projects
         </DropdownMenuCheckboxItem>

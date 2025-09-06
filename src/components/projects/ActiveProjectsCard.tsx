@@ -1,17 +1,17 @@
 
-import { useEffect, useState } from "react",
-import Link from "next/link",
-import { BriefcaseIcon, Clock } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { useProjects } from "@/hooks/useProjects",
-import { Project } from "@/types/projects",
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { BriefcaseIcon, Clock } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
-  useEffect(() => {
+  useEffect((,) => {
     if (projects && !isLoading) {
       const active = projects.filter(p => 
         ['offer_acceptedin_progress'].includes(p.status)
@@ -76,8 +76,8 @@ export function ActiveProjectsCard() {
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
               <Badge 
-                variant={project.status === "in_progress" ? "default" : "outline"}
-                className={project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
+                variant = {project.status === "in_progress" ? "default" : "outline",}
+                className = {project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}
               >
                 {project.status === "offer_accepted" ? "Starting" : "In Progress"}
               </Badge>

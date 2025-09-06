@@ -1,7 +1,7 @@
-import { FooterNewsletter } from "@/components/FooterNewsletter",
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
 import Link from "next/link", // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget",
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
     return fallback
@@ -44,7 +44,7 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href={TWITTER_URL}
+                href = {TWITTER_URL,}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
@@ -55,7 +55,7 @@ export function Footer() {
                 <span className="sr-only">Twitter</span>
               </a>
               <a
-                href={LINKEDIN_URL}
+                href = {LINKEDIN_URL,}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
@@ -66,7 +66,7 @@ export function Footer() {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a
-                href={FACEBOOK_URL}
+                href = {FACEBOOK_URL,}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
@@ -77,7 +77,7 @@ export function Footer() {
                 <span className="sr-only">Facebook</span>
               </a>
               <a
-                href={INSTAGRAM_URL}
+                href = {INSTAGRAM_URL,}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
@@ -88,7 +88,7 @@ export function Footer() {
                 <span className="sr-only">Instagram</span>
               </a>
               <a
-                href={GITHUB_URL}
+                href = {GITHUB_URL,}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"

@@ -1,8 +1,8 @@
 
-import React from "react",
-import { X } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { badgeVariants } from "@/components/ui/badge-variants",
+import React from "react";
+import { X } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { badgeVariants } from "@/components/ui/badge-variants";
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void,
   variant?: "default" | "secondary" | "destructive" | "outline"
@@ -29,7 +29,7 @@ export function ClickableBadge({
       {onRemove && (
         <button
           type="button"
-          onClick={(e) => {
+          onClick={(e,) => {
             e.stopPropagation(),
             onRemove()
           }}

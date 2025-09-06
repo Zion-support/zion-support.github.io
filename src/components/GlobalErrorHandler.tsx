@@ -1,14 +1,14 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',
-import { toast } from '@/hooks/use-toast',
-import { Button } from '@/components/ui/button',
-import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
-import * as Sentry from '@sentry/nextjs',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
-  reportError: (error: Error, context?: any) => void,
-  showRetryableError: (error: Error, retryAction?: () => void) => void,
-  showNetworkError: (retryAction?: () => void) => void,
-  showAuthError: (loginAction?: () => void) => void,
+  reportError: (error: Error, context?: any,) => void,
+  showRetryableError: (error: Error, retryAction?: (,) => void) => void,
+  showNetworkError: (retryAction?: (,) => void) => void,
+  showAuthError: (loginAction?: (,) => void) => void,
   clearAllErrors: () => void
 }
 
@@ -21,7 +21,7 @@ interface GlobalErrorHandlerProps {
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const [retryCount, setRetryCount] = useState<Record<string, number>>({}),
 
-  const reportError = useCallback((error: Error, context?: any) => {
+  const reportError = useCallback((error: Error, context?: any,) => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       logErrorToProduction('Global Error Handler:', error, context)
@@ -29,7 +29,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
 
     // Report to Sentry for production
     if (process.env.NODE_ENV === 'production') {
-      Sentry.withScope((scope) => {
+      Sentry.withScope((scope,) => {
         if (context) {
           scope.setContext('errorContext', context)
         }
@@ -39,7 +39,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     }
   }, []),
 
-  const showRetryableError = useCallback((error: Error, retryAction?: () => void) => {
+  const showRetryableError = useCallback((error: Error, retryAction?: (,) => void) => {
     const errorKey = error.message,
     const currentRetryCount = retryCount[errorKey] || 0,
 
@@ -62,7 +62,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       } : undefined})
   }, [retryCount, reportError]),
 
-  const showNetworkError = useCallback((retryAction?: () => void) => {
+  const showNetworkError = useCallback((retryAction?: (,) => void) => {
     const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true,
     
     toast({
@@ -77,7 +77,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       } : undefined})
   }, []),
 
-  const showAuthError = useCallback((loginAction?: () => void) => {
+  const showAuthError = useCallback((loginAction?: (,) => void) => {
     toast({
       title: "Authentication Required",
       description: "Please log in to continue with this action.",
@@ -88,7 +88,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       } : undefined})
   }, []),
 
-  const clearAllErrors = useCallback(() => {
+  const clearAllErrors = useCallback((,) => {
     setRetryCount({}),
     // Clear any active toasts would go here if the toast system supports it
   }, []),
@@ -155,7 +155,7 @@ function getErrorMessage(error: Error): string {
 export function useErrorHandler() {
   const { reportError, showRetryableError, showNetworkError, showAuthError } = useGlobalErrorHandler(),
 
-  const handleApiError = useCallback((error: any, retryAction?: () => void) => {
+  const handleApiError = useCallback((error: any, retryAction?: (,) => void) => {
     if (error.response?.status === 401 || error.response?.status === 403) {
       showAuthError()
     } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {
@@ -166,9 +166,9 @@ export function useErrorHandler() {
   }, [showRetryableError, showNetworkError, showAuthError]),
 
   const handleAsyncOperation = useCallback(async <T>(
-    operation: () => Promise<T>,
+    operation: (,) => Promise<T>,
     options?: {
-      onError?: (error: Error) => void,
+      onError?: (error: Error,) => void,
       retryAction?: () => void,
       successMessage?: string
     }

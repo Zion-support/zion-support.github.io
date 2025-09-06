@@ -1,9 +1,9 @@
-import React from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
-import Link from "next/link",
-import { cn } from "@/lib/utils",
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 interface InteractiveFeaturesProps {
   className?: string,
   style?: React.CSSProperties
@@ -42,8 +42,8 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       icon: <Settings className="h-8 w-8 text-amber-700" />,
       link: "/equipment"}],
 
-  const handleToggle = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index))
+  const handleToggle = (index: number,) => {
+    setOpenIndex((prev,) => (prev === index ? null : index))
   },
 
   return (
@@ -58,12 +58,12 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
+          {features.map((feature, index,) => (
             <Card
-              key={index}
-              onMouseEnter={() => setOpenIndex(index)}
-              onMouseLeave={() => setOpenIndex(null)}
-              onClick={() => handleToggle(index)}
+              key = {index,}
+              onMouseEnter = {(,) => setOpenIndex(index),}
+              onMouseLeave = {() => setOpenIndex(null),}
+              onClick = {() => handleToggle(index),}
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
@@ -76,10 +76,10 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
                 </div>
               </CardHeader>
               <div
-                className={cn(
+                className = {cn(
                   "transition-all duration-300",
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
-                )}
+                ),}
               >
                 <CardContent className="text-sm text-zion-slate-light p-0">
                   <p>{feature.details}</p>
