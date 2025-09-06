@@ -1,5 +1,6 @@
 
 
+
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -22,6 +23,7 @@ export default [
 
     files: ["**/*.{js,jsx,ts,tsx}"],
 
+
     ignores: [
       '.next/**',
       'out/**',
@@ -29,7 +31,9 @@ export default [
       'build/**',
       'node_modules/**',
 
+
       '.eslintrc.js',
+
 
       'coverage/**',
       '*.config.js',
@@ -46,6 +50,7 @@ export default [
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+
 
       '**/test-utils.*',
       '**/jest.setup.*',
@@ -184,6 +189,7 @@ export default [
       'backup-problematic-files/**'
       '**/performance-*.txt'
 
+
       '**/zion-os/**',
       '**/zion-website/**',
       '**/zion-academy/**',
@@ -194,9 +200,67 @@ export default [
       '**/public/**',
       '**/static/**',
 
+      'temp_exclude/**',
+      'temp_working/**',
+      'test_build/**',
+      'tests/**',
+      'types/**',
+      'utils/**',
+      'ultimate-*.cjs',
+      'test-next.js',
+      'vite.config.ts',
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'temp_components/**',
+      'temp_conflicts/**',
+      'supabase/**',
+      'start-dev.js',
+      'structural-fix.js',
+      'super-syntax-fixer.cjs',
+      'system-monitor.cjs',
+
     ],
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
-      parser: typescriptParser,
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+      },
+    },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+    },
+    rules: {
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+    },
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -205,6 +269,7 @@ export default [
         },
       },
       globals: {
+
         // Browser globals
         window: 'readonly',
         document: 'readonly',
@@ -508,6 +573,7 @@ origin/automation-improvements-final
 
 
 
+
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -515,16 +581,20 @@ origin/automation-improvements-final
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
+
         afterAll: 'readonly'
       }
     },
     plugins: {
 
+
       '@typescript-eslint': tseslint,
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+
       'jsx-a11y': jsxA11y
+
     },
     rules: {
       ...tseslint.configs.recommended.rules,
@@ -533,13 +603,16 @@ origin/automation-improvements-final
       ...jsxA11y.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
+
         { allowConstantExport: true }
       ],
+
 
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
+
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -571,13 +644,16 @@ origin/automation-improvements-final
         version: 'detect'
       }
     }
+
   },
   {
     files: [
       '**/*.cjs',
       '**/scripts/**/*.js',
       '**/automation/**/*.js',
+
       '**/pm2/**/*.js'
+
     ],
     languageOptions: {
       ecmaVersion: 2021,
@@ -592,6 +668,7 @@ origin/automation-improvements-final
         __dirname: 'readonly',
         __filename: 'readonly',
         Buffer: 'readonly',
+
         global: 'readonly'
       }
     },
@@ -654,3 +731,4 @@ origin/automation-improvements-final
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
