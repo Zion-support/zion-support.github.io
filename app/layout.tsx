@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
 <<<<<<< HEAD
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
-  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
+  description: 'Zion Tech Group is a leading technology company specializing in AI, micro SaaS development, and IT services. Transform your business with cutting-edge technology.',
+  keywords: ['AI', 'artificial intelligence', 'micro SaaS', 'IT services', 'technology', 'innovation', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -32,16 +32,28 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions.',
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
     images: ['/og-image.jpg'],
   },
-  viewport: 'width=device-width, initial-scale=1',
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  alternates: {
+    canonical: 'https://ziontechgroup.com',
+  },
+  category: 'technology',
+  classification: 'Business',
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light',
   themeColor: '#000000',
+<<<<<<< HEAD
 =======
   title: 'Zion Tech Group - AI-Powered Solutions',
   description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
   keywords: 'AI solutions, business automation, digital transformation, software development, tech consulting',
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
+=======
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
 };
 
 export default function RootLayout({

@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
+=======
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
 import React from 'react';
+import { Metadata } from 'next';
 
+<<<<<<< HEAD
 export const metadata = {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +38,9 @@ export const metadata = {;
 =======
 =======
 export const metadata = {
+=======
+export const metadata: Metadata = {
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
   title: "About | Zion Tech Group",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +73,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -272,6 +281,10 @@ function AboutPage() {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
+=======
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About Zion Tech Group
@@ -296,10 +309,14 @@ function AboutPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
 =======
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
             We are a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.
+=======
+            We are a leading technology company specializing in AI, micro SaaS development, and comprehensive IT solutions that drive business transformation.
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
           </p>
         </div>
         
@@ -307,15 +324,34 @@ function AboutPage() {
           <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-lg text-gray-600 mb-6">
-              To transform businesses through cutting-edge AI and technology solutions that drive innovation, efficiency, and growth.
+              To democratize advanced technology and make AI, micro SaaS, and innovative solutions accessible to businesses of all sizes, enabling them to thrive in the digital age.
             </p>
-            <p className="text-lg text-gray-600">
-              We believe in the power of technology to solve complex problems and create opportunities for our clients to thrive in the digital age.
+            <p className="text-lg text-gray-600 mb-6">
+              We combine technical expertise with business acumen to deliver solutions that drive real results and transform how companies operate.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="tel:+13024640950"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+              >
+                Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
+              >
+                Email Us
+              </a>
+            </div>
           </div>
+          
           <div className="bg-gray-50 p-8 rounded-lg">
+<<<<<<< HEAD
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
@@ -427,41 +463,75 @@ function AboutPage() {
               business processes, enabling organizations to achieve their full
               potential.
             </p>
+=======
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Values</h3>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-blue-600 font-bold">I</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Innovation</h4>
+                  <p className="text-gray-600">We push the boundaries of what's possible, constantly exploring new technologies and approaches.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-green-600 font-bold">E</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Excellence</h4>
+                  <p className="text-gray-600">We maintain the highest standards in everything we do, from code quality to customer service.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-purple-600 font-bold">C</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Collaboration</h4>
+                  <p className="text-gray-600">We believe in the power of teamwork and partnerships to achieve extraordinary results.</p>
+                </div>
+              </div>
+            </div>
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
           </div>
         </div>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Why Choose Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">
-                Expert Team
-              </h3>
-              <p className="text-gray-300">
-                Our team consists of industry experts with years of experience
-                in AI, blockchain, and IT solutions.
-              </p>
+        <div className="mt-24">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Journey</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">500+</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Projects Completed</h3>
+              <p className="text-gray-600">Successful projects delivered across various industries</p>
             </div>
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">
-                Proven Track Record
-              </h3>
-              <p className="text-gray-300">
-                We have successfully delivered projects for clients across
-                various industries and scales.
-              </p>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-green-600">50+</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Team Members</h3>
+              <p className="text-gray-600">Expert professionals dedicated to your success</p>
             </div>
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">
-                Innovation Focus
-              </h3>
-              <p className="text-gray-300">
-                We stay at the forefront of technology trends and continuously
-                innovate our solutions.
-              </p>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-purple-600">25+</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Countries Served</h3>
+              <p className="text-gray-600">Global reach with local expertise</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-orange-600">99%</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Client Satisfaction</h3>
+              <p className="text-gray-600">Consistently high satisfaction ratings</p>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 =======
@@ -486,6 +556,32 @@ function AboutPage() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 =======
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
+=======
+
+        <div className="mt-24 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our innovative solutions can help you achieve your business goals.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Email Us
+            </a>
+          </div>
+          <p className="text-sm text-gray-500 mt-4">
+            📍 364 E Main St STE 1008, Middletown DE 19709
+          </p>
+        </div>
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
       </div>
     </div>
   );

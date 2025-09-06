@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },;
 module.exports = {;
   plugins: {;
@@ -26,6 +27,9 @@ module.exports = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 module.exports = {
+=======
+export default {
+>>>>>>> c9eab401084b8cb2c6f17819405d581bd6d67698
   plugins: {
     'tailwindcss': {},
     'autoprefixer': {},
