@@ -1,5 +1,5 @@
 const fs = require('fs');
-;
+
 // Create a clean tsconfig.json;
 const cleanTsconfig = `{;
   "compilerOptions":{;
@@ -40,8 +40,8 @@ const cleanTsconfig = `{;
   "exclude":[;
     "node_modules";
   ];}`;
-;
+
 // Write the clean tsconfig.json;
 fs.writeFileSync('tsconfig.json', cleanTsconfig);
-;
+
 console.log('Clean tsconfig.json created!');

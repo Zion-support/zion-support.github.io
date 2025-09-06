@@ -1,10 +1,10 @@
 #!/usr/bin/env node;
-;
+
 const fs = require('fs');
 const path = require('path');
-;
+
 console.log('🔧 Fixing all remaining syntax errors...');
-;
+
 // Fix help.tsx;
 const helpContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -204,10 +204,10 @@ export default function Help() {;
     </Layout>;
   );
 }`;
-;
+
 fs.writeFileSync('/workspace/pages/help.tsx', helpContent);
 console.log('✅ Fixed help.tsx');
-;
+
 // Fix industries/education.tsx;
 const educationContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -386,8 +386,8 @@ export default function Education() {;
     </Layout>;
   );
 }`;
-;
+
 fs.writeFileSync('/workspace/pages/industries/education.tsx', educationContent);
 console.log('✅ Fixed industries/education.tsx');
-;
+
 console.log('🎉 All remaining syntax errors fixed!');
