@@ -2,29 +2,29 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered Project Management Platform | Zion Tech Group',
-  description: 'Intelligent project management with AI task prioritization, resource optimization, risk prediction, and automated reporting. Increase team productivity by 50% with smart project insights.',
-  keywords: 'AI project management, task automation, resource optimization, project analytics, team productivity, smart scheduling'
+  title: 'AI-Powered Financial Analytics Platform | Zion Tech Group',
+  description: 'Advanced financial analytics with AI-driven insights, predictive modeling, risk assessment, and automated reporting. Make data-driven financial decisions with 95% accuracy predictions.',
+  keywords: 'AI financial analytics, predictive modeling, risk assessment, financial forecasting, investment analysis, automated reporting'
 };
 
-export default function AIProjectManagementPage() {
+export default function AIFinancialAnalyticsPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-blue-100 rounded-lg">
+      <section className="text-center py-16 bg-gradient-to-br from-emerald-50 to-blue-100 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI-Powered Project Management
+          AI-Powered Financial Analytics
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your project management with AI-driven insights, automated task prioritization, and intelligent resource allocation. 
-          Our platform increases team productivity by 50% and reduces project delays by 70%.
+          Transform your financial decision-making with AI-driven insights, predictive modeling, and automated risk assessment. 
+          Our platform provides 95% accuracy in financial predictions and reduces analysis time by 80%.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Platform Inquiry"
+            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Platform Inquiry"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-            Start Free Trial
+            Get Free Analysis
           </a>
           <a
             href="tel:+13024640950"
@@ -38,76 +38,76 @@ export default function AIProjectManagementPage() {
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Project Management</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Financial Intelligence</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI-powered platform learns from your team's patterns to optimize workflows and predict project outcomes.
+            Our AI-powered platform analyzes complex financial data to provide actionable insights and predictions.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
-            icon="🎯"
-            title="AI Task Prioritization"
-            description="Machine learning algorithms analyze project requirements, team capacity, and deadlines to automatically prioritize tasks for maximum efficiency."
+            icon="📈"
+            title="Predictive Financial Modeling"
+            description="Advanced machine learning models predict market trends, cash flow, and financial performance with 95% accuracy."
             benefits={[
-              "Automatic task ranking",
-              "Deadline optimization",
-              "Resource-aware scheduling",
-              "Dynamic priority updates"
-            ]}
-          />
-          <FeatureCard
-            icon="👥"
-            title="Smart Resource Allocation"
-            description="AI analyzes team skills, workload, and availability to automatically assign tasks to the most suitable team members."
-            benefits={[
-              "Skill-based matching",
-              "Workload balancing",
-              "Availability optimization",
-              "Conflict resolution"
+              "95% prediction accuracy",
+              "Real-time market analysis",
+              "Cash flow forecasting",
+              "Revenue optimization"
             ]}
           />
           <FeatureCard
             icon="⚠️"
-            title="Risk Prediction & Mitigation"
-            description="Advanced analytics predict potential project risks and suggest mitigation strategies before they impact delivery."
+            title="AI Risk Assessment"
+            description="Comprehensive risk analysis using multiple data sources to identify potential financial threats and opportunities."
             benefits={[
-              "Early risk detection",
-              "Mitigation recommendations",
-              "Impact assessment",
-              "Preventive actions"
+              "Multi-factor risk analysis",
+              "Early warning system",
+              "Portfolio optimization",
+              "Compliance monitoring"
+            ]}
+          />
+          <FeatureCard
+            icon="💰"
+            title="Investment Intelligence"
+            description="AI-powered investment recommendations based on market analysis, risk tolerance, and financial goals."
+            benefits={[
+              "Personalized recommendations",
+              "Portfolio rebalancing",
+              "Tax optimization",
+              "Performance tracking"
             ]}
           />
           <FeatureCard
             icon="📊"
-            title="Automated Reporting"
-            description="AI generates comprehensive project reports, status updates, and stakeholder communications automatically."
+            title="Automated Financial Reporting"
+            description="Generate comprehensive financial reports, compliance documents, and stakeholder presentations automatically."
             benefits={[
               "Real-time dashboards",
-              "Automated status updates",
-              "Stakeholder notifications",
-              "Custom report templates"
+              "Regulatory compliance",
+              "Custom report templates",
+              "Automated distribution"
             ]}
           />
           <FeatureCard
-            icon="🔄"
-            title="Workflow Optimization"
-            description="AI analyzes team workflows and suggests improvements to eliminate bottlenecks and increase efficiency."
+            icon="🔍"
+            title="Fraud Detection & Prevention"
+            description="Advanced anomaly detection algorithms identify suspicious transactions and potential fraud in real-time."
             benefits={[
-              "Bottleneck identification",
-              "Process optimization",
-              "Efficiency recommendations",
-              "Continuous improvement"
+              "Real-time monitoring",
+              "Pattern recognition",
+              "False positive reduction",
+              "Compliance reporting"
             ]}
           />
           <FeatureCard
-            icon="💬"
-            title="Smart Communication"
-            description="AI-powered communication tools ensure all team members stay informed and aligned on project goals."
+            icon="📱"
+            title="Mobile Financial Insights"
+            description="Access critical financial data and insights on-the-go with our mobile-optimized dashboard."
             benefits={[
-              "Context-aware notifications",
-              "Meeting optimization",
-              "Documentation automation",
-              "Knowledge sharing"
+              "Real-time notifications",
+              "Mobile dashboards",
+              "Offline access",
+              "Secure authentication"
             ]}
           />
         </div>
@@ -116,55 +116,55 @@ export default function AIProjectManagementPage() {
       {/* Pricing */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that scales with your team. All plans include our core AI features and 24/7 support.
+            Choose the plan that fits your financial analysis needs. All plans include our core AI features.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <PricingCard
-            name="Team"
-            price="$29"
-            period="per user/month"
-            description="Perfect for small teams up to 10 members"
+            name="Starter"
+            price="$199"
+            period="per month"
+            description="Perfect for small businesses and individuals"
             features={[
-              "Up to 10 team members",
-              "AI task prioritization",
-              "Basic resource allocation",
-              "Project templates",
+              "Up to $1M portfolio analysis",
+              "Basic AI predictions",
+              "Monthly reports",
+              "Email support",
               "Mobile app access",
-              "Email support"
+              "Standard data sources"
             ]}
             popular={false}
           />
           <PricingCard
             name="Professional"
-            price="$49"
-            period="per user/month"
-            description="Most popular for growing teams"
+            price="$499"
+            period="per month"
+            description="Most popular for growing businesses"
             features={[
-              "Up to 50 team members",
+              "Up to $10M portfolio analysis",
               "Advanced AI features",
-              "Risk prediction",
-              "Custom workflows",
-              "API access",
+              "Real-time monitoring",
               "Priority support",
-              "Advanced analytics"
+              "API access",
+              "Custom integrations",
+              "Advanced reporting"
             ]}
             popular={true}
           />
           <PricingCard
             name="Enterprise"
-            price="$99"
-            period="per user/month"
-            description="For large organizations"
+            price="$1,299"
+            period="per month"
+            description="For large organizations and institutions"
             features={[
-              "Unlimited team members",
+              "Unlimited portfolio analysis",
               "All AI features",
               "Custom AI models",
               "White-label options",
               "Dedicated support",
-              "Custom integrations",
+              "Custom data sources",
               "SLA guarantee"
             ]}
             popular={false}
@@ -175,32 +175,32 @@ export default function AIProjectManagementPage() {
       {/* Success Stories */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Results</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Financial Results</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how our AI-powered project management has transformed teams across industries.
+            See how our AI-powered financial analytics has transformed businesses across industries.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <CaseStudy
-            company="TechCorp Solutions"
-            industry="Software Development"
-            result="50% increase in project delivery speed"
-            description="Implemented AI task prioritization and resource allocation, resulting in 50% faster project delivery and 30% reduction in overtime."
-            metrics={["50% faster delivery", "30% less overtime", "40% better resource utilization"]}
+            company="Investment Partners LLC"
+            industry="Investment Management"
+            result="40% improvement in portfolio returns"
+            description="Implemented AI-powered investment recommendations and risk assessment, resulting in 40% better returns and 60% reduction in risk exposure."
+            metrics={["40% better returns", "60% risk reduction", "80% faster analysis"]}
           />
           <CaseStudy
-            company="Marketing Agency Pro"
-            industry="Marketing"
-            result="70% reduction in project delays"
-            description="Used AI risk prediction and workflow optimization to eliminate bottlenecks and improve project predictability."
-            metrics={["70% fewer delays", "60% better deadline adherence", "45% improved client satisfaction"]}
+            company="Retail Finance Corp"
+            industry="Retail Banking"
+            result="70% reduction in fraud losses"
+            description="Deployed AI fraud detection and risk assessment to identify suspicious transactions and prevent financial losses."
+            metrics={["70% fraud reduction", "95% detection accuracy", "50% cost savings"]}
           />
           <CaseStudy
-            company="Construction Plus"
-            industry="Construction"
-            result="35% improvement in resource efficiency"
-            description="Deployed smart resource allocation and automated reporting to optimize construction project management."
-            metrics={["35% efficiency gain", "25% cost reduction", "50% better communication"]}
+            company="Tech Startup Inc"
+            industry="Technology"
+            result="50% improvement in cash flow management"
+            description="Used AI predictive modeling and automated reporting to optimize cash flow and improve financial planning."
+            metrics={["50% better cash flow", "30% cost reduction", "90% accuracy in forecasts"]}
           />
         </div>
       </section>
@@ -208,24 +208,24 @@ export default function AIProjectManagementPage() {
       {/* Technology Stack */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Built for Scale and Reliability</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Built with Financial-Grade Security</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our platform is built on enterprise-grade technology for maximum performance and security.
+            Our platform meets the highest security standards for financial data protection and compliance.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {[
             { name: "React", icon: "⚛️", description: "Frontend framework" },
-            { name: "Next.js", icon: "▲", description: "Full-stack framework" },
-            { name: "Node.js", icon: "🟢", description: "Backend runtime" },
+            { name: "Python", icon: "🐍", description: "AI/ML backend" },
             { name: "PostgreSQL", icon: "🐘", description: "Primary database" },
             { name: "Redis", icon: "🔴", description: "Caching layer" },
-            { name: "OpenAI GPT-4", icon: "🧠", description: "AI engine" },
+            { name: "TensorFlow", icon: "🧠", description: "ML framework" },
             { name: "AWS", icon: "☁️", description: "Cloud platform" },
             { name: "Docker", icon: "🐳", description: "Containerization" },
             { name: "Kubernetes", icon: "⚙️", description: "Orchestration" },
+            { name: "Stripe", icon: "💳", description: "Payment processing" },
+            { name: "Plaid", icon: "🏦", description: "Banking integration" },
             { name: "MongoDB", icon: "🍃", description: "Document store" },
-            { name: "Elasticsearch", icon: "🔍", description: "Search engine" },
             { name: "Grafana", icon: "📊", description: "Monitoring" }
           ].map((tech, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
@@ -237,18 +237,50 @@ export default function AIProjectManagementPage() {
         </div>
       </section>
 
+      {/* Security & Compliance */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Bank-Grade Security & Compliance</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Your financial data is protected with enterprise-grade security and regulatory compliance.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <SecurityFeature
+            icon="🔒"
+            title="SOC 2 Type II"
+            description="Certified security controls and processes"
+          />
+          <SecurityFeature
+            icon="🛡️"
+            title="256-bit SSL Encryption"
+            description="End-to-end data encryption"
+          />
+          <SecurityFeature
+            icon="📋"
+            title="GDPR Compliant"
+            description="Full data protection compliance"
+          />
+          <SecurityFeature
+            icon="✅"
+            title="PCI DSS Level 1"
+            description="Highest payment security standard"
+          />
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Project Management?</h2>
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Financial Analysis?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join 300+ teams using our AI-powered platform to deliver projects faster and more efficiently.
+          Join 200+ financial professionals using our AI platform to make smarter investment decisions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Platform Demo"
+            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Platform Demo"
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Start Free Trial
+            Get Free Analysis
           </a>
           <a
             href="tel:+13024640950"
@@ -325,7 +357,7 @@ function PricingCard({ name, price, period, description, features, popular }: {
         ))}
       </ul>
       <a
-        href="mailto:kleber@ziontechgroup.com?subject=AI Project Management - {name} Plan"
+        href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -366,6 +398,20 @@ function CaseStudy({ company, industry, result, description, metrics }: {
           ))}
         </div>
       </div>
+    </div>
+  );
+}
+
+function SecurityFeature({ icon, title, description }: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 }
