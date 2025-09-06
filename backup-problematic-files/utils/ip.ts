@@ -6,4 +6,3 @@ export function extractClientIp(req: NextApiRequest): string | null {
   if (ip.startsWith('::ffff: ')) return ip.substring(7),
   return ip
 }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

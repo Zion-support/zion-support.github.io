@@ -7,7 +7,6 @@ import { extraServices } from '../data/extra-services'
 export default function MDMPage() {
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'))
   if (!service) return null,
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
     <UltraAdvancedFuturisticBackground>

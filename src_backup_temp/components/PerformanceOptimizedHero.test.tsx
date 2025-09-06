@@ -1,5 +1,4 @@
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function PerformanceOptimizedHero() {return ( <div className="min-h-screen bg-white"> <SEO title="PerformanceOptimizedHero.test - Zion Tech Group" description="Professional PerformanceOptimizedHero.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">PerformanceOptimizedHero.test</h1> <p className="text-gray-300 text-lg"
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,6 +23,5 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function PerformanceOptimizedHero() {return ( <div className="min-h-screen bg-white"> <SEO title="PerformanceOptimizedHero && PerformanceOptimizedHero.test - Zion Tech Group" description="Professional PerformanceOptimizedHero && PerformanceOptimizedHero.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">PerformanceOptimizedHero && PerformanceOptimizedHero.test</h1> <pclassName="text-gray-300 text-lg"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }"
 import React from 'react',','' '''' import {SEO } from '@/components/SEO' export default function PerformanceOptimizedHero() {return ( <div className="min-h-screen bg-white"> <SEO title="PerformanceOptimizedHero && PerformanceOptimizedHero.test - Zion Tech Group" description="Professional PerformanceOptimizedHero && PerformanceOptimizedHero.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">PerformanceOptimizedHero && PerformanceOptimizedHero.test</h1> <p className="text-gray-300 text-lg"> Professional PerformanceOptimizedHero && PerformanceOptimizedHero.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"
