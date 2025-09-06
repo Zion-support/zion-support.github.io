@@ -1,30 +1,39 @@
-import React from 'react'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { toast } from '@/hooks/use-toast'
-import React from "react"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { toast } from "@/hooks/use-toast"
+
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+<<<<<<< HEAD
+  Card;
+  CardContent;
+  CardDescription;
+  CardFooter;
+  CardHeader;
+  CardTitle} from "@/components/ui/card",
+=======
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Sparkles } from 'lucide-react'
-import { Progress } from '@/components/ui/progress'
+import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
+<<<<<<< HEAD
+  const handleSaveChanges = null;
+=======
   const handleSaveChanges = () => {
     toast({
-      title: 'Limits updated',
-      description: 'The new usage limits have been saved successfully.',
+      title: 'Limits updated'
+      description: 'The new usage limits have been saved successfully.'
     })
   }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='space-y-8'>
       <div>
@@ -34,7 +43,6 @@ export function UsageStats() {
           resources.
         </p>
       </div>
-
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
         <Card>
           <CardHeader>
@@ -68,7 +76,6 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -101,7 +108,6 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -132,7 +138,6 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -175,7 +180,6 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
-
       <div className='bg-muted/50 rounded-lg p-6 flex items-center justify-between'>
         <div className='flex items-center gap-4'>
           <div className='h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center'>

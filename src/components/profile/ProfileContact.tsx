@@ -2,16 +2,25 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Mail, Send } from 'lucide-react'
-import { useState } from 'react'
-import { toast } from '@/hooks/use-toast'
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
-  email?: string
-  profileName: string
+  email?: string;
+  profileName: string;
   profileType: 'service' | 'talent'
+<<<<<<< HEAD
+}
+
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const handleSendMessage = null;
+=======
 export function ProfileContact({
-  email,
-  profileName,
-  profileType,
+  email
+  profileName
+  profileType
 }: ProfileContactProps) {
   const [message, setMessage] = useState('')
   const [subject, setSubject] = useState('')
@@ -24,18 +33,18 @@ export function ProfileContact({
       setIsSending(false)
       setMessage('')
       setSubject('');      toast({
-        title: 'Message Sent',
-        description: `Your message has been sent to ${profileName}.`,
+        title: 'Message Sent'
+        description: `Your message has been sent to ${profileName}.`
       })
     }, 1000)
   }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4 flex items-center'>
         <Mail className='mr-2 h-5 w-5 text-zion-cyan' />
         Contact
       </h3>
-
       {email && (
         <div className='mb-4 text-zion-slate-light'>
           <span className='block'>Email: </span>
@@ -43,14 +52,13 @@ export function ProfileContact({
             href={`mailto:${email}`}
             className='text-zion-cyan hover:underline truncate block'          >        <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
-          <a 
-            href={`mailto:${email}`} 
+          <a
+            href={`mailto:${email}`}
             className="text-zion-cyan hover:underline truncate block"
             {email}
           </a>
         </div>
       )}
-
       <form onSubmit={handleSendMessage}>
         <div className='space-y-4'>
           <div>
@@ -85,8 +93,8 @@ export function ProfileContact({
             disabled={isSending}              required
             />
           </div>
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled = {isSending,}
           >
@@ -101,7 +109,7 @@ export function ProfileContact({
     </div>
   )
   `mailto:$ {
-  email 
+  email
 }` "
-}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) 
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
 }'"}

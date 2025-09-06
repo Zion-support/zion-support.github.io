@@ -6,6 +6,10 @@ export interface Notification {
   type: string;
   related_id?: string;
   read: boolean;
-  created_at: string,
+<<<<<<< HEAD
+  created_at: string;
+=======
+  created_at: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   updated_at: string
 }

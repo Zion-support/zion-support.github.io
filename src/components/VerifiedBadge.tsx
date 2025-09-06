@@ -1,10 +1,22 @@
-import React from 'react'
+
+import React from 'react';
 import { CheckCircle } from 'lucide-react'
+<<<<<<< HEAD
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+interface VerifiedBadgeProps {
+  verified: boolean;
+  size?: 'sm' | 'md' | 'lg';
+  /** Optional tooltip label to display */
+  label?: string
+}
+
+export function VerifiedBadge({ verified, size;
+=======
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
 } from '@/components/ui/tooltip'
 interface VerifiedBadgeProps {
   verified: boolean
@@ -12,31 +24,31 @@ interface VerifiedBadgeProps {
   /** Optional tooltip label to display */
   label?: string
 export function VerifiedBadge({
-  verified,
-  size = 'sm',
-  label = 'Verified talent',
+  verified
+  size = 'sm'
+  label = 'Verified talent'
 }: VerifiedBadgeProps) {
   if (!verified) return null
   const sizeClasses = {
-    sm: 'h-3.5 w-3.5',
-    md: 'h-4 w-4',
-    lg: 'h-5 w-5',
+    sm: 'h-3.5 w-3.5'
+    md: 'h-4 w-4'
+    lg: 'h-5 w-5'
   }
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 interface VerifiedBadgeProps {
-  verified: boolean,
+  verified: boolean
   size?: 'sm' | 'md' | 'lg'
   /** Optional tooltip label to display */
   label?: string
 }
-
 export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
   if (!verified) return null
   const sizeClasses = {
-    sm: 'h-3.5 w-3.5',
-    md: 'h-4 w-4',
+    sm: 'h-3.5 w-3.5'
+    md: 'h-4 w-4'
     lg: 'h-5 w-5'
   }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <TooltipProvider>
       <Tooltip>
@@ -52,4 +64,3 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     </TooltipProvider>
   )
 }
-;

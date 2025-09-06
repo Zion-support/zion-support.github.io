@@ -1,14 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { useRouter } from 'next/router'
-import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
-import { Input } from '@/components/ui/input'
+import React, { useState, useEffect, useRef } from 'react';
+import { useRouter  } from 'next/router';
 import { Search, X } from 'lucide-react'
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'
-import { fireEvent } from '@/lib/analytics'
-import { SearchSuggestion } from '@/types/search'
-import { slugify } from '@/lib/slugify'
-import { useDebounce } from '@/hooks/useDebounce'
-import { useOnClickOutside } from '@/hooks/useOnClickOutside'
+import { Input  } from '@/components/ui/input';
+import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
+import { fireEvent  } from '@/lib/analytics';
+import { SearchSuggestion  } from '@/types/search';
+import { slugify  } from '@/lib/slugify';
+import { useDebounce  } from '@/hooks/useDebounce';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 /**
  * SearchBar component props
  */
@@ -16,20 +15,31 @@ interface SearchBarProps {
   /**
    * The current value of the search input
    */
-  value: string;  value: string,
+<<<<<<< HEAD
+  value: string;
+=======
+  value: string;  value: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   /**
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
    */
+<<<<<<< HEAD
+  onChange: (val: string) => void;
+=======
   onChange: (val: string) => void;  /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
-   */  onChange: (val: string,) => void,
-  onChange: (val: string) => void,
+   */  onChange: (val: string,) => void
+  onChange: (val: string) => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */
+<<<<<<< HEAD
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
+=======
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void
   /**
    * The placeholder text for the search input
@@ -37,7 +47,8 @@ interface SearchBarProps {
   placeholder?: string
 /**
  * SearchBar component that allows users to search for content.
- */  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+ */  onSelectSuggestion?: (suggestion: SearchSuggestion) => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   /**
    * The placeholder text for the search input
    */
@@ -46,11 +57,15 @@ interface SearchBarProps {
 /**
  * SearchBar component that allows users to search for content.
  */
+<<<<<<< HEAD
+export function SearchBar({ value, onChange, onSelectSuggestion, placeholder;
+              default: break
+=======
 export function SearchBar({
-  value,
-  onChange,
-  onSelectSuggestion,
-  placeholder = 'Search...',
+  value
+  onChange
+  onSelectSuggestion
+  placeholder = 'Search...'
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
@@ -67,7 +82,7 @@ export function SearchBar({
     }
     const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
-      signal: controller.signal,
+      signal: controller.signal
     })
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch suggestions')
@@ -133,7 +148,7 @@ export function SearchBar({
           onFocus={e => {
             setFocused(true);            // Ensure the input receives focus properly
             e.target.setSelectionRange(
-              e.target.value.length,
+              e.target.value.length
               e.target.value.length
             )
           }}
@@ -141,7 +156,7 @@ export function SearchBar({
             // Only blur if not clicking on suggestions
             const relatedTarget = e.relatedTarget as HTMLElement
             if (
-              !relatedTarget ||
+              !relatedTarget |
               !containerRef.current?.contains(relatedTarget)
             ) {
               setFocused(false)
@@ -155,13 +170,13 @@ export function SearchBar({
               : undefined
           }
           autoComplete='search'
-          onKeyDown={e => {            if (!focused || suggestions.length === 0) {
+          onKeyDown={e => {            if (!focused |suggestions.length === 0) {
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
-            if (!focused || suggestions.length === 0) {
+            if (!focused |suggestions.length === 0) {
               if (e.key === 'Escape') {
                 e.preventDefault()
                 setFocused(false)
@@ -178,14 +193,13 @@ export function SearchBar({
               return }              // If Enter is pressed and there's a value, navigate with query parameter
               if (e.key === 'Enter' && value.trim()) {
                 e.preventDefault(), // Prevent form submission if SearchBar is in a form
-                fireEvent('search', { search_term: value }),
+                fireEvent('search', { search_term: value })
                 router.push(`/search?q=${encodeURIComponent(value)}`)
                 setFocused(false)
                 inputRef.current?.blur()
               }
               return
             }
-
             switch (e.key) {
               case 'ArrowDown':
                 e.preventDefault()
@@ -235,6 +249,7 @@ export function SearchBar({
                 break
               default:
                 break }              default: break
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
             }
           }}
         />
@@ -264,20 +279,19 @@ export function SearchBar({
   )
 }/> onClick={'
   () => onChange ('') "
-}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) 
+}aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
 }</div> <AutocompleteSuggestions suggestions= {
-  suggestions 
+  suggestions
 }searchTerm= {
-  value 
+  value
 }onSelectSuggestion= {
-  handleSelect 
+  handleSelect
 }visible= {
-  focused 
+  focused
 }highlightedIndex= {
-  highlightedIndex 
+  highlightedIndex
 }listId= {
-  listId 
-}/> </div>) 
+  listId
+}/> </div>)
 }'"  )
 }
-;

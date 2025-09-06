@@ -2,9 +2,17 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
 import { Mail } from 'lucide-react'
-import { useToast } from '@/hooks/use-toast'
-import { logErrorToProduction } from '@/utils/productionLogger'
+import { useToast } from "@/hooks/use-toast";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
+<<<<<<< HEAD
+
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
+  const EMAIL_REGEX = null;
+=======
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -21,28 +29,27 @@ export function EnhancedNewsletterForm() {
       toast.error('Invalid email')
       return
     }
-
     setIsSubmitting(true)
     try {
       const res = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmed }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email: trimmed })
       })
       const data = await res.json().catch(() => ({}))
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!")
+          toast.success(data.message |"You're already subscribed!")
         } else {
-          toast.success(data.message || 'Thanks for subscribing!')
+          toast.success(data.message |'Thanks for subscribing!')
         }
         setIsSubmitted(true)
         setEmail('')
       } else {
         // Handle error responses
         logErrorToProduction('Newsletter subscription failed:', { data: data })
-        toast.error(data.error || 'Subscription failed. Please try again.')
+        toast.error(data.error |'Subscription failed. Please try again.')
       }
     } catch (err: any) {
       logErrorToProduction('Newsletter subscription error:', { data: err })
@@ -51,6 +58,7 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false)
     }
   }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>
       <div className='flex items-center mb-4'>
@@ -65,7 +73,6 @@ export function EnhancedNewsletterForm() {
           </p>
         </div>
       </div>
-
       {isSubmitted ? (
         <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>
           <p className='text-white font-medium'>Thank you for subscribing!</p>
@@ -102,7 +109,6 @@ export function EnhancedNewsletterForm() {
           </Button>
         </form>
       )}
-
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>
         <div className='flex -space-x-1 mr-2'>
           {[...Array(3)].map((_, i) => (

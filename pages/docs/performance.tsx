@@ -1,4 +1,4 @@
-import Head from 'next/head',;
+import Head from 'next/head';
 export default function PerformanceDocRedirect() {
   return (
     <>
@@ -11,4 +11,3 @@ export default function PerformanceDocRedirect() {
     </>
   )
 }
-

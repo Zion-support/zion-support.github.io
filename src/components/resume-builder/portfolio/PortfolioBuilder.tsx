@@ -1,29 +1,30 @@
-import { useState, useEffect } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { FilePlus, Loader2 } from 'lucide-react'; import { ProjectCard } from './ProjectCard'
-import { ProjectForm } from './ProjectForm'
-import { PortfolioProject } from '@/types/resume'
-import { usePortfolio } from '@/hooks/usePortfolio'
+
+import { useState, useEffect  } from 'react';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
 import { FilePlus, Loader2 } from 'lucide-react'
-import { ProjectCard } from './ProjectCard'
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio()
-  const [showAddProject, setShowAddProject] = useState(false)
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
-    null
-  )
-  useEffect(() => {
-    fetchProjects()
-  }, [fetchProjects])
+import { ProjectCard  } from './ProjectCard';
+import { ProjectForm  } from './ProjectForm';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),
-  const [showAddProject, setShowAddProject] = useState(false),
+<<<<<<< HEAD
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+  const [showAddProject, setShowAddProject] = useState(false);
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),
   
   useEffect((,) => {
     fetchProjects()
   }, [fetchProjects]),
   
+  const handleAddSuccess = null;
+=======
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio()
+  const [showAddProject, setShowAddProject] = useState(false)
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null)
+  useEffect((,) => {
+    fetchProjects()
+  }, [fetchProjects])
   const handleAddSuccess = () => {
     setShowAddProject(false)
     fetchProjects()
@@ -44,7 +45,6 @@ export function PortfolioBuilder() {
       </div>
     )
   }
-
   return (
     <div className='space-y-6'>
       <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6'>
@@ -57,42 +57,39 @@ export function PortfolioBuilder() {
         <Button
           onClick={() => setShowAddProject(true)}
           className='gap-2'
-          disabled={showAddProject || !!editingProject}        >
+          disabled={showAddProject |!!editingProject}        >
           <FilePlus className='h-4 w-4' />
           Add Project
         </Button>
       </div>
-
       {/* Edit or Add Form */}
-      {(showAddProject || editingProject) && (
+      {(showAddProject |editingProject) && (
         <Card>
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
-
-            <ProjectForm              project={editingProject || undefined}
+            <ProjectForm              project={editingProject |undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
                 setEditingProject(null) }}
-            
-            <ProjectForm 
+            <ProjectForm
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
                 setEditingProject(null);                setEditingProject(null)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                 setEditingProject(null)
               }}
             />
           </CardContent>
         </Card>
       )}
-
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {projects.map(project => (            <ProjectCard      
+          {projects.map(project => (            <ProjectCard
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -136,8 +133,8 @@ export function PortfolioBuilder() {
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-                <Button 
-                  onClick={() => setShowAddProject(true)} 
+                <Button
+                  onClick={() => setShowAddProject(true)}
                   className="mt-2"
                 >
                   Add Your First Project
@@ -150,4 +147,3 @@ export function PortfolioBuilder() {
     </div>
   )
 }
-;

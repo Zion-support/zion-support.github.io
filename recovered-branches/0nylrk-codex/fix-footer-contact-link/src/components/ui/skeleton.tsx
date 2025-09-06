@@ -1,8 +1,7 @@
 
 import { cn } from &quot;@/lib/utils&quot;
-
 function Skeleton({
-  className,
+  className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
@@ -12,6 +11,4 @@ function Skeleton({
     />;
   );
 }
-;
 export { Skeleton }
-;

@@ -1,46 +1,37 @@
 'use client';
-
 import React, { useState } from 'react';
-
 export default function OSDeployPage() {
 const [loading, setLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
     // Simulate deployment
     setTimeout(() => {
       setLoading(false);
     }, 3000);
-  };
-
+  }
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
-
   // Mock feature keys and functions
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-  
   const labelFor = (key: string) => {
     const labels: { [key: string]: string } = {
-      ai: 'AI Integration',
-      blockchain: 'Blockchain Technology',
-      governance: 'Governance System',
+      ai: 'AI Integration'
+      blockchain: 'Blockchain Technology'
+      governance: 'Governance System'
       treasury: 'Treasury Management';
-    };
-    return labels[key] || key;
-  };
-
+    }
+    return labels[key] |key;
+  }
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
-ai: 'Advanced AI capabilities and automation',
-      blockchain: 'Secure blockchain infrastructure',
-      governance: 'Decentralized governance mechanisms',
+ai: 'Advanced AI capabilities and automation'
+      blockchain: 'Secure blockchain infrastructure'
+      governance: 'Decentralized governance mechanisms'
       treasury: 'Automated treasury management'
-    };
-    return descriptions[key] || 'Feature description';
-  };
-
+    }
+    return descriptions[key] |'Feature description';
+  }
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -51,7 +42,6 @@ ai: 'Advanced AI capabilities and automation',
             Deploy your custom Zion OS instance with advanced features and configurations
           </p>
         </div>
-
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">
@@ -59,7 +49,6 @@ ai: 'Advanced AI capabilities and automation',
               <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>
               Basic Configuration
             </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="instanceName" className="block text-sm font-medium text-white/90">Instance Name *</label>
@@ -72,7 +61,6 @@ ai: 'Advanced AI capabilities and automation',
                   placeholder="My Digital Economy"
                 />
               </div>
-
               <div className="space-y-2">
                 <label htmlFor="vertical" className="block text-sm font-medium text-white/90">Vertical</label>
                 <select
@@ -89,7 +77,6 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="TECH">Technology</option>
                 </select>
               </div>
-
               <div className="space-y-2">
                 <label htmlFor="domain" className="block text-sm font-medium text-white/90">Domain</label>
                 <input
@@ -100,7 +87,6 @@ ai: 'Advanced AI capabilities and automation',
                   placeholder="zion.example.com"
                 />
               </div>
-
               <div className="space-y-2">
                 <label htmlFor="subdomain" className="block text-sm font-medium text-white/90">Subdomain</label>
                 <input
@@ -111,7 +97,6 @@ ai: 'Advanced AI capabilities and automation',
                   placeholder="latam"
                 />
               </div>
-
               <div className="space-y-2">
                 <label htmlFor="defaultLanguage" className="block text-sm font-medium text-white/90">Default Language</label>
                 <input
@@ -121,7 +106,6 @@ ai: 'Advanced AI capabilities and automation',
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                 />
               </div>
-
               <div className="space-y-2">
                 <label htmlFor="region" className="block text-sm font-medium text-white/90">Region</label>
                 <input
@@ -134,14 +118,12 @@ ai: 'Advanced AI capabilities and automation',
               </div>
             </div>
           </div>
-
           {/* Economic Configuration */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
               Economic Configuration
             </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="tokenSystem" className="block text-sm font-medium text-white/90">Token System</label>
@@ -155,7 +137,6 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="HYBRID">Hybrid System</option>
                 </select>
               </div>
-
               <div className="space-y-2">
                 <label htmlFor="governanceType" className="block text-sm font-medium text-white/90">Governance Type</label>
                 <select
@@ -169,7 +150,6 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="HYBRID">Hybrid Governance</option>
                 </select>
               </div>
-
               <div className="space-y-2">
                 <label htmlFor="country" className="block text-sm font-medium text-white/90">Country</label>
                 <input
@@ -180,7 +160,6 @@ ai: 'Advanced AI capabilities and automation',
                   placeholder="United States"
                 />
               </div>
-
               <div className="space-y-2">
                 <label htmlFor="paymentGateway" className="block text-sm font-medium text-white/90">Payment Gateway</label>
                 <select
@@ -197,14 +176,12 @@ ai: 'Advanced AI capabilities and automation',
               </div>
             </div>
           </div>
-
           {/* Feature Selection */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>
               Feature Selection
             </h2>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {FeatureKeys.map((k) => (
                 <label
@@ -230,14 +207,12 @@ ai: 'Advanced AI capabilities and automation',
               ))}
             </div>
           </div>
-
           {/* Additional Features */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>
               Additional Features
             </h2>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <label htmlFor="treasury" className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
@@ -254,7 +229,6 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Manage community funds with transparency</div>
                 </div>
               </label>
-
               <label htmlFor="governance" className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
                   id="governance"
@@ -270,7 +244,6 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Local + global decision making</div>
                 </div>
               </label>
-
               <label htmlFor="moderation" className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
                   id="moderation"
@@ -286,7 +259,6 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Automated content and behavior monitoring</div>
                 </div>
               </label>
-
               <label htmlFor="partnerships" className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
                   id="partnerships"
@@ -304,7 +276,6 @@ ai: 'Advanced AI capabilities and automation',
               </label>
             </div>
           </div>
-
           {/* Submit Button */}
           <div className="text-center">
             <button
@@ -313,7 +284,6 @@ ai: 'Advanced AI capabilities and automation',
             >
               {loading ? 'Deploying...' : 'Deploy Digital Economy'}
             </button>
-
             {message && (
               <div
                 className={`mt-6 p-4 rounded-lg ${

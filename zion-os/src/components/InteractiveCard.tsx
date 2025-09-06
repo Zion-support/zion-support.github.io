@@ -1,26 +1,22 @@
-'use client',;
-import React, { useState } from 'react',;
-import Link from 'next/link',;
-interface InteractiveCardProps {;
-  title: string,;
-  description: string,;
-  icon: string,;
-  href: string,;
-  color?: string,;
-  className?: string,;
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+interface InteractiveCardProps {title: string;
+  description: string;
+  icon: string;
+  href: string;
+  color?: string;
+  className?: string;
   children?: React.ReactNode;
 }
-;
-export default function InteractiveCard({;
-  title,;
-  description,;
-  icon,;
-  href,;
-  color = 'from-purple-500 to-blue-500',;
-  className = '',;
+export default function InteractiveCard({title;
+  description;
+  icon;
+  href;
+  color = 'from-purple-500 to-blue-500';
+  className = '';
   children;
-}: InteractiveCardProps) {;
-  const [isHovered, setIsHovered] = useState(false),;
+}: InteractiveCardProps) {const [isHovered, setIsHovered] = useState(false);
   return (;
     <Link;
       href={href}
@@ -47,15 +43,15 @@ export default function InteractiveCard({;
             {description}
           </p>;
           {/* Custom children or default arrow */}
-{children || (
+{children |(
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
               <span>Learn More</span>
-              <svg 
+              <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
-                }`} 
-                fill=&quot;none&quot; 
-                stroke=&quot;currentColor&quot; 
+                }`}
+                fill=&quot;none&quot;
+                stroke=&quot;currentColor&quot;
                 viewBox=&quot;0 0 24 24&quot;
               >
                 <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot; />
@@ -66,24 +62,20 @@ export default function InteractiveCard({;
         {/* Hover effect overlay */}
         <div;
           className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
-          style={{;
-            background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
+          style={{background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
           }}
         />;
       </div>;
     </Link>;
   );
 }
-;
-export function FeatureCard({;
-  title,;
-  description,;
-  icon,;
-  href,;
-  stats,;
+export function FeatureCard({title;
+  description;
+  icon;
+  href;
+  stats;
   className = '';
-}: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {;
-  return (;
+}: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {return (;
     <InteractiveCard;
       title={title}
       description={description}
@@ -106,27 +98,22 @@ export function FeatureCard({;
     </InteractiveCard>;
   );
 }
-;
-export function TestimonialCard({;
-  quote,;
-  author,;
-  position,;
-  company,;
-  rating = 5,;
+export function TestimonialCard({quote;
+  author;
+  position;
+  company;
+  rating = 5;
   className = '';
-}: {;
-  quote: string,;
-  author: string,;
-  position: string,;
+}: {quote: string;
+  author: string;
+  position: string;
   company: string;
   rating?: number;
   className?: string;
-}) {;
-  return (;
+}) {return (;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
 <div className=&quot;text-4xl mb-4&quot;>💬</div>
-      
       {/* Rating */}
       <div className=&quot;flex mb-4&quot;>
         {Array.from({ length: rating }).map((_, i) => (
@@ -139,7 +126,6 @@ export function TestimonialCard({;
 <blockquote className=&quot;text-gray-300 text-lg leading-relaxed mb-6 italic&quot;>
         &quot;{quote}&quot;
       </blockquote>
-      
       {/* Author info */}
       <div className=&quot;border-t border-white/10 pt-4&quot;>
         <div className=&quot;font-semibold text-white&quot;>{author}</div>

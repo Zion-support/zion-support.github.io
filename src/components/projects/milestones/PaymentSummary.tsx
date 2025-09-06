@@ -1,14 +1,22 @@
-}; import React from 'react'
-import { Milestone } from '@/hooks/useMilestones'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+
+import React from 'react';
+import { Milestone  } from '@/hooks/useMilestones';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CreditCard } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import React from 'react'
 interface PaymentSummaryProps {
-  milestones: Milestone[],
+<<<<<<< HEAD
+  milestones: Milestone[];
   paymentTerms: string | null
 }
 
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
+  const totalPayment = null;
+=======
+  milestones: Milestone[]
+  paymentTerms: string | null
+}
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString());    0
@@ -33,14 +41,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
               ${totalPayment}
             </p>
           </div>
-          
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
-              {paymentTerms || "Not specified"}
+              {paymentTerms |"Not specified"}
             </p>
           </div>
-          
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
@@ -53,3 +59,4 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   )
 }
 '"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

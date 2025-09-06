@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+import React, { useCallback, useMemo, useState } from 'react',
+import Head from 'next/head',
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { GetServerSideProps  } from 'next';
+import { requireAdminRole } from '../../utils/auth';
+export type Slide = any;
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
-
 interface Slide {
   id: string;
   title: string;
@@ -8,43 +15,39 @@ interface Slide {
   chart?: {
     type: string;
     data: Array<{ label: string; value: number }>;
-  };
-
+  }
 function SlidePreview({
-  slide,
-  isActive,
-  onClick,
+  slide
+  isActive
+  onClick
 }: {
   slide: Slide;
   isActive: boolean;
   onClick: () => void;
 }) {
-  
     >
       <div className='font-semibold text-sm line-clamp-2'>
-        {slide.title || 'Untitled'}
+        {slide.title |'Untitled'}
       </div>
       <div className='text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap'>
-        {slide.content || '—'}
+        {slide.content |'—'}
       </div>
     </button>
   );
-
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const result = await requireAdminRole(ctx);
   // @ts-ignore
   if ('redirect' in result) return result;
   return result;
-};
-
+}
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
-    mission: '',
-    fundingStage: '',
-    vision: '',
-    roundType: '',
-    targetRaise: '',
-    assets: [],
+    mission: ''
+    fundingStage: ''
+    vision: ''
+    roundType: ''
+    targetRaise: ''
+    assets: []
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -53,20 +56,17 @@ export default function PitchGenerator() {
     { id: string; createdAt: string, version: string }[]
   >([]);
   const activeSlide = slides[activeIndex];
-
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    const files = Array.from(e.dataTransfer.files || []);
+    const files = Array.from(e.dataTransfer.files |[]);
     setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));  }, []);
-
   const prevent = (e: React.DragEvent) => {
     e.preventDefault();
-    e.stopPropagation(),
-  };
-
+    e.stopPropagation()
+  }
   const operatorPrompt = useMemo(
     () =>
-      `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,
+      `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`
     []
   );
   const autoFetchMetrics = useCallback(async () => {
@@ -76,32 +76,31 @@ export default function PitchGenerator() {
       const data = await res.json();
       return data;
     } catch (e) {
-      return {};
+      return {}
     } finally {
       setLoading(false);    }
   }, []);
-
   const buildDeck = useCallback(async () => {
     setLoading(true);
     try {
       const metrics = await autoFetchMetrics();
       const res = await fetch('/api/admin/pitch/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          operatorPrompt,
-          inputs: builder,
-          metrics,
-        }),
+          operatorPrompt
+          inputs: builder
+          metrics
+        })
       });
       const json = await res.json();
-      const newSlides: Slide[] = json.slides || [];      setSlides(newSlides);
+      const newSlides: Slide[] = json.slides |[];      setSlides(newSlides);
       setActiveIndex(0);
-      const v = json.version || `v${new Date().toISOString()}`;
+      const v = json.version |`v${new Date().toISOString()}`;
       setVersionTag(v);
       setHistory(h => [
-        { id: uid(), createdAt: new Date().toISOString(), version: v },
-        ...h,
+        { id: uid(), createdAt: new Date().toISOString(), version: v }
+        ...h
       ]);
     } catch (e) {
       // noop
@@ -109,25 +108,24 @@ export default function PitchGenerator() {
       setLoading(false);
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
-
   const rephraseSlide = useCallback(
     async (idx: number) => {
       if (!slides[idx]) return;
-      setLoading(true),
+      setLoading(true)
       try {
         const res = await fetch('/api/admin/pitch/rewrite', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ slide: slides[idx] }),
+          method: 'POST'
+          headers: { 'Content-Type': 'application/json' }
+          body: JSON.stringify({ slide: slides[idx] })
         });
         const json = await res.json();
         setSlides(arr =>
           arr.map((s, i) =>
             i === idx
               ? {
-                  ...s,
-                  title: json.title || s.title,
-                  content: json.content || s.content,
+                  ...s
+                  title: json.title |s.title
+                  content: json.content |s.content
                 }
               : s
           )
@@ -136,7 +134,7 @@ export default function PitchGenerator() {
       } finally {
         setLoading(false);
       }
-    },
+    }
     [slides]
   );
   const addSlide = useCallback(async () => {
@@ -145,49 +143,47 @@ export default function PitchGenerator() {
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
       const json = await res.json();
       setSlides(arr => [
-        ...arr,
+        ...arr
         {
-          id: uid(),
-          title: json.title || 'New Slide',
-          content: json.content || '',
-        },
+          id: uid()
+          title: json.title |'New Slide'
+          content: json.content |''
+        }
       ]);
       setActiveIndex(slides.length);
     } catch (e) {
     } finally {
       setLoading(false);    }
   }, [slides.length]);
-
   const exportPdf = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slides, format: 'pdf', version: versionTag }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ slides, format: 'pdf', version: versionTag })
       });      const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `pitch-deck-${versionTag || 'draft'}.pdf`;
+      a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
       URL.revokeObjectURL(url);
     } catch (e) {
     } finally {
       setLoading(false);    }
   }, [slides, versionTag]);
-
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          slides,
-          format: 'gslides',
-          version: versionTag,
-        }),
+          slides
+          format: 'gslides'
+          version: versionTag
+        })
       });
       const json = await res.json();
       if (json && json.url) {
@@ -197,14 +193,12 @@ export default function PitchGenerator() {
     } finally {
       setLoading(false);    }
   }, [slides, versionTag]);
-
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides(arr =>
       arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
-    );  };
-
+    );  }
   const renderChartPreview = (slide: Slide) => {
-    if (!slide.chart) return null,
+    if (!slide.chart) return null
     const { type, data } = slide.chart;
     return (
       <div className='mt-3'>
@@ -247,8 +241,8 @@ export default function PitchGenerator() {
         </div>
       </div>
     );
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <Head>
@@ -268,21 +262,20 @@ export default function PitchGenerator() {
             </button>
             <button
               onClick={exportPdf}
-              disabled={loading || slides.length === 0}
+              disabled={loading |slides.length === 0}
               className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'
             >
               Download PDF
             </button>
             <button
               onClick={exportGoogleSlides}
-              disabled={loading || slides.length === 0}
+              disabled={loading |slides.length === 0}
               className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'
             >
               Export to Google Slides
             </button>
           </div>
         </div>
-
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-1 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -336,7 +329,6 @@ export default function PitchGenerator() {
                 }
                 className='w-full border rounded px-2 py-1 bg-transparent'
               />
-
               <div
                 onDrop={onAssetDrop}
                 onDragOver={prevent}
@@ -349,7 +341,6 @@ export default function PitchGenerator() {
                 </div>
               </div>
             </div>
-
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>Auto Data</div>
               <button
@@ -366,11 +357,10 @@ export default function PitchGenerator() {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
               <div className='text-xs text-gray-500 dark:text-gray-400'>
-                Version: {versionTag || '—'}
+                Version: {versionTag |'—'}
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -386,7 +376,6 @@ export default function PitchGenerator() {
               </ul>
             </div>
           </div>
-
           <div className='lg:col-span-2 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='flex items-center justify-between'>
@@ -412,7 +401,6 @@ export default function PitchGenerator() {
                 </button>
               </div>
             </div>
-
             {/* Active Slide Editor */}
             {activeSlide && (
               <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -438,20 +426,19 @@ export default function PitchGenerator() {
                   className='w-full mt-3 border rounded px-2 py-1 bg-transparent'
                   rows={10}
                 />
-
                 <div className='mt-4 grid grid-cols-3 gap-2 text-sm'>
                   <button
                     onClick={() =>
                       updateActiveSlide({
                         chart: {
-                          type: 'bar',
+                          type: 'bar'
                           data: [
-                            { label: 'Q1', value: 20 },
-                            { label: 'Q2', value: 40 },
-                            { label: 'Q3', value: 60 },
-                            { label: 'Q4', value: 80 },
-                          ],
-                        },
+                            { label: 'Q1', value: 20 }
+                            { label: 'Q2', value: 40 }
+                            { label: 'Q3', value: 60 }
+                            { label: 'Q4', value: 80 }
+                          ]
+                        }
                       })
                     }
                     className='border rounded px-2 py-1'
@@ -462,13 +449,13 @@ export default function PitchGenerator() {
                     onClick={() =>
                       updateActiveSlide({
                         chart: {
-                          type: 'funnel',
+                          type: 'funnel'
                           data: [
-                            { label: 'Visitors', value: 100 },
-                            { label: 'Signups', value: 40 },
-                            { label: 'Projects', value: 15 },
-                          ],
-                        },
+                            { label: 'Visitors', value: 100 }
+                            { label: 'Signups', value: 40 }
+                            { label: 'Projects', value: 15 }
+                          ]
+                        }
                       })
                     }
                     className='border rounded px-2 py-1'
@@ -479,13 +466,13 @@ export default function PitchGenerator() {
                     onClick={() =>
                       updateActiveSlide({
                         chart: {
-                          type: 'timeline',
+                          type: 'timeline'
                           data: [
-                            { label: 'MVP', value: 2023 },
-                            { label: 'Seed', value: 2024 },
-                            { label: 'Series A', value: 2025 },
-                          ],
-                        },
+                            { label: 'MVP', value: 2023 }
+                            { label: 'Seed', value: 2024 }
+                            { label: 'Series A', value: 2025 }
+                          ]
+                        }
                       })
                     }
                     className='border rounded px-2 py-1'

@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { format } from 'date-fns';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { WorkExperience  } from '@/types/resume';
+=======
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -8,27 +26,32 @@ import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
 import { format } from 'date-fns'
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
 } from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Loader2, Edit, Trash2 } from 'lucide-react'
-import { useResume } from '@/hooks/useResume'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { Card, CardContent } from '@/components/ui/card'
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton'
+import { useResume  } from '@/hooks/useResume';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { Card, CardContent  } from '@/components/ui/card';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 // Define schema for form validation
+<<<<<<< HEAD
+const workExperienceSchema = null;
+                      location: ''})
+=======
 const workExperienceSchema = z.object({
-  company_name: z.string().min(1, 'Company name is required'),
-  role_title: z.string().min(1, 'Job title is required'),
-  start_date: z.string().min(1, 'Start date is required'),
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional(),
+  company_name: z.string().min(1, 'Company name is required')
+  role_title: z.string().min(1, 'Job title is required')
+  start_date: z.string().min(1, 'Start date is required')
+  end_date: z.string().optional()
+  is_current: z.boolean().default(false)
+  description: z.string().optional()
+  location: z.string().optional()
 })
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>
 interface WorkExperienceFormProps {
@@ -37,16 +60,16 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 export function WorkExperienceForm({
-  resumeId,
-  workExperiences,
-  onComplete,
-  onBack,
+  resumeId
+  workExperiences
+  onComplete
+  onBack
 }: WorkExperienceFormProps) {
   const {
-    addWorkExperience,
-    updateWorkExperience,
-    deleteWorkExperience,
-    isLoading,
+    addWorkExperience
+    updateWorkExperience
+    deleteWorkExperience
+    isLoading
   } = useResume()
   const [editingId, setEditingId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -57,15 +80,15 @@ export function WorkExperienceForm({
     return format(dateValue, 'yyyy-MM-dd')
   }
   const form = useForm<WorkExperienceFormValues>({
-    resolver: zodResolver(workExperienceSchema),
+    resolver: zodResolver(workExperienceSchema)
     defaultValues: {
-      company_name: '',
-      role_title: '',
-      start_date: format(new Date(), 'yyyy-MM-dd'),
-      is_current: false,
-      description: '',
-      location: '',
-    },
+      company_name: ''
+      role_title: ''
+      start_date: format(new Date(), 'yyyy-MM-dd')
+      is_current: false
+      description: ''
+      location: ''
+    }
   })
   const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {
     try {
@@ -75,44 +98,42 @@ export function WorkExperienceForm({
         company_name: data.company_name, // Required field
         role_title: data.role_title, // Required field
         start_date: data.start_date, // Required field
-        end_date: data.is_current ? undefined : data.end_date || undefined,
-        is_current: data.is_current,
-        description: data.description,
-        location: data.location,
+        end_date: data.is_current ? undefined : data.end_date |undefined
+        is_current: data.is_current
+        description: data.description
+        location: data.location
       }
       if (editingId) {
         success = await updateWorkExperience(editingId, experienceData)
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
-
       if (success) {
         form.reset({
-          company_name: '',
-          role_title: '',
-          start_date: format(new Date(), 'yyyy-MM-dd'),
-          is_current: false,
-          description: '',
-          location: '',
+          company_name: ''
+          role_title: ''
+          start_date: format(new Date(), 'yyyy-MM-dd')
+          is_current: false
+          description: ''
+          location: ''
         })
         setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message || 'An error occurred')
+      setError(err.message |'An error occurred')
     }
   }
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);    form.reset({
-      ...work,
-
+      ...work
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!)
     form.reset({
-      start_date: formatDateValue(work.start_date),
+      start_date: formatDateValue(work.start_date)
       end_date:
         work.end_date && !work.is_current
           ? formatDateValue(work.end_date)
-          : undefined,
+          : undefined
     })
   }
   const handleDelete = async (id: string,) => {
@@ -131,7 +152,6 @@ export function WorkExperienceForm({
           Add your work history to showcase your professional experience.
         </p>
       </div>
-
       {workExperiences.length > 0 && (
         <div className='space-y-4'>
           <h3 className='text-md font-medium'>Added Experience</h3>
@@ -189,12 +209,10 @@ export function WorkExperienceForm({
           ))}
         </div>
       )}
-
       <div className='bg-muted/40 p-6 rounded-lg'>
         <h3 className='text-md font-medium mb-4'>
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
-
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(handleAddOrUpdate)}
@@ -213,7 +231,6 @@ export function WorkExperienceForm({
                   </FormItem>
                 )}
               />
-
               <FormField
                 control={form.control}
                 name='role_title'
@@ -230,7 +247,6 @@ export function WorkExperienceForm({
                 )}
               />
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <FormField
                 control={form.control}
@@ -239,12 +255,11 @@ export function WorkExperienceForm({
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
+                      <Input type='date' {...field} value={field.value |''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-
               <div className='space-y-4'>
                 <FormField
                   control={form.control}
@@ -262,7 +277,6 @@ export function WorkExperienceForm({
                     </FormItem>
                   )}
                 />
-
                 {!form.watch('is_current') && (
                   <FormField
                     control={form.control}
@@ -274,7 +288,7 @@ export function WorkExperienceForm({
                           <Input
                             type='date'
                             {...field}
-                            value={field.value || ''}                          />
+                            value={field.value |''}                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -283,7 +297,6 @@ export function WorkExperienceForm({
                 )}
               </div>
             </div>
-
             <FormField
               control={form.control}
               name='location'
@@ -299,7 +312,6 @@ export function WorkExperienceForm({
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name='description'
@@ -308,7 +320,7 @@ export function WorkExperienceForm({
                   <FormLabel className='flex justify-between'>
                     <span>Job Description</span>
                     <AIEnhancementButton
-                      currentContent={field.value || ''}
+                      currentContent={field.value |''}
                       enhancementType='work-description'
                       context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
@@ -325,13 +337,11 @@ export function WorkExperienceForm({
                 </FormItem>
               )}
             />
-
             {error && (
               <Alert variant='destructive'>
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
-
             <div className='flex justify-between pt-2'>
               <Button
                 type='button'
@@ -340,13 +350,14 @@ export function WorkExperienceForm({
                   if (editingId) {
                     setEditingId(null)
                     form.reset({
-                      company_name: '',
-                      role_title: '',
-                      start_date: format(new Date(), 'yyyy-MM-dd'),
-                      is_current: false,
-                      description: '',
-                      location: '',
+                      company_name: ''
+                      role_title: ''
+                      start_date: format(new Date(), 'yyyy-MM-dd')
+                      is_current: false
+                      description: ''
+                      location: ''
                     })
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                   } else {
                     onBack()
                   }
@@ -354,7 +365,6 @@ export function WorkExperienceForm({
               >
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
-
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
                   {isLoading && (
@@ -362,7 +372,6 @@ export function WorkExperienceForm({
                   )}
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
-
                 {!editingId && workExperiences.length > 0 && (
                   <Button type='button' onClick={onComplete}>
                     Next
@@ -376,9 +385,8 @@ export function WorkExperienceForm({
     </div>
   )
 }> {'
-  editingId ? 'Cancel': 'Back' 
-}</Button> Next </Button>) 
-}</div> </div> </form> </Form> </div> </div>) 
+  editingId ? 'Cancel': 'Back'
+}</Button> Next </Button>)
+}</div> </div> </form> </Form> </div> </div>)
 }'"  )
 }
-;

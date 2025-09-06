@@ -1,35 +1,33 @@
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-
+<<<<<<< HEAD
+export type FeedbackWidgetProps = any;
+=======
 export type FeedbackWidgetProps = {
   responseId?: string;
   aiModel?: string;
-};
-
+}
 export default function FeedbackWidget({
-  responseId,
-  aiModel,
+  responseId
+  aiModel
 }: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
   responseId?: string;
   aiModel?: string
-};
-
+}
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const effectiveResponseId = useMemo(
-    () => responseId || uuidv4(),
+    () => responseId |uuidv4()
     [responseId]
   );
   const submit = async () => {
     if (!rating) {
       setError('Please choose 👍 or 👎');
-      return;    }  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
-
+      return;    }  const effectiveResponseId = useMemo(() => responseId |uuidv4(), [responseId]);
   const submit = async () => {
     if (!rating) {
       setError('Please choose 👍 or 👎');
@@ -39,41 +37,40 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     setSubmitting(true);
     try {
       const res = await fetch('/api/feedback/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          responseId: effectiveResponseId,
-          rating,
-          comment: comment.trim(),
+          responseId: effectiveResponseId
+          rating
+          comment: comment.trim()
           pagePath:
             typeof window !== 'undefined'
               ? window.location.pathname
-              : undefined,
-          aiModel,
-        }),
+              : undefined
+          aiModel
+        })
       });
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true);
     } catch (e: any) {
-      setError(e?.message || 'Something went wrong');
+      setError(e?.message |'Something went wrong');
     } finally {
       setSubmitting(false);    }
-  };
-
+  }
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
-      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment.trim(),
-          pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment.trim()
+          pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined
           aiModel})});
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true)
     } catch (e: any) {
-      setError(e?.message || 'Something went wrong')
+      setError(e?.message |'Something went wrong')
     } finally {
       setSubmitting(false)
     }
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>

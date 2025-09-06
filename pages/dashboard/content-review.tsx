@@ -1,17 +1,22 @@
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
+<<<<<<< HEAD
+const fetcher = null;
+    mutate()
+  }
 
+=======
+const fetcher = (url: string) => fetch(url).then(r => r.json())
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split(';').reduce(
+  const cookies = (req.headers.cookie |'').split(';').reduce(
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
-      if (k) acc[k] = decodeURIComponent(v || '');
+      if (k) acc[k] = decodeURIComponent(v |'');
       return acc;
-    },
+    }
     {} as Record<string, string>
   );
   let role = 'guest';
@@ -19,10 +24,9 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest';
   } catch {}
   if (role !== 'admin')
-    return { redirect: { destination: '/', permanent: false } };
-  return { props: {} };
-};
-
+    return { redirect: { destination: '/', permanent: false } }
+  return { props: {} }
+}
 export default function ContentReviewPage() {
   const [filters, setFilters] = useState<{
     status?: string;
@@ -38,28 +42,26 @@ export default function ContentReviewPage() {
     return p.toString();
   }, [filters]);
   const { data, mutate } = useSWR(
-    `/api/admin/moderation/flags${query ? `?${query}` : ''}`,
+    `/api/admin/moderation/flags${query ? `?${query}` : ''}`
     fetcher
-  );  const flags = data?.flags || [];
-
+  );  const flags = data?.flags |[];
   const [selected, setSelected] = useState<any | null>(null);
-
   async function handleAction(
-    action: 'approve' | 'remove' | 'warn' | 'ban',
+    action: 'approve' | 'remove' | 'warn' | 'ban'
     adminNotes?: string
   ) {
     if (!selected) return;
     await fetch(
-      `/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`,
+      `/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`
       {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action, adminNotes }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ action, adminNotes })
       }
     );
     setSelected(null);
     mutate();  }
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <EnhancedLayout>
       <div className='max-w-7xl mx-auto'>
@@ -68,9 +70,9 @@ export default function ContentReviewPage() {
         </div>
         <div className='mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm'>
           <select
-            value={filters.status || ''}
+            value={filters.status |''}
             onChange={e =>
-              setFilters(f => ({ ...f, status: e.target.value || undefined }))
+              setFilters(f => ({ ...f, status: e.target.value |undefined }))
             }
             className='border rounded px-2 py-1'
           >
@@ -82,11 +84,11 @@ export default function ContentReviewPage() {
             <option value='banned'>Banned</option>
           </select>
           <select
-            value={filters.contentType || ''}
+            value={filters.contentType |''}
             onChange={e =>
               setFilters(f => ({
-                ...f,
-                contentType: e.target.value || undefined,
+                ...f
+                contentType: e.target.value |undefined
               }))
             }
             className='border rounded px-2 py-1'
@@ -99,19 +101,19 @@ export default function ContentReviewPage() {
           </select>
           <input
             placeholder='Reason contains...'
-            value={filters.reason || ''}
+            value={filters.reason |''}
             onChange={e =>
-              setFilters(f => ({ ...f, reason: e.target.value || undefined }))
+              setFilters(f => ({ ...f, reason: e.target.value |undefined }))
             }
             className='border rounded px-2 py-1'
           />
           <input
             placeholder='User email'
-            value={filters.userEmail || ''}
+            value={filters.userEmail |''}
             onChange={e =>
               setFilters(f => ({
-                ...f,
-                userEmail: e.target.value || undefined,
+                ...f
+                userEmail: e.target.value |undefined
               }))
             }
             className='border rounded px-2 py-1'
@@ -176,7 +178,6 @@ export default function ContentReviewPage() {
           </table>
         </div>
       </div>
-
       {selected && (
         <ModerationModal
           flag={selected}

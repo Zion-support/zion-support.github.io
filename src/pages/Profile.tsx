@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Profile = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -13,6 +12,5 @@ const Profile = () => {
       </div>
     </div>;
   );
-};
-
+}
 export default Profile;

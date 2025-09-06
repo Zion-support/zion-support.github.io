@@ -1,43 +1,41 @@
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
+<<<<<<< HEAD
+type Props = any;
+=======
 type Props = {
   milestone: Milestone;
   projectId: string;
   role: 'client' | 'talent' | 'admin';
   onAction: (
-    action: 'in_progress' | 'submitted' | 'approved' | 'paid',
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => Promise<void> | void;
-};
-
+}
 const statusSteps = [
-  'Pending',
-  'In Progress',
-  'Submitted',
-  'Approved',
-  'Paid',
+  'Pending'
+  'In Progress'
+  'Submitted'
+  'Approved'
+  'Paid'
 ] as const;
-
 export default function MilestoneCard({
-  milestone,
-  projectId,
-  role,
-  onAction,
+  milestone
+  projectId
+  role
+  onAction
 }: Props) {
   const [expanded, setExpanded] = useState(false);
-
   const currentIndex = statusSteps.findIndex(s => s === milestone.status);
-
   const canClientMarkInProgress =
     role !== 'talent' && milestone.status === 'Pending';
   const canTalentSubmit =
-    (role === 'talent' || role === 'admin') &&
+    (role === 'talent' |role === 'admin') &&
     milestone.status === 'In Progress';
   const canClientApprove =
     role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid =
     role !== 'talent' && milestone.status === 'Approved';
-
   return (
     <div className='border rounded-lg p-4 bg-white shadow-sm'>
       <div className='flex items-start justify-between'>
@@ -53,27 +51,22 @@ export default function MilestoneCard({
         >          {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
-
       <div className='mt-3'>
         <div className='flex items-center gap-2'>type Props = {
-  milestone: Milestone,
-  projectId: string,
-  role: 'client' | 'talent' | 'admin',
+  milestone: Milestone
+  projectId: string
+  role: 'client' | 'talent' | 'admin'
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
-};
-
+}
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
-
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
   const [expanded, setExpanded] = useState(false);
-
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
-
   const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
-  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';
+  const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="border rounded-lg p-4 bg-white shadow-sm">
       <div className="flex items-start justify-between">
@@ -85,7 +78,6 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
-
       <div className='mt-3'>
         <div className='flex items-center gap-2'>
           {statusSteps.map((step, idx) => (
@@ -122,14 +114,12 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           Status: {milestone.status}
         </div>
       </div>
-
       {expanded && (
         <div className='mt-4 space-y-2 text-sm text-gray-800'>          {milestone.description && <p>{milestone.description}</p>}
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
             <div>        <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
       </div>
-
       {expanded && (
         <div className="mt-4 space-y-2 text-sm text-gray-800">
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
@@ -144,7 +134,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
                       href={a.url}
                       target='_blank'
                       rel='noreferrer'
-                    >                      {a.label || a.url}              <div className="font-medium">Attachments</div>
+                    >                      {a.label |a.url}              <div className="font-medium">Attachments</div>
               <ul className="list-disc ml-5">
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
@@ -157,7 +147,6 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           )}
         </div>
       )}
-
       <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button

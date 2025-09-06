@@ -4,7 +4,11 @@ import path from 'node: path'
 ;
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+<<<<<<< HEAD
+  plugins: [react()];
+=======
+  plugins: [react()]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')

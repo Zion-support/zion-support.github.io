@@ -1,9 +1,12 @@
 export interface BlogAuthor {
   name: string;
-  title: string,
+<<<<<<< HEAD
+  title: string;
+=======
+  title: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   avatarUrl: string
 }
-
 export interface BlogPost {
   id: string;
   title: string;
@@ -18,24 +21,34 @@ export interface BlogPost {
   featuredImage: string;
   isFeatured?: boolean;
   isPublished?: boolean;
-  createdBy?: string,
+<<<<<<< HEAD
+  createdBy?: string;
+=======
+  createdBy?: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   updatedAt?: string
 }
-
 // Type for generated blog content
 export interface GeneratedBlogContent {
   title: string;
   metaDescription: string;
   body: string;
   tags: string[];
-  tweetSummary?: string,
+<<<<<<< HEAD
+  tweetSummary?: string;
+=======
+  tweetSummary?: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   imagePrompt?: string
 }
-
 // Type for generated newsletter content
 export interface GeneratedNewsletterContent {
   subject: string;
   previewText: string;
-  body: string,
+<<<<<<< HEAD
+  body: string;
+=======
+  body: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   cta: string
 }

@@ -8,7 +8,7 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/    
+    content = content.replace(/
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts "in": ${path.relative(process.cwd(), filePath)}`);

@@ -1,5 +1,8 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+<<<<<<< HEAD
+const Page: NextPage;
+=======
 const Page: NextPage = () => {
   return (
     <>
@@ -13,6 +16,6 @@ const Page: NextPage = () => {
       </div>
     </>
   )
-},
-
-export default Page,;
+}
+export default Page;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

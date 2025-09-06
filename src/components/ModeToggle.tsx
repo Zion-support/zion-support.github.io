@@ -1,14 +1,14 @@
 import { Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
 } from '@/components/ui/tooltip'
 import { toast } from '@/hooks/use-toast'
-  darkModeMessages,
-  lightModeMessages,
+  darkModeMessages
+  lightModeMessages
 } from '@/utils/themeToggleMessages'
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from '@/components/ThemeProvider'
@@ -18,19 +18,23 @@ import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
 export function ModeToggle() {
-  const { theme, toggleTheme } = useTheme()
-  const [isClient, setIsClient] = useState(false)
+
+  const { theme, toggleTheme } = useTheme();
+  const [isClient, setIsClient] = useState(false);
   // Ensure we're on the client side to avoid hydration mismatches
   useEffect(() => {
     setIsClient(true)
   }, [])
   // Determine the actual resolved theme for display purposes
+<<<<<<< HEAD
+  const resolvedTheme = null;
+=======
   const resolvedTheme = (() => {
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
@@ -58,8 +62,8 @@ export function ModeToggle() {
         newTheme === 'dark' ? darkModeMessages : lightModeMessages
       const title = messages[Math.floor(Math.random() * messages.length)]
       toast({
-        title,
-        description: `Theme changed to ${newTheme} mode successfully`,
+        title
+        description: `Theme changed to ${newTheme} mode successfully`
       })
       // Accessibility announcement for screen readers
       const announcement = `Theme switched to ${newTheme} mode`
@@ -76,20 +80,20 @@ export function ModeToggle() {
       }, 1000) } catch (error) {
       logErrorToProduction('Theme toggle error:', { data: error })
       logIssue('Theme switch failed', {
-        error,
-        currentTheme: theme,
-        resolvedTheme,
+        error
+        currentTheme: theme
+        resolvedTheme
       })
       toast({
-        title: 'Theme switch failed',
-        description: 'Unable to change theme. Please try again.',
-        variant: 'destructive',
+        title: 'Theme switch failed'
+        description: 'Unable to change theme. Please try again.'
+        variant: 'destructive'
       })
     }
   }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
-    
       >
         <div className='h-5 w-5 bg-muted rounded animate-pulse' />{' '}
         {/* Changed to bg-muted for theme consistency */}
@@ -97,7 +101,6 @@ export function ModeToggle() {
       </Button>
     )
   }
-
   return (
     <TooltipProvider>
       <Tooltip>
@@ -117,7 +120,6 @@ export function ModeToggle() {
             ) : (
               <Moon className='h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12' />
             )}
-
             {/* Enhanced visual indicator */}
             <div
               className={`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${
@@ -126,7 +128,6 @@ export function ModeToggle() {
                   : 'bg-slate-600 dark:bg-slate-400'
               } opacity-70 group-hover:opacity-100`}
             />
-
             <span className='sr-only'>
               Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
               {isDarkMode ? 'light' : 'dark'}.
@@ -154,13 +155,13 @@ if (!isClient) {"
   //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {
   /* Changed to bg-muted for theme consistency */ "
 }<span className="sr-only" >Loading theme toggle</span> </Button>) "
-}return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button) : (<Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />) 
+}return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button) : (<Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />)
 }{
-  /* Enhanced visual indicator */ 
+  /* Enhanced visual indicator */
 }<div className= {
   `absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 $ {'
-  isDarkMode ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50': 'bg-slate-600 dark:bg-slate-400' 
-}opacity-70 group-hover:opacity-100` 
-}/> </span> </Button> </TooltipTrigger> <TooltipContent>) 
-}</div> </TooltipContent> </Tooltip> </TooltipProvider>) 
+  isDarkMode ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50': 'bg-slate-600 dark:bg-slate-400'
+}opacity-70 group-hover:opacity-100`
+}/> </span> </Button> </TooltipTrigger> <TooltipContent>)
+}</div> </TooltipContent> </Tooltip> </TooltipProvider>)
 }'"}

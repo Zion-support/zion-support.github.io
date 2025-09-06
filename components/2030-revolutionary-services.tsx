@@ -1,16 +1,26 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030',
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';
+export default function Revolutionary2030ServicesPage() {
+  const contactInfo = null;
+=======
 import { motion } from 'framer-motion';
 import {
-  ArrowRight,
-  Star,
-  Zap,
-  TrendingUp,
-  Users,
-  Award,
-  Phone,
-  Mail,
-  MapPin,;
+  ArrowRight
+  Star
+  Zap
+  TrendingUp
+  Users
+  Award
+  Phone
+  Mail
+  MapPin;
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -21,12 +31,11 @@ import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFoote
 import { innovative2030Services } from '../data/2030-innovative-services';
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
-  };
-
+  }
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -44,7 +53,6 @@ export default function Revolutionary2030ServicesPage() {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
-
         <meta
           property='og:title'
           content='2030 Revolutionary Technology Services | Zion Tech Group'
@@ -62,7 +70,6 @@ export default function Revolutionary2030ServicesPage() {
           property='og:image'
           content='https://ziontechgroup.com/og-image.jpg'
         />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -77,47 +84,45 @@ export default function Revolutionary2030ServicesPage() {
           name='twitter:image'
           content='https://ziontechgroup.com/twitter-image.jpg'
         />
-
         {/* Additional Meta Tags */}
         <meta name='theme-color' content='#8b5cf6' />
         <link
           rel='canonical'
           href='https://ziontechgroup.com/2030-revolutionary-services'
         />
-
         {/* Structured Data */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Zion Tech Group',
+              '@context': 'https://schema.org'
+              '@type': 'Organization'
+              name: 'Zion Tech Group'
               description:
-                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',
-              url: 'https://ziontechgroup.com',
-              logo: 'https://ziontechgroup.com/logo.png',
+                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing'
+              url: 'https://ziontechgroup.com'
+              logo: 'https://ziontechgroup.com/logo.png'
               contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+1-302-464-0950',
-                contactType: 'customer service',
-                email: 'kleber@ziontechgroup.com',
-              },
+                '@type': 'ContactPoint'
+                telephone: '+1-302-464-0950'
+                contactType: 'customer service'
+                email: 'kleber@ziontechgroup.com'
+              }
               address: {
-                '@type': 'PostalAddress',
-                streetAddress: '364 E Main St STE 1008',
-                addressLocality: 'Middletown',
-                addressRegion: 'DE',
-                postalCode: '19709',
-                addressCountry: 'US',
-              },
-              sameAs: ['https://github.com/Zion-Holdings'],
+                '@type': 'PostalAddress'
+                streetAddress: '364 E Main St STE 1008'
+                addressLocality: 'Middletown'
+                addressRegion: 'DE'
+                postalCode: '19709'
+                addressCountry: 'US'
+              }
+              sameAs: ['https://github.com/Zion-Holdings']
             }),          }}              "contactPoint": {
                 "@type": "ContactPoint";
                 "telephone": "+1-302-464-0950";
-                "contactType": "customer service",
+                "contactType": "customer service"
                 "email": "kleber@ziontechgroup.com"
-              };
+              }
               "address": {
                 "@type": "PostalAddress";
                 "streetAddress": "364 E Main St STE 1008";
@@ -125,17 +130,16 @@ export default function Revolutionary2030ServicesPage() {
                 "addressRegion": "DE";
                 "postalCode": "19709";
                 "addressCountry": "US"
-              };
+              }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
               "sameAs": [
                 "https://github.com/Zion-Holdings"
               ]
             })
         />
       </Head>
-
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />
-
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -159,7 +163,6 @@ export default function Revolutionary2030ServicesPage() {
               </span>
             </div>
           </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -179,7 +182,6 @@ export default function Revolutionary2030ServicesPage() {
               Technology Services
             </span>
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -190,9 +192,8 @@ export default function Revolutionary2030ServicesPage() {
             From AI consciousness and quantum computing to space mining and DNA
             computing, we're building the future today.          </motion.p>            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
-            Experience the next generation of revolutionary technology services. From AI consciousness 
+            Experience the next generation of revolutionary technology services. From AI consciousness
             and quantum computing to space mining and DNA computing, we're building the future today.
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -203,20 +204,17 @@ export default function Revolutionary2030ServicesPage() {
               Schedule Consultation
               <ArrowRight className='w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform' />
             </button>
-
             <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>              View Pricing          >
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">
               Schedule Consultation
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />
             </button>
-            
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
               View Pricing
             </button>
           </motion.div>
         </div>
       </section>
-
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -236,20 +234,17 @@ export default function Revolutionary2030ServicesPage() {
                 2030 Services
               </span>
             </h2>
-
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover our comprehensive range of cutting-edge 2030 technology
               services that will transform your business and propel you into the
               future.            </p>
           </motion.div>
-
           {/* Services Grid */}
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>            {innovative2030Services.map((service, index) => (            
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>            {innovative2030Services.map((service, index) => (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive range of cutting-edge 2030 technology services that will 
+              Discover our comprehensive range of cutting-edge 2030 technology services that will
               transform your business and propel you into the future.
           </motion.div>
-
           {/* Services Grid */}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
             {innovative2030Services.map((service, index) => (
@@ -298,12 +293,10 @@ export default function Revolutionary2030ServicesPage() {
                       </div>
                     )}
                   </div>
-
                   {/* Description */}
                   <p className='text-gray-300 leading-relaxed mb-6'>
                     {service.description}
                   </p>
-
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-3 mb-6'>
                     {service.features
@@ -318,7 +311,6 @@ export default function Revolutionary2030ServicesPage() {
                         </div>
                       ))}
                   </div>
-
                   {/* Service Details */}
                   <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                     <div className='flex items-center space-x-2'>
@@ -345,7 +337,6 @@ export default function Revolutionary2030ServicesPage() {
                         {service.innovationLevel}
                       </span>                    </div>
                   </div>
-
                   {/* Price and CTA */}
                   <div className='flex items-center justify-between'>
                   {/* Features */}
@@ -357,7 +348,6 @@ export default function Revolutionary2030ServicesPage() {
                       </div>
                     ))}
                   </div>
-
                   {/* Service Details */}
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                     <div className="flex items-center space-x-2">
@@ -377,7 +367,6 @@ export default function Revolutionary2030ServicesPage() {
                       <span className="text-gray-300">{service.innovationLevel}</span>
                     </div>
                   </div>
-
                   {/* Price and CTA */}
                   <div className='flex items-center justify-between'>
                     <div>
@@ -403,7 +392,6 @@ export default function Revolutionary2030ServicesPage() {
               </motion.div>
             ))}
           </div>
-
           {/* Call to Action */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -431,7 +419,7 @@ export default function Revolutionary2030ServicesPage() {
                 Ready to Experience the Future?
               </h3>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the revolution and transform your business with our cutting-edge 2030 technology services. 
+                Join the revolution and transform your business with our cutting-edge 2030 technology services.
                 The future is waiting for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -446,7 +434,6 @@ export default function Revolutionary2030ServicesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className='py-24 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8">
@@ -469,7 +456,6 @@ export default function Revolutionary2030ServicesPage() {
               revolutionary 2030 services can transform your business and propel
               you into the future.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>
                 Schedule Consultation
@@ -477,7 +463,6 @@ export default function Revolutionary2030ServicesPage() {
               <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                View Pricing
               </button>
             </div>
-
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
               <div className='flex items-center justify-center space-x-2'>
                 <Phone className='w-5 h-5 text-cyan-400' />              Ready to Transform Your Business with
@@ -486,10 +471,9 @@ export default function Revolutionary2030ServicesPage() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact our team of technology experts to discuss how our revolutionary 2030 services 
+              Contact our team of technology experts to discuss how our revolutionary 2030 services
               can transform your business and propel you into the future.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
                 Schedule Consultation
@@ -498,7 +482,6 @@ export default function Revolutionary2030ServicesPage() {
                 View Pricing
               </button>
             </div>
-
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
               <div className='flex items-center justify-center space-x-2'>
                 <Phone className='w-5 h-5 text-cyan-400' />
@@ -524,7 +507,6 @@ export default function Revolutionary2030ServicesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>

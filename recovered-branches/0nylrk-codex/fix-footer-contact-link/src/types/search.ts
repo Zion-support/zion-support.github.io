@@ -1,27 +1,45 @@
 
 export interface SearchSuggestion {
   text: string;
-  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
+<<<<<<< HEAD
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent';
+=======
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   iconUrl?: string
 }
-
 export interface SearchHighlight {
   before: string;
-  match: string,
+<<<<<<< HEAD
+  match: string;
+=======
+  match: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   after: string
 }
-
 export interface FilterOptions {
   productTypes: {
-    label: string,
+<<<<<<< HEAD
+    label: string;
     value: string
   }[];
   locations: {
-    label: string,
+    label: string;
     value: string
   }[];
   availabilityOptions: {
-    label: string,
+    label: string;
+=======
+    label: string
+    value: string
+  }[];
+  locations: {
+    label: string
+    value: string
+  }[];
+  availabilityOptions: {
+    label: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     value: string
   }[];
   ratingOptions: number[]

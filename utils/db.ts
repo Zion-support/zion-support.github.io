@@ -1,11 +1,9 @@
 // Mock database utility
 import fs from 'fs';
 import path from 'path';
-
 function getFilePath(fileName: string): string {
   return path.join(process.cwd(), 'data', `${fileName}.json`);
 }
-
 export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
     if (fs.existsSync(filePath)) {
@@ -17,14 +15,12 @@ export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   }
   return defaultValue;
 }
-
 export function writeJsonFile<T>(fileName: string, data: T): void {
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
   fs.renameSync(tmpPath, filePath);
 }
-
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);

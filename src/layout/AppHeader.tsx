@@ -1,30 +1,52 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { useMessaging  } from '@/context/MessagingContext';
+import Link from 'next/link';
+import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
+import { Logo  } from '@/components/header/Logo';
+import { useTranslation  } from 'react-i18next';
+import { Menu, X } from 'lucide-react'
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+import { PointsBadge  } from '@/components/loyalty/PointsBadge';
+import { LoginModal  } from '@/components/auth/LoginModal';
+import { useAuth  } from '@/hooks/useAuth';
+import { UserMenu  } from '@/components/header/UserMenu';
+import { useSelector  } from 'react-redux';
+import type { RootState } from '@/store';
+import { cn } from '@/lib/utils', // Import cn utility
+import { useRouter } from 'next/router';
+export function AppHeader() {
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const isMobile = null;
+=======
   const showTagline = router.pathname === '/'
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-  const [loginOpen, setLoginOpen] = useState(false),
-  const isMobile = useIsMobile(),
-  const { t } = useTranslation(),
-  const { user } = useAuth(),
-  const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn),
-  const router = useRouter(),
-  const showTagline = router.pathname === '/',
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false)
+  const isMobile = useIsMobile()
+  const { t } = useTranslation()
+  const { user } = useAuth()
+  const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)
+  const router = useRouter()
+  const showTagline = router.pathname === '/'
   // Messaging context (unread message count)
-  const { unreadCount } = useMessaging(),
-
+  const { unreadCount } = useMessaging()
   const openLoginModal = (returnToPath?: string,) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
     // using router.push with shallow:true before this function is called.
     // This function's main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
-  },
-  
+  }
   return (
     <>
       <header
         style={{ "--nav-height": "64px" } as React.CSSProperties}
         className = {cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
           { "bg-red-500": mobileMenuOpen ,}
         )}
       >
@@ -40,7 +62,6 @@
               <ResponsiveNavigation openLoginModal={openLoginModal} />
             </nav>
           </div>
-          
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
@@ -57,7 +78,6 @@
               )}
             </button>
           </div>
-
           <PointsBadge />
           {!isLoggedIn && (
             <div className="ml-4 relative z-10 flex items-center">
@@ -67,11 +87,12 @@
                 aria-label = {t('auth.login'),}
                 data-testid="login-link"
                 onClick={(e,) => {
-                  e.preventDefault(),
-                  // For the main login link, we might not have a specific returnTo beyond current page,
+                  e.preventDefault()
+                  // For the main login link, we might not have a specific returnTo beyond current page
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                   openLoginModal(router.asPath)
                 }}
               >
@@ -95,17 +116,16 @@
           )}
         </div>
       </header>
-      
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div 
+          <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
+            <MobileMenu
               unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
@@ -113,7 +133,6 @@
           </div>
         </div>
       )}
-
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
@@ -402,17 +421,17 @@
           <div className="flex items-center space-x-4">
             {/* Search */}
             <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Home', href: '/', current: true }
+    { name: 'About', href: '/about', current: false }
+    { name: 'Contact', href: '/contact', current: false }
   ]
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
-    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' }
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' }
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' }
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' }
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' }
+    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' }
   ]
   return (
     <>
@@ -436,7 +455,6 @@
                 {item.name}
               </Link>
             ))}
-
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -448,7 +466,7 @@
                 <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesDropdownOpen && (
-                <div 
+                <div
                   className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md"
                   onMouseEnter={() => setServicesDropdownOpen(true)}
                   onMouseLeave={() => setServicesDropdownOpen(false)}
@@ -587,7 +605,6 @@
                   {item.name}
                 </Link>
               ))}
-
               {/* Mobile Services */}
               <div className="px-3 py-2">
                 <div className="text-slate-400 text-sm font-medium mb-2">Services</div>
@@ -709,4 +726,3 @@
       </AnimatePresence>
     </header>  )
 }
-;

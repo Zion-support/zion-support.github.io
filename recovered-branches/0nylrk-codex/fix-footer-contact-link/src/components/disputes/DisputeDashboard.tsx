@@ -1,28 +1,38 @@
+<<<<<<< HEAD
+
+import React, { useEffect } from "react",
+import { useDisputes } from "@/hooks/useDisputes",
+import { DisputesList } from "./DisputesList",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+=======
 import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from "@/components/ui/card";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 export function DisputeDashboard() {
   const { disputes, isLoading, refetch } = useDisputes();
-
   useEffect(() => {
     refetch();
   }, [refetch]);
+<<<<<<< HEAD
 
+  const openDisputes = null;
+=======
   const openDisputes = disputes.filter((d) => d.status === "open");
   const underReviewDisputes = disputes.filter(
-    (d) => d.status === "under_review",
+    (d) => d.status === "under_review"
   );
   const resolvedDisputes = disputes.filter((d) => d.status === "resolved");
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -32,12 +42,10 @@ export function DisputeDashboard() {
             Manage and resolve disputes between clients and talents
           </p>
         </div>
-
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
-
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -54,13 +62,12 @@ export function DisputeDashboard() {
               <div
                 className="bg-red-600 h-2.5 rounded-full"
                 style={{
-                  width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%`,
+                  width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%`
                 }}
               ></div>
             </div>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -78,13 +85,12 @@ export function DisputeDashboard() {
               <div
                 className="bg-yellow-500 h-2.5 rounded-full"
                 style={{
-                  width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%`,
+                  width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%`
                 }}
               ></div>
             </div>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -102,14 +108,13 @@ export function DisputeDashboard() {
               <div
                 className="bg-green-500 h-2.5 rounded-full"
                 style={{
-                  width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`,
+                  width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`
                 }}
               ></div>
             </div>
           </CardContent>
         </Card>
       </div>
-
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
   );

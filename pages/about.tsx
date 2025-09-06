@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+const AboutPage: React.FC;
+=======
 import React from "react";
 import Layout from "../components/Layout";
-
 export default function About() {
   return (
     <Layout
@@ -14,7 +20,7 @@ export default function About() {
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leading technology solutions provider specializing in AI,
+              Leading technology solutions provider specializing in AI
               cybersecurity, and digital transformation.
             </p>
           </div>
@@ -26,3 +32,4 @@ export default function About() {
     </Layout>
   );
 }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

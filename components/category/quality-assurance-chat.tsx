@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const QualityAssuranceChat: NextPage;
+=======
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,7 +17,6 @@ const QualityAssuranceChat: NextPage = () => {
           content="QualityAssuranceChat blog post"
         />{" "}
       </Head>
-
       <main>
         <h1>QualityAssuranceChat</h1>
         <p>Blog content coming soon...</p>
@@ -19,6 +24,6 @@ const QualityAssuranceChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default QualityAssuranceChat;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

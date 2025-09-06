@@ -1,6 +1,10 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
+<<<<<<< HEAD
+import React, { useState } from 'react',
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 export default function BlogPage() {
 	return (
 		<Layout>

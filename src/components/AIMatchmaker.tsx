@@ -1,16 +1,29 @@
-import { useState } from 'react'
-import { toast } from '@/hooks/use-toast'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { AIMatchingResults } from '@/components/AIMatchingResults'
-import { findMatches, MatchResult } from '@/lib/ai-matchmaking'
-import { Textarea } from '@/components/ui/textarea'
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { AIMatchingResults } from "@/components/AIMatchingResults",
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
+import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from 'lucide-react'
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
+<<<<<<< HEAD
+  serviceType?: string;
+  onMatchSelect?: (match: any) => void;
+  className?: string
+}
+
+export function AIMatchmaker({ serviceType;
+  return (
+    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
+      <CardHeader className="pb-2">
+        <CardTitle className="flex items-center text-white">
+          <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
+=======
   serviceType?: string
 onMatchSelect?: (match: any) => void
-className?: string 
+className?: string
 }if (!query.trim () ) {
   toast ({
   return
@@ -20,22 +33,21 @@ serviceType
 3)
 }catch (error) {'
   logErrorToProduction ('Error during AI matching:', {
-  data: error 
+  data: error
 })
 toast ({
-  //Set empty matches to show no results found UI setMatches ([]) 
+  //Set empty matches to show no results found UI setMatches ([])
 }finally {
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
-  serviceType?: string,
-  onMatchSelect?: (match: any,) => void,
+  serviceType?: string
+  onMatchSelect?: (match: any,) => void
   className?: string
 }
-
 export function AIMatchmaker({
-  serviceType = '',
-  onMatchSelect,
-  className,
+  serviceType = ''
+  onMatchSelect
+  className
 }: AIMatchmakerProps) {
   const [query, setQuery] = useState('')
   const [isMatchmaking, setIsMatchmaking] = useState(false)
@@ -44,13 +56,12 @@ export function AIMatchmaker({
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
-        title: 'Please enter a description',
-        description: "Tell us what you're looking for so we can find matches.",
-        variant: 'destructive',
+        title: 'Please enter a description'
+        description: "Tell us what you're looking for so we can find matches."
+        variant: 'destructive'
       })
       return
     }
-
     setIsMatchmaking(true)
     setHasSearched(true)
     try {
@@ -60,16 +71,16 @@ export function AIMatchmaker({
       logInfo('AI matching results:', { data: results })
       setMatches(results)
       toast({
-        title: 'Matches Found',
-        description: `Found ${results.length} matches based on your description.`,
+        title: 'Matches Found'
+        description: `Found ${results.length} matches based on your description.`
       })
     } catch (error) {
       logErrorToProduction('Error during AI matching:', { data: error })
       toast({
-        title: 'Matching Error',
+        title: 'Matching Error'
         description:
-          "We couldn't find matches for your request. Please try again.",
-        variant: 'destructive',
+          "We couldn't find matches for your request. Please try again."
+        variant: 'destructive'
       })
       // Set empty matches to show no results found UI
       setMatches([])
@@ -79,7 +90,7 @@ export function AIMatchmaker({
   }
   const handleItemSelect = (item: any) => {    if (onMatchSelect) {
       // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id),
+      const matchResult = matches.find(match => match.item.id === item.id)
       if (matchResult) {
         onMatchSelect(matchResult)
       }
@@ -91,6 +102,7 @@ export function AIMatchmaker({
       <CardHeader className='pb-2'>
         <CardTitle className='flex items-center text-white'>
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
           AI Matchmaker
         </CardTitle>
         <p className='text-sm text-zion-slate-light'>
@@ -123,7 +135,6 @@ export function AIMatchmaker({
               )}
             </Button>
           </div>
-
           {hasSearched && (
             <AIMatchingResults
               matches={matchItems}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -8,17 +7,14 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   timeToInteractive: number;
 }
-
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     if (typeof window !== "undefined" && "performance" in window) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const newMetrics: Partial<PerformanceMetrics> = {};
-
+        const newMetrics: Partial<PerformanceMetrics> = {}
         entries.forEach((entry) => {
           if (entry.entryType === "paint") {
             if (entry.name === "first-contentful-paint") {
@@ -28,43 +24,36 @@ const PerformanceDashboard: React.FC = () => {
             newMetrics.largestContentfulPaint = entry.startTime;
           } else if (entry.entryType === "layout-shift") {
             newMetrics.cumulativeLayoutShift =
-              (newMetrics.cumulativeLayoutShift || 0) + (entry as any).value;
+              (newMetrics.cumulativeLayoutShift |0) + (entry as any).value;
           }
         });
-
         if (Object.keys(newMetrics).length > 0) {
           setMetrics(
-            (prev) => ({ ...prev, ...newMetrics }) as PerformanceMetrics,
+            (prev) => ({ ...prev, ...newMetrics }) as PerformanceMetrics
           );
         }
       });
-
       observer.observe({
-        entryTypes: ["paint", "largest-contentful-paint", "layout-shift"],
+        entryTypes: ["paint", "largest-contentful-paint", "layout-shift"]
       });
-
       // Get load time
       window.addEventListener("load", () => {
         const loadTime =
           performance.timing.loadEventEnd - performance.timing.navigationStart;
         setMetrics((prev) => ({ ...prev, loadTime }) as PerformanceMetrics);
       });
-
       return () => observer.disconnect();
     }
   }, []);
-
   const getScoreColor = (
-    value: number,
-    thresholds: { good: number; needsImprovement: number },
+    value: number
+    thresholds: { good: number; needsImprovement: number }
   ) => {
     if (value <= thresholds.good) return "text-green-600";
     if (value <= thresholds.needsImprovement) return "text-yellow-600";
     return "text-red-600";
-  };
-
+  }
   if (!metrics) return null;
-
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
@@ -73,11 +62,9 @@ const PerformanceDashboard: React.FC = () => {
       >
         📊 Performance
       </button>
-
       {isVisible && (
         <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl p-6 w-80 border">
           <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>
-
           <div className="space-y-3">
             {metrics.loadTime && (
               <div className="flex justify-between items-center">
@@ -89,7 +76,6 @@ const PerformanceDashboard: React.FC = () => {
                 </span>
               </div>
             )}
-
             {metrics.firstContentfulPaint && (
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium">FCP:</span>
@@ -100,7 +86,6 @@ const PerformanceDashboard: React.FC = () => {
                 </span>
               </div>
             )}
-
             {metrics.largestContentfulPaint && (
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium">LCP:</span>
@@ -111,7 +96,6 @@ const PerformanceDashboard: React.FC = () => {
                 </span>
               </div>
             )}
-
             {metrics.cumulativeLayoutShift && (
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium">CLS:</span>
@@ -123,7 +107,6 @@ const PerformanceDashboard: React.FC = () => {
               </div>
             )}
           </div>
-
           <div className="mt-4 pt-4 border-t">
             <div className="text-xs text-gray-500">
               Core Web Vitals monitoring in real-time
@@ -133,6 +116,5 @@ const PerformanceDashboard: React.FC = () => {
       )}
     </div>
   );
-};
-
+}
 export default PerformanceDashboard;

@@ -1,6 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+=======
 import Layout from '../components/Layout';
-
 export default function TestPage() {
   return (
     <Layout title="Test Page">
@@ -10,6 +12,7 @@ export default function TestPage() {
     </Layout>
   );
 }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function TestPage() {
   return (
     <>

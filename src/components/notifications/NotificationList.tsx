@@ -1,26 +1,45 @@
-}; import React from 'react'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import Skeleton from '@/components/ui/skeleton'
-import { Button } from '@/components/ui/button'
-import { NotificationItem } from './NotificationItem'
-import { Notification } from '@/context/notifications'
-import { EmptyState } from '@/components/ui/empty-state'
+
+import React from 'react';
+import { ScrollArea  } from '@/components/ui/scroll-area';
+import Skeleton from '@/components/ui/skeleton';
+import { Button  } from '@/components/ui/button';
+import { NotificationItem  } from './NotificationItem';
+import { Notification  } from '@/context/notifications';
+import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react'
 interface NotificationListProps {
-  loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-  onMarkAsRead: (id: string,) => Promise<void>,
-  onDismiss: (id: string,) => Promise<void>,
+<<<<<<< HEAD
+  loading: boolean;
+  error: string | null;
+  notifications: Notification[];
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
+=======
+  loading: boolean
+  error: string | null
+  notifications: Notification[]
+  onMarkAsRead: (id: string,) => Promise<void>
+  onDismiss: (id: string,) => Promise<void>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onRetry: () => void
 }
-
 export const NotificationList: React.FC<NotificationListProps> = ({
+<<<<<<< HEAD
+  loading;
+  error;
+  notifications;
+  onMarkAsRead;
+  onDismiss;
+  onRetry
+},) => {
+  return (
+    <ScrollArea className;
+=======
   loading
   error
   notifications
   onMarkAsRead
-  onDismiss,
+  onDismiss
   onRetry
 },) => {
   return (
@@ -28,9 +47,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       {error ? (
         <div className="p-8 text-center text-amber-500">
           <p>{error}</p>
-          <Button 
-            variant="outline" 
-            size="sm" 
+          <Button
+            variant="outline"
+            size="sm"
             className="mt-2"
             onClick = {onRetry,}
           >
@@ -67,3 +86,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   )
 }
 "
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
