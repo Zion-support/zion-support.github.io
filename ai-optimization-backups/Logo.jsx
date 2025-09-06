@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -12,11 +18,36 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
 export function Logo({ customLogo, customColor }) {}
   const logoColor = customColor || '#22D3EE';',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   return (;
     <Link to="/" className="flex items-center space-x-3 group">";
       <div);
@@ -26,6 +57,22 @@ export function Logo({ customLogo, customColor }) {}
             ? `linear-gradient(135deg,${customColor},${customColor}dd)`,
             : 'linear-gradient(135deg,#22D3EE,#A855F7)'}}',
       >;,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  return (
+    <Link to="/" className="flex items-center space-x-3 group">";
+      <div)
+        className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300""
+        style={{}
+          background: customColor,
+            ? `linear-gradient(135deg,${customColor},${customColor}dd)`,
+            : 'linear-gradient(135deg,#22D3EE,#A855F7)'}}',>;,
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
         <span className="text-white font-bold text-xl">Z</span>";
       </div>;
       <div className="flex flex-col">";
@@ -34,6 +81,19 @@ export function Logo({ customLogo, customColor }) {}
         </span>;
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>";
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
     </Link>;
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -124,16 +184,36 @@ origin/automation-improvements-final
             ? `linear-gradient(135deg,${customColor},${customColor}dd)`
             : 'linear-gradient(135deg,#22D3EE,#A855F7)'
         }}
+=======
+    </Link>;
+  return (
+    <Link to="/" className="flex items-center space-x-3 group">
+      <div
+        className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"
+style={{
+          background: customColor
+            ? `linear-gradient(135deg,${customColor},${customColor}dd)`
+            : 'linear-gradient(135deg,#22D3EE,#A855F7)'}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       >
         <span className="text-white font-bold text-xl">Z</span>
       </div>
       <div className="flex flex-col">
+<<<<<<< HEAD
         <span className="text-xl font-bold" style={{ color: logoColor }}>
+=======
+        <span className="text-xl font-bold" style={{ "color": logoColor }}>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           Zion
         </span>
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>
       </div>
     </Link>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   );
   );
 }
@@ -201,3 +281,17 @@ origin/automation-improvements-final
 
 
 }
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+  );
+
+,
+import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
+import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

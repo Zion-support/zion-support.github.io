@@ -12,12 +12,13 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: true,
-    minify: "terser",
+    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
+          vendor: ["react", "react-dom"],
+          ui: ["framer-motion", "lucide-react"],
+          router: ["react-router-dom"]
         },
       },
     },
@@ -28,6 +29,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom'],
   },
 });

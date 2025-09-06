@@ -10,8 +10,8 @@
     "strict": false,
     "noEmit": true,
     "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -20,7 +20,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"]
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "next-env.d.ts",
