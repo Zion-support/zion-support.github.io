@@ -3,42 +3,41 @@ import crypto from "crypto";
 
 =======
 // Merkle tree utilities;
-export const merkle = {
+export const merkle = {};
   // Add merkle tree functionality here;
   create_tree: (leaves: string[]) => null,
   get_proof: (tree: any, leaf: string) => [],
   verify_proof: (proof: any[], leaf: string, root: string) => false;
 }
 
-export class MerkleTree {
+export class MerkleTree {};
   private root: MerkleNode | null = null;
   private leaves: MerkleNode[] = [];
 
-  constructor(data: any[]) {
+  constructor(data: any[]) {}
     this.buildTree(data);
   }
 
-  private buildTree(data: any[]): void {
+  private buildTree(data: any[]): void {}
     if (data.length === 0) return;
 
-    // Create leaf nodes
-    this.leaves = data.map((item) => ({
+    // Create leaf nodes;
+    this.leaves = data.map((item) => ({}
       hash: this.hashData(JSON.stringify(item)),
       data: item,
     }));
 
-    // Build tree bottom-up
+    // Build tree bottom-up;
     let currentLevel = [...this.leaves];
 
-    while (currentLevel.length > 1) {
+    while (currentLevel.length > 1) {}
       const nextLevel: MerkleNode[] = [];
 
-      for (let i = 0; i < currentLevel.length; i += 2) {
+      for (let i = 0; i < currentLevel.length; i += 2) {}
         const left = currentLevel[i];
-        const right = currentLevel[i + 1] || left; // Duplicate last node if odd number
-
+        const right = currentLevel[i + 1] || left; // Duplicate last node if odd number;
         const combinedHash = left.hash + right.hash;
-        const parent: MerkleNode = {
+        const parent: MerkleNode = {}
           hash: this.hashData(combinedHash),
           left,
           right,
@@ -53,42 +52,42 @@ export class MerkleTree {
     this.root = currentLevel[0];
   }
 
-  private hashData(data: string): string {
+  private hashData(data: string): string {"
     return crypto.createHash("sha256").update(data).digest("hex");
   }
 
-  getRootHash(): string | null {
+  getRootHash(): string | null {}
     return this.root?.hash || null;
   }
 
-  getProof(index: number): string[] {
+  getProof(index: number): string[] {}
     if (index >= this.leaves.length) return [];
 
     const proof: string[] = [];
     let current = this.leaves[index];
     let level = [...this.leaves];
 
-    while (level.length > 1) {
+    while (level.length > 1) {}
       const nextLevel: MerkleNode[] = [];
       const currentIndex = level.indexOf(current);
 
-      if (currentIndex % 2 === 0) {
-        // Left node, add right sibling
-        if (currentIndex + 1 < level.length) {
+      if (currentIndex % 2 === 0) {}
+        // Left node, add right sibling;
+        if (currentIndex + 1 < level.length) {}
           proof.push(level[currentIndex + 1].hash);
         }
-      } else {
-        // Right node, add left sibling
+      } else {}
+        // Right node, add left sibling;
         proof.push(level[currentIndex - 1].hash);
       }
 
-      // Move to parent level
-      for (let i = 0; i < level.length; i += 2) {
+      // Move to parent level;
+      for (let i = 0; i < level.length; i += 2) {}
         const left = level[i];
         const right = level[i + 1] || left;
 
         const combinedHash = left.hash + right.hash;
-        const parent: MerkleNode = {
+        const parent: MerkleNode = {}
           hash: this.hashData(combinedHash),
           left,
           right,
@@ -104,22 +103,22 @@ export class MerkleTree {
     return proof;
   }
 
-  verifyProof(leafData: any, proof: string[], rootHash: string): boolean {
+  verifyProof(leafData: any, proof: string[], rootHash: string): boolean {}
     let currentHash = this.hashData(JSON.stringify(leafData));
 
-    for (const siblingHash of proof) {
+    for (const siblingHash of proof) {}
       currentHash = this.hashData(currentHash + siblingHash);
     }
 
     return currentHash === rootHash;
   }
 
-  getLeaves(): MerkleNode[] {
+  getLeaves(): MerkleNode[] {}
     return [...this.leaves];
   }
 }
 
-export function createMerkleTree(data: any[]): MerkleTree {
+export function createMerkleTree(data: any[]): MerkleTree {};
   return new MerkleTree(data);
 }
 
@@ -127,7 +126,8 @@ export function verifyMerkleProof(
   leafData: any,
   proof: string[],
   rootHash: string,
-): boolean {
+): boolean {};
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
 }
+"

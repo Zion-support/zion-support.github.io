@@ -3,36 +3,36 @@ import { NavigationButtonsProps } from "./types";
 export const NavigationButtons = ({;
   onBack;
   onNext;
-  isNextDisabled = false;
-  backLabel = "Back";
+  isNextDisabled = false;"
+  backLabel = "Back";"
   nextLabel = "Next";
   isLoading = false}: NavigationButtonsProps) => {;
-  return (
+  return ("
     <div className="flex justify-between">;
-      {onBack && (;
+      {onBack && (;'
         <Button variant='outline' onClick={onBack}>;
 export const NavigationButtons = ({;
   onBack,;
   onNext,;
-  isNextDisabled = false,;
-  backLabel = 'Back',;
+  isNextDisabled = false,;'
+  backLabel = 'Back',;'
   nextLabel = 'Next',;
   isLoading = false,;
 }: NavigationButtonsProps) => {;
-  return (
+  return ('
     <div className='flex justify-between'>;
-      {onBack && (;
-        <Button variant='outline' onClick={onBack}>          {backLabel}
+      {onBack && (;'
+        <Button variant='outline' onClick={onBack}>          {backLabel}"
         <Button variant="outline" onClick={onBack}>
-  return (
+  return ("
     <div className="flex justify-between">;
-      {onBack && (;
+      {onBack && (;"
         <Button variant="outline" onClick={onBack}>;
           {backLabel}
         </Button>;
       )}
 
-
+'
           {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
         </Button>;
       )}
@@ -40,8 +40,8 @@ export const NavigationButtons = ({;
     </div>;
   );
 };
-
+"
 "          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
-      )}
+      )}'"

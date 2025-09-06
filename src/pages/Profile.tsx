@@ -1,13 +1,13 @@
 import React from 'react';
 
 ;
-const Profile = () =>: any {
+const Profile = () =>: any {}
   return (
-    <div className="min - h-screen bg - gray - 50">;
-      <div className="container mx - auto px - 4 py - 8">;
+    <div className="min - h-screen bg - gray - 50">;"
+      <div className="container mx - auto px - 4 py - 8">;"
         <h1 className="text - 3xl font - bold text - gray - 900 mb - 4">;
           Profile;
-        </h1>;
+        </h1>;"
         <p className="text - gray - 600">;
           This is a placeholder profile page.;
         </p>;
@@ -16,4 +16,4 @@ const Profile = () =>: any {
 }
 ;
 
-export default Profile;
+export default Profile;'"

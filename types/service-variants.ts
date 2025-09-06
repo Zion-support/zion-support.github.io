@@ -1,27 +1,27 @@
 export type ServiceVariant = 
-  | 'default'
-  | 'holographic'
-  | 'quantum'
-  | 'cyberpunk'
-  | 'neural'
-  | 'quantum-holographic'
-  | 'quantum-advanced'
-  | 'quantum-cyberpunk'
-  | 'neural-holographic'
-  | 'cyberpunk-neural'
-  | 'advanced'
-  | 'premium'
-  | 'enterprise'
+  | 'default''
+  | 'holographic''
+  | 'quantum''
+  | 'cyberpunk''
+  | 'neural''
+  | 'quantum-holographic''
+  | 'quantum-advanced''
+  | 'quantum-cyberpunk''
+  | 'neural-holographic''
+  | 'cyberpunk-neural''
+  | 'advanced''
+  | 'premium''
+  | 'enterprise'';
   | 'custom';
 
-export interface ServiceVariantConfig {
+export interface ServiceVariantConfig {};
   name: string;
   description: string;
   features: string[];
-  pricing: {
+  pricing: {}
     monthly: number;
     yearly: number;
   };
   popular?: boolean;
   recommended?: boolean;
-}
+}'

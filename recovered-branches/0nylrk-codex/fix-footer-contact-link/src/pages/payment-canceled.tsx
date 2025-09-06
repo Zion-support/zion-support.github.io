@@ -1,49 +1,49 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import React from "react";"
+import { Button } from "@/components/ui/button";"
+import { useNavigate } from "react-router-dom";"
 import { XCircle } from "lucide-react";
-export default function PaymentCanceled() {
+export default function PaymentCanceled() {};
   const navigate = useNavigate();
 
-  return (
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
-      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
-        <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">
+  return ("
+    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">"
+      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">"
+        <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">"
           <XCircle className="h-6 w-6 text-red-600" />
         </div>
-
+"
         <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>
-
+"
         <p className="text-zion-slate-light mb-6">
-          Your payment process was canceled. No charges have been made to your
+          Your payment process was canceled. No charges have been made to your;
           account.
         </p>
-
+"
         <div className="flex flex-col space-y-3">
-          <Button
-            onClick={() => navigate("/payments")}
+          <Button"
+            onClick={() => navigate("/payments")}"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
-            Try Again
+            Try Again;
           </Button>
 
-          <Button
-            variant="outline"
-            onClick={() => navigate("/dashboard")}
+          <Button"
+            variant="outline""
+            onClick={() => navigate("/dashboard")}"
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
-            Return to Dashboard
+            Return to Dashboard;
           </Button>
         </div>
       </div>
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a;
 =======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4;
 =======
 }
     </div>);
@@ -51,19 +51,20 @@ export default function PaymentCanceled() {
     </div>);
 }
     </div>;
-  );}
- </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Canceled</h1> <p className="text-zion-slate-light mb-6" > Your payment process was canceled. No charges have been made to your account. </p> <div className="flex flex-col space-y-3" > <Button onClick= {
-  () => navigate ('/payments') 
-}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Try Again </Button> <Button 
+  );}"
+ </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Canceled</h1> <p className="text-zion-slate-light mb-6" > Your payment process was canceled. No charges have been made to your account. </p> <div className="flex flex-col space-y-3" > <Button onClick= {}
+  () => navigate ('/payments') "
+}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Try Again </Button> <Button;
 }
     </div>;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
 =======
 }
 ;
     </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+'"

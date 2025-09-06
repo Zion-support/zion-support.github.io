@@ -1,12 +1,12 @@
 import React from 'react';
-interface WithAuthProps {
-  // Add props here as needed
+interface WithAuthProps {}
+  // Add props here as needed;
 }
-export default function WithAuth({ }: WithAuthProps) {
+export default function WithAuth({ }: WithAuthProps) {}
   return (
     <div>
       <h1>WithAuth</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
-}
+}'

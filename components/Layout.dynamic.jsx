@@ -1,21 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
-const Layout.dynamic = () => {
+const Layout.dynamic = () => {}
   return (
     <div data - testid="layout.dynamic">;
       <h1 > Layout.dynamic</h1>;
     </div>);
 }
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export default Layout.dynamic;
+
+
+export default Layout.dynamic;'"

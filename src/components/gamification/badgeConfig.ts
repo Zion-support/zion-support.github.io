@@ -1,21 +1,21 @@
-import {
+import {}
   LucideIcon,
   BadgeCheck,
   Award,
   Star,
   Trophy,
-  BadgePlus,
+  BadgePlus,;
   BadgeDollarSign,;
 } from 'lucide-react';
 
 
 
 
-export type BadgeKey =
-  | 'first_listing'
-  | 'top_contributor'
-  | 'profile_complete'
-  | 'featured_creator'
+export type BadgeKey ='
+  | 'first_listing''
+  | 'top_contributor''
+  | 'profile_complete''
+  | 'featured_creator''
   | 'first_action'
 
   LucideIcon,
@@ -24,17 +24,17 @@ export type BadgeKey =
   Star,
   Trophy,
   BadgePlus,
-  BadgeDollarSign,
+  BadgeDollarSign,';
 } from 'lucide-react';
-export type BadgeKey =;
-  | 'first_listing';
-  | 'top_contributor';
-  | 'profile_complete';
-  | 'featured_creator';
-  | 'first_action';
+export type BadgeKey =;'
+  | 'first_listing';'
+  | 'top_contributor';'
+  | 'profile_complete';'
+  | 'featured_creator';'
+  | 'first_action';'
   | 'monetized';
 
-export interface BadgeMeta {
+export interface BadgeMeta {};
   key: BadgeKey;
   name: string;
   description: string;
@@ -42,89 +42,88 @@ export interface BadgeMeta {
   color: string;
   bg: string;
 export const badge_list: BadgeMeta[] = [;
-  {
-
+  {}
   badgeList && badgeList.find(b => b && b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>
+export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList && badgeList.find((b) => b && b.key === key);
 
-
-    key: 'first_listing',
-    name: 'First Listing',
+'
+    key: 'first_listing','
+    name: 'First Listing','
     description: 'Published your first product, service, or listing.',
 
-
+'
   | 'monetized';
-
+'
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
 
 export type BadgeKey =
-  | "first_listing"
-  | "top_contributor"
-  | "profile_complete"
-  | "featured_creator"
-  | "first_action"
+  | "first_listing""
+  | "top_contributor""
+  | "profile_complete""
+  | "featured_creator""
+  | "first_action""
   | "monetized",
 
-export interface BadgeMeta {
+export interface BadgeMeta {}
   key: BadgeKey,
   name: string,
   description: string,
-  icon: LucideIcon,
-  color: string,
-  bg: string
+  icon: LucideIcon,;
+  color: string,;
+  bg: string;
 }
 
 
 
-export const badgeList: BadgeMeta[] = [
-  {
-    key: "first_listing",
-    name: "First Listing",
+export const badgeList: BadgeMeta[] = []
+  {"
+    key: "first_listing","
+    name: "First Listing","
     description: "Published your first product, service, or listing.",
-    icon: BadgeCheck,
-    color: '#8B5CF6', // Vivid Purple;
+    icon: BadgeCheck,';
+    color: '#8B5CF6', // Vivid Purple;'
     bg: '#E5DEFF', // Soft Purple;
   },
-  {
-    key: 'top_contributor',
-    name: 'Top Contributor',
+  {'
+    key: 'top_contributor','
+    name: 'Top Contributor','
     description: 'Recognized as a top contributor in the community.',
-    icon: Award,
-    color: '#F97316', // Bright Orange;
+    icon: Award,'
+    color: '#F97316', // Bright Orange;'
     bg: '#FEF7CD', // Soft Yellow;
   },
-  {
-    key: 'profile_complete',
-    name: 'Profile Complete',
+  {'
+    key: 'profile_complete','
+    name: 'Profile Complete','
     description: 'Completed all steps in your profile setup.',
-    icon: Star,
-    color: '#FFD700', // Gold;
+    icon: Star,'
+    color: '#FFD700', // Gold;'
     bg: '#FFFBEA', // Very light yellow;
   },
-  {
-    key: 'featured_creator',
-    name: 'Featured Creator',
+  {'
+    key: 'featured_creator','
+    name: 'Featured Creator','
     description: 'Featured on the Zion homepage.',
-    icon: Trophy,
-    color: '#0EA5E9', // Ocean Blue;
+    icon: Trophy,'
+    color: '#0EA5E9', // Ocean Blue;'
     bg: '#D3E4FD', // Soft Blue;
   },
-  {
-    key: 'first_action',
-    name: 'First Action',
+  {'
+    key: 'first_action','
+    name: 'First Action','
     description: 'Took your first community, posting, or listing action.',
-    icon: BadgePlus,
-    color: '#1EAEDB', // Bright Blue;
+    icon: BadgePlus,'
+    color: '#1EAEDB', // Bright Blue;'
     bg: '#F3F3F3', // Light Gray;
   },
-  {
-    key: 'monetized',
-    name: 'Monetized',
+  {'
+    key: 'monetized','
+    name: 'Monetized','
     description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
 
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find (boolean => b.key === key);
 export const getBadgeMeta = (key: BadgeKey) =>: any;
-  badge_list.find ((b) => b.key === key);
+  badge_list.find ((b) => b.key === key);'"

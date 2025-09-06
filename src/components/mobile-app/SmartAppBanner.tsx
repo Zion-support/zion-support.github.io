@@ -1,5 +1,5 @@
 import { useIsMobile } from "@/hooks/use-mobile";
-interface SmartAppBannerProps {
+interface SmartAppBannerProps {}
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
@@ -8,4 +8,5 @@ interface SmartAppBannerProps {
 
 
 }
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({}
+";

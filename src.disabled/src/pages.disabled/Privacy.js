@@ -1,6 +1,6 @@
-// Privacy utility
-export const Privacy = () => {
-  // Implementation here
+// Privacy utility;
+export const Privacy = () => {};
+  // Implementation here;
   return null;
 };
 

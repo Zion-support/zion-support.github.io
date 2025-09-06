@@ -17,9 +17,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   className = ''
 }) => {
   return (
-    <motion.div 
-      className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${className}`}
-      whileHover={{ y: -5 }}
+    <motion.div
+      className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 ${className}`}
+      whileHover={{ y: -5, scale: 1.02 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -29,13 +29,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           {icon}
         </div>
       )}
-      <h3 className="text-xl font-semibold mb-3 text-white text-center">{title}</h3>
-      <p className="text-gray-300 mb-4 text-center">{description}</p>
+      
+      <h3 className="text-xl font-bold text-white mb-3 text-center">
+        {title}
+      </h3>
+      
+      <p className="text-gray-300 text-center mb-4">
+        {description}
+      </p>
+      
       {features.length > 0 && (
         <ul className="space-y-2">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center text-sm text-gray-300">
-              <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
+              <span className="text-emerald-400 mr-2">✓</span>
               {feature}
             </li>
           ))}

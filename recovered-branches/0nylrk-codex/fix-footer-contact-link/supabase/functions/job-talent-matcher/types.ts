@@ -1,10 +1,10 @@
-export interface JobData {
+export interface JobData {};
   id: string;
   title: string;
   description: string;
   skills: string[];
   category: string;
-  budget: {
+  budget: {}
     min: number;
     max: number;
   };
@@ -12,19 +12,7 @@ export interface JobData {
 }
 
 }
-export interface TalentProfile {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
-  deadline: string
-}
-export interface TalentProfile {
-
-export interface TalentProfile {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface TalentProfile {};
   id: string;
   full_name: string;
   professional_title: string;
@@ -35,22 +23,7 @@ export interface TalentProfile {;
   availability_type?: string;
 }
 
-<<<<<<< HEAD
-  hourly_rate?: number,
-  availability_type?: string;
 
-}
-export interface TalentMatch {
-=======
-export interface TalentMatch {
-  hourly_rate?: number
-
-  availability_type?: string
-}
-export interface TalentMatch {
-
-export interface TalentMatch {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -58,27 +31,26 @@ export interface TalentMatch {;
   created_at: string;
 }
 
-export interface MatchResult {
+export interface MatchResult {};
   talentId: string;
   score: number;
   matchedSkills: string[];
   reason?: string;
 }
-=======
+
   matched_skills: string[]
 
-  created_at: string
+  created_at: string;
 }
-export interface MatchResult {
-
+export interface MatchResult {};
 export interface MatchResult {;
   talentId: string;
-=======
+
   talent_id: string;
   job_id: string;
   match_score: number;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   score: number;
   id: string,;
   title: string,;
@@ -115,15 +87,7 @@ export interface MatchResult {;
   talentId: string,;
   score: number,;
   matchedSkills: string[];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export interface MatchResult {
-  talent_id: string;
-  score: number;
 
-  matched_skills: string[],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   reason?: string;
 
 }
@@ -132,14 +96,7 @@ export interface MatchResult {
 
 export interface JobData {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  reason?: string;
+
+
 }
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+

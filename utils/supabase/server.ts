@@ -1,11 +1,12 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl =
+const supabaseUrl ="
   process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
-const supabaseKey =
+const supabaseKey ="
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
 
-<<<<<<< HEAD
-export function getServerSupabase() {
+
+export function getServerSupabase() {};
   return createClient(supabaseUrl, supabaseKey);
 }
+"

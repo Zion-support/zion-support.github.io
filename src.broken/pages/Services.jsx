@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Services = ({ className }) => {
-  return (
+const Services = ({ className }) => {}
+  return ('
     <div className={className || ''}>
       <h1>Services</h1>
       <p>This component is under development.</p>
@@ -9,4 +9,4 @@ const Services = ({ className }) => {
   );
 };
 
-export default Services;
+export default Services;'

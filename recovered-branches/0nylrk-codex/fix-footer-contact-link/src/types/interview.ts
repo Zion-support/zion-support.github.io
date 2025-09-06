@@ -1,36 +1,26 @@
 export type InterviewStatus =
-  | "requested"
-  | "confirmed"
-  | "declined"
-  | "rescheduled"
-  | "completed"
+  | "requested""
+  | "confirmed""
+  | "declined""
+  | "rescheduled""
+  | "completed"";
   | "cancelled";
-
+"
 export type InterviewType = "video" | "phone" | "in-person";
 
-export type MeetingPlatform =
-  | "zoom"
-  | "google-meet"
-  | "teams"
-  | "other"
+export type MeetingPlatform ="
+  | "zoom""
+  | "google-meet""
+  | "teams""
+  | "other"";
   | "in-app";
 
 
 export interface Interview {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  | 'cancelled';
-export type InterviewType = 'video' | 'phone' | 'in-person';
-export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
-export interface Interview {
 
-export interface Interview {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface Interview {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+export interface Interview {};
   id: string;
   client_id: string;
   talent_id: string;
@@ -54,23 +44,13 @@ export interface Interview {
 
 export interface InterviewRequest {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  client_avatar?: string
-  talent_avatar?: string
-}
-export interface InterviewRequest {
 
-export interface InterviewRequest {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+  client_avatar?: string;
+  talent_avatar?: string;
 }
-export interface InterviewRequest {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface InterviewRequest {};
+export interface InterviewRequest {;
+
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -85,10 +65,11 @@ export interface InterviewRequest {
 
 export interface InterviewResponse {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
   interview_id: string;
   status: InterviewStatus;
   alternative_date?: string;
   message?: string;
 }
+"

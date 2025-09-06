@@ -1,15 +1,15 @@
 import React, { createContext, useContext, useState } from "react";
-interface SidebarContextType {
+interface SidebarContextType {}
   isOpen: boolean;
   toggle: () => void;
   open: () => void;
   close: () => void;
 }
 
-=======
+
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-const SidebarContext = create_context < SidebarContextType>({
+
+const SidebarContext = create_context < SidebarContextType>({}
   is_open: true,
   toggle: () => {},
   open: () => {},
@@ -18,51 +18,28 @@ const SidebarContext = create_context < SidebarContextType>({
 
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-interface SidebarProviderProps {
+
+
+
+
+interface SidebarProviderProps {}
   children: React.ReactNode;
   defaultOpen?: boolean;
 }
-<<<<<<< HEAD
 
-export function SidebarProvider({
-  children,
-  defaultOpen = true,
-}: SidebarProviderProps) {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
   return (
-<<<<<<< HEAD
-    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
-      <div
-        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
-      >
-        {children}
-      </div>
-    </SidebarContext.Provider>
-  );
-}
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export /**
- * SidebarProvider - Function description
+export /**;
+ * SidebarProvider - Function description;
  */
-function SidebarProvider() {
+function SidebarProvider() {}
   const [is_open, setIsOpen] = useState (default_open);
 ;
   const toggle = () =>: any setIsOpen (!is_open);
@@ -71,22 +48,15 @@ function SidebarProvider() {
 ;
   return (
     <SidebarContext.Provider value={{ is_open, toggle, open, close }}>;
-      <div;
+      <div;"
         className={`grid ${is_open ? "grid - cols-[auto_1fr]" : "grid - cols-[auto_1fr]"} min - h-screen w - full`}
       >;
         {children}
       </div>;
     </SidebarContext.Provider>);
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
+"
 import React, { createContext, useContext, useState } from "react",;
 ;
 interface SidebarContextType {;
@@ -112,53 +82,41 @@ interface SidebarProviderProps {;
   defaultOpen?:boolean;
 }
 ;
-export function SidebarProvider({ ;
-  children, ;
-  defaultOpen = true ;
-} SidebarProviderProps) {;
-  const [isOpen, setIsOpen] = useState(defaultOpen),;
-;
-  const toggle = () => setIsOpen(!isOpen),;
-  const open = () => setIsOpen(true),;
-  const close = () => setIsOpen(false),;
-;
-  return (;
-    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
+export function SidebarProvider() { return null; }
+    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;`
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' :'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
         {children}
       </div>;
     </SidebarContext.Provider>;
-  ),; interface SidebarContextType {
+  ),; interface SidebarContextType {}
   isOpen: boolean;
 toggle: () => void;
 open: () => void;
-close: () => void 
-}isOpen: true, toggle: () => {
-  
+close: () => void;
+}isOpen: true, toggle: () => {}
 };
-open: () => {
-  
+open: () => {}
 };
-close: () => {
-  
+close: () => {}
 }
 });
-return (<SidebarContext.Provider value= {
-  {
-  isOpen, toggle, open, close 
+return (<SidebarContext.Provider value= {}
+  {}
+  isOpen, toggle, open, close;
 }
-}> <div className= {
-  `grid $ {
-  isOpen ? 'grid-cols-[auto 1fr]' : 'grid-cols-[auto 1fr]' 
+}> <div className= {}`
+  `grid $ {'
+  isOpen ? 'grid-cols-[auto 1fr]' : 'grid-cols-[auto 1fr]' `
 }min-h-screen w-full` 
-}> {
-  children 
+}> {}
+  children;
 }</div> </SidebarContext.Provider>) 
 }
 }
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+'"`

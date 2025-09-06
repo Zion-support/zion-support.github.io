@@ -12,7 +12,7 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    host: true
+    host: true,
   },
   build: {
     outDir: 'dist',
@@ -30,7 +30,7 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
+        drop_debugger: true,
       }
     }
   },

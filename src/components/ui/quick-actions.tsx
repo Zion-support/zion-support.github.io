@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import React, { useState } from 'react';'
+import { useAuth } from '@/hooks/useAuth';'
+import { Button } from '@/components/ui/button';'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
+import { Badge } from '@/components/ui/badge';'
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {;
   Zap,;
@@ -12,14 +12,14 @@ import {;
   Settings,;
   Activity,;
   Package,;
-  Monitor,;
+  Monitor,;'
 } from 'lucide-react';
 interface QuickAction {;
   id: string;
   label: string;
   description: string;
   icon: React.ReactNode;
-  action: () => void;
+  action: () => void;'
   category: 'performance' | 'development' | 'maintenance';
 
 
@@ -29,19 +29,19 @@ interface QuickAction {;
   const executeAction = async (actionId: string, action: () => void) => {;
 
 
-    setIsProcessing(actionId);    try {
+    setIsProcessing(actionId);    try {}
       await action()
-    } catch (error) {
-      logErrorToProduction(`Failed to execute action ${actionId}:`, {
-        data: error
-      })
-import React, { useState } from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
+    } catch (error) {}
+      logErrorToProduction(`Failed to execute action ${actionId}:`, {}
+        data: error;
+      })'
+import React, { useState } from 'react';'
+import { use_auth } from '@/hooks / use_auth';'
+import { Button } from '@/components / ui / button';'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';'
+import { Badge } from '@/components / ui / badge';'
 import { logErrorToProduction } from '@/utils / production_logger';
-import {
+import {}
   Zap,
   Download,
   Trash2,
@@ -49,66 +49,66 @@ import {
   Settings,
   Activity,
   Package,
-  Monitor,
+  Monitor,';
 } from 'lucide-react';
-interface QuickAction {
+interface QuickAction {}
   id: string;
   label: string;
   description: string;
   icon: React.ReactNode;
-  action: () => void;
+  action: () => void;'
   category: 'performance' | 'development' | 'maintenance';
   dangerous?: boolean;
-export /**
- * QuickActions - Function description
+export /**;
+ * QuickActions - Function description;
  */
-function QuickActions() {
-  const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+function QuickActions() {}
+  const { user } = use_auth ();'
+  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';'
   const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     return null;
   }
   const [is_visible, setIsVisible] = useState (false);
   const [is_processing, setIsProcessing] = useState < string | null>(null);
-  const execute_action = async (action_id: string, action: () => void) => {
-    setIsProcessing (action_id);    try {
+  const execute_action = async (action_id: string, action: () => void) => {}
+    setIsProcessing (action_id);    try {}
       await action ();
-    } catch (error) {
-      logErrorToProduction (`Failed to execute action ${action_id}:`, {
+    } catch (error) {}`
+      logErrorToProduction (`Failed to execute action ${action_id}:`, {}
         data: error,
       });
-    } finally {
+    } finally {}
       setIsProcessing(null)
     }
   }
-
+'
       id: 'enable - performance - monitor',
 
-
-import React, { useState } from 'react',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Badge } from '@/components/ui/badge',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
+'
+import React, { useState } from 'react',;'
+import { useAuth } from '@/hooks/useAuth',;'
+import { Button } from '@/components/ui/button',;'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;'
+import { Badge } from '@/components/ui/badge',;'
+import {logErrorToProduction} from '@/utils/productionLogger',;'
 import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react';
 interface QuickAction {;
   id: string,;
   label: string,;
   description: string,;
   icon: React.ReactNode,;
-  action: () => void,;
+  action: () => void,;'
   category: 'performance' | 'development' | 'maintenance',;
   dangerous?: boolean;
 }
 ;
-export function QuickActions() {;
-  const { user } = useAuth(),;
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
+export function QuickActions() { return null; }
+  const { user } = useAuth(),;'
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;'
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,;
   if (!isAllowed) {;
     return null;
@@ -120,7 +120,7 @@ export function QuickActions() {;
     setIsProcessing(actionId),;
     try {;
       await action();
-    } catch (error) {;
+    } catch (error) {;`
       logErrorToProduction(`Failed to execute action ${actionId}:`, { data: error });
     } finally {;
       setIsProcessing(null);
@@ -130,40 +130,32 @@ export function QuickActions() {;
 
 
 
-  const actions: QuickAction[] = [
-    // Performance Actions
-    {
-      id: 'enable-performance-monitor',
-      label: 'Enable Performance Monitor',
+  const actions: QuickAction[] = []
+    // Performance Actions;
+    {'
+      id: 'enable-performance-monitor','
+      label: 'Enable Performance Monitor','
       description: 'Show real-time performance metrics',
-      icon: <Activity className="w-4 h-4" />,
+      icon: <Activity className="w-4 h-4" />,'
       category: 'performance',
-      action: () => {
-
-
-
-
-    {
-      id: 'enable-bundle-analyzer',
-      label: 'Enable Bundle Analyzer',
-      description: 'Monitor bundle size and chunks',
-      icon: <Package className="w-4 h-4" />,
+      action: () => {}
+    {'
+      id: 'enable-bundle-analyzer','
+      label: 'Enable Bundle Analyzer','
+      description: 'Monitor bundle size and chunks',"
+      icon: <Package className="w-4 h-4" />,'
       category: 'performance',
-      action: () => {
-
-
-
-
-    {
-      id: 'clear-cache',
-      label: 'Clear Cache',
-      description: 'Clear browser cache and storage',
-      icon: <Trash2 className="w-4 h-4" />,
+      action: () => {}
+    {'
+      id: 'clear-cache','
+      label: 'Clear Cache','
+      description: 'Clear browser cache and storage',"
+      icon: <Trash2 className="w-4 h-4" />,'
       category: 'maintenance',
       dangerous: true,
-      action: () => {
-        if ('caches' in window) {
-          caches.keys().then(names => {
+      action: () => {'
+        if ('caches' in window) {}
+          caches.keys().then(names => {}
             names.forEach(name => caches.delete(name))
           })
         }
@@ -177,101 +169,100 @@ export function QuickActions() {;
       }},
 
 
-    {
-      id: 'preload-critical-resources'
-      label: 'Preload Critical Resources'
-      description: 'Preload fonts, images, and critical assets'
-      icon: <Zap className='w-4 h-4' />
+    {'
+      id: 'preload-critical-resources''
+      label: 'Preload Critical Resources''
+      description: 'Preload fonts, images, and critical assets''
+      icon: <Zap className='w-4 h-4' />'
       category: 'performance'
-      action: () => {
-        // Preload critical fonts
-        const criticalFonts = [
-
+      action: () => {}
+        // Preload critical fonts;
+        const criticalFonts = []
   dangerous?: boolean;
 
-        // Preload critical images
-        const criticalImages = [
+        // Preload critical images;
+        const criticalImages = ['
           '/logos/zion-logo.png/images/hero-bg.webp'
         ],
         
-        criticalImages.forEach(img => {
-          const link = document.createElement('link'),
-          link.rel = 'preload',
+        criticalImages.forEach(img => {'
+          const link = document.createElement('link'),'
+          link.rel = 'preload','
           link.as = 'image',
           link.href = img,
           document.head.appendChild(link)
         })
       }},
-    {
-      id: 'download-performance-report',
-      label: 'Download Performance Report',
-      description: 'Export current performance metrics',
-      icon: <Download className="w-4 h-4" />,
+    {'
+      id: 'download-performance-report','
+      label: 'Download Performance Report','
+      description: 'Export current performance metrics',"
+      icon: <Download className="w-4 h-4" />,'
       category: 'development',
-      action: () => {
-        const metrics = {
-          timestamp: new Date().toISOString(),
-          performance: window.window.window.performance.getEntriesByType('navigation')[0],
+      action: () => {}
+        const metrics = {}
+          timestamp: new Date().toISOString(),'
+          performance: window.window.window.performance.getEntriesByType('navigation')[0],'
           resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
           memory: (performance as any).memory || {},
           userAgent: navigator.userAgent,
-          screen: {
+          screen: {}
             width: screen.width,
             height: screen.height,
-            colorDepth: screen.colorDepth
+            colorDepth: screen.colorDepth;
           }
         },
 
-        const blob = new Blob([JSON.stringify(metrics, null, 2)], {
+        const blob = new Blob([JSON.stringify(metrics, null, 2)], {'
           type: 'application/json'
         }),
         
-        const url = URL.createObjectURL(blob),
+        const url = URL.createObjectURL(blob),'
         const a = document.createElement('a'),
-        a.href = url,
+        a.href = url,`
         a.download = `performance-report-${Date.now()}.json`,
         document.body.appendChild(a),
         a.click(),
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
-    {
-      id: 'test-error-boundary',
-      label: 'Test Error Boundary',
-      description: 'Trigger an error to test Sentry integration',
-      icon: <Monitor className="w-4 h-4" />,
+    {'
+      id: 'test-error-boundary','
+      label: 'Test Error Boundary','
+      description: 'Trigger an error to test Sentry integration',"
+      icon: <Monitor className="w-4 h-4" />,'
       category: 'development',
       dangerous: true,
-      action: () => {
+      action: () => {'
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
-    {
-      id: 'refresh-app',
-      label: 'Hard Refresh',
-      description: 'Force reload with cache bypass',
-      icon: <RefreshCw className="w-4 h-4" />,
+    {'
+      id: 'refresh-app','
+      label: 'Hard Refresh','
+      description: 'Force reload with cache bypass',"
+      icon: <RefreshCw className="w-4 h-4" />,'
       category: 'maintenance',
-      action: () => {
+      action: () => {}
         window.location.reload()
       }}],
 
-  const categorizedActions = {
-    performance: actions.filter(a => a.category === 'performance'),
-    development: actions.filter(a => a.category === 'development'),
+  const categorizedActions = {'
+    performance: actions.filter(a => a.category === 'performance'),'
+    development: actions.filter(a => a.category === 'development'),'
     maintenance: actions.filter(a => a.category === 'maintenance')},
 
-  const categoryColors = {
-    performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
-    development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
+  const categoryColors = {'
+    performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200','
+    development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200','
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 
-        const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
+        const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;'
           type: 'application/json',;
         });
 
-        const url = URL && URL.createObjectURL(blob);
+        const url = URL && URL.createObjectURL(blob);'
         const a = document && document.createElement('a');
-        a && a.href = url;
+        a && a.href = url;`
         a && a.download = `performance-report-${Date && Date.now()}.json`;
         document && document.body.appendChild(a);
         a && a.click();
@@ -279,24 +270,24 @@ export function QuickActions() {;
         URL && URL.revokeObjectURL(url);
       },;
     },;
-    {;
-      id: 'test-error-boundary',;
-      label: 'Test Error Boundary',;
-      description: 'Trigger an error to test Sentry integration',;
-      icon: <Monitor className='w-4 h-4' />,;
+    {;'
+      id: 'test-error-boundary',;'
+      label: 'Test Error Boundary',;'
+      description: 'Trigger an error to test Sentry integration',;'
+      icon: <Monitor className='w-4 h-4' />,;'
       category: 'development',;
       dangerous: true,;
       action: () => {;
-        throw new Error(;
+        throw new Error(;'
           'Test error for Sentry integration - this is intentional!';
         );
       },;
     },;
-    {;
-      id: 'refresh-app',;
-      label: 'Hard Refresh',;
-      description: 'Force reload with cache bypass',;
-      icon: <RefreshCw className='w-4 h-4' />,;
+    {;'
+      id: 'refresh-app',;'
+      label: 'Hard Refresh',;'
+      description: 'Force reload with cache bypass',;'
+      icon: <RefreshCw className='w-4 h-4' />,;'
       category: 'maintenance',;
       action: () => {;
         window && window.location.reload();
@@ -304,18 +295,18 @@ export function QuickActions() {;
     },;
   ];
 
-  const categorizedActions = {;
-    performance: actions && actions.filter(a => a && a.category === 'performance'),;
-    development: actions && actions.filter(a => a && a.category === 'development'),;
+  const categorizedActions = {;'
+    performance: actions && actions.filter(a => a && a.category === 'performance'),;'
+    development: actions && actions.filter(a => a && a.category === 'development'),;'
     maintenance: actions && actions.filter(a => a && a.category === 'maintenance'),;
   };
 
   const categoryColors = {;
-    performance:;
+    performance:;'
       'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',;
-    development:;
+    development:;'
       'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',;
-    maintenance:;
+    maintenance:;'
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',;
   };
 
@@ -323,87 +314,83 @@ export function QuickActions() {;
   if (!isVisible) {;
 
 
-    {
-      id: 'download-performance-report',
-      label: 'Download Performance Report',
-      description: 'Export current performance metrics',
-      icon: <Download className="w-4 h-4" />,
+    {'
+      id: 'download-performance-report','
+      label: 'Download Performance Report','
+      description: 'Export current performance metrics',"
+      icon: <Download className="w-4 h-4" />,'
       category: 'development',
-      action: () => {
-        const metrics = {
-          timestamp: new Date().toISOString(),
-          performance: window.window.window.performance.getEntriesByType('navigation')[0],
+      action: () => {}
+        const metrics = {}
+          timestamp: new Date().toISOString(),'
+          performance: window.window.window.performance.getEntriesByType('navigation')[0],'
           resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
           memory: (performance as any).memory || {},
           userAgent: navigator.userAgent,
-          screen: {
+          screen: {}
             width: screen.width,
             height: screen.height,
 
 
-    {
-      id: 'test-error-boundary',
-      label: 'Test Error Boundary',
-      description: 'Trigger an error to test Sentry integration',
-      icon: <Monitor className="w-4 h-4" />,
+    {'
+      id: 'test-error-boundary','
+      label: 'Test Error Boundary','
+      description: 'Trigger an error to test Sentry integration',"
+      icon: <Monitor className="w-4 h-4" />,'
       category: 'development',
       dangerous: true,
-      action: () => {
-
-
-    {
-      id: 'refresh-app',
-      label: 'Hard Refresh',
-      description: 'Force reload with cache bypass',
-      icon: <RefreshCw className="w-4 h-4" />,
+      action: () => {}
+    {'
+      id: 'refresh-app','
+      label: 'Hard Refresh','
+      description: 'Force reload with cache bypass',"
+      icon: <RefreshCw className="w-4 h-4" />,'
       category: 'maintenance',
-      action: () => {
+      action: () => {}
         window.location.reload()
 
 
 
 
 
-  if (!isVisible) {
-    return (
+  if (!isVisible) {}
+    return ("
       <div className="fixed bottom-4 left-4 z-50">
-        <Button
-
-
-          variant="outline"
+        <Button;
+"
+          variant="outline""
           size="sm"
-          onClick={() => setIsVisible(true)}
+          onClick={() => setIsVisible(true)}"
           className="bg-background/80 backdrop-blur-sm"
-        >
+        >"
           <Settings className="w-4 h-4 mr-2" />
 
 
-          Quick Actions
+          Quick Actions;
         </Button>
       </div>
-    )
-          className='bg-background/80 backdrop-blur-sm'        >;
+    )'
+          className='bg-background/80 backdrop-blur-sm'        >;'
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
         </Button>;
       </div>;
     );
   }
-  return (
-    <div className="fixed bottom-4 left-4 z-50 w-80">
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">
-        <CardHeader className="pb-2">
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-sm flex items-center">
+  return ("
+    <div className="fixed bottom-4 left-4 z-50 w-80">"
+      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">"
+        <CardHeader className="pb-2">"
+          <div className="flex items-center justify-between">"
+            <CardTitle className="text-sm flex items-center">"
               <Settings className="w-4 h-4 mr-2" />
-              Quick Actions
+              Quick Actions;
             </CardTitle>
-            <Button
-
-
-              variant="ghost"
+            <Button;
+"
+              variant="ghost""
               size="sm"
-              onClick={() => setIsVisible(false)}
+              onClick={() => setIsVisible(false)}"
               className="h-6 w-6 p-0"
             >
 
@@ -413,35 +400,35 @@ export function QuickActions() {;
           </div>
         </CardHeader>
 
-
+"
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
-            <div key={category}>
-              <div className="flex items-center gap-2 mb-2">
+            <div key={category}>"
+              <div className="flex items-center gap-2 mb-2">"
                 <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">
                   {category}
                 </Badge>
-              </div>
+              </div>"
               <div className="space-y-2">
-                {categoryActions.map((action) => (
+                {categoryActions.map((action) => ("
                   <div key={action.id} className="space-y-1">
-                    <Button
-                      variant={action.dangerous ? "destructive" : "outline"}
+                    <Button"
+                      variant={action.dangerous ? "destructive" : "outline"}"
                       size="sm"
                       onClick={() => executeAction(action.id, action.action)}
-                      disabled={isProcessing === action.id}
+                      disabled={isProcessing === action.id}"
                       className="w-full justify-start h-auto p-3"
-                    >
-                      <div className="flex items-start gap-3 w-full">
+                    >"
+                      <div className="flex items-start gap-3 w-full">"
                         <div className="mt-0.5">
-                          {isProcessing === action.id ? (
+                          {isProcessing === action.id ? ("
                             <RefreshCw className="w-4 h-4 animate-spin" />
                           ) : (
-                            action.icon
+                            action.icon;
                           )}
-                        </div>
-                        <div className="flex-1 text-left">
-                          <div className="font-medium text-sm">{action.label}</div>
+                        </div>"
+                        <div className="flex-1 text-left">"
+                          <div className="font-medium text-sm">{action.label}</div>"
                           <div className="text-xs opacity-70 mt-1">
                             {action.description}
                           </div>;
@@ -466,63 +453,63 @@ export function QuickActions() {;
         window.location.reload ();
       },
     },
-    {
-      id: 'preload - critical - resources',
-      label: 'Preload Critical Resources',
-      description: 'Preload fonts, images, and critical assets',
-      icon: <Zap className='w - 4 h - 4' />,
+    {'
+      id: 'preload - critical - resources','
+      label: 'Preload Critical Resources','
+      description: 'Preload fonts, images, and critical assets','
+      icon: <Zap className='w - 4 h - 4' />,'
       category: 'performance',
-      action: () => {
+      action: () => {}
         // Preload critical fonts;
-        const critical_fonts = [;
-          '/fonts / inter - var.woff2',
+        const critical_fonts = [;'
+          '/fonts / inter - var.woff2','
           '/fonts / cal - sans.woff2',
         ];
-        critical_fonts.for_each (font => {
-          const link = document.create_element ('link');
-          link.rel = 'preload';
-          link.as = 'font';
-          link.type = 'font / woff2';
+        critical_fonts.for_each (font => {'
+          const link = document.create_element ('link');'
+          link.rel = 'preload';'
+          link.as = 'font';'
+          link.type = 'font / woff2';'
           link.cross_origin = 'anonymous';
           link.href = font;
           document.head.append_child (link);
         });
-        // Preload critical images;
+        // Preload critical images;'
         const critical_images = ['/logos / zion - logo.png', '/images / hero - bg.webp'];
-        critical_images.for_each (img => {
-          const link = document.create_element ('link');
-          link.rel = 'preload';
+        critical_images.for_each (img => {'
+          const link = document.create_element ('link');'
+          link.rel = 'preload';'
           link.as = 'image';
           link.href = img;
           document.head.append_child (link);
         });
       },
     },
-    {
-      id: 'download - performance - report',
-      label: 'Download Performance Report',
-      description: 'Export current performance metrics',
-      icon: <Download className='w - 4 h - 4' />,
+    {'
+      id: 'download - performance - report','
+      label: 'Download Performance Report','
+      description: 'Export current performance metrics','
+      icon: <Download className='w - 4 h - 4' />,'
       category: 'development',
-      action: () => {
-        const metrics = {
-          timestamp: new Date ().toISOString (),
-          performance: performance.getEntriesByType ('navigation')[0],
+      action: () => {}
+        const metrics = {}
+          timestamp: new Date ().toISOString (),'
+          performance: performance.getEntriesByType ('navigation')[0],'
           resources: performance.getEntriesByType ('resource').slice (0, 20),
           memory: (performance as any).memory || {},
           user_agent: navigator.user_agent,
-          screen: {
+          screen: {}
             width: screen.width,
             height: screen.height,
             color_depth: screen.color_depth,
           },
         }
-        const blob = new Blob ([JSON.stringify (metrics, null, 2)], {
+        const blob = new Blob ([JSON.stringify (metrics, null, 2)], {'
           type: 'application / json',
         });
-        const url = URL.createObjectURL (blob);
+        const url = URL.createObjectURL (blob);'
         const array = document.create_element ('a');
-        a.href = url;
+        a.href = url;`
         a.download = `performance - report-${Date.now ()}.json`;
         document.body.append_child (a);
         a.click ();
@@ -530,110 +517,110 @@ export function QuickActions() {;
         URL.revokeObjectURL (url);
       },
     },
-    {
-      id: 'test - error - boundary',
-      label: 'Test Error Boundary',
-      description: 'Trigger an error to test Sentry integration',
-      icon: <Monitor className='w - 4 h - 4' />,
+    {'
+      id: 'test - error - boundary','
+      label: 'Test Error Boundary','
+      description: 'Trigger an error to test Sentry integration','
+      icon: <Monitor className='w - 4 h - 4' />,'
       category: 'development',
       dangerous: true,
-      action: () => {
-        throw new Error (
+      action: () => {}
+        throw new Error ('
           'Test error for Sentry integration - this is intentional!');
       },
     },
-    {
-      id: 'refresh - app',
-      label: 'Hard Refresh',
-      description: 'Force reload with cache bypass',
-      icon: <RefreshCw className='w - 4 h - 4' />,
+    {'
+      id: 'refresh - app','
+      label: 'Hard Refresh','
+      description: 'Force reload with cache bypass','
+      icon: <RefreshCw className='w - 4 h - 4' />,'
       category: 'maintenance',
-      action: () => {
+      action: () => {}
         window.location.reload ();
       },
     },
   ];
-  const categorized_actions = {
-    performance: actions.filter (array => a.category === 'performance'),
-    development: actions.filter (array => a.category === 'development'),
+  const categorized_actions = {'
+    performance: actions.filter (array => a.category === 'performance'),'
+    development: actions.filter (array => a.category === 'development'),'
     maintenance: actions.filter (array => a.category === 'maintenance'),
   }
-  const category_colors = {
-    performance:;
+  const category_colors = {}
+    performance:;'
       'bg - green - 100 dark:bg - green - 900 / 20 text - green - 800 dark:text - green - 200',
-    development:;
+    development:;'
       'bg - blue - 100 dark:bg - blue - 900 / 20 text - blue - 800 dark:text - blue - 200',
-    maintenance:;
+    maintenance:;'
       'bg - orange - 100 dark:bg - orange - 900 / 20 text - orange - 800 dark:text - orange - 200',
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return (
+    return ('
       <div className='fixed bottom - 4 left - 4 z - 50'>;
-        <Button;
-          variant='outline';
+        <Button;'
+          variant='outline';'
           size='sm';
-          on_click={() => setIsVisible (true)}
-          className='bg - background / 80 backdrop - blur - sm'        >;
+          on_click={() => setIsVisible (true)}'
+          className='bg - background / 80 backdrop - blur - sm'        >;'
           <Settings className='w - 4 h - 4 mr - 2' />;
           Quick Actions;
         </Button>;
       </div>);
   }
-  return (
-    <div className='fixed bottom - 4 left - 4 z - 50 w - 80'>;
-      <Card className='bg - background / 95 backdrop - blur - sm border shadow - lg max - h-96 overflow - y-auto'>;
-        <CardHeader className='pb - 2'>;
-          <div className='flex items - center justify - between'>;
-            <CardTitle className='text - sm flex items - center'>;
+  return ('
+    <div className='fixed bottom - 4 left - 4 z - 50 w - 80'>;'
+      <Card className='bg - background / 95 backdrop - blur - sm border shadow - lg max - h-96 overflow - y-auto'>;'
+        <CardHeader className='pb - 2'>;'
+          <div className='flex items - center justify - between'>;'
+            <CardTitle className='text - sm flex items - center'>;'
               <Settings className='w - 4 h - 4 mr - 2' />;
               Quick Actions;
             </CardTitle>;
-            <Button;
-              variant='ghost';
+            <Button;'
+              variant='ghost';'
               size='sm';
-              on_click={() => setIsVisible (false)}
+              on_click={() => setIsVisible (false)}'
               className='h - 6 w - 6 p - 0'            >;
               ✕;
             </Button>;
           </div>;
-        </CardHeader>;
+        </CardHeader>;'
         <CardContent className='pt - 0 space - y-4'>;
           {Object.entries (categorized_actions).map (
             ([category, category_actions]) => (
-              <div key={category}>;
+              <div key={category}>;'
                 <div className='flex items - center gap - 2 mb - 2'>;
                   <Badge;
-                    className={
+                    className={}
                       category_colors[category as keyof typeof category_colors];
-                    }
+                    }'
                     variant='outline';
                   >;
                     {category}
                   </Badge>;
-                </div>;
+                </div>;'
                 <div className='space - y-2'>;
-                  {category_actions.map (action => (
+                  {category_actions.map (action => ('
                     <div key={action.id} className='space - y-1'>;
-                      <Button;
-                        variant={action.dangerous ? 'destructive' : 'outline'}
+                      <Button;'
+                        variant={action.dangerous ? 'destructive' : 'outline'}'
                         size='sm';
                         on_click={() => execute_action (action.id, action.action)}
-                        disabled={is_processing === action.id}
+                        disabled={is_processing === action.id}'
                         className='w - full justify - start h - auto p - 3';
-                      >;
-                        <div className='flex items - start gap - 3 w - full'>;
+                      >;'
+                        <div className='flex items - start gap - 3 w - full'>;'
                           <div className='mt - 0.5'>;
-                            {is_processing === action.id ? (
+                            {is_processing === action.id ? ('
                               <RefreshCw className='w - 4 h - 4 animate - spin' />) : (
                               action.icon)}
-                          </div>;
-                          <div className='flex - 1 text - left'>;
+                          </div>;'
+                          <div className='flex - 1 text - left'>;'
                             <div className='font - medium text - sm'>;
                               {action.label}
-                            </div>;
+                            </div>;'
                             <div className='text - xs opacity - 70 mt - 1'>;
                               {action.description}
                             </div>                          </div>;
@@ -647,4 +634,4 @@ if ( {) {
     </div>);
 }
 }
-}
+}'"`

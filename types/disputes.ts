@@ -1,4 +1,4 @@
-export interface Dispute {
+export interface Dispute {};
   id: string;
   orderId: string;
   userId: string;
@@ -11,10 +11,10 @@ export interface Dispute {
   resolvedAt?: Date;
 }
 
-export interface DisputeResolution {
+export interface DisputeResolution {};
   disputeId: string;
   resolution: string;
   resolvedBy: string;
   resolvedAt: Date;
   refundAmount?: number;
-}
+}'

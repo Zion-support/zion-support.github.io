@@ -11,225 +11,7 @@ import AdvancedFuturisticCard from '../components/ui/AdvancedFuturisticCard';
 import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
 
 export default function ServicesPage() {
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'roi' | 'category'>('name');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
-  const [showInnovative, setShowInnovative] = useState(true);
-  const router = useRouter();
 
-  const priceRanges = [
-    { value: 'All', label: 'All Prices' },
-    { value: '0-50', label: '$0 - $50' },
-    { value: '51-100', label: '$51 - $100' },
-    { value: '101-200', label: '$101 - $200' },
-    { value: '201+', label: '$201+' }
-  ];
-
-  const sortOptions = [
-    { value: 'name', label: 'Name A-Z' },
-    { value: 'price', label: 'Price Low-High' },
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'category', label: 'Category' },
-    { value: 'rating', label: 'Highest Rated' }
-=======
-  const services = [
-    {
-      icon: '🤖',
-      title: 'AI-Powered Automation',
-      description: 'Intelligent systems that learn, adapt, and optimize your business processes automatically.',
-      features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Predictive Analytics',
-        'Intelligent Decision Making',
-        'Automated Workflows'
-      ],
-      color: 'bg-gradient-to-br from-fuchsia-500 to-purple-600',
-      textColor: 'text-fuchsia-400',
-      gradient: 'from-fuchsia-400 to-purple-500',
-      link: '/ai-content-generator'
-    },
-    {
-      icon: '☁️',
-      title: 'Cloud Infrastructure',
-      description: 'Scalable, secure, and high-performance cloud solutions designed for modern applications.',
-      features: [
-        'Multi-Cloud Strategy',
-        'Auto-Scaling Systems',
-        'Load Balancing',
-        'Disaster Recovery',
-        'Performance Optimization'
-      ],
-      color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
-      textColor: 'text-cyan-400',
-      gradient: 'from-cyan-400 to-blue-500',
-      link: '/cloud-platform'
-    },
-    {
-      icon: '🔒',
-      title: 'Security & Compliance',
-      description: 'Comprehensive security solutions that protect your data and ensure regulatory compliance.',
-      features: [
-        'Threat Detection',
-        'Vulnerability Assessment',
-        'Compliance Monitoring',
-        'Data Encryption',
-        'Access Control'
-      ],
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500',
-      link: '/contact'
-    },
-    {
-      icon: '📊',
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
-      features: [
-        'Real-time Analytics',
-        'Business Intelligence',
-        'Data Visualization',
-        'Predictive Modeling',
-        'Performance Metrics'
-      ],
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      textColor: 'text-orange-400',
-      gradient: 'from-orange-400 to-red-500',
-      link: '/analytics'
-    },
-    {
-      icon: '🚀',
-      title: 'DevOps & CI/CD',
-      description: 'Streamline your development process with automated pipelines and deployment strategies.',
-      features: [
-        'Continuous Integration',
-        'Automated Testing',
-        'Deployment Automation',
-        'Infrastructure as Code',
-        'Monitoring & Alerting'
-      ],
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      textColor: 'text-indigo-400',
-      gradient: 'from-indigo-400 to-purple-500',
-      link: '/automation'
-    },
-    {
-      icon: '🌐',
-      title: 'Digital Transformation',
-      description: 'Modernize your business with cutting-edge digital solutions and strategic consulting.',
-      features: [
-        'Technology Strategy',
-        'Process Optimization',
-        'Change Management',
-        'Digital Innovation',
-        'Legacy Modernization'
-      ],
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      gradient: 'from-teal-400 to-cyan-500',
-      link: '/contact'
-    },
-  ];
-
-  const microSaasServices = [
-    {
-      icon: '✍️',
-      title: 'AI Content Generator',
-      description: 'Generate high-quality, SEO-optimized content in seconds with AI-powered writing assistance.',
-      features: [
-        'AI-powered content creation',
-        'SEO optimization',
-        'Multiple content formats',
-        'Brand voice customization'
-      ],
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      textColor: 'text-purple-400',
-      gradient: 'from-purple-400 to-indigo-500',
-      link: '/ai-content-generator',
-      badge: 'New'
-    },
-    {
-      icon: '⚡',
-      title: 'Website Performance Monitor',
-      description: 'Real-time monitoring of website performance with Core Web Vitals tracking and optimization tips.',
-      features: [
-        'Real-time monitoring',
-        'Core Web Vitals',
-        'Performance optimization',
-        'Uptime monitoring'
-      ],
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      textColor: 'text-blue-400',
-      gradient: 'from-blue-400 to-cyan-500',
-      link: '/website-performance-monitor',
-      badge: 'New'
-    },
-    {
-      icon: '🔍',
-      title: 'SEO Analyzer Tool',
-      description: 'Comprehensive SEO analysis with keyword research, competitive analysis, and optimization recommendations.',
-      features: [
-        'SEO analysis',
-        'Keyword research',
-        'Competitive analysis',
-        'Optimization tips'
-      ],
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500',
-      link: '/seo-analyzer-tool',
-      badge: 'New'
-    },
-    {
-      icon: '🔧',
-      title: 'API Testing Suite',
-      description: 'Comprehensive API testing with functional, performance, and security testing capabilities.',
-      features: [
-        'API testing',
-        'Performance testing',
-        'Security testing',
-        'Real-time monitoring'
-      ],
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      textColor: 'text-indigo-400',
-      gradient: 'from-indigo-400 to-purple-500',
-      link: '/api-testing-suite',
-      badge: 'New'
-    },
-    {
-      icon: '💻',
-      title: 'Code Quality Checker',
-      description: 'Analyze and improve code quality with multi-language support and security scanning.',
-      features: [
-        'Multi-language support',
-        'Code quality metrics',
-        'Security scanning',
-        'Improvement recommendations'
-      ],
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      gradient: 'from-teal-400 to-cyan-500',
-      link: '/code-quality-checker',
-      badge: 'New'
-    }
-  ];
-
-  const technologies = [
-    { name: 'Next.js', category: 'Frontend', icon: '⚡' },
-    { name: 'React', category: 'Frontend', icon: '⚛️' },
-    { name: 'Node.js', category: 'Backend', icon: '🟢' },
-    { name: 'Python', category: 'Backend', icon: '🐍' },
-    { name: 'AWS', category: 'Cloud', icon: '☁️' },
-    { name: 'Azure', category: 'Cloud', icon: '🔷' },
-    { name: 'Docker', category: 'DevOps', icon: '🐳' },
-    { name: 'Kubernetes', category: 'DevOps', icon: '☸️' },
-    { name: 'PostgreSQL', category: 'Database', icon: '🐘' },
-    { name: 'Redis', category: 'Cache', icon: '🔴' },
-    { name: 'TensorFlow', category: 'AI/ML', icon: '🧠' },
-    { name: 'PyTorch', category: 'AI/ML', icon: '🔥' },
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f6f
   ];
 
   // Filter and sort services
@@ -547,7 +329,7 @@ export default function ServicesPage() {
       "🔄 Continuous Innovation Updates",
       "🌍 Global 24/7 Support"
     ]
-=======
+
   const heroStats = [
     { value: '250+', label: 'Revolutionary Services', icon: <ShieldCheck className="w-6 h-6 text-cyan-400" /> },
     { value: '99.99%', label: 'Uptime Guarantee', icon: <ShieldCheck className="w-6 h-6 text-fuchsia-400" /> },
@@ -1459,7 +1241,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
                 </UltraFuturisticCard>
-=======
+
                 </AdvancedFuturisticCard>
               ))}
             </div>
@@ -1533,7 +1315,7 @@ export default function ServicesPage() {
         </div>
       </section>
     </UltraFuturisticBackground>
-=======
+
         {/* All Services */}
         <section className="py-16 px-4">
           <div className="container mx-auto">

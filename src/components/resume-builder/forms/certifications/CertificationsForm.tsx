@@ -1,10 +1,10 @@
 return (
 
     <div className='space-y-6'>;
-      <div>;
+      <div>;'
         <h2 className='text-xl font-semibold mb-2'>;
           Certifications & Licenses;
-        </h2>;
+        </h2>;'
         <p className='text-muted-foreground'>;
           Add any professional certifications, licenses, or credentials you have;
           earned.;
@@ -13,7 +13,7 @@ return (
 
       {certifications && certifications.length > 0 && (;
 
-        <CertificationsList
+        <CertificationsList;
           certifications={certifications}
           onEdit={handleEdit}
           onDelete={handleDelete}        />;
@@ -21,7 +21,7 @@ return (
 
 
 
-        <CertificationsList 
+        <CertificationsList;
           certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
@@ -31,104 +31,102 @@ return (
 
       )}
 
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
+      <div className="bg-muted/40 p-6 rounded-lg">"
+        <h3 className="text-md font-medium mb-4">'
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
-        <Form {...form}>
+        <Form {...form}>"
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
 
 
 
-
+"
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
-
+"
             <div className="flex justify-between pt-2">
-              <Button
-                type="button"
+              <Button"
+                type="button""
                 variant="outline"
-                onClick={() => {
-                  if (editingId) {
-
-
+                onClick={() => {}
+                  if (editingId) {}
                     setEditingId(null),
                     setEditingId(null),
 
 
-                    form.reset({
-                      name: '',
-                      issuing_organization: '',
-                      issue_date: '',
-                      expiration_date: '',
+                    form.reset({'
+                      name: '','
+                      issuing_organization: '','
+                      issue_date: '','
+                      expiration_date: '','
                       credential_id: '',
 
 
                     setEditingId(null),
                     setEditingId(null),
-                    form.reset({
-                      name: '',
-                      issuing_organization: '',
-                      issue_date: '',
-                      expiration_date: '',
-                      credential_id: '',
+                    form.reset({'
+                      name: '','
+                      issuing_organization: '','
+                      issue_date: '','
+                      expiration_date: '','
+                      credential_id: '','
                       credential_url: ''})
-                  } else {
+                  } else {}
                     onBack()
-
-      <div className='bg-muted/40 p-6 rounded-lg'>;
-        <h3 className='text-md font-medium mb-4'>;
+'
+      <div className='bg-muted/40 p-6 rounded-lg'>;'
+        <h3 className='text-md font-medium mb-4'>;'
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>;
 
         <Form {...form}>;
-          <form
-            onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
+          <form;
+            onSubmit={form && form.handleSubmit(handleAddOrUpdate)}'
             className='space-y-4'>;
             <CertificationFormFields form={form} />;
 
-            {error && (;
+            {error && (;'
               <Alert variant='destructive'>;
                 <AlertDescription>{error}</AlertDescription>;
               </Alert>;
             )}
-
+'
             <div className='flex justify-between pt-2'>;
-              <Button
-                type='button'
+              <Button'
+                type='button''
                 variant='outline'
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
-                    form && form.reset({;
-                      name: '',;
-                      issuing_organization: '',;
-                      issue_date: '',;
-                      expiration_date: '',;
-                      credential_id: '',;
+                    form && form.reset({;'
+                      name: '',;'
+                      issuing_organization: '',;'
+                      issue_date: '',;'
+                      expiration_date: '',;'
+                      credential_id: '',;'
                       credential_url: '',;
                     });
                   } else {;
                     onBack();
                   }
                 }}
-              >
+              >'
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>
 
-
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {editingId ? 'Update' : 'Add'} Certification
+"
+              <div className="flex gap-2">"
+                <Button type="submit" disabled={isLoading}>"
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}'
+                  {editingId ? 'Update' : 'Add'} Certification;
                 </Button>
-
+"
                 <Button type="button" onClick={onComplete}>
 
 
-                  Next
+                  Next;
                 </Button>
               </div>
             </div>
@@ -139,15 +137,15 @@ return (
   )
 
               </Button>;
-
-              <div className='flex gap-2'>;
+'
+              <div className='flex gap-2'>;'
                 <Button type='submit' disabled={isLoading}>;
-                  {isLoading && (;
+                  {isLoading && (;'
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  )}
+                  )}'
                   {editingId ? 'Update' : 'Add'} Certification;
                 </Button>;
-
+'
                 <Button type='button' onClick={onComplete}>;
                   Next;
                 </Button>;
@@ -159,53 +157,53 @@ return (
     </div>;
   );
 
-}> {;
+}> {;'
   editingId ? 'Cancel' : 'Back' ;
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;'"
 }'"}
 
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
-        form.reset ({
-          name: '',
-          issuing_organization: '',
-          issue_date: '',
-          expiration_date: '',
-          credential_id: '',
+        form.reset ({'
+          name: '','
+          issuing_organization: '','
+          issue_date: '','
+          expiration_date: '','
+          credential_id: '','
           credential_url: '',
         });
         setEditingId (null);
       }
-    } catch (err: any) {
+    } catch (err: any) {'
       set_error (err.message || 'An error occurred');
     }
   }
-  const handle_edit = (cert: Certification) =>: any {
-    setEditingId (cert.id!);    form.reset ({
+  const handle_edit = (cert: Certification) =>: any {}
+    setEditingId (cert.id!);    form.reset ({}
       ...cert,
   }
-  const handle_edit = (cert: Certification) =>: any {
+  const handle_edit = (cert: Certification) =>: any {}
     setEditingId (cert.id!);
-    form.reset ({
+    form.reset ({}
       issue_date: formatDateValue (cert.issue_date),
       expiration_date: formatDateValue (cert.expiration_date),
     });
   }
-  const handle_delete = async (id: string, ) => {
-    if () {) {
-  $2
+  const handle_delete = async (id: string, ) => {}
+    if () {) {}
+  $2;
 }
       await delete_certification (id);
     }
   }
-  return (
+  return ('
     <div className='space - y-6'>;
-      <div>;
+      <div>;'
         <h2 className='text - xl font - semibold mb - 2'>;
           Certifications & Licenses;
-        </h2>;
+        </h2>;'
         <p className='text - muted - foreground'>;
           Add any professional certifications, licenses, or credentials you have;
           earned.;
@@ -215,52 +213,52 @@ if ( {) {
         <CertificationsList;
           certifications={certifications}
           on_edit={handle_edit}
-          on_delete={handle_delete}        />)}
-      <div className='bg - muted / 40 p - 6 rounded - lg'>;
-        <h3 className='text - md font - medium mb - 4'>;
+          on_delete={handle_delete}        />)}'
+      <div className='bg - muted / 40 p - 6 rounded - lg'>;'
+        <h3 className='text - md font - medium mb - 4'>;'
           {editing_id ? 'Update Certification' : 'Add Certification'}
         </h3>;
         <Form {...form}>;
           <form;
-            on_submit={form.handle_submit (handleAddOrUpdate)}
+            on_submit={form.handle_submit (handleAddOrUpdate)}'
             className='space - y-4';
           >;
             <CertificationFormFields form={form} />;
-            {error && (
+            {error && ('
               <Alert variant='destructive'>;
                 <AlertDescription>{error}</AlertDescription>;
-              </Alert>)}
+              </Alert>)}'
             <div className='flex justify - between pt - 2'>;
-              <Button;
-                type='button';
+              <Button;'
+                type='button';'
                 variant='outline';
-                on_click={() => {
-                  // Check condition
-if ( {) {
-  $2
+                on_click={() => {}
+                  // Check condition;
+if ( {) {}
+  $2;
 }
                     setEditingId (null);
-                    form.reset ({
-                      name: '',
-                      issuing_organization: '',
-                      issue_date: '',
-                      expiration_date: '',
-                      credential_id: '',
+                    form.reset ({'
+                      name: '','
+                      issuing_organization: '','
+                      issue_date: '','
+                      expiration_date: '','
+                      credential_id: '','
                       credential_url: '',
                     });
-                  } else {
+                  } else {}
                     on_back ();
                   }
                 }}
-              >;
+              >;'
                 {editing_id ? 'Cancel' : 'Back'}
-              </Button>;
-              <div className='flex gap - 2'>;
+              </Button>;'
+              <div className='flex gap - 2'>;'
                 <Button type='submit' disabled={is_loading}>;
-                  {is_loading && (
-                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
+                  {is_loading && ('
+                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}'
                   {editing_id ? 'Update' : 'Add'} Certification;
-                </Button>;
+                </Button>;'
                 <Button type='button' on_click={on_complete}>;
                   Next;
                 </Button>;
@@ -270,10 +268,10 @@ if ( {) {
         </Form>;
       </div>;
     </div>);
-}> {
+}> {'
   editing_id ? 'Cancel' : 'Back';
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);'"
 }'"}
 
 }
-;
+;'"

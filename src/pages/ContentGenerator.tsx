@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContentGenerator = () => {
+const ContentGenerator = () => {}
   return (
     <div>
       <h1>ContentGenerator</h1>
@@ -9,4 +9,4 @@ const ContentGenerator = () => {
   );
 };
 
-export default ContentGenerator;
+export default ContentGenerator;'

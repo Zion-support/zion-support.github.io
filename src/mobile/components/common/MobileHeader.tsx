@@ -1,10 +1,10 @@
-title: string;  showBack?: boolean;  title: string
-  showBack?: boolean
-  showNotifications?: boolean
-  showSettings?: boolean
-  className?: string
-  onNotificationsClick?: () => void
-interface MobileHeaderProps {
+title: string;  showBack?: boolean;  title: string;
+  showBack?: boolean;
+  showNotifications?: boolean;
+  showSettings?: boolean;
+  className?: string;
+  onNotificationsClick?: () => void;
+interface MobileHeaderProps {}
   title: string,
   showBack?: boolean;
   showNotifications?: boolean;
@@ -13,17 +13,15 @@ interface MobileHeaderProps {
   onNotificationsClick?: () => void;
 
 
-  onSettingsClick?: () => void
-export function MobileHeader({
-
-
+  onSettingsClick?: () => void;
+export function MobileHeader({}
   title,
   showBack = false,
   showNotifications = false,
   showSettings = false,
   className,
   onNotificationsClick,
-  onSettingsClick}: MobileHeaderProps) {
+  onSettingsClick}: MobileHeaderProps) {}
   const router = useRouter(),
 
   return (
@@ -37,28 +35,28 @@ export function MobileHeader({
   showSettings = false,
   className,
   onNotificationsClick,
-  onSettingsClick}: MobileHeaderProps) {
+  onSettingsClick}: MobileHeaderProps) {}
   const router = useRouter(),
 
   return (
-    <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
-      className
-    )}>
-      <div className="flex items-center justify-between h-14 px-4">
+    <header className={cn("
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;
+      className;
+    )}>"
+      <div className="flex items-center justify-between h-14 px-4">"
         <div className="flex items-center">
           {showBack && (
 
 
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button "
+              variant="ghost" "
+              size="icon" "
               className="mr-2" 
               onClick={() => router.back()}
 
 
-            >
-              <ChevronLeft className="h-5 w-5" />
+            >"
+              <ChevronLeft className="h-5 w-5" />"
               <span className="sr-only">Back</span>
             </Button>
 interface MobileHeaderProps {;
@@ -83,56 +81,55 @@ export function MobileHeader(): any ({;
   const router = useRouter();
 
   return (
-    <headerclassName={cn(
+    <headerclassName={cn("
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
-      className
-    )}>;
-      <div className="flex items-center justify-between h-14 px-4">;
+      className;
+    )}>;"
+      <div className="flex items-center justify-between h-14 px-4">;"
         <div className="flex items-center">;
           {showBack && (;
-            <Button
-              variant="ghost" 
-              size="icon" 
+            <Button"
+              variant="ghost" "
+              size="icon" "
               className="mr-2" 
               onClick = {(,) => router && router.back(),}
-            >;
-              <ChevronLeft className="h-5 w-5" />;
+            >;"
+              <ChevronLeft className="h-5 w-5" />;"
               <span className="sr-only">Back</span>;
             </Button>;
-          )}
+          )}"
           <h1 className="text-lg font-medium leading-none truncate">
             {title}
 
           </h1>;
-        </div>;
+        </div>;"
         <div className="flex items-center space-x-2">;
           {showNotifications && (;
-            <Button
+            <Button"
               variant="ghost" 
-
+"
               size="icon"
               onClick={onNotificationsClick}
-            >
-              <Bell className="h-5 w-5" />
+            >"
+              <Bell className="h-5 w-5" />"
               <span className="sr-only">Notifications</span>
             </Button>
           )}
 
           {showSettings && (;
-            <Button variant='ghost' size='icon' onClick={onSettingsClick}>;
-              <Settings className='h-5 w-5' />;
+            <Button variant='ghost' size='icon' onClick={onSettingsClick}>;'
+              <Settings className='h-5 w-5' />;'
               <span className='sr-only'>Settings</span>;
 
-            <Button 
-              <span className='sr-only'>Settings</span>            </Button>            <Button 
-            <Button 
-
-
-              variant="ghost" 
+            <Button '
+              <span className='sr-only'>Settings</span>            </Button>            <Button;
+            <Button;
+"
+              variant="ghost" "
               size="icon"
               onClick={onSettingsClick}
-            >
-              <Settings className="h-5 w-5" />
+            >"
+              <Settings className="h-5 w-5" />"
               <span className="sr-only">Settings</span>
 
 ;
@@ -140,11 +137,11 @@ export function MobileHeader(): any ({;
 }
 }
 
-            </Button>
-import React from "react",;
-import { useRouter } from 'next/router',;
-import { ChevronLeft, Bell, Settings } from 'lucide-react';
-import { cn } from "@/lib/utils",;
+            </Button>"
+import React from "react",;'
+import { useRouter } from 'next/router',;'
+import { ChevronLeft, Bell, Settings } from 'lucide-react';"
+import { cn } from "@/lib/utils",;"
 import { Button } from "@/components/ui/button",;
 interface MobileHeaderProps {;
   title: string,;
@@ -156,63 +153,44 @@ interface MobileHeaderProps {;
   onSettingsClick?: () => void;
 }
 ;
-export function MobileHeader({;
-  title,;
-  showBack = false,;
-  showNotifications = false,;
-  showSettings = false,;
-  className,;
-  onNotificationsClick,;
-  onSettingsClick,;
-}: MobileHeaderProps) {;
-  const router = useRouter();
-
-
-    >;
-      <div className='flex items-center justify-between h-14 px-4'>;
-        <div className='flex items-center'>;
-          {showBack && (;
-            <Button
-              variant='ghost'
-              size='icon'
-              className='mr-2'
+export function MobileHeader() { return null; }
               onClick={() => router && router.back()}
-            >;
-              <ChevronLeft className='h-5 w-5' />;
+            >;'
+              <ChevronLeft className='h-5 w-5' />;'
               <span className='sr-only'>Back</span>;
             </Button>;
-            <Button 
-              <span className='sr-only'>Settings</span>            </Button>            <Button 
-            <Button 
-              variant="ghost" 
+            <Button '
+              <span className='sr-only'>Settings</span>            </Button>            <Button;
+            <Button "
+              variant="ghost" "
               size="icon"
               onClick={onSettingsClick}
-            >
-              <Settings className="h-5 w-5" />
+            >"
+              <Settings className="h-5 w-5" />"
               <span className="sr-only">Settings</span>
             </Button>
-          )}
+          )}'
           <h1 className='text-lg font-medium leading-none truncate'>{title}</h1>;
-        </div>;
+        </div>;'
         <div className='flex items-center space-x-2'>;
-          {showNotifications && (;
-            <Button variant='ghost' size='icon' onClick={onNotificationsClick}>;
-              <Bell className='h-5 w-5' />;
+          {showNotifications && (;'
+            <Button variant='ghost' size='icon' onClick={onNotificationsClick}>;'
+              <Bell className='h-5 w-5' />;'
               <span className='sr-only'>Notifications</span>;
             </Button>;
           )}
 
-          {showSettings && (;
-            <Button variant='ghost' size='icon' onClick={onSettingsClick}>;
-              <Settings className='h-5 w-5' />;
-              <span className='sr-only'>Settings</span>            </Button>            <Button
+          {showSettings && (;'
+            <Button variant='ghost' size='icon' onClick={onSettingsClick}>;'
+              <Settings className='h-5 w-5' />;'
+              <span className='sr-only'>Settings</span>            </Button>            <Button"
               variant="ghost" 
-
+"
               size="icon"
-              onClick = {onSettingsClick,}>;
-              <Settings className="h-5 w-5" />;
+              onClick = {onSettingsClick,}>;"
+              <Settings className="h-5 w-5" />;"
               <span className="sr-only">Settings</span>;
           )}
 
 
-;
+;'"

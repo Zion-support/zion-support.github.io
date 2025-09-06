@@ -1,15 +1,14 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
+import { NextRequest, NextResponse } from "next/server";"
+import { getServerSession } from "next-auth";"
 import { prisma } from "@/lib/prisma";
-export async function POST(request: NextRequest) {
-  try {
+export async function POST(request: NextRequest) {}
+  try {};
     const session = await getServerSession();
 
 
-      {
+      {"
         message: "Onboarding completed successfully",
-        user: {
-
+        user: {}
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
@@ -19,12 +18,13 @@ export async function POST(request: NextRequest) {
       },
       { status: 200 },
     );
-  } catch (error) {
+  } catch (error) {"
     console.error("Onboarding completion error:", error);
-    return NextResponse.json(
+    return NextResponse.json("
       { error: "Internal server error" },
       { status: 500 },
     );
   }
 }
 }
+"

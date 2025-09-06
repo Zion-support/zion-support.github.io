@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface Ai-cybersecurityProps {
+interface Ai-cybersecurityProps {}
   className?: string;
 }
 
-const Ai-cybersecurity: React.FC<Ai-cybersecurityProps> = ({ className }) => {
-  return (
+const Ai-cybersecurity: React.FC<Ai-cybersecurityProps> = ({ className }) => {}
+  return ('
     <div className={className || ''}>
       <h1>Ai-cybersecurity</h1>
       <p>This component is under development.</p>
@@ -13,4 +13,4 @@ const Ai-cybersecurity: React.FC<Ai-cybersecurityProps> = ({ className }) => {
   );
 };
 
-export default Ai-cybersecurity;
+export default Ai-cybersecurity;'

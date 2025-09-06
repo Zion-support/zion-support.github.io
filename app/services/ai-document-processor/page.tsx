@@ -11,19 +11,19 @@
   );
 }
 
-function DocumentTypeCard({ icon, name }: { icon: string; name: string }) {
+function DocumentTypeCard({ icon, name }: { icon: string; name: string }) {}
   return (
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
+        <a"
           href="tel:+13024640950"
         >
-          Call +1 302 464 0950
+          Call +1 302 464 0950;
         </a>
-        <a
+        <a"
           href="mailto:kleber@ziontechgroup.com"
         >
-          Email Us
+          Email Us;
         </a>
       </div>
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -31,4 +31,4 @@ function DocumentTypeCard({ icon, name }: { icon: string; name: string }) {
       </div>
     </div>
   );
-}
+}"

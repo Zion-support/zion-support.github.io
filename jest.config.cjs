@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-module.exports = {
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-=======
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -15,7 +7,6 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -29,7 +20,6 @@ const customJestConfig = {
       ]
     }]
   },
-<<<<<<< HEAD
   testMatch: [
     '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
     '<rootDir>/src/**/*.(test|spec).(js|jsx|ts|tsx)'
@@ -44,23 +34,7 @@ const customJestConfig = {
     '<rootDir>/node_modules/',
     '<rootDir>/dist/',
     '<rootDir>/build/',
-  ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  verbose: true,
-  collectCoverage: false,
-<<<<<<< HEAD
-  testTimeout: 10000,
-};
-=======
-  collectCoverageFrom: [
-    'components/**/*.{js,jsx,ts,tsx}',
-    'pages/**/*.{js,jsx,ts,tsx}',
-    'utils/**/*.{js,jsx,ts,tsx}',
-    '!**/node_modules/**',
-  ],
-  testPathIgnorePatterns: [
     '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
     '<rootDir>/out/',
     '<rootDir>/__tests__.disabled/',
     '<rootDir>/tests.disabled/',
@@ -71,11 +45,10 @@ const customJestConfig = {
     '<rootDir>/dao/',
     '<rootDir>/pages.disabled/',
   ],
-}
-
-module.exports = createJestConfig(customJestConfig)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 10000,
   coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
     global: {
@@ -86,4 +59,5 @@ module.exports = createJestConfig(customJestConfig)
     }
   }
 };
->>>>>>> main
+
+module.exports = createJestConfig(customJestConfig);

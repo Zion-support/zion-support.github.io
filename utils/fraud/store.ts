@@ -1,22 +1,22 @@
-export interface FraudRecord {
+export interface FraudRecord {};
   id: string;
   type: string;
   severity: "low" | "medium" | "high" | "critical";
   description: string;
   source: string;
-  timestamp: string;
+  timestamp: string;"
   status: "pending" | "investigating" | "resolved" | "false_positive";
   adminId?: string;
   resolution?: string;
 }
 
 
-class FraudStore {
+class FraudStore {}
   private records: Map<string, FraudRecord> = new Map();
-
-  createRecord(record: Omit<FraudRecord, "id" | "timestamp">): FraudRecord {
+"
+  createRecord(record: Omit<FraudRecord, "id" | "timestamp">): FraudRecord {}
     const id = Date.now().toString();
-    const newRecord: FraudRecord = {
+    const newRecord: FraudRecord = {}
       ...record,
       id,
       timestamp: new Date().toISOString(),
@@ -24,14 +24,14 @@ class FraudStore {
     this.records.set(id, newRecord);
     return newRecord;
   }
-  get_record (id: string): FraudRecord | undefined {
+  get_record (id: string): FraudRecord | undefined {}
     return this.records.get (id);
   }
 
   updateRecord(
     id: string,
     updates: Partial<FraudRecord>,
-  ): FraudRecord | undefined {
+  ): FraudRecord | undefined {}
     const record = this.records.get(id);
     if (!record) return undefined;
 
@@ -39,23 +39,23 @@ class FraudStore {
     this.records.set(id, updatedRecord);
     return updatedRecord;
   }
-  list_records (): FraudRecord[] {
+  list_records (): FraudRecord[] {}
     return Array.from (this.records.values ());
   }
 
-  async generateMonthlyReport(month: string): Promise<MonthlyReport> {
+  async generateMonthlyReport(month: string): Promise<MonthlyReport> {}
     const records = this.listRecords();
     const monthRecords = records.filter((r) => r.timestamp.startsWith(month));
 
-    return {
+    return {}
       month,
-      totalCases: monthRecords.length,
-      resolvedCases: monthRecords.filter((r) => r.status === "resolved").length,
+      totalCases: monthRecords.length,"
+      resolvedCases: monthRecords.filter((r) => r.status === "resolved").length,"
       falsePositives: monthRecords.filter((r) => r.status === "false_positive")
         .length,
-      averageResolutionTime: 24, // placeholder
-      topFraudTypes: [
-        { type: "suspicious_activity", count: 5 },
+      averageResolutionTime: 24, // placeholder;
+      topFraudTypes: ["
+        { type: "suspicious_activity", count: 5 },"
         { type: "unauthorized_access", count: 3 },
       ],
     };
@@ -64,3 +64,4 @@ class FraudStore {
 
 export const fraudStore = new FraudStore();
 export const getFraudStore = () => fraudStore;
+"

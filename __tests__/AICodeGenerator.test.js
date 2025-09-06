@@ -1,3 +1,8 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+
+const AICodeGeneratorTest = () => (
+  <div data-testid="aicodegenerator-test">
     <h1>AI Code Generator Test</h1>
   </div>
 );

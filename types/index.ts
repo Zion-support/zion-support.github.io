@@ -1,18 +1,17 @@
-// Type definitions index
-
-export interface ContactInfo {
+// Type definitions index;
+export interface ContactInfo {};
   phone: string;
   email: string;
   address: string;
   site: string;
 }
 
-export interface AnimationState {
+export interface AnimationState {};
   isLoaded: boolean;
   hasError: boolean;
 }
 
-export interface ProjectBrief {
+export interface ProjectBrief {};
   projectName: string;
   goals: string;
   timeline: string;

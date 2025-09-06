@@ -1,4 +1,4 @@
-export interface Review {
+export interface Review {};
   id: string;
   userId: string;
   serviceId: string;
@@ -8,10 +8,10 @@ export interface Review {
   updatedAt: Date;
 }
 
-export interface ReviewSummary {
+export interface ReviewSummary {};
   averageRating: number;
   totalReviews: number;
-  ratingDistribution: {
+  ratingDistribution: {}
     1: number;
     2: number;
     3: number;

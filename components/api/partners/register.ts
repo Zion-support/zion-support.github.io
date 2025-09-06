@@ -1,21 +1,21 @@
       });
-    } catch (e) {
+    } catch (e) {}
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
 }
-}
+}"
       return res.status (400).json ({ error: "Missing required fields" });
     }
-    try {
-      const { partner, api_key } = await create_partner ({
+    try {}
+      const { partner, api_key } = await create_partner ({}
         name,
         entity_type,
         pointOfContact,
         useCaseType,
         brand,
       });
-      return res.status (201).json ({
-        partner: {
+      return res.status (201).json ({}
+        partner: {}
           id: partner.id,
           name: partner.name,
           status: partner.status,
@@ -26,8 +26,9 @@
         api_key: api_key.key,
         dashboard_url: `/partners / dashboard?pid=${partner.id}`,
       });
-    } catch (e) {
+    } catch (e) {"
       return res.status (500).json ({ error: "Failed to create partner" });
-    }
+    }"
     return res.status (500).json ({ error: "Failed to create partner" });
   }
+"`

@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-export interface ModerationFlag {
-export interface ModerationFlag {;
 
-
-export interface ModerationFlag {
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
   reason: string;
-  userEmail: string;
+  userEmail: string;"
   status: "pending" | "approved" | "removed" | "warned" | "banned";
   createdAt: string;
   updatedAt: string;
@@ -20,13 +11,13 @@ export interface ModerationFlag {
 }
 
 ;
-export async function getFlagById (id: string): Promise < ModerationFlag | null> {
+export async function getFlagById (id: string): Promise < ModerationFlag | null> {};
   return flags.find (flag => flag.id === id) || null;
 }
-export async function readAllFlags (): Promise < ModerationFlag[]> {
+export async function readAllFlags (): Promise < ModerationFlag[]> {};
   return [...flags];
 
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {};
   return flags.find((flag) => flag.id === id) || null;
 }
 
@@ -36,16 +27,16 @@ export async function readAllFlags(): Promise<ModerationFlag[]> {;
 
 export async function createFlag(
   data: Partial<ModerationFlag>,
-): Promise<ModerationFlag> {
-  const flag: ModerationFlag = {
-    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    contentId: data.contentId || "",
-    contentType: data.contentType || "post",
-    reason: data.reason || "",
-    userEmail: data.userEmail || "",
+): Promise<ModerationFlag> {}
+  const flag: ModerationFlag = {}
+    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,"
+    contentId: data.contentId || "","
+    contentType: data.contentType || "post","
+    reason: data.reason || "","
+    userEmail: data.userEmail || "","
     status: "pending",
     createdAt: new Date().toISOString(),
-    ...data,
+    ...data,;
   };
 
   flags.push(flag);
@@ -53,10 +44,10 @@ export async function createFlag(
 }
 
 export async function updateFlagStatus(
-  id: string,
+  id: string,"
   status: ModerationFlag["status"],
   adminNotes?: string,
-): Promise<FlaggedContent | undefined> {
+): Promise<FlaggedContent | undefined> {};
   const flag = await getFlagById(id);
   if (!flag) return undefined;
   flag.status = status;
@@ -65,8 +56,7 @@ export async function updateFlagStatus(
   await upsertFlag(flag);
   return flag;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+"`

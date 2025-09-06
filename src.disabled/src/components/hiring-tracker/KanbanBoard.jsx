@@ -1,12 +1,12 @@
 import React from 'react';
-interface KanbanBoardProps {
-  // Add props here as needed
+interface KanbanBoardProps {}
+  // Add props here as needed;
 }
-export default function KanbanBoard({ }: KanbanBoardProps) {
+export default function KanbanBoard({ }: KanbanBoardProps) {}
   return (
     <div>
       <h1>KanbanBoard</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
-}
+}'

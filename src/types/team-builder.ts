@@ -1,4 +1,4 @@
-export interface ProjectBrief {
+export interface ProjectBrief {};
   projectName: string;
   goals: string;
   timeline: string;

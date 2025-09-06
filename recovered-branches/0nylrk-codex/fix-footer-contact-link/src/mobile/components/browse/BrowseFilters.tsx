@@ -1,568 +1,190 @@
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
-import { Switch } from "@/components/ui/switch";
+import React, { useState } from "react";"
+import { Button } from "@/components/ui/button";"
+import { Slider } from "@/components/ui/slider";"
+import { Switch } from "@/components/ui/switch";"
 import { Input } from "@/components/ui/input";
-import {
+import {}
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+  SelectValue,";
+} from "@/components/ui/select";"
 import { X, Filter } from "lucide-react";
-import {
+import {}
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetFooter,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Badge } from "@/components/ui/badge";
+  SheetTrigger,";
+} from "@/components/ui/sheet";"
+import { Badge } from "@/components/ui/badge";"
 import { Label } from "@/components/ui/label";
-interface BrowseFiltersProps {
+interface BrowseFiltersProps {"
   type: "jobs" | "talents";
 }
 
-export function BrowseFilters({ type }: BrowseFiltersProps) {
+export function BrowseFilters({ type }: BrowseFiltersProps) {};
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
-  const addFilter = (filter: string) => {
-    if (!activeFilters.includes(filter)) {
+  const addFilter = (filter: string) => {}
+    if (!activeFilters.includes(filter)) {}
       setActiveFilters([...activeFilters, filter]);
     }
   };
 
-  const removeFilter = (filter: string) => {
+  const removeFilter = (filter: string) => {}
     setActiveFilters(activeFilters.filter((f) => f !== filter));
   };
 
-  return (
-    <div className="space-y-3">
-      <div className="flex justify-between items-center px-4">
+  return ("
+    <div className="space-y-3">"
+      <div className="flex justify-between items-center px-4">"
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-1">
+            <SheetTrigger asChild>"
+              <Button variant="outline" size="sm" className="gap-1">"
                 <Filter className="h-3.5 w-3.5" />
-                Filter
+                Filter;
               </Button>
-            </SheetTrigger>
+            </SheetTrigger>"
             <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">
               <SheetHeader>
-                <SheetTitle>
+                <SheetTitle>"
                   Filter {type === "jobs" ? "Jobs" : "Talents"}
                 </SheetTitle>
               </SheetHeader>
-
-              <div className="py-6 space-y-6">
+"
+              <div className="py-6 space-y-6">"
                 {type === "jobs" ? (
-                  <>
+                  <>"
                     <div className="space-y-2">
-                      <Label>Job Type</Label>
+                      <Label>Job Type</Label>"
                       <div className="flex gap-2 flex-wrap">
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Full Time
+                          Full Time;
                         </Badge>
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Part Time
+                          Part Time;
                         </Badge>
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Contract
+                          Contract;
                         </Badge>
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Freelance
+                          Freelance;
                         </Badge>
                       </div>
                     </div>
-
+"
                     <div className="space-y-2">
-                      <Label>Experience Level</Label>
+                      <Label>Experience Level</Label>"
                       <div className="flex gap-2 flex-wrap">
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Entry Level
+                          Entry Level;
                         </Badge>
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Mid Level
+                          Mid Level;
                         </Badge>
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Senior
+                          Senior;
                         </Badge>
                       </div>
                     </div>
                   </>
                 ) : (
-                  <>
+                  <>"
                     <div className="space-y-2">
-                      <Label>Specialization</Label>
+                      <Label>Specialization</Label>"
                       <div className="flex gap-2 flex-wrap">
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Developer
+                          Developer;
                         </Badge>
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Designer
+                          Designer;
                         </Badge>
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Marketing
+                          Marketing;
                         </Badge>
-                        <Badge
-                          variant="outline"
+                        <Badge"
+                          variant="outline""
                           className="cursor-pointer hover:bg-primary/5"
                         >
-                          Content
+                          Content;
                         </Badge>
                       </div>
                     </div>
-
+"
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
-                      <Slider
+                      <Slider;
                         defaultValue={[0, 10]}
                         max={20}
-                        step={1}
+                        step={1}"
                         className="my-4"
-                      />;
+                      />;"
                       <div className="flex justify-between text-xs text-muted-foreground">;
                         <span>0+ years</span>;
                         <span>20+ years</span>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-                  </>;
-                )}
-<<<<<<< HEAD
 
-                <div className="space-y-2">
-                  <Label>Location</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select location" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="remote">Remote</SelectItem>
-                      <SelectItem value="us">United States</SelectItem>
-                      <SelectItem value="europe">Europe</SelectItem>
-                      <SelectItem value="asia">Asia</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
 
-                <div className="space-y-2">
-                  <Label>Salary Range</Label>
-                  <div className="flex gap-4 items-center">
-                    <Input placeholder="Min" type="number" className="w-full" />
-                    <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
-                  </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label>Skills</Label>
-                  <div className="grid grid-cols-2 gap-2">
-                    <Badge
-                      variant="outline"
-                      className="cursor-pointer hover:bg-primary/5 justify-start"
-                    >
-                      JavaScript
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      className="cursor-pointer hover:bg-primary/5 justify-start"
-                    >
-                      React
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      className="cursor-pointer hover:bg-primary/5 justify-start"
-                    >
-                      Python
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      className="cursor-pointer hover:bg-primary/5 justify-start"
-                    >
-                      Figma
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      className="cursor-pointer hover:bg-primary/5 justify-start"
-                    >
-                      UI/UX
-                    </Badge>
-                    <Badge
-                      variant="outline"
-                      className="cursor-pointer hover:bg-primary/5 justify-start"
-                    >
-                      Node.js
-                    </Badge>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <Label>Only show verified profiles</Label>
-                  <Switch />
-                </div>
-              </div>
-
-              <SheetFooter>
-                <Button variant="outline" className="w-full">
-                  Reset
-                </Button>
-                <Button
-                  className="w-full"
-                  onClick={() => addFilter("Experience: 3+ years")}
-                >
-                  Apply Filters
-                </Button>
-              </SheetFooter>
-            </SheetContent>
-          </Sheet>
-
-          <Select>
-            <SelectTrigger className="w-[120px] h-8">
-              <SelectValue placeholder="Sort By" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="newest">Newest</SelectItem>
-              <SelectItem value="relevance">Best Match</SelectItem>
-              <SelectItem value="salary">Highest Pay</SelectItem>
-            </SelectContent>
-          </Select>
-
-          {activeFilters.map((filter) => (
-            <Badge
-              key={filter}
-              variant="secondary"
-              className="flex items-center gap-1"
-            >
-              {filter}
-              <X
-                className="h-3 w-3 cursor-pointer"
-                onClick={() => removeFilter(filter)}
-              />
-            </Badge>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-      setActiveFilters ([...active_filters, filter]);
-    }
-  }
-;
-  const remove_filter = (filter: string) =>: any {
-    setActiveFilters (active_filters.filter (function => f !== filter));
-  }
-;
-  return (
-    <div className="space - y-3">;
-      <div className="flex justify - between items - center px - 4">;
-        <div className="flex items - center gap - 2 overflow - x-auto py - 1 hide - scrollbar">;
-          <Sheet>;
-            <SheetTrigger as_child>;
-              <Button variant="outline" size="sm" className="gap - 1">;
-                <Filter className="h - 3.5 w - 3.5" />;
-                Filter;
-              </Button>;
-            </SheetTrigger>;
-            <SheetContent side="bottom" className="h-[85vh] rounded - t-xl">;
-              <SheetHeader>;
-                <SheetTitle > Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>;
-              </SheetHeader>;
-              <div className="py - 6 space - y-6">;
-                {type === "jobs" ? (
-                  <>;
-                    <div className="space - y-2">;
-                      <Label > Job Type</Label>;
-                      <div className="flex gap - 2 flex - wrap">;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Full Time</Badge>;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Part Time</Badge>;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Contract</Badge>;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Freelance</Badge>;
-                      </div>;
-                    </div>;
-                    <div className="space - y-2">;
-                      <Label > Experience Level</Label>;
-                      <div className="flex gap - 2 flex - wrap">;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Entry Level</Badge>;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Mid Level</Badge>;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Senior</Badge>;
-                      </div>;
-                    </div>;
-                  </>) : (
-                  <>;
-                    <div className="space - y-2">;
-                      <Label > Specialization</Label>;
-                      <div className="flex gap - 2 flex - wrap">;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Developer</Badge>;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Designer</Badge>;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Marketing</Badge>;
-                        <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5">Content</Badge>;
-                      </div>;
-                    </div>;
-                    <div className="space - y-2">;
-                      <Label > Experience (years)</Label>;
-                      <Slider;
-                        default_value={[0, 10]}
-                        max={20}
-                        step={1}
-                        className="my - 4";
-                      />;
-                      <div className="flex justify - between text - xs text - muted - foreground">;
-                        <span > 0+ years</span>;
-                        <span > 20+ years</span>;
-                      </div>;
-                    </div>;
-                  </>)}
-                <div className="space - y-2">;
-                  <Label > Location</Label>;
-<<<<<<< HEAD
-
-=======
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Slider } from "@/components/ui/slider",;
-import { Switch } from "@/components/ui/switch",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { X, Filter } from "lucide-react",;
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
-import { Badge } from "@/components/ui/badge",;
-import { Label } from "@/components/ui/label",;
-;
-interface BrowseFiltersProps {;
-  type:"jobs" | "talents";
-}
-;
-export function BrowseFilters({ type } BrowseFiltersProps) {;
-  const [activeFilters, setActiveFilters] = useState<string[]>([]),;
-  ;
-  const addFilter = (filter:string) => {;
-    if (!activeFilters.includes(filter)) {;
-      setActiveFilters([...activeFilters, filter]),;
-    }
-  },;
-  ;
-  const removeFilter = (filter:string) => {;
-    setActiveFilters(activeFilters.filter(f => f !== filter));
-  },;
-  ;
-  return (;
-    <div className="space-y-3">;
-      <div className="flex justify-between items-center px-4">;
-        <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">;
-          <Sheet>;
-            <SheetTrigger asChild>;
-              <Button variant="outline" size="sm" className="gap-1">;
-                <Filter className="h-3.5 w-3.5" /> ;
-                Filter;
-              </Button>;
-            </SheetTrigger>;
-            <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">;
-              <SheetHeader>;
-                <SheetTitle>Filter {type === "jobs" ? "Jobs" :"Talents"}</SheetTitle>;
-              </SheetHeader>;
-              ;
-              <div className="py-6 space-y-6">;
-                {type === "jobs" ? (;
-                  <>;
-                    <div className="space-y-2">;
-                      <Label>Job Type</Label>;
-                      <div className="flex gap-2 flex-wrap">;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Full Time</Badge>;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Part Time</Badge>;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Contract</Badge>;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>;
-                      </div>;
-                    </div>;
-                    ;
-                    <div className="space-y-2">;
-                      <Label>Experience Level</Label>;
-                      <div className="flex gap-2 flex-wrap">;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>;
-                      </div>;
-                    </div>;
-                  </>;
-                ) :(;
-                  <>;
-                    <div className="space-y-2">;
-                      <Label>Specialization</Label>;
-                      <div className="flex gap-2 flex-wrap">;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Developer</Badge>;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Designer</Badge>;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Marketing</Badge>;
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>;
-                      </div>;
-                    </div>;
-                    ;
-                    <div className="space-y-2">;
-                      <Label>Experience (years)</Label>;
-                      <Slider ;
-                        defaultValue={[0, 10]} ;
-                        max={20} ;
-                        step={1} ;
-                        className="my-4";
-                      />;
-                      <div className="flex justify-between text-xs text-muted-foreground">;
-                        <span>0+ years</span>;
-                        <span>20+ years</span>;
-                      </div>;
-                    </div>;
-                  </>;
-                )}
-                ;
-                <div className="space-y-2">;
-                  <Label>Location</Label>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Select>;
-                    <SelectTrigger>;
+                    <SelectTrigger>;"
                       <SelectValue placeholder="Select location" />;
                     </SelectTrigger>;
-                    <SelectContent>;
-                      <SelectItem value="remote">Remote</SelectItem>;
-                      <SelectItem value="us">United States</SelectItem>;
-                      <SelectItem value="europe">Europe</SelectItem>;
+                    <SelectContent>;"
+                      <SelectItem value="remote">Remote</SelectItem>;"
+                      <SelectItem value="us">United States</SelectItem>;"
+                      <SelectItem value="europe">Europe</SelectItem>;"
                       <SelectItem value="asia">Asia</SelectItem>;
                     </SelectContent>;
                   </Select>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-                <div className="space - y-2">;
-                  <Label > Salary Range</Label>;
-                  <div className="flex gap - 4 items - center">;
-                    <Input placeholder="Min" type="number" className="w - full" />;
-                    <span > to</span>;
-                    <Input placeholder="Max" type="number" className="w - full" />;
-                  </div>;
-                </div>;
-                <div className="space - y-2">;
-                  <Label > Skills</Label>;
-                  <div className="grid grid - cols - 2 gap - 2">;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">JavaScript</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">React</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">Python</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">Figma</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">UI / UX</Badge>;
-                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">Node.js</Badge>;
-                  </div>;
-                </div>;
-                <div className="flex items - center justify - between">;
-                  <Label > Only show verified profiles</Label>;
-                  <Switch />;
-                </div>;
-              </div>;
-              <SheetFooter>;
-                <Button variant="outline" className="w - full">Reset</Button>;
-                <Button className="w - full" on_click={() => add_filter ("Experience: 3+ years")}>Apply Filters</Button>;
-              </SheetFooter>;
-            </SheetContent>;
-          </Sheet>;
-          <Select>;
-            <SelectTrigger className="w-[120px] h - 8">;
 
-=======
-                ;
-                <div className="space-y-2">;
-                  <Label>Salary Range</Label>;
-                  <div className="flex gap-4 items-center">;
-                    <Input placeholder="Min" type="number" className="w-full" />;
-                    <span>to</span>;
-                    <Input placeholder="Max" type="number" className="w-full" />;
-                  </div>;
-                </div>;
-                ;
-                <div className="space-y-2">;
-                  <Label>Skills</Label>;
-                  <div className="grid grid-cols-2 gap-2">;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>;
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>;
-                  </div>;
-                </div>;
-                ;
-                <div className="flex items-center justify-between">;
-                  <Label>Only show verified profiles</Label>;
-                  <Switch />;
-                </div>;
-              </div>;
-              ;
-              <SheetFooter>;
-                <Button variant="outline" className="w-full">Reset</Button>;
-                <Button className="w-full" onClick={() => addFilter("Experience:3+ years")}>Apply Filters</Button>;
-              </SheetFooter>;
-            </SheetContent>;
-          </Sheet>;
-          ;
-          <Select>;
-            <SelectTrigger className="w-[120px] h-8">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+"
               <SelectValue placeholder="Sort By" />;
             </SelectTrigger>;
-            <SelectContent>;
-              <SelectItem value="newest">Newest</SelectItem>;
-              <SelectItem value="relevance">Best Match</SelectItem>;
+            <SelectContent>;"
+              <SelectItem value="newest">Newest</SelectItem>;"
+              <SelectItem value="relevance">Best Match</SelectItem>;"
               <SelectItem value="salary">Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-                className="h-3 w-3 cursor-pointer" 
-=======
-          ;
-          {activeFilters.map((filter) => (;
-            <Badge ;
-              key={filter} ;
-              variant="secondary";
-              className="flex items-center gap-1";
-            >;
-              {filter}
-              <X ;
-                className="h-3 w-3 cursor-pointer" ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 onClick={() => removeFilter(filter)} ;
               />;
             </Badge>;
@@ -570,23 +192,17 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-}
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
           {active_filters.map ((filter) => (
             <Badge;
-              key={filter}
-              variant="secondary";
+              key={filter}"
+              variant="secondary";"
               className="flex items - center gap - 1";
             >;
               {filter}
-              <X;
+              <X;"
                 className="h - 3 w - 3 cursor - pointer";
                 on_click={() => remove_filter (filter)}
               />;
@@ -595,107 +211,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;}
- 
-}export function BrowseFilters ({
-  type 
-}: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]> ([]);
-if (!activeFilters.includes (filter) ) {
-  return (<div className="space-y-3" > <div className="flex justify-between items-center px-4" > <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar" > <Sheet> <SheetTrigger asChild> <Button variant="outline" size="sm" className="gap-1" > <Filter className="h-3.5 w-3.5" /> Filter </Button> </SheetTrigger> <SheetContent side="bottom" className="h-[85vh] rounded-t-xl" > <SheetHeader> <> <div className="space-y-2" > <Label>Job Type</Label> <div className="flex gap-2 flex-wrap" > <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Full Time</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Part Time</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Contract</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Freelance</Badge> </div> </div> <div className="space-y-2" > <Label>Experience Level</Label> <div className="flex gap-2 flex-wrap" > <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Entry Level</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Mid Level</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Senior</Badge> </div> </div> </>) : (<> <div className="space-y-2" > <Label>Specialization</Label> <div className="flex gap-2 flex-wrap" > <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Developer</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Designer</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Marketing</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5" >Content</Badge> </div> </div> <div className="space-y-2" > <Label>Experience (years) </Label> <Slider /> <div className="flex justify-between text-xs text-muted-foreground" > <span>0+ years</span> <span>20+ years</span> </div> </div> </>) 
-}<div className="space-y-2" > <Label>Location</Label> <Select> <SelectTrigger> <SelectValue placeholder="Select location" /> </SelectTrigger> <SelectContent> <SelectItem value="remote" >Remote</SelectItem> <SelectItem value="us" >United States</SelectItem> <SelectItem value="europe" >Europe</SelectItem> <SelectItem value="asia" >Asia</SelectItem> </SelectContent> </Select> </div> <div className="space-y-2" > <Label>Salary Range</Label> <div className="flex gap-4 items-center" > <Input placeholder="Min" type="number" className="w-full" /> <span>to</span> <Input placeholder="Max" type="number" className="w-full" /> </div> </div> <div className="space-y-2" > <Label>Skills</Label> <div className="grid grid-cols-2 gap-2" > <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start" >JavaScript</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start" >React</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start" >Python</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start" >Figma</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start" >UI/UX</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start" >Node.js</Badge> </div> </div> <div className="flex items-center justify-between" > <Label>Only show verified profiles</Label> <Switch /> </div> </div> <SheetFooter> </SheetFooter> </SheetContent> </Sheet> <Select> <SelectTrigger className="w-[120px] h-8" > <SelectValue placeholder="Sort By" /> </SelectTrigger> <SelectContent> <SelectItem value="newest" >Newest</SelectItem> <SelectItem value="relevance" >Best Match</SelectItem> <SelectItem value="salary" >Highest Pay</SelectItem> </SelectContent> </Select> {
-  activeFilters.map ( (filter) => (<Badge key= {
-  filter 
-}variant="secondary" className="flex items-center gap-1" > {
-  filter 
-}<X /> </Badge>) ) 
-}</div> </div> </div>) 
-}
-                        className="my-4"
-                      />
-                      <div className="flex justify-between text-xs text-muted-foreground">
-                        <span>0+ years</span>
-                        <span>20+ years</span>
-                      </div>
-                    </div>
-                  </>
-                )}
-                <div className="space-y-2">
-                  <Label>Location</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select location" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="remote">Remote</SelectItem>
-                      <SelectItem value="us">United States</SelectItem>
-                      <SelectItem value="europe">Europe</SelectItem>
-                      <SelectItem value="asia">Asia</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-2">
-                  <Label>Salary Range</Label>
-                  <div className="flex gap-4 items-center">
-                    <Input placeholder="Min" type="number" className="w-full" />
-                    <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Label>Skills</Label>
-                  <div className="grid grid-cols-2 gap-2">
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <Label>Only show verified profiles</Label>
-                  <Switch />
-                </div>
-              </div>
-              <SheetFooter>
-                <Button variant="outline" className="w-full">Reset</Button>
-                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
-              </SheetFooter>
-            </SheetContent>
-          </Sheet>
-          <Select>
-            <SelectTrigger className="w-[120px] h-8">
-              <SelectValue placeholder="Sort By" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="newest">Newest</SelectItem>
-              <SelectItem value="relevance">Best Match</SelectItem>
-              <SelectItem value="salary">Highest Pay</SelectItem>
-            </SelectContent>
-          </Select>
-          {activeFilters.map((filter) => (
-            <Badge
-              key={filter}
-              variant="secondary"
-              className="flex items-center gap-1"
-            >
-              {filter}
-              <X
-                className="h-3 w-3 cursor-pointer"
-                onClick={() => removeFilter(filter)}
-              />
-            </Badge>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+"

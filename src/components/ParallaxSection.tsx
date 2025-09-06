@@ -1,47 +1,47 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';'
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-interface ParallaxSectionProps {
+interface ParallaxSectionProps {}
   children: React.ReactNode;
   speed?: number;
-  className?: string;
+  className?: string;'
   direction?: 'up' | 'down' | 'left' | 'right';
 }
 
-const ParallaxSection: React.FC<ParallaxSectionProps> = ({
+const ParallaxSection: React.FC<ParallaxSectionProps> = ({}
   children,
-  speed = 0.5,
-  className = '',
+  speed = 0.5,'
+  className = '','
   direction = 'up'
-}) => {
+}) => {}
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress } = useScroll({}
     target: ref,
     offset: ["start end", "end start"]
   });
 
-  const getTransform = () => {
+  const getTransform = () => {}
     const baseTransform = scrollYProgress.get() * 100 * speed;
     
-    switch (direction) {
+    switch (direction) {'
       case 'up':
-        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
+        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);'
       case 'down':
-        return useTransform(scrollYProgress, [0, 1], [-100 * speed, 100 * speed]);
+        return useTransform(scrollYProgress, [0, 1], [-100 * speed, 100 * speed]);'
       case 'left':
-        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
+        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);'
       case 'right':
         return useTransform(scrollYProgress, [0, 1], [-100 * speed, 100 * speed]);
       default:
         return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
     }
   };
-
-  const y = direction === 'up' || direction === 'down' ? getTransform() : 0;
+'
+  const y = direction === 'up' || direction === 'down' ? getTransform() : 0;'
   const x = direction === 'left' || direction === 'right' ? getTransform() : 0;
 
   return (
-    <motion.div
+    <motion.div;
       ref={ref}
       style={{ y, x }}
       className={className}
@@ -51,4 +51,4 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   );
 };
 
-export default ParallaxSection;
+export default ParallaxSection;'"

@@ -1,22 +1,18 @@
 export type JobStatus = "new" | "in_progress" | "filled" | "closed";
 
-export type JobCategory =
-  | "development"
-  | "design"
-  | "marketing"
-  | "content"
-  | "data"
-  | "business"
+export type JobCategory ="
+  | "development""
+  | "design""
+  | "marketing""
+  | "content""
+  | "data""
+  | "business"";
   | "other";
 
 export interface JobBudget {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   min: number;
   max: number;
   currency: string;
@@ -25,18 +21,10 @@ export interface JobBudget {;
 
 export interface Job {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export interface Job {
 
-export interface Job {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 }
-export interface Job {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface Job {};
   id: string;
   client_id: string;
   title: string;
@@ -53,23 +41,13 @@ export interface Job {
 
 export interface JobFormData {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  created_at: string
-  updated_at: string
-}
-export interface JobFormData {
 
-export interface JobFormData {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+  created_at: string;
+  updated_at: string;
 }
-export interface JobFormData {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface JobFormData {};
+export interface JobFormData {;
+
   title: string;
   description: string;
   category: JobCategory;
@@ -85,27 +63,26 @@ export interface JobFormData {
 }
 // Add JobMatch interface to be shared across components;
 
-export interface JobMatch {
-=======
+export interface JobMatch {};
   budgetMin: number;
-  budgetMax: number
-  deadline: Date
+  budgetMax: number;
+  deadline: Date;
 }
-// Add JobMatch interface to be shared across components
+// Add JobMatch interface to be shared across components;
 export interface JobMatch {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
   id: string;
   job_id: string;
   talent_id: string;
   match_score: number;
-  matched_skills: string[];
+  matched_skills: string[];"
   status?: "new" | "viewed" | "applied" | "declined";
   created_at: string;
   viewed_at?: string;
   job?: Job;
-  talent_profile?: {
+  talent_profile?: {}
     id?: string;
     user_id: string;
     full_name: string;
@@ -122,31 +99,20 @@ export interface JobMatch {;
   };
 }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
 
 
 export interface ResumeAttachment {;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    category?: string
-    company_name?: string
-  }
-}
-export interface ResumeAttachment {
 
-export interface ResumeAttachment {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface ResumeAttachment {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+export interface ResumeAttachment {};
   id: string;
-  title: string;
+  title: string;"
   type: "ai_resume" | "custom_upload";
   file_url?: string;
   resume_id?: string;
@@ -154,44 +120,24 @@ export interface ResumeAttachment {
   skills?: string[];
 }
 
-export type ApplicationStatus =
-  | "new"
-  | "viewed"
-  | "shortlisted"
-  | "interview"
-  | "hired"
+export type ApplicationStatus ="
+  | "new""
+  | "viewed""
+  | "shortlisted""
+  | "interview""
+  | "hired"";
   | "rejected";
 
-export interface JobApplication {
-=======
-=======
+export interface JobApplication {};
 ;
 
-export interface JobApplication {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-export interface JobApplication {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
+export interface JobApplication {}
+export interface JobApplication {};
 export interface JobApplication {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  summary?: string
-  skills?: string[]
-}
-export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
-export interface JobApplication {
 
-export interface JobApplication {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface JobApplication {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+export interface JobApplication {};
   id: string;
   job_id: string;
   talent_id: string;
@@ -203,7 +149,7 @@ export interface JobApplication {
   updated_at?: string;
   viewed_at?: string;
   job?: Job;
-  talent_profile?: {
+  talent_profile?: {}
     id?: string;
     full_name: string;
     professional_title: string;
@@ -213,66 +159,45 @@ export interface JobApplication {
   };
   resume?: ResumeAttachment;
   // New fields for resume scoring;
-=======
-    bio: string
+
+    bio: string;
     skills: string[]
   }
   resume?: ResumeAttachment;
-  // New fields for resume scoring
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+  // New fields for resume scoring;
   }
   resume?: ResumeAttachment;
   // New fields for resume scoring;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   match_score?: number;
   match_summary?: string;
-  match_breakdown?: {
-    skills_match?: {
+  match_breakdown?: {}
+    skills_match?: {}
       score: number;
       matching: string[];
       missing: string[];
     };
-    experience_match?: {
+    experience_match?: {}
       score: number;
       analysis: string;
     };
-    education_match?: {
+    education_match?: {}
       score: number;
       analysis: string;
     };
   };
   match_suggestion?: string;
   scored_at?: string;
-  notes?: string; // New field for client notes
+  notes?: string; // New field for client notes;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      missing: string[];
-    },;
-    experience_match?: {;
-      score: number,;
-      analysis: string;
-    },;
-    education_match?: {;
-      score: number,;
-      analysis: string;
-    }
-  },;
-  match_suggestion?: string,;
-  scored_at?: string;
-  notes?: string,  // New field for client notes;
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 
 
 
 }
 ;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+"

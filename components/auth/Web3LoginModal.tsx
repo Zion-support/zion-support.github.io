@@ -1,55 +1,55 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-}
+}'
 import React, { useCallback, useEffect, useState } from 'react';
-type Web3LoginModalProps = {
-  isOpen: boolean
-  onClose: () => void
-  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
-function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
+type Web3LoginModalProps = {}
+  isOpen: boolean;
+  onClose: () => void'
+  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void;
+function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {}
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    if (!isOpen) {
+  useEffect(() => {}
+    if (!isOpen) {}
     setError(null);
     setLoading(true);
-    try {;
+    try {;'
       const Web3ModalCtor = (await import('web3modal')).default;
-      const provider = await web3Modal.connect();
+      const provider = await web3Modal.connect();'
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
       const signer = web3Provider.getSigner();
       const address = (await signer.getAddress()).toLowerCase();
-      const network = await web3Provider.getNetwork();
+      const network = await web3Provider.getNetwork();'
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
       const domain = window.location.host;
-      const origin = window.location.origin;
+      const origin = window.location.origin;'
       const statement = 'Sign in to Zion with your wallet. No gas required.';
       const issuedAt = new Date().toISOString();
       onClose()
-    } catch (e: any) {
-      console.error(e);
+    } catch (e: any) {}
+      console.error(e);'
       setError(e?.message |'Wallet connection failed')
-    } finally {
+    } finally {}
       setLoading(false)
     }
   }, [onClose, onLoggedIn]);
@@ -58,25 +58,25 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     setError(null);
     setLoading(true);
     try {;
-      const provider = (window as any)?.solana;
+      const provider = (window as any)?.solana;'
         throw new Error('Phantom not found. Install the Phantom extension');
       }
       const resp = await provider && provider.connect();
-      const publicKey: string = resp && resp.publicKey.toString();
+      const publicKey: string = resp && resp.publicKey.toString();'
       const nonceRes = await fetch('/api/auth/nonce');
-      const statement =;
-        'Sign in to Zion with your Solana wallet. No gas required.';
+      const statement =;'
+        'Sign in to Zion with your Solana wallet. No gas required.';'
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
       }
 
       setLoading(false);    }
-
+'
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
       onClose()
-    } catch (e: any) {
-      console.error(e);
+    } catch (e: any) {}
+      console.error(e);'
       setError(e?.message |'Phantom connection failed')
-    } finally {
+    } finally {}
       setLoading(false)
     }
   }, [onClose, onLoggedIn]);
@@ -87,42 +87,42 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
             Cancel;
           </button>;
         </div>;
-      </div>;
-    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
-      <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>
-        <div className='mb-4'>
-          <h2 className='text-lg font-semibold'>Connect your wallet</h2>
+      </div>;'
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>'
+      <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>'
+        <div className='mb-4'>'
+          <h2 className='text-lg font-semibold'>Connect your wallet</h2>'
           <p className='text-sm text-gray-500 dark:text-gray-400'>
             No gas needed. We will verify your ownership with a signed message.
           </p>
         </div>
-        {error && (
+        {error && ('
           <div className='mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300'>
             {error}
           </div>
-        )}
+        )}'
         <div className='space-y-3'>
-          <button
+          <button;
             onClick={handleEvmConnect}
-            disabled={loading}
+            disabled={loading}'
             className='w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black'
-          >
+          >'
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>
-          <button
+          <button;
             onClick={handlePhantomConnect}
-            disabled={loading}
+            disabled={loading}'
             className='w-full rounded-lg bg-purple-600 text-white py-2.5'
-          >
+          >'
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>
-        </div>
+        </div>'
         <div className='mt-4 flex justify-end'>
-          <button
-            onClick={onClose}
+          <button;
+            onClick={onClose}'
             className='text-sm text-gray-600 dark:text-gray-300'
           >
-            Cancel
+            Cancel;
           </button>
         </div>
       </div>
@@ -131,15 +131,15 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   return <ModalInner {...props} />;        </div>
         {error && (
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
-        )}
-        <div className="space-y-3">
-          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+        )}"
+        <div className="space-y-3">"
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">'
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
-          </button>
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+          </button>"
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">'
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>
-        </div>
+        </div>"
         <div className="mt-4 flex justify-end">
         </div>
       </div>
@@ -148,20 +148,19 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
 }
 
 
-export default function Web3LoginModal(props: Web3LoginModalProps) {;
-  if (!isClient) return null;
+export default function Web3LoginModal() { return null; }
   return <ModalInner {...props} />;        </div>
-        {error && (
+        {error && ("
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
-        )}
-        <div className="space-y-3">
-          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+        )}"
+        <div className="space-y-3">"
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">'
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
-          </button>
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+          </button>"
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">'
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>
-        </div>
+        </div>"
         <div className="mt-4 flex justify-end">
         </div>
       </div>
@@ -170,10 +169,10 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
 }
 
 
-export default function Web3LoginModal(props: Web3LoginModalProps) {;
-  if (!isClient) return null;
+export default function Web3LoginModal() { return null; }
   return <ModalInner {...props} />;
   return <ModalInner {...props} />
 }
   return <ModalInner {...props} />;
 
+'"`

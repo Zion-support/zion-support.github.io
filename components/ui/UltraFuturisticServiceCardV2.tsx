@@ -1,10 +1,10 @@
-  ArrowRight
-  Star
-  Users
-  TrendingUp
-  Zap
-  Shield
-  Globe
+  ArrowRight;
+  Star;
+  Users;
+  TrendingUp;
+  Zap;
+  Shield;
+  Globe;
   Rocket;
   ArrowRight,
   Star,
@@ -17,8 +17,8 @@
 
 
 } from 'lucide-react';
-interface ServiceCardProps {
-  service: {
+interface ServiceCardProps {}
+  service: {}
 import {;
   ArrowRight,;
   Star,;
@@ -27,7 +27,7 @@ import {;
   Zap,;
   Shield,;
   Globe,;
-  Rocket,;
+  Rocket,;'
 } from 'lucide-react';
 interface ServiceCardProps {;
   service: {;
@@ -42,27 +42,27 @@ interface ServiceCardProps {;
     link: string;
     icon: string;
     color: string;
-    popular: boolean;
-        return <Zap className='w-5 h-5' />;
-      case 'quantum & emerging tech':;
-        return <Rocket className='w-5 h-5' />;
-      case 'enterprise it':;
-        return <Shield className='w-5 h-5' />;
-      case 'space & metaverse':;
-        return <Globe className='w-5 h-5' />;
-      case 'micro saas':;
+    popular: boolean;'
+        return <Zap className='w-5 h-5' />;'
+      case 'quantum & emerging tech':;'
+        return <Rocket className='w-5 h-5' />;'
+      case 'enterprise it':;'
+        return <Shield className='w-5 h-5' />;'
+      case 'space & metaverse':;'
+        return <Globe className='w-5 h-5' />;'
+      case 'micro saas':;'
         return <TrendingUp className='w-5 h-5' />;
-        return <Rocket className="w-5 h-5" />;
-      case 'enterprise it':;
-        return <Shield className="w-5 h-5" />;
-      case 'space & metaverse':;
-        return <Globe className="w-5 h-5" />;
-      case 'micro saas':;
+        return <Rocket className="w-5 h-5" />;'
+      case 'enterprise it':;"
+        return <Shield className="w-5 h-5" />;'
+      case 'space & metaverse':;"
+        return <Globe className="w-5 h-5" />;'
+      case 'micro saas':;"
         return <TrendingUp className="w-5 h-5" />;
 
       default:
 
-
+'
         return <Zap className='w-5 h-5' />;    }
 
     }
@@ -72,51 +72,49 @@ interface ServiceCardProps {;
 
   };
 
-  const getGradientClass = (color: string) => {
-    if (color.includes('from-') && color.includes('to-')) {
-
-
+  const getGradientClass = (color: string) => {'
+    if (color.includes('from-') && color.includes('to-')) {}
   };
 
-      {/* Glow effect */}
+      {/* Glow effect */}'
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>;
-      {/* Main card */}
+      {/* Main card */}'
       <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>;
-        {/* Background pattern */}
+        {/* Background pattern */}'
     return 'from-cyan-500 to-blue-500'
-  }
-        <div className='absolute inset-0 opacity-5'>;
-          <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>;
+  }'
+        <div className='absolute inset-0 opacity-5'>;'
+          <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>;'
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0 && 0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>;
         </div>;
-        {/* Header */}
-        <div className='relative z-10 mb-6'>;
-          <div className='flex items-start justify-between mb-4'>;
-            <div className='flex items-center space-x-3'>;
+        {/* Header */}'
+        <div className='relative z-10 mb-6'>;'
+          <div className='flex items-start justify-between mb-4'>;'
+            <div className='flex items-center space-x-3'>;'
               <div className='text-3xl'>{service && service.icon}</div>;
-              <div>;
+              <div>;'
                 <div className='flex items-center space-x-2'>;
-                  {getCategoryIcon(service && service.category)}
-                  <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service && service.category}    }
+                  {getCategoryIcon(service && service.category)}'
+                  <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service && service.category}    }'
     return 'from-cyan-500 to-blue-500';
   };
   return (
-    <motion&& motion.div
+    <motion&& motion.div;
       initial={{ opacity: 0, y: 50, scale: 0 && 0.9 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{
+      transition={{}
         duration: 0 && 0.6,
         delay: index * 0 && 0.1,
         ease: [0 && 0.25, 0 && 0.46, 0 && 0.45, 0 && 0.94]
       }}
-        {/* Header */}
-        <div className="relative z - 10 mb - 6">;
-          <div className="flex items - start justify - between mb - 4">;
-            <div className="flex items - center space - x-3">;
+        {/* Header */}"
+        <div className="relative z - 10 mb - 6">;"
+          <div className="flex items - start justify - between mb - 4">;"
+            <div className="flex items - center space - x-3">;"
               <div className="text - 3xl">{service.icon}</div>;
-              <div>;
+              <div>;"
                 <div className="flex items - center space - x-2">;
-                  {getCategoryIcon (service.category)}
+                  {getCategoryIcon (service.category)}"
                   <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;
                     {service.category}
                   </span>
@@ -127,19 +125,19 @@ interface ServiceCardProps {;
             
 
             {service.popular && (
-              <motion.div
-        <div className="absolute inset-0 opacity-5">;
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400"></div>;
+              <motion.div"
+        <div className="absolute inset-0 opacity-5">;"
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400"></div>;"
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0 && 0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>;
         </div>;
-        {/* Header */}
-        <div className="relative z-10 mb-6">;
-          <div className="flex items-start justify-between mb-4">;
-            <div className="flex items-center space-x-3">;
+        {/* Header */}"
+        <div className="relative z-10 mb-6">;"
+          <div className="flex items-start justify-between mb-4">;"
+            <div className="flex items-center space-x-3">;"
               <div className="text-3xl">{service && service.icon}</div>;
-              <div>;
+              <div>;"
                 <div className="flex items-center space-x-2">;
-                  {getCategoryIcon(service && service.category)}
+                  {getCategoryIcon(service && service.category)}"
                   <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">;
                     {service && service.category}
                   </span>;
@@ -149,84 +147,84 @@ interface ServiceCardProps {;
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
             {service.name}
-          </h3>
+          </h3>"
           <p className="text-gray-300 text-sm leading-relaxed">
 
-
+'
           <p className='text-gray-300 text-sm leading-relaxed'>            {service.tagline}
 
             {service.tagline}
 
-
+"
           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
             {service.name}
-          </h3>
+          </h3>"
           <p className="text-gray-300 text-sm leading-relaxed">
           </p>
         </div>
         {/* Stats */}
                 {service.rating}
 
-              </div>
+              </div>'
               <div className='text-xs text-gray-400'>Rating</div>
 
-            </div>
-            <div className='text-center'>
+            </div>'
+            <div className='text-center'>'
               <div className='text-2xl font-bold text-purple-400'>
                 {service.customers.toLocaleString()}
-              </div>
+              </div>'
               <div className='text-xs text-gray-400'>Customers</div>
-            </div>
-            <div className='text-center'>
+            </div>'
+            <div className='text-center'>'
               <div className='text-2xl font-bold text-pink-400'>
-              </div>;
+              </div>;'
               <div className='text - xs text - gray - 400'>Rating</div>;
-            </div>;
-            <div className='text - center'>;
+            </div>;'
+            <div className='text - center'>;'
               <div className='text - 2xl font - bold text - purple - 400'>;
                 {service.customers.toLocaleString ()}
-              </div>;
+              </div>;'
               <div className='text - xs text - gray - 400'>Customers</div>;
-            </div>;
-            <div className='text - center'>;
+            </div>;'
+            <div className='text - center'>;'
               <div className='text - 2xl font - bold text - pink - 400'>;
-                {service.reviews}
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">{service.customers.toLocaleString()}</div>
+                {service.reviews}"
+            <div className="text-center">"
+              <div className="text-2xl font-bold text-purple-400">{service.customers.toLocaleString()}</div>"
               <div className="text-xs text-gray-400">Customers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-pink-400">{service.reviews}</div>
+            </div>"
+            <div className="text-center">"
+              <div className="text-2xl font-bold text-pink-400">{service.reviews}</div>"
               <div className="text-xs text-gray-400">Reviews</div>
             </div>
           </div>
         </div>
-        {/* Stats */}
-        <div className='relative z-10 mb-6'>;
-          <div className='grid grid-cols-3 gap-4'>;
-            <div className='text-center'>;
+        {/* Stats */}'
+        <div className='relative z-10 mb-6'>;'
+          <div className='grid grid-cols-3 gap-4'>;'
+            <div className='text-center'>;'
               <div className='text-2xl font-bold text-cyan-400'>;
                 {service && service.rating}
-              </div>;
+              </div>;'
               <div className='text-xs text-gray-400'>Rating</div>;
-            </div>;
-            <div className='text-center'>;
+            </div>;'
+            <div className='text-center'>;'
               <div className='text-2xl font-bold text-purple-400'>;
                 {service && service.customers.toLocaleString()}
-              </div>;
+              </div>;'
               <div className='text-xs text-gray-400'>Customers</div>;
-            </div>;
-            <div className='text-center'>;
+            </div>;'
+            <div className='text-center'>;'
               <div className='text-2xl font-bold text-pink-400'>;
                 {service && service.reviews}
-              </div>;
-              <div className='text-xs text-gray-400'>Reviews</div>            </div>            </div>;
-            <div className="text-center">;
-              <div className="text-2xl font-bold text-purple-400">{service && service.customers.toLocaleString()}</div>;
+              </div>;'
+              <div className='text-xs text-gray-400'>Reviews</div>            </div>            </div>;"
+            <div className="text-center">;"
+              <div className="text-2xl font-bold text-purple-400">{service && service.customers.toLocaleString()}</div>;"
               <div className="text-xs text-gray-400">Customers</div>;
-            </div>;
-            <div className="text-center">;
-              <div className="text-2xl font-bold text-pink-400">{service && service.reviews}</div>;
+            </div>;"
+            <div className="text-center">;"
+              <div className="text-2xl font-bold text-pink-400">{service && service.reviews}</div>;"
               <div className="text-xs text-gray-400">Reviews</div>;
             </div>;
           </div>;
@@ -235,67 +233,65 @@ interface ServiceCardProps {;
         </div>;
 
 
-        {/* Features preview */}
-        <div className='relative z-10 mb-6'>
+        {/* Features preview */}'
+        <div className='relative z-10 mb-6'>'
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
-            Key Features
-          </h4>
-          <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">
-          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>
-          <div className="space-y-2">
+            Key Features;
+          </h4>'"
+          <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">"
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>"
+          <div className="space-y-2">'
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (
 
 
             {service.features.slice(0, 3).map((feature, idx) => (
-              <motion.div
+              <motion.div;
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-              >
-                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
+              >'
+                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>'
                 <span className='text-gray-300'>{feature}</span>
               </motion.div>
             ))}
-            {service.features.length > 3 && (
-              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features              >
-                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
+            {service.features.length > 3 && ('
+              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features              >"
+                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>"
                 <span className="text-gray-300">{feature}</span>
               </motion.div>
             ))}
-            {service.features.length > 3 && (
+            {service.features.length > 3 && ("
               <div className="text-xs text-gray-500 mt-2">
-                +{service.features.length - 3} more features
-              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features
-
-                +{service.features.length - 3} more features
-
+                +{service.features.length - 3} more features'
+              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features;
+                +{service.features.length - 3} more features;
               </div>
-        {/* Features preview */}
-        <div className='relative z-10 mb-6'>;
+        {/* Features preview */}'
+        <div className='relative z-10 mb-6'>;'
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>;
             Key Features;
-          </h4>;
-          <div className='space-y-2'>            {service && service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">;
-          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>;
+          </h4>;'"
+          <div className='space-y-2'>            {service && service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">;"
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>;"
           <div className="space-y-2">;
             {service && service.features.slice(0, 3).map((feature, idx) => (;
-              <motion&& motion.div
+              <motion&& motion.div;
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0 && 0.6 + idx * 0 && 0.1 }}
-                className='flex items-center space-x-2 text-sm'>;
-                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>;
+                transition={{ delay: 0 && 0.6 + idx * 0 && 0.1 }}'
+                className='flex items-center space-x-2 text-sm'>;'
+                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>;'
                 <span className='text-gray-300'>{feature}</span>;
               </motion && motion.div>;
             ))}
-            {service && service.features.length > 3 && (;
-              <div className='text-xs text-gray-500 mt-2'>                +{service && service.features.length - 3} more features              >;
-                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>;
+            {service && service.features.length > 3 && (;'
+              <div className='text-xs text-gray-500 mt-2'>                +{service && service.features.length - 3} more features              >;"
+                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>;"
                 <span className="text-gray-300">{feature}</span>;
               </motion && motion.div>;
             ))}
-            {service && service.features.length > 3 && (;
+            {service && service.features.length > 3 && (;"
               <div className="text-xs text-gray-500 mt-2">;
                 +{service && service.features.length - 3} more features;
               </div>;
@@ -304,21 +300,21 @@ interface ServiceCardProps {;
                 animate={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ delay: 0.6 + idx * 0.1 }}
             )}
-        {/* Benefits */}
-        <div className='relative z-10 mb-6'>;
+        {/* Benefits */}'
+        <div className='relative z-10 mb-6'>;'
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>;
             Key Benefits;
-          </h4>;
-          <div className='space-y-2'>            {service && service.benefits.slice(0, 2).map((benefit, idx) => (        <div className="relative z-10 mb-6">;
-          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>;
+          </h4>;'"
+          <div className='space-y-2'>            {service && service.benefits.slice(0, 2).map((benefit, idx) => (        <div className="relative z-10 mb-6">;"
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>;"
           <div className="space-y-2">;
             {service && service.benefits.slice(0, 2).map((benefit, idx) => (;
-              <motion&& motion.div
+              <motion&& motion.div;
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-              >
-                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
+              >'
+                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>'
                 <span className='text-gray-300'>{feature}</span>
               </motion.div>
             ))}
@@ -327,35 +323,35 @@ interface ServiceCardProps {;
             )}
           </div>
         </div>
-        {/* Benefits */}
-        <div className="relative z-10 mb-6">
-          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
+        {/* Benefits */}"
+        <div className="relative z-10 mb-6">"
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>"
           <div className="space-y-2">
             {service.benefits.slice(0, 2).map((benefit, idx) => (
-              <motion.div
+              <motion.div'
                 className='flex items - center space - x-2 text - sm';
-              >;
-                <div className='w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full'></div>;
+              >;'
+                <div className='w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full'></div>;'
                 <span className='text - gray - 300'>{feature}</span>;
               </motion.div>))}
-            {service.features.length > 3 && (
-              <div className='text - xs text - gray - 500 mt - 2'>                +{service.features.length - 3} more features              >;
-                <div className="w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full"></div>;
+            {service.features.length > 3 && ('
+              <div className='text - xs text - gray - 500 mt - 2'>                +{service.features.length - 3} more features              >;"
+                <div className="w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full"></div>;"
                 <span className="text - gray - 300">{feature}</span>;
               </motion.div>))}
-            {service.features.length > 3 && (
+            {service.features.length > 3 && ("
               <div className="text - xs text - gray - 500 mt - 2">;
                 +{service.features.length - 3} more features;
               </div>)}
           </div>;
         </div>;
-        {/* Benefits */}
-        <div className='relative z - 10 mb - 6'>;
+        {/* Benefits */}'
+        <div className='relative z - 10 mb - 6'>;'
           <h4 className='text - sm font - semibold text - gray - 300 mb - 3'>;
             Key Benefits;
-          </h4>;
-          <div className='space - y-2'>            {service.benefits.slice (0, 2).map ((benefit, idx) => (        <div className="relative z - 10 mb - 6">;
-          <h4 className="text - sm font - semibold text - gray - 300 mb - 3">Key Benefits</h4>;
+          </h4>;'"
+          <div className='space - y-2'>            {service.benefits.slice (0, 2).map ((benefit, idx) => (        <div className="relative z - 10 mb - 6">;"
+          <h4 className="text - sm font - semibold text - gray - 300 mb - 3">Key Benefits</h4>;"
           <div className="space - y-2">;
             {service.benefits.slice (0, 2).map ((benefit, idx) => (
               <motion.div;
@@ -364,39 +360,39 @@ interface ServiceCardProps {;
                 initial={{ opacity: 0, coordinate_x: -20 }}
                 animate={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ delay: 0.8 + idx * 0.1 }}
-        {/* Benefits */}
-        <div className='relative z-10 mb-6'>
+        {/* Benefits */}'
+        <div className='relative z-10 mb-6'>'
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
-            Key Benefits
+            Key Benefits;
           </h4>
             {service.benefits.slice(0, 2).map((benefit, idx) => (
-              <motion.div
+              <motion.div;
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8 + idx * 0.1 }}
+                transition={{ delay: 0.8 + idx * 0.1 }}'
                 className='flex items-center space-x-2 text-sm'
               >
               </motion.div>
             ))}
 
           </div>;
-        </div>;
+        </div>;'
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>
 
 
 
         {/* Market info */}
 
-        {service.marketSize && service.growthRate && (
-          <div className="relative z-10 mb-6">
-            <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-gray-400">Market Size</span>
+        {service.marketSize && service.growthRate && ("
+          <div className="relative z-10 mb-6">"
+            <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">"
+              <div className="flex items-center justify-between text-xs">"
+                <span className="text-gray-400">Market Size</span>"
                 <span className="text-cyan-400 font-medium">{service.marketSize}</span>
-              </div>
-              <div className="flex items-center justify-between text-xs mt-1">
-                <span className="text-gray-400">Growth Rate</span>
+              </div>"
+              <div className="flex items-center justify-between text-xs mt-1">"
+                <span className="text-gray-400">Growth Rate</span>"
                 <span className="text-green-400 font-medium">{service.growthRate}</span>
               </div>
             </div>
@@ -404,67 +400,67 @@ interface ServiceCardProps {;
             ))}
 
         {/* Market info */}
-        {service && service.marketSize && service && service.growthRate && (;
-          <div className='relative z-10 mb-6'>;
-            <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>;
-              <div className='flex items-center justify-between text-xs'>;
-                <span className='text-gray-400'>Market Size</span>;
+        {service && service.marketSize && service && service.growthRate && (;'
+          <div className='relative z-10 mb-6'>;'
+            <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>;'
+              <div className='flex items-center justify-between text-xs'>;'
+                <span className='text-gray-400'>Market Size</span>;'
                 <span className='text-cyan-400 font-medium'>;
                   {service && service.marketSize}
                 </span>;
-              </div>;
-              <div className='flex items-center justify-between text-xs mt-1'>;
-                <span className='text-gray-400'>Growth Rate</span>;
+              </div>;'
+              <div className='flex items-center justify-between text-xs mt-1'>;'
+                <span className='text-gray-400'>Growth Rate</span>;'
                 <span className='text-green-400 font-medium'>;
-                  {service && service.growthRate}
-                </span>              </div>          <div className="relative z-10 mb-6">;
-            <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">;
-              <div className="flex items-center justify-between text-xs">;
-                <span className="text-gray-400">Market Size</span>;
+                  {service && service.growthRate}"
+                </span>              </div>          <div className="relative z-10 mb-6">;"
+            <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">;"
+              <div className="flex items-center justify-between text-xs">;"
+                <span className="text-gray-400">Market Size</span>;"
                 <span className="text-cyan-400 font-medium">{service && service.marketSize}</span>;
-              </div>;
-              <div className="flex items-center justify-between text-xs mt-1">;
-                <span className="text-gray-400">Growth Rate</span>;
+              </div>;"
+              <div className="flex items-center justify-between text-xs mt-1">;"
+                <span className="text-gray-400">Growth Rate</span>;"
                 <span className="text-green-400 font-medium">{service && service.growthRate}</span>;
             </div>;
           </div>;
         )}
-          <motion.a
+          <motion.a;
             href={service.link}
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.95 }}"
             <span className="relative z-10 flex items-center space-x-2">
-              <span>Learn More</span>
+              <span>Learn More</span>"
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
             </span>
-            {/* Button glow effect */}
+            {/* Button glow effect */}"
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
           </motion.a>
-        </div>
-        <div className='relative z-10'>          <motion&& motion.a
+        </div>'
+        <div className='relative z-10'>          <motion&& motion.a;
             href={service && service.link}
             whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}
+            whileTap={{ scale: 0 && 0.95 }}'"
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className="relative z-10">;
-          <motion&& motion.a
+          <motion&& motion.a;
             href={service && service.link}
             whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}
-            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'>;
+            whileTap={{ scale: 0 && 0.95 }}'
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'>;'
             <span className='relative z-10 flex items-center space-x-2'>;
-              <span>Learn More</span>;
+              <span>Learn More</span>;'
               <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />;
             </span>;
 
           </motion.a>
 
-            {/* Button glow effect */}
-            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>          </motion && motion.a>          >;
+            {/* Button glow effect */}'
+            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>          </motion && motion.a>          >;"
             <span className="relative z-10 flex items-center space-x-2">;
-              <span>Learn More</span>;
+              <span>Learn More</span>;"
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />;
             </span>;
-            {/* Button glow effect */}
+            {/* Button glow effect */}"
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>;
           </motion && motion.a>;
         </div>;
@@ -475,74 +471,74 @@ interface ServiceCardProps {;
         </div>
 
         {/* Hover overlay */}
-        <motion&& motion.div
+        <motion&& motion.div;
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
-export default UltraFuturisticServiceCardV2;
+export default UltraFuturisticServiceCardV2;'
                 className='flex items - center space - x-2 text - sm';
-              >;
-                <div className='w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full'></div>;
+              >;'
+                <div className='w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full'></div>;'"
                 <span className='text - gray - 300'>{benefit}</span>              </motion.div>                className="flex items - center space - x-2 text - sm";
-              >;
-                <div className="w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full"></div>;
+              >;"
+                <div className="w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full"></div>;"
                 <span className="text - gray - 300">{benefit}</span>))}
           </div>;
         </div>;
         {/* Market info */}
-        {service.market_size && service.growth_rate && (
-          <div className='relative z - 10 mb - 6'>;
-            <div className='bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20'>;
-              <div className='flex items - center justify - between text - xs'>;
-                <span className='text - gray - 400'>Market Size</span>;
+        {service.market_size && service.growth_rate && ('
+          <div className='relative z - 10 mb - 6'>;'
+            <div className='bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20'>;'
+              <div className='flex items - center justify - between text - xs'>;'
+                <span className='text - gray - 400'>Market Size</span>;'
                 <span className='text - cyan - 400 font - medium'>;
                   {service.market_size}
                 </span>;
-              </div>;
-              <div className='flex items - center justify - between text - xs mt - 1'>;
-                <span className='text - gray - 400'>Growth Rate</span>;
+              </div>;'
+              <div className='flex items - center justify - between text - xs mt - 1'>;'
+                <span className='text - gray - 400'>Growth Rate</span>;'
                 <span className='text - green - 400 font - medium'>;
-                  {service.growth_rate}
-                </span>              </div>          <div className="relative z - 10 mb - 6">;
-            <div className="bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20">;
-              <div className="flex items - center justify - between text - xs">;
-                <span className="text - gray - 400">Market Size</span>;
+                  {service.growth_rate}"
+                </span>              </div>          <div className="relative z - 10 mb - 6">;"
+            <div className="bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20">;"
+              <div className="flex items - center justify - between text - xs">;"
+                <span className="text - gray - 400">Market Size</span>;"
                 <span className="text - cyan - 400 font - medium">{service.market_size}</span>;
-              </div>;
-              <div className="flex items - center justify - between text - xs mt - 1">;
-                <span className="text - gray - 400">Growth Rate</span>;
+              </div>;"
+              <div className="flex items - center justify - between text - xs mt - 1">;"
+                <span className="text - gray - 400">Growth Rate</span>;"
                 <span className="text - green - 400 font - medium">{service.growth_rate}</span>;
             </div>;
           </div>)}
-        {/* CTA Button */}
+        {/* CTA Button */}'
         <div className='relative z - 10'>          <motion.a;
             href={service.link}
             while_hover={{ scale: 1.05 }}
-            while_tap={{ scale: 0.95 }}
+            while_tap={{ scale: 0.95 }}'"
             className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25'        <div className="relative z - 10">;
           <motion.a;
             href={service.link}
             while_hover={{ scale: 1.05 }}
-            while_tap={{ scale: 0.95 }}
+            while_tap={{ scale: 0.95 }}'
             className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25';
-          >;
+          >;'
             <span className='relative z - 10 flex items - center space - x-2'>;
-              <span > Learn More</span>;
+              <span > Learn More</span>;'
               <ArrowRight className='w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200' />;
             </span>;
-            {/* Button glow effect */}
-            <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300'></div>          </motion.a>          >;
+            {/* Button glow effect */}'
+            <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300'></div>          </motion.a>          >;"
             <span className="relative z - 10 flex items - center space - x-2">;
-              <span > Learn More</span>;
+              <span > Learn More</span>;"
               <ArrowRight className="w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200" />;
             </span>;
-            {/* Button glow effect */}
+            {/* Button glow effect */}"
             <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300"></div>;
           </motion.a>;
         </div>;
         {/* Hover overlay */}
         <motion.div;
           initial={{ opacity: 0 }}
-          while_hover={{ opacity: 1 }}
+          while_hover={{ opacity: 1 }}'
           className='absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 10 to - purple - 500 / 10 rounded - 2xl pointer - events - none';
         />;
       </div>;
@@ -576,3 +572,4 @@ export default UltraFuturisticServiceCardV2;
 };
 
 
+'"

@@ -1,45 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 
-class EnhancedErrorFixingAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixesApplied = [];
-    this.startTime = Date.now();
-  }
-
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-  }
-
-  async runCommand(command, options = {}) {
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: "utf8",
-        stdio: options.silent ? "pipe" : "inherit",
-        ...options
-      });
-      return { success: true, output: result };
-    } catch (error) {
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
-    }
-  }
-
-  async fixMergeConflicts() {
-    this.log("Fixing merge conflicts...");
-    
-    const files = this.getTypeScriptFiles();
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, "utf8");
-        if (content.includes("<<<<<<< HEAD") || content.includes("=======") || content.includes(">>>>>>> ")) {
           this.log(`Fixing merge conflicts in ${file}`);
           
           // Simple merge conflict resolution - keep the HEAD version
@@ -48,12 +7,7 @@ class EnhancedErrorFixingAutomation {
           let inConflict = false;
           
           for (const line of lines) {
-            if (line.includes("<<<<<<< HEAD")) {
-              inConflict = true;
-              continue;
-            } else if (line.includes("=======")) {
-              continue;
-            } else if (line.includes(">>>>>>> ")) {
+            if (line.includes("
               inConflict = false;
               continue;
             } else if (!inConflict) {
@@ -140,7 +94,7 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorFixingAutomation;
-=======
+
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 #!/usr/bin/env node;
@@ -316,4 +270,4 @@ export default function"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+

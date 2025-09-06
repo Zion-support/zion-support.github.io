@@ -1022,15 +1022,4 @@
       "type": "any",
       "message": "TypeScript any type used - consider more specific typing"
     }
-<<<<<<< HEAD
-  ],
-  "summary": {
-    "consoleLogs": 8,
-    "todos": 3,
-    "anyTypes": 193
-  }
-}
-=======
-  ]
-}
->>>>>>> main
+

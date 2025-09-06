@@ -1,5 +1,5 @@
 import { useTheme } from "@/hooks/useTheme";
-interface ChatMessageProps {
+interface ChatMessageProps {}
   message: string;
   isUser: boolean;
 
@@ -21,20 +21,20 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
 
 
-  return (
-    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
+  return ("
+    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>"
       <Avatar className="h-8 w-8">
         {isUser ? (
-          <>
+          <>"
             <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
             <AvatarFallback>U</AvatarFallback>
           </>
         ) : (
           <>
-            <AvatarImage
-              src="https://placehold.co/40x40?text=AI"
+            <AvatarImage"
+              src="https://placehold.co/40x40?text=AI""
               alt="Zion Support"
-            />
+            />"
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
           </>
         )}
@@ -42,5 +42,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       </Avatar>;
 
 
-      <div
+      <div;
         className={cn(
+'"`

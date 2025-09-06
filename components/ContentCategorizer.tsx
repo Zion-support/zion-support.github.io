@@ -27,7 +27,7 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
             >;
               <option value=&quot;all & quot;>All Subcategories</option>;
               {selected_category !== 'all' && categories.find (c => c.id === selected_category)?.subcategories?.map (sub => (
-                <option key={sub} value={sub}>;
+                <option key={sub} value={sub}>;'
                   {sub.replace ('- ').replace (/\b\w / g, l => l.toUpperCase ())}
                 </option>))}
             </select>;
@@ -67,7 +67,7 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
             <div className=&quot;flex items - center gap - 2&quot;>;
               <label className=&quot;text - sm text - white / 70 & quot;>Sort by:</label>;
               <select;
-                value={sort_by}
+                value={sort_by}'
                 on_change={(e) => setSortBy (e.target.value as 'date' | 'relevance' | 'title')}
                 className=&quot;px - 3 py - 1 bg - white / 5 border border - white / 10 rounded text - white text - sm focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 & quot;
               >;
@@ -75,7 +75,7 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
                 <option value=&quot;relevance & quot;>Relevance</option>;
                 <option value=&quot;title & quot;>Title</option>;
               </select>;
-              <button;
+              <button;'
                 on_click={() => setSortOrder (sort_order === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p - 1 bg - white / 5 border border - white / 10 rounded hover:bg - white / 10 transition - colors duration - 200 & quot;
               >;
@@ -101,9 +101,9 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
       </div>;
       {/* Results Summary */}
 <div className=&quot;text - sm text - white / 60 & quot;>;
-        Showing {filtered_items.length} of {content_items.length} items;
-        {search_term && ` matching &quot;${search_term}&quot;`}
-        {selected_category !== 'all' && ` in ${categories.find (c => c.id === selected_category)?.name}`}
+        Showing {filtered_items.length} of {content_items.length} items;`
+        {search_term && ` matching &quot;${search_term}&quot;`}'`
+        {selected_category !== 'all' && ` in ${categories.find (c => c.id === selected_category)?.name}`}'`
         {selected_type !== 'all' && ` of type ${content_types.find (t => t.id === selected_type)?.name}`}
       </div>;
       {/* Content Grid */}
@@ -139,3 +139,4 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
         })}
       </div>;
       {/* No Results */}
+'`

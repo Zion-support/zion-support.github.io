@@ -1,58 +1,58 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-
+'
 type Theme = 'light' | 'dark' | 'system';
 
-interface ThemeContextType {
+interface ThemeContextType {}
   theme: Theme;
-  setTheme: (theme: Theme) => void;
+  setTheme: (theme: Theme) => void;'
   actualTheme: 'light' | 'dark';
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const useTheme = () => {
+export const useTheme = () => {};
   const context = useContext(ThemeContext);
-  if (context === undefined) {
+  if (context === undefined) {'
     throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
 };
 
-interface ThemeProviderProps {
+interface ThemeProviderProps {}
   children: React.ReactNode;
 }
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>('system');
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {';
+  const [theme, setTheme] = useState<Theme>('system');'
   const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('dark');
 
-  useEffect(() => {
+  useEffect(() => {'
     const savedTheme = localStorage.getItem('theme') as Theme;
-    if (savedTheme) {
+    if (savedTheme) {}
       setTheme(savedTheme);
     }
   }, []);
 
-  useEffect(() => {
+  useEffect(() => {}
     const root = window.document.documentElement;
-    
-    if (theme === 'system') {
+    '
+    if (theme === 'system') {'
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      setActualTheme(systemTheme);
+      setActualTheme(systemTheme);'
       root.classList.remove('light', 'dark');
       root.classList.add(systemTheme);
-    } else {
-      setActualTheme(theme);
+    } else {}
+      setActualTheme(theme);'
       root.classList.remove('light', 'dark');
       root.classList.add(theme);
     }
   }, [theme]);
 
-  useEffect(() => {
+  useEffect(() => {'
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const value = {
+  const value = {}
     theme,
     setTheme,
     actualTheme,
@@ -63,4 +63,4 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       {children}
     </ThemeContext.Provider>
   );
-};
+};'

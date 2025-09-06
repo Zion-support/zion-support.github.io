@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 
-export interface OperatorSession {
+
+export interface OperatorSession {};
   id: string;
   name: string;
   status: "active" | "inactive" | "busy";
@@ -10,7 +10,7 @@ export interface OperatorSession {
   updatedAt: Date;
 }
 
-export interface SupportEvent {
+export interface SupportEvent {};
   type: string;
   sessionId: string;
   payload: any;
@@ -18,32 +18,33 @@ export interface SupportEvent {
 }
 
 
-  tagOperatorSession(sessionId: string, tag: string): void {
-    // Simple implementation - in a real app this would update a database
+  tagOperatorSession(sessionId: string, tag: string): void {}
+    // Simple implementation - in a real app this would update a database;
     console.log(`Tagging session ${sessionId} with tag: ${tag}`);
   }
 
-  logSupportEvent(event: SupportEvent): void {
-    this.events.push(event);
+  logSupportEvent(event: SupportEvent): void {}
+    this.events.push(event);"
     console.log("Support event logged:", event);
   }
 
-  getOperatorSessions(): OperatorSession[] {
+  getOperatorSessions(): OperatorSession[] {}
     return Array.from(this.sessions.values());
   }
 
-  getSupportEvents(): SupportEvent[] {
+  getSupportEvents(): SupportEvent[] {}
     return [...this.events];
   }
 }
 
 const operatorManager = new OperatorManager();
 
-export const tagOperatorSession = (sessionId: string, tag: string) =>
+export const tagOperatorSession = (sessionId: string, tag: string) =>;
   operatorManager.tagOperatorSession(sessionId, tag);
 
-export const logSupportEventToOperator = (event: SupportEvent) =>
+export const logSupportEventToOperator = (event: SupportEvent) =>;
   operatorManager.logSupportEvent(event);
 
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
 export const getSupportEvents = () => operatorManager.getSupportEvents();
+"`

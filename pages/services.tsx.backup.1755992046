@@ -318,7 +318,7 @@ export default function ServicesPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
     <>
       <Head>
@@ -621,160 +621,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Micro SaaS Services */}
-      <MicroSaasServices
-        title="Our Micro SaaS Portfolio"
-        subtitle="Explore our comprehensive collection of AI-powered micro SaaS solutions. Each service is designed to solve specific business challenges with cutting-edge technology and competitive pricing."
-        showCategoryFilter={true}
-      />
 
-      {/* Service Comparison */}
-      <ServiceComparison />
-
-      {/* Technology Stack */}
-      <section className="section-padding bg-gradient-cursor-accent">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
-              Technology Stack
-=======
-  return (
-    <>
-      <Head>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services including AI automation, cloud infrastructure, security, and specialized micro SaaS solutions for modern businesses." />
-      </Head>
-
-      <div className="min-h-screen bg-black">
-        {/* Header Section */}
-        <section className="pt-32 pb-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="mb-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
-                Our Services
-              </div>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-              Comprehensive
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Technology Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              From enterprise infrastructure to specialized micro SaaS tools, we provide the technology solutions 
-              your business needs to thrive in the digital age.
-            </p>
-          </div>
-        </section>
-
-        {/* Services by Category */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {categories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="mb-24">
-                <div className="text-center mb-16">
-                  <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                    {category.name}
-                  </h2>
-                  <p className="text-xl text-gray-400 max-w-4xl mx-auto">
-                    {category.description}
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.services.map((service, serviceIndex) => (
-                    <Card key={serviceIndex} className="h-full">
-                      <div className="p-8 h-full flex flex-col">
-                        <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center text-3xl mb-6`}>
-                          {service.icon}
-                        </div>
-                        
-                        <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                        <p className="text-gray-400 mb-6 flex-grow">{service.description}</p>
-                        
-                        <div className="mb-6">
-                          <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                          <ul className="space-y-2">
-                            {service.features.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                                <div className={`w-2 h-2 rounded-full ${service.gradient} mr-3`} />
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        {service.pricing && (
-                          <div className="mb-6 p-4 bg-gray-800/50 rounded-lg">
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-white">{service.pricing}</div>
-                              {service.marketSize && (
-                                <div className="text-sm text-gray-400 mt-1">Market Size: {service.marketSize}</div>
-                              )}
-                            </div>
-                          </div>
-                        )}
-
-                        <div className="mt-auto">
-                          {service.link ? (
-                            <Button
-                              href={service.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className={`w-full bg-gradient-to-r ${service.gradient} hover:opacity-90`}
-                            >
-                              Learn More
-                            </Button>
-                          ) : (
-                            <Button
-                              href="/contact"
-                              className={`w-full bg-gradient-to-r ${service.gradient} hover:opacity-90`}
-                            >
-                              Get Started
-                            </Button>
-                          )}
-                        </div>
-                      </div>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-=======
-      {/* Micro SaaS Services CTA */}
-      <section className="section-padding bg-gradient-to-r from-purple-600 to-pink-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots opacity-10" />
-        <div className="container-cursor text-center relative z-10">
-          <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
-            Discover Our Micro SaaS Services
-          </h2>
-          <p className="text-responsive-md text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Explore our comprehensive suite of professional micro SaaS solutions designed for modern businesses. 
-            From AI content generation to performance monitoring, we deliver enterprise-grade features at competitive prices.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              href="/micro-saas-services"
-              size="lg"
-              className="bg-white text-purple-600 hover:bg-gray-100 shadow-2xl hover-glow"
-            >
-              Explore Micro SaaS Services
-            </Button>
-            <Button
-              href="/pricing"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-            >
-              View Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-dfdd
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
@@ -864,7 +711,7 @@ export default function ServicesPage() {
         </section>
       </div>
     </AdvancedFuturisticBackground>
-=======
+
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />

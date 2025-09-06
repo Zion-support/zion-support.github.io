@@ -1,6 +1,6 @@
 import Image from 'next / image';
 ;
-interface OptimizedImageProps {
+interface OptimizedImageProps {}
   width?: number;
   height?: number;
   class_name?: string;
@@ -14,15 +14,15 @@ interface OptimizedImageProps {
   alt,
   width,
   height,
-  priority = false,
+  priority = false,'
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,
   fill = false,
   style;
-}) => {
-  // Check condition
-if ( {) {
-  $2
+}) => {}
+  // Check condition;
+if ( {) {}
+  $2;
 }
     return (
       <Image;
@@ -59,3 +59,4 @@ quality={quality}
       style={style}
   );
 }
+'

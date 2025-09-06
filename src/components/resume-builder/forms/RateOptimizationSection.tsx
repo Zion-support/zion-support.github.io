@@ -1,4 +1,4 @@
-} import {
+} import {};
   FormField;
   FormItem;
   FormLabel;
@@ -7,7 +7,7 @@
 
 
 
-interface RateOptimizationSectionProps {
+interface RateOptimizationSectionProps {}
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
@@ -15,15 +15,15 @@ interface RateOptimizationSectionProps {
 
 
 
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender","
 import { Card, CardContent } from "@/components/ui/card",
 
-interface RateOptimizationSectionProps {
+interface RateOptimizationSectionProps {}
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
-  location?: string,
+  location?: string,"
   rateType: "hourly" | "fixed"
 }
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({";

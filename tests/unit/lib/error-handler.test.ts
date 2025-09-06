@@ -32,43 +32,55 @@ describe('Error Handler', () => {
     it('handles AppError correctly', () => {
       const error = new AppError('Test error', 400);
       errorHandler(error, mockReq as NextApiRequest, mockRes as NextApiResponse);
+      
       expect(mockStatus).toHaveBeenCalledWith(400);
       expect(mockJson).toHaveBeenCalledWith({
-        error: {
-          message: 'Test error',
-          statusCode: 400,
-          timestamp: expect.any(String)
-        }
+        success: false,
+        error: 'Test error'
       });
     });
 
-    it('handles unknown errors', () => {
-      const error = new Error('Unknown error');
+    it('handles generic error correctly', () => {
+      const error = new Error('Generic error');
       errorHandler(error, mockReq as NextApiRequest, mockRes as NextApiResponse);
+      
       expect(mockStatus).toHaveBeenCalledWith(500);
       expect(mockJson).toHaveBeenCalledWith({
-        error: {
-          message: 'Internal Server Error',
-          statusCode: 500,
-          timestamp: expect.any(String)
-        }
+        success: false,
+        error: 'Something went wrong'
+      });
+    });
+
+    it('handles validation error correctly', () => {
+      const error = new Error('Validation failed');
+      error.name = 'ValidationError';
+      errorHandler(error, mockReq as NextApiRequest, mockRes as NextApiResponse);
+      
+      expect(mockStatus).toHaveBeenCalledWith(400);
+      expect(mockJson).toHaveBeenCalledWith({
+        success: false,
+        error: 'Validation failed'
       });
     });
   });
 
   describe('asyncHandler', () => {
-    it('handles async function errors', async () => {
+    it('calls next with error when async function throws', async () => {
+      const mockNext = jest.fn();
       const asyncFn = jest.fn().mockRejectedValue(new Error('Async error'));
-      const wrappedFn = asyncHandler(asyncFn);
-      await wrappedFn(mockReq, mockRes, jest.fn());
-      expect(mockStatus).toHaveBeenCalledWith(500);
+      
+      await asyncHandler(asyncFn)(mockReq as NextApiRequest, mockRes as NextApiResponse, mockNext);
+      
+      expect(mockNext).toHaveBeenCalledWith(expect.any(Error));
     });
 
-    it('passes through successful async functions', async () => {
+    it('does not call next when async function succeeds', async () => {
+      const mockNext = jest.fn();
       const asyncFn = jest.fn().mockResolvedValue('success');
-      const wrappedFn = asyncHandler(asyncFn);
-      await wrappedFn(mockReq, mockRes, jest.fn());
-      expect(asyncFn).toHaveBeenCalledWith(mockReq, mockRes, expect.any(Function));
+      
+      await asyncHandler(asyncFn)(mockReq as NextApiRequest, mockRes as NextApiResponse, mockNext);
+      
+      expect(mockNext).not.toHaveBeenCalled();
     });
   });
 });

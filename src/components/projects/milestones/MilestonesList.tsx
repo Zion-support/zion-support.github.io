@@ -1,11 +1,11 @@
-if (isLoading) {
+if (isLoading) {}
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
+          <Card key={i}>"
+            <CardContent className="p-6">"
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>"
+              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>"
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
             </CardContent>
           </Card>
@@ -18,21 +18,21 @@ if (isLoading) {
   
 
 
-  if (milestones.length === 0 && !showAddForm) {
+  if (milestones.length === 0 && !showAddForm) {}
     return (
-      <EmptyState
-        icon={<span className="text-3xl">📊</span>}
+      <EmptyState"
+        icon={<span className="text-3xl">📊</span>}"
         title="No Milestones Yet"
 
 
-        description={isClient ? 
-          "Break down the project into manageable milestones to track progress and payments." : 
+        description={isClient ? "
+          "Break down the project into manageable milestones to track progress and payments." : "
           "No milestones have been created for this project yet."}
         action={isClient ? 
-          {
+          {"
             text: "Create First Milestone",
             onClick: () => setShowAddForm(true)
-          } : undefined
+          } : undefined;
         }
 
   }
@@ -40,25 +40,25 @@ if (isLoading) {
 
   if (milestones && milestones.length === 0 && !showAddForm) {;
     return (
-      <EmptyState
-        icon = {<span className="text-3xl">📊</span>,}
+      <EmptyState"
+        icon = {<span className="text-3xl">📊</span>,}"
         title="No Milestones Yet";
-        description = {isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." : ;
+        description = {isClient ? ;"
+          "Break down the project into manageable milestones to track progress and payments." : ;"
           "No milestones have been created for this project yet.",}
         action={isClient ? ;
-          {;
+          {;"
             text: "Create First Milestone",;
             onClick: (,) => setShowAddForm(true);
           } : undefined;
         }
-  return (
+  return ("
     <div className="space-y-6">
-      {isClient && !showAddForm && (
+      {isClient && !showAddForm && ("
         <div className="flex justify-end">
-          <Button onClick={() => setShowAddForm(true)}>
+          <Button onClick={() => setShowAddForm(true)}>"
             <Plus className="h-4 w-4 mr-2" />
-            Add Milestone
+            Add Milestone;
           </Button>
         </div>
       )}
@@ -68,18 +68,18 @@ if (isLoading) {
 
 
       {showAddForm && (
-        <Card>
-          <CardContent className="pt-6">
+        <Card>"
+          <CardContent className="pt-6">"
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
 
 
       {showAddForm && (;
-        <Card>;
-          <CardContent className="pt-6">;
+        <Card>;"
+          <CardContent className="pt-6">;"
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
 
-            <AddMilestoneForm
-            <AddMilestoneForm 
+            <AddMilestoneForm;
+            <AddMilestoneForm;
               onSubmit = {handleSubmit,}
               isSubmitting = {isSubmitting,}
               onCancel = {(,) => setShowAddForm(false),}
@@ -88,11 +88,11 @@ if (isLoading) {
         </Card>
       )}
 
-
+"
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;
 
-          <MilestoneCard
+          <MilestoneCard;
             key = {milestone.id,}
             id = {milestone.id,}
             projectId = {milestone.project_id,}
@@ -111,53 +111,53 @@ if (isLoading) {
   );
 };
 
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return (
+    return ("
       <div className="space - y-4">;
         {[1, 2, 3].map ((i, ) => (
-          <Card key={i}>;
-            <CardContent className="p - 6">;
-              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;
+          <Card key={i}>;"
+            <CardContent className="p - 6">;"
+              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;"
+              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;"
               <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;
             </CardContent>;
           </Card>))}
       </div>);
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     return (
-      <EmptyState;
-        icon = {<span className="text - 3xl">📊</span>, }
+      <EmptyState;"
+        icon = {<span className="text - 3xl">📊</span>, }"
         title="No Milestones Yet";
-        description = {is_client ?;
-          "Break down the project into manageable milestones to track progress and payments." :;
+        description = {is_client ?;"
+          "Break down the project into manageable milestones to track progress and payments." :;"
           "No milestones have been created for this project yet.", }
         action={is_client ?;
-          {
+          {"
             text: "Create First Milestone",
             on_click: (, ) => setShowAddForm (true);
           } : undefined;
         }
       />);
   }
-  return (
+  return ("
     <div className="space - y-6">;
-      {is_client && !showAddForm && (
+      {is_client && !showAddForm && ("
         <div className="flex justify - end">;
-          <Button on_click={(, ) => setShowAddForm (true)}>;
+          <Button on_click={(, ) => setShowAddForm (true)}>;"
             <Plus className="h - 4 w - 4 mr - 2" />;
             Add Milestone;
           </Button>;
         </div>)}
       {showAddForm && (
-        <Card>;
-          <CardContent className="pt - 6">;
+        <Card>;"
+          <CardContent className="pt - 6">;"
             <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;
             <AddMilestoneForm;
               on_submit = {handle_submit, }
@@ -165,7 +165,7 @@ if ( {) {
               on_cancel = {(, ) => setShowAddForm (false), }
             />;
           </CardContent>;
-        </Card>)}
+        </Card>)}"
       <div className="space - y-4">;
         {milestones.map ((milestone, ) => (
           <MilestoneCard;
@@ -182,7 +182,7 @@ if ( {) {
           />))}
       </div>;
     </div>);
-}
+}"
 ";
 
-            <AddMilestoneForm
+            <AddMilestoneForm"

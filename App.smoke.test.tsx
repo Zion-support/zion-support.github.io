@@ -12,4 +12,3 @@ describe('App Smoke Tests', () => {
     expect(container.firstChild).toBeTruthy();
   });
 });
-});

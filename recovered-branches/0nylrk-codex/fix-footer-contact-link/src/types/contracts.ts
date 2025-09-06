@@ -1,5 +1,5 @@
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-export interface ContractTemplate {
+export interface ContractTemplate {};
   id: string;
   title: string;
   template_data: ContractFormValues;
@@ -8,16 +8,17 @@ export interface ContractTemplate {
   updated_at: string;
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 =======
 }
 ;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
 =======
 }
 ;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+"

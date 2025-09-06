@@ -1,4 +1,4 @@
-export interface ModerationResult {
+export interface ModerationResult {};
   id: string;
   content: string;
   status: 'approved' | 'rejected' | 'pending';
@@ -7,10 +7,10 @@ export interface ModerationResult {
   moderatedAt: Date;
 }
 
-export interface ModerationRule {
+export interface ModerationRule {};
   id: string;
   name: string;
-  pattern: string;
-  action: 'approve' | 'reject' | 'flag';
+  pattern: string;'
+  action: 'approve' | 'reject' | 'flag';'
   severity: 'low' | 'medium' | 'high';
-}
+}'

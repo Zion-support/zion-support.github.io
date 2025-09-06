@@ -7,4 +7,4 @@
       <canvas;
         ref={canvas_ref}
         className=&quot;w - full h - full & quot;
-        style={{
+        style={{}
