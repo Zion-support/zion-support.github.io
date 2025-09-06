@@ -1,4 +1,20 @@
 
+import React, { useState, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import { Footer } from './components/Footer';
+import Sidebar from './components/layout/Sidebar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Pricing from './pages/Pricing';
+import Contact from './pages/Contact';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
+
+function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <ErrorBoundary>
@@ -25,6 +41,6 @@
       </Router>
     </ErrorBoundary>
   );
+}
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default App;
