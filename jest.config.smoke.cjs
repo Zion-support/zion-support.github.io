@@ -28,7 +28,16 @@ const config = {
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/', 
+    '<rootDir>/node_modules/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/apps.backup/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/backup/',
+    '<rootDir>/backups/'
+  ]
 };
 
 module.exports = createJestConfig(config);

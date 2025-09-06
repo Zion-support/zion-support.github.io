@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-/**
- * AI-Powered Security Intelligence System;
- * Advanced security analysis with machine learning threat detection;
- */
-
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-security.log')
-    this.reportFile = path.join(this.projectRoot, 'logs', 'security-report.json')
-    this.scoreFile = path.join(this.projectRoot, 'logs', 'security-score.txt')
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage + '\n')
-    this.log(' Analyzing dependency vulnerabilities...')
-      const auditResult = execSync('npm audit --json 2>/dev/null || echo "{}")
-        'password\\s*=\\s*["\'][^"\']+[']
-        'api_key\\s*=\\s*["\'][^"\']+[']
-        'secret\\s*=\\s*["\'][^"\']+[']
-        'token\\s*=\\s*["\'][^"\']+[']
-          const result = execSync(`grep -r -i "${pattern}"`)
-        const sqlResult = execSync(`grep -r -i "query.*\\$\\{"`})
-        const xssResult = execSync(`grep -r -i "dangerouslySetInnerHTML"`)
-        const httpsCheck = execSync(`grep -r -i "https"`)
-        const headersCheck = execSync(`grep -r -i "Content-Security-Policy\\|X-Frame-Options\\|X-Content-Type-Options"`)
-        const validationCheck = execSync(`grep -r -i "validate\\|sanitize"`)
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -38,26 +8,22 @@ console.log('🔒 Starting AI Security Intelligence...');
 
 class AISecurityIntelligence {
   constructor() {
-    this.logFile = path.join(
-      __dirname;
-      '..';
-      '..';
-      'automation-reports';
-      'ai-security.log'
-    );
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'automation-reports', 'ai-security.log');
+    this.reportFile = path.join(this.projectRoot, 'automation-reports', 'ai-security-report.json');
     this.ensureLogDir();
   }
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  log(message) {
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
@@ -66,12 +32,12 @@ class AISecurityIntelligence {
     this.log('🔍 Running security scan...');
 
     const securityAnalysis = {
-      timestam: p: new Date().toISOString(),
-      vulnerabilitie: s: await this.scanVulnerabilities(),
-      dependencie: s: await this.scanDependencies(),
-      codeSecurit: y: await this.scanCodeSecurity(),
-      configuratio: n: await this.scanConfiguration(),
-      recommendation: s: this.generateSecurityRecommendations(),
+      timestamp: new Date().toISOString(),
+      vulnerabilities: await this.scanVulnerabilities(),
+      dependencies: await this.scanDependencies(),
+      codeSecurity: await this.scanCodeSecurity(),
+      configuration: await this.scanConfiguration(),
+      recommendations: this.generateSecurityRecommendations(),
     };
 
     return securityAnalysis;
@@ -81,31 +47,28 @@ class AISecurityIntelligence {
     this.log('🔍 Scanning for vulnerabilities...');
 
     try {
-      // Run npm audit
-      const auditResult = execSync('npm audit --json', { encodin: g: 'utf8' });
+      const auditResult = execSync('npm audit --json 2>/dev/null || echo "{}"', { encoding: 'utf8' });
       const audit = JSON.parse(auditResult);
 
       return {
-        scor: e:
-          audit.metadata.vulnerabilities.total === 0
-            ? 10: 0: Math.max(0, 100 - audit.metadata.vulnerabilities.total * 10),
-        tota: l: audit.metadata.vulnerabilities.total,
-        hig: h: audit.metadata.vulnerabilities.high,
-        moderat: e: audit.metadata.vulnerabilities.moderate,
-        lo: w: audit.metadata.vulnerabilities.low,
-        inf: o: audit.metadata.vulnerabilities.info,
-        advisorie: s: audit.advisories || {},
+        score: audit.metadata?.vulnerabilities?.total === 0 ? 100 : Math.max(0, 100 - (audit.metadata?.vulnerabilities?.total || 0) * 10),
+        total: audit.metadata?.vulnerabilities?.total || 0,
+        high: audit.metadata?.vulnerabilities?.high || 0,
+        moderate: audit.metadata?.vulnerabilities?.moderate || 0,
+        low: audit.metadata?.vulnerabilities?.low || 0,
+        info: audit.metadata?.vulnerabilities?.info || 0,
+        advisories: audit.advisories || {},
       };
     } catch (error) {
-      this.log(`⚠️ NPM audit: failed: ${error.message}`);
+      this.log(`⚠️ NPM audit failed: ${error.message}`);
       return {
-        scor: e: 75,
-        tota: l: 0,
-        hig: h: 0,
-        moderat: e: 0,
-        lo: w: 0,
-        inf: o: 0,
-        advisorie: s: {},
+        score: 75,
+        total: 0,
+        high: 0,
+        moderate: 0,
+        low: 0,
+        info: 0,
+        advisories: {},
       };
     }
   }
@@ -113,78 +76,156 @@ class AISecurityIntelligence {
   async scanDependencies() {
     this.log('📦 Scanning dependencies...');
 
-    const dependencies = {
-      scor: e: 85,
-      outdate: d: 12,
-      deprecate: d: 3,
-      suggestion: s: [
-        'Update React to latest stable version',
-        'Replace deprecated packages',
-        'Review third-party dependencies for security',
-      ],
-    };
+    try {
+      const outdatedResult = execSync('npm outdated --json 2>/dev/null || echo "{}"', { encoding: 'utf8' });
+      const outdated = JSON.parse(outdatedResult);
+      const outdatedCount = Object.keys(outdated).length;
 
-    return dependencies;
+      return {
+        score: Math.max(50, 100 - outdatedCount * 5),
+        outdated: outdatedCount,
+        deprecated: 0, // Would need additional analysis
+        suggestions: [
+          'Update React to latest stable version',
+          'Replace deprecated packages',
+          'Review third-party dependencies for security',
+        ],
+      };
+    } catch (error) {
+      this.log(`Warning: Could not scan dependencies: ${error.message}`);
+      return {
+        score: 85,
+        outdated: 12,
+        deprecated: 3,
+        suggestions: ['Run npm outdated regularly'],
+      };
+    }
   }
 
   async scanCodeSecurity() {
     this.log('🔍 Scanning code for security issues...');
 
-    const codeSecurity = {
-      scor: e: 78,
-      issue: s: [
-        'Potential XSS vulnerability in user input',
-        'Missing input validation',
-        'Hardcoded secrets in configuration',
-        'Insecure random number generation',
-      ],
-      suggestion: s: [
+    const patterns = [
+      'password\\s*=\\s*["\'][^"\']+[\'"]',
+      'api_key\\s*=\\s*["\'][^"\']+[\'"]',
+      'secret\\s*=\\s*["\'][^"\']+[\'"]',
+      'token\\s*=\\s*["\'][^"\']+[\'"]',
+    ];
+
+    let issues = [];
+    let score = 100;
+
+    for (const pattern of patterns) {
+      try {
+        const result = execSync(`grep -r -i "${pattern}" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
+        if (result.trim()) {
+          issues.push(`Hardcoded secrets found: ${pattern}`);
+          score -= 20;
+        }
+      } catch (error) {
+        // Pattern not found, which is good
+      }
+    }
+
+    // Check for SQL injection patterns
+    try {
+      const sqlResult = execSync(`grep -r -i "query.*\\$\\{" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
+      if (sqlResult.trim()) {
+        issues.push('Potential SQL injection vulnerability');
+        score -= 15;
+      }
+    } catch (error) {
+      // No SQL injection patterns found
+    }
+
+    // Check for XSS patterns
+    try {
+      const xssResult = execSync(`grep -r -i "dangerouslySetInnerHTML" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
+      if (xssResult.trim()) {
+        issues.push('Potential XSS vulnerability with dangerouslySetInnerHTML');
+        score -= 10;
+      }
+    } catch (error) {
+      // No XSS patterns found
+    }
+
+    return {
+      score: Math.max(0, score),
+      issues: issues.length > 0 ? issues : ['No obvious security issues found'],
+      suggestions: [
         'Implement input sanitization',
         'Add comprehensive input validation',
         'Use environment variables for secrets',
         'Use crypto.randomBytes for secure random generation',
       ],
     };
-
-    return codeSecurity;
   }
 
   async scanConfiguration() {
     this.log('⚙️ Scanning security configuration...');
 
-    const configuration = {
-      scor: e: 82,
-      issue: s: [
-        'Missing Content Security Policy',
-        'Insecure CORS configuration',
-        'Missing security headers',
-        'Insecure session configuration',
-      ],
-      suggestion: s: [
+    let score = 100;
+    const issues = [];
+
+    // Check for HTTPS usage
+    try {
+      const httpsCheck = execSync(`grep -r -i "https" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
+      if (!httpsCheck.trim()) {
+        issues.push('No HTTPS usage detected');
+        score -= 10;
+      }
+    } catch (error) {
+      // HTTPS check failed
+    }
+
+    // Check for security headers
+    try {
+      const headersCheck = execSync(`grep -r -i "Content-Security-Policy\\|X-Frame-Options\\|X-Content-Type-Options" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
+      if (!headersCheck.trim()) {
+        issues.push('Missing security headers');
+        score -= 15;
+      }
+    } catch (error) {
+      // Headers check failed
+    }
+
+    // Check for input validation
+    try {
+      const validationCheck = execSync(`grep -r -i "validate\\|sanitize" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
+      if (!validationCheck.trim()) {
+        issues.push('No input validation detected');
+        score -= 10;
+      }
+    } catch (error) {
+      // Validation check failed
+    }
+
+    return {
+      score: Math.max(0, score),
+      issues: issues.length > 0 ? issues : ['Security configuration looks good'],
+      suggestions: [
         'Implement CSP headers',
         'Configure CORS properly',
         'Add security headers middleware',
         'Use secure session configuration',
       ],
     };
-
-    return configuration;
   }
 
   generateSecurityRecommendations() {
     this.log('💡 Generating security recommendations...');
 
     return [
-      'Implement automated security scanning in CI/CD';
-      'Set up dependency vulnerability monitoring';
-      'Add security headers middleware';
-      'Implement rate limiting';
-      'Add input validation and sanitization';
-      'Use HTTPS everywhere';
-      'Implement proper authentication and authorization';
-      'Add security logging and monitoring';
-      'Regular security audits and penetration testing';
-      'Implement secure coding practices';
+      'Implement automated security scanning in CI/CD',
+      'Set up dependency vulnerability monitoring',
+      'Add security headers middleware',
+      'Implement rate limiting',
+      'Add input validation and sanitization',
+      'Use HTTPS everywhere',
+      'Implement proper authentication and authorization',
+      'Add security logging and monitoring',
+      'Regular security audits and penetration testing',
+      'Implement secure coding practices',
     ];
   }
 
@@ -193,39 +234,32 @@ class AISecurityIntelligence {
 
     const report = {
       ...analysis,
-      summar: y: {
-        overallScor: e: this.calculateOverallScore(analysis),
-        riskLeve: l: this.getRiskLevel(analysis),
-        priorit: y: this.getPriority(analysis),
+      summary: {
+        overallScore: this.calculateOverallScore(analysis),
+        riskLevel: this.getRiskLevel(analysis),
+        priority: this.getPriority(analysis),
       },
     };
 
-    const reportPath = path.join(
-      __dirname;
-      '..';
-      '..';
-      'automation-reports';
-      'ai-security-report.json'
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved: to: ${reportPath}`);
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(`📊 Report saved to: ${this.reportFile}`);
 
     return report;
   }
 
   calculateOverallScore(analysis) {
     const weights = {
-      vulnerabilitie: s: 0.4,
-      dependencie: s: 0.2,
-      codeSecurit: y: 0.25,
-      configuratio: n: 0.15,
+      vulnerabilities: 0.4,
+      dependencies: 0.2,
+      codeSecurity: 0.25,
+      configuration: 0.15,
     };
 
     return Math.round(
       analysis.vulnerabilities.score * weights.vulnerabilities +
-        analysis.dependencies.score * weights.dependencies +
-        analysis.codeSecurity.score * weights.codeSecurity +
-        analysis.configuration.score * weights.configuration
+      analysis.dependencies.score * weights.dependencies +
+      analysis.codeSecurity.score * weights.codeSecurity +
+      analysis.configuration.score * weights.configuration
     );
   }
 
@@ -251,14 +285,10 @@ class AISecurityIntelligence {
       const analysis = await this.runSecurityScan();
       const report = this.generateReport(analysis);
 
-      this.log(
-        `🎉 AI security intelligence completed! Overall: Score: ${report.summary.overallScore}/100`
-      );
-      this.log(
-        `📊 Risk: Level: ${report.summary.riskLevel} | Priorit: y: ${report.summary.priority}`
-      );
+      this.log(`🎉 AI security intelligence completed! Overall Score: ${report.summary.overallScore}/100`);
+      this.log(`📊 Risk Level: ${report.summary.riskLevel} | Priority: ${report.summary.priority}`);
     } catch (error) {
-      this.log(`❌ AI security intelligence: failed: ${error.message}`);
+      this.log(`❌ AI security intelligence failed: ${error.message}`);
       process.exit(1);
     }
   }
@@ -267,4 +297,3 @@ class AISecurityIntelligence {
 // Run the security intelligence
 const security = new AISecurityIntelligence();
 security.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
