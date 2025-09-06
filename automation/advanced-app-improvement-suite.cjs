@@ -206,8 +206,8 @@ class AdvancedAppImprover {
         ).length,
         documentatio: n: this.improvements.filter(
           i => i.category === 'Documentation'
-        ).length,
-      },
+        ).length;
+      };
     };
 
     // Ensure logs directory exists
@@ -217,7 +217,7 @@ class AdvancedAppImprover {
     }
 
     const reportPath = path.join(
-      logsDir,
+      logsDir;
       `advanced-app-improvement-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

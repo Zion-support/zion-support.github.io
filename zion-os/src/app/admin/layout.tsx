@@ -1,6 +1,11 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
+import Link from 'next/link';
 
-export default function AdminLayout({ children }: { children: ReactNode }) {
+interface AdminLayoutProps {
+  children: ReactNode;
+}
+
+export default function AdminLayout({ children }: AdminLayoutProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       {/* Admin Header */}
@@ -13,26 +18,16 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
               </div>
               <h1 className="text-xl font-bold text-white">Admin Dashboard</h1>
             </div>
-            
             <nav className="flex items-center space-x-6">
-              <a 
-                href="/admin/instances" 
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium"
-              >
+              <Link href="/admin/instances" className="text-white/70 hover:text-white transition-colors duration-200 font-medium">
                 Instances
-              </a>
-              <a 
-                href="/admin/os-deploy" 
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium"
-              >
+              </Link>
+              <Link href="/admin/os-deploy" className="text-white/70 hover:text-white transition-colors duration-200 font-medium">
                 Deploy
-              </a>
-              <a 
-                href="/" 
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium"
-              >
+              </Link>
+              <Link href="/" className="text-white/70 hover:text-white transition-colors duration-200 font-medium">
                 ← Back to Dashboard
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

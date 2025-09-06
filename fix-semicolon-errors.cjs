@@ -8,7 +8,7 @@ function fixSemicolonErrors(filePath) {
 
     // Fix semicolons in import statements
     content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"];?/g,
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"];?/g;
       (match, imports) => {
         const cleanImports = imports
           .split(',')
@@ -19,8 +19,8 @@ function fixSemicolonErrors(filePath) {
     );
 
     // Fix semicolons in object properties
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2,');
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2');
+    content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2,');
+    content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2');
 
     // Fix semicolons in array elements
     content = content.replace(/\[([^\]]+)\]/g, (match, arrayContent) => {

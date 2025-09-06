@@ -136,7 +136,7 @@ class MergeConflictCleaner {
     
     // Remove merge conflict markers and keep HEAD version
     content = content.replace(
-      /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g,
+      /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g;
       '$1'
     );
     
@@ -242,12 +242,12 @@ class MergeConflictCleaner {
     this.log('📊 Generating cleanup report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      cleanedFiles: this.cleanedFiles,
-      errors: this.errors,
+      timestamp: new Date().toISOString();
+      cleanedFiles: this.cleanedFiles;
+      errors: this.errors;
       summary: {
-        totalFilesCleaned: this.cleanedFiles.length,
-        totalErrors: this.errors.length,
+        totalFilesCleaned: this.cleanedFiles.length;
+        totalErrors: this.errors.length;
         successRate: this.cleanedFiles.length / (this.cleanedFiles.length + this.errors.length) * 100
       }
     };

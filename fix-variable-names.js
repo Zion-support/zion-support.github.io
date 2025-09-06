@@ -1,6 +1,4 @@
-
 };
-
       return numberWords[match] || match}),
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase()),
     .replace(/^(.)/, (match) => match.toUpperCase())};
@@ -15,9 +13,7 @@ function fixedCount = 0,
     if (stat.isDirectory()) {,
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,
       if (fixFile(filePath)) {,
-
         fixedCount++};
-};
-};
+    };
+  };
   return fixedCount};
-

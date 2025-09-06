@@ -164,11 +164,11 @@ function main() {
 
     // write metadata per branch
     const metaTxt = [
-      `branch: ${branch}`,
-      `commit: ${meta.short}`,
-      `date: ${meta.date}`,
-      `author: ${meta.author}`,
-      `subject: ${meta.subject}`,
+      `branch: ${branch}`;
+      `commit: ${meta.short}`;
+      `date: ${meta.date}`;
+      `author: ${meta.author}`;
+      `subject: ${meta.subject}`;
       ''
     ].join('\n');
     writeFileSafely(path.join(snapRoot, 'META.txt'), metaTxt);

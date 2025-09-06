@@ -1,6 +1,4 @@
-
     .join("")};
-
 ,
 // Function to extract display name from service name,
 function getDisplayName(serviceName) {,
@@ -25,6 +23,4 @@ remainingCorruptedFiles.forEach(filePath => {,
     const content = servicePageTemplate(serviceName, displayName),
     fs.writeFileSync(filePath, content, "utf8"),
     console.log(`✓ Fixed ${filePath}`)} catch (error) {,
-
   console.error(`✗ Error fixing ${filePath}:`, error.message)};
-

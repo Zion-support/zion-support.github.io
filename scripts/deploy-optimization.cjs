@@ -16,10 +16,10 @@ class DeploymentOptimizer {
     this.projectRoot = process.cwd();
     this.buildDir = path.join(this.projectRoot, '.next');
     this.optimizationResults = {
-      bundleSize: 0,
-      optimizationsApplied: [],
-      warnings: [],
-      performance: {},
+      bundleSize: 0;
+      optimizationsApplied: [];
+      warnings: [];
+      performance: {};
     };
   }
 
@@ -49,8 +49,8 @@ class DeploymentOptimizer {
     
     // Check if required environment variables are set
     const requiredEnvVars = [
-      'NEXT_PUBLIC_SUPABASE_URL',
-      'NEXT_PUBLIC_SUPABASE_ANON_KEY',
+      'NEXT_PUBLIC_SUPABASE_URL';
+      'NEXT_PUBLIC_SUPABASE_ANON_KEY';
     ];
 
     const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
@@ -159,15 +159,15 @@ class DeploymentOptimizer {
     console.log('\n📄 Generating optimization report...');
     
     const report = {
-      timestamp: new Date().toISOString(),
-      version: this.getPackageVersion(),
-      environment: 'production',
-      optimizations: this.optimizationResults.optimizationsApplied,
-      bundleSize: this.optimizationResults.bundleSize,
-      bundleSizeFormatted: this.formatBytes(this.optimizationResults.bundleSize),
-      warnings: this.optimizationResults.warnings,
-      recommendations: this.generateRecommendations(),
-      deploymentChecklist: this.generateDeploymentChecklist(),
+      timestamp: new Date().toISOString();
+      version: this.getPackageVersion();
+      environment: 'production';
+      optimizations: this.optimizationResults.optimizationsApplied;
+      bundleSize: this.optimizationResults.bundleSize;
+      bundleSizeFormatted: this.formatBytes(this.optimizationResults.bundleSize);
+      warnings: this.optimizationResults.warnings;
+      recommendations: this.generateRecommendations();
+      deploymentChecklist: this.generateDeploymentChecklist();
     };
 
     // Save report
@@ -183,29 +183,29 @@ class DeploymentOptimizer {
     
     if (this.optimizationResults.bundleSize > 3 * 1024 * 1024) {
       recommendations.push({
-        type: 'performance',
-        priority: 'high',
-        title: 'Consider code splitting',
-        description: 'Bundle size is large. Implement dynamic imports for heavy components.',
+        type: 'performance';
+        priority: 'high';
+        title: 'Consider code splitting';
+        description: 'Bundle size is large. Implement dynamic imports for heavy components.';
         action: 'Use React.lazy() and dynamic imports'
       });
     }
 
     if (this.optimizationResults.warnings.length > 0) {
       recommendations.push({
-        type: 'security',
-        priority: 'medium',
-        title: 'Address warnings',
-        description: 'Several warnings were detected during optimization.',
+        type: 'security';
+        priority: 'medium';
+        title: 'Address warnings';
+        description: 'Several warnings were detected during optimization.';
         action: 'Review and resolve warnings before deployment'
       });
     }
 
     recommendations.push({
-      type: 'monitoring',
-      priority: 'medium',
-      title: 'Setup production monitoring',
-      description: 'Enable performance monitoring in production.',
+      type: 'monitoring';
+      priority: 'medium';
+      title: 'Setup production monitoring';
+      description: 'Enable performance monitoring in production.';
       action: 'Configure Sentry alerts and performance budgets'
     });
 
@@ -215,28 +215,28 @@ class DeploymentOptimizer {
   generateDeploymentChecklist() {
     return [
       {
-        item: 'Environment variables configured',
-        status: process.env.NEXT_PUBLIC_SUPABASE_URL ? 'complete' : 'pending',
+        item: 'Environment variables configured';
+        status: process.env.NEXT_PUBLIC_SUPABASE_URL ? 'complete' : 'pending';
         required: true
-      },
+      };
       {
-        item: 'Production build successful',
-        status: fs.existsSync(this.buildDir) ? 'complete' : 'pending',
+        item: 'Production build successful';
+        status: fs.existsSync(this.buildDir) ? 'complete' : 'pending';
         required: true
-      },
+      };
       {
-        item: 'Bundle size optimized',
-        status: this.optimizationResults.bundleSize < 5 * 1024 * 1024 ? 'complete' : 'warning',
+        item: 'Bundle size optimized';
+        status: this.optimizationResults.bundleSize < 5 * 1024 * 1024 ? 'complete' : 'warning';
         required: false
-      },
+      };
       {
-        item: 'Security audit passed',
-        status: this.optimizationResults.warnings.some(w => w.includes('Security')) ? 'warning' : 'complete',
+        item: 'Security audit passed';
+        status: this.optimizationResults.warnings.some(w => w.includes('Security')) ? 'warning' : 'complete';
         required: false
-      },
+      };
       {
-        item: 'Performance monitoring ready',
-        status: 'manual-check',
+        item: 'Performance monitoring ready';
+        status: 'manual-check';
         required: false
       }
     ];
@@ -295,12 +295,12 @@ if (require.main === module) {
 
 // Export methods for use in other scripts
 module.exports = {
-  DeploymentOptimizer,
+  DeploymentOptimizer;
   runPreDeployChecks: async () => {
     const optimizer = new DeploymentOptimizer();
     await optimizer.runPreDeployChecks();
     return optimizer.optimizationResults; // Return results for inspection if needed
-  },
+  };
   analyzeAndReport: async () => {
     const optimizer = new DeploymentOptimizer();
     // Ensure buildDir is set if not running the full optimize sequence

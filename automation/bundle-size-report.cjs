@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable */
+ 
 const fs = require('fs');
 const path = require('path');
 
@@ -19,8 +19,8 @@ function listFiles(dir) {
 
 function main() {
   const targets = [
-    path.join(NEXT_DIR, 'static'),
-    path.join(NEXT_DIR, 'server'),
+    path.join(NEXT_DIR, 'static');
+    path.join(NEXT_DIR, 'server');
   ];
   const files = targets.flatMap(listFiles);
   const entries = files.map((f) => ({ file: f.replace(ROOT + path.sep, ''), size: fs.statSync(f).size }))

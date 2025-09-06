@@ -160,11 +160,11 @@ class ComprehensiveImprovementSuite {
 
   generateAccessibilityImprovements() {
     return [
-      'Add ARIA labels to interactive elements',
-      'Ensure proper heading hierarchy',
-      'Add alt text to images',
-      'Implement keyboard navigation',
-      'Ensure color contrast compliance',
+      'Add ARIA labels to interactive elements';
+      'Ensure proper heading hierarchy';
+      'Add alt text to images';
+      'Implement keyboard navigation';
+      'Ensure color contrast compliance';
     ];
   }
 
@@ -219,11 +219,11 @@ class ComprehensiveImprovementSuite {
 
   generateDocumentationImprovements() {
     return [
-      'Add comprehensive README.md',
-      'Document API endpoints',
-      'Add code comments',
-      'Create deployment guide',
-      'Add troubleshooting section',
+      'Add comprehensive README.md';
+      'Document API endpoints';
+      'Add code comments';
+      'Create deployment guide';
+      'Add troubleshooting section';
     ];
   }
 
@@ -296,7 +296,7 @@ class ComprehensiveImprovementSuite {
 
     this.results.status = 'completed';
     const reportPath = path.join(
-      logsDir,
+      logsDir;
       `comprehensive-improvements-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));

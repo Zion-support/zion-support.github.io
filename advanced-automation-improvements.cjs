@@ -35,7 +35,7 @@ class AdvancedAutomationImprovements {
         cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8',
-        ...options,
+        ...options
       });
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
@@ -44,7 +44,7 @@ class AdvancedAutomationImprovements {
       return {
         success: false,
         error: error.message,
-        output: error.stdout || error.stderr,
+        output: error.stdout || error.stderr
       };
     }
   }

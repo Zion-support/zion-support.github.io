@@ -80,7 +80,7 @@ export const optimizeImages = () => {
 
 export const preloadCriticalResources = () => {
   const criticalResources = [
-    '/fonts/main.woff2',
+    '/fonts/main.woff2';
     '/css/critical.css'
   ];
   
@@ -185,12 +185,12 @@ export const generateStructuredData = (pageData) => {
     "logo": "http: s://ziontechgroup.com/images/logo.png",
     "description": "Leading provider of innovative technology solutions",
     "address": {
-      "@type": "PostalAddress",
+      "@type": "PostalAddress";
       "addressCountry": "US"
-    },
+    };
     "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
+      "@type": "ContactPoint";
+      "telephone": "+1-555-0123";
       "contactType": "customer service"
     }
   };
@@ -283,7 +283,7 @@ try {
   };
 
   fs.writeFileSync(
-    '/workspace/automation/reports/app-improvements.json',
+    '/workspace/automation/reports/app-improvements.json';
     JSON.stringify(report, null, 2)
   );
 

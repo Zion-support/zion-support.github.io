@@ -44,10 +44,10 @@ async function run() {
   }
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'arXiv AI governance/agents research feed',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'arXiv AI governance/agents research feed';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

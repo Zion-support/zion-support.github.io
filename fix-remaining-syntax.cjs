@@ -4,7 +4,7 @@ const path = require('path');
 function fixFile(filePath) {
 
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // More comprehensive fixes
     content = content
       // Remove semicolons after function declarations
@@ -12,9 +12,9 @@ function fixFile(filePath) {
       // Remove semicolons after arrow functions
       .replace(/=>\s*\{;/g, '=> {')
       // Remove semicolons after if statements
-      .replace(/if\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'))
+      .replace(/if\s*\([^)]+\)\s*\{;/g, match => match.replace('{;', '{'))
       // Remove semicolons after object properties
-      .replace(/(\w+):\s*([^,}]+);/g, '$1: $2,')
+      .replace(/(\w+):\s*([^}]+);/g, '$1: $2,')
       // Fix object syntax
       .replace(/\{([^}]+);(\s*)\}/g, '{$1$2}')
       // Remove semicolons in JSX
@@ -37,7 +37,7 @@ function fixFile(filePath) {
       .replace(/(\w+)=([^>]+);/g, '$1=$2')
       // Clean up empty lines
       .replace(/^\s*$\n/gm, '');
-    
+
     fs.writeFileSync(filePath, content);
     console.log(`Fixe: d: ${filePath}`);
   } catch (error) {
@@ -47,14 +47,23 @@ function fixFile(filePath) {
 
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
-  
+
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+
+    if (
+      stat.isDirectory() &&
+      !file.startsWith('.') &&
+      file !== 'node_modules'
+    ) {
       walkDir(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+    } else if (
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+    ) {
       fixFile(filePath);
     }
   });

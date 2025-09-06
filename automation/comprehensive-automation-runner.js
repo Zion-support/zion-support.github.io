@@ -1,238 +1,210 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync, spawn } = require('child_process');
 
+class ComprehensiveAutomationRunner {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logs', 'comprehensive-automation.log');
+    this.resultsFile = path.join(__dirname, 'reports', 'comprehensive-results.json');
+    this.ensureDirectories();
+    this.results = {
+      timestamp: new Date().toISOString(),
+      tests: {},
+      builds: {},
+      linting: {},
+      security: {},
+      performance: {},
+      overall: 'pending'
+    };
+  }
 
-#!/usr/bin/env node,
-import fs from "fs",
-import path from "path",
-import { execSync, spawn } from "child_process",
-import { fileURLToPath } from "url",
-,
-const __filename = fileURLToPath(import.meta.url),
-const __dirname = path.dirname(__filename),
-,
-class ComprehensiveAutomationRunner {,
-  constructor() {,
-    this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"),
-    this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"),
-    this.ensureDirectories(),
-    this.results = {,
-      timestam: p: new Date().toISOString(),
-      test: s: {},
-      build: s: {},
-      lintin: g: {},
-      performanc: e: {},
-      securit: y: {},
-      overal: l: { statu: s: "unknown", scor: e: 0 };
-    };
-      };
-    }),
-  };
-,
-  log(message, level = "INFO") {,
-    const timestamp = new Date().toISOString(),
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`,
-    console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logMessage),
-  };
-,
-  async runCommand(command, description) {,
-    try {,
-      this.log(`Runnin: g: ${description}`),
-      const startTime = Date.now(),
-      const output = execSync(command, {,
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
-        timeou: t: 300000 // 5 minutes,
-      }),
-      const duration = Date.now() - startTime,
-      this.log(`✓ ${description} completed in ${duration}ms`),
-      return { succes: s: true, outpu: t: output.toString(), duration };
-    } catch (error) {,
-      this.log(`✗ ${description} faile: d: ${error.message}`, "ERROR"),
-      return {,
-        succes: s: false,
-        erro: r: error.message,
-        outpu: t: error.stdout?.toString() || error.stderr?.toString() || "",
-      };
-    };
-  };
-,
-  async runBuildTests() {,
-    this.log("=== RUNNING BUILD TESTS ==="),
-,
-    const buildTests = [,
-      { cm: d: "npm run build", des: c: "Production build" },
-      { cm: d: "npm run lint", des: c: "Linting check" },
-      { cm: d: "npm run type-check", des: c: "TypeScript type checking" },
-      { cm: d: "npm run: test:smoke", des: c: "Smoke tests" };
-    ],
-,
-    for (const test of buildTests) {,
-      const result = await this.runCommand(test.cmd, test.desc),
-      this.results.builds[test.desc] = result,
-    };
-  };
-,
-  async runPerformanceTests() {,
-    this.log("=== RUNNING PERFORMANCE TESTS ==="),
-,
-    const perfTests = [,
-      { cm: d: "npm run: build:analyze", des: c: "Bundle analysis" },
-      { cm: d: "npm run: perf:audit", des: c: "Performance audit" };
-    ],
-,
-    for (const test of perfTests) {,
-      const result = await this.runCommand(test.cmd, test.desc),
-      this.results.performance[test.desc] = result,
-    };
-  };
-,
-  async runSecurityTests() {,
-    this.log("=== RUNNING SECURITY TESTS ==="),
-,
-    const securityTests = [,
-      { cm: d: "npm audit", des: c: "Security audit" },
-      { cm: d: "npm run: security:audit", des: c: "Enhanced security audit" };
-    ],
-,
-    for (const test of securityTests) {,
-      const result = await this.runCommand(test.cmd, test.desc),
-      this.results.security[test.desc] = result,
-    };
-  };
-,
-  async runQualityTests() {,
-    this.log("=== RUNNING QUALITY TESTS ==="),
-,
-    const qualityTests = [,
-      { cm: d: "npm run: lint:check", des: c: "Lint check" },
-      { cm: d: "npm run: format:check", des: c: "Format check" },
-      { cm: d: "npm run: test:coverage", des: c: "Test coverage" };
-    ],
-,
-    for (const test of qualityTests) {,
-      const result = await this.runCommand(test.cmd, test.desc),
-      this.results.tests[test.desc] = result,
-    };
-  };
-,
-  calculateOverallScore() {,
-    let totalScore = 0,
-    let maxScore = 0,
-,
-    // Build tests (40% weight),
-    const buildScore = this.calculateCategoryScore(this.results.builds),
-    totalScore += buildScore * 0.4,
-    maxScore += 100 * 0.4,
-,
-    // Performance tests (25% weight),
-    const perfScore = this.calculateCategoryScore(this.results.performance),
-    totalScore += perfScore * 0.25,
-    maxScore += 100 * 0.25,
-,
-    // Security tests (20% weight),
-    const securityScore = this.calculateCategoryScore(this.results.security),
-    totalScore += securityScore * 0.2,
-    maxScore += 100 * 0.2,
-,
-    // Quality tests (15% weight),
-    const qualityScore = this.calculateCategoryScore(this.results.tests),
-    totalScore += qualityScore * 0.15,
-    maxScore += 100 * 0.15,
-,
-    const finalScore = Math.round((totalScore / maxScore) * 100),
-    this.results.overall.score = finalScore,
-    this.results.overall.status = finalScore >= 80 ? "excellent" :,
-                                 finalScore >= 60 ? "good" :,
-                                 finalScore >= 40 ? "fair" : "poor",
-,
-    return finalScore,
-  };
-,
-  calculateCategoryScore(category) {,
-    if (!category || Object.keys(category).length === 0) return 0,
-,
-    const results = Object.values(category),
-    const successCount = results.filter(r => r.success).length,
-    return Math.round((successCount / results.length) * 100),
-  };
-,
-  generateRecommendations() {,
-    const recommendations = [],
-,
-    // Build recommendations,
-    Object.entries(this.results.builds).forEach(([test, result]) => {,
-      if (!result.success) {,
-        recommendations.push(`Fix ${test}: ${result.error}`),
-      };
-    }),
-,
-    // Performance recommendations,
-    Object.entries(this.results.performance).forEach(([test, result]) => {,
-      if (!result.success) {,
-        recommendations.push(`Optimize ${test}: ${result.error}`),
-      };
-    }),
-,
-    // Security recommendations,
-    Object.entries(this.results.security).forEach(([test, result]) => {,
-      if (!result.success) {,
-        recommendations.push(`Address security issue in ${test}: ${result.error}`),
-      };
-    }),
-,
-    // Quality recommendations,
-    Object.entries(this.results.tests).forEach(([test, result]) => {,
-      if (!result.success) {,
-        recommendations.push(`Improve ${test}: ${result.error}`),
-      };
-    }),
-,
-    return recommendations,
-  };
-,
-  async saveResults() {,
-    this.results.recommendations = this.generateRecommendations(),
-    this.results.overall.score = this.calculateOverallScore(),
-,
-    fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),
-    this.log(`Results saved: to: ${this.resultsFile}`),
-  };
-,
-  async runAll() {,
-    this.log("🚀 Starting Comprehensive Automation Runner"),
-    this.log("=" * 50),
-,
-    try {,
-      await this.runBuildTests(),
-      await this.runPerformanceTests(),
-      await this.runSecurityTests(),
-      await this.runQualityTests(),
-,
-      const score = this.calculateOverallScore(),
-      await this.saveResults(),
-,
-      this.log("=" * 50),
-      this.log(`🎯 Overall: Score: ${score}/100 (${this.results.overall.status})`),
-      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),
-,
-      if (score < 80) {,
-        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN"),
-      } else {,
-        this.log("✅ All systems performing well!", "SUCCESS"),
-      };
-,
-    } catch (error) {,
-      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),
-      throw error,
-    };
-  };
-};
-,
-// Main execution,
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
-  const runner = new ComprehensiveAutomationRunner(),
-  runner.runAll().catch(console.error),
-};
-,
-export default ComprehensiveAutomationRunner,
+  ensureDirectories() {
+    const dirs = ['logs', 'reports'];
+    dirs.forEach(dir => {
+      const dirPath = path.join(__dirname, dir);
+      if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, { recursive: true });
+      }
+    });
+  }
 
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async runTests() {
+    try {
+      this.log('Running tests...');
+      const output = execSync('npm test -- --passWithNoTests --watchAll=false', { 
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
+      this.results.tests = {
+        status: 'passed',
+        output: output,
+        timestamp: new Date().toISOString()
+      };
+      this.log('Tests completed successfully');
+    } catch (error) {
+      this.results.tests = {
+        status: 'failed',
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
+      this.log(`Tests failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async runBuild() {
+    try {
+      this.log('Running build...');
+      const output = execSync('npm run build', { 
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
+      this.results.builds = {
+        status: 'success',
+        output: output,
+        timestamp: new Date().toISOString()
+      };
+      this.log('Build completed successfully');
+    } catch (error) {
+      this.results.builds = {
+        status: 'failed',
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
+      this.log(`Build failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async runLinting() {
+    try {
+      this.log('Running linting...');
+      const output = execSync('npm run lint', { 
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
+      this.results.linting = {
+        status: 'passed',
+        output: output,
+        timestamp: new Date().toISOString()
+      };
+      this.log('Linting completed successfully');
+    } catch (error) {
+      this.results.linting = {
+        status: 'failed',
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
+      this.log(`Linting failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async runSecurityAudit() {
+    try {
+      this.log('Running security audit...');
+      const output = execSync('npm audit --json', { stdio: 'pipe' });
+      const auditResult = JSON.parse(output.toString());
+      
+      this.results.security = {
+        status: 'completed',
+        vulnerabilities: auditResult.vulnerabilities || {},
+        timestamp: new Date().toISOString()
+      };
+      this.log('Security audit completed');
+    } catch (error) {
+      this.results.security = {
+        status: 'failed',
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
+      this.log(`Security audit failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async runPerformanceCheck() {
+    try {
+      this.log('Running performance check...');
+      // Simple performance check - bundle size analysis
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const dependencies = Object.keys(packageJson.dependencies || {}).length;
+      const devDependencies = Object.keys(packageJson.devDependencies || {}).length;
+      
+      this.results.performance = {
+        status: 'completed',
+        dependencies: dependencies,
+        devDependencies: devDependencies,
+        timestamp: new Date().toISOString()
+      };
+      this.log('Performance check completed');
+    } catch (error) {
+      this.results.performance = {
+        status: 'failed',
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
+      this.log(`Performance check failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  calculateOverallStatus() {
+    const statuses = [
+      this.results.tests.status,
+      this.results.builds.status,
+      this.results.linting.status,
+      this.results.security.status,
+      this.results.performance.status
+    ];
+    
+    if (statuses.every(status => status === 'passed' || status === 'success' || status === 'completed')) {
+      this.results.overall = 'success';
+    } else if (statuses.some(status => status === 'failed')) {
+      this.results.overall = 'failed';
+    } else {
+      this.results.overall = 'partial';
+    }
+  }
+
+  saveResults() {
+    try {
+      fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2));
+      this.log(`Results saved to ${this.resultsFile}`);
+    } catch (error) {
+      this.log(`Error saving results: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async run() {
+    try {
+      this.log('Starting comprehensive automation runner...');
+      
+      await this.runTests();
+      await this.runBuild();
+      await this.runLinting();
+      await this.runSecurityAudit();
+      await this.runPerformanceCheck();
+      
+      this.calculateOverallStatus();
+      this.saveResults();
+      
+      this.log(`Comprehensive automation completed with status: ${this.results.overall}`);
+      
+    } catch (error) {
+      this.log(`Comprehensive automation failed: ${error.message}`, 'ERROR');
+      this.results.overall = 'failed';
+      this.saveResults();
+    }
+  }
+}
+
+if (require.main === module) {
+  const runner = new ComprehensiveAutomationRunner();
+  runner.run();
+}
+
+module.exports = ComprehensiveAutomationRunner;

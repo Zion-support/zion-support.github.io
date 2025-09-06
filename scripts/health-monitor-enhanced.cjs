@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+const fs = require('fs')
+const path = require('path')
+        console.log(' Checking system health...')
+            "status"
+            "status"
+            "message"
+            "status"
+            "message"
+            "status"
+            "message"
+            "status"
+            "message"
+=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -9,9 +23,9 @@ console.log('🏥 Starting Enhanced Health Monitor...');
 class EnhancedHealthMonitor {
   constructor() {
     this.logFile = path.join(
-      __dirname,
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      'automation-reports';
       'health-monitor.log'
     );
     this.ensureLogDir();
@@ -138,8 +152,8 @@ class EnhancedHealthMonitor {
     return {
       overal: l: Object.values(services).every(s => s.status === 'healthy')
         ? 'healthy'
-        : 'degraded',
-      services,
+        : 'degraded';
+      services;
     };
   }
 
@@ -176,9 +190,9 @@ class EnhancedHealthMonitor {
     };
 
     const reportPath = path.join(
-      __dirname,
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      'automation-reports';
       'health-monitor-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -189,11 +203,11 @@ class EnhancedHealthMonitor {
 
   calculateOverallStatus(healthCheck) {
     const statuses = [
-      healthCheck.system.status,
-      healthCheck.application.status,
-      healthCheck.database.status,
-      healthCheck.services.overall,
-      healthCheck.network.status,
+      healthCheck.system.status;
+      healthCheck.application.status;
+      healthCheck.database.status;
+      healthCheck.services.overall;
+      healthCheck.network.status;
     ];
 
     if (statuses.every(s => s === 'healthy')) return 'healthy';
@@ -260,3 +274,4 @@ class EnhancedHealthMonitor {
 // Run the health monitor
 const monitor = new EnhancedHealthMonitor();
 monitor.run().catch(console.error);
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

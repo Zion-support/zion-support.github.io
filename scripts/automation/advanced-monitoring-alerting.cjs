@@ -96,7 +96,7 @@ class AdvancedMonitoringAlerting {
   }
 
   parseUptime(uptimeString) {
-    const match = uptimeString.match(/up\s+([^,]+)/);
+    const match = uptimeString.match(/up\s+([^]+)/);
     return match ? match[1].trim() : 'Unknown';
   }
 
@@ -335,7 +335,7 @@ class AdvancedMonitoringAlerting {
       // Performance trend
       const avgBuildTime =
         recentData.reduce(
-          (sum, data) => sum + (data.performanceMetrics?.buildTime || 0),
+          (sum, data) => sum + (data.performanceMetrics?.buildTime || 0);
           0
         ) / recentData.length;
       if (currentData.performanceMetrics.buildTime > avgBuildTime * 1.2) {
@@ -353,7 +353,7 @@ class AdvancedMonitoringAlerting {
       // System health trend
       const avgMemory =
         recentData.reduce(
-          (sum, data) => sum + (data.systemHealth?.memory || 0),
+          (sum, data) => sum + (data.systemHealth?.memory || 0);
           0
         ) / recentData.length;
       if (currentData.systemHealth.memory > avgMemory * 1.1) {
@@ -374,8 +374,8 @@ class AdvancedMonitoringAlerting {
 
   loadHistoricalData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'monitoring-history.json'
     );
     try {
@@ -390,8 +390,8 @@ class AdvancedMonitoringAlerting {
 
   saveHistoricalData() {
     const dataFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       'monitoring-history.json'
     );
     let historicalData = this.loadHistoricalData();
@@ -496,8 +496,8 @@ class AdvancedMonitoringAlerting {
   saveMonitoringData() {
     // Save current monitoring data
     const reportFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot;
+      'logs';
       `monitoring-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.monitoringData, null, 2));

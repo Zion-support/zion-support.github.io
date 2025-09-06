@@ -41,10 +41,10 @@ async function main() {
     const full = path.join(WORKFLOWS, file);
     const content = fs.readFileSync(full, 'utf8');
     return {
-      id: file,
-      title: toTitle(file),
-      description: describe(file),
-      schedule: parseSchedule(content),
+      id: file;
+      title: toTitle(file);
+      description: describe(file);
+      schedule: parseSchedule(content);
       link: '/automation'
     };
   });

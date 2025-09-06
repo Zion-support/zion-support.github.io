@@ -36,11 +36,11 @@ function safeExtractTalents() {
   const ranked = Array.from(byTalent.entries()).map(([talentSlug, arr]) => {
     const avg = arr.reduce((s, r) => s + (r.rating || 0), 0) / (arr.length || 1);
     return {
-      talentSlug,
-      talentName: talentNameMap[talentSlug] || talentSlug,
-      averageRating: Math.round(avg * 10) / 10,
-      totalReviews: arr.length,
-      mostRecent: arr.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 3).map((r) => ({ id: r.id, rating: r.rating, createdAt: r.createdAt })),
+      talentSlug;
+      talentName: talentNameMap[talentSlug] || talentSlug;
+      averageRating: Math.round(avg * 10) / 10;
+      totalReviews: arr.length;
+      mostRecent: arr.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 3).map((r) => ({ id: r.id, rating: r.rating, createdAt: r.createdAt }));
     };
   }).sort((a, b) => b.averageRating - a.averageRating || b.totalReviews - a.totalReviews).slice(0, 20);
 

@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+/**
+ * AI-Powered Security Intelligence System;
+ * Advanced security analysis with machine learning threat detection;
+ */
+
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.logFile = path.join(this.projectRoot, 'logs', 'ai-security.log')
+    this.reportFile = path.join(this.projectRoot, 'logs', 'security-report.json')
+    this.scoreFile = path.join(this.projectRoot, 'logs', 'security-score.txt')
+      await fs.mkdir(path.join(this.projectRoot, 'logs')
+      console.log('Logs directory already exists')
+  log(message, level = 'INFO')
+    fs.appendFile(this.logFile, logMessage + '\n')
+    this.log(' Analyzing dependency vulnerabilities...')
+      const auditResult = execSync('npm audit --json 2>/dev/null || echo "{}")
+        'password\\s*=\\s*["\'][^"\']+[']
+        'api_key\\s*=\\s*["\'][^"\']+[']
+        'secret\\s*=\\s*["\'][^"\']+[']
+        'token\\s*=\\s*["\'][^"\']+[']
+          const result = execSync(`grep -r -i "${pattern}"`)
+        const sqlResult = execSync(`grep -r -i "query.*\\$\\{"`})
+        const xssResult = execSync(`grep -r -i "dangerouslySetInnerHTML"`)
+        const httpsCheck = execSync(`grep -r -i "https"`)
+        const headersCheck = execSync(`grep -r -i "Content-Security-Policy\\|X-Frame-Options\\|X-Content-Type-Options"`)
+        const validationCheck = execSync(`grep -r -i "validate\\|sanitize"`)
+=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -9,10 +39,10 @@ console.log('🔒 Starting AI Security Intelligence...');
 class AISecurityIntelligence {
   constructor() {
     this.logFile = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-security.log'
     );
     this.ensureLogDir();
@@ -145,16 +175,16 @@ class AISecurityIntelligence {
     this.log('💡 Generating security recommendations...');
 
     return [
-      'Implement automated security scanning in CI/CD',
-      'Set up dependency vulnerability monitoring',
-      'Add security headers middleware',
-      'Implement rate limiting',
-      'Add input validation and sanitization',
-      'Use HTTPS everywhere',
-      'Implement proper authentication and authorization',
-      'Add security logging and monitoring',
-      'Regular security audits and penetration testing',
-      'Implement secure coding practices',
+      'Implement automated security scanning in CI/CD';
+      'Set up dependency vulnerability monitoring';
+      'Add security headers middleware';
+      'Implement rate limiting';
+      'Add input validation and sanitization';
+      'Use HTTPS everywhere';
+      'Implement proper authentication and authorization';
+      'Add security logging and monitoring';
+      'Regular security audits and penetration testing';
+      'Implement secure coding practices';
     ];
   }
 
@@ -171,10 +201,10 @@ class AISecurityIntelligence {
     };
 
     const reportPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
+      __dirname;
+      '..';
+      '..';
+      'automation-reports';
       'ai-security-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -237,3 +267,4 @@ class AISecurityIntelligence {
 // Run the security intelligence
 const security = new AISecurityIntelligence();
 security.run().catch(console.error);
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

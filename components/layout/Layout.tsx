@@ -1,25 +1,20 @@
-<<<<<<< HEAD
-import React, { ReactNode } from 'react';
-import Header from '../Header';
-import Footer from './Footer';
-
-interface LayoutProps {
-  childre: n: ReactNode;
-}
-
-const: Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
+import React from 'react;
+import * as React from 'react';
+;
+interface LayoutProps {,
+  children: React.ReactNode,
+  title?: string,
+  description?: string,
+  keywords?: string
 };
-
-export default Layout;
-=======
-{children}; </div>)};
->>>>>>> cursor/automate-test-improve-and-merge-code-948c
+export default function Layout({,
+  children,
+  title = "Zion Tech Group,
+  description = "Leading technology solutions provider",
+  keywords = technology, AI, cloud, micro SaaS"
+}: LayoutProps) {,
+  return (,
+    <div className="min-h-screen bg-gray-50">,
+      {children};
+    </div>)
+};

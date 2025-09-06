@@ -18,7 +18,7 @@ function main() {
   const content = `# Changelog\n\n${header}\n${entries ? entries + '\n' : '- No significant changes.\n'}`;
 
   const out = path.join(process.cwd(), 'docs', 'CHANGELOG.md');
-  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.mkdirSync(path.dirname(out) { recursive: true });
   let finalContent = content;
   if (fs.existsSync(out)) {
     const prev = fs.readFileSync(out, 'utf8');

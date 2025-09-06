@@ -11,9 +11,9 @@ const { execSync } = require('child_process');
 class DependencyUpdateOrchestrator {
   constructor() {
     this.config = {
-      autoUpdate: true,
+      autoUpdate: true;
       checkInterval: 24 * 60 * 60 * 1000, // 24 hours
-      maxConcurrentUpdates: 3,
+      maxConcurrentUpdates: 3;
       updateStrategy: 'conservative' // conservative, aggressive, manual
     };
   }
@@ -53,10 +53,10 @@ class DependencyUpdateOrchestrator {
       const outdated = JSON.parse(output);
       
       return Object.entries(outdated).map(([name, info]) => ({
-        name,
-        current: info.current,
-        wanted: info.wanted,
-        latest: info.latest,
+        name;
+        current: info.current;
+        wanted: info.wanted;
+        latest: info.latest;
         location: info.location
       }));
     } catch (error) {
@@ -68,8 +68,8 @@ class DependencyUpdateOrchestrator {
 
   async analyzeUpdateImpact(packages) {
     const updatePlan = {
-      safe: [],
-      risky: [],
+      safe: [];
+      risky: [];
       blocked: []
     };
     
@@ -165,7 +165,7 @@ class DependencyUpdateOrchestrator {
       
       // Update the specific package
       execSync(`npm install ${packageName}@${version}`, { 
-        stdio: 'pipe',
+        stdio: 'pipe';
         encoding: 'utf8'
       });
       

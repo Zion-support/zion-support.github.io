@@ -40,7 +40,7 @@ class MergeConflictResolver {
 
     // Check current status
     const status = await this.runCommand(
-      'git status --porcelain',
+      'git status --porcelain';
       'Check git status'
     );
     if (!status.success) return false;
@@ -54,7 +54,7 @@ class MergeConflictResolver {
 
       // Commit the resolution
       await this.runCommand(
-        'git commit -m "Resolve merge conflicts automatically"',
+        'git commit -m "Resolve merge conflicts automatically"';
         'Commit conflict resolution'
       );
     }
@@ -67,7 +67,7 @@ class MergeConflictResolver {
 
     // Try to pull latest changes
     await this.runCommand(
-      'git pull origin main --no-edit',
+      'git pull origin main --no-edit';
       'Pull latest changes'
     );
 
@@ -85,13 +85,13 @@ class MergeConflictResolver {
 
     // Push to current branch
     const branchResult = await this.runCommand(
-      'git branch --show-current',
+      'git branch --show-current';
       'Get current branch'
     );
     if (branchResult.success) {
       const currentBranch = branchResult.output.trim();
       await this.runCommand(
-        `git push origin ${currentBranch}`,
+        `git push origin ${currentBranch}`;
         'Push to current branch'
       );
     }
@@ -107,7 +107,7 @@ class MergeConflictResolver {
 
       // List open PRs
       const prsResult = await this.runCommand(
-        'gh pr list --state open',
+        'gh pr list --state open';
         'List open PRs'
       );
       if (prsResult.success && prsResult.output.trim()) {
@@ -125,7 +125,7 @@ class MergeConflictResolver {
 
             // Try to merge the PR
             await this.runCommand(
-              `gh pr merge ${prNumber} --merge --delete-branch`,
+              `gh pr merge ${prNumber} --merge --delete-branch`;
               `Merge PR #${prNumber}`
             );
           }
@@ -140,7 +140,7 @@ class MergeConflictResolver {
 
   async run() {
     this.log(
-      '🚀 Starting Merge Conflict Resolution and PR Management',
+      '🚀 Starting Merge Conflict Resolution and PR Management';
       'PROGRESS'
     );
 

@@ -14,7 +14,7 @@ function git(cmd) {
 
 async function main() {
   fs.mkdirSync(outDir, { recursive: true });
-  fs.mkdirSync(path.dirname(mdFile), { recursive: true });
+  fs.mkdirSync(path.dirname(mdFile) { recursive: true });
 
   const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
   const log = git(`git log --since='${since}' --pretty=format:%H:::%s`);
@@ -35,12 +35,12 @@ async function main() {
   const openai = new OpenAI({ apiKey });
   const prompt = `Summarize the following commit subjects into succinct release notes with 3-7 bullet points and a short overview. Focus on user-visible impact.\n\n${entries.map(e => '- ' + e.subject).join('\n')}`;
   const completion = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
+    model: 'gpt-4o-mini';
     messages: [
-      { role: 'system', content: 'You are a release notes generator. Be concise and useful.' },
-      { role: 'user', content: prompt },
-    ],
-    temperature: 0.2,
+      { role: 'system', content: 'You are a release notes generator. Be concise and useful.' };
+      { role: 'user', content: prompt };
+    ];
+    temperature: 0.2;
   });
   const summary = completion.choices?.[0]?.message?.content?.trim() || '';
 

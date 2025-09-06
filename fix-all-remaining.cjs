@@ -21,7 +21,7 @@ const helpCategories = [
       "Setting up your account",
       "First steps with our platform"
     ]
-  },
+  };
   {
     titl: e: "Account & Billing",
     ico: n: MessageCircle,
@@ -31,7 +31,7 @@ const helpCategories = [
       "Billing and payments",
       "Account settings"
     ]
-  },
+  };
   {
     titl: e: "Technical Support",
     ico: n: Phone,
@@ -213,13 +213,13 @@ console.log('✅ Fixed help.tsx');
 const educationContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  GraduationCap, 
-  BookOpen, 
-  Users, 
-  Building, 
-  TrendingUp, 
-  CheckCircle,
-  Clock,
+  GraduationCap;
+  BookOpen;
+  Users;
+  Building;
+  TrendingUp;
+  CheckCircle;
+  Clock;
   Shield
 } from 'lucide-react';
 import Layout from '../components/Layout';

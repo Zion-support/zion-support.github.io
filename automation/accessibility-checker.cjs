@@ -84,7 +84,7 @@ class AccessibilityChecker {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `accessibility-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -116,4 +116,27 @@ if (require.main === module) {
     });
 }
 
+<<<<<<< HEAD
+const reportFile = path.join(
+  reportsDir,
+  `accessibility-report-${Date.now()}.json`
+);
+fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log('♿ Accessibility Checker Starting...\n')
+    "name"
+    "name"
+    "name"
+    "name"
+    "name"
+    "status"
+=======
 module.exports = AccessibilityChecker;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

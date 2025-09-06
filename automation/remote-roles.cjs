@@ -33,21 +33,21 @@ async function run() {
     })
     .slice(0, 100)
     .map((j) => ({
-      id: j.id,
-      date: j.date,
-      company: j.company,
-      position: j.position,
-      tags: j.tags || [],
-      location: j.location || 'Remote',
-      url: j.url || j.original || j.apply_url,
-      logo: j.logo || null,
+      id: j.id;
+      date: j.date;
+      company: j.company;
+      position: j.position;
+      tags: j.tags || [];
+      location: j.location || 'Remote';
+      url: j.url || j.original || j.apply_url;
+      logo: j.logo || null;
     }));
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'Remote roles relevant to AI/Agents/Web3 from RemoteOK',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'Remote roles relevant to AI/Agents/Web3 from RemoteOK';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

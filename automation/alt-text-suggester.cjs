@@ -50,17 +50,17 @@ function buildReport(images, publicDir) {
     const relFromRoot = path.relative(process.cwd(), abs).replace(/\\/g, '/');
     const relFromPublic = path.relative(publicDir, abs).replace(/\\/g, '/');
     return {
-      file: relFromRoot,
-      publicPath: `/${relFromPublic}`.replace(/\\/g, '/'),
-      suggestion: suggestAltFromFilename(abs),
-      bytes: fs.statSync(abs).size,
-      updatedAt: new Date().toISOString(),
+      file: relFromRoot;
+      publicPath: `/${relFromPublic}`.replace(/\\/g, '/');
+      suggestion: suggestAltFromFilename(abs);
+      bytes: fs.statSync(abs).size;
+      updatedAt: new Date().toISOString();
     };
   });
   return {
-    generatedAt: new Date().toISOString(),
-    total: items.length,
-    images: items,
+    generatedAt: new Date().toISOString();
+    total: items.length;
+    images: items;
   };
 }
 

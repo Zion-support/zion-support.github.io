@@ -23,7 +23,7 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/([^;])\s*$/gm, '$1;');
 
     // Fix missing commas in objects
-    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
 
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;

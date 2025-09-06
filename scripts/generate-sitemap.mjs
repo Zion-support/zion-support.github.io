@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+import fs from 'fs'
+import path from 'path'
+const baseUrl = 'https://ziontechgroup.com'
+  ''
+  '/about'
+  '/services'
+  '/services/ai-development'
+  '/services/cloud-architecture'
+  '/services/cybersecurity'
+  '/services/data-analytics'
+  '/services/devops'
+  '/services/mobile-development'
+  '/blockchain-solutions'
+  '/iot-platforms'
+  '/solutions/digital-transformation'
+  '/solutions/enterprise-solutions'
+  '/contact'
+  '/privacy'
+  '/terms'
+  '/cookies'
+  const priority = page === '' ? '1.0' : page.startsWith('/services') ? '0.9' : '0.8'
+  const changefreq = page === '' ? 'daily' : 'weekly'
+    <lastmod>${new Date().toISOString().split('T'})
+}).join('\n')
+  const publicDir = path.join(process.cwd(), 'public'
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml')
+  console.log(' Sitemap generated successfully at public/sitemap.xml')
+=======
 #!/usr/bin/env node
 
 import { writeFileSync, readdirSync, statSync } from 'fs';
@@ -12,38 +41,38 @@ const BASE_URL = 'https://ziontechgroup.com';
 
 // Priority and change frequency for different types of pages
 const PAGE_PRIORITIES = {
-  '/': { priority: '1.0', changefreq: 'daily' },
-  '/services': { priority: '0.9', changefreq: 'weekly' },
-  '/solutions': { priority: '0.9', changefreq: 'weekly' },
-  '/about': { priority: '0.8', changefreq: 'monthly' },
-  '/contact': { priority: '0.8', changefreq: 'monthly' },
-  '/multiverse/launch': { priority: '0.9', changefreq: 'weekly' },
-  '/admin/os-deploy': { priority: '0.7', changefreq: 'monthly' },
-  '/admin/instances': { priority: '0.7', changefreq: 'monthly' },
-  '/docs': { priority: '0.8', changefreq: 'weekly' },
-  '/api': { priority: '0.7', changefreq: 'monthly' },
-  '/community': { priority: '0.6', changefreq: 'weekly' },
-  '/privacy': { priority: '0.5', changefreq: 'yearly' },
-  '/terms': { priority: '0.5', changefreq: 'yearly' },
-  '/cookies': { priority: '0.5', changefreq: 'yearly' },
+  '/': { priority: '1.0', changefreq: 'daily' };
+  '/services': { priority: '0.9', changefreq: 'weekly' };
+  '/solutions': { priority: '0.9', changefreq: 'weekly' };
+  '/about': { priority: '0.8', changefreq: 'monthly' };
+  '/contact': { priority: '0.8', changefreq: 'monthly' };
+  '/multiverse/launch': { priority: '0.9', changefreq: 'weekly' };
+  '/admin/os-deploy': { priority: '0.7', changefreq: 'monthly' };
+  '/admin/instances': { priority: '0.7', changefreq: 'monthly' };
+  '/docs': { priority: '0.8', changefreq: 'weekly' };
+  '/api': { priority: '0.7', changefreq: 'monthly' };
+  '/community': { priority: '0.6', changefreq: 'weekly' };
+  '/privacy': { priority: '0.5', changefreq: 'yearly' };
+  '/terms': { priority: '0.5', changefreq: 'yearly' };
+  '/cookies': { priority: '0.5', changefreq: 'yearly' };
 };
 
 // Static pages that should be included
 const STATIC_PAGES = [
-  '/',
-  '/services',
-  '/solutions',
-  '/about',
-  '/contact',
-  '/multiverse/launch',
-  '/admin/os-deploy',
-  '/admin/instances',
-  '/docs',
-  '/api',
-  '/community',
-  '/privacy',
-  '/terms',
-  '/cookies',
+  '/';
+  '/services';
+  '/solutions';
+  '/about';
+  '/contact';
+  '/multiverse/launch';
+  '/admin/os-deploy';
+  '/admin/instances';
+  '/docs';
+  '/api';
+  '/community';
+  '/privacy';
+  '/terms';
+  '/cookies';
 ];
 
 // Function to generate sitemap XML
@@ -95,9 +124,9 @@ function scanForDynamicPages() {
               const routePath = basePath || '/';
               if (routePath !== '/' && !STATIC_PAGES.includes(routePath)) {
                 dynamicPages.push({
-                  url: `${BASE_URL}${routePath}`,
-                  priority: '0.6',
-                  changefreq: 'monthly',
+                  url: `${BASE_URL}${routePath}`;
+                  priority: '0.6';
+                  changefreq: 'monthly';
                   lastmod: new Date().toISOString()
                 });
               }
@@ -127,9 +156,9 @@ function generateSitemap() {
   const staticPages = STATIC_PAGES.map(path => {
     const metadata = PAGE_PRIORITIES[path] || { priority: '0.6', changefreq: 'monthly' };
     return {
-      url: `${BASE_URL}${path}`,
-      priority: metadata.priority,
-      changefreq: metadata.changefreq,
+      url: `${BASE_URL}${path}`;
+      priority: metadata.priority;
+      changefreq: metadata.changefreq;
       lastmod: new Date().toISOString()
     };
   });
@@ -195,3 +224,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { generateSitemap };
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

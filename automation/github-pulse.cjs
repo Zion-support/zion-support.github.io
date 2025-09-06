@@ -14,11 +14,11 @@ function ensureDir(filePath) {
 async function fetchJson(url) {
   const res = await fetch(url, {
     headers: {
-      'Accept': 'application/vnd.github+json',
-      ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {}),
-      'X-GitHub-Api-Version': '2022-11-28',
-      'User-Agent': 'Zion-Automation/1.0',
-    },
+      'Accept': 'application/vnd.github+json';
+      ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {});
+      'X-GitHub-Api-Version': '2022-11-28';
+      'User-Agent': 'Zion-Automation/1.0';
+    };
   });
   if (!res.ok) throw new Error(`GitHub API failed ${res.status} ${url}`);
   return res.json();
@@ -43,19 +43,19 @@ async function run() {
   } catch (e) { console.warn('Stars fetch failed', e.message); }
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'GitHub repo pulse (last 24h activity)',
+    generatedAt: new Date().toISOString();
+    description: 'GitHub repo pulse (last 24h activity)';
     repo: {
-      full_name: repo.full_name,
-      open_issues: repo.open_issues_count,
-      forks: repo.forks_count,
-      watchers: repo.subscribers_count,
-      stargazers_count: repo.stargazers_count,
-    },
+      full_name: repo.full_name;
+      open_issues: repo.open_issues_count;
+      forks: repo.forks_count;
+      watchers: repo.subscribers_count;
+      stargazers_count: repo.stargazers_count;
+    };
     last24h: {
-      issues_updated: issues.total_count || 0,
-      prs_updated: prs.total_count || 0,
-    },
+      issues_updated: issues.total_count || 0;
+      prs_updated: prs.total_count || 0;
+    };
   };
 
   ensureDir(OUTPUT_PATH);
