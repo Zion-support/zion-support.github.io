@@ -9,6 +9,31 @@ interface CardProps {
   icon?: string;
 }
 
+function Card({ title, href, description, bullets = [], icon }: CardProps) {
+  return (
+    <Link
+      href={href}
+      className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
+    >
+      <div className="flex items-center mb-4">
+        {icon && <span className="text-2xl mr-3">{icon}</span>}
+        <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+      </div>
+      <p className="text-gray-600 leading-relaxed mb-4">{description}</p>
+      {bullets.length > 0 && (
+        <ul className="space-y-1">
+          {bullets.map((bullet, index) => (
+            <li key={index} className="text-sm text-gray-600 flex items-center">
+              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+              {bullet}
+            </li>
+          ))}
+        </ul>
+      )}
+    </Link>
+  );
+}
+
 function ServiceCard({ title, href, description, bullets = [], icon }: CardProps) {
   return (
     <Link
@@ -111,44 +136,23 @@ export default function HomePage() {
             ]}
             icon="💻"
           />
-          <ServiceCard
-            title="Blockchain Solutions"
+          <Card
+            title="Blockchain"
             href="/services/blockchain"
-            description="Smart contracts, DeFi protocols, NFT platforms and Web3 solutions"
-            bullets={[
-              "Smart contract development",
-              "DeFi protocols",
-              "NFT marketplaces",
-              "Web3 applications",
-              "Token economics"
-            ]}
+            description="Smart contracts, DeFi protocols, NFT platforms and Web3 solutions."
             icon="⛓️"
           />
-          <ServiceCard
+          <Card
             title="Cybersecurity"
             href="/services/cybersecurity"
-            description="Penetration testing, security audits, compliance and incident response"
-            bullets={[
-              "Security audits",
-              "Penetration testing",
-              "Compliance management",
-              "Incident response",
-              "Security training"
-            ]}
+            description="Penetration testing, security audits, compliance and incident response."
             icon="🔒"
           />
-          <ServiceCard
-            title="Data Analytics"
-            href="/services/data-analytics"
-            description="Business intelligence, predictive analytics and data science solutions"
-            bullets={[
-              "Business intelligence",
-              "Predictive analytics",
-              "Data visualization",
-              "Machine learning",
-              "Real-time dashboards"
-            ]}
-            icon="📊"
+          <Card
+            title="Cloud Services"
+            href="/services/cloud-services"
+            description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
+            icon="☁️"
           />
         </div>
       </section>
@@ -222,6 +226,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+function FeatureCard({ title, description }: { title: string; description: string }) {
+  return (
+    <div className="text-center p-6">
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 }
