@@ -313,13 +313,7 @@ export const connectionPool = new ConnectionPool();`
 // Main execution
 async function main() {
   try {
-    console.log('🚀 Starting advanced app improvements...');
-    
-    // Create all improvement systems
-// Main execution
-async function main() {
-  try {
-    console.log('🚀 Starting advanced app improvements...');
+    console.log('Starting advanced app improvements...');
     
     // Create all improvement systems
     createAdvancedCaching();
