@@ -1,38 +1,40 @@
+
+import { useState } from "react",
+import { useForm } from "react-hook-form",
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
+
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
   Form,
   FormControl,
   FormField,
   FormItem,
-<<<<<<< HEAD
 FormMessage,;
-=======
-  FormMessage,
->>>>>>> main
 } from "@/components/ui/form";
+
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-<<<<<<< HEAD
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
-  parentId?: string;
+  parentId?: string
 }
-
 interface ReplyFormValues {
   content: string;
 }
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<ReplyFormValues>({
     defaultValues: {
-      content: "",
-    },
+      content: ""
+    }
   });
-
   const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true);
     try {
@@ -40,8 +42,8 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
     } finally {
       setIsSubmitting(false);
     }
+  }
   };
-=======
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -68,57 +70,90 @@ import {;
   FormControl,;
   FormField,;
   FormItem,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+  FormMessage,;
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
 interface ReplyFormProps {;
-  onSubmit: (content: string) => Promise<void>,;
-  parentId?: string;
+
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
 }
-;
+
+import { useState  } from './react';
+import { use_form  } from './react - hook - form';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
+=======
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+
+
 interface ReplyFormValues {;
+
   content: string;
 }
-;
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
+
+FormMessage,;
+
+} from "@/components/ui/form";
+
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+  };
+
+
+=======
+
   const form = useForm<ReplyFormValues>({;
     defaultValues: {;
-      content: "";
-    }
-  }),;
+      content: "",;
+    },;
+  });
+
   const handleSubmit = async (values: ReplyFormValues) => {;
-    setIsSubmitting(true),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setIsSubmitting(true);
     try {;
-      await onSubmit(values.content),;
-      form.reset();
+      (await onSubmit(values && values.content), form && form.reset());
     } finally {;
       setIsSubmitting(false);
     }
-  },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
-    <Card>
-      <CardContent className="pt-6">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)}>
+    <Card>;
+      <CardContent className="pt-6">;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="content"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormControl>;
                     <Textarea
-<<<<<<< HEAD
                       placeholder={
-                        parentId
-                          ? "Write your reply..."
-                          : "Join the discussion..."
+                        parent_id;
+                          ? "Write your reply...";
+                          : "Join the discussion...";
                       }
-=======
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -136,11 +171,15 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
         </Form>
       </CardContent>
     </Card>
+  );
+}
+export default ReplyForm;
+
   )
 },
 
 <<<<<<< HEAD
-export default ReplyForm;
-=======
 export default ReplyForm,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default ReplyForm;
+export default ReplyForm,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

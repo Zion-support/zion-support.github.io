@@ -1,32 +1,4 @@
-
-<<<<<<< HEAD
-import { useState, useEffect } from "react"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { Job, JobStatus } from "@/types/jobs"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Loader2, Edit, X, Eye } from 'lucide-react'import { format } from "date-fns"
-import Link from "next/link"
-import {logErrorToProduction} from '@/utils/productionLogger'
-interface JobsListProps {
-  filter?: JobStatus
-  onSelectJob?: (jobId: string, jobTitle: string) => void}
-
-export function JobsList({ filter, onSelectJob }: JobsListProps) {
-  const { user } = useAuth()
-  const [jobs, setJobs] = useState<Job[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  useEffect((,) => {
-    const fetchJobs = async () => {
-      if (!user) return;
 =======
-import { format } from "date-fns";
-import Link from "next/link";
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface JobsListProps {
-
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -36,6 +8,19 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
+import Link from "next/link";
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface JobsListProps {
+
+  filter?: JobStatus
+  onSelectJob?: (jobId: string, jobTitle: string) => void}
+export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth()
+  const [jobs, setJobs] = useState<Job[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect((,) => {
+    const fetchJobs = async () => {
+      if (!user) return
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
@@ -52,80 +37,29 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     const fetchJobs = async () => {
       if (!user) return,
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-      try {
-        let query = supabase
-          .from("jobs")
-          .select("*")
-          .eq("client_id", user.id)
-          .order("created_at", { ascending: false }),
-<<<<<<< HEAD
-        if (filter) {
-          query = query.eq("status", filter)
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         }
+        const { data, error } = await query;
+        // Check condition
+if (throw error) {
+  $2
+}
+        set_jobs (data as Job[]);
 
-        const { data, error } = await query
-        if (error) throw error
-        setJobs(data as Job[])
       } catch (error) {
-        logErrorToProduction('Error fetching jobs:', { data: error })
+        logErrorToProduction ('Error fetching jobs:', { data: error });
       } finally {
-        setIsLoading(false)
+        setIsLoading (false);
       }
     }
     fetchJobs()
   }, [user, filter])
-=======
 
-        if (filter) {
-          query = query.eq("status", filter)
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Job, JobStatus } from "@/types/jobs",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Loader2, Edit, X, Eye } from 'lucide-react';
-import { format } from "date-fns",;
-import Link from "next/link",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface JobsListProps {;
-  filter?: JobStatus,;
-  onSelectJob?: (jobId: string, jobTitle: string) => void;
-}
-;
-export function JobsList({ filter, onSelectJob }: JobsListProps) {;
-  const { user } = useAuth(),;
-  const [jobs, setJobs] = useState<Job[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  useEffect(() => {;
-    const fetchJobs = async () => {;
-      if (!user) return,;
-      try {;
-        let query = supabase;
-          .from("jobs");
-          .select("*");
-          .eq("client_id", user.id);
-          .order("created_at", { ascending: false }),;
-        if (filter) {;
-          query = query.eq("status", filter);
-        }
-;
-        const { data, error } = await query,;
-        if (error) throw error,;
-        setJobs(data as Job[]);
-      } catch (error) {;
-        logErrorToProduction('Error fetching jobs:', { data: error });
-      } finally {;
-        setIsLoading(false);
-      }
-    },
-
-    fetchJobs()
-  }, [user, filter]),
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -133,15 +67,11 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
       </div>
     )
   }
-
   if (jobs.length === 0) {
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
-          {filter 
-            ? `No jobs with status "${filter}" found.` 
-            : "You haven't posted any jobs yet."
-          }
+
         </p>
         <Button asChild className="mt-4">
           <Link href="/post-job">Post Your First Job</Link>
@@ -149,38 +79,27 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
       </div>
     )
   }
-
-  const getStatusColor = (status: JobStatus) => {
+  const getStatusColor = (status: JobStatus,) => {
     switch (status) {
-<<<<<<< HEAD
       case "new": return "bg-blue-100 text-blue-800"
       case "in_progress":
         return "bg-yellow-100 text-yellow-800"
       case "filled":
         return "bg-green-100 text-green-800"
-=======
+
+  const getStatusColor = (status: JobStatus) => {
+    switch (status) {
       case "new": return "bg-blue-100 text-blue-800",
       case "in_progress":
         return "bg-yellow-100 text-yellow-800",
       case "filled":
         return "bg-green-100 text-green-800",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-      case "closed":
-        return "bg-gray-100 text-gray-800",
-      default:
-        return "bg-gray-100 text-gray-800"
-    }
-<<<<<<< HEAD
-  }
-=======
-  },
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
-        <Card 
-          key={job.id} 
+        <Card
+          key={job.id}
+
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -204,31 +123,29 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
-<<<<<<< HEAD
+=======
               {job.skills.slice(0, 3).map((skill, index,) => (
                 <Badge key={index} variant="outline" className="text-xs">
-=======
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
     },;
     fetchJobs();
-  }, [user, filter]),;
+  }, [user, filter]);
+
   if (isLoading) {;
-    return (;
+    return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
   }
-;
-  if (jobs.length === 0) {;
-    return (;
-      <div className="text-center p-8 border rounded-md bg-muted/20">;
+
+  if (jobs && jobs.length === 0) {;
+    return (<div className="text-center p-8 border rounded-md bg-muted/20">;
         <p className="text-lg text-muted-foreground">;
-          {filter;
-            ? `No jobs with status "${filter}" found.`;
-            : "You haven't posted any jobs yet.";
-          }
+          {filter ;
+            ? `No jobs with status "${filter}" found.` ;
+            : "You haven't posted any jobs yet.", }
         </p>;
         <Button asChild className="mt-4">;
           <Link href="/post-job">Post Your First Job</Link>;
@@ -236,59 +153,98 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
       </div>;
     );
   }
-;
-  const getStatusColor = (status: JobStatus) => {;
+
+  const getStatusColor = (status: JobStatus,) => {;
     switch (status) {;
-      case "new": return "bg-blue-100 text-blue-800",;
+      case "new": return "bg-blue-100 text-blue-800";
       case "in_progress":;
-        return "bg-yellow-100 text-yellow-800",;
+        return "bg-yellow-100 text-yellow-800";
       case "filled":;
-        return "bg-green-100 text-green-800",;
+        return "bg-green-100 text-green-800";
       case "closed":;
-        return "bg-gray-100 text-gray-800";
+        return "bg-gray-100 text-gray-800",;
       default:;
         return "bg-gray-100 text-gray-800";
+  const getStatusColor = (status: JobStatus, ) =>: any {
+    switch (status) {
+      case "new": return "bg - blue - 100 text - blue - 800";
+      case "in_progress":;
+        return "bg - yellow - 100 text - yellow - 800";
+      case "filled":;
+        return "bg - green - 100 text - green - 800";
+      case "closed":;
+        return "bg - gray - 100 text - gray - 800",
+      default:;
+        return "bg - gray - 100 text - gray - 800";
     }
-  };
-  return (;
+  }
+
+  return (
+
     <div className="grid gap-6 md:grid-cols-2">;
-      {jobs.map((job) => (;
-        <Card;
-          key={job.id} ;
-          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${;
-            onSelectJob ? "cursor-pointer" : "";
+      {jobs && jobs.map((job,) => (;
+        <Card
+          key = {job && job.id,}
+
+          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
+            onSelectJob ? "cursor-pointer" : ""
           }`}
-          onClick = {(,) => onSelectJob?.(job.id, job.title),}
-        >
-          <CardHeader className="p-4">
-            <div className="flex justify-between items-start">
-              <div>
-                <CardTitle className="text-xl">{job.title}</CardTitle>
-                <CardDescription className="mt-1">
-                  Posted {format(new Date(job.created_at), "PPP")}
-                </CardDescription>
-              </div>
-              <Badge className={getStatusColor(job.status)}>
-                {job.status.replace("_", " ").toUpperCase()}
-              </Badge>
-            </div>
-          </CardHeader>
-          <CardContent className="p-4 pt-0">
-            <p className="line-clamp-3 text-sm text-muted-foreground mb-2">
-              {job.description}
+          onClick = {(,) => onSelectJob?.(job && job.id, job && job.title),}
+        >;
+          <CardHeader className="p-4">;
+            <div className="flex justify-between items-start">;
+              <div>;
+                <CardTitle className="text-xl">{job && job.title}</CardTitle>;
+                <CardDescription className="mt-1">;
+                  Posted {format(new Date(job && job.created_at), "PPP")}
+                </CardDescription>;
+              </div>;
+              <Badge className={getStatusColor(job && job.status)}>;
+                {job && job.status.replace("_", " ").toUpperCase()}
+              </Badge>;
+            </div>;
+          </CardHeader>;
+          <CardContent className="p-4 pt-0">;
+            <p className="line-clamp-3 text-sm text-muted-foreground mb-2">;
+              {job && job.description}
             </p>;
             <div className="flex flex-wrap gap-1 mt-2">;
-              {job.skills.slice(0, 3).map((skill, index) => (;
+              {job && job.skills.slice(0, 3).map((skill, index,) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+
                   {skill}
-                </Badge>
+                </Badge>;
               ))}
-              {job.skills.length > 3 && (
-                <Badge variant="outline" className="text-xs">
-                  +{job.skills.length - 3} more
-                </Badge>
+              {job && job.skills.length > 3 && (;
+                <Badge variant="outline" className="text-xs">;
+                  +{job && job.skills.length - 3} more;
+                </Badge>;
               )}
+
+    </div>;
+  );
+};"
+return (<div className="grid gap-6 md:grid-cols-2" > {
+  jobs.map ( (job) => (<Card key= {
+  job.id
+}className= {
+  `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
+  onSelectJob ? "cursor-pointer" : ""
+}`
+}onClick={
+  () => onSelectJob?. (job.id, job.title)
+}job.description
+}</p> + {
+  job.skills.length - 3
+}more </Badge>) "
+}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {
+  job.budget.min
+}- $ {
+  job.budget.max "
+}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
+}</div>)
+}'"}
             </div>
             <div className="mt-3 text-sm">
               <span className="font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
@@ -313,38 +269,27 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
                 <X className="h-4 w-4" />
               </Button>
             </div>
-          </CardFooter>
 <<<<<<< HEAD
-        </Card>;
-      ))};
-    </div>;
-  );
+          </CardFooter>
+
 };"
 return (<div className="grid gap-6 md:grid-cols-2" > {
   jobs.map ( (job) => (<Card key= {
-  job.id 
+  job.id
 }className= {
   `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
-  onSelectJob ? "cursor-pointer" : "" 
-}` 
+  onSelectJob ? "cursor-pointer" : ""
+}`
 }onClick={
-  () => onSelectJob?. (job.id, job.title) 
-}job.description 
+  () => onSelectJob?. (job.id, job.title)
+}job.description
 }</p> + {
-  job.skills.length - 3 
+  job.skills.length - 3
 }more </Badge>) "
 }</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {
-  job.budget.min 
+  job.budget.min
 }- $ {
   job.budget.max "
-}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) ) 
-}</div>) 
+}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
+}</div>)
 }'"}
-=======
-        </Card>
-      ))}
-    </div>;
-  );
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

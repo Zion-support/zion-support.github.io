@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { JobData, TalentProfile, MatchResult } from "./types.ts",;
 ;
 // Get openAI API key from environment variables;
@@ -242,3 +244,4 @@ return normalizedSkills;
 }
 }/** * Fallback method that uses basic string matching to find talent matches * @param jobDetails The job to match * @param talents Array of talent profiles * @returns Array of matches with scores */ 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

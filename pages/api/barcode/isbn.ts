@@ -1,28 +1,14 @@
-<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 const bwipjs = require('bwip-js'),
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = (req.query.code as string) || '',
-  if (!code) {
-    res.status(400).json({ error: 'Missing code' }),
-    return
-  }
 
-  try {
-    const png = await bwipjs.toBuffer({
-      bcid: 'ean13',
-      text: code.replace(/[^0-9]/g, ''),
-      scale: 3,
-      height: 10,
-includetext: false}),
-    res.setHeader('Content-Typeimage/png'),
     res.status(200).send(png)
   } catch (e: any) {
+    res.status(500).json({ error: e?.message |'Failed to render barcode' })
     res.status(500).json({ error: e?.message || 'Failed to render barcode' })
   };
 };
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 const bwipjs = require('bwip-js');
 export default async function handler(req, res) {
@@ -58,4 +44,13 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }
+}
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

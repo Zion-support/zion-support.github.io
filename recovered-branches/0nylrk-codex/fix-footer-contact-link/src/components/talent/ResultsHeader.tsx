@@ -1,18 +1,17 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import {Loader2} from "lucide-react";
-=======
-import { Loader2 } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 import { Loader2 } from "lucide-react";
->>>>>>> main
+import { Loader2 } from "lucide-react",
+import {Loader2} from "lucide-react";
+import { Loader2 } from "lucide-react",
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ResultsHeaderProps {
   isLoading: boolean;
-  resultCount: number;
+  resultCount: number
 }
-
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
@@ -23,21 +22,22 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </div>
       ) : (
         <span>
-<<<<<<< HEAD
+          {resultCount === 0
+            ? "No talents found. Try adjusting your filters."
+            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
+        </span>
           {resultCount === 0 ? (
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
-<<<<<<< HEAD
-=======
 import { Loader2 } from "lucide-react",;
 interface ResultsHeaderProps {;
-  isLoading: boolean;
+  isLoading: boolean,;
   resultCount: number;
 }
-;
-export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
-  return (;
+
+export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderProps) {;
+  return (
     <div className="flex items-center mb-6 text-zion-slate-light">;
       {isLoading ? (;
         <div className="flex items-center">;
@@ -50,16 +50,3 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
             "No talents found. Try adjusting your filters.";
           ) : (;
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-          )}
-=======
-          {resultCount === 0
-            ? "No talents found. Try adjusting your filters."
-            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
->>>>>>> main
-        </span>
-      )}
-    </div>
-  );
-}
-;

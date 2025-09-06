@@ -1,5 +1,12 @@
 
-<<<<<<< HEAD
+
+
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {NavigationButtonsProps} from "./types";
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {NavigationButtonsProps} from "./types";
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
@@ -9,7 +16,6 @@ export const NavigationButtons = ({;
   isNextDisabled = false;
   backLabel = "Back";
   nextLabel = "Next";
-=======
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
@@ -19,14 +25,13 @@ export const NavigationButtons = ({
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
         <Button variant="outline" onClick={onBack}>
-<<<<<<< HEAD
-=======
+
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 import { NavigationButtonsProps } from "./types",;
@@ -36,26 +41,55 @@ export const NavigationButtons = ({;
   isNextDisabled = false,;
   backLabel = "Back",;
   nextLabel = "Next";
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isLoading = false}: NavigationButtonsProps) => {;
-  return (;
+  return (
     <div className="flex justify-between">;
       {onBack && (;
         <Button variant="outline" onClick={onBack}>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {backLabel}
-        </Button>
+        </Button>;
       )}
       {onNext && (
+        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>
       )}
-<<<<<<< HEAD
     </div>
   )
-=======
+}
+
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    </div>;
+  );
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+          {backLabel}
+        </Button>;
+      )}
+      {onNext && (
+
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>
+      )}
+
 };
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>;
+      )}
+
+
+
+    </div>;
+  );
+
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

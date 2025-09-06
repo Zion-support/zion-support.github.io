@@ -1,4 +1,5 @@
 
+=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -118,6 +119,7 @@ export const useJobApplications = (jobId?:string) => {;
       console.error("Error applying to job:", err),;
       toast.error("Failed to submit application:" + err.message),;
       return false;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   },;
   ;
@@ -153,100 +155,5 @@ export const useJobApplications = (jobId?:string) => {;
           viewed_at:new Date().toISOString() ;
         });
         .eq("id", applicationId);
-        .is("viewed_at", null), // Only update if not already viewed;
-      ;
-      if (error) throw error,;
-      ;
-      // Update the local state;
-      setApplications(prev => ;
-        prev.map(app => app.id === applicationId ? ;
-          { ...app, status:"viewed", viewed_at:new Date().toISOString() } app;
-        );
-      ),;
-      ;
-      return true,;
-    } catch (err) {;
-      console.error("Error marking application as viewed:", err),;
-      return false,;
-    }
-  },;
-  ;
-  // Fetch applications when component mounts or dependencies change;
-  useEffect(() => {;
-    if (user) {;
-      fetchApplications(),;
-    }
-  }, [user, jobId]),;
-  ;
-  return {;
-    applications,;
-    isLoading,;
-    error,;
-    refetch:fetchApplications,;
-    applyToJob,;
-    updateApplicationStatus,;
-    markApplicationAsViewed;
-  },;
-},; export const useJobApplications = (jobId?: string) => {
-  const {
-  user 
-}= useAuth ();
-const [applications, setApplications] = useState<JobApplication[]> ([]);
-const [isLoading, setIsLoading] = useState (true);
-const [error, setError] = useState<string | null> (null);
-const fetchApplications = async () => {
-  if (!user) {
-  setIsLoading (false);
-return 
-}try {
-  setIsLoading (true);
-let query = supabase .from ("job applications") 
-}//For client users, fetch applications for their jobs else if (user.userType === "employer" || user.userType === "buyer") {
-  if (!jobId) {
-  //Fix: Convert the subquery to a proper array or string const {
-  data: jobIds 
-}= await supabase .from ("jobs") .select ("id") .eq ("client id", user.id);
-if (jobIds && jobIds.length > 0) {
-  const jobIdArray = jobIds.map (job => job.id);
-query = query.in ("job id", jobIdArray) 
-}else {
-  throw error 
-}return false;
-}//Add the new application to the local state const newApplication = data as JobApplication;
-setApplications (prev => [newApplication, ...prev]);
-}
-};
-const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
-  try {
-  const {
-  error 
-}= await supabase .from ("job applications") .update ({
-  status 
-}) //Update the local state setApplications (prev => 
-}
-};
-const markApplicationAsViewed = async (applicationId: string) => {
-  try {
-  const {
-  error 
-}= await supabase .from ("job applications") .update ({
-  status: "viewed";
-viewed at: new Date () .toISOString () 
-}) .eq ("id", applicationId) .is ("viewed at", null), //Only update if not already viewed //Update the local state setApplications (prev => prev.map (app => app.id === applicationId ?) );
-}
-};
-// Fetch applications when component mounts or dependencies change useEffect ( () => {
-  if (user) {
-  fetchApplications () 
-}
-}, [user, jobId]);
-return {
-  applications;
-isLoading;
-error;
-refetch: fetchApplications;
-applyToJob;
-updateApplicationStatus;
-markApplicationAsViewed 
-}
-};
+<<<<<<< HEAD
+

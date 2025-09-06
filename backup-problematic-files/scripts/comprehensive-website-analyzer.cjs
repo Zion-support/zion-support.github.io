@@ -62,4 +62,5 @@ const path = require("path")
       this.log("� Website analysis completed successfully")
       return {"success": true,"workingLinks": this.workingLinks.length,"brokenLinks"}
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
-      return { "success": false, "error"}
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,104 +1,19 @@
-<<<<<<< HEAD
+import type { NextPage } from 'next';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+import Head from 'next/head';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
 import Layout from '../../components/Layout';
 
-const products = [
-  {
-    id: 'ai-analytics-suite',
-    name: 'ZionAI Analytics Suite',
-    description: 'Comprehensive business intelligence platform with AI-powered insights and predictive analytics.',
-    category: 'AI & Analytics',
-    pricing: '$2,999/month',
-    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration'],
-    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Scalable Solutions'],
-    icon: Award,
-    popular: true
-  },
-  {
-    id: 'cloud-infrastructure',
-    name: 'ZionCloud Infrastructure',
-    description: 'Scalable cloud infrastructure solutions with enterprise-grade security and performance.',
-    category: 'Cloud Services',
-    pricing: '$4,999/month',
-    features: ['Auto-scaling', '99.9% Uptime', 'Global CDN', 'Security Compliance'],
-    benefits: ['Cost Optimization', 'High Availability', 'Global Performance', 'Secure Operations'],
-    icon: Globe,
-    popular: true
-  },
-  {
-    id: 'cybersecurity-suite',
-    name: 'ZionShield Security',
-    description: 'Advanced cybersecurity solutions with threat detection and prevention capabilities.',
-    category: 'Security',
-    pricing: '$3,999/month',
-    features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Compliance Management'],
-    benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance Ready', 'Peace of Mind'],
-    icon: Shield,
-    popular: false
-  },
-  {
-    id: 'automation-platform',
-    name: 'ZionAutomate Platform',
-    description: 'Intelligent automation platform for streamlining business processes and workflows.',
-    category: 'Automation',
-    pricing: '$2,499/month',
-    features: ['Workflow Automation', 'Process Optimization', 'Integration Hub', 'Analytics Dashboard'],
-    benefits: ['Increased Productivity', 'Reduced Errors', 'Cost Savings', 'Better Efficiency'],
-    icon: Zap,
-    popular: false
-  },
-  {
-    id: 'collaboration-suite',
-    name: 'ZionCollaborate Suite',
-    description: 'Comprehensive collaboration platform for teams and organizations.',
-    category: 'Collaboration',
-    pricing: '$1,999/month',
-    features: ['Team Chat', 'Video Conferencing', 'File Sharing', 'Project Management'],
-    benefits: ['Better Communication', 'Improved Collaboration', 'Remote Work Ready', 'Enhanced Productivity'],
-    icon: Users,
-    popular: false
-  },
-  {
-    id: 'data-management',
-    name: 'ZionData Manager',
-    description: 'Advanced data management and governance platform for enterprise data needs.',
-    category: 'Data Management',
-    pricing: '$3,499/month',
-    features: ['Data Governance', 'Quality Management', 'Compliance Tools', 'Analytics Integration'],
-    benefits: ['Data Quality', 'Compliance Ready', 'Better Insights', 'Risk Reduction'],
-    icon: Star,
-    popular: false
-  }
-];
-
-const categories = [
-  'All',
-  'AI & Analytics',
-  'Cloud Services',
-  'Security',
-  'Automation',
-  'Collaboration',
-  'Data Management'
-];
-
-const ProductsIndex: NextPage = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [searchTerm, setSearchTerm] = React.useState('');
-
-  const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
   return (
+
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -135,6 +50,49 @@ const ProductsIndex: NextPage = () => {
               {/* Search Bar */}
               <div className="mb-8">
                 <div className="relative">
+
+  return (
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+    <Layout
+      title="Products - Zion Tech Group"
+      description="Discover our comprehensive suite of technology products designed to transform your business operations."
+      keywords="products, technology solutions, AI, cloud, security, automation, collaboration">;
+      <div className="min-h-screen bg-gray-50">;
+        {/* Hero Section */}
+
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+          </div>;
+
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Products</span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                Comprehensive technology products designed to transform your business operations and drive growth.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-white">;
+          <div className="container mx-auto px-4">;
+            <div className="max-w-4xl mx-auto">;
+              {/* Search Bar */}
+              <div className="mb-8">;
+                <div className="relative">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <input
                     type="text"
                     placeholder="Search products..."
@@ -277,6 +235,9 @@ const ProductsIndex: NextPage = () => {
                 </button>
                 <Link
                   href="/contact"
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   Contact Sales
@@ -287,30 +248,51 @@ const ProductsIndex: NextPage = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+<<<<<<< HEAD
 
-export default ProductsIndex;
-  )
-};
-
-export default Index;
-=======
-import type { NextPage } from 'next',
-import Head from 'next/head',
-const Index: NextPage = () => {
-  return (
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index page" />
-      </Head>
+
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
+
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name='description' content='Index page' />
+      </Head>
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+export default ProductsIndex;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+      <main>
+        <h1>Index</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+  ),
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+  );
+ursor/integrate-build-improve-and-re-verify-8f7d
+};
+
+export default Index;
+}
+export default ProductsIndex;
+origin/main
   )
+}
+export default Index;
+
 },
 export default Index,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

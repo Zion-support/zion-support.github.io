@@ -1,100 +1,92 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import OpenAI from 'openai';
-import { readJson } from '../../../utils/fsDb';
-import { HelpArticle, matchIntent } from '../../../utils/support';
-import { logSupportEventToOperator } from '../../../utils/operator';
-const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 import { readJson } from "../../../utils/fsDb";
 import { HelpArticle, matchIntent } from "../../../utils/support";
 import { logSupportEventToOperator } from "../../../utils/operator";
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" });
->>>>>>> main
-
   const { sessionId, messages } = req.body as {
     sessionId?: string;
     messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
-  };
-  if (!messages || !Array.isArray(messages))
+  }
+  if (!messages |!Array.isArray(messages))
     return res.status(400).json({ error: "messages required" });
-
   const articles = readJson<HelpArticle[]>("help/articles.json", []);
   const lastUser = [...messages].reverse().find((m) => m.role === "user");
   const intent = lastUser
     ? matchIntent(lastUser.content, articles)
-    : { intentMatched: false, matchedArticleIds: [] };
-
+    : { intentMatched: false, matchedArticleIds: [] }
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
-  // Build context with top matched articles as brief references
-  const matchedArticles = articles.filter((a) =>
-    intent.matchedArticleIds.includes(a.id),
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  }
+  if ()) {
+  $2
+}
+    return res.status (400).json ({ error: "messages required" });
+;
+  const articles = read_json < HelpArticle[]>("help / articles.json", []);
+  const last_user = [...messages].reverse ().find ((m) => m.role === "user");
+  const intent = last_user;
+    ? match_intent (last_user.content, articles);
+    : { intent_matched: false, matchedArticleIds: [] }
+;
+  const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
+;
+  // Build context with top matched articles as brief references;
+  const matched_articles = articles.filter ((a) =>;
+    intent.matchedArticleIds.includes (a.id),
   );
-  const context = matchedArticles
-    .map((a) => `- ${a.title}: /help/${a.slug}`)
-    .join("\n");
-
-  const sysMessage = {
+  const context = matched_articles;
+    .map ((a) => `- ${a.title}: /help/${a.slug}`);
+    .join ("\n");
+;
+  const sys_message = {
     role: "system" as const,
-    content:
-      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ""),
-  };
-
+    content:;
+      SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : ""),
+  }
+;
   try {
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [sysMessage, ...messages],
+    const completion = await openai.chat.completions.create ({
+      model: "gpt - 4o - mini",
+      messages: [sys_message, ...messages],
       temperature: 0.2,
     });
-
-    const assistantMessage =
-      completion.choices?.[0]?.message?.content ??
+;
+    const assistant_message =;
+      completion.choices?.[0]?.message?.content ??;
       "Let me know how I can help.";
-
-    await logSupportEventToOperator({
+;
+    await logSupportEventToOperator ({
       type: "chat_completion",
-      sessionId: sessionId ?? "unknown",
+      session_id: session_id ?? "unknown",
       payload: { intent },
     });
-
-    return res.status(200).json({
-      assistantMessage,
+;
+    return res.status (200).json ({
+      assistant_message,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       meta: {
-        intentMatched: intent.intentMatched,
+        intent_matched: intent.intent_matched,
         matchedArticleIds: intent.matchedArticleIds,
-        links: matchedArticles.map((a) => ({
+
+        links: matched_articles.map ((a) => ({
           title: a.title,
           href: `/help/${a.slug}`,
         })),
       },
+
     });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch (e: any) {
-<<<<<<< HEAD
-    return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-    return res.status(200).json({
-      assistantMessage:
-        "I could not reach the assistant right now. Please try again in a moment.",
-    });
->>>>>>> main
-  }
-}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

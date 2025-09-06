@@ -1,129 +1,56 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react'
-import { Star } from 'lucide-react'
-import { ReviewStats } from '@/components/reviews/ReviewStats'
-import { ReviewsList } from '@/components/reviews/ReviewsList'
-import { useReviews } from '@/hooks/useReviews'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-interface ProfileRatingsProps {
-  userId: string
-averageRating?: number
-ratingCount?: number 
-}export function ProfileRatings ({
-  userId,  averageRating = 0, ratingCount = 0 
-}: ProfileRatingsProps) {
-  const {
-  reviews, isLoading,  fetchUserReviews, reportReview 
-}= useReviews ()
-const [ratingDistribution, setRatingDistribution] = useState<Record<number number>> ({
-})
-//Calculate rating distribution useEffect ( () => {
-  if (reviews.length > 0) {
-  const distribution: Record<number number> = {
-  1: 0, 2: 0, 3: 0,  4: 0, 5: 0 
-}
-reviews.forEach ( (review) => {
-  if (review.rating >= 1 && review.rating <= 5) {
-  distribution[review.rating] = (distribution[review.rating] || 0) + 1 
-export function ProfileRatings({
-  userId,
-  averageRating = 0,
-  ratingCount = 0,
-}: ProfileRatingsProps) {
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews()
-  const [ratingDistribution, setRatingDistribution] = useState<
-    Record<number, number>
-  >({})
-  // Calculate rating distribution
-  useEffect((,) => {
-    if (reviews.length > 0) {
-      const distribution: Record<number, number> = {
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-      }
-      reviews.forEach(review => {        if (review.rating >= 1 && review.rating <= 5) {
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1
-        }
-      })
-      setRatingDistribution(distribution)
-    }
-  }, [reviews])
-  // Fetch reviews when component mounts
-  useEffect(() => {
-    fetchUserReviews(userId)
-  }, [userId])
-  return (
-    <div className='space-y-6'>
-      <div className='flex flex-col md:flex-row gap-6'>
-        <div className='md:w-1/3'>          <ReviewStats
-    <div className="space-y-6">
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="md:w-1/3">
-  useEffect(() => {
-    fetchUserReviews(userId)
-  }, [userId])
-  return (
-=======
 
-import { useState, useEffect } from "react",
 import { Star } from 'lucide-react'
 import { ReviewStats } from "@/components/reviews/ReviewStats",
 import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+
+  return (
+
 
 interface ProfileRatingsProps {
   userId: string,
-  averageRating?: number,
+  averageRating?: number;
   ratingCount?: number
-import { useState, useEffect } from "react",;
-import { Star } from 'lucide-react';
-import { ReviewStats } from "@/components/reviews/ReviewStats",;
-import { ReviewsList } from "@/components/reviews/ReviewsList",;
-import { useReviews } from "@/hooks/useReviews",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-interface ProfileRatingsProps {;
-  userId: string,;
-  averageRating?: number,;
-  ratingCount?: number;
 }
-;
-export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews(),;
-  const [ratingDistribution, setRatingDistribution] = useState<Record<number number>>({}),;
-  // Calculate rating distribution;
-  useEffect(() => {;
-    if (reviews.length > 0) {;
-      const distribution: Record<number number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },;
-      reviews.forEach((review) => {;
-        if (review.rating >= 1 && review.rating <= 5) {;
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1;
-        }
-      }),;
-      setRatingDistribution(distribution);
-    }
-  }, [reviews]),
+
+
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview  } = useReviews(),
+  const [ ratingDistribution, setRatingDistribution ] = useState<Record<number, number>>({}),
+
   
-  // Fetch reviews when component mounts
+  // Calculate rating distribution
   useEffect(() => {
-    fetchUserReviews(userId)
-  }, [userId]),
-  
+    if (reviews.length > 0) {
+      const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      
+      reviews.forEach((review) => {
+        if (review.rating >= 1 && review.rating <= 5) {
+          distribution[ review.rating ] = (distribution[review.rating] || 0) + 1
+        }
+      });
+      
+
+      setRatingDistribution(distribution)
+    }
+
+
+  }, [reviews]);
+
+  // Fetch reviews when component mounts;
+  useEffect(() => {;
+    fetchUserReviews(userId);
+  }, [userId]);
+
+
   return (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    <div className='space-y-6'>
+      <div className='flex flex-col md:flex-row gap-6'>
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats
             averageRating={averageRating}
             totalReviews={ratingCount}
-<<<<<<< HEAD
             ratingDistribution={ratingDistribution}          />
         </div>
         <div className='md:w-2/3'>
@@ -135,6 +62,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value='positive'>Positive</TabsTrigger>
               <TabsTrigger value='critical'>Critical</TabsTrigger>
             </TabsList>
+            <TabsContent value='all'>              <ReviewsList
             <TabsContent value='all'>              <ReviewsList        
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
@@ -161,10 +89,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value="positive">
               <ReviewsList
 =======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
             ratingDistribution={ratingDistribution}
           />
         </div>
         
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -172,35 +102,43 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="positive">Positive</TabsTrigger>
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
-            
             <TabsContent value="all">
-              <ReviewsList
                 reviews={reviews}
                 isLoading={isLoading}
-                onReportReview={reportReview}
-              />
+                onReportReview={reportReview}              />
             </TabsContent>
-            
-            <TabsContent value="positive">
+            <TabsContent value='positive'>
               <ReviewsList
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-                reviews={reviews.filter((r) => r.rating >= 4)}
-                isLoading={isLoading}
+                reviews={reviews.filter(r => r.rating >= 4)}                isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
-<<<<<<< HEAD
             <TabsContent value='critical'>
               <ReviewsList
-                reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-            
-            <TabsContent value="critical">
+                reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
+
+            <TabsContent value="positive">
               <ReviewsList
-                reviews={reviews.filter((r) => r.rating < 4)}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+              />;
+            </TabsContent>;
+
+            <TabsContent value='critical'>;
+              <ReviewsList
+                reviews={reviews && reviews.filter(r => r && r.rating < 4)}                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
+
+            <TabsContent value="critical">;
+
+              <ReviewsList
+                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
+
+
+=======
 <<<<<<< HEAD
               />
             </TabsContent>
@@ -211,42 +149,36 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   )
 }, [reviews])
 //Fetch reviews when component mounts return (<div className="space-y-6" > <div className="flex flex-col md:flex-row gap-6" > <div className="md:w-1/3" > <ReviewStats averageRating= {
-  averageRating 
+  averageRating
 }totalReviews= {
-  ratingCount 
+  ratingCount
 }ratingDistribution= {
   ratingDistribution "
 }/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews 
+  reviews
 }isLoading= {
-  isLoading 
+  isLoading
 }onReportReview= {
   reportReview "
 }/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating >= 4) 
+  reviews.filter ( (r) => r.rating >= 4)
 }isLoading= {
-  isLoading 
+  isLoading
 }onReportReview= {
   reportReview "
 }/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating < 4) 
+  reviews.filter ( (r) => r.rating < 4)
 }isLoading= {
-  isLoading 
+  isLoading
 }onReportReview= {
+<<<<<<< HEAD
+  reportReview
+}/> </TabsContent> </Tabs> </div> </div> </div>)
+}"}
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
 }
 }
 }
-=======
-              />;
-            </TabsContent>;
-          </Tabs>;
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD

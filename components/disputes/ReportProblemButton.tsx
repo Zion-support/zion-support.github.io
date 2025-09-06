@@ -1,46 +1,104 @@
 import Link from "next/link";
 
+import Link from "next/link";
 export default function ReportProblemButton({
+  projectId
+  entityType
+  entityId
+}: {
   projectId,
   entityType,
   entityId,
 }: {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
 }) {
   const query = new URLSearchParams({
-    projectId,
-    ...(entityType ? { entityType } : {}),
-    ...(entityId ? { entityId } : {}),
+    projectId
+    ...(entityType ? { entityType } : {})
+    ...(entityId ? { entityId } : {})
+
+export default function ReportProblemButton(): any ({;
+  projectId,;
+  entityType,;
+  entityId,;
+}: {;
+  projectId: string;
+  entityType?: "milestone" | "contract" | "thread";
+  entityId?: string;
+}) {;
+  const query = new URLSearchParams({;
+    projectId,;
+    ...(entityType ? { entityType } : {}),;
+    ...(entityId ? { entityId } : {}),;
+
+  });
+
+  return (
+    <Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
+        {" "}
+        Report a Problem;
+      </a>;
+    </Link>;
+  );
+}
+
+export default function ReportProblemButton(): any ({;
+  projectId,;
+  entityType,;
+  entityId,;
+}: {;
+  projectId: string;
+  entityType?: "milestone" | "contract" | "thread";
+  entityId?: string;
+}) {;
+  const query = new URLSearchParams({;
+    projectId,;
+    ...(entityType ? { entityType } : {}),;
+    ...(entityId ? { entityId } : {}),;
+
   });
   return (
-    <Link href={`/disputes/new?${query.toString()}`}>
-      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">
-        {" "}
-        Report a Problem
-      </a>
-    </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-=======
+    <Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;
+    </Link>;
+
   );
->>>>>>> main
+}
+
+import Link from './next / link';
+;
+export default /**
+ * ReportProblemButton - Function description
+ */
+function ReportProblemButton() {
+  const query = new URLSearchParams ({
+    project_id,
+    ...(entity_type ? { entity_type } : {}),
+    ...(entity_id ? { entity_id } : {}),
+=======
 }
 export default function ReportProblemButton({
   projectId,
   entityType,
   entityId,
 }: {;
+
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
 }) {
   const query = new URLSearchParams({
-    projectId,
-    ...(entityType ? { entityType } : {}),
-    ...(entityId ? { entityId } : {}),
+    projectId
+    ...(entityType ? { entityType } : {})
+    ...(entityId ? { entityId } : {})
+
   });
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
@@ -48,6 +106,25 @@ export default function ReportProblemButton({
     </Link>
   );
 }
+export default /**
+ * ReportProblemButton - Function description
+ */
+function ReportProblemButton() {
+  const query = new URLSearchParams ({
+    project_id,
+    ...(entity_type ? { entity_type } : {}),
+    ...(entity_id ? { entity_id } : {}),
+  });
+  return (
+    <Link href={`/disputes / new?${query.to_string ()}`}>;
+      <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm"></a>;
+    </Link>);
+}
+
 =======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,12 +1,17 @@
+import React from 'react';
 'use client';
-
-<<<<<<< HEAD
-import * as React from 'react';
-import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import {Check} from 'lucide-react';
 =======
+
+import * as React from 'react';
+import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
+import {Check} from 'lucide-react';
+import {cn} from '@/lib/utils';
+
 "use client"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+"use client"
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -14,14 +19,7 @@ import { Check } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-const Checkbox = React.forwardRef<
-  React.ElementRef<typeof CheckboxPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
->(({ className, ...props }, ref) => (
-  <CheckboxPrimitive.Root
-    ref={ref}
-    className={cn(
-      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       className
     )}
     {...props}
@@ -32,12 +30,13 @@ const Checkbox = React.forwardRef<
       <Check className="h-3 w-3" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
+<<<<<<< HEAD
 ))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
-<<<<<<< HEAD
-export { Checkbox };
-=======
 export { Checkbox }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export { Checkbox };
+export { Checkbox }
+;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

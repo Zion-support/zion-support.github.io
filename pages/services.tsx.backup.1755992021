@@ -3,11 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Check, Star, TrendingUp, Clock, DollarSign, ShieldCheck, Search, Filter, Grid3X3, List, Phone, Mail, MapPin, ArrowRight, ExternalLink, Brain, Rocket, Globe, Cpu, Lock, Eye, Zap } from 'lucide-react';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import { ArrowRight, Check, Star, Zap, Shield, Database, Code, Lock, Link, QrCode, FileText, Mail, Key, Globe, BarChart3 } from 'lucide-react';
-=======
-import { ExternalLink } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-c308
 
 export default function ServicesPage() {
   const services = [

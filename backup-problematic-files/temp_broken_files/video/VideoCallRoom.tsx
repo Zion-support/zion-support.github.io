@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+=======
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/video/VideoCallRoom.tsx
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',;
+=======
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/video/VideoCallRoom.tsx
 import './video-call.css',;
 ;
 interface Participant {;
@@ -104,17 +112,25 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
   },;
 ;
   return (;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/video/VideoCallRoom.tsx
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">;
         <div className="flex items-center space-x-2">;
           <CardTitle className="text-white">Video Call</CardTitle>;
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
-            Room:{roomId}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+
           </Badge>;
         </div>;
         <div className="flex items-center space-x-2">;
           <Badge variant="secondary" className="bg-zion-blue-light text-white">;
             {formatDuration(callDuration)}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+
+=======
           </Badge>;
           <Badge variant="outline" className="text-white">;
             {participants.length} participant{participants.length !== 1 ? 's' :''}
@@ -128,25 +144,37 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
             participants.map((participant) => (;
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">;
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/video/VideoCallRoom.tsx
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
                     {/* Placeholder for actual video stream */}
                     <Video className="h-12 w-12 opacity-50" />;
                   </div>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+
+=======
                 ) :participant.isScreenSharing ? (;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/video/VideoCallRoom.tsx
                   <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">;
                     {/* Placeholder for screen share */}
                     <ScreenShare className="h-12 w-12 opacity-50" />;
                   </div>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+
+=======
                 ) :(;
                   <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">;
                     <Avatar className="h-20 w-20">;
                       <AvatarImage src={participant.avatar} alt={participant.name} />;
                       <AvatarFallback className="bg-zion-purple text-white text-2xl">;
                         {participant.name.charAt(0).toUpperCase()}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/video/VideoCallRoom.tsx
                       </AvatarFallback>;
                     </Avatar>;
                   </div>;
                 )}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+
+=======
                 ;
                 <div className="video-metadata flex items-center space-x-2">;
                   <span>{participant.name}</span>;
@@ -156,6 +184,7 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
               </div>;
             ));
           ) :(;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/video/VideoCallRoom.tsx
             <div className="col-span-full flex flex-col items-center justify-center py-12 text-white">;
               <Video className="h-16 w-16 mb-4 opacity-30" />;
               <p className="text-center text-lg mb-2">No participants yet</p>;
@@ -165,6 +194,9 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
             </div>;
           )}
         </div>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+
+=======
         ;
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">;
           <Button;
@@ -214,11 +246,15 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
             onClick={handleLeaveCall}
             aria-label="Leave call";
           >;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/video/VideoCallRoom.tsx
             <Phone className="rotate-135" />;
           </Button>;
         </div>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/video/VideoCallRoom.tsx
+
+=======
   ),;
 },; import { ;
   {;
@@ -274,13 +310,13 @@ if (onToggleVideo) {;
   isVideoEnabled ? <Video /> : <VideoOff /> ;
 }</Button> <Button >{;
   isScreenSharing ? <ScreenShareOff /> : <ScreenShare /> ;
-<<<<<<< HEAD:temp_broken_files/video/VideoCallRoom.tsx
+:temp_broken_files/video/VideoCallRoom.tsx
 }</Button> <Button >{;"  isAudioOnly ? <VolumeX /> : <Volume2 /> ";"}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
 };"'"
-=======
 }</Button> <Button > {;
   isAudioOnly ? <VolumeX /> : <Volume2 /> ";
 }</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
 };
 '"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/video/VideoCallRoom.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/video/VideoCallRoom.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/video/VideoCallRoom.tsx

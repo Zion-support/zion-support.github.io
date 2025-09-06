@@ -1,13 +1,20 @@
 
-<<<<<<< HEAD
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
-=======
 import { useEffect, useState, useRef, ReactNode } from "react",
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
+interface LazyLoadProps {
+  height?: string | number;
+  width?: string | number;
+  children: ReactNode,;
+
+  loadingComponent?: ReactNode;
 import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
@@ -16,24 +23,16 @@ interface LazyLoadProps {
   className?: string
 }
 
-<<<<<<< HEAD
-export function LazyLoad({;
-  height = "200px";
-  width = "100%";
-  children;
-  loadingComponent;
-=======
 export function LazyLoad({
-  height = "200px",
-  width = "100%",
-  children,
-  loadingComponent,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   className}: LazyLoadProps) {
   const [isVisible, setIsVisible] = useState(false),
   const [isLoaded, setIsLoaded] = useState(false),
   const containerRef = useRef<HTMLDivElement>(null),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -41,16 +40,7 @@ export function LazyLoad({
           setIsVisible(true),
           observer.disconnect()
         }
-      },
-      {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
-<<<<<<< HEAD
-        threshold: 0.1}
-    );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current)
-=======
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { Skeleton } from "@/components/ui/skeleton",;
@@ -71,12 +61,14 @@ export function LazyLoad({;
   const [isVisible, setIsVisible] = useState(false),;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   useEffect(() => {;
     const observer = new IntersectionObserver(;
       (entries) => {;
         if (entries[0].isIntersecting) {;
-          setIsVisible(true),;
-          observer.disconnect();
+
+          setIsVisible(true);
+          observer && observer.disconnect();
         }
       },;
       {;
@@ -85,66 +77,84 @@ export function LazyLoad({;
     ),;
     if (containerRef.current) {;
       observer.observe(containerRef.current);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-    }
 
+    }
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current)
       }
     }
-<<<<<<< HEAD
-  }, []);
 
+    }
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current)
+      }
+    }
+  }, []);
   useEffect(() => {
     if (isVisible) {
       // Simulate loading delay (remove in production)
       const timer = setTimeout(() => {
         setIsLoaded(true)
       }, 500);
-
       return () => clearTimeout(timer)
     }
   }, [isVisible]);
-
   const defaultLoadingComponent = (
     <Skeleton
-=======
+      style={{ height, width }}
+      className="rounded-md bg-zion-blue-light/20"
+    />
+  );
+  return (
+    <div
+      ref={containerRef}
+      className={cn("transition-opacity duration-500"
+        isLoaded ? "opacity-100" : "opacity-0";
+
   }, []),;
+
   useEffect(() => {;
     if (isVisible) {;
       // Simulate loading delay (remove in production);
       const timer = setTimeout(() => {;
         setIsLoaded(true);
-      }, 500),;
+      }, 500);
+
       return () => clearTimeout(timer);
     }
-  }, [isVisible]),;
+  }, [isVisible]);
+
   const defaultLoadingComponent = (;
+
     <Skeleton;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
-    />
-  ),
-
+    />;
+  );
   return (
     <div
       ref={containerRef}
-      className={cn("transition-opacity duration-500", 
+      className={cn("transition-opacity duration-500",
         isLoaded ? "opacity-100" : "opacity-0",
+
         className
-      )}
-    >
-      {isVisible ? (
-        <>
+      )}>;
+      {isVisible ? (;
+        <>;
           {!isLoaded && (loadingComponent || defaultLoadingComponent)}
           {isLoaded && children}
-        </>
-      ) : (
-        loadingComponent || defaultLoadingComponent
+        </>;
+      ) : (;
+        loadingComponent || defaultLoadingComponent;
       )}
+=======
     </div>
   )
 }
-;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

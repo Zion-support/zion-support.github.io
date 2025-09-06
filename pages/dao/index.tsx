@@ -1,12 +1,35 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react',;
 ;
 type Holder = { address: string, amount: string },
 
-=======
 import { useEffect, useState } from 'react';
+
+type Holder = { address: string, amount: string }
+type Metrics = {
+  updatedAt: number
+  tokenDistribution: { address: string, percent: number }[]
+  topHolders: Holder[]
+  activeProposals: any[]
+  governanceParticipationRate: number
+  cached?: boolean
+}
+export default function DaoMetrics() {
+  const [data, setData] = useState<Metrics | null>(null)
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    async function load() {
+      setLoading(true)
+      const resp = await fetch('/api/dao/metrics')
+      const json = await resp.json()
+      setData(json)
+      setLoading(false)
+    }
+    load()
+  }, [])
+  if (loading) return <div>Loading...</div>
+  if (!data) return <div>Error loading data</div>
+
 type Holder = { address: string, amount: string };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Metrics = {
   updatedAt: number;
   tokenDistribution: { address: string, percent: number }[],;
@@ -35,6 +58,10 @@ export default function DaoMetrics(req, res) {
   }, []),
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -55,16 +82,8 @@ export default function DaoMetrics(req, res) {
                 </div>
                 <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
-                </div>
-              </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        <div className="border rounded p-4">
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
             <thead>
@@ -75,43 +94,36 @@ export default function DaoMetrics(req, res) {
             </thead>
             <tbody>
               {data.topHolders.map((h) => (
-                <tr key={h.address} className="border-t border-gray-200 dark:border-gray-800">
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </tbody>
           </table>
         </div>
       </section>
-      <section className="grid lg:grid-cols-2 gap-6">
-        <div className="border rounded p-4">
-          <div className="font-medium mb-2">Active Proposals</div>
-          {data.activeProposals.length ? (
-            <ul className="list-disc pl-5 text-sm">
-              {data.activeProposals.map((p, i) => (
-                <li key={i}>{JSON.stringify(p)}</li>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </ul>
-          ) : (
-            <div className="text-sm text-gray-600">No active proposals.</div>
-<<<<<<< HEAD
-          )}
+
 =======
+
+      <section className="grid lg:grid-cols-2 gap-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+            <div className="text-sm text-gray-600">No active proposals.</div>
+          )}
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -126,11 +138,13 @@ export default function DaoMetrics(req, res) {
 <<<<<<< HEAD
   );
 };
-=======
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

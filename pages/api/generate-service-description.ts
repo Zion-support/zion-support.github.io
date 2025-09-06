@@ -1,8 +1,11 @@
-<<<<<<< HEAD
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import OpenAI from "openai";
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 export type GenerateServiceDescriptionRequest = {;
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page. Service Title: ${req.body?.title || 'Service'} Target Audience: ${req.body?.targetAudience || 'General'} Key Features: - ${req.body?.keyFeatures?.join('\n- ') || 'Feature 1'} ${req.body?.additionalNotes ? `Additional Notes: ${req.body.additionalNotes}` : ''} ${req.body?.toneInstruction || ''} Requirements: - 2-3 sentence hook opening that addresses audience needs - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline) - Use clear, benefit-focused language - End with a short call to action`;
@@ -10,93 +13,58 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type GenerateServiceDescriptionRequest = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   title: string;
   keyFeatures: string[];
   targetAudience: string;
   additionalNotes?: string;
-<<<<<<< HEAD
   tone?: "professional" | "friendly" | "persuasive" | "technical";
-};
-export type GenerateServiceDescriptionResponse = {;
+}
+export type GenerateServiceDescriptionResponse = {
   description: string;
+}
 };
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+export type GenerateServiceDescriptionRequest = {
+  title: string;
+
+
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>,
+  req: NextApiRequest
+  res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
-  if (req.method !== "POST") {;
-    return res.status(405).json({ error: "Method not allowed" });
-  }
 
-  const { title, keyFeatures, targetAudience, additionalNotes, tone } =
-    req.body as GenerateServiceDescriptionRequest;
-
-  if (!process.env.OPENAI_API_KEY) {
-    return res.status(500).json({ error: "OpenAI API key not configured" });
-  }
-
-  if (
-    !title ||
-    !Array.isArray(keyFeatures) ||
-    keyFeatures.length === 0 ||
-    !targetAudience
-  ) {
-    return res.status(400).json({
-      error: "Missing required fields: title, keyFeatures, targetAudience",
-    });
-  }
-
-  try {
-    const toneInstruction = tone
-      ? `Write in a ${tone} tone.`
-      : "Write in a professional, clear tone.";
     const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
-
 Service Title: ${title}
 Target Audience: ${targetAudience}
 Key Features:
-- ${keyFeatures.join("\n- ")}
+
 ${additionalNotes ? `Additional Notes: ${additionalNotes}` : ""}
-
 ${toneInstruction}
-
 Requirements:
 - 2-3 sentence hook opening that addresses audience needs
-- 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline)
-- Use clear, benefit-focused language
-- End with a short call to action`;
-    // Using Responses API for modern SDK
-    const response = await openai.responses.create({
-      model: "gpt-4o-mini",
-      input: prompt,
-      temperature: 0.7,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     });
     let description = "";
-    const output = response.output?.[0];
-    if (output && output.type === "message") {
-      // Aggregate all text parts from the first message
-      description = output.content
-        .filter((c) => c.type === "output_text")
-        .map((c: any) => c.text)
-        .join("\n");
-    }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    }
     if (!description) {
       // Fallback to top-level text if available
       // @ts-ignore
       description =
-        (response as any).content?.[0]?.text ||
+        (response as any).content?.[0]?.text |
         "Unable to generate description at this time.";
     }
-
     return res.status(200).json({ description });
   } catch (error: any) {
     console.error("OpenAI generation error:", error);
     return res.status(500).json({ error: "Failed to generate description" });
-=======
+
   tone?: 'professional' | 'friendly' | 'persuasive' | 'technical';
 };
 export type GenerateServiceDescriptionResponse = {
@@ -237,20 +205,34 @@ Requirements:;
       temperature: 0.7});
     let description = '';
     const output = response.output?.[0];
-    if (output && output.type === 'message') {;
+    // Check condition
+if ( {) {
+  $2
+}
       // Aggregate all text parts from the first message;
       description = output.content;
-        .filter((c) => c.type === 'output_text');
-        .map((c: any) => c.text);
-        .join('\n');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+        .filter ((c) => c.type === "output_text");
+        .map ((c: any) => c.text);
+        .join ("\n");
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      // Fallback to top - level text if available;
+      // @ts - ignore;
+      description =;
+        (response as any).content?.[0]?.text ||;
+        "Unable to generate description at this time.";
+    }
+    return res.status (200).json ({ description });
+  } catch (error: any) {
+    console.error ("OpenAI generation error:", error);
+    return res.status (500).json ({ error: "Failed to generate description" });
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -303,6 +285,8 @@ Requirements:;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

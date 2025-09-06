@@ -1,31 +1,23 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 import {ArrowLeft} from "lucide-react";
-=======
 import React from 'react',
 import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { ArrowLeft } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
->>>>>>> main
+import { Link } from "react-router-dom",
+import { ArrowLeft } from "lucide-react",
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProfileErrorStateProps {
   error: string | null;
 }
-
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
       <div className="text-red-400 mb-4 text-xl">
-        {error || "Something went wrong"}
+        {error |"Something went wrong"}
       </div>
       <Button asChild>
         <Link
@@ -37,23 +29,20 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
-<<<<<<< HEAD
+  );
+}
   )
-<<<<<<< HEAD
-=======
+  )
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { ArrowLeft } from "lucide-react";
 interface ProfileErrorStateProps {;
   error: string | null;
-=======
-  );
->>>>>>> main
 }
-;
-export function ProfileErrorState({ error }: ProfileErrorStateProps) {;
-  return (;
+
+export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
+  return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
       <Button asChild>;
@@ -64,6 +53,18 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {;
       </Button>;
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
+;
+=======
+
+  )
+=======
+  )
+
+}
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

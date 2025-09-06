@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { supabase } from '@/integrations/supabase/client',;
 ;
 export async function ensureAnalyticsTablesExist() {;
@@ -111,4 +113,5 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
   console.error ('Error creating analytics tables:', error);
 // Tables creation failed, but we can still continue 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }

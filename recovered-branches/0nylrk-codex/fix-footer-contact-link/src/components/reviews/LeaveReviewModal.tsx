@@ -1,5 +1,6 @@
 
-<<<<<<< HEAD
+import { useState, useEffect } from "react";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -8,25 +9,36 @@ import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
 =======
 import { useState, useEffect } from "react",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogHeader;
+  DialogTitle;
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { ReviewForm } from "./ReviewForm";
+import { useReviews } from "@/hooks/useReviews";
+interface LeaveReviewModalProps {
+
+  projectId: string
+  revieweeId: string
+  revieweeName: string
+  isOpen: boolean
+
+  onClose: () => void
+}
+export function LeaveReviewModal({
 import { ReviewForm } from "./ReviewForm",
 import { useReviews } from "@/hooks/useReviews",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface LeaveReviewModalProps {
   projectId: string,
   revieweeId: string,
   revieweeName: string,
   isOpen: boolean,
   onClose: () => void
-<<<<<<< HEAD
 }
 
 export function LeaveReviewModal({;
@@ -37,18 +49,16 @@ export function LeaveReviewModal({;
   onClose}: LeaveReviewModalProps) {
   const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
   const [open, setOpen] = useState(isOpen);
-  
   useEffect(() => {
     setOpen(isOpen)
   }, [isOpen]);
-  
+
   const handleOpenChange = (open: boolean) => {
-    setOpen(open),
+    setOpen(open)
     if (!open) {
       onClose()
     }
-  };
-  
+  }
   const handleSubmit = async (formValues: any) => {
     if (userReview) {
       // Update existing review
@@ -63,7 +73,24 @@ export function LeaveReviewModal({;
       const success = await submitReview(formValues);
       if (success) {
         handleOpenChange(false)
-=======
+import { useState, useEffect } from "react",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { ReviewForm } from "./ReviewForm",
+import { useReviews } from "@/hooks/useReviews",
+interface LeaveReviewModalProps {
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  isOpen: boolean,
+  onClose: () => void
 import { useState, useEffect } from "react",;
 import {;
   Dialog,;
@@ -76,6 +103,7 @@ import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { ReviewForm } from "./ReviewForm",;
 import { useReviews } from "@/hooks/useReviews",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface LeaveReviewModalProps {;
   projectId: string,;
   revieweeId: string,;
@@ -83,29 +111,35 @@ interface LeaveReviewModalProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-;
-export function LeaveReviewModal({;
-  projectId,;
-  revieweeId,;
-  revieweeName,;
-  isOpen,;
+
+export function LeaveReviewModal(): any ({;
+
+  projectId;
+  revieweeId;
+  revieweeName;
+  isOpen;
   onClose}: LeaveReviewModalProps) {;
-  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId),;
-  const [open, setOpen] = useState(isOpen),;
+  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
+  const [open, setOpen] = useState(isOpen);
+
+
   useEffect(() => {;
     setOpen(isOpen);
-  }, [isOpen]),;
+  }, [isOpen]);
+
   const handleOpenChange = (open: boolean) => {;
     setOpen(open),;
     if (!open) {;
       onClose();
     }
-  },;
+  };
+
   const handleSubmit = async (formValues: any) => {;
     if (userReview) {;
       // Update existing review;
-      const { project_id, reviewee_id, ...updates } = formValues,;
-      const success = await updateReview(userReview.id, updates),;
+
+      const { project_id, reviewee_id, ...updates } = formValues;
+      const success = await updateReview(userReview && userReview.id, updates);
       if (success) {;
         handleOpenChange(false);
       }
@@ -115,37 +149,44 @@ export function LeaveReviewModal({;
       const success = await submitReview(formValues);
       if (success) {;
         handleOpenChange(false);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
-      return success
+      return success;
     }
-<<<<<<< HEAD
-  };
-=======
-  },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
-    <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-md">
-        <DialogHeader>
-          <DialogTitle>
+    <Dialog open={open} onOpenChange={handleOpenChange}>;
+      <DialogContent className="max-w-md">;
+        <DialogHeader>;
+          <DialogTitle>;
             {userReview ? "Edit Your Review" : `Rate Your Experience with ${revieweeName}`}
-          </DialogTitle>
-          <DialogDescription>
-            Your feedback helps build a trustworthy community. It will be visible after moderation.
-          </DialogDescription>
-        </DialogHeader>
+
+          </DialogTitle>;
+          <DialogDescription>;
+            Your feedback helps build a trustworthy community. It will be visible after moderation.;
+          </DialogDescription>;
+        </DialogHeader>;
+
+
         <ReviewForm
           projectId={projectId}
           revieweeId={revieweeId}
           revieweeName={revieweeName}
           onSubmit={handleSubmit}
-          defaultValues={userReview || undefined}
+          defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
-        />
-      </DialogContent>
-    </Dialog>
-  )
+=======
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
 }
-;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======

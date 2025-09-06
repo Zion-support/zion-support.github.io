@@ -29,4 +29,5 @@ import { execSync, spawn } from;
         execSync(`"npm": install ${moduleName}`, { "stdio"`})
         "replacement"
         "replacement"
-        execSync(`"npm": install ${packageName}`, { "stdio"`})
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

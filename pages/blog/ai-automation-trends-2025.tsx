@@ -1,37 +1,36 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
-=======
 import Head from 'next/head',
+import Link from 'next/link';
+
+import React from 'react'
+
 import Link from 'next/link',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import Head from 'next / head';
+import Link from 'next / link';
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react',
 export default function AIAutomationTrends2025() {
   return (
-    <>
-      <Head>
-        <title>
-          AI Automation Trends 2025: The Future of Autonomous Systems | Zion
-          Tech Group
-        </title>
-        <meta
-          name='description'
-          content='Explore the cutting-edge trends shaping the future of AI automation and autonomous technology systems in 2025 and beyond.'
-        />
-        <meta
-          property='og:title'
-          content='AI Automation Trends 2025: The Future of Autonomous Systems'
-        />
-        <meta
-          property='og:description'
-          content='Explore the cutting-edge trends shaping the future of AI automation and autonomous technology systems.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
-        <main className='container mx-auto px-6 py-12'>
-          <div className='max-w-4xl mx-auto'>
-            <nav className='mb-8'>
+    <>;
+      <Head>;
+        <title>;
+          AI Automation Trends 2025: The Future of Autonomous Systems | Zion;
+          Tech Group;
+        </title>;
+
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
+        <main className='container mx-auto px-6 py-12'>;
+          <div className='max-w-4xl mx-auto'>;
+            <nav className='mb-8'>;
               <Link
                 href='/blog'
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
@@ -239,14 +238,26 @@ export default function AIAutomationTrends2025() {
       </div>
     </>
   )
-<<<<<<< HEAD
+}
 };
 ;
 =======
+
+};
+;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,9 +1,18 @@
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
+
+=======
+import React from "react",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { cn } from "@/lib/utils",;
+import { format } from "date-fns",;
+=======
 import React, { useMemo } from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
 import { format } from "date-fns",;
 // Use the wrapper hook so TypeScript properly infers the return type;
 // from the ThemeProvider context;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/ChatMessage.tsx
 import { useTheme } from "@/hooks/useTheme",;
 ;
 interface ChatMessageProps {;
@@ -12,6 +21,13 @@ interface ChatMessageProps {;
   timestamp:Date;
 }
 ;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
+export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
+  const { theme } = useTheme(),;
+  ;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 export const ChatMessage:React.FC<ChatMessageProps> = ({;
   message,;
   isUser,;
@@ -26,23 +42,21 @@ export const ChatMessage:React.FC<ChatMessageProps> = ({;
   ),;
 ;
   return (;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/ChatMessage.tsx
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>;
       <Avatar className="h-8 w-8">;
         {isUser ? (;
           <>;
-            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />;
-            <AvatarFallback>U</AvatarFallback>;
-          </>;
-        ) :(;
-          <>;
-            <AvatarImage;
-              src="https://placehold.co/40x40?text=AI";
-              alt="Zion Support";
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
+
             />;
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
         )}
       </Avatar>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
+
+=======
       ;
       <div className={cn(;
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",;
@@ -60,11 +74,15 @@ export const ChatMessage:React.FC<ChatMessageProps> = ({;
             :theme === "dark";
               ? "text-gray-300";
               :"text-gray-500";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/ChatMessage.tsx
         )}>;
           {format(timestamp, "h:mm a")}
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
+
+=======
   ),;
 },;
 ;
@@ -123,7 +141,7 @@ return (<> <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" /
 };
 //A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy //dependency like DOMPurify for now and instead escape the five critical //characters. This ensures any user-supplied string is rendered harmless //before we perform our link replacements below. ;
 }//First, escape any HTML so that user input cannot break out of the intended //markup.);
-<<<<<<< HEAD:temp_broken_files/support/ChatMessage.tsx
+:temp_broken_files/support/ChatMessage.tsx
 "
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatMessage.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatMessage.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/support/ChatMessage.tsx

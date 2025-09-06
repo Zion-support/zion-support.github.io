@@ -1,47 +1,15 @@
-import { useEffect, useState } from 'react'
-import EmptyState from '../../components/ui/EmptyState'
-export default function FavoritesPage() {
-  const [favorites, setFavorites] = useState<string[]>([])
-  useEffect(() => {
-    const raw = localStorage.getItem('zion.favorites')
-    setFavorites(raw ? JSON.parse(raw) : [])
-  }, [])
-<<<<<<< HEAD
-;
-  if (!favorites.length) {;
-    return <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Save profiles to revisit them easily.&quot; ctaLabel=&quot;Browse Talent&quot; ctaHref=&quot;/talent&quot; />
-=======
-  if (!favorites.length) {
-    return <EmptyState title="Nothing here yet..." message="Save profiles to revisit them easily." ctaLabel="Browse Talent" ctaHref="/talent" />
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
   }
-}
-  return (
-    <div>
-<<<<<<< HEAD
+
       <h2 className=&quot;text-xl font-semibold mb-4&quot;>Favorites</h2>
       <ul className=&quot;list-disc pl-6&quot;>
         {favorites.map(f => <li key={f}>{f}</li>)}
       </ul>;
     </div>;
   );
-=======
-      <h2 className="text-xl font-semibold mb-4">Favorites</h2>
-      <ul className="list-disc pl-6">
-        {favorites.map(f => <li key={f}>{f}</li>)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 }
-      </ul>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

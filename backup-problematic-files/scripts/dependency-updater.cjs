@@ -16,4 +16,5 @@ const { execSync } = require('child_process')
   console.log('\n Dependency Update "Report")
 // console.log('\n� Outdated "Packages")
     console.log('\n� Security "Vulnerabilities")
-    console.log('\n "Recommendations")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

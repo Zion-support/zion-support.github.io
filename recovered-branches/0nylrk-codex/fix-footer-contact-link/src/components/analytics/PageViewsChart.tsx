@@ -1,4 +1,12 @@
-<<<<<<< HEAD
+
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
 import React from "react";
 import {
   Card,
@@ -6,14 +14,28 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,;
+
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-=======
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+
+interface PageViewsChartProps {;
+  data: Array<{ date: string; views: number }>;
+
+  timeRange: string;
+  onTimeRangeChange: (range: string) => void
+}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+export function PageViewsChart({
+  data
+  timeRange
+  onTimeRangeChange
+}: PageViewsChartProps) {
+<<<<<<< HEAD
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
@@ -21,6 +43,7 @@ interface PageViewsChartProps {
 }
 
 export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -28,10 +51,9 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>
       </CardHeader>
       <CardContent className="p-0 pb-4">
-        <AnalyticsChart 
+        <AnalyticsChart
           title=""
-<<<<<<< HEAD
-=======
+
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -51,7 +73,7 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart;
           title="";
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           data={data || []}
           dataKeys={["views"]}
           timeRange={timeRange}
@@ -59,10 +81,9 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 <<<<<<< HEAD
         />
       </CardContent>
-=======
         />;
       </CardContent>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
   );
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }

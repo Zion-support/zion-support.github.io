@@ -1,14 +1,16 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-import {readJson} from '../../utils/fsDb';
+import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
+export async function getStaticProps() {
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export async function getStaticProps() {;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return { props: { articles } };
 
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {;
   const categories = Array.from(new Set(articles.map(a => a.category)));
-=======
 import { readJson } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {;
@@ -25,7 +27,8 @@ export async function getStaticProps() {;
 }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map((a) => a.category))),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
@@ -41,18 +44,17 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                     <div className="font-medium">{a.title}</div>
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
                   </Link>
+
                 </Link>
-<<<<<<< HEAD
-              ))}
-          </div>
-        </div>
-      ))}
-    </div>
-);
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
 
 }
 }
+
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -72,4 +74,10 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

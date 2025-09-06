@@ -1,4 +1,20 @@
-<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { PROVIDERS } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { PROVIDERS  } from '../../../lib / integrations / registry';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
+=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PROVIDERS } from "../../../lib/integrations/registry";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -6,7 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: "Method not allowed" });
   res.status(200).json({ providers: PROVIDERS });
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -28,4 +43,4 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

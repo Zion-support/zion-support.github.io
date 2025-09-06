@@ -107,23 +107,8 @@ const serviceCategories = [
 
 export default function Pricing() {
   return (
-<<<<<<< HEAD
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
-=======
-    <EnhancedFuturisticBackground variant="quantum-holographic-advanced" intensity="high">
-      <div className="min-h-screen">
-        <Head>
-          <title>Transparent Pricing Plans | Zion Tech Group - Revolutionary Micro SaaS Solutions</title>
-          <meta name="description" content="Choose from our transparent pricing plans starting at $99/month. Access 300+ revolutionary micro SaaS services with enterprise-grade security and support." />
-          <meta name="keywords" content="pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, Zion Tech Group pricing" />
-          <meta property="og:title" content="Transparent Pricing Plans | Zion Tech Group" />
-          <meta property="og:description" content="Choose from our transparent pricing plans starting at $99/month." />
-          <meta property="og:url" content="https://ziontechgroup.com/pricing" />
-          <link rel="canonical" href="https://ziontechgroup.com/pricing" />
-        </Head>
-
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d240
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10" />

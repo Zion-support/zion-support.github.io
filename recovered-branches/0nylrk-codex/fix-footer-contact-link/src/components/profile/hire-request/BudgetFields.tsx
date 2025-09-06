@@ -1,25 +1,20 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> main
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+
 import { TalentProfile } from "@/types/talent";
 import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
-<<<<<<< HEAD
-  form: UseFormReturn<FormValues>,
+  form: UseFormReturn<FormValues>;
   talent?: TalentProfile
-=======
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -38,13 +33,17 @@ import { FormValues } from "./useHireRequestForm",;
 interface BudgetFieldsProps {;
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
->>>>>>> main
-}
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+export function BudgetFields({ form, talent }: BudgetFieldsProps) {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   return (
     <>
@@ -70,7 +69,6 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
           </FormItem>
         )}
       />
-
       <FormField
         control={form.control}
         name="budgetMax"
@@ -96,4 +94,80 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
     </>
   );
 }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  return (
+    <>;
+      <FormField
+        control={form && form.control}
+        name="budgetMin"
+
+import React from './react';
+import { UseFormReturn  } from './react - hook - form';
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { TalentProfile  } from '@/types / talent';
+import { FormValues  } from './useHireRequestForm';
+interface BudgetFieldsProps {
+  form: UseFormReturn < FormValues>;
+  talent?: TalentProfile;
+}
+export /**
+ * BudgetFields - Function description
+ */
+function BudgetFields() {
+  return (
+    <>;
+      <FormField;
+        control={form.control}
+        name="budget_min";
+
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel className="text - white">Budget (Min)</FormLabel>;
+            <FormControl>;
+              <div className="relative">;
+                <span className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate">;
+                  $;
+                </span>;
+                <Input;
+                  type="number";
+                  className="pl - 7 bg - zion - blue border - zion - blue - light text - white";
+                  {...field}
+
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel className="text-white">Budget (Min)</FormLabel>;
+            <FormControl>;
+              <div className="relative">;
+                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>;
+                <Input
+                  type="number" 
+                  className="pl-7 bg-zion-blue border-zion-blue-light text-white" 
+                  {...field} 
+                />;
+              </div>;
+            </FormControl>;
+            <FormMessage className="text-red-400" />;
+          </FormItem>;
+        )}
+      />
+    </>
+  );
+}
+  )
+}
 ;
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

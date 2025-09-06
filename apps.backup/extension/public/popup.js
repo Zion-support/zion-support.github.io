@@ -1,57 +1,62 @@
-<<<<<<< HEAD
-const API_BASE = 'http: //localhost:4000';
-function getUserId(cb) {
-  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id))
-=======
+
+
 const API_BASE = 'http: //localhost:4000',;
 function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-}
+=======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
-<<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
-    document.getElementById('prompt').value = btn.dataset.text || ''
+    document.getElementById('prompt').value = btn.dataset.text |''
   })
-}),
-
+})
 document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document.getElementById('prompt').value.trim();
-  if (!prompt) return;
-  const userId = await new Promise((r) => getUserId(r));
+  if (=> getUserId(r)),
   const res = await fetch(`${API_BASE}/ai/ask`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
+
+    method: 'POST'
+    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) }
+
     body: JSON.stringify({ prompt })
-  });
+  }));
   const data = await res.json();
-  document.getElementById('result').textContent = data.text || JSON.stringify(data, null, 2);
+
+  document.getElementById('result').textContent = data.text |JSON.stringify(data, null, 2);
 });
 
 document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   const res = await fetch(`${API_BASE}/jobs/generate`, {
+
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-    body: JSON.stringify({ role: 'Cloud Engineer' })
+    body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
   });
-  const data = await res.json();
-  document.getElementById('result').textContent = data.description || 'Draft saved.';
+  const data = await res && res.json();
+  document && document.getElementById('result').textContent = data && data.description || 'Draft saved.';
+
 });
 
 document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
-  if (!userId) return (document.getElementById('result').textContent = 'Sign in first.');
+
+  if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.');
   const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {
     headers: { ...(userId ? { 'x-user-id': userId } : {}) }
   });
-  const data = await res.json();
-  document.getElementById('result').textContent = JSON.stringify(data.results || [], null, 2);
+  const data = await res && res.json();
+  document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.results || [], null, 2);
+
 });
 
 document.getElementById('viewNotifications').addEventListener('click', async () => {
@@ -60,22 +65,22 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   const res = await fetch(`${API_BASE}/notifications`, {
     headers: { 'x-user-id': userId }
   });
-  const data = await res.json();
-  document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2);
+
+  const data = await res && res.json();
+  document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2);
+
 });
 
 document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
-const id = crypto.randomUUID();
+  const id = crypto.randomUUID();
   setUserId(id);
-  document.getElementById('result').textContent = 'Signed in (local).';
+
+  document && document.getElementById('result').textContent = 'Signed in (local).';
 });
-=======
-;
-document.querySelectorAll('.example').forEach((btn) => {;
-  btn.addEventListener('click', () => {;
-    document.getElementById('prompt').value = btn.dataset.text || '';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   });
+
 }),;
 document.getElementById('askBtn').addEventListener('click', async () => {;
   const prompt = document.getElementById('prompt').value.trim(),;
@@ -123,4 +128,6 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   setUserId(id),;
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

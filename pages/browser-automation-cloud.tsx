@@ -1,12 +1,15 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
-=======
 import React from 'react',
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function BrowserAutomationCloudPage() {
 	return (
 		<>
@@ -34,35 +37,20 @@ export default function BrowserAutomationCloudPage() {
 							<h3 className="text-xl font-bold">Enterprise</h3>
 							<p className="mt-2 text-gray-300">SAML/SCIM, VPC deploy, dedicated subnets, custom guards & retries.</p>
 							<p className="mt-4 text-3xl font-bold">Custom</p>
-						</div>
-					</div>
-					<div className="mt-8 flex flex-wrap items-center gap-4">
-						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $99/mo</a>
-						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>
-						<a href="https://playwright.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> Playwright
-						</a>
-						<a href="https://pptr.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> Puppeteer
-						</a>
-					</div>
-				</section>
-			</main>
-		</>
-	)
-<<<<<<< HEAD
-=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react';
 import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-export default function BrowserAutomationCloudPage(req, res) {
-  try {
-	return (;
+import {Check, ExternalLink} from 'lucide-react';
+
+export default function BrowserAutomationCloudPage() {;
+	return (
 		<>;
 			<Head>;
 				<title>Browser Automation Cloud | Zion Tech Group</title>;
 				<meta name="description" content="Scale headless browser flows for testing, scraping, and RPA with queues, concurrency limits, and smart retries." />;
-				<link rel="canonical" href="https://ziontechgroup.com/browser-automation-cloud" />;
+				<link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/browser-automation-cloud" />;
 			</Head>;
 			<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 text-white bg-black">;
 				<div className="max-w-5xl mx-auto space-y-8">;
@@ -88,10 +76,10 @@ export default function BrowserAutomationCloudPage(req, res) {
 					<div className="mt-8 flex flex-wrap items-center gap-4">;
 						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $99/mo</a>;
 						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>;
-						<a href="https://playwright.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">;
+						<a href="https://playwright && playwright.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">;
 							<ExternalLink className="w-4 h-4" /> Playwright;
 						</a>;
-						<a href="https://pptr.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">;
+						<a href="https://pptr && pptr.dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">;
 							<ExternalLink className="w-4 h-4" /> Puppeteer;
 						</a>;
 					</div>;
@@ -103,6 +91,11 @@ export default function BrowserAutomationCloudPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

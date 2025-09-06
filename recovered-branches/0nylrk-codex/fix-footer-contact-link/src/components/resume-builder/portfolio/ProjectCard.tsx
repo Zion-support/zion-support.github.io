@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import {useState} from 'react';
-import {Card, CardContent, CardFooter} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Badge} from '@/components/ui/badge';
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
-import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
-import {PortfolioProject} from '@/types/resume';
-=======
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -22,24 +12,69 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
-import { PortfolioProject } from "@/types/resume";
->>>>>>> main
+} from '@/components / ui / alert - dialog';
+import { Edit, Trash2, Github, Link, FileText  } from './lucide-react';
+import { PortfolioProject  } from '@/types / resume';
+interface ProjectCardProps {
+  project: PortfolioProject;
+  on_edit: (project: PortfolioProject) => void;
+  on_delete: (project_id: string) => void;
+}
+export /**
+ * ProjectCard - Function description
+ */
+function ProjectCard() {
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState (false);
+;
+  const handle_delete = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      on_delete (project.id);
+    }
+    setDeleteDialogOpen (false);
+  }
+;
+
+  return (
+    <Card className="h - full flex flex - col">;
+      <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
+        {project.image_url ? (
+          <img;
+            src={project.image_url}
+            alt={project.title}
+
+=======
+import {useState} from 'react';
+import {Card, CardContent, CardFooter} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Badge} from '@/components/ui/badge';
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
+import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
+import {PortfolioProject} from '@/types/resume';
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void;
+  onDelete: (projectId: string) => void
 }
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
-<<<<<<< HEAD
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false);
+  }
+
       onDelete(project.id)
-=======
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -47,112 +82,124 @@ import { Badge } from '@/components/ui/badge',;
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',;
 import { PortfolioProject } from '@/types/resume',;
+
 interface ProjectCardProps {;
   project: PortfolioProject,;
   onEdit: (project: PortfolioProject) => void,;
   onDelete: (projectId: string) => void;
 }
-;
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+
   const handleDelete = () => {;
+
     if (project.id) {;
       onDelete(project.id);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     setDeleteDialogOpen(false)
   },
   
-=======
-      onDelete(project.id);
-    }
-    setDeleteDialogOpen(false);
-  };
-
->>>>>>> main
   return (
-    <Card className="h-full flex flex-col">
-      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
-        {project.image_url ? (
+    <Card className="h-full flex flex-col">;
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
+        {project && project.image_url ? (;
           <img
-            src={project.image_url}
-            alt={project.title}
+            src={project && project.image_url} 
+            alt={project && project.title} 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="w-full h-full object-cover"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-muted">
-            <FileText className="h-12 w-12 text-muted-foreground/50" />
-          </div>
+          />;
+        ) : (;
+          <div className="w-full h-full flex items-center justify-center bg-muted">;
+            <FileText className="h-12 w-12 text-muted-foreground/50" />;
+          </div>;
         )}
-      </div>
-<<<<<<< HEAD
-      <CardContent className="flex-grow pt-6">
-        <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{project.title}</h3>
-=======
 
-      <CardContent className="flex-grow pt-6">
-        <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{project.title}</h3>
+            className="w - full h - full object - cover";
+          />) : (
+          <div className="w - full h - full flex items - center justify - center bg - muted">;
+            <FileText className="h - 12 w - 12 text - muted - foreground / 50" />;
+          </div>)}
+      </div>;
+      <CardContent className="flex - grow pt - 6">;
+        <div className="space - y-2">;
+          <h3 className="font - semibold text - lg">{project.title}</h3>;
 
->>>>>>> main
           {project.description && (
-            <p className="text-sm text-muted-foreground line-clamp-3">
+            <p className="text - sm text - muted - foreground line - clamp - 3">;
               {project.description}
-            </p>
+
+      </div>;
+
+      <CardContent className="flex-grow pt-6">;
+        <div className="space-y-2">;
+          <h3 className="font-semibold text-lg">{project && project.title}</h3>;
+
+          {project && project.description && (;
+            <p className="text-sm text-muted-foreground line-clamp-3">{project && project.description}</p>;
           )}
 
-          {project.technologies && project.technologies.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-2">
-              {project.technologies.map((tech, index) => (
-                <Badge key={index} variant="secondary" className="text-xs">
+          {project && project.technologies && project && project.technologies.length > 0 && (;
+            <div className="flex flex-wrap gap-1 mt-2">;
+              {project && project.technologies.map((tech, index) => (;
+                <Badge key={index} variant="secondary" className="text-xs">;
+
                   {tech}
-<<<<<<< HEAD
                 </Badge>
               ))}
             </div>
-=======
                 </Badge>;
               ))}
             </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-          )}
-        </div>
-      </CardContent>
 <<<<<<< HEAD
-=======
-
->>>>>>> main
-      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
-        <div className="flex gap-2">
-          {project.github_url && (
-            <a
-              href={project.github_url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="ghost" size="icon">
-                <Github className="h-4 w-4" />
-              </Button>
-            </Link>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
+
+            </p>)}
+          {project.technologies && project.technologies.length > 0 && (
+            <div className="flex flex - wrap gap - 1 mt - 2">;
+              {project.technologies.map ((tech, index) => (
+                <Badge key={index} variant="secondary" className="text - xs">;
+                  {tech}
+                </Badge>))}
+            </div>)}
+        </div>;
+      </CardContent>;
+      <CardFooter className="flex justify - between border - t bg - muted / 40 p - 4">;
+        <div className="flex gap - 2">;
+
+          {project.github_url && (
+            <a;
+              href={project.github_url}
+
+              target="_blank";
+              rel="noopener noreferrer";
+            >;
+              <Button variant="ghost" size="icon">;
+                <Github className="h - 4 w - 4" />;
+              </Button>;
+            </a>)}
 
           {project.demo_url && (
-            <a
+            <a;
               href={project.demo_url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="ghost" size="icon">
-                <Link className="h-4 w-4" />
-              </Button>
-            </Link>
+
+        </div>;
+      </CardContent>;
+
+      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">;
+        <div className="flex gap-2">;
+          {project && project.github_url && (;
+            <a href={project && project.github_url} target="_blank" rel="noopener noreferrer">;
+              <Button variant="ghost" size="icon">;
+                <Github className="h-4 w-4" />;
+              </Button>;
+            </a>;
           )}
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>
             <Edit className="h-4 w-4" />
@@ -166,10 +213,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
           </Button>
         </div>
       </CardFooter>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -193,3 +236,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
     </Card>
   );
 }
+  )
+}
+;

@@ -1,4 +1,5 @@
 
+=======
 ;
 // Define types for the pricing recommendation;
 export interface PricingSuggestion {;
@@ -145,6 +146,7 @@ export async function getTalentRateSuggestion(params:TalentRateParams):Promise<P
     ;
     if (location) {;
       explanation += `, considering market rates in ${location}`,;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     ;
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`,;
@@ -165,85 +167,6 @@ export async function getTalentRateSuggestion(params:TalentRateParams):Promise<P
     },;
   }
 }
-;
-// Function to save pricing analytics data;
-export async function trackPricingSuggestion(data:{;
-  userId:string,;
-  suggestionType:'client' | 'talent',;
-  suggestedMin:number,;
-  suggestedMax:number,;
-  actualValue?:number,;
-  accepted:boolean;
-}) {;
-  try {;
-    // In a real implementation, this would save to the database;
-    // For now, we'll just log it;
-    // // // console.log("Tracking pricing suggestion:", data),;
-    ;
-    // In a real implementation with Supabase:// await supabase;
-    //  .from('pricing_suggestions');
-    //  .insert([data]),;
-    ;
-    return true;
-  } catch (error) {;
-    console.error("Error tracking pricing suggestion:", error),;
-    return false,;
-  } //Define types for the pricing recommendation 
-}export interface ClientBudgetParams {
-  jobTitle: string;
-category: string;
-timeline?: string;
-scope?: string;
-experienceLevel?: string 
-}export interface TalentRateParams {
-  skills: string[];
-yearsExperience: number;
-location?: string 
-}try {
-  //This would be replaced with an actual API call to an AI model //Simulate API call delay await new Promise (resolve => setTimeout (resolve, 1000) );
-//Basic logic to determine budget range based on category maxRate -= 15;
-minRate = Math.max (minRate, 15);
-//Ensure minimum doesn't go too low 
-}//Generate explanation return {
-  minRate, maxRate, confidence, explanation 
-};
-}catch (error) {
-  //Return a fallback suggestion return {
-  //Return a fallback suggestion return {
-  minRate: 30;
-maxRate: 60;
-}
-}export async function getTalentRateSuggestion (params: TalentRateParams) : Promise<PricingSuggestion> {
-  try {
-  const {
-  skills, yearsExperience, location 
-}= params;
-//Base rate calculation based on years of experience inDemandSkills.some (demandSkill => skill.toLowerCase () .includes (demandSkill) ) );
-}//Generate explanation let explanation = `Based on $ {
-  yearsExperience 
-}years of experience`;
-if (hasInDemandSkills) {
-  explanation += `and your in-demand skills ($ {
-  skills.join () 
-}) ` 
-}if (location) {
-  explanation += `, considering market rates in $ {
-  location 
-}` 
-}explanation += `, we recommend a rate of $$ {
-  minRate 
-}-$$ {
-  maxRate 
-}/hour to remain competitive while maximizing your earning potential.`;
-return {
-  minRate;
-maxRate;
-confidence;
-explanation 
-}
-}catch (error) {
-  
-}
-}// Function to save pricing analytics data 
-}
+<<<<<<< HEAD
+
 }

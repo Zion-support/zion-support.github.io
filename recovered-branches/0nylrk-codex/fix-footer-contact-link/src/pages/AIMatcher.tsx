@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -12,7 +11,6 @@ import {MatchResult} from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {;
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-=======
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -20,38 +18,54 @@ import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
 import { AIMatchmaker } from "@/components/AIMatchmaker",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { toast } from "@/hooks/use-toast";
+import { MatchResult } from "@/lib/ai-matchmaking";
+export default function AIMatcherPage() {
+
+  const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const handleMatchSelect = (match: MatchResult) => {
+    // Get the item type from the category
+    let itemType = "service";
+    const category = match.item.category.toLowerCase()
+    if (category.includes("talent") |category === "engineering" |
+        category === "data science" |category === "development") {
 import { toast } from "@/hooks/use-toast",
 import { MatchResult } from "@/lib/ai-matchmaking",
 export default function AIMatcherPage() {
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
     let itemType = "service",
     const category = match.item.category.toLowerCase(),
-    
-    if (category.includes("talent") || category === "engineering" || 
+
+    if (category.includes("talent") || category === "engineering" ||
         category === "data science" || category === "development") {
+
       itemType = "talent"
-    } else if (category.includes("equipment") || category === "hardware") {
+    } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
     }
-    
     toast({
-      title: "Match Selected",
-      description: `You've selected ${match.item.title}`}),
-    
+      title: "Match Selected"
+      description: `You've selected ${match.item.title}`})
     // Navigate to the quote request page with the selected item
     navigate("/request-quote", {
-      state: { 
-        serviceType: itemType,
+      state: {
+        serviceType: itemType
         specificItem: match.item
       }
     })
+
+=======
+  }
+
   },
   
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>
       <Header />
@@ -80,9 +94,20 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
+            <AIMatchmaker
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+              onMatchSelect={handleMatchSelect}
+            />
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+            
             <AIMatchmaker 
-<<<<<<< HEAD
-=======
+            <AIMatchmaker 
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -93,32 +118,37 @@ import { AIMatchmaker } from "@/components/AIMatchmaker",;
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
 import { toast } from "@/hooks/use-toast",;
 import { MatchResult } from "@/lib/ai-matchmaking",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function AIMatcherPage() {;
-  const navigate = useNavigate(),;
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),;
+  const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
   const handleMatchSelect = (match: MatchResult) => {;
     // Get the item type from the category;
-    let itemType = "service",;
-    const category = match.item.category.toLowerCase(),;
-    if (category.includes("talent") || category === "engineering" ||;
+    let itemType = "service";
+    const category = match && match.item.category && category.toLowerCase(),;
+
+    if (category && category.includes("talent") || category === "engineering" || ;
         category === "data science" || category === "development") {;
       itemType = "talent";
-    } else if (category.includes("equipment") || category === "hardware") {;
+    } else if (category && category.includes("equipment") || category === "hardware") {;
       itemType = "equipment";
     }
-;
+
     toast({;
       title: "Match Selected",;
-      description: `You've selected ${match.item.title}`}),;
+      description: `You've selected ${match && match.item.title}`}),;
+
     // Navigate to the quote request page with the selected item;
     navigate("/request-quote", {;
-      state: {;
-        serviceType: itemType;
-        specificItem: match.item;
+      state: { ;
+        serviceType: itemType,;
+        specificItem: match && match.item;
       }
     });
   };
-  return (;
+
+  return (
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -129,6 +159,7 @@ export default function AIMatcherPage() {;
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
             </p>;
           </div>;
+
           <div className="max-w-4xl mx-auto">;
             <div className="mb-8">;
               <label className="block text-sm font-medium text-zion-slate-light mb-2">;
@@ -147,18 +178,20 @@ export default function AIMatcherPage() {;
               </Select>;
             </div>;
             <AIMatchmaker;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
-            />
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
+            />;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+
+    </>);
 }
-<<<<<<< HEAD
 =======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

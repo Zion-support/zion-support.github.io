@@ -1,4 +1,5 @@
 
+=======
 import React, { useState } from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -171,6 +172,7 @@ export function ApiReference() {;
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint),;
 ;
   return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <ApiDocsLayout>;
       <div className="grid md:grid-cols-5 gap-8">;
         {/* Endpoint list */}
@@ -178,43 +180,20 @@ export function ApiReference() {;
           <div className="sticky top-8">;
             <h3 className="text-lg font-semibold text-white mb-4">Endpoints</h3>;
             <ul className="space-y-2">;
-              {endpoints.map((endpoint) => (;
-                <li key={endpoint.id}>;
-                  <button;
-                    onClick={() => setActiveEndpoint(endpoint.id)}
-                    className={`w-full text-left px-3 py-2 rounded-md text-sm flex items-center ${;
-                      activeEndpoint === endpoint.id;
-                        ? "bg-zion-purple/20 text-zion-cyan";
-                        :"text-zinc-400 hover:text-white hover:bg-zinc-900";
-                    }`}
-                  >;
-                    <span className={`inline-block w-16 font-mono ${endpoint.method === "GET" ? "text-green-500" :endpoint.method === "POST" ? "text-blue-500" :"text-yellow-500"}`}>;
+
                       {endpoint.method}
                     </span>;
                     <span className="truncate">{endpoint.path}</span>;
                   </button>;
-                </li>;              ))}
-            </ul>;
-          </div>;
-        </div>;
-;
-        {/* Endpoint details */}
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         <div className="md:col-span-4">;
           {activeEndpointData ? (;
             <div>;
               <div className="flex items-center mb-6">;
-                <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${;
-                  activeEndpointData.method === "GET" ? "bg-green-950 text-green-500" :;
-                  activeEndpointData.method === "POST" ? "bg-blue-950 text-blue-500" :;
-                  "bg-yellow-950 text-yellow-500";
-                }`}>;
-                  {activeEndpointData.method}
-                </span>;
-                <span className="font-mono text-lg text-white">{activeEndpointData.path}</span>;
-              </div>;
-;
-              <p className="text-zinc-400 mb-8">{activeEndpointData.description}</p>;
-;
+
               <Tabs defaultValue="docs">;
                 <TabsList className="mb-6">;
                   <TabsTrigger value="docs">Documentation</TabsTrigger>;
@@ -224,8 +203,7 @@ export function ApiReference() {;
                   {/* Request section */}
                   <div className="mb-8">;
                     <h3 className="text-xl font-semibold text-white mb-4">Request</h3>;
-                    ;
-                    {activeEndpointData.parameters && activeEndpointData.parameters.length > 0 && (;
+
                       <>;
                         <h4 className="text-lg font-medium text-white mb-3">Parameters</h4>;
                         <div className="overflow-x-auto mb-6">;
@@ -239,47 +217,13 @@ export function ApiReference() {;
                               </tr>;
                             </thead>;
                             <tbody>;
-                              {activeEndpointData.parameters.map((param, index) => (;
-                                <tr key={param.name} className={index < activeEndpointData.parameters.length - 1 ? "border-b border-zinc-800" :""}>;
-                                  <td className="py-2 px-4 text-white font-mono">{param.name}</td>;
-                                  <td className="py-2 px-4 text-blue-400 font-mono">{param.type}</td>;
-                                  <td className="py-2 px-4 text-zinc-300">{param.required ? "Yes" :"No"}</td>;
-                                  <td className="py-2 px-4 text-zinc-300">{param.description}</td>;
-                                </tr>;                              ))}
+
                             </tbody>;
                           </table>;
                         </div>;
                       </>;
                     )}
-;
-                    <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
-                    <CodeBlock ;
-                      code={activeEndpointData.requestExample} ;
-                      language="bash";
-                      showLineNumbers={true}
-                    />;
-                  </div>;
-;
-                  {/* Response section */}
-                  <div>;
-                    <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>;
-                    ;
-                    {Object.entries(activeEndpointData.responses).map(([status, response]) => (;
-                      <div key={status} className="mb-6">;
-                        <div className="flex items-center mb-3">;
-                          <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${;
-                            status.startsWith('2') ? 'bg-green-950 text-green-500' :;
-                            status === '401' || status === '403' ? 'bg-orange-950 text-orange-500' :;
-                            'bg-red-950 text-red-500';
-                          }`}>;
-                            {status}
-                          </span>;
-                          <span className="text-white">{response.description}</span>;
-                        </div>;
-                        ;
-                        <CodeBlock ;
-                          code={response.example} ;
-                          language="json";
+
                           showLineNumbers={true}
                         />;
                       </div>;
@@ -291,67 +235,4 @@ export function ApiReference() {;
                     <div className="text-center">;
                       <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;
                       <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;
-                    </div>;
-                  </div>;
-                </TabsContent>;
-              </Tabs>;
-            </div>;
-          ) :(;
-            <div className="p-8 border border-zinc-800 rounded-lg text-center">;
-              <p className="text-zinc-400">Select an endpoint from the list to view details</p>;
-            </div>;
-          )}
-        </div>;
-      </div>;
-    </ApiDocsLayout>;
-  ),;}
-;
-export default ApiReference,;
- 
-};
-//More jobs... ];
-"count" : 42;
-"limit" : 20;
-"offset" : 0 
-}` 
-};
-}
-};
-requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` 
-};
-] 
-}` 
-}
-};
-requestExample: `curl -X POST \\ https://api.zionai.com/v1/api/jobs \\ //More talent profiles... ];
-"count" : 38;
-"limit" : 20;
-"offset" : 0 
-}` 
-}
-};
-requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=React, Node.js&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` 
-}];
-//Find the active endpoint data <button onClick= {
-  () => setActiveEndpoint (endpoint.id) 
-}className= {
-  `w-full text-left px-3 py-2 rounded-md text-sm flex items-center $ {
-  activeEndpoint === endpoint.id </button> </li>) ) 
-}</ul> </div> </div> <Tabs defaultValue="docs" > <TabsList className="mb-6" > <TabsTrigger value="docs" >Documentation</TabsTrigger> <TabsTrigger value="try" >Try It</TabsTrigger> </TabsList> {
-  activeEndpointData.parameters && activeEndpointData.parameters.length > 0 && (<> <h4 className="text-lg font-medium text-white mb-3" >Parameters</h4> <div className="overflow-x-auto mb-6" > <table className="w-full border-collapse" > <thead> <tr className="border-b border-zinc-800" > <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Name</th> <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Type</th> <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Required</th> <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Description</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> </>) 
-}<h4 className="text-lg font-medium text-white mb-3" >Example Request</h4> <CodeBlock /> </div> {
-  /* Response section */ 
-}<div> <h3 className="text-xl font-semibold text-white mb-4">Responses</h3> {
-  Object.entries (activeEndpointData.responses) .map ( ([status, response]) => (<div key= {
-  status 
-}className="mb-6"> <div className="flex items-center mb-3"> <span className= {
-  `inline-block px-2 py-1 text-xs font-medium rounded mr-3 $ {
-  status.startsWith ('2') ? 'bg-green-950 text-green-500' : status === '401' || status === '403' ? 'bg-orange-950 text-orange-500' : 'bg-red-950 text-red-500' 
-}` 
-}> {
-  status 
-}</span> /> </div>) ) 
-}</div> </TabsContent> <TabsContent value="try"> <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center"> <div className="text-center"> <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p> <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p> </div> </div> </TabsContent> </Tabs> </div>) : (<div className="p-8 border border-zinc-800 rounded-lg text-center"> <p className="text-zinc-400">Select an endpoint from the list to view details</p> </div>) 
-}</div> </div> </ApiDocsLayout>) 
-}export default ApiReference;
+

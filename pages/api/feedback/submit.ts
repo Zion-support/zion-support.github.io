@@ -1,24 +1,67 @@
-<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (req.method !== "POST") return res.status(405).end();
-  const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
-  if (!responseId || !rating || !["up", "down"].includes(rating)) {
+  const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
+  if (!responseId |!rating |!["up", "down"].includes(rating)) {
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
+    id: responseId
+    rating
+    comment: String(comment |"").slice(0, 2000)
+    pagePath: String(pagePath |"")
+    aiModel: String(aiModel |"")
+    userAgent: req.headers["user-agent"] |""
+    ts: Date.now()
+  }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     id: responseId,
     rating,
     comment: String(comment || "").slice(0, 2000),
     pagePath: String(pagePath || ""),
     aiModel: String(aiModel || ""),
-    userAgent: req.headers["user-agent"] || "",
-    ts: Date.now(),
+    userAgent: req && req.headers["user-agent"] || "",
+    ts: Date && Date.now(),
   };
+  const rows = readAll();
+  rows && rows.push(entry);
+  writeAll(rows);
+  return res && res.status(200).json({ ok: true });
+
+}
+
 =======
+import type { NextApiRequest, NextApiResponse } from './next';
+import fs from './fs';
+import path from './path';
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).end ()) {
+  $2
+}
+  const { response_id, rating, comment, page_path, ai_model } = req.body || {}
+  if () {) {
+  $2
+}
+    return res.status (400).json ({ error: "Missing response_id or rating" });
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Feedback submitted' });
@@ -105,25 +148,36 @@ export default function handler(req, res) {
     aiModel: String(aiModel || '');
     userAgent: req.headers['user-agent'] || '',;
     ts: Date.now()},;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);
   return res.status(200).json({ ok: true });
-<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  }
+  const entry = {
+    id: response_id,
+    rating,
+    comment: String (comment || "").slice (0, 2000),
+    page_path: String (page_path || ""),
+    ai_model: String (ai_model || ""),
+    user_agent: req.headers["user - agent"] || "",
+    ts: Date.now (),
+  }
+  const rows = read_all ();
+  rows.push (entry);
+  write_all (rows);
+  return res.status (200).json ({ ok: true });
 }
 =======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

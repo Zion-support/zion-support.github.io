@@ -1,6 +1,5 @@
 
-export interface TalentProfile {;
-<<<<<<< HEAD
+
   id: string;
   user_id: string;
   full_name: string;
@@ -18,21 +17,21 @@ export interface TalentProfile {;
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-    title: string,
+
+    title: string
+
     description: string
   }[]
 }
 
-export interface TalentProfileFilters {;
   search?: string;
-  skills?: string[];
-  availabilities?: string[];
-  regions?: string[];
-  priceRange?: [number, number];
+  skills?: string[],
+  availabilities?: string[],
+  regions?: string[],
+  priceRange?: [number, number],
   experienceRange?: [number, number]
 }
 
-export interface HireRequest {;
   id: string;
   clientId: string;
   talentId: string;
@@ -40,17 +39,21 @@ export interface HireRequest {;
   projectDescription: string;
   budget: {
     min: number;
-    max: number,
+
+    max: number
+
     currency: string
-  };
+  }
   timeline: {
     startDate: string;
-    endDate?: string,
+
+    endDate?: string
     estimatedDuration?: string
-  };
-  status: 'pending' | 'accepted' | 'rejected' | 'completed',
+  }
+  status: 'pending' | 'accepted' | 'rejected' | 'completed'
+
   createdAt: string
-=======
+
   id: string,;
   user_id: string,;
   full_name: string,;
@@ -69,29 +72,34 @@ export interface HireRequest {;
   is_verified?: boolean,;
   key_projects?: {;
     title: string,;
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     description: string;
   }[];
 }
-;
-export interface TalentProfileFilters {;
-  search?: string,;
-  skills?: string[],;
-  availabilities?: string[],;
-  regions?: string[],;
-  priceRange?: [number, number],;
-  experienceRange?: [number, number];
+export interface TalentProfileFilters {
+  search?: string;
+  skills?: string[];
+  availabilities?: string[];
+  regions?: string[];
+  price_range?: [number, number];
+  experience_range?: [number, number];
+
 }
-;
-export interface HireRequest {;
-  id: string,;
-  clientId: string,;
-  talentId: string,;
-  projectTitle: string,;
-  projectDescription: string,;
-  budget: {;
-    min: number,;
-    max: number,;
+export interface HireRequest {
+  id: string;
+  client_id: string;
+  talent_id: string;
+  project_title: string;
+  project_description: string;
+  budget: {
+    min: number;
+
+    max: number,
     currency: string;
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   },;
   timeline: {;
     startDate: string,;
@@ -100,5 +108,13 @@ export interface HireRequest {;
   },;
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+;
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

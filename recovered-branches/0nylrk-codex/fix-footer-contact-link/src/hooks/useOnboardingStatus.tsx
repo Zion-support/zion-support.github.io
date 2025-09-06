@@ -1,127 +1,74 @@
 
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {useAuth} from "./useAuth";
 import {supabase} from "@/integrations/supabase/client";
-=======
 import { useState, useEffect } from "react",
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "./useAuth",
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface OnboardingStatus {
-  profileCompleted: boolean,
-  skillsAdded: boolean,
-  availabilitySet: boolean,
-  matchReceived: boolean,
-  jobPosted: boolean,
-  inviteSent: boolean,
+
+  profileCompleted: boolean
+  skillsAdded: boolean
+  availabilitySet: boolean
+  matchReceived: boolean
+  jobPosted: boolean
+  inviteSent: boolean
+
   responseReceived: boolean
 }
 
-<<<<<<< HEAD
 export function useOnboardingStatus() {;
   const { user } = useAuth();
-=======
 export function useOnboardingStatus() {
   const { user } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [status, setStatus] = useState<OnboardingStatus>({
-    profileCompleted: false,
-    skillsAdded: false,
-    availabilitySet: false,
-    matchReceived: false,
-    jobPosted: false,
-    inviteSent: false,
+
+    profileCompleted: false
+    skillsAdded: false
+    availabilitySet: false
+    matchReceived: false
+    jobPosted: false
+    inviteSent: false
+
     responseReceived: false
-  }),
-  
+
   useEffect(() => {
+
     const fetchOnboardingStatus = async () => {
-      if (!user) return,
-      
+
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
-          .single(),
-          
+
         if (error) {
-          console.error("Error fetching onboarding status:", error),
+          console.error("Error fetching onboarding status:", error);
           return
-<<<<<<< HEAD
-=======
-import { useState, useEffect } from "react",;
-import { useAuth } from "./useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-interface OnboardingStatus {;
-  profileCompleted: boolean,;
-  skillsAdded: boolean,;
-  availabilitySet: boolean,;
-  matchReceived: boolean,;
-  jobPosted: boolean,;
-  inviteSent: boolean,;
-  responseReceived: boolean;
-}
-;
-export function useOnboardingStatus() {;
-  const { user } = useAuth(),;
-  const [status, setStatus] = useState<OnboardingStatus>({;
-    profileCompleted: false,;
-    skillsAdded: false,;
-    availabilitySet: false,;
-    matchReceived: false,;
-    jobPosted: false,;
-    inviteSent: false,;
-    responseReceived: false;
-  }),;
-  useEffect(() => {;
-    const fetchOnboardingStatus = async () => {;
-      if (!user) return,;
-      try {;
-        // Get user onboarding progress from database;
-        const { data, error } = await supabase;
-          .from('user_onboarding');
-          .select('*');
-          .eq('user_id', user.id);
-          .single(),;
-        if (error) {;
-          console.error("Error fetching onboarding status:", error),;
-          return;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
-        
         if (data) {
           setStatus({
-            profileCompleted: data.profile_completed || false,
-            skillsAdded: data.skills_added || false,
-            availabilitySet: data.availability_set || false,
-            matchReceived: data.match_received || false,
-            jobPosted: data.job_posted || false,
-            inviteSent: data.talent_invited || false,
-            responseReceived: data.quote_received || false
+            profileCompleted: data.profile_completed |false
+            skillsAdded: data.skills_added |false
+            availabilitySet: data.availability_set |false
+            matchReceived: data.match_received |false
+            jobPosted: data.job_posted |false
+            inviteSent: data.talent_invited |false
+            responseReceived: data.quote_received |false
           })
-        }
-      } catch (err) {
-        console.error("Error in onboarding status hook:", err)
-<<<<<<< HEAD
-      }
-    };
-    
-    fetchOnboardingStatus()
-  }, [user]);
-  
-  return status
-}
-=======
-      } catch (err) {;
-        console.error("Error in onboarding status hook:", err);
-      }
-    };
-    fetchOnboardingStatus();
-  }, [user]);
-  return status;
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

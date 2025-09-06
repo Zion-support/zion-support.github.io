@@ -1,11 +1,20 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/PriceFilter.tsx
+=======
+import { ChevronDown, ChevronUp } from "lucide-react",;
+=======
 import { ChevronDown, ChevronUp } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/filters/PriceFilter.tsx
 import { Slider } from "@/components/ui/slider",;
 import { PriceFilterProps } from "@/types/filters",;
 ;
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen } PriceFilterProps) {;
   const handleChange = (values:number[]) => {;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/PriceFilter.tsx
+    setPriceRange([values[0], values[1]]),;
+=======
     setPriceRange([values[0] || 0, values[1] || 500]),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/filters/PriceFilter.tsx
   },;
 ;
   return (;
@@ -22,23 +31,34 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         )}
       </button>;
       ;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/PriceFilter.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/filters/PriceFilter.tsx
       {expanded && (;
         <div className="mt-6">;
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
             <span>${priceRange[0]}/hr</span>;
             <span>${priceRange[1]}/hr</span>;
           </div>;
-          <Slider;
-            aria-label="Hourly rate range";            value={[priceRange[0], priceRange[1]]}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/PriceFilter.tsx
+
             min={50}
             max={200}
             step={5}
             onValueChange={handleChange}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/PriceFilter.tsx
+
+=======
             className="mt-6";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/filters/PriceFilter.tsx
           />;
         </div>;
       )}
     </div>;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/PriceFilter.tsx
+
+=======
   ),;}
  export function PriceFilter ({;
   priceRange, setPriceRange, expanded,  toggleSection, isMobileFilterOpen ;
@@ -52,9 +72,9 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
 }/hr</span> <span>$ {;
   priceRange[1] ;
 }/hr</span> </div> <Slider /> </div>) ;
-<<<<<<< HEAD:temp_broken_files/talent/filters/PriceFilter.tsx
+:temp_broken_files/talent/filters/PriceFilter.tsx
 }</div>) ;"}"
-=======
 }</div>) ;
 }"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/PriceFilter.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/PriceFilter.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/filters/PriceFilter.tsx

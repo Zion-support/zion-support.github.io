@@ -1,62 +1,36 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { SORT_OPTIONS } from '@/data/sortOptions'
+
 import { SortDesc, ChevronDown } from 'lucide-react'
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
+
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 interface SortDropdownProps {
   sortOption: string
   setSortOption: (option: string) => void
-  sortOption: string,
+  sortOption: string
   setSortOption: (option: string,) => void
 }
+
 import {
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu"
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+
 interface SortDropdownProps {
-  sortOption: string,
-  setSortOption: (option: string) => void
-}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { SORT_OPTIONS } from "@/data/sortOptions",
-import { SortDesc, ChevronDown } from 'lucide-react'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
-export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-<<<<<<< HEAD
-        <Button
-          variant='outline'
-          className='w-full justify-between border-zion-blue-light text-white'
-=======
-        <Button 
-          variant="outline" 
-          className="w-full justify-between border-zion-blue-light text-white"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-        >
-          <div className="flex items-center gap-2">
-            <SortDesc className="h-4 w-4 text-zion-purple" />
-            {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent 
-        align="start" 
+      <DropdownMenuContent
+        align="start"
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
-<<<<<<< HEAD
         {SORT_OPTIONS.map(option => (          <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
@@ -64,60 +38,30 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
               sortOption === option.value
                 ? 'bg-zion-purple/20 text-zion-purple'
                 : ''            }`}        {SORT_OPTIONS.map((option,) => (
-=======
         {SORT_OPTIONS.map((option) => (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
           <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
 <<<<<<< HEAD
-              sortOption === option.value
-                ? 'bg-zion-purple/20 text-zion-purple'
-                : ''        >
-          <div className="flex items-center gap-2">
-            <SortDesc className="h-4 w-4 text-zion-purple" />
-=======
-              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { SORT_OPTIONS } from "@/data/sortOptions",;
-import { SortDesc, ChevronDown } from 'lucide-react';
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
-interface SortDropdownProps {;
-  sortOption: string;
-  setSortOption: (option: string) => void;
+
+            }`}
+          >
+            {option.label}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
 }
-;
-export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {;
-  return (;
-    <DropdownMenu>;
-      <DropdownMenuTrigger asChild>;
-        <Button;
-          variant="outline";
-          className="w-full justify-between border-zion-blue-light text-white";
-        >;
-          <div className="flex items-center gap-2">;
-            <SortDesc className="h-4 w-4 text-zion-purple" />;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+
+
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
-          </div>
-          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent 
-        align="start" 
-        className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
-      >
-        {SORT_OPTIONS.map((option) => (
-          <DropdownMenuItem
-            key={option.value}
+          </div>;
+            }`}
             onClick={() => setSortOption(option.value)}
-<<<<<<< HEAD
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
             }`}
@@ -132,7 +76,25 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
 }
 }
 }
-=======
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${;
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
+            }`}
+          >;
+            {option.label}
+          </DropdownMenuItem>))}
+      </DropdownMenuContent>;
+    </DropdownMenu>);
+}
+      <DropdownMenuContent;
+        align="start";
+        className="w-[200px] bg-zion-blue-dark border-zion-blue-light";
+      >;
+        {SORT_OPTIONS.map((option) => (;
+          <DropdownMenuItem;
+            key={option.value}
+<<<<<<< HEAD
+            onClick={() => setSortOption(option.value)}
+
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${;
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
             }`}
@@ -145,4 +107,3 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
   );
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

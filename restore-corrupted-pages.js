@@ -1,10 +1,9 @@
-<<<<<<< HEAD
+
+
 '),
       if (parts.length > 1) {
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -70,77 +69,78 @@ function restorePage(pagePath) {;
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
         backupContent = parts[1].split('>>>>>>>')[0];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      if (parts.length > 1) {
+        // Take the content after the conflict resolution
+        backupContent = parts[1].split('>>>>>>>')[0]
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     }
-    
     // Clean up the content
-    backupContent = backupContent.trim(),
-    
+
+    backupContent = backupContent.trim()
+
     // Ensure it has proper structure
     if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
-<<<<<<< HEAD
     
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Create a backup of the current corrupted file
-    const timestamp = Date.now(),
-    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`,
-    fs.writeFileSync(corruptedBackupPath, currentContent),
-    
+
+    const timestamp = Date.now()
+    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`
+    fs.writeFileSync(corruptedBackupPath, currentContent)
     // Restore the page
-    fs.writeFileSync(pagePath, backupContent),
-    
-    return { 
-      restored: true, 
-      backupUsed: backupPath,
+    fs.writeFileSync(pagePath, backupContent)
+    return {
+      restored: true
+      backupUsed: backupPath
+
       corruptedBackup: corruptedBackupPath
-=======
-;
-    // Create a backup of the current corrupted file;
-    const timestamp = Date.now();
-    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
-    fs.writeFileSync(corruptedBackupPath, currentContent),;
-    // Restore the page;
-    fs.writeFileSync(pagePath, backupContent),;
-    return {;
-      restored: true,;
-      backupUsed: backupPath,;
-      corruptedBackup: corruptedBackupPath;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
-    
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
-<<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Function to scan and restore all corrupted pages
 function restoreAllCorruptedPages() {
-  const pagesDir = path.join(process.cwd(), 'pages'),
+  const pagesDir = path.join(process.cwd(), 'pages')
   const results = {
-    total: 0,
-    restored: 0,
-    failed: 0,
+
+    total: 0
+    restored: 0
+    failed: 0
     details: []
-  },
-  
+  }
   function scanDirectory(dir) {
-    const entries = fs.readdirSync(dir, { withFileTypes: true }),
-    
+    const entries = fs.readdirSync(dir, { withFileTypes: true })
     for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name),
-      
+      const fullPath = path.join(dir, entry.name)
+
       if (entry.isDirectory()) {
-        if (entry.name !== 'node_modules' && entry.name !== '.git' && entry.name !== '.next') {
+        if ({
           scanDirectory(fullPath)
         }
+<<<<<<< HEAD
+
+      } else if (entry.name.endsWith('.tsx') |entry.name.endsWith('.jsx')) {
+        results.total++
+        console.log(`\n🔍 Checking: ${fullPath}`)
+        const result = restorePage(fullPath)
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         
         console.log(`\n🔍 Checking: ${fullPath}`),
-=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -162,19 +162,22 @@ function restoreAllCorruptedPages() {;
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         const result = restorePage(fullPath),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         if (result.restored) {
-          results.restored++,
-          console.log(`✅ Restored: ${fullPath}`),
-          console.log(`   Used backup: ${result.backupUsed}`),
+          results.restored++
+          console.log(`✅ Restored: ${fullPath}`)
+          console.log(`   Used backup: ${result.backupUsed}`)
           console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
+
+
+          console.log(`   Reason: ${result.reason}`)
           results.failed++,
-<<<<<<< HEAD
+          results.failed++,
           console.log(`❌ Failed: ${fullPath}`),
           console.log(`   Reason: ${result.reason}`)
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           // // // console.log(`❌ Failed: ${fullPath}`),
           // // // console.log(`   Reason: ${result.reason}`)
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {;
@@ -190,38 +193,17 @@ function restoreAllCorruptedPages() {;
           results.failed++,;
           // // // console.log(`❌ Failed: ${fullPath}`),;
           // // // console.log(`   Reason: ${result.reason}`);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
-        
         results.details.push({
-          file: fullPath,
+          file: fullPath
           ...result
         })
       }
     }
   }
 <<<<<<< HEAD
-  
-  console.log('🚀 Starting page restoration process...'),
-=======
-  // // // console.log('🚀 Starting page restoration process...'),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  scanDirectory(pagesDir),
-  // Generate summary
-<<<<<<< HEAD
-  console.log('\n📊 Restoration Summary: '),
-  console.log(`   Total pages: ${results.total}`),
-  console.log(`   Restored: ${results.restored}`),
-  console.log(`   Failed: ${results.failed}`),
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
-  
-  // Save detailed report
-  const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`),
-  
-  return results
-=======
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -246,23 +228,35 @@ function restoreAllCorruptedPages() {;
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-
 // Run the restoration if this script is executed directly
-if (require.main === module) {
+if ({
   restoreAllCorruptedPages()
 }
+}
 
+;
+module.exports = {;
+  restorePage,;
+  restoreAllCorruptedPages,;
+  findBestBackup;
+};
+<<<<<<< HEAD
+main
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 module.exports = {
-  restorePage,
+  restore_page,
   restoreAllCorruptedPages,
   findBestBackup;
-<<<<<<< HEAD
 },;
 
-=======
 };
-=======
->>>>>>> main
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

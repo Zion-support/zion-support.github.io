@@ -1,7 +1,14 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/AIEnhancementButton.tsx
+=======
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Sparkles, Loader2 } from 'lucide-react',;
+=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
 ;
 interface AIEnhancementButtonProps {;
@@ -54,18 +61,13 @@ export function AIEnhancementButton({;
       {isEnhancing ? (;
         <Loader2 className="h-3 w-3 animate-spin" />;
       ) :(;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/AIEnhancementButton.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
         <Sparkles className="h-3 w-3" />;
       )}
       <span className="text-xs">{buttonText}</span>;
     </Button>;
-  ),;}
- currentContent;
-enhancementType;
-context);
-) : (<Sparkles className="h-3 w-3" />) ;
-<<<<<<< HEAD:temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
-}</Button>) ;"}"
-=======
-}</Button>) ;
-}"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/AIEnhancementButton.tsx
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/AIEnhancementButton.tsx
+

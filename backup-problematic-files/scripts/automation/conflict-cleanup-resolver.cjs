@@ -129,4 +129,5 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
-  console.error(" Fatal "error")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

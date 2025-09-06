@@ -1,57 +1,53 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus();
-=======
 import React from "react",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
+import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function ClientOnboardingSteps() {
+
+  const onboardingStatus = useOnboardingStatus();
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
-=======
-import React from "react";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
-export function ClientOnboardingSteps() {
-  const onboardingStatus = useOnboardingStatus();
-
->>>>>>> main
   const steps: OnboardingStep[] = [
     {
-      id: "post-job",
-      label: "Post your first job",
-      completed: onboardingStatus.jobPosted,
-      link: "/post-job",
-      action: "Post Job",
-    },
+      id: "post-job"
+      label: "Post your first job"
+      completed: onboardingStatus.jobPosted
+      link: "/post-job"
+      action: "Post Job"
+    }
     {
-      id: "invite",
-      label: "Send invitation to talent",
-      completed: onboardingStatus.inviteSent,
-      link: "/talent",
-      action: "Find Talent",
-    },
+      id: "invite"
+      label: "Send invitation to talent"
+      completed: onboardingStatus.inviteSent
+      link: "/talent"
+      action: "Find Talent"
+    }
     {
+      id: "response"
+      label: "Receive your first application"
+      completed: onboardingStatus.responseReceived
+      link: "/client-dashboard"
+      action: "Check Dashboard"
+    }
+  ];
       id: "response",
       label: "Receive your first application",
       completed: onboardingStatus.responseReceived,
       link: "/client-dashboard",
-<<<<<<< HEAD
       action: "Check Dashboard"}],
   
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",;
@@ -78,12 +74,45 @@ export function ClientOnboardingSteps() {;
       link: "/client-dashboard";
       action: "Check Dashboard"}];
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+
 =======
+import React from './react';
+import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
+import { PlusCircle, SendIcon, InboxIcon  } from './lucide-react';
+import { OnboardingTracker, OnboardingStep  } from './OnboardingTracker';
+export /**
+ * ClientOnboardingSteps - Function description
+ */
+function ClientOnboardingSteps() {
+  const onboarding_status = useOnboardingStatus ();
+;
+  const steps: OnboardingStep[] = [;
+    {
+      id: "post - job",
+      label: "Post your first job",
+      completed: onboarding_status.job_posted,
+      link: "/post - job",
+      action: "Post Job",
+    },
+    {
+      id: "invite",
+      label: "Send invitation to talent",
+      completed: onboarding_status.invite_sent,
+      link: "/talent",
+      action: "Find Talent",
+    },
+    {
+      id: "response",
+      label: "Receive your first application",
+      completed: onboarding_status.response_received,
+      link: "/client - dashboard",
       action: "Check Dashboard",
     },
   ];
-
+;
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
->>>>>>> main
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Octokit } from '@octokit/rest',;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '',
@@ -8,9 +7,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    } catch (e) {
+      // ignore if missing
+    }
+return res.status(200).json({ ok: true, issue: issue.data.number })
+  } catch (e) {
+    console.error(e)
+
+    return res.status(500).json({ error: 'Failed to process webhook' })
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
 export default async function handler(req, res) {
@@ -21,12 +29,10 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;
   try {
-<<<<<<< HEAD
     const { app, severity, message, stack, metadata } = req.body || {},
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
 
@@ -62,7 +68,6 @@ return res.status(200).json({ ok: true, issue: issue.data.number })
     return res.status(500).json({ error: 'Failed to process webhook' })
   };
 };
-=======
     const { app, severity, message, stack, metadata } = req.body || {};
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,;
     const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined });
@@ -107,9 +112,13 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (error) {
       // ignore if missing;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    }
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
   }
 }
 ;
@@ -127,4 +136,6 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

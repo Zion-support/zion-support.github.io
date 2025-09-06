@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-import {GradientHeading} from "./GradientHeading";
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
-import {FileText} from "lucide-react";
-=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -11,7 +8,12 @@ import {
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
@@ -31,41 +33,8 @@ const faqs = [
   {
     question: "Are there any fees for listing my products or services?",
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
-
-export function FaqSection() {
-  return (
-    <section className="py-20 bg-zion-blue" id="faq">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <GradientHeading>Frequently Asked Questions</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
-            Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services
-          </p>
-        </div>
-        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
-          <div className="flex items-center mb-6">
-            <FileText className="h-6 w-6 text-zion-cyan mr-2" />
-            <h3 className="text-xl font-bold text-white">Common Questions</h3>
-          </div>
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
-                <AccordionTrigger className="text-white hover:text-zion-cyan">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-zion-slate-light">
-<<<<<<< HEAD
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </div>
-    </section>
-  )
-};
-=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -94,6 +63,7 @@ const faqs = [;
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 export function FaqSection() {;
   return (;
+
     <section className="py-20 bg-zion-blue" id="faq">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -102,15 +72,32 @@ export function FaqSection() {;
             Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services;
           </p>;
         </div>;
+
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">;
           <div className="flex items-center mb-6">;
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />;
             <h3 className="text-xl font-bold text-white">Common Questions</h3>;
           </div>;
+
           <Accordion type="single" collapsible className="w-full">;
-            {faqs.map((faq, index) => (;
+            {faqs && faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
+                  {faq && faq.question}
+                </AccordionTrigger>;
+                <AccordionContent className="text-zion-slate-light">;
+                  {faq && faq.answer}
+                </AccordionContent>;
+              </AccordionItem>;
+            ))}
+          </Accordion>;
+        </div>;
+      </div>;
+    </section>;
+  );
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
+;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -54,7 +54,7 @@ echo ""
 echo "🔒 Phase 3: Security & Performance"
 echo "====="
 # Security scan
-run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
+
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 # Performance monitoring

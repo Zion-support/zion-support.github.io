@@ -1,47 +1,56 @@
-"use client",;
-import { useEffect } from "react",;
-interface FirstInputEntry extends PerformanceEntry {;
-  processingStart: number,;
-  processingEnd: number,;
-  target?: Element;
-}
-;
-export function Analytics() {;
-  useEffect(() => {;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Performance monitoring;
-    if (typeof window !== "undefined") {;
+    // Check condition
+if ( {) {
+  $2
+}
       // Core Web Vitals monitoring;
-      const observer = new PerformanceObserver((list) => {;
-        for (const entry of list.getEntries()) {;
-          if (entry.entryType === "largest-contentful-paint") {;
-            // // // console.log("LCP:", entry.startTime);
+      const observer = new PerformanceObserver ((list) => {
+        for (const entry of list.get_entries ()) {
+          // Check condition
+if ( {) {
+  $2
+}
+            // // // console.log ("LCP:", entry.start_time);
           }
-          if (entry.entryType === "first-input") {;
-            const firstInputEntry = entry as FirstInputEntry,;
-            // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
+
           }
         }
-      }),;
-      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] }),;
+      }),
+      observer.observe ({ entry_types: ["largest - contentful - paint", "first - input"] }),
       // Cumulative Layout Shift monitoring;
-      let cls = 0,;
-      const observer2 = new PerformanceObserver((list) => {;
-        for (const entry of list.getEntries()) {;
-          if (entry.entryType === "layout-shift") {;
-            const layoutShiftEntry = entry as any,;
+      let cls = 0,
+      const observer2 = new PerformanceObserver ((list) => {
+        for (const entry of list.get_entries ()) {
+          // Check condition
+if ( {) {
+  $2
+}
+            const layoutShiftEntry = entry as any,
             cls += layoutShiftEntry.value;
           }
         }
-      }),;
-      observer2.observe({ entryTypes: ["layout-shift"] }),;
+      }),
+      observer2.observe ({ entry_types: ["layout - shift"] }),
       // Report metrics on page unload;
-      window.addEventListener("beforeunload", () => {;
-        // // // console.log("CLS:", cls);
-      }),;
+      window.addEventListener ("beforeunload", () => {
+        // // // console.log ("CLS:", cls);
+      }),
       // Cleanup;
+
+<<<<<<< HEAD
+=======
       return () => {;
         observer.disconnect();
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         observer2.disconnect();
+
       }
     }
   }, []);

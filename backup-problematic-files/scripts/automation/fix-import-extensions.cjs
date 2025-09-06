@@ -56,4 +56,5 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Import Extension Fixer "failed": ', error);
       process.exit(1)})};
-module.exports = ImportExtensionFixer;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

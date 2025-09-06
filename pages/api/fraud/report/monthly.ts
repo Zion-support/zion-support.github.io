@@ -1,14 +1,15 @@
+=======
 <<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
   if (req.method !== "GET") {;
     res.status(405).json({ error: "Method not allowed" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -18,7 +19,6 @@ export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
     res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     return;
     } catch (error) {
     console.error("Error:", error);
@@ -27,20 +27,36 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
   const month =
-    (req.query.month as string) || new Date().toISOString().slice(0, 7);
+    (req.query.month as string) |new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
   res.status(200).json(report);
 }
-=======
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "GET") {;
+    res.status(405).json({ error: "Method not allowed" });
+
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    res.status (405).json ({ error: "Method not allowed" });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    return;
   }
+<<<<<<< HEAD
+  const month =;
+    (req.query.month as string) || new Date ().toISOString ().slice (0, 7);
+  const store = getFraudStore ();
+  const report = await store.generateMonthlyReport (month);
+  res.status (200).json (report);
 }
+
   const month = (req.query.month as string) || new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
@@ -58,4 +74,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

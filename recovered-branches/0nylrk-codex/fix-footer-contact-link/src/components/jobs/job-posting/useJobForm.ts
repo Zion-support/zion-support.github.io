@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -17,23 +17,24 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
 =======
-import { useState, useEffect } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { format } from 'date-fns',
-import { toast } from "sonner",
-import { useNavigate } from 'react-router-dom',
-import { jobSchema, JobSchemaType } from './validation',
-import { useAuth } from "@/hooks/useAuth",
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export interface JobPostingProps {
-  jobId?: string,
-  onSuccess?: () => void
+  job_id?: string;
+  on_success?: () => void;
 }
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [startDate, setStartDate] = useState<Date | undefined>(undefined);
+  const [endDate, setEndDate] = useState<Date | undefined>(undefined);
+  const [isRemote, setIsRemote] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
   const { user } = useAuth(),
   const navigate = useNavigate(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [startDate, setStartDate] = useState<Date | undefined>(undefined),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
@@ -41,53 +42,13 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [isLoading, setIsLoading] = useState(false),
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const form = useForm<JobSchemaType>({
-    resolver: zodResolver(jobSchema),
+    resolver: zodResolver(jobSchema);
     defaultValues: {
-      title: '',
-      company: '',
-      location: '',
-      job_type: '',
-      salary_range: '',
-      description: '',
-      responsibilities: '',
-      qualifications: '',
-      benefits: '',
-      application_instructions: '',
-      contact_email: '',
-      published_date: '',
-      expiry_date: '',
-      is_remote: false,
-      category: '',
-      status: '',
-      external_apply_link: ''},
-    mode: "onChange"}),
 
-  // Function to create/update jobs that will be implemented by parent component
-  const submitJob = async (values: JobSchemaType) => {
-    if (!user) {
-      toast.error("You must be logged in to post a job"),
-      navigate("/login"),
-      return
-<<<<<<< HEAD
-    }
-
-    setIsLoading(true);
-
-    try {
-      const publishedDate = startDate ? startDate.toString() : '';
-      const expiryDate = endDate ? endDate.toString() : '';
-
-      const jobData = {
-        ...values;
-        published_date: publishedDate;
-        expiry_date: expiryDate;
-        is_remote: isRemote,
-        user_id: user.id};
-
-      if (onSuccess) {
-        onSuccess()
-=======
 import { useState, useEffect } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -150,33 +111,41 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
         user_id: user.id},;
       if (onSuccess) {;
         onSuccess();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       }
-      
+
       return jobData
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+      }
+      return job_data;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } catch (error: any) {
-      console.error("Error in job form submission:", error),
-      toast.error(error.message || "Failed to process form"),
-      throw error
+      console.error ("Error in job form submission:", error);
+      toast.error (error.message || "Failed to process form");
+      throw error;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setIsLoading(false)
+=======
 <<<<<<< HEAD
+      setIsLoading(false)
     }
   };
 
   return {
     form;
-    isLoading;
-    startDate;
+    is_loading;
+    start_date;
     setStartDate;
-    endDate, 
+
+    end_date,
+
     setEndDate;
-    isRemote;
+    is_remote;
     setIsRemote;
-    initialValues;
+    initial_values;
     setInitialValues;
     submitJob
-=======
 ;
       return jobData;
     } catch (error: any) {;
@@ -199,6 +168,39 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     initialValues,;
     setInitialValues;
     submitJob;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      setIsLoading(false)
+
+;
+      return jobData;
+    } catch (error: any) {;
+      console.error("Error in job form submission:", error),;
+      toast.error(error.message || "Failed to process form"),;
+      throw error;
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  return {;
+    form,;
+    isLoading,;
+    startDate,;
+    setStartDate,;
+    endDate,;
+    setEndDate,;
+    isRemote,;
+    setIsRemote,;
+    initialValues,;
+    setInitialValues;
+    submitJob;
+
   }
 };
+  }
+}
+
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  }
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

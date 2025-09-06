@@ -1,33 +1,32 @@
-<<<<<<< HEAD
 
-export default WhitepaperViewPage; import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router', // Changed from useParams
-import { supabase } from '@/integrations/supabase/client'
+import { supabase  } from '@/integrations/supabase/client';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel
-import { Button } from '@/components/ui/button'
+import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link', // For a back button, changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger'
+import {logErrorToProduction} from '@/utils/productionLogger';
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
+
 const useAuth = () => {
     // const { user } = useUserContext(), // Example from a real app
-    // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user },
+    // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user }
     return { isAdmin: false, isAuthenticated: false }, // Default to non-admin, not authenticated for this example
-},
-
+}
 interface SharedWhitepaper {
   whitepaper_data: {
-    tokenName: string,
-    tokenSupply: string,
-    sections: Array<{ id: string, title: string, content: string }>,
-    distributionChartData: Array<{ name: string, value: number }>,
+    tokenName: string
+    tokenSupply: string
+    sections: Array<{ id: string, title: string, content: string }>
+    distributionChartData: Array<{ name: string, value: number }>
     distributionBreakdown?: string
-  },
-  created_at: string,
+  }
+  created_at: string
   is_public: boolean
-=======
-import React, { useState, useEffect } from 'react',;
+
+}
+
 import { useRouter } from 'next/router', // Changed from useParams;
 import { supabase } from '@/integrations/supabase/client',;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel;
@@ -52,71 +51,68 @@ interface SharedWhitepaper {;
   },;
   created_at: string,;
   is_public: boolean;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 const WhitepaperViewPage: React.FC = () => {
-  const router = useRouter(),
-  const { id: rawId } = router.query,
-  const id = typeof rawId === 'string' ? rawId : undefined,
-  const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null),
-  const [loading, setLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
+  const router = useRouter()
+  const { id: rawId } = router.query
+  const id = typeof rawId === 'string' ? rawId : undefined
+  const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const { isAdmin } = useAuth(), // Get admin status
-
   useEffect((,) => {
     const fetchWhitepaper = async () => {
       if (!id) {
+        setError("No whitepaper ID provided.")
+        setLoading(false)
+        return
         setError("No whitepaper ID provided."),
         setLoading(false),
-<<<<<<< HEAD
-=======
         return
 ;
 const WhitepaperViewPage: React.FC = () => {;
   const router = useRouter(),;
-  const { id: rawId } = router.query,;
+  const { id: rawId } = router && router.query,;
   const id = typeof rawId === 'string' ? rawId : undefined,;
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null),;
   const [loading, setLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
   const { isAdmin } = useAuth(), // Get admin status;
-  useEffect(() => {;
+
+  useEffect((,) => {;
     const fetchWhitepaper = async () => {;
       if (!id) {;
         setError("No whitepaper ID provided."),;
         setLoading(false),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         return;
+<<<<<<< HEAD
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       }
-      setLoading(true),
-      setError(null),
+      setLoading(true)
+      setError(null)
       try {
         const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {
-          body: { id }}),
-
-        if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
-        if (responseData && (responseData as any).error) throw new Error((responseData as any).error),
-        if (!responseData || !(responseData as any).whitepaper_data) {
+          body: { id }})
+        if (funcError) throw new Error(`Supabase function error: ${funcError.message}`)
+        if (responseData && (responseData as any).error) throw new Error((responseData as any).error)
+        if (!responseData |!(responseData as any).whitepaper_data) {
           throw new Error('Shared whitepaper not found or data is invalid.')
         }
-
         setSharedData(responseData as SharedWhitepaper)
-
       } catch (e: any) {
-        logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),
-        setError(e.message || 'An unexpected error occurred.')
+        logErrorToProduction('Error fetching shared whitepaper:', { data:  e })
+        setError(e.message |'An unexpected error occurred.')
       } finally {
         setLoading(false)
       }
+    }
     },
     fetchWhitepaper()
-  }, [id]),
-
+  }, [id])
   if (loading) {
     return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>
   }
-
   if (error) {
     return (
       <div className="flex flex-col justify-center items-center h-screen text-red-600">
@@ -127,7 +123,6 @@ const WhitepaperViewPage: React.FC = () => {;
       </div>
     )
   }
-
   if (!sharedData) { // Check sharedData which includes the is_public flag
     return (
          <div className="flex flex-col justify-center items-center h-screen">
@@ -138,7 +133,6 @@ const WhitepaperViewPage: React.FC = () => {;
         </div>
     )
   }
-
   // Access control based on is_public and admin role
   if (!sharedData.is_public && !isAdmin) {
     return (
@@ -151,9 +145,7 @@ const WhitepaperViewPage: React.FC = () => {;
       </div>
     )
   }
-
-  const { whitepaper_data: whitepaper } = sharedData,
-
+  const { whitepaper_data: whitepaper } = sharedData
   return (
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
         <div className="mb-6 flex justify-between items-center">
@@ -166,7 +158,6 @@ const WhitepaperViewPage: React.FC = () => {;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">
                     Private (Admin View)
                 </span>
-<<<<<<< HEAD
             )}
         </div>
       <WhitepaperPreviewPanel
@@ -177,9 +168,33 @@ const WhitepaperViewPage: React.FC = () => {;
       />
     </div>
   )
+}
+export default WhitepaperViewPage;
+
 },
 ;
-=======
+      }
+      setLoading(true),;
+      setError(null),;
+      try {;
+        const { data: responseData, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;
+          body: { id }}),;
+
+        if (funcError) throw new Error(`Supabase function error: ${funcError && funcError.message}`),;
+        if (responseData && (responseData as any).error) throw new Error((responseData as any).error),;
+        if (!responseData || !(responseData as any).whitepaper_data) {;
+          throw new Error('Shared whitepaper not found or data is invalid.');
+        }
+
+        setSharedData(responseData as SharedWhitepaper);
+
+      } catch (e: any) {;
+        logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),;
+        setError(e && e.message || 'An unexpected error occurred.');
+      } finally {;
+        setLoading(false);
+      }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },;
     fetchWhitepaper();
   }, [id]),;
@@ -188,7 +203,7 @@ const WhitepaperViewPage: React.FC = () => {;
   }
 ;
   if (error) {;
-    return (;
+    return (
       <div className="flex flex-col justify-center items-center h-screen text-red-600">;
         <p>Error: {error}</p>;
         <Button asChild variant="link" className="mt-4">;
@@ -197,9 +212,11 @@ const WhitepaperViewPage: React.FC = () => {;
       </div>;
     );
   }
-;
+
+
   if (!sharedData) { // Check sharedData which includes the is_public flag;
-    return (;
+
+    return (
          <div className="flex flex-col justify-center items-center h-screen">;
             <p>Whitepaper not found.</p> {/* This can be a generic message */}
             <Button asChild variant="link" className="mt-4">;
@@ -208,10 +225,12 @@ const WhitepaperViewPage: React.FC = () => {;
         </div>;
     );
   }
-;
+
+
   // Access control based on is_public and admin role;
-  if (!sharedData.is_public && !isAdmin) {;
-    return (;
+  if (!sharedData && sharedData.is_public && !isAdmin) {;
+
+    return (
       <div className="flex flex-col justify-center items-center h-screen">;
         <h2 className="text-2xl font-semibold mb-4">Access Denied</h2>;
         <p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>;
@@ -221,9 +240,12 @@ const WhitepaperViewPage: React.FC = () => {;
       </div>;
     );
   }
-;
+
+
   const { whitepaper_data: whitepaper } = sharedData,;
-  return (;
+
+
+  return (
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">;
         <div className="mb-6 flex justify-between items-center">;
             <Button asChild variant="outline">;
@@ -237,14 +259,14 @@ const WhitepaperViewPage: React.FC = () => {;
                 </span>;
             )}
         </div>;
-      <WhitepaperPreviewPanel;
-        sections={whitepaper.sections}
-        distributionChartData={whitepaper.distributionChartData}
-        tokenName={whitepaper.tokenName}
-        tokenSupply={whitepaper.tokenSupply}
+      <WhitepaperPreviewPanel
+
+        sections = {whitepaper && whitepaper.sections,}
+        distributionChartData = {whitepaper && whitepaper.distributionChartData,}
+        tokenName = {whitepaper && whitepaper.tokenName,}
+        tokenSupply = {whitepaper && whitepaper.tokenSupply,}
       />;
     </div>;
   );
 },;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-export default WhitepaperViewPage;
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

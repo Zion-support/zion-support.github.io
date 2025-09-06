@@ -183,8 +183,11 @@ export default function AIServices() {;
     </>;
   );
 }
-<<<<<<< HEAD:temp_conflicts/pages/ai-services.tsx
+
+<<<<<<< HEAD
+=======
+:temp_conflicts/pages/ai-services.tsx
 ;
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/ai-services.tsx
+:backup-problematic-files/temp_conflicts/pages/ai-services.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

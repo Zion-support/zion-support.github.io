@@ -1,142 +1,77 @@
 
-<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-
-  try {
-    const { title, keyFeatures, targetAudience } = await req.json(),
-
-    if (!title) {
-      return new Response(
-        JSON.stringify({ 
-          error: "Missing required field: title" 
-        }),
-        { 
-          status: 400, 
-          headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
 =======
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
-  }
-;
-  try {;
-    const { title, keyFeatures, targetAudience } = await req.json(),;
-    if (!title) {;
-      return new Response(;
-        JSON.stringify({;
-          error: "Missing required field: title";
-        }),;
-        {;
-          status: 400,;
-          headers: { ...corsHeaders, "Content-Type": "application/json" } ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
-      )
+      );
     }
-<<<<<<< HEAD
 
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const configuration = new Configuration({
-      apiKey: Deno.env.get('OPENAI_API_KEY')});
+      apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
-
     const prompt = `Create a professional and detailed service description for the following service:
+Title: ${title}
+Key Features: ${keyFeatures |"Not specified"}
+Target Audience: ${targetAudience |"General users"}
     
-=======
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Create a professional and detailed service description for the following service:;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 Title: ${title}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
-The description should: 1. Be approximately 200-300 words
-2. Highlight the key benefits and unique selling points
-3. Use professional language suitable for a marketplace listing
-4. Speak directly to the target audience
-5. Include a compelling opening and closing statement`,
-
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0.7}),
-
-    const generatedDescription = completion.choices[0].message.content,
-    
-    return new Response(
-      JSON.stringify({ description: generatedDescription }),
-      { 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
-  } catch (error) {
-    console.error("Error in generate-service-description:", error),
-    
-    return new Response(
-      JSON.stringify({ 
-        error: "Failed to generate service description",
-        details: error.message 
-      }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
-      }
-    )
-=======
-Key Features: ${keyFeatures || "Not specified"}
-Target Audience: ${targetAudience || "General users"}
-;
-The description should: 1. Be approximately 200-300 words;
-2. Highlight the key benefits and unique selling points;
-3. Use professional language suitable for a marketplace listing;
-4. Speak directly to the target audience;
-5. Include a compelling opening and closing statement`,;
-    const completion = await openai.chat.completions.create({;
-      model: "gpt-4o-mini",;
-      messages: [{ role: "user", content: prompt }],;
-      temperature: 0.7}),;
-    const generatedDescription = completion.choices[0].message.content,;
-    return new Response(;
-      JSON.stringify({ description: generatedDescription }),;
-      {;
-        headers: { ...corsHeaders, "Content-Type": "application/json" } ;
-      }
-    );
-  } catch (error) {;
-    console.error("Error in generate-service-description:", error),;
-    return new Response(;
-      JSON.stringify({;
-        error: "Failed to generate service description",;
-        details: error.message;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }),;
       {;
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+
   }
 });
+  }
+});
+
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+});
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

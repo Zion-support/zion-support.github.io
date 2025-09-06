@@ -1,15 +1,8 @@
+
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
-<<<<<<< HEAD
-import React from "react";
-import {BadgeDollarSign} from "lucide-react";
-import {useWallet} from "@/hooks/useWallet";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Skeleton} from "@/components/ui/skeleton";
-export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
-=======
+  const { wallet, loading } = useWallet();
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
 import { useWallet } from "@/hooks/useWallet",
@@ -18,7 +11,7 @@ import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 export function TokenDisplay() {
   const { wallet, loading } = useWallet(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <Card>
@@ -30,12 +23,13 @@ export function TokenDisplay() {
         <BadgeDollarSign className="h-6 w-6 text-primary" />
       </CardHeader>
       <CardContent>
+=======
         {loading ? (
           <Skeleton className="h-12 w-28" />
         ) : (
           <div className="flex flex-col gap-2">
             <div className="flex items-end">
-              <span className="text-3xl font-bold">{wallet?.balance || 0}</span>
+              <span className="text-3xl font-bold">{wallet?.balance |0}</span>
               <span className="ml-1 text-muted-foreground">ZION$</span>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -47,13 +41,11 @@ export function TokenDisplay() {
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
         )}
       </CardContent>
     </Card>
   )
 }
-=======
 import React from "react",;
 import { BadgeDollarSign } from "lucide-react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -63,6 +55,7 @@ import { Skeleton } from "@/components/ui/skeleton",;
 export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
   return (;
+
     <Card>;
       <CardHeader className="flex flex-row items-center justify-between pb-2">;
         <div>;
@@ -84,15 +77,39 @@ export function TokenDisplay() {;
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
             <div className="mt-2">;
+        {loading ? (
+          <Skeleton className="h-12 w-28" />
+        ) : (
+          <div className="flex flex-col gap-2">
+            <div className="flex items-end">
+              <span className="text-3xl font-bold">{wallet?.balance |0}</span>
+              <span className="ml-1 text-muted-foreground">ZION$</span>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Use your tokens to boost visibility, access premium features, or convert to credits.
+            </p>
+            <div className="mt-2">
+              <Button variant="outline" size="sm">
+                View Wallet
+              </Button>
+            </div>
+          </div>
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
             </div>;
-          </div>;
-        )}
+
+          </div>)}
       </CardContent>;
-    </Card>;
-  );
+    </Card>);
+
+}
+=======
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

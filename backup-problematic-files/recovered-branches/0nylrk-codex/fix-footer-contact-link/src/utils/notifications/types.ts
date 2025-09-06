@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 ;
 export interface CreateNotificationParams {;
@@ -42,3 +44,4 @@ export interface SystemNotificationParams {;
   actionText?:string | null,;
   sendEmail?:boolean;
 } export type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 ;
   };
 ],;
@@ -50,3 +52,4 @@ export default function ServicesPage() {,;
         </section>,
         {/* Why Choose Us */};
         {/* Why Choose Us */};
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

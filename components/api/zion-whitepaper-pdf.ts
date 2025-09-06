@@ -1,100 +1,54 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
+
+=======
+
+
 import {
+  getWhitepaperSections
+  OPERATOR_PROMPT;
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
-  doc.addPage(),
+  doc.addPage()
   doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
   doc.moveDown();
   doc.fontSize(11).fillColor('#222222').text(content, {
-    width: 480,
-    align: 'left',
+    width: 480
+    align: 'left'
   });
 
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
-) {;
-  const editionParam = (req.query.edition as string) || 'full';
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const edition =
-    editionParam === 'investor' || editionParam === 'developer'
+    editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
 
-  res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader(
-    'Content-Disposition',
-    `attachment; filename="zion-protocol-${edition}.pdf"`
-  );
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  const editionParam = (req.query.edition as string) |'full';
+  const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
+
+
 
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
-
   doc.pipe(res);
-
-  // Cover page
-  doc.addPage();
-  doc
-    .fontSize(26)
-    .fillColor('#000000')
-    .text('Zion Protocol Whitepaper', { align: 'left' });
-  doc.moveDown();
-  doc
-    .fontSize(14)
-    .fillColor('#444444')
-    .text(`Edition: ${edition.toUpperCase()}`);
-  doc.moveDown();
-  doc
-    .fontSize(10)
-    .fillColor('#666666')
-    .text('Operator Prompt (for maintenance):');  doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-
-  const sections = getWhitepaperSections(edition as any);
-<<<<<<< HEAD
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd));  doc.moveDown();
-  doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`);
-  doc.moveDown();
-  doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):');
-  doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-
-  const sections = getWhitepaperSections(edition as any);
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd));
-
-  // End
-  doc.addPage();
-  doc
-    .fontSize(10)
-    .fillColor('#444444')
-    .text(
-      '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
-    );
-
-  doc.end();
-  // End
-  doc.addPage();
-  doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
-
-  doc.end()
-}
-
-}
-}
-=======
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd));
-
-  doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-
-  const sections = getWhitepaperSections(edition as any);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

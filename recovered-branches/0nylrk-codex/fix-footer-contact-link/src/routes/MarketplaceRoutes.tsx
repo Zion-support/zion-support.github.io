@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
@@ -20,7 +19,6 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage";
 import SearchPage from "@/pages/SearchPage";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
-=======
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Marketplace from "@/pages/Marketplace",
@@ -39,9 +37,11 @@ import AIMatcher from "@/pages/AIMatcher",
 import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",
 import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
 import SearchPage from "@/pages/SearchPage",
+import ProjectRoom from "@/pages/ProjectRoom";
+import VideoCall from "@/pages/VideoCall";
+
 import ProjectRoom from "@/pages/ProjectRoom",
 import VideoCall from "@/pages/VideoCall",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const MarketplaceRoutes = () => {
   return (
     <Routes>
@@ -52,70 +52,63 @@ const MarketplaceRoutes = () => {
       <Route path="/featured" element={<Featured />} />
       <Route path="/marketplace/listing/:id" element={<ListingDetail />} />
       <Route path="/listing/:id" element={<ListingDetail />} />
-      
       {/* Equipment Routes */}
       <Route path="/equipment" element={<EquipmentPage />} />
       <Route path="/equipment/:id" element={<EquipmentDetail />} />
-      
       {/* Job Routes */}
       <Route
-        path="/post-job" 
+        path="/post-job"
         element={
           <ProtectedRoute>
             <PostJob />
           </ProtectedRoute>
-        } 
+        }
       />
       <Route path="/jobs/:id" element={<JobDetails />} />
-      
       {/* AI Matcher Routes */}
       <Route path="/ai-matcher" element={<AIMatcher />} />
       <Route path="/match" element={<AIMatcher />} />
-      
       {/* Creator Routes */}
-      <Route 
-        path="/publish" 
+      <Route
+        path="/publish"
         element={
           <ProtectedRoute>
             <PublishProduct />
           </ProtectedRoute>
-        } 
+        }
       />
-      
       {/* Service Routes */}
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
       <Route path="/request-quote" element={<RequestQuote />} />
       <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />
-      
       {/* Search Route */}
       <Route path="/search" element={<SearchPage />} />
-      
       {/* Project Room Routes */}
-      <Route 
-        path="/project/:projectId" 
+      <Route
+        path="/project/:projectId"
         element={
           <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
-        } 
+        }
       />
-      
       {/* Video Call Routes */}
-      <Route 
-        path="/call/:roomId" 
+      <Route
+        path="/call/:roomId"
         element={
           <ProtectedRoute>
             <VideoCall />
           </ProtectedRoute>
-        } 
+        }
       />
     </Routes>
   )
+}
+export default MarketplaceRoutes;
+
 },
 
-<<<<<<< HEAD
-=======
 export default MarketplaceRoutes,
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -137,61 +130,76 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
 import SearchPage from "@/pages/SearchPage",;
 import ProjectRoom from "@/pages/ProjectRoom",;
 import VideoCall from "@/pages/VideoCall",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const MarketplaceRoutes = () => {;
-  return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
     <Routes>;
       {/* Marketplace Routes */}
+
       <Route path="/marketplace" element={<Marketplace />} />;
       <Route path="/categories" element={<Categories />} />;
       <Route path="/category/:slug" element={<CategoryDetail />} />;
       <Route path="/featured" element={<Featured />} />;
       <Route path="/marketplace/listing/:id" element={<ListingDetail />} />;
       <Route path="/listing/:id" element={<ListingDetail />} />;
+
       {/* Equipment Routes */}
       <Route path="/equipment" element={<EquipmentPage />} />;
       <Route path="/equipment/:id" element={<EquipmentDetail />} />;
+
+
       {/* Job Routes */}
-      <Route;
-        path="/post-job";
-        element={;
+      <Route
+        path="/post-job"
+        element={
+
           <ProtectedRoute>;
             <PostJob />;
           </ProtectedRoute>;
         } ;
       />;
       <Route path="/jobs/:id" element={<JobDetails />} />;
+
       {/* AI Matcher Routes */}
       <Route path="/ai-matcher" element={<AIMatcher />} />;
       <Route path="/match" element={<AIMatcher />} />;
+
       {/* Creator Routes */}
-      <Route;
-        path="/publish";
-        element={;
+      <Route
+        path="/publish" 
+        element={
           <ProtectedRoute>;
             <PublishProduct />;
           </ProtectedRoute>;
         } ;
       />;
+
       {/* Service Routes */}
       <Route path="/services" element={<ServicesPage />} />;
       <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />;
       <Route path="/request-quote" element={<RequestQuote />} />;
       <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />;
+
       {/* Search Route */}
       <Route path="/search" element={<SearchPage />} />;
+
       {/* Project Room Routes */}
-      <Route;
-        path="/project/:projectId";
-        element={;
+      <Route
+        path="/project/:projectId" 
+        element={
           <ProtectedRoute>;
             <ProjectRoom />;
           </ProtectedRoute>;
         } ;
       />;
+
       {/* Video Call Routes */}
-      <Route;
-        path="/call/:roomId";
-        element={;
+      <Route
+        path="/call/:roomId" 
+        element={
           <ProtectedRoute>;
             <VideoCall />;
           </ProtectedRoute>;
@@ -200,5 +208,13 @@ const MarketplaceRoutes = () => {;
     </Routes>;
   );
 },;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 export default MarketplaceRoutes;
+export default MarketplaceRoutes;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+},;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default MarketplaceRoutes;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

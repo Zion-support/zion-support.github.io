@@ -1,4 +1,5 @@
 
+=======
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -34,28 +35,11 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
-    </Tooltip>;
-  ),;}
- interface DisputeStatusBadgeProps {;
-  status: 'open' | 'under review' | 'resolved' | 'closed' ;
-}export function DisputeStatusBadge ({;
-  status ;
-}: DisputeStatusBadgeProps) {;
-  switch (status) {';
-  case 'under review': variant = "secondary";";
-message = "This dispute is under review by our team";
-break;'";
-case 'resolved': variant = "outline";";
-message = "This dispute has been resolved";
-break;'";
-case 'closed': variant = "outline";";
-message = "This dispute has been closed";
-break;
-message ;
-}</p> </TooltipContent> </Tooltip>) ;
-}'"
+<<<<<<< HEAD
+

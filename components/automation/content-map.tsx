@@ -1,19 +1,37 @@
-<<<<<<< HEAD
+=======
+
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>)
 export default function ContentMap({ report }: Props) {;
-=======
  
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
 export default function ContentMap({ report }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
+
+
+=======
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function ContentMap({ report }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  if (!report) return <div>No content map yet. Check back later.</div>;
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
+
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -28,18 +46,23 @@ export default function ContentMap({ report }: Props) {
         <h2 className="font-semibold mb-2">Pages by Section</h2>
         <ul className="text-sm space-y-1">
           {sections.map(([sec, n]) => (
-            <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>
+            <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
+=======
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           ))}
         </ul>
       </section>
       <section>
-        <h2 className="font-semibold mb-2">All Pages</h2>
-        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
-          {report.pages.map((p, i) => (
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
+
           ))}
         </ul>
       </section>
     </div>
-);
+=======
+<<<<<<< HEAD
+  )
+
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

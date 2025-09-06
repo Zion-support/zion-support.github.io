@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 =======
 import React from 'react';
 
@@ -12,22 +11,3 @@ export default function AboutPage() {
     </div>
   );
 }
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-const About: NextPage = () => (
-  <div className="py-10">
-    <Head><title>About - Zion</title></Head>
-    <h1 className="text-2xl font-semibold text-white">About</h1>
-    <p className="text-white/80 mt-2">About page content coming soon.</p>
-  </div>
-);
-
-export default About;
-=======
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Information coming soon.</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/build-zion-ai-notification-center-5a66

@@ -1,14 +1,12 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React from 'react',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-import React from "react";
->>>>>>> main
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ProfileLoadingState() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">
       <div className="text-zion-cyan animate-pulse text-xl">
@@ -17,4 +15,8 @@ export function ProfileLoadingState() {
     </div>
   );
 }
+  )
+}
 ;
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

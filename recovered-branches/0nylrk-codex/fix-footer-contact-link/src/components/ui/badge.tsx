@@ -1,41 +1,11 @@
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
-
-import { badgeVariants } from "@/components/ui/badge-variants"
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement> {
-<<<<<<< HEAD
-  variant?:;
-    | &quot;default&quot;
-    | &quot;secondary&quot;
-    | &quot;destructive&quot;
-    | &quot;outline&quot;
-    | &quot;success&quot;
-    | &quot;warning&quot;
-    | &quot;info&quot;
-=======
-  variant?:
-    | "default"
-    | "secondary"
-    | "destructive"
-    | "outline"
-    | "success"
-    | "warning"
-    | "info"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
+
 ;
-function Badge({ className, variant, ...props }: BadgeProps) {;
-  return (;
-    <span className={cn(badgeVariants({ variant }), className)} {...props} />;
-  );
-}
-;
-<<<<<<< HEAD
-export { Badge, badgeVariants };
-=======
-export { Badge, badgeVariants }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

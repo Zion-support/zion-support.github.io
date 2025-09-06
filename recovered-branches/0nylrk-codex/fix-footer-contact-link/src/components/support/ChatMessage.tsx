@@ -1,32 +1,37 @@
 
-<<<<<<< HEAD
 import React from "react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {cn} from "@/lib/utils";
 import {format} from "date-fns";
 import {useTheme} from "@/hooks/useTheme";
-=======
 import React from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
+import { format } from "date-fns";
+import { useTheme } from "@/hooks/useTheme";
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ChatMessageProps {
-  message: string,
-  isUser: boolean,
+
+  message: string
+  isUser: boolean
+
   timestamp: Date
 }
 
-<<<<<<< HEAD
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   const { theme } = useTheme();
-=======
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
+  const { theme } = useTheme();
   const { theme } = useTheme(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   return (
+
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
         {isUser ? (
@@ -45,48 +50,34 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         )}
       </Avatar>
       <div className={cn(
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
-        isUser 
-          ? "bg-zion-purple text-white" 
-          : theme === "dark"
-            ? "bg-zion-blue-light text-white"
-            : "bg-gray-100 text-gray-800"
-      )}>
-        <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
-        <div className={cn(
-          "text-xs mt-1",
-          isUser 
-            ? "text-white/70" 
+
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
-        )}>
+        )}>;
           {format(timestamp, "h:mm a")}
         </div>
       </div>
     </div>
   )
 }
-
 // Function to convert URLs and help links to actual clickable links
 function formatMessageWithLinks(message: string): string {
   // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g,
+  const urlRegex = /(https?:\/\/[^\s]+)/g
   let formattedMessage = message.replace(
-    urlRegex, 
+    urlRegex
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  ),
-  
+
   // Replace help center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g,
+  const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex, 
+    helpCenterRegex
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  ),
-  
+  )
+
   return formattedMessage
-<<<<<<< HEAD
-=======
+}
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
@@ -142,21 +133,34 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   );
 }
 ;
+
 // Function to convert URLs and help links to actual clickable links;
-function formatMessageWithLinks(message: string): string {;
+function formatMessageWithLinks(): any (message: string): string {;
   // Replace URLs;
   const urlRegex = /(https?:\/\/[^\s]+)/g,;
-  let formattedMessage = message.replace(;
-    urlRegex,;
+  let formattedMessage = message && message.replace(;
+    urlRegex, ;
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
-  ),;
+  );
+
   // Replace help center references like [Getting Started];
   const helpCenterRegex = /\[([^\]]+)\]/g,;
-  formattedMessage = formattedMessage.replace(;
-    helpCenterRegex;
+  formattedMessage = formattedMessage && formattedMessage.replace(;
+    helpCenterRegex, ;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
-  );
+  ),;
+
   return formattedMessage;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

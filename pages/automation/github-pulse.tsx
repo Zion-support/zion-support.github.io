@@ -1,19 +1,23 @@
-<<<<<<< HEAD
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/github-pulse.json';
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/github-pulse.json',;
-=======
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/github-pulse.json',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function GithubPulsePage() {
-  const repo = data?.repo || {},
-  const last24h = data?.last24h || {},
+
+  const repo = data?.repo |{}
+  const last24h = data?.last24h |{}
+
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">GitHub Pulse</h1>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
         <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
           <Metric label="Stars" value={repo.stargazers_count} />
@@ -26,10 +30,6 @@ export default function GithubPulsePage() {
       </div>
     </EnhancedLayout>
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 function Metric({ label, value }: { label: string, value: any }) {
   return (
@@ -37,14 +37,88 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
-<<<<<<< HEAD
   );
 };
-=======
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export default function GithubPulsePage() {
+
+  const repo = data?.repo |{}
+  const last24h = data?.last24h |{}
+
+  return (
+    <EnhancedLayout>
+      <div className="max-w-5xl mx-auto py-10">
+        <h1 className="text-3xl font-bold">GitHub Pulse</h1>
+
+        <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
+          <Metric label="Stars" value={repo.stargazers_count} />
+          <Metric label="Forks" value={repo.forks} />
+          <Metric label="Open Issues" value={repo.open_issues} />
+          <Metric label="Watchers" value={repo.watchers} />
+          <Metric label="Issues updated (24h)" value={last24h.issues_updated} />
+          <Metric label="PRs updated (24h)" value={last24h.prs_updated} />
+
+        </div>
+      </div>
+    </EnhancedLayout>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+=======
+}
+
+=======
+import EnhancedLayout from '../../components / layout / EnhancedLayout',
+// @ts - ignore;
+import data from '../../data / github - pulse.json',
+export default /**
+ * GithubPulsePage - Function description
+ */
+function GithubPulsePage() {
+  const repo = data?.repo || {},
+  const last24h = data?.last24h || {},
+  return (
+    <EnhancedLayout>;
+      <div className="max - w-5xl mx - auto py - 10">;
+        <h1 className="text - 3xl font - bold">GitHub Pulse</h1>;
+        <p className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300">Updated at {data?.generated_at || '—'}</p>;
+        <div className="mt - 6 grid md:grid - cols - 3 gap - 4 text - sm">;
+          <Metric label="Stars" value={repo.stargazers_count} />;
+          <Metric label="Forks" value={repo.forks} />;
+          <Metric label="Open Issues" value={repo.open_issues} />;
+          <Metric label="Watchers" value={repo.watchers} />;
+          <Metric label="Issues updated (24h)" value={last24h.issues_updated} />;
+          <Metric label="PRs updated (24h)" value={last24h.prs_updated} />;
+        </div>;
+      </div>;
+    </EnhancedLayout>);
+}
+/**
+ * Metric - Function description
+ */
+function Metric() {
+  return (
+    <div className="p - 4 border border - gray - 200 dark:border - gray - 800 rounded - lg">;
+      <div className="text - xs text - gray - 500 dark:text - gray - 400">{label}</div>;
+      <div className="text - lg font - semibold">{value ?? '—'}</div>;
+    </div>);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
+
+    </div>
+
+  )
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

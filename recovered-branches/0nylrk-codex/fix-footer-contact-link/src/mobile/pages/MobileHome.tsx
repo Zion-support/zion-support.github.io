@@ -1,5 +1,11 @@
 
-<<<<<<< HEAD
+
+import React from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -9,28 +15,32 @@ import {useAuth} from "@/hooks/useAuth";
 export function MobileHome() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-=======
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+import { useAuth } from "@/hooks/useAuth";
+export function MobileHome() {
+  const { user } = useAuth();
+
+  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
 import { TalentDashboard } from "../components/dashboard/TalentDashboard",
 import { useAuth } from "@/hooks/useAuth",
 export function MobileHome() {
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   return (
     <div className="min-h-screen">
-      <MobileHeader 
-        title={isClient ? "Client Dashboard" : "Talent Dashboard"} 
-        showNotifications 
+      <MobileHeader
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"}
+        showNotifications
         showSettings
       />
-<<<<<<< HEAD
-      <main className="py-4">
-=======
+
       
       <main className="py-4">
 import React from "react",;
@@ -43,17 +53,27 @@ export function MobileHome() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
   return (;
+
     <div className="min-h-screen">;
-      <MobileHeader;
-        title={isClient ? "Client Dashboard" : "Talent Dashboard"} ;
-        showNotifications;
-        showSettings;
+      <MobileHeader
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"} 
+        showNotifications 
+        showSettings
       />;
+
       <main className="py-4">;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
-      </main>
-      <BottomNavigation />
-    </div>
-  )
+      </main>;
+
+      <BottomNavigation />;
+    </div>;
+  );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

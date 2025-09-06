@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+=======
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {AppHeader} from "@/layout/AppHeader";
@@ -11,9 +11,8 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {Briefcase} from "lucide-react";
 function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string };
+  const { jobId } = useParams() as { jobId?: string }
   const [activeTab, setActiveTab] = useState<string>("kanban");
-=======
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { AppHeader } from "@/layout/AppHeader",
@@ -27,13 +26,13 @@ import { Briefcase } from "lucide-react",
 function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string },
   const [activeTab, setActiveTab] = useState<string>("kanban"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <>
-      <SEO 
-        title="Hiring Tracker | Zion AI Marketplace" 
-        description="Manage your candidate pipeline in the Zion AI Marketplace." 
+      <SEO
+        title="Hiring Tracker | Zion AI Marketplace"
+        description="Manage your candidate pipeline in the Zion AI Marketplace."
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
@@ -65,7 +64,10 @@ function HiringTrackerContent() {
     </>
   )
 <<<<<<< HEAD
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -80,10 +82,11 @@ function HiringTrackerContent() {;
   const { jobId } = useParams() as { jobId?: string },;
   const [activeTab, setActiveTab] = useState<string>("kanban");
   return (;
+
     <>;
-      <SEO;
-        title="Hiring Tracker | Zion AI Marketplace";
-        description="Manage your candidate pipeline in the Zion AI Marketplace.";
+      <SEO
+        title="Hiring Tracker | Zion AI Marketplace" 
+        description="Manage your candidate pipeline in the Zion AI Marketplace." 
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -98,14 +101,17 @@ function HiringTrackerContent() {;
             </p>;
           </div>;
         </div>;
+
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">;
           <TabsList>;
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
             <TabsTrigger value="analytics">Analytics</TabsTrigger>;
           </TabsList>;
+
           <TabsContent value="kanban" className="mt-6">;
             <KanbanBoard jobId={jobId} />;
           </TabsContent>;
+
           <TabsContent value="analytics" className="mt-6">;
             <HiringAnalytics jobId={jobId} />;
           </TabsContent>;
@@ -114,7 +120,16 @@ function HiringTrackerContent() {;
       <Footer />;
     </>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+;
+export default function HiringTracker() {;
+  return (;
+    <ProtectedRoute>;
+      <HiringTrackerContent />;
+    </ProtectedRoute>;
+  );
+}
+;
 }
 
 export default function HiringTracker() {
@@ -124,4 +139,7 @@ export default function HiringTracker() {
     </ProtectedRoute>
   )
 }
+
 ;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

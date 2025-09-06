@@ -1,21 +1,22 @@
-    const logMessage = `[${timestamp}] ${message}\n`;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
   async runCommand(command, options = {}) {
     try {
-      const { stdout, stderr } = await execAsync(command, { 
-        cwd: process.cwd(), 
-        timeout: 120000, 
-        ...options 
+      const { stdout, stderr } = await execAsync(command, {
+        cwd: process.cwd(),
+        timeout: 120000,
+        ...options
       });
       return { success: true, stdout, stderr };
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
-      return { 
-        success: false, 
-        stdout: error.stdout || "", 
-        stderr: error.stderr || error.message 
+      return {
+        success: false,
+        stdout: error.stdout || "",
+        stderr: error.stderr || error.message
       };
     }
   }
@@ -140,4 +141,5 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "message"
-        "impact"
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

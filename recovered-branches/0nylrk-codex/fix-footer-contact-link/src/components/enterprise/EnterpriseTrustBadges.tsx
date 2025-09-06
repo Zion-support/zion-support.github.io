@@ -1,6 +1,9 @@
+
+=======
+<<<<<<< HEAD
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
-<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -12,12 +15,8 @@ export function EnterpriseTrustBadges() {
           <p className="text-muted-foreground">
             We maintain the highest standards of data protection and compliance
           </p>
-=======
+<<<<<<< HEAD
 
-import React from "react",
-import { Shield, Lock, Award, CheckCircle } from "lucide-react",
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
@@ -38,22 +37,23 @@ import { Shield, Lock, Award, CheckCircle } from "lucide-react",
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>;
-  );
-}
-=======
-    </section>
+
   )
 import React from "react",;
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function EnterpriseTrustBadges() {;
-  return (;
+
+  return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-8">;
-          <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>;
-          <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p>;
+          <h3 className="text-xl font-medium mb-2">;
+            Enterprise-Grade Security & Compliance;
+          </h3>;
+          <p className="text-muted-foreground">;
+            We maintain the highest standards of data protection and compliance;
+          </p>;
         </div>;
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">;
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">;
@@ -78,4 +78,4 @@ export function EnterpriseTrustBadges() {;
   );
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

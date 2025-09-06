@@ -1,18 +1,16 @@
-<<<<<<< HEAD
 import type { BookProject } from '../book/bookTypes',;
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project,;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n'),;
-=======
 import type { BookProject } from '../book/bookTypes';
+export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const chapterHtml = chapters;
     .map(;
       (c) => `;
@@ -21,7 +19,6 @@ export function buildPrintableHtml(project: BookProject): string {;
         <div class="content">${paragraphize(c.content)}</div>;
       </section>;
     `);
-<<<<<<< HEAD
     .join('\n\n'),;
   const visualsHtml = [;
     ...visuals.timelineImages,;
@@ -29,7 +26,6 @@ export function buildPrintableHtml(project: BookProject): string {;
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n'),;
-=======
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -37,15 +33,23 @@ export function buildPrintableHtml(project: BookProject): string {;
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======
+    .join ('\n\n'),
+  const visuals_html = [;
+    ...visuals.timeline_images,
+    ...visuals.daoVoteCharts,
+    ...visuals.ui_screens];
+    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join ('\n'),
+  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return `<!doctype html>;
 <html>;
 <head>;
 <meta charset="utf-8" />;
 <title>${escapeHtml(meta.title)}</title>;
 <style>;
-<<<<<<< HEAD
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
@@ -64,9 +68,9 @@ export function buildPrintableHtml(project: BookProject): string {;
 </head>;
 <body>;
   <section class="cover">;
-    <div>${escapeHtml(meta.publisher || '')}</div>;
+    <div>${escapeHtml(meta.publisher |'')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
-    <h3>${escapeHtml(meta.subtitle || '')}</h3>;
+    <h3>${escapeHtml(meta.subtitle |'')}</h3>;
     <div class="by">By ${escapeHtml(meta.author)}</div>;
     ${barcode}
   </section>;
@@ -76,18 +80,19 @@ export function buildPrintableHtml(project: BookProject): string {;
 </body>;
 </html>`;
 }
-;
-function paragraphize(text: string): string {;
-  if (!text) return '';
+function paragraphize(text: string): string {if (!text) return '';
   return text;
     .split(/\n\n+/);
     .map((p) => `<p>${escapeHtml(p)}</p>`);
     .join('\n');
 }
+function escapeHtml(s: string): string {return s;
 ;
 function escapeHtml(s: string): string {;
   return s;
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -158,10 +163,26 @@ function escapeHtml(s: string): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 </style>;
 </head>;
 <body>;
   <section class="cover">;
+
+    <div>${escape_html (meta.publisher || '')}</div>;
+    <h1>${escape_html (meta.title)}</h1>;
+    <h3>${escape_html (meta.subtitle || '')}</h3>;
+    <div class="by">By ${escape_html (meta.author)}</div>;
+
+    ${barcode}
+  </section>;
+  ${quotesHtml}
+  ${chapterHtml}
+  ${visualsHtml}
+</body>;
+</html>`;
+}
+
     <div>${escapeHtml(meta.publisher || '')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
     <h3>${escapeHtml(meta.subtitle || '')}</h3>;
@@ -197,17 +218,25 @@ function escapeHtml(s: string): string {;
 ;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
 <<<<<<< HEAD
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

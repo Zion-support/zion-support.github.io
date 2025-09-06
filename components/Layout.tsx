@@ -1,84 +1,121 @@
-<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface LayoutProps {
   children: React.ReactNode;
+interface LayoutProps {;
+  children: React && React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  noIndex?: boolean;
+  og_title?: string;
+  og_description?: string;
+  og_image?: string;
+  no_index?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({
+
+const Layout: React.FC<LayoutProps> = ({;
+  children,;
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",;
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",;
+  canonical = "https://ziontechgroup && ziontechgroup.com",;
+  ogTitle,;
+  ogDescription,;
+  ogImage = "https://ziontechgroup && ziontechgroup.com/og-image && image.jpg",;
+  noIndex = false,;
+}) => {;
+  const jsonLd = {;
+    "@context": "https://schema && schema.org",;
+    "@type": "Organization",;
+    name: "Zion Tech Group",;
+    url: "https://ziontechgroup && ziontechgroup.com",;
+    logo: "https://ziontechgroup && ziontechgroup.com/logo && logo.png",;
+    description: description,;
+    address: {;
+      "@type": "PostalAddress",;
+      streetAddress: "364 E Main St STE 1008",;
+      addressLocality: "Middletown",;
+      addressRegion: "DE",;
+      postalCode: "19709",;
+      addressCountry: "US",;
+    },;
+    contactPoint: {;
+      "@type": "ContactPoint",;
+      telephone: "+1-302-464-0950",;
+      contactType: "customer service",;
+      email: "kleber@ziontechgroup && ziontechgroup.com",;
+    },;
+  };
+
+
+  return (
+    <div className="min-h-screen bg-white">;
+const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
   description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
   keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
   canonical = "https://ziontechgroup.com",
-  ogTitle,
-  ogDescription,
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  noIndex = false,
+  og_title,
+  og_description,
+  og_image = "https://ziontechgroup.com / og - image.jpg",
+  no_index = false,
 }) => {
-  const jsonLd = {
+  const json_ld = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Zion Tech Group",
     url: "https://ziontechgroup.com",
-    logo: "https://ziontechgroup.com/logo.png",
+    logo: "https://ziontechgroup.com / logo.png",
     description: description,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "364 E Main St STE 1008",
-      addressLocality: "Middletown",
-      addressRegion: "DE",
-      postalCode: "19709",
-      addressCountry: "US",
+      street_address: "364 E Main St STE 1008",
+      address_locality: "Middletown",
+      address_region: "DE",
+      postal_code: "19709",
+      address_country: "US",
     },
-    contactPoint: {
+    contact_point: {
       "@type": "ContactPoint",
-      telephone: "+1-302-464-0950",
-      contactType: "customer service",
+      telephone: "+1 - 302 - 464 - 0950",
+      contact_type: "customer service",
       email: "kleber@ziontechgroup.com",
     },
-  };
-
+  }
+;
   return (
-    <div className="min-h-screen bg-white">
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
+    <div className="min - h-screen bg - white">;
+      <Head>;
+        <title>{title}</title>;
+        <meta name="description" content={description} />;
+        <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
-        {noIndex && <meta name="robots" content="noindex,nofollow" />}
 
-        {/* Open Graph */}
-        <meta property="og:title" content={ogTitle || title} />
-        <meta
-          property="og:description"
-          content={ogDescription || description}
-        />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={ogTitle || title} />
-        <meta
-          name="twitter:description"
-          content={ogDescription || description}
-        />
-        <meta name="twitter:image" content={ogImage} />
-        {/* JSON-LD */}
-        <script
-          type="application/ld+json"
+=======
+      <Header />;
+      <main>{children}</main>;
+      <Footer />;
+    </div>;
+  );
+};
+=======
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
@@ -86,7 +123,24 @@ const Layout: React.FC<LayoutProps> = ({
       <main>{children}</main>
       <Footer />
     </div>
-=======
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+interface LayoutProps {
+  children: ReactNode,
+}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+  );
+}
+export default Layout;
 import React, { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode;
@@ -98,6 +152,7 @@ interface LayoutProps {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -120,7 +175,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 };
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,15 +1,20 @@
 
-<<<<<<< HEAD
+=======
 import React from "react";
 import {QuoteRequestCard} from "./QuoteRequestCard";
 import {EmptyStateCard} from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
-=======
 import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
+import { EmptyStateCard } from "./EmptyStateCard";
+import type { QuoteRequest } from "@/types/quotes";
 import { EmptyStateCard } from "./EmptyStateCard",
 import type { QuoteRequest } from "@/types/quotes",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+import React from "react",
+import { QuoteRequestCard } from "./QuoteRequestCard",
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
   isLoading: boolean,
@@ -19,20 +24,11 @@ type QuoteRequestsListProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
-<<<<<<< HEAD
-export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
-  quotes;
-  isLoading;
-  isArchived;
-  onViewDetails;
-=======
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
-  quotes,
-  isLoading,
-  isArchived,
-  onViewDetails,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   onMarkAsResponded,
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onToggleArchive
 }) => {
   if (isLoading) {
@@ -41,12 +37,12 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     )
-<<<<<<< HEAD
-=======
+
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 type QuoteRequestsListProps = {;
   quotes: QuoteRequest[],;
   isLoading: boolean,;
@@ -54,26 +50,31 @@ type QuoteRequestsListProps = {;
   onViewDetails: (quote: QuoteRequest) => void,;
   onMarkAsResponded: (id: string) => void,;
   onToggleArchive: (id: string, isArchived: boolean) => void;
-},;
+};
+
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
-  quotes,;
-  isLoading,;
-  isArchived,;
-  onViewDetails,;
-  onMarkAsResponded;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  quotes;
+  is_loading;
+  is_archived;
+  onViewDetails;
+
+  onMarkAsResponded,;
   onToggleArchive;
 }) => {;
   if (isLoading) {;
-    return (;
+
+    return (
       <div className="text-center py-20">;
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
     );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
-  
-  if (quotes.length === 0) {
-    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
+
+
+  if (quotes && quotes.length === 0) {;
+    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
   
   return (
@@ -87,11 +88,27 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
           onToggleArchive={onToggleArchive}
         />
       ))}
-<<<<<<< HEAD
     </div>
   )
-=======
+}
+
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    </div>;
+  );
+          quote={quote}
+          onViewDetails={onViewDetails}
+          onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
+          onToggleArchive={onToggleArchive}
+
+
+
+    </div>;
+  );
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

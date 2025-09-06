@@ -1,9 +1,5 @@
-import type { NextPage } from 'next',;
-import Link from 'next/link',;
-const AutomationsIndex: NextPage = () => {
-  const items = [
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
+
+
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -14,25 +10,21 @@ const AutomationsIndex: NextPage = () => {
             <div className="enhanced-card hover:shadow-lg cursor-pointer">
               <h2 className="text-xl font-semibold">{it.title}</h2>
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
+
             </div>
           </Link>
-<<<<<<< HEAD
-        ))}
-      </div>
-    </main>
-  )
-},
-
-export default AutomationsIndex,;
-=======
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </div>;
+
     </main>;
   );
 },;
 export default AutomationsIndex;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,35 +1,23 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Award} from "lucide-react";
-=======
 import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Award } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
->>>>>>> main
+import { Badge } from "@/components/ui/badge",
+import { Award } from "lucide-react",
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
 }
 
-<<<<<<< HEAD
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
   if (!featured) return null;
-<<<<<<< HEAD
-=======
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
+  if (!featured) return null;
   if (!featured) return null,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
-=======
-
->>>>>>> main
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">
       <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">
@@ -37,24 +25,22 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
         <span>Featured</span>
       </Badge>
     </div>
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-=======
   );
->>>>>>> main
 }
-=======
+  )
+  )
+}
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Award } from "lucide-react",;
 interface TalentCardBadgesProps {;
   featured: boolean | undefined;
 }
-;
-export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
+
+export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
   if (!featured) return null;
-  return (;
+
+  return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">;
       <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">;
         <Award className="h-3 w-3" />;
@@ -64,4 +50,11 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
   );
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+  )
+=======
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

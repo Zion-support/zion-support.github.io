@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth',;
 import { UserRole } from '../../../utils/messaging/types',;
@@ -12,23 +11,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   setUserCookie(res, user),
   res.status(200).json({ user });
 };
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
-import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth';
-import { UserRole } from '../../../utils/messaging/types';
-export default function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { name, role } = req.body as { name: string, role: UserRole };
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  ensureDemoUsers();
-  const user = generateUser(name, role);
-  upsertUser(user);
-  setUserCookie(res, user);
-  res.status(200).json({ user });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,3 +1,5 @@
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -8,6 +10,8 @@ import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+<<<<<<< HEAD
+=======
 const Industry: React.FC<IndustryProps> = ({ className }) => {
   return (
     <div className={className || ''}>
@@ -18,3 +22,4 @@ const Industry: React.FC<IndustryProps> = ({ className }) => {
 };
 
 export default Industry;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

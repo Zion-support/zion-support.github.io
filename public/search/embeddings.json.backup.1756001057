@@ -2618,188 +2618,44 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       1,
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,      0,
-<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,      0,
+      0,
+      0,
+      0,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
-=======
-=======
-      1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-      1,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,      0,
-      0,
-      0,
-      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      3,
-      0,
-      0,
-      3,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      2,
-      1,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      1,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      4,
-      0,
-      0,
-      0,
-      0,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      2,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      2,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -2811,49 +2667,8 @@
       0,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      5,
-      4,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      3,
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      3,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      3,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      3,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -2864,96 +2679,13 @@
       0,
       1,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
-      4,
-      0,
-      1,
-      0,
-      1,
-      0,
-      3,
-      1,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      3,
-      0,
-      0,
-      1,
-      4,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,      0,
-      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      0,
-      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      0,
-      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 <<<<<<< HEAD
       1,
       0,
@@ -3012,10 +2744,6 @@
       1,
       3,
       0,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -3038,1015 +2766,110 @@
       0,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
       0,
       0,
       0,
       0,
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
+      0,
+      0,
       1,
       0,
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
       0,
       0,
       0,
       0,
-      1,
       0,
       0,
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0
-    ]
-  },
-  {
-    "route": "/500",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "route": "/[slug]",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      4,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      6,
-      0,
-      0,
-      0,
-      2,
-      0,
-      2,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      2,
-      0,
-      7,
-      0,
-      0,
-      1,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      2,
-      2,
-      1,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
-      3,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      2,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      1,
-      0,
-      2,
-      4,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
-      0,
-      28,
-      1,
-      3,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      1,
-      0,
-      0,
-      3,
-      0,
-      1,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      1,
-      21,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      5,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      5,
-      1,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      35,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      2,
-      1,
-      1,
-      8,
-      3,
-      1,
-      0,
-      1,
-      2,
-      0,
-      2,
-      1,
-      0,
-      3,
-      2,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      1,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "route": "/_app",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,      1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      1,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      1,
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
       0,
       0,
       1,
@@ -4059,58 +2882,7 @@
       0,
       0,
       0,
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      1,      1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      1,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -4148,22 +2920,12 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+      0,
+      0,      0,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -4181,151 +2943,58 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,      0,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
-=======
-=======
-      0,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -4365,22 +3034,6 @@
       0,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -4423,105 +3076,12 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+      0,
+      4,      0,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-      4,
-=======
-      3,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      4,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      4,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      4,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -4549,32 +3109,9 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 <<<<<<< HEAD
       2,
-=======
-      1,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      2,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      2,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      2,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -4598,556 +3135,47 @@
       0,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      1,
+      0,
+      2,
+      1,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      2,
-      2,
-      0,
-      0,
-      3,
-      2,
-      2,
-      7,
-      0,
-      1,
-      0,
       1,
       0,
       0,
       0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      7,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      2,
-      9,
-      1,
-      2,
-      3,
-      1,
-      1,
-      1,
-      0,
-      11,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      1,
-      12,
-      0,
-      3,
-      1,
-      2,
-      4,
-      1,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      1,
-      5,
-      1,
-      0,
-      0,
-      1,
-      0,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      2,
-      3,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      5,
-      3,
-      0,
-      4,
-      1,
-      0,
-      0,
-      0,
-      0,
-      6,
-      0,
-      0,
-      0,
-      9,
-      3,
-      6,
-      0,
-      0,
-      3,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      0,
-      6,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      4,
-      3,
-      0,
-      1,
-      1,
-      1,
-      0,
-      1,
-      0,
-      5,
-      3,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      5,
-      3,
-      0,
-      0,
-      1,
-      1,
-      0,
-      2,
-      9,
-      0,
-      0,
-      4,
-      4,
-      0,
-      1,
-      0,
-      0,
-      8,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-=======
-      1,
       2,
-      2,
-      1,
-      0,
-      4,
-      0,
-      0,
-      2,
-      0,
-<<<<<<< HEAD
-=======
-=======
-      0,      3,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      0,
-      0,
-      1,
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      0,
-      0,
-      0,
-      2,
-      8,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      8,
-      2,
-      2,
-      0,
-      0,
-      2,
-      3,
-      0,
-      6,
-      0,
-      0,
-      3,
-      3,
-      1,
-      0,
-      1,
-      1,
-      4,
-      0,
-      0,
-      3,
-      12,
-      0,
-      3,
-      2,
-      1,
-      6,
-      1,
-      0,
-      2,
-      0,
-      1,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      0,
-      3,
-      0,
-      0,
-      2,
-      7,
-      2,
-      0,
-      1,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      4,
-      1,
-      2,
-      2,
-      0,
-      0,
-      1,
-      4,
-      1,
-      0,
-      5,
-      3,
-      0,
-      0,
-      0,
-      2,
-      2,
-      0,
-      0,
-      6,
-      8,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      3,
-      9,
-      1,
-      0,
-      0,
-      11,
-      0,
-      7,
-      0,
-      1,
-      2,
-      5,
-      0,
-      1,
-      1,
-      2,
-      1,
-      0,
-      1,
-      1,
-      3,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      3,
-      2,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      0,      3,
-      2,
-      0,
-      0,
-      0,
-      0,      0,
-      0,
-      1,
-      0,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      2,
-      1,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      2,
-=======
-      4,
-      6,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      2,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      2,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      2,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      1,
-      10,
-      0,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      1,
-      10,
-      0,      0,
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      3,
-      2,
-      0,
-      0,
-      0,
-      1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-      2,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
       2,      0,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
-=======
-=======
-      2,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      2,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       1,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      1,
-      2,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      1,
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      1,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1
     ]
   },
@@ -16121,81 +14149,7 @@
       0,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      3,
-      0,
-      0,
-      3,
-      0,
-      2,
-      1,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      2,
-      2,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      4,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      8,
-=======
-      2,
-      0,
-      0,
-      0,
-      0,
-      3,
-      3,
-      0,
-      8,
-      0,
-      2,
-      1,
-      4,
-      0,
-      1,
-      0,
-      1,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
@@ -16204,500 +14158,39 @@
       0,
       0,
       1,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      8,      2,
-      0,
-      0,
-      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      1,
-      0,
-      2,
-      2,
-      0,
-      2,
-      2,
-      0,
-      0,
-      1,
-      1,
-      2,
-      0,
-      0,
-      3,
-      1,
-      0,
-      1,
-      2,
-      1,
-      2,
-      0,
-      2,
-      0,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       1,
       0,
       2,
       0,
       0,
-      1,
-      4,
-      1,
-      2,
-      3,
-      0,
-      0,
-      0,
-      1,
-      4,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      2,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      4,
-      1,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      1,
-      1,
-      0,
-      6,
-      0,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      3,
-      0,
-      5,
-      1,
-      0,
-      1,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      2,
-=======
-      0,
-      0,
-      3,
-      4,
-      0,
-      6,
-      0,
-      0,
-      0,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      2,      1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      2,      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      2,      1,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      2,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+      0,
+      0,
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      1,
-      1,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-=======
-      1,
-      1,
-      0,
-      1,
-      1,
-      2,
-      4,
-      1,
-      0,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      3,
-      0,      3,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      3,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      3,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      4,
-      1,
-      3,
-      3,
-      3,
-      0,
-      2,
-      2,
-      0,
-      3,
-      4,
-      0,
-      0,
-      6,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      7,
-=======
-      1,
-      0,
-      0,
-      2,
-      0,
-      4,
-      1,
-      0,
-      0,
-      1,
-      2,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      0,
-      0,
-      7,      1,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      7,      1,
-      0,
-      0,
-      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      4,
-      4,
-      2,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      2,
-      0,
-      7,
-      2,
-      0,
-      1,
-      4,
-      4,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      9,
-=======
-      0,
-      1,
-      2,
-      0,
-      0,
-      6,
-      9,
-      1,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      5,
-      0,
-      0,
-      0,
-      13,
-      1,
-      8,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-      0,
-<<<<<<< HEAD
-=======
-=======
-      9,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       0,
       0,
       1,
-<<<<<<< HEAD
-=======
-      1,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
-=======
-      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       9,      0,
       0,
       0,
       1,
       1,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      9,      0,
-      0,
-      0,
-      1,
-      1,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      1,
-      2,
-      1,
-      14,
-      1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      3,
-=======
-      1,
-      11,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      2,
-      0,
-      3,
-      1,
-      0,
-      0,
-      4,
-      1,
-      0,
-      2,
-      0,
-      4,
-      2,
-      1,
-      0,
-      0,
-      2,
-      0,
-      3,
-      1,
-      4,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      5,
-      11,
-      0,
-      0,
-      3,
-      10,
-      0,
-      0,
-      0,
-      3,
-      11,
-      0,
-      1,
-      1,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      4,
-      1,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      2,
-      20,
-      2,
-      0,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       2,
       4,
@@ -16706,175 +14199,19 @@
       2,
       4,
       0,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      3,      0,
-      2,
-      4,
-      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      0,
-      0,
-      4,
-      1,
-      2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      3,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-=======
-      0,
-      0,
-      0,
-      3,
-      0,
-      2,
-      3,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,      1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      1,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       2,
       1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      2,
-      0,
-      1,
-      3,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0
-=======
-      0,
-      0,
-      2,
-      2,
-      1,
-      1,
-      0,
-      1,
-      2,
-      0,
-      2,
-      0,
-      1,
-      3
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     ]
       0    ]
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0    ]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0    ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   {
     "route": "/cutting-edge-pricing-2025",
@@ -20532,485 +17869,7 @@
   },
   {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-    "route": "/explore",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      6,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      3,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      3,
-      2,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      1,
-      4,
-      0,
-      3,
-      0,
-      4,
-      1,
-      1,
-      7,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      1,
-      0,
-      2,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      3,
-      0,
-      2,
-      0,
-      9,
-      0,
-      1,
-      1,
-      4,
-      0,
-      0,
-      0,
-      6,
-      0,
-      5,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      1,
-      2,
-      1,
-      0,
-      0,
-      4,
-      2,
-      1,
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      1,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      1,
-      2,
-      3,
-      0,
-      0,
-      3,
-      1,
-      1,
-      2,
-      0,
-      1,
-      11,
-      0,
-      1,
-      0,
-      1,
-      3,
-      0,
-      0,
-      0,
-      0,
-      2,
-      2,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      2,
-      0,
-      0,
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      2,
-      0,
-      1,
-      5,
-      1,
-      0,
-      9,
-      0,
-      2,
-      2,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      1,
-      1,
-      4,
-      0,
-      2,
-      0,
-      0,
-      1,
-      1,
-      0,
-      2,
-      0,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      2,
-      1,
-      0,
-      0,
-      5,
-      0,
-      0,
-      0
-    ]
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-    "route": "/expo",
-    "vector": [
-  {      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  {      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  {      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-=======
-      2,
-      0,
-      0,
-<<<<<<< HEAD
-=======
-=======
-      2,
-      0,
-      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      4,      2,
-      0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       0,
       0,
@@ -21020,12 +17879,120 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -21034,29 +18001,15 @@
       0,
       0,
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      3,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,
-      1,
-      3,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       0,
       0,
       0,
@@ -21066,12 +18019,6 @@
       0,
       3,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
       0,
       0,
@@ -21684,26 +18631,6 @@
       0,
       0,
       0,
-=======
-      1,
-      0,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,
-      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      1,
-      2,
-      0,
-      0,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
       0,
       0,
@@ -21817,351 +18744,19 @@
       0,
       0,
       0,
-=======
-      1,
-      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       2,
       0,
       0,
       1,
       1,      0,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,
-      1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
-      2,
       0,
       0,
       0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      7,
-      0,
-      0,
-      2,
-      2,
-      6,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      2,
-      1,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ]
-  },
-  {
-    "route": "/iam-access-review",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
-      0,
-      6,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      6,
-      0,
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      6,
-      0,
-      4,      1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      2,
-      6,
-      0,
-      4,      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
       1,
       0,
@@ -22282,298 +18877,22 @@
       0,
       0,
       0,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      2,
-      0,
-      1,
-      0,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      1,
-      0,
       0,
       0,
       0,
       0,
       1,
       1,
-      1,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      3,
-      0,
-      1,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      3,
-      2,
-      0,
-      0,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-<<<<<<< HEAD
       0,
       2,
       6,
       0,
       4,
-=======
       1,
       0,
       0,
       0,
       0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-      1,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      5,
-      0,
-      0,
-      3,
-      7,
-      0,
-      7,
-      1,
-      1,
-      0,
-      2,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      3,
-      4,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      4,
-      5,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      2,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      7,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      0,
-      0,
-      7,
-      0,
-      0,
-      2,
-      1,
-      0,
-      3,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      3,
-      2,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      1,
-=======
-      1,
-      0,
-      0,
-      0,
-=======
-      1,      0,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-      0,
-      0,
-      0,
-      5,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       10,
       0,
       0,
@@ -22586,17 +18905,7 @@
       0,
       1,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       2,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -22605,17 +18914,8 @@
       0,
       0,
       2,      0,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      2,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      2,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       0,
@@ -22626,53 +18926,8 @@
       0,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      4,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      1,
-=======
-      1,
-      1,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      1,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0
@@ -33642,866 +29897,12 @@
   },
   {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-    "route": "/search",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
-      2,
-      0,
-      3,
-      0,
-      1,
-      0,
-      0,
-      3,
-      0,
-      0,
-      18,
-      0,
-      1,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      3,
-      0,
-      0,
-      1,
-      1,
-      0,
-      3,
-      1,
-      1,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      3,
-      0,
-      7,
-      0,
-      3,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      8,
-      0,
-      1,
-      0,
-      2,
-      2,
-      0,
-      1,
-      5,
-      0,
-      0,
-      0,
-      0,
-      0,
-      16,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      0,
-      1,
-      1,
-      3,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      3,
-      1,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      1,
-      6,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      6,
-      0,
-      8,
-      0,
-      4,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      6,
-      2,
-      0,
-      0,
-      0,
-      2,
-      2,
-      0,
-      0,
-      5,
-      2,
-      1,
-      0,
-      0,
-      0,
-      13,
-      0,
-      0,
-      1,
-      0,
-      2,
-      6,
-      7,
-      0,
-      0,
-      0,
-      4,
-      1,
-      0,
-      0,
-      12,
-      2,
-      1,
-      6,
-      0,
-      2,
-      2,
-      5,
-      0,
-      1,
-      1,
-      7,
-      0,
-      0,
-      0,
-      0,
-      3,
-      1,
-      0,
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      2,
-      3,
-      0,
-      2,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      7,
-      1,
-      1,
-      17,
-      0,
-      0,
-      3,
-      1,
-      1,
-      0,
-      6,
-      0,
-      1,
-      1,
-      1,
-      4,
-      0,
-      6,
-      0,
-      0,
-      2,
-      2,
-      0,
-      9,
-      0,
-      1,
-      0,
-      1,
-      2,
-      0,
-      3,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      16,
-      2,
-      1,
-      0
-    ]
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-    "route": "/secrets-rotation-automation",
-    "vector": [
-<<<<<<< HEAD
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      1,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      4,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0
-    ]
-  },
-  {
-    "route": "/security-awareness-phishing",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
-      0,
-      6,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      6,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1
-    ]
-  },
-  {
-    "route": "/seo-analyzer-tool",
-    "vector": [
-      2,
-      0,
-      0,
-      0,
-      3,
-      2,
-      0,
-      1,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      2,
-      4,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      1,
-      1,
-      0,
-      0,
-      6,
-      6,
-      0,
-      0,
-      1,
-=======
-=======
-  {      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       0,
       0,
       1,
       1,
       1,
-<<<<<<< HEAD
       1,
       0,
       0,
@@ -35240,476 +30641,54 @@
   {
     "route": "/services",
     "vector": [
-<<<<<<< HEAD
       0,
-=======
-      5,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
       0,
       0,
       0,
       1,
-<<<<<<< HEAD
       1,
       1,
       1,
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       0,
       0,
       0,
       2,
-=======
-=======
-    "route": "/secrets-rotation-automation",
-    "vector": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   {      0,
       0,
       0,
       1,
       1,
       1,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       1,
       0,
       0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-      0,
-      0,
-      3,
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      3,
-      1,
-      0,
-      0,
-      4,
-      3,
-      5,
-      0,
-      1,
-      1,
-      3,
-      2,
-      0,
-      21,
-      2,
-      5,
-      0,
-      0,
-      0,
-      1,
-      0,
-      3,
-      1,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-      0,
-      1,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
-=======
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,      0,
-      1,
-      0,
-      0,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      3,
-      2,
-      4,
-      2,
-      2,
-      0,
-      0,
-      0,
-      2,
-      0,
-      1,
-      4,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      8,
-      1,
-      1,
-      0,
-      2,
-      0,
-      1,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      2,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      3,
-      0,
-      2,
-      1,
-      1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,      0,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
-=======
-=======
-      0,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       4,
       0,
       0,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+      0,
+      1,
+      0,
+      0,
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      6,
-      0,
-      5,
-      0,
-      0,
-      0,
-      0,
-      0,
       0,
       0,
       1,
       0,
-      2,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      1,
-      1,
-      5,
-      1,
-      1,
-      0,
-      0,
-      1,
-      2,
-      5,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      2,
-=======
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      4,
-      1,
-      2,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      3,
-      2,      3,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      2,      3,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      2,      3,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      1,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      5,
-      0,
-      1,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      0,
-=======
-      4,
-      0,
-      0,
-      0,
-      3,
-      1,
-      1,
-      1,
-      2,
-      2,
-      3,
-      0,
-      0,
-      4,
-      2,
-=======
-      0,      2,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      2,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      2,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      1,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       8,
       0,
       1,
@@ -35737,24 +30716,6 @@
       0,
       2,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      0,
-      0,
-      1,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       2,
@@ -35810,101 +30771,8 @@
       6,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0
-=======
-      1,
-      2,
-      1,
-      0,
-      0,
-      3,
-      2,
-      1,
-      3,
-      4,
-      2,
-      3,
-      0,
-      1,
-      1,
-      0,
-      0,
-      6,
-      0,
-      0,
-      0,
-      1,
-      1,
-      2,
-      5,
-      2,
-      3,
-      51,
-      0,
-      1,
-      2,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      3,
-      2,
-      5,
-      0,
-      5,
-      0,
-      0,
-      1,
-      2,
-      1,
-      3,
-      0,
-      2,
-      0,
-      1,
-      2,
-      0,
-      1,
-      0,
-      6,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      13,
-      0,
-      0,
-      2
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-    ]
-      0    ]
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0    ]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0    ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   {
     "route": "/site-health",
@@ -36176,51 +31044,8 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      2,
-      0,
-      1,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      3,
-=======
-      1,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      3,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      3,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      3,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -36237,60 +31062,8 @@
       0,
       1,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      4,
-      2,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      1,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -36303,58 +31076,21 @@
       0,
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      5,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       0,
       0,
       0,
-<<<<<<< HEAD
+      0,
+      0,
+      0,
       1,
       0,
       1,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      1,
-      5,      0,
-      0,
-      0,
-      0,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       5,
       0,
       0,
@@ -36389,40 +31125,13 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       1,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
-      1,      0,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
       2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
 <<<<<<< HEAD
       1,
@@ -36450,142 +31159,15 @@
       3,
       0,
       1,
-=======
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      7,
       0,
-      0,
-      3,
-      1,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      1,
-      0,
-      2,
-      0,
-      4,
       0,
       0,
       0,
       0,
       1,
-      0,
-      1,
-      0,
-      1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      1,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      2,
-      1,
-      1,      1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      1,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      1,
-      1,
-      12,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-      1,
-=======
-      1,
-      0,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
@@ -36606,13 +31188,7 @@
       0,
       1,
       3,      0,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,      2,
       0,
       0,
@@ -36620,64 +31196,20 @@
       0,
       1,
       3,      0,
-<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 <<<<<<< HEAD
       6,
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       6,      0,
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
-=======
-=======
-      6,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      6,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
       0,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
@@ -36693,85 +31225,8 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b56b
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0
     ]
   },

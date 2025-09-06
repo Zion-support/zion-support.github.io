@@ -1,27 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return;
-  const terms = readJsonFile('deal/terms.json', {
+=======
+
+  const terms = readJsonFile('deal/terms && terms.json', {
     round: 'Series A',
     target: '$10,000,000',
     valuationCap: '$80,000,000',
     discount: '20%',
-    leadInvestor: 'TBD',
+
   });
-  res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-  const terms = readJsonFile('deal/terms.json', {
+
+  const terms = readJsonFile('deal/terms && terms.json', {
     round: 'Series A',
+
     target: '$10,000,000';
     valuationCap: '$80,000,000';
-    discount: '20%',
+
+    discount: '20%'
     leadInvestor: 'TBD'});
+
   res.status(200).json(terms)
 }
-<<<<<<< HEAD
-
 }
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

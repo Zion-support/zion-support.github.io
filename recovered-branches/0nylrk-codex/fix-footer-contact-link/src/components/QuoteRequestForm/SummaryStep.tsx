@@ -1,69 +1,31 @@
-<<<<<<< HEAD
-import {useEffect, useState} from "react";
-import {QuoteFormData} from "@/types/quotes";
-import {Card, CardContent} from "@/components/ui/card";
-import {Label} from "@/components/ui/label";
-import {Textarea} from "@/components/ui/textarea";
-import {AIMatchingResults} from "@/components/AIMatchingResults";
-import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
-import {toast} from "@/hooks/use-toast";
-interface SummaryStepProps {
-  formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void
-}
-
-export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
-  const [isMatching, setIsMatching] = useState(false);
-  const [matches, setMatches] = useState<MatchResult[]>([]);
-  
-  // Run AI matching when the component mounts
-  useEffect(() => {
-    const runMatching = async () => {
-      if (!formData.projectDescription) return;
-      
-      setIsMatching(true);
-      try {
-        // Create a query string from the form data
-        const queryString = `
-          ${formData.projectName} 
-          ${formData.projectDescription} 
-          ${formData.serviceType} 
-          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
-          ${formData.timeline}
-        `;
 =======
+
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
-import { toast } from "@/hooks/use-toast",
-interface SummaryStepProps {
-  formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void
-import { useEffect, useState } from "react",;
-import { QuoteFormData } from "@/types/quotes",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Label } from "@/components/ui/label",;
-import { Textarea } from "@/components/ui/textarea",;
-import { AIMatchingResults } from "@/components/AIMatchingResults",;
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
-import { toast } from "@/hooks/use-toast",;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface SummaryStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
-;
-export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
-  const [isMatching, setIsMatching] = useState(false),;
-  const [matches, setMatches] = useState<MatchResult[]>([]),;
+
+export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
+
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+
+
   // Run AI matching when the component mounts;
   useEffect(() => {;
     const runMatching = async () => {;
-      if (!formData.projectDescription) return,;
-      setIsMatching(true),;
+      if (!formData && formData.projectDescription) return;
+
+      setIsMatching(true);
       try {;
         // Create a query string from the form data;
         const queryString = `;
@@ -73,106 +35,97 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         // Get AI matches
         const results = await findMatches(
           queryString,
           formData.serviceType,
           3
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         );
-        
-        setMatches(results)
+
+import { useEffect, useState } from './react';
+import { QuoteFormData } from '@/types / quotes';
+import { Card, CardContent } from '@/components / ui / card';
+import { Label } from '@/components / ui / label';
+import { Textarea } from '@/components / ui / textarea';
+import { AIMatchingResults } from '@/components / AIMatchingResults';
+import { find_matches, MatchResult } from '@/lib / ai - matchmaking';
+import { toast } from '@/hooks / use - toast';
+interface SummaryStepProps {
+  form_data: QuoteFormData,
+  updateFormData: (data: Partial < QuoteFormData>) => void;
+}
+export /**
+ * SummaryStep - Function description
+ */
+function SummaryStep() {
+  const [is_matching, setIsMatching] = useState (false);
+  const [matches, set_matches] = useState < MatchResult[]>([]);
+;
+  // Run AI matching when the component mounts;
+  useEffect (() => {
+    const run_matching = async () => {
+      // Check condition
+if (return) {
+  $2
+}
+      setIsMatching (true);
+      try {
+        // Create a query string from the form data;
+        const query_string = `;
+          ${form_data.project_name}
+          ${form_data.project_description}
+          ${form_data.service_type}
+          ${form_data.budget.type === 'fixed' ? `budget ${form_data.budget.amount}` : ''}
+          ${form_data.timeline}
+        `;
+;
+        // Get AI matches;
+        const results = await find_matches (
+          query_string;
+          form_data.service_type;
+          3);
+;
+        set_matches (results);
       } catch (error) {
-        console.error("Error during AI matching:", error);
-        toast({
+        console.error ("Error during AI matching:", error);
+        toast ({
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
-          variant: "destructive"})
+          variant: "destructive"});
+
       } finally {
-        setIsMatching(false)
+        setIsMatching (false);
       }
-    },
-    
+
     runMatching()
   }, [formData]);
-  
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match
     updateFormData({
-      specificItem: match.item,
+      specificItem: match.item
       serviceCategory: match.item.category
     });
-    
     toast({
-      title: "Match Selected",
+      title: "Match Selected"
       description: `You've selected ${match.item.title}`})
-  },
-  
-  // Extract just the items from each MatchResult for the AIMatchingResults component
-  const matchItems = matches.map(match => match.item),
-  
+
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
-    const matchResult = matches.find(match => match.item.id === item.id),
+    const matchResult = matches.find(match => match.item.id === item.id)
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
-  },
-  
-  return (
-    <div className="space-y-6">
-      <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-<<<<<<< HEAD
-=======
-      
-        `,;
-        // Get AI matches;
-        const results = await findMatches(;
-          queryString,;
-          formData.serviceType,;
-          3;
-        ),;
-        setMatches(results);
-      } catch (error) {;
-        console.error("Error during AI matching:", error),;
-        toast({;
-          title: "Matching Error",;
-          description: "We couldn't find matches for your request. Please try again.",;
-          variant: "destructive"});
-      } finally {;
-        setIsMatching(false);
-      }
-    },;
-    runMatching();
-  }, [formData]),;
-  const handleSelectMatch = (match: MatchResult) => {;
-    // Update the form with the selected match;
-    updateFormData({;
-      specificItem: match.item,;
-      serviceCategory: match.item.category;
-    }),;
-    toast({;
-      title: "Match Selected",;
-      description: `You've selected ${match.item.title}`});
-  },;
-  // Extract just the items from each MatchResult for the AIMatchingResults component;
-  const matchItems = matches.map(match => match.item),;
-  // Map the onSelectMatch handler to work with the item directly;
-  const handleItemSelect = (item: any) => {;
-    // Find the original MatchResult that contains this item;
-    const matchResult = matches.find(match => match.item.id === item.id);
-    if (matchResult) {;
-      handleSelectMatch(matchResult);
-    }
-  };
-  return (;
-    <div className="space-y-6">;
-      <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* AI Matching Results */}
-      <AIMatchingResults 
+      <AIMatchingResults
         serviceType={formData.serviceType}
         projectDescription={formData.projectDescription}
         matches={matchItems}
@@ -235,7 +188,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
                   </div>
                 </div>
               )}
-              
+
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -281,7 +234,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
               </div>
               <div>
                 <Label className="text-zion-slate-light">Company</Label>
-                <div className="text-white">{formData.contactInfo.company || "N/A"}</div>
+                <div className="text-white">{formData.contactInfo.company |"N/A"}</div>
               </div>
               <div>
                 <Label className="text-zion-slate-light">Email</Label>
@@ -289,7 +242,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
               </div>
               <div>
                 <Label className="text-zion-slate-light">Phone</Label>
-                <div className="text-white">{formData.contactInfo.phone || "N/A"}</div>
+                <div className="text-white">{formData.contactInfo.phone |"N/A"}</div>
               </div>
             </div>
           </CardContent>
@@ -297,8 +250,10 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
       </div>
     </div>
   )
-<<<<<<< HEAD
-};
 =======
+<<<<<<< HEAD
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+};
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

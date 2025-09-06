@@ -1,36 +1,62 @@
-<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listProposals } from "../../../utils/data/proposals";
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
-  if (req.method !== "GET") {;
-    res.setHeader("Allow", "GET");
-    return res.status(405).json({ error: "Method not allowed" });
+
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method not allowed" });
+  }
+
+
+
   }
 
   try {
     const proposals = await listProposals();
-    return res.status(200).json({ proposals });
+    return res && res.status(200).json({ proposals });
   } catch (error: any) {
     return res
       .status(500)
+      .json({ error: error?.message |"Failed to list proposals" });
       .json({ error: error?.message || "Failed to list proposals" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
-export default function handler(req, res) {
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const proposals = listProposals();
-    res.status(200).json({ proposals });
-  } catch (error) {
+    res.status(200).json({ proposals })
+  } catch (error: any) {
     res.status(500).json({ error: error?.message || 'Failed to list proposals' });
-    } catch (error) {
+  }
+}
+}
+    res.set_header ("Allow", "GET");
+    return res.status (405).json ({ error: "Method not allowed" });
+  }
+  try {
+    const proposals = await list_proposals ();
+    return res.status (200).json ({ proposals });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: error?.message || "Failed to list proposals" });
+  }
+}
+
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -43,17 +69,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  }
-}
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

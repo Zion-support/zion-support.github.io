@@ -1,77 +1,53 @@
 import { defineConfig, devices } from '@playwright/test';
+
+import { defineConfig, devices } from '@playwright/test';
+export default defineConfig({testDir:'tests/e2e';
 import { defineConfig, devices } from '@playwright/test',;
 ;
 export default defineConfig({;
-<<<<<<< HEAD
   testDir:'tests/e2e',;
   use:{;
-    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
-    trace:'on-first-retry'},;
+    baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
+    trace:'on-first-retry'}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   projects:[;
-    {;
-      name:'Desktop Chrome',;
+    {name:'Desktop Chrome';
       use:{;
-        browserName:'chromium',;
+        browserName:'chromium';
         channel:'chrome'}
-    },;
-    {;
-      name:'Desktop Firefox',;
+    }
+    {name:'Desktop Firefox';
       use:{;
         browserName:'firefox'}
-    },;
-    {;
-      name:'Desktop Safari',;
+    }
+    {name:'Desktop Safari';
       use:{;
         browserName:'webkit'}
-    },;
-    {;
-      name:'Mobile Chrome',;
-      use:{;
-        browserName:'chromium',;
-        ...devices['Pixel 5']}
-    },;
-    {;
-      name:'Mobile Safari',;
-      use:{;
-        browserName:'webkit',;
-        ...devices['iPhone 12']}
     }
-  ],;
-  reporter:[;
-    ['list'],;
-    ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
-}),;import { defineConfig, devices } from "@playwright/test";
-import { defineConfig, devices } from '@playwright/test';
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace: 'on-first-retry'
-  },
+
   projects: [
     {
       name: "Desktop Chrome",
       use: {
         browserName: 'chromium',
         channel: 'chrome'
-}
-    },
+
     {
       name: "Desktop Firefox",
       use: {
         browserName: 'firefox'
-}
-    },
+
     {
       name: "Desktop Safari",
       use: {
         browserName: 'webkit'
-}
-    },
+
     {
       name: "Mobile Chrome",
       use: {
         browserName: 'chromium',
         ...devices['Pixel 5']
-}
-    },
+
     {
       name: "Mobile Safari",
       use: {
@@ -83,8 +59,19 @@ import { defineConfig, devices } from '@playwright/test';
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
-]
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+        ...devices['Pixel 5']}
+    }
+    {name:'Mobile Safari';
+      use:{;
+        browserName:'webkit';
+        ...devices['iPhone 12']}
+    }
+  ];
+  reporter:[;
 =======
+]
   testDir: 'tests/e2e',;
   use: {;
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
@@ -144,7 +131,7 @@ import { defineConfig, devices } from '@playwright/test';
 }
   ],;
   reporter: [;
+
     ['list'];
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]];
-});
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

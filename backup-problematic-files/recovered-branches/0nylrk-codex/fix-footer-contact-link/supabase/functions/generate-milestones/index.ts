@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 ;
@@ -88,12 +90,17 @@ serve(async (req) => {;
         status:500, ;
         headers:{ ...corsHeaders, 'Content-Type':'application/json' }}
     ),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }),; const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'
 };
 //Handle CORS preflight requests if (req.method === 'OPTIONS') {
   //Create prompt for OpenAI const prompt = `You are an expert project manager who specializes in breaking down projects into clear milestones. Based on the following project details: Generate a logical, phased milestone breakdown with 3-7 milestones that would be appropriate for this project. Include realistic due dates, estimated hours of effort, and clear deliverable descriptions. Each milestone should have: 1. Title: A concise title 2. Description: A clear description of deliverables 3. Due Date: A specific date within the project timeline 4. Estimated Hours: Reasonable effort estimate Format the response as a valid JSON array of milestone objects with these fields: "title", "description", "dueDate", "estimatedHours" Ensure your response is ONLY the JSON array with no additional text. `;
-// Call OpenAI API 
+// Call OpenAI API
 }
 });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

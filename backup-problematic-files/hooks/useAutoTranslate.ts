@@ -1,98 +1,32 @@
-<<<<<<< HEAD:hooks/useAutoTranslate.ts
-=======
-<<<<<<< HEAD:backup-problematic-files/hooks/useAutoTranslate.ts
-import { useEffect, useMemo, useState } from 'react',;
-import { translateTextViaAI } from '../utils/translation',;
-export type UseAutoTranslateResult = {;
-  translations: Record<string string>,;
-  loading: boolean,;
-  error?: string;
-},;
-export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
-  const [translations, setTranslations] = useState<Record<string string>>({}),;
-  const [loading, setLoading] = useState(false),;
-  const [error, setError] = useState<string | undefined>(undefined),;
-  const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]),;
-  useEffect(() => {;
-    if (!text || targets.length === 0) {;
-      setTranslations({}),;
-      return;
-    }
-;
-    let cancelled = false,;
-    const timer = setTimeout(async () => {;
-      try {;
-        setLoading(true),;
-        setError(undefined),;
-        const res = await translateTextViaAI(text, targets),;
-        if (!cancelled) setTranslations(res);
-      } catch (e: any) {;
-        if (!cancelled) setError(e?.message || 'Translation failed');
-      } finally {;
-        if (!cancelled) setLoading(false);
-      }
-    }, debounceMs),;
-    return () => {;
-      cancelled = true;
-      clearTimeout(timer);
-    }
-  }, [key, debounceMs]);
-  return { translations, loading, error }
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useAutoTranslate.ts
+
+
 import { useEffect, useMemo, useState } from 'react';
+
 import { translateTextViaAI } from '../utils/translation';
+import { translateTextViaAI } from '../utils/translation';
+
 export type UseAutoTranslateResult = {;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
   translations: Record<string, string>;
   loading: boolean;
   error?: string;
-};
-
+}
 export function useAutoTranslate(
+
   text: string,
   targets: string[],
   debounceMs = 600;
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
-  const [translations, setTranslations] = useState<Record<string, string>>({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | undefined>(undefined);
 
-  const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]);
-
-  useEffect(() => {
-    if (!text || targets.length === 0) {
-      setTranslations({});
-      return;    }      return
-    }
-
-    let cancelled = false;
-    const timer = setTimeout(async () => {
-      try {
-        setLoading(true);
-        setError(undefined);
-        const res = await translateTextViaAI(text, targets);
-        if (!cancelled) setTranslations(res);
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Translation failed');
-      } finally {
-        if (!cancelled) setLoading(false);      }      } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Translation failed')
-      } finally {
-        if (!cancelled) setLoading(false)
-      }
-    }, debounceMs);
-
-    return () => {
-      cancelled = true;
-      clearTimeout(timer);
-    };
-  }, [key, debounceMs]);
-
-  return { translations, loading, error };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+:hooks/useAutoTranslate.ts
     }
   }, [key, debounceMs]);
-
   return { translations, loading, error }
 }
->>>>>>> main:hooks/useAutoTranslate.ts
+}
+main:hooks/useAutoTranslate.ts
+:backup-problematic-files/hooks/useAutoTranslate.ts
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

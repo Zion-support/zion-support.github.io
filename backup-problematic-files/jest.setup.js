@@ -1,4 +1,6 @@
-import "@testing-library/jest-dom";
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -17,39 +19,32 @@ jest.mock("next/router", () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
+=======
         emit: jest.fn()
       },
-<<<<<<< HEAD:jest.setup.js
+:jest.setup.js
       isFallback: false,
-=======
-<<<<<<< HEAD:backup-problematic-files/jest.setup.js
+:backup-problematic-files/jest.setup.js
       isFallback: false
     }
   }
 }));
 
-// Mock Next.js Image component
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: (props) => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />
-  }
-}));
-=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js
+:backup-problematic-files/jest.setup.js
     };
   },
 }));
 
+=======
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   return function MockedImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />;
   };
 });
-<<<<<<< HEAD:jest.setup.js
+:jest.setup.js
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {
@@ -61,20 +56,15 @@ jest.mock("next/link", () => {
     );
   };
 });
-=======
->>>>>>> main:jest.setup.js
+main:jest.setup.js
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
-<<<<<<< HEAD:backup-problematic-files/jest.setup.js
-    return <a href={href} {...props}>{children}</a>
-  }
-=======
+<<<<<<< HEAD
 
-  },
->>>>>>> main:jest.setup.js
 }));
 
 // Mock window.matchMedia
@@ -84,8 +74,7 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
@@ -106,5 +95,5 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

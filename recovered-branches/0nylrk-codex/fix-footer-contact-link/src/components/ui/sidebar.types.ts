@@ -1,12 +1,35 @@
 
+=======
 <<<<<<< HEAD
 import React from 'react';
-=======
 import React from 'react',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 // This file fixes the ref type issues in sidebar components
-
 // Export a placeholder to ensure the file is recognized as a module
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+// This file fixes the ref type issues in sidebar components
+// Export a placeholder to ensure the file is recognized as a module
+
+// Safe ref casting helper type - this is the key to fixing our issues
+// We need to use a type that is compatible with both Slot's ref and React's ref handling
+export type SafeRef<T> = React.Ref<T>,
+
+// Sidebar specific types
+export type SidebarState = "expanded" | "collapsed",
+
+};
+export type SidebarContext = {
+  state: SidebarState;
+  open: boolean;
+  set_open: (open: boolean) => void;
+  open_mobile: boolean;
+  setOpenMobile: (open: boolean) => void;
+
+  is_mobile: boolean;
+  toggle_sidebar: () => void;
+}
+;
+
 export const SIDEBAR_REF_TYPE_FIX = true,
 
 // Define a type that makes the ref forwards compatible
@@ -19,13 +42,10 @@ export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRe
 export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>,
 
 // Helper for dealing with refs in complex situations
-<<<<<<< HEAD
 export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = ;
   React.PropsWithChildren<Props & { as?: T }>;
-=======
 export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = 
   React.PropsWithChildren<Props & { as?: T }>,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 // Safe ref casting helper type - this is the key to fixing our issues
 // We need to use a type that is compatible with both Slot's ref and React's ref handling
@@ -34,7 +54,6 @@ export type SafeRef<T> = React.Ref<T>,
 // Sidebar specific types
 export type SidebarState = "expanded" | "collapsed",
 
-<<<<<<< HEAD
 export type SidebarContext = {;
   state: SidebarState;
   open: boolean;
@@ -43,7 +62,6 @@ export type SidebarContext = {;
   setOpenMobile: (open: boolean) => void;
   isMobile: boolean,
   toggleSidebar: () => void
-=======
 export type SidebarContext = {
   state: SidebarState,
   open: boolean,
@@ -79,5 +97,7 @@ export type SidebarContext = {;
   setOpenMobile: (open: boolean) => void,;
   isMobile: boolean;
   toggleSidebar: () => void;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-};
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

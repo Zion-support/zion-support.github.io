@@ -1,4 +1,5 @@
 
+=======
 ;
 #!/usr/bin/env node,;
 const fs = require('fs'),;
@@ -655,29 +656,28 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
               cwd: this.projectRoot,
               encoding: 'utf8'
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             }).trim(),
 ,
             branchInfo.push({,
               name: branchName,
               lastCommit: lastCommit,
               commitCount: parseInt(commitCount),
-              isActive: true
-            })
-          } catch (error) {,
-            // Skip if can't access branch
+<<<<<<< HEAD
+
           };
         };
       };
 ,
       return {,
         success: true,
-        branches: branchInfo
+
       };
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
-        branches: []
+
       };
     };
   };
@@ -688,7 +688,7 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 ,
       const status = execSync('git status --porcelain', {,
         cwd: this.projectRoot,
-        encoding: 'utf8'
+
       }),
 ,
       const conflictFiles = status,
@@ -699,14 +699,14 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
       return {,
         success: true,
         hasConflicts: conflictFiles.length > 0,
-        conflictFiles: conflictFiles
+
       };
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
         hasConflicts: false,
-        conflictFiles: []
+
       };
     };
   };
@@ -717,7 +717,7 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 ,
       const branches = execSync('git branch -r', {,
         cwd: this.projectRoot,
-        encoding: 'utf8'
+
       }).trim().split('\n'),
 ,
       const staleBranches = [],
@@ -728,8 +728,7 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,
           try {,
             const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,
-              cw: d: this.projectRoot,
-              encodin: g: 'utf8'            }).trim(),,
+
             const lastCommitDate = new Date(lastCommit),
             const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24),
 ,
@@ -737,24 +736,20 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
               staleBranches.push({,
                 name: branchName,
                 lastCommit: lastCommit,
-                daysSinceLastCommit: Math.floor(daysSinceLastCommit)
-              })
-            };
-          } catch (error) {,
-            // Skip if can't access branch
+
           };
         };
       };
 ,
       return {,
         success: true,
-        staleBranches: staleBranches
+
       };
     } catch (error) {,
       return {,
         success: false,
         error: error.message,
-        staleBranches: []
+
       };
     };
   };
@@ -768,15 +763,13 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
         totalBranches: branchInfo.branches?.length || 0,
         hasConflicts: conflictInfo.hasConflicts,
         staleBranches: staleInfo.staleBranches?.length || 0,
-        healthScore: 0
+
       },
       details: {,
         status: statusInfo,
         branches: branchInfo,
         conflicts: conflictInfo,
-        stale: staleInfo
-      },
-      recommendations: []
+
     };
 ,
     // Calculate health score,
@@ -793,48 +786,35 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
       report.recommendations.push({,
         priority: 'medium',
         message: 'Uncommitted changes detected',
-        action: 'Commit or stash changes before switching branches'
-      })
+
     };
 ,
     if (conflictInfo.hasConflicts) {,
       report.recommendations.push({,
         priority: 'high',
         message: 'Merge conflicts detected',
-        action: 'Resolve merge conflicts before continuing'
-      })
+
     };
 ,
     if (staleInfo.staleBranches?.length > 0) {,
       report.recommendations.push({,
         priority: 'low',
         message: `${staleInfo.staleBranches.length} stale branches found`,
-        action: 'Consider deleting or updating stale branches'
-      })
+
     };
 ,
     if (branchInfo.branches?.length > 10) {,
       report.recommendations.push({,
         priority: 'low',
         message: 'Many branches detected',
-        action: 'Consider cleaning up unused branches'
-      })
-    };
-,
-    return report
+
   };
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
-        fs.mkdirSync(reportDir, { recursive: true })
-      };
-,
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved to: ${this.reportFile}`)
-    } catch (error) {,
-      this.log(`Error saving report: ${error.message}`)
+
     };
   };
 ,
@@ -846,7 +826,7 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
-        fs.mkdirSync(logsDir, { recursive: true })
+
       };
 ,
       // Run all git checks,
@@ -878,15 +858,7 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
         this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-          this.log(`    Action: ${rec.action}`)
-        })
-      } else {,
-        this.log('\n✨ Git workflow is healthy!')
-      };
 
-    } catch (error) {,
-      this.log(`❌ Error running git workflow monitor: ${error.message}`),
-      process.exit(1)
     };
   };
 };
@@ -894,8 +866,4 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 // Run the git workflow monitor,
 const gitWorkflow = new GitWorkflow(),
 gitWorkflow.run().catch(error => {,
-  process.exit(1)
-}),
 
-const _gitWorkflow = new GitWorkflow();
-gitWorkflow.run().catch(error = > {_; process.exit(1)});

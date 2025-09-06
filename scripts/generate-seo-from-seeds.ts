@@ -1,12 +1,24 @@
-<<<<<<< HEAD
+
  
 import fs from 'fs';
 import path from 'path';
-const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
-async function post(url: string, body: any) {
+
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json()
-=======
+}
+import fs from 'fs';
+import path from 'path';
+
+  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  return await res.json()
+
+}
+
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -14,50 +26,23 @@ const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
 async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
   return await res.json();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 async function main() {
-  const seedsPath = path.join(process.cwd(), 'datapage-metadataseo-seeds.json'),
-  if (!fs.existsSync(seedsPath)) {
-    // // // console.log('No seeds file found at', seedsPath),
-    process.exit(0)
+  try {
+  const seedsPath = path && path.join(process && process.cwd(), 'datapage-metadataseo-seeds && seeds.json');
+  if (!fs && fs.existsSync(seedsPath)) {
+    console && console.log('No seeds file found at', seedsPath);
+    process && process.exit(0)
   }
-  const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,
-  const outDir = path.join(process.cwd(), 'datapage-metadataseo'),
-  fs.mkdirSync(outDir, { recursive: true }),
+  const seeds = JSON && JSON.parse(fs && fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>;
+  const outDir = path && path.join(process && process.cwd(), 'datapage-metadataseo');
+  fs && fs.mkdirSync(outDir, { recursive: true });
   for (const s of seeds) {
-    const gen = await post(`${HOST}/api/seo/generate`, s),
+    const gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {
-<<<<<<< HEAD
-      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
-      console.log('Generated', gen.slug)
-    }
-  }
-}
-
-main().catch((e) => { console.error(e), process.exit(1) });
-=======
-      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
-      // // // console.log('Generated', gen.slug)
-;
-async function main() {;
-  const seedsPath = path.join(process.cwd(), 'datapage-metadataseo-seeds.json'),;
-  if (!fs.existsSync(seedsPath)) {;
-    // // // console.log('No seeds file found at', seedsPath),;
-    process.exit(0);
-  }
-  const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,;
-  const outDir = path.join(process.cwd(), 'datapage-metadataseo'),;
-  fs.mkdirSync(outDir, { recursive: true }),;
-  for (const s of seeds) {;
-    const gen = await post(`${HOST}/api/seo/generate`, s),;
-    if (gen?.slug && gen?.payload) {;
-      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),;
-      // // // console.log('Generated', gen.slug);
-    }
-  }
-}
-;
-main().catch((e) => { console.error(e), process.exit(1) });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

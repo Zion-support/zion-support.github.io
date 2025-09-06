@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -111,3 +113,4 @@ return {
   updateProfile 
 }
 };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

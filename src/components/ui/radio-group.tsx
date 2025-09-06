@@ -1,28 +1,25 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as RadioGroupPrimitive from &quot;@radix-ui/react-radio-group&quot;
-import { Circle } from 'lucide-react';
-;
-import { cn } from &quot;@/lib/utils&quot;
 =======
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from 'lucide-react'
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { cn } from "@/lib/utils"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const RadioGroup = React.forwardRef<
-  React.ElementRef<typeof RadioGroupPrimitive.Root>,
+  React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
-  return (
-    <RadioGroupPrimitive.Root
-<<<<<<< HEAD
-      className={cn(&quot;grid gap-2&quot; className)}
-=======
-      className={cn("grid gap-2", className)}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+import * as React from &quot;react & quot;
+import * as RadioGroupPrimitive from &quot;@radix - ui / react - radio - group & quot;
+import { Circle } from 'lucide-react';
+;
+import { cn } from &quot;@/lib/utils&quot;
+import { cn } from &quot;@/lib/utils&quot;
+
+onst RadioGroup = React.forwardRef<
+
       {...props}
       ref={ref}
     />;
@@ -30,38 +27,25 @@ const RadioGroup = React.forwardRef<
 });
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 const RadioGroupItem = React.forwardRef<;
-<<<<<<< HEAD
-  React.ElementRef<typeof RadioGroupPrimitive.Item>;
-=======
-  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
 <<<<<<< HEAD
-className={cn(
-        &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;
-=======
-      className={cn(
-        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-        className
-      )}
-      {...props}
-    >
-      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-        <Circle className="h-2.5 w-2.5 fill-current text-current" />
-      </RadioGroupPrimitive.Indicator>
-    </RadioGroupPrimitive.Item>
-  )
-})
-RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
-<<<<<<< HEAD
-export { RadioGroup, RadioGroupItem };
-=======
+export { RadioGroup, RadioGroupItem }
+
 
 export { RadioGroup, RadioGroupItem }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export { RadioGroup, RadioGroupItem };
+
+export { RadioGroup, RadioGroupItem }
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

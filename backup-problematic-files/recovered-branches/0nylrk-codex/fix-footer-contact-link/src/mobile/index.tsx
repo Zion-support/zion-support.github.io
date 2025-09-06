@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import React from 'react',;
 import { MobileApp } from './MobileApp',;
 ;
@@ -34,9 +36,14 @@ export * from './components/browse/BrowseFilters';
 export * from './components/projects/MobileProjectView';
 export * from './theme/MobileThemeProvider';
 // Export all mobile pages export * from './pages/MobileOnboarding';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export * from './pages/MobileHome';
 export * from './pages/MobileBrowse';
 export * from './pages/MobileProjects';
 export * from './pages/MobileMessages';
 export * from './pages/MobileResumeBuilder';
 export * from './pages/MobileJobPost';
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

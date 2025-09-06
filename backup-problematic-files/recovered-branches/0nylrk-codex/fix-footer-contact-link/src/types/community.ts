@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 export type ForumCategory = ;
   | 'getting-hired';
   | 'project-help';
@@ -77,3 +79,4 @@ export interface CommunityUser {;
   isVerified:boolean,;
   isModerator:boolean;
 } export type ForumCategory = | 'getting-hired' | 'project-help' | 'ai-tools' | 'feedback' | 'announcements';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

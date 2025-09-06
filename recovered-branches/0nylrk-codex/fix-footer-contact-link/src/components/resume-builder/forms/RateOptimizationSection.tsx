@@ -1,27 +1,40 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
+import { Control } from "react-hook-form";
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
 =======
-import React, { useState } from "react",
-import { Control } from "react-hook-form",
+
 import { 
-  FormField,
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription,
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormDescription;
   FormMessage
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
+import { Card, CardContent } from "@/components/ui/card";
+interface RateOptimizationSectionProps {
+
+=======
+import {Control} from "react-hook-form";
+import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
+import {Card, CardContent} from "@/components/ui/card";
+
+=======
+  location?: string;
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
@@ -31,25 +44,28 @@ interface RateOptimizationSectionProps {
   rateType: "hourly" | "fixed"
 }
 
-<<<<<<< HEAD
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
   control;
   setValue;
   skills;
   yearsExperience;
-=======
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+  location
   control,
   setValue,
   skills,
   yearsExperience,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   location,
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
-  },
 
   return (
     <div className="space-y-4">
@@ -65,8 +81,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 min="1"
                 step="0.01"
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
-<<<<<<< HEAD
-=======
+
 import React, { useState } from "react",;
 import { Control } from "react-hook-form",;
 import {;
@@ -80,71 +95,71 @@ import {;
 import { Input } from "@/components/ui/input",;
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",;
 import { Card, CardContent } from "@/components/ui/card",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface RateOptimizationSectionProps {;
   control: Control<any>,;
   setValue: (name: string, value: any) => void,;
   skills: string[],;
   yearsExperience: number,;
-  location?: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  location?: string;
   rateType: "hourly" | "fixed";
 }
-;
+
+
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
-  control,;
-  setValue,;
-  skills,;
-  yearsExperience,;
+
+  control;
+  set_value;
+  skills;
+
   location,;
   rateType;
 }) => {;
   const handleSuggestionApplied = (rate: number) => {;
     setValue("hourlyRate", rate);
   };
-  return (;
+
+
+  return (
     <div className="space-y-4">;
-      <FormField;
+      <FormField
         control={control}
-        name="hourlyRate";
+        name="hourlyRate"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
             <FormControl>;
-              <Input;
-                type="number";
-                min="1";
-                step="0.01";
-                placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+              <Input
+                type="number"
+                min="1"
+                step="0 && 0.01"
+                placeholder={rateType === "hourly" ? "e && e.g. 45" : "e && e.g. 1000"}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              Set a competitive rate based on your skills and experience
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+              />;
+            </FormControl>;
+            <FormDescription>;
+              Set a competitive rate based on your skills and experience;
+            </FormDescription>;
+            <FormMessage />;
 
-      <Card>
-        <CardContent className="pt-4">
+      />;
+
+      <Card>;
+        <CardContent className="pt-4">;
+
           <TalentRateRecommender
             skills={skills}
-            yearsExperience={yearsExperience}
+            years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
             rateType={rateType}
-<<<<<<< HEAD
-          />
-        </CardContent>
-      </Card>
-    </div>
-  )
-=======
-          />;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 };
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

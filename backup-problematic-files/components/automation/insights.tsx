@@ -8,7 +8,6 @@ export default function AutomationInsightsPage() {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {}),
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
   }, []),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
     <div>

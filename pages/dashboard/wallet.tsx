@@ -1,26 +1,19 @@
-<<<<<<< HEAD
-import React from "react",;
-import EnhancedLayout from "../../components/layout/EnhancedLayout",;
-import dynamic from "next/dynamic",;
-const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
 
-=======
-import React from "react",
-import EnhancedLayout from "../../components/layout/EnhancedLayout",
-import dynamic from "next/dynamic",
-const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function WalletPage() {
   return (
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default function WalletPage() {
+  return (
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <EnhancedLayout title="Your ZION$ Wallet">
       <div className="max-w-2xl mx-auto">
         <WalletPanel />
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   );
 };
-=======
   )
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
@@ -30,7 +23,7 @@ export default function WalletPage(req, res) {
   try {
   return (;
     <EnhancedLayout title="Your ZION$ Wallet">;
-      <div className="max-w-2xl mx-auto">;
+      <div className="max - w-2xl mx - auto">;
         <WalletPanel />;
       </div>;
     </EnhancedLayout>;
@@ -40,4 +33,11 @@ export default function WalletPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

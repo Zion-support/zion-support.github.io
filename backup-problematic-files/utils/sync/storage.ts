@@ -23,7 +23,7 @@ function defaultConfig(): InstanceConfig {
 function defaultConfig(): InstanceConfig {_const _instanceId = process.env.ZION_INSTANCE_ID || "zion-local";
   return {
     instanceId, _optIn: false, _paused: false, _scope: "full", _peers: [], _secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0)};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
 }
 
 function defaultState(): MultiverseState {_return {
@@ -78,5 +78,5 @@ export function filterEventsByScope(
     return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry")
   }
   return events
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
 }

@@ -1,5 +1,7 @@
 
-<<<<<<< HEAD
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -9,53 +11,47 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
-=======
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table",
-import { Skeleton } from "@/components/ui/skeleton",
-import { formatDistanceToNow } from "date-fns",
-import { ShieldAlert } from "lucide-react",
-import { Link } from "react-router-dom",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 type DisputesListProps = {
-  disputes: Dispute[],
+  disputes: Dispute[]
   isLoading: boolean
+
+  const filteredDisputes = statusFilter === "all"
+    ? disputes
+    : disputes.filter(dispute => dispute.status === statusFilter),
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+type DisputesListProps = {
+  disputes: Dispute[]
+  isLoading: boolean
+}
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+  const filteredDisputes = statusFilter === "all"
+    ? disputes
+    : disputes.filter(dispute => dispute.status === statusFilter);
 },
 
-<<<<<<< HEAD
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
-=======
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter),
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-      case "open": return "default",
+      case "open": return "default";
       case "under_review":
-        return "secondary",
+        return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
-        return "outline",
-      default:
-        return "default"
-    }
-  },
+
+=======
 
   if (isLoading) {
     return (
@@ -87,40 +83,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
                 </TableRow>
-<<<<<<< HEAD
-=======
-import React, { useState } from "react",;
-import { Dispute, DisputeStatus } from "@/types/disputes",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow} from "@/components/ui/table",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { formatDistanceToNow } from "date-fns",;
-import { ShieldAlert } from "lucide-react",;
-import { Link } from "react-router-dom",;
-type DisputesListProps = {;
-  disputes: Dispute[],;
-  isLoading: boolean;
-},;
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),;
-  const filteredDisputes = statusFilter === "all";
-    ? disputes;
-    : disputes.filter(dispute => dispute.status === statusFilter),;
-  const getStatusBadgeVariant = (status: DisputeStatus) => {;
-    switch (status) {;
-      case "open": return "default",;
-      case "under_review":;
-        return "secondary",;
-      case "resolved":;
-        return "outline", // Changed from "success" to "outline";
-      case "closed":;
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         return "outline";
       default:;
         return "default";
@@ -156,58 +120,58 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               ))}
-            </TableBody>
-          </Table>
-        </div>
-      </div>
-    )
+            </TableBody>;
+          </Table>;
+        </div>;
+      </div>;
+    );
   }
 
   if (disputes.length === 0) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-      <div className="text-center py-12 border rounded-md bg-muted/20">
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-        <h3 className="text-xl font-medium">No disputes found</h3>
-        <p className="text-muted-foreground mt-2">
-          No active disputes match the selected filter
-        </p>
-      </div>
-    )
+      <div className="text-center py-12 border rounded-md bg-muted/20">;
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
+        <h3 className="text-xl font-medium">No disputes found</h3>;
+        <p className="text-muted-foreground mt-2">;
+          No active disputes match the selected filter;
+        </p>;
+      </div>;
+    );
   }
-
   return (
-    <div className="space-y-4">
-      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+    <div className="space-y-4">;
+      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">;
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
           onClick={() => setStatusFilter("all")}
-          size="sm"
-        >
-          All
-        </Button>
+          size="sm";
+        >;
+          All;
+        </Button>;
         <Button
           variant={statusFilter === "open" ? "default" : "outline"}
           onClick={() => setStatusFilter("open")}
-          size="sm"
-        >
-          Open
-        </Button>
+          size="sm";
+        >;
+          Open;
+        </Button>;
         <Button
           variant={statusFilter === "under_review" ? "default" : "outline"}
           onClick={() => setStatusFilter("under_review")}
-          size="sm"
-        >
-          Under Review
-        </Button>
+          size="sm";
+        >;
+          Under Review;
+        </Button>;
         <Button
           variant={statusFilter === "resolved" ? "default" : "outline"}
           onClick={() => setStatusFilter("resolved")}
-          size="sm"
-        >
-          Resolved
-        </Button>
+          size="sm";
+        >;
+          Resolved;
+        </Button>;
         <Button
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
@@ -235,15 +199,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
-                  {dispute.project?.title || "Unknown Project"}
+                  {dispute.project?.title |"Unknown Project"}
                 </TableCell>
                 <TableCell>
                   <div className="flex flex-col text-sm">
                     <span>
-                      Client: {dispute.client_profile?.display_name || "Unknown Client"}
+                      Client: {dispute.client_profile?.display_name |"Unknown Client"}
                     </span>
                     <span>
-                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
                     </span>
                   </div>
                 </TableCell>
@@ -262,10 +226,4 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
               </TableRow>
             ))}
-          </TableBody>
-        </Table>
-      </div>
-    </div>
-  )
-}
-;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,21 +1,22 @@
-import React from 'react',;
-import ServiceLanding from '../components/sections/ServiceLanding',;
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEmotionalIntelligenceTraining() {
 	return (
 		<ServiceLanding
+
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 			title="AI Emotional Intelligence Training"
 			slug="ai-emotional-intelligence-training"
 			description="Dynamic coaching that improves communication, empathy, and leadership. AI evaluates tone, clarity, and sentiment to deliver tailored practice scenarios and feedback."
 			subtitle="Upgrade team EQ with measurable gains in manager effectiveness and CSAT."
-<<<<<<< HEAD
-			pricePerMonthUSD={799}
-=======
+
 			pricePerMonthUSD={799  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 2–5x within 60–90 days"
 			features={[
@@ -25,14 +26,12 @@ export default function AIEmotionalIntelligenceTraining() {
 				"Team dashboards and skill gap analysis",
 				"Integrations: LMS, Slack/Teams, Gmail/Outlook",
 				"Privacy-first voice and text processing"
-<<<<<<< HEAD
 			]}
 			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
 			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
 		/>
 	)
 };
-=======
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -54,4 +53,4 @@ export default function AIEmotionalIntelligenceTraining() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

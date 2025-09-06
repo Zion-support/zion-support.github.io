@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { getConfig } from "../../../../utils/token/service",;
 import { tokenStore } from "../../../../utils/token/storage",;
@@ -15,15 +14,9 @@ const body = req.body || {},
   }
   return res.status(405).json({ error: "Method not allowed" });
 };
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getConfig } from "../../../../utils/token/service";
 import { tokenStore } from "../../../../utils/token/storage";
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
     if (req.method === 'GET') {
       const config = getConfig();
@@ -41,4 +34,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

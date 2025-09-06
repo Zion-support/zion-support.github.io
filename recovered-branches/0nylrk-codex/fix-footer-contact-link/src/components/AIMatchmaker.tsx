@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+=======
+
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -7,89 +8,77 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
-import { Textarea } from "@/components/ui/textarea",
-import { Sparkles, Search } from "lucide-react",
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-interface AIMatchmakerProps {
-  serviceType?: string,
-  onMatchSelect?: (match: any) => void,
-  className?: string
+  serviceType?: string;
+  onMatchSelect?: (match: any) => void,;
+  className?: string;
 }
 
-<<<<<<< HEAD
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
+export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
+
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
-=======
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const [query, setQuery] = useState(""),
-  const [isMatchmaking, setIsMatchmaking] = useState(false),
-  const [matches, setMatches] = useState([] as MatchResult[]),
-  const [hasSearched, setHasSearched] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+
+  onMatchSelect?: (match: any) => void
+import { Textarea } from "@/components/ui/textarea",
+import { Sparkles, Search } from "lucide-react",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
-        title: "Please enter a description",
-        description: "Tell us what you're looking for so we can find matches.",
-        variant: "destructive"}),
+        title: "Please enter a description"
+        description: "Tell us what you're looking for so we can find matches."
+        variant: "destructive"})
       return
+
     }
 
-    setIsMatchmaking(true),
-    setHasSearched(true),
-    
-    try {
-      // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),
-      
       // Get AI matches
       const results = await findMatches(
         query,
         serviceType,
         3
+
       ),
       
       // // // console.log("AI matching results:", results),
       setMatches(results),
       
-      toast({
-        title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`})
-    } catch (error) {
-      console.error("Error during AI matching:", error),
-      toast({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"}),
-      // Set empty matches to show no results found UI
-      setMatches([])
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } finally {
       setIsMatchmaking(false)
-<<<<<<< HEAD
     }
-  };
-  
+  }
   const handleItemSelect = (item: any) => {
     if (onMatchSelect) {
       // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id),
+      const matchResult = matches.find(match => match.item.id === item.id)
       if (matchResult) {
         onMatchSelect(matchResult)
       }
     }
+  }
+  // Extract just the items from each MatchResult
+  const matchItems = matches.map(match => match.item);
+
   };
-=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -154,13 +143,18 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       }
     }
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
-    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
+    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
@@ -173,38 +167,77 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
-            <Textarea
-              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
-              value={query}
-              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
-              className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-            <Button 
+          Describe what you're looking for and our AI will find the best matches;
+        </p>;
+      </CardHeader>;
+      <CardContent>;
+
+              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e && e.target.value)}
+              className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
+            />;
+
+            <Button
               onClick={handleSearch}
               disabled={isMatchmaking}
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-            >
-              {isMatchmaking ? (
-                <>Analyzing your needs...</>
-              ) : (
-                <>
-                  <Search className="h-4 w-4 mr-2" />
-                  Find Matches
-                </>
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+              {isMatchmaking ? (;
+                <>Analyzing your needs...</>;
+              ) : (;
+                <>;
+                  <Search className="h-4 w-4 mr-2" />;
+                  Find Matches;
+                </>;
               )}
-            </Button>
-          </div>
-          {hasSearched && (
-            <AIMatchingResults 
+
+            </Button>;
+          </div>;
+
+          {hasSearched && (;
+
+            <AIMatchingResults
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
-            />
+            />;
           )}
-        </div>
-      </CardContent>
-    </Card>
-  )
-};
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+=======
+        <div className="space - y-4">;
+          <div className="space - y-2">;
+            <Textarea;
+              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
+              value={query}
+              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) => set_query (e.target.value)}
+              className="min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+            />;
+            <Button;
+              on_click={handle_search}
+              disabled={is_matchmaking}
+              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
+            >;
+              {is_matchmaking ? (
+                <>Analyzing your needs...</>) : (
+                <>;
+                  <Search className="h - 4 w - 4 mr - 2" />;
+                  Find Matches;
+                </>)}
+            </Button>;
+          </div>;
+          {has_searched && (
+            <AIMatchingResults;
+              matches={match_items}
+              onSelectMatch={handleItemSelect}
+              is_loading={is_matchmaking}
+              service_type={service_type}
+              project_description={query}
+            />)}
+        </div>;
+      </CardContent>;
+    </Card>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}

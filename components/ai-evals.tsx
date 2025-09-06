@@ -1,21 +1,42 @@
+
+=======
+import React from 'react',
 import React from 'react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Head from 'next/head';
+
 import {
+  Check
+  ShieldCheck
+  TrendingUp
+  Clock
+  Phone
+  Mail
+  MapPin
+  ExternalLink;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Check,
   ShieldCheck,
   TrendingUp,
   Clock,
   Phone,
   Mail,
+=======
   MapPin,;
   ExternalLink,;
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default function AIEvalsPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  }
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -24,15 +45,15 @@ export default function AIEvalsPage() {
     website: 'https://ziontechgroup.com',;
   };
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const features = [
-    'Golden datasets and synthetic evals',
-    'Hallucination and grounding score',
-    'Toxicity, bias and safety metrics',
-    'LLM version comparison reports',
-    'CI quality gates and webhooks',
-    'Latency and cost KPIs with budgets',
+    'Golden datasets and synthetic evals'
+    'Hallucination and grounding score'
+    'Toxicity, bias and safety metrics'
+    'LLM version comparison reports'
+    'CI quality gates and webhooks'
+    'Latency and cost KPIs with budgets'
   ];
-
   return (
     <QuantumHolographicMatrixBackground>
       <Head>
@@ -64,6 +85,8 @@ export default function AIEvalsPage() {
                   {features.map(f => (
                     <li
                       key={f}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className='flex items-start gap-2 text-gray-200'
                     >
                       <Check className='w-5 h-5 text-emerald-400 mt-0.5' />{' '}
@@ -162,6 +185,8 @@ export default function AIEvalsPage() {
       </section>
     </QuantumHolographicMatrixBackground>
   );					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
+<<<<<<< HEAD
+
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
 							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>{contactInfo.mobile}</a></div>
@@ -175,9 +200,8 @@ export default function AIEvalsPage() {
 				</div>
 			</section>
 		</QuantumHolographicMatrixBackground>
-<<<<<<< HEAD
-);
-=======
-	);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

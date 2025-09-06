@@ -18,7 +18,6 @@ import { realOperationalServices } from '../../data/real-operational-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-<<<<<<< HEAD
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
@@ -37,9 +36,6 @@ import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
 import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { cursorAddedServices } from '../../data/cursor-added-services';
-=======
-import { newDiversifiedServices } from '../../data/new-2026-2027-additions';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1503
 
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug,
@@ -74,7 +70,6 @@ export default function ServicesIndexPage() {
       verified2025Additions as unknown[],
       realServicesQ12025 as unknown[],
       realEnterpriseServices2025 as unknown[],
-<<<<<<< HEAD
       realMarketAugmentations2025 as unknown[],
       verifiedRealServices2025Batch2 as unknown[],
       additionalLiveServices2025 as unknown[],
@@ -92,9 +87,6 @@ export default function ServicesIndexPage() {
       real2027Q1Additions as unknown[],
       real2027Q2Additions as unknown[],
       cursorAddedServices as unknown[]
-=======
-      newDiversifiedServices as unknown[]
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1503
     );
   const byCategory: Record<string, unknown[]> = {};
   for (const c of categories) byCategory[c] = [];

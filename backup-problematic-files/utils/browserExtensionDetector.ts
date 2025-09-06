@@ -1,8 +1,4 @@
-<<<<<<< HEAD:utils/browserExtensionDetector.ts
-export const detectBrowserExtension = () => {
-  return { isExtension: false, version: "1.0.0" } as { isExtension: boolean, version: string };
-=======
-export const detectBrowserExtension = () => {;
-  return { isExtension: false, version: "1.0.0" } as { isExtension: boolean, version: string }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/browserExtensionDetector.ts
+
+
 };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

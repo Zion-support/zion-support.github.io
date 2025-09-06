@@ -1,0 +1,16 @@
+:src.disabled/hooks/use-mobile.jsx
+:src.disabled/hooks/use-mobile.js.jsx
+const { useState,useEffect } from";react" export: function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("";resize",checkIsMobile) return: () => window.removeEventListener("";resize",checkIsMobile)},[]) return: "isMobile"}"";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.disabled/hooks/use-mobile.js.jsx
+const { useState,useEffect } from";react" export: function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("";resize",checkIsMobile) return: () => window.removeEventListener("";resize",checkIsMobile)},[]) return: "isMobile"}"";'"'"
+:temp_exclude/src.disabled/hooks/use-mobile.jsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { useState,useEffect } from';react' "export": function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener('';resize',checkIsMobile) "return": () => window.removeEventListener('';resize',checkIsMobile)},[]) "return": 'isMobile'}'';''
+=======
+=======
+:src && src.disabled/hooks/use-mobile && mobile.js.jsx
+const { useState,useEffect } from";react" export: function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window && window.innerWidth < 768)} checkIsMobile() window && window.addEventListener("";resize",checkIsMobile) return: () => window && window.removeEventListener("";resize",checkIsMobile)},[]) return: "isMobile"}"";'"'"
+
+import { useState,useEffect } from';react' "export": function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window && window.innerWidth < 768)} checkIsMobile() window && window.addEventListener('';resize',checkIsMobile) "return": () => window && window.removeEventListener('';resize',checkIsMobile)},[]) "return": 'isMobile'}'';''
+

@@ -1,19 +1,25 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+
+/** @type {import ('next').NextConfig} */;
+const next_config = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
+  page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
+    domains: ["localhost", "ziontechgroup.com"]
+  }
+  output: 'standalone'
+  trailingSlash: false
+  distDir: '.next'
+}
     domains: ["localhost", "ziontechgroup.com"],
   },
-  output: "standalone",
+  output: 'standalone',
   trailingSlash: false,
-  distDir: ".next",
+  distDir: '.next',
 };
-<<<<<<< HEAD
+module.exports = nextConfig;
 
 module.exports = nextConfig;
-=======
 module.exports = nextConfig;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,30 +1,26 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from 'react';
-import {Button} from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 interface NotificationHeaderProps {
-  unreadCount: number,
+  unreadCount: number;
   onMarkAllAsRead: () => Promise<void>
-=======
+}
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
   unreadCount: number,;
   onMarkAllAsRead: () => Promise<void>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-import React from "react";
-import { Button } from "@/components/ui/button";
-interface NotificationHeaderProps {
-  unreadCount: number;
-  onMarkAllAsRead: () => Promise<void>;
->>>>>>> main
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
-  unreadCount,
-  onMarkAllAsRead,
+
+  unreadCount
+  onMarkAllAsRead
 }) => {
   return (
     <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">
@@ -33,19 +29,28 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
           onClick={onMarkAllAsRead}
           className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark"
         >
           Mark all as read
         </Button>
       )}
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
+  );
+}
+
+          onClick={onMarkAllAsRead}
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark">;
+          Mark all as read;
+        </Button>;
+      )}
+
+
+
+
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> main
   );
 };

@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Menu, X, Zap, Globe, Bot, Cloud, Shield, Brain, Atom } from 'lucide-react';
-=======
-import { Menu, X, Zap, Globe, Bot, Cloud, Shield, Sparkles, Rocket, Cpu, Database, Brain, Atom, Eye, Lock, BarChart3, Users, Target, TrendingUp, Star, Award, ZapIcon, CloudIcon, BotIcon, ShieldIcon, GlobeIcon, CpuIcon, DatabaseIcon, BrainIcon, AtomIcon, EyeIcon, LockIcon, BarChart3Icon, UsersIcon, TargetIcon, TrendingUpIcon, StarIcon, AwardIcon, DollarSign } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu as HeadlessMenu, X as HeadlessX, Zap as HeadlessZap, Sparkles as HeadlessSparkles, ChevronDown, Globe as HeadlessGlobe, Shield as HeadlessShield, Cpu as HeadlessCpu, Brain as HeadlessBrain } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
 
 const FuturisticNavbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +24,6 @@ const FuturisticNavbar: React.FC = () => {
   }, [isClient]);
 
   const navItems = [
-<<<<<<< HEAD
     { name: 'Home', href: '/', icon: <Zap className="w-4 h-4" /> },
     { name: 'Services', href: '/services', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Micro SaaS', href: '/micro-saas', icon: <Bot className="w-4 h-4" /> },
@@ -39,70 +32,6 @@ const FuturisticNavbar: React.FC = () => {
     { name: 'Pricing', href: '/pricing', icon: <Globe className="w-4 h-4" /> },
     { name: 'About', href: '/about', icon: <Shield className="w-4 h-4" /> },
     { name: 'Contact', href: '/contact', icon: <Zap className="w-4 h-4" /> },
-=======
-    { 
-      name: 'Home', 
-      href: '/', 
-      icon: <Zap className="w-4 h-4" />,
-      description: 'Welcome to the future'
-    },
-    { 
-      name: 'Services', 
-      href: '/services', 
-      icon: <Cloud className="w-4 h-4" />,
-      description: '250+ Revolutionary Micro SaaS Solutions',
-      dropdown: [
-        { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning', icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum Computing & AI', href: '/services?category=Quantum%20Computing%20%26%20AI', icon: <Atom className="w-4 h-4" /> },
-        { name: 'Biotechnology & Healthcare', href: '/services?category=AI%20%26%20Biotechnology', icon: <Eye className="w-4 h-4" /> },
-        { name: 'Space Technology', href: '/services?category=AI%20%26%20Space%20Technology', icon: <Rocket className="w-4 h-4" /> },
-        { name: 'Autonomous Manufacturing', href: '/services?category=AI%20%26%20Manufacturing', icon: <Cpu className="w-4 h-4" /> },
-        { name: 'Metaverse & VR/AR', href: '/services?category=AI%20%26%20Metaverse', icon: <Globe className="w-4 h-4" /> },
-        { name: 'Financial AI & Trading', href: '/services?category=AI%20%26%20Financial%20Services', icon: <DollarSign className="w-4 h-4" /> },
-        { name: 'IoT & Smart Cities', href: '/services?category=AI%20%26%20IoT', icon: <Cpu className="w-4 h-4" /> },
-        { name: 'Robotics & Automation', href: '/services?category=AI%20%26%20Robotics', icon: <Bot className="w-4 h-4" /> },
-        { name: 'Cybersecurity', href: '/services?category=Cybersecurity', icon: <Lock className="w-4 h-4" /> },
-        { name: 'Analytics & Business Intelligence', href: '/services?category=Analytics%20%26%20Business%20Intelligence', icon: <BarChart3 className="w-4 h-4" /> },
-        { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure', icon: <Sparkles className="w-4 h-4" /> }
-      ]
-    },
-    { 
-      name: 'IT Services', 
-      href: '/it-services', 
-      icon: <Globe className="w-4 h-4" />,
-      description: 'Cloud, DevOps, SRE, FinOps'
-    },
-    { 
-      name: 'AI Services', 
-      href: '/ai-services', 
-      icon: <Brain className="w-4 h-4" />,
-      description: 'LLM, RAG, MLOps'
-    },
-    { 
-      name: 'Micro SaaS', 
-      href: '/micro-saas', 
-      icon: <Bot className="w-4 h-4" />,
-      description: 'Innovative Solutions'
-    },
-    { 
-      name: 'Pricing', 
-      href: '/pricing', 
-      icon: <Globe className="w-4 h-4" />,
-      description: 'Transparent Plans'
-    },
-    { 
-      name: 'About', 
-      href: '/about', 
-      icon: <Shield className="w-4 h-4" />,
-      description: 'Our Mission'
-    },
-    { 
-      name: 'Contact', 
-      href: '/contact', 
-      icon: <Zap className="w-4 h-4" />,
-      description: 'Get in Touch'
-    },
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
   ];
 
   const handleDropdownEnter = (name: string) => {

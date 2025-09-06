@@ -1,9 +1,13 @@
-<<<<<<< HEAD
+import { Job } from "@/types/jobs";
+export const JOB_POSTS: Job[] = [
+  {
 import { Job } from '@/types/jobs';
-=======
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
     id: "job-1",
     client_id: "client-1",
@@ -35,7 +39,6 @@ status: "new";
 created at: "2024-05-05";
 updated at: "2024-05-05" 
 }];
-=======
     id: "job-2",
     client_id: "client-2",
     title: "Part-time DevOps Engineer",
@@ -75,4 +78,4 @@ export const JOB_POSTS: Job[] = [;
     created_at: "2024-05-05";
     updated_at: "2024-05-05"}
 ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

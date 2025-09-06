@@ -1,36 +1,22 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',;
-import { Link } from 'react-router-dom',;
-import { SERVICE_CATEGORIES } from '@/data/servicesData',;
-export function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-    timeline: ''
-  }),
 
-  const [selectedService, setSelectedService] = useState(''),
+import React from 'react';
+import { render, screen } from '@testing - library / react';
+import { MemoryRouter } from 'react-router-dom';
+import EquipmentPage from './EquipmentPage';
+describe ('EquipmentPage', () => {
+  it ('renders equipment page correctly', () => {
+    render (
+      <MemoryRouter>;
+        <EquipmentPage />;
+      </MemoryRouter>);
+    expect (screen.getByText ('Equipment')).toBeInTheDocument ();
 
+  });
+  const [selectedService, setSelectedService] = useState('');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target,
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  },
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    // Here you would typically send the form data to your backend
-    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=Service Inquiry from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACompany: ${formData.company}%0D%0APhone: ${formData.phone}%0D%0AService: ${formData.service}%0D%0ABudget: ${formData.budget}%0D%0ATimeline: ${formData.timeline}%0D%0AMessage: ${formData.message}`,
-    window.location.href = mailtoLink
-  },
-
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -44,13 +30,13 @@ export function ContactPage() {
               Ready to transform your business? Let's discuss how Zion Tech Group can help you achieve your goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 📞 Call Now: +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
@@ -60,6 +46,7 @@ export function ContactPage() {
           </div>
         </div>
       </div>
+
       {/* Contact Info Banner */}
       <div className="bg-white border-b shadow-sm">
         <div className="container mx-auto px-4 py-4">
@@ -85,6 +72,7 @@ export function ContactPage() {
           </div>
         </div>
       </div>
+
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -94,10 +82,8 @@ export function ContactPage() {
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
             </p>
-<<<<<<< HEAD
-=======
-            
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -115,6 +101,7 @@ export function ContactPage() {
                     placeholder="Your full name"
                   />
                 </div>
+                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -131,10 +118,8 @@ export function ContactPage() {
                   />
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-              
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -150,6 +135,7 @@ export function ContactPage() {
                     placeholder="Your company name"
                   />
                 </div>
+                
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
@@ -165,6 +151,7 @@ export function ContactPage() {
                   />
                 </div>
               </div>
+              
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service of Interest *
@@ -215,14 +202,12 @@ export function ContactPage() {
                           <option value="devops-automation">DevOps Automation & CI/CD Pipeline</option>
                         </>
                       )}
-                    </optgroup>;
+                    </optgroup>
                   ))}
                 </select>
               </div>
-<<<<<<< HEAD
-=======
-              
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -243,6 +228,7 @@ export function ContactPage() {
                     <option value="over-500k">Over $500,000</option>
                   </select>
                 </div>
+                
                 <div>
                   <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Timeline
@@ -263,6 +249,7 @@ export function ContactPage() {
                   </select>
                 </div>
               </div>
+              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Project Details *
@@ -278,6 +265,7 @@ export function ContactPage() {
                   placeholder="Tell us about your project, goals, and requirements..."
                 />
               </div>
+              
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
@@ -286,8 +274,9 @@ export function ContactPage() {
               </button>
             </form>
           </div>
+
           {/* Contact Information */}
-          <div className="space-y-8">;
+          <div className="space-y-8">
             {/* Direct Contact */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Direct Contact</h3>
@@ -303,6 +292,7 @@ export function ContactPage() {
                     </a>
                   </div>
                 </div>
+                
                 <div className="flex items-center gap-4">
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-green-600 text-xl">✉️</span>
@@ -314,6 +304,7 @@ export function ContactPage() {
                     </a>
                   </div>
                 </div>
+                
                 <div className="flex items-center gap-4">
                   <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-purple-600 text-xl">📍</span>
@@ -326,6 +317,7 @@ export function ContactPage() {
                     </p>
                   </div>
                 </div>
+                
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-orange-600 text-xl">🌐</span>
@@ -339,54 +331,10 @@ export function ContactPage() {
                 </div>
               </div>
             </div>
+
             {/* Business Hours */}
-<<<<<<< HEAD
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Monday - Friday</span>
-                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Saturday</span>
-                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Sunday</span>
-                  <span className="font-semibold">Closed</span>
-                </div>
-                <div className="pt-3 border-t border-gray-200">
-                  <p className="text-sm text-gray-600">
-                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues
-                  </p>
-                </div>
-              </div>
-            </div>
-=======
-            <div className="bg-white rounded-xl shadow-lg p-8">;
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;
-              <div className="space-y-3">;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Monday - Friday</span>;
-                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>;
-                </div>;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Saturday</span>;
-                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>;
-                </div>;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Sunday</span>;
-                  <span className="font-semibold">Closed</span>;
-                </div>;
-                <div className="pt-3 border-t border-gray-200">;
-                  <p className="text-sm text-gray-600">;
-                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues;
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -420,6 +368,7 @@ export function ContactPage() {
           </div>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -430,13 +379,13 @@ export function ContactPage() {
             Don't wait to transform your business. Contact us today for a free consultation and discover how our innovative solutions can drive your success.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a 
+            <a
               href="tel: +13024640950"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
             >
               📞 Call +1 302 464 0950
             </a>
-            <a 
+            <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
             >
@@ -446,21 +395,5 @@ export function ContactPage() {
         </div>
       </div>
     </div>
-  );
-};
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import EquipmentPage from './EquipmentPage';
-describe('EquipmentPage', () => {
-  it('renders equipment page correctly', () => {
-    render(
-      <MemoryRouter>
-        <EquipmentPage />
-      </MemoryRouter>
-    );
-    expect(screen.getByText('Equipment')).toBeInTheDocument();
-  });
-});
->>>>>>> main
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

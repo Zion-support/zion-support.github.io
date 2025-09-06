@@ -1,4 +1,5 @@
 
+=======
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -102,37 +103,16 @@ export function MobileBrowse() {;
           <Button;
             variant={browseType === "jobs" ? "default" :"ghost"}
             className="rounded-full";
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             onClick={() => setBrowseType("jobs")}
           >;
             Jobs;
           </Button>;
-          <Button;
-            variant={browseType === "talents" ? "default" :"ghost"}
-            className="rounded-full";
-            onClick={() => setBrowseType("talents")}
+<<<<<<< HEAD
+
           >;
             Talents;
           </Button>;
         </div>;
       </div>;
-      ;
-      <BrowseFilters type={browseType} />;
-      ;
-      <div className="py-4 px-4">;
-        <BrowseCards;
-          items={browseType === "jobs" ? jobsData :talentsData}
-          type={browseType}
-          onViewDetails={handleViewDetails}
-        />;
-      </div>;
-      ;
-      <BottomNavigation />;
-    </div>;
-  ),;}
- };
-return (<div className="min-h-screen" > <MobileHeader title= {
-  browseType === "jobs" ? "Browse Jobs" : "Browse Talents" 
-}> <Button > Jobs </Button> <Button > Talents </Button> </div> </div> <BrowseFilters type= {
-  browseType 
-}/> <div className="py-4 px-4" > <BrowseCards /> </div> <BottomNavigation /> </div>) 
-}
+

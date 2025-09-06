@@ -21,7 +21,8 @@ class CICDAutomation {}
     const timestamp = new Date().toISOString(;);
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
-    
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.report.steps.push({})
       timestamp,
       type,
@@ -31,7 +32,7 @@ class CICDAutomation {}
     try {}
       this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
-        "encoding": 'utf8', 
+        "encoding": 'utf8',
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);
@@ -79,24 +80,24 @@ class CICDAutomation {}
 
     const reportPath = path.join('/workspace', 'ci-cd-automation-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
-    
+
     this.log(`Report saved "to": ${reportPath}`)};
   async run() {}
     try {}
       this.log('Starting CI/CD Pipeline Automation');
-      
+
       // Install dependencies;
       await this.installDependencies();
-      
+
       // Run tests;
       await this.runTests();
-      
+
       // Run linting;
       await this.runLinting();
-      
+
       // Build application;
       await this.buildApplication();
-      
+
       this.log('CI/CD Pipeline completed successfully', 'success')} catch (error) {}
       this.log(`CI/CD Pipeline "failed": ${error.message}`, 'error')} finally {`}
       await this.generateReport()};
@@ -108,4 +109,5 @@ if ( {})
      {}
   const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)};
-module.exports = CICDAutomation;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

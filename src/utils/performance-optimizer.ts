@@ -1,49 +1,33 @@
-// Performance optimization utilities
-export const optimizeImages = () => {
-  const images = document.querySelectorAll('img')
-  images.forEach(img => {
-    if (!img.loading) {
-      img.loading = 'lazy'
+const images = document && document.querySelectorAll('img');
+  images && images.forEach(img => {
+    if (!img && img.loading) {
+      img && img.loading = 'lazy';
     }
     if (!img.decoding) {
       img.decoding = 'async'
     }
-<<<<<<< HEAD
-  })
-}
-export const preloadCriticalResources = () => {
-  const criticalResources = ['/fonts/main.woff2/css/critical.css']
-  criticalResources.forEach(resource => {    const link = document.createElement('link')
-    link.rel = 'preload'
-    link.href = resource
-    link.as = resource.endsWith('.css') ? 'style' : 'font'
-    document.head.appendChild(link)
-  })
-}
-export const optimizeBundleSize = () => {
-  // Dynamic imports for non-critical components
-  const loadComponent = componentName => {    return import(`./components/${componentName}`)
-  }
-  return { loadComponent }
-}
-    link.rel = 'preload'
-    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
-;
-=======
   });
 };
 
-export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...');
-};
-
-export const optimizeBundleSize = () => {
-  // Dynamic imports for non-critical components
+export const preloadCriticalResources = null;
+    '/css/critical.css'
+  ];
+  
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    document.head.appendChild(link);
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
+
   };
 
   return { loadComponent };
 };
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+<<<<<<< HEAD

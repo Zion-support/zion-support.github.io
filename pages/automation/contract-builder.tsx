@@ -1,41 +1,42 @@
-<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react',;
 import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
 type PaymentType = 'hourly' | 'fixed',
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import React, { useEffect, useMemo, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import { useRouter } from 'next/router';
+type PaymentType = 'hourly' | 'fixed'
 export default function ContractBuilderPage() {
-  const router = useRouter(),
-  const [talentName, setTalentName] = useState(''),
-  const [projectName, setProjectName] = useState(''),
-  const [scopeSummary, setScopeSummary] = useState(''),
-  const [startDate, setStartDate] = useState<Date | null>(null),
-  const [endDate, setEndDate] = useState<Date | null>(null),
-  const [paymentType, setPaymentType] = useState<PaymentType>('hourly'),
-  const [currency, setCurrency] = useState('USD'),
-  const [hourlyRate, setHourlyRate] = useState<number>(100),
-  const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>(''),
-  const [fixedAmount, setFixedAmount] = useState<number>(5000),
-  const [milestoneSummary, setMilestoneSummary] = useState(''),
-  const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice'),
-  const [nda, setNda] = useState(true),
-  const [ipTransfer, setIpTransfer] = useState(true),
-  const [governingLaw, setGoverningLaw] = useState('Delaware, USA'),
-  const [revisionRounds, setRevisionRounds] = useState<number>(2),
-
-  const [loading, setLoading] = useState(false),
-  const [error, setError] = useState<string | null>(null),
-  const [contract, setContract] = useState<string>(''),
-
+  const router = useRouter()
+  const [talentName, setTalentName] = useState('')
+  const [projectName, setProjectName] = useState('')
+  const [scopeSummary, setScopeSummary] = useState('')
+  const [startDate, setStartDate] = useState<Date | null>(null)
+  const [endDate, setEndDate] = useState<Date | null>(null)
+  const [paymentType, setPaymentType] = useState<PaymentType>('hourly')
+  const [currency, setCurrency] = useState('USD')
+  const [hourlyRate, setHourlyRate] = useState<number>(100)
+  const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>('')
+  const [fixedAmount, setFixedAmount] = useState<number>(5000)
+  const [milestoneSummary, setMilestoneSummary] = useState('')
+  const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice')
+  const [nda, setNda] = useState(true)
+  const [ipTransfer, setIpTransfer] = useState(true)
+  const [governingLaw, setGoverningLaw] = useState('Delaware, USA')
+  const [revisionRounds, setRevisionRounds] = useState<number>(2)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [contract, setContract] = useState<string>('')
   useEffect(() => {
-    if (!router.isReady) return,
-    const { talent, project } = router.query as { talent?: string, project?: string },
-    if (talent && !talentName) setTalentName(decodeURIComponent(talent)),
+    if (!router.isReady) return
+    const { talent, project } = router.query as { talent?: string, project?: string }
+    if (talent && !talentName) setTalentName(decodeURIComponent(talent))
     if (project && !projectName) setProjectName(decodeURIComponent(project))
-  }, [router.isReady, router.query, talentName, projectName]),
-
+  }, [router.isReady, router.query, talentName, projectName])
   const canSubmit = useMemo(() => {
     return (
+=======
       talentName.trim().length > 0 &&
       projectName.trim().length > 0 &&
       scopeSummary.trim().length > 0 &&
@@ -43,66 +44,67 @@ export default function ContractBuilderPage() {
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
-  }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]),
-
+  }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
   async function submitForm(event: React.FormEvent) {
-    event.preventDefault(),
-    if (!canSubmit) return,
+    event.preventDefault()
+    if (!canSubmit) return
+    setLoading(true)
+    setError(null)
+    setContract('')
+    try {
+      const body = {
+        talentName
+        projectName
+        scopeSummary
+        startDate: startDate?.toISOString().slice(0, 10)
+        endDate: endDate?.toISOString().slice(0, 10)
+        payment:
+          paymentType === 'hourly'
+            ? {
+                type: 'hourly'
+                currency
+                hourlyRate
+                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined
+                paymentSchedule}
+            : {
+                type: 'fixed'
+                currency
+                totalAmount: fixedAmount
+                milestoneSummary: milestoneSummary |undefined
+                paymentSchedule}
+        clauses: {
+          nda
+          ipTransfer}
+        governingLaw
+        revisionRounds}
+      const res = await fetch('/api/ai-contract', {
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/json'}
+        body: JSON.stringify(body)})
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data?.error |`Request failed: ${res.status}`)
+      }
+      const data = (await res.json()) as { contract: string }
+      setContract(data.contract)
+    } catch (e: any) {
+      setError(e?.message |'Failed to generate contract')
+    } finally {
+      set_loading (false);
+    }
+  }
 
+    URL.revokeObjectURL(url)
+  }
     setLoading(true),
     setError(null),
     setContract(''),
 
 =======
-import React, { useEffect, useMemo, useState } from 'react';
-import DatePicker from 'react-datepicker';
-import { useRouter } from 'next/router';
-type PaymentType = 'hourly' | 'fixed';
-export default function ContractBuilderPage(req, res) {
-  try {
-  const router = useRouter();
-  const [talentName, setTalentName] = useState('');
-  const [projectName, setProjectName] = useState('');
-  const [scopeSummary, setScopeSummary] = useState('');
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
-  const [paymentType, setPaymentType] = useState<PaymentType>('hourly');
-  const [currency, setCurrency] = useState('USD');
-  const [hourlyRate, setHourlyRate] = useState<number>(100);
-  const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>('');
-  const [fixedAmount, setFixedAmount] = useState<number>(5000);
-  const [milestoneSummary, setMilestoneSummary] = useState('');
-  const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice');
-  const [nda, setNda] = useState(true);
-  const [ipTransfer, setIpTransfer] = useState(true);
-  const [governingLaw, setGoverningLaw] = useState('Delaware, USA');
-  const [revisionRounds, setRevisionRounds] = useState<number>(2);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [contract, setContract] = useState<string>('');
-  useEffect(() => {;
-    if (!router.isReady) return,;
-    const { talent, project } = router.query as { talent?: string, project?: string },;
-    if (talent && !talentName) setTalentName(decodeURIComponent(talent)),;
-    if (project && !projectName) setProjectName(decodeURIComponent(project));
-  }, [router.isReady, router.query, talentName, projectName]),;
-  const canSubmit = useMemo(() => {;
-    return (;
-      talentName.trim().length > 0 &&;
-      projectName.trim().length > 0 &&;
-      scopeSummary.trim().length > 0 &&;
-      !!startDate &&;
-      !!endDate &&;
-      (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0);
-    );
-  }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]),;
-  async function submitForm(event: React.FormEvent) {;
-    event.preventDefault(),;
-    if (!canSubmit) return,;
-    setLoading(true);
-    setError(null);
-    setContract('');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       const body = {;
         talentName;
@@ -187,6 +189,7 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -253,6 +256,7 @@ export default function ContractBuilderPage(req, res) {
               <div className="md:col-span-3">
                 <label className="block text-sm font-medium mb-1">Payment schedule</label>
                 <input className="w-full input input-bordered" value={paymentSchedule} onChange={(e) => setPaymentSchedule(e.target.value)} placeholder="e.g., 50% upfront, 50% on delivery" />
+
               </div>
             </div>
           )  } catch (error) {
@@ -261,47 +265,33 @@ export default function ContractBuilderPage(req, res) {
   }
 }
         </div>
-        <div>
-          <label className="block text-sm font-medium mb-2">Optional clauses</label>
-          <div className="space-y-2">
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={nda} onChange={(e) => setNda(e.target.checked)} /> NDA (Confidentiality)
-            </label>
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={ipTransfer} onChange={(e) => setIpTransfer(e.target.checked)} /> IP Transfer / Assignment
-            </label>
-          </div>
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Governing law</label>
-          <input className="w-full input input-bordered" value={governingLaw} onChange={(e) => setGoverningLaw(e.target.value)} />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Included revision rounds</label>
-          <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
-        </div>
-        <div className="md:col-span-2 flex items-center gap-3">
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
-<<<<<<< HEAD
+
             {loading ? 'Generating…' : 'Generate contract'}
           </button>
           {error && <span className="text-red-600 text-sm">{error}</span>}
-=======
-            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
         </div>
       </form>
       {contract && (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        </div>
+      </form>
+=======
+      {contract && (
+
+=======
+}
+
+=======
+          </article>;
+        </div>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="mt-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-2xl font-semibold">Generated Contract</h2>
@@ -311,15 +301,17 @@ export default function ContractBuilderPage(req, res) {
             </div>
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
-<<<<<<< HEAD
+=======
             {contract}
           </article>
         </div>
       )}
     </div>
+  )
   );
 };
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -339,4 +331,7 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,5 @@
 
+=======
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import Login from "@/pages/Login",;
@@ -12,57 +13,31 @@ import ServiceOnboarding from "@/pages/ServiceOnboarding",;
 ;
 const AuthRoutes = () => {;
   return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Routes>;
       {/* Auth Routes */}
       <Route path="/login" element={<Login />} />;
       <Route path="/signup" element={<Signup />} />;
       <Route path="/forgot-password" element={<ForgotPassword />} />;
       <Route path="/update-password" element={<UpdatePassword />} />;
-      ;
-      {/* Onboarding Routes */}
-      <Route ;
-        path="/onboarding" ;
-        element={;
+<<<<<<< HEAD
+
           <ProtectedRoute>;
             <Onboarding />;
           </ProtectedRoute>;
         } ;
       />;
-      <Route ;
-        path="/talent-onboarding" ;
-        element={;
+
           <ProtectedRoute>;
             <TalentOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
-      <Route ;
-        path="/service-onboarding" ;
-        element={;
+
           <ProtectedRoute>;
             <ServiceOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
     </Routes>;
-  ),;
-},;
-;
-export default AuthRoutes,; const AuthRoutes = () => {
-  return (<Routes> {
-  /* Auth Routes */ 
-}<Route path="/login" element= {
-  <Login /> 
-}/> <Route path="/signup" element= {
-  <Signup /> 
-}/> <Route path="/forgot-password" element= {
-  <ForgotPassword /> 
-}/> <Route path="/update-password" element= {
-  <UpdatePassword /> 
-}/> /* Onboarding Routes */ 
-}<Route <Onboarding /> </ProtectedRoute> 
-}/> <Route <TalentOnboarding /> </ProtectedRoute> 
-}/> <Route <ServiceOnboarding /> </ProtectedRoute> 
-}/> </Routes>) 
-};
-export default AuthRoutes;
+

@@ -1,26 +1,18 @@
 
-<<<<<<< HEAD
-import React from 'react';
-=======
+
 import React from 'react',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // This is a simplified version of the theme hook for offline development
+
 export const useTheme = () => {
   return {
-    theme: "dark",
-<<<<<<< HEAD
-    setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
-  };
-=======
-    setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
-  }
-},
-import React from 'react',;
-// This is a simplified version of the theme hook for offline development;
-export const useTheme = () => {;
-  return {;
-    theme: "dark";
-    setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`);
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 };
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

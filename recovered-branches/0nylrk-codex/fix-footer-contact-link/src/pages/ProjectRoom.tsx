@@ -1,23 +1,28 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import {useParams} from 'react-router-dom';
-import {Header} from '@/components/Header';
-import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
-import {VideoCallRoom} from '@/components/video/VideoCallRoom';
-import {toast} from 'sonner';
+import { useParams  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X  } from 'lucide-react';
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
+import { toast  } from 'sonner';
 export default function ProjectRoom() {
+
+  const { projectId } = useParams() as { projectId: string }
   const { projectId } = useParams() as { projectId: string },;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
-    id: string,
-    name: string,
+    id: string
+    name: string
+
     avatar?: string;
     isMuted?: boolean;
     isVideoEnabled?: boolean;
@@ -25,83 +30,35 @@ export default function ProjectRoom() {
     isHost?: boolean
   }>>([
     {
-      id: 'user-1',
-      name: 'You',
-      isHost: true,
-      isVideoEnabled: true,
+
+      id: 'user-1'
+      name: 'You'
+      isHost: true
+      isVideoEnabled: true
       isMuted: false
     }
   ]);
-=======
-import React, { useState } from 'react',;
-import { useParams } from 'react-router-dom',;
-import { Header } from '@/components/Header',;
-import { Footer } from '@/components/Footer',;
-import { SEO } from '@/components/SEO',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react',;
-import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
-import { toast } from 'sonner',;
-export default function ProjectRoom() {;
-  const { projectId } = useParams() as { projectId: string },;
-  const [activeTab, setActiveTab] = useState('chat'),;
-  const [isInCall, setIsInCall] = useState(false),;
-  const [callParticipants, setCallParticipants] = useState<Array<{;
-    id: string,;
-    name: string,;
-    avatar?: string,;
-    isMuted?: boolean,;
-    isVideoEnabled?: boolean,;
-    isScreenSharing?: boolean,;
-    isHost?: boolean;
-  }>>([;
-    {;
-      id: 'user-1',;
-      name: 'You',;
-      isHost: true,;
-      isVideoEnabled: true,;
-      isMuted: false;
-    }
+
+import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
+import {VideoCallRoom} from '@/components / video / VideoCallRoom';
+import {toast} from 'sonner';
+
   ]),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
-  const startVideoCall = () => {
-    setIsInCall(true),
-    toast.success("Video call started", {
-      description: "Others can join with the project room link"
-    }),
-    // Switch to video tab if not already there
-    if (activeTab !== 'video') {
-      setActiveTab('video')
-    }
-  },
-  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const endVideoCall = () => {
-    setIsInCall(false),
+    setIsInCall(false);
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
-  },
-  
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
 <<<<<<< HEAD
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    
-    if (!callParticipants.find(p => p.id === randomUser.id)) {
-      setCallParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`)
-    }
-  };
-=======
+
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
@@ -132,43 +89,48 @@ export default function ProjectRoom() {;
       toast(`${randomUser.name} joined the call`);
     }
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
-    <>
-      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
-      <Header />
-      <main className="container mx-auto py-8">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>
-          <div className="flex gap-2">
-            {isInCall && (
-              <Button variant="destructive" className="flex items-center gap-2">
-                <X className="h-4 w-4" />
-                End Call
-              </Button>
+    <>;
+      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
+      <Header />;
+      <main className="container mx-auto py-8">;
+        <div className="flex justify-between items-center mb-6">;
+          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>;
+          <div className="flex gap-2">;
+            {isInCall && (;
+              <Button variant="destructive" className="flex items-center gap-2">;
+                <X className="h-4 w-4" />;
+                End Call;
+              </Button>;
             )}
-            <Button variant="outline">Invite Team Member</Button>
-          </div>
-        </div>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-          <TabsList className="grid grid-cols-6 md:w-fit">
-            <TabsTrigger value="chat" className="flex items-center gap-2">
-              <MessageSquare className="h-4 w-4" />
-              <span className="hidden sm:inline">Chat</span>
-            </TabsTrigger>
-            <TabsTrigger value="files" className="flex items-center gap-2">
-              <FileText className="h-4 w-4" />
-              <span className="hidden sm:inline">Files</span>
-            </TabsTrigger>
-            <TabsTrigger value="video" className="flex items-center gap-2">
-              <Video className="h-4 w-4" />
-              <span className="hidden sm:inline">Video</span>
-              {isInCall && (
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                </span>
+
+            <Button variant="outline">Invite Team Member</Button>;
+          </div>;
+        </div>;
+
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">;
+          <TabsList className="grid grid-cols-6 md:w-fit">;
+            <TabsTrigger value="chat" className="flex items-center gap-2">;
+              <MessageSquare className="h-4 w-4" />;
+              <span className="hidden sm:inline">Chat</span>;
+            </TabsTrigger>;
+            <TabsTrigger value="files" className="flex items-center gap-2">;
+              <FileText className="h-4 w-4" />;
+              <span className="hidden sm:inline">Files</span>;
+            </TabsTrigger>;
+            <TabsTrigger value="video" className="flex items-center gap-2">;
+              <Video className="h-4 w-4" />;
+              <span className="hidden sm:inline">Video</span>;
+              {isInCall && (;
+                <span className="relative flex h-2 w-2">;
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>;
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>;
+                </span>;
               )}
             </TabsTrigger>
             <TabsTrigger value="calendar" className="flex items-center gap-2">
@@ -219,32 +181,36 @@ export default function ProjectRoom() {;
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (
                   <div className="space-y-4">
-                    <VideoCallRoom 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
-                    />
+
+                    />;
+
+
                     {/* This button is just for demo/testing purposes */}
-                    <div className="flex justify-center mt-4">
-                      <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
-                        Simulate user joining (demo only)
-                      </Button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center justify-center h-[400px] space-y-4">
-                    <p className="text-muted-foreground">Start a video call with your team</p>
-                    <div className="flex gap-2">
-                      <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">
-                        <Video className="h-4 w-4" />
-                        Start Video Call
-                      </Button>
-                    </div>
-                    <div className="text-xs text-muted-foreground mt-4">
-                      <p>Recent calls:</p>
-                      <p>No recent calls for this project</p>
-                    </div>
-                  </div>
+                    <div className="flex justify-center mt-4">;
+                      <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
+                        Simulate user joining (demo only);
+                      </Button>;
+                    </div>;
+                  </div>;
+                ) : (;
+                  <div className="flex flex-col items-center justify-center h-[400px] space-y-4">;
+                    <p className="text-muted-foreground">Start a video call with your team</p>;
+                    <div className="flex gap-2">;
+                      <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">;
+                        <Video className="h-4 w-4" />;
+                        Start Video Call;
+                      </Button>;
+                    </div>;
+                    <div className="text-xs text-muted-foreground mt-4">;
+                      <p>Recent calls:</p>;
+                      <p>No recent calls for this project</p>;
+                    </div>;
+                  </div>;
                 )}
               </CardContent>
             </Card>
@@ -293,8 +259,9 @@ export default function ProjectRoom() {;
       <Footer />
     </>
   )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

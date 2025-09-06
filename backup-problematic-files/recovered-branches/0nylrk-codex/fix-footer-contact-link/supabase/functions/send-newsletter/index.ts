@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { Resend } from "npm:resend@2.0.0",;
 ;
@@ -87,3 +89,4 @@ status: 200
 });
 }
 });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

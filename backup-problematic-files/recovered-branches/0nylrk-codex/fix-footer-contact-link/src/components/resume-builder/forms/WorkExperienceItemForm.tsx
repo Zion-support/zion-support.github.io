@@ -1,4 +1,5 @@
 
+=======
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -88,178 +89,60 @@ export function WorkExperienceItemForm({;
             <FormField;
               control={form.control}
               name="company_name";
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
-                    <Input placeholder="e.g. Acme Corporation" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;              )}
-            />;
-            ;
-            <FormField;
-              control={form.control}
-              name="role_title";
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Role Title</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="e.g. Senior Developer" {...field} />;
+
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
             />;
-          </div>;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <FormField;
-              control={form.control}
-              name="location";
+
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Location</FormLabel>;
                   <FormControl>;
-                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;              )}
-            />;
-            ;
-            <FormField;
-              control={form.control}
-              name="is_current";
-              render={({ field }) => (;
-                <FormItem className="flex flex-col">;
-                  <FormLabel>Current Position</FormLabel>;
-                  <div className="flex items-center gap-2 h-10">;
-                    <Switch;
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                      id="current-position";
-                    />;
-                    <label htmlFor="current-position" className="text-sm text-muted-foreground">;
+
                       I currently work here;
                     </label>;
                   </div>;
                   <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-          </div>;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <FormField;
-              control={form.control}
-              name="start_date";
-              render={({ field }) => (;
-                <FormItem className="flex flex-col">;
-                  <FormLabel>Start Date</FormLabel>;
-                  <Popover>;
-                    <PopoverTrigger asChild>;
-                      <FormControl>;
-                        <Button;
-                          variant={"outline"}
-                          className={cn(;
-                            "w-full pl-3 text-left font-normal",;
-                            !field.value && "text-muted-foreground";
-                          )}
-                        >;
-                          {field.value ? (;
-                            format(field.value, "MMM yyyy");
-                          ) :(;
-                            <span>Select date</span>;
-                          )}
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
-                        </Button>;
-                      </FormControl>;
-                    </PopoverTrigger>;
-                    <PopoverContent className="w-auto p-0" align="start">;
-                      <Calendar;
-                        mode="single";
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        initialFocus;
-                        captionLayout="dropdown-buttons";
-                        fromYear={1990}
-                        toYear={new Date().getFullYear()}
+
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-            ;
-            {!watchIsCurrent && (;
-              <FormField;
-                control={form.control}
-                name="end_date";
+
                 render={({ field }) => (;
                   <FormItem className="flex flex-col">;
                     <FormLabel>End Date</FormLabel>;
                     <Popover>;
                       <PopoverTrigger asChild>;
                         <FormControl>;
-                          <Button;
-                            variant={"outline"}
-                            className={cn(;
-                              "w-full pl-3 text-left font-normal",;
-                              !field.value && "text-muted-foreground";
-                            )}
-                          >;
-                            {field.value ? (;
-                              format(field.value, "MMM yyyy");
-                            ) :(;
-                              <span>Select date</span>;
-                            )}
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                           </Button>;
                         </FormControl>;
                       </PopoverTrigger>;
                       <PopoverContent className="w-auto p-0" align="start">;
-                        <Calendar;
-                          mode="single";
-                          selected={field.value || undefined}
-                          onSelect={field.onChange}
-                          initialFocus;
-                          captionLayout="dropdown-buttons";
-                          fromYear={1990}
-                          toYear={new Date().getFullYear()}
-                          disabled={(date) => date > new Date()}
+
                         />;
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;
-                  </FormItem>;                )}
-              />;
-            )}
-          </div>;
-;
-          <FormField;
-            control={form.control}
-            name="description";
+
             render={({ field }) => (;
               <FormItem>;
                 <div className="flex justify-between items-center">;
                   <FormLabel>Description</FormLabel>;
                   <div className="flex gap-2">;
-                    <AIEnhancementButton;
-                      options={{;
-                        enhancementType:"work-description",;
-                        content:field.value || "",;
-                        context:`${watchRoleTitle} at ${watchCompanyName}`;
-                      }}
-                      onEnhanced={(content) => form.setValue("description", content, { shouldDirty:true })}
-                      buttonText="Enhance with AI";
-                    />;
-                    <Button;
-                      type="button";
-                      variant="outline";
-                      size="sm";
-                      onClick={() => setIsEnhancementDialogOpen(true)}
-                      className="text-xs";
+
                     >;
                       AI Writer;
                     </Button>;
@@ -268,15 +151,12 @@ export function WorkExperienceItemForm({;
                 <FormControl>;
                   <Textarea;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role...";
-                    className="min-h-[150px]";
+
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-              </FormItem>;
-            )}
-          />;
-          ;
+
           <div className="flex justify-end gap-2">;
             <Button type="button" variant="outline" onClick={onCancel}>;
               Cancel;
@@ -287,51 +167,9 @@ export function WorkExperienceItemForm({;
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                   Saving...;
                 </>;
-              ) :(;
-                <>Save</>;
-              )}
+
             </Button>;
           </div>;
         </form>;
       </Form>;
-;
-      <AIEnhancementDialog;
-        title="Enhance Work Experience Description";
-        isOpen={isEnhancementDialogOpen}
-        onClose={() => setIsEnhancementDialogOpen(false)}
-        onApply={handleAIEnhancement}
-        defaultOptions={{;
-          enhancementType:"work-description",;
-          content:form.getValues("description") || "",;
-          context:`${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent={form.getValues("description") || ""}
-      />;
-    </>;
-  ),;}
- is current: z.boolean () .default (false);
-description: z.string () .optional ();
-location: z.string () .optional () 
-});
-type FormValues = z.infer<typeof formSchema>;
-//Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
-  await onSubmit (workExperience) 
-};
-setIsEnhancementDialogOpen (false);
-};
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormLabel>Current Position</FormLabel> <div className="flex items-center gap-2 h-10" > <Switch /> <label htmlFor="current-position" className="text-sm text-muted-foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) 
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
-}/> {
-  !watchIsCurrent && (<FormField control= {
-  form.control 
-}<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) 
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
-}/>) 
-}</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
-  ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
-}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) 
-}
+

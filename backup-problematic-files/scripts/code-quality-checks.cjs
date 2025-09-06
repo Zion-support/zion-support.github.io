@@ -34,4 +34,5 @@ const fs = require("fs")
     console.log(`"Failed"`)
 // console.log(`"Warnings"`)
     console.log("=")
-    console.log(`� Report saved "to"`)
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

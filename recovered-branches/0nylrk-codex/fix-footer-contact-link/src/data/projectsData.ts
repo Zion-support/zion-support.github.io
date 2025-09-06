@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-import { Project } from '@/types/projects';
-=======
-import { Project } from "@/types/projects",
+import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
     id: "project-1",
     client_id: "client-1",
@@ -20,7 +18,6 @@ export const PROJECTS: Project[] = [
       description: "Develop dashboards using React and integrate ML models"
     },
     talent_profile: {
-<<<<<<< HEAD
       full_name: 'Alexandra Chen',
       professional_title: 'Senior AI Engineer',
     },
@@ -32,7 +29,6 @@ export const PROJECTS: Project[] = [
     talent_profile: {
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer"
-=======
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
 import { Project } from "@/types/projects",;
@@ -55,7 +51,7 @@ export const PROJECTS: Project[] = [;
     talent_profile: {;
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer";
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 ];

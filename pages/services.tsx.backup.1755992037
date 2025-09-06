@@ -3,12 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Check, Star, TrendingUp, Clock, DollarSign, ShieldCheck, Search, Filter, Grid3X3, List, Phone, Mail, MapPin, ArrowRight, ExternalLink, Brain, Rocket, Globe, Cpu, Lock, Eye, Zap } from 'lucide-react';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
-import MicroSaasServices from '../components/sections/MicroSaasServices';
-import ServiceComparison from '../components/sections/ServiceComparison';
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-a78d
 
 export default function ServicesPage() {
   const services = [
@@ -633,7 +628,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Micro SaaS Services Promotion */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
@@ -714,17 +708,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-=======
-      {/* Micro SaaS Services */}
-      <MicroSaasServices
-        title="Our Micro SaaS Portfolio"
-        subtitle="Explore our comprehensive collection of AI-powered micro SaaS solutions. Each service is designed to solve specific business challenges with cutting-edge technology and competitive pricing."
-        showCategoryFilter={true}
-      />
-
-      {/* Service Comparison */}
-      <ServiceComparison />
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-a78d
 
       {/* Technology Stack */}
       <section className="section-padding bg-gradient-cursor">

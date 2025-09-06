@@ -1,35 +1,37 @@
-import type { NextPage, GetServerSideProps } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-type Props = { urlCount: number },
+import type { NextPage, GetServerSideProps } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
     <main className="space-y-4">
       <h1 className="text-2xl font-semibold">Sitemap Status</h1>
-<<<<<<< HEAD
-      <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</a></p>
-=======
-      <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</Link></p>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+      <div className="enhanced-card">
+        <div className="text-lg">Indexed URLs: {urlCount}</div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <div className="enhanced-card">
         <div className="text-lg">Indexed URLs: {urlCount}</div>
       </div>
     </main>
   )
+}
 },
-export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(process.cwd(), 'publicsitemap.xml'),
-  let urlCount = 0,
-  try {
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
-<<<<<<< HEAD
+    const raw = fs.readFileSync(p, 'utf8'),
+    urlCount = (raw.match(/<url>/g) || []).length
   } catch {}
   return { props: { urlCount } }
 },
 ;
 export default SitemapStatus,;
-=======
   } catch {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -42,4 +44,4 @@ export default SitemapStatus,;
 }
 };
 export default SitemapStatus;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

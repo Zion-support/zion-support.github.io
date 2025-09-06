@@ -1,10 +1,12 @@
-<<<<<<< HEAD
-import React from 'react',;
-import Head from 'next/head',;
-=======
+import React from 'react';
+import Head from 'next/head';
 import React from 'react'
 import Head from 'next/head'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import React from 'react',;
+import Head from 'next/head',;
+import React from 'react'
+import Head from 'next/head'
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function TransportationLogisticsSolutions() {
   return (
     <>
@@ -21,35 +23,41 @@ export default function TransportationLogisticsSolutions() {
       </div>
     </>
   )
-<<<<<<< HEAD
 };
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+import React from 'react',
+import Head from 'next / head',
+export default /**
+ * TransportationLogisticsSolutions - Function description
+ */
+function TransportationLogisticsSolutions() {
+  return (
+    <>;
+      <Head>;
+        <title > Transportation & Logistics Solutions | Zion Tech Group</title>;
+        <meta name="description" content="AI and optimization solutions for transportation and logistics: routing, supply chain, and real - time visibility." />;
+        <link rel="canonical" href="https://ziontechgroup.com / transportation - logistics - solutions" />;
+      </Head>;
+      <div className="min - h-screen bg - black text - white">;
+        <section className="container mx - auto px - 4 py - 20">;
+          <h1 className="text - 4xl font - bold mb - 6">Transportation & Logistics Solutions</h1>;
+          <p className="text - gray - 300">We help optimize routes, reduce costs, and increase reliability with AI - driven logistics platforms.</p>;
+        </section>;
+      </div>;
+    </>);
 }
-import React from 'react';
-import Head from 'next/head';
-export default function TransportationLogisticsSolutions() {_return (
-    <>
-      <Head>
-        <title>Transportation & Logistics Solutions | Zion Tech Group</title>
-        <meta name="description" content="AI and optimization solutions for transportation and logistics: routing, _supply chain, _and real-time visibility." />
-        <link rel="canonical" href="https://ziontechgroup.com/transportation-logistics-solutions" />
-      </Head>
-      <div className="min-h-screen bg-black text-white">
-        <section className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold mb-6">Transportation & Logistics Solutions</h1>
-          <p className="text-gray-300">We help optimize routes, _reduce costs, _and increase reliability with AI-driven logistics platforms.</p>
-        </section>
-      </div>
-    </>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

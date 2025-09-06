@@ -1,9 +1,7 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import {CheckCircle} from 'lucide-react';
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
-interface VerifiedBadgeProps {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   verified: boolean,
   size?: 'sm' | 'md' | 'lg'
 }
@@ -11,6 +9,8 @@ interface VerifiedBadgeProps {
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
   if (!verified) return null;
 =======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react',;
 import { CheckCircle } from 'lucide-react',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
@@ -18,17 +18,18 @@ interface VerifiedBadgeProps {;
   verified: boolean,;
   size?: 'sm' | 'md' | 'lg';
 }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+  verified: boolean
+  size?: 'sm' | 'md' | 'lg'
+}
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
+
   if (!verified) return null,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
-  const sizeClasses = {
-    sm: 'h-3.5 w-3.5',
-    md: 'h-4 w-4',
-    lg: 'h-5 w-5'
-  },
-  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <TooltipProvider>
       <Tooltip>
@@ -43,4 +44,3 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
       </Tooltip>
     </TooltipProvider>
   )
-}

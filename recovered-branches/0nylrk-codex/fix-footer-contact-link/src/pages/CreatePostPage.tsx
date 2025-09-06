@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -8,38 +7,52 @@ import {Button} from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import {useToast} from "@/hooks/use-toast";
 import {ForumCategory} from "@/types/community";
-=======
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button",
 import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast";
+import { ForumCategory } from "@/types/community";
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface PostFormValues {
-  title: string,
-  content: string,
-  categoryId: ForumCategory,
+
+  title: string
+  content: string
+  categoryId: ForumCategory
+
   tags: string
 }
 
-<<<<<<< HEAD
 export default function CreatePostPage() {;
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
-=======
 export default function CreatePostPage() {
+
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+  // Get category from URL query params if available
+  const initialCategory = searchParams.get("category") as ForumCategory | null;
+  const initialValues: Partial<PostFormValues> = {
+    categoryId: initialCategory |"project-help"
+  }
   const navigate = useNavigate(),
   const { toast } = useToast(),
   const [searchParams] = useSearchParams(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Get category from URL query params if available
   const initialCategory = searchParams.get("category") as ForumCategory | null,
   
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const initialValues: Partial<PostFormValues> = {
     categoryId: initialCategory || "project-help"
   },
@@ -48,29 +61,81 @@ export default function CreatePostPage() {
     try {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation
-      
       // Parse tags into an array
-      const tagsArray = values.tags.split(",").map(tag => tag.trim()),
-      
+
       toast({
-        title: "Post created",
+        title: "Post created"
         description: "Your post has been published successfully"
-      }),
-      
+
       // Redirect to the forum category
       navigate(`/community/category/${values.categoryId}`)
     } catch (error) {
       toast({
-        title: "Error",
-        description: "There was a problem creating your post",
+        title: "Error"
+        description: "There was a problem creating your post"
         variant: "destructive"
       })
+
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useSearchParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import PostForm from "@/components/community/PostForm";
+import {useToast} from "@/hooks/use-toast";
+import {ForumCategory} from "@/types/community";
+interface PostFormValues {;
+  title: string,;
+  content: string,;
+  categoryId: ForumCategory,;
+  tags: string;
+}
+
+export default function CreatePostPage() {;
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+
+  // Get category from URL query params if available;
+  const initialCategory = searchParams && searchParams.get("category") as ForumCategory | null;
+
+  const initialValues: Partial<PostFormValues> = {;
+    categoryId: initialCategory || "project-help";
+  };
+
+  const handleSubmit = async (values: PostFormValues) => {;
+    try {;
+      // Here we would normally save to the database;
+      // For now, we'll just simulate a successful post creation;
+
+      // Parse tags into an array;
+      const tagsArray = values && values.tags.split(",").map(tag => tag && tag.trim());
+
+      toast({;
+        title: "Post created",;
+        description: "Your post has been published successfully";
+      });
+
+      // Redirect to the forum category;
+      navigate(`/community/category/${values && values.categoryId}`);
+    } catch (error) {;
+      toast({;
+        title: "Error",;
+        description: "There was a problem creating your post",;
+        variant: "destructive";
+      });
+
     }
+=======
+  }
   },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
-    <AppLayout>
-      <SEO 
+
+    <AppLayout>;
+
+      <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
@@ -89,72 +154,8 @@ export default function CreatePostPage() {
     </AppLayout>
   )
 <<<<<<< HEAD
-}
-=======
-import { useState, useEffect } from "react",;
-import { Link, useNavigate, useSearchParams } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { SEO } from "@/components/SEO",;
-import { Button } from "@/components/ui/button",;
-import PostForm from "@/components/community/PostForm",;
-import { useToast } from "@/hooks/use-toast",;
-import { ForumCategory } from "@/types/community",;
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
-}
-;
-export default function CreatePostPage() {;
-  const navigate = useNavigate(),;
-  const { toast } = useToast(),;
-  const [searchParams] = useSearchParams(),;
-  // Get category from URL query params if available;
-  const initialCategory = searchParams.get("category") as ForumCategory | null,;
-  const initialValues: Partial<PostFormValues> = {;
-    categoryId: initialCategory || "project-help";
-  },;
-  const handleSubmit = async (values: PostFormValues) => {;
-    try {;
-      // Here we would normally save to the database;
-      // For now, we'll just simulate a successful post creation;
-      // Parse tags into an array;
-      const tagsArray = values.tags.split(",").map(tag => tag.trim()),;
-      toast({;
-        title: "Post created",;
-        description: "Your post has been published successfully";
-      }),;
-      // Redirect to the forum category;
-      navigate(`/community/category/${values.categoryId}`);
-    } catch (error) {;
-      toast({;
-        title: "Error",;
-        description: "There was a problem creating your post";
-        variant: "destructive";
-      });
-    }
-  };
-  return (;
-    <AppLayout>;
-      <SEO;
-        title="Create New Post | Community Forum | Zion AI Marketplace";
-        description="Create a new discussion post in the Zion AI Marketplace community forum.";
-        keywords="community, forum, discussion, create post, new thread";
-      />;
-      <div className="container py-8">;
-        <div className="flex items-center gap-3 mb-6">;
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
-            Forum;
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <span className="text-sm font-medium">Create Post</span>;
-        </div>;
-        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
-      </div>;
-    </AppLayout>;
-  );
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

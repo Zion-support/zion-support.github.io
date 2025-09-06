@@ -64,4 +64,5 @@ console.log(' Starting CI/CD Pipeline...')
             "failedStages"
 // console.log(`   - Successful "Stages"`)
 console.log(`   - Failed "Stages"`)
-  console.log('� Application "URL")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

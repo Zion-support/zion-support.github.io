@@ -1,37 +1,25 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-export default function Ecommerce() {
-  const schema = {
-    '@context': 'https://schema.org',
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     '@type': 'WebPage',;
     name: 'E-commerce Platform',;
     description:;
-      'Sell or purchase AI solutions and IT equipment through our secure marketplace.';
-    url: 'https://app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "E-commerce Platform"
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
-  }
-  return (
-    <>
-      <SEO
-        title='E-commerce Platform'
-        description='Buy and sell hardware, software and services in the Zion marketplace.'
-        keywords='tech marketplace, buy IT hardware, sell AI solutions'
-        canonical='https://app.ziontechgroup.com/features/e-commerce'
+      'Sell or purchase AI solutions and IT equipment through our secure marketplace.',;
+    url: 'https://app && app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "E-commerce Platform";
+    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",;
+    "url": "https://app && app.ziontechgroup.com/features/e-commerce";
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
 =======
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 export default function Ecommerce() {
   const schema = {
     "@context": "https://schema.org",
@@ -39,20 +27,19 @@ export default function Ecommerce() {
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app.ziontechgroup.com/features/e-commerce"
-  },
+
+  };
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <>
       <SEO
-        title="E-commerce Platform"
-        description="Buy and sell hardware, software and services in the Zion marketplace."
-        keywords="tech marketplace, buy IT hardware, sell AI solutions"
-        canonical="https://app.ziontechgroup.com/features/e-commerce"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
+
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -86,7 +73,6 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
-<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
@@ -126,21 +112,9 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
-              <Link href="/marketplace">Start Shopping</Link>
-            </Button>
-          </div>
-        </div>
-      </main>
-    </>
-  )
-<<<<<<< HEAD
-}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
-=======
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -176,38 +150,22 @@ export default function Ecommerce() {;
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-            <img;
-              src="https://placehold.co/800x400";
-              alt="Screenshot of marketplace interface";
-              className="object-cover";
-            />;
-          </div>;
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
-            <li>Support for videos and 3D models to highlight your offerings.</li>;
-            <li>Secure transactions with Stripe and fraud protection.</li>;
-            <li>Reach new customers around the world via our global platform.</li>;
-          </ul>;
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
-          <div className="space-y-4 mb-12">;
-            <div>;
-              <p className="font-semibold">How do I list a new product?</p>;
-              <p className="text-zion-slate-light">Sign in and click "Publish Product" from your dashboard to add pricing, images and details.</p>;
-            </div>;
-            <div>;
-              <p className="font-semibold">Do you support international shipping?</p>;
-              <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>;
-            </div>;
-          </div>;
-          <div className="text-center">;
-            <Button size="lg" className="bg-zion-purple text-white" asChild>;
+            <img
+              src="https://placehold && placehold.co/800x400"
+              alt="Screenshot of marketplace interface"
+              className="object-cover"
+
+
               <Link href="/marketplace">Start Shopping</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
-    </>;
-  );
-}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

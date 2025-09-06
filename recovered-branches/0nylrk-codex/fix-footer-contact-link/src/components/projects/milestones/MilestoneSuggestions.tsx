@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import {Button} from '@/components/ui/button';
-import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Loader2, Sparkles, Check} from 'lucide-react';
-import {Badge} from '@/components/ui/badge';
-import {format, parseISO} from 'date-fns';
-interface MilestoneSuggestionsProps {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -23,6 +17,8 @@ export function MilestoneSuggestions({;
   endDate;
   projectType;
 =======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -38,21 +34,32 @@ interface MilestoneSuggestionsProps {;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+  projectName: string
+  scopeSummary: string
+  startDate: Date
+  endDate?: Date;
+  projectType: string
+
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
 export function MilestoneSuggestions({
   projectName,
   scopeSummary,
   startDate,
   endDate,
   projectType,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  onMilestonesGenerated
-}: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
-  const [showSuggestions, setShowSuggestions] = useState(false),
+
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
+      scope: `${projectName}: ${scopeSummary}`
+      startDate: startDate.toISOString()
+      endDate: endDate ? endDate.toISOString() : null
+      projectType: projectType |"Other"
+    }
+    const milestones = await generateMilestones(input);
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -61,65 +68,85 @@ export function MilestoneSuggestions({
 
     const milestones = await generateMilestones(input),
     
-    if (milestones.length > 0) {
-      setShowSuggestions(true),
-      if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones)
-<<<<<<< HEAD
-      }
-    }
-  };
 
-  const formatDate = (dateString: string) => {
-    try {
-      return format(parseISO(dateString), 'MMM dd, yyyy')
-    } catch (error) {
-      return dateString
-    }
-  };
-=======
-;
-export function MilestoneSuggestions({;
-  projectName,;
-  scopeSummary,;
-  startDate,;
-  endDate,;
-  projectType,;
-  onMilestonesGenerated;
-}: MilestoneSuggestionsProps) {;
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
-  const [showSuggestions, setShowSuggestions] = useState(false),;
-  const handleGenerateMilestones = async () => {;
-    const input: MilestoneInput = {;
-      scope: `${projectName}: ${scopeSummary}`,;
-      startDate: startDate.toISOString(),;
-      endDate: endDate ? endDate.toISOString() : null,;
-      projectType: projectType || "Other";
-    },;
-    const milestones = await generateMilestones(input),;
-    if (milestones.length > 0) {;
-      setShowSuggestions(true),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      setShowSuggestions(true);
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
     }
+
+import {Button} from '@/components / ui / button';
+import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
+import {Loader2, Sparkles, Check} from 'lucide-react';
+import {Badge} from '@/components / ui / badge';
+import {format, parseISO} from 'date - fns';
+interface MilestoneSuggestionsProps {
+  project_name: string,
+  scope_summary: string,
+  start_date: Date,
+  end_date?: Date;
+  project_type: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
+export /**
+ * MilestoneSuggestions - Function description
+ */
+function MilestoneSuggestions() {
+  const { generate_milestones, generated_milestones, is_generating } = useMilestoneGenerator ();
+  const [show_suggestions, setShowSuggestions] = useState (false);
+;
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+      scope: `${project_name}: ${scope_summary}`,
+      start_date: start_date.toISOString (),
+      end_date: end_date ? end_date.toISOString () : null,
+      project_type: project_type || "Other";
+    }
+;
+    const milestones = await generate_milestones (input);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      setShowSuggestions (true);
+      // Check condition
+if ( {) {
+  $2
+}
+        onMilestonesGenerated (milestones);
+      }
+    }
+  }
+;
+  const format_date = (date_string: string) =>: any {
+
+    try {
+      return format (parseISO (date_string), 'MMM dd, yyyy');
+    } catch (error) {
+
   };
+
   const formatDate = (dateString: string) => {;
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
+
     }
+
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
-    <div className="space-y-4">
-      {!showSuggestions && (
+    <div className="space-y-4">;
+      {!showSuggestions && (;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
+          disabled={isGenerating |!scopeSummary |!startDate}
           className="w-full"
         >
           {isGenerating ? (
@@ -165,7 +192,6 @@ export function MilestoneSuggestions({;
                   </div>
                 </div>
               ))}
-
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
@@ -174,7 +200,3 @@ export function MilestoneSuggestions({;
           </CardContent>
         </Card>
       )}
-    </div>
-  )
-}
-;

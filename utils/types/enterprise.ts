@@ -1,32 +1,6 @@
+
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
-export interface CompanyUsageLimits {;
-  monthlyJobPosts: number;
-  budgetCapUsd: number;
-<<<<<<< HEAD
-}
-;
-export interface CompanyPlan {;
-  tier: 'teams' | 'business' | 'enterprise-custom';
-  seatsPurchased: number;
-  seatsUsed: number;
-  usageLimits: CompanyUsageLimits;
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface CompanyPlan {;
-  tier: 'teams' | 'business' | 'enterprise-custom',;
-  seatsPurchased: number;
-  seatsUsed: number;
-  usageLimits: CompanyUsageLimits;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
 ;
 export interface CompanyMember {;
@@ -34,13 +8,7 @@ export interface CompanyMember {;
   email: string;
   name: string;
   role: EnterpriseRole;
-<<<<<<< HEAD
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
 ;
 export interface CompanyActivityEvent {;
@@ -48,55 +16,58 @@ export interface CompanyActivityEvent {;
   timestampIso: string;
   actorEmail: string;
   action: string;
-<<<<<<< HEAD
-  meta?: Record<string unknown>;
-=======
-  meta?: Record<string, unknown>;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
 ;
 export interface InvoiceRecord {;
   id: string;
-  companyId: string;
-  number: string;
-  amountUsd: number;
-  periodStartIso: string;
-  periodEndIso: string;
+
+=======
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
+export interface CompanyPlan {
+  tier: 'teams' | 'business' | 'enterprise - custom',
+  seats_purchased: number,
+  seats_used: number,
+  usage_limits: CompanyUsageLimits;
+}
+export interface CompanyMember {
+  id: string,
+  email: string,
+  name: string,
+  role: EnterpriseRole;
+}
+export interface CompanyActivityEvent {
+  id: string,
+  timestamp_iso: string,
+  actor_email: string,
+  action: string,
+  meta?: Record < string unknown>;
+}
+export interface InvoiceRecord {
+  id: string,
+  company_id: string,
+  number: string,
+  amount_usd: number,
+  periodStartIso: string,
+  periodEndIso: string,
   status: 'paid' | 'open' | 'void' | 'past_due';
-<<<<<<< HEAD
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
-;
-export interface CompanyRecord {;
-  id: string;
-  name: string;
+export interface CompanyRecord {
+  id: string,
+  name: string,
   slug: string, // e.g. acme;
-<<<<<<< HEAD
-  logoUrl?: string;
-  brandColor?: string;
-  plan: CompanyPlan;
-  members: CompanyMember[];
-  activity: CompanyActivityEvent[];
-  invoices: InvoiceRecord[];
-=======
-  logoUrl?: string,;
-  brandColor?: string,;
-  plan: CompanyPlan,;
-  members: CompanyMember[];
-  activity: CompanyActivityEvent[];
-  invoices: InvoiceRecord[];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

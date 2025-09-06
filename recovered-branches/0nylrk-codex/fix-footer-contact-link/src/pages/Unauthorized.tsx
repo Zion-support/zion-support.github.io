@@ -1,17 +1,5 @@
 
-<<<<<<< HEAD
-import {Link} from "react-router-dom";
-import {Button} from "@/components/ui/button";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {ShieldAlert} from "lucide-react";
 =======
-import { Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { ShieldAlert } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Unauthorized() {
   return (
     <>
@@ -46,15 +34,17 @@ export default function Unauthorized() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-=======
+}
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { ShieldAlert } from "lucide-react";
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function Unauthorized() {;
-  return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">;
@@ -69,24 +59,14 @@ export default function Unauthorized() {;
             You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.;
           </p>;
           <div className="flex flex-col gap-3">;
-            <Link;
-              to="/";
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center";
-            >;
+            <Link
+              to="/"
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
               Return to Home;
             </Link>;
-            <Link;
-              to="/login";
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center";
-            >;
-              Login with Different Account;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-      <Footer />;
-    </>;
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-}
-;
+            <Link
+              to="/login"
+
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

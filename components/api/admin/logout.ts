@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { clearSessionCookie } from '../../../utils/adminAuth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  clearSessionCookie(res);
-  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  clearSessionCookie(res);
-  res.status(200).json({ ok: true })
-}
-<<<<<<< HEAD
 
-}
+  res.status(200).json({ ok: true })
+  res.status(200).json({ ok: true })
+
+
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  clearSessionCookie(res);
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

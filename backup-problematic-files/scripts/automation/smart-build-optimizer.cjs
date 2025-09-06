@@ -206,4 +206,5 @@ const packagePath = path.join(this.projectRoot, "package.json")
         "ERROR"
   this.log(")
   console.log("Smart Build Optimization completed successfully")
-  console.error("Smart Build Optimization "failed")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -154,4 +154,5 @@ process.on("SIGINT")
       case "report":";        await launcher.generateReport();"
       case "help":";      default"
   } catch (error) {launcher.log(` Command failed``})
-process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

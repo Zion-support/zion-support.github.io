@@ -5,5 +5,5 @@ if (typeof window !== 'undefined') {
     tracesSampleRate: 0.1,
     integrations: [],
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)})
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
 }

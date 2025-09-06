@@ -39,4 +39,5 @@ const { execSync } = require('child_process')
       this.log(`⚠ Final test run "failed"`)
     return { "status"}
       "overallStatus"
-      this.log(`Ultimate Automation Orchestrator "failed"`)
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

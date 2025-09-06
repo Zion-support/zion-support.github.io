@@ -1,37 +1,47 @@
 import { useEffect } from 'react';
-<<<<<<< HEAD
-export default function LinksReportRedirect() {
-  useEffect(() => {
+=======
+  useEffect(() => {;
     if (typeof window !== 'undefined') {;
-      window.location.replace('/reports/links/index.html');
+      window && window.location.replace('/reports/links/index && index.html');
     }
   }, []);
-  return null;export default function LinksReportRedirect() {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.location.replace('/reports/links/index.html')
-    };
-  }, []);
-  return null
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+
+=======
+export default /**
+ * LinksReportRedirect - Function description
+ */
+function LinksReportRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
 }
+      window.location.replace ('/reports / links / index.html');
+    }
+  }, []);
+  return null;export default /**
+ * LinksReportRedirect - Function description
+ */
+function LinksReportRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+      window.location.replace ('/reports / links / index.html');
+    }
+  }, []);
+  return null;
 
 }
 =======
-export default function LinksReportRedirect(req, res) {
-  try {
-  useEffect(() => {;
-    if (typeof window !== 'undefined') {;
-      window.location.replace('/reports/links/index.html');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, []);
-  return null;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

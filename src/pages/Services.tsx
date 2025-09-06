@@ -1,165 +1,318 @@
 import React from 'react';
+=======
 import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Smartphone, 
+  Database, 
+  Lock, 
+  Server, 
+  Code,
+  Zap,
+  BarChart3,
+  Globe,
+  Cpu
+} from 'lucide-react';
 
-const Services: React.FC = () => {
+const Services = () => {
   const services = [
     {
-      title: "AI & Machine Learning",
-      description: "Transform your business with cutting-edge AI solutions including natural language processing, computer vision, and predictive analytics.",
-      features: ["Custom AI Models", "Data Analytics", "Automation", "Predictive Insights"],
-      icon: "🤖",
-      color: "from-blue-500 to-purple-600"
+      name: 'AI Services',
+      description: 'Transform your business with cutting-edge artificial intelligence solutions.',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Strategy Consulting',
+        'Custom AI Solutions'
+      ],
+      price: '$5,000 - $50,000',
+      href: '/services/ai'
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable, secure, and reliable cloud solutions that grow with your business needs.",
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Auto-scaling"],
-      icon: "☁️",
-      color: "from-green-500 to-blue-600"
+      name: 'Cybersecurity',
+      description: 'Protect your digital assets with comprehensive security solutions.',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      features: [
+        'Security Audits',
+        'Threat Detection',
+        'Compliance Management',
+        'Penetration Testing',
+        'Security Training',
+        'Incident Response'
+      ],
+      price: '$3,000 - $30,000',
+      href: '/services/cybersecurity'
     },
     {
-      title: "Web Development",
-      description: "Modern, responsive web applications built with the latest technologies and best practices.",
-      features: ["React/Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
-      icon: "💻",
-      color: "from-purple-500 to-pink-600"
+      name: 'Cloud Migration',
+      description: 'Seamlessly migrate to the cloud with our expert guidance.',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      features: [
+        'AWS Migration',
+        'Azure Migration',
+        'GCP Migration',
+        'Hybrid Cloud Solutions',
+        'Cost Optimization',
+        'Security Implementation'
+      ],
+      price: '$10,000 - $100,000',
+      href: '/services/cloud-migration'
     },
     {
-      title: "Mobile Applications",
-      description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
-      features: ["iOS/Android", "React Native", "Flutter", "App Store Optimization"],
-      icon: "📱",
-      color: "from-orange-500 to-red-600"
+      name: 'DevOps & SRE',
+      description: 'Streamline your development and operations with modern DevOps practices.',
+      icon: Server,
+      color: 'from-green-500 to-teal-500',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Infrastructure as Code',
+        'Monitoring & Alerting',
+        'Container Orchestration',
+        'Site Reliability Engineering',
+        'Performance Optimization'
+      ],
+      price: '$8,000 - $80,000',
+      href: '/services/devops'
     },
     {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
-      features: ["Security Audits", "Penetration Testing", "Compliance", "24/7 Monitoring"],
-      icon: "🔒",
-      color: "from-red-500 to-orange-600"
+      name: 'Mobile Development',
+      description: 'Create powerful mobile applications for iOS and Android platforms.',
+      icon: Smartphone,
+      color: 'from-indigo-500 to-purple-500',
+      features: [
+        'Native iOS Apps',
+        'Native Android Apps',
+        'Cross-Platform Solutions',
+        'UI/UX Design',
+        'App Store Optimization',
+        'Maintenance & Support'
+      ],
+      price: '$15,000 - $150,000',
+      href: '/services/mobile-development'
     },
     {
-      title: "Data Analytics",
-      description: "Turn your data into actionable insights with advanced analytics and visualization tools.",
-      features: ["Business Intelligence", "Data Warehousing", "Real-time Analytics", "Custom Dashboards"],
-      icon: "📊",
-      color: "from-indigo-500 to-purple-600"
+      name: 'Data Analytics',
+      description: 'Unlock insights from your data with advanced analytics solutions.',
+      icon: BarChart3,
+      color: 'from-yellow-500 to-orange-500',
+      features: [
+        'Business Intelligence',
+        'Data Warehousing',
+        'Real-time Analytics',
+        'Machine Learning Models',
+        'Data Visualization',
+        'Predictive Modeling'
+      ],
+      price: '$7,000 - $70,000',
+      href: '/services/data-analytics'
+    },
+    {
+      name: 'Blockchain',
+      description: 'Leverage blockchain technology for secure and transparent solutions.',
+      icon: Lock,
+      color: 'from-gray-600 to-gray-800',
+      features: [
+        'Smart Contracts',
+        'DeFi Applications',
+        'NFT Platforms',
+        'Supply Chain Solutions',
+        'Digital Identity',
+        'Tokenization'
+      ],
+      price: '$20,000 - $200,000',
+      href: '/services/blockchain'
+    },
+    {
+      name: 'IT Support',
+      description: 'Comprehensive IT support and maintenance services.',
+      icon: Cpu,
+      color: 'from-emerald-500 to-green-500',
+      features: [
+        '24/7 Technical Support',
+        'System Maintenance',
+        'Network Management',
+        'Hardware Support',
+        'Software Updates',
+        'Troubleshooting'
+      ],
+      price: '$2,000 - $20,000',
+      href: '/services/it-support'
     }
   ];
+>>>>>>> origin/main
 
+const ServicesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
-          </p>
-        </div>
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Product engineering and AI-first consulting to deliver measurable outcomes for your business.
+        </p>
       </div>
-      {/* Services Grid */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                <div className={`h-2 bg-gradient-to-r ${service.color} rounded-t-2xl`}></div>
-                <div className="p-8">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link 
-                    to="/contact" 
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-                  >
-                    Learn More
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <ServiceCard
+          href="/services/micro-saas"
+          title="Micro SaaS"
+          description="End-to-end product development with billing, auth, and analytics"
+          bullets={[
+            "Foundational architecture",
+            "Billing + subscriptions",
+            "Growth analytics",
+            "Multi-tenant systems",
+            "API development"
+          ]}
+          icon="🚀"
+        />
+        <ServiceCard
+          href="/services/ai-services"
+          title="AI Services"
+          description="LLM applications, RAG systems, and MLOps pipelines"
+          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines", "Custom AI models", "AI integration"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/it-services"
+          title="IT Services"
+          description="Cloud migration, DevOps, and security solutions"
+          bullets={["Cloud migration", "DevOps + SRE", "Security", "Infrastructure automation", "Cost optimization"]}
+          icon="⚙️"
+        />
+      </div>
+      
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Talk to our experts about your project. We'll help you choose the right service and create a custom solution for your business needs.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+========
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:src/pages/Services.tsx
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏥</span>
               </div>
-            ))}
+              <h3 className="text-lg font-semibold">Healthcare</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏦</span>
+              </div>
+              <h3 className="text-lg font-semibold">Finance</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏭</span>
+              </div>
+              <h3 className="text-lg font-semibold">Manufacturing</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛒</span>
+              </div>
+              <h3 className="text-lg font-semibold">Retail</h3>
+            </div>
+<<<<<<<< HEAD:backup-problematic-files/src/pages/Services.tsx
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold">Education</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏛️</span>
+              </div>
+              <h3 className="text-lg font-semibold">Government</h3>
+            </div>
+
+========
+<<<<<<< HEAD
           </div>
         </div>
       </div>
-      {/* Process Section */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
-            <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">1</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
-              <p className="text-gray-600">We analyze your business needs and challenges to understand your goals.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategy</h3>
-              <p className="text-gray-600">We develop a comprehensive strategy tailored to your specific requirements.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">3</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Development</h3>
-              <p className="text-gray-600">Our expert team builds and implements your solution with precision.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">4</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
-              <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
+            <Link
+              to="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
             >
               Get Free Consultation
             </Link>
-            <Link 
-              to="/pricing" 
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+            <Link
+              to="/pricing"
+              className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
             >
               View Pricing
             </Link>
+<<<<<<< HEAD
           </div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>
       </div>
     </div>
   );
 };
 
-export default Services;
+function ServiceCard({
+  href,
+  title,
+  description,
+  bullets,
+  icon,
+}: {
+  href: string;
+  title: string;
+  description: string;
+  bullets: string[];
+  icon: string;
+}) {
+  return (
+    <Link
+      to={href}
+      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+    >
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {bullet}
+          </li>
+        ))}
+      </ul>
+    </Link>
+  );
+}
+
+export default ServicesPage;

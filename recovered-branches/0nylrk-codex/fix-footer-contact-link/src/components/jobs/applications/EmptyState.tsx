@@ -1,13 +1,16 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-=======
 
 import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card",
 import { Link } from "react-router-dom",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function EmptyState() {
   return (
     <Card className="bg-muted/30">
@@ -20,11 +23,12 @@ export function EmptyState() {
           <Link to="/jobs">Browse Jobs</Link>
         </Button>
       </CardContent>
-<<<<<<< HEAD
+    </Card>
+  );
+}
     </Card>;
   );
 }
-=======
     </Card>
   )
 import { Button } from "@/components/ui/button",;
@@ -46,4 +50,9 @@ export function EmptyState() {;
   );
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

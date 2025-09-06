@@ -1,15 +1,10 @@
+
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
-<<<<<<< HEAD
-import React from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Download, Settings} from "lucide-react";
-import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
-export function AdminHeader() {;
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
-=======
+  const { user } = useAuth();
+  const { company } = useCompanyWorkspace();
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -18,7 +13,7 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 export function AdminHeader() {
   const { user } = useAuth(),
   const { company } = useCompanyWorkspace(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="space-y-4">
@@ -43,30 +38,30 @@ export function AdminHeader() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
-          <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
+          <div className="text-xl font-medium">{company?.plan |"Enterprise"}</div>
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
-          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>
+          <div className="text-xl font-medium">{company?.teamSize |"Loading..."} / {company?.teamLimit |"∞"}</div>
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Billing Cycle</div>
-          <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
+          <div className="text-xl font-medium">{company?.billingCycle |"Annual"}</div>
         </div>
       </div>
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
-            <img 
-              src={company?.logoUrl || "/placeholder.svg"} 
-              alt={company?.name || "Company"} 
+            <img
+              src={company?.logoUrl |"/placeholder.svg"}
+              alt={company?.name |"Company"}
               className="max-h-10 max-w-10"
             />
           </div>
           <div>
-            <h2 className="font-medium">{company?.name || "Company Name"}</h2>
+            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
-              Workspace URL: {company?.workspaceUrl || "loading..."}
+              Workspace URL: {company?.workspaceUrl |"loading..."}
             </p>
           </div>
         </div>
@@ -74,9 +69,8 @@ export function AdminHeader() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
 =======
+}
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -86,6 +80,7 @@ export function AdminHeader() {;
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (;
+
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
@@ -101,44 +96,53 @@ export function AdminHeader() {;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             Export Data;
           </Button>;
         </div>;
       </div>;
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
-        <div className="bg-card rounded-lg p-4 border border-border">;
-          <div className="text-sm text-muted-foreground">Subscription Plan</div>;
-          <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>;
+
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Subscription Plan</div>;
+          <div className="text - xl font - medium">{company?.plan || "Enterprise"}</div>;
         </div>;
-        <div className="bg-card rounded-lg p-4 border border-border">;
-          <div className="text-sm text-muted-foreground">Team Members</div>;
-          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Team Members</div>;
+          <div className="text - xl font - medium">{company?.team_size || "Loading..."} / {company?.team_limit || "∞"}</div>;
         </div>;
-        <div className="bg-card rounded-lg p-4 border border-border">;
-          <div className="text-sm text-muted-foreground">Billing Cycle</div>;
-          <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>;
+        <div className="bg - card rounded - lg p - 4 border border - border">;
+          <div className="text - sm text - muted - foreground">Billing Cycle</div>;
+          <div className="text - xl font - medium">{company?.billing_cycle || "Annual"}</div>;
         </div>;
       </div>;
-      <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">;
-        <div className="flex items-center gap-4">;
-          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">;
+      <div className="bg - muted / 50 rounded - lg p - 4 flex items - center justify - between">;
+        <div className="flex items - center gap - 4">;
+          <div className="h - 12 w - 12 rounded - lg bg - card flex items - center justify - center">;
             <img;
-              src={company?.logoUrl || "/placeholder.svg"} ;
-              alt={company?.name || "Company"} ;
-              className="max-h-10 max-w-10";
+              src={company?.logo_url || "/placeholder.svg"}
+              alt={company?.name || "Company"}
+              className="max - h-10 max - w-10";
             />;
           </div>;
           <div>;
-            <h2 className="font-medium">{company?.name || "Company Name"}</h2>;
-            <p className="text-sm text-muted-foreground">;
-              Workspace URL: {company?.workspaceUrl || "loading..."}
+            <h2 className="font - medium">{company?.name || "Company Name"}</h2>;
+            <p className="text - sm text - muted - foreground">;
+              Workspace URL: {company?.workspace_url || "loading..."}
             </p>;
           </div>;
         </div>;
-        <Button>Customize Workspace</Button>;
+        <Button > Customize Workspace</Button>;
       </div>;
-    </div>;
-  );
+    </div>);
+
+}
+=======
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

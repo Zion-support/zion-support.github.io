@@ -1,87 +1,27 @@
-<<<<<<< HEAD
-  title = "Complete Your Profile", 
+=======
+{/* Progress bar */}
+      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
+        <div 
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+
 import React from "react"
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-=======
 
-import React from "react",
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-export interface OnboardingStep {
-  id: string,
-  label: string,
-  completed: boolean,
-  link: string,
-  action?: string
-<<<<<<< HEAD
-}
-
-interface OnboardingTrackerProps {
-  steps: OnboardingStep[],
-  title?: string
-  className?: string
-}
-
-export function OnboardingTracker({ 
-  steps
-  title = "Complete Your Profile", 
-  className 
-}: OnboardingTrackerProps) {
-  const completedSteps = steps.filter(step => step.completed).length
-  const progress = Math.round((completedSteps / steps.length) * 100)
-=======
-import React from "react",;
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
-import { cn } from "@/lib/utils",;
-import { Button } from "@/components/ui/button",;
-import Link from "next/link",;
-export interface OnboardingStep {;
-  id: string,;
-  label: string,;
-  completed: boolean,;
-  link: string,;
-  action?: string;
-}
-;
-interface OnboardingTrackerProps {;
-  steps: OnboardingStep[],;
-  title?: string,;
-  className?: string;
-}
-
-export function OnboardingTracker({ 
-  steps,
-  title = "Complete Your Profile", 
-  className 
-}: OnboardingTrackerProps) {
-  const completedSteps = steps.filter(step => step.completed).length,
-  const progress = Math.round((completedSteps / steps.length) * 100),
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
+<<<<<<< HEAD
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-white">{title}</h3>
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
       </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-        <div 
+        <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-<<<<<<< HEAD
-          style={{ width: `${progress}%` }}
-        ></div>
-      </div>
-=======
 ;
 export function OnboardingTracker({;
   steps,;
@@ -95,34 +35,27 @@ export function OnboardingTracker({;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
-      </div>;
-      {/* Progress bar */}
-      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
-        <div;
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
-          style={{ width: `${progress}%` }}
-        ></div>;
-      </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Steps list */}
-      <div className="space-y-3">
-        {steps.map((step) => (
-          <div key={step.id} className="flex items-center">
-            <div className="mr-3">
+      <div className="space - y-3">;
+        {steps.map ((step, ) => (
+          <div key={step.id} className="flex items - center">;
+            <div className="mr - 3">;
               {step.completed ? (
-                <CheckCircle className="h-5 w-5 text-zion-cyan" />
-              ) : (
-                <Circle className="h-5 w-5 text-zion-slate-light" />
-              )}
-            </div>
-            <div className="flex-1">
-              <div className="text-sm font-medium text-white">{step.label}</div>
-            </div>
+                <CheckCircle className="h - 5 w - 5 text - zion - cyan" />) : (
+                <Circle className="h - 5 w - 5 text - zion - slate - light" />)}
+            </div>;
+            <div className="flex - 1">;
+              <div className="text - sm font - medium text - white">{step.label}</div>;
+            </div>;
             {!step.completed && step.action && (
-              <Button 
-                asChild 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                asChild
+                variant="ghost"
+                size="sm"
                 className="text-zion-purple hover:text-zion-cyan hover:bg-zion-blue"
               >
                 <Link href={step.link}>
@@ -132,7 +65,6 @@ export function OnboardingTracker({;
             )}
           </div>
         ))}
-<<<<<<< HEAD
       </div>
     </div>
   )
@@ -142,18 +74,11 @@ export function OnboardingTracker({;
   steps.map ( (step) => (<div key= {
   step.id "
 }className="flex items-center" > <div className="mr-3" > {"
-  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>) 
+  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
 }</div> </div> {"
   !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
-  step.link 
-}> </Link> </Button>) 
-}</div>) ) ;
-}</div> </div>) ;
-}"};
-=======
-      </div>;
-    </div>;
-  );
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  step.link
+}> </Link> </Button>)
+}</div>) )
+}</div> </div>)
+}"}

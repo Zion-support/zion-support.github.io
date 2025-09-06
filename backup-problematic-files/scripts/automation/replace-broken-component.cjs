@@ -12,17 +12,17 @@ class ComponentReplacer {}
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
-  Bot, 
-  User, 
-  Send, 
-  Paperclip, 
-  Mic, 
-  MicOff, 
-  Settings, 
-  X, 
-  ThumbsUp, 
-  ThumbsDown, 
-  Sparkles, 
+  Bot,
+  User,
+  Send,
+  Paperclip,
+  Mic,
+  MicOff,
+  Settings,
+  X,
+  ThumbsUp,
+  ThumbsDown,
+  Sparkles,
   Clock,
   MessageCircle,
   HelpCircle,
@@ -161,11 +161,10 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
-
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
-
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   return ()
     <>
       {/* Chat Toggle Button */};
@@ -405,4 +404,5 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Component Replacer "failed": ', error);
       process.exit(1)})};
-module.exports = ComponentReplacer;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

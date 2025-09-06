@@ -1,18 +1,6 @@
-<<<<<<< HEAD
+
 import { Button } from "@/components/ui/button";
-interface Contract {
-  id: string;
-  title: string;
-  client: string;
-  talent: string;
-  date: string;
-  isSmartContract: boolean;
-}
-
-interface RecentContractsTableProps {
-=======
-
-import { Button } from "@/components/ui/button",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface Contract {
   id: string,
   title: string,
@@ -31,69 +19,25 @@ interface Contract {;
 }
 ;
 interface RecentContractsTableProps {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   contracts: Contract[];
-  onViewContract: (contractId: string) => void;
+  onViewContract: (contractId: string) => void
 }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  contracts: Contract[];
+  onViewContract: (contractId: string) => void
+}
+export function RecentContractsTable({
+  contracts
+  onViewContract
+}: RecentContractsTableProps) {
+
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
-  return (
-    <>
-      <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>
-      <div className="overflow-x-auto rounded-md border">
-        <table className="min-w-full divide-y divide-border">
-          <thead className="bg-muted">
-            <tr>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                Contract Title
-              </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                Client
-              </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                Talent
-              </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                Date
-              </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                Type
-              </th>
-              <th scope="col" className="relative px-6 py-3">
-                <span className="sr-only">Actions</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-card divide-y divide-border">
-            {contracts.map((contract) => (
-              <tr key={contract.id}>
-                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {contract.title}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {contract.client}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {contract.talent}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {new Date(contract.date).toLocaleDateString()}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm">
-                  {contract.isSmartContract ? (
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs">
-                      Smart Contract
-                    </span>
-                  ) : (
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-muted text-muted-foreground text-xs">
-                      Standard
-                    </span>
-                  )}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-right text-sm">
-                  <Button 
-                    variant="ghost" 
-                    size="sm"
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     onClick={() => onViewContract(contract.id)}
                   >
                     View
@@ -101,15 +45,26 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                 </td>
               </tr>
             ))}
-<<<<<<< HEAD
-          </tbody>
-        </table>
-      </div>
-=======
+
+    </>;
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+                  >;
+                    View;
+                  </Button>;
+                </td>;
+
+
+
           </tbody>;
         </table>;
       </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </>;
+=======
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }

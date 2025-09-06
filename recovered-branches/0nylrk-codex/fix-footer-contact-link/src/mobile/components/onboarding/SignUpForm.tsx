@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
@@ -11,20 +10,32 @@ import {Alert, AlertDescription} from "@/components/ui/alert";
 export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
-=======
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
+import { AlertCircle } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+export function SignUpForm() {
+
+  const navigate = useNavigate();
+  const { signup, login, loginWithGoogle } = useAuth();
+  const [formData, setFormData] = useState({
+    email: ""
+    password: ""
+    name: ""})
+  const [isLoading, setIsLoading] = useState(false);
+  const [signupMode, setSignupMode] = useState(true);
+  const [error, setError] = useState("");
 import { AlertCircle } from "lucide-react",
 import { Alert, AlertDescription } from "@/components/ui/alert",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export function SignUpForm() {
   const navigate = useNavigate(),
   const { signup, login, loginWithGoogle } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [formData, setFormData] = useState({
     email: "",
@@ -35,9 +46,10 @@ export function SignUpForm() {
   const [error, setError] = useState(""),
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value })),
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
     setError("")
+
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -45,78 +57,24 @@ export function SignUpForm() {
     setError(""),
     setIsLoading(true),
     
-    try {
-      if (signupMode) {
-        const { error } = await signup(formData.email, formData.password, {
-          name: formData.name}),
-        
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         if (error) {
           throw new Error(error)
         }
-        
         navigate("/mobile")
-      } else {
-        const { error } = await login(formData.email, formData.password),
-        
-        if (error) {
-          throw new Error(error)
-        }
-        
-        navigate("/mobile")
-<<<<<<< HEAD
-=======
-import React, { useState } from "react",;
-import { Label } from "@/components/ui/label",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { useNavigate } from "react-router-dom",;
-import { useAuth } from "@/hooks/useAuth",;
-import { AlertCircle } from "lucide-react",;
-import { Alert, AlertDescription } from "@/components/ui/alert",;
-export function SignUpForm() {;
-  const navigate = useNavigate(),;
-  const { signup, login, loginWithGoogle } = useAuth(),;
-  const [formData, setFormData] = useState({;
-    email: "",;
-    password: "",;
-    name: ""}),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [signupMode, setSignupMode] = useState(true),;
-  const [error, setError] = useState(""),;
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value } = e.target,;
-    setFormData(prev => ({ ...prev, [name]: value })),;
-    setError("");
-  },;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    setError(""),;
-    setIsLoading(true),;
-    try {;
-      if (signupMode) {;
-        const { error } = await signup(formData.email, formData.password, {;
-          name: formData.name}),;
-        if (error) {;
-          throw new Error(error);
-        }
-;
-        navigate("/mobile");
-      } else {;
-        const { error } = await login(formData.email, formData.password),;
-        if (error) {;
-          throw new Error(error);
-        }
-;
-        navigate("/mobile");
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     } catch (err: any) {
-      setError(err.message)
+      set_error (err.message);
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
+  }
   };
-<<<<<<< HEAD
   
   const handleGoogleLogin = async () => {
     try {
@@ -124,25 +82,33 @@ export function SignUpForm() {;
     } catch (err: any) {
       setError(err.message)
     }
+  }
+
   };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+  };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
-      setError(err.message);
+      setError(err && err.message);
     }
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
-    <div className="space-y-4 px-4">
-      <h2 className="text-xl font-medium text-center">
+    <div className="space-y-4 px-4">;
+      <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       </h2>
       <div className="space-y-2">
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           className="w-full py-6 relative"
           onClick={handleGoogleLogin}
         >
@@ -154,8 +120,8 @@ export function SignUpForm() {;
           </svg>
           Continue with Google
         </Button>
-        <Button 
-          variant="outline" 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -175,7 +141,6 @@ export function SignUpForm() {;
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-      
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
@@ -183,47 +148,52 @@ export function SignUpForm() {;
             <Input
               id="name"
               name="name"
-              value={formData.name}
+              value={formData && formData.name}
               onChange={handleInputChange}
               required
               placeholder="Enter your full name"
-            />
-          </div>
+            />;
+          </div>;
         )}
-        
-        <div className="space-y-2">
-          <Label htmlFor="email">Email address</Label>
+
+
+        <div className="space-y-2">;
+          <Label htmlFor="email">Email address</Label>;
+
           <Input
             id="email"
             name="email"
             type="email"
-            value={formData.email}
+            value={formData && formData.email}
             onChange={handleInputChange}
             required
             placeholder="Enter your email"
-          />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="password">Password</Label>
+
+          />;
+        </div>;
+
+        <div className="space-y-2">;
+          <Label htmlFor="password">Password</Label>;
+
           <Input
             id="password"
             name="password"
             type="password"
-            value={formData.password}
+            value={formData && formData.password}
             onChange={handleInputChange}
             required
             placeholder="Create a password"
           />
         </div>
-        <Button 
-          type="submit" 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="w-full py-6"
           disabled={isLoading}
         >
-          {isLoading 
-            ? "Please wait..." 
-            : signupMode 
-              ? "Create Account" 
+          {isLoading
+            ? "Please wait..."
+            : signupMode
+              ? "Create Account"
               : "Sign In"
           }
         </Button>
@@ -237,11 +207,18 @@ export function SignUpForm() {;
           variant="link"
           className="p-0 h-auto"
           onClick={() => setSignupMode(!signupMode)}
-        >
+        >;
           {signupMode ? "Sign In" : "Sign Up"}
         </Button>
       </p>
     </div>
   )
-}
+=======
 ;
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

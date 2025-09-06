@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-export * from "./JobsList";
-export * from "./job-posting";
-export * from "./SuggestedTalents";
-export * from "./JobMatches";
-export * from "./JobMatchCard";
-export * from "./MyApplications";
-export * from "./SuggestedJobs";
-export * from "./EmptyMatchesCard";
-export * from "./JobMatchesCard";
-export * from "./NoJobsCard";
-export * from "./JobApplicationsTable";
-export * from "./ApplicationScoreCard";
-=======
 
-export * from './JobsList',;
-export * from './job-posting',;
-export * from './SuggestedTalents',;
-export * from './JobMatches',;
-export * from './JobMatchCard',;
-export * from './MyApplications',;
-export * from './SuggestedJobs',;
-export * from './EmptyMatchesCard',;
-export * from './JobMatchesCard',;
-export * from './NoJobsCard',;
-export * from './JobApplicationsTable',;
-export * from './ApplicationScoreCard';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

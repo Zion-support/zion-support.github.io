@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 import React from "react";
-import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
+
+export const useToast = useToastHook;
+
 
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
@@ -10,7 +11,6 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
 };
 
 export const useToast = useToastHook;
-=======
 import React from "react",
 import {
   useToast as useToastHook,
@@ -22,19 +22,18 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
   title?: string,
   variant?: "default" | "destructive" | "success"
 },
-
-export const useToast = useToastHook,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
-  const { toast } = useToastHook(),
+  const { toast } = useToastHook();
   toast(props)
 }
-
 // Convenience helpers mirroring common toast variants.
-baseToast.title = (title: string) => {
+baseToast && baseToast.title = (title: string) => {
   baseToast({ title })
+
+};
+
 },
 
 baseToast.description = (description: string) => {
@@ -50,13 +49,11 @@ baseToast.success = (message: string) => {
 },
 
 // Export the callable toast function.
-<<<<<<< HEAD
 export const toast = baseToast as typeof baseToast & {;
   title: (title: string) => void;
   description: (description: string) => void;
   error: (error: string) => void,
   success: (message: string) => void
-=======
 export const toast = baseToast as typeof baseToast & {
   title: (title: string) => void,
   description: (description: string) => void,
@@ -99,5 +96,10 @@ export const toast = baseToast as typeof baseToast & {;
   description: (description: string) => void,;
   error: (error: string) => void;
   success: (message: string) => void;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

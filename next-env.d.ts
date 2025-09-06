@@ -1,4 +1,7 @@
-<<<<<<< HEAD
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+// <reference path="./.next/types/routes.d.ts" />
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

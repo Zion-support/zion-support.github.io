@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { jsPDF } from 'jspdf',;
 ;
 export interface FontConfig {;
@@ -36,6 +38,7 @@ export async function loadCustomFonts(doc:jsPDF, fontFamily:FontFamily = 'defaul
     console.error('Error loading custom fonts:', error),;
     // Fall back to default font;
     doc.setFont('helvetica'),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 } export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
 /** * Loads and registers custom fonts for PDF documents */ try {
@@ -44,5 +47,5 @@ export async function loadCustomFonts(doc:jsPDF, fontFamily:FontFamily = 'defaul
 break;
 case 'open-sans': doc.setFont ('helvetica');
 break;
-case 'roboto': 
+case 'roboto':
 }

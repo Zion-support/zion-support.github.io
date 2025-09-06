@@ -1,91 +1,54 @@
 
-<<<<<<< HEAD
+import { jsPDF  } from 'jspdf';
+import { Skill  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addSkillsSection(
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
   startY: number
 ): number {
-  if (skills.length === 0) return startY;
+
+  if (skills && skills.length === 0) return startY;
   
   let yPos = startY;
   
-  doc.setFontSize(16);
-  doc.setTextColor(colors.heading),
-  doc.text('Skills', 20, yPos);
+  doc && doc.setFontSize(16);
+  doc && doc.setTextColor(colors && colors.heading),
+  doc && doc.text('Skills', 20, yPos);
   yPos += 8;
   
-  doc.setDrawColor(colors.accent);
-  doc.line(20, yPos, 60, yPos);
+  doc && doc.setDrawColor(colors && colors.accent);
+  doc && doc.line(20, yPos, 60, yPos);
+
   yPos += 8;
-  
   // Group skills by category
-  const skillsByCategory = skills.reduce((acc, skill) => {
-    const category = skill.category || 'Other';
+
+  const skillsByCategory = skills && skills.reduce((acc, skill) => {
+    const category = skill && skill.category || 'Other';
+
     if (!acc[category]) {
       acc[category] = []
     }
     acc[category].push(skill);
     return acc
   }, {} as Record<string, typeof skills>);
-  
-  doc.setFontSize(11);
-  doc.setTextColor(colors.text);
-  
-  for (const [category, categorySkills] of Object.entries(skillsByCategory)) {
-    doc.setFont('helveticabold');
-    doc.text(category, 20, yPos);
-    doc.setFont('helveticanormal');
-    
-    const skillsText = categorySkills.map(skill => skill.name).join(', ');
-    const skillLines = doc.splitTextToSize(skillsText, 160);
-    doc.text(skillLines, 30, yPos + 5);
-    
+
     yPos += (skillLines.length * 5) + 10
-=======
-import { jsPDF } from 'jspdf',;
-import { Skill } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
-export function addSkillsSection(;
-  doc: jsPDF,;
-  skills: Skill[],;
-  colors: PdfThemeColors,;
-  startY: number;
-): number {;
-  if (skills.length === 0) return startY,;
-  let yPos = startY,;
-  doc.setFontSize(16),;
-  doc.setTextColor(colors.heading),;
-  doc.text('Skills', 20, yPos),;
-  yPos += 8,;
-  doc.setDrawColor(colors.accent),;
-  doc.line(20, yPos, 60, yPos),;
-  yPos += 8,;
-  // Group skills by category;
-  const skillsByCategory = skills.reduce((acc, skill) => {;
-    const category = skill.category || 'Other',;
-    if (!acc[category]) {;
-      acc[category] = [];
-    }
-    acc[category].push(skill),;
-    return acc;
-  }, {} as Record<string typeof skills>),;
-  doc.setFontSize(11),;
-  doc.setTextColor(colors.text),;
-  for (const [category, categorySkills] of Object.entries(skillsByCategory)) {;
-    doc.setFont('helveticabold'),;
-    doc.text(category, 20, yPos),;
-    doc.setFont('helveticanormal'),;
-    const skillsText = categorySkills.map(skill => skill.name).join(', '),;
-    const skillLines = doc.splitTextToSize(skillsText, 160);
-    doc.text(skillLines, 30, yPos + 5);
-    yPos += (skillLines.length * 5) + 10;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
-  
   return yPos + 5
 }
-;

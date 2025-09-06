@@ -1,54 +1,91 @@
-<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+function toPostman() {
+  return {
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 function toPostman() {
   return {
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const postmanCollection = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     info: {
-      name: "Zion OS API",
+
+      name: "Zion OS API"
       schema:
-        "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    },
+        "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    }
+
     item: v1.sections.flatMap((section) =>
       section.endpoints.map((ep) => ({
-        name: `${section.title} - ${ep.title}`,
+        name: `${section.title} - ${ep.title}`
+
         request: {
-          method: ep.method,
+          method: ep && ep.method,
           header: [
             {
               key: "Authorization",
               value: "Bearer {{token}}",
-              disabled: !(ep.auth || []).includes("jwt"),
+              disabled: !(ep && ep.auth || []).includes("jwt"),
             },
           ],
           url: {
-            raw: `{{baseUrl}}${ep.path}`,
+            raw: `{{baseUrl}}${ep && ep.path}`,
             host: ["{{baseUrl}}"],
-            path: ep.path.replace(/^\//, "").split("/"),
+            path: ep && ep.path.replace(/^\//, "").split("/"),
           },
-          body: ep.requestBodySchema
-            ? { mode: "raw", raw: JSON.stringify({}, null, 2) }
+          body: ep && ep.requestBodySchema
+            ? { mode: "raw", raw: JSON && JSON.stringify({}, null, 2) }
             : undefined,
         },
       })),
     ),
     variable: [
+
+      { key: "baseUrl", value: "https://api.zion.os" }
+      { key: "token", value: "" }
+    ]
+  }
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res && res.setHeader("Content-Type", "application/json");
+  res && res.status(200).json(toPostman());
+}
+      name: 'Zion OS API',
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+    },
+    item: [
+      {
+        name: 'Health Check',
+        request: {
+          method: 'GET',
+          header: [],
+          url: {
+            raw: '{{baseUrl}}/api/health',
+            host: ['{{baseUrl}}'],
+            path: ['api', 'health']
+          }
+        }
+      }
+    ],
+    variable: [
+      {
+        key: 'baseUrl',
+        value: 'https://api.ziontechgroup.com'
+      }
+    ]
+  };
       { key: "baseUrl", value: "https://api.zion.os" },
       { key: "token", value: "" },
     ],
   };
-<<<<<<< HEAD
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
   res.setHeader("Content-Type", "application/json");
   res.status(200).json(toPostman());
 }
-=======
   res.status(200).json(postmanCollection);
   } catch (error) {
     console.error("Error:", error);
@@ -128,4 +165,4 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

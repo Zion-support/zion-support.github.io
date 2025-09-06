@@ -1,16 +1,23 @@
-"use client",;
-import { useEffect, useRef, useState } from "react",;
-// Skip link component for keyboard navigation;
-export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
-  return (;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <a;
-      href={`#${targetId}`}
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--accent)] text-white px-4 py-2 rounded z-50";
+      href={`#${target_id}`}
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
     >;
       {children}
-    </a>;
-  );
+    </a>);
 }
+
+=======
+// Live region for screen reader announcements;
+export function LiveRegion({message;
+  role = "status";
+  "aria-live": ariaLive = "polite";
+}: {message: string;
+  role?: "status" | "alert" | "log";
+  "aria-live"?: "polite" | "assertive" | "off";
+}) {return (;
 ;
 // Live region for screen reader announcements;
 export function LiveRegion({;
@@ -23,16 +30,17 @@ export function LiveRegion({;
   "aria-live"?: "polite" | "assertive" | "off";
 }) {;
   return (;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <div;
       role={role}
-      aria-live={ariaLive}
-      className="sr-only";
-      aria-atomic="true";
+      aria - live={aria_live}
+      className="sr - only";
+      aria - atomic="true";
     >;
       {message}
-    </div>;
-  );
+    </div>);
 }
+
 ;
 // Focus trap for modals and dialogs;
 export function useFocusTrap(enabled: boolean = true) {;
@@ -49,6 +57,11 @@ export function useFocusTrap(enabled: boolean = true) {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {if (document.activeElement === lastElement) {;
+            e.preventDefault();
             e.preventDefault(),;
             lastElement.focus();
           }
@@ -59,6 +72,55 @@ export function useFocusTrap(enabled: boolean = true) {;
           }
         }
       }
+    }
+    container.addEventListener("keydown", handleKeyDown);
+    return () => container.removeEventListener("keydown", handleKeyDown);
+  }, [enabled]);
+  return containerRef;
+}
+// Keyboard navigation hook;
+export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {const [selectedIndex, setSelectedIndex] = useState(-1);
+  const handleKeyDown = (e: KeyboardEvent) => {;
+    switch (e.key) {;
+      case "ArrowDown": e.preventDefault();
+        setSelectedIndex(prev => (prev + 1) % items.length);
+        break;
+      case "ArrowUp":;
+        e.preventDefault();
+        setSelectedIndex(prev => (prev - 1 + items.length) % items.length);
+        break;
+      case "Enter":;
+      case " ":;
+        e.preventDefault();
+        if (selectedIndex >= 0) {;
+          onSelect(items[selectedIndex]);
+        }
+        break;
+      case "Escape": setSelectedIndex(-1);
+        break;
+    }
+  }
+  useEffect(() => {document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [items, selectedIndex, onSelect]);
+  return { selectedIndex, setSelectedIndex }
+}
+// Announcement component for screen readers;
+export function Announcement({message;
+  priority = "polite";
+}: {message: string;
+  priority?: "polite" | "assertive";
+}) {const [announcements, setAnnouncements] = useState<string[]>([]);
+  useEffect(() => {;
+    if (message) {;
+      setAnnouncements(prev => [...prev, message]);
+      // Clear announcement after a delay;
+      const timer = setTimeout(() => {;
+        setAnnouncements(prev => prev.slice(1));
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
     },;
     container.addEventListener("keydown", handleKeyDown),;
     return () => container.removeEventListener("keydown", handleKeyDown);
@@ -123,6 +185,14 @@ export function Announcement({;
     </div>;
   );
 }
+// Progress indicator component;
+export function ProgressIndicator({value;
+  max;
+  label;
+}: {value: number;
+  max: number;
+  label: string;
+}) {const percentage = Math.round((value / max) * 100);
 ;
 // Progress indicator component;
 export function ProgressIndicator({;
@@ -138,23 +208,48 @@ export function ProgressIndicator({;
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    const handleKeyDown = (e: KeyboardEvent) => {;
+      if (e.key === "Tab") {;
+        if (e.shiftKey) {;
+          if (document.activeElement === firstElement) {;
+
+            firstElement.focus();
+          }
+        }
+      }
+
+  return (;
+    <div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (;
+        <div key={index}>{announcement}</div>;
+      ))}
+    </div>;
+  );
+
+}
+
+  return (;
+    <div className="space-y-2">;
+      <div className="flex justify-between text-sm">;
+
         <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
-      <div className="w-full bg-[var(--border)] rounded-full h-2">;
+      <div className="w - full bg-[var (--border)] rounded - full h - 2">;
         <div;
-          className="bg-[var(--accent)] h-2 rounded-full transition-all duration-300";
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";
           style={{ width: `${percentage}%` }}
           role="progressbar";
-          aria-valuenow={value}
-          aria-valuemin={0}
-          aria-valuemax={max}
-          aria-label={label}
+          aria - valuenow={value}
+          aria - valuemin={0}
+          aria - valuemax={max}
+          aria - label={label}
         />;
       </div>;
-    </div>;
-  );
+    </div>);
 }
+
 ;
 // Collapsible section component;
 export function CollapsibleSection({;
@@ -170,32 +265,40 @@ export function CollapsibleSection({;
   const contentRef = useRef<HTMLDivElement>(null),;
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
+
       <button;
-        className="w-full px-4 py-3 text-left font-medium hover:bg-[var(--bg-secondary)] transition-colors flex items-center justify-between";
-        onClick={() => setIsExpanded(!isExpanded)}
-        aria-expanded={isExpanded}
-        aria-controls={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
+        on_click={() => setIsExpanded (!is_expanded)}
+        aria - expanded={is_expanded}
+        aria - controls={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
       >;
         {title}
-        <span className="text-[var(--accent)]">;
-          {isExpanded ? "−" : "+"}
+        <span className="text-[var (--accent)]">;
+          {is_expanded ? "−" : "+"}
         </span>;
       </button>;
       <div;
+
+=======
         id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
         ref={contentRef}
+        className={`overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }`}
-        aria-hidden={!isExpanded}
+        aria - hidden={!is_expanded}
       >;
-        <div className="px-4 pb-3">;
+        <div className="px - 4 pb - 3">;
           {children}
         </div>;
       </div>;
-    </div>;
-  );
+    </div>);
 }
+
 ;
 // Tooltip component with proper accessibility;
 export function Tooltip({;
@@ -217,26 +320,28 @@ export function Tooltip({;
   };
   return (;
     <div className="relative inline-block">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  return (;
+    <div className="relative inline-block">;
+
       <div;
-        onMouseEnter={() => setIsVisible(true)}
-        onMouseLeave={() => setIsVisible(false)}
-        onFocus={() => setIsVisible(true)}
-        onBlur={() => setIsVisible(false)}
-        aria-describedby={tooltipId}
-        tabIndex={0}
+        onMouseEnter={() => setIsVisible (true)}
+        onMouseLeave={() => setIsVisible (false)}
+        on_focus={() => setIsVisible (true)}
+        on_blur={() => setIsVisible (false)}
+        aria - describedby={tooltip_id}
+        tab_index={0}
       >;
         {children}
       </div>;
-      {isVisible && (;
+      {is_visible && (
         <div;
-          id={tooltipId}
-          className={`absolute z-50 px-2 py-1 text-sm text-white bg-gray-900 rounded shadow-lg ${positionClasses[position]}`}
+          id={tooltip_id}
+          className={`absolute z - 50 px - 2 py - 1 text - sm text - white bg - gray - 900 rounded shadow - lg ${position_classes[position]}`}
           role="tooltip";
         >;
           {content}
-          <div className="absolute w-2 h-2 bg-gray-900 transform rotate-45" />;
-        </div>;
-      )}
-    </div>;
-  );
+          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
+        </div>)}
+    </div>);
 }

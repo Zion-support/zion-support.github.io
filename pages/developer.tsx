@@ -1,14 +1,15 @@
-<<<<<<< HEAD
+
+
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
 import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
 import Link from 'next/link',;
-=======
 import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
 import Link from 'next/link'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function DeveloperPage() {
   return (
     <>
@@ -21,22 +22,21 @@ export default function DeveloperPage() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, SDKs, and quickstarts for all services. Contact us for enterprise onboarding.</p>
               <div className="space-x-4">
-<<<<<<< HEAD
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</a>
         <a href="/docs" className="text-cyan-400 underline">Guides</a>
         <a href="/support" className="text-cyan-400 underline">Support</a>
-=======
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</Link>
         <a href="/docs" className="text-cyan-400 underline">Guides</Link>
         <a href="/support" className="text-cyan-400 underline">Support</Link>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
       </div>
     </>
   )
-<<<<<<< HEAD
 };
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -57,6 +57,7 @@ export default function DeveloperPage() {_return (
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, _SDKs, _and quickstarts for all services. Contact us for enterprise onboarding.</p>
               <div className="space-x-4">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</a>
         <a href="/docs" className="text-cyan-400 underline">Guides</a>
         <a href="/support" className="text-cyan-400 underline">Support</a>
@@ -64,10 +65,12 @@ export default function DeveloperPage() {_return (
       </div>
     </>
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

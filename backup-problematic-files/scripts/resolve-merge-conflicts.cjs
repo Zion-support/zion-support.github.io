@@ -1,12 +1,23 @@
+conflictType = 'incoming';
+        continue;
+      }
+
+        conflictType = 'incoming';
+        continue;
+      }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         conflictType = 'incoming';
         continue;
       }
       
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         inConflict = false;
         conflictType = '';
         continue;
       }
-      
       if (!inConflict) {
         resolvedLines.push(line);
       } else if (conflictType === 'head') {
@@ -15,12 +26,10 @@
       }
       // Skip incoming version (second part)
     }
-    
     // Write resolved content
     fs.writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
-    
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
@@ -99,23 +108,24 @@ class MergeConflictResolver {
           } catch (error) {
             // Skip files that can"t be read,,
 }
-
 // Function to find all files with merge conflicts
 function findConflictedFiles(dir) {
   const conflictedFiles = [];
-  
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
-          const content = fs.readFileSync(fullPath, 'utf8');
+
+=======
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -124,7 +134,7 @@ function findConflictedFiles(dir) {
       }
     }
   }
-  
+
   scanDirectory(dir);
   return conflictedFiles;
 }
@@ -132,24 +142,24 @@ function findConflictedFiles(dir) {
 // Main execution
 try {
   const conflictedFiles = findConflictedFiles('.');
-  
+
   if (conflictedFiles.length === 0) {
     console.log('✅ No merge conflicts found!');
     process.exit(0);
   }
-  
+
   console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
   conflictedFiles.forEach(file => console.log(`  - ${file}`));
-  
+
   let resolvedCount = 0;
   for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
       resolvedCount++;
     }
   }
-  
+
   console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
-  
+
   // Try to build after resolving conflicts
   console.log('\n🔨 Testing build after conflict resolution...');
   try {
@@ -158,8 +168,13 @@ try {
   } catch (error) {
     console.log('⚠️  Build still has issues, but conflicts are resolved');
   }
-  
+
 } catch (error) {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
+=======
+<<<<<<< HEAD
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

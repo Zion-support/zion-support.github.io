@@ -1,12 +1,28 @@
-#!/usr/bin/env node
 
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+console.log('🔧 Smart Code Fixer');
+console.log('=====');
+=======
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals
@@ -19,31 +35,27 @@ function fixUnescapedEntities(content) {
     return match;
   });
 }
-
 // Function to fix specific linting issues
 function fixSpecificIssues(content, filePath) {
   let modified = false;
-
   // Fix unused imports
   if (content.includes("import Image from 'next/image'") && !content.includes('<Image')) {
     content = content.replace(/import Image from 'next\/image'/, '// import Image from \'next/image\';');
     modified = true;
   }
-
   if (content.includes("import { Mail, Phone, MapPin } from 'lucide-react'") && !content.includes('<Mail')) {
     content = content.replace(/import { Mail, Phone, MapPin } from 'lucide-react'/, 'import { Phone, MapPin } from \'lucide-react\';');
     modified = true;
   }
-
   if (content.includes("import { Layers, Zap, Shield, Globe } from 'lucide-react'") && !content.includes('<Layers')) {
     content = content.replace(/import { Layers, Zap, Shield, Globe } from 'lucide-react'/, 'import { Zap, Shield, Globe } from \'lucide-react\';');
     modified = true;
   }
-
   if (content.includes("import Link from 'next/link'") && !content.includes('<Link')) {
     content = content.replace(/import Link from 'next\/link'/, '// import Link from \'next/link\';');
     modified = true;
   }
+=======
 
   // Fix console.log statements in production files
   if (filePath.includes('pages/') || filePath.includes('components/')) {
@@ -52,41 +64,36 @@ function fixSpecificIssues(content, filePath) {
       modified = true;
     }
   }
+=======
 
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
   if (content !== content.replace(/([^;}])\n\s*}/g, '$1;\n}')) {
     modified = true;
   }
-
   // Fix missing commas in objects
   content = content.replace(/([^,}])\n\s*}/g, '$1,\n}');
   if (content !== content.replace(/([^,}])\n\s*}/g, '$1,\n}')) {
     modified = true;
   }
-
   return { content, modified };
 }
-
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     let modifiedContent = content;
     let hasChanges = false;
-
     // Apply fixes
     const result = fixSpecificIssues(modifiedContent, filePath);
     modifiedContent = result.content;
     hasChanges = result.modified;
-
     // Fix unescaped entities
     const originalContent = modifiedContent;
     modifiedContent = fixUnescapedEntities(modifiedContent);
     if (modifiedContent !== originalContent) {
       hasChanges = true;
     }
-
     // Write back if modified
     if (hasChanges) {
       fs.writeFileSync(filePath, modifiedContent, 'utf8');
@@ -101,20 +108,16 @@ function processFile(filePath) {
     return false;
   }
 }
-
 // Function to find all relevant files
 function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   const files = [];
-  
   function traverse(currentDir) {
     try {
       const items = fs.readdirSync(currentDir);
-      
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
         try {
           const stat = fs.statSync(fullPath);
-          
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
             traverse(fullPath);
           } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
@@ -134,32 +137,29 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
       }
     }
   }
-  
   traverse(dir);
   return files;
 }
-
 // Main execution
 function main() {
   const targetDir = process.cwd();
   console.log(`🔍 Scanning directory: ${targetDir}`);
-  
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
-  
   let fixedCount = 0;
   let totalFiles = files.length;
-  
   for (const file of files) {
     if (processFile(file)) {
       fixedCount++;
     }
   }
-  
   console.log('\n📊 Summary:');
   console.log(`✅ Files fixed: ${fixedCount}`);
   console.log(`📁 Total files processed: ${totalFiles}`);
-  
   if (fixedCount > 0) {
     console.log('\n🔧 Running linter to verify fixes...');
     try {
@@ -169,13 +169,15 @@ function main() {
       console.log('⚠️  Linting completed with warnings');
     }
   }
-  
   console.log('\n🎉 Smart code fixing completed!');
 }
-
 // Run if called directly
 if (require.main === module) {
   main();
 }
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

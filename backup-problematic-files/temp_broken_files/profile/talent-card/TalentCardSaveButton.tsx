@@ -1,9 +1,10 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
+=======
 import React from "react",;
-import { Heart } from 'lucide-react';
+import { Heart } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { useToast } from "@/hooks/use-toast",;
-import { useRouter } from 'next/router',;
 ;
 interface TalentCardSaveButtonProps {;
   profileId:string,;
@@ -13,6 +14,16 @@ interface TalentCardSaveButtonProps {;
   isAuthenticated:boolean;
 }
 ;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
+export function TalentCardSaveButton({ ;
+  profileId, ;
+  profileName,;
+  isSaved, ;
+  onToggleSave,;
+  isAuthenticated ;
+} TalentCardSaveButtonProps) {;
+  const { toast } = useToast(),;
+=======
 export function TalentCardSaveButton({;
   profileId,;
   profileName,;
@@ -23,20 +34,28 @@ export function TalentCardSaveButton({;
   const { toast } = useToast(),;
   const router = useRouter(),;
   // Using router.asPath for current path;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved),;
   ;
   // Handle save toggle;
   const handleSaveToggle = (e:React.MouseEvent) => {;
     e.stopPropagation(),;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
+    ;
+=======
 ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
     if (!isAuthenticated) {;
       toast({;
         title:"Authentication required",;
         description:"Please log in to save talents to your favorites",;
         variant:"destructive";
       }),;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
+=======
       const returnTo = encodeURIComponent(router.asPath),;
       router.push(`/auth/login?returnTo=${returnTo}`),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
       return,;
     }
     ;
@@ -68,17 +87,45 @@ export function TalentCardSaveButton({;
       />;
     </button>;
   ),;}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
+ interface TalentCardSaveButtonProps {
+=======
  interface TalentCardSaveButtonProps {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
   profileId: string;
 profileName: string;
 isSaved: boolean;
 onToggleSave?: (id: string, isSaved: boolean) => void;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
+isAuthenticated: boolean 
+}export function TalentCardSaveButton ({
+=======
 isAuthenticated: boolean ;
 }export function TalentCardSaveButton ({;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
   profileId;
 profileName;
 isSaved;
 onToggleSave;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/talent-card/TalentCardSaveButton.tsx
+isAuthenticated 
+}: TalentCardSaveButtonProps) {
+  const {
+  toast 
+}= useToast ();
+const [localIsSaved, setLocalIsSaved] = React.useState (isSaved);
+//Handle save toggle const handleSaveToggle = (e: React.MouseEvent) => {
+  e.stopPropagation ();
+if (!isAuthenticated) {
+  toast ({
+  return;
+}variant: "default" 
+}) 
+};
+}/> </button>) 
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 isAuthenticated ;
 }: TalentCardSaveButtonProps) {;
   const { ;
@@ -86,16 +133,16 @@ isAuthenticated ;
  } = useToast ();
 const router = useRouter ();
 //Handle save toggle return;
-<<<<<<< HEAD:temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
+:temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
 
 }variant: "default",
 }) ;
 };
 }/> </button>) ;"}"
-=======
 }variant: "default" ;
 }) ;
 };
 }/> </button>) ;
 }"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardSaveButton.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardSaveButton.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx

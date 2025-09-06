@@ -1,20 +1,28 @@
 
-<<<<<<< HEAD
 import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
+export default function PaymentSuccess() {
+
+
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
 import { CheckCircle2 } from 'lucide-react',
 export default function PaymentSuccess() {
   const navigate = useNavigate(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -26,13 +34,17 @@ export default function PaymentSuccess() {
           Your payment has been processed successfully. You now have access to all the premium features.
         </p>
         <div className="flex flex-col space-y-3">
-          <Button 
+          <Button
             onClick={() => navigate('/dashboard')}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Go to Dashboard
           </Button>
+          <Button
           <Button 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             variant="outline"
             onClick={() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -43,35 +55,52 @@ export default function PaymentSuccess() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-=======
+}
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
 import { CheckCircle2 } from 'lucide-react',;
+
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
-  return (;
+
+  return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">;
           <CheckCircle2 className="h-6 w-6 text-green-600" />;
         </div>;
+
         <h1 className="text-2xl font-bold text-white mb-2">Payment Successful!</h1>;
+
         <p className="text-zion-slate-light mb-6">;
           Your payment has been processed successfully. You now have access to all the premium features.;
         </p>;
+
         <div className="flex flex-col space-y-3">;
-          <Button;
+          <Button
             onClick={() => navigate('/dashboard')}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
           >;
             Go to Dashboard;
           </Button>;
-          <Button;
-            variant="outline";
+
+          <Button
+            variant="outline"
             onClick={() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
+=======
+import React from 'react';
+import {Button} from '@/components / ui / button';
+import {use_navigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+export default /**
+ * PaymentSuccess - Function description
+ */
+function PaymentSuccess() {
+  const navigate = use_navigate ();
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+;
           >;
             Return to Home;
           </Button>;
@@ -79,5 +108,7 @@ export default function PaymentSuccess() {;
       </div>;
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

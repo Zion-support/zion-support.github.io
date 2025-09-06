@@ -1,10 +1,38 @@
 
-<<<<<<< HEAD
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
-=======
+const testimonials = [
+  {
+    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
+    author: "Sarah Chen"
+    role: "CTO, DataMind Solutions";
+
+    avatar: "https://i.pravatar.cc / 150?img = 32",
+    company: "DataMind"},
+  {
+    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24 / 7 support is unmatched in the industry.",
+    author: "Michael Rodriguez",
+    role: "IT Director, GlobalTech";
+    avatar: "https://i.pravatar.cc / 150?img = 12",
+    company: "GlobalTech"},
+  {
+    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game - changer.";
+    author: "Aanya Patel",
+    role: "Independent AI Consultant",
+    avatar: "https://i.pravatar.cc / 150?img = 28",
+    company: "AI Systems"},
+
+  {
+    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
+    author: "Thomas Klein"
+    role: "Operations Manager, EcoTech Systems";
+    avatar: "https://i.pravatar.cc/150?img=67"
+    company: "EcoTech"}]
 import {
   Carousel,
   CarouselContent,
@@ -14,7 +42,12 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Quote } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -41,20 +74,10 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}],
 
-export function TestimonialCarousel() {
-  return (
-    <section className="py-20 bg-zion-blue-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-            Discover how Zion is transforming the tech and AI marketplace ecosystem
-          </p>
-        </div>
-        <div className="max-w-5xl mx-auto px-8">
-          <Carousel
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             opts={{
-              align: "start",
+              align: "start"
+
               loop: true}}
             className="w-full"
           >
@@ -79,20 +102,7 @@ export function TestimonialCarousel() {
                     </CardContent>
                   </Card>
                 </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-8 gap-2">
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
-              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
-            </div>
-          </Carousel>
-        </div>
-      </div>
-    </section>
-  )
 <<<<<<< HEAD
-};
-=======
 import {;
   Carousel,;
   CarouselContent,;
@@ -165,17 +175,26 @@ export function TestimonialCarousel() {;
                     </CardContent>;
                   </Card>;
                 </CarouselItem>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               ))}
-            </CarouselContent>;
-            <div className="flex justify-center mt-8 gap-2">;
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
-              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+            </CarouselContent>
+            <div className="flex justify-center mt-8 gap-2">
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+            </div>
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  )
             </div>;
           </Carousel>;
         </div>;
       </div>;
-    </section>;
-  );
+
+    </section>);
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
+;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

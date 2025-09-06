@@ -1,4 +1,7 @@
-<<<<<<< HEAD:backup-problematic-files/jest.setup.jsx
+
+<<<<<<< HEAD
+=======
+:backup-problematic-files/jest.setup.jsx
 }}},};
 export default function Jest.setup({ }: Jest.setupProps) {;
   return (,
@@ -9,6 +12,6 @@ export default function Jest.setup({ }: Jest.setupProps) {;
 };
 };
 };
-=======
 }}};
->>>>>>> main:jest.config.jsx
+main:jest.config.jsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

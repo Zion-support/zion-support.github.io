@@ -1,4 +1,5 @@
 
+=======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 ;
 export type JobCategory = ;
@@ -75,6 +76,7 @@ export interface ResumeAttachment {;
   resume_id?:string,;
   summary?:string,;
   skills?:string[];
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected',;
@@ -124,4 +126,5 @@ export interface JobApplication {;
 } export type JobStatus = 'new' | 'in progress' | 'filled' | 'closed';
 export type JobCategory = | 'development' | 'design' | 'marketing' | 'content' | 'data' | 'business' | 'other';
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
-}
+<<<<<<< HEAD
+

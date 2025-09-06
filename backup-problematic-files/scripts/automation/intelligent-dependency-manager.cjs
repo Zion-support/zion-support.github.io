@@ -36,7 +36,7 @@ class IntelligentDependencyManager {}
             const dependencies = {}
                 "production": Object.keys(packageJson.dependencies || {}),
                 "development": Object.keys(packageJson.devDependencies || {}),
-                "total": Object.keys(packageJson.dependencies || {}).length + 
+                "total": Object.keys(packageJson.dependencies || {}).length +
                        Object.keys(packageJson.devDependencies || {}).length;
            };
             this.log(`Found ${dependencies.total} total dependencies`);
@@ -48,7 +48,7 @@ class IntelligentDependencyManager {}
         this.log('Checking for outdated packages...');
         try {}
             const outdatedResult = execSync('npm outdated --json', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -77,7 +77,7 @@ class IntelligentDependencyManager {}
         this.log('Checking for security vulnerabilities...');
         try {}
             const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -97,7 +97,7 @@ class IntelligentDependencyManager {}
         try {}
             // Update minor and patch versions;
             execSync('npm update', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -110,7 +110,7 @@ class IntelligentDependencyManager {}
         this.log('Fixing security issues...');
         try {}
             execSync('npm audit fix', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -164,4 +164,5 @@ if ( {})
      {}
     const manager = new IntelligentDependencyManager}(;);
     manager.run().catch(console.error)};
-module.exports = IntelligentDependencyManager;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

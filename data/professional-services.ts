@@ -1,5 +1,5 @@
+export interface ProfessionalService {
 export interface ProfessionalService {;
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -12,9 +12,9 @@ export interface ProfessionalService {;
   contactInfo: {
     mobile: string;
     email: string;
+export interface ProfessionalService {;
     address: string;
   };
-=======
   id: string,;
   name: string,;
   tagline: string,;
@@ -30,27 +30,21 @@ export interface ProfessionalService {;
     address: string;
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
 export const professionalServices: ProfessionalService[] = [
   {
-    id: "it-consulting",
-    name: "IT Consulting Services",
-    tagline: "Expert IT consulting for business growth",
-    price: "$120/hour",
-    description: "Professional IT consulting services to help businesses optimize their technology investments.",
+
     features: [
-      "Technology assessment",
-      "Strategic planning",
-      "Implementation guidance",
-      "Performance optimization",
+      "Technology assessment";
+      "Strategic planning";
+      "Implementation guidance";
+      "Performance optimization";
       "Ongoing support"
-    ],
-    link: "/services/it-consulting",
-    category: "Professional Services",
+    ];
+    link: "/services/it-consulting", category: "Professional Services",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -58,10 +52,16 @@ export const professionalServices: ProfessionalService[] = [
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-=======
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

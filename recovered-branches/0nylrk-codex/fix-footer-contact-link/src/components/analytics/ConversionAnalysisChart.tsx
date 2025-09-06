@@ -1,4 +1,12 @@
-<<<<<<< HEAD
+
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
 import React from "react";
 import {
   Card,
@@ -6,36 +14,37 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,;
+
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-=======
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-interface ConversionAnalysisProps {
-  data: Array<Record<string any>>,
-  timeRange: string,
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface ConversionAnalysisProps {;
+  data: Array<Record<string, any>>;
+  timeRange: string;
   onTimeRangeChange: (range: string) => void
 }
 
-<<<<<<< HEAD
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ConversionAnalysisChart({
-  data,
-  timeRange,
-  onTimeRangeChange,
+  data
+  timeRange
+  onTimeRangeChange
 }: ConversionAnalysisProps) {
   const dataKeys =
     data && data.length > 0
-      ? Object.keys(data[0]).filter((key) => key !== "date");
+      ? Object.keys(data[0]).filter((key) => key !== "date")
       : [];
-=======
-export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
-  const dataKeys = data && data.length > 0
-    ? Object.keys(data[0]).filter(key => key !== 'date')
-    : [],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+interface ConversionAnalysisProps {
+  data: Array < Record < string, any>>;
+  time_range: string;
+  onTimeRangeChange: (range: string) => void;
+}
 
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -46,16 +55,29 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
       <CardContent>
         <AnalyticsChart
           title=""
-          data={data || []}
+          data={data |[]}
           dataKeys={dataKeys}
           type="bar"
-<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
+      <CardHeader>
+        <CardTitle className="text-white text-lg">Conversion Analysis</CardTitle>
+        <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <AnalyticsChart
+          title=""
+          data={data |[]}
+          dataKeys={dataKeys}
+          type="bar"
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />
       </CardContent>
     </Card>
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -81,11 +103,18 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data || []}
           dataKeys={dataKeys}
           type="bar"
+
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
     </Card>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }

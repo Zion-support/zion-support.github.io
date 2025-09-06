@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
 ;
@@ -57,4 +59,5 @@ export function useTrackUserBehavior(componentName:string) {;
 component.addEventListener ('click', trackButtonClicks);
 component.addEventListener ('submit', trackFormSubmits, true);
 return componentRef 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }

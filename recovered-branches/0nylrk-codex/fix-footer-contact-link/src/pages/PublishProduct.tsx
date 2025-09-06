@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+=======
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -9,58 +9,48 @@ import {Navigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 export default function PublishProduct() {;
   const { isAuthenticated, isLoading } = useAuth();
-=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
 import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth();
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
+import { useAuth } from "@/hooks/useAuth",
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Show loading while checking authentication
   if (isLoading) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
-        <div className="animate-pulse text-zion-purple text-lg">
-          Loading...
-        </div>
-      </div>
-    )
-  }
-  
-  // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/publish' }} replace />
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+        <div className="animate-pulse text-zion-purple text-lg">;
+          Loading...;
+        </div>;
+      </div>;
+    );
   }
 
+
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {;
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />;
+
+  }
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEO 
-        title="Publish Your Product" 
-        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
-        keywords="publish product, sell online, digital marketplace, AI tools, tech services"
-      />
-      <Header />
-      <main className="flex-1 p-6 md:p-10">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-white mb-2">Publish on Zion</h1>
-          <p className="text-zion-slate mb-8">
-            Share your products, services, or digital assets with the Zion community.
-          </p>
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">
-            <ProductSubmissionForm />
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  )
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -87,20 +77,32 @@ export default function PublishProduct() {;
   }
 ;
   return (;
+
     <div className="min-h-screen flex flex-col bg-zion-blue">;
-      <SEO;
-        title="Publish Your Product";
-        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.";
-        keywords="publish product, sell online, digital marketplace, AI tools, tech services";
-      />;
-      <Header />;
-      <main className="flex-1 p-6 md:p-10">;
-        <div className="max-w-4xl mx-auto">;
-          <h1 className="text-3xl font-bold text-white mb-2">Publish on Zion</h1>;
-          <p className="text-zion-slate mb-8">;
-            Share your products, services, or digital assets with the Zion community.;
-          </p>;
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+      <SEO
+        title="Publish Your Product"
+        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
+        keywords="publish product, sell online, digital marketplace, AI tools, tech services"
+      />
+      <Header />
+      <main className="flex-1 p-6 md:p-10">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl font-bold text-white mb-2">Publish on Zion</h1>
+          <p className="text-zion-slate mb-8">
+            Share your products, services, or digital assets with the Zion community.
+          </p>
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">
+            <ProductSubmissionForm />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  )
+
+}
+;
             <ProductSubmissionForm />;
           </div>;
         </div>;
@@ -108,5 +110,7 @@ export default function PublishProduct() {;
       <Footer />;
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

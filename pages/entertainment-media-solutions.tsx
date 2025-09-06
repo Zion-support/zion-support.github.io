@@ -1,5 +1,8 @@
-import React from 'react',;
-import Head from 'next/head',;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+import React from 'react';
+import Head from 'next/head';
 export default function EntertainmentMediaSolutions() {
   return (
     <>
@@ -16,9 +19,11 @@ export default function EntertainmentMediaSolutions() {
       </div>
     </>
   )
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,24 +1,21 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import {CountryPricing} from "@/data/onsiteServicePricing";
-import {CountryServiceSelector} from "../CountryServiceSelector";
-=======
-import { CountryPricing } from "@/data/onsiteServicePricing",
-import { CountryServiceSelector } from "../CountryServiceSelector",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
->>>>>>> main
+import { CountryPricing } from "@/data/onsiteServicePricing",
+import { CountryServiceSelector } from "../CountryServiceSelector",
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {CountryServiceSelector} from "../CountryServiceSelector";
+import { CountryPricing } from "@/data/onsiteServicePricing",
+import { CountryServiceSelector } from "../CountryServiceSelector",
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
-  setSelectedCountry: (country: CountryPricing | null) => void;
+  setSelectedCountry: (country: CountryPricing | null) => void
 }
-
 export function ServiceDetailsSection({
-  selectedCountry,
-  setSelectedCountry,
+  selectedCountry
+  setSelectedCountry
 }: ServiceDetailsSectionProps) {
   return (
     <div id="service-details" className="mt-12">
@@ -37,20 +34,41 @@ export function ServiceDetailsSection({
             pricing
           </p>
         </div>
-<<<<<<< HEAD
-=======
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountryServiceSelector } from "../CountryServiceSelector",;
 interface ServiceDetailsSectionProps {;
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
-;
-export function ServiceDetailsSection({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {;
-  return (;
+export /**
+ * ServiceDetailsSection - Function description
+ */
+function ServiceDetailsSection() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return (
+    <div id="service - details" className="mt - 12">;
+      {selected_country ? (
+        <CountryServiceSelector;
+          selected_country={selected_country}
+          onCountryChange={setSelectedCountry}
+
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {CountryServiceSelector} from "../CountryServiceSelector";
+=======
+
+import { CountryPricing } from "@/data/onsiteServicePricing",;
+import { CountryServiceSelector } from "../CountryServiceSelector",;
+
+interface ServiceDetailsSectionProps {;
+  selectedCountry: CountryPricing | null,;
+  setSelectedCountry: (country: CountryPricing | null) => void;
+}
+
+export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {;
+  return (
     <div id="service-details" className="mt-12">;
       {selectedCountry ? (;
-        <CountryServiceSelector;
+        <CountryServiceSelector
           selectedCountry={selectedCountry}
           onCountryChange={setSelectedCountry}
         />;
@@ -61,9 +79,13 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry }: S
             Choose a country from the options above to see service details and pricing;
           </p>;
         </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
     </div>
   );
+}
+      )}
+    </div>
+  )
+
 }
 ;

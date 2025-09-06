@@ -14,4 +14,5 @@ const path = require('path')
           content = content.replace(stringConcatSemicolon, '$"1")
           content = content.replace(templateLiteralSemicolon, '"$1$2")
           content = content.replace(templateLiteralSemicolon, '"$1$2")
-    console.error(' Final syntax fixer "failed")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

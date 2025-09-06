@@ -1,4 +1,5 @@
 
+=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 ;
 // Find a route by path in the complete sitemap;
@@ -60,16 +61,17 @@ export const getBreadcrumbsForPath = (path:string):Array<{label:string, path:str
         label:segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),;
         path:currentPath;
       }),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
   ;
   return breadcrumbs,;
 },; //Find a route by path in the complete sitemap export const findRouteByPath = (path: string) : SitemapItem | undefined => {
-  return completeSitemap.find (route => route.path === path) 
+  return completeSitemap.find (route => route.path === path)
 };
 //Check if a route requires authentication export const isProtectedRoute = (path: string) : boolean => {
   const route = findRouteByPath (path);
-return route?.requiredAuth === true 
+return route?.requiredAuth === true
 };
 isAuthenticated: boolean;
 userType?: string | null //If route doesn't exist in our sitemap if (!route) return true, //Default to accessible //If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;
@@ -79,11 +81,11 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
 //Get breadcrumb items for a path if (path === '/') return breadcrumbs;
 //Split the path into segments if (route) {
   breadcrumbs.push ({
-  label: route.label, path: currentPath 
+  label: route.label, path: currentPath
 });
 }else {
   // For dynamic routes that might not be in the static sitemap breadcrumbs.push ({
-  
+
 }
-}return breadcrumbs;
-};
+<<<<<<< HEAD
+

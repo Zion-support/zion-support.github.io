@@ -1,21 +1,10 @@
-import React from 'react',;
-import Head from 'next/head',;
-export default function AICustomerService() {
-  return (
-    <>
-      <Head>
-        <title>AI Customer Service | Zion Tech Group</title>
-        <meta name="description" content="AI-powered customer service automation: chat, voice, support workflows, and analytics." />
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />
-      </Head>
-      <div className="min-h-screen bg-black text-white">
-        <section className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold mb-6">AI Customer Service</h1>
-          <p className="text-gray-300">Automate and augment customer support experiences with AI agents and analytics.</p>
+
         </section>
       </div>
     </>
   )
+=======
+}
 import React from 'react';
 import Head from 'next/head';
 export default function AICustomerService(req, res) {
@@ -23,25 +12,20 @@ export default function AICustomerService(req, res) {
   return (;
     <>;
       <Head>;
-        <title>AI Customer Service | Zion Tech Group</title>;
-        <meta name="description" content="AI-powered customer service automation: chat, voice, support workflows, and analytics." />;
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />;
+        <title > AI Customer Service | Zion Tech Group</title>;
+        <meta name="description" content="AI - powered customer service automation: chat, voice, support workflows, and analytics." />;
+        <link rel="canonical" href="https: //ziontechgroup.com / ai - customer - service" />;
       </Head>;
-      <div className="min-h-screen bg-black text-white">;
-        <section className="container mx-auto px-4 py-20">;
-          <h1 className="text-4xl font-bold mb-6">AI Customer Service</h1>;
-          <p className="text-gray-300">Automate and augment customer support experiences with AI agents and analytics.</p>;
+      <div className="min - h-screen bg - black text - white">;
+        <section className="container mx - auto px - 4 py - 20">;
+          <h1 className="text - 4xl font - bold mb - 6">AI Customer Service</h1>;
+          <p className="text - gray - 300">Automate and augment customer support experiences with AI agents and analytics.</p>;
         </section>;
       </div>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    </>);
 }
 <<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
+
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

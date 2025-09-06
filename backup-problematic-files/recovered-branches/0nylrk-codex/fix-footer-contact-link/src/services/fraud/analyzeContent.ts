@@ -1,4 +1,5 @@
 
+=======
 // Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
 import { AnalysisResult } from './types',;
@@ -36,6 +37,7 @@ export const analyzeContent = (content:string):AnalysisResult => {;
   // Check for poor grammar with repetitive punctuation;
   if (/[!?]{3}/.test(content)) {;
     reasons.push('Suspicious punctuation pattern'),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
   ;
   return {;
@@ -44,6 +46,7 @@ export const analyzeContent = (content:string):AnalysisResult => {;
   },;
 },; // Content analysis functionality // Check for suspicious phrases for (const phrase of suspiciousPhrases) {
   if (contentLower.includes (phrase.toLowerCase () ) ) {
-  
+
 }
-}// Check for links (simplified check) if (hasExternalLinks && (contentLower.includes ('payment') || contentLower.includes ('money') || contentLower.includes ('deal') 
+<<<<<<< HEAD
+

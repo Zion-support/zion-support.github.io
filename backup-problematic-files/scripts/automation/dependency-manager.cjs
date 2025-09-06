@@ -169,7 +169,7 @@ class $1 {}
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, "node_modules");
       if (fs.existsSync(nodeModulesPath)) {}
-  
+
 } catch (error) {}
   status.packageJsonIssues.push({})
   "type": "PARSE_ERROR",
@@ -265,7 +265,7 @@ class $1 {}
             "current": info.current,
             "wanted": info.wanted,
             "latest": info.latest}))} catch {}
-  
+
 } catch (error) {}
   // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {}
@@ -501,4 +501,5 @@ async function $1() {}
 if (require.main === module) {}
   main()};
 ;
-module.exports = DependencyManager;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,10 +1,11 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -17,13 +18,14 @@ const AutomationStatus: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-<<<<<<< HEAD
+=======
   )
-},
+}
+export default AutomationStatus;
 
 export default AutomationStatus,;
-=======
   );
 };
 export default AutomationStatus;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

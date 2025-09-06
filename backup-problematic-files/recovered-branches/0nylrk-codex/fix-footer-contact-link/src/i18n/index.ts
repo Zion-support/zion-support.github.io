@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import i18n from 'i18next',;
 import { initReactI18next } from 'react-i18next',;
 import LanguageDetector from 'i18next-browser-languagedetector',;
@@ -70,3 +72,4 @@ ar: {
 fallbackLng: 'en', // Default language debug: process.env.NODE ENV === 'development';
 // For RTL language support document.documentElement.dir = i18n.dir ();
 // Listen for language changes to update RTL/LTR direction export default i18n;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

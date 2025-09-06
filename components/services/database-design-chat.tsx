@@ -1,31 +1,32 @@
-<<<<<<< HEAD
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const DatabaseDesignChat: NextPage = () => {
   return (
     <div>
       <Head>
-<<<<<<< HEAD
-        <title>DatabaseDesignChat - Zion Tech Solutions</title>
-        <meta name="description" content="DatabaseDesignChat service" />{" "}
-      </Head>
-      <main>
-        <h1>DatabaseDesignChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-  );
-};
-
-export default DatabaseDesignChat;
 =======
+
+      </Head>;
+
+
+      <main>;
+        <h1>DatabaseDesignChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  );
+}
+export default DatabaseDesignChat;
+<<<<<<< HEAD
+
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        <title>DatabaseDesignChat - Zion Tech Solutions</title>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

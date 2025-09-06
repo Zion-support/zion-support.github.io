@@ -1,5 +1,5 @@
+export interface AiAutonomousService2026 {
 export interface AiAutonomousService2026 {;
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -12,9 +12,9 @@ export interface AiAutonomousService2026 {;
   contactInfo: {
     mobile: string;
     email: string;
+export interface AiAutonomousService2026 {;
     address: string;
   };
-=======
   id: string,;
   name: string,;
   tagline: string,;
@@ -30,27 +30,21 @@ export interface AiAutonomousService2026 {;
     address: string;
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
-    id: "2026-ai-autonomous",
-    name: "2026 AI Autonomous Platform",
-    tagline: "Fully autonomous AI systems",
-    price: "$499/month",
-    description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",
+
     features: [
-      "Autonomous operation",
-      "Self-learning capabilities",
-      "Independent decision making",
-      "Advanced AI algorithms",
+      "Autonomous operation";
+      "Self-learning capabilities";
+      "Independent decision making";
+      "Advanced AI algorithms";
       "24/7 operation"
-    ],
-    link: "/services/2026-ai-autonomous",
-    category: "AI Autonomous 2026",
+    ];
+    link: "/services/2026-ai-autonomous", category: "AI Autonomous 2026",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -58,10 +52,16 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-=======
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

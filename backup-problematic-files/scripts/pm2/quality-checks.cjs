@@ -14,7 +14,7 @@ const runCommand = (command, description) => {}
   try {}
     log(`Starting: ${description}`);
     const output = execSync(command, { })
-      encoding: 'utf8', 
+      encoding: 'utf8',
       stdio: 'pipe',
       cwd: process.cwd(),
     }
@@ -119,9 +119,9 @@ const generateQualityReport = (results) => {}
     codeQuality: results.codeQuality,
     coverage: results.coverage,
     overall: {}
-      passed: results.linting.passed + results.typeChecking.passed + 
+      passed: results.linting.passed + results.typeChecking.passed +
               results.codeQuality.passed + results.coverage.passed,
-      failed: results.linting.failed + results.typeChecking.failed + 
+      failed: results.linting.failed + results.typeChecking.failed +
               results.codeQuality.failed + results.coverage.failed;
     };
   };
@@ -179,4 +179,5 @@ main().catch(error => {})
   log(`Quality Checks Process failed: ${error.message}`);
   process.exit(1);
 }
-});
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

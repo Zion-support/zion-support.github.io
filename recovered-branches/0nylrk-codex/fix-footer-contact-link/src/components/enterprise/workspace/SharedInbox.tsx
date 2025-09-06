@@ -1,43 +1,59 @@
 
-<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
-=======
 import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function SharedInbox() {
   // Mock messages
+
   const messages = [
     {
+      id: "msg-1"
+      from: "John Smith"
+      subject: "Interview Scheduled"
+      preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm."
+      timestamp: "2h ago"
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: "msg-1",
       from: "John Smith",
       subject: "Interview Scheduled",
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
-<<<<<<< HEAD
       unread: true;
     };
-=======
       unread: true
+    }
     },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
-      id: "msg-2",
-      from: "Talent Support",
-      subject: "New talent matches",
-      preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer.",
-      timestamp: "Yesterday",
+      id: "msg-2"
+      from: "Talent Support"
+      subject: "New talent matches"
+      preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer."
+      timestamp: "Yesterday"
       unread: false
+
+=======
+    }
     },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
-      id: "msg-3",
-      from: "Sarah Wilson",
-      subject: "Contract approved",
-      preview: "The contract with freelancer Michael Chen has been approved and signed.",
-      timestamp: "2d ago",
+      id: "msg-3"
+      from: "Sarah Wilson"
+      subject: "Contract approved"
+      preview: "The contract with freelancer Michael Chen has been approved and signed."
+      timestamp: "2d ago"
       unread: false
     }
   ],
@@ -56,8 +72,8 @@ export function SharedInbox() {
       <CardContent className="p-0">
         <div className="divide-y divide-border">
           {messages.map((message) => (
-            <div 
-              key={message.id} 
+            <div
+              key={message.id}
               className={`flex flex-col p-4 hover:bg-muted/50 cursor-pointer ${message.unread ? 'bg-blue-50 dark:bg-blue-900/10' : ''}`}
             >
               <div className="flex items-center justify-between">
@@ -74,7 +90,6 @@ export function SharedInbox() {
             No new messages
           </div>
         )}
-        
         <div className="p-3 text-center border-t border-border">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View All Messages
@@ -83,8 +98,12 @@ export function SharedInbox() {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-=======
+
+}
+;
+    }
+  ];
+;
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -117,6 +136,7 @@ export function SharedInbox() {;
     }
   ];
   return (;
+
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
@@ -124,39 +144,76 @@ export function SharedInbox() {;
             <CardTitle>Shared Inbox</CardTitle>;
             <CardDescription>Team messages and notifications</CardDescription>;
           </div>;
-          <Badge className="bg-blue-500">{messages.filter(m => m.unread).length} New</Badge>;
+          <Badge className="bg-blue-500">{messages && messages.filter(m => m && m.unread).length} New</Badge>;
         </div>;
       </CardHeader>;
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
-          {messages.map((message) => (;
-            <div;
-              key={message.id} ;
-              className={`flex flex-col p-4 hover:bg-muted/50 cursor-pointer ${message.unread ? 'bg-blue-50 dark:bg-blue-900/10' : ''}`}
-            >;
+          {messages && messages.map((message) => (;
+            <div
+              key={message && message.id} 
+              className={`flex flex-col p-4 hover:bg-muted/50 cursor-pointer ${message && message.unread ? 'bg-blue-50 dark:bg-blue-900/10' : ''}`}>;
               <div className="flex items-center justify-between">;
-                <p className={`font-medium ${message.unread ? 'font-semibold' : ''}`}>{message.from}</p>;
-                <span className="text-xs text-muted-foreground">{message.timestamp}</span>;
+                <p className={`font-medium ${message && message.unread ? 'font-semibold' : ''}`}>{message && message.from}</p>;
+                <span className="text-xs text-muted-foreground">{message && message.timestamp}</span>;
               </div>;
-              <p className="text-sm font-medium mt-1">{message.subject}</p>;
-              <p className="text-sm text-muted-foreground mt-1 truncate">{message.preview}</p>;
+              <p className="text-sm font-medium mt-1">{message && message.subject}</p>;
+              <p className="text-sm text-muted-foreground mt-1 truncate">{message && message.preview}</p>;
             </div>;
           ))}
         </div>;
-        {messages.length === 0 && (;
+
+        {messages && messages.length === 0 && (;
           <div className="p-4 text-center text-muted-foreground">;
             No new messages;
           </div>;
         )}
-;
+
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
+=======
+    <Card>;
+      <CardHeader>;
+        <div className="flex items - center justify - between">;
+          <div>;
+            <CardTitle > Shared Inbox</CardTitle>;
+            <CardDescription > Team messages and notifications</CardDescription>;
+          </div>;
+          <Badge className="bg - blue - 500">{messages.filter (m => m.unread).length} New</Badge>;
+        </div>;
+      </CardHeader>;
+      <CardContent className="p - 0">;
+        <div className="divide - y divide - border">;
+          {messages.map ((message) => (
+            <div;
+              key={message.id}
+              className={`flex flex - col p - 4 hover:bg - muted / 50 cursor - pointer ${message.unread ? 'bg - blue - 50 dark:bg - blue - 900 / 10' : ''}`}
+            >;
+              <div className="flex items - center justify - between">;
+                <p className={`font - medium ${message.unread ? 'font - semibold' : ''}`}>{message.from}</p>;
+                <span className="text - xs text - muted - foreground">{message.timestamp}</span>;
+              </div>;
+              <p className="text - sm font - medium mt - 1">{message.subject}</p>;
+              <p className="text - sm text - muted - foreground mt - 1 truncate">{message.preview}</p>;
+            </div>))}
+        </div>;
+        {messages.length === 0 && (
+          <div className="p - 4 text - center text - muted - foreground">;
+            No new messages;
+          </div>)}
+        <div className="p - 3 text - center border - t border - border">;
+          <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             View All Messages;
           </button>;
         </div>;
       </CardContent>;
     </Card>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

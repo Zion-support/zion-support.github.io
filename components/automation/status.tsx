@@ -1,34 +1,50 @@
-<<<<<<< HEAD
+
+</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
-=======
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 
 export default function AutomationStatusPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export default function AutomationStatusPage() {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
 
-  useEffect(() => {
-    fetch('/automation/status.json')
-      .then((r) => r.json())
-      .then((j) => setStatus(j))
-      .catch(() => setStatus(null))
-  }, []);
 
+  useEffect(() => {;
+    fetch('/automation/status && status.json');
+      .then((r) => r && r.json());
+      .then((j) => setStatus(j));
+      .catch(() => setStatus(null));
+
+  }, []);
   return (
-    <div className="space-y-4">
-      <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>
-      {status ? (
-        <div className="rounded-lg border p-4 text-sm">
-          <div>Last Run: {new Date(status.runAt || '').toLocaleString() || '—'}</div>
-          <div>Health: {status.ok ? 'OK' : 'Unknown'}</div>
-          <div className="mt-2"><a className="underline" href="/metrics/latest.json">View latest metrics JSON</a></div>
-        </div>
-      ) : (
-        <div className="text-sm text-gray-500">No status available yet.</div>
+
+    <div className="space-y-4">;
+      <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
+      {status ? (;
+        <div className="rounded-lg border p-4 text-sm">;
+          <div>Last Run: {new Date(status && status.runAt || '').toLocaleString() || '—'}</div>;
+          <div>Health: {status && status.ok ? 'OK' : 'Unknown'}</div>;
+          <div className="mt-2"><a className="underline" href="/metrics/latest && latest.json">View latest metrics JSON</a></div>;
+        </div>;
+      ) : (;
+        <div className="text-sm text-gray-500">No status available yet.</div>;
       )}
     </div>
 );
 }
+  );
+}
+
+=======
+
+  );
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

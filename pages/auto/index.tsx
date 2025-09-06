@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-=======
+
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -28,17 +27,18 @@ const AutoIndex: NextPage = () => {
           <li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </li>
         </ul>
       </main>
     </div>
-<<<<<<< HEAD
   ),
 };
 
-=======
   )
+
+export default AutoIndex;
+
 },
 export default AutoIndex,
 import type { NextPage } from 'next';
@@ -72,5 +72,11 @@ const AutoIndex: NextPage = () => {;
     </div>;
   );
 },;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default AutoIndex;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

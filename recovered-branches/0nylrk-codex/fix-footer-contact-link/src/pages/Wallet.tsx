@@ -1,37 +1,36 @@
 
-<<<<<<< HEAD
+
+  const { wallet, transactions, loading } = useWallet();
 import {useWallet} from '@/hooks/useWallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
 export default function WalletPage() {;
   const { wallet, transactions, loading } = useWallet();
-=======
 import { useWallet } from '@/hooks/useWallet',
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
 import { BadgeDollarSign } from 'lucide-react',
 export default function WalletPage() {
   const { wallet, transactions, loading } = useWallet(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
-    <div className="container max-w-4xl py-10">
-      <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
-        <BadgeDollarSign className="h-6 w-6" /> Wallet
-      </h1>
-      <Card className="mb-6">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <BadgeDollarSign className="h-5 w-5" /> Balance
-          </CardTitle>
-          <CardDescription>Your current ZION$ balance</CardDescription>
-        </CardHeader>
-        <CardContent>
-          {loading ? (
-            <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />
-          ) : (
-            <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>
+    <div className="container max-w-4xl py-10">;
+      <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;
+        <BadgeDollarSign className="h-6 w-6" /> Wallet;
+      </h1>;
+      <Card className="mb-6">;
+        <CardHeader>;
+          <CardTitle className="flex items-center gap-2">;
+            <BadgeDollarSign className="h-5 w-5" /> Balance;
+          </CardTitle>;
+          <CardDescription>Your current ZION$ balance</CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+          {loading ? (;
+            <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />;
+          ) : (;
+            <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
           )}
         </CardContent>
       </Card>
@@ -47,7 +46,7 @@ export default function WalletPage() {
             <ul className="space-y-2">
               {transactions.filter(t => t.transaction_type === 'earn').map(t => (
                 <li key={t.id} className="flex justify-between border-b py-2">
-                  <span>{t.reason || 'Reward'}</span>
+                  <span>{t.reason |'Reward'}</span>
                   <span className="font-medium">+{t.amount} ZION$</span>
                 </li>
               ))}
@@ -61,7 +60,7 @@ export default function WalletPage() {
             <ul className="space-y-2">
               {transactions.filter(t => t.transaction_type === 'burn').map(t => (
                 <li key={t.id} className="flex justify-between border-b py-2">
-                  <span>{t.reason || 'Purchase'}</span>
+                  <span>{t.reason |'Purchase'}</span>
                   <span className="font-medium">-{t.amount} ZION$</span>
                 </li>
               ))}
@@ -76,4 +75,10 @@ export default function WalletPage() {
       </div>
     </div>
   )
+=======
+
 }
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

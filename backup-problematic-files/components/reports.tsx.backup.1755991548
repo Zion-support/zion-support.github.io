@@ -1,10 +1,25 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Breadcrumbs from '../components/Breadcrumbs';
-import RelatedContent from '../components/RelatedContent';
-import QuickNavigation from '../components/QuickNavigation';
-
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { 
+  FileText,
+  Download, 
+  Calendar, 
+  User, 
+  Tag, 
+  ArrowRight, 
+  TrendingUp,
+  BarChart3,
+  Brain,
+  Atom,
+  Globe,
+  Shield,
+  Zap,
+  Eye,
+  Clock,
+  Award
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 const ReportsPage: React.FC = () => {
   const reports = [
     {
@@ -13,7 +28,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-15',
       author: 'Dr. Sarah Chen & Quantum Research Team',
       category: 'Technology Trends',
-      tags: ['Quantum Computing', 'Enterprise', 'Market Analysis', 'Future Tech'],
+      tags: ['Quantum ComputingEnterpriseMarket AnalysisFuture Tech'],
       pages: 45,
       downloads: 1247,
       views: 5678,
@@ -27,7 +42,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-10',
       author: 'AI Research Division',
       category: 'Business Intelligence',
-      tags: ['AI', 'ROI', 'Fortune 500', 'Best Practices'],
+      tags: ['AIROIFortune 500Best Practices'],
       pages: 38,
       downloads: 892,
       views: 3456,
@@ -41,7 +56,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-08',
       author: 'Cybersecurity Research Team',
       category: 'Security',
-      tags: ['Cybersecurity', 'AI Threats', 'Threat Landscape', 'Defense'],
+      tags: ['CybersecurityAI ThreatsThreat LandscapeDefense'],
       pages: 52,
       downloads: 1567,
       views: 6789,
@@ -55,7 +70,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-05',
       author: 'Market Research Team',
       category: 'Market Analysis',
-      tags: ['Venture Capital', 'Investment', 'Innovation', 'Global Markets'],
+      tags: ['Venture CapitalInvestmentInnovationGlobal Markets'],
       pages: 41,
       downloads: 734,
       views: 2890,
@@ -69,7 +84,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-03',
       author: 'IoT Research Division',
       category: 'Emerging Tech',
-      tags: ['Edge Computing', 'IoT', 'Industry 4.0', 'Real-time'],
+      tags: ['Edge ComputingIoTIndustry 4.0Real-time'],
       pages: 36,
       downloads: 623,
       views: 2345,
@@ -83,7 +98,7 @@ const ReportsPage: React.FC = () => {
       date: '2024-01-01',
       author: 'Sustainability Research Team',
       category: 'Sustainability',
-      tags: ['Green Computing', 'Sustainability', 'Environmental Impact', 'Clean Tech'],
+      tags: ['Green ComputingSustainabilityEnvironmental ImpactClean Tech'],
       pages: 43,
       downloads: 445,
       views: 1789,
@@ -91,10 +106,10 @@ const ReportsPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-teal-500 to-green-500'
     }
-  ];
+  ],
 
   return (
-    <UltraFuturisticBackground>
+    <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
         <Head>
           <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>
@@ -207,7 +222,7 @@ const ReportsPage: React.FC = () => {
                       {report.tags.map((tag, tagIndex) => (
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">
                           {tag}
-                        </span>
+                        </span>;
                       ))}
                     </div>
                   </div>
@@ -225,9 +240,8 @@ const ReportsPage: React.FC = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </section>
-
+          </div>;
+        </section>;
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -253,33 +267,32 @@ const ReportsPage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-            >
-              {categories.map((category, index) => (
-                <button
+            >;
+              {categories.map((category, index) => (;
+                <button;
                   key={index}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
-                    category.active
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${;
+                    category.active;
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50';
                   }`}
-                >
-                  {category.name} ({category.count})
-                </button>
+                >;
+                  {category.name} ({category.count});
+                </button>;
               ))}
-            </motion.div>
-
+            </motion.div>;
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {reports.filter(report => !report.featured).map((report, index) => (
                 <motion.article
                   key={index}
-                  className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                  className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>
+                >;
+                  <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>;
                     {report.icon}
                   </div>
                   
@@ -319,10 +332,9 @@ const ReportsPage: React.FC = () => {
                   </div>
                 </motion.article>
               ))}
-            </div>
-          </div>
-        </section>
-
+            </div>;
+          </div>;
+        </section>;
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -339,7 +351,7 @@ const ReportsPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2"
@@ -354,19 +366,42 @@ const ReportsPage: React.FC = () => {
                   View Research Services
                 </a>
               </div>
-              <h3 className="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">
-                {category.name}
-              </h3>
-              <p className="text-white/70 mb-4">{category.description}</p>
-              <span className="text-cyan-400 font-semibold">{category.count}</span>
-            </Link>
-          ))}
-        </div>
-        
-        <RelatedContent currentPage="reports" />
-      </main>
-    </div>
-  );
-};
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+},
 
+export default ReportsPage,
+            >;
+              <h2 className="text-4xl font-bold text-white mb-6">;
+                Need Custom Research?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8">;
+                Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <a;
+                  href="/contact";
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2";
+                >;
+                  <span>Request Custom Research</span>;
+                  <ArrowRight className="w-5 h-5" />;
+                </a>;
+                <a;
+                  href="/services";
+                  className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200";
+                >;
+                  View Research Services;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+  );
+},;
 export default ReportsPage;

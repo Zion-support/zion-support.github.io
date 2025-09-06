@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from "react",;
 import { TalentProfile as TalentProfileType } from "@/types/talent",;
 import { ProfileData } from "@/types/profile",;
@@ -78,3 +80,4 @@ if (mockProfile) {
 };
 }, [id]);
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

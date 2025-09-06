@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { serve } from "https://deno.land/std@0.131.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.20.0",;
 import { corsHeaders } from "../_shared/cors.ts",;
@@ -83,21 +85,26 @@ serve(async (req) => {;
       JSON.stringify({ error:'Internal server error' }),;
       { headers:{ ...corsHeaders, 'Content-Type':'application/json' }, status:500 }
     ),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }),; //Handle CORS pre-flight request if (req.method === 'OPTIONS') {
   //Create Supabase client const supabase = createClient (Deno.env.get ('SUPABASE URL') ?? '';
 Deno.env.get ('SUPABASE SERVICE ROLE KEY') ?? '');
 try {
   //Look up the referrer from the referral code const {
-  data: refCodeData, error: refError 
+  data: refCodeData, error: refError
 }= await supabase .from ('referral codes') .select ('user id') .eq ('code', refCode) .single ();
 }//Check if this user has already been referred const {
-  data: existingReferral 
+  data: existingReferral
 }= await supabase .from ('referrals') .select ('id') .eq ('referred id', userId) .single ();
 }// Create the referral record const {
-  data, error 
+  data, error
 }= await supabase .from ('referrals') .insert ([ {
-  referrer id: refCodeData.user id, referred id: userId, referral code: refCode, email, ip address: ipAddress 
+  referrer id: refCodeData.user id, referred id: userId, referral code: refCode, email, ip address: ipAddress
 }]) .select () .single ();
 }
 });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

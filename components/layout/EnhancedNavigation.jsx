@@ -1,5 +1,26 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React, { useState } from 'react';
+=======
 import Link from 'next/link';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -59,7 +80,7 @@ const EnhancedNavigation = () => {
               href='/contact'
               className='bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors'
             >              Get Startedconst EnhancedNavigation = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -180,16 +201,5 @@ const EnhancedNavigation = () => {
                 Careers
               </Link>
               <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
-                Contact
-              </Link>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-);
-};
 
-export default EnhancedNavigation;},
-
-export default EnhancedNavigation;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

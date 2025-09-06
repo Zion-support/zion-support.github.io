@@ -1,32 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { AlertTriangle } from 'lucide-react'
-import Link from 'next/link'
-import Head from 'next/head'
-export default function ErrorPage() {
-  return (
-    <>
-<<<<<<< HEAD
-      <Head>;
-        <title>Authentication Error - Zion Tech Marketplace</title>;
-        <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
-      </Head>
-      <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
-        <Card className=&quot;w-full max-w-md&quot;>
-          <CardHeader className=&quot;space-y-1 text-center&quot;>
-            <div className=&quot;mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20&quot;>
-              <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />
-=======
-      <Head>
-        <title>Authentication Error - Zion Tech Marketplace</title>
-        <meta name="description" content="Authentication error page" />
-      </Head>
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4">
-        <Card className="w-full max-w-md">
-          <CardHeader className="space-y-1 text-center">
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
-              <AlertTriangle className="h-6 w-6 text-red-600 dark:text-red-400" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
             </div>
             <CardTitle className="text-2xl font-bold">Authentication Error</CardTitle>
             <p className="text-sm text-muted-foreground">
@@ -39,36 +12,53 @@ export default function ErrorPage() {
                 This could be due to:
               </p>
               <ul className="text-sm text-muted-foreground space-y-1 text-left">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+            </div>
+            <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
+            <p className=&quot;text-sm text-muted-foreground&quot;>
+              There was an issue with your authentication request
+            </p>
+          </CardHeader>
+          <CardContent className=&quot;space-y-4&quot;>
+            <div className=&quot;text-center space-y-4&quot;>
+              <p className=&quot;text-sm text-muted-foreground&quot;>
+                This could be due to:
+              </p>
+              <ul className=&quot;text-sm text-muted-foreground space-y-1 text-left&quot;>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <li>• Invalid email or password</li>
                 <li>• Account not verified</li>
                 <li>• Network connectivity issues</li>
                 <li>• Temporary service unavailability</li>
               </ul>
-<<<<<<< HEAD
-              <div className=&quot;pt-4 space-y-2&quot;>
-                <Button asChild className=&quot;w-full&quot;>
-                  <Link href=&quot;/auth/login&quot;>
-=======
-              <div className="pt-4 space-y-2">
-                <Button asChild className="w-full">
-                  <Link href="/auth/login">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
                     Try Again
                   </Link>
                 </Button>
                 <Button asChild variant="outline" className="w-full">
                   <Link href="/">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+                    Try Again
+                  </Link>
+                </Button>
+                <Button asChild variant=&quot;outline&quot; className=&quot;w-full&quot;>
+                  <Link href=&quot;/&quot;>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     Go to Homepage
                   </Link>
                 </Button>
               </div>
-<<<<<<< HEAD
-              <div className=&quot;text-center text-sm text-muted-foreground pt-4&quot;>
-                Need help? <Link href=&quot;/contact&quot; className=&quot;hover:text-primary&quot;>Contact Support</Link>
-=======
+
               <div className="text-center text-sm text-muted-foreground pt-4">
                 Need help? <Link href="/contact" className="hover:text-primary">Contact Support</Link>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </div>
           </CardContent>
@@ -77,11 +67,14 @@ export default function ErrorPage() {
     </>
   )
 <<<<<<< HEAD
-}
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

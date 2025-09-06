@@ -1,5 +1,5 @@
+export interface QuantumSpaceService {
 export interface QuantumSpaceService {;
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -12,9 +12,9 @@ export interface QuantumSpaceService {;
   contactInfo: {
     mobile: string;
     email: string;
+export interface QuantumSpaceService {;
     address: string;
   };
-=======
   id: string,;
   name: string,;
   tagline: string,;
@@ -30,27 +30,21 @@ export interface QuantumSpaceService {;
     address: string;
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
-    id: "quantum-computing-platform",
-    name: "Quantum Computing Platform",
-    tagline: "Next-generation quantum computing solutions",
-    price: "$199/month",
-    description: "Advanced quantum computing platform for complex calculations and simulations.",
+
     features: [
-      "Quantum algorithms",
-      "Simulation tools",
-      "API access",
-      "Documentation",
+      "Quantum algorithms";
+      "Simulation tools";
+      "API access";
+      "Documentation";
       "Support services"
-    ],
-    link: "/services/quantum-computing-platform",
-    category: "Quantum Computing",
+    ];
+    link: "/services/quantum-computing-platform", category: "Quantum Computing",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -58,10 +52,16 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-=======
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

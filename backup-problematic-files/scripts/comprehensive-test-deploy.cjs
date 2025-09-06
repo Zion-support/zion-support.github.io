@@ -1,7 +1,11 @@
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
-    
+
     const recommendations = this.generateRecommendations();
     this.log('\n💡 Recommendations:');
     recommendations.forEach((rec, index) => {
@@ -14,7 +18,13 @@
 
 // Run the comprehensive suite
 const suite = new ComprehensiveTestDeploy();
-suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
+
+#!/usr/bin/env node;
+
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -51,4 +61,10 @@ console.log('=')
     this.log('\\n COMPREHENSIVE SUITE SUMMARY')
     this.log('===')
     this.log('\n Recommendations:')
+=======
     this.log('\\n� Comprehensive test & deploy suite completed!')
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

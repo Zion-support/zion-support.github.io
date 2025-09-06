@@ -1,5 +1,4 @@
 import type { AppProps } from 'next/app';
-<<<<<<< HEAD
 =======
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import '../styles/globals.css';
@@ -10,11 +9,4 @@ import '../styles/modern-design-system.css';
 export default function MyApp({ Component, pageProps }: AppProps) {
 <<<<<<< HEAD
   return <Component {...pageProps} />;
-=======
-  return (
-    <EnhancedLayout>
-      <Component {...pageProps} />
-    </EnhancedLayout>
-  );
->>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
 }

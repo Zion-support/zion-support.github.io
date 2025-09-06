@@ -1,7 +1,4 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from "lucide-react";
-<<<<<<< HEAD
+
 export function EnterpriseCTA() {
   return (
     <section className="py-20 px-4 md: px-6">
@@ -16,13 +13,21 @@ export function EnterpriseCTA() {
                 <p className="text-xl text-muted-foreground mb-8">
                   Schedule a personalized demo with our enterprise team to see
                   how Zion AI can help you build your dream team.
+
+                  </li>;
+                </ul>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+    </section>);
+
+}
 =======
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Calendar, ArrowRight } from "lucide-react",
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="gap-2">
@@ -68,11 +73,12 @@ import { Calendar, ArrowRight } from "lucide-react",
           </div>
         </div>
       </div>
-<<<<<<< HEAD
+    </section>
+  );
+}
     </section>;
   );
 }
-=======
     </section>
   )
 import React from "react",;
@@ -140,4 +146,9 @@ export function EnterpriseCTA() {;
   );
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import React from 'react',
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -22,7 +22,6 @@ export default function APIDocumentationPage() {
   );
 
 }
-=======
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
@@ -62,4 +61,8 @@ export default function APIDocumentationPage(req, res) {
   }
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

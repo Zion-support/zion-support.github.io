@@ -1,138 +1,29 @@
-<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildPressRelease } from "../../../utils/mediaKit";
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
-  try {
-    const {
-      type = "launch",
-      companyName = "Zion",
-      date = new Date().toISOString().substring(0, 10),
-      raiseAmount,
-      description = "Innovative technology company",
-      contactEmail = "press@zion.com",;
-    } = req.body || {};
-
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
     }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-    const pressRelease = await buildPressRelease({
-      type,
-      companyName,
-      date,
-      raiseAmount,
-      description,
-      contactEmail,
-    });
-
-    return res.status(200).json({
-      ok: true,
-      pressRelease,
-      downloadUrl: `/api/media/download/${pressRelease.id}`,
-    });
-  } catch (error: any) {
-    console.error("Press release generation error:", error);
-    return res.status(500).json({
-      ok: false,
-      error: "Failed to generate press release",
-    });
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { buildPressRelease } from '../../../utils/mediaKit';
-export default async function handler(req, res) {
-  try {
-    const { type = 'launch', companyName = 'Zion', date = new Date().toISOString().substring(0,10), raiseAmount, tokenName } = req.body || {},;
-    const apiKey = process.env.OPENAI_API_KEY;
-    if (apiKey) {;
-      try {
-        const { OpenAI } = await import('openai');
-        const client = new OpenAI({ apiKey });
-        const prompt = `Write a concise ${type} press release for ${companyName} (date ${date}) with clear headlines, 2 paragraphs, and one quote.`,;
-        const completion = await client.chat.completions.create({;
-          model: 'gpt-4o-mini';
-          messages: [;
-            { role: 'system', content: 'You are a seasoned tech PR writer.' },;
-            { role: 'user', content: prompt   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          ],;
-          temperature: 0.4,;
-          max_tokens: 500}),;
-        const text = completion.choices?.[0]?.message?.content?.trim();
-        if (text) {;
-          res.status(200).json({ ok: true, text });
-          return;
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-        // fall through to template;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
     const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
     res.status(200).json({ ok: true, text, fallback: true });
-  } catch (error) {
+  } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } catch (error) {
     console.error("Error:", error);
@@ -150,6 +41,11 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

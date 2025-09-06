@@ -1,16 +1,21 @@
+// SEO optimizer utilities;
+export const generateMetaTags = () =>: any {
+  console.log ('Generating meta tags...');
+}
+;
+export const optimize_headings = () =>: any {
+  console.log ('Optimizing headings...');
+}
+;
+
 // SEO optimizer utilities
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
-};
-
-export const optimizeHeadings = () => {;
+}
+export const optimizeHeadings = () => {
   console.log('Optimizing headings...');
-};
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
-=======
+}
+origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       telephone: '+1-555-0123',
       contactType: 'customer service'}};
 };
@@ -35,4 +40,3 @@ export const generateStructuredData = pageData => {;
     }
   }
 };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

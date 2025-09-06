@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 const winston = require('winston'),;
 ;
 const logger = winston.createLogger({;
@@ -257,3 +259,4 @@ new winston.transports.File ({
 process.on ('SIGTERM', () => {
   // Add cleanup logic here process.exit (0) 
 });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

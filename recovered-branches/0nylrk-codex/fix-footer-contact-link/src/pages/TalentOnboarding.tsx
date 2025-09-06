@@ -1,5 +1,9 @@
 
-<<<<<<< HEAD
+
+import React from "react",
+import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
 import React from "react";
 import {TalentOnboardingForm} from "@/components/profile/TalentOnboardingForm";
 import {Header} from "@/components/Header";
@@ -8,22 +12,25 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function TalentOnboarding() {;
   const { user, isLoading } = useAuth();
-=======
 import React from "react",
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+export default function TalentOnboarding() {
+  const { user, isLoading } = useAuth();
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 export default function TalentOnboarding() {
   const { user, isLoading } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-
   return (
     <>
       <Header />
@@ -42,9 +49,8 @@ export default function TalentOnboarding() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-}
 =======
+}
 import React from "react",;
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",;
 import { Header } from "@/components/Header",;
@@ -59,6 +65,7 @@ export default function TalentOnboarding() {;
   }
 ;
   return (;
+
     <>;
       <Header />;
       <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
@@ -66,16 +73,24 @@ export default function TalentOnboarding() {;
           <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">;
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Talent Network</h1>;
             <p className="text-zion-slate-light max-w-2xl mx-auto">;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               Showcase your skills to top clients and employers. Create a professional profile;
               to get discovered for AI and tech projects on the Zion Marketplace.;
             </p>;
           </div>;
+
+
           <TalentOnboardingForm />;
         </div>;
       </div>;
       <Footer />;
-    </>;
-  );
+
+    </>);
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 ;
 export interface ThemeColors {;
@@ -72,3 +74,4 @@ export function applyThemeColors(colors:ThemeColors) {;
   document.body.style.color = colors.textColor,;
 }  
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

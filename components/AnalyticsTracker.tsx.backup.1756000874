@@ -1,19 +1,9 @@
 import React, { useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
 
-<<<<<<< HEAD
 interface AnalyticsTrackerProps {
   trackingId?: string;
   enableTracking?: boolean;
-=======
-// Browser API types are declared globally in PerformanceOptimizer.tsx
-
-// Performance entry types for Core Web Vitals
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target?: any | null;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e21f
 }
 
 interface AnalyticsTrackerProps {

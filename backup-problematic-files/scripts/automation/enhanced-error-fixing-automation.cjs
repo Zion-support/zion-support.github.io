@@ -172,4 +172,5 @@ export default function"
       "summary"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
-        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,4 +1,5 @@
 
+=======
 import React, { useState } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -68,12 +69,14 @@ export default function ProjectRoom() {;
   },;
   ;
   return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
       <Header />;
       <main className="container mx-auto py-8">;
         <div className="flex justify-between items-center mb-6">;
-          <h1 className="text-3xl font-bold">Project Room:{projectId}</h1>;
+<<<<<<< HEAD
+
           <div className="flex gap-2">;
             {isInCall && (;
               <Button variant="destructive" className="flex items-center gap-2">;
@@ -84,7 +87,7 @@ export default function ProjectRoom() {;
             <Button variant="outline">Invite Team Member</Button>;
           </div>;
         </div>;
-        ;
+
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">;
           <TabsList className="grid grid-cols-6 md:w-fit">;
             <TabsTrigger value="chat" className="flex items-center gap-2">;
@@ -118,7 +121,7 @@ export default function ProjectRoom() {;
               <span className="hidden sm:inline">Settings</span>;
             </TabsTrigger>;
           </TabsList>;
-          ;
+
           <TabsContent value="chat" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -132,7 +135,7 @@ export default function ProjectRoom() {;
               </CardContent>;
             </Card>;
           </TabsContent>;
-          ;
+
           <TabsContent value="files" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -146,7 +149,7 @@ export default function ProjectRoom() {;
               </CardContent>;
             </Card>;
           </TabsContent>;
-          ;
+
           <TabsContent value="video" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -156,12 +159,12 @@ export default function ProjectRoom() {;
               <CardContent className="min-h-[400px] p-4">;
                 {isInCall ? (;
                   <div className="space-y-4">;
-                    <VideoCallRoom ;
+
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
                     />;
-                    ;
+
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">;
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
@@ -169,7 +172,7 @@ export default function ProjectRoom() {;
                       </Button>;
                     </div>;
                   </div>;
-                ) :(;
+
                   <div className="flex flex-col items-center justify-center h-[400px] space-y-4">;
                     <p className="text-muted-foreground">Start a video call with your team</p>;
                     <div className="flex gap-2">;
@@ -187,7 +190,7 @@ export default function ProjectRoom() {;
               </CardContent>;
             </Card>;
           </TabsContent>;
-          ;
+
           <TabsContent value="calendar" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -197,34 +200,12 @@ export default function ProjectRoom() {;
               <CardContent className="h-[400px]">;
                 <div className="flex items-center justify-center h-full">;
                   <p className="text-muted-foreground">Calendar will be implemented soon</p>;
+
                 </div>;
               </CardContent>;
             </Card>;
           </TabsContent>;
-          ;
-          <TabsContent value="team" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Team Members</CardTitle>;
-                <CardDescription>Manage project participants</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">Team management will be implemented soon</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-          ;
-          <TabsContent value="settings" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Project Settings</CardTitle>;
-                <CardDescription>Configure project parameters</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">Settings will be implemented soon</p>;
+
                 </div>;
               </CardContent>;
             </Card>;
@@ -232,26 +213,5 @@ export default function ProjectRoom() {;
         </Tabs>;
       </main>;
       <Footer />;
-    </>;
-  ),; //Switch to video tab if not already there if (activeTab !== 'video') {
-  setActiveTab ('video') 
-}
-};
-const endVideoCall = () => {
-  
-};
-}
-};
-return (<> End Call </Button>) 
-}<Button variant="outline" >Invite Team Member</Button> </div> </div> </TabsTrigger> <TabsTrigger value="files" className="flex items-center gap-2" > <FileText className="h-4 w-4" /> <span className="hidden sm:inline" >Files</span> </TabsTrigger> </span>) 
-}</TabsTrigger> <TabsTrigger value="calendar" className="flex items-center gap-2" > <Calendar className="h-4 w-4" /> <span className="hidden sm:inline" >Calendar</span> </TabsTrigger> <TabsTrigger value="team" className="flex items-center gap-2" > <Users className="h-4 w-4" /> <span className="hidden sm:inline" >Team</span> </TabsTrigger> <TabsTrigger value="settings" className="flex items-center gap-2" > <Settings className="h-4 w-4" /> <span className="hidden sm:inline" >Settings</span> </TabsTrigger> </TabsList> <TabsContent value="chat" className="space-y-4" > <Card> <CardHeader> <CardTitle>Project Chat</CardTitle> <CardDescription>Communicate with your team members</CardDescription> </CardHeader> <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Chat functionality will be implemented soon</p> </div> </CardContent> </Card> </TabsContent> <TabsContent value="files" className="space-y-4" > <Card> <CardHeader> <CardTitle>Project Files</CardTitle> <CardDescription>Manage documents and files</CardDescription> </CardHeader> <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >File management will be implemented soon</p> </div> </CardContent> </Card> </TabsContent> <TabsContent value="video" className="space-y-4" > <Card> <CardHeader> <CardTitle>Video Meetings</CardTitle> <CardDescription>Schedule and join video calls</CardDescription> </CardHeader> <VideoCallRoom roomId= {
-  `project-$ {
-  projectId 
-}` 
-}participants= {
-  callParticipants 
-}onLeave= {
-  endVideoCall 
-}/> Simulate user joining (demo only) </Button> </div> </div>) : (Start Video Call </Button> </div> <div className="text-xs text-muted-foreground mt-4" > <p>Recent calls:</p> <p>No recent calls for this project</p> </div> </div>) 
-}</CardContent> </Card> </TabsContent> <TabsContent value="calendar" className="space-y-4" > <Card> <CardHeader> <CardTitle>Project Calendar</CardTitle> <CardDescription>Schedule and manage events</CardDescription> </CardHeader> <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Calendar will be implemented soon</p> </div> </CardContent> </Card> </TabsContent> <TabsContent value="team" className="space-y-4" > <Card> <CardHeader> <CardTitle>Team Members</CardTitle> <CardDescription>Manage project participants</CardDescription> </CardHeader> <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Team management will be implemented soon</p> </div> </CardContent> </Card> </TabsContent> <TabsContent value="settings" className="space-y-4" > <Card> <CardHeader> <CardTitle>Project Settings</CardTitle> <CardDescription>Configure project parameters</CardDescription> </CardHeader> <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Settings will be implemented soon</p> </div> </CardContent> </Card> </TabsContent> </Tabs> </main> <Footer /> </>) 
+
 }

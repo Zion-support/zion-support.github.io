@@ -1,124 +1,55 @@
 
-<<<<<<< HEAD
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "sonner";
-=======
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export async function createJob(jobData: any) {
   try {
     const { data, error } = await supabase
       .from('jobs')
       .insert([jobData])
-<<<<<<< HEAD
-      .select();
-      .single();
-=======
-      .select()
-      .single(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-      
+
     if (error) throw error,
     return data
   } catch (error: any) {
     console.error("Error creating job:", error),
     throw new Error(error.message || "Failed to create job")
-  }
-}
 
-export async function updateJob(jobId: string, jobData: any) {
-  try {
-    const { data, error } = await supabase
-      .from('jobs')
-      .update(jobData)
-      .eq('id', jobId)
-<<<<<<< HEAD
-      .select();
-      .single();
-=======
-      .select()
-      .single(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-      
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (error) throw error,
     return data
   } catch (error: any) {
     console.error("Error updating job:", error),
     throw new Error(error.message || "Failed to update job")
-  }
-}
 
-export async function getJobById(jobId: string) {
-  try {
-    const { data, error } = await supabase
-      .from('jobs')
-      .select('*')
-<<<<<<< HEAD
-      .eq('id', jobId);
-      .single();
-=======
-      .eq('id', jobId)
-      .single(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-      
-    if (error) throw error,
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return data
   } catch (error: any) {
-    console.error("Error fetching job:", error),
-    toast.error("Failed to load job details"),
+    console && console.error("Error fetching job:", error);
+    toast && toast.error("Failed to load job details");
     return null
-<<<<<<< HEAD
-  }
-}
 =======
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "sonner",;
-export async function createJob(jobData: any) {;
-  try {;
-    const { data, error } = await supabase;
-      .from('jobs');
-      .insert([jobData]);
-      .select();
-      .single(),;
-    if (error) throw error,;
-    return data;
-  } catch (error: any) {;
-    console.error("Error creating job:", error),;
-    throw new Error(error.message || "Failed to create job");
+
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from './sonner';
+export async /**
+ * create_job - Function description
+ */
+function create_job() {
+  try {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
+
 }
 ;
-export async function updateJob(jobId: string, jobData: any) {;
-  try {;
-    const { data, error } = await supabase;
-      .from('jobs');
-      .update(jobData);
-      .eq('id', jobId);
-      .select();
-      .single(),;
-    if (error) throw error,;
-    return data;
-  } catch (error: any) {;
-    console.error("Error updating job:", error),;
-    throw new Error(error.message || "Failed to update job");
-  }
-}
-;
-export async function getJobById(jobId: string) {;
-  try {;
-    const { data, error } = await supabase;
-      .from('jobs');
-      .select('*');
-      .eq('id', jobId);
-      .single(),;
-    if (error) throw error,;
-    return data;
-  } catch (error: any) {;
-    console.error("Error fetching job:", error);
-    toast.error("Failed to load job details");
-    return null;
-  }
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

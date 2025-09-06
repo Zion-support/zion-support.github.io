@@ -1,98 +1,54 @@
-<<<<<<< HEAD
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import { ReferralReward } from '@/types/referrals'
-import { formatDate } from '@/utils/referralUtils'
+
+
 import { BadgeDollarSign, Badge } from 'lucide-react'
+
+
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSign, Badge } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 interface RewardsCardProps {
+
   rewards: ReferralReward[]
-  isLoading: boolean
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ReferralReward } from "@/types/referrals"
-import { formatDate } from "@/utils/referralUtils"
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-=======
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralReward } from "@/types/referrals",
-import { formatDate } from "@/utils/referralUtils",
-import { BadgeDollarSign, Badge } from 'lucide-react'
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-interface RewardsCardProps {
-  rewards: ReferralReward[],
   isLoading: boolean
 }
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
-  if (isLoading) {
-    return (
-      <Card>
-        <CardHeader>
-<<<<<<< HEAD
-          <CardTitle className='flex items-center gap-2'>
-            <BadgeDollarSign className='h-5 w-5' />
-=======
-          <CardTitle className="flex items-center gap-2">
-            <BadgeDollarSign className="h-5 w-5" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-            Your Rewards
-          </CardTitle>
-          <CardDescription>Rewards earned from successful referrals</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="flex items-center justify-center p-4">
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-          </div>
-        </CardContent>
-      </Card>
-<<<<<<< HEAD
-    ) }            Your Rewards
-          </CardTitle>
-          <CardDescription>Rewards earned from successful referrals</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="flex items-center justify-center p-4">
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-          </div>
-        </CardContent>
-      </Card>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-    )
-  }
 
-  if (rewards.length === 0) {
+
     return (
       <Card>
         <CardHeader>
-<<<<<<< HEAD
+=======
           <CardTitle className='flex items-center gap-2'>
             <BadgeDollarSign className='h-5 w-5' />
-=======
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
             Your Rewards
           </CardTitle>
-          <CardDescription>Rewards earned from successful referrals</CardDescription>
+          <CardDescription>
+            Rewards earned from successful referrals
+          </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-          <div className='flex flex-col items-center justify-center p-4 text-center'>
-            <p className='text-muted-foreground'>No rewards yet</p>
-            <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards
-          </CardTitle>
-          <CardDescription>Rewards earned from successful referrals</CardDescription>
-        </CardHeader>
-        <CardContent>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
           <div className="flex flex-col items-center justify-center p-4 text-center">
             <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -101,178 +57,32 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
-    ) }    )
-=======
-    )
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  }
 
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+
+
+            Your Rewards
+          <CardTitle className='flex items-center gap-2'>
+            <BadgeDollarSign className='h-5 w-5' />
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
   return (
     <Card>
       <CardHeader>
-<<<<<<< HEAD
-        <CardTitle className='flex items-center gap-2'>
-          <BadgeDollarSign className='h-5 w-5' />
-=======
+
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+}
+}
+<<<<<<< HEAD
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
       </CardHeader>
       <CardContent>
 <<<<<<< HEAD
-        <div className='space-y-4'>          {rewards.map((reward, index) => (
-            <div
-              key={reward.id}
-        <div className="space-y-4">
-          {rewards.map((reward, index,) => (
-            <div 
-              key = {reward.id,}
-              className={`flex justify-between items-start ${
-                index !== rewards.length - 1 ? 'border-b pb-3' : ''
-              }`}
-            >
-              <div>
-                <div className='flex items-center gap-2'>
-                  {reward.reward_type === 'credit' ? (
-                    <BadgeDollarSign className='h-4 w-4 text-green-600' />
-                  ) : (
-                    <Badge className='h-4 w-4 text-blue-600' />
-                  )}
-                  <p className='font-medium'>                    {reward.reward_type === 'credit'                  <p className="font-medium">
-                    {reward.reward_type === 'credit'
-                      ? `$${reward.amount?.toFixed(2)} Credit`
-                      : 'Visibility Boost'}
-                  </p>
-                </div>
-                <p className='text-xs text-muted-foreground mt-1'>
-                  Earned on {formatDate(reward.created_at)}
-                </p>
-                {reward.expires_at && (
-                  <p className='text-xs text-muted-foreground'>                    Expires on {formatDate(reward.expires_at)}                <p className="text-xs text-muted-foreground mt-1">
-                  Earned on {formatDate(reward.created_at)}
-                </p>
-                {reward.expires_at && (
-                  <p className="text-xs text-muted-foreground">
-                  </p>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </CardContent>
-    </Card>;
-  );
-};
-}
-}
-=======
-        <div className="space-y-4">
-          {rewards.map((reward, index) => (
-            <div 
-              key={reward.id}
-              className={`flex justify-between items-start ${
-                index !== rewards.length - 1 ? "border-b pb-3" : ""
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralReward } from "@/types/referrals",;
-import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from 'lucide-react';
-interface RewardsCardProps {;
-  rewards: ReferralReward[];
-  isLoading: boolean;
-}
-;
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
-  if (isLoading) {;
-    return (;
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-            <BadgeDollarSign className="h-5 w-5" />;
-            Your Rewards;
-          </CardTitle>;
-          <CardDescription>Rewards earned from successful referrals</CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="flex items-center justify-center p-4">;
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />;
-          </div>;
-        </CardContent>;
-      </Card>;
-    );
-  }
-;
-  if (rewards.length === 0) {;
-    return (;
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-            <BadgeDollarSign className="h-5 w-5" />;
-            Your Rewards;
-          </CardTitle>;
-          <CardDescription>Rewards earned from successful referrals</CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="flex flex-col items-center justify-center p-4 text-center">;
-            <p className="text-muted-foreground">No rewards yet</p>;
-            <p className="text-sm text-muted-foreground mt-1">;
-              Refer users to earn rewards once they complete onboarding;
-            </p>;
-          </div>;
-        </CardContent>;
-      </Card>;
-    );
-  }
-;
-  return (;
-    <Card>;
-      <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <BadgeDollarSign className="h-5 w-5" />;
-          Your Rewards;
-        </CardTitle>;
-        <CardDescription>Rewards earned from successful referrals</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="space-y-4">;
-          {rewards.map((reward, index) => (;
-            <div;
-              key={reward.id}
-              className={`flex justify-between items-start ${;
-                index !== rewards.length - 1 ? "border-b pb-3" : "";
-              }`}
-            >;
-              <div>;
-                <div className="flex items-center gap-2">;
-                  {reward.reward_type === 'credit' ? (;
-                    <BadgeDollarSign className="h-4 w-4 text-green-600" />;
-                  ) : (;
-                    <Badge className="h-4 w-4 text-blue-600" />;
-                  )}
-                  <p className="font-medium">;
-                    {reward.reward_type === 'credit';
-                      ? `$${reward.amount?.toFixed(2)} Credit`;
-                      : 'Visibility Boost'}
-                  </p>;
-                </div>;
-                <p className="text-xs text-muted-foreground mt-1">;
-                  Earned on {formatDate(reward.created_at)}
-                </p>;
-                {reward.expires_at && (;
-                  <p className="text-xs text-muted-foreground">;
-                    Expires on {formatDate(reward.expires_at)}
-                  </p>;
-                )}
-              </div>;
-            </div>;
-          ))}
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD

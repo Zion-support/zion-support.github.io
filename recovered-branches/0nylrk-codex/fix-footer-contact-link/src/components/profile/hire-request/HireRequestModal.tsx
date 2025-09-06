@@ -1,101 +1,108 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
+import {
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+} from "@/components/ui/dialog";
+import { HireRequestForm } from "./HireRequestForm";
+
+import { TalentProfile } from "@/types/talent";
+import { UserProfile } from "@/types/auth";
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {HireRequestForm} from "./HireRequestForm";
 import {TalentProfile} from "@/types/talent";
 import {UserProfile} from "@/types/auth";
-=======
 import React from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { HireRequestForm } from "./HireRequestForm",
 import { TalentProfile } from "@/types/talent",
 import { UserProfile } from "@/types/auth",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-import React from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { HireRequestForm } from "./HireRequestForm";
-import { TalentProfile } from "@/types/talent";
-import { UserProfile } from "@/types/auth";
->>>>>>> main
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
   onClose: () => void;
-  userDetails?: UserProfile;
+  userDetails?: UserProfile
 }
 
 export function HireRequestModal({
-  talent,
-  isOpen,
-  onClose,
-  userDetails,
+  talent
+  isOpen
+  onClose
+  userDetails
 }: HireRequestModalProps) {
   const handleClose = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
     onClose();
+  }
+  if (!talent) return null;
   };
-=======
     onClose()
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   if (!talent) return null,
 
   return (
+
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {HireRequestForm} from "./HireRequestForm";
+import {TalentProfile} from "@/types/talent";
+import {UserProfile} from "@/types/auth";
+=======
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white">
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
 import { HireRequestForm } from "./HireRequestForm",;
 import { TalentProfile } from "@/types/talent",;
 import { UserProfile } from "@/types/auth",;
+
 interface HireRequestModalProps {;
   talent: TalentProfile | null,;
   isOpen: boolean,;
   onClose: () => void,;
   userDetails?: UserProfile;
 }
-;
-export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {;
+
+export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {;
   const handleClose = () => {;
     onClose();
   };
+
   if (!talent) return null;
-  return (;
+
+  return (
     <Dialog open={isOpen} onOpenChange={handleClose}>;
       <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle className="text-xl font-bold text-white">;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
-<<<<<<< HEAD
+        <HireRequestForm
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
         <HireRequestForm 
 =======
 
-        <HireRequestForm
->>>>>>> main
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
-        />
-      </DialogContent>
-    </Dialog>
+
+        />;
+      </DialogContent>;
+    </Dialog>;
   );
 }
+

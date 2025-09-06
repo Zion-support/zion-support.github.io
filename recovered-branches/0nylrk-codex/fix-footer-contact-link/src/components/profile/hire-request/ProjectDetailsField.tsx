@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> main
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
@@ -11,52 +7,77 @@ import {
   FormLabel,
   FormControl,
   FormMessage,
-} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-import { FormValues } from "./useHireRequestForm";
+} from '@/components / ui / form';
+import { Textarea  } from '@/components / ui / textarea';
+import { FormValues  } from './useHireRequestForm';
+
 interface ProjectDetailsFieldProps {
-<<<<<<< HEAD
-  form: UseFormReturn<FormValues>
-=======
-import React from "react",
-import { UseFormReturn } from "react-hook-form",
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
-import { FormValues } from "./useHireRequestForm",
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
-import React from "react",;
-import { UseFormReturn } from "react-hook-form",;
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;
-import { FormValues } from "./useHireRequestForm";
-interface ProjectDetailsFieldProps {;
-  form: UseFormReturn<FormValues>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  form: UseFormReturn<FormValues>;
->>>>>>> main
+  form: UseFormReturn < FormValues>;
 }
 
-export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
+import { Textarea } from "@/components/ui/textarea";
+import {UseFormReturn} from "react-hook-form";
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Textarea} from "@/components/ui/textarea";
+import {FormValues} from "./useHireRequestForm";
+
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+
+export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <FormField
-      control={form.control}
+      control={form && form.control}
       name="projectOverview"
+
+export /**
+ * ProjectDetailsField - Function description
+ */
+function ProjectDetailsField() {
+  return (
+    <FormField;
+      control={form.control}
+      name="project_overview";
+
       render={({ field }) => (
-        <FormItem>
-          <FormLabel className="text-white">Project Overview</FormLabel>
-          <FormControl>
-            <Textarea
-              placeholder="Describe your project, goals, and requirements"
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+        <FormItem>;
+          <FormLabel className="text - white">Project Overview</FormLabel>;
+          <FormControl>;
+            <Textarea;
+              placeholder="Describe your project, goals, and requirements";
+              className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
               {...field}
-            />
-          </FormControl>
-          <FormMessage className="text-red-400" />
-        </FormItem>
+
+      render={({ field }) => (;
+        <FormItem>;
+          <FormLabel className="text-white">Project Overview</FormLabel>;
+          <FormControl>;
+            <Textarea
+              placeholder="Describe your project, goals, and requirements" 
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+              {...field} 
+            />;
+          </FormControl>;
+          <FormMessage className="text-red-400" />;
+        </FormItem>;
       )}
     />
   );
 }
+  )
+}
 ;
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

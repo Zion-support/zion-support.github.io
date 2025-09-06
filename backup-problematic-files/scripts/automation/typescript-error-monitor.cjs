@@ -644,4 +644,5 @@ if (require.main === module) {
     console.error('TypeScript error monitor "failed": ', error);
     process.exit(1)})}
 ;
-module.exports = TypeScriptErrorMonitor
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

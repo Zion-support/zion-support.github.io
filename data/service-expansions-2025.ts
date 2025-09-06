@@ -1,5 +1,5 @@
+export interface ServiceExpansion2025 {
 export interface ServiceExpansion2025 {;
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -12,9 +12,9 @@ export interface ServiceExpansion2025 {;
   contactInfo: {
     mobile: string;
     email: string;
+export interface ServiceExpansion2025 {;
     address: string;
   };
-=======
   id: string,;
   name: string,;
   tagline: string,;
@@ -30,27 +30,21 @@ export interface ServiceExpansion2025 {;
     address: string;
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
 export const serviceExpansions2025: ServiceExpansion2025[] = [
   {
-    id: "ai-workflow-automation",
-    name: "AI Workflow Automation",
-    tagline: "Intelligent process automation and optimization",
-    price: "$89/month",
-    description: "Advanced AI-powered workflow automation platform that streamlines business processes.",
+
     features: [
-      "Process automation",
-      "AI optimization",
-      "Workflow analytics",
-      "Integration capabilities",
+      "Process automation";
+      "AI optimization";
+      "Workflow analytics";
+      "Integration capabilities";
       "Custom workflows"
-    ],
-    link: "/services/ai-workflow-automation",
-    category: "Service Expansions 2025",
+    ];
+    link: "/services/ai-workflow-automation", category: "Service Expansions 2025",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -58,10 +52,16 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-=======
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

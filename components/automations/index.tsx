@@ -1,9 +1,16 @@
+import React from "react";
+import Link from "next/link";
+export default function AutomationsPage() {
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
+
+
+=======
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <main className='mx-auto max-w-5xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>
@@ -19,7 +26,7 @@ import Link from 'next/link';
             Intelligent Orchestrator
           </h2>
           <p className='mt-2 text-sm text-gray-600'>
-            Detects change patterns, selects relevant tasks (UI, SEO,
+            Detects change patterns, selects relevant tasks (UI, SEO
             performance, security, links, monetization, venture), executes in
             parallel batches, and commits results.
           </p>
@@ -32,32 +39,27 @@ import Link from 'next/link';
               target="_blank"
               rel="noreferrer"
               className="rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+
               View Live Runs
             </a>
           </div>
         </div>
-        <div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm'>
-          <h2 className='text-lg font-semibold text-gray-900'>
-            AI Content Curator
-          </h2>
-          <p className='mt-2 text-sm text-gray-600'>
-            Optionally uses AI to produce small, useful artifacts (e.g., growth
-            experiments), committed into the repository.
-          </p>
-          <div className='mt-4 flex gap-3'>
-            <Link href='/automations/curation'>
-              <a className='rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700'>
-                View Curated Output
-              </a>
-            </Link>          </div>        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+
+=======
+
+        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <h2 className="text-lg font-semibold text-gray-900">AI Content Curator</h2>
           <p className="mt-2 text-sm text-gray-600">
             Optionally uses AI to produce small, useful artifacts (e.g., growth experiments), committed into the repository.
           </p>
           <div className="mt-4 flex gap-3">
             <Link href="/automations/curation"><a className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover: bg-indigo-700">View Curated Output</a></Link>
-        </div>
-      </div>
-    </main>
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,9 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {try {;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  try {;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(req, res) {
   try {
     const base = getZionDesignMap();
@@ -59,21 +67,30 @@ export default async function handler(req, res) {
 import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
 export default async function handler(req, res) {
   try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
       fetchLovableTokens()]);
     const tokens = {;
+<<<<<<< HEAD
+      colors: { ...localTokens.colors, ...(cmsTokens?.colors |{}) }
+      typography: {fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes |{}) }}}
+    res.status(200).json({ route: base.route, products: base.products, tokens });
+  } catch (e: any) {res.status(500).json({ error: e?.message |'Failed to build design map' });
       colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) };
       typography: {;
-<<<<<<< HEAD
         fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) }}}
 ;
     res.status(200).json({ route: base.route, products: base.products, tokens });
   } catch (e: any) {;
     res.status(500).json({ error: e?.message || 'Failed to build design map' });
-=======
         fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) }}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -115,6 +132,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

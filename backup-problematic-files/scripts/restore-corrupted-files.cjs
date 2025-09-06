@@ -109,4 +109,5 @@ class FileRestorer {}
 if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)};
-module.exports = FileRestorer;
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

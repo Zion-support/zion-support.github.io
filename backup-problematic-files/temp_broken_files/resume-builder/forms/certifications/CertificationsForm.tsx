@@ -1,10 +1,11 @@
 
+=======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { Button } from '@/components/ui/button',;
 import { Form } from '@/components/ui/form',;
 import { Certification } from '@/types/resume',;
-import { Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react',;
 import { useResume } from '@/hooks/useResume',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -91,6 +92,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   },;
 ;
   return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>;
@@ -98,55 +100,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           Add any professional certifications, licenses, or credentials you have earned.;
         </p>;
       </div>;
-;
-      {certifications.length > 0 && (;
-        <CertificationsList ;
-          certifications={certifications} ;
-          onEdit={handleEdit} ;
-          onDelete={handleDelete} ;
-        />;
-      )}
-;
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Certification' :'Add Certification'}
-        </h3>;
-;
-        <Form {...form}>;
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
-            <CertificationFormFields form={form} />;
-;
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-;
-            <div className="flex justify-between pt-2">;
-              <Button;
-                type="button";
-                variant="outline";
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null),;
-                    form.reset({;
-                      name:'',;
-                      issuing_organization:'',;
-                      issue_date:'',;
-                      expiration_date:'',;
-                      credential_id:'',;
-                      credential_url:''}),;
-                  } else {;
-                    onBack(),;
-                  }
-                }}
-              >;
-                {editingId ? 'Cancel' :'Back'}
-              </Button>;
-;
-              <div className="flex gap-2">;
-                <Button type="submit" disabled={isLoading}>;
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {editingId ? 'Update' :'Add'} Certification;
-                </Button>;
-;
-                <Button type="button" onClick={onComplete}>;
+<<<<<<< HEAD
+
                   Next;
                 </Button>;
               </div>;
@@ -154,18 +109,5 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           </form>;
         </Form>;
       </div>;
-    </div>;
-  ),; return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Certifications & Licenses</h2> <p className="text-muted-foreground" > Add any professional certifications, licenses, or credentials you have earned. </p> </div> {;
-  certifications.length > 0 && (<CertificationsList certifications= {;
-  certifications ;
-}onEdit= {;
-  handleEdit ;
-}onDelete= {;
-  handleDelete ;"}/>) ";"}<div className="flex justify-between pt-2" > <Button if (editingId) {;
-  setEditingId (null);
-form.reset ({;
-  ;
+
 }
-}>{;
-  editingId ? 'Cancel' : 'Back' ;
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;"}'"

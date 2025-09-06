@@ -1,14 +1,12 @@
 
-<<<<<<< HEAD
-import {useEffect, useState} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
+
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
   const { user } = useAuth();
-  const [wallet, setWallet] = useState<Wallet | null>(null);
-  const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
+  const [wallet, setWallet] = useState<Wallet | null>(null),
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [loading, setLoading] = useState(true);
+
   const [error, setError] = useState<string | null>(null);
 
   async function fetchWallet() {
@@ -16,83 +14,137 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
-
     try {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('wallets')
-        .select('*')
-        .eq('user_id', user.id)
-        .single();
-
-      if (error) {
-        throw error
+      set_loading (true);
+      const { data, error } = await supabase;
+        .from ('wallets');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw error;
       }
-
-      setWallet(data)
+      set_wallet (data);
     } catch (err: any) {
-      console.error('Error fetching wallet:', err);
-      setError(err.message)
+      console.error ('Error fetching wallet:', err);
+      set_error (err.message);
+
     } finally {
-      setLoading(false)
+      set_loading (false);
     }
   }
 
-  async function fetchTransactions() {
-    if (!user?.id) {
-      setTransactions([]);
-      return
-    }
-    try {
-      const { data, error } = await supabase
-        .from('token_transactions')
-        .select('*')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
+    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
 
-      if (error) throw error;
-      setTransactions((data || []) as TokenTransaction[])
-    } catch (err: any) {
-      console.error('Error fetching transactions:', err)
-    }
-  }
-
-  async function earnTokens(amount: number, reason?: string) {
-    if (!user?.id) return;
-    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
     setTransactions(prev => [
       {
-        id: crypto.randomUUID();
-        user_id: user.id;
+        id: crypto && crypto.randomUUID();
+        user_id: user && user.id;
         amount;
         transaction_type: 'earn';
-        reason: reason || null,
-        created_at: new Date().toISOString()};
+        reason: reason |null
+        created_at: new Date().toISOString()}
       ...prev])
   }
-
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev =>
-      prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
+      prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
     );
     setTransactions(prev => [
       {
-        id: crypto.randomUUID();
-        user_id: user.id;
+        id: crypto && crypto.randomUUID();
+        user_id: user && user.id;
         amount;
         transaction_type: 'burn';
-        reason: reason || null,
-        created_at: new Date().toISOString()};
+        reason: reason |null
+        created_at: new Date().toISOString()}
       ...prev])
   }
-
   useEffect(() => {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
-
+=======
+  async /**
+ * fetch_transactions - Function description
+ */
+function fetch_transactions() {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_transactions ([]);
+      return;
+    }
+    try {
+      const { data, error } = await supabase;
+        .from ('token_transactions');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_transactions ((data || []) as TokenTransaction[]);
+    } catch (err: any) {
+      console.error ('Error fetching transactions:', err);
+    }
+  }
+  async /**
+ * earn_tokens - Function description
+ */
+function earn_tokens() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_wallet (prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
+    set_transactions (prev => [;
+      {
+        id: crypto.randomUUID ();
+        user_id: user.id;
+        amount;
+        transaction_type: 'earn';
+        reason: reason || null,
+        created_at: new Date ().toISOString ()}
+      ...prev]);
+  }
+  async /**
+ * spend_tokens - Function description
+ */
+function spend_tokens() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_wallet (prev =>;
+      prev ? { ...prev, balance: Math.max (0, prev.balance - amount) } : prev);
+    set_transactions (prev => [;
+      {
+        id: crypto.randomUUID ();
+        user_id: user.id;
+        amount;
+        transaction_type: 'burn';
+        reason: reason || null,
+        created_at: new Date ().toISOString ()}
+      ...prev]);
+  }
+  useEffect (() => {
+    fetch_wallet ();
+    fetch_transactions ();
+  }, [user?.id]);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     wallet;
     transactions;
@@ -195,9 +247,10 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     fetchTransactions;
     earnTokens;
+
     spendTokens}
 }
-;

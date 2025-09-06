@@ -1,51 +1,53 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { Skill  } from '@/types/resume';
+import { SkillCategory } from './SkillCategory';
 import {useState, useEffect} from 'react';
 import {Skill} from '@/types/resume';
 import {SkillCategory} from './SkillCategory';
-=======
-import { useState, useEffect } from "react";
-import { Skill } from "@/types/resume";
-import { SkillCategory } from "./SkillCategory";
->>>>>>> main
 interface SkillsListProps {
   skills: Skill[];
-  onDeleteSkill: (id: string, category: string) => Promise<void>;
+  onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 
-<<<<<<< HEAD
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
-  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
-  
-=======
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[]>
   >({});
-
->>>>>>> main
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
+  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
+  
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
       (acc, skill) => {
-        const category = skill.category || "Other";
+        const category = skill.category |"Other";
         if (!acc[category]) {
+=======
+;
+  useEffect (() => {
+    // Group skills by category;
+    const grouped = skills.reduce (
+      (acc, skill) => {
+        const category = skill.category || "Other";
+        // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           acc[category] = [];
         }
-        acc[category].push(skill);
+        acc[category].push (skill);
         return acc;
-      },
-      {} as Record<string, Skill[]>,
+      }
+      {} as Record<string, Skill[]>
     );
-
     setSkillsByCategory(grouped);
   }, [skills]);
-
   if (Object.keys(skillsByCategory).length === 0) {
-<<<<<<< HEAD
+    return null;
+  }
     return null
-=======
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
@@ -70,19 +72,16 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   }, [skills]);
   if (Object.keys(skillsByCategory).length === 0) {;
     return null;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-    return null;
->>>>>>> main
-  }
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+  
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory
@@ -95,14 +94,12 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 <<<<<<< HEAD
       </div>
     </div>
-<<<<<<< HEAD
+  );
+}
+
   )
-=======
       </div>;
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  );
->>>>>>> main
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

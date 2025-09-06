@@ -1,21 +1,22 @@
-import React from 'react',;
-import ServiceLanding from '../components/sections/ServiceLanding',;
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIConsciousnessEvolution2025() {
 	return (
 		<ServiceLanding
+
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 			title="AI Consciousness Evolution 2025"
 			slug="ai-consciousness-evolution-2025"
 			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent."
 			subtitle="From narrow tasks to contextual understanding with emotional intelligence."
-<<<<<<< HEAD
-			pricePerMonthUSD={4999}
-=======
+
 			pricePerMonthUSD={4999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Strategic R&D with demonstrable prototypes and IP"
 			features={[
@@ -25,14 +26,12 @@ export default function AIConsciousnessEvolution2025() {
 				"Evaluation harness for subjective tasks",
 				"Multi-modal context fusion (text, voice, UI)",
 				"Partnered research roadmap and governance"
-<<<<<<< HEAD
 			]}
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
 			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
 		/>
 	)
 };
-=======
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -54,4 +53,4 @@ export default function AIConsciousnessEvolution2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

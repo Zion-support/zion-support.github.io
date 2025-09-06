@@ -1,40 +1,35 @@
-<<<<<<< HEAD
+
 import React, {
-  useState,
-  useRef,
-  useEffect,
-  FormEvent,
-  KeyboardEvent,
+  useState
+  useRef
+  useEffect
+  FormEvent
+  KeyboardEvent
 } from 'react'
 import { Button } from '@/components/ui/button'
-=======
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
-import { Button } from "@/components/ui/button",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 import { Send } from 'lucide-react'
 interface ChatInputProps {
-<<<<<<< HEAD
   onSend: (message: string) => void
-disabled?: boolean 
+disabled?: boolean
 }export function ChatInput ({
-  onSend, disabled = false 
+  onSend, disabled = false
 }: ChatInputProps) {'
   const [message, setMessage] = useState ('')
 const inputRef = useRef<HTMLTextAreaElement> (null)
-//Focus input when component mounts 
+//Focus input when component mounts
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
-
-  const [ message, setMessage ] = useState(''),
-  const inputRef = useRef<HTMLTextAreaElement>(null),
-
+  const [ message, setMessage ] = useState('')
+  const inputRef = useRef<HTMLTextAreaElement>(null)
   useEffect(() => {    // Focus input when component mounts
     inputRef.current?.focus() }, [])
     inputRef.current?.focus()
 interface ChatInputProps {
-  onSend: (message: string) => void,
+
+=======
+  onSend: (message: string) => void
   disabled?: boolean
 }
-
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   const [message, setMessage] = useState('')
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -57,48 +52,110 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       }
     }
   }
-=======
   onSend: (message: string) => void,
   disabled?: boolean
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Send } from 'lucide-react';
+
+interface ChatInputProps {;
+  onSend: (message: string) => void;
+disabled?: boolean ;
+}export function ChatInput(): any ({;
+  onSend, disabled = false ;
+}: ChatInputProps) {';
+  const [message, setMessage] = useState ('');
+const inputRef = useRef<HTMLTextAreaElement> (null);
+//Focus input when component mounts ;
+export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
+
+  const [ message, setMessage ] = useState(''),;
+  const inputRef = useRef<HTMLTextAreaElement>(null),;
+
+  useEffect(() => {    // Focus input when component mounts;
+    inputRef && inputRef.current?.focus();  }, []);
+    inputRef && inputRef.current?.focus();
+
 interface ChatInputProps {;
   onSend: (message: string) => void,;
   disabled?: boolean;
 }
-;
-export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
-  const [message, setMessage] = useState(''),;
-  const inputRef = useRef<HTMLTextAreaElement>(null),;
+
+export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
+  const [message, setMessage] = useState('');
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
   useEffect(() => {;
     // Focus input when component mounts;
-    inputRef.current?.focus();
-  }, []),;
+    inputRef && inputRef.current?.focus();
+
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
+import { Button } from "@/components/ui/button";
+import { Send } from 'lucide-react'
+
+interface ChatInputProps {
+  onSend: (message: string) => void,
+  disabled?: boolean
+}
+
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+
+  const [ message, setMessage ] = useState(''),
+  const inputRef = useRef<HTMLTextAreaElement>(null),
+
+
+  useEffect(() => {
+    // Focus input when component mounts
+    inputRef.current?.focus()
+
+  }, []);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
-    e.preventDefault(),;
-    if (message.trim() && !disabled) {;
-      onSend(message),;
-      setMessage('');
+    e && e.preventDefault();    if (message && message.trim() && !disabled) {;
+      onSend(message);
+
+
     }
-  },;
-  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;
-    if (e.key === 'Enter' && !e.shiftKey) {;
-      e.preventDefault(),;
-      if (message.trim() && !disabled) {;
-        onSend(message);
-        setMessage('');
+
+
       }
-
     }
-  },
+  };
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+  return (
+
+    <form on_submit={handle_submit} className='flex items - end gap - 2'>;
+      <textarea;
+        ref={input_ref}
+        className='flex - 1 min - h-[40px] max - h-[120px] px - 3 py - 2 bg - zion - blue - dark border border - zion - blue - light rounded - md focus:outline - none focus:ring - 2 focus:ring - zion - purple focus:border - transparent resize - none text - black placeholder:text - zion - slate - light';
+        placeholder='Type your message...';
+        value={message}
+        on_change={e => set_message (e.target.value)}        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />;
+      <Button;
+        type='submit';
+        className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center'        on_change={(e) => set_message (e.target.value)}
+
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />;
+
+        disabled={!message.trim() |disabled}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
         ref={inputRef}
-<<<<<<< HEAD
+=======
         className='flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light'
         placeholder='Type your message...'
         value={message}
@@ -109,41 +166,41 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       <Button
         type='submit'
         className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'        onChange={(e) => setMessage(e.target.value)}
-=======
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
         placeholder="Type your message..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
       />
-<<<<<<< HEAD
-      <Button
-        type='submit'
-        className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'
-        disabled={!message.trim() || disabled}      >
-        <Send className='h-5 w-5' />
-=======
-      <Button 
-        type="submit" 
-        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
-        disabled={!message.trim() || disabled}
+
+        className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
+        placeholder="Type your message..."
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />
+
+
+  }, []);
       >
         <Send className="h-5 w-5" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        disabled={!message.trim() || disabled}
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+      >
+        <Send className="h-5 w-5" />
       </Button>
     </form>
   )
 }
 <<<<<<< HEAD
-        disabled={!message.trim() || disabled}
-      >
-        <Send className="h-5 w-5" />
-      </Button>
-    </form>
-  )
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

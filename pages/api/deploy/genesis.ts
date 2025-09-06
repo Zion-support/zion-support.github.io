@@ -1,86 +1,182 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
-
-function summarizeModules(
-  modules: Record<string, boolean>,
-  bonus: Record<string, boolean>,
-) {
-  const active = [
-    ...Object.entries(modules)
       .filter(([, v]) => v)
-      .map(([k]) => `/${k}`),
-    ...Object.entries(bonus)
-      .filter(([, v]) => v)
-      .map(([k]) => `/${k}`),
+      .map(([k]) => `/${k}`)
   ];
-  return active.length ? active.sort().join(", ") : "None";
+  return active && active.length ? active && active.sort().join(", ") : "None";
 }
-
 function missionParagraph(
-  region: string,
-  instanceName: string,
-  modules: Record<string, boolean>,
-  bonus: Record<string, boolean>,
+  region: string
+  instanceName: string
+  modules: Record<string, boolean>
+  bonus: Record<string, boolean>
 ) {
   const activeCount =
-    Object.values(modules).filter(Boolean).length +
-    Object.values(bonus).filter(Boolean).length;
+    Object && Object.values(modules).filter(Boolean).length +
+    Object && Object.values(bonus).filter(Boolean).length;
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`;
 }
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
-  if (req.method !== "POST") {;
-    return res.status(405).json({ error: "Method not allowed" });
-  }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  }
   try {
-    const body = req.body || {};
+
+    const body = req && req.body || {};
+
     const {
-      instanceName,
-      defaultLanguage = "en",
-      deploymentRegion,
-      tokenActivation = false,
-      governanceMode = "democratic",
-      branding = {},
-      modules = {},
-      bonusModules = {},
+
+      instanceName
+      defaultLanguage = "en"
+      deploymentRegion
+      tokenActivation = false
+      governanceMode = "democratic"
+      branding = {}
+      modules = {}
+      bonusModules = {}
+
     } = body;
 
+
     if (!instanceName || !deploymentRegion) {
-      return res.status(400).json({
+      return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion",
+
       });
     }
-
     // Simulated provisioning operations
     const now = new Date().toISOString();
-    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date.now()}`;
+
+    const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;
+
 
     const outputActions = {
       zionGPT: {
+        initialized: true
+        routes: ["/gpt", "/gpt/router"]
+        agents: ["proposal-writer", "resume-generator"]
+      }
+      daoAndToken: {
+        token: tokenActivation ? "ZION$" : "disabled"
+        treasury: tokenActivation ? `${provisionId}-treasury` : null
+        governanceMode
+        votingDashboard: "/dao"
+      }
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+;
+/**
+ * summarize_modules - Function description
+ */
+function summarize_modules() {
+  const active = [;
+    ...Object.entries (modules);
+      .filter (([, v]) => v);
+      .map (([k]) => `/${k}`),
+    ...Object.entries (bonus);
+      .filter (([, v]) => v);
+      .map (([k]) => `/${k}`),
+  ];
+  return active.length ? active.sort ().join (", ") : "None";
+}
+/**
+ * mission_paragraph - Function description
+ */
+function mission_paragraph() {
+  const active_count =;
+    Object.values (modules).filter (Boolean).length +;
+    Object.values (bonus).filter (Boolean).length;
+  return `"${instance_name}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${active_count} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`;
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (405).json ({ error: "Method not allowed" });
+  }
+  try {
+    const body = req.body || {}
+    const {
+      instance_name,
+      default_language = "en",
+      deployment_region,
+      token_activation = false,
+      governance_mode = "democratic",
+      branding = {},
+      modules = {},
+      bonus_modules = {},
+    } = body;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({
+        error: "Missing required fields: instance_name, deployment_region",
+      });
+    }
+    // Simulated provisioning operations;
+    const now = new Date ().toISOString ();
+    const provision_id = `zion-${instance_name.toLowerCase ().replace (/[^a - z0 - 9]+/g, "-")}-${Date.now ()}`;
+;
+    const output_actions = {
+      zionGPT: {
         initialized: true,
-        routes: ["/gpt", "/gpt/router"],
-        agents: ["proposal-writer", "resume-generator"],
+        routes: ["/gpt", "/gpt / router"],
+        agents: ["proposal - writer", "resume - generator"],
       },
       daoAndToken: {
-        token: tokenActivation ? "ZION$" : "disabled",
-        treasury: tokenActivation ? `${provisionId}-treasury` : null,
-        governanceMode,
-        votingDashboard: "/dao",
+        token: token_activation ? "ZION$" : "disabled",
+        treasury: token_activation ? `${provision_id}-treasury` : null,
+        governance_mode,
+        voting_dashboard: "/dao",
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       assets: {
-        whitepaper: "/whitepaper",
-        roadmap: "/roadmap",
+        whitepaper: "/whitepaper"
+        roadmap: "/roadmap"
         book: {
-          pdf: "/book/manifesto.pdf",
+
+          pdf: "/book/manifesto && manifesto.pdf",
           trailerScript: "/trailer/script",
         },
         summit: "/summit",
       },
+
       publicPages: [
+        "/about"
+        "/manifesto"
+        "/constitution"
+        "/partners"
+        "/academy"
+        "/marketplace"
+        "/dao"
+        `/nation/${defaultLanguage |"en"}`
+      ]
+    }
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules)
+      mission: missionParagraph(
+        deploymentRegion
+        instanceName
+        modules
+        bonusModules
+      )
+    }
+=======
+          pdf: "/book / manifesto.pdf",
+          trailer_script: "/trailer / script",
+        },
+        summit: "/summit",
+      },
+      public_pages: [;
         "/about",
         "/manifesto",
         "/constitution",
@@ -88,48 +184,58 @@ export default async function handler(
         "/academy",
         "/marketplace",
         "/dao",
-        `/nation/${defaultLanguage || "en"}`,
+        `/nation/${default_language || "en"}`,
       ],
-    };
-
+    }
+;
     const operator = {
-      activeModulesSummary: summarizeModules(modules, bonusModules),
-      mission: missionParagraph(
-        deploymentRegion,
-        instanceName,
+      activeModulesSummary: summarize_modules (modules, bonus_modules),
+      mission: mission_paragraph (
+        deployment_region,
+        instance_name,
         modules,
-        bonusModules,
+        bonus_modules,
       ),
-    };
-
+    }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const access = {
-      roles: ["Founder", "Superadmin", "DAO Multisig"],
+      roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
+
         type: "application/json",
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
       },
     };
 
-    return res.status(200).json({
-      success: true,
-      provisionId,
-      instanceName,
-      region: deploymentRegion,
-      language: defaultLanguage || "en",
-      governanceMode,
-      tokenActivation,
-      branding,
-      modules,
-      bonusModules,
-      createdAt: now,
-      version: "Zion OS v1.0.0",
-      outputActions,
+
       operator,
       access,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-  } catch (err: any) {
-    return res.status(500).json({ error: err.message || "Internal error" });
+
 =======
+    return res && res.status(500).json({ error: err && err.message || "Internal error" });
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+      version: 'Zion OS v1.0.0'};
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+    const access = {
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+    return res.status (500).json ({ error: err.message || "Internal error" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -148,6 +254,31 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+    return res && res.status(500).json({ error: err && err.message || "Internal error" });
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+=======
+      version: 'Zion OS v1.0.0'};
+
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+
+    const access = {
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
   try {
@@ -354,33 +485,34 @@ export default async function handler(req, res) {
       export: {;
         type: 'application/json';
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
-    return res.status(200).json({ outputActions, deployLog, access, operator });
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
   } catch (error) {
-    return res.status(500).json({ error: err.message || 'Internal error' });
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  }
-}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

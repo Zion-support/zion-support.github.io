@@ -1,16 +1,12 @@
-<<<<<<< HEAD:components/_app.tsx
+
 import type { AppProps } from 'next/app',;
 import '../styles/globals.css',;
 function MyApp({ Component, pageProps }: AppProps) {;
   return <Component {...pageProps} />;
-}
-;
-export default MyApp;
-=======
-import type { AppProps } from 'next/app',
-import '../styles/globals.css',
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />}
 
-export default MyApp,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/_app.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+export default MyApp;
+
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

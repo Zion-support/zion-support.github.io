@@ -1,5 +1,12 @@
-
 // Add basic type definitions for Node.js globals used in the project;
+
+declare let process: Process,
+declare let console: Console,
+declare let __dirname: string,
+;
+declare let process: Process,;
+declare let console: Console,;
+declare let __dirname: string,;
 interface Process {;
   env: {;
     [key: string]: string | undefined,;
@@ -11,8 +18,6 @@ interface Process {;
   }
 }
 
-<<<<<<< HEAD
-=======
 declare let process: Process,
 declare let console: Console,
 declare let __dirname: string,
@@ -20,4 +25,6 @@ declare let __dirname: string,
 declare let process: Process,;
 declare let console: Console,;
 declare let __dirname: string,;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

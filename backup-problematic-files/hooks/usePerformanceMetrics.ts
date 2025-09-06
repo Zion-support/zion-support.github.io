@@ -1,95 +1,48 @@
-<<<<<<< HEAD:hooks/usePerformanceMetrics.ts
-import { useEffect, useState } from "react";
-import { PerformanceMetrics } from "../types";
 
-export function usePerformanceMetrics() {;
-=======
-<<<<<<< HEAD:backup-problematic-files/hooks/usePerformanceMetrics.ts
-import { useEffect, useState } from 'react';
-import { PerformanceMetrics } from '../types';
-export function usePerformanceMetrics() {
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
+    if (typeof window === "undefined" |!("performance" in window)) {
       return;
     }
     setIsSupported(true);
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      const fcp = paintEntries.find(
-        entry => entry.name === 'first-contentful-paint'
-      );
-      const lcp = performance.getEntriesByType(
-        'largest-contentful-paint'
-      )[0] as PerformanceNavigationTiming;
-      const cls = performance
-        .getEntriesByType('layout-shift')
-        .reduce((acc, entry) => {
-          return acc + (entry as any).value;
-        }, 0);
-      const fid = performance.getEntriesByType(
-        'first-input'
-      )[0] as PerformanceEventTiming;
-=======
-import { useEffect, useState } from "react";
-import { PerformanceMetrics } from "../types";
-
-export function usePerformanceMetrics() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/usePerformanceMetrics.ts
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isSupported, setIsSupported] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined" || !("performance" in window)) {
-      return;
-    }
-
-    setIsSupported(true);
-
     const measurePerformance = () => {
       const navigationEntries =
         window.performance.getEntriesByType("navigation");
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType("paint");
-
       const fcp = paintEntries.find(
-        (entry) => entry.name === "first-contentful-paint",
+        (entry) => entry.name === "first-contentful-paint"
       );
       const lcpEntries = window.performance.getEntriesByType(
-        "largest-contentful-paint",
+        "largest-contentful-paint"
       );
       const lcp = lcpEntries[0] as PerformanceEntry;
-
       const clsEntries = window.performance.getEntriesByType("layout-shift");
       const cls = clsEntries.reduce((acc, entry) => {
         return acc + (entry as PerformanceEntry & { value: number }).value;
       }, 0);
-
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
 
->>>>>>> main:hooks/usePerformanceMetrics.ts
-      setMetrics({
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: cls,
-        firstInputDelay: fid ? fid.processingStart - fid.startTime : 0,
-      });
-    };
-<<<<<<< HEAD:backup-problematic-files/hooks/usePerformanceMetrics.ts
-    // Wait for all performance entries to be available
-    const timer = setTimeout(measurePerformance, 1000);
-    return () => clearTimeout(timer);
-  }, []);
-  return { metrics, isSupported };
-}
-<<<<<<< HEAD:hooks/usePerformanceMetrics.ts
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+:hooks/usePerformanceMetrics.ts
+
+main:hooks/usePerformanceMetrics.ts
+:backup-problematic-files/hooks/usePerformanceMetrics.ts
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+      setMetrics({
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart
+        firstContentfulPaint: fcp ? fcp.startTime : 0
+        largestContentfulPaint: lcp ? lcp.startTime : 0
+        cumulativeLayoutShift: cls
+        firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
+      });
+
+<<<<<<< HEAD
 import { useEffect, useState } from 'react',;
 import { PerformanceMetrics } from '../types',;
 export function usePerformanceMetrics() {;
@@ -98,40 +51,13 @@ export function usePerformanceMetrics() {;
   useEffect(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) {;
       return;
+
     }
-;
-    setIsSupported(true),;
-    const measurePerformance = () => {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
-      const paintEntries = performance.getEntriesByType('paint'),;
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint'),;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry,;
-      const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => {;
-        return acc + (entry as any).value;
-      }, 0),;
-      const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming,;
-      setMetrics({;
-        loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,;
-        firstContentfulPain: t: fcp ? fcp.startTim: e: 0,;
-        largestContentfulPain: t: lcp ? lcp.startTim: e: 0,;
-        cumulativeLayoutShif: t: cls,;
-        firstInputDela: y: fid ? fid.processingStart - fid.startTim: e: 0;
-      });
-    },;
-    // Wait for all performance entries to be available;
+    // Wait for all performance entries to be available
     const timer = setTimeout(measurePerformance, 1000);
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
-=======
 
-    // Wait for all performance entries to be available
-    const timer = setTimeout(measurePerformance, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  return { metrics, isSupported };
->>>>>>> main:hooks/usePerformanceMetrics.ts
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/usePerformanceMetrics.ts
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

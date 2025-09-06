@@ -1,9 +1,18 @@
+
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/ai-process-manager.cjs
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node;
 /**
  * AI-Powered Process Manager;
  * Intelligent process management with machine learning capabilities;
  */
 
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/ai-process-manager.cjs
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -30,4 +39,7 @@ const { execSync } = require('child_process')
         "message"
         "averageMemoryUsage"
         "averageCpuUsage"
+=======
+<<<<<<< HEAD:scripts/intelligent/ai-process-manager.cjs
     console.error(' AI Process Manager "failed")
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

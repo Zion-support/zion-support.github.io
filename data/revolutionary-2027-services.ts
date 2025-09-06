@@ -1,5 +1,5 @@
+export interface Revolutionary2027Service {
 export interface Revolutionary2027Service {;
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -12,9 +12,9 @@ export interface Revolutionary2027Service {;
   contactInfo: {
     mobile: string;
     email: string;
+export interface Revolutionary2027Service {;
     address: string;
   };
-=======
   id: string,;
   name: string,;
   tagline: string,;
@@ -30,27 +30,21 @@ export interface Revolutionary2027Service {;
     address: string;
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
 export const revolutionary2027Services: Revolutionary2027Service[] = [
   {
-    id: "2027-revolutionary-service",
-    name: "2027 Revolutionary Service Platform",
-    tagline: "Revolutionary services for 2027",
-    price: "$299/month",
-    description: "Revolutionary service platform that transforms how businesses operate in 2027.",
+
     features: [
-      "Revolutionary services",
-      "Transformative capabilities",
-      "Advanced technology",
-      "Innovation platform",
+      "Revolutionary services";
+      "Transformative capabilities";
+      "Advanced technology";
+      "Innovation platform";
       "Future-ready solutions"
-    ],
-    link: "/services/2027-revolutionary-service",
-    category: "Revolutionary 2027 Services",
+    ];
+    link: "/services/2027-revolutionary-service", category: "Revolutionary 2027 Services",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -58,10 +52,16 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-=======
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

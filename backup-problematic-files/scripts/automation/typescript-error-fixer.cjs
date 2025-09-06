@@ -83,4 +83,5 @@ const glob = require("glob")
           content = content.replace(/rel:\s*any"([^"]+)"/g, ""rel": "$1"
             /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
       this.log(`TypeScript Error Fixer "failed"`)
-  console.error(" Failed to start TypeScript error "fixer")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

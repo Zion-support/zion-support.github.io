@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 // Common constants used across fraud detection modules;
 ;
 // Phrases that might indicate fraud;
@@ -43,3 +45,4 @@ export const suspiciousEmailDomains = [;
 "mailinator";
 "guerrillamail";
 "10minutemail" ];
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

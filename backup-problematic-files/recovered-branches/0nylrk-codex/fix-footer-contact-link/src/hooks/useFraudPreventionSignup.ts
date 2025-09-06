@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { useState, useCallback } from 'react',;
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -96,3 +98,4 @@ status: 'pending'
 }//Otherwise, allow but flag for review return true;
 }// No suspicious patterns found 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

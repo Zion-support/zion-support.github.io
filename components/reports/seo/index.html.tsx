@@ -1,33 +1,21 @@
-import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-export default function Placeholder() {
-  return (
-    <main className='min-h-screen p-8'>
+
       <Head>
         <title>Reports • Seo • Index.html - Placeholder</title>
-        <meta name='robots' content='noindex' />
+        <meta name=&quot;robots&quot; content=&quot;noindex&quot; />
       </Head>
-      <div className='max-w-3xl mx-auto'>
-        <h1 className='text-2xl font-semibold mb-2'>
-          Reports • Seo • Index.html
-        </h1>
-        <p className='text-gray-600 mb-6'>
-          Auto-generated placeholder for missing route:{' '}
-          <code>/reports/seo/index.html</code>.
-        </p>
-        <Link href='/'>
-          <a className='text-blue-600 hover:underline'>Back to Home</a>
-        </Link>
+      <div className=&quot;max-w-3xl mx-auto&quot;>
+        <h1 className=&quot;text-2xl font-semibold mb-2&quot;>Reports • Seo • Index.html</h1>
+        <p className=&quot;text-gray-600 mb-6&quot;>Auto-generated placeholder for missing route: <code>/reports/seo/index.html</code>.</p>
+        <Link href=&quot;/&quot;><a className=&quot;text-blue-600 hover:underline&quot;>Back to Home</a></a>
       </div>
-    </main>;
-  );export default function Placeholder() {
-  return (
-=======
+
 
 export default function Placeholder() {
   return (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Index.html - Placeholder</title>
@@ -38,13 +26,14 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/index.html</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
-<<<<<<< HEAD
+    </main>
+  );
+}
     </main>;
   );
 }
 
 }
-=======
     </main>
   )
   } catch (error) {
@@ -53,4 +42,5 @@ export default function Placeholder() {
   }
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

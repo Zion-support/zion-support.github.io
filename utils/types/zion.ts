@@ -1,24 +1,15 @@
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface Branding {;
-<<<<<<< HEAD
-  logoUrl?: string;
-  primaryColor?: string;
-  secondaryColor?: string;
-  subdomain?: string;
-=======
-  logoUrl?: string,;
-  primaryColor?: string,;
-  secondaryColor?: string,;
-  subdomain?: string;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
+
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -30,14 +21,32 @@ export interface DeployModules {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
-<<<<<<< HEAD
   globalMap?: boolean;
   franchiseOnboarding?: boolean;
   referralAmbassadors?: boolean;
   grantPortal?: boolean;
   trailer?: boolean;
   bookStore?: boolean;
-=======
+}
+export interface DeployInput {instanceName: string;
+  defaultLanguage: string;
+  deploymentRegion: string;
+  tokenActivation: boolean;
+  governanceMode: GovernanceMode;
+  branding: Branding;
+  modules: DeployModules;
+  requestedRoutes?: string[];
+}
+export interface DeployLogEntry {timestamp: string;
+  level: "info" | "warn" | "error";
+  action: string;
+  details?: Record<string unknown> | string;
+}
+export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event";
+  path: string;
+  description?: string;
+}
+export interface DeployResult {success: boolean;
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -48,7 +57,7 @@ export interface DeployModules {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 export interface DeployInput {;
@@ -56,7 +65,6 @@ export interface DeployInput {;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
-<<<<<<< HEAD
   governanceMode: GovernanceMode;
   branding: Branding;
   modules: DeployModules;
@@ -74,7 +82,6 @@ export interface GeneratedAsset {;
   kind: "file" | "page" | "config" | "job" | "event";
   path: string;
   description?: string;
-=======
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -104,34 +111,94 @@ export interface GeneratedAsset {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export interface DeployResult {;
   success: boolean;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
   version: string;
-<<<<<<< HEAD
-=======
+}
+export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+  adminKeyConfigured: boolean;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-;
-export interface AccessControlConfig {;
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+export interface DeployModules {
+  marketplace: boolean,
+  gpt: boolean,
+  academy: boolean,
+  token: boolean,
+  dao: boolean,
+  nation_builder: boolean,
+  launch_kit: boolean,
+  book_builder: boolean,
+  roadmap_whitepaper: boolean,
+  apiDocsWiki: boolean,
+  zion_brain: boolean,
+  // Bonus;
+  global_map?: boolean,
+  franchise_onboarding?: boolean,
+  referral_ambassadors?: boolean,
+  grant_portal?: boolean,
+  trailer?: boolean,
+  book_store?: boolean;
+}
+export interface DeployInput {
+  instance_name: string,
+  default_language: string,
+  deployment_region: string,
+  token_activation: boolean,
+  governance_mode: GovernanceMode,
+  branding: Branding,
+  modules: DeployModules,
+  requested_routes?: string[];
+}
+export interface DeployLogEntry {
+  timestamp: string,
+  level: "info" | "warn" | "error",
+  action: string,
+  details?: Record < string unknown> | string;
+}
+export interface GeneratedAsset {
+  kind: "file" | "page" | "config" | "job" | "event",
+  path: string,
+  description?: string;
+}
+export interface DeployResult {
+  success: boolean,
+  instance_slug: string,
+  config_path: string,
+  assets: GeneratedAsset[],
+  logs: DeployLogEntry[],
+  summary: string,
+  version: string;
+}
+export interface AccessControlConfig {
+  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
 <<<<<<< HEAD
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

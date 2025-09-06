@@ -1,20 +1,37 @@
-<<<<<<< HEAD
-const { spawn } = require('child_process'),;
-=======
 const { spawn } = require('child_process');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-console.log('🚀 Starting development server...'),;
+console.log('🚀 Starting development server...');
 // Start the development server;
-const devProcess = spawn('npm', ['rundev'], {;
-  stdio: 'inherit',;
+const devProcess = spawn('npm', ['rundev'], {stdio: 'inherit';
   shell: true;
-}),;
-devProcess.on('error', (error) => {;
-  console.error('Error starting development server:', error);
-}),;
-devProcess.on('close', (code) => {;
-  console.log(`Development server exited with code ${code}`);
-}),;
+});
+devProcess.on('error', (error) => {console.error('Error starting development server:', error);
+});
+devProcess.on('close', (code) => {console.log(`Development server exited with code ${code}`);
+});
+// Handle process termination;
+process.on('SIGINT', () => {console.log('Stopping development server...');
+  devProcess.kill('SIGINT');
+  process.exit(0);
+});
+process.on('SIGTERM', () => {console.log('Stopping development server...');
+  devProcess.kill('SIGTERM');
+  process.exit(0);
+});
+const { spawn } = require('child_process'),;
+const { spawn } = require('child_process');
+console.log('🚀 Starting development server...'),;
+
+// Start the development server;
+const dev_process = spawn ('npm', ['rundev'], {
+  stdio: 'inherit',
+  shell: true;
+}),
+dev_process.on ('error', (error) => {
+  console.error ('Error starting development server:', error);
+}),
+dev_process.on ('close', (code) => {
+  console.log (`Development server exited with code ${code}`);
+}),
 // Handle process termination;
 process.on('SIGINT', () => {;
   console.log('Stopping development server...'),;
@@ -26,3 +43,7 @@ process.on('SIGTERM', () => {;
   devProcess.kill('SIGTERM'),;
   process.exit(0);
 }),;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

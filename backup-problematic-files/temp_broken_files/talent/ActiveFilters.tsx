@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/ActiveFilters.tsx
+=======
+import React from "react",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { Button } from "@/components/ui/button",;
+import { X } from "lucide-react",;
+=======
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/ActiveFilters.tsx
 ;
 interface ActiveFiltersProps {;
   selectedSkills:string[],;
@@ -51,14 +59,17 @@ export function ActiveFilters({;
         <ClickableBadge ;
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => toggleSkill(skill)}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/ActiveFilters.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/ActiveFilters.tsx
         >;
           {skill}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-      ;
-      {selectedAvailability.map(status => (;
-        <ClickableBadge ;
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/ActiveFilters.tsx
+
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
           onClick={() => toggleAvailability(status)}
@@ -69,36 +80,51 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/ActiveFilters.tsx
+
+=======
       ;
       {selectedRegions.map(region => (;
         <ClickableBadge ;
           key={region}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => toggleRegion(region)}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/ActiveFilters.tsx
         >;
           {region}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/ActiveFilters.tsx
+
+=======
       ;
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
         <ClickableBadge ;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/ActiveFilters.tsx
           onClick={() => setPriceRange([50, 200])}
         >;
           ${priceRange[0]}-${priceRange[1]}/hr;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/ActiveFilters.tsx
+
+=======
       ;
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
         <ClickableBadge ;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/ActiveFilters.tsx
           onClick={() => setExperienceRange([0, 15])}
         >;
           {experienceRange[0]}-{experienceRange[1]} years;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/ActiveFilters.tsx
+
+=======
       ;
       <Button ;
         variant="ghost" ;
@@ -144,9 +170,9 @@ if (!hasActiveFilters) return null;
   selectedRegions.map (region => (<ClickableBadge key= {;
   region ;
 }</ClickableBadge>) ;
-<<<<<<< HEAD:temp_broken_files/talent/ActiveFilters.tsx
+:temp_broken_files/talent/ActiveFilters.tsx
 }<Button ;"}'"
-=======
 }<Button ;
 }'"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ActiveFilters.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ActiveFilters.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/ActiveFilters.tsx

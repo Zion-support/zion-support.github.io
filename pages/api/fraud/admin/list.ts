@@ -1,12 +1,33 @@
-<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { getFraudStore } from '../../../../utils/fraud/store';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getFraudStore } from '../../../../utils/fraud/store',;
 function ensureAdmin(req: NextApiRequest): boolean {
-  const token = req.headers['x-admin-token'],
+  const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
   return token === process.env.ADMIN_TOKEN
-=======
+}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.status(405).json({ error: 'Method not allowed' })
+    return
+  }
+  if (!ensureAdmin(req)) {
+    res.status(401).json({ error: 'Unauthorized' })
+    return
+  }
+  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>
+  const store = getFraudStore()
+  const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
+    source: source as any
+    userId
+    status: status as any
+    label: label as any})
+
+  res.status(200).json({ items })
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -22,7 +43,7 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -58,6 +79,28 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method not allowed' }),
+    return;
+  }
+  if () {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' }),
+    return;
+  }
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
   } catch (error) {
     console.error("Error:", error);
@@ -86,16 +129,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
-
-  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
-  const store = getFraudStore(),
-  const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
-    source: source as any,
-    userId,
-    status: status as any,
-    label: label as any}),
-  res.status(200).json({ items });
-};
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

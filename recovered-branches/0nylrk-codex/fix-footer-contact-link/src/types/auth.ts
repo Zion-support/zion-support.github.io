@@ -1,5 +1,5 @@
+export interface UserDetails {
 export interface UserDetails {;
-<<<<<<< HEAD
   id?: string;
   name?: string;
   email?: string;
@@ -9,48 +9,53 @@ export interface UserDetails {;
   headline?: string;
   profileComplete?: boolean;
   role?: string;
-  permissions?: string[];
+  permissions?: string[],
   companyId?: string;
   bio?: string;
   createdAt?: string;
   updatedAt?: string
 }
+<<<<<<< HEAD
+export interface UserProfile {
 
 export interface UserProfile {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id?: string;
-  displayName?: string;
+  display_name?: string;
   email: string;
-  userType: string;
-  profileComplete: boolean;
-  createdAt: string;
-  updatedAt: string;
+  user_type: string;
+  profile_complete: boolean;
+  created_at: string;
+  updated_at: string;
   avatar_url?: string;
   bio?: string;
-  avatarUrl?: string;
+  avatar_url?: string;
   headline?: string;
   role?: string;
-  permissions?: string[],
-  companyId?: string
-}
 
+  permissions?: string[],
+  company_id?: string;
+}
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {;
   user: UserDetails | null;
   isLoading: boolean;
-  isAuthenticated: boolean,
+
+  isAuthenticated: boolean
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
   signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
-  logout: () => Promise<void>,
+  logout: () => Promise<void>
   resetPassword: (email: string) => Promise<{ error?: any }>;
   updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
   loginWithGoogle: () => Promise<void>;
   loginWithFacebook: () => Promise<void>;
   loginWithTwitter: () => Promise<void>;
-  loginWithWeb3: () => Promise<void>,
+  loginWithWeb3: () => Promise<void>
   signIn?: (email: string, password: string) => Promise<{ error: any }>;
   signOut?: () => Promise<void>;
+
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
-=======
+
   id?: string,;
   name?: string,;
   email?: string,;
@@ -101,5 +106,12 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+;
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

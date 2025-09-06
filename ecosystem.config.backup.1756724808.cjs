@@ -1,3 +1,4 @@
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = {}
   "apps": [// PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY);]
     {}
@@ -355,3 +356,10 @@ module.exports = {}
     };
   };
 };
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+};
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -5,21 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ChevronRight, Home, Star, Users, 
   HelpCircle, Mail, Phone, MapPin,
-<<<<<<< HEAD
   Brain, Atom, Rocket, DollarSign,
   Zap,
   TrendingUp, Award, CheckCircle, Clock,
   Search, X as CloseIcon,
   Target, BookOpen, Calendar, Video, FileText, Grid
-=======
-  Brain, Atom, Shield, Rocket, DollarSign,
-  Zap, Settings, Globe, Heart, Eye, Lock, Cloud,
-  BarChart3, Network, Database, Code, Award, Cpu,
-  TrendingUp, CheckCircle, Clock, Grid, Sparkles,
-  Search, X as CloseIcon,
-  Target, BookOpen, Calendar, Video, FileText,
-  Truck, ShoppingCart, BookOpenCheck, Building, MessageCircle, User
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 } from 'lucide-react';
 
 const contactInfo = {
@@ -31,40 +21,9 @@ const contactInfo = {
 
 const sidebarSections = [
   {
-<<<<<<< HEAD
     title: 'AI & Machine Learning',
-=======
-    title: 'Main Navigation',
-    icon: <Home className="w-5 h-5" />,
-    items: [
-      { name: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
-      { name: 'About Us', href: '/about', icon: <Building className="w-4 h-4" /> },
-      { name: 'Contact', href: '/contact', icon: <MessageCircle className="w-4 h-4" /> },
-      { name: 'Services', href: '/services', icon: <Rocket className="w-4 h-4" /> },
-      { name: 'Solutions', href: '/solutions', icon: <Target className="w-4 h-4" /> },
-      { name: 'Resources', href: '/resources', icon: <BookOpen className="w-4 h-4" /> }
-    ]
-  },
-  {
-    title: 'Core Services',
-    icon: <Star className="w-5 h-5" />,
-    items: [
-      { name: 'AI & Machine Learning', href: '/ai-services', icon: <Brain className="w-4 h-4" /> },
-      { name: 'Quantum Computing', href: '/quantum-services', icon: <Atom className="w-4 h-4" /> },
-      { name: 'Space Technology', href: '/space-technology', icon: <Rocket className="w-4 h-4" /> },
-      { name: 'Enterprise IT', href: '/it-services', icon: <Cpu className="w-4 h-4" /> },
-      { name: 'Micro SAAS', href: '/micro-saas', icon: <Zap className="w-4 h-4" /> },
-      { name: 'Cybersecurity', href: '/security', icon: <Shield className="w-4 h-4" /> },
-      { name: 'Cloud Platform', href: '/cloud-platform', icon: <Cloud className="w-4 h-4" /> },
-      { name: 'Automation', href: '/automation', icon: <Settings className="w-4 h-4" /> }
-    ]
-  },
-  {
-    title: 'AI & Consciousness',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
     icon: <Brain className="w-5 h-5" />,
     items: [
-<<<<<<< HEAD
       { name: 'AI Services Overview', href: '/ai-services', badge: 'Main' },
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', badge: 'New' },
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', badge: 'New' },
@@ -75,22 +34,11 @@ const sidebarSections = [
       { name: 'AI Healthcare Diagnostics', href: '/healthcare-solutions' },
       { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }
-=======
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', icon: <Brain className="w-4 h-4" /> },
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', icon: <Heart className="w-4 h-4" /> },
-      { name: 'AI Autonomous Operations', href: '/ai-autonomous-business-operations-platform', icon: <Settings className="w-4 h-4" /> },
-      { name: 'AI Research Assistant', href: '/ai-autonomous-research-assistant', icon: <BookOpen className="w-4 h-4" /> },
-      { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform', icon: <Eye className="w-4 h-4" /> },
-      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine', icon: <FileText className="w-4 h-4" /> },
-      { name: 'AI Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager', icon: <Globe className="w-4 h-4" /> },
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework', icon: <Shield className="w-4 h-4" /> }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
     ]
   },
   {
     title: 'Quantum & Emerging Tech',
     icon: <Atom className="w-5 h-5" />,
-<<<<<<< HEAD
     color: 'from-blue-500 to-cyan-500',
     items: [
       { name: 'Quantum Services Overview', href: '/quantum-services', badge: 'Main' },
@@ -119,24 +67,8 @@ const sidebarSections = [
   },
   {
     title: 'Enterprise IT',
-=======
-    items: [
-      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform', icon: <Brain className="w-4 h-4" /> },
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', icon: <BarChart3 className="w-4 h-4" /> },
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', icon: <Atom className="w-4 h-4" /> },
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform', icon: <Heart className="w-4 h-4" /> },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform', icon: <Lock className="w-4 h-4" /> },
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform', icon: <Cloud className="w-4 h-4" /> },
-      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', icon: <Rocket className="w-4 h-4" /> },
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', icon: <Brain className="w-4 h-4" /> }
-    ]
-  },
-  {
-    title: 'Enterprise Solutions',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
     icon: <Shield className="w-5 h-5" />,
     items: [
-<<<<<<< HEAD
       { name: 'IT Services Overview', href: '/it-services', badge: 'Main' },
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', badge: 'New' },
       { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', badge: 'New' },
@@ -216,70 +148,6 @@ const sidebarSections = [
       { name: 'Whitepapers', href: '/whitepapers' },
       { name: 'Webinars', href: '/webinars' },
       { name: 'Support', href: '/support' }
-=======
-      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', icon: <Settings className="w-4 h-4" /> },
-      { name: 'Edge Computing Platform', href: '/edge-computing-orchestration-platform', icon: <Network className="w-4 h-4" /> },
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', icon: <Database className="w-4 h-4" /> },
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', icon: <Code className="w-4 h-4" /> },
-      { name: 'Zero Trust Security', href: '/zero-trust-security-platform', icon: <Lock className="w-4 h-4" /> },
-      { name: 'AI Cybersecurity', href: '/ai-powered-cybersecurity', icon: <Shield className="w-4 h-4" /> },
-      { name: 'SOC 2 Compliance', href: '/soc2-compliance-automation', icon: <Award className="w-4 h-4" /> }
-    ]
-  },
-  {
-    title: 'Business Solutions',
-    icon: <Rocket className="w-5 h-5" />,
-    items: [
-      { name: 'AI Content Generator', href: '/ai-content-generator', icon: <FileText className="w-4 h-4" /> },
-      { name: 'AI Code Review', href: '/ai-code-review', icon: <Code className="w-4 h-4" /> },
-      { name: 'AI HR Analytics', href: '/intelligent-hr-analytics-platform', icon: <Users className="w-4 h-4" /> },
-      { name: 'AI Financial Planning', href: '/ai-financial-planning-platform', icon: <BarChart3 className="w-4 h-4" /> },
-      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', icon: <Truck className="w-4 h-4" /> },
-      { name: 'Content Automation', href: '/intelligent-content-automation-platform', icon: <FileText className="w-4 h-4" /> },
-      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', icon: <TrendingUp className="w-4 h-4" /> },
-      { name: 'AI Customer Success', href: '/ai-customer-success-platform', icon: <Users className="w-4 h-4" /> }
-    ]
-  },
-  {
-    title: 'Industry Solutions',
-    icon: <Target className="w-5 h-5" />,
-    items: [
-      { name: 'Healthcare AI', href: '/healthcare-ai-solutions', icon: <Heart className="w-4 h-4" /> },
-      { name: 'Financial Technology', href: '/financial-solutions', icon: <BarChart3 className="w-4 h-4" /> },
-      { name: 'Government Tech', href: '/government-technology-solutions', icon: <Building className="w-4 h-4" /> },
-      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions', icon: <Settings className="w-4 h-4" /> },
-      { name: 'Retail Technology', href: '/retail-technology-solutions', icon: <ShoppingCart className="w-4 h-4" /> },
-      { name: 'Education Technology', href: '/education-technology-solutions', icon: <BookOpen className="w-4 h-4" /> },
-      { name: 'Energy & Utilities', href: '/energy-utilities-solutions', icon: <Zap className="w-4 h-4" /> },
-      { name: 'Space Technology', href: '/space-technology', icon: <Rocket className="w-4 h-4" /> }
-    ]
-  },
-  {
-    title: 'Showcase & Pricing',
-    icon: <Star className="w-5 h-5" />,
-    items: [
-      { name: 'Services Showcase 2025', href: '/comprehensive-services-showcase-2025', icon: <Grid className="w-4 h-4" /> },
-      { name: 'Pricing Plans', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
-      { name: 'Market Pricing', href: '/market-pricing', icon: <BarChart3 className="w-4 h-4" /> },
-      { name: '2026 Services', href: '/revolutionary-2026-services', icon: <TrendingUp className="w-4 h-4" /> },
-      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', icon: <Sparkles className="w-4 h-4" /> },
-      { name: 'Ultimate Showcase', href: '/ultimate-2026-services-showcase', icon: <Star className="w-4 h-4" /> }
-    ]
-  },
-  {
-    title: 'Company & Resources',
-    icon: <Building className="w-5 h-5" />,
-    items: [
-      { name: 'Partners', href: '/partners', icon: <Users className="w-4 h-4" /> },
-      { name: 'Investors', href: '/investors', icon: <DollarSign className="w-4 h-4" /> },
-      { name: 'Careers', href: '/careers', icon: <User className="w-4 h-4" /> },
-      { name: 'News', href: '/news', icon: <FileText className="w-4 h-4" /> },
-      { name: 'Blog', href: '/blog', icon: <BookOpen className="w-4 h-4" /> },
-      { name: 'Case Studies', href: '/case-studies', icon: <Award className="w-4 h-4" /> },
-      { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-      { name: 'Training', href: '/training', icon: <BookOpenCheck className="w-4 h-4" /> }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
     ]
   }
 ];
@@ -507,18 +375,13 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                       className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
                     >
                       <div className="flex items-center space-x-3">
-<<<<<<< HEAD
                         <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center`}>
-=======
-                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
                           {section.icon}
                         </div>
                         <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
                           {section.title}
                         </span>
                       </div>
-<<<<<<< HEAD
                       <div>
                         <span className="font-medium">{section.title}</span>
                         {section.badge && (
@@ -573,42 +436,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   </AnimatePresence>
                 </div>
               ))}
-=======
-                      <ChevronRight 
-                        className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          expandedCategory === section.title ? 'rotate-90' : ''
-                        }`} 
-                      />
-                    </button>
-                    
-                    <AnimatePresence>
-                      {expandedCategory === section.title && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className="ml-8 mt-2 space-y-1"
-                        >
-                          {section.items.map((item) => (
-                            <Link
-                              key={item.name}
-                              href={item.href.endsWith('/') ? item.href : `${item.href}/`}
-                              onClick={onClose}
-                              className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"
-                            >
-                              <span className="text-sm text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
-                                {item.name}
-                              </span>
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
-              </div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
             </div>
 
             {/* Company Links */}

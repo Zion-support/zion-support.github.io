@@ -1624,9 +1624,12 @@ export default function News() {;
     </>;
   );
 }
-<<<<<<< HEAD:temp_conflicts/pages/news.tsx
+
+<<<<<<< HEAD
+=======
+:temp_conflicts/pages/news.tsx
 ;
 }
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/news.tsx
+:backup-problematic-files/temp_conflicts/pages/news.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

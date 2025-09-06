@@ -1,17 +1,43 @@
 
-<<<<<<< HEAD
+=======
+
+
+import React, { useState, useEffect, useRef } from "react",
+import { Search, X } from "lucide-react",
+import { Input } from "@/components/ui/input",
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
 import {SearchSuggestion} from "@/types/search";
-=======
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
+interface EnhancedSearchInputProps {
+
+  value: string
+  onChange: (value: string) => void
+
+  placeholder?: string;
+  searchSuggestions: SearchSuggestion[];
+}
+
+
+export function EnhancedSearchInput(): any ({ ;
+  value;
+  onChange, ;
+  placeholder = "Search...", ;
+  searchSuggestions ;
+}: EnhancedSearchInputProps) {;
+
+  const [isFocused, setIsFocused] = useState(false);
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -19,51 +45,16 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
-<<<<<<< HEAD
-export function EnhancedSearchInput({ ;
-  value;
-=======
-export function EnhancedSearchInput({ 
-  value,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  onChange, 
-  placeholder = "Search...", 
-  searchSuggestions 
+  onChange,
+  placeholder = "Search...",
+  searchSuggestions
 }: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false),
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
   const inputRef = useRef<HTMLInputElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
 
-  // Filter suggestions based on input value
-  useEffect(() => {
-    if (!value) {
-      // Show recent searches when input is empty
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
-      return
-<<<<<<< HEAD
-    }
-    
-    const filtered = searchSuggestions.filter(suggestion => 
-      suggestion.text.toLowerCase().includes(value.toLowerCase())
-    );
-    
-    // Sort suggestions to prioritize those that start with the search term
-    filtered.sort((a, b) => {
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      return aStartsWith - bStartsWith
-    });
-    
-    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions
-  }, [value, searchSuggestions]);
-
-  // Handle clicks outside the component to close suggestions
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setIsFocused(false)
-=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -110,10 +101,15 @@ export function EnhancedSearchInput({;
     function handleClickOutside(event: MouseEvent) {;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     }
-    
+
     document.addEventListener("mousedown", handleClickOutside),
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, []),
@@ -123,18 +119,19 @@ export function EnhancedSearchInput({;
     setIsFocused(false),
     inputRef.current?.blur()
   },
-  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">
-        <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+        <Search
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
         <Input
           ref={inputRef}
           type="text"
-<<<<<<< HEAD
-=======
+
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -153,29 +150,36 @@ export function EnhancedSearchInput({;
         <Input;
           ref={inputRef}
           type="text";
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           value={value}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-        />
-        {value && (
-          <button 
+
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
+        />;
+        {value && (;
+
+          <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
-          >
-            <X className="h-4 w-4" />
-          </button>
+          >;
+            <X className="h-4 w-4" />;
+          </button>;
         )}
-      </div>
+
+      </div>;
+
+
       <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-      />
-    </div>
-  )
+
+      />;
+    </div>;
+  );
 }
-;
+

@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -236,3 +238,4 @@ conversationId = newConversation.id
 }
 };
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

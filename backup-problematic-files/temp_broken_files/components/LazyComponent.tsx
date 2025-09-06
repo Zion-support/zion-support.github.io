@@ -1,38 +1,31 @@
-import React, { Suspense, lazy } from 'react',;
-interface LazyComponentProps {;
-  component: () => Promise<{ default: React.ComponentType<any> }>,;
-  fallback?: React.ReactNode,;
+import React, { Suspense, lazy } from 'react';
+interface LazyComponentProps {component: () => Promise<{ default: React.ComponentType<any> }>;
+  fallback?: React.ReactNode;
   [key: string]: any;
 }
 <<<<<<< HEAD:components/LazyComponent.tsx
-;
-const LazyComponent: React.FC<LazyComponentProps> = ({;
-  component,;
-  fallback = <div>Loading...</div>,;
+const LazyComponent: React.FC<LazyComponentProps> = ({component;
+  fallback = <div>Loading...</div>;
   ...props;
-}) => {;
-  const LazyLoadedComponent = lazy(component),;
+}) => {const LazyLoadedComponent = lazy(component);
   return (;
     <Suspense fallback={fallback}>;
       <LazyLoadedComponent {...props} />;
     </Suspense>;
   );
-},;
+}
 export default LazyComponent;
-=======
-
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  component, 
-  fallback = <div>Loading...</div>, 
-  ...props 
-}) => {
-  const LazyLoadedComponent = lazy(component),  
-  return (
-    <Suspense fallback={fallback}>
-      <LazyLoadedComponent {_...props} />
-    </Suspense>
-  )
-},
-
-export default LazyComponent,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
+;
+const LazyComponent: React.FC<LazyComponentProps> = ({;
+  component,;
+  fallback = <div>Loading...</div>,;
+  ...props;
+}) => {const LazyLoadedComponent = lazy(component);
+  return (;
+    <Suspense fallback={fallback}>;
+      <LazyLoadedComponent {...props} />;
+    </Suspense>;
+  );
+}
+export default LazyComponent;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -7,10 +7,9 @@ export default function GovernancePrivacy() {
       </p>
       <a href=&quot;/dao/zkvote&quot; className=&quot;inline-block px-4 py-2 rounded bg-black text-white&quot;>Open ZK Vote</a>
     </div>
-<<<<<<< HEAD:components/governance/privacy.tsx
-  )
-}
-;
 =======
+
   )}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/governance/privacy.tsx
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

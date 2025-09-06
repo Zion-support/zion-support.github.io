@@ -1,11 +1,4 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Sparkles, RefreshCcw } from "lucide-react";
-<<<<<<< HEAD
-export interface EmptyMatchesCardProps {;
-  onRefresh: () => void;
-  isProcessing: boolean;
-=======
+
 
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -14,38 +7,30 @@ import { Sparkles, RefreshCcw } from "lucide-react",
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
   isProcessing: boolean
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+}
+export function EmptyMatchesCard({
+  onRefresh
+  isProcessing
+}: EmptyMatchesCardProps) {
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Sparkles, RefreshCcw } from "lucide-react";
+export interface EmptyMatchesCardProps {;
+  onRefresh: () => void;
+  isProcessing: boolean;
+
+import { Card } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Sparkles, RefreshCcw } from "lucide-react",
+
+export interface EmptyMatchesCardProps {
+  onRefresh: () => void,
+  isProcessing: boolean
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
-  return (
-    <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
-      <div className="mb-4 flex justify-center">
-        <Sparkles className="h-12 w-12 text-muted-foreground" />
-      </div>
-      <h3 className="text-lg font-medium mb-2">No talent matches yet</h3>
-      <p className="text-muted-foreground mb-6">
-        Run AI matching to find talents that match this job's requirements.
-      </p>
-      <Button 
-        onClick={onRefresh} 
-        disabled={isProcessing}
-        className="mx-auto"
-      >
-        {isProcessing ? (
-          <>
-            <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
-            Processing...
-          </>
-        ) : (
-          <>
-            <Sparkles className="mr-2 h-4 w-4" />
-            Find AI Matches
-          </>
-<<<<<<< HEAD
-        )}
-      </Button>
-=======
+
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Sparkles, RefreshCcw } from "lucide-react",;
@@ -56,6 +41,8 @@ export interface EmptyMatchesCardProps {;
 ;
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {;
   return (;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
@@ -64,11 +51,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
       <p className="text-muted-foreground mb-6">;
         Run AI matching to find talents that match this job's requirements.;
       </p>;
-      <Button;
-        onClick={onRefresh} ;
-        disabled={isProcessing}
-        className="mx-auto";
-      >;
+      <Button onClick={onRefresh} disabled={isProcessing} className="mx-auto">;
         {isProcessing ? (;
           <>;
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />;
@@ -81,7 +64,44 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
           </>;
         )}
       </Button>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </Card>;
   );
+
+import { Card  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Sparkles, RefreshCcw  } from './lucide-react';
+export interface EmptyMatchesCardProps {
+  on_refresh: () => void;
+  is_processing: boolean;
 }
+export /**
+ * EmptyMatchesCard - Function description
+ */
+function EmptyMatchesCard() {
+  return (
+    <Card className="p - 6 text - center border - dashed border - 2 bg - muted / 30">;
+      <div className="mb - 4 flex justify - center">;
+        <Sparkles className="h - 12 w - 12 text - muted - foreground" />;
+      </div>;
+      <h3 className="text - lg font - medium mb - 2">No talent matches yet</h3>;
+      <p className="text - muted - foreground mb - 6">;
+        Run AI matching to find talents that match this job's requirements.;
+      </p>;
+      <Button on_click={on_refresh} disabled={is_processing} className="mx - auto">;
+        {is_processing ? (
+          <>;
+            <RefreshCcw className="mr - 2 h - 4 w - 4 animate - spin" />;
+            Processing...;
+          </>) : (
+          <>;
+            <Sparkles className="mr - 2 h - 4 w - 4" />;
+            Find AI Matches;
+          </>)}
+      </Button>;
+    </Card>);
+
+}
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm:resend@1.0.0",;
@@ -181,3 +183,4 @@ if (notificationError) {
   console.error ("Failed to create notification:", notificationError) 
 }
 });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

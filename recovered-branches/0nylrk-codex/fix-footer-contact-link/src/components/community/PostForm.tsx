@@ -1,5 +1,6 @@
 
-<<<<<<< HEAD
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -9,37 +10,46 @@ import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
 =======
-import { useState } from "react",
-import { useForm } from "react-hook-form",
+
 import { 
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  Card;
+  CardContent;
+  CardFooter;
+  CardHeader;
   CardTitle
 } from "@/components/ui/card",
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
   FormMessage
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+interface PostFormValues {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
-<<<<<<< HEAD
-}
+=======
 
+  title: string
+  content: string
+  categoryId: ForumCategory
+
+  tags: string
+}
 interface PostFormProps {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -49,6 +59,8 @@ export const PostForm = ({;
   initialValues;
   onSubmit;
 =======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -82,126 +94,165 @@ interface PostFormProps {;
   onSubmit: (values: PostFormValues) => void,;
   isEditing?: boolean;
 }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+  initialValues?: Partial<PostFormValues>;
+  onSubmit: (values: PostFormValues) => void
+  isEditing?: boolean
+}
 export const PostForm = ({
   initialValues,
   onSubmit,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  isEditing = false
-}: PostFormProps) => {
-  const form = useForm<PostFormValues>({
-    defaultValues: {
-      title: initialValues?.title || "",
-      content: initialValues?.content || "",
-      categoryId: initialValues?.categoryId || "project-help",
-      tags: initialValues?.tags || ""
-    }
-<<<<<<< HEAD
-  });
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (values: PostFormValues) => {
-    setIsSubmitting(true),
+import { useState } from './react';
+import { use_form } from './react - hook - form';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+import { Button } from '@/components / ui / button';
+import { Textarea } from '@/components / ui / textarea';
+import { ForumCategory } from '@/types / community';
+interface PostFormValues {
+  title: string,
+  content: string,
+  category_id: ForumCategory,
+  tags: string;
+}
+interface PostFormProps {
+  initial_values?: Partial < PostFormValues>;
+  on_submit: (values: PostFormValues) => void,
+  is_editing?: boolean;
+}
+export const PostForm = ({
+  initial_values;
+  on_submit;
+  is_editing = false;
+}: PostFormProps) =>: any {
+  const form = use_form < PostFormValues>({
+    default_values: {
+      title: initial_values?.title || "",
+      content: initial_values?.content || "",
+      category_id: initial_values?.category_id || "project - help",
+      tags: initial_values?.tags || "";
+    }
+  });
+;
+  const [is_submitting, setIsSubmitting] = useState (false);
+;
+  const handle_submit = async (values: PostFormValues) => {
+    setIsSubmitting (true),
+
     try {
-      await onSubmit(values)
+      await on_submit (values);
     } finally {
       setIsSubmitting(false)
     }
-  };
-=======
+
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
+
     }
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <Form {...form}>
-          <form className="space-y-6" onSubmit={form.handleSubmit(handleSubmit)}>
+    <Card>;
+      <CardHeader>;
+        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>;
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="title"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Title</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Enter post title..." {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Title</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder="Enter post title..." {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+
+            />;
+
+
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="content"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Content</FormLabel>
-                  <FormControl>
-                    <Textarea 
+
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Content</FormLabel>;
+                  <FormControl>;
+                    <Textarea
                       placeholder="Write your post content here..." 
                       className="min-h-[200px]"
                       {...field} 
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
               )}
-            />
-            
+            />;
+
+
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="categoryId"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Category</FormLabel>
-                  <FormControl>
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Category</FormLabel>;
+                  <FormControl>;
                     <select
                       className="w-full p-2 border rounded-md"
-                      {...field}
-                    >
-                      <option value="getting-hired">Getting Hired</option>
-                      <option value="project-help">Project Help</option>
-                      <option value="ai-tools">AI Tools Discussion</option>
-                      <option value="feedback">Feedback & Feature Requests</option>
-                    </select>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+                      {...field}>;
+                      <option value="getting-hired">Getting Hired</option>;
+                      <option value="project-help">Project Help</option>;
+                      <option value="ai-tools">AI Tools Discussion</option>;
+                      <option value="feedback">Feedback & Feature Requests</option>;
+                    </select>;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
               )}
-            />
-            
+
+            />;
+
+
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="tags"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Tags (comma-separated)</FormLabel>
-                  <FormControl>
-                    <Input 
-                      placeholder="e.g. resume, hiring, flutter" 
+
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Tags (comma-separated)</FormLabel>;
+                  <FormControl>;
+                    <Input
+                      placeholder="e && e.g. resume, hiring, flutter" 
                       {...field} 
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
               )}
-            />
-            
-            <Button type="submit" disabled={isSubmitting}>
+            />;
+
+            <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
             </Button>
           </form>
@@ -209,10 +260,6 @@ export const PostForm = ({
       </CardContent>
     </Card>
   )
-},
-
-<<<<<<< HEAD
-export default PostForm;
-=======
-export default PostForm,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

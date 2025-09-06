@@ -1,55 +1,11 @@
 
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Link} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-import {BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {SuggestedJobs} from "@/components/jobs/SuggestedJobs";
-import {useAuth} from "@/hooks/useAuth";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {TalentOnboardingSteps} from "@/components/onboarding/TalentOnboardingSteps";
-import {MyApplications} from "@/components/jobs/MyApplications";
-import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner";
-import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
-function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("job-matches");
 =======
-import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Link } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from "lucide-react",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",
-import { useAuth } from "@/hooks/useAuth",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
-import { MyApplications } from "@/components/jobs/MyApplications",
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-function TalentDashboardContent() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("job-matches"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
-      <SEO 
-        title="Talent Dashboard | Zion AI Marketplace" 
-        description="Your personalized talent dashboard with job matches and professional opportunities." 
+      <SEO
+        title="Talent Dashboard | Zion AI Marketplace"
+        description="Your personalized talent dashboard with job matches and professional opportunities."
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
@@ -82,16 +38,16 @@ function TalentDashboardContent() {
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
-                        <img src={user.avatarUrl} alt={user.displayName || "User"} />
+                        <img src={user.avatarUrl} alt={user.displayName |"User"} />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
-                          {user?.displayName?.charAt(0) || "U"}
+                          {user?.displayName?.charAt(0) |"U"}
                         </div>
                       )}
                     </Avatar>
                     <div>
-                      <CardTitle>{user?.displayName || "User"}</CardTitle>
-                      <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
+                      <CardTitle>{user?.displayName |"User"}</CardTitle>
+                      <CardDescription>{user?.headline |"AI Professional"}</CardDescription>
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
@@ -121,8 +77,6 @@ function TalentDashboardContent() {
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-=======
             
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -221,7 +175,7 @@ function TalentDashboardContent() {;
                 </div>;
               </CardContent>;
             </Card>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {/* Upcoming Interviews Card */}
@@ -297,12 +251,17 @@ function TalentDashboardContent() {;
     </>
   )
 }
-
-export default function TalentDashboard() {
-  return (
-    <ProtectedRoute>
-      <TalentDashboardContent />
-    </ProtectedRoute>
-  )
-}
 ;
+
+export default function TalentDashboard() {;
+  return (
+    <ProtectedRoute>;
+      <TalentDashboardContent />;
+    </ProtectedRoute>;
+  );
+}
+
+;
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

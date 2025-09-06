@@ -1,14 +1,21 @@
-<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
-export default function LearnMarketplace() {
+
   const [filters, setFilters] = useState({
+    category: ''
+    level: ''
+    isFree: ''
+  });  const [courses, setCourses] = useState<Course[]>([]);
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    async function load() {
     category: '',
     level: '',
     isFree: '',;
   });  const [courses, setCourses] = useState<Course[]>([]);
-=======
 import { useEffect, useState } from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
@@ -16,33 +23,58 @@ export default function LearnMarketplace(req, res) {
   try {
   const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
   const [courses, setCourses] = useState<Course[]>([]);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {;
     async function load() {;
       setLoading(true);
+
+      const params = new URLSearchParams();
+
+
+      setLoading(false);
+    }
+    load ();
+  }, [filters]);
+;
+  return (
+
+      setCourses(data.courses || []);
+      setLoading(false)
+    }
+    load()
+  }, [filters]);
+import CourseCard, { Course } from '../../components/learn/CourseCard';
+import FilterBar from '../../components/learn/FilterBar';
+export default function LearnMarketplace() {
+
+  const [filters, setFilters] = useState({
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    async function load() {;
+
+      setLoading(true);
+
       const params = new URLSearchParams();
       if (filters.category) params.set('category', filters.category);
       if (filters.level) params.set('level', filters.level);
       if (filters.isFree) params.set('isFree', filters.isFree);
       const resp = await fetch(`/api/learn/courses?${params.toString()}`);
       const data = await resp.json();
-      setCourses(data.courses || []);
+      setCourses(data.courses |[]);
       setLoading(false);
-<<<<<<< HEAD
-    }
-    load();
-  }, [filters]);
 
-=======
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    load()
-  }, [filters]),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between gap-4">
@@ -50,12 +82,12 @@ export default function LearnMarketplace(req, res) {
           <h1 className="text-2xl font-semibold">Zion Academy</h1>
           <div className="text-gray-500 text-sm">Courses • Certifications • Career Boost</div>
         </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
       <FilterBar {...filters} onChange={setFilters} />
       {loading ? (
         <div>Loading...</div>
       ) : (
-<<<<<<< HEAD
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           {courses.map(c => (            <CourseCard key={c.id} course={c} />
           ))}
@@ -65,26 +97,19 @@ export default function LearnMarketplace(req, res) {
 );
 
 }
-=======
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+          ))}
         </div>;
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+      )}
+
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

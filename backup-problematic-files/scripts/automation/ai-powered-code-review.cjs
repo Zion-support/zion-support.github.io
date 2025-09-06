@@ -249,4 +249,5 @@ this.logError("Code review failed")
         .split("\n")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
-  const content = fs.readFileSync(filePath, ")
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

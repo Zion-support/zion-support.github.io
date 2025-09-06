@@ -1,8 +1,28 @@
-<<<<<<< HEAD
-// Search parser utilities
-export const parseSearchQuery = (query: string) => {
-  // Add search query parsing functionality here
-  return {
+
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null;
+
+}
+  }
+
+  const words = query && query.toLowerCase().split(/\s+/);
+  const keywords: string[] = [];
+  const skills: string[] = [];
+  
+  // Simple keyword extraction
+  for (const word of words) {
+    if (word && word.length > 2) {
+      keywords && keywords.push(word);
+    }
+  }
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     keywords: [],
     skills: [],
     location: null,
@@ -17,14 +37,21 @@ export const searchAll = (parsed: any, access: any) => {
     talent: [],
     jobs: [],
     projects: [];
+
   };
 };
 
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
   return null;
-};
-=======
 
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+};
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

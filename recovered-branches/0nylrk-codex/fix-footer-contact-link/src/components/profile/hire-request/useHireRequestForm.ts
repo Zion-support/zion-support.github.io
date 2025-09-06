@@ -1,44 +1,37 @@
 
-<<<<<<< HEAD
+=======
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {useHireRequest} from "@/hooks/useHireRequest";
 import {TalentProfile} from "@/types/talent";
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
+import { useHireRequest } from "@/hooks/useHireRequest";
+import { TalentProfile } from "@/types/talent";
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
-    name?: string,
-    email?: string,
-    id?: string
-<<<<<<< HEAD
-  }
-}
 
-export interface FormValues {;
   requesterName: string;
   requesterEmail: string;
   projectOverview: string;
   timeline: string;
-  budgetMin: number,
-  budgetMax: number
-}
 
-export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { submitHireRequest } = useHireRequest();
-=======
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -64,65 +57,86 @@ export interface FormValues {;
   budgetMin: number,;
   budgetMax: number;
 }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+  budgetMin: number
+
+  budgetMax: number
+}
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const { submitHireRequest } = useHireRequest(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Define the form schema with validation rules
+
   const formSchema = z.object({
+  // Define the form schema with validation rules
+
+  const formSchema = z.object({
+    requesterName: z.string().min(2, "Name is required");
+    requesterEmail: z.string().email("Valid email is required")
+    projectOverview: z.string().min(10, "Please provide more details about your project");
+    timeline: z.string().min(5, "Please specify your timeline");
+    budgetMin: z.number().min(1, "Budget minimum is required");
     requesterName: z.string().min(2, "Name is required"),
     requesterEmail: z.string().email("Valid email is required"),
     projectOverview: z.string().min(10, "Please provide more details about your project"),
     timeline: z.string().min(5, "Please specify your timeline"),
     budgetMin: z.number().min(1, "Budget minimum is required"),
-    budgetMax: z.number().min(1, "Budget maximum is required")
-  }).refine(data => data.budgetMax >= data.budgetMin, {
-    message: "Maximum budget must be greater than or equal to minimum budget",
-    path: ["budgetMax"]
-  }),
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   // Initialize the form
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema);
     defaultValues: {
-      requesterName: userDetails?.name || "",
-      requesterEmail: userDetails?.email || "",
-      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",
-      timeline: "",
-      budgetMin: talent.hourly_rate || 25,
-      budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
-    }
-  }),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
-    setIsSubmitting(true),
-    try {
-      const requestData = {
-        talent: {
-          id: talent.id || "",
-          full_name: talent.full_name,
-          professional_title: talent.professional_title},
-        requester: {
-          name: values.requesterName,
-          email: values.requesterEmail,
-          id: userDetails?.id
-        },
-        project: {
-          overview: values.projectOverview,
-          timeline: values.timeline,
-          budgetMin: values.budgetMin,
-          budgetMax: values.budgetMax
-<<<<<<< HEAD
-        }
-      };
-
-      const result = await submitHireRequest(requestData);
-      if (result.success) {
-        onClose()
+    setIsSubmitting(true);
 =======
+  budget_min: number,
+  budget_max: number;
+}
+export /**
+ * useHireRequestForm - Function description
+ */
+function useHireRequestForm() {
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const { submitHireRequest } = useHireRequest ();
+;
+  // Define the form schema with validation rules;
+  const form_schema = z.object ({
+    requester_name: z.string ().min (2, "Name is required");
+    requester_email: z.string ().email ("Valid email is required"),
+    project_overview: z.string ().min (10, "Please provide more details about your project");
+    timeline: z.string ().min (5, "Please specify your timeline");
+    budget_min: z.number ().min (1, "Budget minimum is required");
+    budget_max: z.number ().min (1, "Budget maximum is required");
+  }).refine (data => data.budget_max >= data.budget_min, {
+    message: "Maximum budget must be greater than or equal to minimum budget",
+    path: ["budget_max"];
+  });
+;
+  // Initialize the form;
+  const form = use_form < FormValues>({
+    resolver: zod_resolver (form_schema);
+    default_values: {
+      requester_name: user_details?.name || "";
+      requester_email: user_details?.email || "",
+      project_overview: initialJobTitle ? `Job: ${initialJobTitle}` : "";
+      timeline: "";
+      budget_min: talent.hourly_rate || 25,
+      budget_max: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50;
+    }
+  });
+;
+  // Handle form submission;
+  const on_submit = async (values: FormValues) => {
+    setIsSubmitting (true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    try {
+      const request_data = {
+        talent: {
+
 ;
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -175,21 +189,96 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       const result = await submitHireRequest(requestData),;
       if (result.success) {;
         onClose();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       }
+=======
+      const result = await submitHireRequest(requestData);
+      if (result && result.success) {
+        onClose()
+          id: talent.id || "",
+          full_name: talent.full_name,
+          professional_title: talent.professional_title},
+        requester: {
+          name: values.requesterName,
+          email: values.requesterEmail,
+          id: userDetails?.id
+        },
+        project: {
+          overview: values.projectOverview,
+          timeline: values.timeline,
+          budgetMin: values.budgetMin,
+          budgetMax: values.budgetMax
+        }
+      };
+
+      const result = await submitHireRequest(requestData);
+      if (result.success) {
+        onClose()
+;
+export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { submitHireRequest } = useHireRequest(),;
+  // Define the form schema with validation rules;
+  const formSchema = z.object({;
+    requesterName: z.string().min(2, "Name is required"),;
+    requesterEmail: z.string().email("Valid email is required"),;
+    projectOverview: z.string().min(10, "Please provide more details about your project"),;
+    timeline: z.string().min(5, "Please specify your timeline"),;
+    budgetMin: z.number().min(1, "Budget minimum is required"),;
+    budgetMax: z.number().min(1, "Budget maximum is required");
+  }).refine(data => data.budgetMax >= data.budgetMin, {;
+    message: "Maximum budget must be greater than or equal to minimum budget",;
+    path: ["budgetMax"];
+  }),;
+  // Initialize the form;
+  const form = useForm<FormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      requesterName: userDetails?.name || "",;
+      requesterEmail: userDetails?.email || "",;
+      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",;
+      timeline: "",;
+      budgetMin: talent.hourly_rate || 25,;
+      budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50;
+    }
+  }),;
+  // Handle form submission;
+  const onSubmit = async (values: FormValues) => {;
+    setIsSubmitting(true),;
+    try {;
+      const requestData = {;
+        talent: {;
+          id: talent.id || "",;
+          full_name: talent.full_name,;
+          professional_title: talent.professional_title},;
+        requester: {;
+          name: values.requesterName,;
+          email: values.requesterEmail,;
+          id: userDetails?.id;
+        },;
+        project: {;
+          overview: values.projectOverview,;
+          timeline: values.timeline,;
+          budgetMin: values.budgetMin,;
+          budgetMax: values.budgetMax;
+        }
+      },;
+      const result = await submitHireRequest(requestData),;
+      if (result.success) {;
+        onClose();
+      }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     } catch (error) {
       console.error("Error submitting hire request:", error)
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-    }
-  };
 
-  return {
-    form;
-    isSubmitting;
-    onSubmit
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+      }
+    } catch (error) {
+      console && console.error("Error submitting hire request:", error)
+    } finally {
+
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -200,7 +289,19 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     form;
     isSubmitting;
     onSubmit;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+<<<<<<< HEAD
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

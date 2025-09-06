@@ -1,34 +1,11 @@
+
 <<<<<<< HEAD
-import * as React from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { DayPicker } from 'react-day-picker'
-import { cn } from '@/lib/utils';
-import { buttonVariants } from '@/components/ui/button';
-export type CalendarProps = React.ComponentProps<typeof DayPicker>; export type CalendarProps = React.ComponentProps<typeof DayPicker>
-function Calendar({
-  className,
-  classNames,
-  showOutsideDays = true,
-  ...props
-}: CalendarProps) {
-  
-        IconLeft: ({ ..._props }) => <ChevronLeft className='h-4 w-4' />,
-        IconRight: ({ ..._props }) => <ChevronRight className='h-4 w-4' />,
-      }}      {...props}
-    />
-  )
-Calendar.displayName = 'Calendar'
-export { Calendar }
-  className, classNames,  showOutsideDays = true, ...props 
-}: CalendarProps) {
+=======
 }/>) ;
 }";
-=======
-import * as React from "react",
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { DayPicker } from "react-day-picker",
-import { cn } from "@/lib/utils",
-import { buttonVariants } from "@/components/ui/button",
-export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
