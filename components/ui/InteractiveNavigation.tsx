@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import React, { useState } from "react";
+import Link from "next/link";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 interface NavItem {
   label: string;
@@ -13,7 +13,10 @@ interface InteractiveNavigationProps {
   className?: string;
 }
 
-const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
+const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
+  items,
+  className = "",
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -23,7 +26,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
   };
 
   return (
-    <nav className={'bg-white shadow-lg ' + className}>
+    <nav className={"bg-white shadow-lg " + className}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-blue-600">
