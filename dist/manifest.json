@@ -1,193 +1,89 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "name": "Zion Tech Group - AI Marketplace",
-  "short_name": "Zion",
-  "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
+  "name": "Zion Tech Group",
+  "short_name": "Zion Tech",
+  "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#172d67",
-  "theme_color": "#2e73ea",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "name": "Zion Tech Group",
+  "short_name": "Zion Tech",
+  "description": "Leading-edge technology solutions and autonomous innovation platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
-  "categories": ["business", "productivity", "utilities"],
+  "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-      "src": "/images/zion-logo-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/android-chrome-192x192.png",      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-      "src": "/images/zion-logo-512.png",
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+      "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable any"
     },
     {
-      "src": "/images/zion-logo-180.png",
+      "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png",
-      "purpose": "apple touch"
+      "purpose": "apple touch icon"
+    },
+    {
+      "src": "/maskable_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "/images/screenshot-desktop.png",
+      "src": "/screenshot-desktop.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Zion Tech Group Desktop View"
+      "label": "Desktop view of ZionTech Group website"
     },
     {
-      "src": "/images/screenshot-mobile.png",
-      "sizes": "390x844",
+      "src": "/screenshot-mobile.png",
+      "sizes": "375x667",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile View"
-=======
-  "short_name": "Zion Tech",
-  "name": "Zion Tech Group - AI & Technology Solutions",
-  "description": "Empowering businesses with cutting-edge AI solutions and innovative technology services",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-=======
-  "short_name": "Zion Tech",
-  "name": "Zion Tech Group - AI & Technology Solutions",
-  "description": "Empowering businesses with cutting-edge AI solutions and innovative technology services",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
->>>>>>> origin/chore/build-fixes-and-slim-app
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "orientation": "portrait-primary",
-  "categories": ["business", "productivity", "technology"],
-  "lang": "en-US",
-  "dir": "ltr",
-  "scope": "/",
-  "prefer_related_applications": false,
-  "related_applications": [],
-  "screenshots": [
-    {
-      "src": "screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-<<<<<<< HEAD
->>>>>>> origin/chore/cleanup-and-build
-=======
->>>>>>> origin/chore/build-fixes-and-slim-app
+      "label": "Mobile view of ZionTech Group website"
+      "type": "image/png"
     }
   ],
   "shortcuts": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "name": "AI Talent Matching",
-      "short_name": "AI Match",
-      "description": "Find AI talent or jobs",
-      "url": "/match",
+      "name": "Launch Economy",
+      "short_name": "Launch",
+      "description": "Quick access to launch your digital economy",
+      "url": "/multiverse/launch",
       "icons": [
         {
-          "src": "/images/ai-match-icon.png",
-          "sizes": "96x96"
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
         }
       ]
     },
     {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "Browse tech services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/images/services-icon.png",
-          "sizes": "96x96"
-=======
-=======
->>>>>>> origin/chore/build-fixes-and-slim-app
       "name": "Services",
       "short_name": "Services",
       "description": "View our technology services",
       "url": "/services",
       "icons": [
         {
-          "src": "logo192.png",
-          "sizes": "192x192"
-<<<<<<< HEAD
->>>>>>> origin/chore/cleanup-and-build
-=======
->>>>>>> origin/chore/build-fixes-and-slim-app
-        }
-      ]
-    },
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "name": "Talent Directory",
-      "short_name": "Talent",
-      "description": "Find tech professionals",
-      "url": "/talent",
-      "icons": [
-        {
-          "src": "/images/talent-icon.png",
+          "src": "/icon-96x96.png",
           "sizes": "96x96"
-        }
-      ]
-    }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  },
-  "handle_links": "preferred",
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/%s"
-=======
-=======
->>>>>>> origin/chore/build-fixes-and-slim-app
-      "name": "AI Solutions",
-      "short_name": "AI Solutions",
-      "description": "Explore AI solutions",
-      "url": "/ai-solutions",
-      "icons": [
-        {
-          "src": "logo192.png",
+          "src": "/icon-192x192.png",
           "sizes": "192x192"
         }
       ]
@@ -199,14 +95,47 @@
       "url": "/contact",
       "icons": [
         {
-          "src": "logo192.png",
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "About",
+      "short_name": "About",
+      "description": "Learn about ZionTech Group",
+      "url": "/about",
+      "icons": [
+        {
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
+          "src": "/icon-192x192.png",
           "sizes": "192x192"
         }
       ]
-<<<<<<< HEAD
->>>>>>> origin/chore/cleanup-and-build
-=======
->>>>>>> origin/chore/build-fixes-and-slim-app
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
     }
   ]
 }
