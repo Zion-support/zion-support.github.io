@@ -15,8 +15,6 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-<<<<<<< HEAD
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -32,43 +30,3 @@
   "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"],
   "exclude": ["node_modules", "dist", "build"]
 }
-=======
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/lib/*": [
-        "./lib/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/hooks/*": [
-        "./hooks/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true
-=======
-      "@/*": ["./src/*"]
-    }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  },
-  "include": [
-    "src/**/*",
-    "src/**/*.tsx",
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
-}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

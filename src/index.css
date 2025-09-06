@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* CSS Custom Properties for Accessibility and Performance */
 :root {
   /* Font sizes with accessibility support */
@@ -43,9 +41,7 @@ html {
   scroll-behavior: smooth;
 }
 
-=======
 /* Basic styles */
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 body {
   margin: 0;
   padding: 0;
@@ -63,7 +59,6 @@ body {
   background-color: #ffffff;
 }
 
-<<<<<<< HEAD
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -359,11 +354,10 @@ body {
   .animate-bounce {
     animation: none;
   }
-=======
+  }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
