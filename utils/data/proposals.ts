@@ -128,3 +128,4 @@ export function updateArtifacts(
     ...meta,
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
+}

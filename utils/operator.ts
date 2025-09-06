@@ -17,3 +17,4 @@ export async function tagOperatorSession(
   tag: string
 ): Promise<void> {
   return Promise.resolve();
+}

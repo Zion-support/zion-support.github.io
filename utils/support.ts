@@ -26,8 +26,6 @@ export function matchIntent(
   const matched = new Set<string>();
 
   const keywordToArticle = new Map<string, string[]>();
-  
-  }
 
   // Simple heuristics
   const heuristics: Array<[RegExp, string[]]> = [
@@ -59,3 +57,4 @@ export function matchIntent(
     intentMatched: heuristicHit || matchedIds.length > 0,
     matchedArticleIds: matchedIds.slice(0, 3),
   };
+}

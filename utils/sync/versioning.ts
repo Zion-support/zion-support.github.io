@@ -6,3 +6,4 @@ export function nextVersionFor(
 ): number {
   const current = state.latestVersionByEntityId[entityKey] || 0;
   return current + 1;
+}

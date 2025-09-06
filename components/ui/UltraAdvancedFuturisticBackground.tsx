@@ -11,12 +11,12 @@ interface UltraAdvancedFuturisticBackgroundProps {
 }
 
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
-  intensity = 'high';
-  colorScheme = 'quantum-fusion';
-  particleCount = 300;
-  animationSpeed = 1.5;
-  enableHolographic = true;
-  enableQuantumEffects = true;
+  intensity = 'high',
+  colorScheme = 'quantum-fusion',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  enableHolographic = true,
+  enableQuantumEffects = true,
   children
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -29,7 +29,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let animationFrameId: number,
+    let animationFrameId: number;
     let particles: Array<{
       x: number,
       y: number,
@@ -61,21 +61,21 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         accent: '#ffff00',
         quantum: '#00ff88',
         holographic: '#ff0088'
-      };
+      },
       'neon-cyber': {
         primary: '#00ff41',
         secondary: '#ff0080',
         accent: '#00d4ff',
         quantum: '#ff6b35',
         holographic: '#9d4edd'
-      };
+      },
       'holographic': {
         primary: '#ff00ff',
         secondary: '#00ffff',
         accent: '#ffff00',
         quantum: '#00ff88',
         holographic: '#ff0088'
-      };
+      },
       'quantum-ai': {
         primary: '#00d4ff',
         secondary: '#ff6b35',
@@ -90,7 +90,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     // Initialize particles
     const initParticles = () => {
       particles = [];
-      for (let i = 0, i < particleCount, i++) {
+      for (let i = 0; i < particleCount; i++) {
         const type = Math.random() > 0.7 ? 'quantum' : 
                     Math.random() > 0.5 ? 'holographic' : 
                     Math.random() > 0.3 ? 'neon' : 'fusion';
@@ -104,7 +104,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           opacity: Math.random() * 0.8 + 0.2,
           color: type === 'quantum' ? colors.quantum :
                  type === 'holographic' ? colors.holographic :
-                 type === 'neon' ? colors.primary : colors.secondary;
+                 type === 'neon' ? colors.primary : colors.secondary,
           type
         })
       }
@@ -114,8 +114,8 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return;
       
-      for (let i = 0, i < particles.length, i++) {
-        for (let j = i + 1, j < particles.length, j++) {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -143,7 +143,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       ctx.lineWidth = 0.5;
       
       // Vertical lines
-      for (let x = offset, x < canvas.width, x += gridSize) {
+      for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
@@ -151,7 +151,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       }
       
       // Horizontal lines
-      for (let y = offset, y < canvas.height, y += gridSize) {
+      for (let y = offset; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
@@ -165,8 +165,8 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       
       const nodes = particles.filter(p => p.type === 'quantum' || p.type === 'holographic');
       
-      for (let i = 0, i < nodes.length, i++) {
-        for (let j = i + 1, j < nodes.length, j++) {
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -190,7 +190,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       
       // Create background gradient
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0;
+        canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       );
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
@@ -226,7 +226,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         
         // Create glow effect
         const glowGradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0;
+          particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 3
         );
         glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`);
@@ -250,7 +250,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       if (intensity === 'high') {
         // Add energy waves
         const time = Date.now() * 0.001;
-        for (let i = 0, i < 3, i++) {
+        for (let i = 0; i < 3; i++) {
           const waveRadius = (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2);
           ctx.beginPath();
           ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2);

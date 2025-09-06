@@ -20,7 +20,7 @@ function matchesService(profile: TalentProfile, service?: string) {
 
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
-    () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service));
+    () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
     [region, service]
   );
 

@@ -130,6 +130,7 @@ function extractKeywords(text: string): string[] {
           'in',
         ].includes(w)
     );
+}
 
 export async function parseQueryToFilters(
   query: string

@@ -39,6 +39,7 @@ export async function findProjectById(
 ): Promise<Project | undefined> {
   const projects = await readProjects();
   return projects.find(p => p.id === projectId);
+}
 
 export async function upsertReview(newReview: Review): Promise<void> {
   const reviews = await readReviews();
@@ -49,15 +50,18 @@ export async function upsertReview(newReview: Review): Promise<void> {
     reviews.push(newReview);
   }
   await writeReviews(reviews);
+}
 
 export async function getProjectReviews(projectId: string): Promise<Review[]> {
   const reviews = await readReviews();
   return reviews.filter(r => r.projectId === projectId && !r.removed);
+}
 
 export function counterpartRole(
   role: 'client' | 'talent'
 ): 'client' | 'talent' {
   return role === 'client' ? 'talent' : 'client';
+}
 
 export async function hasExistingReview(
   projectId: string,
@@ -72,3 +76,4 @@ export async function hasExistingReview(
       r.fromId === fromId &&
       !r.removed
   );
+}

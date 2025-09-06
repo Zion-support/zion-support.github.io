@@ -10,12 +10,13 @@ export type AIAssistantProps = {
 };
 
 export default function AIAssistant({
-  buttonLabel = 'Generate with AI';
-  title = 'AI Writing Assistant';
-  defaultPrompt;
-  systemPrompt;
-  onAccept;
-  authorizationToken}: AIAssistantProps) {
+  buttonLabel = 'Generate with AI',
+  title = 'AI Writing Assistant',
+  defaultPrompt,
+  systemPrompt,
+  onAccept,
+  authorizationToken
+}: AIAssistantProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState('');
@@ -34,12 +35,13 @@ export default function AIAssistant({
       const res = await fetch('/api/ai/operator', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json';
+          'Content-Type': 'application/json',
           ...(authorizationToken
             ? { Authorization: `Bearer ${authorizationToken}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
             ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` }
-            : {})};
+            : {})
+        },
         body: JSON.stringify({ prompt, system: systemPrompt })
       });
       const data = await res.json();

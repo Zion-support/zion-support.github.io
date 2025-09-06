@@ -48,6 +48,7 @@ function availabilityMatches(candidate?: string, requested?: string): boolean {
   if (!requested) return true;
   if (!candidate) return false;
   return candidate.toLowerCase() === requested.toLowerCase();
+}
 
 function passesRls(
   visibility: AccessLevel | undefined,

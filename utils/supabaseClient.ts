@@ -25,3 +25,4 @@ export function getSupabaseClient(): ZionSupabase {
   } catch {
     return undefined;
   }
+}
