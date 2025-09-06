@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import './globals.css';
+import './global-styles.css';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
