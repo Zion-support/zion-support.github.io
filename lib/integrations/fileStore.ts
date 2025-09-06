@@ -7,11 +7,12 @@ function ensureDataDir(): void {
   }
   if (!fs.existsSync(STATE_FILE)) {
     const initial: IntegrationsState = {
-      connections: [];
-      logs: [];
-      overrides: [];
-      events: []};
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8')
+      connections: [],
+      logs: [],
+      overrides: [],
+      events: []
+    };
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
 }
 

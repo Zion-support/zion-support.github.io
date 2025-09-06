@@ -12,13 +12,18 @@ function load(): Record<string, KycProfile> {
   }
 }
 
-function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true }),
+function save(,
+    db: Record<string, KycProfile>) {
+  fs.mkdirSync(DATA_DIR, {,
+    recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({,
+    error: 'Method not allowed' });
   const { userId, role, fullLegalName, businessName, businessRegistrationNumber } = req.body as {
     userId?: string;
     role?: KycRole;
@@ -26,22 +31,32 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName?: string;
     businessRegistrationNumber?: string
   };
-  if (!userId || !role) return res.status(400).json({ error: 'Missing userId or role' }),
+  if (!userId || !role) return res.status(400).json({,
+    error: 'Missing userId or role' });
   const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
-  const profile: KycProfile = existing || {
-    userId,
+  const,
+    profile: KycProfile = existing || {
+    userId;
     role;
     fullLegalName;
     businessName;
-    businessRegistrationNumber;
+    businessRegistrationNumber;,
     documents: [],
-    status: 'in_progress',
-    amlStatus: 'unknown',
-    createdAt: now,
-    lastUpdatedAt: now,
-    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,
+    s,
+    tatus: 'in_progress',
+    a,
+    mlStatus: 'unknown',
+    c,
+    reatedAt: now,
+    l,
+    astUpdatedAt: now,
+    a,
+    uditTrail: [{,
+    at: now, b,
+    y: userId, a,
+    ction: 'kyc_started' }]} as KycProfile,
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
@@ -49,9 +64,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-  res.status(200).json({
+  res.status(200).json({,
     ok: true,
-    profile;
-    requiredDocuments: getRequiredDocuments(role),
-    optionalDocuments: getOptionalDocuments(role)})
+    profile,
+    r,
+    equiredDocuments: getRequiredDocuments(role),
+    o,
+    ptionalDocuments: getOptionalDocuments(role)})
 }

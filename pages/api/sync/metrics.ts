@@ -1,11 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  if (req.method !== "GET") return res.status(405).json({,
+    error: "Method not allowed" });
   const state = readState();
   const events = filterEventsByScope(state.events, state.config.scope);
-  const totalsByToken: Record<string, number> = {};
-  const contributionsBySubject: Record<string, number> = {};
+  const,
+    totalsByToken: Record<string, number> = {};
+  const,
+    contributionsBySubject: Record<string, number> = {};
   let globalVotes = 0;
   for (const e of events) {
     if (e.type === "token_transfer") {
@@ -24,9 +29,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .map(([subjectId, score]) => ({ subjectId, score }))
     .sort((a, b) => b.score - a.score)
     .slice(0, 10);
-  return res.status(200).json({
+  return res.status(200).json({,
     treasuryTotals: totalsByToken,
-    topContributors;
-    totalVoteCount: globalVotes,
-    lastSyncedAt: state.lastSyncedAt})
+    topContributors,
+    t,
+    otalVoteCount: globalVotes,
+    l,
+    astSyncedAt: state.lastSyncedAt})
 }

@@ -3,7 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Job } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
   if (!rateLimit(req, res)) return;
   if (req.method === 'GET') {
     const jobs = readJsonFile<Job[]>(FILE, []);
@@ -22,24 +24,36 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       deliveryDeadlineIso;
       clientEmail} = req.body || {};
     if (!title || !description || !clientEmail) {
-      res.status(400).json({ error: 'Missing required fields' }),
+      res.status(400).json({,
+    error: 'Missing required fields' });
       return
     }
 
     const nowIso = new Date().toISOString();
-    const job: Job = {
-      id: uuidv4(),
-      title: String(title),
-      description: String(description),
-      category: String(category || ''),
-      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [],
-      budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined,
-      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined,
-      deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined,
-      clientEmail: String(clientEmail),
-      status: 'New',
-      createdAtIso: nowIso,
-      updatedAtIso: nowIso},
+    const,
+    job: Job = {,
+    id: uuidv4();,
+    title: String(title),
+      d,
+    escription: String(description),
+      c,
+    ategory: String(category || ''),
+      r,
+    equiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [],
+      b,
+    udgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined,
+      b,
+    udgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined,
+      d,
+    eliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined,
+      c,
+    lientEmail: String(clientEmail),
+      s,
+    tatus: 'New',
+      c,
+    reatedAtIso: nowIso,
+      u,
+    pdatedAtIso: nowIso},
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
     if (!job.category) {
       const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());

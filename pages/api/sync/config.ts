@@ -1,10 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const state = readState(),
+export default function handler(,
+    req: NextApiRequest, r,
+    es: NextApiResponse) {
+  const state = readState();
   if (req.method === "GET") {
-    return res.status(200).json({ config: state.config })
+    return res.status(200).json({,
+    config: state.config })
   }
 
   if (req.method === "POST") {
@@ -14,7 +17,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       instanceId?: string
     };
     if (scope && !["full", "dao", "marketplace"].includes(scope)) {
-      return res.status(400).json({ error: "Invalid scope" })
+      return res.status(400).json({,
+    error: "Invalid scope" })
     }
 
     if (Array.isArray(peers)) {
@@ -25,8 +29,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (scope) state.config.scope = scope;
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId;
     writeState(state);
-    return res.status(200).json({ config: state.config })
+    return res.status(200).json({,
+    config: state.config })
   }
 
-  return res.status(405).json({ error: "Method not allowed" })
+  return res.status(405).json({,
+    error: "Method not allowed" })
 }

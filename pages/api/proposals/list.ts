@@ -1,10 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+export default function handler(,
+    _req: NextApiRequest, r,
+    es: NextApiResponse) {
   try {
-    const proposals = listProposals(),
+    const proposals = listProposals();
     res.status(200).json({ proposals })
-  } catch (error: any) {
-    res.status(500).json({ error: error?.message || 'Failed to list proposals' })
+  } catch (,
+    error: any) {
+    res.status(500).json({,
+    error: error?.message || 'Failed to list proposals' })
   }
 }
