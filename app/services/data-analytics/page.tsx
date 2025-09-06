@@ -1,93 +1,93 @@
 export const metadata = { 
-  title: 'AI Services | Zion Tech Group',
-  description: 'Advanced AI solutions including RAG systems, custom agents, MLOps, and production-ready AI applications.'
+  title: 'Data Analytics Services | Zion Tech Group',
+  description: 'Advanced data analytics solutions including business intelligence, data visualization, machine learning, and data engineering.'
 };
 
-export default function AIPage() {
+export default function DataAnalyticsPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Services</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Data Analytics Services</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Ship AI features with confidence: RAG systems, intelligent agents, fine-tuning, 
-          evaluations, and production MLOps. We build AI that works in the real world.
+          Transform your data into actionable insights with our comprehensive analytics solutions. 
+          From data engineering to advanced visualization, we help you make data-driven decisions.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <Item 
-          title="Applied AI" 
+          title="Data Engineering" 
           details={[
-            "RAG over private data",
-            "Task-specific agents",
-            "Computer vision + speech",
-            "Personalization engines",
-            "Chatbots & virtual assistants",
-            "Document processing & OCR"
+            "ETL/ELT pipelines",
+            "Data warehousing",
+            "Real-time processing",
+            "Data quality management",
+            "Cloud data platforms",
+            "API development"
           ]} 
         />
         <Item 
-          title="Model Operations" 
+          title="Business Intelligence" 
           details={[
-            "Offline evaluations",
-            "Safety + guardrails",
-            "Batch + streaming inference",
-            "Cost optimization",
-            "A/B testing frameworks",
-            "Model versioning & rollback"
+            "Dashboard development",
+            "KPI tracking",
+            "Report automation",
+            "Data visualization",
+            "Self-service analytics",
+            "Mobile reporting"
           ]} 
         />
         <Item 
-          title="Data & MLOps" 
+          title="Advanced Analytics" 
           details={[
-            "Data pipelines",
-            "Feature stores",
-            "Vector databases",
-            "Monitoring + drift detection",
-            "Model serving infrastructure",
-            "Automated retraining"
+            "Predictive modeling",
+            "Statistical analysis",
+            "Machine learning",
+            "A/B testing",
+            "Customer segmentation",
+            "Forecasting"
           ]} 
         />
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Our AI Solutions</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Our Data Analytics Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ServiceCard
-            title="Intelligent Document Processing"
-            description="Extract insights from documents using OCR, NLP, and computer vision"
+            title="Business Intelligence Dashboard"
+            description="Interactive dashboards with real-time KPIs and business metrics"
             price="Starting at $15k"
-            features={["OCR + text extraction", "Entity recognition", "Document classification", "Automated workflows"]
+            features={["Custom dashboards", "Real-time data", "Mobile responsive", "Export capabilities"]
           />
           <ServiceCard
-            title="Conversational AI"
-            description="Build intelligent chatbots and virtual assistants for customer service"
-            price="Starting at $12k"
-            features={["Multi-channel support", "Context awareness", "Integration APIs", "Analytics dashboard"]
+            title="Data Pipeline Development"
+            description="Automated data processing and ETL pipelines for your business"
+            price="Starting at $20k"
+            features={["ETL/ELT pipelines", "Data validation", "Error handling", "Monitoring"]
           />
           <ServiceCard
             title="Predictive Analytics"
-            description="Machine learning models for forecasting and business intelligence"
-            price="Starting at $20k"
-            features={["Time series forecasting", "Anomaly detection", "Risk assessment", "Real-time predictions"]
+            description="Machine learning models for forecasting and prediction"
+            price="Starting at $25k"
+            features={["Model development", "Data preprocessing", "Model training", "Deployment"]
           />
           <ServiceCard
-            title="Computer Vision"
-            description="Image and video analysis for quality control and automation"
+            title="Customer Analytics"
+            description="Comprehensive customer behavior analysis and segmentation"
             price="Starting at $18k"
-            features={["Object detection", "Image classification", "Video analysis", "Real-time processing"]
+            features={["Customer segmentation", "Behavior analysis", "Churn prediction", "Lifetime value"]
           />
           <ServiceCard
-            title="Natural Language Processing"
-            description="Text analysis, sentiment analysis, and language understanding"
-            price="Starting at $10k"
-            features={["Sentiment analysis", "Text summarization", "Language translation", "Content moderation"]
+            title="Data Visualization"
+            description="Advanced data visualization and interactive reports"
+            price="Starting at $12k"
+            features={["Interactive charts", "Custom visualizations", "Storytelling", "Export options"]
           />
           <ServiceCard
-            title="Recommendation Systems"
-            description="Personalized recommendations for e-commerce and content platforms"
-            price="Starting at $16k"
-            features={["Collaborative filtering", "Content-based filtering", "Real-time updates", "A/B testing"]
+            title="Data Warehouse Setup"
+            description="Complete data warehouse design and implementation"
+            price="Starting at $30k"
+            features={["Architecture design", "Data modeling", "ETL processes", "Security setup"]
           />
         </div>
       </div>
@@ -139,52 +139,52 @@ function ServiceCard({ title, description, price, features }: {
 function Pricing() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">AI Development Packages</h2>
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Data Analytics Service Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
-          name="AI Discovery" 
-          price="$5k–$12k" 
-          duration="2–3 weeks"
+          name="Analytics Discovery" 
+          price="$8k–$15k" 
+          duration="2–4 weeks"
           features={[
-            "Use-case analysis & design",
-            "Technology selection",
             "Data assessment",
-            "Implementation roadmap",
+            "Requirements analysis",
+            "Technology selection",
+            "Architecture design",
             "Proof of concept",
-            "ROI projections"
+            "Implementation roadmap"
           ]} 
         />
         <Plan 
-          name="AI Pilot" 
-          price="$15k–$45k" 
-          duration="4–8 weeks"
+          name="Analytics Implementation" 
+          price="$20k–$50k" 
+          duration="6–12 weeks"
           features={[
-            "RAG/agent MVP development",
-            "Evaluation framework",
-            "Safety & guardrails",
-            "Performance dashboards",
-            "Integration testing",
-            "User feedback collection"
+            "Dashboard development",
+            "Data pipeline setup",
+            "Model development",
+            "Testing & validation",
+            "User training",
+            "Documentation"
           ]} 
         />
         <Plan 
-          name="AI Production" 
+          name="Analytics Platform" 
           price="$50k+" 
-          duration="8+ weeks"
+          duration="12+ weeks"
           features={[
-            "Hardened infrastructure",
-            "Advanced monitoring",
-            "SLA guarantees",
-            "Cost optimization",
-            "Scalability planning",
-            "24/7 support"
+            "Full platform development",
+            "Advanced analytics",
+            "Machine learning models",
+            "Real-time processing",
+            "Scalable architecture",
+            "Ongoing support"
           ]} 
         />
       </div>
       
       <div className="text-center mt-8">
         <p className="text-gray-600 mb-4">
-          Ready to implement AI in your business? Let's discuss your AI requirements.
+          Ready to unlock insights from your data? Let's discuss your analytics needs.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

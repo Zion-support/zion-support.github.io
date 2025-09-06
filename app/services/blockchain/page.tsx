@@ -1,93 +1,93 @@
 export const metadata = { 
-  title: 'Micro SaaS Development | Zion Tech Group',
-  description: 'End-to-end micro SaaS development with billing, auth, analytics, and growth features. From MVP to scale.'
+  title: 'Blockchain Solutions | Zion Tech Group',
+  description: 'Comprehensive blockchain development services including DeFi, NFTs, smart contracts, and Web3 applications.'
 };
 
-export default function MicroSaaSPage() {
+export default function BlockchainPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Micro SaaS Development</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Blockchain Solutions</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          We design, build, launch and operate revenue-generating micro SaaS products end-to-end.
-          From concept to scale, we handle everything so you can focus on your business.
+          Build the future of decentralized applications with our comprehensive blockchain development services. 
+          From smart contracts to DeFi protocols, we deliver secure and scalable Web3 solutions.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <Item 
-          title="Core Features" 
+          title="Smart Contracts" 
           details={[
-            "Multi-tenant architecture",
-            "Auth (email, OAuth, SSO)",
-            "Billing (Stripe, PayPal, Paddle)",
-            "Admin dashboard + analytics",
-            "In-app onboarding flows",
-            "API rate limiting & security"
+            "Solidity development",
+            "Security auditing",
+            "Gas optimization",
+            "Multi-chain deployment",
+            "Upgradeable contracts",
+            "Testing & verification"
           ]} 
         />
         <Item 
-          title="Growth Stack" 
+          title="DeFi Protocols" 
           details={[
-            "SEO-ready marketing site",
-            "Blog + documentation",
-            "Email marketing campaigns",
-            "Referral + affiliate systems",
-            "A/B testing framework",
-            "Customer success tools"
+            "DEX development",
+            "Yield farming",
+            "Liquidity pools",
+            "Token economics",
+            "Governance systems",
+            "Risk management"
           ]} 
         />
         <Item 
-          title="Ops & Reliability" 
+          title="Web3 Applications" 
           details={[
-            "CI/CD pipelines",
-            "Monitoring & observability",
-            "Error tracking & budgets",
-            "SLOs & uptime guarantees",
-            "On-call setup & alerts",
-            "Backup & disaster recovery"
+            "Wallet integration",
+            "NFT marketplaces",
+            "DAO platforms",
+            "Cross-chain bridges",
+            "Oracle integration",
+            "User experience design"
           ]} 
         />
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Our Micro SaaS Solutions</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Our Blockchain Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ServiceCard
-            title="Analytics Dashboard"
-            description="Real-time business intelligence and user behavior tracking"
-            price="Starting at $12k"
-            features={["Custom metrics", "Real-time updates", "Export capabilities", "White-label options"]
+            title="DeFi Platform"
+            description="Complete decentralized finance platform with trading, lending, and staking"
+            price="Starting at $50k"
+            features={["DEX integration", "Liquidity pools", "Yield farming", "Governance token"]
           />
           <ServiceCard
-            title="Customer Portal"
-            description="Self-service customer management and billing portal"
+            title="NFT Marketplace"
+            description="Multi-chain NFT marketplace with minting, trading, and auction features"
+            price="Starting at $35k"
+            features={["Multi-chain support", "Royalty system", "Auction mechanism", "Creator tools"]
+          />
+          <ServiceCard
+            title="Smart Contract Audit"
+            description="Comprehensive security audit and testing for smart contracts"
             price="Starting at $8k"
-            features={["Account management", "Billing history", "Support tickets", "Document access"]
+            features={["Code review", "Vulnerability assessment", "Gas optimization", "Test coverage"]
           />
           <ServiceCard
-            title="API Management"
-            description="Secure API gateway with rate limiting and analytics"
-            price="Starting at $15k"
-            features={["API documentation", "Rate limiting", "Usage analytics", "Webhook management"]
+            title="Token Development"
+            description="Custom token creation with advanced features and tokenomics"
+            price="Starting at $12k"
+            features={["ERC-20/721/1155", "Tokenomics design", "Vesting contracts", "Multi-signature"]
           />
           <ServiceCard
-            title="Content Management"
-            description="Headless CMS with multi-tenant content management"
-            price="Starting at $10k"
-            features={["Multi-tenant", "Version control", "Media management", "SEO optimization"]
+            title="DAO Platform"
+            description="Decentralized autonomous organization platform with governance"
+            price="Starting at $25k"
+            features={["Proposal system", "Voting mechanism", "Treasury management", "Member management"]
           />
           <ServiceCard
-            title="Notification System"
-            description="Multi-channel notification and communication platform"
-            price="Starting at $7k"
-            features={["Email, SMS, Push", "Templates", "Scheduling", "Analytics"]
-          />
-          <ServiceCard
-            title="Workflow Automation"
-            description="No-code workflow builder with integrations"
-            price="Starting at $18k"
-            features={["Visual builder", "Integrations", "Conditional logic", "Monitoring"]
+            title="Cross-Chain Bridge"
+            description="Secure bridge for transferring assets between different blockchains"
+            price="Starting at $40k"
+            features={["Multi-chain support", "Security protocols", "Liquidity pools", "Monitoring system"]
           />
         </div>
       </div>
@@ -139,52 +139,52 @@ function ServiceCard({ title, description, price, features }: {
 function Pricing() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Development Packages</h2>
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Blockchain Development Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
-          name="MVP Sprint" 
+          name="Smart Contract" 
           price="$8k–$20k" 
           duration="2–4 weeks"
           features={[
-            "MVP scope definition",
-            "Stripe billing integration",
-            "Basic analytics dashboard",
-            "User authentication",
-            "Core functionality",
-            "Basic admin panel"
+            "Contract development",
+            "Security testing",
+            "Gas optimization",
+            "Documentation",
+            "Deployment support",
+            "Basic audit"
           ]} 
         />
         <Plan 
-          name="Growth" 
-          price="$20k–$60k" 
-          duration="6–10 weeks"
+          name="DApp Development" 
+          price="$25k–$60k" 
+          duration="6–12 weeks"
           features={[
-            "SEO-optimized marketing site",
-            "Content management system",
-            "CRM + email automation",
-            "Advanced analytics",
-            "A/B testing framework",
-            "Customer success tools"
+            "Full-stack DApp",
+            "Frontend development",
+            "Backend integration",
+            "Wallet connectivity",
+            "Testing & deployment",
+            "User documentation"
           ]} 
         />
         <Plan 
-          name="Scale" 
-          price="$60k+" 
-          duration="Custom timeline"
+          name="DeFi Protocol" 
+          price="$50k+" 
+          duration="12+ weeks"
           features={[
-            "Custom roadmap planning",
-            "SRE + security hardening",
-            "Multi-region deployment",
-            "SLA guarantees",
-            "24/7 monitoring",
-            "Dedicated support"
+            "Complex protocol design",
+            "Security audit",
+            "Tokenomics design",
+            "Governance system",
+            "Multi-chain support",
+            "Ongoing maintenance"
           ]} 
         />
       </div>
       
       <div className="text-center mt-8">
         <p className="text-gray-600 mb-4">
-          Ready to build your micro SaaS? Let's discuss your project requirements.
+          Ready to build on the blockchain? Let's discuss your Web3 project.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
