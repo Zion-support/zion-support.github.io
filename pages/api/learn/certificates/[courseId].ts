@@ -43,13 +43,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .text('Zion AI Marketplace', { align: 'center', underline: false });    doc.moveDown(0.5);
     doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
     doc.moveDown(1.5);
-    doc.fontSize(14).text(`This certifies that`, { align: 'center' }),
+    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
     doc.moveDown(0.5);
-    doc.fontSize(22).text(user.name || user.userId, { align: 'center' }),
+    doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
     doc.moveDown(0.5);
-    doc.fontSize(14).text(`has successfully completed`, { align: 'center' }),
+    doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
     doc.moveDown(0.5);
-    doc.fontSize(20).text(course.title, { align: 'center' }),
+    doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
     doc
       .fontSize(12)
