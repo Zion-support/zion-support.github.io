@@ -1,4 +1,25 @@
 const fs = require('fs');
+<<<<<<< HEAD
+
+// Find all files with merge conflict markers
+const conflictFiles = [
+  './types/empty.ts',
+  './types/index.ts',
+  './App.tsx',
+  './scripts/pm2/test-automation.js',
+  './scripts/pm2/code-quality-monitor.js',
+  './scripts/pm2/dependency-monitor.js',
+  './scripts/pm2/health-monitor.js',
+  './scripts/pm2/docs-generator.js',
+  './scripts/pm2/build-optimizer.js',
+  './scripts/pm2/security-scanner.js'
+];
+
+function cleanMergeConflicts(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`File not: found: ${filePath}`);
+=======
 const path = require('path');
 const { execSync } = require('child_process');
 ;
@@ -19,10 +40,25 @@ function cleanMergeConflicts(filePath) {;
   try {;
     if (!fs.existsSync(filePath)) {;
       console.log(`File not:found:${filePath}`);
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
       return;
     }
     ;
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+    
+    // Remove merge conflict markers and keep our version (the part after =======)
+    content = content.replace(/\n<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1');
+    
+    // Also handle cases where there's no content after =======
+    content = content.replace(/\n<<<<<<< HEAD\n([\s\S]*?)\n=======\n>>>>>>> [^\n]+\n/g, '$1');
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======\n/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
+    
+=======
     ;
     // Remove merge conflict markers and keep our version (the part after );
     content = content.replace(/\n([\s\S]*?);
@@ -34,6 +70,7 @@ function cleanMergeConflicts(filePath) {;
     content = content.replace(/.*?\n/g, '');
     content = content.replace(/;
     ;
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
     fs.writeFileSync(filePath, content);
     console.log(`Cleaned merge conflicts:in:${filePath}`);
   } catch (error) {;

@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD:backup-problematic-files/2025-advanced-services-showcase.tsx
+import SEO from '../components/SEO';
+=======
 import SEOHead from '../components/SEOHead';
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358:components/2025-advanced-services-showcase.tsx
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check,
@@ -8,9 +12,15 @@ import {
 } from 'lucide-react';
 
 // Import our new service data
+<<<<<<< HEAD:backup-problematic-files/2025-advanced-services-showcase.tsx
+import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
+import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+=======
 import { advancedInnovativeServices as advancedEnterpriseServices2025 } from '../data/2025-advanced-innovative-services-expansion';
 import { innovativeMicroSaasExpansionServices as innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
 import { cuttingEdgeITInfrastructure2025 as cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358:components/2025-advanced-services-showcase.tsx
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -87,6 +97,11 @@ const getServiceFeatures = (service: any) => {
   if (service.keyFeatures) return service.keyFeatures;
   return [];
 };
+<<<<<<< HEAD:backup-problematic-files/2025-advanced-services-showcase.tsx
+
+
+=======
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358:components/2025-advanced-services-showcase.tsx
 
 export default function AdvancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');

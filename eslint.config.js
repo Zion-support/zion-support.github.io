@@ -172,6 +172,10 @@ export default [
       '**/performance-*.sh',
       '**/performance-*.html',
       '**/performance-*.md',
+<<<<<<< HEAD
+      '**/performance-*.txt',
+      'backup-problematic-files/**'
+=======
       '**/performance-*.txt'
 =======
       '**/zion-os/**',
@@ -184,6 +188,7 @@ export default [
       '**/public/**',
       '**/static/**',
 >>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -351,6 +356,24 @@ export default [
       '.next/**',
       'dist/**',
       'build/**',
+<<<<<<< HEAD
+      'node_modules/**',
+      // Public assets/scripts
+      'public/**',
+      // Root-level noisy files
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      '*.backup.*',
+      '*.old.*',
+      '*.disabled.*',
+      '*.broken.*',
+      '*.corrupted.*',
+      '*.temp.*',
+      'backup-problematic-files/**'
+    ]
+  }
+=======
       'out/**',
       'coverage/**',
       '*.log',
@@ -379,4 +402,5 @@ export default [
   },
 =======
 >>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
 ];

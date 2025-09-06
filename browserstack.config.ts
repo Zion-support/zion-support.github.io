@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import { defineConfig, devices } from '@playwright/test';
+=======
+<<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test',;
 ;
 export default defineConfig({;
@@ -47,6 +50,7 @@ import { defineConfig, devices } from '@playwright/test';
 import { defineConfig, devices } from "@playwright/test";
 >>>>>>> 43ad6f92a8904cde8bad8d22878159f38917cf55
 >>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
 
 export default defineConfig({
   testDir: "tests/e2e",
@@ -54,10 +58,13 @@ export default defineConfig({
 <<<<<<< HEAD
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace: 'on-first-retry'
+<<<<<<< HEAD
+=======
 =======
     baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000",
     trace: "on-first-retry",
 >>>>>>> 43ad6f92a8904cde8bad8d22878159f38917cf55
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
   },
   projects: [
     {
@@ -121,6 +128,8 @@ export default defineConfig({
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
   ]
+<<<<<<< HEAD
+=======
 =======
         browserName: "webkit",
         ...devices["iPhone 12"],
@@ -132,4 +141,5 @@ export default defineConfig({
     ["html", { outputFolder: "playwright-logs/html-report", open: "never" }],
   ],
 >>>>>>> 43ad6f92a8904cde8bad8d22878159f38917cf55
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
 });
