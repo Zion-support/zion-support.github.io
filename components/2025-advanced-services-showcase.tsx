@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const allServices = [
   ...advancedEnterpriseServices2025
   ...innovativeMicroSaasExpansion2025
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup.com'
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
 }
 const allServices = [
   ...advancedEnterpriseServices2025;
@@ -194,7 +194,7 @@ const getServicePricing = (service: any) => {
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup && ziontechgroup.com';
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 const allServices = [;
   ...advancedEnterpriseServices2025;
@@ -733,8 +733,7 @@ import { motion, AnimatePresence  } from './framer-motion';
   Award,
   Phone,
   Mail,
-  MapPin,
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 ;
 // Mock service data;
 const advancedEnterpriseServices2025 = [;
@@ -747,9 +746,7 @@ const advancedEnterpriseServices2025 = [;
     rating: 4.9,
     tags: ["AI", "Machine Learning", "Enterprise"],
     color: "from - blue - 500 to - purple - 500",
-    icon: "🤖",
-  },
-];
+    icon: "🤖"}];
 ;
 const innovativeMicroSaasExpansion2025 = [;
   {
@@ -761,9 +758,7 @@ const innovativeMicroSaasExpansion2025 = [;
     rating: 4.7,
     tags: ["SaaS", "Micro Services", "Cloud"],
     color: "from - green - 500 to - teal - 500",
-    icon: "⚡",
-  },
-];
+    icon: "⚡"}];
 ;
 const cuttingEdgeITInfrastructureServices = [;
   {
@@ -775,22 +770,19 @@ const cuttingEdgeITInfrastructureServices = [;
     rating: 4.8,
     tags: ["Cloud", "Infrastructure", "DevOps"],
     color: "from - orange - 500 to - red - 500",
-    icon: "☁️",
-  },
-];// Import our new service data;
+    icon: "☁️"}];// Import our new service data;
 import { advancedEnterpriseServices2025 } from '../data / 2025 - advanced - enterprise - services - expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data / 2025 - innovative - micro - saas - expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data / 2025 - cutting - edge - it - infrastructure';
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}
 ;
 const all_services = [;
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
-  ...cuttingEdgeITInfrastructureServices, ];  website: 'https://ziontechgroup.com';
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
 }
 ;
 const all_services = [;
@@ -839,43 +831,37 @@ const categories = [;
     name: 'Quantum Computing',
     icon: <Atom className="w - 6 h - 6" />,
     color: 'from - violet - 500 to - indigo - 500',
-    description: 'Quantum computing solutions',
-  },
+    description: 'Quantum computing solutions'},
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
     icon: <Building className='w - 6 h - 6' />,
     color: 'from - blue - 500 to - purple - 500',
-    description: 'Enterprise - grade AI and IT solutions',
-  },
+    description: 'Enterprise - grade AI and IT solutions'},
   {
     id: 'micro - saas',
     name: 'Micro SAAS',
     icon: <Globe className='w - 6 h - 6' />,
     color: 'from - green - 500 to - emerald - 500',
-    description: 'Innovative micro SAAS solutions',
-  },
+    description: 'Innovative micro SAAS solutions'},
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
     icon: <Shield className='w - 6 h - 6' />,
     color: 'from - orange - 500 to - red - 500',
-    description: 'Cutting - edge infrastructure services',
-  },
+    description: 'Cutting - edge infrastructure services'},
   {
     id: 'ai - ml',
     name: 'AI & Machine Learning',
     icon: <Brain className='w - 6 h - 6' />,
     color: 'from - purple - 500 to - pink - 500',
-    description: 'Advanced AI and ML platforms',
-  },
+    description: 'Advanced AI and ML platforms'},
   {
     id: 'quantum',
     name: 'Quantum Computing',
     icon: <Atom className='w - 6 h - 6' />,
     color: 'from - violet - 500 to - indigo - 500',
-    description: 'Quantum computing solutions',
-  }, ];
+    description: 'Quantum computing solutions'}];
 ;
 const getServiceCategory = (service: any) =>: any {
   // Check condition

@@ -1,119 +1,44 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
-import Button from './components/Button';
-import Card from './components/Card';
-import ServiceCard from './components/ServiceCard';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
-import ToastContainer from './components/ToastContainer';
-import { ThemeProvider } from './components/ThemeProvider';
-import ScrollToTop from './components/ScrollToTop';
-import BackToTop from './components/BackToTop';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Pricing from './pages/Pricing';
 
-function App() {
+export default function App() {
   return (
-    <ThemeProvider>
-      <ErrorBoundary>
-        <Router>
-          <ScrollToTop />
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/pricing" element={<Pricing />} />
-              </Routes>
-            </main>
-            <Footer />
-            <ToastContainer />
-            <BackToTop />
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-white shadow-sm">
+        <div className="container mx-auto px-4 py-4">
+          <h1 className="text-2xl font-bold">Zion Tech</h1>
+        </div>
+      </header>
+      <main className="container mx-auto px-4 py-8">
+        <h2 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech</h2>
+        <p className="text-lg text-center text-gray-600 mb-8">
+          Your trusted partner for AI and IT solutions
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
+            <p className="text-gray-600">
+              Cutting-edge artificial intelligence solutions for your business needs.
+            </p>
           </div>
-        </Router>
-      </ErrorBoundary>
-    </ThemeProvider>
-=======
-import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './components/ThemeProvider';
-import ErrorBoundary from './components/ErrorBoundary';
-import ScrollToTop from './components/ScrollToTop';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-
-// Pages
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import Pricing from './pages/Pricing';
-import NotFound from './pages/NotFound';
-
-// Service Pages
-import AIServices from './pages/AIServices';
-import ITServices from './pages/ITServices';
-import MicroSaaS from './pages/MicroSaaS';
-import Cybersecurity from './pages/Cybersecurity';
-import CloudMigration from './pages/CloudMigration';
-import MobileDevelopment from './pages/MobileDevelopment';
-
-// Additional Pages
-import FAQ from './pages/FAQ';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Support from './pages/Support';
-
-function App() {
-  return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <ThemeProvider>
-          <AccessibilityEnhancer>
-            <Router>
-              <ScrollToTop />
-              <PerformanceMonitor />
-              <div className="min-h-screen bg-background text-foreground" id="main-content">
-            <Routes>
-              {/* Main Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/pricing" element={<Pricing />} />
-              
-              {/* Service Routes */}
-              <Route path="/services/ai-services" element={<AIServices />} />
-              <Route path="/services/it-services" element={<ITServices />} />
-              <Route path="/services/micro-saas" element={<MicroSaaS />} />
-              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-              <Route path="/services/cloud-solutions" element={<CloudMigration />} />
-              <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-              
-              {/* Additional Routes */}
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/support" element={<Support />} />
-              
-              {/* 404 Route */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </ThemeProvider>
-      </HelmetProvider>
-    </ErrorBoundary>
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">IT Services</h3>
+            <p className="text-gray-600">
+              Comprehensive IT services and infrastructure management.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>
+            <p className="text-gray-600">
+              Scalable cloud infrastructure and migration services.
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p>&copy; 2025 Zion Tech. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
   );
 }
-
-export default App;

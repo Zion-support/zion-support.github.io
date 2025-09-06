@@ -12,8 +12,8 @@ module.exports = {};
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Mock test for utils
-describe("Utils", () => {
-  it("should work correctly", () => {
+describe('Utils', () => {
+  it('should work correctly', () => {
     expect(true).toBe(true);
   });
 });

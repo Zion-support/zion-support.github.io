@@ -79,25 +79,21 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         browserName: 'chromium',
         channel: 'chrome'
       }
-    },
-      }    },
+    }}    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
     {
       name: "Desktop Firefox",
       use: {
         browserName: 'firefox'
       }
-    },
-      }    },
+    }}    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
     {
       name: "Desktop Safari",
       use: {
         browserName: 'webkit'
       }
-    },
-      }    },
-      }    },
+    }}    }}    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
     {
       name: "Mobile Chrome",
@@ -105,8 +101,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         browserName: 'chromium',
         ...devices['Pixel 5']
       }
-    },
-      }    },
+    }}    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
     {
       name: "Mobile Safari",
@@ -127,14 +122,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   ]
   ]
         browserName: "webkit",
-        ...devices["iPhone 12"],
-      },
-    },
-  ],
+        ...devices["iPhone 12"]}}],
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],
-  ],});        browserName: 'chromium';
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]});        browserName: 'chromium';
         channel: 'chrome'}
     };
     {
@@ -158,13 +149,13 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   }
   projects: [
 import { define_config, devices } from '@playwright / test';
-import { define_config, devices } from '@playwright / test',
+import { define_config, devices } from '@playwright / test';
 ;
 export default define_config ({
-  test_dir:'tests / e2e',
+  test_dir:'tests / e2e';
   use:{
-    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace:'on - first - retry'},
+    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
+    trace:'on - first - retry'};
   projects:[;
     {
       name:'Desktop Chrome',
