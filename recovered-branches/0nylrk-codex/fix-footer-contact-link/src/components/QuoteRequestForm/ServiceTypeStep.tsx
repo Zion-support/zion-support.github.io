@@ -1,12 +1,18 @@
-import { useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Card } from "@/components/ui/card",
+import {useState} from "react";
+import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
+import {Input} from "@/components/ui/input";
+import {Card} from "@/components/ui/card";
+import {Search} from "lucide-react";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
+import { useState } from "react";
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
 import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void
+  updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
@@ -67,6 +73,16 @@ export function ServiceTypeStep({
     updateFormData({ serviceType: type })
   },
   
+export function ServiceTypeStep({
+  formData,
+  updateFormData,
+}: ServiceTypeStepProps) {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleTypeSelect = (type: ServiceType) => {
+    updateFormData({ serviceType: type });
+  };
+
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item
@@ -150,6 +166,7 @@ export function ServiceTypeStep({
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
             />
           </div>
+
           <div className="grid grid-cols-1 gap-4 mt-4">
             {filteredListings.length > 0 ? (
               filteredListings.map((item) => (

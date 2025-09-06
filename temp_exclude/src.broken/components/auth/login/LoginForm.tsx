@@ -8,7 +8,6 @@ FormLabel;
   email: z.string () .email ("Please enter a valid email") .min (1, "Email is required");
 password: z.string () .min (6, "Password must be at least 6 characters") 
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 type LoginFormValues = z.infer<typeof loginSchema>;
 const onSubmit = async (data: LoginFormValues) => {
   if (isSubmitting) return;
 try {

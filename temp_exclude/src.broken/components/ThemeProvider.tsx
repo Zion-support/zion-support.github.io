@@ -8,7 +8,6 @@ type Theme = "dark" | "light" | "system" type ThemeProviderProps = {
 setTheme (newTheme);
 };
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const value = {
   theme, setTheme: setCurrentTheme, toggleTheme 
 }return (<ThemeProviderContext.Provider value= {
   value 

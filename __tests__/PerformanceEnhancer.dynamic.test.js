@@ -39,6 +39,6 @@ import PerformanceEnhancer from '../components/PerformanceEnhancer.dynamic';
 describe('PerformanceEnhancer', () => {
   test('renders without crashing', () => {
     render(<PerformanceEnhancer />);
-    expect(screen.getByTestId('performance-enhancer')).toBeInTheDocument();
+    expect(screen.getByTestId("performance-enhancer")).toBeInTheDocument();
   });
 });

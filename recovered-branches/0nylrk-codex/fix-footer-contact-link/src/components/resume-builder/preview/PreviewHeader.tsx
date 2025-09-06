@@ -7,6 +7,9 @@ import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
+interface PreviewHeaderProps {
+  resume: Resume;
+  onBack: () => void;
 }
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
   const [isPrinting, setIsPrinting] = useState(false);
@@ -16,6 +19,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
   const isMobile = useIsMobile();
   const handleBrowserPrint = () => {
     setIsPrinting(true);
+
     // Inject print-specific CSS only for the duration of printing
     const style = document.createElement("style");
     style.innerHTML = `
@@ -57,6 +61,16 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
     }, 1000)
   },
 
+    // Trigger print dialog
+    window.print();
+
+    // Remove the temporary style element after printing
+    setTimeout(() => {
+      document.head.removeChild(style);
+      setIsPrinting(false);
+    }, 1000);
+  };
+
   return (
     <div
       className={`flex ${isMobile ? "flex-col" : "justify-between"} items-${isMobile ? "stretch" : "center"} gap-3`}
@@ -78,6 +92,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           <FileText className="h-4 w-4" />
           Print
         </Button>
+
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile

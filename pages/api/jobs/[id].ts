@@ -59,6 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ job });
     return;
   }
+
   res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }

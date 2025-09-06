@@ -39,6 +39,6 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer.dynamic';
 describe('PerformanceOptimizer', () => {
   test('renders without crashing', () => {
     render(<PerformanceOptimizer />);
-    expect(screen.getByTestId('performance-optimizer')).toBeInTheDocument();
+    expect(screen.getByTestId("performance-optimizer")).toBeInTheDocument();
   });
 });

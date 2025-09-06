@@ -26,6 +26,7 @@ export function ExperienceFilter({
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">

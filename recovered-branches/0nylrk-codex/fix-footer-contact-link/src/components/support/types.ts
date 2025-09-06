@@ -21,6 +21,9 @@ export interface SupportTicket {
   status: "open" | "in-progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
   createdAt: string;
+  updatedAt: string;
+}
+  createdAt: string;
 
   updatedAt: string;
 }

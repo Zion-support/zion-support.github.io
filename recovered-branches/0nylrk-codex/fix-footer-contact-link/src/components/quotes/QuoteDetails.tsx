@@ -6,6 +6,13 @@ import {
   DialogHeader
   DialogTitle
   DialogDescription
+import React from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
@@ -28,6 +35,9 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     try {
       return format(new Date(dateString), "PPP");
     } catch (e) {
+      return dateString;
+    }
+  };
       return dateString;
     }
   }
@@ -63,6 +73,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               </div>
             </CardContent>
           </Card>
+
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -83,6 +94,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
+
             {quote.project_description && (
               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
@@ -101,6 +113,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </div>
           </CardContent>
         </Card>
+
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
@@ -108,3 +121,5 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     </Dialog>
   );
 }
+};
+},

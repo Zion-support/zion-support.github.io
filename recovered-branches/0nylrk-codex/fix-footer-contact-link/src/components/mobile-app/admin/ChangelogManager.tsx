@@ -165,3 +165,4 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
     </Card>;
   );
 };
+};

@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   Card
@@ -41,7 +42,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   if (!category) {;
     return <div>Category not found</div>;
   }
-  
+
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
@@ -56,6 +57,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
+
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>

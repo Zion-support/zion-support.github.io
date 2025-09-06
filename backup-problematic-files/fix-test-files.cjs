@@ -177,7 +177,7 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
       const content = fs.readFileSync(filePath, 'utf8');
       
       // Skip if no merge conflicts or obvious syntax issues
-      if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+      if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
         // Check for other syntax issues
         if (!content.includes('.test') && !content.includes('interface') || content.includes('export default')) {
           return;

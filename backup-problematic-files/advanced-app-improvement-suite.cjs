@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -8,6 +9,8 @@ class AdvancedAppImprovementSuite {
     this.projectRoot = projectRoot || process.cwd();
     this.reportsDir = path.join(this.projectRoot, "improvement-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
+    this.startTime = new Date();
+    this.results = {};
     this.ensureDirectories();
   }
 
@@ -147,6 +150,12 @@ class AdvancedAppImprovementSuite {
       execSync('npm run analyze:bundle', { stdio: 'inherit' });
       this.improvements.push('Bundle analysis completed');
     } catch (error) {
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+      this.generateReport();
+    }
+  }
+}
+
       this.log(`⚠️ Bundle analysis failed: ${error.message}`);
     }
   }
@@ -253,17 +262,9 @@ class AdvancedAppImprovementSuite {
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
       throw error;    }
-
   }
 }
 
-if (require.main === module) {
-  const suite = new AdvancedAppImprovementSuite();
-  suite.run().catch(console.error);
-}
-
-module.exports = AdvancedAppImprovementSuite;
-// Run the improvement suite
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
     this.ensureDirectories();,

@@ -1,5 +1,7 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
+import React from "react";
+import { Badge } from "@/components/ui/badge";
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }

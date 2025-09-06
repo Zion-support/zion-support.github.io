@@ -9,6 +9,18 @@ export function ReviewsList({
   reviews
   isLoading
   onReportReview
+import { Review } from "@/types/reviews";
+import { ReviewCard } from "./ReviewCard";
+interface ReviewsListProps {
+  reviews: Review[];
+  isLoading: boolean;
+  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
+}
+
+export function ReviewsList({
+  reviews,
+  isLoading,
+  onReportReview,
 }: ReviewsListProps) {
   if (isLoading) {
     return (
@@ -66,9 +78,10 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
           </div>;
         ))}
       </div>;
+      </div>
     );
   }
-  
+
   if (reviews.length === 0) {
     return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">
@@ -79,6 +92,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
       </div>
     );
   }
+
   return (
     <div className="space-y-4">
       {reviews.map((review) => (

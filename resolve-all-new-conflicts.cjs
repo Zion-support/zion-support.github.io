@@ -33,8 +33,7 @@ function resolveMergeConflicts(filePath) {
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent.replace(/\n?/g, '');
     resolvedContent = resolvedContent.replace(/\n?/g, '');
-    resolvedContent = resolvedContent.replace(/
-    // Write resolved content
+    resolvedContent = resolvedContent.replace(/    // Write resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
     return true;
   } catch (error) {

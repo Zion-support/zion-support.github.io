@@ -53,6 +53,7 @@ export default function ApiPerformanceTestingPage() {
   ];
 
 return (
+  return (
     <>
       <SEO
         title="API Performance Testing"

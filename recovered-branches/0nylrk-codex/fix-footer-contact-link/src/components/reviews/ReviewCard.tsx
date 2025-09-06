@@ -1,64 +1,30 @@
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { Star, Flag, User } from "lucide-react",
-import { Review } from "@/types/reviews",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
 import {
-
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
-  DialogTrigger
-} from "@/components/ui/dialog";
-
-import { Textarea } from "@/components/ui/textarea";
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger} from "@/components/ui/dialog",
+import { Textarea } from "@/components/ui/textarea",
 interface ReviewCardProps {
   review: Review;
-  onReport: (reviewId: string, reason: string) => Promise<boolean>
+  onReport: (reviewId: string, reason: string) => Promise<boolean>;
 }
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState("");
-  const [isReporting, setIsReporting] = useState(false);
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-
-  const handleReport = async () => {
-    if (!reportReason.trim()) return;
-    setIsReporting(true);
-    const success = await onReport(review.id, reportReason);
-    setIsReporting(false);
-    if (success) {
-      setReportReason("");
-      setIsReportDialogOpen(false);
-    }
-  }
-  const renderStars = (rating?: number) => {
-    if (!rating) return null;
-  
-  const handleReport = async () => {
-    if (!reportReason.trim()) return,
-    
-    setIsReporting(true),
-    const success = await onReport(review.id, reportReason),
-    setIsReporting(false),
-    
-    if (success) {
-      setReportReason(""),
-      setIsReportDialogOpen(false)
-    }
-  },
-  
-  const renderStars = (rating?: number) => {
-    if (!rating) return null,
-    
     return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
@@ -180,6 +146,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               )}
             </Avatar>
           )}
+                </AvatarFallback>
+              )}
+            </Avatar>
+          )}
+
           <div>
             <div className="font-medium">
               {review.is_anonymous
@@ -213,6 +184,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>
               </Badge>
             )}
+
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
@@ -229,6 +201,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>
               </Badge>
             )}
+
             {review.would_work_again !== undefined && (
               <Badge
                 variant={review.would_work_again ? "default" : "secondary"}
@@ -243,7 +216,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </div>
       )}
       )}
-      
+
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -260,6 +233,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
+
             <Textarea
               placeholder="Why are you reporting this review?"
               value={reportReason}

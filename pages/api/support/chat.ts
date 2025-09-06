@@ -45,6 +45,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Build context with top matched articles as brief references
   const matchedArticles = articles.filter((a) =>
     intent.matchedArticleIds.includes(a.id)
+
+  const { sessionId, messages } = req.body as {
+    sessionId?: string;
+    messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
+  };
+  if (!messages || !Array.isArray(messages))
+    return res.status(400).json({ error: "messages required" });
+
+  const articles = readJson<HelpArticle[]>("help/articles.json", []);
+  const lastUser = [...messages].reverse().find((m) => m.role === "user");
+  const intent = lastUser
+    ? matchIntent(lastUser.content, articles)
+    : { intentMatched: false, matchedArticleIds: [] };
+
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+  // Build context with top matched articles as brief references
+  const matchedArticles = articles.filter((a) =>
+    intent.matchedArticleIds.includes(a.id),
   );
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
@@ -84,6 +103,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({
       assistantMessage:
         "I could not reach the assistant right now. Please try again in a moment."
+    });
+    return res.status(200).json({
+      assistantMessage:
+        "I could not reach the assistant right now. Please try again in a moment.",
     });
   }
 }

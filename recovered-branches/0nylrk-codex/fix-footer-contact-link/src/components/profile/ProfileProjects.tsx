@@ -3,6 +3,11 @@ import { Badge } from "@/components/ui/badge",
 import { ProfileProject } from "@/types/profile",
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { FileText } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ProfileProject } from "@/types/profile";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { FileText } from "lucide-react";
 interface ProfileProjectsProps {
   projects: ProfileProject[];
 }
@@ -10,6 +15,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
           <Card
@@ -84,6 +90,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                   ))}
                 </div>
               )}
+
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>

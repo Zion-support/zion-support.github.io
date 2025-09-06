@@ -177,3 +177,5 @@ export const CommunityDiscussion: React.FC = () => {
 }
 
 };
+  );
+};

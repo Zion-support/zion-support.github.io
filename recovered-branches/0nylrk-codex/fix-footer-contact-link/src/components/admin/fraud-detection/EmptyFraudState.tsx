@@ -37,3 +37,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 }
 
 };
+    </div>
+  );
+};

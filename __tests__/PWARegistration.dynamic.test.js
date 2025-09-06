@@ -37,6 +37,6 @@ import PWARegistration from '../components/PWARegistration.dynamic';
 describe('PWARegistration', () => {
   test('renders without crashing', () => {
     render(<PWARegistration />);
-    expect(screen.getByTestId('pwa-registration')).toBeInTheDocument();
+    expect(screen.getByTestId("pwa-registration")).toBeInTheDocument();
   });
 });

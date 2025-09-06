@@ -33,6 +33,16 @@ export function ResumeVersionSelector({
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
+interface ResumeVersionSelectorProps {
+  currentResume: Resume;
+  onResumeChange: (resumeId: string) => void;
+}
+
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+  const { createResume, fetchResume } = useResume();
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
+  const [newResumeTitle, setNewResumeTitle] = useState("");
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleCreateNewVersion = async () => {
@@ -48,6 +58,9 @@ export function ResumeVersionSelector({
       setIsLoading(false);
     }
   }
+      }
+      setIsLoading(false);
+        setNewResumeTitle("");
       }
       setIsLoading(false);
     }
@@ -83,6 +96,7 @@ export function ResumeVersionSelector({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -45,6 +46,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
             <p className="text-2xl font-semibold">${totalPayment}</p>
           </div>
+
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
@@ -67,4 +69,5 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       </CardContent>;
     </Card>;
   );
+};
 };

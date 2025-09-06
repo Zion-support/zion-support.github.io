@@ -1,5 +1,4 @@
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define form schema end date: z.date () .optional ();
-is current: z.boolean () .default (false);
+ is current: z.boolean () .default (false);
 description: z.string () .optional ();
 location: z.string () .optional () ;
 });

@@ -2,6 +2,10 @@ import { Loader2 } from "lucide-react";
 interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number
+import { Loader2 } from "lucide-react";
+interface ResultsHeaderProps {
+  isLoading: boolean;
+  resultCount: number;
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
@@ -43,3 +47,9 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
     </div>
   );
 }
+        </span>
+      )}
+    </div>
+  );
+}
+;

@@ -17,7 +17,9 @@ export function CertificationFormFields({
 }: CertificationFormFieldsProps) {
 }
 
-export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
+export function CertificationFormFields({
+  form,
+}: CertificationFormFieldsProps) {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

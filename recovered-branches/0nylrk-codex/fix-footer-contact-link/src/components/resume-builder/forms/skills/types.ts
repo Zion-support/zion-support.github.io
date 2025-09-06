@@ -4,6 +4,10 @@ export interface SkillsFormProps {
   skills: Skill[];
   onComplete: () => void;
   onBack: () => void
+  resumeId: string;
+  skills: Skill[];
+  onComplete: () => void;
+  onBack: () => void;
 }
 export interface SkillItemProps {
   skill: Skill;
@@ -19,6 +23,8 @@ export interface AddSkillFormProps {
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+  defaultCategory?: string;
 }
 export interface BulkAddSkillsProps {
   resumeId: string;

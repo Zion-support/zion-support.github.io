@@ -15,6 +15,13 @@ import {
 
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+  const [searchQuery, setSearchQuery] = useState("");
+import { useState, useMemo } from "react",
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Globe, Search, ArrowUpDown } from "lucide-react",
+import { Button } from "@/components/ui/button",
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
@@ -33,6 +40,13 @@ export function ITServicePricingTable() {
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
+    // Filter by search query
+    if (searchQuery) {
+      filteredData = filteredData.filter((item) =>
+        item.country.toLowerCase().includes(searchQuery.toLowerCase()),
+      );
+    }
+
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -54,6 +68,15 @@ export function ITServicePricingTable() {
           : "ascending"
     });
   }
+
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+      key,
+      direction: 
+        sortConfig.key === key && sortConfig.direction === "ascending" 
+          ? "descending" 
+          : "ascending"})
+  },
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">

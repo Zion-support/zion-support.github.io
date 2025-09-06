@@ -39,6 +39,6 @@ import PerformanceMonitor from '../components/PerformanceMonitor.dynamic';
 describe('PerformanceMonitor', () => {
   test('renders without crashing', () => {
     render(<PerformanceMonitor />);
-    expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
+    expect(screen.getByTestId("performance-monitor")).toBeInTheDocument();
   });
 });

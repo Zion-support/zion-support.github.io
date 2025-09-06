@@ -15,6 +15,22 @@ import { QuoteFormData } from "@/types/quotes";
 interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
+import { useState } from "react";
+import { format } from "date-fns";
+import { Calendar } from "@/components/ui/calendar";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { CalendarIcon } from "@/components/icons";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
+import { QuoteFormData } from "@/types/quotes";
+interface TimelineStepProps {
+  formData: QuoteFormData;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
@@ -53,6 +69,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               </p>
             </div>
           </div>
+
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
               <div>
@@ -90,6 +107,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   </PopoverContent>
                 </Popover>
               </div>
+
               <div>
                 <Label className="block mb-2 text-zion-slate-light">
                   End Date
@@ -102,6 +120,8 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark"
 
                         !formData.endDate && "text-zion-slate-light"
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
+                        !formData.endDate && "text-zion-slate-light",
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -126,6 +146,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                         date < (formData.startDate |new Date())
                       }
                       disabled={(date) => date < (formData.startDate || new Date())}
+                      disabled={(date) =>
+                        date < (formData.startDate || new Date())
+                      }
                     />
                   </PopoverContent>
                 </Popover>
@@ -137,5 +160,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
     </div>
   );
 }
+  );
 }
 ;

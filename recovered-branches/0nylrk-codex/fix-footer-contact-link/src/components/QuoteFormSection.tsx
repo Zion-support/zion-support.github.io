@@ -1,3 +1,11 @@
+
+import {Button} from "./ui/button";
+import {Input} from "./ui/input";
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
+export function QuoteFormSection() {;
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
 import { GradientHeading } from "./GradientHeading";
@@ -118,6 +126,7 @@ export function QuoteFormSection() {
                   />
                 </div>
               </div>
+
               <div className="mt-6">
                 <label
                   htmlFor="interest"
@@ -146,12 +155,17 @@ export function QuoteFormSection() {
                         className="ml-2 text-sm text-zion-slate-light"
                       >
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
+                      <label
+                        htmlFor={`interest-${index}`}
+                        className="ml-2 text-sm text-zion-slate-light"
+                      >
                         {item}
                       </label>
                     </div>
                   ))}
                 </div>
               </div>
+
               <div className="mt-6">
                 <label
                   htmlFor="message"

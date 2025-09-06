@@ -11,6 +11,16 @@ const nextConfig = {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"]
     formats: ['image/webp', 'image/avif']
   }
+  // Image optimization
+  images: {
+    domains: [
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com",
+    ],
+    formats: ["image/webp", "image/avif"],
+  },
   // Output configuration
   output: 'standalone'
   // Trailing slash
@@ -24,5 +34,9 @@ const nextConfig = {
   // Dist directory
   distDir: '.next'
 }
+  // Dist directory
+  distDir: ".next",
+};
+
 module.exports = nextConfig;
 module.exports = nextConfig;

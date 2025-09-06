@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -71,6 +72,7 @@ export default function HelpCenter() {
             Find answers to common questions or get in touch with our support
             team.
           </p>
+
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
@@ -151,6 +153,7 @@ export default function HelpCenter() {;
                   searchQuery={searchQuery}
                 />
               )}
+
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -198,6 +201,7 @@ export default function HelpCenter() {;
                       optimal results.
                     </p>
                   </div>
+
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I hire someone on Zion?
@@ -220,6 +224,7 @@ export default function HelpCenter() {;
                       approved, ensuring security for both clients and talent.
                     </p>
                   </div>
+
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I contact support?
@@ -244,6 +249,7 @@ export default function HelpCenter() {;
                     Our support team is available 24/7 to assist you with any
                     questions or issues.
                   </p>
+
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -280,6 +286,7 @@ export default function HelpCenter() {;
                       </span>
                     </div>
                   </div>
+
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
@@ -292,6 +299,7 @@ export default function HelpCenter() {;
                     We value your input and are constantly looking to improve
                     our platform.
                   </p>
+
                   <form className="space-y-4">
                     <div>
                       <Input placeholder="Your email" />

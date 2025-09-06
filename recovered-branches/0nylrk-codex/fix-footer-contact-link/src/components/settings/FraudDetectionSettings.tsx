@@ -34,7 +34,8 @@ import { useAuth } from "@/hooks/useAuth";
 export function FraudDetectionSettings() {
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
-  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] =
+    useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -55,6 +56,16 @@ export function FraudDetectionSettings() {
       // For now, we'll just simulate a successful save
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
+
+  const handleSavePreferences = async () => {
+    if (!user?.id) return;
+
+    setIsSaving(true);
+    try {
+      // In a real implementation, we would save these preferences to the database
+      // For now, we'll just simulate a successful save
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
       toast({
         title: "Settings saved"
         description: "Your fraud detection preferences have been updated."
@@ -65,6 +76,10 @@ export function FraudDetectionSettings() {
         title: "Error"
         description: "Failed to save your preferences. Please try again."
         variant: "destructive"
+      toast({
+        title: "Error",
+        description: "Failed to save your preferences. Please try again.",
+        variant: "destructive",
       });
     } finally {
       setIsSaving(false);
@@ -102,6 +117,7 @@ export function FraudDetectionSettings() {
                 onCheckedChange={setMessageScanningEnabled}
               />
             </div>
+
             <div className="flex items-center justify-between">
               <div>
                 <Label className="font-medium" htmlFor="activity-monitoring">
@@ -133,6 +149,7 @@ export function FraudDetectionSettings() {
               />
             </div>
           </div>
+
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-sm font-medium">

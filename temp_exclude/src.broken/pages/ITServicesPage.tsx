@@ -39,7 +39,6 @@ benefits: [ "Reduced downtime", "Lower operational costs",
 website: "https://ziontechgroup.com/infrastructure-management" 
 }];
 ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 </div> <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent" > IT Infrastructure & DevOps Services </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <a href="tel:+13024640950" className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors" > <Phone className="w-5 h-5 mr-2" /> <span>Call Now: +1 302 464 0950</span> </Link> <a href="mailto:kleber@ziontechgroup.com?subject=IT%20Services%20Inquiry" className="inline-flex items-center px-6 py-3 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white rounded-lg font-semibold transition-colors" > <Mail className="w-5 h-5 mr-2" /> <span>Get IT Consultation</span> </Link> </div> </div> </div> </div> </div>) ) 
 }</div> </div> Our IT Service Portfolio </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive IT solutions designed to modernize infrastructure, enhance security, and drive operational efficiency. </p> </div> <div className="space-y-4" > <div> </li>) ) 
 }</ul> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> <div>) ) 
 }</ul> </div> </div> <div>) ) 

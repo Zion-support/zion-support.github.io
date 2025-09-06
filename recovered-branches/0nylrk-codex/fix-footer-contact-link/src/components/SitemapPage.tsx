@@ -1,3 +1,10 @@
+
+import React from 'react';
+import {completeSitemap, dynamicPaths} from '@/config/sitemap';
+import {Link} from 'react-router-dom';
+import {ChevronRight} from 'lucide-react';
+import {SEO} from './SEO';
+import {AppLayout} from '@/layout/AppLayout';
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
@@ -37,6 +44,7 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
+
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -65,6 +73,7 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
+
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -93,6 +102,7 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
+
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -121,6 +131,7 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
+
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">

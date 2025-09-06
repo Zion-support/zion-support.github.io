@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 interface NotificationHeaderProps {
@@ -12,6 +13,16 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
   onMarkAllAsRead
+import React from "react";
+import { Button } from "@/components/ui/button";
+interface NotificationHeaderProps {
+  unreadCount: number;
+  onMarkAllAsRead: () => Promise<void>;
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+  unreadCount,
+  onMarkAllAsRead,
 }) => {
   return (
     <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">

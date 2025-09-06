@@ -74,6 +74,7 @@ export default async function handler(
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }

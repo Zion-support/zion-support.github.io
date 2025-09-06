@@ -32,10 +32,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     if (!targetType |!targetId) {
 
+
+    if (!targetType || !targetId) {
       return res.status(400).json({ error: "Missing targetType or targetId" });
     }
-    if (targetType !== 'talent' && targetType !== 'client') {
-      return res.status(400).json({ error: 'Invalid targetType' })
+    if (targetType !== "talent" && targetType !== "client") {
+      return res.status(400).json({ error: "Invalid targetType" });
     }
 
     const all = await readReviews();
@@ -51,7 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           x.fromRole !== r.fromRole &&
           x.toRole !== r.toRole &&
           x.approved &&
-          !x.removed
+          !x.removed,
       );
       return counterpartExists
     });
@@ -63,11 +65,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       )
       .map((r) => {
         let authorName = r.fromId;
-        if (r.fromRole === 'talent') {
+        if (r.fromRole === "talent") {
           const t = TALENT_PROFILES.find((tp) => tp.slug === r.fromId);
-          authorName = t ? t.name : r.fromId
+          authorName = t ? t.name : r.fromId;
         }
-        if (r.anonymous) authorName = 'Anonymous';
+        if (r.anonymous) authorName = "Anonymous";
         return {
           ...r
           authorName
@@ -95,6 +97,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return res.status(200).json({ summary, reviews: publicReviews });
   } catch (error: any) {
+    return res
+      .status(500)
+      .json({ error: "Internal server error", details: error?.message });
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });

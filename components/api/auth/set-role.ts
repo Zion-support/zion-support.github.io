@@ -36,6 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     set("talentSlug", talent);
   }
   set("userId", role === "guest" ? "" : "test-user");
+
   headers["Set-Cookie"] = cookies.join();
   res.writeHead(302, { ...headers, Location: "/" });
   res.end();

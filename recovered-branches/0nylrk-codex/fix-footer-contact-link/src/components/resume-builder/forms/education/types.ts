@@ -4,6 +4,10 @@ export interface EducationFormProps {
   educationEntries: Education[];
   onComplete: () => void;
   onBack: () => void
+  resumeId: string;
+  educationEntries: Education[];
+  onComplete: () => void;
+  onBack: () => void;
 }
 export interface EducationItemProps {
   education: Education;

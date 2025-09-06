@@ -19,6 +19,7 @@ export function Footer() {
     });
   };
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-background border-t">
       <div className="container mx-auto px-4 py-8">

@@ -125,3 +125,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
     </div>;
 );
 };
+};
+
+export default FraudStatsCards;

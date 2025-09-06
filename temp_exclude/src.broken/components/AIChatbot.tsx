@@ -19,7 +19,6 @@ useEffect ( () => {
   setIsTyping (true);
 //Simulate AI processing time await new Promise (resolve => setTimeout (resolve, 1000 + Math.random () * 2000) );
 const responses = [ ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Add some context-aware responses let finalResponse: string = randomResponse,
 if (userMessage.toLowerCase () .includes ('price') || userMessage.toLowerCase () .includes ('cost') ) {
   
 }

@@ -79,6 +79,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(201).json({ milestone: created });
     return;
   }
+
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }

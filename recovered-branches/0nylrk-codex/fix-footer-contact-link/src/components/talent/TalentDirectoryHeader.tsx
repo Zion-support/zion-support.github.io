@@ -1,3 +1,4 @@
+
 import React from "react";
 interface TalentDirectoryHeaderProps {
   title: string;
@@ -22,6 +23,10 @@ import React from "react",;
 interface TalentDirectoryHeaderProps {;
   title: string;
   description: string;
+        <p className="text-zion-slate-light max-w-2xl">{description}</p>
+      </div>
+    </div>
+  );
 }
 ;
 export function TalentDirectoryHeader({ title, description }: TalentDirectoryHeaderProps) {;

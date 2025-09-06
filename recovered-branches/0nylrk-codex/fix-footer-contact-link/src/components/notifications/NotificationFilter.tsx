@@ -16,6 +16,11 @@ interface NotificationFilterProps {
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter
   onFilterChange
+}
+
+export const NotificationFilter: React.FC<NotificationFilterProps> = ({
+  filter,
+  onFilterChange,
 }) => {
   return (
     <div className="border-b border-zion-blue-light">

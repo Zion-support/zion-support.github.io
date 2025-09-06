@@ -20,6 +20,10 @@ export interface Service {
   support: string;
   image?: string;
   popular?: boolean;
+  title: string;
+  href: string;
+  icon: string;
+  color: string;
 }
 export interface ServiceCategory {
   title: string;
@@ -52,6 +56,9 @@ export interface LoadingState {
   progress?: number;
 }
 export interface AnimationState {
+}
+
+export interface AnimationState {
   isLoaded: boolean;
   hasError: boolean;
 }
@@ -64,6 +71,9 @@ export interface FormData {
   message: string;
 }
 export interface Testimonial {
+}
+
+export interface Testimonial {;
   id: string;
   name: string;
   role: string;
@@ -300,6 +310,7 @@ export interface FAQ {
   category?: string;
 }
 export interface PricingPlan {
+  id: string;
   id: string;
   name: string;
   price: number;
@@ -713,3 +724,5 @@ export interface PaginatedResponse<T> {;
     hasPrev: boolean;
   };
 }
+export interface ContactInfo {
+

@@ -160,3 +160,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
     </div>;
 );
 };
+};
+
+export default QuoteStatusCards;

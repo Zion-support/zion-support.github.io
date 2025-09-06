@@ -53,6 +53,7 @@ export default function SecretsRotationAutomationPage() {
   ];
 
 return (
+  return (
     <>
       <SEO
         title="Secrets Rotation Automation"

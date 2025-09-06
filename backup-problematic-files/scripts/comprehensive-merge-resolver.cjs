@@ -14,7 +14,7 @@ function removeMergeConflictMarkers(content) {
     .replace(//g, '')
     .replace(/}
 
-    .replace(/    .replace(/=======/g, '')
+    .replace(/    .replace(//g, '')
     .replace(/}
 
 // Function to fix common syntax errors

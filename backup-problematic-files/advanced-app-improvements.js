@@ -7,9 +7,12 @@ console.log('🚀 Starting Advanced App Improvements...');
 function createAdvancedMonitoring() {
   console.log('\n📊 Creating advanced monitoring system...');
   const monitoringFiles = {
+:backup-problematic-files/advanced-app-improvements.js
     'monitoring/health-check.js': `// Advanced health check system
 export class HealthChecker {
   constructor() {this.checks = new Map();
+  constructor() {;
+    this.checks = new Map();
     this.results = new Map();  }
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
@@ -268,6 +271,7 @@ export const connectionPool = new ConnectionPool();`
   Object.entries(monitoringFiles).forEach(([filePath, content]) => {
     const fullPath = path.join(process.cwd(), filePath);
     const dir = path.dirname(fullPath);
+
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
@@ -291,7 +295,7 @@ async function main() {
     console.log('  - Accessibility improvements implemented');
     console.log('\n🚀 Your app is now enhanced with advanced features!');
   } catch (error) {
-    console.error('❌ Error during app improvements:', error);
+    console.error("❌ Error during app improvements:", error);
     process.exit(1);
   }
 }

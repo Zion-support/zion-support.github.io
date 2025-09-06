@@ -9,6 +9,5 @@ export class TestingSystem {_static async testUserInteraction(element: HTMLEleme
         break
     }
         break;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }

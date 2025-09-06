@@ -79,6 +79,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     res.status(200).json({ milestone: updated });
     return;
   }
+
   res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }

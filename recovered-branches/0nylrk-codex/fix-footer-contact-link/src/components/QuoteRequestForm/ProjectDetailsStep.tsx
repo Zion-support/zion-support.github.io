@@ -9,6 +9,18 @@ interface ProjectDetailsStepProps {
 export function ProjectDetailsStep({
   formData
   updateFormData
+import { QuoteFormData } from "@/types/quotes";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+interface ProjectDetailsStepProps {
+  formData: QuoteFormData;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+
+export function ProjectDetailsStep({
+  formData,
+  updateFormData,
 }: ProjectDetailsStepProps) {
   return (
     <div className="space-y-6">
@@ -29,6 +41,7 @@ export function ProjectDetailsStep({
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
+
           <div>
             <Label
               htmlFor="projectDescription"
@@ -76,6 +89,7 @@ export function ProjectDetailsStep({
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
+
           <div>
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
@@ -95,6 +109,7 @@ export function ProjectDetailsStep({
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
+
           <div>
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
@@ -115,6 +130,7 @@ export function ProjectDetailsStep({
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
+
           <div>
             <Label htmlFor="phone" className="text-zion-slate-light">
               Phone

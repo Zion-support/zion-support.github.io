@@ -10,6 +10,11 @@ export default async function handler(
   try {
     const { proof, optionId } = req.body |{}
     if (!proof |typeof optionId !== "number") {
+    return;
+  }
+  try {
+    const { proof, optionId } = req.body || {};
+    if (!proof || typeof optionId !== "number") {
       res.status(400).json({ error: "Invalid body" });
       return;
     }

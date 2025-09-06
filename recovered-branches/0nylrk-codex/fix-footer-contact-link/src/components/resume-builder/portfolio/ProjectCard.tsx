@@ -19,6 +19,10 @@ interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
+interface ProjectCardProps {
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+  onDelete: (projectId: string) => void;
 }
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
@@ -36,6 +40,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     setDeleteDialogOpen(false)
   },
   
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false);
+  };
+
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -59,6 +68,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               {project.description}
             </p>
           )}
+
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
@@ -83,6 +93,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               </Button>
             </Link>
           )}
+
           {project.demo_url && (
             <a
               href={project.demo_url}
@@ -108,6 +119,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </Button>
         </div>
       </CardFooter>
+
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>

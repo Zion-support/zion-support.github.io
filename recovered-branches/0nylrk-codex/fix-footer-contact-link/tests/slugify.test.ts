@@ -32,3 +32,4 @@ it('converts slug back to title', () => {;
 it('handles custom separator when unslugifying', () => {;
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title');
 });
+  expect(unslugify('multi_word_title_')).toBe('Multi Word Title')

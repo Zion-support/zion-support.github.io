@@ -49,7 +49,20 @@ export default async function handler(
     });
     writeState((s) => s.logs.push(log));
 
+res.status(200).json({ ok: true, eventId });
   }
   res.status(200).json({ ok: true, eventId });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 }

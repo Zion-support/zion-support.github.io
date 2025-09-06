@@ -37,6 +37,6 @@ import SEO from '../components/SEO.dynamic';
 describe('SEO', () => {
   test('renders without crashing', () => {
     render(<SEO />);
-    expect(screen.getByTestId('seo')).toBeInTheDocument();
+    expect(screen.getByTestId("seo")).toBeInTheDocument();
   });
 });

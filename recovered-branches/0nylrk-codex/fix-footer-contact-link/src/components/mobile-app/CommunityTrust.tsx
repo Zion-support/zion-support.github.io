@@ -7,6 +7,8 @@ export const CommunityTrust: React.FC = () => {
     { value: "4.8", label: "App Store Rating" }
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
+import React from "react";
+import { Star } from "lucide-react";
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -31,6 +33,7 @@ export const CommunityTrust: React.FC = () => {
             mobile app to connect, hire, and work
           </p>
         </div>
+
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
           {stats.map((stat, index) => (
@@ -69,3 +72,5 @@ export const CommunityTrust: React.FC = () => {
     </section>
   );
 }
+};
+},

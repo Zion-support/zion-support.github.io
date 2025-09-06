@@ -95,5 +95,6 @@ export function LanguageDetectionPopup() {;
       </AlertDialogContent>
     </AlertDialog>
   );
+  );
 }
 }
