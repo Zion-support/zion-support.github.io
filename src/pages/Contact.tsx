@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Clock, MessageCircle } from 'lucide-react';
 
@@ -25,55 +21,8 @@ const Contact: React.FC = () => {
       [e.target.name]: e.target.value
     });
   };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900">Address</h3>
-                <p className="text-gray-600">
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                <input 
-                  type="text" 
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                <input 
-                  type="email" 
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -178,25 +127,22 @@ const Contact: React.FC = () => {
                     placeholder="your.email@company.com"
                   />
                 </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>
+
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                <textarea 
-                  rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                ></textarea>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your company name"
+                />
               </div>
-<<<<<<< HEAD
-              <button 
-                type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-=======
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -240,7 +186,6 @@ const Contact: React.FC = () => {
               Schedule a Call
             </button>
           </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>
       </div>
     </div>
@@ -248,5 +193,3 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

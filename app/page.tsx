@@ -1,35 +1,5 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-export default function HomePage() {
-  return (
-    <div className="animate-fade-in">
-      <section className="text-center py-12 md:py-20">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Build and scale with{' '}
-          <span className="text-blue-600">AI</span>,{' '}
-          <span className="text-green-600">Micro SaaS</span>{' '}
-          and{' '}
-          <span className="text-purple-600">Enterprise IT</span>
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, automation, cloud infra, and secure micro SaaS products.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/services"
-<<<<<<< HEAD
-=======
-          <Link 
-            href="/services" 
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-=======
 export default function HomePage() {
   return (
     <div className="min-h-screen">
@@ -42,37 +12,14 @@ export default function HomePage() {
           to help businesses scale, automate, and succeed in the digital age.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/services" 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<Link 
+            href="/services"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <a
+<a 
             href="https://ziontechgroup.com"
-=======
-          <a 
-            href="https://ziontechgroup.com" 
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-=======
-          <a 
-            href="https://ziontechgroup.com" 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-          <a
-            href="https://ziontechgroup.com"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             Visit Main Site
@@ -80,76 +27,25 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="py-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
             description="End-to-end product engineering with billing, auth, analytics and growth."
-<<<<<<< HEAD
             icon="🚀"
-<<<<<<< HEAD
-=======
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card 
-            title="Micro SaaS" 
-            href="/services/micro-saas" 
-            description="End-to-end product engineering with billing, auth, analytics and growth." 
-            icon="🚀" 
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           />
-          <Card
-            title="AI Services"
-            href="/services/ai-services"
-            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps."
-            icon="🤖"
+<Card 
+            title="AI Services" 
+            href="/services/ai-services" 
+            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps." 
+            icon="🤖" 
           />
-<<<<<<< HEAD
-          <Card
-            title="IT Services"
-            href="/services/it-services"
-            description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
-            icon="⚙️"
-          />
-          <Card
-            title="Blockchain Solutions"
-            href="/services/blockchain-solutions"
-            description="DeFi protocols, NFTs, smart contracts, and Web3 applications."
-            icon="⛓️"
-          />
-          <Card
-            title="Automation Solutions"
-            href="/services/automation-solutions"
-            description="RPA, workflow automation, and AI-powered business process optimization."
-            icon="⚡"
-          />
-          <Card
-            title="Data Analytics"
-            href="/services/data-analytics"
-            description="Business intelligence, predictive analytics, and data engineering solutions."
-            icon="📊"
-<<<<<<< HEAD
-=======
           <Card 
             title="IT Services" 
             href="/services/it-services" 
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
             icon="⚙️" 
-<<<<<<< HEAD
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-=======
           />
           <Card
             title="Business Automation"
@@ -168,47 +64,36 @@ export default function HomePage() {
             href="/services/data-analytics"
             description="Advanced analytics and BI solutions that transform data into actionable insights."
             icon="📊"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           />
           <Card
-            title="AI-Powered CRM"
-            href="/services/ai-powered-crm"
-            description="Revolutionary CRM with AI automation that boosts sales by 300% and predicts customer behavior."
-            icon="🎯"
+            title="AI Code Reviewer"
+            href="/services/ai-code-reviewer"
+            description="Automated code review with AI-powered analysis, security scanning, and performance optimization."
+            icon="🔍"
           />
           <Card
-            title="AI Content Optimizer"
-            href="/services/ai-content-optimizer"
-            description="AI-powered content creation that increases engagement by 400% and automates SEO optimization."
-            icon="✍️"
+            title="Invoice Automation"
+            href="/services/invoice-automation"
+            description="AI-powered invoice processing and financial workflow automation for streamlined operations."
+            icon="📄"
           />
           <Card
-            title="Cybersecurity Suite"
-            href="/services/cybersecurity-suite"
-            description="Enterprise-grade security solutions with 24/7 monitoring and threat detection."
-            icon="🔒"
-=======
+            title="Vulnerability Scanner"
+            href="/services/vulnerability-scanner"
+            description="Advanced security scanning with AI-powered threat detection and automated remediation."
+            icon="🛡️"
           />
           <Card
-            title="Digital Transformation"
-            href="/services/digital-transformation"
-            description="Complete digital transformation solutions and legacy system modernization."
-            icon="🔄"
+            title="Team Collaboration"
+            href="/services/team-collaboration-hub"
+            description="AI-powered collaboration platform with intelligent project management and productivity analytics."
+            icon="👥"
           />
           <Card
-            title="Cybersecurity"
-            href="/services/cybersecurity"
-            description="Comprehensive security solutions, threat detection, and compliance management."
-            icon="🔒"
-          />
-          <Card
-            title="Cloud Services"
-            href="/services/cloud-services"
-            description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
-            icon="☁️"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+            title="SEO Analyzer"
+            href="/services/seo-analyzer"
+            description="Advanced SEO analysis with AI-powered optimization recommendations and competitor intelligence."
+            icon="📈"
           />
         </div>
       </section>
@@ -221,69 +106,28 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          <FeatureCard
-            title="Fast Delivery"
-            description="Rapid prototyping and deployment with modern tools and practices."
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-          <FeatureCard 
+<FeatureCard 
             title="Fast Delivery" 
             description="Rapid prototyping and deployment with modern tools and practices." 
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
           />
-          <FeatureCard
-            title="Scalable Architecture"
-            description="Built for growth with cloud-native, microservices architecture."
+          <FeatureCard 
+            title="Scalable Architecture" 
+            description="Built for growth with cloud-native, microservices architecture." 
           />
-          <FeatureCard
-            title="24/7 Support"
-            description="Round-the-clock monitoring and support for your critical systems."
+          <FeatureCard 
+            title="24/7 Support" 
+            description="Round-the-clock monitoring and support for your critical systems." 
           />
-<<<<<<< HEAD
-          <FeatureCard
-            title="Cost Effective"
-            description="Optimized solutions that reduce operational costs and improve efficiency."
-<<<<<<< HEAD
-=======
           <FeatureCard 
             title="Cost Effective" 
-            description="Optimized solutions that reduce operational costs and improve efficiency." 
-<<<<<<< HEAD
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+            description="Optimized solutions that reduce operational costs and improve efficiency."
           />
         </div>
       </section>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
-  return (
-    <Link
-      href={href}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 function Card({ title, description, href, icon }: { 
   title: string; 
   description: string; 
@@ -293,63 +137,23 @@ function Card({ title, description, href, icon }: {
   return (
     <Link 
       href={href} 
-<<<<<<< HEAD
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </Link>
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-function FeatureCard({ title, description }: { title: string; description: string }) {
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 function FeatureCard({ title, description }: { 
   title: string; 
   description: string; 
 }) {
-<<<<<<< HEAD
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-function FeatureCard({ title, description }: { title: string; description: string }) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
-=======
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

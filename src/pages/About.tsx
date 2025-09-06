@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Users, Award, Target, Globe, Zap, Shield } from 'lucide-react';
 
@@ -34,36 +33,6 @@ const About: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
-        <div className="prose max-w-4xl">
-          <p className="text-lg text-gray-600 mb-6">
-            Zion Tech Group is a leading technology solutions provider specializing in AI-powered micro SaaS applications, 
-            intelligent automation, and cutting-edge IT services. We help businesses transform and scale through innovative 
-            technology solutions.
-          </p>
-          <p className="text-lg text-gray-600 mb-6">
-            Our team of expert developers, AI specialists, and IT professionals work together to deliver solutions that 
-            drive real business results. From concept to deployment, we provide end-to-end support for your technology needs.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-              <p className="text-gray-600">
-                To empower businesses with AI-driven solutions that automate processes, enhance productivity, 
-                and drive exponential growth through innovative technology.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-              <p className="text-gray-600">
-                To be the world's leading provider of intelligent business solutions that transform 
-                how companies operate and compete in the digital age.
-              </p>
-            </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -198,7 +167,6 @@ const About: React.FC = () => {
             <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg">
               Learn More
             </button>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>
         </div>
       </div>
@@ -207,5 +175,3 @@ const About: React.FC = () => {
 };
 
 export default About;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,51 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-
-const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-900 text-white py-8" role="contentinfo">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300">
-              Leading technology solutions provider for modern businesses.
-            </p>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2" role="list">
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">AI Services</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">IT Solutions</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">Cloud Services</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2" role="list">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">About</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">Contact</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-1">Pricing</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-gray-300">
-              <p>Email: info@ziontechgroup.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
-              <p>Address: 123 Tech Street, Innovation City</p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-=======
 import { 
   Twitter,
   Linkedin,
@@ -310,7 +263,6 @@ const Footer: React.FC = () => {
             <ChevronUp className='h-4 w-4' aria-hidden='true' />
             <span>Back to Top</span>
           </button>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>
 
         <div className='mt-12 pt-8 border-t border-primary/20'>
@@ -346,10 +298,4 @@ const Footer: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Footer;
-=======
-export default Footer;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
