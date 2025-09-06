@@ -42,6 +42,13 @@ export default [
       "temp_backup/",
       "temp_broken_files/",
       "test_build/",
+      "temp_exclude/",
+      "zion-os/",
+      "zion-website/",
+      "zion-ai-assistant/",
+      "types/",
+      "utils/",
+      "ultimate-*.cjs",
       "*.test.js",
       "*.test.ts",
       "*.test.tsx",
@@ -52,7 +59,7 @@ export default [
   },
   js.configs.recommended,
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
+    files: ["src/**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       parser: tsparser,
       parserOptions: {
