@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Sidebar from './components/layout/Sidebar'
 import ErrorBoundary from './components/ErrorBoundary'
+import PerformanceMonitor from './components/PerformanceMonitor'
 // Import pages
 import HomePage from './pages/Home'
 import AboutPage from './pages/About'
