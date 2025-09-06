@@ -23,4 +23,7 @@ import { usePerformance } from '../hooks/usePerformance';
           </Link>
         </div>
       </div>
-export default Home;
+    </div>
+  );
+};
+

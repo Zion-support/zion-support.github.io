@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+<<<<<<< HEAD
   darkMode: "class",
+=======
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
@@ -13,12 +17,16 @@ module.exports = {
 =======
     './app/**/*.{js,ts,jsx,tsx}'
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
+=======
+    './app/**/*.{js,ts,jsx,tsx}',
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
   ],
   theme: {
     extend: {
       colors: {
         primary: {
           50: '#eff6ff',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           500: '#3b82f6',
@@ -31,6 +39,8 @@ module.exports = {
   plugins: [],
 };
 =======
+=======
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
           100: '#dbeafe',
           200: '#bfdbfe',
           300: '#93c5fd',
@@ -41,11 +51,14 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
           950: '#172554',
+<<<<<<< HEAD
 =======
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8'
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
+=======
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
         },
         gray: {
           50: '#f9fafb',
@@ -64,6 +77,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
 =======
         mono: ['JetBrains Mono', 'Fira Code', 'monospace']
@@ -77,10 +93,14 @@ module.exports = {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'spin-slow': 'spin 8s linear infinite',
 =======
         'spin-slow': 'spin 8s linear infinite'
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
+=======
+        'spin-slow': 'spin 8s linear infinite',
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
       },
       keyframes: {
         fadeIn: {
@@ -90,6 +110,9 @@ module.exports = {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
           '100%': { transform: 'translateY(0px)', opacity: '1' },
         },
         scaleIn: {
@@ -100,6 +123,7 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
         },
+<<<<<<< HEAD
 =======
           '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
@@ -112,10 +136,13 @@ module.exports = {
           '50%': { transform: 'translateY(-20px)' }
         }
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
+=======
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
       },
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
+<<<<<<< HEAD
         '128': '32rem'
       },
       borderRadius: {
@@ -125,10 +152,18 @@ module.exports = {
 =======
         '5xl': '2.5rem'
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
+=======
+        '128': '32rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
       },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
+<<<<<<< HEAD
 <<<<<<< HEAD
         'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
       },
@@ -138,10 +173,16 @@ module.exports = {
       }
     }
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
+=======
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+      },
+    },
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+<<<<<<< HEAD
 <<<<<<< HEAD
     require('@tailwindcss/aspect-ratio'),
   ],
@@ -152,3 +193,8 @@ module.exports = {
   ]
 }
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
+=======
+    require('@tailwindcss/aspect-ratio'),
+  ],
+}
+>>>>>>> 6a0d0fe1c19bf517513527a946228e5f4823a840
